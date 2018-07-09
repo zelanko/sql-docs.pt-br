@@ -1,5 +1,5 @@
 ---
-title: Agendar atualização de dados e fontes de dados que não suportam a autenticação do Windows (PowerPivot para SharePoint) | Microsoft Docs
+title: Agendar atualização de dados e fontes de dados que não dão suporte a autenticação do Windows (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230088"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Atualização de dados de agendamento e fontes de dados que não oferecem suporte à Autenticação do Windows (PowerPivot para SharePoint)
   Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do PowerPivot para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
@@ -78,7 +78,7 @@ ms.locfileid: "36009437"
   
 9. Clique em **OK**.  
   
-10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **definir credenciais**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **Set Credentials**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digite o nome de usuário do Windows e a senha do Windows, e clique em **OK**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36009437"
   
 2.  Clique no nome do aplicativo de Serviço de Repositório Seguro.  
   
-3.  Sobre o **gerenciar** , clique em **novo**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
+3.  Sobre o **gerenciar** , clique em **New**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
 4.  Na página **Criar Novo Aplicativo de Destino de Repositório Seguro** , configure os seguintes valores:  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36009437"
   
 6.  Sobre o **credenciais** página, altere o primeiro nome de campo para `Oracle User ID` e altere o **tipo de campo** para `User Name`.  
   
-     Altere o segundo nome de campo para `Oracle Password` e **tipo de campo** para `Password`.  
+     Altere o segundo nome de campo para `Oracle Password` e o **tipo de campo** para `Password`.  
   
 7.  Clique em **Avançar**.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "36009437"
   
 9. Clique em **OK**.  
   
-10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **definir credenciais**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Uma nova ID de aplicativo de destino será adicionada à lista. Selecione a ID do aplicativo de destino e clique em **Set Credentials**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digite a ID do Usuário Oracle e a Senha Oracle, e clique em **OK**.  
   
- Para obter mais informações, consulte a seção "Para criar um aplicativo de destino para a autenticação do SQL Server" em [usar repositório seguro com autenticação do SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Para obter mais informações, consulte a seção "Para criar um aplicativo de destino para a autenticação do SQL Server" em [Store do uso seguro com autenticação do SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Para configurar o aplicativo de serviço PowerPivot  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36009437"
   
 3.  Clique em **Definir configurações do aplicativo de serviço** na seção Ações.  
   
-4.  No **de atualização de dados** seção, defina o **conta de atualização de dados autônoma PowerPivot**para`PowerPivotDataRefresh` e, em seguida, clique em **Okey**.  
+4.  No **atualização de dados** seção, defina as **conta de atualização de dados autônoma PowerPivot**para`PowerPivotDataRefresh` e, em seguida, clique em **Okey**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   

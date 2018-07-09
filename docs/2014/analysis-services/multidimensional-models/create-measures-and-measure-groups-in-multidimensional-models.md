@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 767f85b5fb777dbb7c64301b79041cda3654f000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153487"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Criar medidas e grupos de medidas em modelos multidimensionais
   Uma *medida* é uma agregação de valores de dados numéricos, como soma, contagem, mínima, máxima, média ou uma expressão MDX personalizada criada por você. Um *grupo de medidas* é um contêiner para uma ou mais medidas. Todas as medidas existem em um grupo de medidas, mesmo que haja somente uma medida. Um cubo deve ter pelo menos uma medida e um grupo de medidas.  
@@ -64,7 +64,7 @@ ms.locfileid: "36010310"
   
  O diagrama a seguir representa a tabela de fatos **FactSalesQuota** e duas tabelas de dimensões a ela, **DimTime** e **DimEmployee**. No cubo de exemplo do Adventure Works, essas tabelas são usadas como base para o grupo de medidas Cotas de vendas e as dimensões Tempo e Funcionário.  
   
- ![Tabela FactSalesQuota com duas tabelas de dimensões](../media/factsalesquota.gif "tabela FactSalesQuota com duas tabelas de dimensão")  
+ ![Tabela FactSalesQuota com duas tabelas de dimensões](../media/factsalesquota.gif "tabela FactSalesQuota com duas tabelas de dimensões")  
   
  A tabela de fatos contém dois tipos básicos de colunas: colunas de atributos e colunas de medidas.  
   

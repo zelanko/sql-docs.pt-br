@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - extended events [SQL Server], targets
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbd3b218390cc1a49f7256a7f2cb79228ff8c3c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba3ea863b35142c65b2e5f38789f888d603b6977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160977"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destinos de eventos estendidos são consumidores de evento. Os destinos podem gravar em um arquivo, armazenar dados de evento em um buffer de memória ou agregar dados de evento. Os destinos podem processar dados de forma síncrona ou assíncrona.  
@@ -43,7 +43,7 @@ ms.locfileid: "36009386"
   
      Muitos tipos de eventos ocorrem em pares, como aquisições e liberações de bloqueio. Use para determinar quando um evento emparelhado especificado não ocorre em um conjunto correspondente. Este é um destino assíncrono.  
   
--   [Rastreamento de eventos do Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Rastreamento de eventos para Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Use para correlacionar eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o sistema operacional Windows ou dados de eventos de aplicativos. Este é um destino síncrono.  
   

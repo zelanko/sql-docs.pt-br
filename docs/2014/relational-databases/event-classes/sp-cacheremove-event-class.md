@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db6b0933af52271698622b86b848de16ecbd7cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158417"
 ---
 # <a name="spcacheremove-event-class"></a>Classe de evento SP:CacheRemove
   A classe de evento SP:CacheRemove indica que o procedimento armazenado foi removido do cache do plano.  
@@ -38,7 +38,7 @@ ms.locfileid: "36009985"
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
 |EventClass|`int`|Tipo de evento = 36.|27|não|  
 |EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|não|  
-|EventSubClass|`int`|Tipo de subclasse de eventos:<br /><br /> 1 = Compplan Remove. Um plano de consulta compilado foi removido do cache.<br /><br /> 2 = Proc Cache Flush. Todas as entradas foram removidas do cache de procedimentos.|21|Sim|  
+|EventSubClass|`int`|Tipo de subclasse de eventos:<br /><br /> 1 = 1=compplan Remove. Um plano de consulta compilado foi removido do cache.<br /><br /> 2 = a liberação do Cache de processamento. Todas as entradas foram removidas do cache de procedimentos.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  

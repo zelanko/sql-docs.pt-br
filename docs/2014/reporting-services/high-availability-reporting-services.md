@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150217"
 ---
 # <a name="high-availability-reporting-services"></a>Alta disponibilidade (Reporting Services)
   Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é um servidor sem monitoração de estado que armazena dados de aplicativo, conteúdo, propriedades e informações de sessão em dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Como tal, a melhor maneira de garantir a disponibilidade de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funcionalidade é fazer o seguinte:  
   
--   Use os recursos de alta disponibilidade a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar o tempo de funcionamento dos bancos de dados de servidor de relatório. Se você configurar um [!INCLUDE[ssDE](../includes/ssde-md.md)] da instância para executar em um cluster de failover, você pode selecionar que instância quando você cria um banco de dados do servidor de relatório.  
+-   Use os recursos de alta disponibilidade a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] para maximizar o tempo de atividade dos bancos de dados de servidor de relatório. Se você configurar um [!INCLUDE[ssDE](../includes/ssde-md.md)] da instância para ser executado em um cluster de failover, você pode selecionar que instância quando você cria um banco de dados do servidor de relatório.  
   
 -   Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] com os bancos de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e para fontes de dados, como for possível. Para obter mais informações, confira [Reporting Services com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   
@@ -42,6 +42,6 @@ ms.locfileid: "36010361"
   
 ## <a name="see-also"></a>Consulte também  
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Configurar uma implantação de expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar uma implantação de expansão do servidor de relatório do modo nativo &#40;Configuration Manager do SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

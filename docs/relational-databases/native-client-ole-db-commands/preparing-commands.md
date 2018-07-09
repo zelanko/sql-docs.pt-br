@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca4dcd60cb419baafddbdb1b6f8ae211c01a7061
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703437"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418315"
 ---
 # <a name="preparing-commands"></a>Preparando comandos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "35703437"
   
  A criação de procedimento armazenado temporário é controlada pela propriedade de inicialização SSPROP_INIT_USEPROCFORPREP, específica do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Caso o valor de propriedade seja SSPROPVAL_USEPROCFORPREP_ON ou SSPROPVAL_USEPROCFORPREP_ON_DROP, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client tenta criar um procedimento armazenado durante a preparação de um comando. A criação do procedimento armazenado tem êxito caso o usuário do aplicativo tenha permissões suficientes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para os consumidores que não costumam desconectar, criação de procedimentos armazenados temporários pode exigir recursos significativos de **tempdb**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do sistema no qual os objetos temporários são criados. Quando o valor SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ ON, os procedimentos armazenados temporários criados pelo provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client só são descartados quando a sessão que criou o comando perde a conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso essa conexão seja a padrão criada na inicialização da fonte de dados, o procedimento armazenado temporário só é descartado quando a fonte de dados deixa de ser inicializada.  
+ Para os consumidores que não costumam desconectar, a criação de procedimentos armazenados temporários pode exigir recursos significativos de **tempdb**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do sistema no qual os objetos temporários são criados. Quando o valor SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ ON, os procedimentos armazenados temporários criados pelo provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client só são descartados quando a sessão que criou o comando perde a conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso essa conexão seja a padrão criada na inicialização da fonte de dados, o procedimento armazenado temporário só é descartado quando a fonte de dados deixa de ser inicializada.  
   
  Quando o valor de SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ON_DROP, os procedimentos armazenados temporários do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client são descartados quando ocorre uma das seguintes condições:  
   

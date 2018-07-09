@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149927"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriedades do Índice de Texto Completo (página Geral)
   **Para exibir ou alterar as propriedades modificáveis de um índice de texto completo**  
@@ -69,7 +68,7 @@ ms.locfileid: "36010100"
  O grupo de arquivos ao qual o índice de texto completo pertence.  
   
  **Lista de palavras irrelevantes de índice de texto completo**  
- A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes é uma lista de [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando  **\<OFF >** na lista, ou você pode selecionar uma outra lista de palavras irrelevantes;  **\<Sistema >** indica a lista de palavras irrelevantes do sistema.  
+ A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes é uma lista dos [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando  **\<OFF >** na lista, ou você pode selecionar uma outra lista de palavras irrelevantes;  **\<Sistema >** indica a lista de palavras irrelevantes do sistema.  
   
  **Para criar uma lista de palavras irrelevantes**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "36010100"
  **Lista de propriedades de pesquisa**  
  A lista de propriedades de pesquisa associada atualmente o índice de texto completo, se houver algum. Uma lista de propriedades de pesquisa especifica um conjunto de propriedades de documento que são incluídos no índice de texto completo quando ele é preenchido. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<Desativar >** indica que não há atualmente nenhuma lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando  **\<Off >** na lista, ou você pode selecionar uma lista de propriedades de pesquisa diferente da lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
+ **\<Desativar >** indica que não há atualmente nenhuma lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando  **\<desativar >** na lista, ou você pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
   
 > [!NOTE]  
 >  Você pode associar uma determinada lista de propriedades de pesquisa a mais de um índice de texto completo no mesmo banco de dados.  
@@ -90,7 +89,7 @@ ms.locfileid: "36010100"
  **Contagem de itens de texto completo da tabela**  
  Indica o número de linhas com indexação de texto completo bem-sucedida.  
   
- Essa propriedade corresponde do `TableFulltextItemCount` propriedade retornada pelo OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] função.  
+ Essa propriedade corresponde à `TableFulltextItemCount` propriedade retornada pelo OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] função.  
   
  **Documentos de texto completo da tabela processados**  
  Exibe o número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado. Linhas excluídas não são contadas.  
@@ -100,7 +99,7 @@ ms.locfileid: "36010100"
 |0|Indica que a indexação de texto completo está concluída e que não há população ativa.|  
 |> 0|Para uma população ativa, indica o número de documentos processados pelas operações de inserção ou de atualização desde qualquer uma das seguintes opções: uma população, a habilitação do controle de alterações com população de índice de atualização em segundo plano (como controle de alterações automáticas), a alteração do esquema de índice de texto completo, a reconstrução do catálogo de texto completo, o reinício da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], etc.|  
   
- **Texto completo da tabela as alterações pendentes**  
+ **Texto completo da tabela alterações pendentes**  
  Número de entradas de controle de alterações pendentes a serem processadas.  
   
  0 = o controle de alterações não está habilitado.  
@@ -133,7 +132,7 @@ ms.locfileid: "36010100"
   
 |||  
 |-|-|  
-|**desativar**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
+|**Desativar**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
 |**Manual**|O índice de texto completo não é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes. Porém, as alterações aos dados subjacentes são mantidas e você pode propagá-los para o índice de texto completo ou em uma agenda que usa o SQL Server Agent ou manualmente.|  
 |**Automático**|O índice de texto completo é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes na tabela base.|  
   

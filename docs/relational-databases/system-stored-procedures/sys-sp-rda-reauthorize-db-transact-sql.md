@@ -1,14 +1,11 @@
 ---
-title: sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
+title: sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998533"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407505"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  É a credencial no escopo do banco de dados associada com o banco de dados local habilitado para Stretch.  
   
  @with_copy = *@with_copy*  
- Especifica se deve fazer uma cópia dos dados remotos e conectar-se à cópia (recomendada). *@with_copy* é bit.  
+ Especifica se deve fazer uma cópia dos dados remotos e conecte-se à cópia (recomendada). *@with_copy* é bit.  
   
  @azure_servername = *@azure_servername*  
  Especifica o nome do servidor do Azure que contém os dados remotos. *@azure_servername* é sysname.  
@@ -61,13 +57,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  0 (êxito) ou >0 (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissões db_owner.  
+ Exige permissões db_owner.  
   
 ## <a name="remarks"></a>Remarks  
- Quando você executa [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure, essa operação redefine automaticamente o modo de consulta para LOCAL_AND_REMOTE, que é o comportamento padrão para o Stretch Database. Ou seja, consultas retornam resultados de dados locais e remotos.  
+ Quando você executa [sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados do Azure remoto, essa operação redefine automaticamente o modo de consulta como LOCAL_AND_REMOTE, que é o comportamento padrão para o Stretch Database. Ou seja, consultas retornam resultados de dados locais e remotos.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir restaura a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto. Ele faz uma cópia dos dados remotos (recomendados) e conecta-se a nova cópia.  
+ O exemplo a seguir restaura a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto. Ele faz uma cópia dos dados remotos (recomendados) e conecta-se para a nova cópia.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

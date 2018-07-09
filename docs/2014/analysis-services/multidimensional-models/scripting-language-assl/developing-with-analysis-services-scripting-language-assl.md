@@ -15,22 +15,22 @@ helpviewer_keywords:
 - ASSL
 ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e7cc4d26ca41b36bc1472417d64702345911ceec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b68282f6327ac52cdf47bb761c764609292d7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185165"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Desenvolvendo com ASSL (linguagem de script do Analysis Services)
   ASSL (Linguagem de scripts do Analysis Services) é uma extensão ao XMLA que adiciona uma linguagem de definição de objeto e linguagem de comandos para criar e gerenciar as estruturas do Analysis Services diretamente no servidor. Você pode usar o ASSL em um aplicativo personalizado para comunicar-se com o Analysis Services em um protocolo XMLA. O ASSL é composto de duas partes:  
   
 -   Uma DDL (Linguagem de Definição de Dados), ou linguagem de definição de objeto, define e descreve uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], além de bancos de dados e de objetos de banco de dados contidos na instância.  
   
--   Uma linguagem de comandos que envia comandos de ação, como `Create`, `Alter`ou `Process`, para uma instância do Analysis Services. Essa linguagem de comandos é discutida no [XML for Analysis &#40;XMLA&#41; referência](../../xmla/xml-for-analysis-xmla-reference.md).  
+-   Uma linguagem de comandos que envia comandos de ação, como `Create`, `Alter`ou `Process`, para uma instância do Analysis Services. Essa linguagem de comandos é discutida a [XML for Analysis &#40;XMLA&#41; referência](../../xmla/xml-for-analysis-xmla-reference.md).  
   
  Para exibir o ASSL que descreve uma solução multidimensional no [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], você pode usar o comando de Código de Exibição no nível do projeto. Ainda é possível criar ou editar script ASSL no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] usando o editor de consultas XMLA. Os scripts que você cria podem ser usados para gerenciar objetos ou executar comandos no servidor.  
   

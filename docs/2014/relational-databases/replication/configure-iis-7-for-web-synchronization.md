@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158273"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
   Os procedimentos deste tópico guiarão você pelo processo de configuração manual do Serviços de Informações da Internet (IIS) versão 7 e mais recentes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para uso com sincronização da Web para replicação de mesclagem. 
@@ -58,7 +58,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 4.  Registre replisapi.dll:  
   
-    1.  Clique em **Iniciar**e em **Executar**. No **abrir** , digite `cmd`e, em seguida, clique em **Okey**.  
+    1.  Clique em **Iniciar**e em **Executar**. No **aberto** , digite `cmd`e, em seguida, clique em **Okey**.  
   
     2.  No diretório criado na etapa 1, execute o comando a seguir:  
   
@@ -70,7 +70,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
   
-    2.  Para **Alias**, digite `SQLReplication`.  
+    2.  Para **Alias**, insira `SQLReplication`.  
   
     3.  Para **Caminho físico**, insira **\<unidade>:\Inetpub\SQLReplication\\** e, em seguida, clique em **OK**.  
   
@@ -82,13 +82,13 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     3.  No painel **Ações** , clique em **Adicionar Mapeamento de Módulo**.  
   
-    4.  Para **solicitação** caminho, digite `replisapi.dll`.  
+    4.  Para **solicitar** caminho, digite `replisapi.dll`.  
   
     5.  Na lista suspensa **Módulo** , selecione **IsapiModule**.  
   
     6.  Para **Executável**, insira **\<unidade>:\Inetpub\SQLReplication\replisapi.dll**.  
   
-    7.  Para **nome**, digite `Replisapi`.  
+    7.  Para **nome**, insira `Replisapi`.  
   
     8.  Clique no botão **Restrições da Solicitação** , clique na guia **Acesso** e clique em **Executar**.  
   

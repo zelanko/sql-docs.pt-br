@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting uppercase to lowercase
 - LOWER function
@@ -18,13 +18,13 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f375f8c81a7f1e279c1e74528cc7f92e61f93056
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed93892fc9157e51453db9fe2cac4d541444db77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277012"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (Expressão SSIS)
   Retorna uma expressão character depois de converter caracteres maiúsculos em minúsculos.  
@@ -68,7 +68,7 @@ LOWER(@CityName)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [SUPERIOR &#40;expressão SSIS&#41;](upper-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [SUPERIOR &#40;expressão do SSIS&#41;](upper-ssis-expression.md)   
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

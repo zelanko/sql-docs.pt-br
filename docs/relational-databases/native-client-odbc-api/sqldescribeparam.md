@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,22 +18,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 361c935e8d19a0801769bc314285ee2bc4021d5a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 27c2eb207f6f69ab838a5530cab6d23de5f1de63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432575"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para descrever os parâmetros de qualquer instrução SQL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client cria e executa um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT quando SQLDescribeParam é chamado em um identificador de instrução ODBC preparado. Os metadados do conjunto de resultados determinam as características dos parâmetros na instrução preparada. SQLDescribeParam pode retornar qualquer código de erro que SQLExecute ou SQLExecDirect pode retornar.  
+  Para descrever os parâmetros de qualquer instrução SQL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client cria e executa um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT quando SQLDescribeParam é chamado em um identificador de instrução ODBC preparado. Os metadados do conjunto de resultados determinam as características dos parâmetros na instrução preparada. SQLDescribeParam pode retornar qualquer código de erro que pode retornar SQLExecute ou SQLExecDirect.  
   
- Melhorias no mecanismo de banco de dados, começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir SQLDescribeParam obter descrições mais precisas dos resultados esperados. Esses resultados mais precisos podem ser diferentes dos valores retornados por SQLDescribeParam nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Melhorias no mecanismo de banco de dados a partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir SQLDescribeParam Obtenha descrições mais precisas dos resultados esperados. Esses resultados mais precisos podem ser diferentes dos valores retornados por SQLDescribeParam nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [descoberta de metadados](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Também novo no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* agora retorna um valor que se alinha à definição para o tamanho, em caracteres, da coluna ou expressão do marcador de parâmetro correspondente conforme definido no [ODBC especificação de](http://go.microsoft.com/fwlink/?LinkId=207044). Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* poderia ser o valor correspondente de **SQL_DESC_OCTET_LENGTH** para o tipo ou um valor de tamanho de coluna irrelevante fornecido para SQLBindParameter para um tipo, o valor que deve ser ignorado (**SQL_INTEGER**, por exemplo).  
+ Também nesta nova [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* agora retorna um valor que se alinha com a definição para o tamanho, em caracteres, da coluna ou expressão do marcador de parâmetro correspondente, conforme definido no [ODBC especificação](http://go.microsoft.com/fwlink/?LinkId=207044). Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* pode ser o valor correspondente de **SQL_DESC_OCTET_LENGTH** para o tipo ou um valor de tamanho de coluna irrelevante fornecido para SQLBindParameter para um tipo, o valor que deve ser ignorado (**SQL_INTEGER**, por exemplo).  
   
  O driver não oferece suporte SQLDescribeParam chamada nas seguintes situações:  
   
@@ -47,23 +47,23 @@ ms.locfileid: "35696527"
   
 -   Para qualquer consulta em que um dos parâmetros é um parâmetro para uma função.  
   
--   Quando há comentários (/ * \*/) no [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+-   Quando há comentários (/ * \*/) na [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
   
- Durante o processamento de um lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, o driver também não oferece suporte ao chamar SQLDescribeParam para marcadores de parâmetro em instruções depois da primeira instrução no lote.  
+ Ao processar um lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, o driver também não suporta chamar SQLDescribeParam para marcadores de parâmetro nas instruções após a primeira instrução no lote.  
   
- Ao descrever os parâmetros de procedimentos armazenados preparados, SQLDescribeParam usa o procedimento armazenado do sistema [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) para recuperar características de parâmetro. sp_sproc_columns pode informar dados para procedimentos armazenados no banco de dados do usuário atual. Preparar um nome de procedimento armazenado totalmente qualificado permite SQLDescribeParam executar em bancos de dados. Por exemplo, o sistema de procedimento armazenado [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) pode ser preparada e executada em qualquer banco de dados como:  
+ Ao descrever os parâmetros de procedimentos armazenados preparados, SQLDescribeParam usa o procedimento armazenado do sistema [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) para recuperar características de parâmetro. sp_sproc_columns pode informar dados para procedimentos armazenados no banco de dados do usuário atual. Preparando-se um nome totalmente qualificado de procedimento armazenado permite SQLDescribeParam executar em bancos de dados. Por exemplo, o sistema de procedimento armazenado [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) pode ser preparada e executada em qualquer banco de dados como:  
   
 ```  
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- Executar SQLDescribeParam após uma preparação bem-sucedida retorna uma linha vazia, defina quando conectado a qualquer banco de dados, mas **mestre**. A mesma chamada, preparada como a seguir, faz com que SQLDescribeParam tenha êxito, independentemente do banco de dados do usuário atual:  
+ SQLDescribeParam em execução após a preparação bem-sucedida retorna uma linha vazia definida quando conectado a qualquer banco de dados, mas **mestre**. A mesma chamada, preparada como a seguir, faz com que SQLDescribeParam seja bem-sucedido independentemente do banco de dados do usuário atual:  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- Para tipos de dados de valor grande, o valor retornado em *DataTypePtr* é SQL_VARCHAR, SQL_VARBINARY ou SQL_NVARCHAR. Para indicar que o tamanho do parâmetro de tipo de dados de valor grande é "ilimitado", o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de driver ODBC Native Client *ParameterSizePtr* como 0. Valores de tamanho reais são retornados para o padrão **varchar** parâmetros.  
+ Para tipos de dados de valor grande, o valor retornado em *DataTypePtr* é SQL_VARCHAR, SQL_VARBINARY ou SQL_NVARCHAR. Para indicar que o tamanho do parâmetro de tipo de dados de valor grande é "ilimitado", o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de drivers de ODBC do Native Client *ParameterSizePtr* como 0. Valores de tamanho reais são retornados para standard **varchar** parâmetros.  
   
 > [!NOTE]  
 >  Se o parâmetro já tiver sido associado a um tamanho máximo para os parâmetros SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR, o tamanho associado do parâmetro será retornado, não "ilimitado".  
@@ -89,10 +89,10 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
- Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>Suporte SQLDescribeParam para UDTs CLR grandes  
- **SQLDescribeParam** oferece suporte a grandes CLR definido pelo usuário (UDTs tipos). Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLDescribeParam** suporta tipos CLR grandes definidos pelo usuário (UDTs). Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Função SQLDescribeParam](http://go.microsoft.com/fwlink/?LinkId=59339)   

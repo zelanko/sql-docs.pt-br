@@ -1,12 +1,12 @@
 ---
-title: Suporte ao tipo de dados ODBC de data e hora melhorias | Microsoft Docs
+title: Suporte de tipo de dados para ODBC aprimoramentos de data e hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702627"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431285"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte de tipo de dados para aprimoramentos de hora e data ODBC
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte de tipo de dados para ODBC aprimoramentos de data e hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "35702627"
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:hh:ss'<br /><br /> Este tipo de dados tem precisão de um minuto. O componente de segundos será zero na saída, sendo arredondado pelo servidor na entrada.|  
 |data|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-dd'|  
 |Hora|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh [.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.9999999]'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'aaaa-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Opcionalmente, podem ser especificadas frações de segundo usando até sete dígitos.|  
   
  Não há nenhuma alteração às sequências de escape de ODBC para literais de data/hora.  
@@ -140,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Se o **timezone_hour** for negativo, o **timezone_minute** deve ser negativo ou zero. Se o **timezone_hour** for positivo, o **timezone_minute** deve ser positivo ou zero. Se o **timezone_hour** é zero, o**timezone_minute** pode ter qualquer valor no intervalo-59 por + 59.  
+ Se o **timezone_hour** for negativo, o **timezone_minute** deve ser negativo ou zero. Se o **timezone_hour** for positivo, o **timezone_minute** deve ser positivo ou zero. Se o **timezone_hour** for zero, o s**timezone_minute** pode ter qualquer valor no intervalo-59 por + 59.  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

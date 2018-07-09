@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 43afb9ba50d67d35eb9dabb5542a20f0b847ae88
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1064c0142ddb3162ed58b228308c702360c099d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703797"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432745"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Especifica os seguintes campos de diagnósticos adicionais para **SQLGetDiagField**. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Especifica os campos de diagnósticos adicionais a seguir para **SQLGetDiagField**. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
   
 |Campo de registro de diagnóstico|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Informa o número da linha de um procedimento armazenado que gera um erro. O valor de SQL_DIAG_SS_LINE só será útil se SQL_DIAG_SS_PROCNAME retornar um valor. O valor é retornado como um inteiro de 16 bits sem-sinal.|  
 |SQL_DIAG_SS_MSGSTATE|O estado de uma mensagem de erro. Para obter informações sobre o estado da mensagem de erro, consulte [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). O valor é retornado como um inteiro de 32 bits com assinatura.|  
-|SQL_DIAG_SS_PROCNAME|O nome do procedimento armazenado que gera um erro, se apropriado. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) depende da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele pode ser determinado chamando [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) solicita o valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_PROCNAME|O nome do procedimento armazenado que gera um erro, se apropriado. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) depende da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele pode ser determinado chamando [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) solicitando o valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|O nível de severidade da mensagem de erro associada. O valor é retornado como um inteiro de 32 bits com assinatura.|  
 |SQL_DIAG_SS_SRVNAME|O nome do servidor no qual o erro ocorreu. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) é definido pela macro SQL_MAX_SQLSERVERNAME em sqlncli.h.|  
   

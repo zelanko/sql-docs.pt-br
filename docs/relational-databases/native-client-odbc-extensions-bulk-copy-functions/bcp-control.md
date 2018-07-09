@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e374c65ce0ef97251ffeb5e3511b85868ebcdb74
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8524e9655bef6c48548ecd35e2fa4ce1e2bfbcc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703447"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429905"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_control (
  É um dos seguintes:  
   
  BCPABORT  
- Para uma operação de cópia em massa que já está em andamento. Chamar **bcp_control** com um *eOption* de BCPABORT de outro thread para interromper a execução em massa a operação de cópia. O *iValue* parâmetro é ignorado.  
+ Para uma operação de cópia em massa que já está em andamento. Chame **bcp_control** com um *eOption* de BCPABORT de outro thread para interromper um execução em massa a operação de cópia. O *iValue* parâmetro será ignorado.  
   
  BCPBATCH  
  É o número de linhas por lote. O padrão é 0, que indica todas as linhas de uma tabela, quando os dados estão sendo extraídos, ou todas as linhas no arquivo de dados do usuário, quando os dados estão sendo copiados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor menor que 1 redefine BCPBATCH para o padrão.  
   
  BCPDELAYREADFMT  
- Um booliano, se definido como verdadeiro, fará com que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) Leia na execução. Se false (padrão), bcp_readfmt imediatamente irá ler o arquivo de formato. Um erro de sequência ocorrerá se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
+ Um booliano, se definido como true, fará com que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) Leia na execução. Se false (padrão), bcp_readfmt será imediatamente ler o arquivo de formato. Um erro de sequência ocorrerá se BCPDELAYREADFMT for true e você chamar bcp_columns ou bcp_setcolfmt.  
   
  Um erro de sequência também ocorrerá se você chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` depois de chamar `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` e bcp_writefmt.  
   
@@ -75,7 +75,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: os dados do arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foi obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em uma [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou servidor mais recente, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de um **varchar (max)** coluna, ele será salvo como colunas de texto são salvos no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
+ O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor. Por exemplo, para importar dados que foi obtidos de uma coluna de texto em uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server em uma **varchar (max)** coluna em um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma **varchar (max)** coluna, ele será salvo como colunas de texto são salvos na [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Formatar e podem ser importados para uma coluna de texto de um [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.  
   
  BCPFIRST  
  É a primeira linha de dados a ser copiada em um arquivo ou tabela. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.  
@@ -85,7 +85,7 @@ RETCODE bcp_control (
   
  Para BCP em operações, especifica a primeira linha do arquivo de dados a ser copiada na tabela de banco de dados.  
   
- O *iValue* parâmetro deve ser o endereço de um inteiro assinado de 64 bits que contém o valor. O valor máximo que pode ser passado a BCPFIRSTEX é 2^63-1.  
+ O *iValue* parâmetro deve ser o endereço de um inteiro com sinal de 64 bits que contém o valor. O valor máximo que pode ser passado a BCPFIRSTEX é 2^63-1.  
   
  BCPFMTXML  
  Especifica que o arquivo de formato gerado deve estar no formato XML. Eles está desativado por padrão.  
@@ -112,15 +112,15 @@ RETCODE bcp_control (
   
  Para BCP em operações, especifica a última linha do arquivo de dados a ser copiada na tabela do banco de dados.  
   
- O *iValue* parâmetro deve ser o endereço de um inteiro assinado de 64 bits que contém o valor. O valor de máximo que pode ser passado para BCPLASTEX é 2^63-1.  
+ O *iValue* parâmetro deve ser o endereço de um inteiro com sinal de 64 bits que contém o valor. O valor de máximo que pode ser passado para BCPLASTEX é 2^63-1.  
   
  BCPMAXERRS  
  É o número de erros permitido antes de ocorrer uma falha na operação de cópia em massa. O padrão é 10; um valor menor que 1 redefine essa opção para seu padrão. A cópia em massa impõe um máximo de 65.535 erros. Uma tentativa de definir esta opção como um valor maior que 65.535 resulta na definição da opção como 65.535.  
   
  BCPODBC  
- Especifica que, quando for verdadeiro, **datetime** e **smalldatetime** valores salvos em formato de caractere irá usar o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a DB_OUT.  
+ Quando for verdadeiro, especifica que **datetime** e **smalldatetime** valores salvos no formato de caractere usará o prefixo de sequência de escape de carimbo de hora ODBC e o sufixo. A opção BCPODBC só se aplica a DB_OUT.  
   
- Quando for falso, um **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 1997-01-01 00:00:00.000. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
+ Quando for falso, uma **datetime** valor que representa 1 de janeiro de 1997 é convertido para a cadeia de caracteres: 00:00:00.000 1997-01-01. Quando TRUE, o mesmo **datetime** valor é representado como: {ts ' 00:00:00.000 1997-01-01'}.  
   
  BCPROWCOUNT  
  Retorna o número de linhas afetadas pela operação BCP atual (ou última).  
@@ -132,7 +132,7 @@ RETCODE bcp_control (
  Quando TRUE, especifica que o arquivo de entrada é um arquivo Unicode.  
   
  *iValue*  
- É o valor especificado *eOption*. *iValue* é um valor inteiro (LONGLONG) convertido em um ponteiro void para permitir expansão futura para valores de 64 bits.  
+ É o valor especificado *eOption*. *iValue* é um valor inteiro (LONGLONG) convertido em um ponteiro nulo para permitir expansão futura para valores de 64 bits.  
   
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
