@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d197434bbff97fa3fab1f1e2031c0b37b69d9ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161107"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Selecione uma caixa de diálogo de coluna de chave de tabela aninhada (exibição de estrutura de mineração)
   Use a caixa de diálogo **Selecionar uma Coluna de Chave de Tabela Aninhada** para designar uma coluna que funcionará como chave da nova tabela aninhada. Quando você sair da caixa de diálogo, uma nova tabela será adicionada para a estrutura de mineração que contém a coluna de chave. Você pode adicionar colunas à tabela aninhada clicando com o botão direito na estrutura e selecionando **Adicionar uma Coluna**. A caixa de diálogo contém diferentes opções dependendo se você esta trabalhando com um modelo de mineração OLAP ou um modelo de mineração relacional.  
@@ -50,6 +50,6 @@ ms.locfileid: "36006718"
  Isto só é usado para modelos de mineração de OLAP.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modo de exibição de estrutura de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)  
+ [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

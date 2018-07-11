@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
@@ -16,13 +16,13 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e87c5f2a718bca918b6e05e60a46ff364b7931c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ebea2cea05b050b2a8bca4a51d75784b05190
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158617"
 ---
 # <a name="-equal-ssis-expression"></a>== (Igual a) (Expressão SSIS)
   Executará uma comparação para determinar se duas expressões são iguais. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação. Para obter mais informações, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
@@ -108,7 +108,7 @@ ListPrice == 500
   
 ## <a name="see-also"></a>Consulte também  
  [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   
