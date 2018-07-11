@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], change order in a table
 - column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 07dbfa235a722220d42e68d7f98485a8a85e829f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f78859e33b009b5e3e54fa6432c34dd1349180df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230666"
 ---
 # <a name="change-column-order-in-a-table"></a>Alterar ordem de colunas em uma tabela
   Você pode alterar a ordem das colunas no Designer de Tabela do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

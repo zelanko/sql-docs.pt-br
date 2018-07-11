@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f0c48c0c6a9a6f14e9223cda5da0d45479b9ef3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695517"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423985"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Executando procedimentos armazenados - processar códigos de retorno e parâmetros de saída
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Executando procedimentos armazenados – processar códigos de retorno e parâmetros de saída
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporta a execução de procedimentos armazenados como procedimentos armazenados remotos. Executar um procedimento armazenado como um procedimento armazenado remoto permite que o driver e o servidor otimizem o desempenho da execução do procedimento.  
   
-  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e parâmetros de saída são enviados no último pacote do servidor e não estão disponíveis para o aplicativo até que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) retorna SQL_NO_DATA. Se um erro for retornado por um procedimento armazenado, chame o SQLMoreResults para Avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  
+  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e parâmetros de saída são enviados no último pacote do servidor e não estão disponíveis para o aplicativo até que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA. Se um erro for retornado por um procedimento armazenado, chame o SQLMoreResults para Avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
@@ -39,7 +39,7 @@ ms.locfileid: "35695517"
   
 1.  Construa uma instrução SQL que use a sequência de escape ODBC CALL. A instrução deve usar marcadores de parâmetro para cada entrada/saída e parâmetro de saída, e também para o valor de retorno de procedimento (se houver).  
   
-2.  Chamar [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e para o procedimento retorna o valor (se houver).  
+2.  Chame [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e para o procedimento retornar valor (se houver).  
   
 3.  Execute a instrução com **SQLExecDirect**.  
   

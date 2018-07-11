@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a8e1465528a72ee8a6cbacccc6d5186ff3d7af9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3fc247de8bfc69a1851f8c1bf820a9076cf562ad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696327"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416945"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construindo instruções SQL para cursores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client usa cursores de servidor para implementar a funcionalidade de cursor definida na especificação do ODBC. Um aplicativo ODBC controla o comportamento de cursor usando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir atributos de instrução diferentes. Estes são os atributos e seus padrões.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client usa cursores de servidor para implementar a funcionalidade de cursor definida na especificação de ODBC. Um aplicativo ODBC controla o comportamento do cursor utilizando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir atributos de instrução diferentes. Estes são os atributos e seus padrões.  
   
 |attribute|Padrão|  
 |---------------|-------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "35696327"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Quando essas opções são definidas para os padrões no momento em que uma instrução SQL é executada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client não usa um cursor de servidor para implementar o conjunto de resultados; em vez disso, ele usa um conjunto de resultados padrão. Se alguma dessas opções são alteradas de seus padrões no momento em que uma instrução SQL é executada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client tenta usar um cursor de servidor para implementar o conjunto de resultados.  
+ Quando essas opções são definidas como seus padrões no momento em que uma instrução SQL é executada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client não usa um cursor de servidor para implementar o conjunto de resultados; em vez disso, ele usa um conjunto de resultados padrão. Se qualquer uma dessas opções são alteradas em relação aos padrões no momento em que uma instrução SQL é executada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client tenta usar um cursor de servidor para implementar o conjunto de resultados.  
   
  Conjuntos de resultados padrão oferecem suporte a todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Não há nenhuma restrição quanto aos tipos de instruções SQL que podem ser executados ao usar um conjunto de resultados padrão.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "35696327"
   
      Instruções SQL que contêm as palavras-chave FOR BROWSE ou INTO.  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], caso uma instrução SQL correspondente a alguma dessas condições seja executada com um cursor de servidor, este é implicitamente convertido em um conjunto de resultados padrão. Depois de **SQLExecDirect** ou **SQLExecute** retorna SQL_SUCCESS_WITH_INFO, o cursor atributos serão definidos para suas configurações padrão.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], caso uma instrução SQL correspondente a alguma dessas condições seja executada com um cursor de servidor, este é implicitamente convertido em um conjunto de resultados padrão. Após **SQLExecDirect** ou **SQLExecute** retorna SQL_SUCCESS_WITH_INFO, o atributos serão definidos para suas configurações padrão de cursor.  
   
  As instruções SQL que não se enquadram nas categorias acima podem ser executadas com qualquer configuração de atributo da instrução; elas funcionam igualmente bem com um conjunto de resultados padrão ou um cursor de servidor.  
   
