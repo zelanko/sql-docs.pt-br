@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2995ceae19dc17fc6abd71cbdd102375058237be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185233"
 ---
 # <a name="dimension-element-assl"></a>Elemento Dimension (ASSL)
   Define uma dimensão.  

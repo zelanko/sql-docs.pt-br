@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24525eff885b183b34f5810d79e44e4509e3f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192926"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o estilo em cascata padrão arquivos folhas (. CSS) que definem estilos para o **relatório** barra de ferramentas no Visualizador de HTML e o Gerenciador de relatórios. Se você for um desenvolvedor Web ou possuir conhecimento especializado na criação de folhas de estilo em cascata, poderá modificar os tamanhos padrão por seu próprio risco para alterar cores, fontes e layout da barra de ferramentas do Gerenciador de Relatórios. Nem as folhas de estilo padrão nem as instruções para modificar as folhas de estilo são documentadas nesta versão.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o estilo em cascata padrão arquivos de folha (. CSS) que definem estilos para o **relatório** barra de ferramentas no Visualizador de HTML e o Gerenciador de relatórios. Se você for um desenvolvedor Web ou possuir conhecimento especializado na criação de folhas de estilo em cascata, poderá modificar os tamanhos padrão por seu próprio risco para alterar cores, fontes e layout da barra de ferramentas do Gerenciador de Relatórios. Nem as folhas de estilo padrão nem as instruções para modificar as folhas de estilo são documentadas nesta versão.  
   
  Modificar as folhas de estilo incorretamente pode resultar em erros ao abrir relatórios. Se você não souber modificar folhas de estilo, deve usar as folhas de estilo padrão. Se escolher por personalizar as folhas de estilo, certifique-se de criar um backup para todos os arquivos .css padrão antes de efetuar qualquer modificação.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36006780"
 >  Se desejar usar estilos de relatório predefinidos, use o Assistente de Relatório para criar um relatório. O Assistente de Relatório fornece uma variedade de temas que podem ser usados para criar relatórios estilizados com diferentes combinações de cores e fontes. Os modelos de estilo que definem os temas de um relatório podem ser modificados.  
   
 ## <a name="reporting-services-style-sheets"></a>Folhas de estilo do Reporting Services  
- A tabela a seguir descreve os arquivos de planilha (. CSS) de estilo que são usados em um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalação.  
+ A tabela a seguir descreve os arquivos (. CSS) de folha de estilo que são usados em um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalação.  
   
 |Folha de estilo|Description|  
 |-----------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36006780"
 >  As folhas de estilo a seguir são usadas para documentação on-line do Gerenciador de Relatórios e nunca devem ser modificadas: Sql.css e Mailto.css. Outras folhas de estilo definem estilos para relatórios e para o Gerenciador de Relatórios que abrem em Web parts do SharePoint. Algumas dessas folhas de estilo são Rswebparts.css, Sp_full.css e Sp_small.css. Não é recomendado modificar as folhas de estilo do SharePoint. Para obter mais informações sobre como as Web parts são usadas, consulte [exibir e explorar nativo modo relatórios usando Web Parts do SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurando o Reporting Services para usar uma folha de estilo personalizada  
- É necessário que a folha de estilo seja um arquivo de folha de estilo em cascata (.css) localizado na pasta Estilos. Por padrão, a pasta estilos está localizada em \< *unidade*>: \Program Files\Microsoft SQL Server. *n*\reporting.  
+ É necessário que a folha de estilo seja um arquivo de folha de estilo em cascata (.css) localizado na pasta Estilos. Por padrão, a pasta estilos está localizada em \< *unidade*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
   
  Para usar uma folha de estilo personalizada em tempo de execução para o Visualizador de HTML, é possível escolher entre as seguintes abordagens:  
   

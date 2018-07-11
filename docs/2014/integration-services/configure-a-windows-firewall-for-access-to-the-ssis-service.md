@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
 - Windows Firewall [Integration Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 302d3d9aac30d18ae8ae887cdd65cde7147a9f22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 67a1206afe217ce2f0e358c56ee4df2b16691b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162997"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar um Firewall do Windows para acesso ao serviço SSIS
     
@@ -92,7 +92,7 @@ ms.locfileid: "36006710"
     >  Para configurar o Firewall do Windows, este procedimento usa o item **Firewall do Windows** no Painel de Controle. O item **Firewall do Windows** configura apenas o firewall do perfil do local de rede local. No entanto, também é possível configurar o Firewall do Windows por meio da ferramenta de linha de comando **netsh** ou do snap-in MMC (Console de Gerenciamento) da [!INCLUDE[msCoName](../includes/msconame-md.md)] denominado Firewall do Windows com Segurança Avançada. Para obter mais informações sobre como fazer isso, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando a integração de serviços serviço &#40;serviço SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configurar a integração com o serviço de serviços &#40;serviço SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181523"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece assinaturas controladas por dados de forma que você pode personalizar a distribuição de um relatório baseado em dados de assinante dinâmicos. As assinaturas controladas por dados foram desenvolvidas para os seguintes tipos de cenário:  
@@ -49,7 +49,7 @@ ms.locfileid: "36006544"
 ## <a name="requirements"></a>Requisitos  
  As assinaturas controladas por dados normalmente são criadas e mantidas por administradores de servidor de relatórios. A capacidade de criar assinaturas controladas por dados requer experiência em criação de consultas, conhecimento das fontes de dados que contêm dados de assinante e permissões elevadas em um servidor de relatório.  
   
- O tutorial usará o relatório criado no tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) e dados de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ O tutorial usará o relatório criado no tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) e os dados de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36006544"
   
 -   O serviço do SQL Server Agent deve estar em execução.  
   
--   Um relatório que inclui parâmetros. Este tutorial pressupõe que o relatório de exemplo, `Sales Orders` você cria usando o tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Um relatório que inclui parâmetros. Este tutorial presume que o relatório de exemplo `Sales Orders` você cria usando o tutorial [criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], que fornece dados ao relatório de amostra.  
   
@@ -71,6 +71,6 @@ ms.locfileid: "36006544"
   
 ## <a name="see-also"></a>Consulte também  
  [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
- [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Criar um relatório de tabela básica &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

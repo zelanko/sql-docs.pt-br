@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd91efe4bd802a64ced4e6f93ac65f16ed4e5a71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165287"
 ---
 # <a name="edit-checked-in-files"></a>Editar arquivos com check-in
   Você normalmente deve fazer o check-out de arquivos com controle do código-fonte antes de poder editá-los. Entretanto, é possível configurar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que você possa modificar arquivos que não fizeram check-out. Ao fazer isso, suas alterações são mantidas na memória até os arquivos serem salvos. Você será solicitado a fazer check–out do arquivo no controle do código-fonte.  

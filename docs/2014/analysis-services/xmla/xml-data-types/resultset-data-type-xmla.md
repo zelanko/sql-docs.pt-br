@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8a571012c82c9e4d26d9f586cf67344f19258a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d4e95d3e2b85971271cff4b1365b44e5a30ba0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155067"
 ---
 # <a name="resultset-data-type-xmla"></a>Tipo de dados Resultset (XMLA)
   Define um tipo de dados primitivo abstrato que representa os dados retornados de uma [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  

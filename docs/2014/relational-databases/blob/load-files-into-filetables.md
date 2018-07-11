@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169097"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
   Descreve como carregar ou migrar arquivos para FileTables.  
@@ -48,7 +47,7 @@ ms.locfileid: "36006857"
 ###  <a name="HowToMigrateFiles"></a> Exemplo: migrando arquivos do sistema de arquivos para uma FileTable  
  Neste cenário, seus arquivos são armazenados no sistema de arquivos, e você tem uma tabela de metadados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém ponteiros para os arquivos. Você deseja mover os arquivos para uma FileTable e, em seguida, substituir o caminho UNC original de cada arquivo dos metadados pelo caminho UNC da FileTable. A função [GetPathLocator & #40. O Transact-SQL e 41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) ajuda você a atingir esse objetivo.  
   
- Para este exemplo, suponha que haja uma tabela de banco de dados existente, `PhotoMetadata`, que contém dados sobre fotografias. Esta tabela tem uma coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo. jpg.  
+ Neste exemplo, suponha que há uma tabela de banco de dados existente, `PhotoMetadata`, que contém dados sobre fotografias. Esta tabela tem uma coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo. jpg.  
   
  Para migrar os arquivos de imagem do sistema de arquivos para uma FileTable, você deve fazer o seguinte:  
   

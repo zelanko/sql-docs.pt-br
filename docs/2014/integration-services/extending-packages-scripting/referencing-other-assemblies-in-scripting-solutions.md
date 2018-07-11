@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162977"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Referenciando outros assemblies em soluções de script
   A biblioteca de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] oferece ao desenvolvedor de scripts um conjunto avançado de ferramentas para implementar uma funcionalidade personalizada em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tarefa Script e o componente Script também podem usar assemblies gerenciados personalizados.  
@@ -67,7 +67,7 @@ ms.locfileid: "36006884"
   
  Esta lista descreve várias das classes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usadas com mais frequência:  
   
--   `System.Data` Contém a arquitetura ADO.NET.  
+-   `System.Data` Contém arquitetura ADO.NET.  
   
 -   `System.IO` Fornece uma interface para o sistema de arquivos e fluxos.  
   
@@ -77,17 +77,17 @@ ms.locfileid: "36006884"
   
 -   `System.Environment` Retorna informações sobre o computador local, o usuário atual e as configurações de computador e usuário.  
   
--   `System.Net` Fornece as comunicações de rede.  
+-   `System.Net` Oferece comunicações de rede.  
   
 -   `System.DirectoryServices` Expõe o Active Directory.  
   
 -   `System.Drawing` Fornece bibliotecas de manipulação de imagens extensivos.  
   
--   `System.Threading` Habilita a programação multi-threaded.  
+-   `System.Threading` Habilita a programação multithreaded.  
   
  Para obter mais informações sobre o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consulte a Biblioteca MSDN.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Estender pacotes com scripts](extending-packages-with-scripting.md)  

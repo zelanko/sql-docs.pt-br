@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Expression element
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b56f4d09e59644b63d11c4becbb999f0536479d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d7ba9bbfeddef0d4d7466141cabb914f4289034
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155308"
 ---
 # <a name="expression-element-assl"></a>Elemento Expression (ASSL)
   Contém uma linguagem MDX que define o conteúdo do elemento pai.  
@@ -62,7 +62,7 @@ ms.locfileid: "36007150"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para o `CellPermission` elemento, o `Expression` elemento contém uma expressão MDX lógica que identifica células aplicáveis aos direitos indicados pelo [acesso](access-element-assl.md) elemento o `CellPermission` elemento. Se o valor de um elemento `Expression` para um elemento `CellPermission` estiver vazio, o elemento `CellPermission` será ignorado.  
+ Para o `CellPermission` elemento, o `Expression` elemento contém uma expressão MDX lógica que identifica células aplicáveis aos direitos indicados pelo [Access](access-element-assl.md) elemento do `CellPermission` elemento. Se o valor de um elemento `Expression` para um elemento `CellPermission` estiver vazio, o elemento `CellPermission` será ignorado.  
   
  Para o elemento `StandardAction`, o elemento `Expression` contém uma linguagem MDX que representa o conteúdo da ação. Se o valor de um elemento `Expression` para um elemento `StandardAction` estiver vazio, o elemento `StandardAction` será ignorado.  
   

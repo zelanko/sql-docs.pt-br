@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
 - queries [MDX], about queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ff060a0f570626052cf8577be60850e689566fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155187"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>A consulta básica de MDX (MDX)
   A consulta básica das expressões multidimensionais (MDX) é a instrução SELECT, a consulta MDX mais usada. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  
@@ -113,7 +113,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Para obter exemplos mais detalhados, consulte [Especificação do conteúdo de um eixo de consulta &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)e [Especificação do conteúdo de um eixo de segmentação de dados &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

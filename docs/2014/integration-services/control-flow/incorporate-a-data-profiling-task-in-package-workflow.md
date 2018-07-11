@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164993"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -106,9 +106,9 @@ ms.locfileid: "36006892"
   
 -   Na janela **Variáveis** , adicione e configure as duas seguintes variáveis de pacote:  
   
-    -   Insira o nome, `ProfileConnectionName`, para uma das variáveis e defina o tipo dessa variável como **cadeia de caracteres**.  
+    -   Insira o nome `ProfileConnectionName`, para uma das variáveis e defina o tipo dessa variável como **cadeia de caracteres**.  
   
-    -   Insira o nome, `AddressLine2NullRatio`, para a variável e defina o tipo dessa variável como **duplo**.  
+    -   Insira o nome `AddressLine2NullRatio`, para a variável e defina o tipo dessa variável como **duplo**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar a tarefa Criação de Perfil de Dados  
  A tarefa Criação de Perfil de Dados deve ser configurada do seguinte modo:  
@@ -270,7 +270,7 @@ ms.locfileid: "36006892"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo - Lendo a saída de perfil a partir de uma variável  
  O procedimento anterior mostra como carregar a saída da tarefa Criação de Perfil de Dados a partir de um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
   
--   Chamar o `LoadXml` método o `XmlDocument` classe o `Load` método.  
+-   Chame o `LoadXml` método da `XmlDocument` classe, em vez do `Load` método.  
   
 -   No Editor da tarefa Script, adicione o nome da variável de pacote que contém a saída de perfil para a tarefa `ReadOnlyVariables` lista.  
   

@@ -19,22 +19,22 @@ helpviewer_keywords:
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7bc7d1a6b35b093e9f5fabab41138dc90b9c10ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163307"
 ---
 # <a name="cube-translations"></a>Traduções de cubo
   Uma tradução é um mecanismo simples para alterar os rótulos e legendas exibidos de um idioma para outro. Cada tradução é definida como um par de valores: uma cadeia de caracteres com o texto traduzido e um número com uma ID do idioma. As traduções estão disponíveis para todos os objetos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. As dimensões também podem ter os valores de atributo traduzidos. O aplicativo cliente é responsável por encontrar a configuração de idioma que o usuário definiu e alternar a exibição de todas as legendas e rótulos para esse idioma. Um objeto pode ter a quantidade de traduções que você desejar.  
   
  Um simples objeto <xref:Microsoft.AnalysisServices.Translation> é composto de: número de ID do idioma e legenda traduzida. O número de ID do idioma é um `Integer` com uma ID do idioma. A legenda traduzida é o texto traduzido.  
   
- Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma tradução de cubo é uma representação de específico do idioma do nome de um objeto de cubo, como uma legenda ou uma pasta de exibição. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também oferece suporte às traduções de nomes de membros da dimensão.  
+ Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma tradução de cubo é uma representação específica de idioma do nome de um objeto de cubo, como uma legenda ou uma pasta de exibição. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também oferece suporte às traduções de nomes de membros da dimensão.  
   
  As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Frequentemente, usuários de países diferentes exibem dados de cubo. É útil poder de traduzir vários elementos de um cubo em um idioma diferente de modo que esses usuários possam exibir e compreender os metadados do cubo. Por exemplo, um usuário empresarial na França pode acessar um cubo a partir de uma estação de trabalho com uma configuração de localidade francesa e exibir os valores de propriedade do objeto em francês. Do mesmo modo, um usuário empresarial na Alemanha pode acessar o mesmo cubo a partir de uma estação de trabalho com uma configuração de localidade alemã e exibir os valores de propriedade do objeto em alemão.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36006451"
   
 ## <a name="see-also"></a>Consulte também  
  [Conversões de dimensão](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [Traduções &#40;do Analysis Services&#41;](../translations-analysis-services.md)   
- [Dicas de globalização e práticas recomendadas &#40;do Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Traduções &#40;Analysis Services&#41;](../translations-analysis-services.md)   
+ [Dicas de globalização e práticas recomendadas para o &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   
