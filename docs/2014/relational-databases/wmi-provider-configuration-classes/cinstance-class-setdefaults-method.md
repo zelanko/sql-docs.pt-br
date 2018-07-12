@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba36da4d47b8c9c9a2aa973e143bb44f00b9da43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c17a12c4fa35594482599491071f8342c2118ccf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157987"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Método SetDefaults (classe CInstance)
-  Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir dados existentes.  
+  Define todos os valores padrão para a instância das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir dados existentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   

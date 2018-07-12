@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
 - restoring pages [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a404c6e4a7ace75d1d17f8ca6dfda0eaf603ea92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 27dc4236fa3455ce9993451bf105cc1a2bcbb80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164767"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gerenciar a tabela suspect_pages (SQL Server)
   Este tópico descreve como gerenciar a tabela **suspect_pages** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A tabela **suspect_pages** é usada para manter informações sobre páginas suspeitas e é relevante para ajudar a decidir se a restauração é necessária. A tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) reside no [banco de dados msdb](../databases/msdb-database.md).  

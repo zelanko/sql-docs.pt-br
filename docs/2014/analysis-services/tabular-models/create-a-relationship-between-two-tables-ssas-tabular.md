@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.managereldb.f1
 - sql12.asvs.bidtoolset.createrelatdb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 626bc8153e73e038a26f936d40d814333ebaa0d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3caaf25043cc72246cd173711711ff3ec4ee33f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167247"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Criar uma relação entre duas tabelas (SSAS tabular)
   Se as tabelas da fonte de dados não tiverem relações existentes ou se você adicionar novas tabelas, será possível usar as ferramentas no designer de modelo para criar novas relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "36020783"
 6.  Clique em **Criar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Excluir relações &#40;Tabular do SSAS&#41;](delete-relationships-ssas-tabular.md)   
- [Relações &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)  
+ [Excluir relações de &#40;Tabular do SSAS&#41;](delete-relationships-ssas-tabular.md)   
+ [Relações de &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)  
   
   

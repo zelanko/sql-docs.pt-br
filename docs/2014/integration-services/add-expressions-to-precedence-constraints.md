@@ -1,5 +1,5 @@
 ---
-title: Adicionar expressões às restrições de precedência | Microsoft Docs
+title: Adicionar expressões a restrições de precedência | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161037"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Adicionar expressões a restrições de precedência
   Uma restrição de precedência pode usar uma expressão para definir a restrição entre dois executáveis: o executável de precedência e o executável de restrição. Os executáveis podem ser tarefas ou contêineres. A expressão pode ser usada sozinha ou em combinação com o resultado de execução do executável da restrição. O resultado da execução de um executável pode ter sucesso ou falha. Quando você configura o resultado de execução de uma restrição de precedência, pode definir o resultado de execução como `Success`, `Failure` ou `Completion`. `Success` exige que o executável de precedência tenha sucesso, `Failure` exige que o executável de precedência falhe e `Completion` indica que o executável de restrição deve ser executado independentemente da tarefa de restrição ter sucesso ou falhar. Para obter mais informações, consulte [Precedence Constraints](control-flow/precedence-constraints.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36115496"
   
  ![Restrição de precedência entre duas tarefas](media/mw-dts-03.gif "Restrição de precedência entre duas tarefas")  
   
- Os executáveis também podem ser vinculados usando múltiplas restrições de precedência que contenham expressões diferentes. Por exemplo, na ilustração a seguir, as tarefas B e C estão vinculadas à tarefa A por restrições de precedência que usam resultados de execução e expressões. Ambos os valores de restrição são definidos como `Success.` uma restrição de precedência inclui a expressão `@X >== @Z`, e a restrição de precedência inclui a expressão `@X < @Z`. Dependendo dos valores da variável `X` e da variável `Z`, uma das tarefas C ou B será executada.  
+ Os executáveis também podem ser vinculados usando múltiplas restrições de precedência que contenham expressões diferentes. Por exemplo, na ilustração a seguir, as tarefas B e C estão vinculadas à tarefa A por restrições de precedência que usam resultados de execução e expressões. Ambos os valores de restrição são definidos como `Success.` uma restrição de precedência inclui a expressão `@X >== @Z`, e a outra restrição de precedência inclui a expressão `@X < @Z`. Dependendo dos valores da variável `X` e da variável `Z`, uma das tarefas C ou B será executada.  
   
  ![Expressões em restrições de precedência](media/mw-dts-04.gif "Expressões em restrições de precedência")  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183293"
 ---
 # <a name="nonemptybehavior-element-assl"></a>Elemento NonEmptyBehavior (ASSL)
-  Determina o comportamento não vazio associado com o pai do [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento.  
+  Determina o comportamento não vazio associado ao pai do [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36115293"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `NonEmptyBehavior` propriedade se aplica a `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) definida como *membro*.  
+ O `NonEmptyBehavior` propriedade se aplica ao `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) definido como *membro*.  
   
- O elemento que corresponde ao pai do `NonEmptyBehavior` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ O elemento que corresponde ao pai de `NonEmptyBehavior` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

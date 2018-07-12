@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d8ad863c6af2737aef283424a5c8f1cc469f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228826"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  
@@ -86,19 +86,19 @@ ms.locfileid: "36115371"
 
   
 ##  <a name="InThisSection"></a> Nesta seção  
- [Relatórios detalhados &#40;SSRS e construtor de relatórios&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [Relatórios de detalhamento &#40;relatórios e SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  Explica relatórios abertos quando um usuário clica em um link em um relatório principal.  
   
- [Os sub-relatórios &#40;SSRS e construtor de relatórios&#41;](subreports-report-builder-and-ssrs.md)  
+ [Subrelatórios &#40;relatórios e SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  Explica esses sub-relatórios exibidos no corpo de um relatório principal.  
   
- [Regiões de dados aninhadas &#40;SSRS e construtor de relatórios&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [Regiões de dados aninhadas &#40;relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  Explica o aninhamento de uma região de dados em outra, como um gráfico aninhado dentro de uma matriz.  
   
- [Ação de busca detalhada &#40;SSRS e construtor de relatórios&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [Ação de busca detalhada &#40;relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  Explica o uso da ação de busca detalhada para ocultar e mostrar itens de relatório.  
   
- [Especificando caminhos para itens externos &#40;SSRS e construtor de relatórios&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Especificando caminhos para itens externos &#40;relatórios e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Explica como se referir a itens que são externo ao arquivo de definição de relatório.  
   
 ## <a name="see-also"></a>Consulte também  

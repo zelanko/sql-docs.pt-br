@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8ae61c3f17ba0ad85e6f32aa9ae1f5389114e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156317"
 ---
 # <a name="query-builder"></a>Construtor de Consultas
   Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a ser usada na tarefa Executar SQL, na origem e no destino OLE DB e na transformação Pesquisa.  
@@ -76,9 +76,9 @@ ms.locfileid: "36116202"
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
- [Origem de OLE DB](data-flow/ole-db-source.md)   
+ [Origem OLE DB](data-flow/ole-db-source.md)   
  [Destino OLE DB](data-flow/ole-db-destination.md)   
- [Transformação de pesquisa](data-flow/transformations/lookup-transformation.md)   
+ [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)   
  [Serviços de integração &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)   
  [MERGE em pacotes do Integration Services](control-flow/merge-in-integration-services-packages.md)  
   

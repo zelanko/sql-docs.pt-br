@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187055"
 ---
 # <a name="relationship-representation-tabular"></a>Representação de relação (de tabela)
   Uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados.  
   
- Consulte [representação de relação (Tabular)](relationship-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de relação.  
+ Ver [Relationship Representation (Tabular)](relationship-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de relação.  
   
 ## <a name="relationship-representation"></a>Representação de relação  
  Em modelos de tabela, podem ser definidas várias relações entre duas tabelas. Quando são definidas várias relações entre duas tabelas, somente uma pode ser definida como a relação padrão para o modelo e é chamada de relação Ativa; todas as outras relações são chamadas de Inativas.  

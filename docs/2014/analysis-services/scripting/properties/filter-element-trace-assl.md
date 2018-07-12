@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8997c652883a70572fa83351be51b3381a6fdb7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159347"
 ---
 # <a name="filter-element-trace-assl"></a>Elemento Filter (Trace) (ASSL)
   Contém um fragmento de documento XML que descreve o [rastreamento](../objects/trace-element-assl.md) filtro.  
@@ -62,7 +62,7 @@ ms.locfileid: "36115299"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `Filter` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `Filter` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)   

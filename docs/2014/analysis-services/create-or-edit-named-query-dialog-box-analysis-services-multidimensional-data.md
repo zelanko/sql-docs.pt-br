@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149617"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar/Editar Consulta Nomeada (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar/Editar Consulta Nomeada** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar ou editar uma consulta nomeada no **Designer de Exibição da Fonte de Dados**. Uma consulta nomeada pode ser tratada como uma tabela, na qual você pode basear outros objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Criar/Editar Consulta Nomeada** :  
@@ -62,7 +62,7 @@ ms.locfileid: "36116854"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**Alterne para o construtor de consultas genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br />**Painel SQL**<br />**Painel de resultados**<br />**Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> <br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Alternar para construtor de consultas genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br />**Painel SQL**<br />**Painel de resultados**<br />**Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> <br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Alternar para construtor de consultas VDT**|Selecione para exibir todas as opções disponíveis para a exibição Construtor de Consultas VDT (Visual Database Tools).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas Genérico** estiver selecionado.|  
 |**Painel Mostrar/Ocultar Diagrama**|Mostra ou oculta o painel **Diagrama**.<br /><br /> **Observação** essa opção será exibida apenas se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Painel Mostrar/Ocultar Grade**|Mostra ou oculta o painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
@@ -106,6 +106,6 @@ ms.locfileid: "36116854"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Definir consultas nomeadas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

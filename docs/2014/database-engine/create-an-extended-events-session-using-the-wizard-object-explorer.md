@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155227"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Criar uma sessão de Eventos Estendidos usando o assistente (Pesquisador de Objetos)
   Para ajudar você a selecionar e capturar eventos no servidor, os Eventos Estendidos incluem um Assistente para Nova Sessão que o guiará pelas etapas de criação de uma sessão de Eventos Estendidos. O Assistente para Nova Sessão expõe a maioria da funcionalidade de Eventos Estendidos. A caixa de diálogo [Nova Sessão](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) também permite definir uma sessão de Eventos Estendidos que captura, exibe e analisa seus dados. A caixa de diálogo Nova Sessão expõe toda a funcionalidade de Eventos Estendidos.  
@@ -57,7 +57,7 @@ ms.locfileid: "36116217"
   
 -   [Definir propriedades de sessão](#BKMK_SetSessionProperties)  
   
--   [Escolher modelo](#BKMK_ChooseTemplate)  
+-   [Escolha o modelo](#BKMK_ChooseTemplate)  
   
 -   [Selecionar eventos a serem capturados](#BKMK_SelectEventsToCapture)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36116217"
   
      Para iniciar a sessão ao inicializar o servidor, marque a caixa de seleção **Iniciar a sessão de evento na inicialização do servidor** e clique em **Avançar**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Escolher modelo  
+##  <a name="BKMK_ChooseTemplate"></a> Escolha o modelo  
  Na página **Escolher Modelo** , faça o seguinte:  
   
 -   Selecione a opção **Usar este modelo de sessão de evento** para selecionar um dos modelos de um conjunto de modelos pré-configurados projetados para problemas comuns. Selecione o modelo desejado na lista suspensa e clique em **Avançar**.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
 - geography data type [SQL Server], spatial data
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e328be1225999a629d93ab16c55b2bc4b7f15d5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d6dbc52caa183352376ae04887ec02088e8459ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162177"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
   Há dois tipos de dados espaciais. O tipo de dados `geometry` oferece suporte a dados planares ou a dados euclidianos (planisfério). O tipo de dados `geometry` (planar) está de acordo com os Recursos Simples do Open Geospatial Consortium (OGC) para o SQL Specification versão 1.1.0 e compatível com o SQL MM (padrão ISO).  
   
- Além disso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a `geography` tipo de dados que armazena dados elipsoidais (Terra redonda), como coordenadas de latitude e longitude GPS.  
+ Além disso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a `geography` tipo de dados que armazena dados de elipsoidais (Terra redonda), como coordenadas de latitude e longitude GPS.  
   
 > [!IMPORTANT]  
 >  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo aprimoramentos nos tipos de dados espaciais, baixe o white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(Novos recursos espaciais no SQL Server codinome "Denali").  
@@ -37,11 +37,11 @@ ms.locfileid: "36115651"
 ##  <a name="objects"></a> Objetos de dados espaciais  
  Os tipos de dados `geometry` e `geography` oferecem suporte a dezesseis objetos de dados espaciais, ou tipos de instâncias. No entanto, apenas onze desses tipos de instâncias *podem ser instanciados*. É possível criar e trabalhar com essas instâncias (ou criar uma instância delas) em um banco de dados. Essas instâncias derivam determinadas propriedades de seus tipos de dados pai que as distingue como `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` ou como vários `geometry`ou `geography` instâncias em um `GeometryCollection`. O tipo `Geography` tem um tipo de instância adicional, `FullGlobe`.  
   
- A figura a seguir ilustra o `geometry` hierarquia na qual o `geometry` e `geography` são com base em tipos de dados. Os tipos podem ser instanciados de `geometry` e `geography` são indicados em azul.  
+ A figura a seguir ilustra a `geometry` hierarquia na qual o `geometry` e `geography` baseiam-se os tipos de dados. Os tipos podem ser instanciados de `geometry` e `geography` são indicados em azul.  
   
- ![Hierarquia de tipo de geometria](../../database-engine/media/geom-hierarchy.gif "hierarquia de tipo de geometria")  
+ ![Hierarquia do tipo geometria](../../database-engine/media/geom-hierarchy.gif "hierarquia do tipo geometry")  
   
- Como a Figura indica, os dez tipos podem ser instanciados do `geometry` e `geography` tipos de dados são `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, e `GeometryCollection`. Há um tipo adicional do qual se pode criar uma instância para o tipo de dados de geography: `FullGlobe`. O `geometry` e `geography` tipos podem reconhecer uma instância específica desde que é uma instância bem formada, mesmo se a instância não for definida explicitamente. Por exemplo, se você definir um `Point` instância explicitamente usando o método stpointfromtext (), `geometry` e `geography` reconhecem a instância como um `Point`, desde que a entrada do método esteja bem formada. Se você definir a mesma instância usando o método `STGeomFromText()`, os tipos de dados `geometry` e `geography` a reconhecerão como uma instância de `Point`.  
+ Como a Figura indica, os dez tipos podem ser instanciados do `geometry` e `geography` tipos de dados são `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, e `GeometryCollection`. Há um tipo adicional do qual se pode criar uma instância para o tipo de dados de geography: `FullGlobe`. O `geometry` e `geography` tipos podem reconhecer uma instância específica desde que ele seja bem-formada, mesmo se a instância não está definida explicitamente. Por exemplo, se você definir um `Point` explicitamente usando o método stpointfromtext (), da instância `geometry` e `geography` reconhecem a instância como um `Point`, desde que a entrada do método esteja bem formada. Se você definir a mesma instância usando o método `STGeomFromText()`, os tipos de dados `geometry` e `geography` a reconhecerão como uma instância de `Point`.  
   
  Os subtipos dos tipos geometry e geography são divididos em tipos simples e de coleção.  Alguns métodos como `STNumCurves()` só funcionam com tipos simples.  
   
@@ -82,20 +82,20 @@ ms.locfileid: "36115651"
 ### <a name="measurements-in-spatial-data-types"></a>Medidas em tipos de dados espaciais  
  No sistema planar ou de terra plana, as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o `geometry` tipo de dados, a distância entre (2, 2) e (5, 6) é de 5 unidades, independentemente das unidades usadas.  
   
- No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto, comprimentos e áreas são normalmente medidas em metros e metros quadrados, embora a medida possa depender do identificador de referência espacial (SRID) do `geography` instância. A unidade de medida mais comum de `geography` tipo de dados é em metros.  
+ No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto, comprimentos e áreas são normalmente medidas em metros e metros quadrados, embora a medida possa depender de identificador de referência espacial (SRID) do `geography` instância. A unidade mais comuns de medida para o `geography` tipo de dados é em metros.  
   
 ### <a name="orientation-of-spatial-data"></a>Orientação de dados espaciais  
  No sistema de planar, a orientação de anel de um polígono não é um fator importante. Por exemplo, um polígono descrito por ((0, 0), (10, 0), (0, 20), (0, 0)) é o mesmo que um polígono descrito por ((0, 0), (0, 20), (10, 0), (0, 0)). Os Recursos Simples do OGC para SQL Specification não ditam uma ordenação de anel e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não impõe ordenação de anel.  
   
  Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o `geography` tipo de dados para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela regra à esquerda.  
   
- Quando o nível de compatibilidade é 100 ou abaixo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o `geography` tipo de dados tem as seguintes restrições:  
+ Quando o nível de compatibilidade for 100 ou abaixo na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o `geography` tipo de dados tem as seguintes restrições:  
   
 -   Cada instância de `geography` deve se ajustar dentro de um único hemisfério. Nenhum objeto espacial maior do que um hemisfério pode ser armazenado.  
   
 -   Qualquer instância de `geography` de uma representação WKT (Well-Known Text) ou WKB (Well-Known Binary) do Open Geospatial Consortium (OGC) que reproduza um objeto maior do que um hemisfério aciona uma `ArgumentException`.  
   
--   O `geography` que requerem a entrada de dois métodos de tipo de dados `geography` instâncias, como stintersection (), Stunion, stdifference () e stsymdifference (), retornarão nulas se os resultados dos métodos não couberem em um único hemisfério. STBuffer() também retornará nulo se a saída ultrapassar um único hemisfério.  
+-   O `geography` que requerem a entrada de dois métodos de tipo de dados `geography` instâncias, como stintersection (), stunion (), stdifference () e stsymdifference (), retornarão nulas se os resultados dos métodos não couberem em um único hemisfério. STBuffer() também retornará nulo se a saída ultrapassar um único hemisfério.  
   
  No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` é um tipo especial de Polígono que abrange o globo inteiro. `FullGlobe` tem uma área, mas nenhuma borda ou vértices.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36115651"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- Este exemplo mostra como armazenar os triângulos Isósceles anteriores que usam um `LineString` instância e `CircularString` instância:  
+ Este exemplo mostra como armazenar os triângulos Isósceles anteriores usando um `LineString` instância e `CircularString` instância:  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -174,13 +174,13 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  ou em  
   
- Nos exemplos anteriores, em um `LineString` instância ou um `CompoundCurve` instância poderia armazenar a figura.  O exemplo a seguir usa um `CompoundCurve` para armazenar uma fatia de pizza:  
+ Nos exemplos anteriores, uma `LineString` instância ou um `CompoundCurve` instância poderia armazenar a figura.  O exemplo a seguir usa um `CompoundCurve` para armazenar uma fatia de pizza:  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
- Um `CompoundCurve` instância pode armazenar o segmento de arco circular (2 2, 3 1, 0 2) diretamente, enquanto um `LineString` instância precisa converter a curva em vários segmentos de linha menores.  
+ Um `CompoundCurve` instância pode armazenar o segmento de arco circular (2 de 2, 3 1, 0 2) diretamente, enquanto um `LineString` instância precisaria converter a curva em vários segmentos de linha menores.  
   
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Comparação de CircularString e CompoundCurve  
  O exemplo de código a seguir mostra como a fatia de pizza pode ser armazenada em uma instância `CircularString`:  
@@ -206,7 +206,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparação de Polygon e CurvePolygon  
- `CurvePolygon` as instâncias podem usar `CircularString` e `CompoundCurve` instâncias ao definir seus anéis exterior e interior.  `Polygon` instâncias não é possível usar os tipos de segmento de arco circular: `CircularString` e `CompoundCurve`.  
+ `CurvePolygon` as instâncias podem usar `CircularString` e `CompoundCurve` ao definir seus anéis exterior e interior.  `Polygon` instâncias não é possível usar os tipos de segmento de arco circular: `CircularString` e `CompoundCurve`.  
   
   
 ## <a name="see-also"></a>Consulte também  

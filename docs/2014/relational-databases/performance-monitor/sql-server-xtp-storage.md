@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 897a3a2e9e3cc592281be87593aa6356ce474c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b2f18eb1db7ef854b4d982d18374b174ecf65641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156437"
 ---
 # <a name="xtp-storage"></a>Armazenamento de XTP
   O objeto de desempenho do Armazenamento de XTP contém os contadores relacionados ao Armazenamento de XTP no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,6 +38,6 @@ ms.locfileid: "36115884"
 |**Total de arquivos mesclados**|O número total de arquivos de origem mesclados. Esta contagem pode ser usada para localizar o número médio de arquivos de origem na mesclagem.|  
   
 ## <a name="see-also"></a>Consulte também  
- [XTP &#40;OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
   

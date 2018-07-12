@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b2fa8916d222694c26e4a3bef50cb447eeafbeec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183853"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Alterar a extensão de entrega padrão do Reporting Services
   Você pode modificar as definições de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para alterar a extensão de entrega padrão que aparece na lista **Entregue por** de uma página de definição de assinatura. Por exemplo, você pode modificar a configuração de modo que quando os usuários criem uma nova assinatura, a entrega de compartilhamento de arquivos seja selecionada por padrão, em vez da entrega de email. Você também pode alterar a ordem em que as extensões de entrega são listadas na interface do usuário.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modo do SharePoint do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui a entrega de email e compartilhamento de arquivos do Windows são extensões. O servidor de relatório pode ter extensões de entrega adicionais caso extensões personalizadas ou de terceiros tenham sido implantadas para oferecer suporte à entrega personalizada. A disponibilidade de uma extensão de entrega depende de sua implantação em um servidor de relatório.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui as entregas email e compartilhamento de arquivos do Windows são extensões. O servidor de relatório pode ter extensões de entrega adicionais caso extensões personalizadas ou de terceiros tenham sido implantadas para oferecer suporte à entrega personalizada. A disponibilidade de uma extensão de entrega depende de sua implantação em um servidor de relatório.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configuração padrão de servidor de relatório em modo nativo  
  A ordem de uma extensão de entrega que aparece no Report Manager na lista **Entregue por** baseia-se na ordem das entradas de extensão de entrega do arquivo **RSReportServer.config** . Por exemplo, a imagem a seguir mostra email em primeiro lugar na lista e é selecionada por padrão.  
@@ -108,7 +108,7 @@ ms.locfileid: "36020847"
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Executar o PowerShell a seguir para verificar se a extensão de entrega padrão atual para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" do aplicativo de serviço.  
+3.  Execute o PowerShell a seguir para verificar se a extensão de entrega padrão atual para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" do aplicativo de serviço.  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
@@ -118,8 +118,8 @@ ms.locfileid: "36020847"
 ## <a name="see-also"></a>Consulte também  
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Entrega de compartilhamento de arquivos no Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

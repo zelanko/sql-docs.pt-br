@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163799"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório, você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [tabelas &#40;construtor de relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), ou [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -124,6 +124,6 @@ ms.locfileid: "36115154"
  É possível dividir uma célula mesclada previamente. Você pode dividir as células horizontalmente em colunas ou verticalmente em linhas. Para dividir uma célula em um bloco de células, divida primeiro a célula horizontalmente e divida verticalmente quantas vezes forem necessárias.  
   
 ## <a name="see-also"></a>Consulte também  
- [Região de dados Tablix &#40;SSRS e construtor de relatórios&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Região de dados Tablix &#40;relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

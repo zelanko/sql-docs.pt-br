@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3c3cf457cf85f4e29074e5ed6cbba7f5f87ead3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 37fa2a790e5eeeabd621cd6581848d913f178138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182873"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Razão Nula de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Razão Nula de Coluna** selecionada no painel de solicitações. O perfil Razão Nula de Coluna informa a porcentagem de valores nulos na coluna selecionada. Este perfil pode ajudar a identificar problemas em seus dados, como uma inesperada razão alta de valores nulos em uma coluna. Por exemplo, um perfil Razão Nula de Coluna pode criar um perfil de uma coluna Código Postal/CEP e descobrir uma porcentagem excessivamente elevada de códigos postais ausentes.  
@@ -74,7 +74,7 @@ ms.locfileid: "36116204"
  Digite um nome descritivo para identificar esta solicitação de perfil. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa de criação de perfil dados &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa de criação de perfil &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149497"
 ---
 # <a name="measurequalificaton-element-assl"></a>Elemento MeasureQualification (ASSL)
-  Determina se um prefixo é aplicado nas medidas no [MeasureGroup](../objects/group-element-assl.md).  
+  Determina se um prefixo é aplicado nas medidas na [MeasureGroup](../objects/group-element-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36116455"
 |*PrefixMeasureGroup*|O nome exclusivo e a legenda de cada medida desse grupo de medidas têm um prefixo que é o nome do grupo de medidas e um único espaço.|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `MeasureQualification` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ O elemento que corresponde ao pai de `MeasureQualification` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
 - TRIM function
@@ -17,13 +17,13 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef5a948e4734c1965217702f600605666c385c01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f6ebc237ccedbde4cc2b7a9cabc848846eef511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184603"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (Expressão SSIS)
   Retorna uma expressão de caractere depois de remover espaços em branco à esquerda e direita.  
@@ -64,8 +64,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [LTRIM &#40;expressão SSIS&#41;](trim-ssis-expression.md)   
- [RTRIM &#40;expressão SSIS&#41;](rtrim-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [LTRIM &#40;expressão do SSIS&#41;](trim-ssis-expression.md)   
+ [RTRIM &#40;expressão do SSIS&#41;](rtrim-ssis-expression.md)   
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

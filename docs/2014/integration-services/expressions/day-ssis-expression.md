@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
@@ -16,13 +16,13 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b569d3114e89d623b896ed33a87aa95dc1cff32a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79780ad62800eac8dfabbd6c8b80eacc3abe5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148747"
 ---
 # <a name="day-ssis-expression"></a>DAY (Expressão SSIS)
   Retorna um inteiro que representa a parte do dia em uma data.  
@@ -71,11 +71,11 @@ DAY(GETDATE())
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [DATEADD &#40;expressão SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;expressão SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;expressão do SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;expressão do SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;Expressão do SSIS&#41;](datepart-ssis-expression.md)   
  [MONTH &#40;Expressão do SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;Expressão do SSIS&#41;](year-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

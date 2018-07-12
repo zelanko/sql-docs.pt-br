@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159857"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Implantação de script e tarefas administrativas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao uso de scripts para automatizar a instalação, a implantação e as tarefas administrativas de rotina. A implantação de um servidor de relatórios é um processo de várias etapas. É preciso usar diversos processos e ferramentas para configurar uma implantação. Não existe nenhum programa ou abordagem que possa ser usado para automatizar todas as tarefas.  
@@ -56,7 +56,7 @@ ms.locfileid: "36115851"
 |Configure a conexão do banco de dados do servidor de relatórios.|Se estiver alterando a cadeia de conexão, a conta, a senha ou o tipo de autenticação da conexão, execute o utilitário **rsconfig** para configurar a conexão. Para obter mais informações, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) e [Utilitário rsconfig &#40;SSRS&#41;](rsconfig-utility-ssrs.md).<br /><br /> Não é possível usar rsconfig.exe para criar ou atualizar o banco de dados. O banco de dados e a RSExecRole já devem existir.|  
 |Configure uma implantação de expansão.|Escolha dentre as seguintes abordagens para automatizar a implantação de expansão:<br /><br /> Execute o utilitário rskeymgmt.exe para unir instâncias do servidor de relatórios a uma instalação existente. Para obter mais informações, consulte [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br /><br /> Escreva o código personalizado executado no provedor WMI do Servidor de Relatórios.|  
 |Backup de chaves de criptografia.|Escolha dentre as seguintes abordagens para automatizar o backup da chave de criptografia:<br /><br /> Execute o utilitário rskeymgmt.exe para fazer o backup das chaves. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br /><br /> Escreva o código personalizado executado no provedor WMI do Servidor de Relatórios.|  
-|Configure o email do Servidor de Relatórios.|Escreva o código personalizado executado no provedor WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O provedor oferece suporte a um subconjunto de configurações de email.<br /><br /> Embora o arquivo RSReportServer.config inclua todas as configurações, não utilize o arquivo de maneira automatizada. Mais especificamente, não use um arquivo em lotes para copiar o arquivo para outro servidor de relatórios. Cada arquivo de configuração inclui valores que são específicos à instância atual. Esses valores não serão válidos em outras instâncias de servidor de relatórios.<br /><br /> Para obter mais informações sobre as configurações, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
+|Configure o email do Servidor de Relatórios.|Escreva o código personalizado executado no provedor WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O provedor oferece suporte a um subconjunto de configurações de email.<br /><br /> Embora o arquivo RSReportServer.config inclua todas as configurações, não utilize o arquivo de maneira automatizada. Mais especificamente, não use um arquivo em lotes para copiar o arquivo para outro servidor de relatórios. Cada arquivo de configuração inclui valores que são específicos à instância atual. Esses valores não serão válidos em outras instâncias de servidor de relatórios.<br /><br /> Para obter mais informações sobre as configurações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
 |Configure a conta de execução autônoma.|Escolha dentre as seguintes abordagens para automatizar a configuração de conta de processamento autônoma:<br /><br /> Execute o utilitário rsconfig.exe para configurar a conta. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br /><br /> Escreva código personalizado que faz chamadas no provedor de WMI do servidor de relatório.|  
 |Implemente o conteúdo existente em outro servidor de relatórios, incluindo a hierarquia de pastas, as atribuições de função, os relatórios, as assinaturas, as agendas, as fontes de dados e os recursos.|A melhor maneira de recriar um ambiente de servidor de relatórios existente é copiar o banco de dados do servidor de relatórios para uma nova instância de servidor de relatórios.<br /><br /> Outra opção é escrever o código personalizado que recria o conteúdo do servidor de relatórios existente de forma programada. No entanto, lembre-se que as assinaturas, os instantâneos de relatório e o histórico de relatórios não podem ser recriados de forma programada.<br /><br /> Algumas implantações se beneficiam de ambas as técnicas juntas (ou seja, restaurar um banco de dados do servidor de relatórios e, em seguida, executar o código personalizado que modifica o banco de dados do servidor de relatórios para uma instalação específica).<br /><br /> Para obter um exemplo detalhado, consulte [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> Para obter mais informações sobre como relocar um banco de dados do servidor de relatório, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). Para obter mais informações sobre a criação do ambiente do servidor de relatórios de forma programada, consulte a seção "Usando o script para migrar conteúdo e pastas do servidor de relatórios" neste tópico.|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36115851"
  Para obter mais informações sobre como formatar e executar um arquivo de script, consulte [utilitário e o serviço Web de Script com o rs.exe](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Usando scripts para configurar propriedades do servidor  
- Você pode escrever scripts que configuram as propriedades do sistema no servidor de relatórios. O script .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a seguir exibe um modo de configurar as propriedades. Este exemplo desabilita o controle RSClientPrint ActiveX, mas você pode substituir `EnableClientPrinting` e `False` com qualquer valor e nome de propriedade válido. Para exibir uma lista completa das propriedades do servidor, consulte [propriedades de sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Você pode escrever scripts que configuram as propriedades do sistema no servidor de relatórios. O script .NET [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a seguir exibe um modo de configurar as propriedades. Este exemplo desabilita o controle ActiveX de RSClientPrint, mas você pode substituir `EnableClientPrinting` e `False` com qualquer valor e nome de propriedade válido. Para exibir uma lista completa das propriedades do servidor, consulte [propriedades de sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Para usar o script, salve-o em um arquivo com extensão .rss e, em seguida, use o utilitário de prompt de comando rs.exe para executar o arquivo no servidor de relatórios. O script não é compilado, logo não é necessário ter uma instalação de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Este exemplo supõe que você possui permissões no computador local que hospeda o servidor de relatórios. Caso não esteja conectado por uma conta que possua permissões, é preciso especificar as informações de conta por meio de argumentos de linha de comando adicionais. Para obter mais informações, consulte [Utilitário RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
@@ -125,14 +125,14 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método GenerateDatabaseCreationScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [Método GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [Método GenerateDatabaseCreationScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [Método GenerateDatabaseRightsScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [Método GenerateDatabaseUpgradeScript &#40;Msreportserver_configurationsetting&#41&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Instalar o servidor de relatório de modo nativo do Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitários de Prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Planejamento para o Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Ferramentas do Reporting Services](reporting-services-tools.md)  
   
   

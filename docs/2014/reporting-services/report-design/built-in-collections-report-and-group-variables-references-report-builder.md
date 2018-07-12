@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148487"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
   Quando há um cálculo complexo usado mais de uma vez em expressões em um relatório, convém criar uma variável. É possível criar uma variável do relatório ou uma variável do grupo. Os nomes de variável devem ser exclusivos em um relatório.  
@@ -51,7 +51,7 @@ ms.locfileid: "36116317"
   
 -   **Uso de leitura-gravação** Defina um valor uma vez e serialize-o dentro da sessão de relatório. A opção de leitura-gravação para variáveis fornece uma alternativa melhor do que o uso de uma variável estática no bloco de Código na definição do relatório.  
   
-     Quando você desmarca o **somente leitura** opção para uma variável, a propriedade gravável para a variável é definida como `true`. Para atualizar o valor de uma expressão, use o método SetValue, por exemplo, `=Variables!MyVariable.SetValue("123")`.  
+     Quando você desmarca a **somente leitura** para a variável é definida como a opção para uma variável, a propriedade Writable `true`. Para atualizar o valor de uma expressão, use o método SetValue, por exemplo, `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Não é possível controlar quando o processador do relatório inicializa uma variável ou avalia uma expressão que atualiza uma variável. A ordem de execução da inicialização da variável não é definida.  
@@ -77,7 +77,7 @@ ms.locfileid: "36116317"
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Coleções internas em expressões &#40;SSRS e construtor de relatórios&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Coleções internas em expressões &#40;relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

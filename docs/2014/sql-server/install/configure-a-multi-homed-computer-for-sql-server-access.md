@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183893"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
   Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
@@ -59,9 +59,9 @@ ms.locfileid: "36115353"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar os endereços IP no computador.  
   
-1.  No computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado, clique em **iniciar**, clique em **executar**, tipo `cmd` e [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  No computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado, clique em **iniciar**, clique em **execute**, digite `cmd` e, em seguida, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Na janela do Prompt de comando, digite `ipconfig,` e pressione ENTER para listar os endereços IP disponíveis neste computador.  
+2.  Na janela do Prompt de comando, digite `ipconfig,` e, em seguida, pressione ENTER para listar os endereços IP disponíveis neste computador.  
   
     > [!NOTE]  
     >  O comando **ipconfig** , às vezes, lista diversas conexões possíveis, incluindo conexões que são desconectadas. O comando **ipconfig** pode listar endereços IPv4 e IPv6.  
@@ -89,7 +89,7 @@ ms.locfileid: "36115353"
   
 1.  No computador no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, faça logon como um administrador.  
   
-2.  Clique em **iniciar**, clique em **executar**, tipo `wf.msc`e clique em **Okey**.  
+2.  Clique em **inicie**, clique em **execute**, digite `wf.msc`e clique em **Okey**.  
   
 3.  Na caixa de diálogo **Controle de Conta de Usuário** , clique em **Continuar** para usar as credenciais de Administrador para abrir o snap-in Firewall do Windows com Segurança Avançada.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
 - queries [Reporting Services], data-driven subscriptions
@@ -18,13 +18,13 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 811851675f317e6807f22035152a48b18a372eb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183913"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  
@@ -39,7 +39,7 @@ ms.locfileid: "36115848"
   
 -   [Definir uma consulta que recupera informações de assinatura](#bkmk_define_query)  
   
--   [Executa uma assinatura](#bkmk_run_subscription)  
+-   [Executar uma assinatura](#bkmk_run_subscription)  
   
 -   [Gerenciar e excluir uma assinatura controlada por dados](#bkmk_manage_and_delete)  
   
@@ -98,15 +98,15 @@ ms.locfileid: "36115848"
   
  Para esta etapa, a consulta deve ser validada a consulta antes de continuar. A validação não processa a consulta, mas ela retorna uma lista de todas as colunas que estão no conjunto de linhas para que você possa fazer referência a colunas nas seleções subsequentes. Se houver falha na validação da consulta, você não poderá continuar. Há uma falha na validação da consulta se a sintaxe da consulta estiver incorreta ou se a conexão com a fonte de dados não for válida. Use o botão **Voltar** para fazer correções na fonte de dados.  
   
-##  <a name="bkmk_run_subscription"></a> Executa uma assinatura  
+##  <a name="bkmk_run_subscription"></a> Executar uma assinatura  
  Você configura as condições para o processamento da assinatura. Você pode configurar uma agenda ou pode disparar a assinatura para coincidir com as atualizações para um instantâneo de execução do relatório.  
   
- ![Observação](../media/rs-fyinote.png "Observação") enquanto não houver nenhum recurso na interface do usuário que você pode usar para executar imediatamente uma assinatura, você pode usar um script simples do Windows PowerShell para disparar a execução de uma assinatura. Para obter mais informações, consulte o "Script: executar (acionar) uma única assinatura" seção [usar o PowerShell para alterar e Reporting Services Subscription Owners lista e executar uma assinatura](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Observação](../media/rs-fyinote.png "Observação") enquanto não há nenhum recurso na interface do usuário que você pode usar para executar uma assinatura imediatamente, você pode usar um script simples do Windows PowerShell para disparar uma assinatura para ser executado. Para obter mais informações, consulte o "Script: executar (acionar) uma única assinatura" seção [usar o PowerShell para a alteração e lista Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Agenda e condições para execução de assinaturas controladas por dados é o mesmo que processamento para assinaturas padrão.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gerenciar e excluir uma assinatura controlada por dados  
- Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para obter mais informações, consulte [criar e gerenciar assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
+ Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para obter mais informações, consulte [crie e gerencie assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  Para excluir uma assinatura controlada por dados, selecione-a na página Minhas Assinaturas ou na página Assinaturas de um relatório e clique em **Excluir**.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "36115848"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Criar e gerenciar assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Página Assinaturas &#40;Gerenciador de Relatórios&#41;](../subscriptions-page-report-manager.md)   
  [Página Minhas Assinaturas &#40;Gerenciador de Relatórios&#41;](../my-subscriptions-page-report-manager.md)  
   

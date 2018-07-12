@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a57374d5a33afe95539b00b3cb3eeb4801915064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ce41539fc2dfadf7e2499a0828ad44752948666e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157727"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Pontos de dados vazios e nulos em gráficos (Construtor de Relatórios e SSRS)
   Se você estiver exibindo campos com valores vazios ou nulos em seu gráfico, o gráfico poderá não ficar como você espera. Gráficos processam valores vazios de maneira diferente dependendo do tipo de gráfico especificado:  
   
--   Se o gráfico for do tipo linear (barras, colunas, dispersão, linhas, área, intervalo), os valores vazios serão exibidos como espaços vazios ou "lacunas". Para indicar pontos vazios, é necessário adicionar espaços reservados de pontos vazios. Para obter mais informações, consulte [adicionar pontos de vazios ao gráfico &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Se o gráfico for do tipo linear (barras, colunas, dispersão, linhas, área, intervalo), os valores vazios serão exibidos como espaços vazios ou "lacunas". Para indicar pontos vazios, é necessário adicionar espaços reservados de pontos vazios. Para obter mais informações, consulte [adicionar pontos vazios a gráfico de &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se o gráfico for do tipo linear contíguo (área, barra, coluna, linha, dispersão), pontos de dados vazios serão adicionados ao gráfico para manter a continuidade na série.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36116075"
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Adicionar um gráfico a um relatório &#40;SSRS e construtor de relatórios&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Solucionar problemas de gráficos &#40;SSRS e construtor de relatórios&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Adicionar um gráfico a um relatório &#40;relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Solucionar problemas de gráficos &#40;relatórios e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

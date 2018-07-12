@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7f33036175d395359efbdb5708a422b27bf711db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153867"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Aplicativos de serviço são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.  
@@ -131,7 +131,7 @@ ms.locfileid: "36116092"
   
 |Página|Description|  
 |----------|-----------------|  
-|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. É recomendável armazenar o arquivo de chave em um computador separado daquele que está executando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
+|Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. Você deve pensar em armazenar o arquivo de chave em um computador separado daquele que está sendo executado [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|  
 |Restaurar chave de criptografia|1) Digite ou navegue até o arquivo da chave na caixa **Local do Arquivo**<br /><br /> 2) Na caixa **Senha** , digite a senha que foi usada para fazer backup do arquivo de criptografia.<br /><br /> 3) Clique em **OK**|  
 |Alterar Chave de Criptografia|Esta operação criará uma nova chave e criptografará novamente seu conteúdo criptografado. Se você tiver muito conteúdo, esta operação poderá levar várias horas.<br /><br /> Quando a operação de alteração de chave de criptografia for concluída, é recomendado que você faça um backup de sua nova chave.|  
 |Conteúdo Criptografado Excluído|O conteúdo excluído não pode ser recuperado.<br /><br /> **\*\* Importante \*\*** A ação de excluir e recriar a chave simétrica não pode ser invertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.|  
@@ -195,7 +195,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  Na página Associações de Aplicativos de Serviço, altere a exibição para **Aplicativos de Serviço**.  
   
-3.  Localize e clique no nome do novo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço. Você também pode clicar no nome do grupos de proxies de aplicativos **padrão** para adicionar o proxy ao grupo padrão em vez de concluir as etapas a seguir.  
+3.  Localize e clique no nome do seu novo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço. Você também pode clicar no nome do grupos de proxies de aplicativos **padrão** para adicionar o proxy ao grupo padrão em vez de concluir as etapas a seguir.  
   
 4.  Selecione **Personalizado** na caixa de seleção **Editar o seguinte grupo de conexões**.  
   

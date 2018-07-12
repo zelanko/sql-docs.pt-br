@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97500036ed4021c0b1c6d907db1c4aa7858c8b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c41d6570b4e267109fbbf696bba7917b63f33b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230066"
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validação cruzada
   Quando você gera um relatório de validação cruzada, ele contém medidas de exatidão para cada modelo, dependendo do tipo de modelo de mineração (ou seja, o algoritmo que foi usado para criar o modelo), o tipo de dados do atributo previsível, e o valor do atributo previsível, se qualquer.  
@@ -50,6 +50,6 @@ ms.locfileid: "36115825"
   
 ## <a name="see-also"></a>Consulte também  
  [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)   
- [Validação cruzada &#40;Analysis Services – mineração de dados&#41;](cross-validation-analysis-services-data-mining.md)  
+ [A validação cruzada &#40;Analysis Services - mineração de dados&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

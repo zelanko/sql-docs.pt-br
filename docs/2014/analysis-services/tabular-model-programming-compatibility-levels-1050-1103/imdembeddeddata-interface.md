@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157137"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   A interface IMDEmbedded é uma interface pública usada para gerenciar um banco de dados do PowerPivot inserido ou um banco de dados modelo de tabela. A interface herda da interface `IPersistStream`. A interface permite as seguintes operações:  
@@ -44,7 +44,7 @@ ms.locfileid: "36115518"
 -   Salvar o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de `IPersistStream`.  
   
 ## <a name="reference"></a>Referência  
- A referência a seguir documentos a `IMDEmbedded` interface como apresentado em **msmd. h** arquivo de cabeçalho.  
+ A seguinte referência documenta as `IMDEmbedded` interface conforme apresentado na **msmd** arquivo de cabeçalho.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Arquivo de origem: PXOEmbeddedData.idl  
   

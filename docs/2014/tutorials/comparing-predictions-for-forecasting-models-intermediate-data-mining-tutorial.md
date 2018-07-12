@@ -1,5 +1,5 @@
 ---
-title: Comparando previsões para a previsão de modelos (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Comparando previsões para modelos (Tutorial de mineração de dados intermediário) de previsão | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165767"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparando previsões para modelos de previsão (Tutorial de mineração de dados intermediário)
   Nas etapas anteriores deste tutorial, você criou vários modelos de série temporal:  
@@ -38,7 +38,7 @@ ms.locfileid: "36313084"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> Comparando os resultados originais com os resultados após a adição de dados  
+##  <a name="bkmk_EXTEND"></a> Comparando os resultados originais com os resultados depois de adicionar dados  
  Vamos observar os dados apenas da linha de produto M200 na região do Pacífico, para ver como atualizar o modelo com novos dados afeta os resultados. Lembre-se de que a série de dados original terminava em junho de 2004, e nós obtivemos novos dados para julho, agosto e setembro.  
   
 -   A primeira coluna mostra os novos dados que foram adicionados.  
@@ -52,15 +52,15 @@ ms.locfileid: "36313084"
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
 |9-25-2008|**61**|32|**61**|  
-|25-10-2008|Sem dados|36|32|  
+|10-25-2008|Sem dados|36|32|  
 |11-25-2008|Sem dados|31|41|  
-|25-12-2008|Sem dados|34|32|  
+|12-25-2008|Sem dados|34|32|  
   
  Você observará que as previsões que usam os dados estendidos (mostrados aqui em negrito) repetem exatamente os pontos de dados reais. A repetição ocorre por design. Contanto que haja pontos de dados reais para usar, a consulta de previsão retornará os valores reais e mostrará novos valores de previsão somente depois que os novos pontos de dados reais tiverem ficado obsoletos.  
   
  Em geral, o algoritmo pondera as alterações nos novos dados mais fortemente do que nos dados iniciais do modelo. Porém, neste caso, os novos números de vendas representam um aumento de apenas 20-30% sobre o período anterior. Então, só houve um pequeno aumento nas vendas projetadas, depois das quais as projeções de vendas caíram novamente, mais alinhados com a tendência dos meses anteriores aos novos dados.  
   
-##  <a name="bkmk_REPLACE"></a> Comparando os resultados Original e a previsão cruzada  
+##  <a name="bkmk_REPLACE"></a> Comparando os resultados originais e a previsão cruzada  
  Lembre-se de que o modelo de mineração original revelou grandes diferenças entre as regiões e as linhas de produtos. Por exemplo, as vendas para o modelo M200 foram muito fortes, ao passo que as vendas para o modelo T1000 foram bastante baixas em todas as regiões. Além disso, algumas séries não tinham muitos dados. As séries ficaram em desvantagem, o que significa que não tinham o mesmo ponto de partida.  
   
  ![Séries que preveem a quantidade M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "séries que preveem a quantidade M200 e T1000")  
@@ -81,7 +81,7 @@ ms.locfileid: "36313084"
  Você aprendeu a criar modelos que podem ser usados para previsão cruzada, usando o parâmetro REPLACE_MODEL_CASES e aplicando o modelo a uma série de dados diferente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial de mineração de dados intermediário de &#40;Analysis Services – mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelos de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

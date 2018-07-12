@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Deleted event class
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3878a6432a35e0749b37da1e7a6e4b330f12eea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bc5d8458889b809f583457514c37d1d65ce4860b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182283"
 ---
 # <a name="objectdeleted-event-class"></a>Classe de evento Object:Deleted
   A classe de evento Object:Deleted  indica que um objeto foi excluído; por exemplo, pelas instruções DROP INDEX e DROP TABLE. Essa classe de evento pode ser usada para determinar se objetos estão sendo excluídos, por exemplo, por aplicativos ODBC que geralmente criam procedimentos armazenados temporariamente.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing connection properties
 - projects [SQL Server Management Studio], connections
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying connection properties
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 726133292e29b2b122230b0374392f3ac0122d6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c8640e850c53031f649e9afd2725ab7051d56197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159777"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Exibir ou alterar as propriedades de uma conexão em um projeto
   As propriedades de uma conexão salvas em um projeto podem ser exibidas e algumas podem ser modificadas.  

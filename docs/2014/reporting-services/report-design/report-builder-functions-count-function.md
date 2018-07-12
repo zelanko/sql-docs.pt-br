@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152167"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>função Count (Construtor de Relatórios e SSRS)
   Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  
@@ -39,7 +39,7 @@ Count(expression, scope, recursive)
  (`Variant` ou `Binary`) a expressão na qual executar a agregação, por exemplo, `=Fields!FieldName.Value`.  
   
  *escopo*  
- (`String`) O nome de um conjunto de dados, grupo ou região de dados que contém o relatório itens ao qual aplicar a função de agregação. Se *scope* não estiver especificado, será usado o escopo atual.  
+ (`String`) O nome de um conjunto de dados, grupo ou região de dados que contém o relatório de itens ao qual deseja aplicar a função de agregação. Se *scope* não estiver especificado, será usado o escopo atual.  
   
  *recursivos*  
  (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
@@ -80,9 +80,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
