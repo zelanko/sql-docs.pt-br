@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a056d52c52951a4f96901e00abbecc0fb78c6b01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277402"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Adicionar, excluir ou compartilhar um gerenciador de conexões em um pacote
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui uma variedade de gerenciadores de conexão para se conectar a fontes de dados diferentes, como bancos de dados relacionais, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bancos de dados e arquivos nos formatos CSV e XML. Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de projeto. O gerenciador de conexões criado no nível de projeto está disponível para todos os pacotes no projeto. Por outro lado, o gerenciador de conexões criado no nível de pacote está disponível para aquele pacote específico.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui uma variedade de gerenciadores de conexão para se conectar a fontes de dados diferentes, como bancos de dados relacionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bancos de dados e arquivos nos formatos CSV e XML. Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de projeto. O gerenciador de conexões criado no nível de projeto está disponível para todos os pacotes no projeto. Por outro lado, o gerenciador de conexões criado no nível de pacote está disponível para aquele pacote específico.  
   
  Use gerenciadores de conexões que são criados no nível de projeto em vez de fontes de dados, para compartilhar conexões com origens. Para adicionar um gerenciador de conexões no nível de projeto, o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deve usar o modelo de implantação de projeto. Quando um projeto é configurado para usar este modelo, a pasta **Gerenciadores de Conexões** é exibida no **Gerenciador de Soluções**e a pasta **Fontes de Dados** é removida do **Gerenciador de Soluções**.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "36011828"
   
  Estes procedimentos aplicam-se a todos os tipos de gerenciadores de conexões e descrevem como realizar as seguintes tarefas:  
   
--   [Para adicionar um Gerenciador de conexão ao criar um pacote](#wizard)  
+-   [Para adicionar um Gerenciador de conexão durante a criação de um pacote](#wizard)  
   
 -   [Para adicionar um Gerenciador de conexão a um pacote existente](#package)  
   
--   [Para adicionar um Gerenciador de conexão no nível de projeto](#project)  
+-   [Para adicionar um Gerenciador de conexão no nível do projeto](#project)  
   
 -   [Para criar um parâmetro para uma propriedade de Gerenciador de conexão](#parameter)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36011828"
   
 -   [Para excluir um Gerenciador de conexão compartilhada (Gerenciador de conexão de nível de projeto)](#DeleteProjectLevel)  
   
-##  <a name="wizard"></a> Para adicionar um Gerenciador de conexão ao criar um pacote  
+##  <a name="wizard"></a> Para adicionar um Gerenciador de conexão durante a criação de um pacote  
   
 -   Usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   
   
@@ -81,9 +81,9 @@ ms.locfileid: "36011828"
     |[Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)|[Editor do Gerenciador de Conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Gerenciador de Conexões de Vários Arquivos](connection-manager/multiple-files-connection-manager.md)|[Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gerenciador de Conexões de Arquivos Simples](connection-manager/flat-file-connection-manager.md)|[Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[Gerenciador de Conexões de Vários Arquivos Simples](connection-manager/multiple-flat-files-connection-manager.md)|[Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Gerenciador de Conexões de Vários Arquivos Simples](connection-manager/multiple-flat-files-connection-manager.md)|[Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md)|[Editor do Gerenciador de Conexões FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexão HTTP &#40;página de servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexão HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexão HTTP &#40;página do servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexão HTTP &#40;página de Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Gerenciador de Conexões MSMQ](connection-manager/msmq-connection-manager.md)|[Editor do Gerenciador de Conexões MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Gerenciador de Conexões ODBC](connection-manager/odbc-connection-manager.md)|[Referência da interface do usuário do Gerenciador de Conexões ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[Gerenciador de Conexões OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](configure-ole-db-connection-manager.md)|  
@@ -98,7 +98,7 @@ ms.locfileid: "36011828"
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Item Selecionado** no menu **Arquivo** .  
   
-##  <a name="project"></a> Para adicionar um Gerenciador de conexão no nível de projeto  
+##  <a name="project"></a> Para adicionar um Gerenciador de conexão no nível do projeto  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -117,9 +117,9 @@ ms.locfileid: "36011828"
     |[Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)|[Editor do Gerenciador de Conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Gerenciador de Conexões de Vários Arquivos](connection-manager/multiple-files-connection-manager.md)|[Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gerenciador de Conexões de Arquivos Simples](connection-manager/flat-file-connection-manager.md)|[Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[Gerenciador de Conexões de Vários Arquivos Simples](connection-manager/multiple-flat-files-connection-manager.md)|[Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[Gerenciador de Conexões de Vários Arquivos Simples](connection-manager/multiple-flat-files-connection-manager.md)|[Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md)|[Editor do Gerenciador de Conexões FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexão HTTP &#40;página de servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexão HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[Gerenciador de Conexões de HTTP](connection-manager/http-connection-manager.md)|[Editor do Gerenciador de Conexão HTTP &#40;página do servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor do Gerenciador de Conexão HTTP &#40;página de Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[Gerenciador de Conexões MSMQ](connection-manager/msmq-connection-manager.md)|[Editor do Gerenciador de Conexões MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Gerenciador de Conexões ODBC](connection-manager/odbc-connection-manager.md)|[Referência da interface do usuário do Gerenciador de Conexões ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[Gerenciador de Conexões OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurar Gerenciador de Conexões OLE DB](configure-ole-db-connection-manager.md)|  

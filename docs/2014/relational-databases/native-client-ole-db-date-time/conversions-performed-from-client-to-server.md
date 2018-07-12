@@ -1,28 +1,26 @@
 ---
-title: Conversões executadas do cliente para servidor | Microsoft Docs
+title: Conversões executadas do cliente para o servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 155d6e55dac73df71fb25c388b9cd3af2360e9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 33aa66968fe93944172356a9be55d12fa459ddc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012040"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427895"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
   Este tópico descreve conversões de data/hora executadas entre um aplicativo cliente escrito com o OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior).  
@@ -30,7 +28,7 @@ ms.locfileid: "36012040"
 ## <a name="conversions"></a>Conversões  
  Este tópico descreve as conversões feitas no cliente. Se o cliente especificar a precisão de frações de segundo para um parâmetro diferente do definido no servidor, a conversão do cliente pode gerar uma falha, nos casos em que o servidor permitiria o êxito da operação. Em particular, o cliente trata qualquer truncamento de frações de segundo como um erro, enquanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arredonda valores de tempo para o segundo inteiro mais próximo.  
   
- Se ICommandWithParameters:: SetParameterInfo não for chamado, associações de DBTYPE_DBTIMESTAMP serão convertidas como se fossem `datetime2`.  
+ Se não for chamado ICommandWithParameters:: SetParameterInfo, associações de DBTYPE_DBTIMESTAMP são convertidas como se fossem `datetime2`.  
   
 |Para -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -63,7 +61,7 @@ ms.locfileid: "36012040"
 |7|A data é definida com a data atual.|  
 |8|A hora é convertida a UTC. Se ocorrer um erro durante essa conversão, DBSTATUS_E_CANTCONVERTVALUE será definido.|  
 |9|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino.<br /><br /> Se o tipo de destino for DBTIMESTAMP, `smalldatetime`, `datetime` ou `datetime2`, a cadeia de caracteres deverá estar de acordo com a sintaxe de data, hora ou literais `datetime2`, ou com a sintaxe reconhecida pelo OLE. Se a cadeia de caracteres for um literal de data, todos os componentes de hora serão definidos como zero. Se a cadeia de caracteres for um literal de hora, a data será definida com a data atual.<br /><br /> Para todos os outros tipos de destino, a cadeia de caracteres deve estar de acordo com a sintaxe de literais do tipo de destino.|  
-|10|Se ocorrer o truncamento de frações de segundo com perda de dados, DBSTATUS_E_DATAOVERFLOW será definido. Para conversões de cadeia de caracteres, a verificação de estouro é possível somente quando a cadeia de caracteres estiver de acordo com a sintaxe ISO. Se a cadeia de caracteres for um literal de data OLE, as frações de segundo serão arredondadas.<br /><br /> Para a conversão de DBTIMESTAMP (datetime) em smalldatetime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client truncará silenciosamente o valor de segundos em vez de gerar o erro DBSTATUS_E_DATAOVERFLOW.|  
+|10|Se ocorrer o truncamento de frações de segundo com perda de dados, DBSTATUS_E_DATAOVERFLOW será definido. Para conversões de cadeia de caracteres, a verificação de estouro é possível somente quando a cadeia de caracteres estiver de acordo com a sintaxe ISO. Se a cadeia de caracteres for um literal de data OLE, as frações de segundo serão arredondadas.<br /><br /> Para conversão de DBTIMESTAMP (datetime) em smalldatetime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client truncará silenciosamente o valor de segundos em vez de gerar o erro DBSTATUS_E_DATAOVERFLOW.|  
 |11|O número de dígitos das frações de segundo (a escala) é determinado pelo tamanho da coluna de destino, de acordo com a seguinte tabela. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> Porém, se o tipo de origem for DBTIMESTAMP e as frações de segundo forem zero, não serão gerados dígitos de fração de segundo ou vírgulas decimais. Este comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando provedores OLE DB mais antigos.<br /><br /> Um tamanho de coluna de ~ 0 implica em tamanho ilimitado no OLE DB (9 dígitos, a menos que a regra de 3 dígitos para DBTIMESTAMP se aplique).<br /><br /> **DBTIME2** - 8, 10..18 (comprimento em caracteres); 0, 1..9 (escala)<br /><br /> **DBTIMESTAMP** - 19, 21..29 (comprimento em caracteres); 0, 1..9 (escala)<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36 (comprimento em caracteres); 0, 1..9 (escala)|  
 |12|Semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_DATE é mantida. As frações de segundo são truncadas para zero.|  
 |13|Semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_FILETIME é mantida. Se você usar a API do Windows FileTimeToSystemTime, a precisão de frações de segundo é limitada a 1 milissegundo.|  
@@ -72,6 +70,6 @@ ms.locfileid: "36012040"
 |16|O comportamento de conversão de um valor (de um tipo determinado) inserido em uma estrutura cliente SSVARIANT é igual ao comportamento do mesmo valor e tipo quando não inserido em uma estrutura cliente SSVARIANT.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Associações e conversões &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [Associações e conversões de &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

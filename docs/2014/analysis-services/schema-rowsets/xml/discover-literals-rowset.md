@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4643ab803f3e6a7d63c4172423e909b6badd64b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd59dfdc385775f0846a1a0f9de41f7d3bf2750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259958"
 ---
 # <a name="discoverliterals-rowset"></a>Conjunto de linhas DISCOVER_LITERALS
   Retorna informações sobre literais, incluindo tipos de dados e valores, com suporte do provedor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA (XML for Analysis).  
@@ -34,7 +34,7 @@ ms.locfileid: "36012087"
  Se você chamar o [Discover](../../xmla/xml-elements-methods-discover.md) método com o `DISCOVER_LITERALS` valor de enumeração no [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, o `Discover` método retorna o `DISCOVER_LITERALS` conjunto de linhas.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_LITERALS` linhas contém as seguintes colunas.  
+ O `DISCOVER_LITERALS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "36012087"
 |`LiteralName`|`DBTYPE_WSTR`|Opcional.|  
   
 ## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)   
  [Conjunto de linhas DISCOVER_KEYWORDS &#40;XMLA&#41;](discover-keywords-rowset-xmla.md)  
   
   

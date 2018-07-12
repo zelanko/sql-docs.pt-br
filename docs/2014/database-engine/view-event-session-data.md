@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239456"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
   Este tópico descreve o uso da interface do usuário de exibição para ver e analisar dados de evento estendidos:  
@@ -89,7 +89,7 @@ ms.locfileid: "36020755"
  O painel de **Detalhes** mostra todas as colunas para o evento selecionado, incluindo campos e ações. Você pode adicionar uma coluna à tabela de dados de destino clicando com o botão direito em uma linha no painel de **Detalhes** e selecionando **Mostrar Coluna na Tabela**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Criar, modificar ou excluir colunas mescladas  
- Uma coluna mesclada permite que você combine um conjunto de campos a ser exibido em uma única coluna. A coluna mesclada mostrará os dados do primeiro campo não NULL baseado na ordem que eles são adicionados à lista de campos. Isso é semelhante ao que você vê no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, onde uma coluna específica pode mostrar dados diferentes dependendo do evento (o exemplo mais comum é o campo TextData no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criador de perfil). Para um exemplo, você pode mesclar os campos instrução e batch_text dos eventos sql_statement_completed e sql_batch_completed, respectivamente, em um campo nomeado myStatement. Quando você exibe a coluna myStatement na tabela, ela mostrará os dados apropriados para o evento associado.  
+ Uma coluna mesclada permite que você combine um conjunto de campos a ser exibido em uma única coluna. A coluna mesclada mostrará os dados do primeiro campo não NULL baseado na ordem que eles são adicionados à lista de campos. Isso é semelhante ao que você vê no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, onde uma coluna específica pode mostrar dados diferentes dependendo do evento (o exemplo mais comum disso é o campo TextData no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Para um exemplo, você pode mesclar os campos instrução e batch_text dos eventos sql_statement_completed e sql_batch_completed, respectivamente, em um campo nomeado myStatement. Quando você exibe a coluna myStatement na tabela, ela mostrará os dados apropriados para o evento associado.  
   
  Você pode criar, modificar ou excluir colunas mescladas:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36020755"
  Se você agrupou colunas, classificar a coluna só classificará os dados dentro do grupo.  
   
 ### <a name="group-results"></a>Agrupar resultados  
- Resultados agrupados são equivalentes à funcionalidade do `GROUP BY` cláusula [!INCLUDE[tsql](../includes/tsql-md.md)]. A tabela de dados de destino mostrará os dados agrupados, permitindo expandir e recolher os dados.  
+ Resultados agrupados são equivalentes à funcionalidade do `GROUP BY` cláusula em [!INCLUDE[tsql](../includes/tsql-md.md)]. A tabela de dados de destino mostrará os dados agrupados, permitindo expandir e recolher os dados.  
   
  Você deve agrupar dados antes de poder agregá-lo. Por exemplo, você pode agrupar no valor query_hash, classificar em ordem decrescente por duração, obter a duração média para cada grupo e classificar em ordem decrescente na agregação.  Isto produzirá uma lista que mostra a lista de instruções exclusivas da duração média mais longa para a mais curta. Quando você expande o grupo de nível superior, você verá as execuções individuais daquela consulta específica classificada da mais longa para a mais curta.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36020755"
   
  Para copiar resultados de rastreamento, selecione uma célula, linha ou linhas, clique com o botão direito, selecione **Cópia** e em **Célula**, **Linha**ou **Detalhes**. A opção Eventos Estendidos oferece suporte à cópia de um máximo de 1.000 linhas.  
   
- Você pode exportar resultados de rastreamento para um. XEL arquivo, tabela, ou. Arquivo CSV selecionando **exportar para** do **eventos estendidos** opção de menu em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Você pode exportar resultados de rastreamento para um. XEL arquivo, tabela, ou. Arquivo CSV, selecionando **exportar para o** da **eventos estendidos** opção de menu no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Exibir um gráfico de Deadlock e planos de consulta  
  Você pode exibir o deadlock graph para **xml_deadlock_report** no painel Detalhes para ajudar a solucionar problemas de deadlocks. Você também pode exibir gráficos de plano de consulta para os seguintes eventos:  

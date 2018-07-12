@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67c7206bb030f1e0e2390013657f97eeb8278aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008887"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420745"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
   Dados grandes podem ser associados ou recuperados por meio da interface `ISequentialStream`. Para colunas associadas, o sinalizador de status DBSTATUS_S_TRUNCATED indica que os dados estão truncados.  
@@ -42,7 +40,7 @@ ms.locfileid: "36008887"
   
     -   `IRow::Open()` pode ser usado para abrir um `ISequentialStream` na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (`IStream` ou `ISequentialStream` que pode ser usada para ler os dados da coluna).  
   
-    -   Se `IRow::GetColumns()` for usado, o **pData** da estrutura DBCOLUMNACCESS é definido para apontar para um objeto de fluxo.  
+    -   Se `IRow::GetColumns()` for usado, o **pData** elemento da estrutura DBCOLUMNACCESS é definido para apontar para um objeto de fluxo.  
   
 4.  Use **ISequentialStream::Read()** repetidamente para ler o número especificado de bytes no buffer de consumidor.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36008887"
   
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria uma tabela usada pelo exemplo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela usada pelo exemplo.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - old diagrams [SQL Server]
 - previous database diagrams [SQL Server]
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - diagrams [SQL Server], upgrading
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44b6f2f1f884d4c43cf1b8cd62706c78d7f5d187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44438695929f3eaed3529fcbc3fb14f66d3d5fd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153627"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Atualizar diagramas de banco de dados de edições anteriores (Visual Database Tools)
-  Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais etapas para configurar a diagramação, consulte [definir o Designer de diagrama de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais etapas de configuração de diagramação, consulte [definir o Designer de diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para atualizar diagramas de banco de dados herdados  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36021068"
      Isso atualizará os diagramas armazenados no banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Entender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+ [Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
  [Configurar o Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

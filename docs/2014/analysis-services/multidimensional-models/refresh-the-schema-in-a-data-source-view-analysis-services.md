@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239766"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Atualizar o esquema em uma exibição da fonte de dados (Analysis Services)
   Depois de definir uma DSV (exibição da fonte de dados) em um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o esquema de uma fonte de dados subjacente pode ser alterado. Essas alterações não são detectadas nem atualizadas automaticamente em um projeto de desenvolvimento. Além disso, se você implantou o projeto em um servidor, agora encontrará erros de processamento se o Analysis Services não puderem mais se conectar à fonte de dados externa.  
@@ -52,7 +52,7 @@ ms.locfileid: "36019690"
   
  Durante a atualização, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consulta todas as fontes de dados relacionais subjacentes para determinar se houve mudanças nas tabelas/exibições incluídas na DSV. Se for possível estabelecer conexões com todas as fontes de dados subjacentes e se tiver sido feita alguma alteração, você as verá na caixa de diálogo **Atualizar Exibição da Fonte de Dados** .  
   
- ![Atualizar a caixa de diálogo de exibição da fonte de dados](../media/ssas-olapdsv-refresh.gif "caixa de diálogo Atualizar exibição da fonte de dados")  
+ ![Caixa de diálogo de exibição da fonte de dados de atualização](../media/ssas-olapdsv-refresh.gif "caixa de diálogo Atualizar exibição da fonte de dados")  
   
  A caixa de diálogo lista tabelas, colunas, restrições e relações que serão excluídas da exibição da DSV. O relatório também lista qualquer consulta nomeada ou cálculo nomeado que não possa ser preparado(a) com sucesso. Os objetos afetados são listados no modo de exibição de árvore, com as colunas e relações aninhadas em tabelas e o tipo de alteração (exclusão ou adição) indicado para cada objeto. Os ícones de objeto de exibição da fonte de dados padrão indicam o tipo de objeto afetado.  
   

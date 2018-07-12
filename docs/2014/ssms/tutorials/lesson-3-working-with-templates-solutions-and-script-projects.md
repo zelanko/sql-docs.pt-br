@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cac5d637d333fae270c740bfddfe2bd5017be960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8fa4ec230f993412804f2b1675e9a46bcfdb6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165783"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lição 3: Trabalhando com modelos, soluções e projetos de script
   Com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode criar modelos personalizados, projetos de script e soluções.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b8be72bc61a4da253b9296ac2cf5a80fd01082ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 967d8cc50e1784de0fa66a9a437d35774e6b52a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151067"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Adicionar tabelas a uma instância CDC
   Use a caixa de diálogo Seleção de Tabela para adicionar tabelas da origem do Oracle para a instância CDC. As tabelas selecionadas são adicionadas à lista na guia **Tabelas** do editor de Propriedades.  
@@ -52,7 +52,7 @@ ms.locfileid: "36021210"
 >  Você pode exibir a lista de tabelas no visualizador. Ao usar o visualizador, as informações serão somente leitura. O visualizador também inclui uma lista das colunas capturadas na tabela. Para obter mais informações sobre como acessar o visualizador, consulte [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Como gerenciar uma instância CDC](manage-a-cdc-instance.md)   
  [Selecionar as tabelas Oracle para capturar alterações](select-oracle-tables-for-capturing-changes.md)  
   

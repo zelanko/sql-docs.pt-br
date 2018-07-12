@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotifications element
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c19cc7a3a0b4ade2dab73b3ef5d28bc33c2ac57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14d49b5e7a4d86aec5a2ac555cb67094b30b2fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229996"
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>Elemento IncrementalProcessingNotifications (ASSL)
   Contém a coleção de [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) elementos que fornecem informações para o [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre consultas a serem executadas para determinar o andamento do processamento incremental.  

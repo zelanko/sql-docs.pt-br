@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159287"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidade do PowerPivot e recuperação de desastres (SQL Server 2014)
   Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui diagramas de topologia de exemplo a serem considerados ao planejar a disponibilidade e a recuperação de desastres para a implantação de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "36020153"
   
 -   **(3)** Os serviços de cálculo do Excel são executados um em cada servidor de aplicativos e permitem que o aplicativo de serviço seja executado em servidores de aplicativos. Portanto, se um único servidor de aplicativos ficar offline, os serviços de cálculo do Excel ainda estarão disponíveis.  
   
--   **(4)**  e **(6)** instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins modo do SharePoint é executado em servidores fora do farm do SharePoint, isso inclui o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)**. Cada uma dessas instâncias é registrada nos serviços do Excel **(3)**. Os Serviços do Excel gerenciam o balanceamento de carga de solicitações para os servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . A arquitetura do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 permite que você tenha vários servidores para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para que você possa adicionar facilmente mais instâncias, conforme necessário. Para obter mais informações, consulte [Gerenciar as configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)**  e **(6)** instâncias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins modo do SharePoint é executado em servidores fora do farm do SharePoint, isso inclui o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)**. Cada uma dessas instâncias é registrada nos serviços do Excel **(3)**. Os Serviços do Excel gerenciam o balanceamento de carga de solicitações para os servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . A arquitetura do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 permite que você tenha vários servidores para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para que você possa adicionar facilmente mais instâncias, conforme necessário. Para obter mais informações, consulte [Gerenciar as configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** Os bancos de dados do SQL Server usados para o conteúdo, a configuração e os bancos de dados do aplicativo. Isso inclui o banco de dados de aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O seu plano de recuperação de desastres deve incluir a camada de banco de dados. Nesse design, os bancos de dados são executados no mesmo servidor como **(4)** uma das instâncias [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** e **(5)** também poderiam estar em servidores diferentes.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36020153"
   
 -   **(1)** Os servidores front-end da Web. Instale os provedores de dados em cada servidor. Para obter mais informações, consulte [Instalar o Provedor OLE DB do Analysis Services nos Servidores SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
--   **(2)**  Os dois [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serviços compartilhados e **(4)** o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)** estão instalados nos servidores de aplicativos do SharePoint.  
+-   **(2)**  Dois [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serviços compartilhados e **(4)** o serviço do Windows **SQL Server Analysis Services (POWERPIVOT)** estão instalados nos servidores de aplicativo do SharePoint.  
   
      O Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é executado **em cada** servidor de aplicativos e permite a execução do aplicativo de serviço **entre** servidores de aplicativos. Se um único servidor de aplicativos ficar offline, o aplicativo de serviço [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ainda estará disponível.  
   

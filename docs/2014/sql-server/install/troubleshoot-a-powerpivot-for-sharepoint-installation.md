@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: b4881ce3be8ede7d97dc2b71fb464b94b8677ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26ed6e178e6aea91aa3b0fa5aaedf3926f5d908a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161747"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Solução de problemas da instalação do PowerPivot para SharePoint
   Se você obtiver erros em vez das páginas e recursos que você esperava, faça o seguinte.  
@@ -35,7 +35,7 @@ ms.locfileid: "36020617"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>As imagens em miniatura para Galeria PowerPivot são exibidas como um X vermelho  
  Uma causa possível é que a **Integração de recursos do PowerPivot para coleções de sites** não está ativa. Preencha o seguinte:  
   
-1.  Na biblioteca da Galeria PowerPivot, clique em **configurações de Site** do ícone de engrenagem ![configurações SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "configurações SharePoint") ou o **inicial** lista.  
+1.  Na biblioteca da Galeria PowerPivot, clique em **configurações de Site** no ícone de engrenagem ![configurações do SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") ou o **Home** lista.  
   
 2.  Na seção **Administração do Conjunto de Sites** , clique em **Recursos do Conjunto de Sites**.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "36020617"
   
 4.  Verifique se a **Integração de recursos do PowerPivot para coleções de sites** está **Ativa**.  
   
- Para causas adicionais desse problema, consulte [Galeria do PowerPivot mostra Xs vermelhos em vez de ícones](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ Para obter as causas adicionais desse problema, consulte [Galeria do PowerPivot mostra Xs vermelhos em vez de ícones](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
   
   

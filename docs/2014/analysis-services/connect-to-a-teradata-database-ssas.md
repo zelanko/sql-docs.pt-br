@@ -1,5 +1,5 @@
 ---
-title: Conecte-se ao banco de dados Teradata (SSAS) | Microsoft Docs
+title: Conectar-se ao banco de dados Teradata (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connterradb.f1
 ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79b7fb9d5f282c55d1b8ac93dabb58a9266f556f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfe95cae0b7c3dba77bc08839569fa8cca20d114
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163847"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Conectar a um banco de dados Teradata (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão a um banco de dados Teradata. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

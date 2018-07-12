@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized queries, plan guides for
 - plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c30d9bc5b4200fff1e8077eecaf733eb4b097b3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: dfdacfb9764e607737946ccb8dc72d330f6b11a3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019569"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430965"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Criar um guia de plano para consultas parametrizadas
   O guia de plano TEMPLATE corresponde consultas autônomas com parâmetros com uma forma especificada.  

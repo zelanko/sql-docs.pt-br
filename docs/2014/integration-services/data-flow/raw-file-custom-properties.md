@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee1b5a26edc9c1335abf35dd2af23e7035b84809
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a991f1e7362be2e9516857ec2f6d98b4e487b536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277442"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
   **Propriedades personalizadas de fontes**  

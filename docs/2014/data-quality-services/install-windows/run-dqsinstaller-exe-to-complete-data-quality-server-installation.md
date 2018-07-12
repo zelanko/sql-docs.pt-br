@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c80d7ab755580bece61606c658c8603cd76c3b55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3a906560699ed6ebcd91c3e9561d0f2368a4f74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155367"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server
   Para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , você terá de executar o arquivo DQSInstaller.exe depois de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve como executar o DQSInstaller.exe na tela **Iniciar** , menu **Iniciar** , Windows Explorer ou Prompt de comando; você pode escolher qualquer uma das formas de executar o arquivo DQSInstaller.exe.  
@@ -38,7 +38,7 @@ ms.locfileid: "36115512"
   
     -   **Tela Iniciar**: na tela **Iniciar** , clique em **Instalador do Servidor do Data Quality.**  
   
-    -   **Menu Iniciar**: na barra de tarefas, clique em **iniciar**, aponte para **todos os programas**, clique em **Microsoft SQL Server 2014**. Em **Microsoft SQL Server 2014**, clique em **Data Quality Services**e, em seguida, clique em **instalador do Data Quality.**  
+    -   **Menu Iniciar**: na barra de tarefas, clique em **começar**, aponte para **todos os programas**, clique em **Microsoft SQL Server 2014**. Sob **Microsoft SQL Server 2014**, clique em **Data Quality Services**e, em seguida, clique em **instalador do Data Quality.**  
   
     -   **Windows Explorer**: Localize o arquivo DQSInstaller.exe. Se você instalou a instância padrão do SQL Server, o arquivo DQSInstaller.exe estará disponível em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Clique duas vezes no arquivo DQSInstaller.exe.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 48
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1c5e302a72e2e810fed16db5b9b3d0fc8527720
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c6a5bbcbc994a3f5cc7e62a3fa80048505f88e26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168248"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de serviço Web Servidor de Relatórios
   Os serviços Web Servidor de Relatórios incluem várias categorias de métodos que se baseiam em recursos de componente. Esses métodos são fornecidos através de vários pontos de extremidade de serviço Web (três para gerenciamento de relatórios e um para execução de relatórios), os quais são expostos como membros das classes <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Essas classes podem ser geradas por meio de uma ferramenta de classe proxy como wsdl.exe, que está incluída no SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para obter mais informações sobre os serviços Web Servidor de Relatórios e o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [Criando aplicativos usando o serviço Web e o .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

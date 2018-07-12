@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: mblythe
-ms.openlocfilehash: bfd4886ccb4b6357f0fe854c52ebebf17060a6c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 828bde484f401d2e46cebd6f00acc09c3425effb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150757"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sub-relatórios (Construtor de Relatórios e SSRS)
   Um sub-relatório é um item de relatório que exibe outro relatório dentro do principal corpo de conteúdo de um relatório. Conceitualmente, um sub-relatório em um relatório é semelhante a um quadro em uma página da Web. É usado para inserir um relatório dentro de um relatório. Qualquer relatório pode ser usado como um sub-relatório. O relatório exibido pelo sub-relatório é armazenado em um servidor de relatório, normalmente na mesma pasta do relatório pai. Você pode designar o relatório pai para transmitir parâmetros ao sub-relatório. Um sub-relatório pode ser repetido em regiões de dados, usando um parâmetro para filtrar dados em cada instância do sub-relatório.  
@@ -59,6 +59,6 @@ ms.locfileid: "36020625"
  No Construtor de Relatórios, para visualizar um sub-relatório em um relatório principal, os dois relatórios devem estar localizados no mesmo servidor de relatório ou você deve especificar um caminho completo para o sub-relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;SSRS e construtor de relatórios&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;relatórios e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

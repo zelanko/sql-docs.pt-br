@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4956317c08b1f48e6504122e30392426e3dbcfcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e70c54de0c3d43d68753780b1b4cde5084ad64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192586"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Credenciais
   Selecione **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados Compartilhada** para exibir e modificar as credenciais a fim de estabelecer uma conexão com a fonte de dados compartilhada no relatório. As credenciais que você fornecer serão usadas para acessar a fonte de dados e para colocar em cache uma cópia dos dados para a visualização dos relatórios. Para obter mais informações sobre como os dados de visualização são armazenados em cache, consulte [Visualizando relatórios](reports/previewing-reports.md). Para obter mais informações sobre credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="options"></a>Opções  
- **Usar autenticação do Windows (segurança integrada)**  
+ **Usar a autenticação do Windows (segurança integrada)**  
  Selecione esta opção para usar a Autenticação do Windows.  
   
  **Usar este nome de usuário e senha**  
@@ -39,7 +39,7 @@ ms.locfileid: "36019497"
  **Senha**  
  Digite uma senha para fazer logon na fonte de dados.  
   
- **Solicitar credenciais**  
+ **Pedir credenciais**  
  Selecione esta opção para solicitar as credenciais quando o relatório for executado.  
   
  **Insira a cadeia de caracteres de prompt**  

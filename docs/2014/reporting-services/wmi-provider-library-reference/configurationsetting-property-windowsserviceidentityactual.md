@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityActual
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a9986ef1ab5f33be99233203e8b62cc12c96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e9caf0f1fac0108298b7c0f14fae9c266a19de9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166147"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>Propriedade WindowsServiceIdentityActual (WMI MSReportServer_ConfigurationSetting)
   A identidade sob a qual o serviço do Windows do servidor de relatório está sendo executado. Somente leitura.  
@@ -43,7 +43,7 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>Valores da propriedade  
- Um `String` objeto que contém a identidade que está executando o serviço do servidor de relatório do Windows em.  
+ Um `String` objeto que contém a identidade que o serviço Windows do servidor de relatório está sendo executado.  
   
 ## <a name="example-code"></a>Código de exemplo  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

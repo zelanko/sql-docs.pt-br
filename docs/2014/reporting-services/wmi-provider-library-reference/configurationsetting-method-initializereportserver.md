@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210676"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
   Inicializa a instância do serviço de relatório especificada.  
@@ -64,7 +64,7 @@ public void InitializeReportServer(string InstallationID,
   
  O método *InitializeReportServer* deve ser chamado em um servidor de relatório que já tenha acesso às informações seguras para que possa descriptografar a chave de criptografia. Em seguida, a chave de criptografia criptografada resultante é armazenada no banco de dados do servidor de relatório.  
   
- Se o servidor de relatório [IsInitialized](configurationsetting-property-isinitialized.md) está definida como `true` quando o método InitializeReportServer é chamado, o método terá êxito sem tentar criptografar a chave de criptografia.  
+ Se o servidor de relatório [IsInitialized](configurationsetting-property-isinitialized.md) estiver definida como `true` quando o método InitializeReportServer for chamado, o método retornará êxito sem tentar criptografar a chave de criptografia.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

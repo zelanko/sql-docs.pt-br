@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], scripts
 - scripts [SQL Server replication], snapshots
 - snapshot replication [SQL Server], scripts
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e22987419706c6449ca7dd501d1ee26f43aa14a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46591477bfa12e7439dd5802f94ee15b14dc7f1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156127"
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied-sql-server-management-studio"></a>Executar scripts antes e depois de um instantâneo ser aplicado (SQL Server Management Studio)
   Especifique um script opcional para ser executado antes ou depois da aplicação do instantâneo na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  

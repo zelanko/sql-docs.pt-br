@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
 - modifying constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 607761af5db2d46b42e5eb21b38cf87b0c3f4a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4669aff39622e7d05da2c127207dc0fc481fa1a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157967"
 ---
 # <a name="modify-check-constraints"></a>Modificar restrições de verificação
   Você pode modificar uma restrição de verificação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] quando você quiser alterar a expressão de restrição ou as opções que habilitam ou desabilitam a restrição de condições específicas.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170190"
 ---
 # <a name="data-mining-queries"></a>Consultas de mineração de dados
   Consultas de mineração de dados são úteis para muitos propósitos. Você pode:  
@@ -106,7 +106,7 @@ ms.locfileid: "36020175"
   
 -   **Funções de previsão personalizadas:** cada tipo de modelo fornece um conjunto de funções de previsão criado para trabalhar com os padrões criados por aquele algoritmo.  
   
-     Por exemplo, a função `Lag` é fornecida para modelos de série temporal, para permitir que você exiba os dados históricos usados para o modelo. Para modelos de clustering, funções como `ClusterDistance` são mais significativos.  
+     Por exemplo, a função `Lag` é fornecida para modelos de série temporal, para permitir que você exiba os dados históricos usados para o modelo. Para modelos de clustering, funções como `ClusterDistance` são mais significativas.  
   
      Para obter mais informações sobre as funções que têm suporte para cada tipo de modelo, consulte os links a seguir:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36020175"
   
 -   **Estatísticas personalizadas:** funções adicionais de suporte são fornecidas para cada tipo de modelo, para gerar estatísticas que sejam pertinentes à tarefa analítica específica.  
   
-     Por exemplo, quando você estiver trabalhando com um modelo de clustering, você pode usar a função `PredictCaseLikelihood`para retornar a pontuação de probabilidade associada a um determinado caso e cluster. Porém, se você criou um modelo de regressão linear, é mais interessante recuperar o coeficiente e interceptar, o que você pode fazer usando uma consulta de conteúdo.  
+     Por exemplo, quando você estiver trabalhando com um modelo de clustering, você pode usar a função `PredictCaseLikelihood`, para retornar a pontuação de probabilidade associada a um determinado caso e cluster. Porém, se você criou um modelo de regressão linear, é mais interessante recuperar o coeficiente e interceptar, o que você pode fazer usando uma consulta de conteúdo.  
   
 -   **Funções de conteúdo de modelo:** o *conteúdo* de todos os modelos é representado em um formato de tabela padronizado que permite recuperar as informações com uma simples consulta. Você cria consultas no conteúdo do modelo usando o DMX. Você também pode obter um tipo de conteúdo do modelo de mineração usando os conjuntos de linhas de esquema de mineração de dados.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36020175"
 |Use os componentes de mineração de dados no Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Conteúdo do modelo de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 424b69fdd39865ee5fbfb2c52e8bd9c62d634872
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 041872122516c411e7b02b7dde85c248600904cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260462"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Solução do problema de limitação de linhas do Excel
   Este tópico explica como resolver a limitação de linhas do Excel 2003 quando você exporta relatórios para o Excel. A solução alternativa é para um relatório que contém apenas uma tabela.  

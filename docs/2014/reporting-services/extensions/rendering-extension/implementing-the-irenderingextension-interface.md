@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8541a0f60746393719a5afba5f439cbb1ac16f9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e7bd0228b5eaf02b51313414cbd8ebab48f14522
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278702"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
   A extensão de renderização obtém os resultados de uma definição de relatório combinada com os dados reais e renderiza os dados resultantes para um formato que seja utilizável. A transformação dos dados combinados e a formatação são feitas usando uma classe CLR (Common Language Runtime) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Isto transforma o modelo de objeto em um formato de saída que é consumível por um visualizador, impressora ou outro destino de saída.  

@@ -1,5 +1,5 @@
 ---
-title: Exemplo de conjunto de resultados | Microsoft Docs
+title: Resultado do exemplo de conjunto de | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b3c240777d0f49af2fb9113a29a08b70085d327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eb38a6a9dfb411152ba17fdcf29e5a096a1c7ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159027"
 ---
 # <a name="result-set-sample"></a>Exemplo de conjunto de resultados
   Às vezes, é útil poder executar comandos e, ao mesmo tempo, ler os resultados de uma consulta sem abrir uma nova conexão e sem ler todos os resultados na memória. O recurso MARS (Multiple Active Result Set) no ADO.NET 2.0 é uma tecnologia que pode ajudar a conseguir isso. Atualmente, MARS não é implementado para o provedor em processo usado para programação de servidor. Para solucionar essa limitação, você pode usar cursores de servidor. Este exemplo demonstra como usar cursores de servidor para solucionar a falta de suporte a MARS para programação de servidor.  

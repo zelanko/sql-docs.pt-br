@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183403"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
@@ -187,7 +187,7 @@ ms.locfileid: "36019752"
   
  Não é necessário especificar que uma coluna de dados numéricos contínuos representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usará automaticamente a coluna como um regressor potencial e particionará o conjunto de dados em regiões com padrões significativos, mesmo que você não defina o sinalizador REGRESSOR na coluna.  
   
- No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão de forma um * C1 + b\*C2 +... para ajustar os padrões em nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
+ No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tenta encontrar equações de regressão do formulário um * C1 + b\*C2 +... de acordo com os padrões em nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
   
  Por exemplo, se você estiver prevendo o comportamento de compra dos clientes usando a **Renda** como um atributo e definir o sinalizador de modelagem REGRESSOR na coluna, o algoritmo primeiro tentará adequar os valores de **Renda** usando uma fórmula de regressão padrão. Se o desvio for muito grande, a fórmula de regressão será abandonada e a árvore será dividida em outro atributo. O algoritmo de árvore de decisão tentará ajustar um regressor para renda em cada uma das ramificações após a divisão.  
   
@@ -208,6 +208,6 @@ ms.locfileid: "36019752"
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Conteúdo do modelo de árvore de decisão de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

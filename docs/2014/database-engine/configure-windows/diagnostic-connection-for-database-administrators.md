@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
 - administrator connections [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8b73b7a7c097285d242def37e9b77c87c2723f57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209816"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexão de diagnóstico para administradores de banco de dados
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma conexão diagnóstica especial para administradores quando conexões padrão com o servidor não são possíveis. Esta conexão diagnóstica permite que um administrador acesse o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar consultas diagnósticas e resolver problemas mesmo quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está respondendo às solicitações de conexão padrão.  
@@ -47,7 +47,7 @@ ms.locfileid: "36020108"
   
  Apenas membros da função sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem se conectar usando o DAC.  
   
- O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial (**-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin: * < nome_da_instância >.* Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \<* nome_da_instância * >.  
+ O DAC está disponível e tem suporte através do utilitário de prompt de comando **sqlcmd** que usa uma opção de administrador especial (**-A**). Para obter mais informações sobre como usar **sqlcmd**, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Você também pode se conectar inserindo o prefixo `admin:`para o nome da instância no formato **sqlcmd - Sadmin: * * * < nome_da_instância >.* Você também pode iniciar um DAC de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas ao se conectar ao `admin:` \<* instance_name * >.  
   
 ## <a name="restrictions"></a>Restrictions  
  Como o DAC existe somente para diagnosticar problemas do servidor em circunstâncias raras, há algumas restrições na conexão:  

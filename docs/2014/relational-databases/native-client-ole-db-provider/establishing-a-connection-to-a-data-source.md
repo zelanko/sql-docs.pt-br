@@ -1,13 +1,11 @@
 ---
-title: Estabelecer uma Conexão com uma fonte de dados | Microsoft Docs
+title: Estabelecer uma Conexão a uma fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,24 +16,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8354f8927cefd860ce2f212242cc7caea7976d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9b07fd8c9710c591806721d019f7dc776298fbab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011366"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425285"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Estabelecendo uma conexão com uma fonte de dados
-  Para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, o consumidor deve primeiro criar uma instância de um objeto de fonte de dados chamando o **CoCreateInstance** método. Um CLSID (identificador de classe) exclusivo identifica cada provedor OLE DB. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, o identificador de classe é CLSID_SQLNCLI10. Você também pode usar o símbolo SQLNCLI_CLSID será resolvido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB que é usado em SQLNCLI. h que você faz referência.  
+  Para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, o consumidor deve primeiro criar uma instância de um objeto de fonte de dados chamando o **CoCreateInstance** método. Um CLSID (identificador de classe) exclusivo identifica cada provedor OLE DB. Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, o identificador de classe é CLSID_SQLNCLI10. Você também pode usar o símbolo SQLNCLI_CLSID será resolvido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client que é usado no SQLNCLI. h que você faz referência.  
   
- A fonte de dados objeto expõe o **IDBProperties** interface, que o consumidor usa para fornecer informações de autenticação básica, como o nome do servidor, nome do banco de dados, ID de usuário e senha. O **idbproperties:: SetProperties** método é chamado para definir essas propriedades.  
+ A fonte de dados objeto expõe os **IDBProperties** interface, que o consumidor usa para fornecer informações de autenticação básica, como o nome do servidor, nome do banco de dados, ID de usuário e senha. O **idbproperties:: SetProperties** método é chamado para definir essas propriedades.  
   
  Se houver várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no computador, o nome do servidor será especificado como ServerName\InstanceName.  
   
- O objeto de fonte de dados também expõe o **IDBInitialize** interface. Depois de configurar as propriedades, conexão à fonte de dados é estabelecida chamando o **IDBInitialize:: Initialize** método. Por exemplo:  
+ O objeto de fonte de dados também expõe o **IDBInitialize** interface. Depois que as propriedades são definidas, a conexão à fonte de dados é estabelecida chamando o **IDBInitialize:: Initialize** método. Por exemplo:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -45,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- Essa chamada para **CoCreateInstance** cria um único objeto da classe associada com CLSID_SQLNCLI10 (CSLID associado com os dados e o código que será usado para criar o objeto). IID_IDBInitialize é uma referência para o identificador da interface (**IDBInitialize**) a ser usado para se comunicar com o objeto.  
+ Essa chamada para **CoCreateInstance** cria um único objeto da classe associada com CLSID_SQLNCLI10 (CSLID associado com os dados e o código que será usado para criar o objeto). IID_IDBInitialize é uma referência ao identificador da interface (**IDBInitialize**) a ser usado para se comunicar com o objeto.  
   
  Segue uma função de exemplo que inicializa e estabelece uma conexão com a fonte de dados.  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4316e91e465922ca1f7c428a9f25e781837ec6e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04a76cd2216b8f19816950c0a86dce9840caca39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184763"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Sobre o Mecanismo de Banco de Dados do SQL Server
   O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar um típico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação, consulte [instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar um típico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
  **Importante** Para instalações locais, é necessário executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36019418"
  [Edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

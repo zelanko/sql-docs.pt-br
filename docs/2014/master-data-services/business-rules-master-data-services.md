@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 758f0fdc00308ca3d04e7b426436ff9e21164d24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c4721fac2328fe881f4977b725c00cbafab4792e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258962"
 ---
 # <a name="business-rules-master-data-services"></a>Regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], uma regra de negócio é uma regra usada para garantir a qualidade e a exatidão de seus dados mestres. Você pode usar uma regra de negócio para atualizar dados automaticamente, enviar email ou iniciar um processo empresarial ou fluxo de trabalho.  
@@ -75,7 +75,7 @@ ms.locfileid: "36012929"
 |Criar e publicar uma nova regra de negócio.|[Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Adicionar várias condições a uma regra de negócio.|[Adicionar várias condições a uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Criar uma regra de negócio para exigir que os atributos tenham valores.|[Exigir valores de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base em alterações de valor de atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base em alterações de valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Alterar o nome de uma regra de negócio existente.|[Alterar o nome de uma regra de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |Configure o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificações quando as regras de negócio forem aplicadas.|[Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Aplicar regras de negócio a membros específicos.|[Validar membros específicos em relação a regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
@@ -86,7 +86,7 @@ ms.locfileid: "36012929"
   
 -   [Visão geral do Master Data Services](master-data-services-overview-mds.md)  
   
--   [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 353c8d1eac5803db6f76014519d1c812813f535d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192432"
 ---
 # <a name="keyduplicate-element-assl"></a>Elemento KeyDuplicate (ASSL)
   Determina como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] manipula um erro de chave duplicada, caso seja encontrado algum durante o processamento.  

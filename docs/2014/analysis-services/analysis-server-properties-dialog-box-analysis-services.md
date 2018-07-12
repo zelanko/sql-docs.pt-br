@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259994"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Caixa de diálogo Propriedades do Analysis Server (Analysis Services)
   Use a caixa de diálogo **Propriedades do Analysis Server** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir configurações gerais, de linguagem/agrupamento e segurança para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível exibir a caixa de diálogo **Propriedades do Analysis Server** clicando com o botão direito do mouse em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Explorador de Objetos** e selecionando **Propriedades** no menu de contexto. A caixa de diálogo **Propriedades do Analysis Server** contém as propriedades a seguir.  
@@ -32,7 +32,7 @@ ms.locfileid: "36010562"
 ## <a name="information-properties"></a>Propriedades de informações  
  Use esta página para exibir o modo, a versão e o nível de compatibilidade do servidor. Cada instância é instalada no modo de servidor de Tabela ou Multidimensional, com a capacidade de carregar modelos de tabela ou multidimensionais. Se você precisar dar suporte aos dois modelos, instale duas instâncias.  
   
- **Suporte para o nível de compatibilidade** é equivalente a `DefaultCompatibilityLevel` propriedade no AMO. Ele é somente leitura, com base no modo de implantação de servidor especificado durante a instalação. O servidor verifica essa propriedade ao executar operações que variam por modo de servidor ou versão, como restaurar um backup de um banco de dados de tabela para uma instância de servidor de tabela. Não confunda isso com o modo de compatibilidade de banco de dados de modelos de tabela ou multidimensionais, que têm nomes e valores semelhantes. Os valores válidos para essa propriedade de servidor incluem:  
+ **Suporte para o nível de compatibilidade** é equivalente ao `DefaultCompatibilityLevel` propriedade no AMO. Ele é somente leitura, com base no modo de implantação de servidor especificado durante a instalação. O servidor verifica essa propriedade ao executar operações que variam por modo de servidor ou versão, como restaurar um backup de um banco de dados de tabela para uma instância de servidor de tabela. Não confunda isso com o modo de compatibilidade de banco de dados de modelos de tabela ou multidimensionais, que têm nomes e valores semelhantes. Os valores válidos para essa propriedade de servidor incluem:  
   
 -   **1100** é o nível de compatibilidade padrão de um modo de implantação 0, para um modo multidimensional e de mineração de dados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36010562"
   
 -   **Diferenciar Maiúsculas de Minúsculas** é usado para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado, e para diferenciar entre letras maiúsculas e minúsculas.  
   
-     Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões maiúsculas e minúsculas de letras são iguais. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define se letras minúsculas são classificadas inferior ou letras maiusculas quando **diferencia maiusculas de minúsculas** não estiver selecionada.  
+     Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões maiúsculas e minúsculas de letras são iguais. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não define se letras minúsculas são classificadas inferior ou superior em relação a letras maiusculas letras quando **diferencia maiusculas de minúsculas** não estiver selecionada.  
   
 -   **Diferenciar Acento** é usado para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado, e para distinguir entre caracteres acentuados e não acentuados. Por exemplo, 'a' não é igual a 'á'.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "36010562"
      Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará as representações de byte único e de byte duplo do mesmo caractere como iguais.  
   
 ## <a name="security-properties"></a>Propriedades de segurança  
- Use essa página para especificar as contas de usuário e grupo do Windows pertencentes à função de administrador do servidor para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . A associação nessa função transmite a permissão para executar tarefas em todo o servidor, como criar ou processar um banco de dados, modificar propriedades do servidor, adicionar/remover outros membros dessa função ou iniciar um rastreamento. Consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter detalhes.  
+ Use essa página para especificar as contas de usuário e grupo do Windows pertencentes à função de administrador do servidor para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . A associação nessa função transmite a permissão para executar tarefas em todo o servidor, como criar ou processar um banco de dados, modificar propriedades do servidor, adicionar/remover outros membros dessa função ou iniciar um rastreamento. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Determina o modo de servidor de uma instância do Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determinar o modo de servidor de uma instância do Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurar propriedades de servidor no Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Funções e permissões &#40;do Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Idiomas e agrupamentos &#40;do Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [Funções e permissões &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
+ [Idiomas e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

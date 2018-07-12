@@ -1,5 +1,5 @@
 ---
-title: Atributos CSDLBI para Design de relatório | Microsoft Docs
+title: Atributos CSDLBI para Design de relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259382"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para design de relatórios
   Esta seção descreve os atributos nas extensões de CSDL para modelagem de tabela que afeta o design de consulta [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "36012987"
 |`DisplayFolder`|Texto|O nome (caminho completo) da pasta na qual este campo é exibido. Se ele for omitido, o campo será exibido na raiz do modelo.|  
 |`ContextualNameRule`|Enum|Um valor que indica se e como o nome da propriedade deve ser modificado com base no contexto no qual é usado. Os valores possíveis são: `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Um valor que indica como os valores de campos devem ser alinhados em uma apresentação de tabela. Os valores possíveis são `Default`, `Center`, `Left`, `Right`. Se ele for omitido, o padrão determina o alinhamento com base no tipo de dados do campo.|  
-|`FormatString`|Texto|Uma cadeia de caracteres no formato .NET que indica como o valor do campo deve ser formatado por padrão. Se for omitida, o seguinte formato será assumido:<br /><br /> -Campos Datetime: data curta regional ou "d"<br />-Função de agregação de campos ponto flutuante e campos integrais com um padrão: número regional ou "n"<br />-Função de agregação inteiros sem nenhum padrão: número decimal regional ou "d"<br /><br /> Para todos os outros tipos de campos, nenhuma cadeia de caracteres de formato se aplica.|  
+|`FormatString`|Texto|Uma cadeia de caracteres no formato .NET que indica como o valor do campo deve ser formatado por padrão. Se for omitida, o seguinte formato será assumido:<br /><br /> -Campos Datetime: data curta regional ou "d"<br />-Função de agregação de campos ponto flutuante e integral com um padrão: número regional ou "n"<br />-Função de agregação inteiros sem nenhum padrão: número decimal regional ou "d"<br /><br /> Para todos os outros tipos de campos, nenhuma cadeia de caracteres de formato se aplica.|  
 |`Units`|Texto|O símbolo que se aplica a valores de campos para expressar unidades. Se ele for omitido, as unidades são consideradas desconhecidas.|  
 |`Width`|Integer|A largura preferencial em caracteres que deve ser reservada para exibir os valores do campo em uma apresentação de tabela. Se ela for omitida, uma largura padrão se baseará no tipo de dados do campo.|  
 |`SortDirection`|Enum|Um valor que indica como os valores de campos costumam ser classificados. Os valores possíveis são `Default`, `Ascending`, `Descending`. Se ele for omitido, o valor padrão atribuirá uma direção de classificação com base no tipo de dados do campo.|  

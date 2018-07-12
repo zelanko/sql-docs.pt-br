@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.dimensionproperties.f1
 helpviewer_keywords:
 - Dimension Properties dialog box
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b76df4bb4efeef723ab6688e3324c9f04026194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d73fa2387255a1bba847a2cff30eaa68c518077
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155207"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Propriedades da Dimensão (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Propriedades da Dimensão** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma dimensão em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode exibir a caixa de diálogo **Propriedades da Dimensão** clicando com o botão direito do mouse em uma dimensão no Pesquisador de Objetos e selecionando **Propriedades**.  

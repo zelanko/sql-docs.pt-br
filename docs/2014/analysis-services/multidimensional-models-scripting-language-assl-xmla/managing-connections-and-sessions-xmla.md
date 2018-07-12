@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192497"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
-  *Status do processo* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
+  *Statefulness* é uma condição durante o qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Statelessness* é uma condição durante o qual o servidor não se lembra a identidade e o contexto de um cliente após a conclusão de uma chamada de método.  
   
- Para fornecer statefulness, o XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções a serem executadas em conjunto. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
+ Para fornecer statefulness, o XML for Analysis (XMLA) dá suporte a *sessões* que permitem que uma série de instruções seja executada em conjunto. Um exemplo de uma dessas séries de instruções seria a criação de um membro calculado a ser usado em consultas subsequentes.  
   
  Em geral, as sessões em XMLA seguem o comportamento a seguir, descrito pela especificação do OLE DB 2.6:  
   

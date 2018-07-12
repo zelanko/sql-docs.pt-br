@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152467"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Excluir um grupo de atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua um grupo de atributos quando você não precisar mais da guia para exibir a área funcional **Explorer** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -40,13 +40,13 @@ ms.locfileid: "36115237"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição do modelo de** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
+2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
   
 3.  Na lista **Modelo** , selecione um modelo.  
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Clique no sinal de adição para expandir **grupos de folha**, **grupos consolidados**, ou **grupos de coleção**, dependendo do tipo de grupo que deseja excluir.  
+5.  Clique no sinal de adição para expandir **grupos de folha**, **grupos consolidados**, ou **grupos de coleção**, dependendo do tipo de grupo que você deseja excluir.  
   
 6.  Clique no grupo de atributos que você deseja excluir.  
   

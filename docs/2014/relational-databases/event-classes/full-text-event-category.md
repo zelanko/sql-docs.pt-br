@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server event classes, Full Text event category
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ecffe6eb556de587ee45dd5b5e396aa2d8addb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 55535dc725cf7bdcbb8b212e68b5d256117d2a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149077"
 ---
 # <a name="full-text-event-category"></a>Categoria de evento Full Text
   A categoria de evento **Full Text** contém eventos gerais de texto completo.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149157"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensões (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Dimensões** para exibir e editar dimensões de cubo, incluindo hierarquias e atributos, na guia **Estrutura do Cubo** do Designer de Cubo.  
@@ -30,12 +30,12 @@ ms.locfileid: "36020592"
  **Hierarquias**  
  Clique para exibir as dimensões de cubo disponíveis e as hierarquias de cubo associadas a elas.  
   
- Expanda uma dimensão de cubo e selecione **editar \<dimensão >** para exibir o Designer de dimensão e editar a dimensão de banco de dados no qual a dimensão do cubo é baseada. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda uma dimensão de cubo e selecione **edite \<dimensão >** para exibir o Designer de dimensão e editar a dimensão do banco de dados no qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Atributos**  
  Clique para exibir as dimensões de cubo disponíveis e os atributos de cubo associados.  
   
- Expanda uma dimensão de cubo e selecione **editar \<dimensão >** para exibir o Designer de dimensão e editar a dimensão de banco de dados no qual a dimensão do cubo é baseada. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda uma dimensão de cubo e selecione **edite \<dimensão >** para exibir o Designer de dimensão e editar a dimensão do banco de dados no qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse no painel **Dimensões** :  
@@ -91,7 +91,7 @@ ms.locfileid: "36020592"
 ## <a name="see-also"></a>Consulte também  
  [Barra de ferramentas &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Medidas &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Exibição da fonte de dados &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
+ [Modo de exibição da fonte de dados &#40;guia estrutura do cubo, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
  [Estrutura do cubo &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

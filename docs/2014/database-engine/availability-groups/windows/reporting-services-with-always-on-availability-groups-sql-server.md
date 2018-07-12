@@ -1,28 +1,27 @@
 ---
-title: Reporting Services com grupos de disponibilidade do AlwaysOn (SQL Server) | Microsoft Docs
+title: Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153117"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico contém informações sobre como configurar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para funcionar com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Os três cenários para usar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são bancos de dados para fontes de dados de relatório, bancos de dados do servidor de relatório e design de relatório. A funcionalidade com suporte e a configuração exigida é diferente para os três cenários.  
@@ -33,7 +32,7 @@ ms.locfileid: "36020560"
   
    
   
-##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e grupos de disponibilidade do AlwaysOn  
+##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e grupos de disponibilidade AlwaysOn  
  Para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você precisa baixar e instalar um hotfix para .Net 3.5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:  
   
 > **Mensagem de erro:** "Palavra-chave sem suporte 'applicationintent'"  
@@ -176,7 +175,7 @@ ms.locfileid: "36020560"
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
-  [Grupos de disponibilidade do AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [Introdução aos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
+  [Grupos de disponibilidade AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [Noções básicas sobre grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
  [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

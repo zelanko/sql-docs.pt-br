@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f8775ea445a06659fa31f1fee14105525c1414d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdf975299c4a96d4052c3397fe9578d8f6df4690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165197"
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO
   Retorna informações básicas sobre o provedor de rastreamento, como seu nome e descrição.  
@@ -28,7 +28,7 @@ ms.locfileid: "36019449"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_TRACE_DEFINITION_PROVIDERINFO` linhas contém as seguintes colunas.  
+ O `DISCOVER_TRACE_DEFINITION_PROVIDERINFO` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

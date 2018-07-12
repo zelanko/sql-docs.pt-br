@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa65e6742004206c5116437c4e3bba7dbd316798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d60f4db93721d20b85b613459a034eaa896dc87a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165247"
 ---
 # <a name="create-a-domain"></a>Criar um domínio
   Este tópico descreve como criar um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Os valores no domínio são uma representação semântica dos dados em um campo. Para obter mais informações sobre domínios, consulte [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36019231"
   
 3.  Selecione **Descoberta da Base de Dados de Conhecimento** como a atividade e clique em **Criar** para criar a nova base de dados de conhecimento ou em **Abrir** para abrir uma base de dados de conhecimento existente.  
   
-4.  Na página **Mapa** , especifique uma conexão com a fonte de dados. Para obter mais informações, consulte [Executar descoberta de Conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  Na página **Mapa** , especifique uma conexão com a fonte de dados. Para obter mais informações, consulte [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Se não existir um domínio correspondente, clique no ícone **Criar um Domínio** .  
   

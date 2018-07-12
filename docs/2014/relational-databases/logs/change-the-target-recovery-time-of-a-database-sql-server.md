@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c8006464383f39b6f2fef4c3fd741c3ba57c119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c23360f7a57e110c5cf50bb01406b51f166c5950
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149317"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Alterar o tempo de recuperação de destino de um banco de dados (SQL Server)
   Este tópico descreve como definir o tempo de recuperação de destino de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por padrão, o tempo de recuperação de destino é 0, e o banco de dados usa *pontos de verificação automáticos* (que são controlados pela opção de servidor **intervalo de recuperação** ). Definir o tempo de recuperação de destino como maior que 0 faz com que o banco de dados use os *pontos de verificação indiretos* e estabelece um limite superior no tempo de recuperação para este banco de dados.  

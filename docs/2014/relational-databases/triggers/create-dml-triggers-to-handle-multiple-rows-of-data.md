@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple row DML triggers
 - UPDATE statement [SQL Server], DML triggers
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2e3de68398974d400efa15c2d9101c668b32fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0413a39428b11c3bdc14741ac518e48fbfd1c294
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008853"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417095"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crie gatilhos DML para tratar várias linhas de dados
   Ao gravar o código de um gatilho DML, considere que a instrução que aciona o gatilho pode ser uma única instrução que afeta diversas linhas de dados, em vez de uma única linha. Esse comportamento é comum para os gatilhos UPDATE e DELETE, pois essas instruções geralmente afetam várias linhas. O comportamento é menos comum para gatilhos INSERT, pois a instrução INSERT básica adiciona apenas uma única linha. Entretanto, como o gatilho INSERT pode ser acionado por uma instrução INSERT INTO (*table_name*) SELECT, a inserção de várias linhas pode causar a invocação de um único gatilho.  

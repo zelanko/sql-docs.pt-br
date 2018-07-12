@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33509006a58d65cb87c106572b6e68ba3621cca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1c8ab80ff9c697ac3f7a9a7eaa466e11d003adfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162207"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Executar o depurador Transact-SQL
   Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] depois de abrir uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Em seguida, você pode executar seu código [!INCLUDE[tsql](../../includes/tsql-md.md)] em modo de depuração até parar o depurador. Você pode definir opções para personalizar como o depurador é executado.  
@@ -37,7 +37,7 @@ ms.locfileid: "36013532"
 ## <a name="starting-and-stopping-the-debugger"></a>Iniciando e parando o depurador  
  Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] são os seguintes:  
   
--   Se seu Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em outro computador, você deverá ter configurado o depurador para depuração remota. Para obter mais informações, consulte [configurar o depurador Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md).  
+-   Se seu Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em outro computador, você deverá ter configurado o depurador para depuração remota. Para obter mais informações, consulte [configurar o depurador do Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] deve estar sendo executado sob uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
   

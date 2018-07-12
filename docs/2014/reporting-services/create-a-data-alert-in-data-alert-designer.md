@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278792"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
   Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "36012848"
   
 ## <a name="see-also"></a>Consulte também  
  [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md)   
- [Gerenciador de alertas de dados para os administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
   
   

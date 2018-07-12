@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258902"
 ---
 # <a name="developer39s-guide-database-engine"></a>Desenvolvedor&#39;guia (mecanismo de banco de dados)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
@@ -58,9 +58,9 @@ ms.locfileid: "36011396"
   
 ## <a name="see-also"></a>Consulte também  
  [Programação de mineração de dados](../analysis-services/dev-guide/data-mining-programming.md)   
- [Guia do desenvolvedor &#40;do Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Guia do desenvolvedor &#40;do Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Guia do desenvolvedor &#40;replicação&#41;](replication/concepts/replication-developer-documentation.md)   
- [Guia do desenvolvedor &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Guia do desenvolvedor do &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
+ [Guia do desenvolvedor do &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Guia do desenvolvedor do &#40;replicação&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Guia do desenvolvedor do &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

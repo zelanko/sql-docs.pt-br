@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d99a11e1f0801024544e7a64a4321e8f6e53d6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187073"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>Elemento DataSourceImpersonationInfo (ASSL)
   Contém as informações usadas para determinar o comportamento de representação ao conectar-se à fonte de dados para um [banco de dados](../objects/database-element-assl.md) elemento.  

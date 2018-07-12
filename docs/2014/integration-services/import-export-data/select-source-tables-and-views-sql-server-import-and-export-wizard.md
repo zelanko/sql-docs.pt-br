@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f785bac221acd45892a2a75a28682b2173e29e37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 863ec1ff07440dcab80cd46b5179e3f042d9dadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149897"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selecionar tabelas de origem e exibições (Assistente de Importação e Exportação do SQL Server)
   Use o **selecionar tabelas de origem e exibições** página para especificar as tabelas e exibições a serem copiados da fonte de dados para o destino.  
@@ -43,14 +43,14 @@ ms.locfileid: "36020727"
  Selecione uma tabela de destino da lista para cada tabela de origem.  
   
 > [!NOTE]  
->  Se você pausar neste ponto, o Assistente para criar uma tabela de destino em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou outra ferramenta, a nova tabela não fica imediatamente visível na lista de tabelas de destino disponíveis. Para atualizar a lista de tabelas de destino, volte duas páginas para o **escolha um destino** página, selecione novamente o banco de dados de destino e vá para frente novamente para o **selecionar tabelas de origem e exibições**.  
+>  Se você pausar neste ponto do Assistente para criar uma tabela de destino no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou outra ferramenta, a nova tabela não está imediatamente visível na lista de tabelas de destino disponíveis. Para atualizar a lista de tabelas de destino, volte duas páginas para o **escolher um destino** página, selecione novamente o banco de dados de destino e, em seguida, passo à frente novamente até a **selecionar tabelas de origem e exibições**.  
   
 ### <a name="other-options"></a>Outras opções  
  **Editar mapeamentos**  
- Use o **mapeamentos de coluna** caixa de diálogo para especificar colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar > no **destino** coluna do **mapeamentos de coluna** caixa de diálogo para colunas que você deseja ignorar.  
+ Use o **mapeamentos de coluna** caixa de diálogo para especificar colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar > na **destino** coluna do **mapeamentos de coluna** caixa de diálogo para colunas que você deseja ignorar.  
   
  **Visualização**  
- Visualizar dados de origem a **visualizar dados** caixa de diálogo para verificá-lo antes de executar a importação ou exportação. O **visualizar dados** caixa de diálogo exibe até 200 linhas de dados.  
+ Visualizar dados de origem na **visualizar dados** caixa de diálogo para verificá-lo antes de executar a importação ou exportação. O **visualizar dados** caixa de diálogo exibe até 200 linhas de dados.  
   
  Após visualizar os dados, é possível alterar as opções selecionadas para a origem e destino de dados. Para fazer essas alterações, na página **Selecionar Tabelas e Exibições de Origem**, clique em **Voltar** para retornar às páginas anteriores nas quais é possível alterar as seleções.  
   

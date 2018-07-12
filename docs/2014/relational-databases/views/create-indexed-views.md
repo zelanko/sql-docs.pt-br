@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150417"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
@@ -135,7 +134,7 @@ ms.locfileid: "36115179"
 -   Se a definição de exibição contiver uma cláusula GROUP BY, a chave de índice clusterizado exclusivo poderá referenciar somente as colunas especificadas na cláusula GROUP BY.  
   
 ###  <a name="Recommendations"></a> Recomendações  
- Quando você referencia os literais de cadeia de caracteres `datetime` e `smalldatetime` em exibições indexadas, é recomendável que converta explicitamente o literal no tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressões que envolvem conversão implícita de cadeias de caracteres para `datetime` ou `smalldatetime` são consideradas não determinísticas. Isso ocorre porque os resultados dependem das configurações de LANGUAGE e DATEFORMAT da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`listopad`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
+ Quando você referencia os literais de cadeia de caracteres `datetime` e `smalldatetime` em exibições indexadas, é recomendável que converta explicitamente o literal no tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressões que envolvem a conversão implícita de cadeias de caracteres para `datetime` ou `smalldatetime` são consideradas não determinísticas. Isso ocorre porque os resultados dependem das configurações de LANGUAGE e DATEFORMAT da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`listopad`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
   
  A conversão implícita de dados de caracteres não Unicode entre agrupamentos também é considerada não determinística.  
   

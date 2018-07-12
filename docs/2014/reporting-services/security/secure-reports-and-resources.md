@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240366"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -65,7 +65,7 @@ ms.locfileid: "36012211"
  Para atenuar o risco de incluir links em um relatório que executam inadvertidamente scripts mal-intencionados, associe hiperlinks a dados apenas de fontes confiáveis. Verifique se os dados dos resultados da consulta e as expressões que associam dados a hiperlinks não criam links que possam ser explorados. Por exemplo, não baseie um hiperlink em uma expressão que concatene dados de vários campos de conjuntos de dados. Se necessário, navegue até o relatório e use "Exibir origem" para verificar scripts e URLs suspeitos.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Diminuindo ataques de injeção SQL em um relatório parametrizado  
- Em qualquer relatório que inclui um parâmetro de tipo `String`, certifique-se de usar uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e certifique-se de que qualquer usuário que executa o relatório tem apenas as permissões necessárias para exibir os dados no relatório. Quando você define um parâmetro de tipo `String`, é exibida uma caixa de texto que pode ter qualquer valor para o usuário. Uma lista de valores disponíveis limita os valores que podem ser inseridos. Se o parâmetro do relatório estiver associado a um parâmetro de consulta e uma lista de valores disponíveis não for usada, um usuário do relatório poderá digitar sintaxe SQL na caixa de texto, abrindo potencialmente o relatório e o servidor a um ataque de injeção SQL. Se o usuário tiver permissões suficientes para executar a nova instrução SQL, resultados indesejados podem ser produzidos no servidor.  
+ Em qualquer relatório que inclui um parâmetro de tipo `String`, certifique-se de usar uma lista de valores disponíveis (também conhecida como uma lista de valores válidos) e certifique-se de que qualquer usuário que executa o relatório tem apenas as permissões necessárias para exibir os dados no relatório. Quando você define um parâmetro de tipo `String`, o usuário é apresentado com uma caixa de texto que pode ter qualquer valor. Uma lista de valores disponíveis limita os valores que podem ser inseridos. Se o parâmetro do relatório estiver associado a um parâmetro de consulta e uma lista de valores disponíveis não for usada, um usuário do relatório poderá digitar sintaxe SQL na caixa de texto, abrindo potencialmente o relatório e o servidor a um ataque de injeção SQL. Se o usuário tiver permissões suficientes para executar a nova instrução SQL, resultados indesejados podem ser produzidos no servidor.  
   
  Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão ou uma URL no valor de parâmetro e processar o relatório em Excel ou HTML. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
   

@@ -12,26 +12,26 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51d176ecef04060c58be629b72fe867cd51960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f5e645098da53c720d37814b4dc4dbfe6f1c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169547"
 ---
 # <a name="discoverstoragetables-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLES
   Permite ao cliente determinar as tabelas que são incluídas em um banco de dados do Analysis Services executado no modo Tabular ou SharePoint.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_STORAGE_TABLES` linhas contém as seguintes colunas.  
+ O `DISCOVER_STORAGE_TABLES` linhas contém as colunas a seguir.  
   
 |**Nome da coluna**|**Indicador de tipo**|**Comprimento**|**Descrição**|  
 |---------------------|------------------------|----------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`||Especifica o nome do banco de dados que contém as tabelas.<br /><br /> O `DISCOVER_STORAGE_TABLES` linhas pode ser restringido usando esta coluna. Se esta coluna não for usada para restringir o conjunto de linhas, o banco de dados atual será usado.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||Especifica o cubo ou modelo que contém as tabelas.<br /><br /> O `DISCOVER_STORAGE_TABLES` linhas pode ser restringido usando esta coluna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`||Especifica o nome do banco de dados que contém as tabelas.<br /><br /> O `DISCOVER_STORAGE_TABLES` conjunto de linhas pode ser restrito usando esta coluna. Se esta coluna não for usada para restringir o conjunto de linhas, o banco de dados atual será usado.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||Especifica o cubo ou modelo que contém as tabelas.<br /><br /> O `DISCOVER_STORAGE_TABLES` conjunto de linhas pode ser restrito usando esta coluna.|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`||O nome do grupo de medidas.|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`||O nome da partição.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||O nome da dimensão.|  

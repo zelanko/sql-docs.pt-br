@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158017"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um dos seguintes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.  
@@ -132,13 +131,13 @@ ms.locfileid: "36020455"
   
  [Neste tópico](#top)  
   
-##  <a name="processing"></a> Processamento de pesquisa de texto completo  
+##  <a name="processing"></a> Processamento da pesquisa de texto completo  
  A pesquisa de texto completo é ativada pelo Mecanismo de Texto Completo. O Mecanismo de Texto Completo tem duas funções: suporte a indexação e suporte a consulta.  
   
 ###  <a name="indexing"></a> Processo de indexação de texto completo  
  Quando uma população de texto completo (também conhecida como rastreamento) é iniciada, o mecanismo de texto completo entrega grandes lotes de dados à memória e notifica o host do daemon de filtro. O host filtra e o Word divide os dados e converte os dados convertidos em listas de palavras invertidas. A pesquisa de texto completo pega os dados convertidos nas listas de palavras, processa-os para remover palavras irrelevantes e mantém as listas de palavras para um lote em um ou mais índices invertidos.  
   
- Ao indexar dados armazenados em um `varbinary(max)` ou `image` coluna, o filtro, que implementa o **IFilter** interface, extrai texto com base no formato de arquivo especificado para que os dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro requerem o `varbinary(max)`, ou `image` dados sejam gravados fora da pasta, em vez de serem postos na memória.  
+ Ao indexar dados armazenados em um `varbinary(max)` ou `image` coluna, o filtro, que implementa o **IFilter** interface, extrai texto com base no formato de arquivo especificado para os dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro exigem o `varbinary(max)`, ou `image` dados sejam gravados fora da pasta, em vez de serem postos na memória.  
   
  Como parte do processamento, os dados de texto reunidos são passados por um separador de palavras para que o texto seja separado em tokens individuais ou palavras-chave. A linguagem usada para geração de tokens é especificada no nível da coluna, podendo ser identificada em dados `varbinary(max)`, `image` ou `xml`, pelo componente de filtro.  
   

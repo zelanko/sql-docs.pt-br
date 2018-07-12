@@ -1,25 +1,23 @@
 ---
-title: Alterações recentes em gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
+title: Alterações significativas ao gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e204958f9cea2db092f2a9c4b7d20648e4182c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f206da123659c750f955d2132142dcae76df6a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165347"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Alterações de quebra feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
   Este tópico descreve alterações de quebra feitas em recursos das ferramentas de gerenciamento. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

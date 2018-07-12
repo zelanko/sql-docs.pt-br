@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157487"
 ---
 # <a name="external-tools"></a>Ferramentas Externas
   Use esta caixa de diálogo para adicionar ferramentas externas, como o Gerenciador de Configurações do SQL Server ou o Bloco de Notas, ao menu **Ferramentas** . Adicionar ferramentas externas permite a execução de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, as saídas de algumas ferramentas podem ser exibidas na janela Saída. A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
@@ -76,7 +76,7 @@ ms.locfileid: "36115147"
   
 2.  Na caixa **Título** , digite **Gerenciador de Configurações do SQL Server**.  
   
-3.  No **comando** , digite o caminho para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] executável, como Console de gerenciamento `C:\WINNT\system32\mmc.exe`  
+3.  No **comando** , digite o caminho para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console de gerenciamento do executável, como `C:\WINNT\system32\mmc.exe`  
   
 4.  No **argumentos** , digite o caminho para o arquivo. msc, como `"C:\WINNT\system32\SQLServerManager.msc"`  
   

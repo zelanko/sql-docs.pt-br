@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b69f6ba2dd0fc6c5b3b2ce4f93e70239d8868007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211266"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Adicionando um procedimento armazenado estendido ao SQL Server
     
@@ -49,7 +49,7 @@ ms.locfileid: "36020255"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Se o nome da função especificado em `sp_addextendedproc` não corresponder exatamente ao nome da função na DLL, o novo nome será registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o nome não poderá ser usado. Por exemplo, embora `xp_Hello` é registrado como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado localizado em `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não será capaz de encontrar a função na DLL se você usar `xp_Hello` para chamar a função mais tarde.  
+ Se o nome da função especificado em `sp_addextendedproc` não corresponder exatamente ao nome da função na DLL, o novo nome será registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o nome não poderá ser usado. Por exemplo, embora `xp_Hello` está registrado como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado localizado em `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderão localizar a função na DLL se você usar `xp_Hello` para chamar a função mais tarde.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

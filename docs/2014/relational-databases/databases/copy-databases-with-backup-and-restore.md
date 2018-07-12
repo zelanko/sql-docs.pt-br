@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164887"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "36020945"
   
     -   Se o arquivo existente não puder ser substituído, ocorrerá um erro na restauração.  
   
- Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar o [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabela de histórico para encontrar os arquivos de banco de dados e log no backup que você planeja restaurar.  
+ Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar o [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabela de histórico para descobrir os arquivos de log e banco de dados no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
  Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
@@ -116,7 +116,7 @@ ms.locfileid: "36020945"
   
 -   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **Para reiniciar uma operação de restauração interrompida**  
+ **Reiniciar uma operação de restauração interrompida**  
   
 -   [Reiniciar uma operação de restauração interrompida &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36020945"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Para copiar um banco de dados usando o SQL Server Management Objects (SMO)**  
+ **Copiar um banco de dados usando o SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

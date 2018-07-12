@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b63309bec7a37ef7953eb1a358ed317b366c4bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211476"
 ---
 # <a name="level-element-csdlbi"></a>Elemento Level (CSDLBI)
   O elemento Level é um tipo complexo que define um único nível em uma hierarquia  
@@ -86,7 +86,7 @@ ms.locfileid: "36020349"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o modelo de objeto de tabela](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Noções básicas sobre o modelo de objeto Tabular](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Compreendendo funções para hierarquias pai-filho em DAX](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
  [Configurar o &#40;todos os&#41; nível para hierarquias de atributo](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

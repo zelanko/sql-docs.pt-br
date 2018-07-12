@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193327"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
   Não há suporte para as operações de ALTER nas tabelas com otimização de memória. Isso inclui operações como alteração do bucket_count, adição ou remoção de um índice, e adição ou remoção de uma coluna. Este tópico fornece diretrizes sobre como atualizar tabelas com otimização de memória.  
@@ -73,7 +73,7 @@ ms.locfileid: "36020942"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Se não houver memória suficiente disponível, `T_copy` pode ser uma tabela com otimização de memória, o que torna os dados mais rápido copiar.<sup> 2</sup>  
+     Se não houver memória suficiente disponível, `T_copy` pode ser uma tabela com otimização de memória, o que torna os dados mais rápida de copiar.<sup> 2</sup>  
   
 5.  Descarte os objetos associados ao esquema que fazem referência à tabela original.  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36020942"
   
 10. Inicie a carga de trabalho em `T`.  
   
- <sup>1</sup> Observe que `T_copy` é persistente no disco neste exemplo. Se um backup de `T` estiver disponível, `T_copy` poderá ser uma tabela temporária ou não durável.  
+ <sup>1</sup> Observe que `T_copy` é persistido no disco neste exemplo. Se um backup de `T` estiver disponível, `T_copy` poderá ser uma tabela temporária ou não durável.  
   
  <sup>2</sup> deve haver memória suficiente para `T_copy`. A memória não é liberada imediatamente em `DROP TABLE`. Se `T_copy` tiver otimização de memória, haverá necessidade de memória suficiente para duas cópias adicionais de `T`. Se `T_copy` for uma tabela baseada em disco, haverá necessidade de memória suficiente apenas para uma cópia adicional de `T`, devido ao coletor de lixo que precisa ser atualizado depois de descartar a versão antiga de `T`.  
   
 ## <a name="changing-schema-powershell"></a>Alterando o esquema (PowerShell)  
  Os scripts do PowerShell a seguir preparam e geram alterações de esquema gerando o script da tabela e das permissões associadas.  
   
- Uso: prepare_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ Uso: prepare_schema_change.ps1 *nome_do_servidor * * db_name`schema_name`table_name*  
   
  Esse script usa como argumentos uma tabela e gera o script do objeto e de suas permissões, além de fazer referência a objetos associados ao esquema e suas permissões na pasta atual. Um total de 7 scripts é gerado para atualizar o esquema da tabela de entrada:  
   
@@ -228,7 +228,7 @@ write-host ""
   
  O script de PowerShell a seguir executa as alterações do esquema que foram incluídas em script no exemplo anterior. Esse script é considerado argumento de uma tabela, além de executar os scripts de alteração do esquema que foram gerados para essa tabela e os procedimentos armazenados associados.  
   
- Uso: execute_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ Uso: execute_schema_change.ps1 *nome_do_servidor * * db_name`schema_name`table_name*  
   
 ```tsql  
 # stop execution once an error occurs  

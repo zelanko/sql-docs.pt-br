@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22f525a1eed94e3125dab5cdc3930dc6bc20ec91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763a1eb2db612eff3e1d6a895e91fb0878d465e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159127"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
   Este tópico descreve como desanexar e anexar os bancos de dados do DQS.  
@@ -46,7 +46,7 @@ ms.locfileid: "36013421"
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
 ##  <a name="Detach"></a> Desanexar bancos de dados DQS  
- Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados DQS geralmente estão disponíveis no seguinte local no seu computador de serviços de qualidade de dados: Server \ mssql12 do C:\Program Files\Microsoft SQL. *< Nome_da_instância >* \MSSQL\DATA.  
+ Quando você desanexa um banco de dados DQS usando o SQL Server Management Studio, os arquivos desanexados permanecem no computador e podem ser anexados novamente à mesma instância do SQL Server ou podem ser movidos para outro servidor e anexados lá. Os arquivos de banco de dados DQS geralmente estão disponíveis no seguinte local no computador do Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Instance_Name >* \MSSQL\DATA.  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   

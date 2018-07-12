@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de18cc3a646e9aefa8ffaf5d07a8379be0588c3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5b693d06e42f0fc5d2815b188826b21f5d89cae7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009553"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428385"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` Retorna uma linha que relata os atributos de valor de retorno de todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimentos armazenados.  
   
- `SQLProcedureColumns` Retorna SQL_SUCCESS se existirem ou não valores para *CatalogName*, *SchemaName*, *ProcName*, ou *ColumnName* parâmetros. **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
+ `SQLProcedureColumns` Retorna SQL_SUCCESS havendo ou não valores para *CatalogName*, *SchemaName*, *ProcName*, ou *ColumnName* parâmetros. **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
   
  É possível executar `SQLProcedureColumns` em um cursor de servidor estático. Uma tentativa de executar `SQLProcedureColumns` em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
- A tabela a seguir lista as colunas retornadas pelo conjunto de resultados e como elas foram estendidas para tratar o **udt** e **xml** tipos de dados por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
+ A tabela a seguir lista as colunas retornadas pelo conjunto de resultados e como elas foram estendidas para lidar com o **udt** e **xml** tipos de dados por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
   
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
@@ -45,7 +43,7 @@ ms.locfileid: "36009553"
 |SS_XML_SCHEMACOLLECTION_NAME|Retorna o nome de uma coleção de esquemas XML. Se não for possível localizar o nome, essa variável conterá uma cadeia de caracteres vazia.|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns e parâmetros com valor de tabela  
- SQLProcedureColumns trata parâmetros com valor de tabela de maneira semelhante para tipos CLR definidos pelo usuário. Em linhas retornadas para parâmetros com valor de tabela, as colunas têm os seguintes valores:  
+ SQLProcedureColumns lida com os parâmetros com valor de tabela de maneira semelhante para tipos CLR definidos pelo usuário. Em linhas retornadas para parâmetros com valor de tabela, as colunas têm os seguintes valores:  
   
 |Nome da coluna|Descrição/valor|  
 |-----------------|------------------------|  
@@ -74,7 +72,7 @@ ms.locfileid: "36009553"
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>Suporte de SQLProcedureColumns a recursos aprimorados de data e hora  
  Para os valores retornados para tipos de data/hora, consulte [metadados de catálogo](../native-client-odbc-date-time/metadata-catalog.md).  
   
- Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Suporte de SQLProcedureColumns a UDTs CLR grandes  
  `SQLProcedureColumns` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

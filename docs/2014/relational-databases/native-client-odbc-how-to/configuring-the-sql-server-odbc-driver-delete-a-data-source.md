@@ -5,33 +5,31 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009538"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415185"
 ---
 # <a name="delete-a-data-source-odbc"></a>Excluir uma fonte de dados (ODBC)
   Você pode excluir uma fonte de dados usando o administrador de ODBC, programaticamente (usando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), ou excluindo um arquivo (se um nome de fonte de dados de arquivo).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para excluir uma fonte de dados usando o Administrador de ODBC  
   
-1.  Em **painel de controle**, abra **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
+1.  Na **painel de controle**, abra **ferramentas administrativas**e, em seguida, clique duas vezes em **fontes de dados (ODBC)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
   
-2.  Clique o **DSN do usuário**, **DSN de sistema**, ou **DSN de arquivo** guia.  
+2.  Clique o **DSN de usuário**, **DSN de sistema**, ou **DSN de arquivo** guia.  
   
 3.  Clique na fonte de dados para excluir.  
   

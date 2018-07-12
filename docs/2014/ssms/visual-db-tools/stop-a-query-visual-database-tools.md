@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 - queries [SQL Server], stopping
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450a19f5dabbd813ae4555f07956127633a76521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e443a2bf75c4d6b7e3a8106641322f71d52e20e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240037"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Parar uma consulta (Visual Database Tools)
   Quando você observar que uma consulta está excessivamente lenta ou que não retorna os resultados esperados, poderá pará-la se ela ainda não tiver terminado.  
@@ -34,7 +34,7 @@ ms.locfileid: "36011926"
   
 ## <a name="see-also"></a>Consulte também  
  [Limpar resultados da consulta &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [Executar consultas &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+ [Executar consultas do &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

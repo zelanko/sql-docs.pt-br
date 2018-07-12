@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
 - Integration Services projects, adding
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - projects [Integration Services], adding
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 20a8d1c2de2f71a8095145a413c2594467bd2e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19ef4acffc6fabb5d69effe0f932b7ea45f52275
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211696"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Adicionar ou remover um projeto do Integration Services em uma solução
   Os procedimentos a seguir descrevem como adicionar ou remover um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em uma solução.  

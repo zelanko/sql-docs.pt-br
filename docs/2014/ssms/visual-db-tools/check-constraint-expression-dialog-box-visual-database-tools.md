@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71477726c02f1fc37586242d969d7709bfb8e07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 843fe6a662c0d77962881683fb8d5842a4f44612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278232"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
   Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
@@ -71,7 +71,7 @@ NOT (payment_method = 'credit card') OR
 |NOT|Nega qualquer expressão Booleana (que pode incluir palavras-chaves, como LIKE, NULL, BETWEEN, IN e EXISTS).<br /><br /> Quando mais de um operador lógico for usado em uma instrução, NOT é processado primeiro. É possível alterar a ordem de execução usando parênteses.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Restrições UNIQUE e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [As restrições UNIQUE e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Criar restrições exclusivas](../../relational-databases/tables/create-unique-constraints.md)  
   
   

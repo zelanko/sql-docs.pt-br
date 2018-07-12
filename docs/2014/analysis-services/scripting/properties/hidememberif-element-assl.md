@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187023"
 ---
 # <a name="hidememberif-element-assl"></a>Elemento HideMemberIf (ASSL)
   Indica se, e quando, um membro em um nível ficará oculto pelos aplicativos cliente.  
@@ -69,7 +69,7 @@ ms.locfileid: "36018976"
 |*Nunca*|Membros nunca são ocultados.|  
 |*OnlyChildWithNoName*|Um membro é ocultado quando ele for o único filho de seu pai e seu nome estiver vazio.|  
 |*OnlyChildWithParentName*|Um membro é ocultado quando ele for o único filho de seu pai e seu nome for idêntico ao de seu pai.|  
-|*Sem nome*|Um membro é ocultado quando seu nome estiver vazio.|  
+|*NoName*|Um membro é ocultado quando seu nome estiver vazio.|  
 |*ParentName*|Um membro é ocultado quando seu nome for idêntico ao de seu pai.|  
   
 ## <a name="remarks"></a>Remarks  

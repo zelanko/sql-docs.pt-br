@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192466"
 ---
 # <a name="import-the-sqlps-module"></a>Importar o módulo SQLPS
   A maneira recomendada para gerenciar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no PowerShell é importar o módulo `sqlps` para um ambiente do Windows PowerShell 2.0. O módulo carrega e registra os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e assemblies de capacidade de gerenciamento.  
@@ -50,9 +50,9 @@ ms.locfileid: "36019638"
 ##  <a name="LoadSqlps"></a> Carregar o módulo sqlps  
  **Para carregar o módulo sqlps no Windows PowerShell**  
   
-1.  Use o `Set-ExecutionPolicy` cmdlet para definir a política de execução de script adequada.  
+1.  Use o `Set-ExecutionPolicy` cmdlet para definir a política de execução do script apropriado.  
   
-2.  Use o `Import-Module` para importar o módulo sqlps. Especifique o `DisableNameChecking` parâmetro se você desejar suprimir o aviso sobre `Encode-Sqlname` e `Decode-Sqlname`.  
+2.  Use o `Import-Module` cmdlet para importar o módulo sqlps. Especifique o `DisableNameChecking` parâmetro, se você desejar suprimir o aviso sobre `Encode-Sqlname` e `Decode-Sqlname`.  
   
 ### <a name="example-powershell"></a>Exemplo (PowerShell)  
  Este exemplo carrega o módulo `sqlps` com verificação de nome desligado.  

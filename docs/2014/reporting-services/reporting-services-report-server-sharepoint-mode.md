@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 10c79cc0750843f75d5c479562af470aa622a65c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a41599128d6b0f9bbceaa47a30d851e312f39e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168127"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
   Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configurado para o **Modo do SharePoint** pode ser executado em uma implantação de um produto do SharePoint. Um servidor de relatório no modo do SharePoint pode usar os recursos de colaboração e gerenciamento do SharePoint para relatórios e outros [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tipos de conteúdo. O modo do SharePoint requer a instalação da versão apropriada do suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint nos seus Front Ends Web do SharePoint.  
@@ -30,9 +30,9 @@ ms.locfileid: "36019499"
   
 -   [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
--   [Adicionar um servidor de relatório a um Farm &#40;expansão do SSRS&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+-   [Adicionar um servidor de relatório a um Farm &#40;expansão SSRS&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- Para obter informações sobre o que há de novo nesta versão, consulte a seção 'SharePoint' [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
+ Para obter informações sobre o que há de novo nesta versão, consulte a seção 'SharePoint' em [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
  **Neste tópico:**  
   
@@ -80,12 +80,12 @@ ms.locfileid: "36019499"
 ##  <a name="bkmk_connectedandlocal"></a> Modo conectado e modo local  
  A versão do SQL Server 2008 R2 introduziu um novo *modo local* para exibição de relatórios de um servidor do SharePoint 2010 com o Suplemento Reporting Services do Microsoft SQL Server 2008 R2 ou posterior para os produtos SharePoint 2010 instalados.  
   
--   *Modo local*: modo Local permite que os relatórios sejam renderizados localmente a partir de biblioteca de documentos do SharePoint, sem integração com um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. O suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint é necessário, mas um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não é. O suplemento pode ser instalado de várias maneiras diferentes, incluindo a ferramenta de preparação de produtos do SharePoint 2010. Para obter mais informações sobre o modo local, consulte [Modo Local versus Modo conectado no Visualizador de relatórios &#40;Reporting Services no modo do SharePoint&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [onde encontrar o suplemento Reporting Services para produtos do SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Modo local*: modo Local permite que os relatórios sejam renderizados localmente na biblioteca de documentos do SharePoint, sem integração com um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. O suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint é necessário, mas um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não é. O suplemento pode ser instalado de várias maneiras diferentes, incluindo a ferramenta de preparação de produtos do SharePoint 2010. Para obter mais informações sobre o modo local, consulte [Modo Local versus Modo conectado no Visualizador de relatórios do &#40;Reporting Services no modo do SharePoint&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [onde encontrar o suplemento Reporting Services para produtos do SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Modo conectado*: há suporte para o modo conectado integrando um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no farm do SharePoint usando a Administração Central do SharePoint. A integração com um servidor de relatório permite relatórios completos de ponta a ponta, fornecendo os recursos de colaboração do SharePoint 2010 e os recursos baseados no servidor de um servidor de relatório, inclusive: Assinaturas, Instantâneos e processamento baseado no servidor.  
+-   *Modo conectado*: há suporte para o modo conectado, integrando um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no farm do SharePoint usando a Administração Central do SharePoint. A integração com um servidor de relatório permite relatórios completos de ponta a ponta, fornecendo os recursos de colaboração do SharePoint 2010 e os recursos baseados no servidor de um servidor de relatório, inclusive: Assinaturas, Instantâneos e processamento baseado no servidor.  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> Recursos do SharePoint sem suporte  
- Nem todos os recursos do SharePoint estão disponíveis para operações integradas. A seguir está uma lista dos recursos do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não integra diretamente:  
+ Nem todos os recursos do SharePoint estão disponíveis para operações integradas. A seguir está uma lista dos recursos SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integra diretamente:  
   
 -   Serviço de Repositório Seguro.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36019499"
      O histórico de versão da biblioteca de documento está configurada na página ”Configurações de versão” de “Configurações da biblioteca”.  
   
 ##  <a name="bkmk_supportedcombinations"></a> Combinações compatíveis do suplemento do SharePoint e servidor de relatório  
- Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Para obter mais informações, consulte [suporte para combinações do SharePoint e servidor do Reporting Services e suplemento &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Para obter mais informações, consulte [combinações do SharePoint e com suporte e servidor do Reporting Services Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  A versão correta do suplemento do Reporting Services deve ser usada com a versão correspondente dos produtos SharePoint.  
@@ -110,14 +110,14 @@ ms.locfileid: "36019499"
 ##  <a name="bkmk_components"></a> Componentes que fornecem integração  
  Para combinar os servidores em uma única implantação, você integra uma instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a uma instância dos produtos SharePoint  
   
- Integração é fornecida pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint. O Suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é um componente de distribuição livre que é possível baixar e, em seguida, instalar em um servidor no qual a versão apropriada do SharePoint está em execução.  
+ A integração é fornecida por meio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint. O Suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é um componente de distribuição livre que é possível baixar e, em seguida, instalar em um servidor no qual a versão apropriada do SharePoint está em execução.  
   
 > [!TIP]  
->  Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Para obter mais informações, consulte [suporte para combinações do SharePoint e servidor do Reporting Services e suplemento &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Para obter mais informações, consulte [combinações do SharePoint e com suporte e servidor do Reporting Services Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   No SharePoint, a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento fornece o ponto de extremidade de proxy de ReportServer, uma parte da Web do Visualizador de relatórios, e as páginas do aplicativo para que você possa exibir, armazenam e gerenciem o conteúdo do servidor de relatório em um site do SharePoint ou farm.  
+-   No SharePoint, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento fornece o ponto de extremidade de proxy de ReportServer, uma parte da Web do Visualizador de relatórios, e as páginas do aplicativo para que você possa exibir, armazenam e gerenciem o conteúdo do servidor de relatório em um site do SharePoint ou farm.  
   
--   Em [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece arquivos de programa atualizados, um ponto de extremidade SOAP e extensões de entrega e de segurança personalizadas. O servidor de relatório deve estar configurado para ser executado no modo integrado do SharePoint, dedicado exclusivamente a dar suporte ao acesso e à entrega de relatórios pelo seu site do SharePoint.  
+-   Em [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece arquivos de programa atualizados, um ponto de extremidade SOAP e extensões de entrega e segurança personalizadas. O servidor de relatório deve estar configurado para ser executado no modo integrado do SharePoint, dedicado exclusivamente a dar suporte ao acesso e à entrega de relatórios pelo seu site do SharePoint.  
   
  Depois de instalar o Suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no SharePoint e configurar os dois servidores para integração, você pode carregar ou publicar tipos de conteúdo de servidor de relatório em uma biblioteca do SharePoint e exibir e gerenciar esses documentos a partir de um site do SharePoint. O carregamento ou a publicação do conteúdo de servidor de relatório é uma primeira etapa importante; a Web part e as páginas são disponibilizadas quando você seleciona definições de relatório (.rdl), modelos de relatório (.smdl) e fontes de dados compartilhadas (.rsds) em um site do SharePoint.  
   
@@ -139,16 +139,16 @@ ms.locfileid: "36019499"
   
 |**Tarefa**|**Link**|  
 |--------------|--------------|  
-|Etapas detalhadas para instalar e configurar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|[Instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) e [adicionar um servidor de relatório a um Farm &#40;expansão do SSRS&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Expansão seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a implantação do SharePoint, adicionando mais servidores de relatório.|[Adicionar um servidor de relatório a um Farm &#40;expansão do SSRS&#41; ](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [topologias de implantação para recursos de BI do SQL Server no SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md) .|  
+|Etapas detalhadas para instalar e configurar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint.|[Instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) e [adicionar um servidor de relatório a um Farm &#40;expansão SSRS&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Escalar horizontalmente seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] implantação do SharePoint, adicionando outros servidores de relatório.|[Adicionar um servidor de relatório a um Farm &#40;expansão SSRS&#41; ](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) e [topologias de implantação para recursos de BI do SQL Server no SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md) .|  
 |Adicione outros front-ends da Web do SharePoint que têm os componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalados para exibir e relatar itens.|[Adicionar um front-end da Web do Reporting Services a um farm](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Configure o email para recursos de alerta de dados e assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|[Configure o email para o do aplicativo de serviço Reporting Services &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Configure o email para recursos de alerta de dados e assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|[Configurar o email para um relatório dos serviços de aplicativo de serviço &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Informações recentes para esta versão, encontradas no TechNet Wiki.|[Dicas, truques e soluções de problemas do SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Requisitos de hardware e Software para o Reporting Services no modo do SharePoint](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
- [Web Part do Visualizador de relatórios em um Site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Web Part de Visualizador de relatórios em um Site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Teste: Configurando o SSRS 2012 para integração com o SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
   
   

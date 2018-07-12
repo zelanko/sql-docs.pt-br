@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169311"
 ---
 # <a name="common-properties"></a>Propriedades comuns
   Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades comuns e personalizadas no componente, na entrada e saída e nos níveis de colunas de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  

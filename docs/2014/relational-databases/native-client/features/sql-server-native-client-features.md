@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc73fcc6a4ecd188053e3ae8ac1064ecc84192e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011118"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411305"
 ---
 # <a name="sql-server-native-client-features"></a>Recursos do SQL Server Native Client
   Além de expor os recursos do WDAC (Windows (anteriormente Microsoft) Data Access Components), o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client também implementa vários outros recursos para expor a funcionalidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,7 +33,7 @@ ms.locfileid: "36011118"
  Discute uma alteração de comportamento a partir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Usando o espelhamento de banco de dados](using-database-mirroring.md)  
- Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao uso de bancos de dados espelhados, que é a capacidade de manter uma cópia ou espelho, de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados em um servidor em espera.  
+ Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dá suporte ao uso de bancos de dados espelhados, que é a capacidade de manter uma cópia ou espelho, de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados em um servidor em espera.  
   
  [Executando operações assíncronas](performing-asynchronous-operations.md)  
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a operações assíncronas, o que possibilita o retorno imediato sem bloqueio no thread que fez a chamada.  
@@ -47,7 +45,7 @@ ms.locfileid: "36011118"
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao tipo de dados XML, um tipo de dados baseado em XML que pode ser usado como um tipo de coluna, um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função.  
   
  [Usando tipos definidos pelo usuário](using-user-defined-types.md)  
- Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a User-Defined tipos (UDT), que estende o sistema de tipos SQL, permitindo armazenar objetos e estruturas de dados personalizadas em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados.  
+ Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a User-Defined UDTS (tipos), que estende o sistema de tipos do SQL, permitindo armazenar objetos e estruturas de dados personalizados em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados.  
   
  [Usando tipos de valor grande](using-large-value-types.md)  
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a tipos de dados de valor grande, que são tipos de dados LOB (objeto binário grande).  
@@ -92,7 +90,7 @@ ms.locfileid: "36011118"
  Discute uma alteração no comportamento apresentada no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Se você fornecer um buffer de comprimento fixo ao associar um resultado de coluna ou parâmetro de saída e se o caractere `wchar` gravado no buffer antes da finalização do caractere for um ponto de código alternativo alto de um par alternativo, e se o próximo caractere `wchar` for um ponto de código alternativo baixo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client não adicionará o ponto de código alternativo alto ao buffer.  
   
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Discute como seu aplicativo pode ser configurado para aproveitar a recuperação de desastres de alta disponibilidade, recursos adicionados [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Discute como seu aplicativo pode ser configurado para aproveitar a recuperação de desastres de alta disponibilidade, recursos adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Acessar informações de diagnóstico nos logs de eventos estendidos](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Discute os aprimoramentos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento de dados que fornece acesso a informações de diagnóstico no buffer de anel e no log de XEvents.  

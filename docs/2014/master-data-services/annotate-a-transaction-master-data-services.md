@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0314970657815734a45d5ffbec254396062e076f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0f5de1290998e6129e94bc849278554121ed8a9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229316"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar uma transação (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], anote uma transação quando desejar fornecer detalhes de suporte sobre a transação para objetivos históricos.  
@@ -68,7 +68,7 @@ ms.locfileid: "36020521"
 5.  Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+ [As anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [Transações &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

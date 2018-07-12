@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades de Meridiano, rótulos de mapa | Microsoft Docs
+title: Caixa de diálogo Propriedades Meridianas, rótulos de mapa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163877"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Meridiano, Rótulos
   Use o **MapMeridian propriedades** caixa de diálogo para alterar as opções de rótulo para a grade vertical no visor do mapa. Um meridiano representa o valor seguinte, de acordo com o sistema de coordenadas especificado para o visor:  
