@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,13 +16,13 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182823"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Validar documentos XML e obtenha saída de erros completa habilitando a `ValidationDetails` propriedade da tarefa XML.  
@@ -31,12 +31,12 @@ ms.locfileid: "36012538"
   
  ![Propriedades da Tarefa XML no Editor da Tarefa XML](../media/xmltaskproperties.jpg "Propriedades da Tarefa XML no Editor da Tarefa XML")  
   
- Antes do `ValidationDetails` propriedade, a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você definir `ValidationDetails` como true, a saída do arquivo contém informações detalhadas sobre cada erro, incluindo o número da linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML.  
+ Antes do `ValidationDetails` propriedade estava disponível, a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define `ValidationDetails` como true, a saída do arquivo contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML.  
   
  A funcionalidade de validação de XML é facilmente dimensionada para documentos XML e grandes números de erros. Como o arquivo de saída é em formato XML, você pode consultar e analisar a saída. Por exemplo, se a saída contiver um grande número de erros, você poderá agrupar os erros usando uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] , conforme descrito neste tópico.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduziu o `ValidationDetails` propriedade [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduziu a `ValidationDetails` propriedade em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Exemplo de saída de XML válida  
  Veja um arquivo de saída de exemplo com os resultados da validação para um arquivo XML válido.  

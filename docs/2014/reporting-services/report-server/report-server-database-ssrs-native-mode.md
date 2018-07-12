@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -20,13 +20,13 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d7dd8dd25195465aaff15bcf58ca5c4898f58274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157647"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Banco de dados do servidor relatório (modo nativo do SSRS)
   Um servidor de relatório é um servidor sem estado que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para armazenar definições de objeto e metadados. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo usa dois bancos de dados para separar os requisitos de armazenamento de dados persistente do armazenamento de dados temporário. Os bancos de dados são criados juntamente e associados por nome. Por padrão, os nomes do banco de dados são **reportserver** e **reportservertempdb**, respectivamente.  
@@ -35,7 +35,7 @@ ms.locfileid: "36019055"
   
  Os bancos de dados podem ser executados em uma instância local ou remota do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A instância local será útil se você tiver recursos de sistema suficientes ou se desejar manter as licenças de software, mas a execução dos bancos de dados em um computador remoto pode melhorar o desempenho.  
   
- Você pode optar por uma porta ou reutilizar um banco de dados do servidor de relatórios existente da instalação anterior ou uma instância diferente com outra instância do servidor de relatórios. O esquema do banco de dados do servidor de relatórios deve ser compatível com a instância do servidor de relatórios. Se o banco de dados estiver em um formato anterior, será solicitada a atualização para o formato atual. Não é possível executar o downgrade das versões mais novas para uma versão mais antiga. Se você tiver um banco de dados do servidor de relatórios, não poderá usá-lo com uma versão anterior de instâncias do servidor de relatórios. Para obter mais informações sobre como os bancos de dados de servidor de relatório são atualizados para formatos mais recentes, consulte [atualizar um banco de dados do servidor de relatório](../install-windows/upgrade-a-report-server-database.md).  
+ Você pode optar por uma porta ou reutilizar um banco de dados do servidor de relatórios existente da instalação anterior ou uma instância diferente com outra instância do servidor de relatórios. O esquema do banco de dados do servidor de relatórios deve ser compatível com a instância do servidor de relatórios. Se o banco de dados estiver em um formato anterior, será solicitada a atualização para o formato atual. Não é possível executar o downgrade das versões mais novas para uma versão mais antiga. Se você tiver um banco de dados do servidor de relatórios, não poderá usá-lo com uma versão anterior de instâncias do servidor de relatórios. Para obter mais informações sobre como os bancos de dados de servidor de relatório serão atualizados para formatos mais recentes, consulte [atualizar um banco de dados do servidor de relatório](../install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  A estrutura de tabelas dos bancos de dados é otimizada para operações de servidor e não deve ser modificada ou ajustada. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar a estrutura da tabela de uma versão para a próxima. Se você modificar ou estender o banco de dados, poderá limitar ou impedir a capacidade de desenvolvimento de futuras atualizações ou aplicar service packs. Você também corre o risco de fazer alterações que prejudiquem as operações do servidor de relatórios. Por exemplo, se você ativar o READ_COMMITTED_SNAPSHOT no banco de dados do ReportServer, quebrará o recurso de classificação interativo.  
@@ -47,7 +47,7 @@ ms.locfileid: "36019055"
 ## <a name="report-server-database"></a>banco de dados do servidor de relatório  
  O banco de dados do servidor de relatório é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que armazena o seguinte conteúdo:  
   
--   Itens gerenciados por um servidor de relatório (... / modelos de relatório de relatórios e relatórios vinculados, fontes de dados compartilhadas, pastas, recursos) e todas as propriedades e configurações de segurança que estão associadas esses itens.  
+-   Itens gerenciados por um servidor de relatório (... / modelos, de relatório de relatórios e relatórios vinculados, fontes de dados compartilhadas, pastas, recursos) e todas as propriedades e configurações de segurança que estão associadas esses itens.  
   
 -   Assinatura e definições de agendamento.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36019055"
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de Relatório do Reporting Services](../reporting-services-report-server.md)   
  [Administrar um banco de dados do Servidor de Relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Operações de backup e restauração para o Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

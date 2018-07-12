@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 10aa9e6c97afbd62e9608f394b38717a677edf0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d77565df3e3d7493a2394ccdab47763b9c69324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164197"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Diretrizes e limitações do SQLXML 4.0
   Lembre-se do seguinte ao trabalhar com SQLXML 4.0:  
@@ -33,6 +33,6 @@ ms.locfileid: "36012660"
   
      Você está executando um aplicativo que usa SQLXML 4.0 e os PROGIDs dependentes de versão, e decide instalar outro programa de software. Esse programa pode instalar uma versão anterior do SQLXML. Seu aplicativo pode falhar, pois os PROGIDS independentes de versão do seu aplicativo agora apontam para a versão mais antiga do SQLXML, o que pode ou não possuir o recurso SQL XML que seu aplicativo está usando.  
   
--   Se por alguma razão você não deseja usar o provedor SQLXMLOLEDB e desejar usar o SQLOLEDB provedor de recursos do SQLXML, defina o **SQLXML Version** propriedade como "SQLXML.4.0".  
+-   Se por algum motivo você não deseja usar o provedor SQLXMLOLEDB e, em vez disso deseja usar o SQLOLEDB provedor para os recursos do SQLXML, defina as **SQLXML Version** propriedade como "SQLXML.4.0".  
   
   

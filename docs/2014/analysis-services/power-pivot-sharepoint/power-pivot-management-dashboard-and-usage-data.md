@@ -1,5 +1,5 @@
 ---
-title: Painel de gerenciamento PowerPivot e dados de uso | Microsoft Docs
+title: PowerPivot Management Dashboard and Usage Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28d410f99884aa1d01a2a97201bd4da9fc2cd6c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97bb7addcbbdf9a4e5a2b8b1151e081f48d0fea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278338"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
   O Painel de Gerenciamento PowerPivot é uma coleção de web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server PowerPivot para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  
@@ -28,7 +28,7 @@ ms.locfileid: "36010116"
   
  [Visão geral das seções do painel](#items)  
   
- [Painel de gerenciamento aberto do PowerPivot](#open)  
+ [Painel de gerenciamento PowerPivot aberto](#open)  
   
  [Fonte de dados em painéis](#sourcedata)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36010116"
 |Atualização de Dados - Falhas Recentes|Lista as pastas de trabalho PowerPivot que não concluíram a atualização de dados com êxito.|  
 |Relatórios|Contém links para relatórios que você pode abrir no Excel.|  
   
-##  <a name="open"></a> Painel de gerenciamento aberto do PowerPivot  
+##  <a name="open"></a> Painel de gerenciamento PowerPivot aberto  
  O painel mostra as informações de um aplicativo de serviço PowerPivot por vez. Você pode abrir o painel de gerenciamento em dois lugares diferentes.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Abra o painel em Configurações Gerais do Aplicativo  
@@ -153,7 +153,7 @@ ms.locfileid: "36010116"
     9. Em Especificar Consulta MDX, clique em **Design** para abrir o designer de consulta MDX e montar os dados com os quais deseja trabalhar. Em seguida, crie relatórios de Tabela Dinâmica ou Gráfico Dinâmico para visualizar os dados no Excel.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atualização de dados do PowerPivot com o SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Atualização de dados do PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

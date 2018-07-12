@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ExpirationDate property
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72e99894a0c4f43d5cdb2db565e16c16da59ac0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 83a85d4d8593f34c33752f1aba7c5baa3e17e706
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175278"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propriedade ExpirationDate (classe SecurityCertificate)
   Obtém a data em que o certificado de segurança deixar de ter efeito.  

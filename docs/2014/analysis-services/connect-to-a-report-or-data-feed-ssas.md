@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um relatório ou Feed de dados (SSAS) | Microsoft Docs
+title: Conectar-se a um relatório ou Feed de dados (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96e2ad7374493c375e85db4f9bff97a475174997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210286"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectar a um relatório ou feed de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um feed de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -48,7 +48,7 @@ ms.locfileid: "36019247"
  **Nome de Conexão amigável**  
  Digite um nome amigável para a conexão de feed de dados.  
   
- **URL de Feed de dados**  
+ **URL do Feed de dados**  
  Digite o caminho completo para um documento do serviço Atom (.atomsvc, .atom) ou a URL de um único feed de dados, ou clique em **Procurar** para selecionar um documento do serviço Atom.  
   
  **Procurar**  
@@ -75,7 +75,7 @@ ms.locfileid: "36019247"
  **Nome de Conexão amigável**  
  Digite um nome amigável para a conexão de feed de dados.  
   
- **URL de Feed de dados**  
+ **URL do Feed de dados**  
  Digite o caminho completo para um documento do serviço Atom (.atomsvc, .atom) ou a URL de um único feed de dados, ou clique em **Procurar** para selecionar um documento do serviço Atom.  
   
  Clique em **Incluir todas as colunas de feed** para especificar se todas as colunas de feeds de dados serão importadas.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server replication]
 - command line installations [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f63d8eee7708b70eedf9b9e00b85e646132dd986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70978d835a5c63589de69ad48fbeeef690dfef2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278202"
 ---
 # <a name="install-sql-server-replication"></a>Instalar a Replicação do SQL Server
   É possível instalar componentes de replicação usando o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um prompt de comando. Instale a replicação ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou ao modificar uma instância existente.  
@@ -43,7 +43,7 @@ ms.locfileid: "36010948"
 ## <a name="installing-replication-from-the-command-prompt"></a>Instalando a replicação a partir do prompt de comando  
  **Para instalar a replicação ao instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   Consulte [instalar o SQL Server 2014 do Prompt de comando](install-sql-server-from-the-command-prompt.md).  
+-   Ver [instalar o SQL Server 2014 do Prompt de comando](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instalar o SQL Server 2014](install-sql-server.md)   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55627b179f472c5501fb2a64bec9cc57f097d007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3a0bcae3a44553fdc6d2d337e9e54993bd7e769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209946"
 ---
 # <a name="user-defined-type"></a>Tipo definido pelo usuário
   O exemplo Tipo de dados definidos pelo usuário mostra a criação e o uso de um tipo de dados simples definido pelo usuário, tanto do Transact-SQL quanto de um aplicativo cliente usando `System.Data.SqlClient`.  

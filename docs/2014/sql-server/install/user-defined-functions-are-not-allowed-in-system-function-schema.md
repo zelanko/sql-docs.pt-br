@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system functions [SQL Server]
 - user-defined functions [SQL Server], system
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16c6cf618028d56a3b09cdad8da4cfd9eb9309f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa21b6f50aaa5bd9d428f3397978fa951925dedf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179143"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Funções definidas pelo usuário não são permitidas no system_function_schema
-  O Supervisor de atualização detectou funções definidas pelo usuário que são de propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O **system_function_schema** nome de usuário não existe e a ID de usuário que está associado com esse nome (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
+  O Supervisor de atualização detectou funções definidas pelo usuário que são propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O **system_function_schema** nome de usuário não existe e a ID de usuário que está associado com esse nome (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -33,32 +33,32 @@ ms.locfileid: "36012819"
 ## <a name="description"></a>Description  
  O armazenamento de objeto de sistema mudou da seguinte maneira:  
   
--   Objetos de sistema são armazenados em somente leitura **recurso** banco de dados e direcionar atualizações de objetos do sistema não são permitidas.  
+-   Objetos de sistema são armazenados em somente leitura **recurso** de banco de dados e direcionar atualizações de objeto do sistema não são permitidas.  
   
-     Objetos do sistema aparecem logicamente no **sys** esquema de cada banco de dados. Isso mantém a habilidade para invocar funções de sistema de qualquer banco de dados especificando um nome de função de uma parte. Por exemplo, a instrução `SELECT * FROM fn_helpcollations()` pode ser executada de qualquer banco de dados.  
+     Objetos do sistema aparecem logicamente na **sys** esquema de cada banco de dados. Isso mantém a habilidade para invocar funções de sistema de qualquer banco de dados especificando um nome de função de uma parte. Por exemplo, a instrução `SELECT * FROM fn_helpcollations()` pode ser executada de qualquer banco de dados.  
   
 -   O usuário não documentado **system_function_schema** foi removido.  
   
--   O usuário ID associada **system_function_schema** (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
+-   O usuário associado à ID **system_function_schema** (UID = 4) é reservada para o **sys** esquema e restrita para uso interno apenas.  
   
  Essas alterações têm o seguinte efeito em funções de sistema definidas pelo usuário:  
   
 -   Instruções do Data Definition Language (DDL) que referenciam **system_function_schema** falhará. Por exemplo, a instrução `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... não terá êxito.  
   
--   Após a atualização para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], os objetos existentes que são de propriedade **system_function_schema** estão contidos no **sys** esquema do **mestre** banco de dados. Como objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou descartadas do **mestre** banco de dados. Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
+-   Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], objetos existentes que são de propriedade **system_function_schema** estão contidas no apenas o **sys** esquema do **mestre** banco de dados. Como objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou descartadas do **mestre** banco de dados. Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Antes da atualização, faça o seguinte:  
   
-1.  Alterar a propriedade das funções definidas pelo usuário existentes para **dbo** usando o **sp_changeobjectowner** procedimento armazenado do sistema.  
+1.  Alterar a propriedade das funções existentes definidas pelo usuário para **dbo** usando o **sp_changeobjectowner** procedimento armazenado do sistema.  
   
 2.  Considere renomear a função de forma que ela não use o prefixo ‘fn_’. Isso evitará potenciais conflitos de nome com atuais ou futuras funções de sistema.  
   
 3.  Adicione uma cópia das funções modificadas a todos os bancos de dados que as usam.  
   
-4.  Substitua referências a **system_function_schema** com **dbo** em todos os scripts que contêm instruções de DDL de funções definidas pelo usuário.  
+4.  Substitua referências a **system_function_schema** com **dbo** em todos os scripts que contêm instruções DDL de funções definidas pelo usuário.  
   
-5.  Modifique os scripts que invocam essas funções para usar ou o nome de duas partes dbo **. * * * function_name*, ou o nome de três partes *database_name ***.** dbo.* nome_da_função *.  
+5.  Modifique os scripts que invocam essas funções para usar ambos o nome de duas partes dbo **. * * * function_name*, ou o nome de três partes *database_name ***.** dbo.* function_name *.  
   
  Para obter mais informações, consulte os seguintes tópicos dos Manuais Online do SQL Server:  
   

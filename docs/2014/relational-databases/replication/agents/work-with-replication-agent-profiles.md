@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152457"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
   Este tópico descreve como trabalhar com perfis do Agente de Replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). O comportamento de cada agente de replicação é controlado por um conjunto de parâmetros que podem ser definidos através dos perfis de agente. Cada agente tem um perfil padrão, e alguns têm perfis adicionais predefinidos; em um determinado momento, apenas um perfil está ativo para um agente.  
@@ -219,11 +219,11 @@ ms.locfileid: "36013579"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     Isso retorna todos os perfis para o tipo especificado de agente. Observe o valor de `profile_name` no conjunto de resultados para o perfil a ser usado.  
+     Isso retorna todos os perfis para o tipo especificado de agente. Observe o valor de `profile_name` no conjunto de resultados de perfil a ser usado.  
   
-2.  Se o agente é iniciado a partir de um trabalho de agente, edite a etapa de trabalho que inicia o agente para especificar o valor de `profile_name` obtido na etapa 1 após o **- ProfileName** parâmetro de linha de comando. Para obter mais informações, consulte [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md).  
+2.  Se o agente for iniciado de um trabalho de agente, edite a etapa de trabalho que inicia o agente para especificar o valor de `profile_name` obtido na etapa 1, depois a **- ProfileName** parâmetro de linha de comando. Para obter mais informações, consulte [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md).  
   
-3.  Quando o agente a partir do prompt de comando, especifique o valor de `profile_name` obtido na etapa 1 após o **- ProfileName** parâmetro de linha de comando.  
+3.  Ao iniciar o agente do prompt de comando, especifique o valor de `profile_name` obtido na etapa 1, depois a **- ProfileName** parâmetro de linha de comando.  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Este exemplo cria um perfil personalizado para o Agente de Mesclagem nomeado **custom_merge**, altera o valor do parâmetro **-UploadReadChangesPerBatch** , adiciona um novo parâmetro **-ExchangeType** e retorna informações sobre o perfil criado.  
@@ -248,7 +248,7 @@ ms.locfileid: "36013579"
   
     -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - uma descrição do perfil.  
   
-    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -defina essa propriedade como `true` se todos os novos trabalhos de agente para este <xref:Microsoft.SqlServer.Replication.AgentType> usarão este perfil por padrão.  
+    -   (Opcional) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -defina essa propriedade como `true` se todos os trabalhos de agente novos para essa <xref:Microsoft.SqlServer.Replication.AgentType> usarão este perfil por padrão.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> para criar o perfil no servidor.  
   

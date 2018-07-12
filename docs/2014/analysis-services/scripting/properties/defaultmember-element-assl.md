@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229676"
 ---
 # <a name="defaultmember-element-assl"></a>Elemento DefaultMember (ASSL)
   Contém uma linguagem MDX que identifica o membro padrão do elemento pai.  
@@ -62,9 +62,9 @@ ms.locfileid: "36013431"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento `DefaultMember` define o membro padrão para o elemento pai. Se `DefaultMember` não for especificado ou é definido como uma cadeia de caracteres vazia, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] escolherá um membro a ser usado como o membro padrão.  
+ O elemento `DefaultMember` define o membro padrão para o elemento pai. Se `DefaultMember` não for especificado ou é definido como uma cadeia de caracteres vazia [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] escolherá um membro a ser usado como o membro padrão.  
   
- Para elementos `ManyToManyMeasureGroupDimension`, o elemento `DefaultMember` contém uma expressão MDC que especifica um membro na dimensão especificada no elemento `CubeDimensionID` do `ManyToManyMeasureGroupDimension`. A expressão MDX é semelhante do [StrToMember](/sql/mdx/strtomember-mdx) função MDX com a palavra-chave CONSTRAINED, em que ele não pode incluir funções MDX ou definidas pelo usuário.  
+ Para elementos `ManyToManyMeasureGroupDimension`, o elemento `DefaultMember` contém uma expressão MDC que especifica um membro na dimensão especificada no elemento `CubeDimensionID` do `ManyToManyMeasureGroupDimension`. A expressão MDX é semelhante para o [StrToMember](/sql/mdx/strtomember-mdx) função MDX com a palavra-chave CONSTRAINED, em que ele não pode incluir funções MDX ou definidas pelo usuário.  
   
  Para obter mais informações sobre membros padrão, consulte [Definir um membro padrão](../../multidimensional-models/attribute-properties-define-a-default-member.md).  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkins [SQL Server Management Studio]
 - checking in files
 - source controls [SQL Server Management Studio], checkins
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afb8bce30fe8bc963c82dac1407e3bbf817c814c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3693d798e74f0ec342c916846e2892e64f779449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154737"
 ---
 # <a name="manage-checkins"></a>Gerenciar check-ins
   Para fazer alterações em um arquivo controlado por código-fonte disponível para outros usuários, você deve fazer check-in do arquivo. Quando você faz o check-in de um arquivo, a versão criada é copiada no provedor de controle do código-fonte e passa a ser a versão mais recente do arquivo. Em geral, ela fica disponível para os usuários que têm as permissões apropriadas.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 16994bcc5c3b4f2be0617f4e4d4521062bd850a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebf2117570a343c740eaaaa964d956d2c8faede2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158777"
 ---
 # <a name="manage-a-cdc-instance"></a>Gerenciar uma instância CDC
   Você pode usar o CDC Designer Console para exibir informações sobre as instâncias que você cria e gerenciar a operação das instâncias.  
@@ -75,7 +75,7 @@ ms.locfileid: "36019416"
     |-|-|  
     |![Erro](../media/error.gif "erro")|**Error**. A Instância Oracle CDC não está sendo executada devido a um erro não reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Misconfigured**: um erro de configuração ocorrido que exige intervenção manual.<br /><br /> **Password Required**: nenhuma senha foi definida para a Instância Oracle CDC ou a senha não é válida.<br /><br /> **Unexpected**. Todos os outros erros não recuperáveis.|  
     |![OK](../media/okay.gif "OK")|**Running**: a instância CDC está sendo executada e está processando registros de alteração. Os seguintes substatus estão disponíveis.<br /><br /> **Idle**: Todos os registros de alteração foram processados e armazenados nas tabelas de alteração de destino. Não há mais nenhuma transação ativa.<br /><br /> **Processing**: há registros de alteração sendo processados que ainda não estão gravados nas tabelas de alteração.|  
-    |![Parar](../media/stop.gif "parar")|**Stopped**: a instância CDC não está em execução. O status Stopped indica que a instância CDC foi parada de uma maneira normal.|  
+    |![Interromper](../media/stop.gif "parar")|**Stopped**: a instância CDC não está em execução. O status Stopped indica que a instância CDC foi parada de uma maneira normal.|  
     |![Em pausa](../media/paused.gif "em pausa")|**Paused**: a instância de CDC está sendo executada, mas o processamento está suspenso devido a um erro reproduzível. Os seguintes substatus estão disponíveis:<br /><br /> **Disconnected**: a conexão ao banco de dados Oracle de origem não pode ser estabelecida. O processamento será retomado quando a conexão for restaurada.<br /><br /> **Storage**: o armazenamento está completo. O processamento será retomado quando um armazenamento adicional estiver disponível.<br /><br /> **Agente**: o agente está conectado ao Oracle, mas não pode ler os logs de transação do Oracle devido a um problema temporário, por exemplo, um log de transação necessário não está disponível.|  
   
 -   **Detailed Status**: o substatus atual.  
@@ -124,7 +124,7 @@ ms.locfileid: "36019416"
 ## <a name="see-also"></a>Consulte também  
  [Como criar a instância de banco de dados de alteração do SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Como exibir as propriedades de instância CDC](how-to-view-the-cdc-instance-properties.md)   
- [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Usar o assistente para nova instância](use-the-new-instance-wizard.md)  
   
   

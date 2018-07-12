@@ -1,34 +1,32 @@
 ---
-title: Conversões executadas do servidor para cliente | Microsoft Docs
+title: Conversões executadas do servidor para o cliente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9898b4d4bfd811076ca8eb93aba1679ed3c96140
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009344"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430855"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversões executadas do servidor para o cliente
   Este tópico descreve conversões de data/hora executadas entre o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="conversions"></a>Conversões  
- A tabela a seguir descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Parâmetros de saída, se ICommandWithParameters:: SetParameterInfo foi chamado e o tipo especificado em *pwszDataSourceType* não corresponde ao tipo real no servidor, uma conversão implícita será executado pelo servidor , e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de ICommandWithParameters:: SetParameterInfo. Isto poderá levar a resultados de conversão inesperados quando as regras de conversão do servidor forem diferentes daquelas descritas neste tópico. Por exemplo, quando é necessário fornecer uma data padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1/1/1900 em vez de 30/12/1899.  
+ A tabela a seguir descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se tiver sido chamado ICommandWithParameters:: SetParameterInfo e o tipo especificado na *pwszDataSourceType* não corresponde ao tipo real no servidor, uma conversão implícita será executado pelo servidor , e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de ICommandWithParameters:: SetParameterInfo. Isto poderá levar a resultados de conversão inesperados quando as regras de conversão do servidor forem diferentes daquelas descritas neste tópico. Por exemplo, quando é necessário fornecer uma data padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1/1/1900 em vez de 30/12/1899.  
   
 |Para -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -67,6 +65,6 @@ ms.locfileid: "36009344"
 |13|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino. A cadeia de caracteres deve se conformar com a sintaxe de literais datetime, a menos que o destino seja DBTYPE_DATE ou DBTYPE_DBTIMESTAMP. Se for o caso, um literal datetime ou time será permitido para que a análise de formato ISO tenha êxito. Para que a análise de OLE tenha êxito, a cadeia de caracteres deve se conformar com a sintaxe reconhecida pelo OLE. Se não for possível analisar a cadeia de caracteres, DBSTATUS_E_CANTCONVERTVALUE será definido. Se qualquer valor de componente estiver fora do intervalo, DBSTATUS_E_DATAOVERFLOW será definido.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Associações e conversões &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [Associações e conversões de &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

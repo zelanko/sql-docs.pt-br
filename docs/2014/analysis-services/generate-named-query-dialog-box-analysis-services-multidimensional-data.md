@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.generatenamedquerydialog.f1
 helpviewer_keywords:
 - Generate Named Query dialog box
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e26ac216cc6c82e523ad88e7a57b40f0085ecbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bbae6eab0e6f478c697d9e71dc0fa06d3902a1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163457"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Gerar Consulta Nomeada (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Gerar Consulta Nomeada** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta nomeada baseada em uma série de gráfico, valor de série de gráfico ou filtro de gráfico selecionado no gráfico exibido na guia **Gráfico Dinâmico** da caixa de diálogo **Explorar Dados**. É possível exibir a caixa de diálogo **Gerar Consulta Nomeada** clicando em **Gerar consulta nomeada** na caixa de diálogo **Explorar Dados** .  

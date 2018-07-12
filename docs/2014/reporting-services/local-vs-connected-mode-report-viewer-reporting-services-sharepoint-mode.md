@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157797"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Relatórios em Modo Local vs. Modo Conectado no Visualizador de Relatórios (Reporting Services no modo do SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatórios podem ser configurados para serem executados no *modo local* ou *modo conectado*, que aproveita um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Em vez disso, você pode usar o Visualizador de Relatórios para renderizar relatórios diretamente do SharePoint quando a extensão de dados der suporte a relatório no modo local. Essa abordagem é chamada de *modo local*. Em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o farm do SharePoint precisava estar conectado a uma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatório configurado no modo do SharePoint server para o controle do Visualizador de relatórios pudesse renderizar relatórios. Essa abordagem é chamada *modo remoto* ou *modo conectado*.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatórios podem ser configurados para serem executados no *modo local* ou *modo conectado*, que aproveita um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Em vez disso, você pode usar o Visualizador de Relatórios para renderizar relatórios diretamente do SharePoint quando a extensão de dados der suporte a relatório no modo local. Essa abordagem é chamada de *modo local*. Nas versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o farm do SharePoint precisava estar conectado a um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatório configurado no modo do SharePoint server para que o controle do Visualizador de relatórios pudesse renderizar relatórios. Essa abordagem é chamada *modo remoto* ou *modo conectado*.  
   
- Em *modo local* não há nenhum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Você deve instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint, mas não [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório é necessário. Com o modo local, os usuários podem exibir relatórios, mas não terão acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
+ Na *modo local* não há nenhum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Você deve instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint, mas não [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório é necessário. Com o modo local, os usuários podem exibir relatórios, mas não terão acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
   
 ||  
 |-|  
@@ -39,15 +39,15 @@ ms.locfileid: "36019078"
 -   [Configurar relatórios no modo Local com o SharePoint 2010](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> Modo local vs modo conectado e extensões com suporte  
- **Modo local:** quando você tem uma extensão de dados compatível com o modo local, o Visualizador de Relatórios renderiza diretamente os relatórios do SharePoint. Em *modo local* não há nenhum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Você deve instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint, mas não [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório é necessário. Com o modo local, os usuários podem exibir relatórios, mas **não** têm acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
+ **Modo local:** quando você tem uma extensão de dados compatível com o modo local, o Visualizador de Relatórios renderiza diretamente os relatórios do SharePoint. Na *modo local* não há nenhum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Você deve instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint, mas não [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório é necessário. Com o modo local, os usuários podem exibir relatórios, mas **não** têm acesso aos recursos do lado do servidor, como assinaturas e alertas de dados.  
   
- **Modo conectado**, também chamado *modo remoto* requer um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no modo do SharePoint, conectado ao farm do SharePoint para o controle do Visualizador de relatórios pudesse renderizar relatórios.  
+ **Modo conectado**, também denominados *modo remoto* requer um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no modo do SharePoint, conectado ao farm do SharePoint para que o controle do Visualizador de relatórios possa renderizar relatórios...  
   
  A seguir há uma lista de extensões de processamento de dados que dão suporte a relatório no modo local:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Extensão de relatório do Access 2010. Para obter mais informações sobre os Serviços do Access, consulte [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Usar Serviços do Access com o SQL Reporting Services: Instalando o Suplemento do SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
   
--   A extensão de dados de lista do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre a extensão de dados de lista do SharePoint, consulte [fontes de dados suportados pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+-   A extensão de dados de lista do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre a extensão de dados de lista do SharePoint, consulte [dados de fontes com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
  Também podem ser desenvolvidas extensões de processamento de dados personalizadas para dar suporte ao modo local. Para obter mais informações, consulte [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36019078"
  Para obter as informações mais recentes sobre o uso da extensão ADS com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo conectado, consulte [relatório de serviços do Access no Site do SharePoint mostra erro nos dados de extensão 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados suportadas pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

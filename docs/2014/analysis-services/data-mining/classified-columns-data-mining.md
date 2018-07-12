@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - STDEV column
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00a3e1e85beebba351340a9cacad5100e96dff6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210336"
 ---
 # <a name="classified-columns-data-mining"></a>Colunas classificadas [mineração de dados]
   Quando você define uma coluna classificada, cria uma relação entre a coluna atual e outra coluna na estrutura de mineração. Os dados na coluna da estrutura de mineração que você designa como a coluna classificada contém informações categóricas que descrevem os valores em outra coluna na estrutura de mineração.  
@@ -64,7 +64,7 @@ ms.locfileid: "36013222"
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)  
   
   

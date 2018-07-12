@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2492232f892dd9f02b84bb50f5ddb7a4415c60e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211806"
 ---
 # <a name="datasourceview-element-xmla"></a>Elemento DataSourceView (XMLA)
   Contém uma exibição da fonte de dados fora de linha para o pai [lote](../xml-elements-commands/batch-element-xmla.md) ou [processo](../xml-elements-commands/process-element-xmla.md) elemento.  
@@ -67,9 +67,9 @@ ms.locfileid: "36012766"
 |Elementos filho|[DatabaseID](id-element-xmla.md), [DataSourceViewID](../../scripting/properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O `DataSourceView` elemento representa uma associação fora de linha para uma exibição de fonte de dados usada pelo `Batch` ou `Process` comando para substituir temporariamente a exibição de fonte de dados de associação para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos processado pelo comando.  
+ O `DataSourceView` elemento representa uma associação fora de linha para uma exibição de fonte de dados usada pelas `Batch` ou `Process` comando para substituir temporariamente a exibição da fonte de dados de associação para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos processado pelo comando.  
   
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

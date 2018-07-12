@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161027"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
   Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
   
 > [!NOTE]  
->  O `CommandTimeout` propriedade da origem do Excel não está disponível na **Editor de origem do Excel**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  O `CommandTimeout` propriedade da origem do Excel não está disponível na **Editor de origem do Excel**, mas pode ser definida usando a **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Para obter mais informações sobre origem do Excel, consulte [Excel Source](data-flow/excel-source.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36019402"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem do Excel &#40;página colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor de origem do Excel &#40;página de colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Editor de origem do Excel &#40;página de saída de erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gerenciador de Conexões do Excel](connection-manager/excel-connection-manager.md)   
  [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  

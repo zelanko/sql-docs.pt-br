@@ -5,24 +5,22 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82e4a722f3abec281af12785a0b381f189ef4740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008166"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424335"
 ---
 # <a name="set-large-data-ole-db"></a>Definir dados grandes (OLE DB)
   Este exemplo mostra como definir dados de BLOB, criar uma tabela, adicionar um registro de exemplo, buscar esse registro no conjunto de linhas e definir o valor do campo BLOB. Este exemplo não tem suporte em IA64.  
@@ -38,7 +36,7 @@ ms.locfileid: "36008166"
   
 #### <a name="to-set-blob-data"></a>Para definir dados de BLOB  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Definir o **Dwfrag** elemento DBOBJECT estrutura como STGM_READ e defina o elemento iid como `IID_ISequentialStream` (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina as **dwFlag** elemento de DBOBJECT estruturar como STGM_READ e defina o elemento iid como `IID_ISequentialStream` (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36008166"
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Description  
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
 ### <a name="code"></a>Código  
   

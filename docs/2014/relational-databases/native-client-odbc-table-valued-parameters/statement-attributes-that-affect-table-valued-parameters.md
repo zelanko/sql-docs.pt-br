@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), statement attribute
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 32cbab7363233ab142855170bce0797c3763a0ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 55da5775b1e4aada4fff4d543166ea825305ed96
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007928"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412905"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Atributos de instruções que afetam parâmetros com valor de tabela
   A tabela a seguir descreve os atributos em um campo descritor.  

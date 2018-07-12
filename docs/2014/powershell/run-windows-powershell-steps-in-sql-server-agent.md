@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 58837a63969baff47ff79bcebb78b6dd24deb31e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff2df6e300c3c422215f459cf258225632bd87eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182735"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Executar etapas do Windows PowerShell no SQL Server Agent
   Use o SQL Server Agent para executar scripts do SQL Server PowerShell nas horas agendadas.  
@@ -33,7 +33,7 @@ ms.locfileid: "36013346"
   
 1.  Use uma etapa de trabalho do PowerShell para fazer com que o subsistema do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent execute o utilitário `sqlps`, que inicia o PowerShell 2.0 e importa o módulo `sqlps`.  
   
-2.  Use uma etapa de trabalho de prompt de comando para executar o PowerShell.exe e especifique um script que importa o `sqlps` módulo.  
+2.  Use uma etapa de trabalho de prompt de comando para executar PowerShell.exe e especifique um script que importa o `sqlps` módulo.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
   

@@ -18,23 +18,23 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e30c4e9ec48604cca89c5ee62dacfbf00f663ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2abd38453d9b8ac124d1a06fe3aab4fd632e6972
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154097"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
-  O exemplo a seguir mostra como os operadores Boolianos são especificados em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para obter exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  O exemplo a seguir mostra como os operadores Boolianos são especificados em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Especificar o operador booliano OR  
- Essa consulta XPath retorna o  **\<cliente >** elementos filhos do nó de contexto com o **CustomerID** valor de 13 ou 31 do atributo:  
+ Essa consulta XPath retorna os  **\<cliente >** filhos do elemento do nó de contexto com o **CustomerID** valor de 13 ou 31 do atributo:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -50,7 +50,7 @@ ms.locfileid: "36019318"
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Para testar as consultas XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (BooleanOperatorsA.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   

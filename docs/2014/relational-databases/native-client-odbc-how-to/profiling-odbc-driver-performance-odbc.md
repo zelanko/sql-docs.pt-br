@@ -1,26 +1,24 @@
 ---
-title: Criação de perfil ODBC Driver desempenho tópicos de instruções (ODBC) | Microsoft Docs
+title: Tópicos explicativos de desempenho de Driver do ODBC (ODBC) de criação de perfil | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fcd58b3c21b113a41c1e869fb1d22ed6c456c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 951ffdf09a7ba8c048aef40b07a27127f51dacb8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007025"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420955"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Tópicos de instruções sobre a criação de perfil de desempenho do driver ODBC (ODBC)
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem duas opções específicas do driver para a criação de perfil de desempenho do driver.  
@@ -31,7 +29,7 @@ ms.locfileid: "36007025"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Perfil de dados de desempenho do Driver &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Criar o perfil de dados de desempenho de Driver &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
 -   [Registrar consultas de longa execução &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   

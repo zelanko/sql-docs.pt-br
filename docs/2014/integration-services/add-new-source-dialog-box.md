@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addNewSource.f1
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f84e1344f6d15f4b0e86549fe9f28d98ef45df39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 173610b33aac8c7ae4005394fe23fd98a53fac1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164947"
 ---
 # <a name="add-new-source-dialog-box"></a>Caixa de diálogo Adicionar Nova Origem
   A tabela a seguir lista as opções disponíveis na caixa de diálogo da Adicionar Nova Origem.  

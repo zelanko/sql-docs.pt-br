@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149807"
 ---
 # <a name="edit-an-operator"></a>Editar um operador
   Este tópico descreve como editar a disponibilidade de operadores para o recebimento de notificações e seus endereços de email, pager e net send no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "36013492"
   
     -   [Propriedades do operador e operador New &#40;página geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propriedades do operador: Novo operador &#40;página notificações&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propriedades do operador: Novo operador &#40;página de notificações&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Propriedades do operador &#40;página Histórico&#41;](operator-properties-history-page.md)  
   

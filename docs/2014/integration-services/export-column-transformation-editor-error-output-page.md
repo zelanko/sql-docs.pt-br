@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 954fd8f8ce86108299ca2b42d075f4fda5f7c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b695ac95c7c76d38fec01a4a38832fae1ed73c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240986"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Exportar Editor de Transformação Colunas (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Transformação Exportar Colunas** para especificar como manipular os erros.  
@@ -54,6 +54,6 @@ ms.locfileid: "36010501"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação exportar &#40;página colunas&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [Exportar Editor de transformação de coluna &#40;página de colunas&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

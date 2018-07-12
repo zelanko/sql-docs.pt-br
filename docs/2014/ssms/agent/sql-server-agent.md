@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230466"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é um serviço do Microsoft Wnodows que executa tarefas admnoistrativas agendadas, que são chamadas de *trabalhos* no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -118,10 +118,10 @@ ms.locfileid: "36012632"
  Você pode definir um operador como o alias de um grupo de indivíduos. Desse modo, todos os membros do alias serão notificados ao mesmo tempo. Para obter mais informações, consulte [Operadores](operators.md).  
   
 ##  <a name="Security"></a> Segurança de administração do SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa o **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** banco de dados fixa no **msdb** banco de dados para controlar o acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent por usuários que não são membros do `sysadmin` função de servidor fixa. Além dessas funções de banco de dados fixas, subsistemas e proxies ajudam os administradores de bancos de dados a garantir que cada etapa de trabalho seja executada com as permissões mínimas necessárias para realizar sua tarefa.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa o **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** banco de dados fixa no **msdb** banco de dados para controlar o acesso aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent por usuários que não são membros do `sysadmin` função de servidor fixa. Além dessas funções de banco de dados fixas, subsistemas e proxies ajudam os administradores de bancos de dados a garantir que cada etapa de trabalho seja executada com as permissões mínimas necessárias para realizar sua tarefa.  
   
 ### <a name="roles"></a>Funções  
- Membros do **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** banco de dados fixa no **msdb**, e membros de `sysadmin` função de servidor fixa tem acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Um usuário que não pertença a nenhuma dessas funções não pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre as funções usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Implementar segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
+ Os membros de **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** banco de dados fixa no **msdb**, e os membros a `sysadmin` função de servidor fixa tem acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Um usuário que não pertença a nenhuma dessas funções não pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre as funções usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Implementar segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
  Um subsistema é um objeto predefinido que representa a funcionalidade disponível a uma etapa de trabalho. Cada proxy tem acesso a um ou mais subsistemas. Os subsistemas propiciam segurança, porque delimitam o acesso à funcionalidade disponível a um proxy. Cada etapa de trabalho é executada no contexto de um proxy, com exceção das etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] usam o comando EXECUTE AS para definir o contexto de segurança.  
@@ -130,7 +130,7 @@ ms.locfileid: "36012632"
   
 |Nome do subsistema|Description|  
 |--------------------|-----------------|  
-|Script do Microsoft ActiveX|Execução de uma etapa de trabalho de script ActiveX.<br /><br /> **\*\* Importante \* \***  subsistema ActiveX Scripting será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|Script do Microsoft ActiveX|Execução de uma etapa de trabalho de script ActiveX.<br /><br /> **\*\* Importante \* \***  será removido do subsistema ActiveX Scripting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |Sistema Operacional (**CmdExec**)|Execução de um programa executável.|  
 |PowerShell|Execução de uma etapa de trabalho de script PowerShell.|  
 |Distribuidor da replicação|Execução de uma etapa de trabalho que ativa o Distribution Agent da replicação.|  
@@ -148,9 +148,9 @@ ms.locfileid: "36012632"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent impõe restrições de subsistema até mesmo quando a entidade de segurança do proxy teria normalmente permissão para executar a tarefa na etapa de trabalho. Por exemplo, um proxy de um usuário que é membro da função de servidor fixa sysadmin não pode executar uma etapa de trabalho [!INCLUDE[ssIS](../../includes/ssis-md.md)] , a menos que tenha acesso ao subsistema [!INCLUDE[ssIS](../../includes/ssis-md.md)] , mesmo quando o usuário pode executar pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 ### <a name="proxies"></a>Proxies  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa proxies para gerenciar contextos de segurança. Um proxy pode ser usado em mais de uma etapa de trabalho. Membros de `sysadmin` função fixa de servidor pode criar proxies.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa proxies para gerenciar contextos de segurança. Um proxy pode ser usado em mais de uma etapa de trabalho. Os membros de `sysadmin` função fixa de servidor pode criar proxies.  
   
- Cada proxy corresponde a uma credencial de segurança. Cada proxy pode ser associado a um conjunto de subsistemas e um conjunto de logons. O proxy só pode ser usado para etapas de trabalho que utilizem um subsistema associado ao proxy. Para criar uma etapa de trabalho que utilize um proxy específico, o proprietário do trabalho deve usar um logon associado a esse proxy ou ser membro de uma função com acesso irrestrito a proxies. Membros de `sysadmin` função de servidor fixa têm acesso irrestrito a proxies. Membros de **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** só podem usar proxies para os quais detém concessão de acesso específica. Cada usuário membro de alguma dessas funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ter acesso concedido a proxies específicos para poder criar etapas de trabalho que utilizem esses proxies.  
+ Cada proxy corresponde a uma credencial de segurança. Cada proxy pode ser associado a um conjunto de subsistemas e um conjunto de logons. O proxy só pode ser usado para etapas de trabalho que utilizem um subsistema associado ao proxy. Para criar uma etapa de trabalho que utilize um proxy específico, o proprietário do trabalho deve usar um logon associado a esse proxy ou ser membro de uma função com acesso irrestrito a proxies. Os membros de `sysadmin` função de servidor fixa têm acesso irrestrito a proxies. Membros de **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** só podem usar proxies para os quais detém concessão de acesso específica. Cada usuário membro de alguma dessas funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ter acesso concedido a proxies específicos para poder criar etapas de trabalho que utilizem esses proxies.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Use as seguintes etapas para configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para automatizar a administração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

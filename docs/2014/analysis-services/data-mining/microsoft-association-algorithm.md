@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de associação da Microsoft | Microsoft Docs
+title: Algoritmo associação da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4dfed3abb4cff8826c42770996a2ea78ab4b324a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165667"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Associação da Microsoft
-  O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de associação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é útil para mecanismos de recomendação. Um mecanismo de recomendação recomenda produtos aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica. Para obter um exemplo de uma análise da cesta de compras, consulte [lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) no Tutorial de mineração de dados.  
+  O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de associação fornecido pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que é útil para mecanismos de recomendação. Um mecanismo de recomendação recomenda produtos aos clientes com base nos itens que eles já compraram ou pelos quais mostraram interesse. O algoritmo Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] também é útil para análise da cesta básica. Para obter um exemplo de uma análise da cesta de compras, consulte [lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de mineração de dados&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) no Tutorial mineração de dados.  
   
  Modelos de associação são criados a partir de conjuntos de dados que contêm identificadores de casos individuais e de itens contidos em casos. Um grupo de itens em um caso é chamado de *conjunto de itens*. Um modelo de associação é formado por uma série de conjuntos de itens e regras que descrevem como esses itens são agrupados nos casos. As regras que o algoritmo identificar podem ser usadas para prever as prováveis compras futuras do cliente com base nos itens já existentes em seu carrinho de compras. O diagrama a seguir mostra uma série de regras em um conjunto de itens.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36013229"
  Para obter informações gerais sobre como criar uma consulta com base em um modelo de mineração de dados, consulte [Consultas de mineração de dados](data-mining-queries.md).  
   
 ## <a name="performance"></a>Desempenho  
- O processo de criação de conjuntos de itens e de contagem de correlações pode ser demorado. Embora o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo regras de associação usa técnicas de otimização para economizar espaço e acelerar o processamento, você deve saber que os problemas de desempenho podem ocorrer sob as seguintes condições:  
+ O processo de criação de conjuntos de itens e de contagem de correlações pode ser demorado. Embora o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo regras de associação usa técnicas de otimização para economizar espaço e acelerar o processamento, você deve saber que podem ocorrer problemas de desempenho sob as seguintes condições:  
   
 -   O conjunto de dados é grande, com muitos itens individuais.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36013229"
 -   Suporta a criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Conteúdo do modelo de mineração para modelos de associação &#40; Analysis Services – mineração de dados &#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo de associação da Microsoft](microsoft-association-algorithm-technical-reference.md)   

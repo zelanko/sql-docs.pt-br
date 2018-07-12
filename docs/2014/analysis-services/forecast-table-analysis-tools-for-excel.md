@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - forecasting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 40724491e971b150fa934f8a3294509d91b99d6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a469765d20ea8a8330843fbaac401dc85b78f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239906"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Botão previsão na análise de tabela da faixa de opções de ferramentas](media/tat-forecast.gif "botão previsão na faixa de opções de ferramentas de análise de tabela")  
@@ -41,15 +41,15 @@ ms.locfileid: "36013226"
   
 1.  Abra uma tabela do Excel que contenha dados numéricos previsíveis.  
   
-2.  Clique em **previsão** no **analisar** guia.  
+2.  Clique em **previsão** sobre o **analisar** guia.  
   
-3.  Especifique as colunas a serem previstas. A ferramenta seleciona automaticamente colunas nos dados que tenham um tipo de dados previsível — ou seja, dados numéricos contínuos. Talvez a ferramenta não selecione algumas colunas que tenham dados numéricos contínuos caso elas contenham muitos valores de zero ou nulos, porque os dados ausentes podem afetar os resultados. Se isso acontecer, você poderá corrigir os dados usando o [rotular novamente &#40;suplementos de mineração de dados do SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta.  
+3.  Especifique as colunas a serem previstas. A ferramenta seleciona automaticamente colunas nos dados que tenham um tipo de dados previsível — ou seja, dados numéricos contínuos. Talvez a ferramenta não selecione algumas colunas que tenham dados numéricos contínuos caso elas contenham muitos valores de zero ou nulos, porque os dados ausentes podem afetar os resultados. Se isso acontecer, você poderá corrigir os dados usando o [rotular novamente &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta.  
   
 4.  Especifique a coluna que contém um identificador de data, tempo ou outra série. Se você selecionar a opção  **\<nenhum carimbo de data / hora >** a ferramenta criará uma série com base na sequência de linhas na fonte de dados.  
   
 5.  Especifique o número de previsões a serem feitas.  
   
-6.  Se desejar, forneça uma dica ao algoritmo para informar se você espera que os dados sejam repetidos semanalmente, mensalmente ou em outros períodos. Se seus dados não forem enquadrados em nenhum dos padrões determinados ou se você não estiver ciente de nenhum padrão, selecione  **\<detectar automaticamente >** para que a ferramenta Encontre os períodos de tempo de repetição.  
+6.  Se desejar, forneça uma dica ao algoritmo para informar se você espera que os dados sejam repetidos semanalmente, mensalmente ou em outros períodos. Se seus dados não se ajusta a qualquer um dos padrões determinados ou se você estiver ciente de nenhum padrão, selecione  **\<detectar automaticamente >** para que a ferramenta Encontre os períodos de tempo de repetição.  
   
 7.  O assistente adiciona as previsões à tabela de origem e cria um relatório de previsão em uma nova planilha.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36013226"
 ## <a name="related-tools"></a>Ferramentas relacionadas  
  O Cliente de Mineração de Dados para Excel, um suplemento separado que fornece funções de mineração de dados mais avançadas, também contém um assistente para previsão.  
   
- Ambos o **previsão** ferramenta (em ferramentas de análise de tabela para Excel) e o **previsão** uso do assistente (no cliente mineração de dados para Excel) a [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo MTS.  
+ Os dois o **previsão** ferramenta (em ferramentas de análise de tabela para Excel) e o **previsão** uso do assistente (no cliente mineração de dados para Excel) o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo MTS.  
   
--   O **previsão** ferramenta é mais fácil de usar porque configura automaticamente o algoritmo para usar as configurações recomendadas para seus dados.  
+-   O **previsão** ferramenta é mais fácil de usar porque configura automaticamente o algoritmo para usar as configurações que são melhores para seus dados.  
   
 -   O **previsão** assistente no cliente de mineração de dados para Excel oferece a capacidade de personalizar os parâmetros.  
   
- Para obter mais informações sobre o **previsão** assistente, consulte [Assistente de previsão &#40;suplementos de mineração de dados para Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). Para obter mais informações sobre o algoritmo usado para previsão, consulte o tópico "Algoritmo MTS" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre o **previsão** assistente, consulte [Assistente de previsão de &#40;Data Mining Add-ins para Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). Para obter mais informações sobre o algoritmo usado para previsão, consulte o tópico "Algoritmo MTS" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

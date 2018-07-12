@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155349"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
   Uma dimensão vinculada baseia-se uma dimensão criada e armazenada em outro banco de dados do Analysis Services na mesma versão e no mesmo nível de compatibilidade. Usando uma dimensão vinculada, você pode criar, armazenar e manter uma dimensão em um banco de dados, ao mesmo tempo disponibilizando-o para usuários de vários bancos de dados. Para usuários, uma dimensão vinculada aparece como qualquer outra dimensão.  
@@ -66,7 +66,7 @@ ms.locfileid: "36019691"
   
 2.  No Gerenciador de Conexões, verifique se o provedor é definido como **OLE DB Nativo\Provedor Microsoft OLE DB para Analysis Services 11.0**.  
   
-3.  Digite o nome do servidor (use *servername*\\*instancename* para uma instância nomeada)<sup>1</sup> ou tipo **localhost** para Conecte-se a um servidor do Analysis Services que está em execução no mesmo computador.  
+3.  Insira o nome do servidor (use *nome_do_servidor*\\*instancename* para uma instância nomeada)<sup>1</sup> ou tipo **localhost** para Conecte-se a um servidor do Analysis Services que está em execução no mesmo computador.  
   
 4.  Use a autenticação do Windows na conexão.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36019691"
  Não é possível alterar a estrutura de uma dimensão vinculada, portanto, você não pode exibi-la com a guia **Estrutura da Dimensão** do Designer de Dimensão. Depois de processar a dimensão vinculada, você pode exibi-la com a guia **Navegador** . Você também pode alterar seu nome e criar uma tradução para o nome.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir a compatibilidade de nível de um banco de dados Multidimensional &#40;do Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [Definir nível de banco de dados Multidimensional a de compatibilidade &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Grupos de medidas vinculados](linked-measure-groups.md)   
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

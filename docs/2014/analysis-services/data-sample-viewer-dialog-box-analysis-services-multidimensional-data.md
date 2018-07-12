@@ -1,5 +1,5 @@
 ---
-title: Dados de exemplo de caixa de diálogo Visualizador (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Visualizador (Analysis Services - dados multidimensionais) de amostra de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasampleviewerdialog.f1
 helpviewer_keywords:
 - Data Sample Viewer dialog box
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20175675c684b9618bcbf6f588d645399b68af80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 802ec623fc365ce9814c31afdc6626355f83b5ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183413"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Visualizador de Exemplos de Dados (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Visualizador de Exemplos de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para exibir os primeiros 1000 registros de uma tabela de fatos que será utilizada para fornecer medidas para um novo cubo.  
@@ -36,6 +36,6 @@ ms.locfileid: "36013468"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Selecionar medidas &#40;Assistente de cubo&#41;](select-measures-cube-wizard.md)  
+ [Selecione as medidas &#40;Assistente de cubo&#41;](select-measures-cube-wizard.md)  
   
   

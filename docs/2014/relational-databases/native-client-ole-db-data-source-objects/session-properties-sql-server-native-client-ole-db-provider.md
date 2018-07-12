@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310c69d13582a52800f7b5bb26f65a23c806fb24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a6a26faf8673ff110e079d4606e587e079f33025
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007488"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413355"
 ---
 # <a name="session-properties"></a>Propriedades da sessão
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client interpreta as propriedades de sessão do OLE DB da seguinte maneira.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client interpreta as propriedades de sessão do OLE DB da seguinte maneira.  
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a todos os níveis de isolamento de transação de confirmação automática com a exceção de nível de caos DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a todos os níveis de isolamento da transação de confirmação automática com exceção de nível de caos DBPROPVAL_TI_CHAOS.|  
   
- No específicas do provedor de conjunto de propriedades DBPROPSET_SQLSERVERSESSION, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client define a propriedade de sessão adicional a seguir.  
+ No específicas do provedor de conjunto de propriedades DBPROPSET_SQLSERVERSESSION, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client define a propriedade de sessão adicional a seguir.  
   
 |ID da propriedade|Description|  
 |-----------------|-----------------|  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c75bd0fa9b2f4e9908848e12ce5ad1f10cbfe7a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f5d41c7a6443ba599c51475890300e9efa82637f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179693"
 ---
 # <a name="instancename-property-cinstance-class"></a>Propriedade InstanceName (classe CInstance)
   Obtém o nome da instância do cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 451c87f7612cdf8cb474f30018769d241e18a076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28040eac1a9bac3a05c890315502dd67c8e069d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277392"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de Loop Foreach (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nomear e descrever um contêiner Loop Foreach que usa um enumerador especificado para repetir um fluxo de trabalho para cada membro em uma coleção.  
@@ -41,7 +41,7 @@ ms.locfileid: "36010473"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de Loop foreach &#40;página de coleção&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Editor de Loop foreach &#40;página mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Editor de Loop foreach &#40;página de mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Página expressões](expressions/expressions-page.md)   
  [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)   
  [Contêiner do Loop For](control-flow/for-loop-container.md)  

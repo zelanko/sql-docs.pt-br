@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161617"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use este painel para gerenciar os atributos associados com a dimensão selecionada. Podem ser arrastados atributos deste painel para o painel **Hierarquias** para criar hierarquias e níveis. Para obter mais informações, consulte [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "36019017"
  **Coluna de chave**  
  Exibe o tipo de dados das colunas subjacentes. Ao criar um novo atributo, clique na seta para baixo para selecionar entre as possibilidades disponíveis.  
   
- **Nome de coluna**  
+ **Coluna de nome**  
  Exibe o local da coluna subjacente. Ao criar um novo atributo, clique na seta para baixo para selecionar entre **Igual à chave** e **Separar coluna**. Se **Separar coluna** for escolhido, a propriedade **NameColumn** no painel **Propriedades** definirá a coluna que armazena o nome a usar para o atributo.  
   
 ## <a name="see-also"></a>Consulte também  

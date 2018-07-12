@@ -5,24 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3d6fb49285580b3afd5a6ad785bc23886ecf4a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 094a968fb48c9eabf554bfdccb89efc69e12391a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007932"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427965"
 ---
 # <a name="conversions-from-sql-to-c"></a>Conversões de SQL em C
   A seguinte tabela lista aspectos a serem considerados quando você converte tipos de data/hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em tipos do C.  
@@ -67,9 +65,9 @@ ms.locfileid: "36007932"
 |21|Caso o buffer seja grande o suficiente para acomodar um SQL_SS_TIMESTAMPOFFSET_STRUCT, o valor é retornado como SQL_SS_TIMESTAMPOFFSET_STRUCT. Caso contrário, um registro de diagnóstico é gerado com SQLSTATE 22003 e a mensagem "Valor numérico fora do intervalo".|  
 |22|O valor é convertido no fuso horário do cliente antes da extração da data. Isso proporciona consistência em relação às demais conversões com tipos timestampoffset. Se ocorrer um erro durante esta conversão, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Estouro do campo datetime". Isso pode resultar em uma data diferente do valor obtido pelo truncamento simples.|  
   
- A tabela neste tópico descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Parâmetros de saída, se o tipo de servidor especificado em SQLBindParameter não coincide com o tipo real no servidor, será executada uma conversão implícita pelo servidor e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de SQLBindParameter. Isso pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes das listadas na tabela anterior. Por exemplo, quando uma data padrão precisar ser fornecida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1, e não a data atual.  
+ A tabela neste tópico descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se o tipo de servidor especificado em SQLBindParameter não coincide com o tipo real no servidor, será executada uma conversão implícita pelo servidor e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de SQLBindParameter. Isso pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes das listadas na tabela anterior. Por exemplo, quando uma data padrão precisar ser fornecida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1, e não a data atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Aprimoramentos de data e hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59dc50f9d3e72e7591d512ab98c5731e2cc6d5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 595470b98b16cf955d2456891dac2284a94508c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160927"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Criar um backup diferencial de banco de dados (SQL Server)
   Este tópico descreve como criar um backup de banco de dados diferencial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -85,7 +84,7 @@ ms.locfileid: "36013352"
 5.  Na caixa de listagem **Tipo de backup** , selecione **Diferencial**.  
   
     > [!IMPORTANT]  
-    >  Quando **diferencial** está selecionada, verifique se que o **copiar somente Backup** caixa de seleção é desmarcada.  
+    >  Quando **diferencial** está selecionada, verifique se que o **copiar somente Backup** caixa de seleção está desmarcada.  
   
 6.  Para **Componente de backup**, clique em **Banco de Dados**.  
   

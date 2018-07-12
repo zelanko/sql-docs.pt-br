@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Management Studio [SQL Server]
 - Enterprise Manager (See SQL Server Management Studio [Analysis Services])
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df674c3d4cb72bb9a6e320719e97534a0aa5c931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169315"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar o SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O SSMS combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para desenvolvedores e administradores de todos os níveis de conhecimento.  
   
  O SSMS combina os recursos do Enterprise Manager, do Analisador de Consultas e do Analysis Manager, incluídos em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], em um único ambiente. Além disso, o SSMS funciona com todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tais como o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Desenvolvedores terão uma experiência familiar e os administradores de banco de dados terão um único utilitário abrangente que combina ferramentas gráficas fáceis de usar com sofisticadas capacidades de script.  
   
- Baixe e instale o SSMS no [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Baixe e instale o SSMS na [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Recursos do SQL Server Management Studio](features-in-sql-server-management-studio.md)  

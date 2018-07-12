@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
 - custom rollup formulas [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2983c826b96f681971a6c1fc5be56084a8213453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183433"
 ---
 # <a name="define-custom-member-formulas"></a>Definir fórmulas de membro personalizado
   É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  
@@ -33,7 +33,7 @@ ms.locfileid: "36013215"
   
  A propriedade `CustomRollupColumn` de um atributo especifica a coluna que contém fórmulas de membro personalizado para os membros do atributo. Se uma linha da coluna estiver vazia, o valor de célula do membro será retornado normalmente. Se a fórmula da coluna não for válida, ocorrerá um erro de tempo de execução sempre que o valor de uma célula que usa o membro for recuperado.  
   
- Antes de poder especificar fórmulas de membro personalizado para um atributo, confirme se a tabela de dimensões contém o atributo, ou uma tabela diretamente relacionada, possui uma coluna de cadeia de caracteres para armazenar as fórmulas de membro personalizado. Se esse for o caso, você pode definir o `CustomRollupColumn` propriedade em um atributo manualmente ou usar o aprimoramento de definir fórmula de membro personalizado do Assistente de Business Intelligence para habilitar uma fórmula de membro personalizado em um atributo. Para obter mais informações sobre como usar essa melhoria, consulte [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Antes de poder especificar fórmulas de membro personalizado para um atributo, confirme se a tabela de dimensões contém o atributo, ou uma tabela diretamente relacionada, possui uma coluna de cadeia de caracteres para armazenar as fórmulas de membro personalizado. Se esse for o caso, você pode definir o `CustomRollupColumn` propriedade em um atributo manualmente ou usar o aprimoramento de definir fórmula de membro personalizado do Assistente de Business Intelligence para uma fórmula de membro personalizado em um atributo. Para obter mais informações sobre como usar essa melhoria, consulte [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Avaliando fórmulas de membro personalizado  
  Fórmulas de membro personalizado são diferentes de membros calculados. As fórmulas de membro personalizado aplicam-se a membros que existem em tabelas de dimensões e fornecem apenas o valor do membro. Diferentemente, os membros calculados não são armazenados em tabelas de dimensões e as expressões de membros calculados definem os dados e os metadados para membros adicionais incluídos em uma dimensão ou hierarquia.  
@@ -66,7 +66,7 @@ ms.locfileid: "36013215"
 Time.[Quarter 3] * 1.5  
 ```  
   
- As fórmulas de membro personalizado são armazenadas em uma coluna da tabela de dimensões. Habilite fórmulas de acúmulo personalizado Configurando a `CustomRollupColumn` propriedade em um atributo.  
+ As fórmulas de membro personalizado são armazenadas em uma coluna da tabela de dimensões. Habilite fórmulas de acúmulo personalizado definindo o `CustomRollupColumn` propriedade em um atributo.  
   
  Para aplicar a mesma expressão MDX a todos os membros de um atributo, crie um cálculo nomeado na tabela de dimensões que retorne uma expressão MDX como cadeia de caracteres literal. Em seguida, especifique o cálculo nomeado configurando a propriedade `CustomRollupColumn` no atributo que você quer configurar. Um cálculo nomeado é uma coluna da tabela de exibição da fonte de dados que retorna os valores de linha definidos por uma expressão SQL. Para obter mais informações sobre como construir cálculos nomeados, consulte [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
