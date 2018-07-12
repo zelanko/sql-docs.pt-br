@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae6c6adad91625ba5d5e898b7da36dc9e818d893
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc295fcd58d3e7609989f35a382e780614e9d7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161897"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
   Um gráfico de coluna exibe uma série como um conjunto de barras verticais agrupadas por categoria. Um gráfico de coluna pode ser útil para:  
@@ -37,7 +37,7 @@ ms.locfileid: "36007663"
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um gráfico no Assistente de gráfico](#Chart)  
+1.  [Criar um gráfico de Assistente de gráfico](#Chart)  
   
 2.  [Escolha o tipo de gráfico](#ChartType)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36007663"
  Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Criar um relatório de gráfico no Assistente de Gráfico  
- Do **Introdução** caixa de diálogo, use o Assistente de gráfico para criar um conjunto de dados inserido, escolha uma fonte de dados compartilhada e crie um gráfico de colunas.  
+ Dos **guia de Introdução** caixa de diálogo, use o Assistente de gráfico para criar um conjunto de dados inserido, escolher uma fonte de dados compartilhada e criar um gráfico de colunas.  
   
 > [!NOTE]  
 >  Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
@@ -76,7 +76,7 @@ ms.locfileid: "36007663"
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36007663"
   
 4.  Clique em **Avançar**.  
   
-5.  Sobre o **escolha um estilo** , na caixa estilos, selecione um estilo.  
+5.  Sobre o **escolher um estilo** página, na caixa estilos, selecione um estilo.  
   
      Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda. Quando você selecionar um estilo, o painel Visualizar exibirá um exemplo do gráfico com esse estilo.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36007663"
   
 3.  Clique em **Número**.  
   
-4.  Em **categoria**, selecione **data**.  
+4.  Na **categoria**, selecione **data**.  
   
 5.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
@@ -168,15 +168,15 @@ ms.locfileid: "36007663"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique no título do eixo horizontal e, em seguida, clique em **Mostrar título do eixo** para remover o título. Como o eixo horizontal exibe datas, o título não é necessário.  
+2.  Clique com botão direito no título do eixo horizontal e, em seguida, clique em **Mostrar título do eixo** para remover o título. Como o eixo horizontal exibe datas, o título não é necessário.  
   
-3.  Com o botão direito do eixo horizontal e, em seguida, clique em **propriedades do Eixo Horizontal**.  
+3.  Clique com botão direito do eixo horizontal e, em seguida, clique em **propriedades do Eixo Horizontal**.  
   
-4.  No **opções de eixo** página em **intervalo do eixo e intervalo**, tipo **3** para **intervalo**. O gráfico exibirá a cada três datas.  
+4.  No **opções de eixo** página sob **intervalo do eixo e intervalo**, tipo **3** para **intervalo**. O gráfico exibirá a cada três datas.  
   
 5.  Clique em **Rótulos**.  
   
-6.  Em **alterar as opções de ajuste automático do rótulo de eixo**, selecione **desabilitar ajuste automático**.  
+6.  Na **alterar opções de ajuste automático do rótulo de eixo**, selecione **desabilitar ajuste automático**.  
   
 7.  Em **Ângulo de rotação do rótulo**, selecione **-90**.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "36007663"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique com botão direito a legenda no gráfico e, em seguida, clique em **propriedades da legenda**.  
+2.  A legenda no gráfico com o botão direito e, em seguida, clique em **propriedades da legenda**.  
   
 3.  Para **Layout e posição**, selecione uma posição diferente. Por exemplo, defina a posição para a opção da metade inferior.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36007663"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Opcional) Como há somente uma categoria neste tutorial, a legenda não é necessária. Para remover a legenda, clique na legenda e, em seguida, clique em **Excluir legenda**.  
+5.  (Opcional) Como há somente uma categoria neste tutorial, a legenda não é necessária. Para remover a legenda, a legenda do botão direito do mouse e, em seguida, clique em **Excluir legenda**.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36007663"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **total de pedidos de vendas de loja**.  
+2.  Selecione as palavras **título do gráfico** na parte superior do gráfico e, em seguida, digite o seguinte texto: **total de pedidos de vendas Store**.  
   
 3.  Clique em **Executar** para visualizar o relatório.  
   
@@ -226,21 +226,21 @@ ms.locfileid: "36007663"
   
 2.  Clique duas vezes nos rótulos no eixo vertical ao longo do gráfico para selecioná-los.  
   
-3.  Na faixa de opções, no **início** guia o **número** de grupo, clique no **moeda** botão. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
+3.  Na faixa de opções, no **Home** guia o **número** , clique no **moeda** botão. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
   
-4.  Na faixa de opções, no **início** guia o **número** de grupo, clique no **diminuir Decimal** botão duas vezes, para mostrar o número arredondado para o valor mais próximo.  
+4.  Na faixa de opções, no **Home** guia o **número** , clique no **diminuir Decimal** botão duas vezes, para mostrar o número arredondado para o valor mais próximo.  
   
-5.  Clique com botão direito do eixo vertical e clique em **propriedades do Eixo Vertical**.  
+5.  Clique com botão direito no eixo vertical e clique em **propriedades do Eixo Vertical**.  
   
-6.  Clique em **Número**. Observe que **moeda** já está selecionado no **categoria** caixa, e **casas decimais** já **0** (zero).  
+6.  Clique em **Número**. Observe que **moeda** já está selecionada na **categoria** caixa, e **casas decimais** já **0** (zero).  
   
 7.  No **Mostrar valores em** , clique em **milhares**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Clique no título do eixo vertical no lado do gráfico e clique em **propriedades do título do eixo**.  
+9. Clique com botão direito no título do eixo vertical ao longo do lado do gráfico e clique em **propriedades do título do eixo**.  
   
-10. Substitua o texto no **texto do título** campo com o seguinte texto: **Total de vendas (em milhares)**. Também é possível especificar várias opções relacionadas ao modo como o título é formatado.  
+10. Substitua o texto na **texto do título** campo com o seguinte texto: **Total de vendas (em milhares)**. Também é possível especificar várias opções relacionadas ao modo como o título é formatado.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -262,7 +262,7 @@ ms.locfileid: "36007663"
   
 6.  Clique em **borda**.  
   
-7.  Em **largura da linha**, selecione **3pt**.  
+7.  Na **largura da linha**, selecione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,17 +278,17 @@ ms.locfileid: "36007663"
   
 2.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-3.  Tipo **gráfico de vendas**, pressione ENTER e, em seguida, digite **janeiro a dezembro de 2009**, de modo que fique assim:  
+3.  Tipo de **gráfico de vendas**, pressione ENTER e, em seguida, digite **janeiro a dezembro de 2009**, portanto, ele tem esta aparência:  
   
      **Gráfico de Vendas**  
   
      **Janeiro a dezembro de 2009**  
   
-4.  Selecione **gráfico de vendas**e clique no **negrito** no botão de **fonte** seção o **início** guia da faixa de opções.  
+4.  Selecione **gráfico de vendas**e clique no **negrito** botão no **fonte** seção o **início** guia da faixa de opções.  
   
-5.  Selecione **janeiro a dezembro de 2009**e no **fonte** seção o **início** guia, defina o tamanho da fonte como **10**.  
+5.  Selecione **janeiro a dezembro de 2009**e, na **fonte** seção o **página inicial** guia, defina o tamanho da fonte como **10**.  
   
-6.  (Opcional) Você pode precisar fazer o **título** altura para acomodar as duas linhas de texto, basta puxar para baixo as setas com pontas duplas quando clicar no meio da borda inferior da caixa de texto.  
+6.  (Opcional) Você talvez precise fazer o **título** altura para acomodar as duas linhas de texto pressionando as setas com pontas duplas quando clicar no meio da borda inferior da caixa de texto.  
   
      Esse título aparecerá na parte superior do relatório. Quando não houver nenhum cabeçalho de página definido, os itens na parte superior do corpo do relatório serão equivalentes a um cabeçalho de relatório.  
   
@@ -310,7 +310,7 @@ ms.locfileid: "36007663"
  Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150517"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexões SSL em um servidor de relatórios do modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo Nativo usa o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório. Se você tiver um arquivo de certificado (.cer) instalado em um repositório de certificados local no computador do servidor de relatório, poderá associá-lo a uma reserva de URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para dar suporte a conexões do servidor de relatório por meio de um canal criptografado.  
@@ -81,7 +81,7 @@ ms.locfileid: "36007896"
 5.  Clique na URL para verificar se está funcionando.  
   
 ## <a name="how-certificate-bindings-are-stored"></a>Como são armazenadas as associações de certificado  
- As associações de certificado serão armazenadas em HTTP.SYS. Uma representação das associações definidas também será armazenada no `URLReservations` seção do arquivo rsreportserver. config. As configurações no arquivo de configuração são apenas uma representação dos valores reais especificados em outros lugares. Não modifique os valores diretamente no arquivo de configuração. Os parâmetros de configuração só serão exibidos no arquivo depois que você usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o provedor WMI do Servidor de Relatório para associar um certificado.  
+ As associações de certificado serão armazenadas em HTTP.SYS. Uma representação das associações definidas também será armazenada do `URLReservations` seção do arquivo rsreportserver. config. As configurações no arquivo de configuração são apenas uma representação dos valores reais especificados em outros lugares. Não modifique os valores diretamente no arquivo de configuração. Os parâmetros de configuração só serão exibidos no arquivo depois que você usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o provedor WMI do Servidor de Relatório para associar um certificado.  
   
 > [!NOTE]  
 >  Se você configurar uma associação com um certificado SSL no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e depois quiser remover o certificado do computador, não se esqueça de remover a associação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , antes de remover o certificado do computador. Caso contrário, você não poderá remover a associação usando a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou WMI, e receberá um erro de "Parâmetro inválido". Caso você já tenha removido o certificado do computador, use a ferramenta Httpcfg.exe para remover a associação de HTTP.SYS. Para obter mais informações sobre Httpcfg.exe, consulte a documentação de produto do Windows.  
@@ -94,7 +94,7 @@ ms.locfileid: "36007896"
  [Autenticação com o servidor de relatório](authentication-with-the-report-server.md)   
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Gerenciador de configuração do Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Gerenciador de configuração do Reporting Services &#40;/DEL&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

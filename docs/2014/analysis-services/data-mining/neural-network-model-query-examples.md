@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea75ce7875a828dc380f81b334d5b7376d2b38c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151807"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de rede neural pode recuperar metadados de modelo, como o número de camadas ocultas. Alternativamente, uma consulta de previsão pode sugerir classificações com base em uma entrada e opcionalmente fornecer as probabilidades de cada classificação.  
@@ -228,7 +228,7 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo rede Neural da Microsoft](microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
- [Conteúdo do modelo de rede Neural modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lição 5: Criar a rede Neural e modelos de regressão logística &#40;intermediário de Tutorial de mineração de dados&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lição 5: Criando a rede Neural e modelos de regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

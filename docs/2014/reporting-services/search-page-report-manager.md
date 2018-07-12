@@ -1,5 +1,5 @@
 ---
-title: Página pesquisa (Gerenciador de relatórios) | Microsoft Docs
+title: Procurar página (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192986"
 ---
 # <a name="search-page-report-manager"></a>Página Pesquisa (Gerenciador de Relatórios)
   Use a página Resultados da Pesquisa para exibir os resultados de uma operação de pesquisa especificada para um relatório, relatório vinculado, modelo de relatório, fonte de dados compartilhada, pasta ou recurso. Os resultados da pesquisa são listados em ordem alfabética. Você pode classificar por tipo, nome ou descrição.  

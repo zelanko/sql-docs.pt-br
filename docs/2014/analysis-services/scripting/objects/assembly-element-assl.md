@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151437"
 ---
 # <a name="assembly-element-assl"></a>Elemento Assembly (ASSL)
-  Representa um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou uma biblioteca de vínculo dinâmico (DLL) COM associado com um [servidor](server-element-assl.md) elemento ou um [banco de dados](database-element-assl.md) elemento.  
+  Representa uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou uma biblioteca de vínculo dinâmico (DLL) COM associado com um [Server](server-element-assl.md) elemento ou uma [banco de dados](database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36008281"
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Server &#40;ASSL&#41;](server-element-assl.md)   
+ [Elemento de servidor &#40;ASSL&#41;](server-element-assl.md)   
  [Elemento de banco de dados &#40;ASSL&#41;](database-element-assl.md)   
  [Objetos &#40;ASSL&#41;](objects-assl.md)  
   

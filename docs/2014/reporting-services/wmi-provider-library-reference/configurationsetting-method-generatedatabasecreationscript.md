@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 05560854358e95ce4beae1727e8c1aeb7be131d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42898aba8f621688ba229fcf01d367b4da1a4f71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149027"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)
   Gera um SQL Script que pode ser usado para criar um banco de dados do servidor de relatório.  
@@ -56,7 +56,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Indica se o banco de dados deve ser criado no modo nativo ou no modo do SharePoint.  
   
 > [!IMPORTANT]  
->  A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` não é suportado porque no modo do SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um SharePoint serviço compartilhado e não é controlado pelo provedor WMI. Você sempre deve definir esse parâmetro `False`.  
+>  A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` não é suportado porque no modo do SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é o serviço compartilhado do SharePoint e não é controlado pelo provedor WMI. Você sempre deve definir esse parâmetro como `False`.  
   
  *Script*  
  [fora] Uma cadeia de caracteres que contém o script SQL gerado.  

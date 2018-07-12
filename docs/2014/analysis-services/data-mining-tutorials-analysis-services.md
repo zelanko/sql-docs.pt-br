@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a7a5038ce93a9f0cb6a725a9fc3833a786c3880e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 497e3ce3b374a40c26238758cab7b03cb9835c77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165697"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriais de Mineração de Dados (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é fácil criar soluções de mineração de dados sofisticada. As ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ajudam a elaborar, criar e gerenciar modelos de mineração de dados que usam dados relacionais ou de cubos. Você pode gerenciar o acesso de cliente aos modelos de mineração de dados e criar consultas de previsão a partir de vários clientes.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] torna mais fácil de criar soluções de mineração de dados sofisticada. As ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ajudam a elaborar, criar e gerenciar modelos de mineração de dados que usam dados relacionais ou de cubos. Você pode gerenciar o acesso de cliente aos modelos de mineração de dados e criar consultas de previsão a partir de vários clientes.  
   
  Os tutoriais passo a passo da lista a seguir lhe ajudarão a saber como obter o máximo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], para que você possa fazer uma análise avançada para resolver problemas de negócios que estão além do alcance dos métodos de business intelligence tradicionais.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36313264"
   
      Este tutorial acompanha você por um cenário de mala direta. Ele demonstra como usar os algoritmos de mineração de dados, visualizadores do modelo de mineração e ferramentas de mineração de dados que estão incluídos no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você criará três modelos de mineração de dados para responder questões comerciais práticas enquanto aprende os conceitos e ferramentas de mineração de dados.  
   
--   [Tutorial de mineração de dados intermediário de &#40;Analysis Services – mineração de dados&#41;](../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+-   [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
      Este tutorial contém uma coleção de lições que apresentam conceitos e técnicas de mineração de dados mais avançadas. Os cenários incluem estes tipos de modelo:  
   
@@ -51,14 +51,14 @@ ms.locfileid: "36313264"
      Os conceitos avançados abordados nessas lições incluem o uso de tabelas aninhadas, previsão cruzada, exibições da fonte de dados personalizadas e consultas nomeadas, além da filtragem em consultas de mineração de dados. Você também obterá proficiência sobre o uso das ferramentas de consulta de previsão fornecidas no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="reference"></a>Referência  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Ferramentas de mineração de dados](data-mining/data-mining-tools.md)  
   
- [Arquitetura lógica &#40;Analysis Services – mineração de dados&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura lógica &#40;Analysis Services - mineração de dados&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [Arquitetura lógica &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36313264"
 ## <a name="see-also"></a>Consulte também  
  [Soluções de mineração de dados](data-mining/data-mining-solutions.md)   
  [Recursos de mineração de dados Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [Criando e consultando modelos de mineração de dados com DMX: tutoriais &#40;Analysis Services – mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Criando e consultando modelos de mineração de dados com DMX: tutoriais &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

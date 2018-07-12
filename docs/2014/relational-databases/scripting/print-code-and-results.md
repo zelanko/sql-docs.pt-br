@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
 - code printing [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7cfe90c4292fdb89a1d7827a78279ec2f952c471
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0bd7213705016d1cf482a161577908f30e60bbc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168367"
 ---
 # <a name="print-code-and-results"></a>Imprimir código e resultados
   Quando você imprime uma consulta ou um arquivo, elementos coloridos serão impressos em cor se sua impressora oferecer suporte a impressões coloridas e a impressão de cor estiver habilitada na configuração da impressora.  

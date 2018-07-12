@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179643"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Página Atribuição de Nova Função: Editar Atribuição de Função (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função ou Editar Atribuição de Função para conceder permissões a itens de servidor de relatório e operações. Cada usuário que solicita acesso a um servidor de relatórios deve ter uma atribuição de função que define o nível de acesso. Você pode criar atribuições de função no nó raiz ou em determinado relatório, modelo, pasta, recurso ou fonte de dados compartilhada. A segurança do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é imposta pelas atribuições de função que você aplica aos itens. Uma atribuição de função faz a correspondência entre um grupo ou usuário e uma definição de função, sendo que cada definição identifica as tarefas que os grupos ou usuários podem executar em um item específico.  
@@ -50,7 +50,7 @@ ms.locfileid: "36007446"
 >  Esta caixa só está disponível na página Atribuição de Nova Função.  
   
  **Função**  
- Mostra todas as funções definidas no servidor de relatório que podem ser usadas para definir a segurança dos itens. Quando você cria ou altera uma atribuição de função para um relatório ou pasta, selecione uma ou mais funções até que o conjunto combinado de tarefas descreva as ações que o usuário deve ter permissão de executar. Para exibir o conjunto de tarefas que cada função dá suporte, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Mostra todas as funções definidas no servidor de relatório que podem ser usadas para definir a segurança dos itens. Quando você cria ou altera uma atribuição de função para um relatório ou pasta, selecione uma ou mais funções até que o conjunto combinado de tarefas descreva as ações que o usuário deve ter permissão de executar. Para exibir o conjunto de tarefas que cada função suporta, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Você não pode exibir, criar, modificar ou excluir funções no Gerenciador de Relatórios. Para obter instruções, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Descrição**  
  Exibe informações adicionais sobre a função. Para funções predefinidas como **Navegador** ou **Gerenciador de Conteúdo**, a descrição resume as tarefas para as quais cada função dá suporte.  
@@ -67,6 +67,6 @@ ms.locfileid: "36007446"
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Atribuições de função](security/role-assignments.md)   
- [Conceder acesso ao usuário para um servidor de relatório &#40;Gerenciador de relatórios&#41;](security/grant-user-access-to-a-report-server.md)  
+ [Acesso do usuário de conceder a um servidor de relatório &#40;Gerenciador de relatórios&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

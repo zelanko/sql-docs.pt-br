@@ -1,5 +1,5 @@
 ---
-title: Planejar para suporte ao relatório de mapa | Microsoft Docs
+title: Planejar suporte ao relatório de mapa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163747"
 ---
 # <a name="plan-for-map-report-support"></a>Planejar para suporte ao relatório de mapa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] dá suporte a relatórios de mapa que usam fontes de dados espaciais. Os dados espaciais podem vir de bancos de dados do SQL Server, de arquivos de formas ESRI ou da Galeria de Mapas instalada com o Reporting Services ou o Construtor de Relatórios. Um mapa também pode exibir um plano de fundo de peças de mapas do Bing. Um autor de relatório pode criar um relatório que especifica dados espaciais ou peças de mapa do Bing como dinâmicos e recuperados em tempo de execução ou como estáticos e inseridos na definição de relatório.  
@@ -27,7 +27,7 @@ ms.locfileid: "36007448"
 ## <a name="support-for-bing-maps"></a>Suporte para Bing Maps  
  Os mapas podem incluir uma camada em segundo plano que exibe peças de mapa do Bing. Para exibir um relatório publicado que tem uma camada de peça de mapa, o servidor de relatório deve ser configurado para recuperar peças de mapa dos Serviços Web do Bing Maps. Para obter mais informações, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- Em cada relatório, os autores de relatório podem especificar se usar uma conexão de Protocolo SSL para recuperar peças do servidor de peças de mapa. Para fazer isso, no painel Propriedades para a camada de peça, eles devem definir a propriedade booleana UseSecureConnection para `true`.  
+ Em cada relatório, os autores de relatório podem especificar se usar uma conexão de Protocolo SSL para recuperar peças do servidor de peças de mapa. Para fazer isso, no painel Propriedades para a camada de peça, eles devem definir a propriedade de booliana UseSecureConnection para `true`.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
@@ -51,9 +51,9 @@ ms.locfileid: "36007448"
   
 -   Quando os dados de mapa devem ser inseridos, ajuste o centro do visor e o nível de zoom para incluir apenas os dados de mapa necessários para o relatório.  
   
- Para obter mais informações, [mapas &#40;construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Para obter mais informações, [Maps &#40;construtor de relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionar problemas de relatórios: Mapear relatórios &#40;SSRS e construtor de relatórios&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

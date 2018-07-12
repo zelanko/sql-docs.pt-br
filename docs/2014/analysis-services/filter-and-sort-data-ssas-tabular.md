@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1sql12.asvs.bidtoolset.notallitemsshowing.f1sql12.asvs.bidtoolset.autofiltermenu.f1
 ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4e40f6aa8f6459522aee0a2ff713d8747b769b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8d9e9c4301b3d2319ed6091db24582efe18a337
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192942"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrar e classificar dados (SSAS tabular)
   Quando você estiver trabalhando com tabelas no modelo tabular, pode filtrar ou classificar dados usando controles no designer modelo. Você também pode criar filtros dentro de cálculos, para controlar os dados usados de uma coluna ou tabela de dados. Cada tipo de filtro só funciona em sua respectiva janela.  

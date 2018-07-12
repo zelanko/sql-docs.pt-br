@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ea1d6fdb47ef4611721d895b74bd6174a5b50441
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c67087ba76d53faad7573f035d18cfa4f76247ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182803"
 ---
 # <a name="backup-restore-and-recovery-of-memory-optimized-tables"></a>Backup, restauração e recuperação de tabelas com otimização de memória
   Tópicos desta seção:  

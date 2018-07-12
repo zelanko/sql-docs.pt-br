@@ -24,15 +24,15 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 792174e9d5da395d2a385b3dde73de9a167f0643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149367"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos e hierarquias de atributos
   As dimensões são coleções de atributos, vinculados a uma ou mais colunas na tabela ou exibição na exibição de fonte de dados.  
@@ -46,7 +46,7 @@ ms.locfileid: "36008298"
 ## <a name="attribute-hierarchies"></a>Hierarquias de atributo  
  Por padrão, os membros de atributo são organizados em dois níveis hierárquicos, consistindo de um nível de folha e um nível ALL. O nível ALL contém o valor de agregação dos membros do atributo nas medidas em cada grupo de medidas, no qual a dimensão de cada atributo está relacionada a um membro. No entanto, se a propriedade `IsAggregatable` for definida como False, o nível ALL não será criado. Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
- Os atributos podem ser, e geralmente são, organizados em hierarquias definidas pelo usuário que fornecem os caminhos de busca detalhada pelos quais os usuários podem pesquisar os dados no grupo de medidas ao qual o atributo está relacionado. Em aplicativos cliente, podem ser usados atributos para fornecer informações de agrupamento e restrição. Quando atributos são organizados em hierarquias definidas pelo usuário, você definir relações entre níveis hierárquicos quando os níveis estão relacionados em um muitos-para-um ou para a relação (chamado um *natural* relação). Por exemplo, em uma hierarquia de Tempo de Calendário, um nível Dia deve estar relacionado ao nível Mês, o nível Mês relacionado ao nível Trimestre e assim por diante. A definição de relações entre os níveis em uma hierarquia definida pelo usuário permite que o Analysis Services defina agregações mais úteis para aumentar o desempenho da consulta e também economizar memória durante o processamento, o que pode ser importante em cubos grandes ou complexos. Para obter mais informações, consulte [hierarquias de usuário](user-hierarchies.md), [Create User-Defined hierarquias](../multidimensional-models/user-defined-hierarchies-create.md), e [definir relações de atributo](../multidimensional-models/attribute-relationships-define.md).  
+ Os atributos podem ser, e geralmente são, organizados em hierarquias definidas pelo usuário que fornecem os caminhos de busca detalhada pelos quais os usuários podem pesquisar os dados no grupo de medidas ao qual o atributo está relacionado. Em aplicativos cliente, podem ser usados atributos para fornecer informações de agrupamento e restrição. Quando atributos são organizados em hierarquias definidas pelo usuário, você definir relações entre níveis hierárquicos quando os níveis estão relacionados em um muitos-para-um ou uma relação um para um (chamado de um *natural* relação). Por exemplo, em uma hierarquia de Tempo de Calendário, um nível Dia deve estar relacionado ao nível Mês, o nível Mês relacionado ao nível Trimestre e assim por diante. A definição de relações entre os níveis em uma hierarquia definida pelo usuário permite que o Analysis Services defina agregações mais úteis para aumentar o desempenho da consulta e também economizar memória durante o processamento, o que pode ser importante em cubos grandes ou complexos. Para obter mais informações, consulte [hierarquias de usuário](user-hierarchies.md), [hierarquias definidas pelo usuário](../multidimensional-models/user-defined-hierarchies-create.md), e [definir relações de atributo](../multidimensional-models/attribute-relationships-define.md).  
   
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relações de atributo, esquemas em estrela e esquemas floco de neve  
  Por padrão, em um esquema em estrela, todos os atributos estão diretamente relacionados ao atributo de chave, o que permite que os usuários pesquisem os fatos no cubo com base em qualquer hierarquia de atributos na dimensão. Em um esquema floco de neve, um atributo estará diretamente vinculado ao atributo de chave se a tabela subjacente estiver diretamente vinculada à tabela de fatos, ou vinculado indiretamente pelos atributos associados à chave na tabela subjacente, que vincula a tabela floco de neve à tabela vinculada diretamente.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLXMLOLEDB Provider
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 17e42318a657f5cc7507ecb3e4389fc83a570571
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 77981acb574ea77d795a28e8244f7a081970602d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184663"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>Provedor SQLXMLOLEDB (SQLXML 4.0)
   O provedor SQLXMLOLEDB é um provedor OLE DB que expõe a funcionalidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML por meio de ADO.  

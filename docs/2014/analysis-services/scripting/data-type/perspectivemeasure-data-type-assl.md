@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210006"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>Tipo de dados PerspectiveMeasure (ASSL)
-  Define um tipo de dados primitivo que representa informações sobre uma medida em um [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) elemento.  
+  Define um tipo de dados primitivo que representa informações sobre uma medida em uma [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

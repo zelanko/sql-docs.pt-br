@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182877"
 ---
 # <a name="collations-and-code-pages"></a>Páginas de código de agrupamentos
   O [!INCLUDE[hek_2](../includes/hek-2-md.md)] tem restrições nas páginas de código com suporte para colunas (var)char em tabelas com otimização de memória e agrupamentos com suporte usados em índices e em procedimentos armazenados compilados nativamente.  
@@ -86,7 +86,7 @@ GO
   
 -   Todas as expressões e operações de classificação dentro dos procedimentos armazenados compilados nativamente devem usar agrupamentos BIN2. A implicação é que todas as comparações e operações de classificação são baseadas nos pontos de código Unicode dos caracteres (representações binárias). Por exemplo, todas as classificações diferenciam maiúsculas de minúsculas ('Z' vem antes de 'a'). Se necessário, use [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para classificação e comparação sem diferenciação de maiúsculas e minúsculas.  
   
--   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que char n (var) (*n*) valores não podem ser convertidos para o tipo char n (var) (*,*), se *,* < *n*, se a agrupamento tem a propriedade SC. Por exemplo, o seguinte não tem suporte:  
+-   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que char n (var) (*n*) valores não podem ser convertidos para o tipo n (var) char (*eu*), se *eu* < *n*, se a agrupamento tem a propriedade SC. Por exemplo, o seguinte não tem suporte:  
   
     ```tsql  
     -- column definition using an _SC collation  

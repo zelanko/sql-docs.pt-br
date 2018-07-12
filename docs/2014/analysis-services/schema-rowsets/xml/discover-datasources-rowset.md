@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185253"
 ---
 # <a name="discoverdatasources-rowset"></a>Conjunto de linhas DISCOVER_DATASOURCES
   Retorna uma lista das fontes de dados de provedor de XMLA (XML for Analysis) disponível no servidor ou no serviço Web. As fontes dos dados publicados são retornadas de uma URL do servidor da Web de aplicativo. O cliente pode conectar a uma das fontes de dados desta lista.  
@@ -36,9 +36,9 @@ ms.locfileid: "36007603"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O cliente seleciona uma fonte de dados, definindo o `DataSourceInfo` propriedade no [propriedades](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento que é enviado junto com o [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento o [Execute](../../xmla/xml-elements-methods-execute.md) método. Um cliente não deve criar o conteúdo da propriedade `DataSourceInfo` a ser enviada ao servidor. Em vez disso, ele deverá usar o método `Discover` para localizar as fontes de dados às quais o provedor oferece suporte. O cliente envia de volta o mesmo valor da propriedade `DataSourceInfo` obtido do conjunto de linhas `DISCOVER_DATASOURCES`.  
+ O cliente seleciona uma fonte de dados, definindo a `DataSourceInfo` propriedade no [propriedades](../../xmla/xml-elements-properties/properties-element-xmla.md) elemento que é enviado junto com o [comando](../../xmla/xml-elements-properties/command-element-xmla.md) elemento pelo [Execute](../../xmla/xml-elements-methods-execute.md) método. Um cliente não deve criar o conteúdo da propriedade `DataSourceInfo` a ser enviada ao servidor. Em vez disso, ele deverá usar o método `Discover` para localizar as fontes de dados às quais o provedor oferece suporte. O cliente envia de volta o mesmo valor da propriedade `DataSourceInfo` obtido do conjunto de linhas `DISCOVER_DATASOURCES`.  
   
- O `DISCOVER_DATASOURCES` linhas contém as seguintes colunas.  
+ O `DISCOVER_DATASOURCES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

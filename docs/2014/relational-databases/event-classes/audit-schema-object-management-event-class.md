@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Management event class
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6e425b38453ced35f91f4ba43cf303d6a89bc749
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7814c85f2df953f3de5c6760345f41b7be84caf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149677"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Classe de evento Audit Schema Object Management
   A classe de evento **Audit Schema Object Management** ocorre quando objetos de servidor são criados, alterados ou removidos.  

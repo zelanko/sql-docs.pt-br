@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d39998e41fd26bb2928290f62dd08fc54a0f567a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695897"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407858"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ HRESULT GetStatus(
  Ocorreu um erro específico de provedor.  
   
 ## <a name="remarks"></a>Remarks  
- O **issasynchstatus:: getStatus** método se comporta exatamente como o **idbasynchstatus:: getStatus** método, exceto que se o objeto de fonte de inicialização de um dado for cancelado, E_UNEXPECTED será retornado em vez disso de DB_E_CANCELED (embora [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retornará DB_E_CANCELED). Isso acontece porque o objeto de fonte de dados não é deixado no estado normal de zumbi que segue uma operação de anulação, para que outras operações futuras de inicialização possam ser tentadas.  
+ O **issasynchstatus:: getStatus** método se comporta exatamente como o **idbasynchstatus:: getStatus** método, exceto que se a inicialização de um dado objeto de fonte é cancelado, E_UNEXPECTED será retornado em vez disso de DB_E_CANCELED (embora [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retorne DB_E_CANCELED). Isso acontece porque o objeto de fonte de dados não é deixado no estado normal de zumbi que segue uma operação de anulação, para que outras operações futuras de inicialização possam ser tentadas.  
   
  Se o conjunto de linhas for inicializado ou populado de forma assíncrona, deverá dar suporte a este método.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing information
 - subscriptions [SQL Server replication], Replication Monitor tasks
 - viewing subscription information
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af378e30b8bf33abea688dd9cc36019d18835bed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ea071e2023c302d604c7d77f703cdaa050fc1c24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150657"
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>Exibir informações e realizar tarefas para uma assinatura (Replication Monitor)
   O Replication Monitor fornece as seguintes guias que incluem informações sobre as assinaturas:  

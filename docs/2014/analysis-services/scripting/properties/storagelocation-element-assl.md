@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6f6d023731126cafaa76cf31598e0bae9fdf1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163527"
 ---
 # <a name="storagelocation-element-assl"></a>Elemento StorageLocation (ASSL)
   Contém o local de armazenamento do sistema de arquivos de conteúdos do elemento pai.  

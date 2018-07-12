@@ -1,5 +1,5 @@
 ---
-title: 'Lição 6: Usando parâmetros com o modelo de implantação do projeto | Microsoft Docs'
+title: 'Lição 6: Usando parâmetros com o modelo de implantação de projeto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f202c6b24d8f6b4ff0cfde431502b4b4cc3ed769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96be61d32c61fbf6efb7d0a7c85cff3bc1f623c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184685"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lição 6: Usando parâmetros com o modelo de implantação de projeto
   O SQL Server 2012 apresenta um novo modelo de implantação em que você pode implantar seus projetos no servidor do Integration Services. O servidor do Integration Services permite gerenciar e executar pacotes e configurar valores de tempo de execução para pacotes.  
