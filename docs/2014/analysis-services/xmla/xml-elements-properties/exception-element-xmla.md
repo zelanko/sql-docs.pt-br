@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Exception element
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 824743a3e8aeb7d735d6844dd1b025de06e09e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 33af06aa3243b0860bca6d9ae8ff15595ae1ad4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156807"
 ---
 # <a name="exception-element-xmla"></a>Elemento Exception (XMLA)
   Indica se uma exceção foi retornada de uma [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  

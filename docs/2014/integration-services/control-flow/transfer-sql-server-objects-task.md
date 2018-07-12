@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184733"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
   A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfere um ou mais tipos de objetos para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, a tarefa pode copiar tabelas e procedimentos armazenados. Dependendo da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado como fonte, tipos diferentes de objetos estarão disponíveis para cópia. Por exemplo, só um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui esquemas e agregações definidos pelo usuário.  
@@ -83,7 +83,7 @@ ms.locfileid: "36012069"
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não informa progresso incremental da transferência do objeto; informa somente conclusão 0% e 100 % .  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução armazenado na `ExecutionValue` propriedade da tarefa, retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade `ExecValueVariable` da tarefa Transferir Objetos do Servidor SQL, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ O valor de execução, armazenado em do `ExecutionValue` propriedade da tarefa, retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade `ExecValueVariable` da tarefa Transferir Objetos do Servidor SQL, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Objetos do SQL inclui as seguintes entradas de log personalizadas:  
@@ -92,7 +92,7 @@ ms.locfileid: "36012069"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    Essa entrada de log informa que a transferência foi concluída. A entrada do log contém a hora de término.  
   
- Além disso, uma entrada de log para um evento `OnInformation` informa o número de objetos dos tipos de objeto selecionados para transferência, o número de objetos transferidos e ações como truncamento de tabelas quando são transferidos dados com tabelas. Uma entrada de log para o `OnWarning` evento foi criado para cada objeto de destino que será substituído.  
+ Além disso, uma entrada de log para um evento `OnInformation` informa o número de objetos dos tipos de objeto selecionados para transferência, o número de objetos transferidos e ações como truncamento de tabelas quando são transferidos dados com tabelas. Uma entrada de log para o `OnWarning` evento foi criado para cada objeto de destino que for substituído.  
   
 ## <a name="security-and-permissions"></a>Segurança e permissões  
  O usuário deve ter permissão para procurar objetos no servidor de origem e deve ter permissão para cancelar e criar objetos no servidor de destino; além disso, o usuário deve ter acesso ao banco de dados especificado e aos objetos do banco de dados.  
@@ -110,9 +110,9 @@ ms.locfileid: "36012069"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Transferência de Editor de tarefa de objetos do SQL Server &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Transferir o Editor da tarefa de objetos do SQL Server &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Transferência de Editor de tarefa de objetos do SQL Server &#40;objetos de página&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Transferir o Editor da tarefa de objetos do SQL Server &#40;página de objetos&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

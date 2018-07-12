@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228886"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
-  As expressões o ajudam a criar relatórios avançados e flexíveis. Este tutorial ensina a criar e implementar expressões que utilizam funções e operadores comuns. Você usará o **expressão** caixa de diálogo para escrever expressões que concatenem valores de nome, pesquisar valores em um conjunto de dados separado, exibir diferentes imagens com base em valores de campo e assim por diante.  
+  As expressões o ajudam a criar relatórios avançados e flexíveis. Este tutorial ensina a criar e implementar expressões que utilizam funções e operadores comuns. Você usará o **expressão** caixa de diálogo para escrever expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibir diferentes imagens com base em valores de campo e assim por diante.  
   
  O relatório é um relatório de barras com cores de linhas alternadas em branco e uma cor. O relatório inclui um parâmetro para selecionar a cor das linhas que não são brancas.  
   
@@ -43,15 +43,15 @@ ms.locfileid: "36012727"
   
 5.  [Pesquisar nome de CountryRegion](#Lookup)  
   
-6.  [Contagem de dias desde a última compra](#Count)  
+6.  [Contar dias desde a última compra](#Count)  
   
-7.  [Use um indicador para mostrar comparação de vendas](#Indicator)  
+7.  [Usar um indicador para mostrar comparação de vendas](#Indicator)  
   
-8.  [Verifique o relatório de relatório "Barra verde"](#GreenBar)  
+8.  [Tornar o relatório de relatório "Barra verde"](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Outras etapas opcionais  
   
--   [Formatar coluna de data](#DateFormat)  
+-   [Formatar coluna de dados](#DateFormat)  
   
 -   [Adicionar um título de relatório](#Title)  
   
@@ -73,15 +73,15 @@ ms.locfileid: "36012727"
   
 #### <a name="to-create-a-new-table-report"></a>Para criar um novo relatório de tabela  
   
-1.  Clique em **iniciar**, aponte para **programas**, clique em [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, clique em [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
     > [!NOTE]  
-    >  Se você preferir usar a versão ClickOnce do construtor de relatórios, abra o Gerenciador de relatórios e clique em **Report Builder**, ou vá para um site do SharePoint no qual Reporting Services tipos de conteúdo, como relatórios estão habilitados e clique em  **Relatório do construtor de relatórios** no **novo documento** menu o **documentos** guia de uma biblioteca de documentos compartilhados.  
+    >  Se você preferir usar a versão ClickOnce do construtor de relatórios, abra o Gerenciador de relatórios e clique em **construtor de relatórios**, ou vá para um site do SharePoint no qual Reporting Services tipos de conteúdo, como relatórios estão habilitados e clique em  **Relatório do construtor de relatórios** sobre o **novo documento** menu no **documentos** guia de uma biblioteca de documentos compartilhados.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36012727"
     > [!NOTE]  
     >  Os campos FirstName e LastName não estão incluídos. Você irá adicioná-los em uma etapa posterior.  
   
-13. No **valores** lista, clique no `CountryRegionID` e clique no **soma** opção.  
+13. No **valores** lista, clique com botão direito `CountryRegionID` e clique no **soma** opção.  
   
      A Soma não é mais aplicada a CountryRegionID.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36012727"
   
 16. Na página **Escolher o layout**, clique em **Avançar**.  
   
-17. Sobre o **escolher um estilo de** , clique em **Tablet**e, em seguida, clique em **concluir**.  
+17. Sobre o **escolha um estilo** , clique em **Slate**e, em seguida, clique em **concluir**.  
   
 ##  <a name="UpdateNames"></a> 2. Atualizar nomes padrão da fonte de dados ou do conjunto de dados  
   
@@ -642,7 +642,7 @@ ms.locfileid: "36012727"
   
      O relatório é renderizado e linhas alternativas têm o plano de fundo escolhido por você.  
   
-##  <a name="DateFormat"></a> (opcional) Formatar coluna de data  
+##  <a name="DateFormat"></a> (opcional) Formatar coluna de dados  
  Formate a coluna **Last Purchase**, que contém datas.  
   
 #### <a name="to-format-date-column"></a>Para formatar coluna de dados  
@@ -701,7 +701,7 @@ ms.locfileid: "36012727"
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Desktop`, `Meus documentos**, ou **meu computador**e, em seguida, navegue até a pasta onde deseja salvar o relatório.  
+2.  Clique em **área de trabalho`, `Meus documentos**, ou **meu computador**e, em seguida, navegue até a pasta onde você deseja salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Resumo de Comparação de Vendas**.  
   
@@ -710,9 +710,9 @@ ms.locfileid: "36012727"
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Indicadores &#40;SSRS e construtor de relatórios&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Imagens, caixas de texto, retângulos e linhas &#40;SSRS e construtor de relatórios&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Indicadores &#40;relatórios e SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Imagens, caixas de texto, retângulos e linhas de &#40;relatórios e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

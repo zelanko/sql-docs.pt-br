@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2f254100d2f77d1e51faa5b295af91fe86524fe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8199de0df5b7910c547867fa62e5670670510988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183303"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
   A solução de qualidade de dados fornecida pelo [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite que um administrador de dados ou profissional de TI mantenha a qualidade de seus dados e assegure que os dados sejam adequados para uso comercial. O DQS é uma solução controlada por conhecimento que fornece maneiras assistidas por computador e interativas para gerenciar a integridade e a qualidade de suas fontes de dados. O DQS permite descobrir, compilar e gerenciar conhecimento sobre seus dados. Você pode usar esse conhecimento para executar a limpeza, a correspondência e a criação de perfil de dados. Você também pode aproveitar os serviços baseados em nuvem de provedores de dados de referência em um projeto de qualidade de dados do DQS.  
@@ -44,7 +44,7 @@ ms.locfileid: "36012569"
   
 -   **Serviços de Dados de Referência :** verificação da qualidade de seus dados usando os serviços de um provedor de dados de referência. Você pode usar os serviços de dados de referência do Windows Azure Marketplace DataMarket para limpar, validar, corresponder e enriquecer dados facilmente. Para obter mais informações, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
--   **Criação de Perfil:** análise de uma fonte de dados para fornecer uma perspectiva da qualidade dos dados em todas as fases da descoberta de conhecimento, do gerenciamento de domínio, da correspondência e dos processos de limpeza de dados. Criação de Perfil é uma ferramenta avançada de uma solução de qualidade de dados do DQS. Você pode criar uma solução de qualidade de dados em que a criação de perfil seja tão importante quanto o gerenciamento de conhecimento, a correspondência ou a limpeza de dados. Para obter mais informações, consulte [criação de perfil de dados e notificações no DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+-   **Criação de Perfil:** análise de uma fonte de dados para fornecer uma perspectiva da qualidade dos dados em todas as fases da descoberta de conhecimento, do gerenciamento de domínio, da correspondência e dos processos de limpeza de dados. Criação de Perfil é uma ferramenta avançada de uma solução de qualidade de dados do DQS. Você pode criar uma solução de qualidade de dados em que a criação de perfil seja tão importante quanto o gerenciamento de conhecimento, a correspondência ou a limpeza de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 -   **Monitoramento:** acompanhamento e determinação do estado de atividades de qualidade de dados. O monitorando permite verificar se sua solução de qualidade de dados está se comportando conforme o esperado. Para obter mais informações, consulte [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   

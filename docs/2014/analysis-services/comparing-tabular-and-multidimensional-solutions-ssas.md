@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5cfb7c473e16dde04a87a05e3d727d161c62583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181053"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparando soluções tabulares e multidimensionais (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece dois métodos distintos para modelagem de dados: tabela e multidimensionais. Embora haja sobreposição significativa entre eles, também há diferenças importantes que informarão a sua decisão sobre como seguir em frente. Neste tópico, podemos oferecer comparações de recurso e explicar como cada abordagem trata os requisitos comuns de projeto. Por exemplo, se o suporte de uma fonte de dados específica é uma consideração importante, a seção sobre fontes de dados pode ajudar a orientar sua decisão sobre qual abordagem de modelagem utilizar.  
@@ -42,13 +42,13 @@ ms.locfileid: "36011277"
   
 -   [Ferramentas de design](#bkmk_designer)  
   
--   [Cliente e aplicativos de relatórios](#bkmk_client)  
+-   [Cliente e aplicativos de relatório](#bkmk_client)  
   
 -   [Plataformas de hospedagem](#bkmk_sharePoint)  
   
 -   [Modos de implantação de servidor para soluções multidimensionais e tabulares](#bkmk_deploymentmode)  
   
--   [Próxima etapa: Compile uma solução](#bkmk_Next)  
+-   [Próxima etapa: Criar uma solução](#bkmk_Next)  
   
  Informações adicionais podem ser encontradas neste artigo técnico no MSDN: [Choosing a Tabular or Multidimensional Modeling Experience in SQL Server 2012 Analysis Services (Escolhendo uma experiência de modelagem tabular ou multidimensional no Analysis Services do SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=251588).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36011277"
 > [!NOTE]  
 >  Modelos de dados do Excel e modelos de tabelas são arquitetonicamente similares. É possível importar um modelo de dados do Excel para um modelo de tabela se for preciso dar suporte a grandes quantidades de dados ou utilizar outros recursos de modelo não disponíveis no Excel.  
   
- Soluções tabulares e multidimensionais são criadas usando [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] e são destinadas para projetos de BI corporativo que são executados em um programa autônomo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância. Ambas as soluções rendem bancos de dados analíticos de alto desempenho que são integrados facilmente com o Excel, os relatórios do Reporting Services e outros aplicativos de BI da Microsoft e aplicativos de terceiros. Ambas as soluções resultam em bancos de dados independentes que podem ser utilizados por qualquer aplicativo cliente que dê suporte ao Analysis Services.  
+ Soluções tabulares e multidimensionais são criadas usando [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] e são destinadas para projetos de BI corporativo que são executados em um autônomo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância. Ambas as soluções rendem bancos de dados analíticos de alto desempenho que são integrados facilmente com o Excel, os relatórios do Reporting Services e outros aplicativos de BI da Microsoft e aplicativos de terceiros. Ambas as soluções resultam em bancos de dados independentes que podem ser utilizados por qualquer aplicativo cliente que dê suporte ao Analysis Services.  
   
  Em um nível alto, as diferenças entre modelos de tabela e multidimensional podem ser caracterizadas como a seguir:  
   
@@ -73,9 +73,9 @@ ms.locfileid: "36011277"
 ##  <a name="bkmk_ds"></a> Suporte de fonte de dados por tipo de solução  
  Modelos multidimensionais e de tabela usam dados importados de fontes externas. A maioria dos desenvolvedores utiliza um data warehouse, projetado para oferecer suporte a estruturas de dados de relatório, como a fonte de dados principal por trás de um modelo. O data warehouse é normalmente baseado em um esquema estrela ou floco de neve e o SSIS é utilizado para carregar os dados de soluções OLTP no data warehouse. A modelagem é mais simples ao utilizar um data warehouse como a fonte de dados de back-end.  
   
-|**Link**|**Resumo de opções com suporte**|  
+|**Link**|**Resumo das opções com suporte**|  
 |--------------|--------------------------------------|  
-|[Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Modelos multidimensionais utilizam os dados de fontes de dados relacionais.|  
+|[Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Modelos multidimensionais utilizam os dados de fontes de dados relacionais.|  
 |[Fontes de dados com suporte &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Modelos de tabela oferecem suporte a uma maior variedade de fontes de dados, incluindo arquivos simples, feeds de dados e fontes de dados que são acessadas por meio de provedores de dados ODBC.|  
   
  Ambas as abordagens de modelagem podem utilizar dados de várias fontes de dados no mesmo modelo.  
@@ -120,7 +120,7 @@ ms.locfileid: "36011277"
 |Hierarquias definidas pelo usuário|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Sim|  
 |Write-back|[Sim](multidimensional-models/set-partition-writeback.md)|não|  
   
- * Se sua solução deve dar suporte a um número muito grande de contagens distintas (como muitos milhões de IDs de clientes), considere a tabela primeiro. Ela costuma ser mais funcional nesse cenário. Consulte a seção sobre contagens distintas no white paper, [Estudo de caso do Analysis Services: Utilizar modelos de tabela em soluções comerciais de larga escala](http://msdn.microsoft.com/library/dn751533.aspx).  
+ * Se sua solução deve dar suporte a um número muito grande de contagens distintas (como muitos milhões de IDs de cliente), considere a tabela primeiro. Ela costuma ser mais funcional nesse cenário. Consulte a seção sobre contagens distintas no white paper, [Estudo de caso do Analysis Services: Utilizar modelos de tabela em soluções comerciais de larga escala](http://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Tamanho do modelo  
  O tamanho do modelo, em termos de número total de objetos, não varia por tipo de solução. No entanto, as ferramentas de design usadas para compilar cada solução variam na maneira como elas se acomodam trabalhando com um número grande de objetos. Um modelo maior é um pouco mais fácil de compilar no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], porque fornece mais instalações para diagramar e listar objetos por tipo no Pesquisador de Objetos e no Gerenciador de Soluções.  
@@ -159,10 +159,10 @@ ms.locfileid: "36011277"
   
 |**Ferramenta de modelagem**|**Como usar**|  
 |-----------------------|------------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Use para criar soluções Tabulares, Multidimensionais e de Mineração de dados. Este ambiente de criação usa o shell do Visual Studio para fornecer espaços de trabalho, painéis de propriedade e navegação de objeto. Os usuários técnicos que já usam o Visual Studio preferirão esta ferramenta para criar aplicativos de business intelligence. Consulte [ferramentas e aplicativos usados no Analysis Services](tools-and-applications-used-in-analysis-services.md) para obter detalhes.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Use para criar soluções Tabulares, Multidimensionais e de Mineração de dados. Este ambiente de criação usa o shell do Visual Studio para fornecer espaços de trabalho, painéis de propriedade e navegação de objeto. Os usuários técnicos que já usam o Visual Studio preferirão esta ferramenta para criar aplicativos de business intelligence. Ver [ferramentas e aplicativos usados no Analysis Services](tools-and-applications-used-in-analysis-services.md) para obter detalhes.|  
 |Excel 2013 e posterior, com o PowerPivot para suplemento do Excel|O PowerPivot para Excel é uma ferramenta usada para editar e aprimorar um modelo de dados do Excel. Ele tem um espaço de trabalho de aplicativo separado que abre no Excel, mas utiliza as mesmas metáforas visuais (páginas tabuladas, layout de grade e barra de fórmulas) que o Excel. Usuários proficientes em Excel costumam preferem essa ferramenta [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Consulte [Power Pivot: Análise e modelagem de dados sofisticadas no Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
   
-##  <a name="bkmk_client"></a> Cliente e aplicativos de relatórios  
+##  <a name="bkmk_client"></a> Cliente e aplicativos de relatório  
  Em versões anteriores, a escolha do tipo de modelo tinha um impacto sobre quais aplicativos cliente você poderia utilizar, mas a distinção diminuiu ao longo do tempo. Os modelos de tabela e multidimensionais oferecem, principalmente, suporte equivalente com relação a aplicativos cliente que se conectam aos dados do Analysis Services. A tabela a seguir é uma lista de aplicativos cliente da Microsoft que podem ser utilizados com modelos de dados do Analysis Services.  
   
 |**Aplicativo**|**Descrição**|  
@@ -178,7 +178,7 @@ ms.locfileid: "36011277"
   
 |Modo de implantação|Description|  
 |---------------------|-----------------|  
-|0 - Multidimensional e de mineração de dados|Executa soluções multidimensionais e de mineração de dados que você implanta em uma instância padrão do Analysis Services. O modo de implantação 0 é o padrão para uma instalação do Analysis Services. Para obter mais informações, consulte [instalar o Analysis Services no modo de mineração de dados Multidimensional e de](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md).|  
+|0 - Multidimensional e de mineração de dados|Executa soluções multidimensionais e de mineração de dados que você implanta em uma instância padrão do Analysis Services. O modo de implantação 0 é o padrão para uma instalação do Analysis Services. Para obter mais informações, consulte [Install Analysis Services in Multidimensional and Data Mining Mode](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md).|  
 |1 - PowerPivot para SharePoint|Para acessar o modelo de dados do Excel, o Analysis Services é um componente interno do SharePoint. O Analysis Services está instalado no modo de implantação 1 e aceita solicitações somente de serviços do Excel em um ambiente do SharePoint. Para obter mais informações, consulte [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md).|  
 |2 - Tabular|Executa soluções tabulares em uma instância autônoma do Analysis Services configurada para implantação do modo 2. Para obter mais informações, consulte [instalar o Analysis Services no modo de tabela](instances/install-windows/install-analysis-services.md).|  
   
@@ -207,10 +207,10 @@ ms.locfileid: "36011277"
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de instância do Analysis Services](instances/analysis-services-instance-management.md)   
- [Novidades no Analysis Services e Business Intelligence](what-s-new-in-analysis-services.md)   
+ [O que há de novo no Analysis Services e Business Intelligence](what-s-new-in-analysis-services.md)   
  [O que há de novo &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
- [Novidades no PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
- [Ajuda do PowerPivot para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   
+ [Quais são as novidades no PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
+ [Ajuda do PowerPivot do SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   
  [Conexão de modelo semântico de BI do PowerPivot &#40;. bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   

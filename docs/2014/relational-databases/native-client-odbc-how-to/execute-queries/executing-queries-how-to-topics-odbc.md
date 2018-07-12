@@ -1,28 +1,26 @@
 ---
-title: Executar consultas tópicos de instruções (ODBC) | Microsoft Docs
+title: Executar consultas de tópicos de instruções (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 762d79dc9da15a2837b698ab4c41a7da3293efdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ff40f3c13d4132b9955c4bd01ae9d2bf2e31fa88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007692"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424865"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Tópicos de instruções sobre a execução de consultas (ODBC)
   A execução de uma instrução SQL em um aplicativo ODBC exige a alocação de um identificador de instrução, a definição de atributos de instrução e a preparação e execução de instruções SQL.  

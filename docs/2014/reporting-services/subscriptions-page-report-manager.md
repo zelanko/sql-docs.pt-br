@@ -1,5 +1,5 @@
 ---
-title: Página assinaturas (Gerenciador de relatórios) | Microsoft Docs
+title: Página de assinaturas (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181573"
 ---
 # <a name="subscriptions-page-report-manager"></a>Página Assinaturas (Gerenciador de Relatórios)
   Use a página Assinaturas para listar todas as assinaturas para o relatório atual ou fonte de dados compartilhada. Se você tiver permissão adequada (como a contida na tarefa "Gerenciar todas as assinaturas"), você poderá exibir as assinaturas de todos os usuários. Caso contrário, essa página só mostrará as assinaturas que você possui.  
   
 > [!NOTE]  
->  Outras páginas também contêm informações de assinatura. Para obter mais informações, consulte [página Minhas assinaturas &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) para acessar todas as suas assinaturas em um único local ou a [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) para criar ou editar uma assinatura.  
+>  Outras páginas também contêm informações de assinatura. Para obter mais informações, consulte [página Minhas assinaturas &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) para acessar todas as suas assinaturas em um único local ou o [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) para criar ou editar uma assinatura.  
   
  Algumas opções só são visíveis se houver assinaturas existentes com as quais é possível trabalhar. Se nenhuma assinatura estiver definida e você estiver acessando essa página de um relatório, **Nova Assinatura** e **Nova Assinatura Orientada por Dados** serão as únicas opções na página.  
   

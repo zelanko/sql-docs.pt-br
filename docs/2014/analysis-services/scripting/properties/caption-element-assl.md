@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a773a4a601ecd4a6a7a98ccc7273fed0d4e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167697"
 ---
 # <a name="caption-element-assl"></a>Elemento Caption (ASSL)
   Contém a legenda do elemento pai associado.  
@@ -62,7 +62,7 @@ ms.locfileid: "36012368"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `Caption` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.Action> e <xref:Microsoft.AnalysisServices.Translation>.  
+ Os elementos que correspondem aos pais de `Caption` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.Action> e <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

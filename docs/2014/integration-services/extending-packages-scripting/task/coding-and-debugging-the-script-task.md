@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184713"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificando e depurando a tarefa Script
   Depois de configurar a tarefa Script no **Editor da Tarefa Script**, você escreve seu código personalizado no ambiente de desenvolvimento da tarefa Script.  
@@ -56,7 +56,7 @@ ms.locfileid: "36011795"
   
 -   Quando a tarefa de Script é configurada para o [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguagem de programação, o `ScriptMain` classe tem uma sub-rotina pública, `Main`. A sub-rotina `ScriptMain.Main` é o método que o tempo de execução chama quando você executa sua tarefa Script.  
   
-     Por padrão, o único código na sub-rotina `Main` de um script novo é a linha `Dts.TaskResult = ScriptResults.Success`. Essa linha informa o tempo de execução em que a tarefa teve êxito em sua operação. O `Dts.TaskResult` propriedade é abordada em [retornando resultados da tarefa Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Por padrão, o único código na sub-rotina `Main` de um script novo é a linha `Dts.TaskResult = ScriptResults.Success`. Essa linha informa o tempo de execução em que a tarefa teve êxito em sua operação. O `Dts.TaskResult` propriedade é discutida [retornando resultados da tarefa Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Quando a tarefa Script é configurada para a linguagem de programação Visual C#, a classe `ScriptMain` tem um método público, `Main`. O método é chamado quando a tarefa Script é executada.  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](http://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para os mais recentes downloads, artigos, exemplos e vídeos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para os downloads mais recentes, artigos, exemplos e vídeos da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referenciar outros assemblies em soluções de script](../referencing-other-assemblies-in-scripting-solutions.md)   

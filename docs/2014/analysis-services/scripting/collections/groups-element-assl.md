@@ -1,5 +1,5 @@
 ---
-title: Grupos de elemento (ASSL) | Microsoft Docs
+title: Elemento (ASSL) de grupos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf89c9f0f5970bcc00d82cab42c0f759e5acb6c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79062d6ef250c6c5d90d5a4ed147a309556d03a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167537"
 ---
 # <a name="groups-element-assl"></a>Elemento Groups (ASSL)
   Contém a coleção de grupos de membros ligados a um atributo.  
@@ -60,7 +60,7 @@ ms.locfileid: "36011904"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Associação](../data-type/binding-data-type-assl.md) do tipo [UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
+|Elementos pai|[Associando](../data-type/binding-data-type-assl.md) do tipo [UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
 |Elementos filho|[Agrupar](../objects/group-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

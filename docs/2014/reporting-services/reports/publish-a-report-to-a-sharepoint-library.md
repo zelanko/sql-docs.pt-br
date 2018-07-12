@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d19618eaa7997444e661ca9213a72f75bf1b3910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7689da40d81d716b9564c11f230f22ea4638bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150007"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar um relatório em uma biblioteca do SharePoint
   Para publicar um relatório em um site do SharePoint configurado para integração do SharePoint, você deve definir as propriedades do projeto no Designer de Relatórios. Nas propriedades do projeto, todas as referências a servidores, relatórios e fontes de dados compartilhadas devem ser URLs totalmente qualificadas. Na definição de relatórios, todas as referências a sub-relatórios, relatórios detalhados e recursos como imagens com base na Web devem ser URLs totalmente qualificadas.  
@@ -40,7 +40,7 @@ ms.locfileid: "36012430"
   
 4.  Para publicar fontes de dados compartilhadas no seu projeto e substituir as fontes de dados compartilhadas publicadas, defina **OverwriteDataSources** como **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, digite uma URL em uma biblioteca do SharePoint ou pasta de biblioteca (por exemplo, *http://TestServer/TestSite/Documents/DataSources)*.  
+5.  (Opcional) Para **TargetDataSourceFolder**, digite uma URL para uma biblioteca do SharePoint ou pasta de biblioteca (por exemplo, *http://TestServer/TestSite/Documents/DataSources)*.  
   
      Se você não especificar um valor, o valor **TargetReportFolder** será usado.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "36012430"
  [Definir propriedades de implantação &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Publicando relatórios em um servidor de relatório](publishing-reports-to-a-report-server.md)   
  [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Usar uma Conexão de dados do Office &#40;. odc&#41; com relatórios &#40;Reporting Services no SharePoint modo integrado&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Usar uma Conexão de dados do Office &#40;. odc&#41; com relatórios &#40;modo integrado do Reporting Services no SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

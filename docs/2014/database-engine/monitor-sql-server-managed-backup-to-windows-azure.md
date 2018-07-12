@@ -1,25 +1,24 @@
 ---
-title: Monitore o SQL Server Backup gerenciado para Windows Azure | Microsoft Docs
+title: Monitor SQL Server Managed Backup to Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 401b41399b7c62f7feeda6d83d2400dd4814d9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149787"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Monitorar o Backup Gerenciado do SQL Server para Windows Azure
   O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem medidas internas para identificar problemas e erros durante processos de backup e adotar uma ação corretiva quando possível.  No entanto, há determinadas situações onde a intervenção do usuário é necessária. Este tópico descreve as ferramentas que você pode usar para determinar o estado de integridade geral dos backups e identifica todos os erros que precisam ser resolvidos.  
@@ -28,7 +27,7 @@ ms.locfileid: "36012328"
  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] examina periodicamente backups agendados e tenta reagendar todos os backups com falha. Ele pesquisa a conta de armazenamento periodicamente para identificar interrupções nas cadeias de logs que afetam a capacidade de recuperação do banco de dados e agenda backups novos apropriadamente. Também leva em conta as políticas de limitação do Windows Azure e tem mecanismos em vigor para gerenciar vários backups de banco de dados. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa eventos estendidos para rastrear toda a atividade. Os canais de Evento Estendido usados pelo agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluem Administração, Operacional, Analítico e Depuração. Os eventos que entram na categoria Admin geralmente estão relacionados a erros, requerem intervenção do usuário e são habilitados por padrão. Os eventos analíticos são ativados também por padrão, mas geralmente não relacionados aos erros que requerem intervenção do usuário. Os eventos operacionais normalmente são informativos. Por exemplo, os eventos operacionais incluem agendar um backup, uma execução bem-sucedida do backup etc. A Depuração é o mais detalhado e usado internamente pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar problemas e corrigi-los se necessário.  
   
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configurar parâmetros de monitoramento para o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- O **sp_set_parameter** procedimento armazenado do sistema permite que você especifique configurações de monitoramento. As seções a seguir mostram o processo de habilitar Eventos Estendidos e habilitar a notificação por email sobre erros e avisos.  
+ O **sp_set_parameter** procedimento armazenado do sistema permite que você especifique as configurações de monitoramento. As seções a seguir mostram o processo de habilitar Eventos Estendidos e habilitar a notificação por email sobre erros e avisos.  
   
  O **smart_admin.fn_get_parameter** função pode ser usada para obter a configuração atual de um parâmetro específico ou todos os parâmetros configurados. Se os parâmetros nunca tiverem sido configurados, a função não retornará nenhum valor.  
   
@@ -61,7 +60,7 @@ GO
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     A saída desta consulta exibirá o event_name, quer seja configurável ou não, e se estiver habilitado no momento.  Para obter mais informações, consulte [smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql).  
+     A saída desta consulta exibirá o event_name, quer seja configurável ou não, e se estiver habilitado no momento.  Para obter mais informações, consulte [fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql).  
   
 2.  Para habilitar eventos de depuração, execute a seguinte consulta:  
   
@@ -116,7 +115,7 @@ GO
   
 ### <a name="aggregated-error-countshealth-status"></a>Contagens de erros agregadas/Status de integridade  
  O **smart_admin.fn_get_health_status** função retorna uma tabela de contagens de erro agregadas para cada categoria que pode ser usado para monitorar o status de integridade de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Essa mesma função também é usada pelo mecanismo de notificação por email configurado pelo sistema descrito mais adiante neste tópico.   
-Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 em 30 minutos, pode ser que o gerenciamento de retenção esteja demorando ou talvez nem esteja funcionando corretamente. As colunas diferentes de zero do erro podem indicar problemas e os logs de Eventos Estendidos devem ser verificados para descobrir o problema. Como alternativa, chame **smart_admin.sp_get_backup_diagnostics** procedimento armazenado para localizar os detalhes do erro.  
+Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 em 30 minutos, pode ser que o gerenciamento de retenção esteja demorando ou talvez nem esteja funcionando corretamente. As colunas diferentes de zero do erro podem indicar problemas e os logs de Eventos Estendidos devem ser verificados para descobrir o problema. Como alternativa, chame **sp_get_backup_diagnostics** procedimento armazenado para encontrar os detalhes do erro.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usando a notificação do agente para avaliar o status e a integridade do backup  
  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inclui um mecanismo de notificação baseado nas políticas de gerenciamento baseado em políticas do SQL Server.  
@@ -135,9 +134,9 @@ Essas contagens agregadas podem ser usadas para monitorar a integridade do siste
   
 ##### <a name="enabling-email-notification"></a>Habilitando a notificação por email  
   
-1.  Se o Database Mail não ainda estiver configurado, use as etapas descritas em [configurar o Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
+1.  Se o Database Mail ainda não estiver configurado, use as etapas descritas em [configurar o Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Conjunto de banco de dados como o sistema de email para o sistema de alerta do SQL Server: clique com o botão direito em **do SQL Server Agent**, selecione **sistema de alerta**, verifique o **habilitar perfil de email** caixa, selecione  **Database Mail** como o **do sistema de email**e selecione um perfil de email criado anteriormente.  
+2.  Conjunto de banco de dados como o sistema de email para o sistema de alerta do SQL Server: clique com botão direito **SQL Server Agent**, selecione **sistema de alerta**, verifique o **habilitar perfil de email** caixa, selecione  **Database Mail** como o **sistema de email**e selecione um perfil de email criado anteriormente.  
   
 3.  Execute a consulta a seguir em uma janela de consulta e forneça o endereço de email para o qual você deseja que a notificação seja enviada:  
   
@@ -201,7 +200,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ```  
   
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Usando o PowerShell para configurar o monitoramento de integridade personalizado  
- O **Test-SqlSmartAdmin** cmdlet pode ser usado para criar o monitoramento de integridade personalizados. Por exemplo, a opção de notificação descrita na seção anterior pode ser configurada no nível da instância.  Se você tiver várias instâncias do SQL Server configuradas para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], o cmdlet do PowerShell poderá ser usado para criar scripts ao coletar o status e a integridade dos backups de todas as instâncias.  
+ O **Test-SqlSmartAdmin** cmdlet pode ser usado para criar o monitoramento de integridade personalizadas. Por exemplo, a opção de notificação descrita na seção anterior pode ser configurada no nível da instância.  Se você tiver várias instâncias do SQL Server configuradas para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], o cmdlet do PowerShell poderá ser usado para criar scripts ao coletar o status e a integridade dos backups de todas as instâncias.  
   
  O **Test-SqlSmartAdmin** cmdlet avalia os erros e avisos retornados pelas políticas de gerenciamento baseado em SQL Server políticas e relata um status acumulado.  Por padrão, esse cmdlet usa as políticas do sistema. Para incluir qualquer política personalizada, use o parâmetro `–AllowUserPolicies`.  
   
@@ -220,7 +219,7 @@ PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus
 ```  
   
 ### <a name="objects-in-msdb-database"></a>Objetos em um banco de dados MSDB  
- Há objetos que são instalados para implementar a funcionalidade. Esses objetos são reservados para uso interno. Porém, há uma tabela do sistema que pode ser útil para monitorar o status do backup: smart_backup_files. A maioria das informações armazenadas nesta tabela relevantes para monitorar como o tipo de banco de dados de backup, nome, primeiro e último lsn, as datas de expiração de backup são expostas por meio da função de sistema [smart_admin &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Embora a coluna de status na tabela smart_backup_files que indica o status do arquivo de backup não esteja disponível por meio da função. O seguinte é um exemplo de consulta que você pode usar para recuperar algumas informações que incluem o status da tabela do sistema:  
+ Há objetos que são instalados para implementar a funcionalidade. Esses objetos são reservados para uso interno. Porém, há uma tabela do sistema que pode ser útil para monitorar o status do backup: smart_backup_files. A maioria das informações armazenadas nesta tabela relevantes para monitorar como o tipo de banco de dados de backup, nome, primeiro e último lsn, as datas de validade do backup são expostas por meio da função de sistema [fn_available_backups &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Embora a coluna de status na tabela smart_backup_files que indica o status do arquivo de backup não esteja disponível por meio da função. O seguinte é um exemplo de consulta que você pode usar para recuperar algumas informações que incluem o status da tabela do sistema:  
   
 ```  
 USE msdb  
@@ -254,13 +253,13 @@ smart_backup_files;
   
  Veja a seguir uma explicação detalhada do status diferente retornado:  
   
--   **Disponível - r:** este é um arquivo de backup normal. O backup foi concluído e também foi verificado que está disponível no armazenamento do Windows Azure.  
+-   **Disponível - a:** este é um arquivo de backup normal. O backup foi concluído e também foi verificado que está disponível no armazenamento do Windows Azure.  
   
 -   **Cópia em andamento – b:** esse status é especificamente para bancos de dados do grupo de disponibilidade. Se o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detectar uma interrupção na cadeia de logs de backup, ele primeiro tentará identificar o backup que pode ter causado essa interrupção. Ao localizar o arquivo de backup, ele tenta copiar o arquivo para o armazenamento do Windows Azure. Quando o processo de cópia estiver em andamento, ele exibirá esse status.  
   
--   **Cópia com falha – f:** semelhante à cópia em andamento, isso é bancos de dados do grupo de disponibilidade específico. Se o processo de cópia falhar, o status será marcado como F.  
+-   **Cópia com falha – f:** semelhante à cópia em andamento, isso é bancos de dados do grupo de disponibilidade t específico. Se o processo de cópia falhar, o status será marcado como F.  
   
--   **Corrompido – c:** se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é capaz de verificar o arquivo de backup no armazenamento executando um comando RESTORE HEADER_ONLY mesmo após várias tentativas, ele marcará este arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
+-   **Corrompido – c:** se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é não é possível verificar o arquivo de backup no armazenamento executando um comando RESTORE HEADER_ONLY mesmo após várias tentativas, ele marcará este arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
   
 -   **Excluído – d:** o arquivo correspondente não foi encontrado no armazenamento do Windows Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup se o arquivo excluído resultar em uma interrupção na cadeia de backup.  
   

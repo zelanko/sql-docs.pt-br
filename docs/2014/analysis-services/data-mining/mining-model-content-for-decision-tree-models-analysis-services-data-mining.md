@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo de árvore de decisão de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Mining Model Content para modelos de árvore de decisão (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161657"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). É importante lembrar que o algoritmo Árvores de Decisão da Microsoft é um híbrido que pode criar modelos com funções muito diferentes: uma árvore de decisão pode representar associações, regras ou até mesmo regressão linear. A estrutura da árvore é basicamente a mesma, mas o modo como as informações serão interpretadas dependerá do objetivo para o qual você criou o modelo.  
@@ -193,7 +193,7 @@ ms.locfileid: "36011271"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Exibe o atributo que distingue esse determinado nó em relação ao nó pai. A legenda do nó define um subsegmento da população com base na condição de divisão. Por exemplo, se a divisão estava em [Idade] e ele foi uma divisão de três vias, as legendas de nó para o filho de três nós podem ser "[Idade] < 40", "40 < = [Idade] \< 50", "[Idade] > = 50".|  
+|**NODE_CAPTION**|Exibe o atributo que distingue esse determinado nó em relação ao nó pai. A legenda do nó define um subsegmento da população com base na condição de divisão. Por exemplo, se a divisão estava em [Idade] e ele era uma divisão de três vias, as legendas de nó para o filho de três nós podem ser "[Idade] < 40", "40 < = [Idade] \< 50", "[Idade] > = 50".|  
 |**NODE_DESCRIPTION**|Contém uma lista completa dos atributos que distinguem esse nó dos outros, desde o nó pai do modelo. Por exemplo, Nome do produto = Apple e Cor = Vermelho.|  
   
 ###  <a name="NodeRule"></a> Regra de nó e regra marginal  
@@ -229,7 +229,7 @@ ms.locfileid: "36011271"
 |Idade < 30|40|Idade < = 30 e Sexo = Masculino|30|30/40 = 0,75|30/100 = 0,30|  
 |||Idade < = 30 e Sexo = Feminino|10|10/40 = 0,25|10/100 = 0,10|  
   
- Um pequeno ajuste  é feito em todos os modelos para contabilizar possíveis valores ausentes. Para atributos contínuos, cada valor ou intervalo de valores é representado como um estado (por exemplo, idade \<30, idade = 30 e idade > 30) e as probabilidades são calculadas da seguinte maneira: estado existe (valor = 1), algum outro estado existe (valor = 0), o estado é `Missing`. Para obter mais informações sobre como as probabilidades são ajustadas para representar valores ausentes, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Um pequeno ajuste  é feito em todos os modelos para contabilizar possíveis valores ausentes. Para atributos contínuos, cada valor ou intervalo de valores é representado como um estado (por exemplo, idade \<lt;30, idade = 30 e idade > 30) e as probabilidades são calculadas da seguinte maneira: estado existe (valor = 1), algum outro estado existe (valor = 0), o estado é `Missing`. Para obter mais informações sobre como as probabilidades são ajustadas para representar valores ausentes, consulte [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  As probabilidades para cada nó são calculadas quase diretamente da distribuição, da seguinte forma:  
   
@@ -286,7 +286,7 @@ ms.locfileid: "36011271"
  Para obter mais informações sobre os nós de regressão, consulte [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração de dados](data-mining-model-viewers.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Algoritmo Árvores de Decisão da Microsoft](microsoft-decision-trees-algorithm.md)  

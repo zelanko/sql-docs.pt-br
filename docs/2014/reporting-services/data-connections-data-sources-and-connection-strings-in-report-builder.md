@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres de Conexão no construtor de relatórios, fontes de dados e conexões de dados | Microsoft Docs
+title: Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d8a958e8549d5c3204e18af02a19194de8904682
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183873"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios
   Para incluir dados em um relatório, crie conexões de dados e conjuntos de dados. Uma conexão de dados inclui informações sobre como acessar uma fonte de dados externa. Um conjunto de dados inclui um comando de consulta que especifica os dados a serem incluídos usando a conexão de dados.  
@@ -47,7 +47,7 @@ ms.locfileid: "36012025"
   
  ![rs_DataSourcesStory](media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="ConnectionString"></a> Exemplos de cadeia de caracteres de Conexão  
+##  <a name="ConnectionString"></a> Exemplos de cadeias de Conexão  
  Uma conexão de dados inclui uma cadeia de conexão que geralmente é fornecida pelo proprietário da fonte de dados externa. A tabela a seguir lista exemplos de cadeias de conexão para tipos diferentes de fontes de dados externas.  
   
 |**Fonte de dados**|**Exemplo**|**Descrição**|  
@@ -59,16 +59,16 @@ ms.locfileid: "36012025"
 |Lista do SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Defina o tipo de fonte de dados `SharePoint List`.|  
 ||||  
 |Modelos de relatório|Não aplicável.|Você não precisa de uma cadeia de conexão para um modelo de relatório. No Construtor de Relatórios, vá para o servidor de relatório e selecione o arquivo .smdl que é o modelo de relatório.|  
-|Servidor do Oracle|`data source=myserver`|Definir o tipo de fonte de dados `Oracle`. As ferramentas do cliente Oracle devem estar instaladas no computador do Construtor de Relatórios e no servidor de relatório.|  
-|Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Definir o tipo de fonte de dados `SAP NetWeaver BI`.|  
-|Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Definir o tipo de fonte de dados `Hyperion Essbase`.|  
-|Fonte de dados do Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Definir o tipo de fonte de dados `Teradata`. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos.|  
+|Servidor do Oracle|`data source=myserver`|Defina o tipo de fonte de dados `Oracle`. As ferramentas do cliente Oracle devem estar instaladas no computador do Construtor de Relatórios e no servidor de relatório.|  
+|Fonte de dados do SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados `SAP NetWeaver BI`.|  
+|Fonte de dados do Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados `Hyperion Essbase`.|  
+|Fonte de dados do Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Defina o tipo de fonte de dados `Teradata`. A cadeia de conexão é um endereço IP no formulário de quatro campos, em que cada campo pode ter de um a três dígitos.|  
 |Fonte de dados do Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Defina o tipo de fonte de dados como `Teradata`, semelhante ao exemplo anterior. Use apenas o banco de dados padrão especificado na marca Database e não descubra automaticamente relações de dados.|  
-|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Definir o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL.|  
-|Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Definir o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para o documento XML.|  
-|Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Definir o tipo de fonte de dados `XML`. Os dados XML são inseridos na definição do relatório.|  
+|Fonte de dados XML, serviço Web|`data source=http://adventure-works.com/results.aspx`|Defina o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para um serviço Web com suporte para WSDL.|  
+|Fonte de dados XML, documento XML|`http://localhost/XML/Customers.xml`|Defina o tipo de fonte de dados `XML`. A cadeia de conexão é uma URL para o documento XML.|  
+|Fonte de dados XML, documento XML inserido|*Empty (vazio)*|Defina o tipo de fonte de dados `XML`. Os dados XML são inseridos na definição do relatório.|  
   
- Para obter mais informações sobre cada tipo de conexão, consulte [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) e [fontes de dados suportados pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Para obter mais informações sobre cada tipo de conexão, consulte [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) e [dados de fontes com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 
   
@@ -83,7 +83,7 @@ ms.locfileid: "36012025"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)   
- [Partes de relatório &#40;SSRS e construtor de relatórios&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

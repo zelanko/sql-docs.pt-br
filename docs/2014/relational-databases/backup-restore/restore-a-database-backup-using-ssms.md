@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184743"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar um backup de banco de dados (SQL Server Management Studio)
   Este tópico explica como restaurar um backup de banco de dados completo.  
@@ -44,7 +43,7 @@ ms.locfileid: "36011167"
   
 2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
   
-3.  Clique duas vezes o banco de dados, aponte para **tarefas**, aponte para **restaurar**e, em seguida, clique em **banco de dados**, que abre o **restaurar banco de dados** caixa de diálogo.  
+3.  O banco de dados com o botão direito, aponte para **tarefas**, aponte para **restaurar**e, em seguida, clique em **banco de dados**, que abre o **restaurar banco de dados** caixa de diálogo.  
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
   
@@ -66,8 +65,8 @@ ms.locfileid: "36011167"
         > [!NOTE]  
         >  Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
-         **mídia de backup**  
-         Selecione a mídia para a operação de restauração: **arquivo**, **fita**, **URL**ou **dispositivo de Backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
+         **Mídia de backup**  
+         Selecione a mídia da operação de restauração: **arquivo**, **fita**, **URL**ou **dispositivo de Backup**. A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.  
   
          **Local de backup**  
          Exibir, adicionar ou remover mídia para a operação de restauração. A lista pode conter até 64 arquivos, fitas ou dispositivos de backup.  
@@ -80,7 +79,7 @@ ms.locfileid: "36011167"
         |**File**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|  
         |**Fita**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**URL**|Isso inicia duas caixas de diálogo na seguinte ordem:<br /><br /> 1) **se conectar ao Windows Azure Storage**<br /><br /> 2) **localizar arquivo de Backup no Windows Azure**|Na caixa de diálogo **Conectar ao Armazenamento do Windows Azure**  , selecione uma Credencial do SQL existente que armazena o nome da conta de armazenamento do Windows Azure e informações de chave de acesso ou crie uma nova Credencial do SQL especificando informações de nome da conta de armazenamento e de chave de acesso de armazenamento. Para obter mais informações, consulte [conectar ao armazenamento do Windows Azure &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Na caixa de diálogo de **Localizar Arquivo de Backup** , você pode selecionar um arquivo da lista de contêineres exibidos no quadro esquerdo.|  
+        |**URL**|Isso inicia duas caixas de diálogo na seguinte ordem:<br /><br /> 1) **se conectar ao Windows o armazenamento do Azure**<br /><br /> 2) **localizar o arquivo de Backup no Windows Azure**|Na caixa de diálogo **Conectar ao Armazenamento do Windows Azure**  , selecione uma Credencial do SQL existente que armazena o nome da conta de armazenamento do Windows Azure e informações de chave de acesso ou crie uma nova Credencial do SQL especificando informações de nome da conta de armazenamento e de chave de acesso de armazenamento. Para obter mais informações, consulte [conectar-se ao armazenamento do Windows Azure &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Na caixa de diálogo de **Localizar Arquivo de Backup** , você pode selecionar um arquivo da lista de contêineres exibidos no quadro esquerdo.|  
   
          Se a lista estiver cheia, o botão **Adicionar** ficará indisponível.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "36011167"
   
 9. Para exibir ou selecionar as opções avançadas, na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:  
   
-    1.  `WITH` Opções (não necessárias):  
+    1.  `WITH` Opções (não obrigatório):  
   
         -   **Substituir o banco de dados existente (WITH REPLACE)**  
   

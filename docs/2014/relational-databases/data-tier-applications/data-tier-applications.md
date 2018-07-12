@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152497"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
   Um DAC (aplicativo da camada de dados) é uma entidade lógica de gerenciamento de banco de dados que define todos os objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como tabelas, exibições e objetos de instância, incluindo logons, associados a um banco de dados de usuário. Um DAC é uma unidade autossuficiente de implantação de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite que desenvolvedores da camada de dados e administradores de banco de dados empacotem objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um artefato portátil chamado pacote de DAC, também conhecido como DACPAC.  
@@ -115,7 +115,7 @@ ms.locfileid: "36013132"
  Estes recursos têm suporte pelas ferramentas de gerenciamento de banco de dados: o Servidor Management Studio, o portal de gerenciamento para o SQL Azure e a API do DACFx.  
   
 ## <a name="permissions"></a>Permissões  
- Você deve ser um membro do `dbmanager` função ou atribuído `CREATE DATABASE` permissões para criar um banco de dados, incluindo a criação de um banco de dados implantando um pacote DAC. Você deve ser um membro do `dbmanager` função, ou ter recebido `DROP DATABASE` permissões para descartar um banco de dados.  
+ Você deve ser um membro do `dbmanager` função ou atribuídos `CREATE DATABASE` permissões para criar um banco de dados, incluindo a criação de um banco de dados implantando um pacote DAC. Você deve ser um membro do `dbmanager` função, ou que receberam `DROP DATABASE` permissões para remover um banco de dados.  
   
 ## <a name="data-tier-application-tasks"></a>Tarefas do aplicativo da camada de dados  
   

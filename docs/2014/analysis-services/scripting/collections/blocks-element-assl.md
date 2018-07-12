@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161317"
 ---
 # <a name="blocks-element-assl"></a>Elemento Blocks (ASSL)
   Contém a coleção de blocos de dados binários que representam o conteúdo binário de um [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
@@ -61,21 +61,21 @@ ms.locfileid: "36011475"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Dados](../objects/data-element-assl.md) do tipo [DataBlock](../data-type/datablock-data-type-assl.md)|  
-|Elementos filho|[bloco](../objects/block-element-assl.md)|  
+|Elementos filho|[Bloco](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `Blocks` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ O elemento que corresponde ao pai de `Blocks` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Tipo de dados ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
- [Elemento de arquivos &#40;ASSL&#41;](files-element-assl.md)   
+ [Arquivos de elemento &#40;ASSL&#41;](files-element-assl.md)   
  [Elemento de arquivo &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Tipo de dados ClrAssemblyFile &#40;ASSL&#41;](../data-type/clrassemblyfile-data-type-assl.md)   
  [Elemento de dados &#40;ASSL&#41;](../objects/data-element-assl.md)   
  [Tipo de dados DataBlock &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [Elemento Blocks](blocks-element-assl.md)   
- [Bloquear elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Bloquear o elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [Coleções &#40;ASSL&#41;](collections-assl.md)  
   
   

@@ -3,11 +3,9 @@ title: Usando os arquivos de biblioteca e cabeçalho do SQL Server Native Client
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7fcb33012d766c2585e11468e23a3591a4b2650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42a657a4524a09ea8d6643d6b37e193c5c6b227f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952431"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416865"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "32952431"
  Os aplicativos OLE DB que usam o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client precisam apenas referenciar sqlncli.h. Se um aplicativo usar o MDAC (SQLOLEDB) e o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ele poderá referenciar sqloledb.h e sqlncli.h, mas a referência a sqloledb.h deve vir primeiro.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>Usando o arquivo de cabeçalho do SQL Server Native Client  
- Para usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arquivo de cabeçalho do Native Client, você deve usar um **incluem** instrução dentro de seu código de programação do C/C++. As seções a seguir descrevem como fazer isto para aplicativos OLE DB e ODBC.  
+ Para usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arquivo de cabeçalho do Native Client, você deve usar um **incluem** instrução dentro do seu código de programação do C/C++. As seções a seguir descrevem como fazer isto para aplicativos OLE DB e ODBC.  
   
 > [!NOTE]  
 >  Os arquivos de cabeçalho e de biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client podem ser compilados apenas usando o Visual Studio C++ 2002 ou posterior.  
@@ -70,7 +67,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  A primeira linha de código mostrada acima deverá ser omitida se as duas APIs OLE DB e ODBC forem usadas pelo aplicativo. Além disso, se o aplicativo tem um **incluem** instrução para SQLOLEDB, o **incluem** instrução para SQLNCLI. h deverá vir depois dela.  
+>  A primeira linha de código mostrada acima deverá ser omitida se as duas APIs OLE DB e ODBC forem usadas pelo aplicativo. Além disso, se o aplicativo tem um **incluem** instrução para SQLOLEDB. h, o **incluem** instrução para SQLNCLI. h deve vir depois dela.  
   
  Ao criar uma conexão com uma fonte de dados por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, use "SQLNCLI11" como a cadeia de caracteres de nome do provedor.  
   
@@ -83,7 +80,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  A primeira linha de código mostrada acima deverá ser omitida se OLE DB e ODBC APIs são usados pelo aplicativo. Além disso, se o aplicativo tiver uma instrução `#include` para odbcss.h, ela deve ser removida.  
+>  A primeira linha do código mostrado acima deve ser omitida se o OLE DB e ODBC APIs são usadas pelo aplicativo. Além disso, se o aplicativo tiver uma instrução `#include` para odbcss.h, ela deve ser removida.  
   
  Ao criar uma conexão com uma fonte de dados por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, use "SQL Server Native Client 11.0" como a cadeia de caracteres de nome do driver.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240916"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB
   Depois de ter adicionado um gerenciador de conexões de arquivo simples para conectar-se à origem de dados, a próxima tarefa é adicionar um gerenciador de conexões OLE DB para conectar-se ao destino. Um gerenciador de conexões OLE DB permite que um pacote extraia dados de qualquer fonte de dados compatível com OLE DB ou carregue dados nela. Usando o gerenciador de conexões OLE DB, você pode especificar o servidor, o método de autenticação e o banco de dados padrão para a conexão.  
@@ -38,7 +38,7 @@ ms.locfileid: "36009376"
   
 4.  No grupo **Fazer logon no servidor** , verifique se a opção **Usar Autenticação do Windows** está selecionada.  
   
-5.  No **conectar-se a um banco de dados** grupo, o **selecionar ou digitar um nome de banco de dados** caixa, digite ou selecione `AdventureWorksDW2012`.  
+5.  No **conectar-se a um banco de dados** grupo, o **selecione ou insira um nome de banco de dados** caixa, digite ou selecione `AdventureWorksDW2012`.  
   
 6.  Clique em **Testar Conexão** para verificar se as configurações de conexão especificadas são válidas.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30acad1bce8a94a1cb3eedd5867977ebddc6d015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e6b68b7cee6f530a8c5f24d54732654da4f89f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151777"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planejando uma instalação do SQL Server
   Para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga estas etapas:  
@@ -65,7 +65,7 @@ ms.locfileid: "36013035"
  [Instalar o SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  Esta seção fornece uma visão geral de opções de instalação diferentes disponíveis para instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Instalar recursos de BI do SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+ [Instalar os recursos de BI do SQL Server 2014](install-sql-server-business-intelligence-features.md)  
  Esta seção da documentação de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica como instalar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que fazem parte da plataforma Microsoft BI.  
   
  [Atualizar para o SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -82,6 +82,6 @@ ms.locfileid: "36013035"
  [Instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Soluções de alta disponibilidade &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
  [Antes de instalar o cluster de failover](../failover-clusters/install/before-installing-failover-clustering.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

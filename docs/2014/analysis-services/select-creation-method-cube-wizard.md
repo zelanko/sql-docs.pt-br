@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b99ea0d73d9d24992af5fcac09d8df3f4d71fafd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259422"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Selecionar Método de Criação (Assistente para Cubos)
   Use a página **Selecionar Método de Criação** para especificar como criar o cubo.  

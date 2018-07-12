@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157077"
 ---
 # <a name="sourceattributeid-element-assl"></a>Elemento SourceAttributeID (ASSL)
-  Contém o identificador (ID) do atributo de origem no qual o [nível](../objects/level-element-assl.md) elemento é baseado.  
+  Contém o identificador (ID) do atributo de origem no qual o [nível](../objects/level-element-assl.md) baseia-se elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36012981"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento correspondente para o pai do `SourceAttributeID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Level>.  
+ O elemento que corresponde ao pai de `SourceAttributeID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Level>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03bbebbf255b5f42934d4fe1e28c78cc1bb54caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1f363564a74e9f64ed126ceda98ca387561c852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151267"
 ---
 # <a name="kpiid-element-assl"></a>Elemento KpiID (ASSL)
   Contém um identificador (ID) que associa um [Kpi](../objects/kpi-element-assl.md) elemento com um [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36012777"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `KpiID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
+ O elemento que corresponde ao pai de `KpiID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades (ASSL)](properties-assl.md)  

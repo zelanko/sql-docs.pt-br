@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services], security
@@ -21,13 +21,13 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cf68cbe7e1599bc34d891dfd010ba2d81c7a965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277260"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  
@@ -63,12 +63,12 @@ ms.locfileid: "36008479"
 |Criptografar tudo com chave de usuário (`EncryptAllWithUserKey`)|Usa uma chave baseada no perfil do usuário atual para criptografar todo o pacote. Apenas o usuário que criou ou exportou o pacote pode abrir o pacote no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer ou executá-lo com o utilitário de prompt de comando **dtexec** .<br /><br /> Quando usado com o utilitário **dtutil** , esse nível de proteção corresponde ao valor de 4.<br /><br /> Observação: para os níveis de proteção que usam uma chave de usuário, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa os padrões DPAPI. Para obter mais informações sobre o DPAPI, consulte a Biblioteca do MSDN em [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Criptografar dados confidenciais com senha (`EncryptSensitiveWithPassword`)|Usa uma senha para criptografar apenas os valores de propriedades confidenciais no pacote. O DPAPI é usado para essa criptografia. Os dados confidenciais são salvos como parte do pacote, mas esses dados são criptografados usando uma senha que o usuário atual fornece quando o pacote é criado ou exportado. Para abrir o pacote no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o usuário precisa fornecer a senha do pacote. Se a senha não for fornecida, o pacote será aberto sem os dados confidenciais e o usuário atual deverá fornecer valores novos para os dados confidenciais. Se o usuário tentar executar o pacote sem fornecer a senha, a execução do pacote não terá êxito. Para obter mais informações sobre senhas e execução de linha de comandos, consulte [dtexec Utility](../packages/dtexec-utility.md).<br /><br /> Quando usado com o utilitário **dtutil** , esse nível de proteção corresponde ao valor de 2.|  
 |Criptografar dados confidenciais com chave de usuário (`EncryptSensitiveWithUserKey`)|Usa uma chave baseada no perfil do usuário atual para criptografar apenas os valores das propriedades confidenciais do pacote. Apenas o mesmo usuário que usa o mesmo perfil pode carregar o pacote. Se um usuário diferente abrir o pacote, as informações confidenciais serão substituídas por espaços em branco e o usuário atual deverá fornecer novos valores para os dados confidenciais. Se o usuário tentar executar o pacote, a execução de pacote não terá êxito. O DPAPI é usado para essa criptografia.<br /><br /> Quando usado com o utilitário **dtutil** , esse nível de proteção corresponde ao valor de 1.<br /><br /> Observação: para os níveis de proteção que usam uma chave de usuário, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa os padrões DPAPI. Para obter mais informações sobre o DPAPI, consulte a Biblioteca do MSDN em [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
-|Confiar no armazenamento do servidor para criptografia (`ServerStorage`)|Protege o pacote inteiro usando funções do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Há suporte para essa opção quando um pacote é salvo no banco de dados msdb do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Além disso, o catálogo SSISDB usa o `ServerStorage` nível de proteção<br /><br /> Essa opção não tem suporte quando um pacote é salvo no sistema de arquivos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|Se baseiam no armazenamento do servidor para criptografia (`ServerStorage`)|Protege o pacote inteiro usando funções do banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Há suporte para essa opção quando um pacote é salvo no banco de dados msdb do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Além disso, o catálogo SSISDB usa o `ServerStorage` nível de proteção<br /><br /> Essa opção não tem suporte quando um pacote é salvo no sistema de arquivos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Definição do nível de proteção e o catálogo SSISDB  
  O catálogo SSISDB usa o `ServerStorage` nível de proteção. Quando você implantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o catálogo criptografará automaticamente os dados do pacote e os valores confidenciais. O catálogo também descriptografa automaticamente os dados quando você recupera-os.  
   
- Se você exportar o projeto (arquivo. ispac) da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor do sistema de arquivos, o sistema automaticamente alterará o nível de proteção para `EncryptSensitiveWithUserKey`. Se você importar o projeto usando o **Assistente de projeto importar do Integration Services** na [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o **ProtectionLevel** propriedade o **propriedades** janela mostra um valor de `EncryptSensitiveWithUserKey`.  
+ Se você exportar o projeto (arquivo. ispac) da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor do sistema de arquivos, o sistema automaticamente alterará o nível de proteção para `EncryptSensitiveWithUserKey`. Se você importar o projeto usando o **Assistente de projeto importar do Integration Services** na [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o **ProtectionLevel** propriedade no **propriedades** janela mostra um valor de `EncryptSensitiveWithUserKey`.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Configuração do nível de proteção com base no ciclo de vida do pacote  
  Você define o nível de proteção de um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando o desenvolve primeiro no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Posteriormente, quando o pacote for implantado, importado ou exportado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou copiado do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou o sistema de arquivos, você poderá atualizar o nível de proteção do pacote. Por exemplo, se você criar e salvar pacotes no computador com uma das opções de nível de proteção de chave de usuário, provavelmente precisará alterar o nível de proteção ao fornecer o pacote a outros usuários; caso contrário eles não poderão abrir o pacote.  
@@ -88,6 +88,6 @@ ms.locfileid: "36008479"
 ## <a name="see-also"></a>Consulte também  
  [Importar e exportar pacotes &#40;serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)   
  [Serviços de integração &#40;SSIS&#41; pacotes](../integration-services-ssis-packages.md)   
- [Visão geral de segurança &#40;do Integration Services&#41;](security-overview-integration-services.md)  
+ [Visão geral de segurança &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

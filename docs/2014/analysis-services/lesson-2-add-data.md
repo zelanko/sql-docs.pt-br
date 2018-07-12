@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165507"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
   Nesta lição, você usará o Assistente de Importação de Tabela do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para se conectar ao banco de dados SQL AdventureWorksDW, selecionar, visualizar e filtrar os dados, e importá-los para o espaço de trabalho do modelo.  
@@ -43,7 +43,7 @@ ms.locfileid: "36011017"
   
 2.  No **Assistente de Importação de Tabela**, em **Bancos de Dados Relacionais**, clique em **Microsoft SQL Server**e clique em **Avançar**.  
   
-3.  No **conectar-se a um banco de dados do Microsoft SQL Server** página **nome de Conexão amigável**, tipo `Adventure Works DB from SQL`.  
+3.  No **conectar-se a um banco de dados do Microsoft SQL Server** página, na **nome de Conexão amigável**, tipo `Adventure Works DB from SQL`.  
   
 4.  Na caixa **Nome do servidor**, digite o nome do servidor no qual você instalou o banco de dados AdventureWorksDW.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36011017"
   
  Agora que você visualizou e filtrou os dados desnecessários, poderá importar os dados. Vá para a próxima seção **Importar as tabelas e os dados de coluna selecionados**.  
   
-##  <a name="Import"></a> Importar os dados de coluna e as tabelas selecionadas  
+##  <a name="Import"></a> Importar os dados de coluna e tabelas selecionadas  
  Agora você pode importar os dados selecionados. O assistente importa os dados da tabela junto com as relações entre as tabelas. São criadas novas tabelas e colunas no modelo usando os nomes amigáveis que você especificou, e os dados que você filtrou não serão importados.  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>Para importar os dados da tabela e da coluna selecionadas  

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Adicionando modelos de mineração à estrutura de mineração cesta | Microsoft Docs'
+title: 'Lição 2: Adicionando modelos de mineração à estrutura de mineração de Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f50095f8bd5c46be96c7132b961477792e1fdd7
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159707"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket 
-  Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de cesta de compras que você criou na [lição 1: Criando a estrutura de mineração da cesta de compras](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
+  Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração da cesta de mercado que você criou na [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
   
  Para prever os tipos de produtos que os clientes tendem a comprar ao mesmo tempo, você criará dois modelos de mineração usando o [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e dois valores diferentes para o *MINIMUM_PROBABILTY* parâmetro.  
   
- *MINIMUM_PROBABILTY* é um [!INCLUDE[msCoName](../includes/msconame-md.md)] parâmetro de algoritmo de associação que ajuda a determinar o número de regras que um modelo de mineração conterá especificando a probabilidade mínima que deve ter uma regra. Por exemplo, definindo-se esse valor como 0,4, uma regra é especificada, a qual só poderá ser gerada se a combinação de produtos que a regra descreve tiver, pelo menos, 40% de probabilidade de ocorrência.  
+ *MINIMUM_PROBABILTY* é um [!INCLUDE[msCoName](../includes/msconame-md.md)] parâmetro de algoritmo de associação que ajuda a determinar o número de regras que um modelo de mineração conterá especificando a probabilidade mínima que uma regra deve ter. Por exemplo, definindo-se esse valor como 0,4, uma regra é especificada, a qual só poderá ser gerada se a combinação de produtos que a regra descreve tiver, pelo menos, 40% de probabilidade de ocorrência.  
   
  Você poderá ver o efeito de alterar o *MINIMUM_PROBABILTY* parâmetro em uma lição posterior.  
   
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
   
  Você só pode usar colunas que já existam na estrutura de mineração.  
   
- A primeira coluna na lista de colunas do modelo de mineração deve ser a coluna de chave na estrutura de mineração. No entanto, você não precisa digitar `KEY` após a coluna de chave para especificar o uso. Isso é porque você já definiu a coluna como uma chave quando criou a estrutura de mineração.  
+ A primeira coluna na lista de colunas do modelo de mineração deve ser a coluna de chave na estrutura de mineração. No entanto, não é necessário digitar `KEY` após a coluna de chave para especificar o uso. Isso é porque você já definiu a coluna como uma chave quando criou a estrutura de mineração.  
   
  As linhas restantes especificam o uso das colunas no novo modelo de mineração. Você pode especificar que uma coluna no modelo de mineração será utilizada para previsão usando a seguinte sintaxe:  
   
@@ -106,11 +106,11 @@ ADD MINING MODEL [<mining model name>]
 -   Adicione um modelo de mineração de associação à estrutura, usando uma probabilidade modificada  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Acrescentando um Modelo de Mineração de Associação à estrutura usando MINIMUM_PROBABILITY padrão  
- A primeira tarefa é adicionar um novo modelo de mineração à estrutura de mineração da cesta de mercado baseadas no [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de associação usando o valor padrão para *MINIMUM_PROBABILITY*.  
+ A primeira tarefa é adicionar um novo modelo de mineração à estrutura de mineração da cesta de mercado, com base nas [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de associação usando o valor padrão para *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>Para adicionar um modelo de mineração de Associação  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -204,7 +204,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Para adicionar um modelo de mineração de Associação  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   

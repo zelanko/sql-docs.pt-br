@@ -5,9 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b9644196575b148277752c6100d94b51e027474
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7a929e7a3f013314915bca3d95aafdc3fa1e28b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006582"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430635"
 ---
 # <a name="bcpinit"></a>bcp_init
   Inicializa a operação de cópia em massa.  
@@ -61,11 +59,11 @@ eDirection
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *szTable*  
- É o nome da tabela do banco de dados a ser copiada de ou para. Este nome também pode incluir o nome do banco de dados ou o nome do proprietário. Por exemplo, **pubs.gracie.titles**, **pubs... títulos**, **gracie**, e **títulos** são todos os nomes de tabela válidos.  
+ É o nome da tabela do banco de dados a ser copiada de ou para. Este nome também pode incluir o nome do banco de dados ou o nome do proprietário. Por exemplo, **pubs**, **pubs... títulos**, **gracie**, e **títulos** são todos os nomes de tabela válidos.  
   
  Se *eDirection* for DB_OUT, *szTable* também pode ser o nome de uma exibição de banco de dados.  
   
- Se *eDirection* for DB_OUT e uma instrução SELECT é especificada usando [bcp_control](bcp-control.md) antes de [bcp_exec](bcp-exec.md) é chamado, **bcp_init * szTable*deve ser definido como NULL.  
+ Se *eDirection* for DB_OUT e uma instrução SELECT for especificada usando [bcp_control](bcp-control.md) antes [bcp_exec](bcp-exec.md) for chamado, **bcp_init * * * szTable*deve ser definido como NULL.  
   
  *szDataFile*  
  É o nome do arquivo de usuário a ser copiado de ou para. Se os dados estão sendo copiados diretamente de variáveis usando [bcp_sendrow](bcp-sendrow.md), defina *szDataFile* como NULL.  
@@ -80,27 +78,27 @@ eDirection
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Remarks  
- Chamar **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O **bcp_init** função deve ser fornecida com um identificador de conexão ODBC habilitado para uso com funções de cópia em massa. Para habilitar o identificador, use [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_BCP definido como SQL_BCP_ON em um identificador de conexão alocado, mas não conectado. A tentativa de atribuir o atributo em um identificador conectado resulta em erro.  
   
  Quando um arquivo de dados é especificado, **bcp_init** examina a estrutura de banco de dados fonte ou destino tabela, não o arquivo de dados. **bcp_init** especifica valores de formato de dados para o arquivo de dados com base em cada coluna na tabela de banco de dados, exibição ou conjunto de resultados de SELECT. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. **bcp_init** define esses valores da seguinte maneira:  
   
--   O tipo de dados especificado é o tipo de dados da coluna na tabela, exibição ou conjunto de resultados de SELECT do banco de dados. O tipo de dados é enumerado por tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados em sqlncli.h. Os dados são representados em seu próprio formato de computador. Ou seja, os dados de uma coluna de **inteiro** tipo de dados é representado por uma sequência de quatro bytes big- ou little endian com base no computador que criou o arquivo de dados.  
+-   O tipo de dados especificado é o tipo de dados da coluna na tabela, exibição ou conjunto de resultados de SELECT do banco de dados. O tipo de dados é enumerado por tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados em sqlncli.h. Os dados são representados em seu próprio formato de computador. Ou seja, os dados de uma coluna de **inteiro** tipo de dados é representado por uma sequência de quatro bytes que é big- ou little endian com base no computador que criou o arquivo de dados.  
   
--   Se um tipo de dados de banco de dados tiver comprimento fixo, os dados do arquivo de dados também terão comprimento fixo. Funções de cópia em massa que processam dados (por exemplo, [bcp_exec](bcp-exec.md)) analisam as linhas de dados esperando que o comprimento dos dados no arquivo de dados seja idêntico ao comprimento dos dados especificados no banco de dados tabela, exibição ou lista de colunas SELECT. Por exemplo, os dados de uma coluna de banco de dados definido como **char (13)** devem ser representados por 13 caracteres para cada linha de dados no arquivo. Os dados de comprimento fixo podem ser prefixados com um indicador nulo se a coluna do banco de dados permitir valores nulos.  
+-   Se um tipo de dados de banco de dados tiver comprimento fixo, os dados do arquivo de dados também terão comprimento fixo. Funções de cópia em massa que processam dados (por exemplo, [bcp_exec](bcp-exec.md)) analisam as linhas de dados esperando que o comprimento dos dados no arquivo de dados seja idêntico ao comprimento dos dados especificados na tabela de banco de dados, exibição ou lista de colunas SELECT. Por exemplo, os dados para uma coluna de banco de dados definida como **char(13)** devem ser representados por 13 caracteres para cada linha de dados no arquivo. Os dados de comprimento fixo podem ser prefixados com um indicador nulo se a coluna do banco de dados permitir valores nulos.  
   
 -   Quando a sequência de bytes de terminador é definida, o comprimento da sequência de bytes de terminador é definido como 0.  
   
 -   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo de dados deve ter dados em cada coluna na tabela do banco de dados. Ao copiar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados de todas as colunas na tabela, exibição ou conjunto de resultados de SELECT do banco de dados são copiados para o arquivo de dados.  
   
--   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca dados com base na posição ordinal da coluna na tabela de banco de dados.  
+-   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca dados com base na posição ordinal da coluna na tabela de banco de dados.  
   
--   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary (22)**) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
+-   Se um tipo de dados do banco de dados é de comprimento variável (por exemplo, **varbinary(22)**) ou se uma coluna de banco de dados pode conter valores nulos, os dados no arquivo de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
   
  Para alterar valores de formato de dados especificados para um arquivo de dados, chame [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md).  
   
- As cópias em massa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser otimizadas para tabelas que não contêm índices, definindo o modelo de recuperação de banco de dados como SIMPLE ou BULK_LOGGED. Para obter mais informações, consulte [pré-requisitos para log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
+ As cópias em massa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser otimizadas para tabelas que não contêm índices, definindo o modelo de recuperação de banco de dados como SIMPLE ou BULK_LOGGED. Para obter mais informações, consulte [pré-requisitos para registro em log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Se nenhum arquivo de dados for usado, você deve chamar [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para especificar o formato e o local na memória dos dados para cada coluna, em seguida, copie as linhas de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [bcp_sendrow](bcp-sendrow.md).  
   

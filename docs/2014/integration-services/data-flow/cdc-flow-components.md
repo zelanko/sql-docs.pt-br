@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7d1719e8f1f8e9c8ff5c61fe1c561299b09213e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c825f11187fceb63373cb053ffd2f650b25834f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152937"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
   Os componentes Change Data Capture da Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] Microsoft ajudam os desenvolvedores do SSIS a trabalharem com CDC e reduzir a complexidade de pacotes CDC.  
@@ -71,7 +71,7 @@ ms.locfileid: "36012320"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Desinstalando os Componentes CDC da Microsoft  
  Você desinstala a origem do CDC, o separador do CDC ou a tarefa de controle do CDC usando o assistente de desinstalação. Antes de desinstalar os componentes, verifique o seguinte:  
   
- Se você estiver usando o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para desenvolvimento de pacote, verifique se o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está fechado antes de executar o Assistente de desinstalação.  
+ Se você estiver usando o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para o desenvolvimento de pacote, verifique se o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está fechado antes de executar o Assistente de desinstalação.  
   
 ## <a name="benefits"></a>Benefícios  
  Os componentes CDC para [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] componentes permitem que os desenvolvedores do SSIS compilem facilmente os pacotes do SSIS que processam dados de alteração. Estes componentes aprimoram a capacidade de desenvolvedores de SSIS de lidarem com o CDC e reduzir a complexidade de pacotes de CDC.  
@@ -105,9 +105,9 @@ ms.locfileid: "36012320"
   
  [Origem CDC](cdc-source.md)  
   
- [Editor de origem CDC &#40;página Gerenciador de Conexão&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [Editor de origem CDC &#40;página do Gerenciador de Conexão&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [Editor de origem CDC &#40;página colunas&#41;](../cdc-source-editor-columns-page.md)  
+ [Editor de origem CDC &#40;página de colunas&#41;](../cdc-source-editor-columns-page.md)  
   
  [Editor de origem CDC &#40;página de saída de erro&#41;](../cdc-source-editor-error-output-page.md)  
   

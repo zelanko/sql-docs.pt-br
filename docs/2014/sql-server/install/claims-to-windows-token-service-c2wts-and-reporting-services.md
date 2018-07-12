@@ -1,5 +1,5 @@
 ---
-title: Claims to Windows Token Service (C2WTS) e do Reporting Services | Microsoft Docs
+title: Claims to Windows Token Service (C2WTS) e o Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,13 +18,13 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278182"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
   O Claims to Windows Token Service (c2WTS) do SharePoint é necessário com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint se você quiser usar a autenticação do windows para fontes de dados que estão fora do farm do SharePoint. Isso ocorre mesmo quando o usuário acessa as fontes de dados com a Autenticação do Windows porque a comunicação entre o WFE (front-end da Web) e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sempre será uma autenticação de Reivindicações.  
@@ -73,9 +73,9 @@ ms.locfileid: "36008834"
   
 2.  Configure o c2WTS ‘AllowedCallers’  
   
-     c2WTS requer as identidades dos 'chamadores' explicitamente listadas no arquivo de configuração, **c2wtshost.exe**. c2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que ele está configurado para fazer isso. Neste caso, o 'chamador' é o grupo WSS_WPG do Windows. O arquivo c2wtshost.exe.confi é salvo no seguinte local:  
+     c2WTS requer as identidades dos 'chamadores' explicitamente listadas no arquivo de configuração **c2wtshost.exe.config**. c2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que ele está configurado para fazer isso. Neste caso, o 'chamador' é o grupo WSS_WPG do Windows. O arquivo c2wtshost.exe.confi é salvo no seguinte local:  
   
-     **Files\Windows identity Foundation\v3.5\c2wtshost.exe.config**  
+     **\Program identity Foundation\v3.5\c2wtshost.exe.config**  
   
      Este é um exemplo do arquivo de configuração:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36008834"
 4.  Inicie o “Claims to Windows Token Service” do SharePoint: Inicie o Claims to Windows Token Service pela Administração Central do SharePoint na página **Gerenciar serviços no servidor** . O serviço deverá ser iniciado no servidor que estará executando a ação. Por exemplo, se você tiver um servidor que é um WFE e outro servidor que é um Servidor de aplicativos com o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. O c2WTS não é necessário no WFE.  
   
 ## <a name="see-also"></a>Consulte também  
- [Declarações to Windows Token Service (c2WTS) (visão geralhttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [(Visão geral de declarações para o Windows Token Service (c2WTS)http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
  [Visão geral da autenticação Kerberos para produtos do Microsoft SharePoint 2010 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

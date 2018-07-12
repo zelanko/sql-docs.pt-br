@@ -1,5 +1,5 @@
 ---
-title: Classificar o Assistente (mineração de dados suplementos para Excel) | Microsoft Docs
+title: Classificar o Assistente (Data Mining Add-ins para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - classification [data mining]
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f71610a317be36a84fa90aff08bed8d6a50d8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1741a66564a9243e06e53c77aa0473dec1b040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159557"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistente de Classificação (Suplementos de Mineração de Dados para Excel)
   ![Assistente de classificar na faixa de opções mineração de dados](media/dmc-classify.gif "Assistente classificar na faixa de opções mineração de dados")  
@@ -33,27 +33,27 @@ ms.locfileid: "36011918"
   
 ## <a name="using-the-classify-wizard"></a>Usando o Assistente para Classificar  
   
-1.  No **mineração de dados** de faixa de opções, clique em **classificar**e, em seguida, clique em **próximo**.  
+1.  No **Data Mining** faixa de opções, clique em **classificar**e, em seguida, clique em **próxima**.  
   
-2.  No **Selecionar fonte de dados** página, escolha os dados para analisar.  
+2.  No **Selecionar fonte de dados** , escolha os dados a serem analisados.  
   
      Esse assistente oferece suporte a vários tipos de dados: tabelas do Excel, intervalos do Excel e fontes de dados externas. Com dados externos, você poderá adicioná-la ao Excel ou escolher um conjunto de tabelas ou exibições em uma fonte de dados do Analysis Services. Você também pode adicionar tabelas e alterar colunas para criar fontes de dados ad hoc.  
   
 3.  Sobre o **classificação** página, escolha a coluna que você deseja classificar.  
   
-     Revise as colunas na lista, **colunas de entrada**e desmarque as colunas que têm valores exclusivos e, portanto, não são úteis para a criação de padrões, como números de identificação, nomes de clientes e assim por diante. Você também deve remover colunas que essencialmente duplicam a coluna classificável.  
+     Revise as colunas na lista, **colunas de entrada**e desmarque as colunas que têm valores exclusivos e, portanto, não são úteis para a criação de padrões, como números de identificação, nomes de cliente e assim por diante. Você também deve remover colunas que essencialmente duplicam a coluna classificável.  
   
      Por exemplo, se você estiver classificando a previsão da categoria de um produto, deverá excluir o campo da subcategoria se houver uma regra de negócio conhecida, caso contrário, a intensidade dessa regra pode impedir que você descubra outras correlações.  
   
-4.  Opcionalmente, clique em **parâmetros** para alterar os parâmetros do algoritmo e personalizar o comportamento do modelo de clustering.  
+4.  Opcionalmente, clique em **parâmetros** para alterar os parâmetros de algoritmo e personalizar o comportamento do modelo de clustering.  
   
-5.  No **dividir os dados em conjuntos de teste e treinamento** página, especifique a quantidade de dados de controle para teste. O restante é sempre usado para treinar o modelo.  
+5.  No **dividir dados em conjuntos de teste e treinamento** , especifique a quantidade de dados será mantida para teste. O restante é sempre usado para treinar o modelo.  
   
      A configuração padrão é de 30% de dados para teste e 70% de dados para treinamento.  
   
 6.  Sobre o **concluir** página, forneça um nome descritivo para o conjunto de dados e o modelo e defina as seguintes opções que controlam como você trabalha com o modelo finalizado:  
   
-    -   **Procurar modelo**. Quando essa opção é selecionada, assim que o assistente tiver concluído o processamento do modelo, ele abre um **procurar** janela para ajudá-lo a explorar os resultados. O conteúdo do visualizador depende do tipo de modelo que você criou. Para obter mais informações, consulte [procurando um modelo de árvores de decisão](browsing-a-decision-trees-model.md) e [procurando um modelo de rede Neural](browsing-a-neural-network-model.md).  
+    -   **Procurar modelo**. Quando essa opção é selecionada, assim que o assistente tiver concluído o processamento do modelo, ele abre uma **procurar** janela para ajudá-lo a explorar os resultados. O conteúdo do visualizador depende do tipo de modelo que você criou. Para obter mais informações, consulte [procurando um modelo de árvores de decisão](browsing-a-decision-trees-model.md) e [procurando um modelo de rede Neural](browsing-a-neural-network-model.md).  
   
     -   **Habilitar o detalhamento**. Selecione esta opção para visualizar os dados subjacentes do modelo finalizado. Essa opção estará disponível somente se você criar um modelo de Árvore de Decisão.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36011918"
  [Referência técnica do algoritmo Rede Neural da Microsoft](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Para usar o **classificar** assistente, você deve estar conectado a um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Para obter informações sobre como criar uma conexão, consulte [conectar-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Para usar o **classificar** assistente, você deve estar conectado a um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Para obter informações sobre como criar uma conexão, consulte [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
