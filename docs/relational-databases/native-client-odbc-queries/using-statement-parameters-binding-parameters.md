@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1cba782e4bea322fdba6c06fc81ae2aa87e94a1a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 138df3eec425b0400acdcd5be538a8b490e7572b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699597"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410268"
 ---
-# <a name="using-statement-parameters---binding-parameters"></a>Usando parâmetros de instrução - parâmetros de associação
+# <a name="using-statement-parameters---binding-parameters"></a>Usando parâmetros de instrução – parâmetros de associação
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para que a instrução possa ser executada, cada marcador de parâmetro em uma instrução SQL deve ser associado a uma variável no aplicativo. Isso é feito chamando a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) função. **SQLBindParameter** descreve a variável de programa (endereço, tipo de dados C e assim por diante) para o driver. Ela também identifica o marcador de parâmetro indicando seu valor ordinal e, em seguida, descreve as características do objeto SQL que representa (tipo de dados SQL, precisão e assim por diante).  
+  Para que a instrução possa ser executada, cada marcador de parâmetro em uma instrução SQL deve ser associado a uma variável no aplicativo. Isso é feito chamando o [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) função. **SQLBindParameter** descreve a variável de programa (endereço, tipo de dados C e assim por diante) para o driver. Ela também identifica o marcador de parâmetro indicando seu valor ordinal e, em seguida, descreve as características do objeto SQL que representa (tipo de dados SQL, precisão e assim por diante).  
   
  Marcadores de parâmetro podem ser associados ou reassociados a qualquer momento, antes de uma instrução ser executada. Uma associação de parâmetro permanece em vigor até ocorrer um dos seguintes eventos:  
   
@@ -51,9 +51,9 @@ ms.locfileid: "35699597"
   
 -   A associação em linhas é feita quando todos os parâmetros na instrução SQL são associados como uma unidade a uma matriz de estruturas que contém cada uma das variáveis para os parâmetros.  
   
-     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_PARAM_BIND_TYPE e *ValuePtr* definido como o tamanho reter a estrutura de variáveis de programa.  
+     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_PARAM_BIND_TYPE e *ValuePtr* definido como o tamanho do contendo a estrutura de variáveis de programa.  
   
- Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client envia parâmetros de cadeia de caracteres binária ou de caractere para o servidor, ele preenche os valores para o comprimento especificado em **SQLBindParameter** *ColumnSize* parâmetro. Se um aplicativo do ODBC 2. x especificar 0 para *ColumnSize*, o driver acrescenta o valor do parâmetro para a precisão do tipo de dados. A precisão é 8000 quando houver conexão a servidores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 quando houver conexões a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* está em bytes para colunas variantes.  
+ Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client envia parâmetros de cadeia de caracteres binária ou de caractere para o servidor, ele preenche os valores para o comprimento especificado no **SQLBindParameter** *ColumnSize* parâmetro. Se um aplicativo ODBC 2.x especificar 0 para *ColumnSize*, o driver acrescenta o valor do parâmetro para a precisão do tipo de dados. A precisão é 8000 quando houver conexão a servidores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 quando houver conexões a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* é em bytes para colunas variantes.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à definição de nomes para parâmetros de procedimento armazenado. O ODBC 3.5 também introduziu o suporte a parâmetros nomeados usados ao chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse suporte pode ser usado para:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "35699597"
   
  Parâmetros nomeados só são suportados ao usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** instrução ou a sequência de escape ODBC CALL para executar um procedimento armazenado.  
   
- Se **SQL_DESC_NAME** está definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir **SQL_DESC_NAME**.  Se forem usados literais em chamadas de procedimento armazenado, onde parâmetros têm **SQL_DESC_NAME** definido, os literais deverão usar o formato *' nome*=*valor*', onde *nome* é o nome do parâmetro de procedimento armazenado (por exemplo, @p1). Para obter mais informações, consulte [associando parâmetros por nome (parâmetros nomeados)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Se **SQL_DESC_NAME** é definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir **SQL_DESC_NAME**.  Se forem usados literais em chamadas de procedimento armazenado, onde parâmetros têm **SQL_DESC_NAME** definido, os literais deverão usar o formato *' nome*=*valor*', em que *nome* é o nome do parâmetro de procedimento armazenado (por exemplo, @p1). Para obter mais informações, consulte [associando parâmetros por nome (parâmetros nomeados)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando parâmetros de instrução](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

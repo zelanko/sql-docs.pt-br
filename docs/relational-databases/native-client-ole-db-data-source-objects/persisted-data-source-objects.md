@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2872454d8ee32514b3efd46b30b7b96c53b1e7a9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700249"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419385"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client oferece suporte a objetos de fonte de dados persistente com o **IPersistFile** interface.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client dá suporte a objetos de fonte de dados persistentes com o **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemplos  
  **A. Manter a inicialização da fonte de dados:**  
   
- Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos no *pLocation* e *pDatasource* parâmetros da função.  
+ Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos na *pLocation* e *pDatasource* parâmetros da função.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válido é persistente.  
+ O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válida é persistida.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

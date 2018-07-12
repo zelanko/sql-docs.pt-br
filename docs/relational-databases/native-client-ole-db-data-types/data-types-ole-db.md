@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8574a80c29e0e4333edb78abd433648c51f940df
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e0ef45030e87bf59b3305607841adfb46fbc189d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703637"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424545"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados OLE DB ao associar parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados OLE DB ao associar os tipos de dados parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701457"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421965"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, você pode definir dados BLOB transmitindo um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, você pode definir dados de BLOB, passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
- Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. O consumidor chama o **IRowsetChange:: SetData** ou **IRowsetChange:: Insertrow** método com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
+ Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. O consumidor, em seguida, chama o **IRowsetChange:: SetData** ou **IRowsetChange:: Insertrow** método com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
   
  Este tópico aborda a funcionalidade disponível nas funções a seguir:  
   
@@ -48,11 +48,11 @@ ms.locfileid: "35701457"
 ## <a name="how-to-set-large-data"></a>Como definir dados grandes  
  Para transmitir um ponteiro para seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna BLOB e chama os métodos **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Para definir dados de BLOB:  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Definir o *Dwfrag* elemento da estrutura DBOBJECT como STGM_READ e defina o *iid* elemento como IID_ISequentialStream (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina as *dwFlag* elemento da estrutura DBOBJECT como STGM_READ e defina as *iid* elemento como IID_ISequentialStream (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Definir o *wType* elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o *pObject* elemento para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina as *wType* elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o *pObject* elemento para apontar para a estrutura DBOBJECT que você criou.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
