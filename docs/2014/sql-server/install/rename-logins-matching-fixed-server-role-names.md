@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined login names [SQL Server]
 - fixed server roles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logins [SQL Server], names
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54223b28e681115df1b4ecf11f4fb96d13c68fd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0064e08000454f485846b45fb0cc3d37c0afd031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155607"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renomear logons que coincidem com nomes de funções fixas do servidor
   O Supervisor de Atualização detectou um ou mais nomes de logon definidos pelo usuário que coincidem com nomes de funções fixas do servidor. Os nomes de funções de servidor fixas são exclusivos. Renomeie o logon antes de atualizar.  
@@ -64,7 +64,7 @@ ms.locfileid: "36011935"
   
 2.  Descarte os logons.  
   
-3.  Use o **sp_addlogin** procedimento de sistema para criar novos logons. Especifique o SID retornado na etapa 1 do **@sid** parâmetro para cada logon correspondente.  
+3.  Use o **sp_addlogin** procedimento do sistema para criar novos logons. Especifique o SID retornado na etapa 1 na **@sid** parâmetro para cada logon correspondente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

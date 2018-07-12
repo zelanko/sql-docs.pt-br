@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: 20
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: b49895ee08de2a9f08d263c92f5372c6b22ec604
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1082bd587d9c3455733d611a676d901b62741859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161597"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
   O utilitário `sqlps` inicia uma sessão do Windows PowerShell 2.0 com os cmdlets e o provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell carregados e registrados. Você pode inserir comandos ou scripts do PowerShell que usam os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabalhar com instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e seus objetos.  
@@ -58,7 +58,7 @@ ms.locfileid: "36010151"
  Especifica que o utilitário `sqlps` não carrega um perfil de usuário. Os perfis de usuário registram alias, funções e variáveis usados com frequência para uso em sessões do PowerShell.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Especifica que o `sqlps` utilitário saída formatada como cadeias de caracteres de texto (**texto**) ou em um formato CLIXML serializado (**XML**).  
+ Especifica que o `sqlps` utilitário saída formatada como texto cadeias de caracteres (**texto**) ou em um formato CLIXML serializado (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
  Especifica que a entrada para o `sqlps` utilitário é formatado como cadeias de caracteres de texto (**texto**) ou em um formato CLIXML serializado (**XML**).  
@@ -101,7 +101,7 @@ ms.locfileid: "36010151"
   
  Por padrão, o `sqlps` utilitário é executado com a política de execução de scripts definida como **Restricted**. Isso impede a execução de quaisquer scripts do PowerShell. Você pode usar o cmdlet **Set-ExecutionPolicy** a fim de habilitar a execução de scripts assinados ou de qualquer script. Execute apenas scripts de fontes confiáveis e proteja todos os arquivos de entrada e saída usando as permissões NTFS adequadas. Para obter mais informações sobre como habilitar scripts do PowerShell, consulte [Running Windows PowerShell Scripts](http://go.microsoft.com/fwlink/?LinkId=103166)(a página pode estar em inglês).  
   
- A versão do `sqlps` utilitário [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] foi implementada como um minishell do Windows PowerShell 1.0. Os minishells têm determinadas restrições, como não permitir que os usuários carreguem snap-ins diferentes dos carregados pelo minishell. Essas restrições não se aplicam à versão [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e superiores do utilitário, que foi alterado para usar o módulo `sqlps`.  
+ A versão dos `sqlps` utilitário [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] era implementado como um minishell do Windows PowerShell 1.0. Os minishells têm determinadas restrições, como não permitir que os usuários carreguem snap-ins diferentes dos carregados pelo minishell. Essas restrições não se aplicam à versão [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e superiores do utilitário, que foi alterado para usar o módulo `sqlps`.  
   
 ## <a name="examples"></a>Exemplos  
  **A. Executar o utilitário sqlps no modo interativo padrão, sem a faixa de direitos autorais**  

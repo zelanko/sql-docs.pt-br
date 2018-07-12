@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703487"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426218"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Qualquer|**text**|  
 |**SQLBIGBINARY**|não|**binary**|  
 |**SQLBINARY**|não|**Binary**|  
-|**SQLBIGVARBINARY**|não|**varbinary**|  
-|**SQLVARBINARY**|não|**varbinary**|  
+|**SQLBIGVARBINARY**|não|**Varbinary**|  
+|**SQLVARBINARY**|não|**Varbinary**|  
 |**SQLIMAGE**|Qualquer|**Imagem**|  
 |**SQLINTN**|Qualquer|**int-null**|  
 |**SQLDATETIMN**|Qualquer|**datetime-null**|  
@@ -92,9 +92,9 @@ RETCODE bcp_gettypename (
 |**SQLAOPMAX**|Qualquer|**Max**|  
 |**SQLDATETIM4**|Qualquer|**smalldatetime**|  
 |**SQLMONEY4**|Qualquer|**Smallmoney**|  
-|**SQLFLT4**|Qualquer|**real**|  
+|**SQLFLT4**|Qualquer|**Real**|  
 |**SQLUNIQUEID**|Qualquer|**uniqueidentifier**|  
-|**SQLNCHAR**|não|**nchar**|  
+|**SQLNCHAR**|não|**Nchar**|  
 |**SQLNVARCHAR**|não|**Nvarchar**|  
 |**SQLNTEXT**|Qualquer|**Ntext**|  
 |**SQLVARIANT**|Qualquer|**sql_variant**|  
@@ -113,9 +113,9 @@ RETCODE bcp_gettypename (
 |**SQLUDT**|Qualquer|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
- Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Tipo em SQLNCLI. h" da tabela na [alterações de cópia em massa para tipos aprimorados de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
+ Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Tipo em SQLNCLI. h" da tabela no [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
   
- Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

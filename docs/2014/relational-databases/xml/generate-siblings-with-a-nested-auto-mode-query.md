@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168217"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Gerar irmãos com uma consulta aninhada em modo AUTO
   O exemplo a seguir mostra como gerar irmãos usando uma consulta aninhada em modo AUTO. A única outra maneira de gerar esse tipo de XML é usar o modo EXPLICIT. No entanto isso pode ser trabalhoso.  
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   A consulta anterior é adicionada na cláusula `FROM` . O resultado da consulta é retornado como uma tabela. Observe o alias de `XmlCol` que é adicionado.  
   
--   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM` . O `query()` método o `xml` tipo de dados é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   A cláusula `SELECT` especifica um XQuery em relação à `XmlCol` retornada na cláusula `FROM` . O `query()` método da `xml` tipo de dados é usado para especificar o XQuery. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

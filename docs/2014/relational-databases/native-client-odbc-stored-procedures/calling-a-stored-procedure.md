@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,33 +18,33 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352d447329a76318f362e958094ee835d36b9d87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008412"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411535"
 ---
 # <a name="calling-a-stored-procedure"></a>Chamando um procedimento armazenado
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client oferece suporte a ODBC CALL sequência de escape do e o [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instrução para executar procedimentos armazenados; a sequência de escape ODBC CALL é o método preferencial. Usar a sintaxe ODBC permite que um aplicativo recupere os códigos de retorno dos procedimentos armazenados e o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client também é otimizado para usar um protocolo originalmente desenvolvido para enviar RPCs (chamadas de procedimento remoto) entre computadores que estejam executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a ODBC CALL sequência de escape do e o [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instrução para a execução de procedimentos armazenados; a sequência de escape CALL do ODBC é o método preferencial. Usar a sintaxe ODBC permite que um aplicativo recupere os códigos de retorno dos procedimentos armazenados e o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client também é otimizado para usar um protocolo originalmente desenvolvido para enviar RPCs (chamadas de procedimento remoto) entre computadores que estejam executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
 > [!NOTE]  
->  Ao chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando parâmetros nomeados com ODBC de procedimentos armazenados (para obter mais informações, consulte [associando parâmetros por nome (parâmetros nomeados)](http://go.microsoft.com/fwlink/?LinkID=209721)), os nomes de parâmetro devem começar com o ' @' caracteres. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client impõe esta restrição de forma mais rigorosa que os MDAC (Microsoft Data Access Components).  
+>  Ao chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimentos armazenados usando parâmetros nomeados com ODBC (para obter mais informações, consulte [associando parâmetros por nome (parâmetros nomeados)](http://go.microsoft.com/fwlink/?LinkID=209721)), os nomes de parâmetro devem começar com o ' @' caracteres. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client impõe esta restrição de forma mais rigorosa que os MDAC (Microsoft Data Access Components).  
   
  A sequência de escape CALL do ODBC para chamar um procedimento é:  
   
  {[**? =**]**chamada * **procedure_name*[([*parâmetro*] [**, **[* parâmetro *]]...)]}  
   
- onde *procedure_name* Especifica o nome de um procedimento e *parâmetro* Especifica um parâmetro de procedimento. Há suporte para parâmetros nomeados somente em instruções que usam a sequência de escape ODBC CALL.  
+ em que *procedure_name* Especifica o nome de um procedimento e *parâmetro* Especifica um parâmetro de procedimento. Há suporte para parâmetros nomeados somente em instruções que usam a sequência de escape ODBC CALL.  
   
  Um procedimento pode ter zero ou mais parâmetros. Ele também pode retornar um valor (conforme indicado pelo marcador de parâmetro opcional ?= no início da sintaxe). Se um parâmetro for de entrada ou entrada/saída, poderá ser um literal ou um marcador de parâmetro. Se o parâmetro for de saída, deve ser um marcador de parâmetro, porque a saída é desconhecida. Marcadores de parâmetro devem ser associados com [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) antes da chamada de procedimento instrução é executada.  
   
  Parâmetros de entrada e entrada/saída podem ser omitidos das chamadas de procedimento. Se um procedimento for chamado usando parênteses, mas sem nenhum parâmetro, o driver instruirá a fonte de dados a usar o valor padrão para o primeiro parâmetro. Por exemplo:  
   
- {**chamar** * procedure_name ***()**}  
+ {**chamar** * * procedure_name **()**}  
   
  Se o procedimento não tiver nenhum parâmetro, ele poderá falhar. Se um procedimento for chamado sem parênteses, o driver não enviará nenhum valor de parâmetro. Por exemplo:  
   
@@ -87,7 +85,7 @@ ms.locfileid: "36008412"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- O servidor gera um erro que um servidor vinculado chamado **MyDB** não existe.  
+ O servidor gera um erro que um servidor vinculado nomeado **MyDB** não existe.  
   
  O problema não existe ao usar identificadores entre colchetes, esta instrução é interpretada corretamente:  
   

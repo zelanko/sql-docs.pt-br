@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.organizerpane.f1
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d97be0a5c0fe8272a448638273fc550724c803e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a39e5579671cf870778f1cee679c49cd3e1617fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151517"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de Ações (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Organizador de Ações** na guia **Ações** do Designer de Cubo para acessar as ações contidas no cubo especificado.  

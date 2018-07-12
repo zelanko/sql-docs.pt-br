@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180987"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Criar e personalizar uma galeria do PowerPivot
   A Galeria PowerPivot é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -54,12 +54,12 @@ ms.locfileid: "36008761"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não pode estar em um site restrito. O site principal que contém Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser adicionado ao site confiável ou à zona de intranet local.  
   
--   A solução de aplicativo Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido implantada no aplicativo, e o recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido ativado para a coleção de sites. Para obter mais informações, consulte [implantar soluções do PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) e[ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   A solução de aplicativo Web do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido implantada no aplicativo, e o recurso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ter sido ativado para a coleção de sites. Para obter mais informações, consulte [implantar soluções do PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) e[ativar a integração do recurso do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Para exibir ou criar um relatório do Reporting Services baseado em uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a pasta de trabalho e o relatório devem estar na mesma Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O relatório deve usar uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contenha dados incorporados, ou a pasta de trabalho deve conter pelo menos uma fonte de dados externa que seja uma pasta de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Visão geral  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é um modelo de biblioteca disponível quando você instala o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] em um servidor do SharePoint. A Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combina uma visualização precisa do conteúdo do arquivo com fatos sobre a origem do documento. É possível ver imediatamente quem criou o documento e quando ele foi modificado pela última vez. Para criar imagens de visualização, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria usa um serviço de instantâneo pode ler [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho e relatórios do Reporting Services que contenham dados PowerPivot. Se você publicar um arquivo que não possa ser lido pelo serviço de instantâneo, nenhuma imagem de visualização estará disponível para esse arquivo.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é um modelo de biblioteca disponível quando você instala o [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] em um servidor do SharePoint. A Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combina uma visualização precisa do conteúdo do arquivo com fatos sobre a origem do documento. É possível ver imediatamente quem criou o documento e quando ele foi modificado pela última vez. Para criar imagens de visualização [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria usa um serviço de instantâneo que pode ler [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho e relatórios do Reporting Services que contenham dados PowerPivot. Se você publicar um arquivo que não possa ser lido pelo serviço de instantâneo, nenhuma imagem de visualização estará disponível para esse arquivo.  
   
  As imagens de visualização se baseiam na maneira como a pasta de trabalho é processada pelos Serviços do Excel. A representação na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser idêntica àquela que você vê ao exibir uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um navegador. No entanto, a visualização tem uma área da superfície limitada. Partes de uma pasta de trabalho ou de um relatório podem ser recortadas para ela se ajustar ao espaço disponível. Talvez você precise abrir uma pasta de trabalho ou um relatório para exibir o documento em sua totalidade.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36008761"
   
     3.  Em Bibliotecas, clique em **Galeria PowerPivot**.  
   
-    1.  **SharePoint 2013**: clique no ícone configurações ![configurações SharePoint](../media/as-sharepoint2013-settings-gear.gif "configurações SharePoint"). Clique em **Conteúdo do Site**  
+    1.  **SharePoint 2013**: clique no ícone configurações ![SharePoint Settings](../media/as-sharepoint2013-settings-gear.gif "configurações do SharePoint"). Clique em **Conteúdo do Site**  
   
     2.  Clique em **Adicionar um aplicativo**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150107"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Edições e componentes do SQL Server 2014
   Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, tempo de execução e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "36011937"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edição|Definição|  
 |---------------------------------------|----------------|  
 |Enterprise (64 bits e 32 bits)|Oferta especial, a edição [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise fornece recursos de datacenter abrangentes de alta tecnologia com desempenho incrivelmente rápido, virtualização ilimitada e Business Intelligence de ponta a ponta — oferecendo altos níveis de serviço para cargas de trabalho importantes e acesso a visões de dados para usuários finais.|  
-|Business Intelligence (64 bits e 32 bits)|A edição [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence fornece uma plataforma abrangente que permite que as empresas criem e implantem soluções BI seguras, flexíveis e gerenciáveis. Ela oferece funcionalidades surpreendentes, como exploração de dados e visualização; baseada em navegador recursos de Mashup de dados avançada e gerenciamento de integração aprimorada.|  
+|Business Intelligence (64 bits e 32 bits)|A edição [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence fornece uma plataforma abrangente que permite que as empresas criem e implantem soluções BI seguras, flexíveis e gerenciáveis. Ela oferece funcionalidades surpreendentes, como a exploração de dados e visualização; baseada em navegador recursos poderosos de dados mash-up e o gerenciamento de integração avançada.|  
 |Standard (64 bits e 32 bits)|A edição[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard fornece gerenciamento de dados básicos e bancos de dados BI para departamentos e pequenas empresas executarem seus aplicativos, e oferece suporte a ferramentas de desenvolvimento comuns para rede local e em nuvem — permitindo o gerenciamento eficiente de bancos de dados com mínimos recursos de TI.|  
   
 ## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>Edições especializadas do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -80,7 +80,7 @@ ms.locfileid: "36011937"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com aplicativos cliente/servidor  
  Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador que esteja executando aplicativos cliente/servidor que se conectam diretamente a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A instalação dos componentes cliente é também uma boa opção se você administra uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um servidor de banco de dados ou se planeja desenvolver aplicativos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- A opção de ferramentas cliente instala os seguintes recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componentes compatíveis com versões anteriores, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componentes de conectividade, ferramentas de gerenciamento, Software Development Kit e componentes dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+ A opção de ferramentas cliente instala os seguintes recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : componentes compatíveis com versões anteriores, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], componentes de conectividade, ferramentas de gerenciamento, Software Development Kit e componentes dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>Decidindo entre os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Use a página Seleção de Recursos do Assistente de Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para selecionar os componentes a serem incluídos em uma instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por padrão, nenhum dos recursos na árvore está selecionado.  
@@ -89,7 +89,7 @@ ms.locfileid: "36011937"
   
 |Componentes de servidor|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o serviço principal para armazenamento, processamento e proteção de dados, replicação, pesquisa de texto completo, ferramentas para gerenciar relacionais e dados XML e o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] server (DQS).|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o principal serviço para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo, ferramentas para gerenciar relacionais e dados XML e o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] servidor (DQS).|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] inclui as ferramentas para criação e gerenciamento de aplicativos OLAP (processamento analítico online) e de mineração de dados.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|O[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui componentes de servidor e cliente por criar, gerenciar e implantar relatórios tabulares, de matriz, gráficos e de forma livre. O[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] também é uma plataforma extensível que você pode usar para desenvolver aplicativos de relatório.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é um conjunto de ferramentas gráficas e objetos programáveis para mover, copiar e transformar dados. Ele também inclui o componente [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  
@@ -111,6 +111,6 @@ ms.locfileid: "36011937"
   
 ## <a name="see-also"></a>Consulte também  
  [Planejando uma instalação do SQL Server](install/planning-a-sql-server-installation.md)   
- [Instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+ [Instalar o SQL Server 2014 do Assistente de instalação &#40;programa de instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
   

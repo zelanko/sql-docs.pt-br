@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Login to Server Role event class
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bd4eeee6820e70e407a790379d712f7b35e93482
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ab322f2b6291efbfb3e8916db33fad3c16d69e0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160477"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
   A classe de evento **Audit Add Login to Server Role** ocorre sempre que um logon é adicionado ou removido de uma função de servidor fixa. Esta classe de evento é usada para os procedimentos armazenados **sp_addsrvrolemember** e **sp_dropsrvrolemember** .  

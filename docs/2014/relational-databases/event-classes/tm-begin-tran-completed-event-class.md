@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71f5085903a367374908d4073374655d8a03e069
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7039e0b3d829daebd2af39c6cf279c7e4c4645e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182343"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>classe de evento TM: Begin Tran Completed
   A classe de evento TM: Begin Tran Completed indica que uma solicitação BEGIN TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações.  

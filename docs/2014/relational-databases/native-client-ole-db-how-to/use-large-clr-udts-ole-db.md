@@ -1,26 +1,24 @@
 ---
-title: Usar UDTs grandes do CLR (OLE DB) | Microsoft Docs
+title: Usar UDTs CLR grandes (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bed76483f9ee9d5a180b8ecd1e905ecf65495ec5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dde2fede6e6772836fc1a20c679b06cfca3bd436
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007691"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407425"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDTs grandes do CLR (OLE DB)
   Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
@@ -32,7 +30,7 @@ ms.locfileid: "36007691"
   
  Execute a segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para adicionar o assembly ao banco de dados mestre.  
   
- Compile com ole32.lib oleaut32.lib e execute a terceira listagem de código (C++). Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a terceira listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a quarta listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir o assembly do banco de dados mestre.  
   

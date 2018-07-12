@@ -1,12 +1,12 @@
 ---
-title: Execute o procedimento armazenado com RPC e processar saída | Microsoft Docs
+title: Executar procedimento armazenado com RPC e saída do processo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,35 +18,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abe2cb37bbf0de66bc6ab924575e7aebd89a7b9b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e04bac0098832cf172b3a991f121d262fc128220
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699177"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427915"
 ---
-# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Execute o procedimento armazenado com RPC e de saída de processo
+# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Executar procedimento armazenado com RPC e saída do processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados de parâmetro de saída estão disponível quando **imultipleresults:: GetResult** retornar DB_S_NORESULT ou quando o **IMultipleResults** interface é completamente liberado, o que ocorrer primeiro.  
+  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados de parâmetro de saída estarão disponíveis quando **imultipleresults:: GetResult** retornar DB_S_NORESULT ou quando o **IMultipleResults** interface é completamente liberado, o que ocorrer primeiro.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você deve manter as credenciais, criptografe-as com o [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter credenciais, criptografe-as com o [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para processar códigos de retorno e parâmetros de saída  
   
 1.  Construa uma instrução SQL que use a sequência de escape RPC.  
   
-2.  Chamar o **ICommandWithParameters:: SetParameterInfo** método para descrever parâmetros ao provedor. Preencha as informações sobre o parâmetro em uma matriz de estruturas PARAMBINDINFO.  
+2.  Chame o **ICommandWithParameters:: SetParameterInfo** método para descrever parâmetros ao provedor. Preencha as informações sobre o parâmetro em uma matriz de estruturas PARAMBINDINFO.  
   
 3.  Crie um conjunto de associações (um para cada criador de parâmetro) usando uma matriz de estruturas DBBINDING.  
   
-4.  Crie um acessador para os parâmetros definidos usando o **IAccessor:: CreateAccessor** método. **CreateAccessor** cria um acessador de um conjunto de associações.  
+4.  Criar um acessador para os parâmetros definidos usando o **IAccessor:: CreateAccessor** método. **CreateAccessor** cria um acessador de um conjunto de associações.  
   
 5.  Preencha a estrutura DBPARAMS.  
   
-6.  Chamar o **Execute** comando (no caso, uma chamada para um procedimento armazenado).  
+6.  Chame o **Execute** comando (nesse caso, uma chamada para um procedimento armazenado).  
   
 7.  Processar o conjunto de linhas e liberá-lo usando o **IRowset:: Release** método.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "35699177"
   
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
@@ -402,6 +402,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de resultados de processamento &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Tópicos explicativos de resultados de processamento &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229006"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   Para definir consultas de texto completo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os predicados de texto completo (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE). Elas dão suporte à avançada sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] que comporta uma variedade de formas de termos de consulta. Para gravar consultas de texto completo, você deve saber quando e como usar esses predicados e funções.  
@@ -214,14 +213,14 @@ GO
   
 
   
-##  <a name="varbinary"></a> Consultando varbinary (max) e xml colunas  
+##  <a name="varbinary"></a> Consultando varbinary (max) e colunas de xml  
  Se uma coluna `varbinary(max)`, `varbinary` ou `xml` tiver um índice de texto completo, poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.  
   
 > [!IMPORTANT]  
 >  A pesquisa de texto completo também funciona com colunas de imagem. No entanto, o `image` tipo de dados será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse tipo de dados em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que o utilizam. Use o `varbinary(max)` em vez disso, o tipo de dados.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>Dados varbinary (max) ou varbinary  
- Um único `varbinary(max)` ou `varbinary` coluna pode armazenar muitos tipos de documentos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a qualquer tipo de documento para o qual um filtro está instalado e disponível no sistema operacional. O tipo de cada documento é identificado pela extensão de arquivo do documento. Por exemplo, no caso de uma extensão de arquivo .doc, a pesquisa de texto completo usa o filtro que dá suporte a documentos do Microsoft Word. Para obter uma lista dos tipos de documento disponíveis, veja a exibição de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
+ Uma única `varbinary(max)` ou `varbinary` coluna pode armazenar muitos tipos de documentos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a qualquer tipo de documento para o qual um filtro está instalado e disponível no sistema operacional. O tipo de cada documento é identificado pela extensão de arquivo do documento. Por exemplo, no caso de uma extensão de arquivo .doc, a pesquisa de texto completo usa o filtro que dá suporte a documentos do Microsoft Word. Para obter uma lista dos tipos de documento disponíveis, veja a exibição de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
  Observe que o Mecanismo de Texto Completo pode aproveitar os filtros existentes instalados no sistema operacional. Para que você possa usar filtros do sistema operacional, separadores de palavras e lematizadores, carregue-os na instância do servidor da seguinte maneira:  
   
@@ -236,7 +235,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>Dados xml  
  Um `xml` coluna de tipo de dados armazena apenas fragmentos e documentos XML, e somente o filtro XML é usado para os documentos. Portanto, uma coluna de tipo é desnecessária. Em `xml` colunas, o índice de texto completo indexa o conteúdo dos elementos XML, mas ignora a marcação XML. Os valores de atributos são indexados como texto completo, a menos que sejam valores numéricos. Marcas de elemento são usadas como limites do token. Há suporte a fragmentos e documentos XML ou HTML bem formados que contêm vários idiomas.  
   
- Para obter mais informações sobre como consultar em uma `xml` coluna, consulte [usar pesquisa de texto completo com colunas XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Para obter mais informações sobre como fazer consultas em uma `xml` coluna, consulte [Use a pesquisa de texto completo com colunas XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -258,7 +257,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="Simple_Term"></a> Procurando uma palavra ou frase (termo simples) específica  
- Você pode usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para pesquisar uma tabela para uma frase específica. Por exemplo, se você deseja pesquisar a `ProductReview` tabela o [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] banco de dados para localizar todos os comentários sobre um produto com a frase "curva de aprendizado", você pode usar o predicado CONTAINS da seguinte maneira:  
+ Você pode usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para pesquisar uma tabela para uma frase específica. Por exemplo, se você deseja pesquisar o `ProductReview` na tabela a [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] banco de dados para localizar todos os comentários sobre um produto com a frase "curva de aprendizado", você pode usar o predicado CONTAINS da seguinte maneira:  
   
 ```  
 USE AdventureWorks2012  
@@ -274,7 +273,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> Fazendo pesquisas de prefixo (termo de prefixo)  
+###  <a name="Prefix_Term"></a> Executando pesquisas de prefixo (termo de prefixo)  
  Você pode usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases com um prefixo especificado. Todas as entradas na coluna que contêm o texto que começa com o prefixo especificado são retornadas. Por exemplo, para procurar todas as linhas que contêm o prefixo `top`-, como em `top``ple`, `top``ping`e `top`. A consulta parece com:  
   
 ```  

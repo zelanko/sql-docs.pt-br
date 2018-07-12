@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Queries element
 ms.assetid: e199412a-23f1-4d11-9e72-11f184ad9602
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9e0da352d9f76166a0fdf8b0ce5b88bf0a026703
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6288deae2bbc6590265c66068f761ae51e9d0647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277432"
 ---
 # <a name="queries-element-xmla"></a>Elemento Queries (XMLA)
   Contém uma coleção de elementos [Query](query-element-xmla.md) usada pelo comando [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) durante a otimização com base em uso.  

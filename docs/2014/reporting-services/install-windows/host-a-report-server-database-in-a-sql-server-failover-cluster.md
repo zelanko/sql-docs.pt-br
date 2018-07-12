@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d2a0a0fc008c2bdb08786d7cf32f76310f259b6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 554f8cef21fc9147a7ee48fdb6cd4f6759d57759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166257"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>Hospedar um banco de dados do servidor de relatório em um cluster de failover do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte de clustering de failover, permitindo o uso de vários discos para uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O clustering de failover tem suporte somente para o banco de dados do servidor de relatório; não é possível executar o serviço Servidor de Relatório como parte de um cluster de failover.  
@@ -30,6 +30,6 @@ ms.locfileid: "36008566"
   
 ## <a name="see-also"></a>Consulte também  
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
   

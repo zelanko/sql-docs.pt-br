@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b604e8a3378285553542e4b03f6ba7c419315941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 53bf187b7a41ffdcb3dfc474daa4ce8dcf2bd4aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153707"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Especificar uma área do gráfico para uma série (Construtor de Relatórios e SSRS)
   O gráfico é o contêiner de nível superior que inclui a borda exterior, o título e a legenda do gráfico. Por padrão, o gráfico contém uma área de gráfico padrão. A área do gráfico não é visível na superfície do gráfico, mas você pode imaginá-la como um contêiner que inclui somente os rótulos e o título dos eixos e a área de plotagem de uma ou mais séries. A ilustração a seguir mostra o conceito de áreas de gráfico dentro de um único gráfico.  
@@ -47,11 +47,11 @@ ms.locfileid: "36009766"
 4.  (Opcional) Alinhe as áreas de gráfico verticalmente. Para isso, clique com o botão direito do mouse no gráfico e selecione **Propriedades da Área do Gráfico**. Em **Alinhamento**, selecione outra área de gráfico com a qual você deseja alinhar a área de gráfico selecionada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Várias séries em um gráfico &#40;SSRS e construtor de relatórios&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Formatando pontos de dados em um gráfico &#40;SSRS e construtor de relatórios&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Várias séries em um gráfico &#40;relatórios e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando pontos de dados em um gráfico &#40;relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Gráficos polares &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gráficos de forma &#40;Construtor de Relatórios e SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

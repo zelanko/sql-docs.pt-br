@@ -1,14 +1,11 @@
 ---
-title: Conectando-se a um banco de dados do Microsoft SQL Azure usando o SQL Server Native Client | Microsoft Docs
+title: Conectar-se a um banco de dados do SQL do Azure do Windows usando o SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: native-client|applications
 ms.suite: sql
-ms.technology: ''
+ms.prod: sql
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
@@ -17,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1dc0139efdaa17cb1046b0661d9e704232a1df4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 797df7fad55e55b38fcfd2ed78a308b1eb7ac9d1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949771"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413047"
 ---
 # <a name="connecting-to-a-windows-azure-sql-database-using-sql-server-native-client"></a>Conectando a um banco de dados SQL do Windows Azure usando o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

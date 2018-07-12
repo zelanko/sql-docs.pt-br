@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152077"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Índices XML podem ser criados em `xml` colunas de tipo de dados. Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
@@ -107,7 +107,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  O processador de consultas usa índice XML primário para consultas que envolvem [Métodos de tipo de dados xml](/sql/t-sql/xml/xml-data-type-methods) e retorna valores escalares ou as subárvores XML do próprio índice primário. (Esse índice armazena todas as informações necessárias para reconstruir a instância XML.)  
   
- Por exemplo, a consulta a seguir retorna informações resumidas armazenadas no `CatalogDescription``xml` type column no `ProductModel` tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
+ Por exemplo, a consulta a seguir retorna informações resumidas armazenadas do `CatalogDescription``xml` type column no `ProductModel` tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -187,7 +187,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Nessa situação, o valor da pesquisa de <`number`> é conhecido, mas ele pode aparecer em qualquer lugar na instância XML como um filho do elemento <`telephoneNumber`>. Esse tipo de consulta pode se beneficiar de um índice de pesquisa baseado em um valor específico.  
   
 ### <a name="property-secondary-index"></a>Índice XML secundário PROPERTY  
- Consultas que recuperam um ou mais valores de instâncias XML individuais podem se beneficiar de um índice PROPERTY. Esse cenário ocorre ao recuperar propriedades de objetos usando o **Value ()** método o `xml` tipo e quando o valor da chave primária do objeto é conhecido.  
+ Consultas que recuperam um ou mais valores de instâncias XML individuais podem se beneficiar de um índice PROPERTY. Esse cenário ocorre ao recuperar as propriedades do objeto, usando o **Value ()** método o `xml` tipo e quando o valor de chave primária do objeto é conhecido.  
   
  O índice PROPERTY é construído nas colunas (PK, Caminho e valor do nó) do índice XML primário, em que PK é a chave primária da tabela base.  
   

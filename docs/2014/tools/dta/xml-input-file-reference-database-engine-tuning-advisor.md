@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183483"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referência do arquivo de entrada XML (Orientador de Otimização do Mecanismo de Banco de Dados)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode usar um arquivo de entrada XML para ajustar o banco de dados Este arquivo XML define os bancos de dados, tabelas, arquivos ou tabelas da carga de trabalho e as opções a serem usadas na sessão de ajuste. Você também pode usar este arquivo para indicar uma configuração específica de usuário a fim de realizar uma análise hipotética.  
@@ -48,7 +48,7 @@ ms.locfileid: "36009042"
   
 -   [Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [Elemento Server &#40;DTA&#41;](server-element-dta.md)  
+-   [Elemento de servidor &#40;DTA&#41;](server-element-dta.md)  
   
 -   [Elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36009042"
   
 -   [Nome de elemento para o servidor &#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [Elemento de banco de dados para o servidor &#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [Elemento Database para servidor &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Elementos de Carga de Trabalho  
   
@@ -92,35 +92,35 @@ ms.locfileid: "36009042"
   
 ## <a name="configuration-elements"></a>Elementos de configuração  
   
--   [Elemento Server para configuração &#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [Elemento Server para a configuração &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
 -   [Elemento de banco de dados para a configuração &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
 -   [Elemento de recomendação &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [Criar elemento &#40;DTA&#41;](create-element-dta.md)  
+-   [Criar o elemento &#40;DTA&#41;](create-element-dta.md)  
   
 -   [Elemento de índice &#40;DTA&#41;](index-element-dta.md)  
   
--   [Nome de elemento de índice &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [Nomeie o elemento de índice &#40;DTA&#41;](name-element-for-index-dta.md)  
   
--   [Elemento de coluna para índice &#40;DTA&#41;](column-element-for-index-dta.md)  
+-   [Elemento Column para Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [Nome de elemento para a coluna &#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [Nomeie o elemento para a coluna &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [Elemento de grupo de arquivos para índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Elemento FileGroup para o índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Elementos de banco de dados  
   
--   [Nome de elemento de banco de dados &#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [Nome de elemento para o banco de dados &#40;DTA&#41;](name-element-for-database-dta.md)  
   
 -   [Elemento de esquema para o banco de dados &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [Nome de elemento de esquema &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Nome de elemento para o esquema &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [Elemento de tabela para esquema &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Elemento de tabela para esquema de &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [Nome de elemento de tabela &#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [Nomeie o elemento para a tabela &#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)  

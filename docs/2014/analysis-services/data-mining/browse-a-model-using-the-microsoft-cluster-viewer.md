@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - discrimination [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c513ddd212c8f5ab0f2b344008d36c1a2e352b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ebba3499c092ab89bacb4011671b0f90df67eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183555"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Procurar um modelo usando o Visualizador de Cluster da Microsoft
   O Visualizador de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o algoritmo de Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . O algoritmo Cluster da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de segmentação para ser usado na exploração de dados para identificar anomalias nos dados e criar previsões. Para obter mais informações sobre esse algoritmo, consulte [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "36010311"
  [Voltar ao Início](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de Clustering da Microsoft](microsoft-clustering-algorithm.md)   
+ [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Tarefas do Visualizador do modelo e instruções de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   

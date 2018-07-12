@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162117"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta baseado em texto (Construtor de Relatórios)
   Use o designer de consulta baseado em texto para especificar uma consulta usando o idioma de consulta suportado pela fonte de dados, execute a consulta e exiba os resultados no tempo de design. Você pode especificar várias instruções do [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o designer de consulta baseado em texto não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de designer de consulta padrão para muitos tipos de fontes de dados.  
@@ -60,7 +60,7 @@ ms.locfileid: "36010157"
 |Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
- A consulta a seguir retorna a lista de sobrenomes do [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados `ContactType` de tabela para o `Person` esquema.  
+ A consulta a seguir retorna a lista de sobrenomes dos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados `ContactType` de tabela para o `Person` esquema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  Quando você seleciona o **Comando typeTableDirect**, o designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. Se você inserir uma tabela e clicar no botão **Executar** , todas as colunas dessa tabela serão retornadas.  
   
 #### <a name="example"></a>Exemplo  
- Para um tipo de fonte de dados OLE DB, a seguinte consulta retorna um conjunto de resultados para tipos de todos os contatos no [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados.  
+ Para um tipo de fonte de dados OLE DB, a seguinte consulta retorna um conjunto de resultados para tipos de contato de todos os [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** banco de dados.  
   
  `Person.ContactType`  
   

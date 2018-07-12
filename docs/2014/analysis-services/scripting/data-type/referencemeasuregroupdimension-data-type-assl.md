@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca3299aa36df705a107fac63bc5ae726b606e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159299"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Tipo de dados ReferenceMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa uma dimensão que está indiretamente relacionada à tabela de fatos por meio de uma dimensão intermediária. Por exemplo, um grupo de medidas Vendas pode fazer referência a uma dimensão Geografia, que está relacionada pela dimensão Cliente.  

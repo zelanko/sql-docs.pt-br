@@ -1,5 +1,5 @@
 ---
-title: Check-Out de arquivos | Microsoft Docs
+title: Fazer Check-Out de arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Visual Studio.SourceControl.CheckOutDialog
 helpviewer_keywords:
 - checking out files
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8b36e03ff939cb7ddbc15bdec1d41532a87d9b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 319555e7a87922b65ff4846b8b5830041893d3c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167167"
 ---
 # <a name="check-out-files"></a>Fazer check-out de arquivos
   A menos que você tenha configurado o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para permitir a edição de arquivos que tenham feito check-in, faça o check-out de um arquivo antes de modificá-lo. Quando você faz o check-out de um arquivo, uma cópia da versão de arquivo é copiada no disco local e o atributo somente leitura é removido.  
@@ -52,10 +52,10 @@ ms.locfileid: "36010506"
      **Comentários**  
      Especifique um comentário a ser associado com a operação de check-out.  
   
-     **Não a caixa de diálogo Mostrar Check-Out ao fazer o check-out de itens**  
+     **Não mostrar Check-Out caixa de diálogo, ao fazer check-out de itens**  
      Suprima a caixa de diálogo durante operações de check-out.  
   
-     **Exibição simples**  
+     **Modo de exibição simples**  
      Exiba os itens de check-out como listas simples em suas conexões de controle do código fonte.  
   
      **Editar**  
@@ -75,7 +75,7 @@ ms.locfileid: "36010506"
   
 ## <a name="see-also"></a>Consulte também  
  [Editar arquivos com Check-In](../../2014/database-engine/edit-checked-in-files.md)   
- [Automaticamente Check-Out de arquivos na edição](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
+ [Check-Out de arquivos na edição automático](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
  [Desfazer check-outs](../../2014/database-engine/undo-checkouts.md)   
  [Gerenciar check-outs](../../2014/database-engine/manage-checkouts.md)  
   

@@ -2,27 +2,24 @@
 title: Tipos definidos pelo usuário CLR grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5cadfa288f94f7713f7d33cb74cf9c183aec14e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694497"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415425"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos de dados CLR grandes definidos pelo usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +30,9 @@ ms.locfileid: "35694497"
  Para obter mais informações, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) e [Large CLR User-Defined tipos &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="use-cases"></a>Casos de uso  
- Para o ODBC, o suporte a UDTs grandes inclui a capacidade de enviar valores UDT em partes como parâmetros de dados em execução. Isso é feito usando SQLPutData.  
+ Para o ODBC, o suporte a UDTs grandes inclui a capacidade de enviar valores UDT em partes como parâmetros de dados em execução. Isso é feito usando o SQLPutData.  
   
- Para OLE DB, suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação de ISequentialStream.  
+ Para OLE DB, suporte a UDTs grandes inclui a capacidade de transmitir valores de UDT para e do servidor usando a associação de ISequentialStream.  
   
  Os UDTs inferiores ou iguais a 8.000 bytes se comportarão como no SQL Server 2005. Para OLE DB, você ainda pode transmitir UDTs pequenos usando associação de ISequentialStream.  
   

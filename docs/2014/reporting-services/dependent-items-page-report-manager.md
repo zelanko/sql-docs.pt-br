@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164107"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página Itens Dependentes (Gerenciador de Relatórios)
   Use a página Itens Dependentes para exibir uma lista de relatórios e modelos que referenciam uma fonte de dados compartilhada. O ícone para cada tipo de item indica se é um relatório ou um modelo. Essa página pode ser exibida em exibição de lista ou exibição de detalhes. Use exibição de detalhes para mostrar mais informações sobre cada item. Opções adicionais de página estão disponíveis na exibição de detalhes. Para ajudar a gerenciar a fonte de dados compartilhada, essa página fornece links para relatórios e modelos que usam a fonte de dados, métricas de quando o relatório ou modelo foi executado ou modificado pela última vez e botões Excluir e Mover para que você possa facilmente remover relatórios e modelos que não são mais usados ou movê-los para um local diferente enquanto determina se eles ainda serão necessários.  

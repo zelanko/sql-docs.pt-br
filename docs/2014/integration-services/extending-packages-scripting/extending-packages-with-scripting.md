@@ -18,13 +18,13 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 84f584a8e0b9a832dfc5d6e7bf209976abdfad7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06a199eebc0cde91c928f2099118996cf9d6bf50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158597"
 ---
 # <a name="extending-packages-with-scripting"></a>Estendendo pacotes com scripts
   Se você considerar que os componentes internos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não atendem às suas necessidades, poderá ampliar a capacidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] codificando suas próprias extensões. Há duas opções distintas para estender seus pacotes: você pode escrever código dentro dos wrappers avançados fornecidos pela tarefa e o componente Script, ou pode criar extensões personalizadas do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do zero com a derivação das classes base fornecidas pelo modelo de objeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "36009381"
  [Compilar Pacotes Programaticamente](../building-packages-programmatically/building-packages-programmatically.md)  
  Descreve como criar, configurar, executar, carregar, salvar e gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programaticamente.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para os mais recentes downloads, artigos, exemplos e vídeos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para os downloads mais recentes, artigos, exemplos e vídeos da [!INCLUDE[msCoName](../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

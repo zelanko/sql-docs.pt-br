@@ -3,12 +3,9 @@ title: sys. remote_data_archive_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,27 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_databases catalog view
 ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 599621bb64cb11ee70646204689a4b1d0bf43574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84234467e626e8168b0d0a9b2a29f5c9cb5ad70f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974301"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428225"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Ampliar as exibições do catálogo de banco de dados - sys. remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database exibições do catálogo – sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada banco de dados remoto que armazena dados de um banco de dados de local habilitada para ampliação.  
+  Contém uma linha para cada banco de dados remoto que armazena dados de um banco de dados de local habilitada para Stretch.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**Int**|O identificador de local gerado automaticamente do banco de dados remoto.|  
+|**remote_database_id**|**int**|O identificador de local gerado automaticamente do banco de dados remoto.|  
 |**remote_database_name**|**sysname**|O nome do banco de dados remoto.|  
-|**data_source_id**|**Int**|A fonte de dados usada para se conectar ao servidor remoto|  
+|**data_source_id**|**int**|A fonte de dados usada para se conectar ao servidor remoto|  
   
 ## <a name="see-also"></a>Consulte também  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158987"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
@@ -95,7 +95,7 @@ ms.locfileid: "36324650"
 9. Crie tarefas no contêiner Loop Foreach que usam o gerenciador de conexões do Excel para executar as mesmas operações em cada tabela do Excel na pasta de trabalho especificada. Se você usar uma tarefa Script para examinar o nome de tabela enumerado ou para trabalhar com tabelas individualmente, lembre-se de adicionar a variável de cadeia à propriedade ReadOnlyVariables da tarefa Script.  
   
 ## <a name="see-also"></a>Consulte também  
- [Importar dados do Excel ou exportar dados para o Excel com o SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar um contêiner de Loop Foreach](foreach-loop-container.md)   
+ [Importar dados do Excel ou exportar dados para o Excel com o SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar um contêiner Loop Foreach](foreach-loop-container.md)   
  [Adicionar ou alterar uma expressão de propriedade](../expressions/add-or-change-a-property-expression.md)   
  [Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)   
  [Origem do Excel](../data-flow/excel-source.md)   

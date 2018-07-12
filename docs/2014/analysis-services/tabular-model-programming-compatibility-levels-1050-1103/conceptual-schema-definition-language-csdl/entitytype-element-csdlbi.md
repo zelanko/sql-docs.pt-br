@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277592"
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
   O elemento `EntityType` é um tipo complexo que representa a estrutura de uma entidade de alto nível, como um cliente ou pedido, em um modelo de dados. O `bi:EntityType` elemento estende a definição de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usado no [estrutura de dados de entidade](http://msdn.microsoft.com/library/bb399567.aspx).  
@@ -33,11 +33,11 @@ ms.locfileid: "36008260"
 |Nome|É obrigatório|Description|  
 |----------|-----------------|-----------------|  
 |Sumário|não|Uma cadeia de caracteres que contém os possíveis tipos de dados em uma coluna. O valor é derivado do valor de DimensionAttributeTypeEnumType no modelo de dados.<br /><br /> Se o valor de DimensionAttributeTypeEnumType for "ExtendedType", o valor de Contents será derivado do elemento ExtendedType de DimensionAttribute. O cliente não é necessário para responder a esses valores.|  
-|DefaultDetails|não|Uma lista de referências de propriedade que representam o conjunto de colunas na tabela.<br /><br /> Consulte [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
-|DefaultImage|não|Uma referência a uma coluna que contém a imagem que ilustra a entidade.<br /><br /> Em modelos multidimensionais, esse elemento corresponde a um atributo binário no atributo de dimensão. Se esse atributo estiver presente, o elemento deverá conter exatamente um elemento MemberRef.<br /><br /> Consulte [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DefaultMeasure|não|Uma referência a uma medida na entidade que deve ser usada como o padrão ao fazer cálculos sobre a entidade. Se não for especificado, SUM será o padrão.<br /><br /> Consulte [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DisplayKey|não|Uma lista de referências a colunas ou a extremidades de função que constituem um identificador forte que identifica exclusivamente uma instância de entidade.<br /><br /> Consulte [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
-|Hierarquia|não|Uma lista de hierarquias no modelo.<br /><br /> Consulte [elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
+|DefaultDetails|não|Uma lista de referências de propriedade que representam o conjunto de colunas na tabela.<br /><br /> Ver [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
+|DefaultImage|não|Uma referência a uma coluna que contém a imagem que ilustra a entidade.<br /><br /> Em modelos multidimensionais, esse elemento corresponde a um atributo binário no atributo de dimensão. Se esse atributo estiver presente, o elemento deverá conter exatamente um elemento MemberRef.<br /><br /> Ver [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DefaultMeasure|não|Uma referência a uma medida na entidade que deve ser usada como o padrão ao fazer cálculos sobre a entidade. Se não for especificado, SUM será o padrão.<br /><br /> Ver [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DisplayKey|não|Uma lista de referências a colunas ou a extremidades de função que constituem um identificador forte que identifica exclusivamente uma instância de entidade.<br /><br /> Ver [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
+|Hierarquia|não|Uma lista de hierarquias no modelo.<br /><br /> Ver [elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
 |ReferenceName|Sim|Um identificador que pode ser usado para fazer referência a essa entidade em uma consulta DAX (Expressões de Análise de Dados).<br /><br /> Se esse atributo não estiver presente, será usado o nome do campo totalmente qualificado da entidade.|  
 |SortMembers|não|Uma lista de propriedades na qual classificar. O atributo SortDirection indica se a ordem é crescente ou decrescente.|  
   

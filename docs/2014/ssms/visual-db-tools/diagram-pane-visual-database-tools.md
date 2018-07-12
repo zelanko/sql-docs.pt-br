@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
 - View Designer, Diagram pane
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4132550e0248e5f3c5db505783f4bbadf0a544e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3243b5fbf5fda0afea9fdbfa3fc26fbfbeee1bae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210376"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Painel de Diagrama (Visual Database Tools)
   O painel Diagrama apresenta uma exibição gráfica das tabelas ou objetos com valor de tabela selecionados na conexão de dados. Mostra também todas as relações de junção entre eles.  
@@ -100,8 +100,8 @@ ms.locfileid: "36007843"
 |![Ícone das Ferramentas de Banco de Dados Visual](../../database-engine/media//dv3wbio.gif "Ícone das Ferramentas de Banco de Dados Visual")|O Designer de Consulta e Exibição não pode determinar o tipo de junção|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de consultas e modos de exibição de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Painel de critérios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [Tópicos explicativos de consultas e exibições de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Painel critérios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 722a2b825b0ec56b7932de29a74faf74627834f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153677"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propriedades do Servidor (página Segurança) - Reporting Services
   Use esta página para desativar recursos que podem comprometer um servidor de relatório potencialmente. A desativação desse recurso limitará algumas funcionalidades, mas pode aprimorar a segurança geral do servidor de relatório, reduzindo ameaças específicas.  
@@ -37,13 +37,13 @@ ms.locfileid: "36011300"
  **Habilitar Relatórios Ad Hoc**  
  Especifique se os usuários podem executar consultas ad hoc de um relatório do Construtor de Relatórios, onde novos relatórios são automaticamente gerados quando um usuário clica nos dados de interesse.  
   
- A definição dessa opção determina se a propriedade `EnableLoadReportDefinition` no servidor de relatório é definida como `True` ou `False`. Se você desmarcar essa opção, a propriedade será definida como `False` e o servidor não irá gerar relatórios de clickthrough criados durante a exploração de dados de relatório. Todas as chamadas para o método `LoadReportDefinition` serão bloqueadas.  
+ A definição dessa opção determina se a propriedade `EnableLoadReportDefinition` no servidor de relatório é definida como `True` ou `False`. Se você desmarcar essa opção, a propriedade será definida como `False` e o servidor não gerará relatórios de clickthrough criados durante a exploração de dados de relatório. Todas as chamadas para o método `LoadReportDefinition` serão bloqueadas.  
   
- Desativar essa opção reduz uma ameaça de que um usuário mal-intencionado inicie um ataque de negação de serviço, carregando o servidor de relatório com `LoadReportDefinition` solicitações.  
+ Desativação dessa opção reduz uma ameaça de que um usuário mal-intencionado inicie um ataque de negação de serviço, sobrecarregando o servidor de relatório com `LoadReportDefinition` solicitações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Especificar credenciais e informações de Conexão para fontes de dados de relatórios] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor na Ajuda de F1 do Management Studio de relatório](report-server-in-management-studio-f1-help.md)  
+ [Especificar credenciais e informações de Conexão para fontes de dados de relatórios] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor de relatório na Ajuda de F1 do Management Studio](report-server-in-management-studio-f1-help.md)  
   
   

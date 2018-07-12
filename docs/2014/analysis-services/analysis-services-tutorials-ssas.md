@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4b933161864612d4bf150789ada911169a5f03d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 204166a6e87f2b8ebdca6b5d2e565b413400da00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183451"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriais do Analysis Services (SSAS)
   Esta seção contém tutoriais para o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  

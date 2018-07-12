@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CommitTransaction command
 ms.assetid: 1cd814dc-a0be-4305-b44d-faf15e843f7d
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 85db6f53386023acb32a9e853ad1d69f92f6860c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 96510ca95048945bca1b822a5dbc72b02af11fa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152757"
 ---
 # <a name="committransaction-element-xmla"></a>Elemento CommitTransaction (XMLA)
-  Confirma uma transação na sessão atual com um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
+  Confirma uma transação na sessão atual com uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   

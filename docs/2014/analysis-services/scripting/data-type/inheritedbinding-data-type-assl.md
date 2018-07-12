@@ -22,15 +22,15 @@ helpviewer_keywords:
 - InheritedBinding data type
 ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e05749878a2ac542dd68c982709a8efe4f86368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb5895ab8435ed92717df8b2e016bc7458efa84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151827"
 ---
 # <a name="inheritedbinding-data-type-assl"></a>Tipo de dados InheritedBinding (ASSL)
   Define um tipo de dados derivado que indica que um [MeasureGroupAttribute](measuregroupattribute-data-type-assl.md) elemento herda suas associações do atributo.  
@@ -58,9 +58,9 @@ ms.locfileid: "36011914"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter informações adicionais sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança de `Binding` tipos, consulte [ &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
+ Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [ &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.InheritedBinding>.  
   

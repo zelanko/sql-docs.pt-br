@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exploring data [Analysis Services]
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4fcb284eeb85b820ce0a194787337fa51e9e345
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d8f26a22f2cda64a6a9999ce4a2a730e4e5c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183448"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorar dados em uma exibição da fonte de dados (Analysis Services)
   Você pode usar a caixa de diálogo **Explorar Dados** do Designer de Exibição da Fonte de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para procurar dados para uma tabela, exibição ou consulta nomeada de uma DSV (exibição da fonte de dados). Ao explorar os dados no Designer de Exibição da Fonte de Dados, você pode exibir o conteúdo de cada coluna de dados da tabela, exibição ou consulta nomeada selecionada. Exibir o conteúdo real é útil para determinar se todas as colunas são necessárias, se os cálculos nomeados são requeridos para torná-los mais amigável para o usuário e melhorar a usabilidade e se os cálculos nomeados ou as consultas nomeadas existentes retornam os valores previstos.  
@@ -42,7 +42,7 @@ ms.locfileid: "36010784"
   
 3.  Clique com o botão direito do mouse na tabela, exibição ou consulta nomeada que contém os dados que você deseja exibir e, em seguida, clique em **Explorar Dados**.  
   
-     Os dados de origem subjacente da tabela, exibição, ou consulta nomeada na exibição da fonte de dados são consultas e os resultados aparecem no **explorar \<nome do objeto > tabela** guia.  
+     Os dados fonte subjacente da tabela, exibição ou consulta nomeada na exibição da fonte de dados são consultas e os resultados aparecem na **explorar \<nome do objeto > tabela** guia.  
   
 4.  Sobre o **explorar \<nome do objeto > tabela** barra de ferramentas, clique no **opções de amostragem** ícone.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36010784"
   
 5.  Clique em **OK** ou em **Cancelar** , conforme apropriado.  
   
-6.  Para obter uma nova amostra dos dados, clique em **criar nova amostra dos dados** no **explorar \<nome do objeto > tabela** barra de ferramentas.  
+6.  Para criar nova amostra dos dados, clique em **criar nova amostra dos dados** sobre o **explorar \<nome do objeto > tabela** barra de ferramentas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  

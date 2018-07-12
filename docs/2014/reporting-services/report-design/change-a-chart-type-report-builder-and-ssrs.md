@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c2aadf05db9ddef965acbb7164068dd975d0869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 58e47fd86d19881c96d5ff13a87d846ca4016ac8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161917"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Alterar um tipo de gráfico (Construtor de Relatórios e SSRS)
-  Na primeira inserção de um gráfico em um relatório, o **Selecionar tipo de gráfico** caixa de diálogo é exibida. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  
+  Quando você primeiro inserir um gráfico em um relatório, o **Selecionar tipo de gráfico** caixa de diálogo é exibida. Se você cancelar essa caixa de diálogo, um tipo de gráfico Coluna será adicionado por padrão.  
   
  A qualquer momento durante a criação do relatório, é possível alterar o tipo de gráfico para aquele mais adequado ao relatório. É importante escolher o tipo de gráfico correto para o tipo de dados para que ele seja interpretado corretamente. Você deve entender as características de cada tipo de gráfico para determinar qual deles é o mais adequado para seus dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36008347"
   
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Medidores &#40;SSRS e construtor de relatórios&#41;](gauges-report-builder-and-ssrs.md)   
- [Adicionar um gráfico a um relatório &#40;SSRS e construtor de relatórios&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Medidores &#40;relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Adicionar um gráfico a um relatório &#40;relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

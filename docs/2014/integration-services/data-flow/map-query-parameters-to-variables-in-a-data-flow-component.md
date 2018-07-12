@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameters [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a018ddc6afb2d9a24794fa99c95fd336e4ac29ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 614681f05b5afb288ca93d543ebafc0e5b7a4322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168987"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
   Quando você configura a fonte OLE DB para usar consultas parametrizadas, pode mapear os parâmetros para variáveis.  
@@ -57,7 +57,7 @@ ms.locfileid: "36010275"
 10. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Origem de OLE DB](ole-db-source.md)   
+ [Origem OLE DB](ole-db-source.md)   
  [Transformação Pesquisa](transformations/lookup-transformation.md)  
   
   

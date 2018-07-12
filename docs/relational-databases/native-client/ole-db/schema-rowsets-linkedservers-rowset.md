@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08dabc873c9d80b3759f6a425f9e963064773350
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949821"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421035"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas de esquema - conjunto de linhas LINKEDSERVERS
+# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  O **LINKEDSERVERS** linhas enumera fontes de dados da organização que podem participar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas.  
+  O **LINKEDSERVERS** conjunto de linhas enumera fontes de dados da organização que podem participar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas.  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   

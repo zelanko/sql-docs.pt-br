@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89f5f5b51bbba9ae7629d5c6dd889ad8ac8bf81b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 09f40b94ef25384fb36223964d77afacf98ea9ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184683"
 ---
 # <a name="collections-master-data-services"></a>Coleções (Master Data Services)
   Uma coleção é um grupo de membros folha e consolidados de uma única entidade. Use coleções quando não precisar de uma hierarquia completa e desejar exibir agrupamentos diferentes de membros para relatório ou análise, ou quando precisar criar uma taxonomia.  
@@ -40,7 +40,7 @@ ms.locfileid: "36009165"
 >  Para poder criar uma coleção, a entidade deve estar habilitada para hierarquias explícitas. Para obter mais informações, consulte [habilitar uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="subscription-views-for-collections"></a>Exibições de assinatura para coleções  
- Há dois tipos de exibições de assinatura que mostram coleções. O formato **Atributos da coleção** mostra uma lista de coleções e todos os atributos relacionados às coleções (como descrição ou proprietário). O formato **Coleções** mostra todos os membros em todas as coleções, bem como cada peso de membros e a ordem de classificação. Para obter mais informações, consulte [exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
+ Há dois tipos de exibições de assinatura que mostram coleções. O formato **Atributos da coleção** mostra uma lista de coleções e todos os atributos relacionados às coleções (como descrição ou proprietário). O formato **Coleções** mostra todos os membros em todas as coleções, bem como cada peso de membros e a ordem de classificação. Para obter mais informações, consulte [exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
   
  Se você definir valores de peso para membros específicos em uma coleção, estes valores estarão disponíveis em exibições de assinatura relacionadas.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "36009165"
   
 -   [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

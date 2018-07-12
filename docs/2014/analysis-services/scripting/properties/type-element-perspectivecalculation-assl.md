@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229566"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Elemento Type (PerspectiveCalculation) (ASSL)
-  Indica o tipo do [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.  
+  Indica o tipo dos [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,11 +67,11 @@ ms.locfileid: "36010984"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Membro*|membro calculado|  
-|*definir*|Conjunto nomeado|  
+|*Definir*|Conjunto nomeado|  
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

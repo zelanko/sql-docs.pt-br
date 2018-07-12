@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9a67a57b29bf014326848b49e40bdbe5bc283dd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 42a979937e087a1404393fe3bf4f6c6566ca5678
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239606"
 ---
 # <a name="caption-element-xmla"></a>Elemento Caption (XMLA)
   Contém informações sobre a legenda do pai [HierarchyInfo](hierarchyinfo-element-xmla.md) ou [membro](member-element-xmla.md) elemento.  

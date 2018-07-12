@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152097"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão de renderização Excel do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] renderiza um relatório para o formato nativo do [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  
@@ -33,10 +33,10 @@ ms.locfileid: "36012020"
 >   
 >  Para obter mais informações sobre o problema, consulte [Corrigir: O SSRS 2012 não consegue exportar um relatório maior que 10 MB para o formato Excel](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  Para obter o service pack mais recente do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], consulte [como obter o service pack mais recente para o SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  Para obter o service pack mais recente do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], consulte [como obter o service pack mais recente do SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  Quando você define um parâmetro de tipo `String`, é exibida uma caixa de texto que pode ter qualquer valor para o usuário. Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão, um script ou um URL no valor de parâmetro e processar o relatório em Excel. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
+>  Quando você define um parâmetro de tipo `String`, o usuário é apresentado com uma caixa de texto que pode ter qualquer valor. Se um parâmetro de relatório não estiver associado a um parâmetro de consulta e os valores de parâmetro forem incluídos no relatório, um usuário do relatório poderá digitar a sintaxe de expressão, um script ou um URL no valor de parâmetro e processar o relatório em Excel. Se outro usuário exibir o relatório e clicar no conteúdo do parâmetro renderizado, o usuário poderá executar acidentalmente o script ou link mal-intencionado.  
 >   
 >  Para reduzir o risco de execução acidental de scripts mal-intencionados, só abra relatórios renderizados de fontes confiáveis. Para obter mais informações sobre como proteger relatórios, consulte [Protegendo Relatórios e Recursos](../security/secure-reports-and-resources.md).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36012020"
 ## <a name="excel-renderer"></a>Renderizador do Excel  
   
 ### <a name="excel-2007-2010-renderer"></a>Renderizador do Excel 2007-2010  
- Em [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o renderizador do Excel padrão é a versão compatível com [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Esta é a opção do **Excel** listada pelos menus **Exportando** no Gerenciador de Relatórios e no SharePoint.  
+ Na [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o renderizador do Excel padrão é a versão compatível com [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Esta é a opção do **Excel** listada pelos menus **Exportando** no Gerenciador de Relatórios e no SharePoint.  
   
  Para usar o renderizador do Excel padrão em vez do renderizador anterior do Excel 2003, instale o Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint, para permitir que versões anteriores do Excel abram os arquivos exportados.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36012020"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- A extensão EXCELOPENXML define o renderizador do Excel para o Excel 2007-2010. A extensão EXCEL define a versão do Excel 2003. `Visible = “false”` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ A extensão EXCELOPENXML define o renderizador do Excel para o Excel 2007-2010. A extensão EXCEL define a versão do Excel 2003. `Visible = “false”` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Diferenças entre os renderizadores do Excel 2007-2010 e do Excel 2003  
  Relatórios, renderizando usando o renderizador do Excel ou do Excel 2003, costumam ser idênticos e apenas em raras circunstâncias você notará diferenças entre os dois formatos. A tabela a seguir compara os renderizadores do Excel e do Excel 2003.  
@@ -229,7 +229,7 @@ ms.locfileid: "36012020"
  As seções de cabeçalho e rodapé suportam um máximo de 256 caracteres, inclusive a marcação. Se este limite for excedido, o processador do Excel removerá os caracteres de marcação iniciando pelo final da cadeia de caracteres do cabeçalho e/ou rodapé a fim de reduzir o número total de caracteres. Se todos os caracteres de marcação forem removidos e ainda assim o comprimento exceder o máximo, a cadeia de caracteres é truncada iniciando-se pela direita.  
   
 ### <a name="simplepageheader-settings"></a>Configurações SimplePageHeader  
- Por padrão, a configuração simplepageheaders das informações do dispositivo é definida como `False`; portanto, os cabeçalhos de página são renderizados como linhas no relatório na superfície da planilha do Excel. As linhas da planilha com os cabeçalhos se tornam linhas travadas. Você pode congelar ou descongelar o painel no Excel.  
+ Por padrão, a configuração simplepageheaders das informações de dispositivo é definida como `False`; portanto, os cabeçalhos da página são renderizados como linhas no relatório na superfície da planilha do Excel. As linhas da planilha com os cabeçalhos se tornam linhas travadas. Você pode congelar ou descongelar o painel no Excel.  
   
 > [!NOTE]  
 >  Se a opção **Imprimir Títulos** for selecionada, os cabeçalhos serão definidos automaticamente para serem impressos em cada página da planilha.  
@@ -283,7 +283,7 @@ ms.locfileid: "36012020"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;SSRS e construtor de relatórios&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

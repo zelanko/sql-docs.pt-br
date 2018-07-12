@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180933"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Criar uma dimensão de tempo ao gerar uma tabela de tempo
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível usar o Assistente de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de tempo quando não houver nenhuma tabela de tempo disponível no banco de dados de origem. Você faz isso selecionando uma das opções a seguir na página **Selecionar Método de Criação** :  

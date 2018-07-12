@@ -5,24 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f929bb28cfd3771926af176d4cd2e36f99ec8332
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cddc9636612e5e96c067f4c1c0d87b46976372ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160467"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
   Este tópico resume como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa a compactação de linha. Este resumo fornece informações básicas para ajudar no planejamento do espaço de armazenamento exigido pelos dados.  
@@ -31,7 +30,7 @@ ms.locfileid: "36010462"
   
 -   Reduz a sobrecarga de metadados associados ao registro. Esses metadados são informações sobre colunas, seus comprimentos e deslocamentos. Em alguns casos, a sobrecarga de metadados pode ser maior do que o formato de armazenamento antigo.  
   
--   Usa o formato de armazenamento de comprimento variável para tipos numéricos (por exemplo `integer`, `decimal`, e `float`) e os tipos que são baseados em números (por exemplo `datetime` e `money`).  
+-   Ele usa o formato de armazenamento de comprimento variável para tipos numéricos (por exemplo `integer`, `decimal`, e `float`) e os tipos que são baseados em números (por exemplo `datetime` e `money`).  
   
 -   Armazena cadeias de caracteres fixas usando o formato de comprimento variável ao não armazenar caracteres em branco.  
   
@@ -52,8 +51,8 @@ ms.locfileid: "36010462"
 |`bit`|Sim|A sobrecarga dos metadados atinge 4 bits.|  
 |`smallmoney`|Sim|Usa a representação de dados de número inteiro usando um número inteiro de 4 bytes. Os valores monetários são multiplicados por 10000 e o valor inteiro resultante é armazenado removendo os dígitos após a casa decimal. Esse tipo tem uma otimização de armazenamento semelhante à empregada para tipos de número inteiro.|  
 |`money`|Sim|Usa a representação de dados de número inteiro usando um número inteiro de 8 bytes. Os valores monetários são multiplicados por 10000 e o valor inteiro resultante é armazenado removendo os dígitos após a casa decimal. Esse tipo tem um intervalo maior que `smallmoney`. Esse tipo tem uma otimização de armazenamento semelhante à empregada para tipos de número inteiro.|  
-|`float`|Sim|Bytes menos significantes com zeros não são armazenados. `float` a compactação é aplicável principalmente para obter valores não fracionários em mantissa.|  
-|`real`|Sim|Bytes menos significantes com zeros não são armazenados. `real` a compactação é aplicável principalmente para obter valores não fracionários em mantissa.|  
+|`float`|Sim|Bytes menos significantes com zeros não são armazenados. `float` a compactação é aplicável principalmente a valores não fracionários em mantissa.|  
+|`real`|Sim|Bytes menos significantes com zeros não são armazenados. `real` a compactação é aplicável principalmente a valores não fracionários em mantissa.|  
 |`smalldatetime`|não|Usa a representação de dados de número inteiro usando números inteiros de 2 bytes. A data ocupa 2 bytes. É o número de dias desde 1/1/1901. São necessários 2 bytes a partir de 1902. Portanto, não há aumento a partir desse ponto.<br /><br /> A hora é o número de minutos a partir da meia-noite. Os valores de hora logo após 4h começam a usar o segundo byte.<br /><br /> Se um `smalldatetime` for usado apenas para representar uma data (o caso comum), a hora será 0.0. A compactação salva 2 bytes armazenando a hora em um formato de byte mais significativo para compactação de linha.|  
 |`datetime`|Sim|Usa a representação de dados de número inteiro usando números inteiros de 4 bytes. O valor de inteiro representa o número de dias com data base de 1/1/1900. Os primeiros 2 bytes podem representar até o ano 2079. A compactação sempre pode salvar 2 bytes aqui até esse ponto. Cada valor de inteiro representa 3,33 milissegundos. A compactação esvazia os primeiros 2 bytes nos primeiros cinco minutos e precisa do quarto byte após às 16h. Portanto, a compactação pode salvar apenas 1 byte depois das 16h. Quando `datetime` é compactado como qualquer outro inteiro, a compactação salva 2 bytes na data.|  
 |`date`|não|Usa a representação de dados inteiros usando 3 bytes. Representa a data a partir de 1/1/0001. Para datas contemporâneas, a compactação de linha usa todos os 3 bytes. Não gera nenhum aumento.|  

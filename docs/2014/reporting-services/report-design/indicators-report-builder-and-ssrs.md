@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168307"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Construtor de Relatórios e SSRS)
   Os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Os ícones que representam indicadores e os respectivos estados são simples e visualmente efetivos mesmo quando usados em tamanhos pequenos.  
@@ -191,22 +191,22 @@ ms.locfileid: "36008578"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista os procedimentos que mostram como adicionar, alterar e excluir indicadores; como configurar e personalizar indicadores e como usar indicadores em medidores.  
   
--   [Adicionar ou excluir um indicador &#40;SSRS e construtor de relatórios&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [Adicionar ou excluir um indicador &#40;relatórios e SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [Alterar os ícones de indicador e conjuntos de indicadores &#40;SSRS e construtor de relatórios&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Alterar os ícones de indicador e conjuntos de indicadores &#40;relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Definir e configurar unidades de medida &#40;SSRS e construtor de relatórios&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Definir e configurar unidades de medida &#40;relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Definir o escopo da sincronização &#40;SSRS e construtor de relatórios&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Definir o escopo da sincronização &#40;relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [Especifique o tamanho de um indicador usando uma expressão &#40;SSRS e construtor de relatórios&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [Especifique o tamanho de um indicador usando uma expressão &#40;relatórios e SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [Incluir indicadores e medidores em um painel de medidores &#40;SSRS e construtor de relatórios&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [Incluir indicadores e medidores em um painel de medidor &#40;relatórios e SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>Consulte também  
- [Medidores &#40;SSRS e construtor de relatórios&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Gráficos &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -3,12 +3,9 @@ title: sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,25 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b26ea87ae8efc750a83d5f42119e09a34d0fe4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 190c1ef35e8269cd909bfe6a8c17a7d360ae1041
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999103"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409565"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Reconcilia a ID do lote armazenada na tabela do SQL Server habilitado para Stretch com a ID de lote armazenada na tabela remota do Azure.  
+  Reconcilia o ID do lote armazenado na tabela do SQL Server habilitado para ampliação com a ID de lote armazenada na tabela remota do Azure.  
   
- Normalmente você só precisa executar **sp_rda_reconcile_batch** se você excluiu manualmente os dados migrados mais recentemente da tabela remota. Quando você excluir manualmente os dados remotos que inclui o lote mais recente, as IDs de lote estão fora de sincronia e para de migração.  
+ Normalmente você só precisará executar **sp_rda_reconcile_batch** se você excluiu manualmente os dados migrados recentemente da tabela remota. Quando você excluir manualmente os dados remotos que inclui o lote mais recente, as IDs de lote estão fora de sincronia e interrompe a migração.  
  
- Para excluir os dados que já tem sido migrados para o Azure, consulte os comentários nesta página.
+ Para excluir dados que já tem sido migrados para o Azure, consulte os comentários nesta página.
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
@@ -54,23 +50,23 @@ sp_rda_reconcile_batch @objname = '@objname'
  O nome da tabela do SQL Server habilitados para Stretch.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissões db_owner.  
+ Exige permissões db_owner.  
   
 ## <a name="remarks"></a>Remarks  
- Se você quiser excluir dados que já tem sido migrados para o Azure, siga estas etapas.  
+ Se você quiser excluir dados que já tem sido migrados para o Azure, faça o seguinte.  
   
-1.  Pausar a migração de dados. Para obter mais informações, consulte [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+1.  Migração de dados de pausar. Para obter mais informações, consulte [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
-2.  Exclua os dados da tabela de preparo do SQL Server executando um comando DELETE com a dica STAGE_ONLY. Para obter mais informações, consulte [fazer exclusões e atualizações administrativas](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
+2.  Exclua os dados da tabela de preparo do SQL Server, executando um comando DELETE com a dica STAGE_ONLY. Para obter mais informações, consulte [fazer exclusões e atualizações administrativas](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
   
 3.  Exclua os mesmos dados da tabela remota do Azure executando um comando DELETE com a dica REMOTE_ONLY.  
   
-4.  Executar **sp_rda_reconcile_batch**.  
+4.  Execute **sp_rda_reconcile_batch**.  
   
 5.  Retomar a migração de dados. Para obter mais informações, consulte [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 ## <a name="example"></a>Exemplo  
- Para reconciliar as IDs de lote, execute a seguinte instrução.  
+ Para reconciliar as IDs de lote, execute a instrução a seguir.  
   
 ```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  

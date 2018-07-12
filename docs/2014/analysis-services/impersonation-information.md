@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a9d2102df9bd1b6cdf2bf1e4c7b3386c0fa825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0f2b5914c31c3cacce4bfb8887ebde73e0d932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180997"
 ---
 # <a name="impersonation-information"></a>Informações sobre representação
   Use a página **Informações sobre Representação** para especificar as credenciais que o Analysis Services usará para se conectar à fonte de dados.  
   
 ## <a name="options"></a>Opções  
- **Usar um nome de usuário específico do Windows e senha**  
+ **Usar um nome de usuário específicos do Windows e senha**  
  Selecione esta opção para fazer com que o objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use as credenciais de segurança de uma conta de usuário do Windows especificada. As credenciais especificadas são usadas para processamento, consultas ROLAP, associações fora de linha, cubos locais, modelos de mineração, partições remotas, objetos vinculados e sincronização do destino para a origem. No entanto, para instruções OPENQUERY de extensões DMX, essa opção é ignorada e as credenciais do usuário atual serão usadas.  
   
  **Nome de usuário**  
  Digite o domínio e o nome da conta de usuário a serem usados pelo objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selecionado. Use o seguinte formato:  
   
- *\<Nome de domínio >* **\\**  *\<nome de conta de usuário >*  
+ *\<Nome de domínio >* **\\**  *\<nome da conta de usuário >*  
   
  Essa opção estará habilitada apenas se a opção **Usar um nome e uma senha específicos** estiver selecionada.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "36008809"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

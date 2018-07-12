@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b07c1d781bfdade9228b6c5991b2eb56585cbe85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148167"
 ---
 # <a name="type-element-binding-assl"></a>Elemento Type (Binding) (ASSL)
   Contém o tipo de ligação do atributo.  
@@ -76,7 +76,7 @@ ms.locfileid: "36009423"
 |*CustomRollup*|Fórmulas de acúmulo personalizado|  
 |*CustomRollupProperties*|Propriedades de acúmulo personalizado|  
   
- Os elementos que correspondem aos pais de `Type` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.AttributeBinding> e <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
+ Os elementos que correspondem aos pais de `Type` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.AttributeBinding> e <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados de associação &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

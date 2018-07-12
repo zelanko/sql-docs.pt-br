@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos pelo usuário de CLR grandes (OLE DB) | Microsoft Docs
+title: Tipos definidos pelo usuário CLR grandes (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6959f7e6993a6d9f024a8201056f57c0b85b54f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a553d8c9117289d1c20174fe3c7f1a4a70511a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957471"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408355"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "32957471"
 
   Este tópico aborda as alterações feitas ao OLE DB no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
   
- Para obter mais informações sobre o suporte para UDTs CLR grandes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [UDTs de CLR grande uso &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obter mais informações sobre o suporte para UDTs CLR grandes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [UDTs CLR grandes de uso &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de Dados  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usa ~ 0 para representar o comprimento de valores de tamanho ilimitado para tipos de objeto grandes (LOB). ~ 0 também representa o tamanho de UDTs CLR maiores que 8.000 bytes.  
   
  A seguinte tabela mostra o mapeamento de tipo de dados em parâmetros e conjuntos de linhas:  
   
-|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Value|  
+|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] (matriz de bytes\)|132 (OLEDB)|  
   
  Os valores UDT são representados como matrizes de bytes. Há suporte para conversões de cadeias hexadecimais e para cadeias hexadecimais. Os valores literais são representados como cadeias de caracteres hexadecimais com um prefixo "0x". Uma cadeia de caracteres hexadecimal é a representação textual de dados binários na base 16. Um exemplo é uma conversão de tipo de servidor **varbinary(10)** em DBTYPE_STR, que resulta em uma representação hexadecimal de 20 caracteres em que cada par de caracteres representa um único byte.  
   
-## <a name="parameter-properties"></a>Propriedades de parâmetro  
+## <a name="parameter-properties"></a>Propriedades do parâmetro  
  O conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER dá suporte a UDTs através do OLE DB. Para obter mais informações, consulte [Using User-Defined tipos](~/relational-databases/native-client/features/using-user-defined-types.md).  
   
 ## <a name="column-properties"></a>Propriedades de coluna  
@@ -58,7 +58,7 @@ ms.locfileid: "32957471"
 |DBTYPE_UDT|Ignored|UDT|Deve incluir um conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN.|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- Informações retornadas na estrutura DBPARAMINFO por meio de **prgParamInfo** é o seguinte:  
+ Informações retornadas na estrutura DBPARAMINFO por meio **prgParamInfo** é da seguinte maneira:  
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
@@ -132,7 +132,7 @@ ms.locfileid: "32957471"
 |DBTYPE_BSTR|Com suporte (2), (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_STR|Com suporte (2), (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_IUNKNOWN|Com suporte (6)|N/A|Com suporte (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/A|Com suporte (3), (5)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Com suporte (5)|N/A|Com suporte (3), (5)|N/A|  
 |DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Legenda dos símbolos  
@@ -144,7 +144,7 @@ ms.locfileid: "32957471"
 |3|Os dados são convertidos de dados binários em cadeia de caracteres hexadecimal.|  
 |4|Validação pode ocorrer ao usar **CreateAccessor** ou **GetNextRows**. O erro é DB_E_ERRORSOCCURRED. O status de associação é definido como DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|BY_REF pode ser usado.|  
-|6|Os parâmetros de UDT podem ser associados como DBTYPE_IUNKNOWN no DBBINDING. Associação a DBTYPE_IUNKNOWN indica que o aplicativo deseja processar os dados como um fluxo usando a interface ISequentialStream. Quando um consumidor especifica *wType* em uma associação como tipo DBTYPE_IUNKNOWN e a coluna correspondente ou a saída parâmetro do procedimento armazenado é um UDT, o SQL Server Native Client retornará ISequentialStream. Para um parâmetro de entrada, o SQL Server Native Client consultará a para a interface ISequentialStream.<br /><br /> Você pode optar por não associar o comprimento de dados de UDT enquanto estiver usando a associação DBTYPE_IUNKNOWN, no caso de UDTs grandes. Porém, o comprimento deve estar associado a UDTs pequenos. Um parâmetro DBTYPE_UDT poderá ser especificado como um UDT grande nos seguintes casos:<br />*ulParamParamSize* é ~ 0.<br />Se DBPARAMFLAGS_ISLONG estiver definido na estrutura DBPARAMBINDINFO.<br /><br /> Para dados de linha, a associação de DBTYPE_IUNKNOWN é permitida só para UDTs grandes. Você pode descobrir se uma coluna é um tipo UDT grande usando o método icolumnsinfo:: Getcolumninfo em um conjunto de linhas ou interface de IColumnsInfo do objeto de comando. Uma coluna DBTYPE_UDT será uma coluna de UDT grande se uma ou mais destas condições for verdadeira:<br />Sinalizador DBCOLUMNFLAGS_ISLONG é definido em *dwFlags* membro da estrutura DBCOLUMNINFO. <br />*ulColumnSize* membro de DBCOLUMNINFO é ~ 0.|  
+|6|Os parâmetros de UDT podem ser associados como DBTYPE_IUNKNOWN no DBBINDING. Associação a DBTYPE_IUNKNOWN indica que o aplicativo quer processar os dados como um fluxo usando a interface ISequentialStream. Quando um consumidor especifica *wType* em uma associação como tipo DBTYPE_IUNKNOWN e a coluna correspondente ou a saída o parâmetro do procedimento armazenado é um UDT, SQL Server Native Client retornará ISequentialStream. Um parâmetro de entrada para o SQL Server Native Client consultará a para a interface ISequentialStream.<br /><br /> Você pode optar por não associar o comprimento de dados de UDT enquanto estiver usando a associação DBTYPE_IUNKNOWN, no caso de UDTs grandes. Porém, o comprimento deve estar associado a UDTs pequenos. Um parâmetro DBTYPE_UDT poderá ser especificado como um UDT grande nos seguintes casos:<br />*ulParamParamSize* é ~ 0.<br />Se DBPARAMFLAGS_ISLONG estiver definido na estrutura DBPARAMBINDINFO.<br /><br /> Para dados de linha, a associação de DBTYPE_IUNKNOWN é permitida só para UDTs grandes. Você pode descobrir se uma coluna é um tipo UDT grande, usando o método icolumnsinfo:: Getcolumninfo em um conjunto de linhas ou interface de IColumnsInfo do objeto de comando. Uma coluna DBTYPE_UDT será uma coluna de UDT grande se uma ou mais destas condições for verdadeira:<br />Sinalizador DBCOLUMNFLAGS_ISLONG é definido em *dwFlags* membro da estrutura DBCOLUMNINFO. <br />*ulColumnSize* membro de DBCOLUMNINFO é ~ 0.|  
   
  DBTYPE_NULL e DBTYPE_EMPTY podem ser associados aos parâmetros de entrada, mas não a parâmetros ou resultados de saída. Quando associado a parâmetros de entrada, o status deve ser definido como DBSTATUS_S_ISNULL para DBTYPE_NULL ou DBSTATUS_S_DEFAULT para DBTYPE_EMPTY. DBTYPE_BYREF não pode ser usado com DBTYPE_NULL ou DBTYPE_EMPTY.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "32957471"
 |SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 e posterior|UDT|UDT|  
   
- Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) é definido como "80", tipos UDT grandes aparecem para os clientes da mesma forma que aparecem para clientes de nível inferior.  
+ Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) é definido como "80", tipos UDT grandes aparecem para os clientes da mesma forma que eles aparecem para clientes de nível inferior.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados CLR grandes definidos pelo usuário](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  

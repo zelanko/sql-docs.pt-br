@@ -3,10 +3,9 @@ title: Trabalhando com notificações de consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698567"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425595"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "35698567"
   
  As notificações de consulta permitem que você solicite uma notificação em um tempo limite especificado quando os dados subjacentes de uma consulta são alterados. A solicitação por notificação especifica as opções de notificação, que incluem o nome do serviço, o texto da mensagem e o valor do tempo limite do servidor. As notificações são entregues através de uma fila do Service Broker na qual os aplicativos podem sondar as notificações disponíveis.  
   
- A sintaxe da cadeia de opções de notificações de consulta é:  
+ A sintaxe da cadeia de caracteres de opções de notificações de consulta é:  
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
@@ -53,7 +51,7 @@ ms.locfileid: "35698567"
   
  As notificações só são enviadas uma vez. Para que as notificações de alteração de dados sejam contínuas, é preciso criar uma nova assinatura e executar novamente a consulta depois que cada notificação foi processada.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Aplicativos cliente nativos normalmente recebem notificações usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) comando para ler as notificações da fila associada ao serviço especificado nas opções de notificação.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Aplicativos clientes nativos normalmente recebem notificações usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) comando para ler as notificações da fila associada ao serviço especificado nas opções de notificação.  
   
 > [!NOTE]  
 >  Os nomes de tabela devem ser qualificados nas consultas para as quais a notificação é requerida, por exemplo, `dbo.myTable`. Os nomes de tabela devem ser qualificados com nomes de duas partes. A assinatura é considerada inválida se nomes com três ou quatro partes são usados.  
@@ -73,13 +71,13 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  O serviço deve usar o contrato predefinido `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` como mostrado acima.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client dá suporte à notificação do consumidor na modificação do conjunto de linhas. O consumidor recebe uma notificação em cada fase da modificação do conjunto de linhas e em qualquer tentativa de alteração.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte à notificação de consumidor na modificação do conjunto de linhas. O consumidor recebe uma notificação em cada fase da modificação do conjunto de linhas e em qualquer tentativa de alteração.  
   
 > [!NOTE]  
->  Passando uma consulta de notificação para o servidor com **ICommand:: execute** é a única maneira válida para assinar notificações de consulta com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client.  
+>  Passando uma consulta de notificação para o servidor com **ICommand:: execute** é a única maneira válida de assinar notificações de consulta com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client.  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>O conjunto de propriedades DBPROPSET_SQLSERVERROWSET  
- Para oferecer suporte a notificações de consulta pelo OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona as propriedades a seguir para o conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
+ Para dar suporte a notificações de consulta através do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
   
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
@@ -95,7 +93,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Observe que SELECT * não exclui a entrada da fila, porém RECEIVE \* FROM exclui. Isso irá interromper um thread de servidor se a fila estiver vazia. Se houver entradas na fila durante o momento da chamada, elas serão retornadas imediatamente; caso contrário, a chamada aguardará até que seja feita a entrada na fila.  
+ Observe que SELECT * não excluir a entrada da fila, porém RECEIVE \* FROM exclui. Isso irá interromper um thread de servidor se a fila estiver vazia. Se houver entradas na fila durante o momento da chamada, elas serão retornadas imediatamente; caso contrário, a chamada aguardará até que seja feita a entrada na fila.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -110,7 +108,7 @@ RECEIVE * FROM MyQueue
 > [!NOTE]  
 >  A preparação de assinaturas nunca fará com que a assinatura seja iniciada; somente a execução da instrução iniciará a assinatura e as notificações de consulta não são impactadas pelo uso dos serviços principais do OLE DB.  
   
- Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERROWSET, consulte [propriedades de conjunto de linhas e comportamentos](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
+ Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERROWSET, consulte [propriedades do conjunto de linhas e os comportamentos](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client dá suporte a notificações de consulta por meio da adição de três novos atributos para o [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) e [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) funções:  
@@ -121,7 +119,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Se SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS não forem NULOS, o cabeçalho do TDS das notificações de consulta que contém os três atributos definidos acima será enviado para o servidor toda vez que o comando for executado. Se um deles for nulo, o cabeçalho não será enviado e SQL_SUCCESS_WITH_INFO será retornado. A validação ocorre em [função SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, e **SqlExecute**, todos os que falham se os atributos não são válidos. De modo semelhante, quando esses atributos de notificação de consulta são definidos para versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ocorre uma falha na execução com SQL_SUCCESS_WITH_INFO.  
+ Se SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS não forem NULOS, o cabeçalho do TDS das notificações de consulta que contém os três atributos definidos acima será enviado para o servidor toda vez que o comando for executado. Se um deles for nulo, o cabeçalho não será enviado e SQL_SUCCESS_WITH_INFO será retornado. A validação ocorre no [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, e **SqlExecute**, todos os que falham se os atributos não são válidos. De modo semelhante, quando esses atributos de notificação de consulta são definidos para versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ocorre uma falha na execução com SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  A preparação de instruções nunca iniciará a assinatura; a assinatura pode ser iniciada com a execução da instrução.  

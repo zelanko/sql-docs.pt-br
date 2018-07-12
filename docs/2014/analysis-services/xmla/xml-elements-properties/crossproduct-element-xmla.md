@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278204"
 ---
 # <a name="crossproduct-element-xmla"></a>Elemento CrossProduct (XMLA)
-  Contém um produto cruzado entre conjuntos ordenados de membros de cada hierarquia para um [eixo](axis-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado pelo tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
+  Contém um produto cruzado entre conjuntos ordenados de membros de cada hierarquia para um [eixo](axis-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado por tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36008283"
 |Tamanho|Necessário `Integer` atributo. Indica o número de tuplas contido no produto cruzado representado pelo elemento `CrossProduct`.|  
   
 ## <a name="remarks"></a>Remarks  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *ClusterFormat*, os membros em cada eixo são divididos em clusters nos quais cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada cluster é representado por um elemento `CrossProduct` . Cada elemento `CrossProduct` contém um elemento `Members` para cada hierarquia no eixo. Um elemento `CrossProduct` pode conter membros de uma única hierarquia.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *ClusterFormat*, os membros em cada eixo são divididos em clusters em que cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada cluster é representado por um elemento `CrossProduct` . Cada elemento `CrossProduct` contém um elemento `Members` para cada hierarquia no eixo. Um elemento `CrossProduct` pode conter membros de uma única hierarquia.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra a estrutura do `CrossProduct` elemento quando um cliente especifica *ClusterFormat* para o `AxisFormat` propriedade XMLA, fornecida aos seguintes membros do eixo:  

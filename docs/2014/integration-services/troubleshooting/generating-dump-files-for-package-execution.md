@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158967"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
   No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar os problemas sobre a execução do pacote.  
@@ -37,7 +37,7 @@ ms.locfileid: "36009586"
   
      Chame esse procedimento armazenado para pausar a execução de um pacote e criar um arquivo de despejo.  
   
- Se for implantar pacotes que usam o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para saber mais, veja [Utilitário dtexec](../packages/dtexec-utility.md) e [Utilitário dtutil](../dtutil-utility.md). Para obter mais informações sobre o modelo de implantação de pacote, consulte [implantação de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [implantação de pacote &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
+ Se for implantar pacotes que usam o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para saber mais, veja [Utilitário dtexec](../packages/dtexec-utility.md) e [Utilitário dtutil](../dtutil-utility.md). Para obter mais informações sobre o modelo de implantação de pacote, consulte [implantação de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [implantação de pacotes &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Formato do arquivo de despejo de depuração  
  Ao especificar uma opção de despejo de depuração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria os seguintes arquivos de despejo de depuração:  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
 - SQL Server, stopping
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b21ac71b54c9bfee76079f86c1d6d1a32fc0f9dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 894b63a9ffe56a89eb6dd01cf1c91ca06a6cacf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182733"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Impedir a inicialização automática de uma instância do SQL Server (SQL Server Configuration Manager)
   Este tópico descreve como impedir que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie automaticamente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é normalmente configurado para iniciar automaticamente. Você pode alterar isso definindo o modo de início da instância como manual.  
@@ -41,7 +41,7 @@ ms.locfileid: "36008706"
   
 3.  No painel detalhes, clique com o botão direito do mouse em **MSSQLServer**e clique em **Propriedades.**  
   
-4.  No **do SQL Server \< ***instancename***> propriedades** na caixa de **propriedades** caixa, defina o valor de **modo inicial**para **Manual**.  
+4.  No **SQL Server \< ***instancename***> propriedades** na caixa a **propriedades** caixa, defina o valor de **modo inicial**para **Manual**.  
   
 5.  Clique em **OK** para fechar a caixa de diálogo **Propriedades de \<***instancename***> do SQL Server** e, em seguida, feche o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager.  
   

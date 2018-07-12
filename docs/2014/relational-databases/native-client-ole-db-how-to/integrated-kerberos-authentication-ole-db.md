@@ -5,27 +5,25 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008410"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410295"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticação integrada do Kerberos (BD OLE)
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o OLE DB em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  
   
- Para obter mais informações sobre autenticação SPNs e Kerberos, consulte [Service Principal Name &#40;SPN&#41; suporte em conexões de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obter mais informações sobre autenticação SPNs e Kerberos, consulte [nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemplo  
  Você deve especificar um servidor. No arquivo .cpp, altere "MyServer" para um nome de máquina que tenha uma instância do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior).  

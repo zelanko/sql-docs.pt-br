@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180873"
 ---
 # <a name="amo-other-classes-and-methods"></a>Outras classes e métodos AMO
-  Esta seção contém classes comuns que não são específicas ao OLAP ou à mineração de dados e que são úteis para administrar ou gerenciar objetos em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Essas classes abordam recursos como procedimentos armazenados, rastreamento, exceções e backup e restauração.  
+  Esta seção contém classes comuns que não são específicos para OLAP ou de mineração de dados, e que são úteis para a administração ou gerenciamento de objetos no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Essas classes abordam recursos como procedimentos armazenados, rastreamento, exceções e backup e restauração.  
   
  Este tópico contém as seguintes seções:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36008771"
 ##  <a name="Assembly"></a> Objetos de assembly  
  Um objeto <xref:Microsoft.AnalysisServices.Assembly> é criado ao ser adicionado à coleção de assemblies do servidor e pela atualização do objeto <xref:Microsoft.AnalysisServices.Assembly> para o servidor por meio do método Update.  
   
- Para remover um <xref:Microsoft.AnalysisServices.Assembly> do objeto, ele terá de ser descartado por meio do método Drop do <xref:Microsoft.AnalysisServices.Assembly> objeto. Remover um objeto <xref:Microsoft.AnalysisServices.Assembly> da coleção de assemblies do banco de dados não descartará o assembly, só impedirá que você o veja em seu aplicativo até a próxima vez em que ele for executado.  
+ Para remover uma <xref:Microsoft.AnalysisServices.Assembly> do objeto, ele terá de ser descartado por meio do método Drop do <xref:Microsoft.AnalysisServices.Assembly> objeto. Remover um objeto <xref:Microsoft.AnalysisServices.Assembly> da coleção de assemblies do banco de dados não descartará o assembly, só impedirá que você o veja em seu aplicativo até a próxima vez em que ele for executado.  
   
  Para obter mais informações sobre os métodos e propriedades disponíveis, consulte <xref:Microsoft.AnalysisServices.Assembly> em <xref:Microsoft.AnalysisServices> .  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36008771"
   
  Uma definição de rastreamento pode incluir uma ou mais classes de evento a serem rastreadas simultaneamente. Para cada classe de evento, podem ser adicionadas uma ou mais colunas de dados à definição de rastreamento, mas nem todas as colunas de rastreamento devem ser usadas. O administrador de banco de dados pode decidir quais das colunas disponíveis serão incluídas em um rastreamento. Além disso, as classes de evento podem ser rastreadas seletivamente com base em critérios de filtragem em qualquer coluna no rastreamento.  
   
- Os rastreamentos podem ser iniciados e excluídos. Vários rastreamentos podem ser executados a qualquer momento. Os eventos de rastreamento podem ser capturados ao vivo ou direcionados a um arquivo para análise posterior ou para nova reprodução. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] é a ferramenta usada para analisar e para reproduzir novamente os eventos de rastreamento do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Várias conexões são permitidas para receber eventos do mesmo rastreamento.  
+ Os rastreamentos podem ser iniciados e excluídos. Vários rastreamentos podem ser executados a qualquer momento. Os eventos de rastreamento podem ser capturados ao vivo ou direcionados a um arquivo para análise posterior ou para nova reprodução. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] é a ferramenta usada para analisar e para reproduzir novamente os eventos de rastreamento do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Várias conexões têm permissão para receber eventos do mesmo rastreamento.  
   
  Os rastreamentos podem ser divididos em dois grupos: rastreamentos de servidor e rastreamentos de sessão. Os rastreamentos de servidor informam todos os eventos do servidor; os rastreamentos de sessão só informam eventos da sessão atual.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36008771"
   
  Para iniciar a captura do XML, a propriedade do objeto de servidor CaptureXML precisa ser definida como `true`. Em seguida, todas as ações que precisam ser enviadas ao servidor começarão a ser capturadas na classe CaptureLog, sem serem enviadas ao servidor. CaptureLog é considerada como classe porque possui um método, Clear, usado para limpar o log de captura.  
   
- Para ler o log, obtenha a a coleção de cadeias de caracteres e inicie a iteração pelas cadeias de caracteres. Além disso, você pode concatenar todos os logs em uma cadeia de caracteres usando o método de objeto de servidor ConcatenateCaptureLog. ConcatenateCaptureLog possui três parâmetros, dois deles obrigatórios. Os parâmetros necessários são *transacional*, do tipo booliano, e *paralela*, do tipo booliano. Se *transacional* é definido como `true`, ele indica que o arquivo em lotes XML será criado como uma única transação em vez de cada comando ser tratado como uma transação separada. Se *paralela* é definido como `true`, ele indica que todos os comandos no arquivo de lote serão registrados para a execução simultânea em vez de sequencialmente como foram registrados.  
+ Para ler o log, obtenha a a coleção de cadeias de caracteres e inicie a iteração pelas cadeias de caracteres. Além disso, você pode concatenar todos os logs em uma cadeia de caracteres usando o método de objeto de servidor ConcatenateCaptureLog. ConcatenateCaptureLog possui três parâmetros, dois deles obrigatórios. Os parâmetros necessários serão *transacional*, do tipo booliano, e *paralela*, do tipo booliano. Se *transacional* é definido como `true`, ele indica que o arquivo em lotes XML será criado como uma única transação em vez de cada comando ser tratado como uma transação separada. Se *paralelas* é definido como `true`, ele indica que todos os comandos no arquivo de lote serão registrados para a execução simultânea em vez de sequencialmente como foram registrados.  
   
 ##  <a name="AMO"></a> Classe de exceção AMOException  
  Você pode usar a classe de exceção AMOException para capturar facilmente as exceções em seu lançadas em seu aplicativo pelo AMO.  

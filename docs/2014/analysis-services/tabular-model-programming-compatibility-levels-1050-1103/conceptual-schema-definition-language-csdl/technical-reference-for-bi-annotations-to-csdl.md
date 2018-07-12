@@ -1,5 +1,5 @@
 ---
-title: Referência técnica para anotações de BI para CSDL | Microsoft Docs
+title: Referência técnica para anotações de BI em CSDL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192370"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Referência técnica para anotações de BI em CSDL
   Esta seção lista os elementos, o atributo e as propriedades em CSDL usadas para representar modelos tabulares do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Alguns elementos são novos; outros foram anotados ou estendidos para oferecer suporte à modelagem de business intelligence.  
   
- Para obter uma visão geral de modelos de tabela e como as entidades, relações e fórmulas são representadas na CSDL, consulte [anotações CSDL para Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Para uma visão geral de modelos de tabela e como são representadas as entidades, relações e fórmulas em CSDL, consulte [anotações CSDL para Business Intelligence &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md).  
   
 ## <a name="extended-csdl-elements-complex-types"></a>Elementos de CSDL estendidos: tipos complexos  
  Os elementos de CSDL a seguir foram adicionados ou estendidos para oferecer suporte aos modelos de dados de business intelligence, de tabela e multidimensionais.  
@@ -54,7 +54,7 @@ ms.locfileid: "36010295"
   
 -   [Elemento de nível &#40;CSDLBI&#41;](level-element-csdlbi.md)  
   
--   [Elemento de medidas &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
+-   [Medir o elemento &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
   
 -   [Elemento Member &#40;CSDLBI&#41;](member-element-csdlbi.md)  
   

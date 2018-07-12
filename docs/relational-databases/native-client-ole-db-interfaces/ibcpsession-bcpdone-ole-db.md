@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694539"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421495"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Nenhuma outra operação pode ser chamada no [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) interface depois de chamar o **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
+ Nenhuma outra operação pode ser chamada na [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) interface após a chamada a **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- **BCP master... fltest em outfile.dat - n -T -S** *server*  
+ **BCP master... fltest em outfile - n -T -S** *server*  
   
  É necessário especificar sqlncli11.lib ao compilar este exemplo.  
   

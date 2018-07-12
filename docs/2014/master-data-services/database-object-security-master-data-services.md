@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 162d60e3a526c70a1624bfdd754076fb08566285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163497"
 ---
 # <a name="database-object-security-master-data-services"></a>Segurança de objeto de banco de dados (Master Data Services)
   No banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , os dados são armazenados em várias tabelas de banco de dados e estão visíveis em exibições. As informações que você pode ter protegido no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] são visíveis aos usuários com acesso ao banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "36010477"
   
 -   [Aplicação imediata de permissões de membro de hierarquia](#Hierarchy)  
   
--   [Alterar a conta de administrador do sistema](#SysAdmin)  
+-   [Alterando a conta de administrador do sistema](#SysAdmin)  
   
 -   [Definição de configurações do sistema](#SysSettings)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36010477"
   
  Para obter mais informações, consulte [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysAdmin"></a> Alterar a conta de administrador do sistema  
+##  <a name="SysAdmin"></a> Alterando a conta de administrador do sistema  
   
 |Ação|Protegíveis|Permissões|  
 |------------|----------------|-----------------|  

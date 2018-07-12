@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164327"
 ---
 # Glossário
   
@@ -109,7 +109,7 @@ ms.locfileid: "36008960"
 |bloco|Uma instrução Transact-SQL incluída entre BEGIN e END.|  
 |cursor em bloco|Um cursor com um tamanho de conjunto de linhas maior que 1.|  
 |transação de bloqueio|Uma transação que faz outra transação falhar.|  
-|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Tais expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
+|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
 |operador booliano|Um operador criado para funcionar com valores boolianos. Os quatro operadores boolianos mais comuns no uso em programação são AND (conjunção lógica), OR (inclusão lógica), XOR (OR exclusivo) e NOT (negação lógica).|  
 |fluxo associado|Um fluxo de eventos que contém todas as informações necessárias para produzir eventos. As informações já são uma fonte de dados instanciada ou são suficientes para o servidor StreamInsight iniciar a fonte de dados.|  
 |caixa delimitadora|A área retangular menor ao redor de um caminho, forma ou grupo de objetos.|  
@@ -294,7 +294,7 @@ ms.locfileid: "36008960"
 |Conflito de simultaneidade|Um conflito que ocorre quando o mesmo item ou unidade de alteração é alterada em duas réplicas diferentes que são sincronizadas mais tarde.|  
 |modelo de simultaneidade|Um modo no qual um aplicativo pode ser criado para responder por operações simultâneas que usam os mesmos dados armazenados em cache. O Windows Server AppFabric oferece suporte a modelos de simultaneidade otimistas e pessimistas.|  
 |operação simultânea|Uma operação de computador na qual dois ou mais processos (programas) têm acesso à hora do microprocessador e são realizados quase simultaneamente. Como um microprocessador pode funcionar com muitas unidades de tempo menores do que as pessoas conseguem perceber, processos simultâneos parecem estar ocorrendo simultaneamente, mas, na realidade não estão.|  
-|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Tais expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
+|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (testando valores para igualdade ou, para valores não boolianos, o \< [menor que] ou > [maior que] relação) e combinação lógica (usando operadores boolianos como AND, OR e XOR) de expressões Boolianas.|  
 |divisão condicional|Uma restauração de um backup completo de banco de dados, o backup de banco de dados diferencial mais recente (se houver) e os backups de logs (se houver) feitos desde o backup completo do banco de dados.|  
 |arquivo config|Um arquivo que contém especificações operacionais legíveis por máquina para um hardware ou software, ou que contém informações sobre outro arquivo ou sobre um usuário específico, como a ID de logon do usuário.|  
 |configuração|Em referência a um único microcomputador, a soma de componentes internos e externos de um sistema, incluindo memória, unidades de disco, teclado, vídeo e geralmente hardware complementar menos crítico, como mouse, modem ou impressora. Software (o sistema operacional e vários drivers de dispositivo), as opções do usuário definidas através de arquivos de configuração como os arquivos AUTOEXEC.BAT e CONFIG.SYS em PCs IBM e compatíveis e, às vezes, hardware (comutadores e saltadores) são necessários para 'configurar a configuração' para que funcione corretamente. Embora a configuração de sistema possa ser alterada, como através da adição de mais memória ou capacidade de disco, a estrutura básica do sistema (sua arquitetura) permanece inalterada.|  
@@ -1338,7 +1338,7 @@ ms.locfileid: "36008960"
 |esquema SQL do repositório|Um conjunto de tabelas padrão usado pelo motor do repositório para gerenciar todos os objetos, relações e coleções de objetos do repositório.|  
 |modelo RTIM|Um modelo básico de objeto que representa definições de tipos de repositório para Serviços de Metadados.|  
 |republicador|Um Assinante que publica dados que recebeu de um Publicador.|  
-|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Caracteres normalmente reservados para usos especiais incluem o asterisco (*), barra (/), barra invertida (\\), ponto de interrogação (?) e barra vertical (&#124;).|  
+|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Caracteres comumente reservados para usos especiais incluem o asterisco (*), barra (/), barra invertida (\\), ponto de interrogação (?) e barra vertical (&#124;).|  
 |estratégia de resolução|Um conjunto de critérios avaliados sequencialmente pelo motor do repositório ao selecionar um objeto onde há várias versões e as informações da versão não são especificadas no programa de chamada.|  
 |recurso|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
 |recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  

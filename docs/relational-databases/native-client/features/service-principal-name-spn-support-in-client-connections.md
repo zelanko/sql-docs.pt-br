@@ -3,10 +3,9 @@ title: Suporte de nome de entidade de serviço (SPN) em conexões de cliente | M
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,25 +14,24 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7348fc6746f3b2763aea780e7bed087ff583808e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 65208af559037dd7e73cbaac49daa825460d1f60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697307"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411465"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Começando com [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], suporte para nomes principais de serviço (SPNs) foi estendido para habilitar a autenticação mútua em todos os protocolos. Em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os SPNs foram apenas suportados para Kerberos em TCP quando o padrão SPN para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância foi registrada com o Active Directory.  
+  Começando com [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], suporte para nomes de entidade de serviço (SPNs) foi estendido para habilitar a autenticação mútua em todos os protocolos. Nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os SPNs foram apenas suportados para Kerberos em TCP quando o padrão SPN para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância foi registrada com o Active Directory.  
   
- Os SPNs são usados pelo protocolo de autenticação para determinar a conta na qual um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância é executada. Se a conta da instância for conhecida, autenticação Kerberos poderá ser usada para fornecer autenticação mútua pelo cliente e servidor. Se a conta de instância não for conhecida, a autenticação NTLM, que só fornece autenticação do cliente pelo servidor, será usada. Atualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client executa a pesquisa de autenticação, derivando o SPN as propriedades de conexão de rede e o nome da instância. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentarão registrar os SPNs na inicialização ou elas poderão ser registradas manualmente. Porém, o registro falhará se houver direitos de acesso insuficientes para a conta que tenta registrar os SPNs.  
+ Os SPNs são usados pelo protocolo de autenticação para determinar a conta na qual um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] execuções da instância. Se a conta da instância for conhecida, autenticação Kerberos poderá ser usada para fornecer autenticação mútua pelo cliente e servidor. Se a conta de instância não for conhecida, a autenticação NTLM, que só fornece autenticação do cliente pelo servidor, será usada. Atualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client executa a pesquisa de autenticação, derivando o SPN das propriedades de conexão de rede e o nome da instância. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentarão registrar os SPNs na inicialização ou elas poderão ser registradas manualmente. Porém, o registro falhará se houver direitos de acesso insuficientes para a conta que tenta registrar os SPNs.  
   
  As contas de domínio e computador são registradas automaticamente no Active Directory. Elas podem ser usadas como SPNs ou os administradores podem definir seus próprios SPNs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz a autenticação segura mais gerenciável e confiável, permitindo que os clientes especifiquem diretamente o SPN a ser usado.  
   
@@ -55,7 +53,7 @@ ms.locfileid: "35697307"
 |Cenário|Description|  
 |--------------|-----------------|  
 |Um aplicativo herdado não especifica um SPN.|Este cenário de compatibilidade garante que não haverá nenhuma alteração de comportamento para aplicativos desenvolvidos para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se nenhum SPN for especificado, o aplicativo confiará nos SPNs gerados e não terá nenhum conhecimento de qual método de autenticação será usado.|  
-|Um aplicativo cliente usando a versão atual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Especifica um SPN na cadeia de conexão como uma conta de usuário ou computador do domínio, como um SPN específico da instância ou como uma cadeia de caracteres definida pelo usuário.|A palavra-chave **ServerSPN** pode ser usada em um provedor, uma inicialização ou uma cadeia de conexão para fazer o seguinte:<br /><br /> -Especifique a conta usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância para uma conexão. Isto simplifica o acesso à autenticação Kerberos. Se um KDC (Centro de Distribuição de Chaves) Kerberos estiver presente e a conta correta for especificada, a autenticação Kerberos provavelmente será mais usada que NTLM. O KDC normalmente reside no mesmo computador que o controlador de domínio.<br /><br /> -Especifique um SPN para a conta de serviço para pesquisar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Para cada [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância, dois SPNs padrão são gerados que pode ser usados para essa finalidade. Não há garantia de que estas chaves estejam presentes no Active Directory. Entretanto, nesta situação, a autenticação Kerberos não é garantida.<br /><br /> -Especifique um SPN que será usado para pesquisar a conta de serviço para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esta poderá ser qualquer cadeia de caracteres definida pelo usuário que mapeia para a conta de serviço. Neste caso, a chave deve ser registrada manualmente no KDC e deve satisfazer as regras para um SPN definido pelo usuário.<br /><br /> A palavra-chave **FailoverPartnerSPN** pode ser usada para especificar o SPN para o servidor de parceiro de failover. O intervalo de conta e valores de chave do Active Directory é igual aos valores que você pode especificar para o servidor principal.|  
+|Um aplicativo cliente usando a versão atual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Especifica um SPN na cadeia de conexão como uma conta de usuário ou computador de domínio, como um SPN específico da instância ou como uma cadeia de caracteres definida pelo usuário.|A palavra-chave **ServerSPN** pode ser usada em um provedor, uma inicialização ou uma cadeia de conexão para fazer o seguinte:<br /><br /> -Especifique a conta usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância para uma conexão. Isto simplifica o acesso à autenticação Kerberos. Se um KDC (Centro de Distribuição de Chaves) Kerberos estiver presente e a conta correta for especificada, a autenticação Kerberos provavelmente será mais usada que NTLM. O KDC normalmente reside no mesmo computador que o controlador de domínio.<br /><br /> -Especifique um SPN para observar a conta de serviço para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Para cada [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância, dois SPNs padrão são gerados que pode ser usados para essa finalidade. Não há garantia de que estas chaves estejam presentes no Active Directory. Entretanto, nesta situação, a autenticação Kerberos não é garantida.<br /><br /> -Especificar um SPN que será usado para pesquisar a conta de serviço para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esta poderá ser qualquer cadeia de caracteres definida pelo usuário que mapeia para a conta de serviço. Neste caso, a chave deve ser registrada manualmente no KDC e deve satisfazer as regras para um SPN definido pelo usuário.<br /><br /> A palavra-chave **FailoverPartnerSPN** pode ser usada para especificar o SPN para o servidor de parceiro de failover. O intervalo de conta e valores de chave do Active Directory é igual aos valores que você pode especificar para o servidor principal.|  
 |Um aplicativo ODBC especifica um SPN como um atributo de conexão para o servidor principal ou servidor de parceiro de failover.|O atributo de conexão **SQL_COPT_SS_SERVER_SPN** pode ser usado para especificar o SPN para uma conexão com o servidor principal.<br /><br /> O atributo de conexão **SQL_COPT_SS_FAILOVER_PARTNER_SPN** pode ser usado para especificar o SPN para o servidor de parceiro de failover.|  
 |Um aplicativo OLE DB especifica um SPN como uma propriedade de inicialização de fonte de dados para o servidor principal ou para um servidor de parceiro de failover.|A propriedade de conexão **SSPROP_INIT_SERVER_SPN** no conjunto de propriedades **DBPROPSET_SQLSERVERDBINIT** pode ser usada para especificar o SPN para uma conexão.<br /><br /> A propriedade de conexão **SSPROP_INIT_FAILOVER_PARTNER_SPN** na **DBPROPSET_SQLSERVERDBINIT** pode ser usada para especificar o SPN para o servidor de parceiro de failover.|  
 |Um usuário especifica um SPN para um servidor ou servidor de parceiro de failover em um DSN (nome de fonte de dados) ODBC.|O SPN pode ser especificado em um DSN ODBC pelas caixas de diálogo de configuração do DSN.|  
@@ -86,7 +84,7 @@ ms.locfileid: "35697307"
   
 -   Segurança: o SPN especificado divulga informações que estão protegidas?  
   
--   Confiabilidade: Para habilitar o uso de SPNs padrão, o conta de serviço na qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância executa deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
+-   Confiabilidade: Para habilitar o uso de SPNs padrão, a conta de serviço no qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa de instância deve ter privilégios suficientes para atualizar o Active Directory no KDC.  
   
 -   Conveniência e transparência de local: como os SPNs de um aplicativo serão afetados se seu banco de dados for movido para uma instância diferente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Isto se aplicará ao servidor principal e seu parceiro de failover se você usar espelhamento de banco de dados. Se uma alteração de servidor significar que os SPNs devem ser alterados, como isto afetará os aplicativos? Qualquer alteração será gerenciada?  
   

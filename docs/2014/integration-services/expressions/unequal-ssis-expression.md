@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
@@ -16,13 +16,13 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6046dcd370769518d6465a48b048e4beb639fc09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf78899779f87837ec6df2db46549563454d398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259042"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Diferente) (Expressão SSIS)
   Executa uma comparação para determinar se duas expressões com tipos de dados compatíveis não são iguais. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  
@@ -109,8 +109,8 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [= = &#40;Igual&#41; &#40;expressão SSIS&#41;](equal-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [= = &#40;Igual&#41; &#40;expressão do SSIS&#41;](equal-ssis-expression.md)   
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

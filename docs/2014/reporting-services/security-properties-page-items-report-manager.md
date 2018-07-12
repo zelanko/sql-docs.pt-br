@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230216"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
   Use a página Propriedades de Segurança para exibir ou modificar as definições de segurança que determinam acesso a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Essa página está disponível para itens que você tem permissão para proteger.  

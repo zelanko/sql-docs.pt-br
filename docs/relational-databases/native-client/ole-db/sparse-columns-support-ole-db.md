@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de135d6d4e172045e7841197c79d86eea9397c9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: HT
+ms.openlocfilehash: 25e45c61290a45240d5e4595a015b543ed89db29
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953041"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409095"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Suporte de colunas esparsas (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Este tópico fornece informações o suporte OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para colunas esparsas. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md). Para obter um exemplo, consulte [coluna de exibição e os metadados de catálogo para colunas esparsas &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
+  Este tópico fornece informações o suporte OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para colunas esparsas. Para obter mais informações sobre colunas esparsas, consulte [Sparse Columns Support in SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md). Para obter um exemplo, consulte [coluna de exibição e os metadados de catálogo para colunas esparsas &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## <a name="ole-db-statement-metadata"></a>Metadados de instruções do OLE DB  
- Começando com o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está disponível. Esse valor deve ser definido para colunas que são **column_set** valores. O sinalizador DBCOLUMNFLAGS pode ser recuperado por meio de *dwFlags* parâmetro de icolumnsinfo:: Getcolumnsinfo e a coluna DBCOLUMN_FLAGS do conjunto de linhas retornado por Getcolumnsrowset.  
+ Começando com o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está disponível. Esse valor deve ser definido para colunas que são **column_set** valores. O sinalizador DBCOLUMNFLAGS pode ser recuperado por meio de *dwFlags* parâmetro de icolumnsinfo:: Getcolumnsinfo e a coluna DBCOLUMN_FLAGS do conjunto de linhas retornado por IColumnsRowset:: Getcolumnsrowset.  
   
 ## <a name="ole-db-catalog-metadata"></a>Metadados de catálogo do OLE DB  
  Duas colunas específicas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adicionais foram acrescentadas a DBSCHEMA_COLUMNS.  
@@ -58,13 +58,13 @@ ms.locfileid: "32953041"
   
 |Tipo ou função de membro|Description|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|Sinalizador de DBCOLUMNFLAGS um novo valor DBCOLUMNFLAGS_SS_ISCOLUMNSET está definida para **column_set** colunas em *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE é definido para **column_set** colunas.|  
-|IColumsRowset::GetColumnsRowset|Um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está definido para **column_set** colunas em DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE é definido como DBCOMPUTEMODE_DYNAMIC para **column_set** colunas.|  
+|IColumnsInfo::GetColumnsInfo|Sinalizador de DBCOLUMNFLAGS um novo valor DBCOLUMNFLAGS_SS_ISCOLUMNSET será definido para **column_set** colunas *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE é definido para **column_set** colunas.|  
+|IColumsRowset::GetColumnsRowset|Um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, é definido para **column_set** colunas em DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE é definido como DBCOMPUTEMODE_DYNAMIC para **column_set** colunas.|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS retorna duas colunas novas: SS_IS_COLUMN_SET e SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS só retorna colunas que não são membros de um **column_set**.<br /><br /> Foram adicionados dois novos conjuntos de linhas de esquema: DBSCHEMA_COLUMNS_EXTENDED retornará todas as colunas, independentemente da dispersão de **column_set** associação. DBSCHEMA_SPARSE_COLUMN_SET só retorna colunas que são membros de um **column_set**. Estes conjuntos de linhas novos têm as mesmas colunas e restrições que DBSCHEMA_COLUMNS.|  
-|IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas inclui os GUIDs para os novos conjuntos de linhas DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET na lista de conjuntos de linhas de esquema disponíveis.|  
-|ICommand::Execute|Se **selecione \* de** *tabela* é usado, ele retornará todas as colunas que não são membros de esparso **column_set**, além de uma coluna XML que contém os valores de todos os colunas não nulas que são membros de esparso **column_set**, se presente.|  
-|IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET retorna um conjunto de linhas com as mesmas colunas ICommand:: execute, com um **selecione \***  consulta na mesma tabela.|  
-|ITableDefinition|Não há nenhuma alteração para esta interface para colunas esparsas ou **column_set** colunas. Aplicativos que precisam fazer modificações de esquema devem executar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] apropriado diretamente.|  
+|IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas inclui as GUIDs para os novos conjuntos de linhas DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET na lista de conjuntos de linhas de esquema disponíveis.|  
+|ICommand::Execute|Se **selecionar \* partir** *tabela* é usada, ela retorna todas as colunas que não são membros de esparso **column_set**, além de uma coluna XML que contém os valores de todos os colunas não nulas que são membros de esparso **column_set**, se estiver presente.|  
+|IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET retorna um conjunto de linhas com ICommand:: execute, as mesmas colunas com um **selecionar \***  consulta na mesma tabela.|  
+|ITableDefinition|Não há nenhuma alteração nesta interface para colunas esparsas ou para **column_set** colunas. Aplicativos que precisam fazer modificações de esquema devem executar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] apropriado diretamente.|  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

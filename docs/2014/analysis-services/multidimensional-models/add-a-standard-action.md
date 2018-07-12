@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165527"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36008526"
         > [!NOTE]  
         >  As ações proprietárias não são retornadas para o servidor a menos que o aplicativo cliente restrinja explicitamente o conjunto de linhas de esquema para retornar somente ações que correspondam ao nome especificadas em **Aplicativo**.  
   
-    -   Em **ação conteúdo**, se você estiver usando o tipo de URL, coloque o endereço de Internet entre aspas, por exemplo, "http://www.adventure-works.com".  
+    -   Na **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço de Internet entre aspas, por exemplo, "http://www.adventure-works.com".  
   
     -   Em **Descrição**, digite uma descrição para a ação.  
   

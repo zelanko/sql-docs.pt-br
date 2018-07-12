@@ -16,20 +16,20 @@ helpviewer_keywords:
 - ISSAbort interface
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 53c6e2c7c06331ce75883f86a8935d4d1c2419c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ace6518c1a0f4ece66ec0b9b24cb9e109db7ffa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180343"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort (OLE DB)
-  O **ISSAbort** interface, que é exposta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, fornece o [issabort:: Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) método que é usado para cancelar o conjunto de linhas atual, além de todos os comandos em lote com o comando que gerou inicialmente o conjunto de linhas, e que ainda não concluiu a execução.  
+  O **ISSAbort** interface, que é exposta na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, fornece o [issabort:: Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) método que é usado para cancelar o conjunto de linhas atual, além de todos os comandos em lote com o comando que gerou inicialmente o conjunto de linhas, e que ainda não concluiu a execução.  
   
- **ISSAbort** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponível por meio da interface de específica do provedor de Native Client **QueryInterface** no **IMultipleResults** objeto retornado por  **ICommand:: execute** ou **IOpenRowset:: OPENROWSET**.  
+ **ISSAbort** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interface específica do provedor de Native Client disponível por meio **QueryInterface** sobre o **IMultipleResults** objeto retornado por  **ICommand:: execute** ou **IOpenRowset:: OPENROWSET**.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

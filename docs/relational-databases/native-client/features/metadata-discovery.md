@@ -2,35 +2,32 @@
 title: Descoberta de metadados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 402730cba419ad49c5be791fefd7a5b2a7971e98
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700297"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423425"
 ---
 # <a name="metadata-discovery"></a>Descoberta de metadados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  A melhoria na descoberta de metadados em [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicativos cliente nativos para garantir que os metadados colunas ou parâmetros retornados da execução de uma consulta são idêntico ao ou compatível com os metadados de formato especificado antes de execução da consulta. Você receberá um erro se os metadados retornados depois da execução da consulta não forem compatíveis com o formato de metadados especificado antes da execução da consulta.  
+  A melhoria na descoberta de metadados na [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicativos cliente nativos para garantir que os metadados coluna ou parâmetro retornados da execução de uma consulta são idêntico ao ou compatível com os metadados de formato especificado antes de execução da consulta. Você receberá um erro se os metadados retornados depois da execução da consulta não forem compatíveis com o formato de metadados especificado antes da execução da consulta.  
   
  Em funções bcp e ODBC, e em interfaces IBCPSession e IBCPSession2, agora você pode especificar uma leitura atrasada (descoberta de metadados atrasada) para evitar a descoberta de metadados para operações de saída de consulta. Isso melhora o desempenho e elimina falhas de descoberta de metadados.  
   
- Se você desenvolver um aplicativo usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] mas se conectar a uma versão de servidor anterior ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], descoberta de metadados corresponderá a funcionalidade para a versão do servidor.  
+ Se você desenvolver um aplicativo usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , mas se conectar a uma versão de servidor anterior ao [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], funcionalidade corresponderá à versão do servidor de descoberta de metadados.  
   
 ## <a name="remarks"></a>Remarks  
  As funções bcp a seguir foram aperfeiçoadas no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] para fornecer descoberta de metadados aprimorada:  

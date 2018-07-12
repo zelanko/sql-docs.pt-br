@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85bc7a517642ccc5b4386f65e7b4a9c89d757ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdfbaa296a7c83c96a7a41d759d582833d2ed8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151167"
 ---
 # <a name="unknownmember-element-assl"></a>Elemento UnknownMember (ASSL)
   Indica se o membro desconhecido é visível.  

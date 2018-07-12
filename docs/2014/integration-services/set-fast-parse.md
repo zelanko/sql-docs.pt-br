@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94f4fe123cb37e60e175ad39b932e61376e217b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79307cdd25f15f34eaaf3be084a3d46045ee7d8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162837"
 ---
 # <a name="set-fast-parse"></a>Definir a análise rápida
   A propriedade de análise rápida deve ser definida para cada coluna da origem ou transformação que use a análise rápida. Para definir a propriedade, use o Editor avançado da fonte Flat File e da transformação de Conversão de Dados.  
@@ -32,7 +32,7 @@ ms.locfileid: "36008942"
   
 3.  No painel **Entradas e Saídas** , clique na coluna para a qual você quer ativar a análise rápida.  
   
-4.  Na janela Propriedades, expanda o **propriedades personalizadas** nó e defina o `FastParse` propriedade `True`.  
+4.  Na janela Propriedades, expanda o **Custom Properties** nó e defina o `FastParse` propriedade `True`.  
   
 5.  Clique em **OK**.  
   

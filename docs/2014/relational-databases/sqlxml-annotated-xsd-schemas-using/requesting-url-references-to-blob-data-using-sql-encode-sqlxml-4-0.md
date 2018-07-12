@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f18f3fb5676270bf01f0598aa29536259f7250f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d9bbcd45a0984a0c34a5759d5ec9774c211354b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258252"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)
   Em um esquema XSD anotado, quando um atributo (ou elemento) é mapeado para uma coluna BLOB no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados são retornados no formato codificado na base 64 no XML.  
@@ -40,7 +40,7 @@ ms.locfileid: "36007463"
   
  À anotação `sql:encode` é possível atribuir o valor "url" ou "default". Um valor "default" retorna dados codificados na base 64.  
   
- A anotação `sql:encode` não pode ser usada com `sql:use-cdata` ou nos tipos de atributo ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS. Ele não também pode ser usado com XSD **fixa** atributo.  
+ A anotação `sql:encode` não pode ser usada com `sql:use-cdata` ou nos tipos de atributo ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS. Ele não também pode ser usado com XSD **corrigido** atributo.  
   
 > [!NOTE]  
 >  As colunas de tipo BLOB não podem ser usadas como parte de uma chave ou chave estrangeira.  
@@ -49,7 +49,7 @@ ms.locfileid: "36007463"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Especificando sql:encode para obter uma referência URL aos dados BLOB  
- Neste exemplo, o esquema de mapeamento especifica `sql:encode` no **LargePhoto** atributo para recuperar a referência URI para uma foto de produto específico (em vez de recuperar os dados binários no formato codificado em Base 64).  
+ Neste exemplo, o esquema de mapeamento especifica `sql:encode` sobre o **LargePhoto** atributo para recuperar a referência URI para uma foto de produto específico (em vez de recuperar os dados binários em formato codificado em Base 64).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
