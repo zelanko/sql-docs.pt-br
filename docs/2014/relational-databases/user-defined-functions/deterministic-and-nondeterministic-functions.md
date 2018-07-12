@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - nondeterministic functions
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11780f633b64f7eaa2cfe495bbe90f7c6ba2a832
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011324"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423495"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funções determinísticas e não determinísticas
   As funções determinísticas sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e quando recebem o mesmo estado do banco de dados. As funções não determinísticas podem retornar resultados diferentes cada vez que são chamadas com um conjunto específico de valores de entrada, mesmo que o estado do banco de dados que elas acessam permaneça o mesmo. Por exemplo, a função AVG sempre retorna o mesmo resultado, dadas as qualificações declaradas acima, mas a função GETDATE, que retorna o valor datetime atual, sempre retorna um resultado diferente.  

@@ -1,13 +1,11 @@
 ---
-title: Atribuição de armazenamento | Microsoft Docs
+title: Atribuindo armazenamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,20 +21,20 @@ helpviewer_keywords:
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb77a63cb3522d86b40742780e44a141dc0a6c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cc3ce031d7f59395ec54abe1c21276e9b4be9054
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115660"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426345"
 ---
 # <a name="assigning-storage"></a>Atribuindo armazenamento
   Um aplicativo pode atribuir armazenamento para resultados antes ou depois de executar uma instrução SQL. Caso prepare ou execute a instrução SQL primeiro, um aplicativo pode consultar o conjunto de resultados antes de atribuir o armazenamento para resultados. Por exemplo, caso o conjunto de resultados seja desconhecido, o aplicativo deve recuperar o número de colunas antes de atribuir o armazenamento a eles.  
   
- Para associar o armazenamento para uma coluna de dados, um aplicativo chama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e passá-lo:  
+ Para associar o armazenamento para uma coluna de dados, um aplicativo chama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e passa-o:  
   
 -   O tipo de dados no qual os dados serão convertidos.  
   
@@ -58,7 +56,7 @@ ms.locfileid: "36115660"
   
 -   A associação que reconhece a linha é concluída quando todos os parâmetros na instrução SQL são associados como uma unidade a uma matriz de estruturas que contêm as variáveis individuais dos parâmetros.  
   
-     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho reter a estrutura de colunas do conjunto de variáveis que receberão o resultado.  
+     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho do contendo a estrutura de colunas do conjunto de variáveis que receberão o resultado.  
   
  O aplicativo também define SQL_ATTR_ROW_ARRAY_SIZE como o número de elementos nas matrizes da coluna ou da linha e define SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   

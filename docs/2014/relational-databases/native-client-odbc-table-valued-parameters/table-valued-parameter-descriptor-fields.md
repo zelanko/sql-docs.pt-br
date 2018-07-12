@@ -5,24 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d6f07c164b6f267301f26d0a5fcdad5da2871d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4d126c397680f03b82a6498d57dd77ec580a7ea1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011119"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420945"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos do descritor de parâmetro com valor de tabela
   O suporte a parâmetros com valor de tabela inclui novos campos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em APDs (descritores de parâmetro de aplicativo) e IPDs (descritores de parâmetro de implementação) ODBC.  
@@ -31,7 +29,7 @@ ms.locfileid: "36011119"
   
 |Nome|Local|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|O nome do tipo de servidor do parâmetro com valor de tabela.<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado em uma chamada para SQLBindParameter, ele sempre deve ser especificado como um valor Unicode, mesmo em aplicativos que são criados como aplicativos ANSI. O valor usado para o parâmetro *StrLen_or_IndPtr* deve ser SQL_NTS ou o comprimento da cadeia de caracteres do nome multiplicado por sizeof (WCHAR).<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado por meio de SQLSetDescField, ele pode ser especificado usando um literal que está de acordo com a maneira como o aplicativo é compilado. O Gerenciador do Driver ODBC executará todas as conversões de Unicode necessárias.|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|O nome do tipo de servidor do parâmetro com valor de tabela.<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado em uma chamada para SQLBindParameter, ele sempre deve ser especificado como um valor Unicode, mesmo em aplicativos que são criados como aplicativos ANSI. O valor usado para o parâmetro *StrLen_or_IndPtr* deve ser SQL_NTS ou o comprimento da cadeia de caracteres do nome multiplicado por sizeof (WCHAR).<br /><br /> Quando um nome de tipo de parâmetro com valor de tabela é especificado por meio do SQLSetDescField, ele pode ser especificado usando um literal que esteja de acordo com a maneira como o aplicativo é compilado. O Gerenciador do Driver ODBC executará todas as conversões de Unicode necessárias.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (somente leitura)|IPD|SQLTCHAR*|O catálogo onde o tipo é definido.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|O esquema onde o tipo é definido.|  
   

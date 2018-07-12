@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344fd0a9b2d3c21e6b046c128a5eae765f84d69f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e54e07700b7b3ec5ffe43943c6d25b76515fb3ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277472"
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar o assistente para nova instância
   O assistente para nova instância é usado para criar uma nova instância para um serviço CDC. Você abre o assistente Criar uma Instância do Oracle CDC no CDC Designer Console. Você pode fazer o seguinte no assistente para nova instância.  

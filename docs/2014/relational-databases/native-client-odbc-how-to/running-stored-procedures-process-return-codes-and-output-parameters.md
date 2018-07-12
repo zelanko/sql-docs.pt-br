@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012036"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422525"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Processar códigos de retorno e parâmetros de saída (ODBC)
-  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e parâmetros de saída são enviados no último pacote do servidor e não estão disponíveis para o aplicativo até que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retorna SQL_NO_DATA. Se um erro for retornado por um procedimento armazenado, chame o SQLMoreResults para Avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  
+  Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e parâmetros de saída são enviados no último pacote do servidor e não estão disponíveis para o aplicativo até que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA. Se um erro for retornado por um procedimento armazenado, chame o SQLMoreResults para Avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
@@ -35,7 +33,7 @@ ms.locfileid: "36012036"
   
 1.  Construa uma instrução SQL que use a sequência de escape ODBC CALL. A instrução deve usar marcadores de parâmetro para cada entrada/saída e parâmetro de saída, e também para o valor de retorno de procedimento (se houver).  
   
-2.  Chamar [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e para o procedimento retorna o valor (se houver).  
+2.  Chame [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para cada entrada, entrada/saída e parâmetro de saída e para o procedimento retornar valor (se houver).  
   
 3.  Execute a instrução com `SQLExecDirect`.  
   
@@ -194,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de procedimentos armazenados de execução &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Executando procedimentos armazenados tópicos de instruções &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

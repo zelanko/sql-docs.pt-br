@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013333"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411725"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
@@ -81,8 +79,8 @@ fIsMaxType
 |`SQLTEXT`|Qualquer|**text**|  
 |`SQLBIGBINARY`|não|**binary**|  
 |`SQLBINARY`|não|**Binary**|  
-|`SQLBIGVARBINARY`|não|**varbinary**|  
-|`SQLVARBINARY`|não|**varbinary**|  
+|`SQLBIGVARBINARY`|não|**Varbinary**|  
+|`SQLVARBINARY`|não|**Varbinary**|  
 |`SQLIMAGE`|Qualquer|**Imagem**|  
 |`SQLINTN`|Qualquer|**int-null**|  
 |`SQLDATETIMN`|Qualquer|**datetime-null**|  
@@ -95,9 +93,9 @@ fIsMaxType
 |`SQLAOPMAX`|Qualquer|**Max**|  
 |`SQLDATETIM4`|Qualquer|**smalldatetime**|  
 |`SQLMONEY4`|Qualquer|**Smallmoney**|  
-|`SQLFLT4`|Qualquer|**real**|  
+|`SQLFLT4`|Qualquer|**Real**|  
 |`SQLUNIQUEID`|Qualquer|**uniqueidentifier**|  
-|`SQLNCHAR`|não|**nchar**|  
+|`SQLNCHAR`|não|**Nchar**|  
 |`SQLNVARCHAR`|não|**Nvarchar**|  
 |`SQLNTEXT`|Qualquer|**Ntext**|  
 |`SQLVARIANT`|Qualquer|**sql_variant**|  
@@ -116,9 +114,9 @@ fIsMaxType
 |`SQLUDT`|Qualquer|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
- Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Tipo em SQLNCLI. h" da tabela na [alterações de cópia em massa para tipos aprimorados de data e hora &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
+ Os valores de parâmetro de token para tipos de data/hora são descritos na coluna "Tipo em SQLNCLI. h" da tabela no [alterações de cópia em massa para tipos aprimorada de data e hora &#40;OLE DB e ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). O valor retornado está na linha correspondente da coluna "Tipo de armazenamento de arquivo" coluna.  
   
- Para obter mais informações, consulte [data e hora melhorias &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [aprimoramentos de data e hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de cópia em massa](sql-server-driver-extensions-bulk-copy-functions.md)  

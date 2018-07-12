@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
 - SQL plan guides
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cced80dda0c62b4c339fb058a05ef927c602e5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020677"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430395"
 ---
 # <a name="plan-guides"></a>Guias de plano
   Guias de plano permitem otimizar o desempenho das consultas quando você não pode ou não quer alterar diretamente o texto da consulta real no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. As guias de plano influenciam a otimização das consultas, anexando dicas de consulta ou um plano de consulta fixo. Guias de plano podem ser úteis quando um subconjunto pequeno de consultas em um aplicativo de banco de dados fornecido por um terceiro não estiver executando como esperado. No guia de plano, especifique a instrução Transact-SQL que deve ser otimizada, e uma cláusula OPTION que contenha as dicas de consulta a serem usadas ou um plano de consulta específico a ser usado para otimizar a consulta. Quando a consulta é feita, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corresponde a instrução Transact-SQL com a guia de plano e anexa a cláusula OPTION à consulta em tempo de execução ou usa o plano de consulta especificado.  

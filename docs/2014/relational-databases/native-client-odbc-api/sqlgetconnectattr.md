@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011381"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415665"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr`, e a função é usada para informar as configurações atuais. Os valores informados para esses atributos não são garantidos até que uma conexão foi feita ou o atributo foi definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr`, e a função é usada para informar as configurações atuais. Os valores informados em relação a esses atributos não são garantidos até depois que uma conexão seja estabelecida ou o atributo foi definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
  Este tópico lista os atributos somente leitura. Para obter informações sobre as outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atributos de conexão específicos do driver ODBC do Native Client, consulte [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -59,7 +57,7 @@ ms.locfileid: "36011381"
 |SQL_SUCCESS|A conexão foi bem-sucedida. A ID de conexão de cliente será localizada no buffer de saída.|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
- O atributo SQL_COPT_SS_PERF_DATA retorna um ponteiro para uma estrutura SQLPERF que contém as estatísticas de desempenho do driver atuais. `SQLGetConnectAttr` retornará NULL se o log de desempenho não está habilitado. As estatísticas na estrutura SQLPERF não são atualizadas dinamicamente pelo driver. Chamar `SQLGetConnectAttr` cada vez que as estatísticas de desempenho precisam ser atualizadas.  
+ O atributo SQL_COPT_SS_PERF_DATA retorna um ponteiro para uma estrutura SQLPERF que contém as estatísticas de desempenho do driver atuais. `SQLGetConnectAttr` retornará NULL se o log de desempenho não está habilitado. As estatísticas na estrutura SQLPERF não são atualizadas dinamicamente pelo driver. Chamar `SQLGetConnectAttr` cada vez que as estatísticas de desempenho precisarem ser atualizadas.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -84,11 +82,11 @@ ms.locfileid: "36011381"
   
  Caso SQL_COPT_SS_SERVER_SPN ou SQL_COPT_SS_FAILOVER_PARTNER não tenha sido definido, será retornado o valor padrão (uma cadeia de caracteres vazia).  
   
- Para obter mais informações sobre os SPNs, consulte [nomes da entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obter mais informações sobre SPNs, consulte [nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Função SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
- [Detalhes de implementação de API de ODBC](odbc-api-implementation-details.md)   
+ [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

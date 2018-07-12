@@ -1,34 +1,32 @@
 ---
-title: Suporte de tipo de parâmetro com valor de tabela do OLE DB (Propriedades) | Microsoft Docs
+title: O suporte de tipo de parâmetro com valor de tabela do OLE DB (Propriedades) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01384c9827d9a204b3eeb94ae9443940548fa2ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019175"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408415"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Suporte ao tipo de parâmetro com valor de tabela de OLE DB (propriedades)
   Este tópico fornece informações sobre propriedades e conjuntos de propriedades de OLE DB associados a objetos de conjunto de linhas de parâmetro com valor de tabela.  
   
 ## <a name="properties"></a>Propriedades  
- A seguir está uma lista de propriedades expostas por meio do método IRowsetInfo::GetPropeties em objetos de conjunto de linhas de parâmetro com valor de tabela. Observe que todas as propriedades de conjunto de linhas de parâmetro com valor de tabela são somente leitura. Portanto, tentar definir qualquer uma das propriedades por meio de IOpenRowset:: OPENROWSET ou ITableDefinitionWithConstraints::CreateTableWithConstraints métodos para seus valores padrão não resultará em um erro e nenhum objeto será criado.  
+ A seguir está uma lista de propriedades expostas por meio do método IRowsetInfo::GetPropeties em objetos de conjunto de linhas de parâmetro com valor de tabela. Observe que todas as propriedades de conjunto de linhas de parâmetro com valor de tabela são somente leitura. Portanto, tentar definir qualquer uma das propriedades por meio de IOpenRowset:: OPENROWSET ou ITableDefinitionWithConstraints::CreateTableWithConstraints métodos para seus valores não padrão resultará em um erro e nenhum objeto será criado.  
   
  Não estão listadas propriedades não implementadas no objeto de conjunto de linhas de parâmetro com valor de tabela. Para obter uma lista completa de propriedades, consulte a documentação de OLE DB no Windows Data Access Components.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "36019175"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Observação: O objeto de conjunto de linhas de parâmetro com valor de tabela oferece suporte as interfaces IRowsetChange.<br /><br /> Um conjunto de linhas criado usando DBPROP_IRowsetChange igual a VARIANT_TRUE exibe comportamentos de modo de atualização imediatos.<br /><br /> No entanto, se colunas BLOB forem associadas como objetos ISequentialStream, o consumidor deverá mantê-los para o tempo de vida do objeto de conjunto de linhas do parâmetro com valor de tabela.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Observação: O objeto de conjunto de linhas de parâmetro com valor de tabela suporta as interfaces IRowsetChange.<br /><br /> Um conjunto de linhas criado usando DBPROP_IRowsetChange igual a VARIANT_TRUE exibe comportamentos de modo de atualização imediatos.<br /><br /> No entanto, se colunas BLOB forem associadas como objetos ISequentialStream, o consumidor deve mantê-los para o tempo de vida do objeto de conjunto de linhas de parâmetro com valor de tabela.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -79,14 +77,14 @@ ms.locfileid: "36019175"
  A propriedade a seguir define parâmetros com valor de tabela de suporte.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Esta propriedade é usada pelo consumidor no processo de criação de um objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints para cada coluna através da estrutura DBCOLUMNDESC, se necessário.  
+ Essa propriedade é usada pelo consumidor no processo de criação de um objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints para cada coluna através da estrutura DBCOLUMNDESC, se necessário.  
   
 |ID da propriedade|Valor da propriedade|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrição: quando definido como VARIANT_TRUE, indica que a coluna é uma coluna computada. VARIANT_FALSE indica que não é uma coluna computada.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Essas propriedades são lidas pelo consumidor ao descobrir as informações de tipo de parâmetro com valor de tabela em chamadas para ISSCommandWithParamters::GetParameterProperties e definidas pelo consumidor ao definir propriedades específicas sobre o parâmetro com valor de tabela por meio de isscommandwithparameters::.  
+ Essas propriedades são lidas pelo consumidor ao descobrir as informações de tipo de parâmetro com valor de tabela em chamadas para ISSCommandWithParamters::GetParameterProperties e definidas pelo consumidor ao definir propriedades específicas sobre o parâmetro com valor de tabela por meio de isscommandwithparameters:: SetParameterProperties.  
   
  A tabela a seguir fornece descrições detalhadas destas propriedades.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258422"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
   Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36019556"
   
 5.  Na página Local do Agente de Mesclagem, clique em **Executar cada agente em seu Assinante**e em **Avançar**.  
   
-6.  Na página assinantes, selecione o nome da instância do servidor do assinante e, em **banco de dados de assinatura**, selecione  **\<novo banco de dados >** da lista.  
+6.  Na página assinantes, selecione o nome da instância do servidor assinante e, em **banco de dados de assinatura**, selecione  **\<novo banco de dados >** na lista.  
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , insira **SalesOrdersReplica** na caixa **Nome do banco de dados** , clique em **OK**e em **Avançar**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36019556"
   
 9. Na página Inicializar Assinaturas, selecione **Na primeira sincronização** na lista **Inicializar Quando** , clique em **Avançar**e em **Avançar** novamente.  
   
-10. Na página de valores de HOST_NAME, digite um valor de `adventure-works\pamela0` no **valor de HOST_NAME** caixa e, em seguida, clique em **concluir**.  
+10. Na página valores de HOST_NAME, insira um valor de `adventure-works\pamela0` no **valor de HOST_NAME** caixa e, em seguida, clique em **concluir**.  
   
 11. Clique em **Concluir** novamente. Após a criação da assinatura, clique em **Fechar**.  
   

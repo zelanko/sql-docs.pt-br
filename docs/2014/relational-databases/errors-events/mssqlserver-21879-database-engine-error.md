@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011414"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413815"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,7 +57,7 @@ ms.locfileid: "36011414"
   
 -   Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para autenticação Kerberos. Consulte **Autenticação Kerberos e SQL Server** nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Use `sp_changedistpublisher` para alterar o modo de segurança associado com o publicador original em MSdistpublishers, bem como para especificar um logon e a senha a ser usada para a conexão.  
+-   Use `sp_changedistpublisher` para alterar o modo de segurança associado com o publicador original em MSdistpublishers, bem como para especificar um logon e senha a ser usado para a conexão.  
   
 -   Especifique o parâmetro de linha de comando *BypassPublisherValidation* na linha de comando do agente de mesclagem para ignorar a validação quando `sp_get_redirected_publisher` é chamado no distribuidor.  
   
