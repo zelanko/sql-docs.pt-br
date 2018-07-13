@@ -7,37 +7,36 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
-caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a9158bacb9959691118c356e4c742dc62e862346
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f158ac7c5904e54daf384ddbf8196dbf8fd5f66f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466592"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925967"
 ---
 # <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contém uma linha para cada trabalho de Map-reduce é propagada para o Hadoop como parte da execução um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] consulta em uma tabela externa do Hadoop. Cada trabalho de Map-reduce representa um dos predicados na consulta. Isso é usado apenas quando a aplicação de predicado é habilitada para consultas em tabelas externas do Hadoop.  
+  Contém uma linha para cada trabalho de Map-reduce que é propagada para o Hadoop como parte da execução um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] consulta em uma tabela externa do Hadoop. Cada trabalho de Map-reduce representa um dos predicados na consulta. Isso é usado somente quando a aplicação de predicado está habilitada para consultas em tabelas externas do Hadoop.  
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|ID para esta operação de Hadoop externa.|Mesmo que a ID de [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**Int**|Índice da etapa de consulta que faz referência a esta operação Hadoop.|Mesmo que step_index em [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|operation_type|**nvarchar(255)**|Descreve o tipo de operação externa.|'Operação Hadoop externo'|  
-|operation_name|**nvarchar(4000)**|A ID do trabalho para um trabalho Map-reduce. Isto é retornado por Hadoop após [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] envia o trabalho.||  
-|map_progress|**float**|A porcentagem de dados de entrada que foi consumidos até o momento pelo trabalho de mapa.|Um ponto flutuante número entre e incluindo 0 e 100.|  
-|reduce_progress|**Int**|A porcentagem do trabalho reduza que foi concluída.|Um ponto flutuante número entre e incluindo 0 e 100.|  
+|request_id|**nvarchar(32)**|ID para esta operação externa do Hadoop.|Mesmo que a ID na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|Índice da etapa de consulta que faz referência a essa operação de Hadoop.|Mesmo que step_index na [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|operation_type|**nvarchar(255)**|Descreve o tipo de operação externa.|'Operation Hadoop externo'|  
+|operation_name|**nvarchar(4000)**|A ID do trabalho para um trabalho de Map-reduce. Isto é retornado pelo Hadoop após [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] envia o trabalho.||  
+|map_progress|**float**|A porcentagem de dados de entrada que foi consumidos até o momento pelo trabalho de mapa.|Entre e incluindo 0 e 100 de número de ponto flutuante.|  
+|reduce_progress|**int**|A porcentagem do trabalho reduce que foi concluída...|Entre e incluindo 0 e 100 de número de ponto flutuante.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

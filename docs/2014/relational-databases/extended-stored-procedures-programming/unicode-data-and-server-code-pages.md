@@ -1,5 +1,5 @@
 ---
-title: Páginas de código Unicode dados e do servidor | Microsoft Docs
+title: Páginas de código do servidor e dados Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199246"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Páginas de código do servidor e dados Unicode
     
@@ -33,14 +33,14 @@ ms.locfileid: "36006102"
   
  A API de procedimento armazenado estendido é habilitada para dados Unicode; porém, não é habilitada para metadados Unicode. O diretiva Unicode #define não tem nenhum efeito sobre a API de procedimento armazenado estendido.  
   
- Pressupõe-se que todos os metadados retornados pela API de procedimento armazenado estendido ou fornecidos para ela pelo seu aplicativo de procedimento armazenado estendido estejam na página de código multibyte do servidor. A página de código padrão de um aplicativo de servidor de API de procedimento armazenado estendido é a página de código ANSI do computador no qual o aplicativo é executado, o que pode ser obtida chamando **srv_pfield** com o parâmetro de campo definido como SRV_ SPROC_CODEPAGE.  
+ Pressupõe-se que todos os metadados retornados pela API de procedimento armazenado estendido ou fornecidos para ela pelo seu aplicativo de procedimento armazenado estendido estejam na página de código multibyte do servidor. A página de código padrão de um aplicativo de servidor de API de procedimento armazenado estendido é a página de código ANSI do computador no qual o aplicativo é executado, que pode ser obtido chamando **srv_pfield** com o parâmetro de campo definido como SRV _ SPROC_CODEPAGE.  
   
  Se seu aplicativo de API de procedimento armazenado estendido for compatível com Unicode, você deverá converter os nomes das colunas de metadados Unicode, as mensagens de erro e assim por diante em dados multibyte antes de passar esses dados para a API de procedimento armazenado estendido.  
   
 ## <a name="example"></a>Exemplo  
  O procedimento armazenado estendido a seguir fornece um exemplo de conversões de Unicode. Observe que:  
   
--   Dados de coluna são passados como dados Unicode em **srv_describe** porque a coluna é descrita para ser SRVNVARCHAR.  
+-   Dados da coluna são passados como dados Unicode **srv_describe** porque a coluna é descrita para ser SRVNVARCHAR.  
   
 -   Metadados de nome de coluna é passado para **srv_describe** como dados multibyte.  
   

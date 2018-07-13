@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7eb07733e9db0a1002658cd1e29de02d95d8ad08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ca071d0ebdf37db3e9929d177f8afc8fd4973c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234836"
 ---
 # <a name="mhtml-device-information-settings"></a>Configurações das informações do dispositivo MHTML
   A tabela a seguir lista as configurações de informações de dispositivo para a renderização de relatórios no arquivo da Web (MHTML).  
@@ -36,7 +36,7 @@ ms.locfileid: "36005458"
   
 ## <a name="see-also"></a>Consulte também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Passando configurações de informações do dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

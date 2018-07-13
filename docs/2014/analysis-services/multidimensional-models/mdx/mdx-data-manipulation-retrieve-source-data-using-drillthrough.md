@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204416"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Usando DRILLTHROUGH para recuperar a fonte de dados (MDX)
   As expressões multidimensionais (MDX) usam a instrução [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)para recuperar um conjunto de linhas dos dados de origem de uma célula de cubo.  
@@ -41,7 +41,7 @@ ms.locfileid: "36005740"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- O `SELECT` cláusula identifica a célula de cubo que contém os dados de origem a serem recuperados. Essa cláusula `SELECT` é igual a uma instrução MDX `SELECT` comum, com exceção de que, na cláusula `SELECT`, apenas um membro pode ser especificado em cada eixo. Se mais de um membro for especificado em um eixo, ocorrerá um erro.  
+ O `SELECT` cláusula identifica a célula do cubo que contém os dados de origem a ser recuperado. Essa cláusula `SELECT` é igual a uma instrução MDX `SELECT` comum, com exceção de que, na cláusula `SELECT`, apenas um membro pode ser especificado em cada eixo. Se mais de um membro for especificado em um eixo, ocorrerá um erro.  
   
  A sintaxe de `<Max_Rows>` especifica o número de máximo de linhas em cada conjunto de linhas retornado. Se o provedor OLE DB usado para estabelecer a conexão com a fonte de dados não oferecer suporte a `DBPROP_MAXROWS`, a configuração `<Max_Rows>` será ignorada.  
   
@@ -60,6 +60,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Manipulando dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulação de dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

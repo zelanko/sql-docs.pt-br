@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 611219cbefc037bc0719b1f48b46178d6eef8af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186623"
 ---
 # <a name="integration-services-features-and-tasks"></a>Recursos e tarefas do Integration Services
   Encontre informações que qualquer pessoa — designer, desenvolvedor, analista ou administrador — precisa para criar e desenvolver [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. Em seguida, aprenda a incorporar esses pacotes em seus aplicativos e sites da Web.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Serviços de integração &#40;SSIS&#41; e ambientes de estúdio](integration-services-ssis-development-and-management-tools.md)  
+ [Serviços de integração &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md)  
   
  [Pacotes do SSIS &#40;Integration Services&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36005689"
   
  [Monitorando execuções de pacotes e outras operações](performance/monitor-running-packages-and-other-operations.md)  
   
- [Visão geral de segurança &#40;do Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
  [Feature Pack do Azure](azure-feature-pack-for-integration-services-ssis.md)  
   

@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
 - transaction log backups [SQL Server], tail-log backups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad9a530a1bcc67db785af3c23f2fd80496155f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 92e636b8fb7cc5001833f8d3b99cd761dddcf228
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207196"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
   Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  
@@ -41,7 +40,7 @@ ms.locfileid: "36005898"
 ##  <a name="TailLogScenarios"></a> Cenários que exigem um backup da parte final do log  
  É recomendável fazer um backup da parte final do log nos seguintes cenários:  
   
--   Se o banco de dados estiver online e você planeja realizar uma operação de restauração nele, comece fazendo backup da parte final do log. Para evitar um erro para um banco de dados online, você deve usar a opção … Opção WITH NORECOVERY do [BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.  
+-   Se o banco de dados estiver online e você planeja realizar uma operação de restauração nele, comece fazendo backup da parte final do log. Para evitar um erro para um banco de dados online, você deve usar a opção … Opção WITH NORECOVERY dos [BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.  
   
 -   Se um banco de dados estiver offline e não puder ser iniciado, e você precisar restaurar o banco de dados, primeiro faça backup da parte final do log. Como nenhuma transação pode ocorrer nesse momento, o uso de WITH NORECOVERY é opcional.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36005898"
 |Opção BACKUP LOG|Comentários|  
 |-----------------------|--------------|  
 |NORECOVERY|Use NORECOVERY sempre que pretender continuar com uma operação de restauração no banco de dados. NORECOVERY coloca o banco de dados no estado de restauração. Isso garante que o banco de dados não seja alterado depois do backup da parte final do log.  O log é truncado, a menos que a opção NO_TRUNCATE ou COPY_ONLY também for especificado.<br /><br /> **\*\* Importante \* \***  é recomendável que você evite usar NO_TRUNCATE, exceto quando o banco de dados estiver danificado.|  
-|CONTINUE_AFTER_ERROR|Use CONTINUE_AFTER_ERROR somente se estiver fazendo backup da parte final de um banco de dados danificado.<br /><br /> Observação: Quando você usa o backup da parte final do log em um banco de dados danificado, alguns dos metadados normalmente capturados em backups de log poderão estar indisponíveis. Para obter mais informações, consulte [Backups da parte final do log com backup incompleto de metadados](#IncompleteMetadata) posteriormente neste tópico.|  
+|CONTINUE_AFTER_ERROR|Use CONTINUE_AFTER_ERROR somente se estiver fazendo backup da parte final de um banco de dados danificado.<br /><br /> Observação: Quando você usa o backup da parte final do log em um banco de dados danificado, alguns dos metadados são normalmente capturados em backups de log podem ficar indisponível. Para obter mais informações, consulte [Backups da parte final do log com backup incompleto de metadados](#IncompleteMetadata) posteriormente neste tópico.|  
   
 ##  <a name="IncompleteMetadata"></a> Backups da parte final do log com backup incompleto de metadados  
  Backups da parte final do log capturam a parte final do log até mesmo se o banco de dados estiver offline, danificado, ou com arquivos de dados faltando. Isso pode causar metadados incompletos dos comandos de informação de restauração e de **msdb**. Entretanto, apenas os metadados estão incompletos; o log capturado está completo e utilizável.  

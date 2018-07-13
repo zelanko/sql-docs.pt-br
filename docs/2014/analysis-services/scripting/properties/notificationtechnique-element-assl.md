@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1216ed87ac9fd24265dbcb33d13ba831997b73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213906"
 ---
 # <a name="notificationtechnique-element-assl"></a>Elemento NotificationTechnique (ASSL)
   Especifica se [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um aplicativo cliente externo processa as notificações.  
@@ -47,7 +47,7 @@ ms.locfileid: "36005967"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|*cliente*|  
+|Valor padrão|*Cliente*|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -62,10 +62,10 @@ ms.locfileid: "36005967"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*cliente*|O aplicativo cliente externo processa a notificação.|  
+|*Cliente*|O aplicativo cliente externo processa a notificação.|  
 |*Servidor*|O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processa a notificação.|  
   
- O elemento que corresponde ao pai do `NotificationTechnique` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
+ O elemento que corresponde ao pai de `NotificationTechnique` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   
  A enumeração que corresponde aos valores permitidos para `NotificationTechnique` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.NotificationTechnique>.  
   

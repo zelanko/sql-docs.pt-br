@@ -13,17 +13,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: 9
 author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 92eee101d27c4483207ba1be9933b750aabdea3d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: ddc64da5a0c1d5dc3f383213f711cb0f1f849eb7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32632247"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875224"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,25 +33,25 @@ Contém uma linha para cada coluna em um índice columnstore.
 | --------------------------- | ---------- | ------------------------------------------------------------ |
 | **partition_id**            | **bigint** | Indica a ID da partição. É exclusivo em um banco de dados.     |
 | **hobt_id**                 | **bigint** | A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore. |
-| **column_id**               | **Int**    | ID da coluna columnstore.                                |
-| **segment_id**              | **Int**    | ID do segmento de coluna. Para compatibilidade com versões anteriores, o nome da coluna continua a ser chamado segment_id, mesmo que isso é a ID do grupo de linhas. Você pode identificar exclusivamente um segmento usando < hobt_id, partition_id, column_id >, < segment_id >. |
-| **version**                 | **Int**    | Versão de formato do segmento de coluna.                        |
-| **encoding_type**           | **Int**    | Tipo de codificação usada para esse segmento:<br /><br /> 1 = VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário (semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED - coluna não-cadeia de caracteres/binários com valores comuns no dicionário<br /><br /> 3 = STRING_HASH_BASED - coluna de cadeia de caracteres/binário com valores comuns no dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED - não-cadeia de caracteres/binários com nenhuma dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - cadeia de caracteres/binário com nenhum dicionário<br /><br /> Todas as codificações tirar proveito de codificação de bit de remessa e comprimento de execução quando possível. |
-| **row_count**               | **Int**    | Número de linhas no grupo de linhas.                             |
-| **has_nulls**               | **Int**    | 1 se o segmento de coluna tiver valores nulos.                     |
+| **column_id**               | **int**    | ID da coluna columnstore.                                |
+| **segment_id**              | **int**    | ID do segmento de coluna. Para compatibilidade com versões anteriores, o nome da coluna continua a ser chamado segment_id, mesmo que isso é a ID do rowgroup. Você pode identificar exclusivamente um segmento usando < hobt_id, partition_id, column_id >, < segment_id >. |
+| **version**                 | **int**    | Versão de formato do segmento de coluna.                        |
+| **encoding_type**           | **int**    | Tipo de codificação usado para esse segmento:<br /><br /> 1 = VALUE_BASED - não-cadeia de caracteres/binários com nenhum dicionário (semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED - coluna não-cadeia de caracteres/binários com valores comuns em dicionário<br /><br /> 3 = STRING_HASH_BASED - coluna de cadeia de caracteres/binário com valores comuns em dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED - não-cadeia de caracteres/binários com nenhum dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - cadeia de caracteres/binário com nenhum dicionário<br /><br /> Todas as codificações de tirar proveito da codificação de empacotamento de bit e o comprimento de execução quando possível. |
+| **row_count**               | **int**    | Número de linhas no grupo de linhas.                             |
+| **has_nulls**               | **int**    | 1 se o segmento de coluna tiver valores nulos.                     |
 | **base_id**                 | **bigint** | ID do valor base se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, base_id será definido como 1. |
-| **magnitude**               | **float**  | Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, magnitude é definido como 1. |
-| **primary__dictionary_id**  | **Int**    | ID do dicionário primário. Um valor diferente de zero aponta para o dicionário de local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento. |
-| **secondary_dictionary_id** | **Int**    | ID do dicionário secundário. Um valor diferente de zero aponta para o dicionário de local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento. |
+| **magnitude**               | **float**  | Magnitude se o tipo de codificação 1 estiver sendo usado.  Se o tipo de codificação 1 não está sendo usado, magnitude será definido como 1. |
+| **primary__dictionary_id**  | **int**    | ID do dicionário principal. Um valor diferente de zero aponta para o dicionário local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento. |
+| **secondary_dictionary_id** | **int**    | ID do dicionário secundário. Um valor diferente de zero aponta para o dicionário local para esta coluna no segmento atual (ou seja, o grupo de linhas). Um valor de -1 indica que há um dicionário local para este segmento. |
 | **min_data_id**             | **bigint** | ID de dados mínimo no segmento de coluna.                       |
 | **max_data_id**             | **bigint** | ID de dados máximo no segmento de coluna.                       |
 | **null_value**              | **bigint** | Valor usado para representar nulos.                               |
 | **on_disk_size**            | **bigint** | Tamanho do segmento em bytes.                                    |
-| **pdw_node_id**             | **Int**    | Identificador exclusivo de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó. |
+| **pdw_node_id**             | **int**    | Identificador exclusivo de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó. |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-Una sys.pdw_nodes_column_store_segments com outras tabelas do sistema para determinar o número de segmentos de columnstore por tabela lógica. 
+Junte-se sys.pdw_nodes_column_store_segments com outras tabelas do sistema para determinar o número de segmentos do columnstore por tabela lógica. 
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -87,7 +86,7 @@ ORDER BY    table_nm
  Requer a permissão **VIEW SERVER STATE**.  
 
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e exibições de catálogo do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
 - installing packages
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8674256ca22d0327987d0219141b254260173c8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fe699eade5daa76a8d6f2a77e63a2c5019b815
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203926"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Implantar pacotes usando o utilitário de implantação
   Quando você cria um utilitário de implantação para instalar pacotes de um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador diferente daquele em que o utilitário de implantação foi criado, é necessário primeiro copiar a pasta de implantação no computador de destino.  

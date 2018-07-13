@@ -22,26 +22,26 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465172"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957609"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Retorna uma tabela que mapeia o campo class_type do log de auditoria para o campo class_desc em sys.dm_audit_actions. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria, consulte [SQL Server Audit &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retorna uma tabela que mapeia o campo class_type do log de auditoria para o campo class_desc em sys.dm_audit_actions. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria, consulte [auditoria do SQL Server &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|O tipo de classe da entidade que foi auditada. Mapeia para o class_type gravado no log de auditoria e retornado pelo **get_audit_file ()** função. Não permite valor nulo.|  
+|**class_type**|**char(2)**|O tipo de classe da entidade que foi auditada. Mapeia para o class_type gravado no log de auditoria e retornado pela **get_audit_file ()** função. Não permite valor nulo.|  
 |**class_type_desc**|**nvarchar(120)**|O nome da entidade auditável. Não permite valor nulo.|  
 |**securable_class_desc**|**nvarchar(120)**|O objeto protegível que é mapeado para o class_type que está sendo auditado. Será NULL se o class_type não for mapeado para um objeto protegível. Pode ser relacionado a class_desc in sys.dm_audit_actions.|  
   
 ## <a name="permissions"></a>Permissões  
- Entidade de segurança deve ter **selecione** permissão. Por padrão, é concedida a Público.  
+ Entidade de segurança deve ter **selecionar** permissão. Por padrão, é concedida a Público.  
   
 ## <a name="see-also"></a>Consulte também  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

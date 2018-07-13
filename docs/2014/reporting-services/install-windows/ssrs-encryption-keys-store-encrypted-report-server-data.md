@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186073"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Armazenar dados criptografados do servidor de relatório (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
@@ -40,7 +40,7 @@ ms.locfileid: "36006310"
   
 -   Credenciais armazenadas usadas por um servidor de relatório para conexão com fontes de dados externas que fornecem dados a um relatório.  
   
-     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, consulte [especificar credenciais e informações de Conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+     Esses valores são definidos ao configurar informações de fonte de dados para um relatório e, em seguida, são armazenados como valores criptografados em um banco de dados de servidor de relatório. O servidor de relatório usa uma chave simétrica para criptografar e decifrar esses dados. Para obter mais informações sobre credenciais armazenadas, consulte [especificar credenciais e informações de Conexão para fontes de dados do relatório](../../integration-services/connection-manager/data-sources.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 -   Uma conta de usuário autônoma usada pelo servidor de relatório para conexão com outros computadores para recuperar arquivos de imagem externos ou dados externos usados em um relatório.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "36006310"
 >  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não dá suporte ao armazenamento em cache nem ao histórico de relatórios que usam parâmetros com base na identificação de segurança do usuário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
