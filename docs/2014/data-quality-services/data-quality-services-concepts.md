@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155387"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
@@ -64,7 +64,7 @@ ms.locfileid: "36130630"
   
  **Criação de perfis e notificações**  
   
- A criação de perfil de dados fornece aos administradores de dados estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS para as atividades de limpeza e correspondência enquanto executa um projeto de qualidade de dados. A criação de perfil de dados ajuda a avaliar a efetividade das atividades de limpeza e correspondência em um projeto de qualidade de dados, e as notificações ajudam o usuário com ações que podem ser realizadas para aprimorar as atividades de limpeza de dados e correspondência de dados. Para obter mais informações, consulte [criação de perfil de dados e notificações no DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ A criação de perfil de dados fornece aos administradores de dados estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS para as atividades de limpeza e correspondência enquanto executa um projeto de qualidade de dados. A criação de perfil de dados ajuda a avaliar a efetividade das atividades de limpeza e correspondência em um projeto de qualidade de dados, e as notificações ajudam o usuário com ações que podem ser realizadas para aprimorar as atividades de limpeza de dados e correspondência de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Para obter mais informações sobre projetos de qualidade de dados no DQS, consulte [Projetos de qualidade de dados &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36130630"
   
 -   Habilitar/desabilitar notificações de criação de perfil. Para obter mais informações, consulte [Habilitar ou desabilitar notificações de criação de perfil no DQS](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Configure níveis de severidade para os arquivos de log do DQS no nível baseado em atividade ou no nível mais avançado baseado em módulo. Para obter mais informações, consulte [configurar níveis de severidade para arquivos de Log do DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Configure níveis de severidade para os arquivos de log do DQS no nível baseado em atividade ou no nível mais avançado baseado em módulo. Para obter mais informações, consulte [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Segurança do DQS**  
   
- Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [DQS Security](../../2014/data-quality-services/dqs-security.md).  
+ Você usa funções do mecanismo de segurança do SQL Server para tornar o DQS seguro. Há três funções de DQS que determinam o nível de acesso para um usuário no aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor e dqs_kb_operator. Você não pode conceder funções aos usuários usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; isso é feito usando o SQL Server Management Studio. Para obter mais informações, consulte [segurança do DQS](../../2014/data-quality-services/dqs-security.md).  
   
  Para obter mais informações sobre a administração do DQS, consulte [administração do DQS](../../2014/data-quality-services/dqs-administration.md).  
   

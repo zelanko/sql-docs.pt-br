@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162247"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a Web Part do Visualizador de Relatórios
   Você pode usar a Web Part do Visualizador de Relatórios para exibir relatórios executados em um servidor de relatório configurado para integração do SharePoint. Os relatórios que você pode exibir incluem arquivos de definição de relatório (.rdl) e relatórios do Construtor de Relatórios. Os relatórios são abertos na Web Part do Visualizador de Relatórios em uma nova página automaticamente, mas você também pode adicionar uma Web Part do Visualizador de Relatórios a uma página ou site existente se quiser que um determinado relatório sempre esteja visível nessa página.  
@@ -79,7 +79,7 @@ ms.locfileid: "36130524"
 |Mostrar controle de zoom|Mostra ou oculta o controle de zoom na barra de ferramentas.|  
 |Mostrar botão feed ATOM|Mostra ou oculta o botão feed ATOM na barra de ferramentas.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Localização da Barra de Ferramentas|Determina o local da barra de ferramentas dentro do visualizador de relatórios. Os valores válidos incluem `Top` e `Bottom`.|  
-|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Exibe a área de parâmetros para os relatórios que incluem valores parametrizados e que exigem entrada do usuário antes do relatório será executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não quiser que a área de parâmetros fique visível para os usuários.|  
+|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed`, e `Hidden`. `Displayed` Exibe a área de parâmetros para os relatórios que incluem valores parametrizados e que exigem entrada do usuário antes do relatório será executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não deseja que a área de parâmetros fique visível para os usuários.|  
 |Largura da Área de Parâmetros|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
 |Mapa do documento|Um controle de navegação definido em um relatório e usado para fornecer acesso com um único clique a seções específicas do relatório. Ele está disponível em relatórios HTML. O mapa do documento é exibido em uma área recolhível ao lado da área de exibição do relatório. Os valores válidos incluem `Displayed`, `Collapsed`, e `Hidden`. Se um mapa do documento estiver definido para um relatório, a área será expandida por padrão a menos que seja marcada como oculta ou recolhida nas propriedades da Web Part. Se o mapa do documento estiver recolhido, você poderá clicar na seta para expandi-lo.|  
 |Largura da Área de Mapa do Documento|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
@@ -96,7 +96,7 @@ ms.locfileid: "36130524"
  A área Parâmetros fornece campos para digitar valores antes de executar o relatório. Ela só é usada quando a definição de um relatório inclui parâmetros. Quando as áreas Parâmetros ou Credenciais são exibidas, a exibição do relatório é ajustada para usar a largura restante da Web Part. Você pode definir propriedades na Web Part para personalizar a largura da área Parâmetros. Também pode definir os rótulos exibidos ao lado dos parâmetros individuais na página. Para obter mais informações sobre como modificar rótulos de parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Web Part do Visualizador de relatórios em um Site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Adicionar a Web Part do Visualizador de relatórios para uma página da Web &#40;Reporting Services no SharePoint modo integrado&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Web Part de Visualizador de relatórios em um Site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Adicionar a Web Part do Visualizador de relatórios a uma página da Web &#40;modo integrado do Reporting Services no SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

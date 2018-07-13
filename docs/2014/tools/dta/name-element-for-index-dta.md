@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86c843e5c69f1fc433d5d035e516c2d1deaa9d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 26e35777540e98b63c6b676778d8a04f26a62e97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278162"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento de nome para índice (DTA)
   Especifica um nome para um índice na configuração especificada pelo usuário.  
@@ -43,7 +43,7 @@ ms.locfileid: "36122296"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Necessário uma vez para cada `Index` elemento.|  
+|**Ocorrência**|Exigido uma vez para cada `Index` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

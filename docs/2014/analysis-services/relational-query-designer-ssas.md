@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259652"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
   O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem recuperados de bancos de dados relacionais do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -126,7 +126,7 @@ ms.locfileid: "36122275"
 -   **Detecção Automática** Alterna o recurso de detecção automática que cria automaticamente relações entre tabelas. Se a detecção automática estiver ativada, o designer de consulta criará relações a partir de chaves estrangeiras nas tabelas; caso contrário, você deverá criar as relações manualmente. Quando você seleciona tabelas no painel **Exibição do banco de dados** , a detecção automática tenta criar relações automaticamente. Se você ativar a detecção automática depois de criar junções manualmente, essas junções serão descartadas.  
   
     > [!IMPORTANT]  
-    >  Ao usar com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] os metadados necessários à criação de junções não são fornecidos e relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
+    >  Ao usar com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] os metadados necessários à criação de junções não são fornecidos e as relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
   
 -   **Adicionar Relação** Adiciona uma relação à lista de **Relações** .  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36122275"
   
 -   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de junções, consulte "Fundamentos de JOIN" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com.  
+-   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com...  
   
 -   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
   
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Clique no botão **Executar** (**!**). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` para que você fornecer valores de parâmetros de **definir parâmetro de consulta** caixa de diálogo.  
+ Clique no botão **Executar** (**!**). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` para os quais você fornece valores de parâmetros a **definir parâmetro de consulta** caixa de diálogo.  
   
 |||  
 |-|-|  
@@ -266,6 +266,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- Quando você insere o nome da tabela `ContactType`, é o equivalente de criar a instrução SQL `SELECT * FROM ContactType`.  
+ Quando você insere o nome da tabela `ContactType`, é o equivalente a criar a instrução SQL `SELECT * FROM ContactType`.  
   
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 caps.latest.revision: 3
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b179d5c1cbc3e76f8b6c5b3e9ce6d93cfd2154c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e1f4b98604eaa641e40d1dcfc3947e649474d15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162227"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Acessando o provedor WMI programaticamente
   Este tópico está em construção.  

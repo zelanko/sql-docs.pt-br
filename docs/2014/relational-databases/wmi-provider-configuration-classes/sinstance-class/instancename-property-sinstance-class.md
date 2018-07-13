@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5be520899f35f4fd2c21ebcf6c4c30ab9da4aa45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8de6e723d64d97352110c0508b52847050dcbf79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193026"
 ---
 # <a name="instancename-property-sinstance-class"></a>Propriedade InstanceName (classe SInstance)
   Obtém o nome da instância do cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Um [classe SInstance](sinstance-class.md) objeto que representa uma instância de servidor.  
+ Uma [classe SInstance](sinstance-class.md) objeto que representa uma instância de servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o nome da instância do cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
