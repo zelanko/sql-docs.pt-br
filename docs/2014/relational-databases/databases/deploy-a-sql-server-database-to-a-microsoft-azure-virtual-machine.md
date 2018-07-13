@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,18 +43,18 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158507"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
-  Use o **implantar um banco de dados do SQL Server em uma VM do Windows Azure** Assistente para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma máquina Virtual (VM do Windows Azure). O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
+  Use o **implantar um banco de dados do SQL Server em uma VM do Windows Azure** Assistente para implantar um banco de dados de uma instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma máquina Virtual (VM do Windows Azure). O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais porque o assistente não substituirá um banco de dados existente que tenha o mesmo nome. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36118362"
 ###  <a name="permissions"></a> Permissões  
  O banco de dados que está sendo implantado deve estar em um estado normal e deve ser acessível à conta de usuário que executa o assistente. A conta de usuário deve ter permissões para executar uma operação de backup.  
   
-##  <a name="launch_wizard"></a> Usando o banco de dados de implantação ao Assistente do Windows Azure VM  
+##  <a name="launch_wizard"></a> Usando o implantar banco de dados ao Assistente VM do Azure do Windows  
  **Para iniciar o assistente, use as seguintes etapas:**  
   
 1.  Use o SQL Server Management Studio para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o banco de dados que deseja implantar.  
@@ -210,7 +210,7 @@ ms.locfileid: "36118362"
   
 -   No campo **Outras Configurações** , especifique uma pasta compartilhada que poderá ser acessada pelo serviço VM do Windows Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure-entrar  
+##  <a name="Azure_sign-in"></a> Windows entrar no Azure  
  Use essa página para se conectar ao Windows Azure e fornecer detalhes do perfil de publicação ou o certificado de gerenciamento.  
   
  **Opções**  

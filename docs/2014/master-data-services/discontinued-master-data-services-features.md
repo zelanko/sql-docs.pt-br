@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f5d4de97af6822ba110fe35e81df2d13a526ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2e9a15b4a0f1441d63ab39a4b65861fcfef099e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167045"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Recursos do Master Data Services descontinuados no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,11 +32,11 @@ ms.locfileid: "36116622"
 ### <a name="security"></a>Segurança  
  Para tornar a atribuição de segurança mais fácil, você não pode mais atribuir permissões de objeto de modelo a objetos da Hierarquia Derivada, da Hierarquia Explícita e do Grupo de Atributos.  
   
--   Agora, as permissões de hierarquia derivadas são baseadas no modelo. Por exemplo, se você desejar que um usuário tenha permissão para uma hierarquia derivada, você deve atribuir **atualização** para o objeto de modelo. Em seguida, você pode atribuir **Deny** acesso a qualquer entidade que você não deseja que o usuário tenha acesso.  
+-   Agora, as permissões de hierarquia derivadas são baseadas no modelo. Por exemplo, se você quiser que um usuário tenha permissão para uma hierarquia derivada, você deve atribuir **atualização** para o objeto de modelo. Em seguida, você pode atribuir **Deny** acesso a qualquer entidade que você não deseja que o usuário tenha acesso.  
   
--   Agora, as permissões de hierarquia explícitas são baseadas na entidade. Por exemplo, se o usuário tiver **atualização** permissões para uma entidade de conta, em seguida, todas as hierarquias explícitas da entidade serão atualizáveis.  
+-   Agora, as permissões de hierarquia explícitas são baseadas na entidade. Por exemplo, se o usuário tiver **atualização** permissões a uma entidade de conta, em seguida, todas as hierarquias explícitas para a entidade será atualizáveis.  
   
--   Permissões de grupo de atributo não podem ser atribuídas no **permissões de usuário e grupo** área funcional. Em vez disso, no **administração do sistema** área funcional em que os grupos de atributos são criados, os usuários e grupos podem receber **atualização** permissão a grupos de atributos. **Somente leitura** permissão a grupos de atributos não está mais disponível.  
+-   Permissões de grupo de atributo não podem ser atribuídas a **permissões de usuário e grupo** área funcional. Em vez disso, nos **administração do sistema** área funcional em que os grupos de atributos são criados, os usuários e grupos podem receber **atualização** permissão a grupos de atributos. **Somente leitura** permissão a grupos de atributos não está mais disponível.  
   
 ### <a name="staging-process"></a>Processo de preparo  
  Você não pode usar o novo processo de preparo para:  
@@ -57,7 +57,7 @@ ms.locfileid: "36116622"
  Além disso, os pacotes podem ser implantados somente na edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual eles foram criados. Isso significa que os pacotes criados no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] não podem ser implantados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Você deve implantar o pacote em um ambiente do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e, em seguida, atualizar o banco de dados para o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Regras de negócio de geração de código  
- Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para um valor gerado** ação o **administração do sistema** área funcional em **regras de negócio** . Agora, em **administração do sistema**, você deve editar a entidade para habilitar valores de códigos gerados automaticamente. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para um valor gerado** ação na **administração do sistema** área funcional em **regras de negócio** . Agora, na **administração do sistema**, você deve editar a entidade para habilitar os valores de códigos gerados automaticamente. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Se você tiver um pacote de implantação de modelo do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que contém uma regra deste tipo, quando atualizar o banco de dados para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a regra de negócios será excluída.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36116622"
  No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais exportar membros para o Excel. Para trabalhar com membros no Excel, use o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
 ### <a name="transactions"></a>Transactions  
- No **Explorer** área funcional, os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter alterações feitas nos dados em **Explorer**. Os administradores ainda podem reverter as transações de todos os usuários a **versão gerenciamento** área funcional.  
+ No **Explorer** área funcional, os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter alterações feitas nos dados no **Explorer**. Os administradores ainda podem reverter as transações para todos os usuários a **gerenciamento de versões** área funcional.  
   
  Agora, as anotações são permanentes e não podem ser excluídas. Anteriormente, as anotações eram consideradas transações e podiam ser excluídas com a reversão da transação.  
   

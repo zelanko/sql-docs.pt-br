@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,30 +15,30 @@ helpviewer_keywords:
 - ODBC cursors, types
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e63cceadf80da13956ea576db50459279a251b51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a69d50c3f818f2eae6f5b1c97e31e0ec344e006
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021135"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411745"
 ---
 # <a name="cursor-types"></a>Tipos de cursor
-  ODBC define quatro tipos de cursor suportados pelo Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. Esses cursores variam em sua capacidade de detectar alterações para o conjunto de resultados e nos recursos consomem, como memória em espaço em **tempdb**. Um cursor pode detectar alterações nas linhas apenas quando ele tenta buscar essas linhas novamente; não há como a fonte de dados notificar o cursor dessas alterações nas linhas que estão sendo buscadas atualmente. A capacidade de um cursor de detectar alterações que não foram feitas pelo cursor também é influenciada pelo nível de isolamento da transação.  
+  ODBC define quatro tipos de cursor suportados pela Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. Esses cursores variam em sua capacidade de detectar alterações ao conjunto de resultados e nos recursos que eles consomem, como memória em espaço em **tempdb**. Um cursor pode detectar alterações nas linhas apenas quando ele tenta buscar essas linhas novamente; não há como a fonte de dados notificar o cursor dessas alterações nas linhas que estão sendo buscadas atualmente. A capacidade de um cursor de detectar alterações que não foram feitas pelo cursor também é influenciada pelo nível de isolamento da transação.  
   
  Estes são os quatro tipos de cursor ODBC suportados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Cursores de somente avanço não suportam o recurso de rolagem; eles suportam apenas a busca de linhas em série do início ao fim do cursor.  
   
--   Cursores estáticos são incorporados no **tempdb** quando o cursor é aberto. Eles sempre exibem o conjunto de resultados da forma como ele estava quando o cursor foi aberto. Eles nunca refletem alterações aos dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores estáticos são sempre somente leitura. Como um cursor de servidor estático é criado como uma tabela de trabalho em **tempdb**, o tamanho do conjunto de resultados de cursor não pode exceder o tamanho de linha máximo permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Cursores estáticos são incorporados **tempdb** quando o cursor é aberto. Eles sempre exibem o conjunto de resultados da forma como ele estava quando o cursor foi aberto. Eles nunca refletem alterações aos dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores estáticos são sempre somente leitura. Como um cursor de servidor estático é criado como uma tabela de trabalho no **tempdb**, o tamanho do conjunto de resultados de cursor não pode exceder o tamanho de linha máximo permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Os cursores controlados por conjunto de chaves têm a associação (membership) e a ordem das linhas fixas no conjunto de resultados quando o cursor é aberto. As alterações nas colunas não chave são visíveis pelo cursor.  
   
 -   Os cursores dinâmicos são o oposto dos cursores estáticos. Eles refletem todas as alterações feitas nas linhas de seu conjunto de resultados. Os valores de dados, a ordem e a associação das linhas do conjunto de resultados podem ser alterados em cada busca.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usar cursores &#40;ODBC&#41;](using-cursors-odbc.md)  
+ [Uso de cursores &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151487"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
   Uma implantação PowerPivot para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados PowerPivot para agilizar recargas. Todo banco de dados PowerPivot que é carregado em memória primeiro é armazenado em cache em disco para agilizar a recarga posterior para atender novas solicitações. Por padrão, o PowerPivot para SharePoint usa todo o espaço disponível em disco para armazenar em cache seus bancos de dados, mas pode modificar este comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizada.  
@@ -56,7 +56,7 @@ ms.locfileid: "36117280"
   
 -   [O que há de novo no Gerenciador de recursos de servidor de arquivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guia passo a passo do Gerenciador de recursos de servidor de arquivos para o Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
 -   [Definindo alertas de espaço em disco insuficiente no Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36117280"
 5.  Clique em **OK** para salvar as alterações.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Uma instalação do PowerPivot para SharePoint fornece regras de integridade para que você adote uma ação corretiva ao detectar problemas de integridade do servidor, configuração ou disponibilidade. Algumas dessas regras usam parâmetros de configuração para determinar as condições em que são disparadas regras de integridade. Se você estiver ajustando ativamente o desempenho do servidor, talvez também queira analisar essas configurações para garantir que os padrões sejam a melhor opção para seu sistema. Para obter mais informações, consulte [configurar regras de integridade do PowerPivot -](configure-power-pivot-health-rules.md).  
+ Uma instalação do PowerPivot para SharePoint fornece regras de integridade para que você adote uma ação corretiva ao detectar problemas de integridade do servidor, configuração ou disponibilidade. Algumas dessas regras usam parâmetros de configuração para determinar as condições em que são disparadas regras de integridade. Se você estiver ajustando ativamente o desempenho do servidor, talvez também queira analisar essas configurações para garantir que os padrões sejam a melhor opção para seu sistema. Para obter mais informações, consulte [regras de integridade do PowerPivot - configurar](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Administração e configuração de servidor do PowerPivot na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md)  

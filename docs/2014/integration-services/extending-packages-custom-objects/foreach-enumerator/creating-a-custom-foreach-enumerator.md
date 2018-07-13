@@ -19,13 +19,13 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c7cba14a14eca63e95abfb8da5a6784b7405bfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a35526010fc49ac3703536a19f05729b9260d10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149917"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Criando um enumerador Foreach personalizado
   As etapas envolvidas na criação de um enumerador foreach personalizado são semelhantes às etapas da criação de qualquer outro objeto personalizado do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -50,7 +50,7 @@ ms.locfileid: "36117027"
  Configure ambos os projetos para atribuir os assemblies que serão gerados no momento de compilação usando um arquivo de chave de nome forte.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>Aplicando o atributo DtsForEachEnumerator  
- Aplique o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> à classe que você criou para identificá-lo como um enumerador foreach. Esse atributo fornece informações de tempo de design como o nome e a descrição do enumerador foreach. O `Name` propriedade aparece na lista suspensa de enumeradores disponíveis no **coleção** guia do **Editor de Loop Foreach** caixa de diálogo.  
+ Aplique o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> à classe que você criou para identificá-lo como um enumerador foreach. Esse atributo fornece informações de tempo de design como o nome e a descrição do enumerador foreach. O `Name` propriedade aparece na lista suspensa de enumeradores disponíveis em de **coleção** guia da **Editor de Loop Foreach** caixa de diálogo.  
   
  Use a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> para vincular o enumerador foreach à sua interface do usuário personalizada. Para obter o token de chave pública exigido para essa propriedade, você pode usar o **sn.exe -t** para exibir o token de chave pública por meio do arquivo de par de chaves (.snk) a ser usado para assinar o assembly da interface do usuário.  
   
@@ -82,7 +82,7 @@ namespace Microsoft.Samples.SqlServer.Dts
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>Compilando, implantando e depurando um enumerador personalizado  
  As etapas para compilar, implantar e depurar um enumerador foreach personalizado no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] são muito semelhantes às etapas necessárias para outros tipos de objetos personalizados. Para obter mais informações, consulte [Compilar, implantar e depurar objetos personalizados](../building-deploying-and-debugging-custom-objects.md).  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Codificar um enumerador Foreach personalizado](coding-a-custom-foreach-enumerator.md)   

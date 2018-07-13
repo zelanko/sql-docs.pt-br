@@ -1,13 +1,11 @@
 ---
-title: Metadados de parâmetro com valor de tabela adicionais | Microsoft Docs
+title: Metadados adicionais de parâmetros com valor de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dbb77a586a08d0a8284a1c79f5ea8a2ef904c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f28c5baf528a975b987c68e81543932b63dc5761
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013546"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419745"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadados adicionais de parâmetros com valor de tabela
-  Para recuperar metadados para um parâmetro com valor de tabela, um aplicativo chama SQLProcedureColumns. Para um parâmetro com valor de tabela, SQLProcedureColumns retorna uma única linha. Dois adicionais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-colunas específicas, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, foram adicionadas para fornecer informações de esquema e catálogo para tipos de tabela associados com parâmetros com valor de tabela. Em conformidade com a especificação de ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e depois de todas as colunas autorizadas pelo próprio ODBC.  
+  Para recuperar metadados para um parâmetro com valor de tabela, um aplicativo chama SQLProcedureColumns. Para um parâmetro com valor de tabela, SQLProcedureColumns retorna uma única linha. Adicionais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-colunas específicas, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, foram adicionados para fornecer informações de esquema e catálogo para tipos de tabela associados com parâmetros com valor de tabela. Em conformidade com a especificação de ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e depois de todas as colunas autorizadas pelo próprio ODBC.  
   
  A tabela a seguir lista as colunas significativas para parâmetros com valor de tabela.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "36013546"
   
  Para obter metadados adicionais para parâmetros com valor de tabela, um aplicativo usa as funções de catálogo SQLColumns e SQLPrimaryKeys. Antes de essas funções serem chamadas para parâmetros com valor de tabela, o aplicativo deve definir o atributo de instrução SQL_SOPT_SS_NAME_SCOPE como SQL_SS_NAME_SCOPE_TABLE_TYPE. Esse valor indica que o aplicativo exige metadados para um tipo de tabela em lugar de uma tabela real. O aplicativo passa então o TYPE_NAME do parâmetro com valor de tabela como o *TableName* parâmetro. SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME são usados com o *CatalogName* e *SchemaName* parâmetros, respectivamente, para identificar o catálogo e o esquema para o parâmetro com valor de tabela. Quando um aplicativo concluir a recuperação de metadados para parâmetros com valor de tabela, ele deve definir SQL_SOPT_SS_NAME_SCOPE novamente com seu valor padrão SQL_SS_NAME_SCOPE_TABLE.  
   
- Quando SQL_SOPT_SS_NAME_SCOPE for definido como SQL_SS_NAME_SCOPE_TABLE, as consultas a servidores vinculados irão falhar. Chamadas para SQLColumns ou SQLPrimaryKeys com um catálogo que contém um componente de servidor falhará.  
+ Quando SQL_SOPT_SS_NAME_SCOPE for definido como SQL_SS_NAME_SCOPE_TABLE, as consultas a servidores vinculados irão falhar. Chamadas para SQLColumns ou SQLPrimaryKeys com um catálogo que contém um componente de servidor falharão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Parâmetros com valor de tabela &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

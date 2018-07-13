@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b919e8f28d5cb102268ed3338aa0309e45a738c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c13cd736887569cfa5fd12bde73e1129e1fd046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161247"
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>Tipo de dados CubeBinding (fora de linha) (ASSL)
   Define um tipo de dados primitivo que representa a relação entre um [cubo](../objects/cube-element-assl.md) elemento e um [DataSource](../objects/datasource-element-assl.md) elemento.  
@@ -60,10 +60,10 @@ ms.locfileid: "36117267"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|[Fonte de dados](../objects/datasource-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureGroup](../objects/group-element-assl.md)|  
-|Elementos derivados|[Associação](../../xmla/xml-elements-properties/binding-element-xmla.md) ([associações](../../xmla/xml-elements-properties/bindings-element-xmla.md) coleção de [processo](../../xmla/xml-elements-commands/process-element-xmla.md) ou [lote](../../xmla/xml-elements-commands/batch-element-xmla.md) comandos)|  
+|Elementos derivados|[Associando](../../xmla/xml-elements-properties/binding-element-xmla.md) ([associações](../../xmla/xml-elements-properties/bindings-element-xmla.md) coleção de [processo](../../xmla/xml-elements-commands/process-element-xmla.md) ou [lote](../../xmla/xml-elements-commands/batch-element-xmla.md) comandos)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados de associação &#40;ASSL&#41;](binding-data-type-assl.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160957"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
   Use as duas opções de memória de servidor, **memória mínima do servidor** e **memória máxima do servidor**, para reconfigurar a quantidade de memória (em megabytes) que é gerenciada pelo Gerenciador de Memória do SQL Server para um processo do SQL Server usado por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -87,14 +87,14 @@ ms.locfileid: "36116658"
 3.  Se **Maximizar transferência de dados para aplicativos de rede** estiver selecionada, escolha qualquer outra opção, clique em **OK**e feche o restante das caixas de diálogo.  
   
 ## <a name="lock-pages-in-memory"></a>Bloquear páginas na memória  
- Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco. O bloqueio de páginas na memória pode manter a resposta do servidor quando ocorre paginação de memória no disco. O SQL Server **bloquear páginas na memória** opção é definida como ON em instâncias de 32 bits e 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition e superior quando a conta com privilégios para executar o sqlservr.exe recebeu o Windows "páginas bloqueadas no Usuário "LPIM (memória) à direita. Em versões anteriores do SQL Server, a definição da opção Bloquear Páginas para uma instância de 32 bits do SQL Server requer que a conta com privilégios para executar o sqlservr.exe tenha o direito de usuário LPIM e a opção de configuração 'awe_enabled' seja definida como ON.  
+ Essa política do Windows determina quais contas podem usar um processo para manter dados na memória física, impedindo o sistema de paginar os dados para a memória virtual em disco. O bloqueio de páginas na memória pode manter a resposta do servidor quando ocorre paginação de memória no disco. O SQL Server **bloquear páginas na memória** opção é definida como ON em instâncias de 32 bits e 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition e superior quando a conta com privilégios para executar sqlservr.exe recebeu o Windows "bloqueado páginas em Usuário "LPIM (memória) à direita. Em versões anteriores do SQL Server, a definição da opção Bloquear Páginas para uma instância de 32 bits do SQL Server requer que a conta com privilégios para executar o sqlservr.exe tenha o direito de usuário LPIM e a opção de configuração 'awe_enabled' seja definida como ON.  
   
  Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remova o direito de usuário “Páginas Bloqueadas em Memória” para a conta de inicialização do SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Para desabilitar Bloquear Páginas na Memória  
  **Para desabilitar as opção Bloquear páginas na memória:**  
   
-1.  No menu **Iniciar** , clique em **Executar**. No **abrir** , digite `gpedit.msc`.  
+1.  No menu **Iniciar** , clique em **Executar**. No **aberto** , digite `gpedit.msc`.  
   
      A caixa de diálogo **Política de Grupo** é aberta.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36116658"
   
 ||32 bits|64 bits|  
 |-|-------------|-------------|  
-|Memória convencional|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB com **3 gb** inicialização parâmetro *<br /><br /> 4 GB no WOW64\*\*|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB na arquitetura x64|  
+|Memória convencional|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB com **3 gb** inicializa o parâmetro *<br /><br /> 4 GB no WOW64\*\*|Limite máximo do espaço de endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB na arquitetura x64|  
   
  ***/3gb** é um parâmetro de inicialização do sistema operacional. Para obter mais informações, visite a [Biblioteca MSDN](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.existingscriptpage.f1
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec54aa4e66cbcd9872dbce03bdb3e7c601c84980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce1916bd988d23dfd33f689f189436a50408a207
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159507"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Definir Conversão de Moeda (Assistente de Business Intelligence)
   Use a página **Definir Conversão de Moeda** para examinar o script MDX que contém a funcionalidade de conversão de moeda gerada pelo Assistente de Business Intelligence. Em seguida, é possível usar esse script MDX gerado pelo assistente para substituir ou acrescentar a funcionalidade de conversão de moeda definida anteriormente no script MDX do cubo.  

@@ -19,13 +19,13 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eea490a49525493bd35767c7b93dc9de13080b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd7f28c40a98d06de9d4caaf0a09beea6ee0bcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164919"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você normalmente salva os dados em um destino ODBC usando um destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Porém, você também pode criar um destino ODBC ad hoc para uso em um único pacote. Para criar esse destino ODBC ad hoc, use o componente Script conforme demonstrado no exemplo seguinte.  
@@ -65,7 +65,7 @@ ms.locfileid: "36117222"
   
 7.  Na página **Gerenciadores de Conexões**, adicione ou crie o gerenciador de conexões ODBC com um nome descritivo, como **MyODBCConnectionManager**.  
   
-8.  Sobre o **Script** , clique em **Editar Script**e, em seguida, digite o script mostrado abaixo na `ScriptMain` classe.  
+8.  Sobre o **Script** , clique em **Editar Script**e, em seguida, insira o script mostrado abaixo no `ScriptMain` classe.  
   
 9. Feche o ambiente de desenvolvimento de script e o **Editor de Transformação Scripts**, então execute a amostra.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36117222"
     }  
     ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um destino com o componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  

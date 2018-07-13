@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
 - Multidimensional Expressions [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0ed9044a9d9719ec67cff1f79d21882a7578129f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179573"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parâmetros no Designer de Consulta MDX do Analysis Services (Construtor de Relatórios e SSRS)
   Para parametrizar uma consulta MDX referente a uma fonte de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , é necessário adicionar um parâmetro de consulta à consulta. No designer de consulta MDX, você pode adicionar um parâmetro de consulta nos modos de Design e de Consulta especificando um filtro. Depois de definir a consulta com um parâmetro de consulta, o Reporting Services cria automaticamente um parâmetro de relatório e um conjunto de dados para fornecer a lista de valores válidos. Dessa forma, o usuário pode especificar um valor que é passado diretamente para a consulta.  
@@ -35,7 +35,7 @@ ms.locfileid: "36116310"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Para definir um parâmetro de consulta em MDX no modo de Design  
   
-1.  No painel de dados do relatório, clique em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
+1.  No painel de dados do relatório, clique com botão direito em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
   
 2.  Arraste uma dimensão até a área de filtro e solte-a na primeira célula da coluna **Dimensão** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36116310"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Para definir um parâmetro de consulta em MDX no modo de Consulta  
   
-1.  No painel de dados do relatório, clique em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
+1.  No painel de dados do relatório, clique com botão direito em um conjunto de dados criado a partir de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tipo de fonte de dados e, em seguida, clique em **consulta**. O designer de consulta MDX abre no modo de Design.  
   
 2.  Na barra de ferramentas, clique em **Design** para alternar para o modo de Consulta.  
   

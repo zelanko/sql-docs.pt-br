@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013550"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421885"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Especifica os seguintes campos de diagnósticos adicionais para `SQLGetDiagField`. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
@@ -33,7 +31,7 @@ ms.locfileid: "36013550"
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Informa o número da linha de um procedimento armazenado que gera um erro. O valor de SQL_DIAG_SS_LINE só será útil se SQL_DIAG_SS_PROCNAME retornar um valor. O valor é retornado como um inteiro de 16 bits sem-sinal.|  
 |SQL_DIAG_SS_MSGSTATE|O estado de uma mensagem de erro. Para obter informações sobre o estado da mensagem de erro, consulte [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). O valor é retornado como um inteiro de 32 bits com assinatura.|  
-|SQL_DIAG_SS_PROCNAME|O nome do procedimento armazenado que gera um erro, se apropriado. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) depende da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele pode ser determinado chamando [SQLGetInfo](sqlgetinfo.md) solicita o valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_PROCNAME|O nome do procedimento armazenado que gera um erro, se apropriado. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) depende da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele pode ser determinado chamando [SQLGetInfo](sqlgetinfo.md) solicitando o valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|O nível de severidade da mensagem de erro associada. O valor é retornado como um inteiro de 32 bits com assinatura.|  
 |SQL_DIAG_SS_SRVNAME|O nome do servidor no qual o erro ocorreu. O valor é retornado como uma cadeia de caracteres. O comprimento da cadeia de caracteres (em caracteres) é definido pela macro SQL_MAX_SQLSERVERNAME em sqlncli.h.|  
   

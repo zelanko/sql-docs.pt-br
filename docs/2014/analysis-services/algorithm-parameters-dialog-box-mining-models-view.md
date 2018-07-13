@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 996a6b9ad990eeccd74888c8b43cd29b12ef17db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178953"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Caixa de diálogo Parâmetros de Algoritmo (Exibição de Modelos de Mineração)
   Use a caixa de diálogo **Parâmetros de Algoritmo** para ajustar os parâmetros de algoritmo que sejam específicos ao modelo selecionado. A alteração de um parâmetro de algoritmo geralmente altera os resultados do modelo de mineração. O modo como cada parâmetro afeta os resultados, depende do algoritmo que está sendo usado e dos dados. Para obter mais informações, consulte [Personalizar os modelos de mineração e a estrutura](data-mining/customize-mining-models-and-structure.md).  
@@ -53,8 +53,8 @@ ms.locfileid: "36117767"
  Se você excluir da lista um dos parâmetros de algoritmo do Analysis Services padrão, o parâmetro ainda será usado no modelo, mas com os valores padrão daquele parâmetro. O parâmetro não é excluído permanentemente e aparecerá da próxima vez que você abrir a caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Exibição de modelos de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Exibição de modelos de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
  [Movendo objetos de Mineração de dados](data-mining/moving-data-mining-objects.md)  
   
   

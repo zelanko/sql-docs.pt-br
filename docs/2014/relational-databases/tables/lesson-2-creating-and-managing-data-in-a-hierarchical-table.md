@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9e41a27da214ac7486506762a327af3e250fc1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e86268cb83887027159629069195fee60b5e85fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160217"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lição 2: Criando e gerenciando dados em uma tabela hierárquica
   Na Lição 1, você modificou uma tabela existente para usar o tipo de dados `hierarchyid` e populou a coluna `hierarchyid` com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos.  

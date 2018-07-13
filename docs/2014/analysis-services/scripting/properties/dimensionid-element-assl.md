@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24b65d34bfd1e16e464c1469a6c90058f4c100ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c211ed3b218a89bf02e29793573fe0915191641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259482"
 ---
 # <a name="dimensionid-element-assl"></a>Elemento DimensionID (ASSL)
   Contém o identificador (ID) da dimensão.  
@@ -62,7 +62,7 @@ ms.locfileid: "36020352"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `DimensionID` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeDimension> e <xref:Microsoft.AnalysisServices.DimensionBinding>.  
+ Os elementos que correspondem aos pais de `DimensionID` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeDimension> e <xref:Microsoft.AnalysisServices.DimensionBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

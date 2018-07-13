@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.createdmdimension.f1
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca54e5c393f8255867bf1752b72c15ad3250d690
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39279730acd14b947c4bf56695547510c9fbbc8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230016"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Diálogo para criar dimensão de mineração de dados
   Use a caixa de diálogo **Criar Dimensão de Mineração de Dados** para criar uma nova dimensão de mineração de dados baseada em um modelo de mineração OLAP.  
@@ -37,7 +37,7 @@ ms.locfileid: "36116034"
  Selecione para criar um cubo com base no modelo de mineração a ser criado. Após selecionar esta opção, você pode digitar um nome para o cubo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modo de exibição de estrutura de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Criar uma dimensão de mineração de dados](data-mining/create-a-data-mining-dimension.md)  
   
   

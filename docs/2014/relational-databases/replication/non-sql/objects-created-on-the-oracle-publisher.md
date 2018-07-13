@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ae4f1bb60dbe467855b43bd4c2408c439e194196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 671058db0556f58d6bd29b8960212b6e180862be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166897"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
   A replicação do[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de banco de dados no Editor Oracle para habilitar controle e encaminhamento de alterações (o[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não instala nenhum arquivo binário no Editor Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  

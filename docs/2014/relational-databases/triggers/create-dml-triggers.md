@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], DML triggers
 - deferred name resolution, DML triggers
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - testing column changes
 - results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9fdbff3f7bc6957a72c4bfb674552f6a213e41d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 49c1cc49dcb388696d18087dbf6da3ef2e0440a3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116339"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430465"
 ---
 # <a name="create-dml-triggers"></a>Criar gatilhos DML
   Este tópico descreve como criar um gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  

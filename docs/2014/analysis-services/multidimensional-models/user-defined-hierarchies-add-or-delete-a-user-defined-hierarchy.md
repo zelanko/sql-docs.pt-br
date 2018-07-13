@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157117"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Adicionar ou excluir uma hierarquia definida pelo usuário
   Você adiciona ou remove uma hierarquia definida pelo usuário de uma dimensão na guia **Estrutura da Dimensão** no Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "36118547"
   
 5.  Se desejar, modifique as propriedades da hierarquia definida pelo usuário ou seus níveis.  
   
-     Por exemplo, convém especificar um nome para a hierarquia definida pelo usuário, renomear um ou mais de seus níveis e definir um nome personalizado para o Todo o nível. Para obter mais informações, consulte [propriedades de hierarquia de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), e [propriedades no nível do &#91;abordado em&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
+     Por exemplo, convém especificar um nome para a hierarquia definida pelo usuário, renomear um ou mais de seus níveis e definir um nome personalizado para o Todo o nível. Para obter mais informações, consulte [propriedades de hierarquia de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), e [propriedades de nível de &#91;Paved sobre&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
     >  Por padrão, uma hierarquia definida pelo usuário é somente um caminho que permite que os usuários façam busca detalhada para obter informações. Porém, se houver relações entre níveis, você pode aumentar o desempenho da consulta configurando relações de atributo entre níveis. Para obter mais informações, consulte [Relações de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) e [Definir relações de atributo](attribute-relationships-define.md).  

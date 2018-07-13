@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 167e04eb8623e6d2f7f11c3bfd43e3d6427c5886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71ce92444042b820f877290478bae067b3474b41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149507"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriedades para estruturas de mineração e colunas de estrutura
   Você pode definir ou alterar as propriedades de uma estrutura de mineração e das colunas associadas e tabelas aninhadas usando a guia **Estrutura de Mineração** do Designer de Data Mining. As propriedades que você estabelece nesta guia se propagam para todo o modelo de mineração associado à estrutura.  
@@ -47,9 +47,9 @@ ms.locfileid: "36118002"
 |**Agrupamento**|Especifica o agrupamento padrão para a coluna. Se um agrupamento não for especificado, o agrupamento do servidor será usado.|  
 |**Descrição**|Descreve a estrutura de mineração. Como uma prática recomendada, a descrição deve declarar o propósito e a composição dos dados na estrutura.|  
 |**ErrorConfiguration (padrão)**|Especifica opções para manipulação especial de erros, se houver.|  
-|**HoldoutMaxCases**|Especifica o número de máximo de casos de estrutura que podem ser reservados como uns conjunto de dados de testes.  Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como `KeepTrainingCases`.|  
-|**HoldoutPercent**|Especifica a porcentagem dos casos de estrutura a ser reservada como um conjunto de dados de testes. Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como `KeepTrainingCases`.|  
-|**HoldoutSeed**|Especifica uma semente para inicializar o particionamento do conjunto de teste de validação, a fim de garantir que o conjunto de dados de testes possa ser criado novamente.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definido como `KeepTrainingCases`.|  
+|**HoldoutMaxCases**|Especifica o número de máximo de casos de estrutura que podem ser reservados como uns conjunto de dados de testes.  Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como `KeepTrainingCases`.|  
+|**HoldoutPercent**|Especifica a porcentagem dos casos de estrutura a ser reservada como um conjunto de dados de testes. Se forem especificados valores para **HoldoutMaxCases** e **HoldoutPercent**, as condições serão combinadas.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como `KeepTrainingCases`.|  
+|**HoldoutSeed**|Especifica uma semente para inicializar o particionamento do conjunto de teste de validação, a fim de garantir que o conjunto de dados de testes possa ser criado novamente.<br /><br /> Observação: Para definir essa propriedade, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve ser definida como `KeepTrainingCases`.|  
 |**ID**|Exibe o identificador exclusivo da estrutura de mineração.<br /><br /> O nome que você atribuiu à estrutura de mineração quando você criou que a estrutura é usado como ID. Se, mais tarde, você alterar o nome digitando um novo valor para a propriedade `Name`, o novo nome será usado apenas como um alias; a ID não é alterada.|  
 |**Idioma**|Especifica o idioma das legendas na estrutura de mineração.|  
 |`Name`|Especifica o nome ou o alias da estrutura de mineração.<br /><br /> Se você alterar o valor da propriedade Name, o novo nome será usado apenas como uma legenda ou um alias; a identificação da estrutura de mineração não é alterada.|  
@@ -62,8 +62,8 @@ ms.locfileid: "36118002"
 |**ClassifiedColumns**|Identifica a coluna descrita por uma coluna classificada.|  
 |**Conteúdo**|O tipo de conteúdo da coluna.|  
 |**Descrição**|Descreve a coluna. Como uma prática recomendada, a descrição da coluna deve fornecer informações sobre como os dados da coluna foram derivados ou alterados para mineração de dados.|  
-|**DiscretizationBucketCount**|Exibe o número de recipientes na coluna de dados discretos.<br /><br /> Habilitada somente se o tipo de conteúdo é definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
-|**DiscretizationMethod**|Exibe o método usado para diferenciar a coluna.<br /><br /> Habilitada somente se o tipo de conteúdo é definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
+|**DiscretizationBucketCount**|Exibe o número de recipientes na coluna de dados discretos.<br /><br /> Habilitado somente se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
+|**DiscretizationMethod**|Exibe o método usado para diferenciar a coluna.<br /><br /> Habilitado somente se o tipo de conteúdo for definido como `Discretized`.<br /><br /> Esta propriedade é somente leitura.|  
 |**Distribuição**|Especifica a distribuição de conteúdo na coluna.|  
 |**ID**|Exibe o identificador da coluna.<br /><br /> Se você alterar o valor da propriedade Name da coluna, o valor da propriedade ID não será afetado.|  
 |**IsKey**|Indica se a coluna é uma coluna de chave.|  

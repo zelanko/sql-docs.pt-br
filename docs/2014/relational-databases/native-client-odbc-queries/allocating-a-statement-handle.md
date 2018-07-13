@@ -1,13 +1,11 @@
 ---
-title: Alocar um identificador de instrução | Microsoft Docs
+title: Alocando um identificador de instrução | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1609155d816e681eb8469069fc6f7efcd3f06528
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 22b207f02fd2cbf4cffa10af8ebab1cb6ba268e7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118104"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430435"
 ---
 # <a name="allocating-a-statement-handle"></a>Alocando um identificador de instrução
   Para que um aplicativo possa executar uma instrução, deve alocar um identificador de instrução. Ele faz isso chamando **SQLAllocHandle** com o *HandleType* parâmetro definido como SQL_HANDLE_STMT e *InputHandle* apontando para um identificador de conexão.  
@@ -39,9 +37,9 @@ ms.locfileid: "36118104"
   
  Tome cuidado ao usar várias opções de conexão e instrução do ODBC. Chamando [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com *fOption* definido como controles SQL_ATTR_LOGIN_TIMEOUT a hora em que um aplicativo aguarda uma tentativa de conexão de tempo limite ao aguardar para estabelecer uma conexão (0 Especifica uma espera infinita). Os sites que têm tempos de resposta lentos podem definir este valor alto para verificar se as conexões têm tempo suficiente para serem estabelecidas. No entanto, o intervalo deve sempre ser baixo o suficiente para dar ao usuário uma resposta em um tempo razoável se o driver não puder se conectar.  
   
- Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_QUERY_TIMEOUT define um intervalo de tempo limite de consulta para ajudar a proteger o servidor e o usuário de consultas de longa execução.  
+ Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_QUERY_TIMEOUT define um intervalo de tempo limite de consulta para ajudar a proteger o servidor e o usuário contra consultas longas.  
   
- Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_LENGTH limita a quantidade de **texto** e **imagem** dados que um instrução individual pode recuperar. Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_ROWS também limitará um conjunto de linhas para o primeiro *n* linhas se isto for todo o aplicativo requer. Observe que a configuração SQL_ATTR_MAX_ROWS faz com que o driver emita uma instrução SET ROWCOUNT ao servidor. Isso afeta todos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções, inclusive gatilhos e atualizações.  
+ Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_LENGTH limita a quantidade de **texto** e **imagem** dados que um pode recuperar a instrução individual. Chamando **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_ROWS também limita a um conjunto de linhas para o primeiro *n* linhas se isto for todo o aplicativo requer. Observe que a configuração SQL_ATTR_MAX_ROWS faz com que o driver emita uma instrução SET ROWCOUNT ao servidor. Isso afeta todos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções, inclusive gatilhos e atualizações.  
   
  Tome cuidado quando você for definir estas opções. Será melhor se todos os identificações de instrução em um identificador de conexão tiverem as mesmas configurações para SQL_ATTR_MAX_LENGTH e SQL_ATTR_MAX_ROWS. Se o driver alternar de um identificador de instrução para outro com valores diferentes para essas opções, o driver deverá gerar as instruções SET TEXTSIZE e SET ROWCOUNT adequadas para alterar as configurações. O driver não pode colocar essas instruções no mesmo lote que a instrução SQL do usuário, pois a instrução SQL pode conter uma instrução que deve ser a primeira instrução em um lote. O driver deve enviar as instruções SET TEXTSIZE e SET ROWCOUNT em um lote separado que automaticamente gera uma viagem de ida-e-volta adicional ao servidor.  
   

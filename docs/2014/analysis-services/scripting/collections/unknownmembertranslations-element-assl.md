@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownMemberTranslations element
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acd95365eef8c2655748dffac5f75ce71e40258f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331f61e1e0cea88ee8dfb58b5d69333f99961be4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159337"
 ---
 # <a name="unknownmembertranslations-element-assl"></a>Elemento UnknownMemberTranslations (ASSL)
-  Contém a coleção de traduções da legenda do [UnknownMember](../objects/member-element-assl.md) elemento de uma dimensão.  
+  Contém a coleção de traduções para a legenda do [UnknownMember](../objects/member-element-assl.md) elemento de uma dimensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36116698"
 |Elementos filho|[UnknownMemberTranslation](../objects/translation-element-assl.md) do tipo [tradução](../data-type/translation-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `UnknownMemberTranslations` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `UnknownMemberTranslations` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados Translation &#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   

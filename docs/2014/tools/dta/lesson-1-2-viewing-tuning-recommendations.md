@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157707"
 ---
 # <a name="viewing-tuning-recommendations"></a>Exibindo recomendações de ajuste
   Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](lesson-1-1-tuning-a-workload.md). Depois que você ajusta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando o script MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] , o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe os resultados na guia **Recomendações** . A tarefa a seguir apresenta a guia **Recomendações** da GUI (interface gráfica do usuário) do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como explorar as informações fornecidas sobre os resultados da sessão de ajuste.  
@@ -48,7 +48,7 @@ ms.locfileid: "36118239"
   
 7.  No menu **Ações** , clique em **Avaliar Recomendações**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria uma nova sessão de ajuste em que você pode avaliar um subconjunto das recomendações originais em MySession.  
   
-8.  Tipo `EvaluateMySession` para seu novo **nome da sessão**e clique no **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
+8.  Tipo de `EvaluateMySession` para seu novo **nome da sessão**e clique no **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
   
 ## <a name="summary"></a>Resumo  
  Você exibiu o conteúdo da guia **Recomendações** para a sessão de ajuste MySession e avaliou um subconjunto de recomendações na nova sessão de ajuste EvaluateMySession.  

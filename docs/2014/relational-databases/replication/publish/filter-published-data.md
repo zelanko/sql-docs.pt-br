@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
 - filters [SQL Server replication], about filtering
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03f3d439b4ef4c8d5ea4eb18d634a608ba1ecab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d1f99411e4cdfceebab0d612f45aa8256719281e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193358"
 ---
 # <a name="filter-published-data"></a>Filtrar dados publicados
   Filtrar artigos de tabela lhe permite criar partições de dados a serem publicados. Filtrando dados publicados, você pode:  
@@ -104,7 +104,7 @@ ms.locfileid: "36116397"
 |Todas as colunas em uma publicação de mesclagem SQL Server 7.0|Colunas não podem ser filtradas em publicações de mesclagem SQL Server 7.0.|  
 |Timestamp|Publicações de instantâneo ou transacionais SQL Server 7.0 que permitem assinaturas atualizáveis|  
   
- <sup>1</sup> se você estiver publicando uma tabela em uma publicação de mesclagem e aquela tabela já contém uma coluna de tipo de dados `uniqueidentifier` com o `ROWGUIDCOL` conjunto de propriedades, a replicação pode usar essa coluna em vez de criar uma coluna adicional chamada **rowguid**. Nesse caso, a coluna existente deve ser publicada.  
+ <sup>1</sup> se você está publicando uma tabela em uma publicação de mesclagem e aquela tabela já contém uma coluna de tipo de dados `uniqueidentifier` com o `ROWGUIDCOL` conjunto de propriedades, a replicação pode usar essa coluna em vez de criar uma coluna adicional chamada **rowguid**. Nesse caso, a coluna existente deve ser publicada.  
   
  Para definir ou modificar um filtro de coluna, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36116397"
   
 -   Replicação transacional lhe permite reproduzir uma exibição indexada como uma exibição ou como uma tabela. Se você reproduzir a exibição como uma tabela, você não poderá filtrar colunas da tabela.  
   
- Os filtros de linha não são criados para funcionar nos bancos de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) para o proprietário do banco de dados (`dbo`). O `dbo` não tem entre privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe a execução dessa lógica para que um mal-intencionado `dbo` não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
+ Os filtros de linha não são criados para funcionar nos bancos de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe intencionalmente a execução de `sp_replcmds` (quais filtros serão executados em) ao proprietário do banco de dados (`dbo`). O `dbo` não tem privilégios de banco de dados. Com a adição de CDC (Change Data Capture) em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a lógica de `sp_replcmds` preenche as tabelas de controle de alterações com informações que o usuário pode retornar e consultar. Por motivos de segurança [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe a execução dessa lógica, de modo que um mal-intencionado `dbo` não possa sequestrar esse caminho de execução. Por exemplo, um `dbo` mal-intencionado pode adicionar gatilhos a tabelas CDC que seriam executadas no contexto do usuário que chama `sp_replcmds`, nesse caso, o Log Reader Agent.  Se a conta que o agente está executando tiver um privilégio mais alto, o `dbo` mal-intencionado poderá escalonar os privilégios dele.  
   
 ## <a name="see-also"></a>Consulte também  
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  

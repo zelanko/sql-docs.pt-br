@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fbfff4e4389406496cf5df467ad044b6fa847727
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183203"
 ---
 # <a name="databasename-element-xmla"></a>Elemento DatabaseName (XMLA)
   Identifica o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados a ser restaurado pelo pai [restaurar](../xml-elements-commands/restore-element-xmla.md) comando.  

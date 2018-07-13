@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81d83e2d179e5a16d17cc6988b209f348dbc2572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3aa8d72073f5459a7e260a81ca4bf5c67ad3209b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169467"
 ---
 # <a name="mdxscript-element-assl"></a>Elemento MdxScript (ASSL)
   Contém informações sobre um script MDX (Multidimensional Expressions) que está associado com um [cubo](cube-element-assl.md) elemento.  

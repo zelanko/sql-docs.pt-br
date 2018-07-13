@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14f4bcdb5fea062320138ea90036bbc824f875e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155647"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Procurar na exibição da fonte de dados (Assistente de Mineração de Dados)
   Use a caixa de diálogo **Procurar na Exibição da Fonte de Dados** para abrir a exibição da fonte de dados selecionada na página **Selecionar Exibição da Fonte de Dados** do assistente.  
@@ -36,7 +36,7 @@ ms.locfileid: "36118556"
  Use para alterar o nível de detalhe mostrado no diagrama.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selecione a exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)  
+ [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selecionar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)  
   
   

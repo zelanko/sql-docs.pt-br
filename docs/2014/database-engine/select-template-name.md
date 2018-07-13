@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
 helpviewer_keywords:
 - Select Template Name dialog box
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08a22aa4b3877cc338197e2d21e8d20d0eda0120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b703b2a02146ab66ee3e0dee98dc920a70ef4a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241176"
 ---
 # <a name="select-template-name"></a>Selecionar Nome do Modelo
   Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo de rastreamento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existente para exportar para um arquivo no sistema operacional. Você também pode usar essa caixa de diálogo para selecionar ou digitar um nome diferente a fim de salvar um modelo de rastreamento ao editar um modelo de rastreamento existente. Para acessar essa caixa de diálogo ao exportar um modelo, no menu **Arquivo** do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Exportar Modelo**. Para acessar essa caixa de diálogo ao mudar o nome de um modelo, no menu **Arquivo**, aponte para **Modelos**, aponte para **Editar Modelo** e, então, clique em **Salvar Como**.  

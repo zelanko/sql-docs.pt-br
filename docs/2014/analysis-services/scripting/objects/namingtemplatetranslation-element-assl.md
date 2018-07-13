@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslation element
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc6c6689f4028c0983267a38435c76e7258768a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2832ae5ffe9d5b834fc03f84154fa398b7a19fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167547"
 ---
 # <a name="namingtemplatetranslation-element-assl"></a>Elemento NamingTemplateTranslation (ASSL)
   Fornece uma tradução localizada do [NamingTemplate](../properties/namingtemplate-element-assl.md) elemento para um pai [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) tipo de dados.  
@@ -60,9 +60,9 @@ ms.locfileid: "36116680"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `NamingTemplateTranslation` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` pai está definido como *pai*) para armazenar localizado tradução do `NamingTemplate` valor para um determinado idioma.  
+ O valor da `NamingTemplateTranslation` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` pai está definido como *pai*) para armazenar o localizada tradução do `NamingTemplate` valor para um determinado idioma.  
   
- O elemento que corresponde ao pai do `NamingTemplateTranslations` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `NamingTemplateTranslations` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento NamingTemplate &#40;ASSL&#41;](../properties/namingtemplate-element-assl.md)   

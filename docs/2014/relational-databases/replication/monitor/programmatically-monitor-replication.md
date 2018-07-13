@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167007"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
   O Replication Monitor é uma ferramenta gráfica que permite monitorar uma topologia de replicação. É possível acessar os mesmos dados de monitoração programaticamente usando o RMO (Replication Management Objects) ou procedimentos armazenados de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Esses objetos permitem programar as seguintes tarefas:  
@@ -134,7 +134,7 @@ ms.locfileid: "36117422"
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -Retorna uma matriz de <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> objetos para fornecido *sessionID*.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Retorna um <xref:System.Data.DataSet> objeto informações especificado *sessionID*.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -Retorna um <xref:System.Data.DataSet> objeto com informações especificado *sessionID*.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>Para monitorar as propriedades de replicação para todas as publicações em um Distribuidor  
   

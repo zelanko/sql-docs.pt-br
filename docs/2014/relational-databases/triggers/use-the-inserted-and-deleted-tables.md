@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
 - UPDATE statement [SQL Server], DML triggers
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e879ddc8687bb7daeb7e20158bd4d65fcd0d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118297"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427635"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
   As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  

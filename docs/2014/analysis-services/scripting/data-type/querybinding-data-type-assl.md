@@ -22,18 +22,18 @@ helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e13dd3e07975250de1f64c050d36dd276c7c579
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169667"
 ---
 # <a name="querybinding-data-type-assl"></a>Tipo de dados QueryBinding (ASSL)
-  Define um tipo de dados derivado que representa a associação de um [DataSource](../objects/datasource-element-assl.md) elemento com um [QueryDefinition](../properties/querydefinition-element-assl.md) elemento.  
+  Define um tipo de dados derivado que representa a associação de um [fonte de dados](../objects/datasource-element-assl.md) elemento com um [QueryDefinition](../properties/querydefinition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36116457"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança de `Binding` tipos, consulte [tipo de dados de associação &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.QueryBinding>.  
   

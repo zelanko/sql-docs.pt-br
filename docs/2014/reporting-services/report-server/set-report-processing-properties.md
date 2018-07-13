@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,13 +20,13 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153587"
 ---
 # <a name="set-report-processing-properties"></a>Definir propriedades de processamento de relatórios
   Propriedades de execução de relatório controlam como um relatório é processado. É necessário definir propriedades de execução individualmente para cada relatório.  
@@ -60,7 +60,7 @@ ms.locfileid: "36118056"
  Quando existir essa condição, o servidor de relatório desativará a assinatura na próxima vez em que a assinatura for agendada para execução. Abra a assinatura e salve-a a fim de reativá-la. Quando você abrir a assinatura, o servidor de relatórios atualizará os valores de parâmetros de assinatura para aqueles especificados para o relatório. Para obter mais informações sobre assinaturas, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;Reporting Services no SharePoint modo integrado&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Definir opções de processamento &#40;modo integrado do Reporting Services no SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurar propriedades de execução de um relatório &#40;Gerenciador de relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Como adicionar um instantâneo ao histórico de relatórios](add-a-snapshot-to-report-history-report-manager.md)   

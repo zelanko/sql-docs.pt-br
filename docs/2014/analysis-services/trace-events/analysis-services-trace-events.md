@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163437"
 ---
 # <a name="analysis-services-trace-events"></a>Eventos de rastreamento do Analysis Services
   Você pode acompanhar a atividade de uma instância do Microsoft SQL Server Analysis Services (SSAS) capturando e analisando os eventos de rastreamento gerados pela instância.  Os eventos de rastreamento são agrupados de forma que você possa localizar facilmente eventos de rastreamento relacionados.  Cada evento de rastreamento contém um conjunto de dados relevantes para o evento; nem todos os dados são relevantes para todos os eventos.  
   
- Eventos de rastreamento podem ser iniciados e capturados usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consulte [usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), ou pode ser iniciado a partir de um comando XMLA como **do SQL Server Eventos estendidos** e depois analisados, consulte [Use SQL Server Extended Events &#40;XEvents&#41; para monitorar o Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Eventos de rastreamento podem ser iniciados e capturados usando **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, consulte [Use SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), ou podem ser iniciados de um comando XMLA como **do SQL Server Eventos estendidos** e depois analisados, veja [Use SQL Server Extended Events &#40;XEvents&#41; para monitorar o Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  As tabelas a seguir descrevem cada categoria de evento e os eventos nessa categoria.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36117257"
  Descrição do evento  
  Uma breve descrição do evento  
   
- **[Categoria de evento de eventos de comando](command-events-event-category.md)**  
+ **[Categoria Command Events](command-events-event-category.md)**  
   
  Coleção de eventos para comandos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36117257"
 |34|Server State Discover Data|Conteúdo do Server State Discover Response.|  
 |35|Server State Discover End|Final do Server State Discover.|  
   
- **[Categoria de eventos de avisos e erros](errors-and-warnings-event-category.md)**  
+ **[Categoria de evento de avisos e erros](errors-and-warnings-event-category.md)**  
   
  Coleção de eventos para erros de servidor.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36117257"
 |------------------|--------------------|---------------------------|  
 |17|Erro|Erro do servidor.|  
   
- **[Carregamento de arquivo e salve a categoria de evento](file-load-and-save-event-category.md)**  
+ **[File Load and Save a categoria de evento](file-load-and-save-event-category.md)**  
   
  Coleção de eventos para relato de operações de armazenamento e salva de arquivo.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36117257"
 |9|Query Begin|Início da consulta.|  
 |10|Query End|Término da consulta.|  
   
- **[Categoria de eventos de processamento de consulta](query-processing-events-category.md)**  
+ **[Categoria de eventos de processamento de consultas](query-processing-events-category.md)**  
   
  Coleção de eventos chave durante o processo de execução de uma consulta.  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36117257"
 |43|Session Initialize|Inicialização de sessão.|  
   
 ## <a name="see-also"></a>Consulte também  
-[Usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[Usar o SQL Server Profiler para monitorar o serviço de análise](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

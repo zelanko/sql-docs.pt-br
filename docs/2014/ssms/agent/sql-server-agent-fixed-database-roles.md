@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7890daf6c0ff4b77bbb8bb44e29d7921a58dd612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 488132684547dcfbfc69a7c6479cc6ec7e42359e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151867"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Funções de banco de dados fixas do SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem as seguintes funções de banco de dados fixas do **msdb** , que propiciam aos administradores um melhor controle do acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. As funções, ordenadas do menor para o maior acesso privilegiado, são:  
@@ -65,11 +65,11 @@ ms.locfileid: "36117574"
   
  <sup>1</sup> não é possível alterar a propriedade do trabalho.  
   
- <sup>2</sup> pode obter a lista de operadores disponíveis para uso em **sp_notify_operator** e **propriedades do trabalho** caixa de diálogo do Management Studio.  
+ <sup>2</sup> pode obter a lista de operadores disponíveis para uso na **sp_notify_operator** e o **propriedades do trabalho** caixa de diálogo do Management Studio.  
   
- <sup>3</sup> lista de proxies disponíveis apenas no **propriedades da etapa de trabalho** caixa de diálogo do Management Studio.  
+ <sup>3</sup> lista de proxies disponíveis apenas em de **propriedades da etapa de trabalho** caixa de diálogo do Management Studio.  
   
- <sup>4</sup> membros de **SQLAgentUserRole** deve ser concedida explicitamente a permissão EXECUTE em **sp_purge_jobhistory** excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.  
+ <sup>4</sup> membros de **SQLAgentUserRole** deve ser concedido explicitamente a permissão EXECUTE no **sp_purge_jobhistory** excluir históricos de trabalhos que eles possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Permissões de SQLAgentReaderRole  
  A função**SQLAgentReaderRole** inclui todas as permissões de **SQLAgentUserRole** , mais permissões para exibir a lista de trabalhos multisservidor disponíveis, suas propriedades e seu histórico. Os membros desta função também podem exibir a lista de todos os trabalhos e agendas de trabalho disponíveis, bem como suas propriedades, e não apenas aqueles que possuem. Membros de**SQLAgentReaderRole** não podem alterar a propriedade do trabalho para ganhar acesso a trabalhos que ainda não possuem. Somente o nó **Trabalhos** no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é visível a membros de **SQLAgentReaderRole**.  
@@ -93,11 +93,11 @@ ms.locfileid: "36117574"
   
  <sup>1</sup> não é possível alterar a propriedade do trabalho.  
   
- <sup>2</sup> pode obter a lista de operadores disponíveis para uso em **sp_notify_operator** e **propriedades do trabalho** caixa de diálogo do Management Studio.  
+ <sup>2</sup> pode obter a lista de operadores disponíveis para uso na **sp_notify_operator** e o **propriedades do trabalho** caixa de diálogo do Management Studio.  
   
- <sup>3</sup> lista de proxies disponíveis apenas no **propriedades da etapa de trabalho** caixa de diálogo do Management Studio.  
+ <sup>3</sup> lista de proxies disponíveis apenas em de **propriedades da etapa de trabalho** caixa de diálogo do Management Studio.  
   
- <sup>4</sup> membros de **SQLAgentReaderRole** deve ser concedida explicitamente a permissão EXECUTE em **sp_purge_jobhistory** excluir históricos de trabalhos que possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.  
+ <sup>4</sup> membros de **SQLAgentReaderRole** deve ser concedido explicitamente a permissão EXECUTE no **sp_purge_jobhistory** excluir históricos de trabalhos que eles possuem. Não podem excluir históricos de trabalho de nenhum outro trabalho.  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Permissões de SQLAgentOperatorRole  
  A função**SQLAgentOperatorRole** é a mais privilegiada das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ela inclui todas as permissões de **SQLAgentUserRole** e **SQLAgentReaderRole**. Os membros desta função também podem exibir propriedades de operadores e proxies, bem como enumerar os proxies e alertas disponíveis no servidor.  
@@ -123,13 +123,13 @@ ms.locfileid: "36117574"
 |Excluir histórico de trabalho|Não aplicável|Não aplicável|Sim|não|Não aplicável|Não aplicável|  
 |Anexar/desanexar|Não aplicável|Não aplicável|Não aplicável|Não aplicável|Sim (somente agendas possuídas)|Não aplicável|  
   
- <sup>1</sup> pode obter a lista de operadores disponíveis para uso em **sp_notify_operator** e **propriedades do trabalho** caixa de diálogo do Management Studio.  
+ <sup>1</sup> pode obter a lista de operadores disponíveis para uso na **sp_notify_operator** e o **propriedades do trabalho** caixa de diálogo do Management Studio.  
   
  <sup>2</sup> não é possível alterar a propriedade do trabalho.  
   
- <sup>3</sup> **SQLAgentOperatorRole** membros podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificar valores para o **@enabled** e **@job_id** (ou **@job_name**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
+ <sup>3</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar trabalhos locais que não possuem, por meio do procedimento armazenado **sp_update_job** e especificando valores para o **@enabled** e o **@job_id** (ou **@job_name**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
   
- <sup>4</sup> **SQLAgentOperatorRole** membros podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificar valores para o **@enabled** e **@schedule_id** (ou **@name**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
+ <sup>4</sup> **SQLAgentOperatorRole** podem habilitar ou desabilitar agendas que não possuem, por meio do procedimento armazenado **sp_update_schedule** e especificando valores para o **@enabled** e o **@schedule_id** (ou **@name**) parâmetros. Se um membro desta função especificar algum outro parâmetro para esse procedimento armazenado, a execução do procedimento falhará.  
   
 ## <a name="assigning-users-multiple-roles"></a>Atribuindo várias funções aos usuários  
  Membros da função de servidor fixa **sysadmin** têm acesso a toda a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Caso um usuário não seja membro da função **sysadmin** , mas seja membro de mais de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, é importante ter em mente o modelo de permissões concêntricas dessas funções. Como funções mais privilegiadas sempre detêm todas as permissões das funções menos privilegiadas, o usuário que for membro de mais de uma função terá, automaticamente, as permissões associadas à função mais privilegiada de que é membro.  

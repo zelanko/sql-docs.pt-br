@@ -1,5 +1,5 @@
 ---
-title: Propriedades de coluna (SSAS Tabular) | Microsoft Docs
+title: Propriedades da coluna (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169297"
 ---
 # <a name="column-properties-ssas-tabular"></a>Propriedades da Coluna (SSAS Tabular)
   Este tópico descreve as propriedades de coluna do modelo tabular.  
@@ -65,7 +65,7 @@ ms.locfileid: "36116447"
 2.  Na janela **Propriedades** , clique em uma propriedade e digite um valor ou clique na seta para baixo para selecionar uma opção de configuração.  
   
 ## <a name="see-also"></a>Consulte também  
- [Energia exibir propriedades de relatório &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)   
+ [Power exibir propriedades de relatório &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)   
  [Ocultar ou congelar colunas &#40;Tabular do SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)   
  [Adicionar colunas a uma tabela &#40;Tabular do SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)  
   

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f8d6b042c1284dc0a0b716524f381017320306e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155817"
 ---
 # <a name="circularstring"></a>CircularString
-  A `CircularString` é uma coleção de zero ou mais segmentos de arco circulares contínuos. Um segmento de arco circular é um segmento curvado definido por três pontos em um plano bidimensional; o primeiro ponto não pode ser igual ao terceiro ponto. Se todos os três pontos de um segmento de arco circular forem colineares, o segmento de arco será tratado como um segmento de linha.  
+  Um `CircularString` é uma coleção de zero ou mais segmentos de arco circulares contínuos. Um segmento de arco circular é um segmento curvado definido por três pontos em um plano bidimensional; o primeiro ponto não pode ser igual ao terceiro ponto. Se todos os três pontos de um segmento de arco circular forem colineares, o segmento de arco será tratado como um segmento de linha.  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o `CircularString` subtipo, baixe o white paper, [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o `CircularString` subtipo, baixe o white paper [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Instâncias CircularString  
  O desenho seguinte mostra válido `CircularString` instâncias:  
@@ -33,7 +33,7 @@ ms.locfileid: "36117849"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Um `CircularString` instância será aceita se estiver vazia ou contém um número ímpar de pontos, n, onde n > 1. O seguinte `CircularString` instâncias são aceitas.  
+ Um `CircularString` instância será aceita se estiver vazia ou contém um número ímpar de pontos, n, onde n > 1. O seguinte `CircularString` instâncias são aceitos.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -48,7 +48,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Uma opção válida `CircularString` instância deve estar vazia ou ter os seguintes atributos:  
+ Válido `CircularString` instância deve estar vazia ou ter os seguintes atributos:  
   
 -   Deve conter, pelo menos, um segmento de arco circular (ou seja, que tenha um mínimo de três pontos).  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   Não pode se sobrepor a um intervalo.  
   
--   Embora `CircularString` instâncias podem conter segmentos de linha, esses segmentos de linha devem ser definidos por três pontos colineares.  
+-   Embora `CircularString` instâncias possam conter segmentos de linha, esses segmentos de linha devem ser definidos por três pontos colineares.  
   
  O exemplo a seguir mostra um `CircularString` instâncias.  
   
@@ -70,7 +70,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Uma instância `CircularString` deve conter, pelo menos, dois segmentos de arco circulares para definir um círculo completo. Um `CircularString` instância não pode usar um segmento de arco circular único (como (1 1, 1 3, 1 1)) para definir um círculo completo. Use (1 1, 2 2, 3 1, 2 0, 1 1) para definir o círculo.  
+ Uma instância `CircularString` deve conter, pelo menos, dois segmentos de arco circulares para definir um círculo completo. Um `CircularString` instância não é possível usar um segmento único de arco circular (como (1 1, 3 1, 1 1)) para definir um círculo completo. Use (1 1, 2 2, 3 1, 2 0, 1 1) para definir o círculo.  
   
  O exemplo a seguir mostra instâncias CircularString que não são válidas.  
   
@@ -109,7 +109,7 @@ SELECT @g.ToString();
 ```  
   
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. Criando uma instância de geometry usando uma CircularString com vários segmentos de arco circular  
- O exemplo a seguir mostra como criar um `CircularString` instância com mais de um segmento de arco circular (círculo cheio):  
+ O exemplo a seguir mostra como criar um `CircularString` de instância com mais de um segmento de arco circular (círculo cheio):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -137,7 +137,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Observe que o valor para o `CircularString` exemplo estiver perto de 2 ∏, que é a circunferência real do círculo.  
+ Observe que o valor para o `CircularString` exemplo está próximo 2∏, que é a real circunferência do círculo.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Declarando e criando uma instância de geometry com uma CircularString na mesma instrução  
  Este trecho mostra como declarar e criar uma instância de `geometry` com uma `CircularString` na mesma instrução:  

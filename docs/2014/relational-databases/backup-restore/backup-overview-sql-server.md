@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163027"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Este tópico apresenta o componente de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O backup do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é essencial para proteger seus dados. Esta discussão abrange tipos de backup e restrições de backup. O tópico também apresenta dispositivos de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e mídia de backup.  
@@ -87,7 +86,7 @@ ms.locfileid: "36116613"
  [backup parcial](partial-backups-sql-server.md)  
  Contém dados apenas de alguns grupos de arquivos em um banco de dados, incluindo os dados no grupo de arquivos primário, em cada grupo de arquivos de leitura/gravação e em qualquer arquivo somente leitura especificado opcionalmente.  
   
- **Mídia de backup termos e definições**  
+ **Mídia de backup de termos e definições**  
   
  [dispositivo de backup](backup-devices-sql-server.md)  
  Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de armazenamento do Blob do Microsoft Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  

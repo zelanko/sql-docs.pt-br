@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228746"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
   Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajudar a:  
@@ -37,7 +37,7 @@ ms.locfileid: "36116875"
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um gráfico no Assistente de gráfico](#Chart)  
+1.  [Criar um gráfico de Assistente de gráfico](#Chart)  
   
 2.  [Escolha o tipo de gráfico](#ChartType)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36116875"
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Criar um relatório de gráfico no Assistente de Gráfico  
- Do **Introdução** caixa de diálogo, crie um conjunto de dados inserido, escolha uma fonte de dados compartilhada e criar um gráfico de barras usando o Assistente de gráfico.  
+ Dos **guia de Introdução** caixa de diálogo, criar um conjunto de dados inserido, escolher uma fonte de dados compartilhada e criar um gráfico de barras usando o Assistente de gráfico.  
   
 > [!NOTE]  
 >  Neste tutorial, como contém os valores de dados, a consulta não precisa de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
@@ -78,7 +78,7 @@ ms.locfileid: "36116875"
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparecer, clique no botão Construtor de relatórios e, em seguida, clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparecer, clique no botão Construtor de relatórios e, em seguida, clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36116875"
   
 2.  Clique em **Barra**e em **Avançar**.  
   
-     Sobre o **organizar campos de gráfico** página, há quatro campos no **campos disponíveis** painel: FirstName, LastName, SalesYear2009 e SalesYear2008.  
+     Sobre o **organizar campos de gráfico** página, há quatro campos na **campos disponíveis** painel: FirstName, LastName, SalesYear2009 e SalesYear2008.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36116875"
   
 6.  Clique em **Avançar**.  
   
-7.  Sobre o **escolha um estilo** , no painel Estilos, selecione um estilo.  
+7.  Sobre o **escolher um estilo** página, no painel Estilos, selecione um estilo.  
   
      Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda. Quando você selecionar um estilo, o painel Visualizar exibirá um exemplo do gráfico com esse estilo.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "36116875"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Clique com botão direito do eixo vertical e, em seguida, clique em **propriedades do Eixo Vertical**.  
+2.  Clique com botão direito no eixo vertical e, em seguida, clique em **propriedades do Eixo Vertical**.  
   
 3.  Em **Alcance e intervalo do eixo**, na caixa **Intervalo** , digite **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Clique com botão direito vertical **título do eixo** e desmarque o **Mostrar título do eixo** caixa de seleção.  
+5.  Clique com botão direito vertical **título do eixo** e desmarque as **Mostrar título do eixo** caixa de seleção.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36116875"
   
 4.  Clique em **Classificar**. A página **Alterar opções de classificação** exibe uma lista de expressões de classificação. Por padrão, essa lista contém uma expressão de classificação que é igual à expressão do grupo de categorias original.  
   
-5.  Em Classificar por, clique em expressão (**Fx**) botão.  
+5.  Em Classificar por, clique na expressão (**Fx**) botão.  
   
 6.  Digite a seguinte expressão: `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
@@ -264,7 +264,7 @@ ms.locfileid: "36116875"
   
 2.  Clique no eixo horizontal ao longo da parte inferior do gráfico para selecioná-lo.  
   
-     Na faixa de opções, no **início** guia o **número** de grupo, clique no **moeda** botão. Os rótulos do eixo horizontal são alterados para moeda.  
+     Na faixa de opções, no **Home** guia o **número** , clique no **moeda** botão. Os rótulos do eixo horizontal são alterados para moeda.  
   
 3.  (Opcional) Remova os dígitos decimais. Próximo ao botão **Moeda** , clique no botão **Diminuir Decimal** duas vezes.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "36116875"
   
 5.  Clique em **Adicionar**. Um novo filtro em branco é exibido.  
   
-6.  Em **expressão**, tipo **[SUM (salesyear2009)]**. Isso cria a expressão subjacente `=Sum(Fields!SalesYear2009.Value)`, que você pode ver se você clicar no **fx** botão.  
+6.  Na **expressão**, digite **[Sum(SalesYear2009)]**. Isso cria a expressão subjacente `=Sum(Fields!SalesYear2009.Value)`, que você pode ver se você clicar em de **fx** botão.  
   
 7.  Verifique se o tipo de dados é **Text**.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "36116875"
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Tipo **gráfico de barras de vendas**, pressione ENTER e, em seguida, digite **cinco principais vendedores para 2009**, de modo que fique assim:  
+2.  Tipo de **gráfico de barras de vendas**, pressione ENTER e, em seguida, digite **cinco principais vendedores para 2009**, portanto, ele tem esta aparência:  
   
      **Gráfico de Barras de Vendas**  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36116875"
   
 3.  Selecione **Gráfico de Barras de Vendas**e clique no botão **Negrito** .  
   
-4.  Selecione **cinco principais vendedores para 2009**e, no **fonte** seção o **início** guia, defina o tamanho da fonte como **10**.  
+4.  Selecione **cinco principais vendedores para 2009**e, no **fonte** seção o **página inicial** guia, defina o tamanho da fonte como **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título para acomodar as duas linhas de texto.  
   
@@ -353,7 +353,7 @@ ms.locfileid: "36116875"
  Você concluiu com êxito o tutorial Adicionando um gráfico de barras seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

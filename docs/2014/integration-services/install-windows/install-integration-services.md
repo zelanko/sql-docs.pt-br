@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
 - SSIS, installing
@@ -21,20 +21,20 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7e495ce5090ad33f6584250db739898ab3ca6dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156517"
 ---
 # <a name="install-integration-services"></a>Instalar o Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um único programa de Instalação para instalar qualquer ou todos os seus componentes, incluindo o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Com a Instalação, você pode instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com ou sem outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um único computador.  
   
  Este tópico destaca considerações importantes que você deve saber antes de instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. As informações neste tópico o ajudarão a avaliar as opções de instalação, para que seja possível fazer seleções que resultem em uma instalação com êxito.  
   
- Este tópico não inclui instruções para o início da Instalação, o uso do Assistente de Instalação ou a execução da Instalação pela linha de comando. Para obter instruções passo a passo sobre como iniciar a instalação e selecionar os componentes para instalar, consulte [instalação de início rápido do SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obter informações sobre opções de linha de comando para instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Este tópico não inclui instruções para o início da Instalação, o uso do Assistente de Instalação ou a execução da Instalação pela linha de comando. Para obter instruções passo a passo sobre como iniciar a instalação e selecionar os componentes a instalar, consulte [instalação de início rápido do SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obter informações sobre opções de linha de comando para instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Preparando para instalar o Integration Services  
  Antes de instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], revise os seguintes requisitos:  
@@ -60,11 +60,11 @@ ms.locfileid: "36117758"
  Depois de analisar os requisitos de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantir que seu computador atende esses requisitos, você estará pronto para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!NOTE]  
->  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os usuários não têm acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Depois de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver instalado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador deve executar a ferramenta de configuração de DCOM (Dcomcnfg.exe) para conceder acesso a usuários específicos para **SQL Server Integration Services 12.0**.  
+>  Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os usuários não têm acesso ao serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Após [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver instalado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador deve executar a ferramenta de configuração de DCOM (Dcomcnfg.exe) para conceder acesso a usuários específicos ao **SQL Server Integration Services 12.0**.  
 >   
 >  Para obter instruções sobre como conceder permissões, consulte [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md).  
   
- Se estiver usando o Assistente de Instalação para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você usará uma série de páginas para especificar componentes e opções. A seguir estão as páginas no Assistente de instalação em que as opções selecionadas afetam a instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com as recomendações de seleção:  
+ Se estiver usando o Assistente de Instalação para instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você usará uma série de páginas para especificar componentes e opções. A seguir estão as páginas no Assistente de instalação em que as opções que você selecione afetam a instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com recomendações de seleção:  
   
 -   **Seleção de recursos**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36117758"
   
      Examine as configurações para o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] na guia **Contas de Serviço** da página **Configuração do Servidor** .  
   
-     Se o Windows 7 ou Windows Server 2008 R2 estiver instalado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serviço é registrado para ser executado na conta virtual NT Services\MsDtsServer120 e o **o tipo de inicialização** é **automática**.  Você não tem que inserir uma senha para a conta virtual. Se o Microsoft Vista ou Windows Server 2008 estiver instalado, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será registrado para ser executado na conta interna Serviço de Rede e o **Tipo de inicialização** será **Automático**. Você não tem que digitar uma senha para a conta de Serviço de Rede interna.  
+     Se o Windows 7 ou Windows Server 2008 R2 estiver instalado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serviço registrado para ser executado na conta virtual NT Services\MsDtsServer120 e o **tipo de inicialização** é **automática**.  Você não tem que inserir uma senha para a conta virtual. Se o Microsoft Vista ou Windows Server 2008 estiver instalado, o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será registrado para ser executado na conta interna Serviço de Rede e o **Tipo de inicialização** será **Automático**. Você não tem que digitar uma senha para a conta de Serviço de Rede interna.  
   
  Por padrão, em uma nova instalação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é configurado para não registrar eventos relacionados à execução de pacotes no log de eventos do Aplicativo. Essa configuração evita de entradas em excesso no log de eventos quando você usa o recurso Coletor de Dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os eventos registrados são EventID 12288, "Pacote iniciado" e EventID 12289, "Pacote concluído com êxito". Para registrar esses eventos no log de eventos do Aplicativo, abra o Registro para edição. Em seguida, no Registro, localize o nó HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS e altere o valor DWORD da configuração LogPackageExecutionToEventLog de 0 para 1.  
   

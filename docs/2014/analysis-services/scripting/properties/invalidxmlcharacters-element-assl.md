@@ -22,15 +22,15 @@ helpviewer_keywords:
 - InvalidXmlCharacters element
 ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19367018c772e4d512082a45a7a1b6e13e497f1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a3735beb602045bc4789d716bdf1cb5968af06f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229666"
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>Elemento InvalidXmlCharacters (ASSL)
   Especifica o método de manipulação de caracteres XML nos dados de origem que não são válidos.  
@@ -58,7 +58,7 @@ ms.locfileid: "36117511"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Elemento pai|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  

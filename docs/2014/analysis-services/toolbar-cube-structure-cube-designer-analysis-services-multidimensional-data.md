@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22857975aee349abdb1a258f9aa013ffe2adf1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209896"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar ações comuns, como processar ou criar novos grupos de medidas na guia **Estrutura do Cubo** no Designer de Cubo.  
@@ -42,6 +42,6 @@ ms.locfileid: "36117509"
 |**Ocultar tabela**|Clique para ocultar a tabela selecionada no painel **Exibição da Fonte de Dados** .<br /><br /> Observação: essa opção será desabilitada se uma tabela não estiver selecionada no painel **Exibição da Fonte de Dados** .|  
 |**Localizar Tabela**|Clique para exibir a caixa de diálogo **Localizar Tabela** e localizar uma tabela no painel **Exibição da Fonte de Dados** .|  
 |**Zoom**|Clique para alternar entre as seguintes opções de percentual de zoom ou para selecionar uma opção de percentual de zoom disponível para o painel **Exibição da Fonte de Dados** .|  
-|**Mostrar**|Clique para alternar entre as seguintes opções ou para selecionar uma das seguintes opções para alterar a exibição do painel **Exibição da Fonte de Dados** :<br /><br /> **Exibição de árvore**: exiba tabelas, consultas nomeadas, colunas, cálculos nomeados e relações em um modo de exibição de árvore.<br /><br /> **Exibição de diagrama**: exiba tabelas, consultas nomeadas, colunas, cálculos nomeados e relações em um diagrama de banco de dados.|  
+|**Mostrar**|Clique para alternar entre as seguintes opções ou para selecionar uma das seguintes opções para alterar a exibição do painel **Exibição da Fonte de Dados** :<br /><br /> **Exibição de árvore**: exiba tabelas, consultas nomeadas, colunas, cálculos nomeados e relações em uma exibição de árvore.<br /><br /> **Exibição de diagrama**: exiba tabelas, consultas nomeadas, colunas, cálculos nomeados e relações em um diagrama de banco de dados.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Atributo de caixa de diálogo de tradução de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo de tradução de dados (Analysis Services - dados multidimensionais) do atributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b8d7f28696e04045ca5ac3f11bf38d4c67f60c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210356"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Tradução de Dados de Atributo (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Tradução de Dados de Atributo** para definir a coluna que contém os dados de legenda de tradução, assim como o agrupamento e a ordem de classificação a serem usados com os dados traduzidos. É possível exibir a caixa de diálogo **Tradução de Dados de Atributo** das seguintes maneiras:  
@@ -56,12 +56,12 @@ ms.locfileid: "36116037"
 > [!NOTE]  
 >  Se essa opção estiver selecionada, as opções **Diferenciar maiúsculas de minúsculas**, **Diferenciar acentos**, **Diferenciar Katakana**e **Diferenciar Largura** estarão desabilitadas.  
   
- **Maiusculas e minúsculas**  
+ **Diferencia maiusculas de minúsculas**  
  Selecione esta opção para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado e para diferenciar entre letras maiúsculas e minúsculas.  
   
- Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões em maiúsculas e minúsculas de letras são iguais. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define se letras minúsculas são classificadas inferior ou letras maiusculas quando **diferencia maiusculas de minúsculas** não estiver selecionada.  
+ Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões em maiúsculas e minúsculas de letras são iguais. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não define se letras minúsculas são classificadas inferior ou superior em relação a letras maiusculas letras quando **diferencia maiusculas de minúsculas** não estiver selecionada.  
   
- **Acentos**  
+ **Diferenciação de acentos**  
  Selecione esta opção para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado e para distinguir entre letras acentuadas ou não. Por exemplo, 'a' não é igual a 'á'.  
   
  Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas de letras são iguais.  

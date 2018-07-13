@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184234"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
   Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
@@ -40,7 +40,7 @@ ms.locfileid: "36116399"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Para iniciar o SQL Server Management Studio  
   
--   Sobre o **iniciar** , aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e, em seguida, clique em **SQL Server Management Studio**.  
+-   Sobre o **inicie** , aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e, em seguida, clique em **SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar o SQL Server Configuration Manager  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36116399"
 1.  Faça logon no Windows como membro do grupo Administradores e abra o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Se você estiver se conectando [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] na [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (ou mais recente), talvez seja necessário com o botão direito [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e, em seguida, clique em **executar como administrador** para se conectar usando o administrador credenciais. Começando pelo [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], a instalação acrescenta logons selecionados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; então, suas credenciais de Administrador não são necessárias.  
+    >  Se você estiver se conectando ao [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] na [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (ou mais recente), talvez seja necessário com o botão direito [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e, em seguida, clique em **executar como administrador** para se conectar usando o administrador credenciais. Começando pelo [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], a instalação acrescenta logons selecionados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; então, suas credenciais de Administrador não são necessárias.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , clique em **Cancelar**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36116399"
   
      A caixa de diálogo **Logon – Novo** é exibida.  
   
-2.  No **geral** página, o **nome de logon** , digite um logon do Windows no formato  *\<domínio >\\< logon\>*.  
+2.  No **gerais** página, o **nome de logon** , digite um logon do Windows no formato  *\<domínio >\\< login\>*.  
   
 3.  Na caixa **Banco de dados padrão** , selecione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso esteja disponível. Caso contrário, selecione **mestre**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Controlando a exibição da região de dados Tablix em uma página de relatório (construtor de relatórios e SSRS) | Microsoft Docs
+title: Controlando a exibição de região de dados Tablix em uma página de relatório (construtor de relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179233"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlando a exibição da região de dados Tablix em uma página do relatório (Construtor de Relatórios e SSRS)
   Este tópico descreve as propriedades de uma região de dados Tablix que pode ser modificada para alterar a forma como uma região de dados Tablix é exibida quando visualizada em um relatório.  
@@ -38,7 +38,7 @@ ms.locfileid: "36117081"
   
 -   **Exibindo uma mensagem quando não há dados**. Quando não há dados de um conjunto de dados de relatório em tempo de execução, é possível escrever uma mensagem própria a ser exibida em lugar da região de dados. Para obter mais informações, consulte [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   **Ocultando dados condicionalmente**. Para controlar condicionalmente se deve mostrar ou ocultar uma região de dados ou partes de uma região de dados, você pode definir a propriedade oculto `True` ou como uma expressão. Entre as expressões podem estar referências a parâmetros de relatório. Também é possível especificar um item de alternância, para que usuário possa optar por exibir dados detalhados. Para obter mais informações, consulte [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Ocultando dados condicionalmente**. Para controlar condicionalmente se deverá mostrar ou ocultar uma região de dados ou partes de uma região de dados, você pode definir a propriedade Hidden `True` ou como uma expressão. Entre as expressões podem estar referências a parâmetros de relatório. Também é possível especificar um item de alternância, para que usuário possa optar por exibir dados detalhados. Para obter mais informações, consulte [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **Mesclando células.** Várias células contíguas em uma tabela podem ser integradas em uma única célula. Isso é conhecido como abrangência de coluna ou mesclagem de célula. As células só podem ser combinadas horizontal ou verticalmente. Quando você mescla células, apenas os dados na primeira célula são preservados. Os dados das demais células são removidos. As células mescladas podem ser divididas nas colunas originais. Para obter mais informações, consulte [Mesclar células em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -78,8 +78,8 @@ ms.locfileid: "36117081"
 ## <a name="see-also"></a>Consulte também  
  [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Controlando quebras de páginas, títulos, colunas e linhas &#40;SSRS e construtor de relatórios&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Controlando quebras de páginas, títulos, colunas e linhas &#40;relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181033"
 ---
 # <a name="lesson-14-deploy"></a>Lição 14: Implantar
   Nesta lição, você configurará propriedades de implantação; especificando uma instância de servidor de implantação do Analysis Services executada no modo de Tabela e um nome para o modelo que você está implantando. Você implantará o modelo nessa instância. Depois de implantado, os usuários podem se conectar ao modelo usando um aplicativo cliente de relatório. Para saber mais, consulte [Implantação de uma solução de modelo de tabela &#40;SSAS Tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -40,12 +40,12 @@ ms.locfileid: "36117281"
     > [!IMPORTANT]  
     >  Você deve ter permissões de Administrador em uma instância do Analysis Services para implantá-la.  
   
-3.  Verifique se o **o modo de consulta** está definida como **na memória**.  
+3.  Verifique se o **modo de consulta** estiver definida como **in-memory**.  
   
     > [!NOTE]  
     >  Não há suporte para o modelo criado por meio deste tutorial no modo DirectQuery.  
   
-4.  No **banco de dados** propriedade, digite `Adventure Works Internet Sales Model`.  
+4.  No **banco de dados** propriedade, tipo `Adventure Works Internet Sales Model`.  
   
 5.  No **cubo** propriedade Name, digite `Adventure Works Internet Sales Model`.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36117281"
   
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Configurar as propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [Bancos de dados de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

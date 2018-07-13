@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - o Transact-SQL - guias página) | Microsoft Docs
+title: Opções (Editor de texto - Transact-SQL – guias página) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c070024769f59516f57d89a4c76b97ceb9b775f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152637"
 ---
-# <a name="options-text-editor---transact-sql---tabs-page"></a>Opções (página do Editor de texto - o Transact-SQL - guias)
+# <a name="options-text-editor---transact-sql---tabs-page"></a>Opções (página do Editor de texto - Transact-SQL – guias)
   Use esta caixa de diálogo para alterar o comportamento de tabulação do Editor de Consultas [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para programar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **Transact-SQL** e, em seguida, clique em **Tabulações**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
@@ -35,7 +35,7 @@ ms.locfileid: "36118496"
  **Nenhuma**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
- **bloco**  
+ **Bloco**  
  Quando esta opção estiver selecionada, a nova linha criada ao se pressionar ENTER ficará recuada automaticamente com a mesma distância da linha anterior.  
   
  **Inteligente**  

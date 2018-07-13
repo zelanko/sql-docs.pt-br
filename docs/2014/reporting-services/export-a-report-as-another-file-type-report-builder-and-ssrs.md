@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166188"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar um relatório como outro tipo de arquivo (Construtor de Relatórios e SSRS)
   Você pode renderizar um relatório para outro formato de arquivo, como CSV, Imagem, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], enquanto visualiza seu relatório no Construtor de Relatórios ou no Designer de Relatórios, ou pode renderizar o relatório enquanto visualiza-o no servidor de relatórios. A renderização do relatório em um formato específico será útil se você desejar salvá-lo imediatamente como outro tipo de arquivo, sem publicar o relatório no servidor de relatório, ou se quiser ver como o design do relatórios será exibido quando ele for entregue aos leitores de relatórios em um formato específico. A renderização do relatório no servidor de relatórios é útil quando você configura assinaturas ou fornece seus relatórios por email, ou quando deseja salvar um relatório disponível no servidor de relatórios. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -89,8 +89,8 @@ ms.locfileid: "36117383"
      **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, você será solicitado a salvar o relatório exportado ou a localizar um programa online para abri-lo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exportando relatórios &#40;SSRS e construtor de relatórios&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;SSRS e construtor de relatórios&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

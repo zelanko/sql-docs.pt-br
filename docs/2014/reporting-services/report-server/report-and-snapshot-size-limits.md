@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - large reports
 - maximum report size
@@ -20,13 +20,13 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 525f1af5c7ca1aadd909c306a3397134d9275a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15925e061103c12f869dae722b1b5881f4146919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159877"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -49,11 +49,11 @@ ms.locfileid: "36117591"
   
 -   PDF, Excel, TIFF, XML e CSV processam o relatório inteiro na memória antes de exibir o relatório para o usuário.  
   
- Para medir o tamanho de um relatório renderizado, você pode exibir o log de execução de relatório. Para obter mais informações, consulte [o Log de execução do servidor de relatório e a exibição do ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
+ Para medir o tamanho de um relatório renderizado, você pode exibir o log de execução de relatório. Para obter mais informações, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
  Para calcular o tamanho de um relatório renderizado no disco, você pode exportar e salvar o relatório no sistema de arquivos (o arquivo salvo inclui dados e informações de formatação do relatório).  
   
- O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre limites de arquivo do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ O único limite fixo do tamanho do relatório é determinado durante a renderização em formato Excel. As planilhas não podem ter mais de 65536 linhas ou 256 colunas. Outros formatos de renderização não têm esses limites, de modo que o tamanho é limitado somente pela quantidade de recursos do servidor. Para obter mais informações sobre os limites de arquivo do Excel, consulte [exportar um relatório como outro tipo de arquivo &#40;construtor de relatórios e SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  O processamento e a renderização do relatório ocorrem na memória. Se houver grandes relatórios ou um grande número de usuários, faça algum tipo de planejamento de capacidade para ter certeza de que a implantação do servidor de relatório seja executada em um nível satisfatório para os usuários. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Planning for Scalability and Performance with Reporting Services (Planejamento de escalabilidade e desempenho com o Reporting Services)](http://go.microsoft.com/fwlink/?LinkID=70650) e [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server (Usando o Visual Studio 2005 para realizar o teste de carga em um servidor de relatórios do Reporting Services do SQL Server 2005)](http://go.microsoft.com/fwlink/?LinkID=77519).  
@@ -84,7 +84,7 @@ EXEC sp_spaceused
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatório](set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](process-large-reports.md)  
   

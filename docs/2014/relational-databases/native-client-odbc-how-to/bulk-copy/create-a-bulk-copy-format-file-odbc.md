@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019581"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414175"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Criar um arquivo de formato de cópia em massa (ODBC)
   Este exemplo mostra como usar funções de cópia em massa para criar um arquivo de dados e um arquivo de formato. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
@@ -39,7 +37,7 @@ ms.locfileid: "36019581"
   
 3.  Conecte-se ao SQL Server.  
   
-4.  Chamar [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chame [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   O nome da tabela ou da exibição da qual ou para a qual será feita a cópia em massa.  
   
@@ -49,13 +47,13 @@ ms.locfileid: "36019581"
   
     -   A direção da cópia: DB_OUT para o arquivo da tabela ou exibição.  
   
-5.  Chamar [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para definir o número de colunas.  
+5.  Chame [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para definir o número de colunas.  
   
-6.  Chamar [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna definir suas características no arquivo de dados.  
+6.  Chame [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada coluna definir suas características no arquivo de dados.  
   
-7.  Chamar [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) para criar um arquivo de formato que descreve o arquivo de dados a ser criado pela operação de cópia em massa.  
+7.  Chame [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) para criar um arquivo de formato que descreve o arquivo de dados a ser criado pela operação de cópia em massa.  
   
-8.  Chamar [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
+8.  Chame [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
  Uma operação de cópia em massa executada dessa forma cria um arquivo de dados que contém os dados copiados e um arquivo de formato que descreve o layout do arquivo de dados.  
   

@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115861"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427465"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
@@ -65,7 +63,7 @@ ms.locfileid: "36115861"
   
 ##  <a name="FunctionTypes"></a> Tipos de funções  
  Função escalar  
- As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados exceto `text`, `ntext`, `image`, `cursor`, e `timestamp`.  
+ As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, não há um corpo de função; o valor escalar é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função, definido em um bloco BEGIN...END, contém uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto `text`, `ntext`, `image`, `cursor`, e `timestamp`.  
   
  Funções com valor de tabela  
  As funções com valor de tabela definidos pelo usuário retornam um `table` tipo de dados. Para uma função com valor de tabela embutida, não há um corpo de função; a tabela é o conjunto de resultados de uma única instrução SELECT.  

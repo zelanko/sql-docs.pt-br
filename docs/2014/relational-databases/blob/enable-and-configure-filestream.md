@@ -3,25 +3,23 @@ title: Habilitar e configurar FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb7929585ca40c0a419d0e655c2c4cc3f298ddf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020269"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413145"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar FILESTREAM
   Antes de começar a usar FILESTREAM, é necessário habilitá-lo na instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Este tópico descreve como habilitar o FILESTREAM usando o SQL Server Configuration Manager.  
@@ -95,7 +93,7 @@ ms.locfileid: "36020269"
 ###  <a name="database"></a> Design físico do banco de dados  
  Ao criar um banco de dados de FILESTREAM, considere as seguintes diretrizes:  
   
--   Colunas FILESTREAM devem ser acompanhadas por uma `uniqueidentifier`coluna ROWGUID. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  
+-   Colunas FILESTREAM devem ser acompanhadas por um correspondente `uniqueidentifier`coluna ROWGUID. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  
   
 -   Por razões de desempenho, grupos de arquivos e contêineres de FILESTREAM devem residir em volumes diferentes do sistema operacional, do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do tempdb ou do arquivo de paginação.  
   

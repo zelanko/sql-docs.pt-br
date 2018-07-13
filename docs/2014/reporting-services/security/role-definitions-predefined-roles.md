@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149937"
 ---
 # <a name="predefined-roles"></a>Funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  

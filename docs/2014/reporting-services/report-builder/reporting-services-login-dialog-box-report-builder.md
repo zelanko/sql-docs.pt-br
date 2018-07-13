@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a36e0597ca34ed17d2ecf6bed6c0c7e0a0923229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 76c6a0b6266871b74fbeb15169df34e89507cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168028"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Caixa de diálogo Logon do Reporting Services (Construtor de Relatórios)
   Use a caixa de diálogo **Logon do Reporting Services** para fornecer credenciais para publicar relatórios no servidor de relatório. Para obter ajuda com essas credenciais, entre em contato o administrador do servidor de relatório.  

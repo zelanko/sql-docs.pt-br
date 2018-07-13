@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230176"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Adicionar um relatório novo ou existente a um projeto de relatório (SSRS)
-  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório usando o Assistente de relatório ou adicionando um novo relatório em branco ao seu projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
+  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório usando o Assistente de relatório ou adicionando um novo relatório em branco ao seu projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  
   
 > [!NOTE]  
 >  Para visualizar um relatório com fontes de dados existentes, é preciso ter as permissões para a fonte de dados do cliente que está criando o relatório. Para obter mais informações, consulte [criar uma fonte de dados compartilhada ou um inserido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36117079"
     -   **Escolha um estilo.** A próxima etapa é aplicar um estilo ao relatório que usa um modelo de estilo. Selecione um modelo para aplicar estilos como fonte, cor e estilo de borda ao relatório. O Designer de Relatórios fornece seis modelos de estilo: Ardósia, Floresta, Corporativo, Negrito, Azul-marinho e Genérico. Você também pode adicionar modelos de estilo adicionais.  
   
         > [!NOTE]  
-        >  Você pode alterar modelos existentes ou adicionar novos editando o arquivo StyleTemplates.xml em que o Visual Studio de \Program Files\Microsoft 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>pasta, onde \<lang > é o idioma que você está usando (por exemplo, se você estiver usando a versão do idioma inglês [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], o nome da pasta é "EN"). Esta pasta está localizada no computador em que o Designer de Relatórios está instalado. Há duas cópias do arquivo ModelosDeEstilo.xml. Para modificar os estilos aplicados por meio do Assistente de Relatório, edite o arquivo na pasta criada para o idioma que está em uso.  
+        >  Você pode alterar modelos existentes ou adicionar novos, editando o arquivo Styletemplates XML no \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>pasta, onde \<lang > é o idioma que você está usando (por exemplo, se você estiver usando a versão do idioma inglês [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], o nome da pasta será "EN"). Esta pasta está localizada no computador em que o Designer de Relatórios está instalado. Há duas cópias do arquivo ModelosDeEstilo.xml. Para modificar os estilos aplicados por meio do Assistente de Relatório, edite o arquivo na pasta criada para o idioma que está em uso.  
   
     -   **Nome do relatório.**  A etapa final é nomear o relatório e verificar os campos que serão incluídos no relatório. Quando todas as etapas forem concluídas, o Designer de Relatórios criará o relatório e o adicionará ao projeto de servidor de relatório.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36117079"
   
 ### <a name="to-add-an-existing-report"></a>Para adicionar um relatório existente  
   
-1.  Do **projeto** menu, clique em **adicionar**e, em seguida, **Item existente**.  
+1.  Dos **Project** menu, clique em **Add**e, em seguida, **Item existente**.  
   
 2.  Navegue até o local do arquivo .rdl, selecione-o e clique em **Adicionar**.  
   

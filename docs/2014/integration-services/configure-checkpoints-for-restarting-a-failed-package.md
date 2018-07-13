@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c2ae5affa24087bbb0511bc29559bba88f86cdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 254e444658ca179319f2af93a414620e7dfa9ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148737"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar pontos de verificação para reinicializar um pacote com falha
   Você pode configurar os pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para reiniciá-los a partir de um ponto de falha em vez de executar novamente todo o pacote, selecionando as propriedades que se aplicam aos pontos de verificação.  
@@ -55,7 +55,7 @@ ms.locfileid: "36118482"
   
     -   Clique com o botão direito do mouse em uma tarefa ou contêiner e clique em **Propriedades**.  
   
-    -   Defina a propriedade FailPackageOnFailure como `True` para cada tarefa e contêiner selecionados.  
+    -   Defina a propriedade FailPackageOnFailure como `True` para cada tarefa e contêiner selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reiniciar pacotes por meio de pontos de verificação](packages/restart-packages-by-using-checkpoints.md)  

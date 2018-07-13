@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a670980605130532d5a93c17dd6827343dd68d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240948"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionando e configurando a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
@@ -98,7 +98,7 @@ ms.locfileid: "36020527"
   
 9. Clique com o botão direito do mouse na transformação Chave de Moeda de Pesquisa e clique em **Propriedades**.  
   
-10. Na janela Propriedades, verifique se o `LocaleID` está definida como **inglês (Estados Unidos)** e **DefaultCodePage** está definida como **1252**.  
+10. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** e o **DefaultCodePage** estiver definida como **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para adicionar e configurar a transformação Pesquisa de Chave de Data  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36020527"
   
 11. Clique com o botão direito do mouse na transformação Chave de Data de Pesquisa e clique em **Propriedades**.  
   
-12. Na janela Propriedades, verifique se o `LocaleID` está definida como **inglês (Estados Unidos)** e **DefaultCodePage** está definida como **1252**.  
+12. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** e o **DefaultCodePage** estiver definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

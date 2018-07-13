@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5489110d2b3eb1648abe1b4d02266cc8c4bfe84d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfe1e43e23904fa571aaacb34f0cf62f204945fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258942"
 ---
 # <a name="integration-services-tutorials"></a>Tutoriais do Integration Services
   Esta seção contém tutoriais [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

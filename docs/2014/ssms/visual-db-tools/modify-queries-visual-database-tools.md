@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying queries
 - queries [SQL Server], modifying
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1e511c95c68f527f0661802602509133c41d234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44dd1dfb1b4fbf542beca3d72c1be86771b87950
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153657"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Modificar consultas (Visual Database Tools)
   Abra uma consulta para modificá-la no Designer de Consulta e Exibição.  
@@ -38,7 +38,7 @@ ms.locfileid: "36118237"
  O Designer de Consulta está agora aberto e você pode fazer modificações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Executar consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Executar consultas do &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   

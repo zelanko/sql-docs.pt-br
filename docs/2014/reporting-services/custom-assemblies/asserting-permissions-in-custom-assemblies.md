@@ -20,15 +20,15 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e09b28471b61c010dec3686a729200fb1f384c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5dd1ba313ad1cdf7d3ceb73f1849db2755e0cf0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228856"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
   Por padrão, o código de assembly personalizado é executado com o conjunto de permissões limitado **Execução**. Em alguns casos, talvez você queira implementar um assembly personalizado que crie chamadas seguras para proteger recursos em seu sistema de segurança (como um arquivo ou o Registro). Para realizar isso, faça o seguinte:  

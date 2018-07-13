@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd364f897299bdee36f931f999bdd623a1878c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239946"
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
   Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
@@ -37,9 +37,9 @@ ms.locfileid: "36116044"
  Para obter mais informações sobre como você pode implementar a mineração de dados em sua solução de business intelligence, consulte a seção Guias de Solução da Biblioteca MSDN.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura lógica &#40;Analysis Services – mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura lógica &#40;Analysis Services - mineração de dados&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitetura física &#40;Analysis Services – mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Serviços de Mineração de dados e fontes de dados](data-mining-services-and-data-sources.md)  
   

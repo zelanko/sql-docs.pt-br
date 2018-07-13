@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165447"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT
   Permite que o aplicativo cliente procure o conteúdo de um modelo de mineração de dados. Os aplicativos cliente podem usar as restrições de operação de árvore especiais descritas no fim deste tópico para navegar no conteúdo do modelo de mineração.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_MODEL_CONTENT` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_MODEL_CONTENT` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|`MODEL_CATALOG`|`DBTYPE_WSTR`||O nome do catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche essa coluna com o nome do banco de dados do qual o modelo é um membro.|  
+|`MODEL_CATALOG`|`DBTYPE_WSTR`||O nome do catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] preenche esta coluna com o nome do banco de dados do qual o modelo é um membro.|  
 |`MODEL_SCHEMA`|`DBTYPE_WSTR`||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá `VT_NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||O nome do modelo ao qual o conteúdo descrito por esta linha é associado.|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||Os nomes dos atributos que correspondem a este nó.|  

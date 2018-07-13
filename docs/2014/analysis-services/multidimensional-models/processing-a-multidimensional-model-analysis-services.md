@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180973"
 ---
 # <a name="multidimensional-model-object-processing"></a>Processamento de objetos de modelo multidimensional
   O processamento é a etapa ou uma série de etapas nas quais o Analysis Services carrega dados de uma fonte de dados relacional para um modelo multidimensional. Para objetos que usam o armazenamento MOLAP, os dados são salvos em disco na pasta do arquivo de banco de dados. No armazenamento ROLAP, o processamento ocorre sob demanda, em resposta a uma consulta MDX sobre um objeto. Para objetos que usam armazenamento ROLAP, o processamento refere-se à atualização do cache antes de retornar os resultados da consulta.  
@@ -49,7 +49,7 @@ ms.locfileid: "36116244"
   
 ##  <a name="bkmk_prereq"></a> Pré-requisitos  
   
--   O processamento exige permissões administrativas na instância do Analysis Services. Se você estiver processando interativamente do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], deverá ser um membro da função de administrador do servidor na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para processamento que é executado de modo autônomo, por exemplo, usando um pacote de SSIS que você agenda por meio do SQL Server Agent, a conta usada para executar o pacote deverá ser um membro da função de administrador do servidor. Para obter mais informações sobre como definir permissões de administrador, consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+-   O processamento exige permissões administrativas na instância do Analysis Services. Se você estiver processando interativamente do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], deverá ser um membro da função de administrador do servidor na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para processamento que é executado de modo autônomo, por exemplo, usando um pacote de SSIS que você agenda por meio do SQL Server Agent, a conta usada para executar o pacote deverá ser um membro da função de administrador do servidor. Para obter mais informações sobre como configurar permissões de administrador, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 -   A conta usada para recuperar dados é especificada no objeto de fonte de dados, como uma opção de representação se você estiver usando a autenticação do Windows, ou como o nome de usuário na cadeia de conexão se estiver usando a autenticação de banco de dados. A conta deve ter permissões de leitura nas fontes de dados relacionais usadas pelo modelo.  
   

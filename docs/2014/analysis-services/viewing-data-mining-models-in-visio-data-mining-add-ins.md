@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259352"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Exibindo modelos de mineração de dados no Visio (suplementos de mineração de dados)
   As formas do Visio para mineração de dados permitem que você se conecte a um servidor e crie um diagrama representando um modelo de mineração de dados existente. Os diagramas podem ser então personalizados usando controles do Visio, mas você também pode detalhar os dados, expor algumas das estatísticas subjacentes e trabalhar com o modelo subjacente.  
   
 ## <a name="building-a-model-diagram"></a>Criando um diagrama modelo  
- Quando você abrir o arquivo que contém as formas do Visio para mineração de dados, o **formas** painel mostra as formas a seguir.  
+ Quando você abre o arquivo que contém as formas do Visio para mineração de dados, o **formas** painel mostra as formas a seguir.  
   
  Se você não visualizar as formas de mineração de dados quando abrir o Visio, abra o arquivo de modelo da pasta de instalação.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36115517"
   
  [Passo a passo do diagrama de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Instruções passo a passo de diagrama de rede de dependência](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Passo a passo de diagrama de rede de dependências](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Passo a passo do diagrama de árvore de decisão](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   

@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115170"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427595"
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
   As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor `xml`. O esquema XML contém informações sobre o seguinte:  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é conseguido por meio de uma instrução XQuery em relação a `xml` dados gerados por EVENTDATA e recuperar o \<CommandText > elemento. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é feito por meio de uma instrução XQuery em relação a `xml` dados que são gerados por EVENTDATA e recuperando o \<CommandText > elemento. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  A EVENTDATA captura os dados de eventos CREATE_SCHEMA, bem como o <schema_element> da definição CREATE SCHEMA correspondente, se houver. Além disso, EVENTDATA reconhece a definição <schema_element>como um evento separado. Portanto, um disparador DDL criado em ambos os eventos CREATE SCHEMA e um evento representado pelo <schema_element> da definição CREATE SCHEMA podem retornar os mesmos dados de evento duas vezes, como os dados de `TSQLCommand`. Por exemplo, considere um disparador DDL criado em ambos os eventos CREATE_SCHEMA e CREATE_TABLE e a execução do seguinte lote:  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para retornar dados de evento, recomenda-se usar o método `value()` de XQuery, em vez do método `query()`. O `query()` método retorna instâncias XML e retorno de carro com escape com e comercial e alimentação de linha (CRLF) na saída, enquanto o `value()` método renderiza instâncias CRLF invisíveis na saída.  
+>  Para retornar dados de evento, recomenda-se usar o método `value()` de XQuery, em vez do método `query()`. O `query()` método retorna instâncias XML e retorno de carro com escape com e comercial e alimentação de linha (CRLF) na saída, enquanto o `value()` método renderiza instâncias CR/LF invisíveis na saída.  
   
  Um exemplo similar de disparador DDL é fornecido com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obter o exemplo, localize a pasta Gatilhos de Banco de Dados, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta pasta está localizada na pasta **Programação** do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Clique com o botão direito do mouse em **ddlDatabseTriggerLog** e selecione **Script de Gatilho de Banco de Dados como**. Por padrão, o gatilho DDL **ddlDatabseTriggerLog** está desabilitado.  
   

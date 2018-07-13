@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], backing up
 - full-text search [SQL Server], back up and restore
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 61
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ef9e88b0ca7be951f4c8c3a4fa3e2b2560c5110
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9b2797c4b9001d05b953a33aff2c03e9add18c38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155867"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Fazer backup e restaurar índices e catálogos de texto completo
   Este tópico explica como fazer backup e restauração de índices de texto completo criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o catálogo de texto completo é um conceito lógico e não reside em um grupo de arquivos. Por isso, para fazer backup de um catálogo de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário identificar cada grupo de arquivos que contém um índice de texto completo do catálogo e fazer backup de cada um deles. Depois, faça backup desses grupos de arquivos, um por um.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210216"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticação e autorização PowerPivot
   Uma implantação do PowerPivot para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e operações do PowerPivot porque todo o conteúdo relacionado ao PowerPivot é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao PowerPivot é executado pelos serviços compartilhados PowerPivot no farm. Os usuários que solicitam uma pasta de trabalho que contém dados PowerPivot são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  
@@ -28,7 +28,7 @@ ms.locfileid: "36116247"
   
  Clique nos links a seguir para ler seções específicas deste tópico:  
   
- [Autenticação do Windows usando o requisito de logon do modo clássico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Autenticação do Windows usando o requisito de entrar no modo clássico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Operações do PowerPivot que exigem autorização do usuário](#UserConnections)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36116247"
   
 -   Carregando dados PowerPivot do cache ou de uma biblioteca se os dados não estiverem disponíveis de outra maneira. Se uma solicitação de conexão de dados for feita para dados PowerPivot que ainda não estão carregados no sistema, a instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] usará a identidade do usuário do SharePoint para recuperar a fonte de dados de uma biblioteca de conteúdo e carregá-la na memória.  
   
--   Operações de atualização de dados que salvam uma cópia atualizada da fonte de dados na pasta de trabalho em uma biblioteca de conteúdo. Neste caso, um log real em operação é executado usando o nome de usuário e a senha que são recuperados de um aplicativo de destino no Serviço de Repositório Seguro. As credenciais podem ser a conta autônoma de atualização de dados PowerPivot ou credenciais que foram armazenadas com a agenda de atualização de dados quando ela foi criada. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurar a conta autônoma dados PowerPivot atualizar &#40; O PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+-   Operações de atualização de dados que salvam uma cópia atualizada da fonte de dados na pasta de trabalho em uma biblioteca de conteúdo. Neste caso, um log real em operação é executado usando o nome de usuário e a senha que são recuperados de um aplicativo de destino no Serviço de Repositório Seguro. As credenciais podem ser a conta autônoma de atualização de dados PowerPivot ou credenciais que foram armazenadas com a agenda de atualização de dados quando ela foi criada. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurar o PowerPivot conta autônoma de dados de atualização &#40; O PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 ##  <a name="Permissions"></a> Permissões do SharePoint para acesso a dados PowerPivot  
  A publicação, gerenciamento e proteção de uma pasta de trabalho PowerPivot têm suporte apenas por meio da integração do SharePoint. Os servidores do SharePoint fornecem subsistemas de autenticação e autorização que garantem acesso legítimo aos dados. Não há nenhum cenário com suporte para implantar uma pasta de trabalho PowerPivot de maneira segura fora de um farm do SharePoint.  
@@ -99,7 +99,7 @@ ms.locfileid: "36116247"
   
  Quando uma pasta de trabalho PowerPivot é aberta em um site do SharePoint, os Serviços do Excel leem a cadeia de conexão de dados PowerPivot inserida e encaminham a solicitação ao provedor local de OLE DB do SQL Server Analysis Services. Então, o provedor transmite as informações de conexão a um servidor do PowerPivot no farm. Para que as solicitações fluam diretamente entre os dois servidores, os Serviços do Excel devem ser configurados para usar configurações requeridas pelo PowerPivot para SharePoint.  
   
- Nos Serviços do Excel, as configurações relacionadas à segurança são especificadas em locais confiáveis, provedores de dados confiáveis e bibliotecas de conexão de dados confiáveis. A tabela a seguir descreve as configurações que permitem ou aprimoram o acesso a dados PowerPivot. Se uma configuração não estiver listada aqui, ela não terá nenhum efeito nas conexões com o servidor do PowerPivot. Para obter instruções sobre como especificar essas configurações passo a passo, consulte a seção "Ativar serviços do Excel" em [configuração inicial &#40;PowerPivot para SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
+ Nos Serviços do Excel, as configurações relacionadas à segurança são especificadas em locais confiáveis, provedores de dados confiáveis e bibliotecas de conexão de dados confiáveis. A tabela a seguir descreve as configurações que permitem ou aprimoram o acesso a dados PowerPivot. Se uma configuração não estiver listada aqui, ela não terá nenhum efeito nas conexões com o servidor do PowerPivot. Para obter instruções sobre como especificar essas configurações passo a passo, consulte a seção "Ativar serviços do Excel" em [a configuração inicial &#40;PowerPivot para SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
   
 > [!NOTE]  
 >  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados PowerPivot e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
