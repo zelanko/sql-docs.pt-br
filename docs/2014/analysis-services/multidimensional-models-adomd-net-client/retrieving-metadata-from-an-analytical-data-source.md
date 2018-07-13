@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151667"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Retrieving Metadata from an Analytical Data Source
   Os metadados são importantes para aplicativos que recuperam dados analíticos e que trabalham com eles. Na recuperação de dados de uma fonte relacional, a dimensionalidade de tais dados será previsível, até mesmo com conjuntos de dados aninhados. Os conjuntos de resultados de um banco de dados relacional são tipicamente bidimensionais ou escalares em estrutura. No entanto, os dados recuperados de fontes de dados analíticos podem ser de dimensionalidade variável, organizados em hierarquias potencialmente profundas.  
@@ -38,7 +38,7 @@ ms.locfileid: "36130450"
  **Conjuntos de linhas de esquema**  
  Uma abordagem completa, embora mais difícil, de recuperar metadados é usar conjuntos de linhas do esquema. Um conjunto de linhas de esquema é um conjunto de linhas OLE DB que encapsula a descrição de todos os objetos de um tipo específico no banco de dados. As informações de esquema de uma fonte de dados analíticos incluem bancos de dados ou catálogos disponíveis na fonte de dados, nos cubos e nos modelos de mineração de um banco de dados, funções existentes para cubos da fonte de dados e assim por diante. Esses metadados podem ser recuperados por meio do método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A>, passando um `GUID` ou um nome XMLA (XML for Analysis).  
   
- Para obter mais informações: [trabalhando com conjuntos de linhas de esquema no ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))  
+ Para obter mais informações: [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))  
   
  Cada um desses métodos de recuperação de metadados acessa tipos diferentes de metadados. A tabela a seguir descreve os diferentes metadados disponíveis para cada método e os métodos usados para acessá-los.  
   

@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource dependencies [SQL Server]
 - failover clustering [SQL Server], dependencies
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 32
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: cb08a5a5848aca29f62446893dad7b20ac9519f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50ebb66342697ba514c3e0b344072424fafdf80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161927"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Adicionar dependências a um recurso do SQL Server
   Este tópico descreve como adicionar dependências a um recurso de FCI (instância de cluster de failover) AlwaysOn usando o snap-in Gerenciador de Cluster de Failover. O snap-in Gerenciador de Cluster de Failover é o aplicativo de gerenciamento de cluster do serviço WSFC (Windows Server Failover Clustering).  

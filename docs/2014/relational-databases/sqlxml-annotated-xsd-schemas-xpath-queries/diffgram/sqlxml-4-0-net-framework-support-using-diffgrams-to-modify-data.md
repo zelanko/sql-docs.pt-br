@@ -27,18 +27,18 @@ helpviewer_keywords:
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9a96faa2192b7fb37ebf61cc6dc509944e496d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4fbe2fcac8299f268922bcad815caf8a4b5cb3e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155827"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Usando DiffGrams para modificar dados no SQLXML 4.0
-  O formato DiffGram foi introduzido no **DataSet** componente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework. No .NET Framework, você pode criar DiffGrams e usá-los para modificar dados em tabelas de um banco de dados Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  O formato DiffGram foi introduzido na **DataSet** componente o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework. No .NET Framework, você pode criar DiffGrams e usá-los para modificar dados em tabelas de um banco de dados Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Esta seção fornece uma rápida introdução a DiffGrams e exemplos de como usá-los. Pressupõe-se que você esteja familiarizado com DiffGrams no .NET Framework. Nesta documentação, o foco principal está nos problemas de DiffGram específicos de SQLXML.  

@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41030 (Database Engine error)
 ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7a823405ff23184459a7057aae61267754d6a3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f3514eea0d71d55332b4bfbdd4d3ee5fa08c702
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121957"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408855"
 ---
 # <a name="mssqlserver41030"></a>MSSQLSERVER_41030
     
@@ -43,7 +42,7 @@ ms.locfileid: "36121957"
  Após recriar um cluster WSFC, desabilite e habilite novamente o AlwaysOn em cada nó de cluster no qual uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada para AlwaysOn. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para essa tarefa.  
   
 ## <a name="see-also"></a>Consulte também  
- [Habilitar e desabilitar grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
+ [Habilitar e desabilitar grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

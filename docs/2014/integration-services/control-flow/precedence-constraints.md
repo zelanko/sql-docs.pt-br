@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163037"
 ---
 # <a name="precedence-constraints"></a>Restrições de precedência
   As restrições de precedência vinculam executáveis, contêineres e tarefas em pacotes em um fluxo de controle e especificam condições que determinam a execução de executáveis. Um executável pode ser um contêiner Loop For, Loop Foreach ou Sequência; uma tarefa; ou um manipulador de eventos. Os manipuladores de eventos também usam restrições de precedência para vincular os seus executáveis a um fluxo de controle.  
@@ -78,7 +78,7 @@ ms.locfileid: "36130385"
 -   A falha requer que o executável de precedência falhe para que o executável restrito seja executado.  
   
 > [!NOTE]  
->  Somente restrições de precedência que são membros do mesmo `Precedence Constraint` coleção pode ser agrupada em uma condição AND lógica. Por exemplo, você não pode combinar restrições de precedência de dois contêineres Loop Foreach.  
+>  Somente as restrições de precedência que são membros do mesmo `Precedence Constraint` coleção pode ser agrupada em uma condição AND lógica. Por exemplo, você não pode combinar restrições de precedência de dois contêineres Loop Foreach.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configuração da restrição de precedência  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
@@ -102,7 +102,7 @@ ms.locfileid: "36130385"
  Artigo técnico, [Exemplos de expressões SSIS](http://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar expressões às restrições de precedência](../add-expressions-to-precedence-constraints.md)   
+ [Adicionar expressões a restrições de precedência](../add-expressions-to-precedence-constraints.md)   
  [Várias restrições de precedência](../multiple-precedence-constraints.md)  
   
   

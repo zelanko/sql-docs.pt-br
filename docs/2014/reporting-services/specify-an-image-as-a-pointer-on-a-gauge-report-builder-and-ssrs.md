@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bce410684b433d8a444d36affa91f8134673432d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230136"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)
   O medidor contém três estilos internos que podem ser usados para personalizar a aparência do ponteiro. Para um medidor radial, os estilos internos são: Agulha, Marcador e Barra. Para um medidor linear, os estilos internos são: Marcador, Barra e Termômetro. Se um único ponteiro for necessário, o usuário poderá criar e especificar uma imagem que pode ser usada como um ponteiro totalmente funcional.  
@@ -39,7 +39,7 @@ ms.locfileid: "36122770"
   
 1.  No modo Design, clique no ponteiro do medidor.  
   
-2.  (Opcional) Se nenhum ponteiro existir no medidor, clique no medidor e selecione **adicionar ponteiro**. Um ponteiro é adicionado ao medidor.  
+2.  (Opcional) Se nenhum ponteiro existir no medidor, clique duas vezes em medidor e selecione **adicionar ponteiro**. Um ponteiro é adicionado ao medidor.  
   
 3.  Clique o **inserir** guia na faixa de opções e clique duas vezes no ícone de imagem. A caixa de diálogo **Propriedades da Imagem** será aberta.  
   
@@ -51,18 +51,18 @@ ms.locfileid: "36122770"
   
 7.  Expanda o nó PointerImage.  
   
-8.  Em **fonte**, selecione **inserido** na lista suspensa.  
+8.  Na **fonte**, selecione **inserido** na lista suspensa.  
   
     > [!NOTE]  
     >  Se sua imagem for armazenada no banco de dados ou na Web, você poderá especificar a opção adequada para essa propriedade. Para obter mais informações, consulte [caixa de diálogo de propriedades de imagem, geral &#40;construtor de relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
-9. Em **valor**, selecione o nome da imagem na lista suspensa.  
+9. Na **valor**, selecione o nome da sua imagem na lista suspensa.  
   
-10. Em **TransparentColor**, escolha um valor de cor que você deseja remover da imagem. Isso criará uma aparência perfeita do ponteiro no medidor.  
+10. Na **TransparentColor**, selecione um valor de cor que você deseja remover da imagem. Isso criará uma aparência perfeita do ponteiro no medidor.  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Adicionar um medidor a um relatório &#40;SSRS e construtor de relatórios&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
+ [Adicionar um medidor a um relatório &#40;relatórios e SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
  [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
