@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c82a2df266f9e6dce2767ecceb3e2af9bd12fc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278752"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permissões nos procedimentos armazenados (Analysis Services)
-  Procedimentos armazenados ou assemblies, em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas uma [!INCLUDE[msCoName](../includes/msconame-md.md)] linguagem de programação .NET, que estende os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
+  Procedimentos armazenados ou assemblies, na [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas em uma [!INCLUDE[msCoName](../includes/msconame-md.md)] linguagem de programação .NET, que estendem os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
   
- Você deve ser um Administrador do Servidor para registrar um assembly. Consulte [conceder permissões de administrador de servidor &#40;do Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Você deve ser um Administrador do Servidor para registrar um assembly. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## <a name="security-context-for-stored-procedure-execution"></a>Contexto de segurança para a execução do procedimento armazenado  
  Qualquer usuário pode chamar um procedimento armazenado. Dependendo da configuração do procedimento armazenado, ele pode ser executado no contexto do usuário chamando o procedimento ou no contexto de um usuário anônimo. Como um usuário anônimo não tem contexto de segurança, use esse recurso junto com a configuração da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para permitir o acesso anônimo.  
@@ -33,11 +33,11 @@ ms.locfileid: "36122759"
   
  A seguir são apresentados os conjuntos de permissões usados para executar procedimentos armazenados:  
   
--   **Segurança** conjunto de permissões com a segurança, um procedimento armazenado não é possível acessar os recursos protegidos no [!INCLUDE[msCoName](../includes/msconame-md.md)] do .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
+-   **Seguro** conjunto de permissões com a segurança, um procedimento armazenado não é possível acessar os recursos protegidos no [!INCLUDE[msCoName](../includes/msconame-md.md)] do .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
   
 -   **Acesso externo** conjunto de permissões com o acesso externo, um procedimento armazenado pode acessar recursos externos usando código gerenciado. A definição de um procedimento armazenado para esse conjunto de permissões não causará erros de programação que poderiam levar à instabilidade do servidor. No entanto, esse conjunto de permissões pode provocar o vazamento de informações para fora do servidor, e a possibilidade de uma elevação na permissão e de ataques de violação de dados.  
   
--   **Irrestrito** conjunto de permissões com o irrestrito, um procedimento armazenado pode acessar recursos externos usando qualquer código. Com esse conjunto de permissões, não há garantias de segurança ou confiabilidade para procedimentos armazenados.  
+-   **Unrestricted** conjunto de permissões com o irrestrito, um procedimento armazenado pode acessar recursos externos por meio de qualquer código. Com esse conjunto de permissões, não há garantias de segurança ou confiabilidade para procedimentos armazenados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Assemblies de modelo multidimensional](multidimensional-models/multidimensional-model-assemblies-management.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240396"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Renderizando itens de relatório (Construtor de Relatórios e SSRS)
   O número, o tamanho e o local de itens de relatório afetam a maneira como os renderizadores paginam o corpo de relatório. A seguir uma descrição de como vários itens de relatório são renderizados.  
@@ -85,9 +85,9 @@ ms.locfileid: "36122790"
   
 -   Itens de relatório pequenos, como caixas de texto ou retângulos, com uma propriedade KeepTogether explícita definida como `true`.  
   
--   Itens de relatório grandes, como sub-relatórios ou um membro do Tablix não mais longe, com uma propriedade KeepTogether explícita definida como `true`.  
+-   Itens de relatório grandes, como sub-relatórios ou um membro do tablix não interno, com uma propriedade KeepTogether explícita definida como `true`.  
   
--   Regiões de dados Tablix com uma propriedade KeepTogether explícita definido como `true`.  
+-   Regiões de dados Tablix com uma propriedade KeepTogether explícita definida como `true`.  
   
 ### <a name="subreports"></a>Sub-relatórios  
  Um sub-relatório renderiza como um retângulo que contém outro relatório definido em um arquivo .rdl de relatório separado. O arquivo de sub-relatório deve ser publicado a um servidor de relatório antes de poder ser acessado pelo relatório pai.  
@@ -111,7 +111,7 @@ ms.locfileid: "36122790"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;SSRS e construtor de relatórios&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

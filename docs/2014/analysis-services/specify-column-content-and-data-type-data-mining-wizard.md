@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e0802d79913fe796fa636f79b6d728f3900885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5203f517335ab3d346b5b303d4225a87e5be64ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183363"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Especificar tipo de conteúdo e de dados da coluna (Assistente de Mineração de Dados)
   Use a página **Especificar Tipo de Conteúdo e de Dados da Coluna** para especificar o uso e o tipo de dados de cada coluna selecionada na página anterior do assistente. Se desejar ignorar a coluna, clique em **Voltar** para voltar à página **Especificar os Dados de Treinamento**e desmarque todas as caixas de seleção.  
@@ -73,7 +73,7 @@ ms.locfileid: "36130430"
  Analise uma amostra de dados em todas as colunas numéricas. Substitui valores de **Tipo de conteúdo** especificados por um tipo de conteúdo recomendado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sugerir colunas relacionadas &#40;Assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
  [Especificar conteúdo e o tipo de dados da coluna &#40;Assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  

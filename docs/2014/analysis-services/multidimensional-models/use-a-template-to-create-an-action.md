@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b608f3ffeb7836481adb23fc316d3dce63bd3bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259562"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar um modelo para criar uma ação
   A exibição **Ações** no Designer de Cubo contém vários modelos que você pode usar para criar ações comuns. O Designer de Cubo pode ser acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

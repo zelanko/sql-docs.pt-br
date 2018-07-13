@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185143"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>Tipo de dados PerspectiveCalculation (ASSL)
-  Define um tipo de dados primitivo que representa a relação entre um cálculo e um [perspectiva](../objects/perspective-element-assl.md) elemento.  
+  Define um tipo de dados primitivo que representa a relação entre um cálculo e uma [perspectiva](../objects/perspective-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

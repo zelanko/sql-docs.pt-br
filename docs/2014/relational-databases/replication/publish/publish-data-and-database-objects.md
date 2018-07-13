@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154077"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
@@ -188,7 +188,7 @@ ms.locfileid: "36130743"
   
 -   Padrões associados criados com [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) não são replicados (padrões associados são preteridos a favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o *@post_snapshot_script* parâmetro `sp_addpublication`.  
+-   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o *@post_snapshot_script* parâmetro do `sp_addpublication`.  
   
 ### <a name="schemas-and-object-ownership"></a>Propriedade de esquemas e objetos  
  A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  

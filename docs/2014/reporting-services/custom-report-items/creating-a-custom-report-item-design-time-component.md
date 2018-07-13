@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149267"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Criando um componente de tempo de design de item de relatório personalizado
   Um componente em tempo de design de item de relatório personalizado é um controle que pode ser usado no ambiente do Designer de Relatórios do Visual Studio. O componente em tempo de design de item de relatório personalizado oferece uma superfície de design ativada que pode aceitar operações de arrastar e soltar, a integração ao pesquisador de propriedade [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e a capacidade de oferecer editores de propriedade personalizados.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Usando adornos  
- Classes de item de relatório personalizadas também podem implementar uma classe `Microsoft.ReportDesigner.Design.Adornment`. Um adorno permite que o controle de item de relatório personalizado forneça áreas fora do retângulo principal da superfície de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar. O `Adornment` classe definida no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` namespace é uma implementação de passagem a <xref:System.Windows.Forms.Design.Behavior.Adorner> classe encontrada em formulários do Windows. Para obter a documentação completa sobre o `Adorner` de classe, consulte [visão geral do serviço de comportamento](http://go.microsoft.com/fwlink/?LinkId=116673) na biblioteca MSDN. Para o código de exemplo que implementa um `Microsoft.ReportDesigner.Design.Adornment` de classe, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Classes de item de relatório personalizadas também podem implementar uma classe `Microsoft.ReportDesigner.Design.Adornment`. Um adorno permite que o controle de item de relatório personalizado forneça áreas fora do retângulo principal da superfície de design. Essas áreas podem tratar eventos de interface do usuário, tais como cliques de mouse e operações de arrastar e soltar. O `Adornment` classe que é definida em de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` namespace é uma implementação passagem do <xref:System.Windows.Forms.Design.Behavior.Adorner> classe encontrada no Windows Forms. Para obter a documentação completa sobre o `Adorner` classe, consulte [visão geral do serviço de comportamento](http://go.microsoft.com/fwlink/?LinkId=116673) na biblioteca MSDN. Para exemplo de código que implementa um `Microsoft.ReportDesigner.Design.Adornment` classe, consulte [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Para obter mais informações sobre como programar e usar o Windows Forms no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consulte estes tópicos no biblioteca MSDN:  
   

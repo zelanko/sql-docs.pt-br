@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ee374b2270dad3c27c53fb6ae1fc9f7fcf318c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 663480de04b5e5cf69f6ef7c228cda7c43037bc3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122147"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413685"
 ---
 # <a name="commands"></a>Commands
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client expõe a **ICommand** objetos de interface e o comando, que são descritos nesta seção:  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **ICommand** objetos de interface e o comando, que são descritos nesta seção:  
   
 -   [Sintaxe de comando](command-syntax.md)  
   

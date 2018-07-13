@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dad83104b83a3d26e204b0ebf8d873dcf2bec975
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cd95724a98fb2b95ee87bb9cd7b25a6f940bf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240536"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
   Este tópico descreve como definir e modificar um filtro de junção entre artigos de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A replicação de mesclagem dá suporte a filtros de junção, que normalmente são usados em conjunto com filtros com parâmetros para estender o particionamento de tabela a outros artigos de tabela relacionados.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278812"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
   Se as consultas forem feitas principalmente em um pequeno número de valores de elementos e atributos, você poderá desejar promover essas quantidades em colunas relacionais. Isso é útil quando consultas são emitidas em uma pequena parte dos dados XML enquanto toda a instância XML é recuperada. A criação de um índice XML na coluna XML não é necessária. Em vez disso, a coluna promovida pode ser indexada. As consultas devem ser escritas para usar a coluna promovida. Isto é, o otimizador de consultas não destina consultas novamente na coluna XML para a coluna promovida.  
@@ -176,7 +176,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Defina os gatilhos de inserção, atualização e exclusão usando a função definida pelo usuário para manter uma tabela de propriedades.  
   
- Para fazer isso, primeiro crie a função CLR de streaming. O `xml` tipo de dados é exposto como uma classe gerenciada SqlXml no ADO.NET e oferece suporte a **createreader ()** método que retorna um XmlReader.  
+ Para fazer isso, primeiro crie a função CLR de streaming. O `xml` tipo de dados é exposto como uma classe gerenciada SqlXml no ADO.NET e dá suporte a **createreader ()** método que retorna um XmlReader.  
   
 > [!NOTE]  
 >  O código de exemplo nesta seção usa XPathDocument e XPathNavigator. Isso força você a carregar todos os documentos XML na memória. Se estiver usando código semelhante em seu aplicativo para processar vários documentos XML grandes, esse código não será escalável. Em vez disso, mantenha as alocações de memória pequenas e use interfaces de streaming sempre que possível. Para obter mais informações sobre o desempenho, veja [Arquitetura da integração CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  
