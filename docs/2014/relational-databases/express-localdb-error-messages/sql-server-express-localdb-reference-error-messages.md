@@ -1,26 +1,24 @@
 ---
-title: Referência de mensagens de erro de LocalDB do SQL Server Express | Microsoft Docs
+title: Referência de mensagem de erro de LocalDB do SQL Server Express | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352e93741020630786c2812b5306aba9ff9bca91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc402c7d66505c68a8b6d35005025d45b1201a25
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115897"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411765"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>Referência de mensagem de erro de LocalDB do SQL Server Express
   Esta seção fornece informações de referência sobre as seguintes mensagens de erro de LocalDB do SQL Server Express:  

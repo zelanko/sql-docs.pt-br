@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163587"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Ajuda F1 do Assistente de Business Intelligence
   Use o Assistente de Business Intelligence para definir recursos de business intelligence e opções avançadas sobre cubos e dimensões. O assistente configura propriedades em objetos existentes, cria novos objetos e gera scripts MDX para fornecer recursos, como inteligência de dimensão e conversão de moeda.  
@@ -66,9 +66,9 @@ ms.locfileid: "36118218"
   
 -   [Definir inteligência de dimensão &#40;Assistente de Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Especifique um operador unário &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Especificar um operador unário &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Especifique um operador unário &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Especificar um operador unário &#40;Assistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
 -   [Criar uma fórmula de membro personalizado &#40;dimensão&#41; &#40;Assistente de Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36118218"
   
 -   [Definir opções de conversão de moeda &#40;Assistente de Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [Selecione membros &#40;Assistente de Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
+-   [Selecionar membros do &#40;Assistente de Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
   
 -   [Selecione o tipo de conversão &#40;Assistente de Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36118218"
   
 -   [Selecione uma caixa de diálogo de coluna &#40;Assistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [Concluindo o assistente &#40;Assistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [Concluindo o Assistente de &#40;Assistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   

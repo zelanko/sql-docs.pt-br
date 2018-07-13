@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebc2c0abd5f380dd31201908e81ac88bfead1232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d58af6ce4b1050b4a971a0b9d4ed5620bd8bd6fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239426"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Adicionando conhecimento a uma base de dados de conhecimento
   Este tópico descreve as maneiras pelas quais você pode adicionar um conhecimento a uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Antes de executar operações de qualidade de dados, você tem que ter conhecimento sobre os dados. Para adquirir esse conhecimento, crie e mantenha uma base de dados de conhecimento de qualidade de dados e adicione a ela conhecimentos relacionados a um tipo específico de fonte de dados. A base de dados de conhecimento é um repositório de conhecimento sobre seus dados que permitem que você entenda seus dados e mantenha sua integridade.  
@@ -43,14 +43,14 @@ ms.locfileid: "36118414"
 ##  <a name="Discovery"></a> Executar a descoberta da base de dados de conhecimento  
  A descoberta da base de dados de conhecimento analisa uma amostra de dados para os critérios de qualidade de dados e adiciona o conhecimento obtido à base de dados de conhecimento. Esse é um processo auxiliado por computador que identifica as inconsistências de dados e os erros de sintaxe e propõe alterações nos dados. A atividade de descoberta da base de dados de conhecimento é um assistente que inclui uma página em que você pode gerenciar interativamente valores de domínio.  
   
--   Para obter mais informações na documentação, consulte [Executar descoberta de Conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+-   Para obter mais informações na documentação, consulte [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 -   Para obter um vídeo que demonstra como executar a descoberta da base de dados de conhecimento, clique em [here](http://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
 ##  <a name="ManageDomain"></a> Gerenciar valores de dados em um domínio  
  O DQS permite que você altere e aumente interativamente os metadados que são gerados pela atividade de descoberta da base de dados de conhecimento assistida por computador. Faça isso na atividade Gerenciamento de Domínio, onde é possível aplicar uma alteração a um valor de dados específico.  
   
--   Para obter mais informações na documentação, consulte [alterar valores de domínio](../../2014/data-quality-services/change-domain-values.md).  
+-   Para obter mais informações na documentação, consulte [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
 -   Para obter um vídeo que demonstra como executar o gerenciamento de domínio, clique [aqui](http://msdn.microsoft.com/sqlserver/hh323825.aspx). Observe que, nesse vídeo, você pode alterar os valores de domínio na página Gerenciando Valores de Domínio do assistente de Descoberta da Base de Dados de Conhecimento. Também é possível executar essas etapas na página Valores de Domínio da atividade Gerenciamento de Domínio.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "36118414"
 ##  <a name="Default"></a> Usar a base de dados de conhecimento padrão do DQS  
  O DQS é fornecido com uma base de dados de conhecimento predefinida denominada Dados do DQS que contém domínios para empresas nos Estados Unidos e dados de endereço. Essa base de conhecimento pode ser usada para iniciar um projeto rapidamente sem criar uma nova base de conhecimento. A base de dados de conhecimento Dados do DQS é somente leitura, mas o administrador de dados pode criar uma nova base de conhecimento baseado nela.  
   
--   Para obter mais informações na documentação, consulte [usando a Base de dados de conhecimento do DQS padrão](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
+-   Para obter mais informações na documentação, consulte [usando a Base de dados de Conhecimento padrão do DQS](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   

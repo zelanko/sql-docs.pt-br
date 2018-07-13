@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157167"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Rotular novamente (Suplementos de Mineração de Dados do SQL Server)
   ![Ícone do Office 13 para a ferramenta rotular novamente](media/dm13-relabel.gif "ícone do Office 13 para a ferramenta rotular novamente")  
@@ -40,23 +40,23 @@ ms.locfileid: "36118984"
   
 ## <a name="using-the-relabel-wizard"></a>Usando o Assistente de Rotular Novamente  
   
-1.  No **mineração de dados** de faixa de opções, clique em **limpar** e, em seguida, selecione **rotular novamente**.  
+1.  No **Data Mining** faixa de opções, clique em **Clean** e, em seguida, selecione **rotular novamente**.  
   
 2.  Selecione a tabela ou o intervalo de dados com os dados que você deseja corrigir.  
   
-3.  No **rotular novamente** página do assistente, selecione uma única coluna, escolhendo a coluna na lista suspensa ou clicando na coluna no **exemplos de dados** painel.  
+3.  No **rotular novamente** página do assistente, selecione uma única coluna, escolhendo a coluna na lista suspensa ou clicando na coluna na **amostras de dados** painel.  
   
      O **exemplos de dados** painel mostra somente cerca de 50 linhas de dados, mas eles são exemplificados para garantir que você veja uma boa variedade de valores.  
   
-     Clique no cabeçalho da coluna para **contagem** para classificar pela contagem de cada valor.  
+     Clique no cabeçalho de coluna para **contagem** para classificar pela contagem de cada valor.  
   
-     Você também pode classificar por **rótulos originais**, que é útil se você quiser rotular novamente todos os valores maiores ou menores primeiro.  
+     Você também pode classificar por **rótulos originais**, que é útil se você quiser rotular novamente todos os valores maiores ou menores pela primeira vez.  
   
-4.  No **rotular novamente** página de dados do assistente, examine os valores no **rótulos originais** coluna e decidir como deseja agrupar ou editá-los.  
+4.  No **rotular novamente** página de dados do assistente, examine os valores na **rótulos originais** coluna e decidir como deseja agrupar ou editá-los.  
   
-5.  Digite um novo valor na linha em **novos rótulos**. Você também pode escolher um valor na lista de valores existentes. À medida que você digita novos valores, eles são disponibilizados para reutilização imediatamente.  
+5.  Digite um novo valor na linha sob **novos rótulos**. Você também pode escolher um valor na lista de valores existentes. À medida que você digita novos valores, eles são disponibilizados para reutilização imediatamente.  
   
-6.  Quando você inserir linhas suficientes, clique em **próximo**e na **Selecionar destino** página, escolha onde salvará os dados com novos rótulos.  
+6.  Quando você inserir linhas suficientes, clique em **próxima**e, na **Selecionar destino** , escolha onde você salvará os dados com novos rótulos.  
   
     -   **Adicionar como uma nova coluna à planilha atual**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36118984"
   
          Clique para criar uma nova planilha que contenha os dados atualizados.  
   
-    -   **Dados de alteração no local**  
+    -   **Alterar dados no local**  
   
          Clique para substituir os dados originais pelos novos valores.  
   

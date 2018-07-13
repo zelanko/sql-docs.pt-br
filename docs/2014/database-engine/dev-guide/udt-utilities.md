@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211526"
 ---
 # <a name="udt-utilities"></a>Utilitários UDT
   O exemplo Utilitários UDT contém várias funções de utilitário. Elas incluem funções para expor metadados de assembly para Transact-SQL, funções com valor de tabela de fluxo de exemplo para retornar os tipos em um assembly como uma tabela e funções para retornar campos, métodos e propriedades em um tipo de dados definido pelo usuário. As tecnologias demonstradas incluem funções com valor de tabela de fluxo, APIs de reflexão do .NET Framework e invocação de funções com valor de tabela do Transact-SQL.  

@@ -1,5 +1,5 @@
 ---
-title: Exibir relatórios do Reporting Services em dispositivos de Microsoft Surface e Apple iOS | Microsoft Docs
+title: Exibir relatórios do Reporting Services em dispositivos do Microsoft Surface e Apple iOS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - iPad
 - Safari
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2766644db67f3f677060c90a2addd2123276f1e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 683a20afc442b7e10a64cac86aa0502c57dabbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166317"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Exibir relatórios do Reporting Services em dispositivos Microsoft Surface e Apple iOS
   Este artigo descreve os recursos e fluxos de trabalho do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com suporte par dispositivos Microsoft Surface e dispositivos com Apple iOS 6 e Apple Safari, tal como o iPad.  
@@ -42,9 +42,9 @@ Assista a uma demonstração de exibição de relatórios em um iPad.
   
 -   Para um servidor de relatório de modo nativo, instale o [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ou posterior.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] está disponível para download do [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] está disponível para download a partir de [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
   
--   Para um servidor de relatório do modo do SharePoint, instale [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ou posterior da [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint.  
+-   Para um servidor de relatório do modo do SharePoint, instale [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ou posterior do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para produtos do SharePoint.  
   
  **Para exibir e interagir com um relatório em um dispositivo iPad ou Microsoft Surface**  
   
@@ -54,16 +54,16 @@ Assista a uma demonstração de exibição de relatórios em um iPad.
   
     -   **Início do email:** em um email criado por um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] assinatura, toque na URL do relatório. O relatório será aberto no navegador.  
   
-    -   **Iniciar o servidor de relatório:** procure o diretório no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório e, em seguida, toque no nome do relatório para abrir o relatório.  
+    -   **Iniciar a partir do servidor de relatório:** procure o diretório no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório e, em seguida, toque no nome de relatório para abri-lo.  
   
-    -   **Iniciar a partir de uma biblioteca de documentos do SharePoint:** navegar até uma biblioteca de documentos do SharePoint que contém [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatórios e, em seguida, toque no nome do relatório. Você pode exibir e interagir com o relatório.  
+    -   **Iniciar a partir de uma biblioteca de documentos do SharePoint:** navegue até uma biblioteca de documentos do SharePoint que contém [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relata e, em seguida, toque no nome do relatório. Você pode exibir e interagir com o relatório.  
   
         > [!IMPORTANT]  
         >  Para o iPad, certifique-se de que a propriedade de **Navegação Particular** para Safari esteja desativada.  
   
-    -   **Web part do SharePoint:** se a web part foi adicionada a uma página do SharePoint, você pode exibir [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatórios.  
+    -   **Web part do SharePoint:** se a web part tiver sido adicionada a uma página do SharePoint, você pode exibir [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] relatórios.  
   
-3.  No dispositivo Microsoft Surface, você também pode abrir o relatório usando o Gerenciador de Relatórios. Procure o diretório no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gerenciador de relatórios e, em seguida, toque no nome do relatório para abrir o relatório.  
+3.  No dispositivo Microsoft Surface, você também pode abrir o relatório usando o Gerenciador de Relatórios. Procure o diretório no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gerenciador de relatórios e, em seguida, toque no nome de relatório para abri-lo.  
   
     > [!IMPORTANT]  
     >  Não há suporte à exibição de relatórios no Gerenciador de Relatórios em um iPad.  
@@ -111,7 +111,7 @@ Assista a uma demonstração de exibição de relatórios em um iPad.
         -   Se você estiver exibindo o relatório em um iPad, exporte o relatório como um arquivo TIFF ou PDF.  
   
 ## <a name="authentication"></a>Autenticação  
- As autenticações RSWindowsNTLM e RSWindowsBasic funcionam com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo e iPad.  
+ Autenticações RSWindowsNTLM e rswindowsbasic funcionam com [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo nativo e iPad.  
   
  Em geral, é recomendado que RSWindowsBasic não seja usado em ambientes que não são HTTPs porque esse tipo de autenticação não garante a confidencialidade das credenciais transmitidas.  
   
@@ -130,7 +130,7 @@ Assista a uma demonstração de exibição de relatórios em um iPad.
 ## <a name="additional-information"></a>Informações adicionais  
  Para obter mais informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e navegadores com suporte, consulte:  
   
--   [Planejamento para o Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+-   [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Para obter mais informações sobre o Microsoft Business Intelligence e dispositivos móveis, consulte o seguinte:  
   
@@ -138,7 +138,7 @@ Assista a uma demonstração de exibição de relatórios em um iPad.
   
 -   [Suporte para navegadores de dispositivos móveis no SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Exibindo relatórios e scorecards em dispositivos iPad da Apple (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
+-   [Exibindo relatórios e scorecards em dispositivos de iPad da Apple (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
   
 -   [Exibindo relatórios do Reporting Services em um iPad (vídeo)](http://technet.microsoft.com/sqlserver/jj873792.aspx) (http://technet.microsoft.com/sqlserver/jj873792.aspx).  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164837"
 ---
 # <a name="ado-net-destination"></a>Destino do ADO NET
   O destino ADO NET carrega dados em uma variedade de bancos de dados compatíveis com o [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que utilizam uma tabela ou exibição de banco de dados. Você tem a opção de carregar esses dados em uma tabela ou exibição existente ou de criar uma nova tabela e carregar os dados nessa tabela.  
@@ -51,7 +51,7 @@ ms.locfileid: "36118476"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor do Destino ADO NET** , clique em um dos seguintes tópicos:  
   
--   [Editor de destino do ADO NET &#40;página Gerenciador de Conexão&#41;](../ado-net-destination-editor-connection-manager-page.md)  
+-   [Editor de destino do ADO NET &#40;página do Gerenciador de Conexão&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
 -   [Editor de destino do ADO NET &#40;página mapeamentos&#41;](../ado-net-destination-editor-mappings-page.md)  
   

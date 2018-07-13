@@ -1,5 +1,5 @@
 ---
-title: Variáveis de tabela de otimização de memória | Microsoft Docs
+title: Variáveis de tabela com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157067"
 ---
 # <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
   Além disso, para tabelas com otimização de memória (para acesso eficiente a dados) e nativamente compilado procedimentos armazenados (para processamento eficiente de consulta e execução de lógica de negócios) [!INCLUDE[hek_2](../includes/hek-2-md.md)] apresenta um terceiro tipo de objeto: o tipo de tabela com otimização de memória. Uma variável de tabela criada usando um tipo de tabela com otimização de memória é uma variável de tabela com otimização de memória.  
@@ -40,9 +40,9 @@ ms.locfileid: "36119584"
   
 -   As variáveis de tabela podem ser usados para simular cursores em procedimentos armazenados compilados nativamente, de modo que possam ajudar você a contornar as restrições da área da superfície em procedimentos armazenados compilados nativamente.  
   
- Como as tabelas com otimização de memória, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gera uma DLL para cada tipo de tabela com otimização de memória. (A compilação é chamada quando o tipo de tabela com otimização de memória é criado e não quando usado para criar variáveis de tabela com otimização de memória.) Essa DLL inclui as funções para acessar índices e recuperar dados de variáveis de tabela. Quando uma variável de tabela com otimização de memória é declarada com base no tipo de tabela, uma instância da tabela e das estruturas de índice correspondentes ao tipo de tabela é criada na sessão do usuário. A variável de tabela pode ser usada da mesma maneira que as variáveis de tabela baseadas em disco. Você pode inserir, atualizar e excluir linhas na variável de tabela e usar variáveis em consultas do [!INCLUDE[tsql](../includes/tsql-md.md)]. Você também pode passar as variáveis para procedimentos armazenados compilados nativamente e interpretados, como parâmetros com valor de tabela (TVP).  
+ Gosta de tabelas com otimização de memória, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gera uma DLL para cada tipo de tabela com otimização de memória. (A compilação é chamada quando o tipo de tabela com otimização de memória é criado e não quando usado para criar variáveis de tabela com otimização de memória.) Essa DLL inclui as funções para acessar índices e recuperar dados de variáveis de tabela. Quando uma variável de tabela com otimização de memória é declarada com base no tipo de tabela, uma instância da tabela e das estruturas de índice correspondentes ao tipo de tabela é criada na sessão do usuário. A variável de tabela pode ser usada da mesma maneira que as variáveis de tabela baseadas em disco. Você pode inserir, atualizar e excluir linhas na variável de tabela e usar variáveis em consultas do [!INCLUDE[tsql](../includes/tsql-md.md)]. Você também pode passar as variáveis para procedimentos armazenados compilados nativamente e interpretados, como parâmetros com valor de tabela (TVP).  
   
- O exemplo a seguir mostra um tipo de tabela com otimização de memória do exemplo de OLTP de memória baseado no AdventureWorks ([exemplos de OLTP na memória do SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
+ O exemplo a seguir mostra um tipo de tabela com otimização de memória do exemplo o OLTP na memória com base no AdventureWorks ([exemplo de OLTP na memória do SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
 ```tsql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -68,7 +68,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   O tipo deve ter pelo menos um índice. Assim como ocorre com as tabelas com otimização de memória, você pode usar índices de hash e não clusterizados.  
   
-     Para um índice de hash, o número de buckets deve ser de cerca de uma a duas vezes o número de chaves de índice exclusivo esperado. Para obter mais informações, consulte [determinando o número de buckets correto para índices de Hash](../relational-databases/indexes/indexes.md).  
+     Para um índice de hash, o número de buckets deve ser de cerca de uma a duas vezes o número de chaves de índice exclusivo esperado. Para obter mais informações, consulte [determinando o número de buckets correta para índices de Hash](../relational-databases/indexes/indexes.md).  
   
 -   O tipo de dados e as restrições da restrição nas tabelas com otimização de memória também se aplicam aos tipos de tabela com otimização de memória. Por exemplo, no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] há suporte para as restrições padrão, mas as restrições de verificação não têm esse suporte.  
   

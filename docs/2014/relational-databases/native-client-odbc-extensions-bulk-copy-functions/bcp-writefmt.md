@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121922"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427875"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Cria um arquivo de formato que contém uma descrição do formato do arquivo de dados de cópia em massa atual.  
@@ -60,12 +58,12 @@ szFormatFile
 ## <a name="remarks"></a>Remarks  
  O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. Chamadas para [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md) definem o formato do arquivo de dados. **bcp_writefmt** salva essa definição no arquivo referenciado por *szFormatFile*. Para obter mais informações, consulte [bcp_init](bcp-init.md).  
   
- Para obter mais informações sobre a estrutura de **bcp** arquivos de formato de dados, consulte [importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Para obter mais informações sobre a estrutura de **bcp** arquivos de formato de dados, consulte [importar e exportar em massa dados usando o utilitário bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Para carregar um arquivo de formato salvo, use [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  O arquivo de formato gerado pelo **bcp_writefmt** tem suporte apenas em versões dos **bcp** utilitário distribuído com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e posteriores.  
+>  O arquivo de formato gerado por **bcp_writefmt** só é suportado por versões dos **bcp** utilitário distributed com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e versões posterior.  
   
 ## <a name="example"></a>Exemplo  
   

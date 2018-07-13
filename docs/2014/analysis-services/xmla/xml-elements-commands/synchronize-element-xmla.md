@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187093"
 ---
 # <a name="synchronize-element-xmla"></a>Elemento Synchronize (XMLA)
   Sincroniza um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados com outro banco de dados existente.  
@@ -83,9 +83,9 @@ ms.locfileid: "36119402"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de backup &#40;XMLA&#41;](backup-element-xmla.md)   
- [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   
- [Paralelo elemento &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
- [Elemento Restore &#40;XMLA&#41;](restore-element-xmla.md)   
+ [Elemento do lote &#40;XMLA&#41;](batch-element-xmla.md)   
+ [Elemento em paralelo &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
+ [Restaurar o elemento &#40;XMLA&#41;](restore-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

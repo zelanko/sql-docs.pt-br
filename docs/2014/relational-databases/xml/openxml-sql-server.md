@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - OPENXML statement, about OPENXML statement
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 166680207dba3a8cb0172d5af59e462d6ac4ab24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228846"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.  
@@ -42,7 +42,7 @@ ms.locfileid: "36118283"
  Para escrever consultas em um documento XML usando OPENXML, você deve primeiro chamar `sp_xml_preparedocument`. Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
+>  `sp_xml_preparedocument` usa uma versão atualizada pelo SQL do analisador MSXML, Msxmlsql. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.  
   
  A representação interna de um documento XML deve ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** para liberar a memória.  
   
@@ -114,7 +114,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   Mapeamento entre as colunas do conjunto de linhas e os nós XML  
   
 ### <a name="xml-document-handle-idoc"></a>Identificador do documento XML (idoc)  
- O identificador de documento é retornado pelo `sp_xml_preparedocument` procedimento armazenado.  
+ O identificador do documento é retornado pelo `sp_xml_preparedocument` procedimento armazenado.  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expressão XPath para identificar os nós a serem processados (rowpattern)  
  A expressão XPath especificada como *rowpattern* identifica um conjunto de nós no documento XML. Cada nó identificado por *rowpattern* corresponde a uma única linha no conjunto de linhas gerado por OPENXML.  

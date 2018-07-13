@@ -5,25 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DDL events
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a8fd33abd044786739e3cefa191fb9caeff6919
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 58b96e8ef7dfd0f2ef2d5f087c1ab73f3453b451
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115661"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413235"
 ---
 # <a name="ddl-events"></a>Eventos DDL
   As tabelas seguintes listam os eventos DDL que podem ser usados para um gatilho DDL ou notificação de eventos. Observe que cada evento corresponde a uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou procedimento armazenado, com a sintaxe de instrução modificada para incluir um caractere sublinhado (_) entre palavras-chave.  

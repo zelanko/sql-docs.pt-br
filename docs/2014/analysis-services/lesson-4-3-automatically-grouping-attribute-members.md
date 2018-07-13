@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183423"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
   Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. Porém, com determinados tipos de atributo, é útil usar o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros dentro de uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.  
@@ -48,11 +48,11 @@ ms.locfileid: "36119007"
   
 4.  No painel **Atributos** , selecione **Renda Anual**.  
   
-5.  Na janela Propriedades, altere o valor para o **DiscretizationMethod** propriedade **automático** e altere o valor para o **DiscretizationBucketCount** propriedade para `5`.  
+5.  Na janela Propriedades, altere o valor para o **DiscretizationMethod** propriedade **automática** e altere o valor para o **DiscretizationBucketCount** propriedade para `5`.  
   
      A imagem a seguir mostra as propriedades modificadas para **Renda Anual**.  
   
-     ![Propriedades modificadas para Renda anual](../../2014/tutorials/media/l4-discretizationmethod-1.gif "propriedades modificadas para Renda anual")  
+     ![Modificou as propriedades para Renda anual](../../2014/tutorials/media/l4-discretizationmethod-1.gif "modificou as propriedades para Renda anual")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupando membros da hierarquia de atributo na dimensão Funcionário  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36119007"
   
 4.  No painel **Atributos** , selecione **Horas de Dispensa Médica**.  
   
-5.  Na janela Propriedades, altere o valor para o **DiscretizationMethod** propriedade **Clusters** e altere o valor para o **DiscretizationBucketCount** propriedade `5`.  
+5.  Na janela Propriedades, altere o valor para o **DiscretizationMethod** propriedade a ser **Clusters** e altere o valor para o **DiscretizationBucketCount** propriedade `5`.  
   
 6.  No painel **Atributos** , selecione **Horas de Férias**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36119007"
   
      A imagem a seguir mostra as vendas dimensionadas pelas horas de dispensa médica dos funcionários:  
   
-     ![Horas de licença de vendas dimensionadas pelas médica dos funcionários](../../2014/tutorials/media/l4-discretizationmethod-2.gif "vendas dimensionadas pelas médica dos funcionários de horas de licença")  
+     ![Vendas dimensionadas pelas dispensa funcionário deixar horas](../../2014/tutorials/media/l4-discretizationmethod-2.gif "vendas dimensionadas pelas dispensa funcionário deixar horas")  
   
 10. Remova a hierarquia **Horas de Dispensa Médica** da área de coluna do painel **Dados** .  
   
@@ -130,6 +130,6 @@ ms.locfileid: "36119007"
  [Ocultando e desabilitando as hierarquias de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Grupo de membros de atributo &#40;diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [Agrupar membros de atributo &#40;diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

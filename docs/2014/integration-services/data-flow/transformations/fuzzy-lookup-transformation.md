@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185183"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
   A transformação Pesquisa Difusa executa tarefas de limpeza de dados, como padronização de dados, correção de dados e fornecimento de valores ausentes.  
@@ -113,12 +113,12 @@ ms.locfileid: "36118385"
 >  Como a opção **Manter índice armazenado** requer a integração CLR, esse recurso funciona apenas quando você seleciona uma tabela de referência em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que a integração CLR está habilitada.  
   
 ## <a name="row-comparison"></a>Comparação de linhas  
- Quando você configura a transformação Pesquisa Difusa, é possível especificar o algoritmo de comparação que a transformação usa para localizar registros correspondentes na tabela de referência. Se você definir a propriedade Exhaustive como `True`, a transformação comparará todas as linhas na entrada para cada linha na tabela de referência. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na tabela de referência seja pequeno. Se a propriedade Exhaustive está definida como `True`, a tabela de referência inteira é carregada na memória. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive `True` durante o desenvolvimento de pacote somente.  
+ Quando você configura a transformação Pesquisa Difusa, é possível especificar o algoritmo de comparação que a transformação usa para localizar registros correspondentes na tabela de referência. Se você definir a propriedade Exhaustive como `True`, a transformação comparará todas as linhas na entrada para cada linha na tabela de referência. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na tabela de referência seja pequeno. Se a propriedade Exhaustive for definida como `True`, a tabela de referência inteira é carregada na memória. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive como `True` durante o desenvolvimento de pacote somente.  
   
- Se a propriedade Exhaustive está definida como `False`, a transformação pesquisa difusa retornará apenas as correspondências que tenham pelo menos um token indexado ou subcadeia de caracteres (a subcadeia de caracteres é chamada um *q-gram*) em comum com o registro de entrada. Para maximizar a eficiência das pesquisas, apenas um subconjunto dos tokens em cada linha da tabela é indexado na estrutura de índice invertida que a transformação Pesquisa Difusa usa para localizar correspondências. Quando o conjunto de dados de entrada for pequeno, você pode definir Exhaustive para `True` para evitar a perda de correspondências para o qual exista tokens comuns na tabela de índice.  
+ Se a propriedade Exhaustive for definida como `False`, a transformação pesquisa difusa retornará apenas as correspondências que têm pelo menos um token indexado ou uma subcadeia de caracteres (a subcadeia de caracteres é chamada um *q-gram*) em comum com o registro de entrada. Para maximizar a eficiência das pesquisas, apenas um subconjunto dos tokens em cada linha da tabela é indexado na estrutura de índice invertida que a transformação Pesquisa Difusa usa para localizar correspondências. Quando o conjunto de dados de entrada for pequeno, você poderá definir Exhaustive como `True` para evitar a perda de correspondências para as quais na exista tokens comuns na tabela de índice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Cache de índices e tabelas de referência  
- Quando você configura a transformação Pesquisa Difusa, é possível especificar se a transformação deve armazenar parcialmente em cache o índice e a tabela de referência na memória antes de a transformação realizar o seu trabalho. Se você definir a propriedade WarmCaches como `True`, a tabela de referência e de índice são carregados na memória. Quando a entrada tiver muitas linhas, definir a propriedade WarmCaches como `True` pode melhorar o desempenho da transformação. Quando o número de linhas de entrada for pequeno, definindo a propriedade de WarmCaches para `False` pode agilizar a reutilização de um índice grande.  
+ Quando você configura a transformação Pesquisa Difusa, é possível especificar se a transformação deve armazenar parcialmente em cache o índice e a tabela de referência na memória antes de a transformação realizar o seu trabalho. Se você definir a propriedade WarmCaches como `True`, a tabela de referência e de índice são carregados na memória. Quando a entrada tiver muitas linhas, defina a propriedade WarmCaches como `True` pode melhorar o desempenho da transformação. Quando o número de linhas de entrada for pequeno, defina a propriedade WarmCaches `False` pode tornar mais rápida a reutilização de um índice grande.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
  Durante a execução, a transformação Pesquisa Difusa cria objetos temporários, como tabelas e índices, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a que a transformação se conecta. O tamanho dessas tabelas e índices temporários é proporcional ao número de linhas e tokens na tabela de referência e ao número de tokens que a transformação Pesquisa Difusa cria; por esse motivo, eles podem consumir uma grande quantidade de espaço em disco. A transformação também consulta as tabelas temporárias. Portanto, você deverá considerar a conexão da transformação Pesquisa Difusa a uma instância de não produção de um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especialmente se o servidor de produção tiver espaço em disco disponível limitado.  
@@ -146,7 +146,7 @@ ms.locfileid: "36118385"
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação de pesquisa](lookup-transformation.md)   
+ [Transformação pesquisa](lookup-transformation.md)   
  [Transformação agrupamento difuso](fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   

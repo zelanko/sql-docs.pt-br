@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,44 +14,44 @@ helpviewer_keywords:
 - SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e83f19e8834004ebfe0a92f3471645a149332c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a9a7ab39d15b32a093cf7a9924645f2ad81f97e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121086"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426755"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   O driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão que substituem ou aprimoram palavras-chave de cadeia de conexão. Várias palavras-chave de cadeia de conexão têm valores padrão especificados pelo driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Para obter uma lista de palavras-chave disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o driver ODBC Native Client, consulte [usando Conexão String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Para obter uma lista de palavras-chave disponíveis na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client, consulte [usando Conexão String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atributos de conexão e comportamentos padrão do driver, consulte [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- Para obter uma discussão de conexão cadeia palavras-chave que são válidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [usando Conexão String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Para obter uma discussão sobre conexão palavras-chave que são válidas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [usando Conexão String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Quando o `SQLDriverConnect` *DriverCompletion* valor do parâmetro é SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recupera valores de palavra-chave das caixa de diálogo exibida. Se o valor de palavra-chave for transmitido na cadeia de caracteres da conexão e o usuário não alterar o valor para a palavra-chave na caixa de diálogo, o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usará o valor da cadeia de caracteres da conexão. Se o valor não for definido na cadeia de caracteres da conexão e o usuário não fizer nenhuma atribuição na caixa de diálogo, o driver usará o padrão.  
   
- `SQLDriverConnect` deve ser fornecido um válido *WindowHandle* quando qualquer *DriverCompletion* valor exige (ou pode exigir) a exibição da caixa de diálogo de conexão do driver. Um identificador inválido retorna SQL_ERROR.  
+ `SQLDriverConnect` deve ser fornecido um válido *WindowHandle* quando qualquer *DriverCompletion* valor exige (ou poderia exigir) a exibição da caixa de diálogo de conexão do driver. Um identificador inválido retorna SQL_ERROR.  
   
- Especifique as palavras-chave DRIVER ou DSN. O ODBC declara que um driver usa a que está mais à esquerda dessas duas palavras-chave e ignora a outra se ambas estão especificadas. Se o DRIVER for especificado ou estiver mais à esquerda dos dois e o `SQLDriverConnect` *DriverCompletion* o valor do parâmetro for SQL_DRIVER_NOPROMPT, a palavra-chave do servidor e um valor apropriado são necessários.  
+ Especifique as palavras-chave DRIVER ou DSN. O ODBC declara que um driver usa a que está mais à esquerda dessas duas palavras-chave e ignora a outra se ambas estão especificadas. Se DRIVER for especificado, ou estiver mais à esquerda dos dois e o `SQLDriverConnect` *DriverCompletion* valor do parâmetro for SQL_DRIVER_NOPROMPT, a palavra-chave do servidor e um valor apropriado serão exigidos.  
   
  Quando SQL_DRIVER_NOPROMPT é especificado, as palavras-chave de autenticação de usuário devem estar presentes com valores. O driver assegura que a cadeia de caracteres "Trusted_Connection=yes" ou as palavras-chave UID e PWD estão presentes.  
   
  Se o *DriverCompletion* o valor do parâmetro for SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED e o idioma ou o banco de dados proveniente da cadeia de conexão e uma for inválido, `SQLDriverConnect` retornará SQL_ERROR.  
   
- Se o *DriverCompletion* o valor do parâmetro for SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED e o idioma ou o banco de dados provenientes de definições de fonte de dados ODBC e uma for inválido, `SQLDriverConnect` usa o padrão idioma ou o banco de dados para a ID de usuário especificada e retorna SQL_SUCCESS_WITH_INFO.  
+ Se o *DriverCompletion* o valor do parâmetro for SQL_DRIVER_NOPROMPT ou SQL_DRIVER_COMPLETE_REQUIRED e o idioma ou o banco de dados vem de definições de fonte de dados ODBC e uma for inválido, `SQLDriverConnect` usa o padrão idioma ou o banco de dados para a ID de usuário especificada e retorna SQL_SUCCESS_WITH_INFO.  
   
- Se o *DriverCompletion* o valor do parâmetro é SQL_DRIVER_COMPLETE ou SQL_DRIVER_PROMPT e se o idioma ou o banco de dados é inválido, `SQLDriverConnect` exibe novamente a caixa de diálogo.  
+ Se o *DriverCompletion* o valor do parâmetro for SQL_DRIVER_COMPLETE ou SQL_DRIVER_PROMPT e se o idioma ou o banco de dados é inválido, `SQLDriverConnect` exibe novamente a caixa de diálogo.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>Suporte de SQLDriverConnect à alta disponibilidade e recuperação de desastre  
- Para obter mais informações sobre como usar `SQLDriverConnect` para se conectar a um [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de cluster, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obter mais informações sobre como usar `SQLDriverConnect` para se conectar a um [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] do cluster, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Suporte de SQLDriverConnect a SPNs (nomes de entidade de serviço)  
- SQLDDriverConnect usará o logon do ODBC diálogo quando for solicitado. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.  
+ SQLDDriverConnect usará a caixa de diálogo quando for solicitado o logon de ODBC. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.  
   
  SQLDriverConnect aceitará as palavras-chave cadeia de caracteres de conexão nova `ServerSPN` e `FailoverPartnerSPN`e reconhecerá os novos atributos de conexão SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
   
@@ -61,7 +59,7 @@ ms.locfileid: "36121086"
   
  Quando uma conexão é aberta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD como o método de autenticação usado para abrir a conexão.  
   
- Para obter mais informações sobre os SPNs, consulte [nomes da entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obter mais informações sobre SPNs, consulte [nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="examples"></a>Exemplos  
  A chamada a seguir ilustra a menor quantidade de dados necessários para `SQLDriverConnect`:  
@@ -72,7 +70,7 @@ SQLDriverConnect(hdbc, hwnd,
     MAX_CONN_OUT, &cbOutConn, SQL_DRIVER_COMPLETE);  
 ```  
   
- As cadeias de conexão a seguir ilustram o mínimo necessário de dados quando o *DriverCompletion* o valor do parâmetro é SQL_DRIVER_NOPROMPT:  
+ As cadeias de conexão a seguir ilustram o mínimo de dados exigidos quando o *DriverCompletion* valor do parâmetro é SQL_DRIVER_NOPROMPT:  
   
 ```  
 "DSN=Human Resources;Trusted_Connection=yes"  
@@ -84,7 +82,7 @@ SQLDriverConnect(hdbc, hwnd,
   
 ## <a name="see-also"></a>Consulte também  
  [Função SQLDriverConnect](http://go.microsoft.com/fwlink/?LinkId=59340)   
- [Detalhes de implementação de API de ODBC](odbc-api-implementation-details.md)   
+ [Detalhes de implementação de API do ODBC](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  

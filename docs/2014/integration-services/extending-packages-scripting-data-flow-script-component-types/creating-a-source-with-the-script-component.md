@@ -20,13 +20,13 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47cfd1ceab750a105fb38ca4827b50f9ba727aca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150837"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Criando uma fonte com o componente Script
   Você usa um componente de origem no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para carregar dados de uma fonte de dados a serem passados para transformações e destinos downstream. Normalmente, você se conecta à fonte de dados por um gerenciador de conexões existente.  
@@ -74,9 +74,9 @@ ms.locfileid: "36119158"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se houver qualquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade a **Script** página do **Editor de transformação scripts**.  
+ Se houver quaisquer variáveis cujos valores você deseja usar em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade o **Script** página do **Editor de transformação scripts**.  
   
- Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir diversas variáveis clicando no botão de reticências (**...** ) ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e selecionar as variáveis no **selecionar variáveis** caixa de diálogo.  
+ Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir diversas variáveis clicando no botão de reticências (**...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -119,14 +119,14 @@ ms.locfileid: "36119158"
  Os exemplos a seguir demonstram o código personalizado que é requerido na classe `ScriptMain` para criar um componente de origem.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** tabela o `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam o **Person. address** na tabela a `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **nvarchar (30) Cidade**colunas de, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="adonet-source-example"></a>Exemplo de origem do ADO.NET  
  Esse exemplo demonstra um componente de origem que usa um gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente para carregar dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no fluxo de dados.  
   
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:  
   
-1.  Criar um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão que usa o `SqlClient` provedor conectar-se para o `AdventureWorks` banco de dados.  
+1.  Criar uma [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexão que usa o `SqlClient` provedor para conectar-se para o `AdventureWorks` banco de dados.  
   
 2.  Adicione um novo componente Script à superfície do designer Fluxo de Dados e configure-o como uma origem.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36119158"
   
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:  
   
-1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação para exportar o **Person. address** tabela o `AdventureWorks` banco de dados de exemplo em um arquivo simples delimitado por vírgulas. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.  
+1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação para exportar o **Person. address** de tabela das `AdventureWorks` banco de dados de exemplo para um arquivo simples delimitado por vírgula. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.  
   
 2.  Crie um gerenciador de conexões de arquivos simples que se conecta ao arquivo de dados exportado.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "36119158"
     }  
     ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

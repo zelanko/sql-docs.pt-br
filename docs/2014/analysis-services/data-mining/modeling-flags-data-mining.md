@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155407"
 ---
 # <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
   Use sinalizadores de modelagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer informações adicionais para um algoritmo de mineração de dados sobre os dados definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
@@ -50,9 +50,9 @@ ms.locfileid: "36118773"
  **MODEL_EXISTENCE_ONLY**  
  Indica que a coluna será tratada como se tivesse dois estados: `Missing` e `Existing`. Se o valor for `NULL`, ele será tratado como Missing. O sinalizador MODEL_EXISTENCE_ONLY é aplicado ao atributo previsível e tem suporte pela maioria dos algoritmos.  
   
- De fato, definir o sinalizador MODEL_EXISTENCE_ONLY `True` altera a representação dos valores de modo que haja apenas dois estados: `Missing` e `Existing`. Todos os estados não ausentes são combinados em um único `Existing` valor.  
+ De fato, definir o sinalizador MODEL_EXISTENCE_ONLY para `True` alterar a representação dos valores de modo que haja somente dois estados: `Missing` e `Existing`. Todos os estados não ausentes são combinados em um único `Existing` valor.  
   
- Um uso comum desse sinalizador de modelagem seria em atributos para os quais o estado `NULL` tem um significado implícito e o valor explícito do estado `NOT NULL` pode não ser tão importante quanto o fato de que a coluna possui algum valor. Por exemplo, uma coluna [DateContractSigned] pode ser `NULL` se um contrato nunca foi assinado e `NOT NULL` se o contrato foi assinado. Portanto, se a finalidade do modelo é prever se um contrato será assinado, você pode usar o sinalizador MODEL_EXISTENCE_ONLY para ignorar o valor da data exata de `NOT NULL` casos e distinguir somente os casos em que um contrato é `Missing` ou `Existing`.  
+ Um uso comum desse sinalizador de modelagem seria em atributos para os quais o estado `NULL` tem um significado implícito e o valor explícito do estado `NOT NULL` pode não ser tão importante quanto o fato de que a coluna possui algum valor. Por exemplo, uma coluna [DateContractSigned] pode ser `NULL` se nunca houve um contrato assinado e `NOT NULL` se o contrato foi assinado. Portanto, se a finalidade do modelo é prever se um contrato será assinado, você pode usar o sinalizador MODEL_EXISTENCE_ONLY para ignorar o valor da data exata a `NOT NULL` casos e distinguir somente os casos em que um contrato é `Missing` ou `Existing`.  
   
 > [!NOTE]  
 >  Missing é um estado especial usado pelo algoritmo e difere do valor de texto "Missing" em uma coluna. Para obter mais informações, consulte [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
@@ -110,11 +110,11 @@ WHERE MODEL_NAME = '<model name>'
 |----------|-----------|  
 |Editar sinalizadores de modelagem usando o Designer de Mineração de Dados|[Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)|  
 |Especifique uma dica para o algoritmo recomendar regressores prováveis|[Especificar uma coluna para usar como regressor em um modelo](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Saiba mais sobre as colunas da estrutura de mineração e as propriedades que você pode definir nelas|[Colunas da estrutura de mineração](mining-structure-columns.md)|  
 |Saiba sobre as colunas do modelo de mineração e sinalizadores de modelagem que podem ser aplicados no nível do modelo|[Colunas do modelo de mineração](mining-model-columns.md)|  
 |Consulte a sintaxe para trabalhar com sinalizadores de modelagem em instruções DMX|[Sinalizadores de modelagem &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
-|Entender valores ausentes e como trabalhar com eles|[Valores ausentes &#40;Analysis Services – mineração de dados&#41;](missing-values-analysis-services-data-mining.md)|  
+|Entender valores ausentes e como trabalhar com eles|[Valores ausentes &#40;Analysis Services - mineração de dados&#41;](missing-values-analysis-services-data-mining.md)|  
 |Saiba sobre como gerenciar modelos e estruturas e definir propriedades de uso|[Movendo objetos de Mineração de dados](moving-data-mining-objects.md)|  
   
   

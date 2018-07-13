@@ -1,5 +1,5 @@
 ---
-title: Opções (página de Designers de banco de dados e Designers de tabela) | Microsoft Docs
+title: Opções (Designers de tabela e página de Designers de banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e82d8f644fbec9c5801d24fb3d9dbcd525760918
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a324f7e0bd9ca0d71b727dd109f8d7dd0a8aec7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240276"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Opções (página de Designers de banco de dados e Designers de tabela)
+# <a name="options-designers-table-and-database-designers-page"></a>Opções (Designers de tabela e página de Designers de banco de dados)
   Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções**, expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  

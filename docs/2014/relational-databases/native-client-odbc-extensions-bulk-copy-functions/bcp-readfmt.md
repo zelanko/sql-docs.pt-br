@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119865"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428725"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Lê uma definição de formato do arquivo de dados do arquivo de formato especificado.  
@@ -58,13 +56,13 @@ szFormatFile
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Remarks  
- Depois de `bcp_readfmt` lê os valores de formato, fará as chamadas apropriadas aos [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md). Não há necessidade de você analisar um arquivo de formato e fazer essas chamadas.  
+ Após `bcp_readfmt` lê os valores de formato, fará as chamadas apropriadas aos [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md). Não há necessidade de você analisar um arquivo de formato e fazer essas chamadas.  
   
  Para manter um arquivo de formato, chame [bcp_writefmt](bcp-writefmt.md). Chamadas para `bcp_readfmt` podem referenciar formatos salvos. Para obter mais informações, consulte [bcp_init](bcp-init.md).  
   
- Como alternativa, o utilitário de cópia em massa (**bcp**) pode salvar formatos de dados definido pelo usuário em arquivos que podem ser referenciados por `bcp_readfmt`. Para obter mais informações sobre o **bcp** utility e a estrutura de **bcp** arquivos de formato de dados, consulte [importação em massa e exportação de dados &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Como alternativa, o utilitário de cópia em massa (**bcp**) pode salvar formatos de dados definido pelo usuário em arquivos que podem ser referenciados por `bcp_readfmt`. Para obter mais informações sobre o **bcp** utilitário e a estrutura dos **bcp** arquivos de formato de dados, consulte [importação em massa e importação de dados &#40;do SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- O `BCPDELAYREADFMT` valor o *eOption* parâmetro [bcp_control](bcp-control.md) modifica o comportamento de bcp_readfmt.  
+ O `BCPDELAYREADFMT` valor da *eOption* parâmetro [bcp_control](bcp-control.md) modifica o comportamento de bcp_readfmt.  
   
 > [!NOTE]  
 >  O arquivo de formato deve ter sido gerado pela versão 4.2 ou posterior do utilitário **bcp** .  

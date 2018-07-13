@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b24b5425fb89794e7af3129039219d699769427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116585"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412765"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
-  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados OLE DB ao associar parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados OLE DB ao associar os tipos de dados parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

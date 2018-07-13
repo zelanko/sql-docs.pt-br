@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2a9e3e5db1e0f21bfe3822d73fd0e3c0b456e250
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 550d038f917af8d191c078716161a8fdb0a99868
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230106"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Tutorial DMX de previsão de série temporal
   Neste tutorial, você aprenderá a criar uma estrutura de mineração de série temporal, a criar três modelos de mineração de série temporal e a fazer previsões usando esses modelos.  
@@ -27,7 +27,7 @@ ms.locfileid: "36312180"
  Os modelos de mineração são baseados nos dados contidos no banco de dados de exemplo do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
- A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu usar a mineração de dados para gerar projeções de vendas. Eles já criaram alguns modelos de previsão regionais; Para obter mais informações, consulte [lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). No entanto, o Departamento de Vendas precisa ser capaz de atualizar periodicamente o modelo de mineração de dados com novos dados de vendas. Eles também desejam personalizar os modelos para oferecer projeções diferentes.  
+ A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu usar a mineração de dados para gerar projeções de vendas. Eles já criaram alguns modelos de previsão regionais; Para obter mais informações, consulte [lição 2: Criando um cenário de previsão de &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). No entanto, o Departamento de Vendas precisa ser capaz de atualizar periodicamente o modelo de mineração de dados com novos dados de vendas. Eles também desejam personalizar os modelos para oferecer projeções diferentes.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece várias ferramentas que podem ser usadas para realizar essa tarefa:  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36312180"
   
 -   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
- Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vá para [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
+ Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], acesse [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
   
 > [!NOTE]  
 >  Ao examinar os tutoriais, recomendamos que você adicione os botões **Próximo Tópico** e **Tópico Anterior** à barra de ferramentas do visualizador de documentos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Tutorial de mineração de dados intermediário de &#40;Analysis Services – mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

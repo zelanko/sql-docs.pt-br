@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239396"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -61,9 +61,9 @@ ms.locfileid: "36118388"
 ### <a name="the-msxdbcdc-database-tables"></a>As tabelas do banco de dados MSXDBCDC  
  Essa seção descreve as seguintes tabelas no banco de dados MSXDBCDC.  
   
--   [dbo. xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
+-   [xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
   
--   [dbo. xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
+-   [xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
@@ -112,13 +112,13 @@ ms.locfileid: "36118388"
 |ref_count|Este item conta o número de computadores em que o mesmo Serviço Oracle CDC está instalado. Ele é incrementado com cada adição de serviço Oracle CDC de mesmo nome e é decrementado quando este serviço é removido. Quando o contador chegar a zero, esta linha será excluída.|  
 |active_service_node|O nome do nó de Windows que atualmente trata o serviço CDC. Quando o serviço é parado corretamente, esta coluna é definida como nulo, indicando que não há mais um serviço ativo.|  
 |active_service_heartbeat|Este item acompanha o serviço CDC atual para determinar se ele ainda está ativo.<br /><br /> Este item é atualizado com o carimbo de data/hora UTC do banco de dados atual para o serviço CDC ativo em intervalos regulares. O intervalo padrão é de 30 segundos; porém, o intervalo é configurável.<br /><br /> Quando um serviço CDC pendente detecta que a pulsação não foi atualizada depois que o intervalo configurado foi transmitido, o serviço pendente tenta assumir a função de serviço do CDC ativo.|  
-|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]**. A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> rastreamento tem os seguintes valores possíveis:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<nome da classe > [, nome da classe >]<br /><br /> O valor padrão é **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
+|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]**. A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> rastreamento tem os seguintes valores possíveis:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<nome de classe > [, nome de classe >]<br /><br /> O valor padrão é **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Os procedimentos armazenados do banco de dados MSXDBCDC  
  Essa seção descreve os seguintes procedimentos armazenados no banco de dados MSXDBCDC.  
   
--   [dbo. xcbcdc_reset_db (nome do banco de dados)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo. xcbcdc_reset_db (nome de banco de dados)](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(DBName)](#BKMK_dboxdbcdc_disable_db)  
   
@@ -190,7 +190,7 @@ ms.locfileid: "36118388"
 ### <a name="service-program-commands"></a>Comandos do programa de serviço  
  A seção descreve os seguintes comandos que são usados para configurar o serviço CDC.  
   
--   [Configuração](#BKMK_config)  
+-   [Config](#BKMK_config)  
   
 -   [Criar](#BKMK_create)  
   

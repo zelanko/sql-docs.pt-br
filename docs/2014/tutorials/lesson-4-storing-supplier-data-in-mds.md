@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40f09aa6544bc38378e547c5b6e94dd26956a549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180943"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lição 4: Armazenando dados do fornecedor no MDS
   O Master Data Services (MDS) é a solução do SQL Server para gerenciamento de dados mestre. O gerenciamento de dados mestre (DMD) descreve os esforços de uma organização para descobrir e definir listas não transacionais de dados.  

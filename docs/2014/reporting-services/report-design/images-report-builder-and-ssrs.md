@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4fb5fa5f0ac040c5642d4a14279407c7b3b7bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4fcb1a4246968e0f42b99ec5c0c596b8d7d36b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278273"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imagens (Construtor de Relatórios e SSRS)
   Uma imagem é um item de relatório que contém uma referência a uma imagem inserida em um relatório, armazenada em um banco de dados, no servidor de relatório ou em qualquer outro lugar na Web. Uma imagem pode ser uma imagem que é repetida com linhas de dados. Você também pode usar uma imagem como plano de fundo para determinados itens de relatórios.  
@@ -79,18 +79,18 @@ ms.locfileid: "36117106"
 
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Adicionar uma imagem externa &#40;SSRS e construtor de relatórios&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Adicionar uma imagem externa &#40;relatórios e SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Inserir uma imagem em um relatório &#40;SSRS e construtor de relatórios&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Inserir uma imagem em um relatório &#40;relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Adicionar uma imagem de plano de fundo &#40;SSRS e construtor de relatórios&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Adicionar uma imagem de plano de fundo &#40;relatórios e SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Adicionar uma imagem associada a dados &#40;SSRS e construtor de relatórios&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Adicionar uma imagem associada a dados &#40;relatórios e SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>Consulte também  
- [Exportando para um arquivo de imagem &#40;SSRS e construtor de relatórios&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Exportando para um arquivo de imagem &#40;relatórios e SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

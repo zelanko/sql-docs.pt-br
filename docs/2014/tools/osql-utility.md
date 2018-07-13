@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239996"
 ---
 # <a name="osql-utility"></a>Utilitário osql
   O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
- Se você não especificar um nome de usuário ao iniciar o **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verifica as variáveis de ambiente e usará, por exemplo, **osqluser = (*`user`*)** ou **osqlserver = (*`server`*)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
+ Se você não especificar um nome de usuário quando você inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verifica as variáveis de ambiente e usa aqueles que, por exemplo, **osqluser = (*`user`*)** ou **osqlserver = (*`server`*)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
   
  Se as opções **-U** ou **-P** não forem usadas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tentará conectar usando o Modo de Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. A autenticação baseia-se na conta do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows do usuário que está executando o **osql**.  
   
@@ -298,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Executa o lote e então sai imediatamente e não retorna valor algum.  
   
--   SAÍDA **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  Executa o lote, incluindo a consulta, e sai depois de retornar os resultados da consulta.  
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      Erro de conversão ao selecionar valor de retorno.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Exibindo Tipos de Dados money e smallmoney  
- **osql** exibe o `money` e `smallmoney` tipos de dados com duas casas decimais, embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena o valor internamente com quatro casas decimais. Considere o exemplo:  
+ **osql** exibe as `money` e `smallmoney` tipos de dados com duas casas decimais, embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazena o valor internamente com quatro casas decimais. Considere o exemplo:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

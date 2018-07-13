@@ -23,15 +23,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71eb9ad4d6066b6dbf3b0c942ee9d7e6f521a590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9fc300712ecac2eeb4e13257515e1300e704d21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240216"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passando configurações de informações de dispositivos para extensões de renderização
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. As configurações do serviço Web Servidor de Relatórios são passadas como um elemento XML **DeviceInfo** e são processadas pelo servidor de relatório. Como configurações de informações de dispositivo têm valores padrão, elas são consideradas argumentos opcionais no processo de renderização. Porém, você pode usar configurações de informações de dispositivo para personalizar a renderização e substituir os valores padrão que são fornecidos pelo servidor.  
@@ -39,7 +39,7 @@ ms.locfileid: "36117374"
  Você pode especificar configurações de informações de dispositivo de diversas formas. Programaticamente, você pode usar o método de renderização. Se você estiver acessando um relatório através da sua URL, poderá especificar informações de dispositivo como parâmetros URL. Você também pode editar as configurações de informações de dispositivo nos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar parâmetros de renderização globalmente. Para obter mais informações sobre como especificar parâmetros de renderização globalmente, consulte [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Passando informações de dispositivo através do método de renderização  
- Para passar configurações de informações de dispositivo para uma extensão de renderização, use o <xref:ReportExecution2005.ReportExecutionService.Render%2A> método. Por exemplo, a cadeia de caracteres XML a seguir pode ser passada para o método <xref:ReportExecution2005.ReportExecutionService.Render%2A> para criar um fragmento de HTML durante a renderização para HTML.  
+ Para passar configurações de informações do dispositivo para uma extensão de renderização, use o <xref:ReportExecution2005.ReportExecutionService.Render%2A> método. Por exemplo, a cadeia de caracteres XML a seguir pode ser passada para o método <xref:ReportExecution2005.ReportExecutionService.Render%2A> para criar um fragmento de HTML durante a renderização para HTML.  
   
 ```  
 <DeviceInfo>  

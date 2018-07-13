@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.f1
 ms.assetid: 85d4f696-b429-409c-a679-2ee867f3a589
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c52f81bba501dc8202f8cd8ba7e1e885b4f54b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e90859fb1b2f5795e39653eb49aa3f0cb0ee34d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163378"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>Perspectivas (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Perspectivas** do Designer de Cubo para criar e modificar perspectivas do cubo selecionado.  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler – organizar colunas | Microsoft Docs
+title: Profiler do SQL Server - organizar colunas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69622d02bbe0eae497f7d6e463ea6d40eb6536cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1bfa74b1d6f8eb7f3c13c294aba37bfb88f7e995
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162907"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler – Organizar Colunas
   Use a caixa de diálogo **Organizar Colunas** para selecionar colunas de dados para agrupar ou agregar eventos exibidos em um rastreamento, o que torna os arquivos ou tabelas de rastreamento grandes mais fáceis de exibir e analisar.  

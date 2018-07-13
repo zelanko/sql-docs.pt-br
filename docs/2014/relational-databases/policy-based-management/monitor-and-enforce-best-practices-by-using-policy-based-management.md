@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240566"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
   Gerenciamento baseado em política permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornece um conjunto de arquivos de política que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de banco de dados. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
@@ -42,8 +42,8 @@ ms.locfileid: "36116578"
 |Permissões de Convidado|[Permissões de convidado em bancos de dados de usuários](guest-permissions-on-user-databases.md)|  
 |Data do Último Backup bem-sucedido|[Backup desatualizado](outdated-backup.md)|  
 |Public Não Recebeu Permissões de Servidor|[Permissões públicas de servidor](server-public-permissions.md)|  
-|Sobreposição de máscara de afinidade de 32 bits do SQL Server|[Corrigir máscara de afinidade e sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Corrigir máscara de afinidade e sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sobreposição de máscara de afinidade de 32 bits do SQL Server|[Corrigir máscara de afinidade e a sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sobreposição de Máscara de Afinidade de 64 bits do SQL Server|[Corrigir máscara de afinidade e a sobreposição de máscara de entrada e saída de afinidade](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Máscara de Afinidade do SQL Server|[Manter o valor padrão da máscara de afinidade](keep-the-affinity-mask-default-value.md)|  
 |Limite de Processo Bloqueado do SQL Server|[Aumentar ou desabilitar o limite de processo bloqueado](increase-or-disable-blocked-process-threshold.md)|  
 |Rastreamento Padrão do SQL Server|[Arquivos de log de rastreamento padrão desabilitados](default-trace-log-files-disabled.md)|  

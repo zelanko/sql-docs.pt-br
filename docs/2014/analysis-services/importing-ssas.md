@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importing.f1
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72faf98eb62b72c18243bb190951f630bbe85218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41bc4470ec16fdeecbca2e978d77e6c7dc7ef09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259572"
 ---
 # <a name="importing-ssas"></a>Importando (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite exibir o progresso da operação de importação. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

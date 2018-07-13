@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,16 +20,16 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278395"
 ---
 # <a name="schedules"></a>Agendamentos
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fornece agendas compartilhadas e específicas de relatório para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fornece agendas compartilhadas e específicas de relatório para ajudar você a controlar o processamento e distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.  
   
  Neste tópico:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36116874"
   
 -   [Configurar as fontes de dados](#bkmk_configuredatasources)  
   
--   [Armazenar credenciais e contas de processamento](#bkmk_credentials)  
+-   [Store credenciais e contas de processamento](#bkmk_credentials)  
   
 -   [Como a agenda e entrega funciona](#bkmk_how_scheduling_works)  
   
@@ -129,10 +129,10 @@ ms.locfileid: "36116874"
   
      Antes que os eventos sejam processados, o Processador de Agendamento e Entrega executa uma etapa de autenticação para verificar se o proprietário da assinatura tem permissão para exibir o relatório.  
   
- O Reporting Services mantém uma fila de eventos para todas as operações agendadas. Ele pesquisa a fila em intervalos regulares para verificar novos eventos. Por padrão, a fila é digitalizada em intervalos de 10 segundos. Você pode alterar o intervalo modificando o `PollingInterval`, `IsNotificationService`, e `IsEventService` definições de configuração no arquivo rsreportserver. config. O modo do SharePoint também usa o RSreporserver.config para obter estas configurações e os valores se aplicam a todos os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ O Reporting Services mantém uma fila de eventos para todas as operações agendadas. Ele pesquisa a fila em intervalos regulares para verificar novos eventos. Por padrão, a fila é digitalizada em intervalos de 10 segundos. Você pode alterar o intervalo modificando as `PollingInterval`, `IsNotificationService`, e `IsEventService` definições de configuração no arquivo rsreportserver. config. O modo do SharePoint também usa o RSreporserver.config para obter estas configurações e os valores se aplicam a todos os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dependências de servidor  
- O Processador de Agendamento e Entrega requer que o serviço Servidor de Relatório e o SQL Server Agent sejam iniciados. O recurso de agendamento e entrega deve ser habilitado por meio de `ScheduleEventsAndReportDeliveryEnabled` propriedade do **configuração da área de superfície do Reporting Services** faceta no gerenciamento baseado em políticas. O SQL Server Agent e o serviço Servidor de Relatório devem ser executados para que as operações agendadas ocorram.  
+ O Processador de Agendamento e Entrega requer que o serviço Servidor de Relatório e o SQL Server Agent sejam iniciados. O recurso de processamento de agendamento e entrega deve ser habilitado por meio de `ScheduleEventsAndReportDeliveryEnabled` propriedade do **configuração da área de superfície do Reporting Services** faceta no gerenciamento baseado em políticas. O SQL Server Agent e o serviço Servidor de Relatório devem ser executados para que as operações agendadas ocorram.  
   
 > [!NOTE]  
 >  É possível usar a faceta **Configuração da Área da Superfície do Reporting Services** para parar as operações agendadas em uma base temporária ou permanente. Embora você possa criar e implantar extensões de entrega personalizadas, em si, o Processador de Agendamento e Entrega não é extensível. Não é possível alterar a forma como ele gerencia eventos e notificações. Para obter mais informações sobre volta fora recursos, consulte a seção **Eventos e entrega agendados** de [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
@@ -148,10 +148,10 @@ ms.locfileid: "36116874"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir instantâneos no histórico de relatórios](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](data-driven-subscriptions.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
  [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Conjuntos de dados compartilhado em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

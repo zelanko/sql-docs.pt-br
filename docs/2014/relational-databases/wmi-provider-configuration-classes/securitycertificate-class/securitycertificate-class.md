@@ -20,20 +20,20 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7415e610eddb5b16f827a9f430e214936e8cd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0954783d3f9a7d7e3b97ce4faf9f82f4fa381d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258482"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
   O [classe SecurityCertificate] securitycertificate-class.md) representa um certificado de segurança. Um certificado é uma instrução assinada digitalmente que associa o valor de uma chave pública à instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que detém a chave privada correspondente. O certificado é emitido de uma autoridade de certificação.  
   
- Com securitycertificate a [classe SecurityCertificate]-class.md), você pode executar as seguintes tarefas:  
+ Com securitycertificate o [classe SecurityCertificate]-class.md), você pode executar as seguintes tarefas:  
   
 -   Exibir as propriedades do certificado de segurança.  
   

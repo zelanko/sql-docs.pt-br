@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166293"
 ---
 # <a name="load-xml-data"></a>Carregar dados XML
   É possível transferir dados XML para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de várias maneiras. Por exemplo:  
@@ -31,7 +31,7 @@ ms.locfileid: "36117831"
   
 -   É possível copiar os dados em massa de outro banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando bcp out e inserir os dados em massa no banco de dados da versão posterior usando bcp in.  
   
--   Se você tiver dados em colunas relacionais em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crie uma nova tabela com uma coluna [n]text e, opcionalmente, uma coluna de chave primária para um identificador de linha. Use programação para recuperar o XML gerado no servidor com FOR XML do lado do cliente e gravá-la na `[n]text` coluna. Em seguida, use as técnicas mencionadas anteriormente para transferir dados para um banco de dados de versão posterior. É possível optar por gravar diretamente o XML em uma coluna XML no banco de dados da versão posterior.  
+-   Se você tiver dados em colunas relacionais em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crie uma nova tabela com uma coluna [n]text e, opcionalmente, uma coluna de chave primária para um identificador de linha. Usar o cliente de programação para recuperar o XML gerado no servidor com FOR XML e gravá-la na `[n]text` coluna. Em seguida, use as técnicas mencionadas anteriormente para transferir dados para um banco de dados de versão posterior. É possível optar por gravar diretamente o XML em uma coluna XML no banco de dados da versão posterior.  
   
 ## <a name="bulk-loading-xml-data"></a>Carregando dados XML em massa  
  É possível carregar dados XML em massa no servidor usando os recursos de carregamento em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bcp. O OPENROWSET permite carregar dados de arquivos em uma coluna de XML. O exemplo a seguir ilustra esse ponto.  
@@ -57,7 +57,7 @@ FROM    (SELECT *
 -   Para usar uma codificação explícita, use o `varbinary()` de tipo, que não tem nenhuma interação com páginas de código, ou use um tipo de cadeia de caracteres da página de código apropriada. Em seguida, atribua os dados a uma coluna, variável ou parâmetro XML.  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>Exemplo: Especificando uma codificação explicitamente  
- Assuma que você tem um documento XML, vcdoc, armazenado como `varchar(max)` que não tem uma declaração XML explícita. A instrução a seguir adiciona uma declaração XML com a codificação "iso8859-1", concatena o documento XML, converte o resultado em `varbinary(max)` para que a representação de bytes é preservada e, finalmente, converte-lo para XML. Isso permite que o processador XML analise os dados de acordo com a codificação "iso8859-1" especificada e gere a representação UTF-16 correspondente para valores de cadeias de caracteres.  
+ Assuma que você tem um documento XML, vcdoc, armazenado como `varchar(max)` que não tem uma declaração XML explícita. A instrução a seguir adiciona uma declaração XML com codificação "iso8859-1", concatena o documento XML, converte o resultado em `varbinary(max)` para que a representação de bytes é preservada e, finalmente, converte-la para XML. Isso permite que o processador XML analise os dados de acordo com a codificação "iso8859-1" especificada e gere a representação UTF-16 correspondente para valores de cadeias de caracteres.  
   
 ```  
 SELECT CAST(   

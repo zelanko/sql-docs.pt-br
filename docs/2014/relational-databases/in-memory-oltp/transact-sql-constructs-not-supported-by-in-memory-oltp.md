@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0d852a4a0d104c815a76076661a3e3c56355d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258852"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
   As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não oferecem suporte à área de superfície completa do [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte em tabelas com base em disco e procedimentos armazenados pelo [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado. Ao tentar usar um dos recursos sem suporte, o servidor retornará um erro.  
@@ -59,9 +59,9 @@ ms.locfileid: "36117436"
 |Recurso|FILESTREAM|O armazenamento FILESTREAM não tem suporte para colunas de tabelas com otimização de memória. Remover o `FILESTREAM` palavra-chave da definição de coluna.|  
 |Recurso|SPARSE|As colunas de tabelas com otimização de memória não podem ser definidas como SPARSE. Remover o `SPARSE` palavra-chave da definição de coluna.|  
 |Recurso|ROWGUIDCOL|A opção ROWGUIDCOL não tem suporte para colunas de tabelas com otimização de memória. Remover o `ROWGUIDCOL` palavra-chave da definição de coluna.|  
-|Recurso|FOREIGN KEY|As restrições FOREIGN KEY não têm suporte para tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Verifique e restrições de chave estrangeira](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Recurso|CHECK|As restrições CHECK não têm suporte para tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Verifique e restrições de chave estrangeira](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Recurso|UNIQUE|As restrições UNIQUE não têm suporte nas tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Verifique e restrições de chave estrangeira](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Recurso|FOREIGN KEY|As restrições FOREIGN KEY não têm suporte para tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Check e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Recurso|CHECK|As restrições CHECK não têm suporte para tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Check e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Recurso|UNIQUE|As restrições UNIQUE não têm suporte nas tabelas com otimização de memória. Remova a restrição da definição de tabela.<br /><br /> Para obter informações sobre como reduzir a falta de suporte para restrições, consulte [migrando Check e Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Recurso|COLUMNSTORE|Os índices COLUMNSTORE não têm suporte com tabelas com otimização de memória. Em vez disso, especifique um índice NONCLUSTERED ou NONCLUSTERED HASH.|  
 |Recurso|índice clusterizado|Especifique um índice não clusterizado. No caso de um índice de chave primária, não deixe de especificar `PRIMARY KEY NONCLUSTERED [HASH]`.|  
 |Recurso|página de código diferente de 1252|As colunas em tabelas com otimização de memória com tipos de dados `char` e `varchar` devem usar a página de código 1252. Use n(var)char em vez de (var)char ou use um agrupamento com página de código 1252 (por exemplo, Latin1_General_BIN2). Para obter mais informações, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
@@ -75,7 +75,7 @@ ms.locfileid: "36117436"
 |Operação|CREATE FULLTEXT INDEX|Os índices de texto completo não têm suporte para tabelas com otimização de memória.|  
 |Operação|alteração de esquema|As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não oferecem suporte a alterações de esquema, por exemplo, `sp_rename`.<br /><br /> A tentativa de fazer alterações de esquema, como renomear uma tabela, gerará o erro 12320. As operações que exigem alteração na versão do esquema, por exemplo, renomeação, não têm suporte nas tabelas com otimização de memória.<br /><br /> Para alterar o esquema, descarte e recrie a tabela ou o procedimento usando uma definição atualizada.|  
 |Operação|CREATE TRIGGER|Não há suporte para gatilhos em tabelas com otimização de memória.|  
-|Operação|TRUNCATE TABLE|A operação TRUNCATE não tem suporte para tabelas com otimização de memória. Para remover todas as linhas de uma tabela, exclua todas as linhas usando `DELETE FROM` *tabela* ou descarte e recrie a tabela.|  
+|Operação|TRUNCATE TABLE|A operação TRUNCATE não tem suporte para tabelas com otimização de memória. Para remover todas as linhas de uma tabela, exclua todas as linhas usando `DELETE FROM` *tabela* ou remova e recrie a tabela.|  
 |Operação|ALTER AUTHORIZATION|Não há suporte para alteração do proprietário de uma tabela com otimização de memória ou procedimentos armazenados nativamente compilados existentes. Descarte e recrie a tabela ou o procedimento para alterar a propriedade.|  
 |Operação|ALTER SCHEMA|Não há suporte para a alteração do esquema de uma tabela com otimização de memória ou de um procedimento armazenado compilado de modo nativo existente. Remova e recrie a tabela ou o procedimento para alterar o esquema.|  
 |Operação|DBCC CHECKTABLE|Não há suporte para DBCC CHECKTABLE nas tabelas com otimização de memória.|  
@@ -90,7 +90,7 @@ ms.locfileid: "36117436"
   
 |Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
-|Recurso|Índice filtrado|Os índices filtrados não têm suporte com tabelas com otimização de memória. Omitir a `WHERE` cláusula da especificação de índice.|  
+|Recurso|Índice filtrado|Os índices filtrados não têm suporte com tabelas com otimização de memória. Omitir o `WHERE` cláusula da especificação de índice.|  
 |Recurso|UNIQUE|Não há suporte para índices exclusivos nas tabelas com otimização de memória. Remova o argumento `UNIQUE` da especificação de índice.|  
 |Recurso|Colunas que permitem valor nulo|Todas as colunas na chave de um índice em uma tabela com otimização de memória devem ser especificadas como `NOT NULL`. Inclua a restrição `NOT NULL` com todas as colunas nas chaves de índice.|  
 |Recurso|agrupamento non-bin2|Todas as colunas de caractere na chave de um índice com otimização de memória devem ser declaradas usando um agrupamento BIN2. Use a cláusula `COLLATE` para definir o agrupamento na definição de coluna. Para obter mais informações, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
@@ -112,10 +112,10 @@ ms.locfileid: "36117436"
 |Tipo|Recurso|Resolução|  
 |----------|-------------|----------------|  
 |Recurso|Variáveis de tabela alinhadas|Os tipos de tabela não podem ser declarados alinhados com declarações de variável. Tipos de tabela devem ser declarados explicitamente usando um `CREATE TYPE` instrução.|  
-|Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> -Ao executar o procedimento do cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução `EXECUTE` do [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de especificar o nome do procedimento diretamente.<br /><br /> -Ao executar o procedimento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado nativamente compilado.<br /><br /> -Ao criar um procedimento armazenado nativamente compilado, em vez de usar um cursor, use a lógica baseada em conjunto ou um `WHILE` loop.|  
+|Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> -Ao executar o procedimento do cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução `EXECUTE` do [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de especificar o nome do procedimento diretamente.<br /><br /> -Ao executar o procedimento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado nativamente compilado.<br /><br /> -Ao criar um procedimento armazenado compilado nativamente, em vez de usar um cursor, use a lógica baseada em conjunto ou um `WHILE` loop.|  
 |Recurso|Padrões de parâmetro não constantes|Ao usar valores padrão com parâmetros em procedimentos armazenados nativamente compilados, os valores devem ser constantes. Remova todos os curingas das declarações de parâmetro.|  
 |Recurso|EXTERNAL|Os procedimentos armazenados CLR não podem ser compilados de modo nativo. Remova a cláusula AS EXTERNAL ou a opção NATIVE_COMPILATION da instrução CREATE PROCEDURE.|  
-|Recurso|Procedimentos armazenados numerados|Os procedimentos armazenados nativamente compilados não podem ser numerados. Remover o `;` *número* do `CREATE PROCEDURE` instrução.|  
+|Recurso|Procedimentos armazenados numerados|Os procedimentos armazenados nativamente compilados não podem ser numerados. Remover o `;` *número* da `CREATE PROCEDURE` instrução.|  
 |Recurso|INSERT de várias linhas... Instruções VALUES|Não é possível inserir várias linhas que usam a mesma instrução `INSERT` em um procedimento armazenado nativamente compilado. Criar `INSERT` instruções para cada linha.|  
 |Recurso|CETs (expressões de tabela comum)|As CTEs (expressões de tabela comuns) não têm suporte em procedimentos armazenados nativamente compilados. Regravar a consulta.|  
 |Recurso|subconsulta|Não há suporte para subconsultas (consultas aninhadas dentro de outra consulta). Regravar a consulta.|  
@@ -123,7 +123,7 @@ ms.locfileid: "36117436"
 |Recurso|SELECT INTO|A cláusula `INTO` não tem suporte com a instrução `SELECT`. Reescreva a consulta como `INSERT INTO` *tabela*`SELECT`.|  
 |Recurso|OUTPUT|Não há suporte para a cláusula `OUTPUT`. Remova-a da consulta.|  
 |Recurso|lista de colunas de inserção incompleta|Em instruções `INSERT`, os valores devem ser especificados para todas as colunas na tabela.|  
-|Função|*Função*|A função interna não tem suporte em procedimentos armazenados nativamente compilados. Remova a função do procedimento armazenado. Para obter mais informações sobre funções internas com suporte, consulte [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Função|*Função*|A função interna não tem suporte em procedimentos armazenados nativamente compilados. Remova a função do procedimento armazenado. Para obter mais informações sobre funções internas com suporte, consulte [procedimentos armazenados compilados nativamente](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Recurso|CASE|A instrução `CASE` não tem suporte em consultas dentro de procedimentos armazenados nativamente compilados. Crie consultas para cada caso. Para obter mais informações, consulte [implementando uma instrução CASE](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
 |Recurso|funções definidas pelo usuário|As funções definidas pelo usuário não podem ser usadas em procedimentos armazenados nativamente compilados. Remova a referência à função da definição de procedimento.|  
 |Recurso|agregações definidas pelo usuário|As funções de agregação definidas pelo usuário não podem ser usadas em procedimentos armazenados nativamente compilados. Remova a referência à função do procedimento.|  
@@ -158,7 +158,7 @@ ms.locfileid: "36117436"
 |Operador|UNION|Não há suporte para esse operador. Remover `UNION` do procedimento armazenado nativamente compilado. A combinação de vários conjuntos de resultados em um único conjunto de resultados pode ser feita usando uma variável de tabela.|  
 |Operador|INTERSECT|Não há suporte para esse operador. Remover `INTERSECT` do procedimento armazenado nativamente compilado. Em alguns casos, um INNER JOIN pode ser usado para obter o mesmo resultado.|  
 |Operador|EXCEPT|Não há suporte para esse operador. Remover `EXCEPT` do procedimento armazenado nativamente compilado.|  
-|Operador|OUTER JOIN|Não há suporte para esse operador. Remover `OUTER JOIN` do procedimento armazenado nativamente compilado. Para obter mais informações, consulte [implementando uma junção externa](implementing-an-outer-join.md).|  
+|Operador|OUTER JOIN|Não há suporte para esse operador. Remover `OUTER JOIN` do procedimento armazenado nativamente compilado. Para obter mais informações, consulte [implementando um Outer Join](implementing-an-outer-join.md).|  
 |Operador|APPLY|Não há suporte para esse operador. Remover `APPLY` do procedimento armazenado nativamente compilado.|  
 |Operador|PIVOT|Não há suporte para esse operador. Remover `PIVOT` do procedimento armazenado nativamente compilado.|  
 |Operador|UNPIVOT|Não há suporte para esse operador. Remover `UNPIVOT` do procedimento armazenado nativamente compilado.|  
@@ -179,8 +179,8 @@ ms.locfileid: "36117436"
 |Dica de junção|HASH, MERGE|Os procedimentos armazenados nativamente compilados oferecem suporte somente a junções de loops aninhados. Não há suporte para junções de hash e mesclagem. Remova a dica de junção.|  
 |Dica de consulta|*Dica de consulta*|Essa dica de consulta não está dentro de procedimentos armazenados nativamente compilados. Para obter dicas de consulta com suporte, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).|  
 |Opção|DISTINCT|Não há suporte para essa opção. Remova `DISTINCT` da consulta no procedimento armazenado nativamente compilado.|  
-|Opção|PERCENT|Essa opção não tem suporte com `TOP` cláusulas. Remova `PERCENT` da consulta no procedimento armazenado nativamente compilado.|  
-|Opção|WITH TIES|Essa opção não tem suporte com `TOP` cláusulas. Remova `WITH TIES` da consulta no procedimento armazenado nativamente compilado.|  
+|Opção|PERCENT|Essa opção não é compatível com `TOP` cláusulas. Remova `PERCENT` da consulta no procedimento armazenado nativamente compilado.|  
+|Opção|WITH TIES|Essa opção não é compatível com `TOP` cláusulas. Remova `WITH TIES` da consulta no procedimento armazenado nativamente compilado.|  
 |Função de agregação|*Função de agregação*|Não há suporte para essa cláusula. Para obter mais informações sobre procedimentos armazenados compilados de modo nativo, veja [Procedimentos armazenados compilados de modo nativo](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Função de classificação|*Função de classificação*|As funções de classificação não têm suporte em procedimentos armazenados nativamente compilados. Remova-as da definição de procedimento.|  
 |Função|*Função*|Não há suporte para essa função. Remova-a do procedimento armazenado nativamente compilado.|  

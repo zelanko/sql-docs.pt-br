@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211686"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>Tipo de dados ScalarMiningStructureColumn (ASSL)
-  Define um tipo de dados derivado que representa um [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento que contém valores escalares, em oposição às tabelas aninhadas associadas a [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento que contém tabelas aninhadas.  
+  Define um tipo de dados derivado que representa uma [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) elemento que contém valores escalares, em vez de tabelas aninhadas associadas com o [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) elemento que contém tabelas aninhadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   

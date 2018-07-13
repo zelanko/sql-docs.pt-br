@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152127"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   Nesta lição, você vai usar as páginas da assinatura controlada por dados para se conectar a uma fonte de dados de assinatura, criar uma consulta que recupera dados de assinatura e mapear o conjunto de resultados para opções de relatório e entrega.  
@@ -33,15 +33,15 @@ ms.locfileid: "36119846"
   
 -   [Iniciar o Assistente de assinatura controlada por dados](#bkmk_startwizard)  
   
--   [Etapa 1 - definir uma descrição](#bkmk_definesubscription)  
+-   [Etapa 1: definir uma descrição](#bkmk_definesubscription)  
   
--   [Etapa 2 - definir uma Conexão com a fonte de dados do assinante](#bkmk_defineconnectiontosubscriber)  
+-   [Etapa 2: definir uma Conexão com a fonte de dados do assinante](#bkmk_defineconnectiontosubscriber)  
   
--   [Etapa 3 - definir uma consulta para recuperar dados de assinante](#bkmk_definequery)  
+-   [Etapa 3: definir uma consulta para recuperar dados de assinante](#bkmk_definequery)  
   
--   [Etapa 4 - definir opções de entrega](#bkmk_set_deliveryoptions)  
+-   [Etapa 4 – definir opções de entrega](#bkmk_set_deliveryoptions)  
   
--   [Etapa 5 – configurar um valor de parâmetro de saída do relatório muito](#bkmk_configure_parameter)  
+-   [Etapa 5 – configurar um valor de parâmetro para a saída de relatório muito](#bkmk_configure_parameter)  
   
 -   [Etapa 6 - para agendar uma assinatura](#bkmk_schedule_subscription)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36119846"
   
 3.  Clique em **nova assinatura controlada por dados**. Se este botão não estiver visível, você não tem permissões do Gerenciador de Conteúdo.  
   
-##  <a name="bkmk_definesubscription"></a> Etapa 1 - definir uma descrição  
+##  <a name="bkmk_definesubscription"></a> Etapa 1: definir uma descrição  
   
 1.  Digite **Entrega de ordem de venda** na descrição.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36119846"
   
 3.  Selecione **Especificar apenas para essa assinatura**e clique em **Avançar**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> Etapa 2 - definir uma Conexão com a fonte de dados do assinante  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> Etapa 2: definir uma Conexão com a fonte de dados do assinante  
   
 1.  Selecione **Microsoft SQL Server** como o tipo de fonte de dados.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36119846"
   
 5.  Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**e, em seguida, clique em **Avançar**.  
   
-##  <a name="bkmk_definequery"></a> Etapa 3 - definir uma consulta para recuperar dados de assinante  
+##  <a name="bkmk_definequery"></a> Etapa 3: definir uma consulta para recuperar dados de assinante  
   
 1.  Na caixa de consulta, digite a seguinte consulta:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36119846"
   
 3.  Clique em **Validar**e, em seguida, clique em **Avançar**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a> Etapa 4 - definir opções de entrega  
+##  <a name="bkmk_set_deliveryoptions"></a> Etapa 4 – definir opções de entrega  
   
 1.  Em **Nome de arquivo**, selecione **Obtenha o valor no banco de dados**. Selecione o campo **Pedido**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36119846"
   
 8.  Clique em **Avançar.**  
   
-##  <a name="bkmk_configure_parameter"></a> Etapa 5 – configurar um valor de parâmetro de saída do relatório muito  
+##  <a name="bkmk_configure_parameter"></a> Etapa 5 – configurar um valor de parâmetro para a saída de relatório muito  
   
 1.  Em **OrderNumber**, selecione **Obtenha o valor no banco de dados**. Em Valor, selecione **Pedido**. Clique em **Avançar.**  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36119846"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
  [Criar, modificar e excluir uma assinatura controlada por dados](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Usar uma fonte de dados externa para dados de assinante &#40;assinatura controlada por dados&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  

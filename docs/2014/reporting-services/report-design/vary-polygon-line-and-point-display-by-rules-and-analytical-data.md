@@ -1,5 +1,5 @@
 ---
-title: Variar de polígono, linha e exibição de ponto por regras e dados analíticos (construtor de relatórios e SSRS) | Microsoft Docs
+title: Variam de polígono, linha e exibição de ponto por regras e dados analíticos (construtor de relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149767"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS)
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -133,7 +133,7 @@ ms.locfileid: "36119465"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Exibe os valores numéricos reais do início e do fim do intervalo.|10 - 790|  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;SSRS e construtor de relatórios&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
