@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 47a5efe43799848d9ef8c4648a24451abf3fd1c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 86a6da5314bb8b4c956910d58f5d511e93e92742
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164969"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
   A ferramenta de relatórios de desempenho de transação (consulte [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre as tabelas em seu banco de dados que se beneficiarão se forem compatibilizadas para usar o OLTP na memória. Após identificar uma tabela que você gostaria de compatibilizar para usar o OLTP na memória, você poderá usar o orientador de otimização de memória para ajudá-lo a migrar a tabela de banco de dados baseada em disco para o OLTP na memória.  

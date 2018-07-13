@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260084"
 ---
 # <a name="accept-license-terms"></a>Aceitar termos de licença
   Use o **aceitar termos de licença** página do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação para aceitar os termos de licença para esta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -48,26 +48,26 @@ ms.locfileid: "36122976"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instalação  
   
- Informações sobre o uso de recursos são enviadas para [!INCLUDE[msCoName](../../includes/msconame-md.md)], onde são armazenadas com acesso limitado.  
+ Informações sobre o uso de recurso são enviadas para [!INCLUDE[msCoName](../../includes/msconame-md.md)], onde são armazenada com acesso limitado.  
   
- Para desabilitar os relatórios CEIP após a conclusão da instalação, use o  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório de erro e uso** ferramenta sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ferramentas de configuração** menu.  
+ Para desabilitar os relatórios CEIP após a conclusão da instalação, use o  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório de erro e uso** ferramenta no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ferramentas de configuração** menu.  
   
  Para ações de Instalação como instalação, atualização, reparo, e assim por diante, as informações são coletadas e carregadas somente durante a execução do programa de instalação  
   
- Para todos os outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as informações são coletadas uma vez por dia para todas as instâncias habilitadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, a hora de coleta é meia-noite para minimizar a carga no servidor. Se quiser alterar a hora de coleta, poderá editar manualmente a chave do registro que controla isso. Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem sua própria chave de registro:  
+ Para todos os outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as informações são coletadas uma vez por dia para todas as instâncias habilitadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, a hora de coleta é meia-noite para minimizar a carga no servidor. Se quiser alterar a hora de coleta, poderá editar manualmente a chave do registro que controla isso. Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem sua própria chave do registro:  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<InstanceName>\.\< INSTANCEID > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< INSTANCEID > \CPE\TimeofReporting  
   
  O valor dessa chave do Registro contém a hora de coleta como o número de minutos a partir de 00h:00 (meia-noite) para executar. Por exemplo, um valor igual a 60 executará a coleta à 1:00 a.m. e um valor igual a 1200 executará a coleta às 8:00 p.m., e assim por diante.  
   
 ## <a name="error-reporting"></a>Relatório de Erros  
- Use o **configurações do relatório de uso e erro** página do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação para habilitar o erro e uso para a funcionalidade de emissão de relatórios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Use o **configurações do relatório de uso e erro** página do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação para habilitar a erro e uso dos relatórios de funcionalidade para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="options"></a>Opções  
  Por padrão, a coleta de dados de uso de recursos e recursos de relatório de erros estão desabilitados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seus componentes no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Relatório de Erros  
- Se você habilitar o recurso relatório de erros, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para enviar um relatório para [!INCLUDE[msCoName](../../includes/msconame-md.md)] automaticamente se ocorrer um erro fatal em qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes:  
+ Se você habilitar o recurso de relatório de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para enviar um relatório para [!INCLUDE[msCoName](../../includes/msconame-md.md)] automaticamente se ocorrer um erro fatal em qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes:  
   
 -   O [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36122976"
   
  Os relatórios de erros contêm as seguintes informações:  
   
--   A condição de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando ocorreu o problema.  
+-   A condição de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando o problema ocorreu.  
   
 -   A versão do sistema operacional e as informações de hardware.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "36122976"
   
 -   Informações de memória ou do(s) arquivo(s) do processo que causou o erro.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] não coleta intencionalmente seus arquivos, nome, endereço, endereço de email ou qualquer outra forma de informações pessoais. Entretanto, o relatório de erros pode conter informações pessoais da memória ou dos arquivos do processo que causou o erro. Apesar de essas informações poderem ser potencialmente usadas para determinar sua identidade, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] não usa essas informações com esse propósito.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] não coleta intencionalmente seus arquivos, nome, endereço, endereço de email ou qualquer outro formulário de informações pessoais. Entretanto, o relatório de erros pode conter informações pessoais da memória ou dos arquivos do processo que causou o erro. Apesar de essas informações poderem ser potencialmente usadas para determinar sua identidade, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] não usa essas informações com esse propósito.  
   
  Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] privacidade e a política de coleta de dados, consulte [declaração de privacidade do Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   
  Se você habilitar Relatório de Erros e um erro fatal ocorrer, poderá ver uma resposta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no log de eventos do Windows que apontará para um artigo específico na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Para desabilitar o relatório de erro ou de uso do recurso para todas as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seus componentes após a conclusão da instalação, vá para o **configurações do relatório de uso e erro** caixa de diálogo e desmarque a caixa de seleção **uso de recursos** . Se **relatório de erros** está habilitada para vários componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e os componentes compartilhados) você pode desabilitar o relatório de erros para cada instância de um indivíduo componente, bem como os componentes compartilhados listados como **outros**.  
+ Para desabilitar o relatório de erro ou de uso do recurso para todas as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seus componentes após a conclusão da instalação, vá para o **configurações do relatório de uso e erro** caixa de diálogo e desmarque as caixas de seleção para **de uso do recurso** . Se **relatório de erros** está habilitada para vários componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e componentes compartilhados) você pode desabilitar o relatório de erros para cada instância de um indivíduo componente, bem como os componentes compartilhados, listado como **outras pessoas**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Sobre os termos de licença do SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

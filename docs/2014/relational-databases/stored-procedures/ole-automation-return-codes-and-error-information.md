@@ -5,28 +5,26 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122352"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414015"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
-  Sistema de automação OLE procedimentos armazenados retornam um `int` código de retorno que é o HRESULT retornado pela operação de automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas quando retornado como um `int` valor em um código de retorno do procedimento armazenado, HRESULT tem o formato 214*nnnnnnn*.  
+  O sistema de automação OLE procedimentos armazenados retornam um `int` código de retorno que é o HRESULT retornado pela operação de automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas quando retornado como um `int` valor em um código de retorno do procedimento armazenado, HRESULT tem o formato 214*nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO. Xyzzy) para sp_OACreate faz com que o procedimento retornar um `int` HRESULT de 2147221005, que é 0x800401f3 em número hexadecimal.  
   
