@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155737"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
   Um relatório de nível mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
@@ -68,7 +68,7 @@ ms.locfileid: "36120728"
   
     2.  No painel Propriedades, em **Alinhamento**, expanda as propriedades para **Preenchimento**.  
   
-    3.  Para **esquerda**, digite um novo valor de preenchimento, como `.5in`. O preenchimento recua o texto na célula pelo valor que você especificar. O preenchimento padrão é 2 pontos. Os valores válidos para as propriedades de preenchimento são um número de zero ou um número maior, positivo, seguido por um designador de tamanho.  
+    3.  Para **esquerda**, digite um valor de preenchimento novo, como `.5in`. O preenchimento recua o texto na célula pelo valor que você especificar. O preenchimento padrão é 2 pontos. Os valores válidos para as propriedades de preenchimento são um número de zero ou um número maior, positivo, seguido por um designador de tamanho.  
   
          Os designadores de tamanho são:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36120728"
 3.  Altere o preenchimento da célula que exibe os dados do grupo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;SSRS e construtor de relatórios&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   

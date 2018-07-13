@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - Distributors [SQL Server replication], modifying
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 993bee2f091fd3156cc2aa287d9fa90342ecda42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5c05df52ed3a2c505417574db89d0050aa1239df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211136"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
   Este tópico descreve como exibir e modificar propriedades do Distribuidor e do Publicador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -80,7 +80,7 @@ ms.locfileid: "36120555"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e, em seguida, em **Propriedades do Publicador**.  
   
-3.  Exibir e modificar propriedades de **propriedades do publicador - \< Publisher >** caixa de diálogo.  
+3.  Exibir e modificar propriedades na **propriedades do publicador – \< Publisher >** caixa de diálogo.  
   
     -   Um usuário na função de servidor fixa **sysadmin** pode ativar bancos de dados para replicação na página **Bancos de Dados de Publicação** . Habilitando um banco de dados não publica esse banco de dados, mas permite que qualquer usuário na função de banco de dados fixa **db_owner** para aquele banco de dados crie uma ou mais publicações no banco de dados.  
   

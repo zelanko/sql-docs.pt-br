@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML for Analysis, scripts
 - XMLA, scripts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - databases [Analysis Services], scripts
 ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97a922007c9205aee23624a0c17e9f36e2570e5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d46180c78befec8a55f03d2064aaa6b94e2ba6a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165479"
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Documentar e gerar scripts de um banco de dados do Analysis Services
   Após a implantação de um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerar os metadados do banco de dados ou de um objeto contido no banco de dados, como um script XMLA. Você pode extrair esse script em uma nova janela do **Editor de Consultas XMLA** , em um arquivo ou na Área de Transferência. Para obter mais informações sobre o XMLA, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referência](../scripting/analysis-services-scripting-language-assl-for-xmla.md).  
@@ -44,6 +44,6 @@ ms.locfileid: "36121601"
 ## <a name="see-also"></a>Consulte também  
  [Modificar ou excluir um banco de dados do Analysis Services](modify-or-delete-an-analysis-services-database.md)   
  [Elemento ALTER &#40;XMLA&#41;](../xmla/xml-elements-commands/alter-element-xmla.md)   
- [Criar elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)  
+ [Criar o elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)  
   
   

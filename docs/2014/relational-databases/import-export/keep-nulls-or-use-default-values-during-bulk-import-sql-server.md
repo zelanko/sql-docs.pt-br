@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258772"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Manter valores nulos ou use os valores padrão durante a importação em massa (SQL Server)
   Por padrão, quando os dados são importados para uma tabela, o comando **bcp** e a instrução BULK INSERT observam os padrões definidos para as colunas na tabela. Por exemplo, se houver um campo nulo em um arquivo de dados, o valor padrão para a coluna será carregado no campo nulo. O comando **bcp** e a instrução BULK INSERT permitem que você especifique a retenção de campos nulos.  
@@ -43,7 +42,7 @@ ms.locfileid: "36120792"
  Para executar os exemplos neste tópico, é necessário criar uma tabela e um arquivo de dados de exemplo.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
- Os exemplos requerem que uma tabela denominada **MyTestDefaultCol2** seja criada no banco de dados de exemplo **AdventureWorks** no esquema **dbo** . Para criar essa tabela, em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
+ Os exemplos requerem que uma tabela denominada **MyTestDefaultCol2** seja criada no banco de dados de exemplo **AdventureWorks** no esquema **dbo** . Para criar essa tabela, na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Para inserir "`NULL`"em vez de"`Default value of Col2`", você precisa usar o `-k` ou a opção KEEPNULL, conforme demonstrado no seguinte **bcp** e exemplos de BULK INSERT.  
+ Para inserir "`NULL`"em vez de"`Default value of Col2`", você precisa usar o `-k` ou a opção KEEPNULL, conforme demonstrado a seguir **bcp** e exemplos de BULK INSERT.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Usando bcp e mantendo valores nulos  
  O exemplo a seguir demonstra como manter valores nulos em um comando **bcp** . O comando **bcp** contém as seguintes opções:  
@@ -122,7 +121,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>Usando BULK INSERT e mantendo valores nulos  
- O exemplo a seguir demonstra como usar a opção KEEPNULLS em uma instrução BULK INSERT. De uma ferramenta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
+ O exemplo a seguir demonstra como usar a opção KEEPNULLS em uma instrução BULK INSERT. De uma ferramenta de consulta, tais como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -146,7 +145,7 @@ GO
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Dica de tabela|  
   
 > [!NOTE]  
->  Para obter mais informações, consulte [inserir &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [selecione &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41; ](/sql/t-sql/functions/openrowset-transact-sql), e [dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
+>  Para obter mais informações, consulte [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [selecione &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41; ](/sql/t-sql/functions/openrowset-transact-sql), e [dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Exemplos  
  O exemplo INSERT... O exemplo de SELECT * FROM OPENROWSET(BULK...) importa dados em massa e mantém os valores padrão.  
@@ -160,7 +159,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- Para inserir o valor padrão "`Default value of Col2`" no lugar de "`NULL`" é necessário usar a dica de tabela KEEPDEFAULTS, como demonstrado no exemplo a seguir. De uma ferramenta de consulta, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
+ Para inserir o valor padrão "`Default value of Col2`" no lugar de "`NULL`" é necessário usar a dica de tabela KEEPDEFAULTS, como demonstrado no exemplo a seguir. De uma ferramenta de consulta, tais como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute:  
   
 ```  
 USE AdventureWorks;  

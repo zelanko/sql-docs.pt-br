@@ -1,5 +1,5 @@
 ---
-title: Editor de tarefa de sistema de arquivos (página geral) | Microsoft Docs
+title: Editor da tarefa sistema de arquivos (página geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7bc28798bbdfe79d05923252e1add422217d763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 120e86946f920a616b9df7c443441fb4ce6d5efc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156647"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor da Tarefa Sistema de Arquivos (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Sistema de Arquivos** para configurar a operação de sistema de arquivos que a tarefa executa.  
@@ -73,8 +73,8 @@ ms.locfileid: "36120618"
 |**Excluir conteúdo do diretório**|Exclui o conteúdo de um diretório. A seleção desse valor exibe as opções dinâmicas para a origem.|  
 |**Excluir arquivo**|Exclui um arquivo. A seleção desse valor exibe as opções dinâmicas para a origem.|  
 |**Mover diretório**|Move um diretório. A seleção desse valor exibe as opções dinâmicas para origem e destino.|  
-|**Mover arquivo**|Move um arquivo. A seleção desse valor exibe as opções dinâmicas para origem e destino.<br /><br /> Observação: Ao mover um arquivo, não incluem um nome de arquivo no caminho do diretório que você fornece como destino.|  
-|**Renomear arquivo**|Renomeia um arquivo. A seleção desse valor exibe as opções dinâmicas para origem e destino.<br /><br /> Observação: Ao renomear um arquivo, inclua o novo nome de arquivo no caminho do diretório que você fornecer para o destino.|  
+|**Mover arquivo**|Move um arquivo. A seleção desse valor exibe as opções dinâmicas para origem e destino.<br /><br /> Observação: Ao mover um arquivo, não inclua um nome de arquivo no caminho de diretório que você fornece como destino.|  
+|**Renomear arquivo**|Renomeia um arquivo. A seleção desse valor exibe as opções dinâmicas para origem e destino.<br /><br /> Observação: Ao renomear um arquivo, inclua o novo nome de arquivo no caminho de diretório que você fornecer para o destino.|  
 |**Definir atributos**|Define os atributos de um arquivo ou diretório. A seleção desse valor exibe as opções dinâmicas para origem e operação.|  
   
  `IsSourcePathVariable`  

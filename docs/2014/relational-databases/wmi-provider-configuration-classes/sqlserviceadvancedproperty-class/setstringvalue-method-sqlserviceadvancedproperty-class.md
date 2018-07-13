@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a62c17ed296d7d35be0ee4954583d0f6ab7b1e29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be05ab6bccb772ef4f2bb0a65eed716f9633edff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166717"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Método SetStringValue (classe SqlServiceAdvancedProperty)
   Define o valor da cadeia de caracteres de uma propriedade.  
@@ -58,7 +58,7 @@ StrValue
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Remarks  
- O tipo de valor de propriedade deve ser `string` para poder definir a propriedade como um valor de cadeia de caracteres.  
+ O tipo de valor de propriedade deve ser `string` ser capaz de definir a propriedade como um valor de cadeia de caracteres.  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

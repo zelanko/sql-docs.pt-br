@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SilenceOverrideInterval element
 ms.assetid: 0dcd2db4-9bc0-4460-b1dd-def0b38c4617
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f12bc90bcac229c3aaff35e23686b127f30b03d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba345f4d7ebe21af3c2ff79739f3badf89da03d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192482"
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>Elemento SilenceOverrideInterval (ASSL)
   Define o período de tempo que deve decorrer após o recebimento da notificação inicial, antes da geração de imagens OLAP multidimensional (MOLAP) começar incondicionalmente.  
@@ -64,7 +64,7 @@ ms.locfileid: "36122486"
 ## <a name="remarks"></a>Remarks  
  O valor de `SilenceOverrideInterval` anulará o valor de `SilenceInterval` se uma notificação for recebida durante o período de silêncio.  
   
- O elemento que corresponde ao pai do `SilenceOverrideInterval` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ O elemento que corresponde ao pai de `SilenceOverrideInterval` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

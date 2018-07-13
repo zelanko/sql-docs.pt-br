@@ -1,5 +1,5 @@
 ---
-title: SQL Server XML Bulk Load Object Model (SQLXML 4.0) | Microsoft Docs
+title: SQL Server XML Bulk Load objeto modelo (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,18 +33,18 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb60aaf57869dbbd108c0815ed3fc02b07ed4bf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1157095c31a62c86530f1e8ed669700357adf982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278882"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
-  O Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste de modelo de objeto de carregamento em massa de XML do objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
+  A Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consiste em modelo de objeto de carregamento em massa de XML do objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
   
 ## <a name="methods"></a>Métodos  
  Execute (executar)  
@@ -52,7 +52,7 @@ ms.locfileid: "36121455"
   
 ## <a name="properties"></a>Propriedades  
  Carregamento em massa  
- Especifica se um Carregamento em Massa deveria ser executado. Esta propriedade é útil se você deseja gerar somente os esquemas (consulte as propriedades SchemaGen, SGDropTables e SGUseID que seguem) e não executar um carregamento em massa. Essa é uma propriedade booliana. Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML é executado. Quando é definida como FALSE, o Carregamento em Massa de XML não é executado.  
+ Especifica se um Carregamento em Massa deveria ser executado. Essa propriedade é útil se você quiser gerar esquemas (consulte as propriedades SchemaGen, SGDropTables e SGUseID que seguem) e não executar um carregamento em massa. Essa é uma propriedade booliana. Quando a propriedade é definida como TRUE, o Carregamento em Massa de XML é executado. Quando é definida como FALSE, o Carregamento em Massa de XML não é executado.  
   
  O valor padrão é TRUE.  
   
@@ -71,12 +71,12 @@ ms.locfileid: "36121455"
  ConnectionCommand  
  Identifica um objeto de conexão existente (por exemplo, o objeto ADO ou ICommand comando) que o XML Bulk Load deve usar. Você pode usar a propriedade ConnectionCommand em vez de especificar uma cadeia de caracteres de conexão com a propriedade ConnectionString. A propriedade de transação deve ser definida como TRUE, se você usar ConnectionCommand.  
   
- Se você usar propriedades ConnectionString e de ConnectionCommand, o XML Bulk Load usa a última propriedade especificada.  
+ Se você usar as propriedades de ConnectionString e ConnectionCommand, o XML Bulk Load usa a última propriedade especificada.  
   
  O valor padrão é NULL.  
   
  ConnectionString  
- Identifica a cadeia de conexão de OLE DB que fornece as informações necessárias para estabelecer uma conexão com uma instância do banco de dados. Se você usar propriedades ConnectionString e de ConnectionCommand, o XML Bulk Load usa a última propriedade especificada.  
+ Identifica a cadeia de conexão de OLE DB que fornece as informações necessárias para estabelecer uma conexão com uma instância do banco de dados. Se você usar as propriedades de ConnectionString e ConnectionCommand, o XML Bulk Load usa a última propriedade especificada.  
   
  O valor padrão é NULL.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36121455"
  IgnoreDuplicateKeys  
  Especifica o que fazer se houver uma tentativa de inserir valores duplicados em uma coluna de chave. Se essa propriedade for definida como TRUE e houver uma tentativa de inserir um registro com um valor duplicado em uma coluna de chave, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não inserirá esse registro. Entretanto, ela não insere o registro subsequente, por isso a operação de Carregamento em Massa não apresenta falha. Se essa propriedade for definida como FALSE, o Carregamento em Massa falhará quando houver uma tentativa de inserir um valor duplicado em uma coluna de chave.  
   
- Quando a propriedade IgnoreDuplicateKeys é definida como TRUE, uma instrução COMMIT é emitida para cada registro inserido na tabela. Isso diminui o desempenho. A propriedade pode ser definida como TRUE somente quando a propriedade de transação é definida como FALSE, pois o comportamento transacional é implementado usando arquivos.  
+ Quando a propriedade IgnoreDuplicateKeys é definida como TRUE, uma instrução COMMIT é emitida para cada registro inserido na tabela. Isso diminui o desempenho. A propriedade pode ser definida como TRUE, somente quando a propriedade de transação é definida como FALSE, pois o comportamento transacional é implementado usando arquivos.  
   
  O valor padrão é FALSE.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36121455"
  SchemaGen  
  Especifica se as tabelas necessárias serão criadas antes de executar uma operação de Carregamento em Massa. Essa é uma propriedade booliana. Se essa propriedade for definida como TRUE, serão criadas as tabelas identificadas no esquema de mapeamento (o banco de dados deve existir). Se já existirem um ou mais das tabelas no banco de dados, a propriedade SGDropTables determina se essas tabelas preexistentes devem ser descartadas e recriadas.  
   
- O valor padrão para a propriedade SchemaGen é FALSE. SchemaGen não cria restrições de chave primária nas tabelas recém-criado. SchemaGen, no entanto, criar restrições de chave estrangeira no banco de dados se conseguir encontrar `sql:relationship` e `sql:key-fields` as anotações no esquema de mapeamento e se o campo de chave consiste em uma única coluna.  
+ O valor padrão para a propriedade SchemaGen é FALSE. SchemaGen não cria restrições de chave primária nas tabelas recém-criado. SchemaGen, no entanto, criar restrições FOREIGN KEY no banco de dados se conseguir encontrar correspondência `sql:relationship` e `sql:key-fields` anotações no esquema de mapeamento e se o campo de chave consiste em uma única coluna.  
   
  Observe que, se você definir a propriedade SchemaGen como TRUE, o XML Bulk Load faz o seguinte:  
   
@@ -132,12 +132,12 @@ ms.locfileid: "36121455"
 -   Retorna dados de estouro para qualquer coluna designada usando o [SQL: overflow-campo](annotation-interpretation-sql-overflow-field.md) na [tipo de dados xml](/sql/t-sql/xml/xml-transact-sql) formato.  
   
  SGDropTables  
- Especifica se as tabelas existentes devem ser descartadas e recriadas. Você usa essa propriedade quando a propriedade SchemaGen é definida como TRUE. Se SGDropTables for falso, as tabelas existentes serão retidas. Quando essa propriedade for TRUE, as tabelas existentes serão excluídas e recriadas.  
+ Especifica se as tabelas existentes devem ser descartadas e recriadas. Você usa essa propriedade quando a propriedade SchemaGen é definida como TRUE. Se SGDropTables for FALSE, as tabelas existentes serão retidas. Quando essa propriedade for TRUE, as tabelas existentes serão excluídas e recriadas.  
   
  O valor padrão é FALSE.  
   
  SGUseID  
- Especifica se o atributo no esquema de mapeamento identificado como de tipo `id` pode ser usado na criação de uma restrição de PRIMARY KEY quando a tabela é criada. Use esta propriedade quando a propriedade SchemaGen é definida como TRUE. Se SGUseID for TRUE, o utilitário SchemaGen usa um atributo para o qual `dt:type="id"` é especificado como a coluna de chave primária e adiciona a restrição de chave primária apropriada ao criar a tabela.  
+ Especifica se o atributo no esquema de mapeamento identificado como de tipo `id` pode ser usado na criação de uma restrição de PRIMARY KEY quando a tabela é criada. Use essa propriedade quando a propriedade SchemaGen é definida como TRUE. Se SGUseID for TRUE, o utilitário de SchemaGen usa um atributo para o qual `dt:type="id"` é especificada como coluna de chave primária e adiciona a restrição de chave primária apropriada ao criar a tabela.  
   
  O valor padrão é FALSE.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36121455"
  Especifica se o Carregamento em Massa deveria ser executado como uma transação, caso em que a reversão será garantida se houver falha do Carregamento em Massa. Essa é uma propriedade booliana. Se a propriedade for definida como TRUE, o Carregamento em Massa ocorrerá em um contexto transacional. A propriedade TempFilePath é útil somente quando a transação é definida como TRUE.  
   
 > [!NOTE]  
->  Se você estiver carregando dados binários (como o bin.hex bin.base64 tipos de dados XML para o binário, imagem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados), a propriedade de transação deve ser definida como FALSE.  
+>  Se você estiver carregando dados binários (como hex e bin.base64 tipos de dados XML para o binário, imagem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados), a propriedade de transação deve ser definida como FALSE.  
   
  O valor padrão é FALSE.  
   

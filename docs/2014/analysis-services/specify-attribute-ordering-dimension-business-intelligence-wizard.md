@@ -1,5 +1,5 @@
 ---
-title: Especificar a ordenação de atributos (dimensão) (Assistente de Business Intelligence) | Microsoft Docs
+title: Especifique o atributo de ordenação (dimensão) (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b9c67acc303534e2b71b8f408cce1d855af785f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05caa09e6100aad7943ade8d64231d8293f1f9ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167257"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Dimensão) (Assistente de Business Intelligence)
   Use a página **Especificar a Ordenação de Atributos** para selecionar uma dimensão para a qual o Assistente de Business Intelligence definirá um atributo e critérios de ordenação que serão usados para classificar membros em cada atributo contido naquela dimensão.  

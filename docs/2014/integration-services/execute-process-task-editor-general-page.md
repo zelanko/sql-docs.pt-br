@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.general.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9828b51c33b30601075860b10e254c75dbe6f9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdafe1f838bdfb8fa94efba93432ea25ca50ee26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259112"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Editor da Tarefa Executar Processo (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Executar Processo** para nomear e descrever a tarefa Executar Processo.  
@@ -42,7 +42,7 @@ ms.locfileid: "36121516"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Execute o Editor de tarefa do processo &#40;processar página&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [Editor da tarefa de processo de executar &#40;processar página&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

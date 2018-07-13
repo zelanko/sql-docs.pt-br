@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -24,15 +24,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b40615a063e9dfe24fa7a3373867047f0583485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4ea6769c88498b15b3145992c3f7024aaf240b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258202"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatando linhas, cores e imagens (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite formatar linhas, cores, regiões de dados, imagens e outros itens de relatório.  
@@ -60,8 +60,8 @@ ms.locfileid: "36118057"
  Também é possível adicionar imagens como logotipos ao plano de fundo do relatório ou a um retângulo, caixa de texto, tabela, matriz, ou algumas partes de um gráfico, ou às seções do corpo e da página de um relatório. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando texto e espaços reservados &#40;SSRS e construtor de relatórios&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;SSRS e construtor de relatórios&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Caixa de diálogo Preenchimento &#40;Construtor de Relatórios e SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

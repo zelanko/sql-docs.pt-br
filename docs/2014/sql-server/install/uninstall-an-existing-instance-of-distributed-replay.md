@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6ae9379c9369b1845eddd73dedcf92ce2d07f03e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d12edfbb93149a27316319e26210f8e4d0a8879f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210526"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>Desinstalar uma instância existente do Distributed Replay
   A desinstalação de um componente do Distributed Replay (controlador ou cliente) removerá o seguinte:  

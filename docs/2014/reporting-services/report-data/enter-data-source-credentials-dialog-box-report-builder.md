@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d70ba9e8761e313d6c1e94b1e55541a3e5c5daf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a74f187c32c5d5392c2d8f8b54adc837fb0c3c44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278542"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados (Construtor de Relatórios)
   Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais para que você possa recuperar dados da fonte de dados.  

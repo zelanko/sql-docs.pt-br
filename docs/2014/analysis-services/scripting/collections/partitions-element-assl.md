@@ -1,5 +1,5 @@
 ---
-title: Partições de elemento (ASSL) | Microsoft Docs
+title: Particiona o elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39e719c6ae4e04e1a05abc42f4290bbf0746e55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54cab2990fcd5f3679da1c83c997921a59e67ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185203"
 ---
 # <a name="partitions-element-assl"></a>Elemento Partitions (ASSL)
   Contém a coleção de [partição](../objects/partition-element-assl.md) elementos usados por um [MeasureGroup](../objects/group-element-assl.md) elemento ou a coleção de ligações de partição que compõem uma fora de linha [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)elemento.  

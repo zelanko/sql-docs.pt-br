@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e4917b0e20c9046382e1ae7700388d758b08ab4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148667"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Fórmulas em consultas de modelo de relatório (Construtor de Relatórios e SSRS)
   Fórmulas são cálculos executados em valores em um relatório que usam um modelo de relatório como uma fonte de dados. Uma fórmula pode conter funções, operadores, constantes e referências a campos ou entidades. As fórmulas permitem combinar, agregar, filtrar e avaliar dados numéricos e de texto. É possível criar fórmulas e salvá-las como novos campos ou modificar as fórmulas de campos existentes.  

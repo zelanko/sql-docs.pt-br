@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberName element
 ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: faf238e9d79d0ab8ef6b9dcb49db9338623917c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c2790a2c83111c45e09411c3ed4006b38a8195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151417"
 ---
 # <a name="allmembername-element-assl"></a>Elemento AllMemberName (ASSL)
   Contém a legenda no idioma padrão para todos os membros de um [hierarquia](../objects/hierarchy-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36121587"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `AllMemberName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ O elemento que corresponde ao pai de `AllMemberName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.speconnstring.f1
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc0988701ba21ef7e6880b85abab6309479a8a2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e253ad8c84b85406cb3c4bf0a9576db419ab7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169367"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar uma cadeia de conexão (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar uma cadeia de conexão para estabelecer conexão com uma fonte de dados OLE DB ou ODBC. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -29,7 +29,7 @@ ms.locfileid: "36120000"
  Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Nome amigável para essa conexão.**  
+ **Nome amigável para essa conexão**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
  **Cadeia de Conexão**  

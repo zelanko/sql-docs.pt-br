@@ -1,5 +1,5 @@
 ---
-title: Controlar a distribuição de relatório | Microsoft Docs
+title: Controlar a distribuição de relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,15 +21,15 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160177"
 ---
-# <a name="control-report-distribution"></a>Controlar a distribuição de relatório
+# <a name="control-report-distribution"></a>Distribuição de relatório de controle
   Você pode configurar um servidor de relatório para reduzir os riscos de segurança associados à distribuição de emails e de compartilhamentos de arquivos.  
   
 ## <a name="securing-reports"></a>Protegendo relatórios  
@@ -51,8 +51,8 @@ ms.locfileid: "36121226"
  A entrega de compartilhamentos de arquivos é usada para enviar um relatório a um arquivo em um disco rígido. Depois de ser salvo em disco, o arquivo não pode mais ser submetido ao modelo de segurança baseado em funções que o servidor de relatório usa para controlar o acesso do usuário. Para proteger um relatório que foi entregue em disco, coloque listas de controle de acesso (ACLs) no próprio arquivo ou na pasta que o contém. Opções de segurança adicionais podem estar disponíveis, dependendo do sistema operacional.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

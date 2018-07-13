@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7adf6dfa581d10626c6513ecb2ee30d58c3bb6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60949c1ff0431daf988e2fd5d4a1d2b8ad41b524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210786"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar o PowerPivot pelo prompt de comando
   É possível executar a Instalação na linha de comando para instalar o SQL Server PowerPivot para SharePoint. Você deve incluir o parâmetro `/ROLE` no comando e excluir o parâmetro `/FEATURES`.  
@@ -96,17 +96,17 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 5.  Selecione o comando inteiro e, em seguida, clique em **cópia** no menu Editar.  
   
-6.  Abra um prompt de comando do administrador. Para fazer isso, clique em **iniciar**, o prompt de comando e selecione **executar como administrador**.  
+6.  Abra um prompt de comando do administrador. Para fazer isso, clique em **inicie**, o prompt de comando com o botão direito e selecione **executar como administrador**.  
   
 7.  Navegue para a unidade ou pasta compartilhada que contém a mídia de instalação do SQL Server.  
   
-8.  Cole o comando revisado na linha de comando. Para fazer isso, clique no ícone no canto superior esquerdo da janela do prompt de comando, aponte para **editar**e, em seguida, clique em **colar**.  
+8.  Cole o comando revisado na linha de comando. Para fazer isso, clique no ícone no canto superior esquerdo da janela do prompt de comando, aponte para **edite**e, em seguida, clique em **colar**.  
   
 9. Pressione **Enter** para executar o comando. Aguarde a conclusão da instalação. É possível monitorar o andamento da Instalação na janela do prompt de comando.  
   
 10. Para verificar a instalação, consulte o arquivo summary.txt em \Arquivos de Programas\SQL Server\120\Setup Bootstrap\Log. O resultado final deverá indicar "Aprovado" se o servidor for instalado sem erros.  
   
-11. Configure o servidor. Você deve, no mínimo, implantar soluções, criar um aplicativo de serviço e habilitar o recurso de cada conjunto de sites. Para obter mais informações, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [configuração na Administração Central e administração de servidor do PowerPivot ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+11. Configure o servidor. Você deve, no mínimo, implantar soluções, criar um aplicativo de serviço e habilitar o recurso de cada conjunto de sites. Para obter mais informações, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [administração de servidor do PowerPivot e a configuração na Administração Central ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar contas de serviço PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   

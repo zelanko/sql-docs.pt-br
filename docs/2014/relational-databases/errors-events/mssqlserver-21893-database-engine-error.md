@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21893 (Database Engine error)
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf6c8b8f2ad46c1874a2b46fb74ec46c67d634c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7160179d5a2253cc0f42215c70cf1d4b1a814852
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118343"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407605"
 ---
 # <a name="mssqlserver21893"></a>MSSQLSERVER_21893
     
@@ -37,7 +36,7 @@ ms.locfileid: "36118343"
 |Texto da mensagem|Os assinantes (%s) do publicador original '%s' não aparecem como servidores remotos no publicador redirecionado '%s'. Execute `sp_addlinkedserver` no publicador redirecionado para adicionar esses assinantes como servidores remotos.|  
   
 ## <a name="explanation"></a>Explicação  
- `sp_validate_redirected_publisher` usa as tabelas de metadados de assinatura do banco de dados do publicador no servidor remoto para identificar seus assinantes associados e verifica se há entradas associadas em Master.dbo. sysservers para os assinantes. Este erro será retornado se algum assinante identificado não estiver presente.  
+ `sp_validate_redirected_publisher` usa as tabelas de metadados de assinatura do banco de dados publicador no servidor remoto para identificar seus assinantes associados e verifica se há entradas associadas em sysservers para os assinantes. Este erro será retornado se algum assinante identificado não estiver presente.  
   
  Este erro não é considerado fatal. Os agentes que encontrarem este erro o registrará em log como erro informativo, mas não finalizarão, já que a falta entradas de assinante apropriadas no novo publicador limitou o impacto na replicação. Sem uma entrada apropriada para um assinante em sysservers, algumas atividades de gerenciamento de assinatura podem falhar quando executadas por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No entanto, essas mesmas atividades podem ser realizadas com êxito, executando explicitamente os procedimentos armazenados de gerenciamento.  
   

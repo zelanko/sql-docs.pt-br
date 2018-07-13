@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 538215095bb15aa34d95ecab70eec6894055ead0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0eab01e4ccc8eb0521186304be114264b951617f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278772"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Propriedade Enabled (classe ServerNetworkProtocol)
   Obtém a propriedade booliana que especifica se o protocolo de rede do servidor está habilitado.  

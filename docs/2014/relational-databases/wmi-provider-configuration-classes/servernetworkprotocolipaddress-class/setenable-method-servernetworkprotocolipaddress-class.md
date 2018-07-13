@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b51d13de41aa5fc038ddcd86fdc05a975aea7bc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 63b30932f06dbe4d65474e099fbc213cd6bf2d87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154007"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>Método SetEnable (classe ServerNetworkProtocolIPAddress)
   Habilita o endereço IP.  

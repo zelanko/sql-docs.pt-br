@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.analysisservices.f1
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5cbf692e94d0a8dcd6da63ca9b0cda9abb2c2b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e006cbe7729d35a34bf8f652c7560a66a39e0ad8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184793"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Novo registro ou editar registro de servidor (guia Geral) (Analysis Services - Dados multidimensionais)
   Use essa guia para especificar opções ao registrar uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 914a9b9d74c360e466919770b2b749a0f0c00920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166797"
 ---
 # <a name="transact-sql-code-snippets"></a>Trechos de código Transact-SQL
   Um trecho [!INCLUDE[tsql](../../includes/tsql-md.md)].code é um modelo que contém a estrutura básica de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode usar os trechos como ponto de partida ao adicionar instruções ao Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode inserir os trechos predefinidos fornecidos com o SQL Server ou criar o seu próprio.  

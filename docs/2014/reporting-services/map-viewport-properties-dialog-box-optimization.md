@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54606ed4dda94c569e1a4aef2438e42cd104eebd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150247"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Caixa de diálogo Propriedades do Visor do Mapa, Otimização
   Selecione **Otimização** para a caixa de diálogo **Propriedades do Visor do Mapa** para ajudar a controlar a resolução de exibição de um mapa em um relatório.  
@@ -38,11 +38,11 @@ ms.locfileid: "36121864"
  **Qualidade**  
  Deslize o ponteiro para mais perto de **Qualidade** para desenhar o mapa com mais detalhes.  
   
- **resolução do mapa**  
+ **Resolução do mapa**  
  Especifique uma resolução para o mapa. Esse valor especifica o menor detalhe que você deseja visualizar no mapa renderizado em pontos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;SSRS e construtor de relatórios&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

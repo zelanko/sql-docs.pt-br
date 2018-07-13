@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d55120355f3b862372ca58098a044ec00ab4a34b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192976"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Quando você cria uma consulta referente a um modelo de mineração de dados, pode criar uma consulta de conteúdo, que fornece detalhes sobre as informações armazenadas no modelo ou pode criar uma consulta de previsão, que usa os padrões no modelo para fazer previsões com base nos novos dados fornecidos. Para um modelo de clusterização de sequência, as consultas de conteúdo geralmente fornecem mais detalhes sobre os clusters encontrados ou as transições dentro desses clusters. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -277,8 +277,8 @@ AS t
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Referência técnica do algoritmo msc](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Referência técnica do algoritmo de Clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Algoritmo msc](microsoft-sequence-clustering-algorithm.md)   
- [Conteúdo do modelo para modelos de Clustering de sequência de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Mining Model Content para modelos de Clustering de sequência &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

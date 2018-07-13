@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229386"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -177,11 +177,11 @@ ms.locfileid: "36122657"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação extração de termos &#40;guia extração de termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de transformação extração de termo &#40;guia de extração de termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de transformação extração de termos &#40;guia exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de transformação extração de termo &#40;guia de exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de transformação extração de termos &#40;guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de transformação extração de termo &#40;guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

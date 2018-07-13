@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2cda01c434fda1a17be4b26352629dc2bc0abb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a075f3ed6dde5bccb648318c11bf8a456c5a1123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277142"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
@@ -55,11 +55,11 @@ ms.locfileid: "36117960"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor de tarefa de consulta de mineração de dados &#40;guia modelo de mineração&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia modelo de mineração&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor de tarefa de consulta de mineração de dados &#40;guia consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia de consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor de tarefa de consulta de mineração de dados &#40;guia de saída&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia de saída&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  O Editor de Consultas de Mineração de Dados não tem nenhuma página Expressões. Em vez disso, use a janela **Propriedades** para acessar as ferramentas de criação e gerenciamento de expressões de propriedade para as propriedades da tarefa Consulta de Mineração de Dados.  

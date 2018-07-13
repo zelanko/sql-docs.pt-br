@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProactiveCaching element
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: daf0a3020932646bac1aae797c7ddbe247de5f78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e66238759e38f9f8b42ebf0604b739d74f851832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211716"
 ---
 # <a name="proactivecaching-element-assl"></a>Elemento ProactiveCaching (ASSL)
   Define configurações de cache pró-ativo para o elemento pai.  
@@ -68,7 +68,7 @@ ms.locfileid: "36120432"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Cubo](cube-element-assl.md), [dimensão](dimension-element-assl.md), [MeasureGroup](group-element-assl.md), [partição](partition-element-assl.md)|  
-|Elementos filho|[AggregationStorage](../properties/aggregationstorage-element-assl.md), [habilitado](../properties/enabled-element-assl.md), [ForceRebuildInterval](../properties/forcerebuildinterval-element-assl.md), [latência](../properties/latency-element-assl.md), [OnlineMode](../properties/onlinemode-element-assl.md), [ SilenceInterval](../properties/silenceinterval-element-assl.md), [SilenceOverrideInterval](../properties/silenceoverrideinterval-element-assl.md), [fonte](../properties/source-element-binding-assl.md)|  
+|Elementos filho|[AggregationStorage](../properties/aggregationstorage-element-assl.md), [habilitados](../properties/enabled-element-assl.md), [ForceRebuildInterval](../properties/forcerebuildinterval-element-assl.md), [latência](../properties/latency-element-assl.md), [OnlineMode](../properties/onlinemode-element-assl.md), [ SilenceInterval](../properties/silenceinterval-element-assl.md), [SilenceOverrideInterval](../properties/silenceoverrideinterval-element-assl.md), [fonte](../properties/source-element-binding-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.ProactiveCaching>.  

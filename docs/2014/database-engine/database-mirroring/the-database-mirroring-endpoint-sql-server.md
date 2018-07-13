@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185163"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
   Para participar do espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , uma instância de servidor requer seu *ponto de extremidade de espelhamento de banco de dados*próprio, dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  
@@ -51,7 +50,7 @@ ms.locfileid: "36120853"
 > [!IMPORTANT]  
 >  Se o computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver um firewall, a configuração de firewall deve permitir conexões de entrada e de saída para a porta especificada no ponto de extremidade.  
   
- Para o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a autenticação e a criptografia são configuradas no ponto de extremidade. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+ Para o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a autenticação e a criptografia são configuradas no ponto de extremidade. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Não reconfigure um ponto de extremidade de espelhamento de banco de dados em uso. Cada instância de servidor usa o ponto de extremidade do outro para aprender o estado dos outros sistemas. Se o ponto de extremidade for reconfigurado, poderia reinicializar, o que pode parecer ser um erro para as outras instâncias de servidor. Isso é particularmente importante no modo de failover automático no qual a reconfiguração de um ponto de extremidade em um parceiro poderia provocar um failover.  
@@ -62,7 +61,7 @@ ms.locfileid: "36120853"
   
 -   Se cada instância de servidor estiver em execução em uma conta de serviço de domínio, você poderá usar a Autenticação do Windows para seus pontos de extremidade de espelhamento de banco de dados. Se todas as instâncias de servidor forem executadas como a mesma conta de usuário do domínio, os logons de usuário corretos existirão automaticamente em ambos os bancos de dados **mestres** . Isso simplifica a configuração da segurança dos bancos de dados de disponibilidade e é recomendável.  
   
-     Se qualquer instância de servidor que hospeda as réplicas de disponibilidade para um grupo de disponibilidade for executada como contas diferentes, o logon de cada conta deve ser criado no **mestre** na outra instância de servidor. Em seguida, esse logon deve receber permissões CONNECT para conectar ao ponto de extremidade de espelhamento de banco de dados dessa instância de servidor. Para obter mais informações, [configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     Se qualquer instância de servidor que hospeda as réplicas de disponibilidade para um grupo de disponibilidade for executada como contas diferentes, o logon de cada conta deve ser criado no **mestre** na outra instância de servidor. Em seguida, esse logon deve receber permissões CONNECT para conectar ao ponto de extremidade de espelhamento de banco de dados dessa instância de servidor. Para obter mais informações, [configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Se suas instâncias de servidor usarem a Autenticação do Windows, você poderá criar pontos de extremidade de espelhamento de banco de dados usando o [!INCLUDE[tsql](../../includes/tsql-md.md)], o PowerShell ou o Assistente de Novo Grupo de Disponibilidade.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36120853"
   
 -   Se alguma instância de servidor estiver em execução em uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou em uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade. Se você estiver usando certificados para pontos de extremidade de espelhamento de banco de dados, o administrador do sistema deverá configurar cada instância de servidor para usar certificados nas conexões de saída e de entrada.  
   
-     Não há nenhum método automatizado para configurar a segurança do espelhamento de banco de dados usando certificados. Você precisará usar um ponto de EXTREMIDADE criar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o `New-SqlHadrEndpoint` cmdlet do PowerShell. Para obter mais informações, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obter informações sobre como habilitar a autenticação de certificado em uma instância de servidor, consulte [usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Não há nenhum método automatizado para configurar a segurança do espelhamento de banco de dados usando certificados. Você precisará usar qualquer um dos CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o `New-SqlHadrEndpoint` cmdlet do PowerShell. Para obter mais informações, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obter informações sobre como habilitar a autenticação de certificado em uma instância de servidor, consulte [usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
@@ -97,9 +96,9 @@ ms.locfileid: "36120853"
   
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.DM hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.DM db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

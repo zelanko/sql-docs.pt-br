@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154977"
 ---
 # <a name="clr-transactions-sample"></a>Exemplo de transações CLR
   Este exemplo demonstra como controlar transações usando as APIs gerenciadas localizadas no namespace `System.Transactions` . Especificamente, a classe `System.Transactions.TransactionScope` é usada para estabelecer um limite para a transação a fim de garantir que os números de estoque não sejam ajustados, a menos que haja estoque suficiente para atender à solicitação e, se houver estoque suficiente, que a transferência do estoque de um local para outro ocorra de forma atômica. O registro automático em uma transação distribuída é demonstrado pelo log de alterações no estoque em um banco de dados de auditoria armazenado em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

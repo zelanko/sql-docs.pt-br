@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169497"
 ---
 # <a name="format-element-assl"></a>Elemento Format (ASSL)
-  Contém o formato exigido do [DataItem](../data-type/dataitem-data-type-assl.md) elemento.  
+  Contém o formato obrigatório do [DataItem](../data-type/dataitem-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36120675"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Elemento pai|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
@@ -74,7 +74,7 @@ ms.locfileid: "36120675"
 |*TrimNone*|Os dados não são fragmentados.|  
 |*TrimRight*|Os dados são fragmentados à direita.|  
   
- O elemento que corresponde ao pai do `Format` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
+ O elemento que corresponde ao pai de `Format` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

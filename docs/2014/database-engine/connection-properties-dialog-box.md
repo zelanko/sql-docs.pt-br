@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectionproperties.f1
 helpviewer_keywords:
 - Connection Properties dialog box
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f4f764af2fd823486ba4a8602d134ccea6e4317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 339bbe1ec75abc3c3d384aeab5080270b4d5f3fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163357"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
   Use essa caixa de diálogo para exibir as propriedades da conexão atual. Essa caixa de diálogo está disponível quando você clica em **Exibir propriedades da conexão** em várias caixas de diálogo do Pesquisador de Objetos. As propriedades exibidas nessa página são somente leitura.  
@@ -105,7 +105,7 @@ ms.locfileid: "36122241"
  O total de memória física no servidor, em megabytes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade no SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
+ [Páginas de propriedades no SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
  [Conectar ao servidor &#40;página Logon&#41; Mecanismo de Banco de Dados](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

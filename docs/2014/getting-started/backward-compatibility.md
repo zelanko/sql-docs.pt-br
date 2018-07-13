@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
 - command prompt [SQL Server], discontinued parameters
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d7b874ed446e2a96dcc6ed2d67e807027585b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152677"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   As seções a seguir contêm informações sobre compatibilidade com versões anteriores para componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este conteúdo inclui informações sobre recursos descontinuados (substituídos), recursos suspensos, alterações que causam interrupções e alterações de comportamento.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb67f459f49a39c75147d9313f8b18ba7b30f538
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 63c596e522b3429209626d1c033b982b750d38e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185153"
 ---
 # <a name="lastdataupdate-element-xmla"></a>Elemento LastDataUpdate (XMLA)
   Contém a data e a hora em que os dados do cubo representados pelo elemento pai [Cube](cube-element-olapinfo-xmla.md) foram atualizados pela última vez.  

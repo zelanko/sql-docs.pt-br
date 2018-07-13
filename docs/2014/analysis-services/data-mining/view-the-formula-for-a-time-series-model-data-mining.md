@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163443"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData do Visualizador de série temporal Designer de mineração fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
   
- Você pode extrair a fórmula de regressão para um modelo de série temporal consultando o conteúdo do modelo. No entanto, para exibir a fórmula ARTXP ou ARIMA completa, recomendamos que você use o **legenda de mineração** do [visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
+ Você pode extrair a fórmula de regressão para um modelo de série temporal consultando o conteúdo do modelo. No entanto, para exibir a fórmula ARTXP ou ARIMA completa, recomendamos que você use o **legenda de mineração** da [visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
   
  Se você criar um modelo misto, as análises ARIMA e ARTXP serão criadas em árvores separadas, unidas no nó raiz que representa o modelo. As estruturas das árvores ARIMA e ARTXP são bem diferentes. Por exemplo, a árvore ARTXP na verdade é uma estrutura de árvore, como uma árvore de decisão, enquanto a árvore ARIMA representa uma série de médias móveis. Assim, embora as duas representações estejam presentes em um modelo por conveniência, elas devem ser tratadas como modelos independentes. As equações também são completamente diferentes e não podem ser combinadas ou comparadas.  
   
- Você também pode exibir modelos de série temporal usando o [Microsoft Visualizador de árvore de conteúdo genérica](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o conteúdo de um modelo de série temporal, consulte [conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Você também pode exibir modelos de série temporal usando o [Microsoft genérico conteúdo Visualizador de árvore](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o conteúdo de um modelo de série temporal, consulte [conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Para exibir a fórmula de regressão ARTXP para um modelo de série temporal  
   

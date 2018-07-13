@@ -1,5 +1,5 @@
 ---
-title: Criar um Analysis Services Project (Tutorial de mineração de dados básico) | Microsoft Docs
+title: Criando uma análise dos serviços de projeto (Tutorial de mineração de dados básico) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d650feead984a358d169851fba246215a58b6d34
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d7f191090750d9a4417b6432ce31f24f3214376b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260112"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Criando um projeto do Analysis Services (Tutorial de mineração de dados básico)
   Cada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto define os objetos em um único [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode conter muitos tipos diferentes de objetos  
@@ -54,14 +54,14 @@ ms.locfileid: "36312524"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>Para alterar a instância em que os objetos de mineração de dados estão armazenados  
   
-1.  Em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **projeto** menu, selecione **propriedades**.  
+1.  Na [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]diante a **Project** menu, selecione **propriedades**.  
   
 2.  No lado esquerdo do painel **Páginas de Propriedades** , sob **Propriedades de Configuração**, clique em **Implantação**.  
   
 3.  No lado direito do painel **Páginas de Propriedades** , sob **Destino**, verifique se o nome de **Servidor** é **localhost**. Se você estiver usando uma instância diferente, digite o nome dessa instância. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criar uma fonte de dados &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Criando uma fonte de dados &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar projetos do Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   

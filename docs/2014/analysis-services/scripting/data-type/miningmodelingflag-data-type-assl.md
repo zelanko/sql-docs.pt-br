@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167517"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>Tipo de dados MiningModelingFlag (ASSL)
   Define um tipo de dados primitivo que representa os sinalizadores de modelagem disponíveis para um [ModelingFlag](../objects/modelingflag-element-assl.md) elemento.  
@@ -66,7 +66,7 @@ ms.locfileid: "36120230"
 |*NÃO NULO*|A coluna não pode aceitar valores NULL.|  
 |*REGRESSOR*|Os valores do regressor de suprimentos da coluna para caixas de teste.|  
   
- Sinalizadores de adicionais específicos do provedor podem ser usados se os provedores de mineração de dados ou OLE DB de terceiros forem agregados na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Sinalizadores adicionais específicos do provedor podem ser usados se os provedores de mineração de dados ou OLE DB de terceiros forem agregados na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Um elemento relacionado bastante próximo ao modelo de objeto AMO (Objetos de Gerenciamento de Análise) é <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   

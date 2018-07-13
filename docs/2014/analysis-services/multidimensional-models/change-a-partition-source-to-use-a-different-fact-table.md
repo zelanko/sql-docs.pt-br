@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7355f5f7430a5e74cd06ffa73c1b6ed68e11a7c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403e34a69d5007ca09404ed6d720493b899b0419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159317"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>Alterar uma origem de partição para usar uma tabela de fatos diferente
   Ao criar uma partição para um cubo, você pode optar por usar uma tabela de fatos diferente. Tabelas diferentes podem ser derivadas de uma única exibição da fonte de dados, de exibições diferentes da fonte de dados ou de fontes de dados diferentes. Uma exibição da fonte de dados também pode conter tabelas diferentes de mais de uma fonte de dados.  
@@ -36,6 +36,6 @@ ms.locfileid: "36122739"
  É possível, mas não recomendado, usar tabelas de fatos diferentes que contêm dados duplicados. Nesse caso, é necessário usar filtros nas partições para assegurar que os dados usados por uma partição não sejam usados por nenhuma outra. Para obter mais informações, consulte [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar uma partição Local &#40;do Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [Criar e gerenciar uma partição Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

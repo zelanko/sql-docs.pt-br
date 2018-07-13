@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
 - Database Engine [SQL Server], availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 80
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 061606f86a28216e78409e6521c78cc301d4c738
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9a6e16e57cf7d196f4210ea7a1624e5501f84523
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259992"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluções de alta disponibilidade (SQL Server)
   Este tópico apresenta várias soluções de alta disponibilidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que melhoram a disponibilidade de servidores ou bancos de dados. Uma solução de alta disponibilidade mascara os efeitos da falha de um hardware ou software e mantém a disponibilidade dos aplicativos, de modo a minimizar o tempo de inatividade percebido pelos usuários.  
@@ -43,7 +42,7 @@ ms.locfileid: "36130702"
  Para obter mais informações, consulte [ instâncias de Cluster de Failover do AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma solução de alta disponibilidade no nível empresarial e recuperação de desastre introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para permitir que você maximize a disponibilidade para um ou mais bancos de dados de usuário. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] exige que as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] residam nos nós do WSFC (Clustering de Failover do Windows Server). Para obter mais informações, consulte [ grupos de disponibilidade do AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] é uma solução de alta disponibilidade no nível empresarial e recuperação de desastre introduzida no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para permitir que você maximize a disponibilidade para um ou mais bancos de dados de usuário. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] exige que as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] residam nos nós do WSFC (Clustering de Failover do Windows Server). Para obter mais informações, consulte [ grupos de disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  Uma FCI pode aproveitar os [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para fornecer recuperação remota de desastres no nível do banco de dados. Para obter mais informações, consulte [Clustering de failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  

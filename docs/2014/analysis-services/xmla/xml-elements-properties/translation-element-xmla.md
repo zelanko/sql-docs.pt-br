@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180783"
 ---
 # <a name="translation-element-xmla"></a>Elemento Translation (XMLA)
   Define uma tradução para um membro de atributo.  

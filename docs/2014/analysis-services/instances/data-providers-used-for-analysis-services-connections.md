@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157197"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provedores de dados usados para conexões do Analysis Services
   O Analysis Services fornece três provedores de dados do servidor e acesso a dados. Todos os aplicativos que se conectam ao Analysis Services fazem isso usando um desses provedores. Dois dos provedores, ADOMD.NET e AMO (objetos de gerenciamento do Analysis Services), são provedores de dados gerenciados. O provedor OLE DB do Analysis Services (MSOLAP DLL) é um provedor de dados nativo.  
@@ -45,7 +45,7 @@ ms.locfileid: "36130870"
   
 -   No SQL Server Management Studio, conecte-se à instância do Analysis Services. Clique com botão direito a instância que você deseja verificar, aponte para **relatórios**e clique em **geral**. As informações sobre a versão e a edição serão exibidas no relatório.  
   
- A compilação principal número da versão inicial do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é 12.0.2000.9.  
+ Número de versão inicial do build o principal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é 12.0.2000.9.  
   
  Para obter mais informações sobre como descobrir a versão e a edição do SQL Server, consulte [Como determinar a versão e a edição do SQL Server e seus componentes](http://support.microsoft.com/kb/321185).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36130870"
   
 1.  Vá para \Arquivos de Programas\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Clique em msolap120.dll e clique em **propriedades**.  
+2.  Clique com botão direito msolap120.dll e clique em **propriedades**.  
   
  Se você não conseguir localizar o arquivo nesse local, ou se o caminho da pasta incluir AS OLEDB\110 ou AS OLEDB\90, você está usando uma biblioteca antiga e deve instalar a versão mais recente agora (AS OLEDB\11) para conectar-se ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

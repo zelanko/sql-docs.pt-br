@@ -16,15 +16,15 @@ helpviewer_keywords:
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e48525e3d944b71dbe728cdcd67a6e962ac97ab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ec2511bd6f2e1f184dd2123750bcda02a50f59cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193016"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Exemplo: Usando o provedor de eventos de WMI com o .NET Framework
   O exemplo a seguir cria um aplicativo no C# que usa o provedor de eventos WMI para retornar dados de evento para todos os eventos DDL (data definition language) que ocorrerem em uma instância de instalação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

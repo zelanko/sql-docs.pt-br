@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 9dd9d25eaaa21361a050e8a80c32be8907cb4b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211316"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore na memória* armazena e gerencia dados usando armazenamento de dados baseado em coluna e processamento de consulta baseado em coluna. Os índices columnstore funcionam bem para as cargas de trabalho de data warehouse que executam principalmente carregamentos em massa e consultas somente leitura. Use o índice columnstore para obter um ganho de **desempenho de consulta até 10 vezes maior** sobre o armazenamento tradicional orientado por linha e de **compactação de dados até 7 vezes maior** sobre o tamanho dos dados não compactados.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore na memória* armazena e gerencia dados usando o armazenamento de dados com base em coluna e processamento de consulta baseado em coluna. Os índices columnstore funcionam bem para as cargas de trabalho de data warehouse que executam principalmente carregamentos em massa e consultas somente leitura. Use o índice columnstore para obter um ganho de **desempenho de consulta até 10 vezes maior** sobre o armazenamento tradicional orientado por linha e de **compactação de dados até 7 vezes maior** sobre o tamanho dos dados não compactados.  
   
 > [!NOTE]  
 >  Exibimos o índice columnstore clusterizado como o padrão para armazenar grandes tabelas de fatos de data warehouse e esperamos que ele seja usado na maioria dos cenários de data warehouse. Uma vez que o índice columnstore clusterizado é atualizável, a carga de trabalho pode executar um grande número de operações de inserção, atualização e exclusão.  
@@ -44,7 +43,7 @@ ms.locfileid: "36130972"
 -   [Tarefas e tópicos relacionados](#related)  
   
 ##  <a name="basics"></a> Noções básicas  
- Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
+ Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
   
 ###  <a name="benefits"></a> Benefícios  
  Os índices columnstore funcionam bem na maioria das consultas somente leitura que executam a análise em grandes conjuntos de dados. Geralmente, essas são consultas sobre cargas de trabalho de data warehousing. Os índices columnstore permitem ganhos de desempenho alto para consultas que usam digitalizações completas de tabela e não são apropriados para consultas que buscam nos dados, procurando um valor específico.  
@@ -68,7 +67,7 @@ ms.locfileid: "36130972"
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice columnstore clusterizado:  
+ No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice columnstore clusterizado:  
   
 -   Está disponível nas edições Enterprise, Developer e Evaluation.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "36130972"
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice não clusterizado columnstore:  
+ No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice columnstore não clusterizado:  
   
 -   Pode indexar um subconjunto das colunas no índice clusterizado ou heap. Por exemplo, pode indexar as colunas frequentemente usadas.  
   
@@ -102,11 +101,11 @@ ms.locfileid: "36130972"
   
 -   Não armazena fisicamente colunas em uma ordem classificada. Em vez disso, ele armazena dados para aprimorar a compactação e o desempenho. A pré-classificação de dados antes da criação do índice columnstore não é necessária, mas pode melhorar a compactação columnstore.  
   
-###  <a name="Concepts"></a> Conceitos e termos principais  
+###  <a name="Concepts"></a> Os principais conceitos e termos  
  Os termos e conceitos principais a seguir estão associados aos índices columnstore.  
   
  índice columnstore  
- Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
+ Um *columnstore index* é uma tecnologia para armazenamento, recuperação e gerenciamento de dados usando um formato de dados colunar, chamado columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a índices columnstore clusterizados e não clusterizados. Ambos usam a mesma tecnologia de columnstore na memória, mas possuem diferenças na finalidade e nos recursos aos quais oferecem suporte.  
   
  columnstore  
  Um *columnstore* são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de coluna.  
@@ -118,7 +117,7 @@ ms.locfileid: "36130972"
  Para altas taxas de desempenho e compactação, o índice columnstore fatia a tabela em grupos de linhas e depois compacta cada um desses grupos com um método com reconhecimento de coluna. O número de linhas no grupo de linhas deve ser grande o suficiente para melhorar as taxas de compactação e pequeno o suficiente para se beneficiar com as operações na memória.  
   
  grupo de linhas  
- Um *rowgroup* é um grupo de linhas que são compactadas no formato columnstore ao mesmo tempo.  
+ Um *rowgroup* é um grupo de linhas que são compactados no formato columnstore ao mesmo tempo.  
   
  segmento de coluna  
  Um *segmento de coluna* é uma coluna de dados do grupo de linhas.  
@@ -136,17 +135,17 @@ ms.locfileid: "36130972"
   
  Um índice columnstore não clusterizado fornece uma maneira de ter um índice columnstore para execução de consultas de análise e, ao mesmo tempo, executar operações somente leitura na tabela original.  
   
- ![Índice não clusterizado columnstore](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice columnstore não clusterizado")  
+ ![Índice columnstore não clusterizado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice columnstore não clusterizado")  
   
  índice columnstore clusterizado  
- Um *índice columnstore clusterizado* é o armazenamento físico para a tabela inteira e é o único índice para a tabela. O índice clusterizado é atualizável. Você pode executar operações de inserção, exclusão e atualização no índice e pode carregar dados em massa no índice.  
+ Um *índice columnstore clusterizado* é o armazenamento físico para toda a tabela e é o único índice para a tabela. O índice clusterizado é atualizável. Você pode executar operações de inserção, exclusão e atualização no índice e pode carregar dados em massa no índice.  
   
  ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  Para reduzir a fragmentação dos segmentos de coluna e melhorar o desempenho, o índice columnstore pode armazenar alguns dados temporariamente em uma tabela rowstore, chamada deltastore, mais uma árvore B de IDs para as linhas excluídas. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore.  
   
  deltastore  
- Usado com índices columnstore clusterizados apenas, um *deltastore* é uma tabela rowstore que armazena linhas até que o número de linhas seja grande o suficiente para ser movido para o columnstore. Um deltastore é usado com índices columnstore clusterizados para melhorar o desempenho do carregamento e de outras operações DML.  
+ Usada com índices columnstore clusterizados apenas, um *deltastore* é uma tabela rowstore que armazena linhas até que o número de linhas seja grande o suficiente para ser movido para o columnstore. Um deltastore é usado com índices columnstore clusterizados para melhorar o desempenho do carregamento e de outras operações DML.  
   
  Durante o carregamento em massa grande, a maioria das linhas vai diretamente para o columnstore sem passar pelo deltastore. No fim do carregamento em massa, o número de linhas pode ser muito pouco para atender ao tamanho mínimo de um rowgroup, que é de 102.400 linhas. Quando isso ocorre, as linhas finais vão para o deltastore, e não para o columnstore. Para carregamento em massa pequeno, menos de 102.400 linhas, todas as linhas vão diretamente para o deltastore.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "36130972"
 ###  <a name="dataload_nci"></a> Carregar dados em um índice Columnstore não clusterizado  
  Para carregar dados em um índice columnstore não clusterizado, primeiro carregue dados em uma tabela rowstore tradicional armazenada como um heap ou clusterizado de índice e, em seguida, crie o índice columnstore não clusterizado com [CREATE COLUMNSTORE INDEX &#40;&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
- ![Carregando dados em um índice columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "carregar dados em um índice columnstore")  
+ ![Carregar dados em um índice columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "carregar dados em um índice columnstore")  
   
  Uma tabela com um índice columnstore não clusterizado é somente leitura até que o índice seja removido ou desabilitado. Para atualizar a tabela e índice columnstore não clusterizado, você pode alternar a entrada e a saída de partições. Você também pode desabilitar o índice, atualiza a tabela e recriar o índice.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "36130972"
   
     2.  Se o número de linhas for menor que o mínimo de linhas por rowgroup, as linhas serão adicionadas ao deltastore.  
   
- Para obter mais informações sobre processos e tarefas de deltastore, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
+ Para obter mais informações sobre os processos e tarefas de deltastore, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
   
 ##  <a name="performance"></a> Dicas de desempenho  
   
@@ -204,7 +203,7 @@ ms.locfileid: "36130972"
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Instrução ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) com REBUILD.  
+-   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) com REBUILD.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
@@ -213,7 +212,7 @@ ms.locfileid: "36130972"
   
 -   [CRIAR um índice COLUMNSTORE CLUSTERIZADO &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [Instrução ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) com REBUILD ou REORGANIZE.  
+-   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) com REBUILD ou REORGANIZE.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   

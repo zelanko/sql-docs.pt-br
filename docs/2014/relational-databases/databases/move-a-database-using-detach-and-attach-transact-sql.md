@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160517"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
   Este tópico descreve como mover um banco de dados desanexado para outro local e anexá-lo novamente à mesma instância de servidor ou a uma instância diferente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. No entanto, recomendamos que você mova os bancos de dados utilizando o procedimento de realocação planejada ALTER DATABASE, em vez de utilizar desanexar e anexar. Para obter mais informações, veja [Mover bancos de dados de usuário](move-user-databases.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36120592"
 3.  Anexe os arquivos copiados. Para obter mais informações, consulte [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria uma cópia do [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções são executadas em uma janela do Editor de consultas está conectada à instância do servidor ao qual está anexado.  
+ O exemplo a seguir cria uma cópia do [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] as instruções são executadas em uma janela do Editor de consulta que está conectada à instância do servidor ao qual está anexada.  
   
 1.  Desanexar o [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções:  
   

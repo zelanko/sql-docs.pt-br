@@ -17,20 +17,20 @@ helpviewer_keywords:
 - requirements [SMO]
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 703df7e2934cbadbe6aa755c318e4e4db00e7dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f82d99f820556630c846557f6c93d8dbdf56fa9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156987"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` driver de objeto para conectar e se comunicar com instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` driver do objeto para conectar e se comunicar com instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Os clientes SMO exibem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que está incluído no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
+ Clientes SMO exibem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que acompanha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
  Para desenvolver aplicativos usando o SMO, você deve ter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 instalado.  
   

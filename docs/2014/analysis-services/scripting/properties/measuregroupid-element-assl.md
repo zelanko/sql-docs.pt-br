@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a6ab3a46de67deb375f74b30a0e802680a9d7ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239636"
 ---
 # <a name="measuregroupid-element-assl"></a>Elemento MeasureGroupID (ASSL)
   Associa um [MeasureGroup](../objects/group-element-assl.md) com o elemento pai, associação ou associação fora de linha.  

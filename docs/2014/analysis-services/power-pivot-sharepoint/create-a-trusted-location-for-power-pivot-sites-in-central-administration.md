@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56bc807ef54538a0d72bab8f3136df9304b6615e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153327"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   Os Serviços do Excel permitem especificar quais locais são repositórios válidos para pastas de trabalho que você abrir em um servidor do SharePoint. Esses locais são chamados de "locais confiáveis" e você pode usar diferentes definições de configuração para cada local confiável que você criar. Para uma implantação do PowerPivot para SharePoint, você pode considerar criar um local confiável para sites que tenham pastas de trabalho PowerPivot, de forma que você possa aplicar as configurações que funcionam melhor para acesso a dados PowerPivot, enquanto preserva valores padrão para o resto do farm.  
@@ -29,7 +29,7 @@ ms.locfileid: "36121792"
 ## <a name="prerequisites"></a>Prerequisites  
  Você deve ser um farm ou administrador de serviço para designar uma URL como um local confiável.  
   
- Você deve saber o endereço da URL do site do SharePoint que possui a Galeria de Relatórios PowerPivot ou outra biblioteca que armazenar suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com botão direito **Galeria PowerPivot**, selecione **propriedades**e, em seguida, copie a primeira parte do endereço (URL) que contém o nome do servidor e o site caminho.  
+ Você deve saber o endereço da URL do site do SharePoint que possui a Galeria de Relatórios PowerPivot ou outra biblioteca que armazenar suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com botão direito **Galeria do PowerPivot**, selecione **propriedades**e, em seguida, copie a primeira parte do endereço (URL) que contém o nome do servidor e o site caminho.  
   
 ##  <a name="overview"></a> Visão geral  
  Uma instalação inicial de Serviços do Excel especifica 'http://' como seu local confiável, o que significa que podem ser abertas pastas de trabalho de qualquer site no farm no servidor. Se você precisar de mais controle sobre quais locais são considerados confiáveis, você poderá criar novos locais confiáveis que sejam mapeados para sites específicos em seu farm e então variar as configurações e permissões para cada um.  
@@ -57,7 +57,7 @@ ms.locfileid: "36121792"
   
 7.  Aceite todas as configurações padrão de propriedades em Gerenciamento de Sessão, Propriedades da Pasta de trabalho e Comportamento de Cálculo.  
   
-8.  Em Propriedades da Pasta de Trabalho, defina **Tamanho Máximo da Pasta de Trabalho** como **50**. Isto alinha o limite superior para tamanho de arquivo de pasta de trabalho com o limite superior para carregamentos de arquivo para o aplicativo de site pai. Se suas pastas de trabalho forem maiores que 50 megabytes, você deverá aumentar o limite de tamanho de arquivo. Para obter mais informações, consulte [configurar tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+8.  Em Propriedades da Pasta de Trabalho, defina **Tamanho Máximo da Pasta de Trabalho** como **50**. Isto alinha o limite superior para tamanho de arquivo de pasta de trabalho com o limite superior para carregamentos de arquivo para o aplicativo de site pai. Se suas pastas de trabalho forem maiores que 50 megabytes, você deverá aumentar o limite de tamanho de arquivo. Para obter mais informações, consulte [configurar o tamanho máximo do arquivo de carregamento &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 9. Em Dados Externos, verifique se Permitir Dados Externos está definido como **Bibliotecas de conexões de dados confiáveis e incorporadas**. Essa configuração é necessária para o acesso a dados PowerPivot em uma pasta de trabalho.  
   

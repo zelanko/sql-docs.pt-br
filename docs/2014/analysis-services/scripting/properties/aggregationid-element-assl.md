@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277812"
 ---
 # <a name="aggregationid-element-assl"></a>Elemento AggregationID (ASSL)
   Identifica a definição de agregação do [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento usado para criar a instância de agregação.  
@@ -62,7 +62,7 @@ ms.locfileid: "36120217"
 ## <a name="remarks"></a>Remarks  
  Se esse elemento estiver ausente ou for definido como uma cadeia de caracteres em branco, o elemento `AggregationInstance` representará uma agregação definida pelo usuário.  
   
- O elemento que corresponde ao pai do `AggregationID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ O elemento que corresponde ao pai de `AggregationID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

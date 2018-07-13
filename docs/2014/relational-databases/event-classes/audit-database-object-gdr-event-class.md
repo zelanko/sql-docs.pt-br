@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object GDR event class
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f3cb9e6b21ffe127b646e994ddd919b4d96b57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 66375b0f9c4d42628ee1c41be121f7c99949e71f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158487"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Classe de evento Audit Database Object GDR
   A classe de evento **Audit Database Object GDR** ocorre quando uma instrução GRANT, REVOKE ou DENY tiver sido emitida para objetos de banco de dados, como assemblies e esquemas.  

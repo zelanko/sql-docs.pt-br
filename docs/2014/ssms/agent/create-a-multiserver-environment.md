@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
 - master servers [SQL Server], about master servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: accad064c75c799af6e871e517975352949f9526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183593"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
   A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
@@ -39,14 +39,14 @@ ms.locfileid: "36121635"
 ## <a name="considerations-for-multiserver-environments"></a>Considerações para ambientes multisservidor  
  Consulte a tabela abaixo para verificar as configurações de MSX/TSX suportadas.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 ou superior**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 ou superior**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Sim|Sim|não|não|não|não|não|  
 |**MSX = 8.0 &LT; SP3**|Sim|Sim|não|não|não|não|não|  
 |**MSX = 8.0 SP3 ou superior**|não|não|Sim|Sim|Sim|Sim|Sim|  
 |**MSX = 9.0**|não|não|não|Sim|Sim|Sim|Sim|  
 |**MSX = 10.0**|não|não|não|não|Sim|Sim|Sim|  
-|**MSX = 10.5**|não|não|não|não|não|Sim|Sim|  
+|**MSX = 10,5**|não|não|não|não|não|Sim|Sim|  
 |**MSX = 11.0**|não|não|não|não|não|não|Sim|  
   
  Considere as seguintes questões ao criar um ambiente multisservidor:  

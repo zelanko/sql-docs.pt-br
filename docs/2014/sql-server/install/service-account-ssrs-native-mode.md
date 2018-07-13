@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 91b4f45089cf6de1883cf4bc27b482bd05814146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36b1b0621cd660855638e4fa0a936e9700efb4d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153547"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Conta do Serviço (modo nativo do SSRS)
   Use a página Conta de Serviço para especificar a conta em que o serviço Servidor de Relatório será executado. Essa conta é configurada inicialmente durante a Instalação. Você pode modificá-la se quiser alterar a conta ou a senha. O serviço Web Servidor de Relatórios, o Gerenciador de Relatórios e o aplicativo de processamento em segundo plano são executados na identidade de serviço especificada nesta página.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- A conta especificada no serviço Servidor de Relatório exige permissão para acessar o registro, os arquivos de programa do servidor de relatório e o banco de dados do servidor de relatório. Todas as permissões são configuradas para a conta automaticamente quando você usa o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager para definir a conta. Se você usar a conta de serviço para se conectar ao banco de dados de servidor de relatório, o Configuration Manager cria um logon de banco de dados para a conta e configura permissões de banco de dados atribuindo a conta para o RSExecRole na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância que hospeda o banco de dados de servidor de relatório. O banco de dados do servidor de relatório é o único repositório de dados em que um servidor de relatório pode gravar. A conta de serviço não exige permissões para nenhum outro repositório de dados.  
+ A conta especificada no serviço Servidor de Relatório exige permissão para acessar o registro, os arquivos de programa do servidor de relatório e o banco de dados do servidor de relatório. Todas as permissões são configuradas para a conta automaticamente quando você usa o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager para definir a conta. Se você usar a conta de serviço para se conectar ao banco de dados de servidor de relatório, o Configuration Manager cria um logon de banco de dados para a conta e irá configurar permissões de banco de dados atribuindo a conta para o RSExecRole no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância que hospeda o banco de dados de servidor de relatório. O banco de dados do servidor de relatório é o único repositório de dados em que um servidor de relatório pode gravar. A conta de serviço não exige permissões para nenhum outro repositório de dados.  
   
  Para abrir essa página, inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager e selecione o link no painel de navegação. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36120272"
 > [!NOTE]  
 >  O Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solicitará que você faça o backup e restaure a chave de criptografia sempre que modificar a conta de serviço. Essas etapas são necessárias para assegurar que os dados criptografados permaneçam disponíveis para o servidor de relatório. Para obter mais informações sobre essas ações, consulte [chaves de criptografia &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- Além disso, se você tiver um servidor de relatório está configurado para ser executado no integrado do SharePoint modo e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, você também deve abrir Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e a instância de relatório. Essa etapa concederá a nova conta de serviço acesso aos bancos de dados do SharePoint, que é necessária para a integração de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com um produto ou tecnologia SharePoint. Para obter mais informações sobre como conceder acesso ao banco de dados na Administração Central do SharePoint, consulte [configuração e administração de um servidor de relatório &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) e [ Instalação do modo do SharePoint do Reporting Services &#40;do SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Além disso, se você tiver um servidor de relatório configurado para ser executado no integrado do SharePoint modo e você alterar a conta de serviço usando o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, você também deve abrir Administração Central do SharePoint e usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Conceder acesso ao banco de dados** página para reaplicar as configurações de servidor e instância de relatório. Essa etapa concederá à nova serviço conta acesso aos bancos de dados do SharePoint, que é necessária para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com um produto ou tecnologia SharePoint. Para obter mais informações sobre como conceder acesso ao banco de dados na Administração Central do SharePoint, consulte [configuração e administração de um servidor de relatório &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) e [ Instalação do modo do SharePoint do Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Escolhendo uma conta  
  Para obter melhores resultados, especifique uma conta que tenha permissões de conexão de rede, com acesso aos controladores de domínio da rede e com gateways ou servidores SMTP corporativos. A tabela a seguir resume as contas e fornece recomendações para usá-las.  
@@ -76,7 +76,7 @@ ms.locfileid: "36120272"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Tópicos de Ajuda F1 do Configuration Manager do Reporting Services &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

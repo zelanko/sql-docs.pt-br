@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AssociatedMeasureGroupID element
 ms.assetid: a18ff25b-00a2-4ddf-abcc-ef4d52c8a462
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58a15e8a25e766ad59e36908e30de8c25db1a228
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad28fbc5023c06bdc260e301732bfb1567ce27f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155323"
 ---
 # <a name="associatedmeasuregroupid-element-assl"></a>Elemento AssociatedMeasureGroupID (ASSL)
-  Contém a ID do [MeasureGroup](../objects/group-element-assl.md) elemento associado a um [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento ou um [Kpi](../objects/kpi-element-assl.md) elemento.  
+  Contém a ID do [MeasureGroup](../objects/group-element-assl.md) elemento associado a um [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento ou uma [Kpi](../objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36122025"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Quando aplicado a `CalculationProperty` elementos, o `AssociatedMeasureGroupID` propriedade se aplica a elementos com um [CalculationType](calculationtype-element-assl.md) de *membro*.  
+ Quando aplicado a `CalculationProperty` elementos, o `AssociatedMeasureGroupID` propriedade se aplica aos elementos com um [CalculationType](calculationtype-element-assl.md) dos *membro*.  
   
- Os elementos que correspondem aos pais de `AssociatedMeasureGroupID` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Kpi>.  
+ Os elementos que correspondem aos pais de `AssociatedMeasureGroupID` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

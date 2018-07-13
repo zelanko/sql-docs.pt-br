@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_FUNCTIONS rowset
 ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a60e18a57c15976e7a7bd5d5e31729e255869a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b726c81df5a6085ee52b177d95b4917d7cb8be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169637"
 ---
 # <a name="dmschemaminingfunctions-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS
-  Descreve as funções de mineração de dados que são suportadas por algoritmos de mineração de dados disponíveis em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Descreve as funções de mineração de dados que são compatíveis com os algoritmos de mineração de dados disponíveis em um servidor que está executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_FUNCTIONS` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_FUNCTIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

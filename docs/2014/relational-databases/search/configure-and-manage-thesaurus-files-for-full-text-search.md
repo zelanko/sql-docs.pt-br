@@ -5,28 +5,27 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64c63acf34e6f3d464fcd402d738c644002ddce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164257"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
-  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultas de texto completo podem procurar sinônimos de termos especificados pelo usuário com o uso de um dicionário de sinônimos. Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dicionário de sinônimos* define um conjunto de sinônimos para um idioma específico. Os administradores de sistema podem definir duas formas de sinônimos: conjuntos de expansão e conjuntos de substituição. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados. Correspondência de dicionário de sinônimos ocorre para todos os [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) consultas e para quaisquer [contém](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) consultas Especifique a cláusula FORMSOF THESAURUS.  
+  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultas de texto completo podem pesquisar sinônimos de termos especificados pelo usuário com o uso de um dicionário de sinônimos. Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dicionário de sinônimos* define um conjunto de sinônimos para um idioma específico. Os administradores de sistema podem definir duas formas de sinônimos: conjuntos de expansão e conjuntos de substituição. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados. Correspondência com o dicionário de sinônimos ocorre para todos os [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) consultas e para quaisquer [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) consultas que Especifique a cláusula FORMSOF THESAURUS.  
   
 ##  <a name="tasks"></a> Tarefas básicas para configurar um arquivo de dicionário de sinônimos  
  Para que as consultas de pesquisa de texto completo na sua instância de servidor possam procurar sinônimos em um determinado idioma, defina mapeamentos de dicionário de sinônimos (sinônimos) para esse idioma. Cada dicionário deve ser configurado manualmente para definir o seguinte:  
@@ -81,7 +80,7 @@ ms.locfileid: "36119853"
 ##  <a name="location"></a> Local dos arquivos de dicionário de sinônimos  
  A localização padrão dos arquivos de dicionário de sinônimos é esta:  
   
- *< SQL_Server_data_files_path >* \mssql12.<InstanceName>\mssql\. MSSQLSERVER\MSSQL\FTDATA\  
+ *< SQL_Server_data_files_path >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
   
  Esse local padrão contém os seguintes arquivos:  
   
@@ -91,7 +90,7 @@ ms.locfileid: "36119853"
   
      Os nomes de arquivo padrão dos arquivos de dicionário de sinônimos usam o seguinte formato:  
   
-     'ts' + \<abreviação de linguagem de três letras > + '. XML'  
+     'ts' + \<abreviação do idioma de três letras > + '. XML'  
   
      O nome do arquivo de dicionário de sinônimos de um idioma é especificado no Registro no seguinte valor: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<nome-da-instância>\MSSearch\\<abreviação-do-idioma>.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "36119853"
   
   
 ##  <a name="structure"></a> Entendendo a estrutura de um arquivo de dicionário de sinônimos  
- Cada arquivo de dicionário de sinônimos define um contêiner XML cuja ID é `Microsoft Search Thesaurus`, além de um comentário, `<!--` … `-->`, que contém um dicionário de sinônimos de exemplo. O dicionário de sinônimos é definido em um \<dicionário de sinônimos > elemento que contém exemplos dos elementos filho que definem a configuração de diacríticos, conjuntos de expansão e conjuntos de substituição, da seguinte maneira:  
+ Cada arquivo de dicionário de sinônimos define um contêiner XML cuja ID é `Microsoft Search Thesaurus`, além de um comentário, `<!--` … `-->`, que contém um dicionário de sinônimos de exemplo. O dicionário de sinônimos é definido em um \<dicionário de sinônimos > elemento que contém exemplos dos elementos filho que definem a configuração de diacríticos, os conjuntos de expansão e conjuntos de substituição, da seguinte maneira:  
   
 -   Estrutura XML da configuração de diacríticos  
   
@@ -127,7 +126,7 @@ ms.locfileid: "36119853"
   
 -   Estrutura XML de um conjunto de expansão  
   
-     Cada conjunto de expansão é incluído em um \<expansão > elemento. Dentro desse elemento, você especifica um ou mais substituições em um \<sub > elemento. No conjunto de expansão, você pode especificar um grupo de substituições sinônimas umas das outras.  
+     Cada conjunto de expansão é incluído em um \<expansão > elemento. Esse elemento, você especifica um ou mais substituições em um \<sub > elemento. No conjunto de expansão, você pode especificar um grupo de substituições sinônimas umas das outras.  
   
      Por exemplo, você pode editar a seção de expansão para tratar as substituições "escritor", "autor" e "jornalista" como sinônimos. As consultas de pesquisa de texto completo que contêm correspondências em uma substituição são expandidas para incluir todas as outras substituições especificadas no conjunto de expansão. Por isso, no exemplo anterior, quando você emite uma consulta FORMS OF THESAURUS ou FREETEXT para a palavra "autor", a pesquisa de texto completo também retorna resultados que contêm as palavras "escritor" e "jornalista".  
   
@@ -180,7 +179,7 @@ ms.locfileid: "36119853"
 ##  <a name="working_with_thesaurus_files"></a> Trabalhando com arquivos de dicionário de sinônimos  
  **Para editar um arquivo de dicionário de sinônimos**  
   
--   [Editando um arquivo de dicionário de sinônimos](#editing)  
+-   [Editar um arquivo de dicionário de sinônimos](#editing)  
   
  **Para carregar um arquivo de dicionário de sinônimos atualizado**  
   
@@ -191,8 +190,8 @@ ms.locfileid: "36119853"
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a> Editando um arquivo de dicionário de sinônimos  
- É possível configurar o dicionário de sinônimos de um idioma editando seu arquivo (um arquivo XML). Durante a instalação, esvaziar os arquivos de dicionário de sinônimos que contêm apenas o \<xml > recipiente e um exemplo comentado \<dicionário de sinônimos > elemento estão instalados. Em ordem para consultas de pesquisa de texto completo que procuram sinônimos funcionem adequadamente, você deve criar um real \<dicionário de sinônimos > elemento que define um conjunto de sinônimos. Você pode definir duas formas de sinônimos: conjuntos de expansão e conjuntos de substituição.  
+##  <a name="editing"></a> Editar um arquivo de dicionário de sinônimos  
+ É possível configurar o dicionário de sinônimos de um idioma editando seu arquivo (um arquivo XML). Durante a instalação, arquivos vazios do dicionário de sinônimos que contêm apenas os \<xml > contêiner e um exemplo comentado \<dicionário de sinônimos > elemento estão instalados. As consultas de pesquisa de texto completo que procuram sinônimos funcionem adequadamente, você deve criar um real \<dicionário de sinônimos > elemento que define um conjunto de sinônimos. Você pode definir duas formas de sinônimos: conjuntos de expansão e conjuntos de substituição.  
   
  **Restrições para arquivos de dicionário de sinônimos**  
   
@@ -206,13 +205,13 @@ ms.locfileid: "36119853"
   
 -   As frases no arquivo de dicionário de sinônimos não devem ter mais de 512 caracteres.  
   
--   Um dicionário de sinônimos não deve conter entradas duplicadas entre o \<sub > entradas de conjuntos de expansão e \<pat > elementos de conjuntos de substituição.  
+-   Um dicionário de sinônimos não deve conter entradas duplicadas entre as \<sub > entradas de conjuntos de expansão e o \<pat > elementos de conjuntos de substituição.  
   
  **Recomendações para arquivos de dicionário de sinônimos**  
   
  Recomendamos que as entradas no arquivo do dicionário de sinônimos não contenham caracteres especiais. Isso ocorre porque os separadores de palavras têm comportamentos sutis em relação a caracteres especiais. Se uma entrada de dicionário de sinônimos contiver caracteres especiais, os separadores de palavras usados com essa entrada poderão ter implicações de comportamento sutis para uma consulta de texto completo.  
   
- É recomendável que \<sub > entradas não contenham palavras irrelevantes pois tais palavras são omitidas do índice de texto completo. As consultas são expandidas para incluir o \<sub > entradas de um arquivo de dicionário de sinônimos e se um \<sub > contiver palavras irrelevantes, o tamanho da consulta aumentará desnecessariamente.  
+ É recomendável que \<sub > entradas de não contenham palavras irrelevantes pois tais palavras são omitidas do índice de texto completo. As consultas são expandidas para incluir a \<sub > entradas de um arquivo de dicionário de sinônimos e se um \<sub > contiver palavras irrelevantes, o tamanho da consulta aumentará desnecessariamente.  
   
 #### <a name="to-edit-a-thesaurus-file"></a>Para editar um arquivo de dicionário de sinônimos  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80fd692b-1cea-4139-8e80-454d3e81c76d
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 31dbc731e6c83ddc3d3587a95a158fb2e7362e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3edb337630b263560655d55ceb88d8415eb7da88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228936"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>O suporte a SOAP nativo do SQL Server foi descontinuado nesta versão do SQL Server.
   O Supervisor de Atualização detectou o uso de Serviços Web XML Nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

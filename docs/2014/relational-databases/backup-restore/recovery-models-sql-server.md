@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
 - bulk-logged recovery model [SQL Server]
@@ -29,15 +28,15 @@ helpviewer_keywords:
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20a45e99426f32c1f6351b38b198931ed72ae249
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a38c1b9002e830ed5ebf9bb72baee456294030cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259012"
 ---
 # <a name="recovery-models-sql-server"></a>Modelos de recuperação (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as operações de backup e restauração ocorrem no contexto do modelo de recuperação do banco de dados. Os modelos de recuperação são projetados para controlar a manutenção de log de transações. Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento.  

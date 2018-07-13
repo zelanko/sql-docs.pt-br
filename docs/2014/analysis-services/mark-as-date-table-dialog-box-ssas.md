@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.createdatetable.f1
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 88cac2df0119fe432eeebd0f970bb1c2b6899973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59a0483b697132c2da56d4b2c937bf942d9792ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210256"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Caixa de diálogo Marcar Como Tabela de Data (SSAS)
   A caixa de diálogo **Marcar como Tabela de Data** aparece quando você clica no menu **Tabela** e, depois, em **Data**e em **Marcar como Tabela de Data**. As tabelas de data são usadas com funções de inteligência de tempo. Para criar uma relação com uma tabela de dados, você deve especificar uma coluna com valores exclusivos a serem usados como um identificador exclusivo para a tabela.  

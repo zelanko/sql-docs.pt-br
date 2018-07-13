@@ -1,31 +1,29 @@
 ---
-title: Conversões de C para SQL | Microsoft Docs
+title: Conversões do C para SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121691"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410068"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversões do C para o SQL
-  Este tópico lista os problemas a serem considerados ao converter tipos C a tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de data/hora.  
+  Este tópico lista os problemas a considerar ao converter tipos C a tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de data/hora.  
   
  As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Nos casos em que o cliente especifica uma precisão de frações de segundo para um parâmetro diferente daquela definida no servidor, a conversão do cliente pode ser bem-sucedida, mas o servidor irá retornar um erro quando `SQLExecute` ou `SQLExecuteDirect` for chamado. Em particular, o cliente trata qualquer truncamento de frações de segundo como um erro, enquanto o comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é arredondar; por exemplo, o arredondamento ocorre quando você vai do `datetime2(6)` para o `datetime2(2)`. Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
   
@@ -64,10 +62,10 @@ ms.locfileid: "36121691"
 |10|Se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Formato de hora inválido". Esse erro também ocorrerá se o valor estiver fora do intervalo que pode ser representado pelo intervalo UTC usado pelo servidor.|  
 |11|Se o comprimento de bytes dos dados não for igual ao tamanho da estrutura exigida pelo tipo SQL, um registro de diagnóstico será gerado com SQLSTATE 22003 e a mensagem "Valor numérico fora do intervalo".|  
 |12|Se o comprimento de bytes dos dados for 4 ou 8, os dados serão enviados para o servidor no formato TDS bruto smalldatetime ou datetime. Se o comprimento de bytes dos dados corresponder exatamente ao tamanho de SQL_TIMESTAMP_STRUCT, os dados serão convertidos no formato TDS para datetime2.|  
-|13|Se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22001 e a mensagem "Dados de cadeia de caracteres truncados à direita".<br /><br /> O número de dígitos de frações de segundo (a escala) é determinado pelo tamanho da coluna de destino de acordo com o seguinte:<br /><br /> **Tipo:** SQL_C_TYPE_TIMESTAMP<br /><br /> Escala implícita<br /><br /> 0<br /><br /> 19<br /><br /> Escala implícita<br /><br /> 1..9<br /><br /> 21..29<br /><br /> Entretanto, para SQL_C_TYPE_TIMESTAMP, se as frações de segundo puderem ser representadas com três dígitos sem perda de dados e o tamanho da coluna for 23 ou maior, serão gerados exatamente três dígitos de frações de segundo. Esse comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando drivers ODBC mais antigos.<br /><br /> Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo ODBC.<br /><br /> Um tamanho de coluna zero implica em tamanho ilimitado para tipos de caracteres de comprimento variável no ODBC (9 dígitos, a menos que a regra de 3 dígitos para SQL_C_TYPE_TIMESTAMP se aplique). A especificação de um tamanho de coluna zero com um tipo de caractere de comprimento fixo é um erro.|  
+|13|Se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22001 e a mensagem "Dados de cadeia de caracteres truncados à direita".<br /><br /> O número de dígitos de frações de segundo (a escala) é determinado pelo tamanho da coluna de destino acordo com o seguinte:<br /><br /> **Tipo:** SQL_C_TYPE_TIMESTAMP<br /><br /> Escala implícita<br /><br /> 0<br /><br /> 19<br /><br /> Escala implícita<br /><br /> 1..9<br /><br /> 21..29<br /><br /> Entretanto, para SQL_C_TYPE_TIMESTAMP, se as frações de segundo puderem ser representadas com três dígitos sem perda de dados e o tamanho da coluna for 23 ou maior, serão gerados exatamente três dígitos de frações de segundo. Esse comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando drivers ODBC mais antigos.<br /><br /> Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo ODBC.<br /><br /> Um tamanho de coluna zero implica em tamanho ilimitado para tipos de caracteres de comprimento variável no ODBC (9 dígitos, a menos que a regra de 3 dígitos para SQL_C_TYPE_TIMESTAMP se aplique). A especificação de um tamanho de coluna zero com um tipo de caractere de comprimento fixo é um erro.|  
 |N/A|O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Aprimoramentos de data e hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

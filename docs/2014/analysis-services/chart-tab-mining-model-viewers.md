@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169797"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Guia Gráficos (Visualizadores do Modelo de Mineração)
   Use o painel **Gráfico** para exibir os dados históricos usados ao treinar um modelo de série temporal, junto com os valores previstos. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo. Previsões futuras serão representadas por uma linha pontilhada.  
@@ -41,7 +41,7 @@ ms.locfileid: "36122750"
  **Ampliar**  
  Amplie a imagem do gráfico.  
   
- **O zoom**  
+ **Reduza a imagem**  
  Reduza a imagem do gráfico.  
   
  **Dimensionar diagrama para ajustar à janela**  
@@ -50,7 +50,7 @@ ms.locfileid: "36122750"
  **Abs**  
  Alterne entre duas exibições de gráfico: na exibição padrão, os números são mostrados em relação à distribuição global (como percentual). Se você clicar em **Abs**, os números serão mostrados como valores absolutos.  
   
- **Copiar os gráficos para a área de transferência**  
+ **Copiar os gráficos na área de transferência**  
  Copie todo o gráfico para a área de transferência.  
   
  **Mostrar desvios**  
@@ -63,7 +63,7 @@ ms.locfileid: "36122750"
  Abra uma caixa de diálogo da qual você poderá selecionar séries para incluir no visualizador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

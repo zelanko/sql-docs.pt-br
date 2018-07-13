@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162257"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
@@ -54,7 +53,7 @@ ms.locfileid: "36121665"
 > [!NOTE]  
 >  Para tabelas que contêm um `timestamp` coluna, você pode usar populações incrementais.  
   
- Quando o controle de alterações é habilitado durante a criação de índice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula completamente o novo índice de texto completo imediatamente depois que ele é criado. Consequentemente, as alterações são controladas e propagadas para o índice de texto completo. Há dois tipos de controle de alterações: automático (opção CHANGE_TRACKING AUTO) e manual (opção CHANGE_TRACKING MANUAL). O controle de alterações automático é o comportamento padrão.  
+ Quando o controle de alterações é habilitada durante a criação de índice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula completamente o novo índice de texto completo imediatamente após sua criação. Consequentemente, as alterações são controladas e propagadas para o índice de texto completo. Há dois tipos de controle de alterações: automático (opção CHANGE_TRACKING AUTO) e manual (opção CHANGE_TRACKING MANUAL). O controle de alterações automático é o comportamento padrão.  
   
  O tipo de controle de alterações determina como o índice de texto completo é populado, como segue:  
   
@@ -188,7 +187,7 @@ GO
      Use esta página para criar ou gerenciar agendas para um trabalho do SQL Server Agent que inicia uma população incremental de tabela na tabela base ou na exibição indexada do índice de texto completo.  
   
     > [!IMPORTANT]  
-    >  Se a tabela base ou exibição não contiver uma coluna do `timestamp` tipo de dados, uma população completa é executada.  
+    >  Se a tabela base ou exibição não contiver uma coluna do `timestamp` de tipo de dados, uma população completa é executada.  
   
      As opções são as seguintes:  
   
@@ -213,7 +212,7 @@ GO
 
   
 ##  <a name="crawl"></a> Solucionando problemas de erros em uma população de texto completo (rastreamento)  
- Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por logs de rastreamento padrão para uma determinada instância, neste caso, a primeira instância, estão localizados em %ProgramFiles%\Microsoft SQL Server \ mssql12. Pasta MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
+ Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por logs de rastreamento padrão para uma determinada instância, neste caso, a primeira instância, estão localizados em %ProgramFiles%\Microsoft SQL Server\MSSQL12. Pasta MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
   
  SQLFT\<DatabaseID >\<FullTextCatalogID >. LOG [\<n >]  
   

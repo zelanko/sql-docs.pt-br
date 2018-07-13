@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 36c71e149a27443a38781dc9a39592f5c720a3ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a53fc8ba07f4a890467096983e2edd73c140d2c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211176"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Operação de ponto de verificação para tabelas com otimização de memória
   Um ponto de verificação precisa ser executado periodicamente para dados com otimização de memória nos arquivos delta e de dados para avançar a parte ativa do log de transações. O ponto de verificação permite que as tabelas com otimização de memória sejam restauradas ou recuperadas no último ponto de verificação com êxito e, em seguida, a parte ativa do log de transações é aplicada de modo a atualizar as tabelas com otimização de memória para concluir a recuperação. A operação de ponto de verificação para tabelas baseadas em disco e tabelas com otimização de memória são operações distintas. A tabela a seguir descreve cenários diferentes e o comportamento do ponto de verificação para tabelas baseadas em disco e com otimização de memória:  
@@ -32,7 +32,7 @@ ms.locfileid: "36121931"
   
  Para tabelas baseadas em disco, um ponto de verificação automático é obtido com base na opção de configuração de intervalo de recuperação (para obter mais informações, consulte [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md)).  
   
- Para tabelas com otimização de memória, um ponto de verificação automático é obtido quando o arquivo de log de transação se torna maior que 512MB desde o último ponto de verificação. 512 MB inclui registros de log de transação para tabelas baseadas em disco e com otimização de memória.  
+ Para tabelas com otimização de memória, um ponto de verificação automático é obtido quando o arquivo de log de transação se torna maior que 512 MB desde o último ponto de verificação. 512 MB inclui registros de log de transação para tabelas baseadas em disco e com otimização de memória.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)  

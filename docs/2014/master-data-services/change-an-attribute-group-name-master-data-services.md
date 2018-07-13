@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164917"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Alterar o nome de um grupo de atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um grupo de atributos.  
@@ -37,7 +37,7 @@ ms.locfileid: "36122198"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição do modelo de** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
+2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
   
 3.  Na lista **Modelo** , selecione um modelo.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36122198"
   
 7.  Clique em **Editar item selecionado**.  
   
-8.  No **nome do grupo de folha** caixa, **nome do grupo consolidado** caixa, ou **nome do grupo de coleção** , digite o nome atualizado do grupo de atributos.  
+8.  No **nome do grupo folha** caixa de **nome do grupo consolidado** caixa, ou **nome do grupo de coleção** , digite o nome atualizado do grupo de atributos.  
   
 9. Clique em **Salvar grupo**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230386"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Uma assinatura padrão sempre é definida pelo relatório no qual se baseia.  
@@ -32,7 +32,7 @@ ms.locfileid: "36120531"
 > [!NOTE]  
 >  Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- Dependendo da **rsreportserver. config** configurações do arquivo de configuração, os usuários poderão adicionar mais usuários a uma assinatura (por exemplo, um gerente adiciona os endereços de email ou seus relatórios diretos para que cada um receba uma cópia das relatório). O suporte a esse recurso depende da visibilidade do campo Para: durante a definição de assinaturas individuais. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ Dependendo da **rsreportserver. config** configurações do arquivo de configuração, os usuários podem até conseguir adicionar mais usuários a uma assinatura (por exemplo, um gerente adiciona os endereços de email ou seus relatórios diretos para que cada um receba uma cópia das relatório). O suporte a esse recurso depende da visibilidade do campo Para: durante a definição de assinaturas individuais. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [criar, modificar e excluir uma assinatura controlada por dados](data-driven-subscriptions.md).  
   
@@ -53,15 +53,15 @@ ms.locfileid: "36120531"
   
 -   O conteúdo neste tópico explica como criar assinaturas em um servidor de relatório do modo nativo usando o Gerenciador de Relatório da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Após definir uma assinatura, você poderá acessá-la no Gerenciador de Relatórios através da página Minhas Assinaturas ou da guia **Assinaturas** de um relatório específico.  
   
--   [Crie e gerencie assinaturas de servidores de relatório do modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explica como usar as páginas do aplicativo em um site do SharePoint para assinar relatórios em um servidor de relatório que é executado no modo integrado do SharePoint.  
+-   [Criar e gerenciar assinaturas de servidores de relatório de modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explica como usar as páginas do aplicativo em um site do SharePoint para assinar relatórios em um servidor de relatório que é executado no modo integrado do SharePoint.  
   
  Este tópico fornece instruções para criar uma assinatura de email e uma assinatura de entrega de compartilhamento de arquivos.  
   
 -   Para usar a entrega de email, o servidor de relatório deve ser configurado para uma conexão de gateway ou de servidor SMTP antes de criar a assinatura.  
   
--   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+-   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [repositório de credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
+ Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [Store credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
   
  Este tópico não explica como criar uma assinatura controlada por dados. Para obter instruções sobre como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou a Ajuda online da página Criar uma Assinatura Controlada por Dados no Gerenciador de Relatórios.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36120531"
   
 2.  Clique na guia **Assinaturas** e, em seguida, clique em **Nova Assinatura**.  
   
-3.  Em **entregues pelo**, selecione **email**. Se este tipo de entrega não estiver disponível, isso indica que o servidor de relatório não foi configurado para assinatura de email.  
+3.  Na **entregues pelo**, selecione **email**. Se este tipo de entrega não estiver disponível, isso indica que o servidor de relatório não foi configurado para assinatura de email.  
   
-4.  No **To** caixa de texto, o nome do destinatário no campo para: campo é endereçado a si mesmo usando sua conta de usuário de domínio. Definições de configuração do servidor de relatório determinam se o **para** campo é endereçado a si mesmo com sua conta de usuário. Para obter mais informações sobre como alterar os endereços de email de definições de configuração, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  No **To** caixa de texto, o nome do destinatário no campo para: campo é autoendereçado usando sua conta de usuário de domínio. Definições de configuração do servidor de relatório determinam se o **para** campo é autoendereçado com sua conta de usuário. Para obter mais informações sobre como alterar os endereços de email de definições de configuração, consulte [configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  
@@ -177,9 +177,9 @@ ms.locfileid: "36120531"
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
  [Criar e gerenciar assinaturas de servidores de relatório do modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Criar e gerenciar assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Assinaturas controladas por dados](data-driven-subscriptions.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Usar Minhas Assinaturas](use-my-subscriptions-native-mode-report-server.md)  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSize element
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a79084349dfda487a4675d6963665980cc22e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34a8e8740e57bdcafbdd9ff1f3dce188e7d5e5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157147"
 ---
 # <a name="datasize-element-assl"></a>Elemento DataSize (ASSL)
   Contém o tamanho em bytes de um [DataItem](../data-type/dataitem-data-type-assl.md) elemento.  
@@ -58,11 +58,11 @@ ms.locfileid: "36120431"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Elemento pai|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `DataSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
+ O elemento que corresponde ao pai de `DataSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

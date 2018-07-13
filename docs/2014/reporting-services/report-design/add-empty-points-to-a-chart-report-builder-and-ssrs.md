@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 942da7aa8b4db6e6f54b80f941856185bc03758d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 317ada15f03de74dc25767a17036623d7479220a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181583"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Adicionar pontos vazios ao gráfico (Construtor de Relatórios e SSRS)
   Valores nulos são mostrados no gráfico como espaços vazios ou lacunas entre os pontos de dados em uma série. Pontos vazios são pontos de dados que podem ser inseridos em um espaço vazio criado por valores nulos.  
@@ -58,6 +58,6 @@ ms.locfileid: "36120286"
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Adicionar quebras de escala a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [Gráficos &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc774b0dfd87ae4f63e9332dd6813d92f79e4a5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169308"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
   Esta seção mostra as opções e funções disponíveis na página **Geral** da caixa de diálogo **Propriedades do Catálogo de Texto Completo** .  
@@ -67,7 +66,7 @@ ms.locfileid: "36120189"
  **Nome**  
  Nome do catálogo de texto completo.  
   
- **Sensível a acentos**  
+ **Diferenciar acentos**  
  Exibe ou modifica se o catálogo diferencia ou não marcas diacríticas, como um til (**~**), um acento agudo (**'**) ou um trema (**¨**). Os valores válidos são:  
   
 -   **Não**  

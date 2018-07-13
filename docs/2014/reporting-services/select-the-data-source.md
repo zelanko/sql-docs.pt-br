@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155787"
 ---
 # <a name="select-the-data-source"></a>Selecionar a fonte de dados
   Use esta página do Assistente de Relatório para definir uma fonte de dados para o relatório.  
@@ -46,11 +46,11 @@ ms.locfileid: "36121631"
   
  Clique em **Credenciais** para fornecer credenciais de banco de dados. A um mínimo, os credenciais que você especifica devem ser suficientes para você se conectar à fonte de dados para propósitos de design de relatório. Quando o relatório é implantado em um servidor de relatório, os credenciais de banco de dados devem acomodar todos os usuários do relatório. Por exemplo, se você desejar que todos os usuários de relatório se conectem à fonte de dados usando seus credenciais, escolha **Usar Autenticação do Windows (Segurança Integrada)**. Os credenciais que você especifica devem ser válidos para a fonte de dados; portanto, se você escolher Autenticação do Windows, verifique se a fonte de dados aceita conexões de todas as contas de usuário que executarão o relatório. Os credenciais de bancos de dados podem ser gerenciados separadamente do relatório. Para obter mais informações, consulte [Gerenciar uma fonte de dados de relatório](report-data/manage-report-data-sources.md).  
   
- **Fazer isso uma fonte de dados compartilhada**  
+ **Tornar esta fonte de dados compartilhados**  
  Selecione esta opção para armazenar a fonte de dados no projeto como uma fonte de dados compartilhada, em vez de armazenar no relatório. Dessa maneira, você pode usá-la como a fonte de dados para outros relatórios no projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;SSRS e construtor de relatórios&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Servidor de Relatório do Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   

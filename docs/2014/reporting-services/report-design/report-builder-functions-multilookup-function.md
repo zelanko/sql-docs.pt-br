@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92395b7b91d94187dc790978baa084c418224686
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157737"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Função Multilookup (Construtor de Relatórios e SSRS)
   Retorna o conjunto de primeiros valores correspondentes para o conjunto de nomes especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -51,7 +51,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Retorna um `VariantArray`, ou `Nothing` se não houver nenhuma correspondência.  
   
 ## <a name="remarks"></a>Remarks  
- Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome-valor em que cada par tem uma relação de 1 a 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de diversos valores com base em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto em uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
+ Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome-valor em que cada par tem uma relação de 1 para 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, um parâmetro baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto em uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
   
  `Multilookup` faz o seguinte:  
   
@@ -127,9 +127,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

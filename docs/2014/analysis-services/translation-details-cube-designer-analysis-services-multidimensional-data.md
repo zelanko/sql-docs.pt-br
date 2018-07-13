@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f6c03a5a9f656bc32752c2dfacb242d0b9fac9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185273"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Tradução (guia Traduções, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Detalhes da Transação** na guia **Transações** do Designer de Dimensão para definir e gerenciar traduções do cubo selecionado.  
@@ -35,7 +35,7 @@ ms.locfileid: "36120422"
   
 -   Grupo de medidas  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
 -   Measure  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36120422"
   
 -   Dimensão  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
 -   Perspectiva  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
 -   KPI (indicador chave de desempenho)  
   
@@ -55,15 +55,15 @@ ms.locfileid: "36120422"
   
 -   Ação  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
 -   Conjunto nomeado  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
 -   membro calculado  
   
-     `Caption` propriedade  
+     `Caption` Propriedade  
   
  **\<Idioma >**  
  Digite o valor da propriedade do objeto de cubo no idioma selecionado.  

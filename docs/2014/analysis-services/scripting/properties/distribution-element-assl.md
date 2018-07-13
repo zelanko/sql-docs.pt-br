@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163537"
 ---
 # <a name="distribution-element-assl"></a>Elemento Distribution (ASSL)
   Contém um valor específico do provedor que descreve como os valores escalares são distribuídos dentro de uma coluna de uma [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -62,9 +62,9 @@ ms.locfileid: "36119795"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os valores disponíveis para o `Distribution` elemento, como *Normal* ou *uniforme,* são específicas para cada provedor de algoritmo de mineração. Para obter mais informações sobre valores válidos de `Distribution`, consulte a documentação de provedor de algoritmo de mineração.  
+ Os valores disponíveis para o `Distribution` elemento, como *Normal* ou *uniforme,* são específicos para cada provedor de algoritmo de mineração. Para obter mais informações sobre valores válidos de `Distribution`, consulte a documentação de provedor de algoritmo de mineração.  
   
- O elemento correspondente para o pai do `Distribution` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ O elemento que corresponde ao pai de `Distribution` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

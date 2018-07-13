@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa03a40457db856c3c53a3db1412d0c9b95e7864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2316c7ab9f0d06930ba5346f51e28d7670dca8f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161527"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Assistentes do Analysis Services (dados multidimensionais)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece assistentes para uso em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tabela a seguir descreve os assistentes disponíveis.  
@@ -33,9 +33,9 @@ ms.locfileid: "36122948"
 |[Ajuda F1 do Assistente de Design de Agregação](aggregation-design-wizard-f1-help.md)|Use o Assistente de Design de Agregação para definir agregações para um design de agregação usado para criar instâncias de agregação para partições em um grupo de medidas.|  
 |[Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)|Use o Assistente de Business Intelligence para adicionar recursos avançados de business intelligence, como inteligência de conta e conversão de moedas, a um cubo ou dimensão.|  
 |[Ajuda F1 do Assistente para Cubos](cube-wizard-f1-help.md)|Use o Assistente para Cubos para criar um novo cubo.|  
-|[Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Use o Assistente de Mineração de Dados para definir uma nova estrutura de mineração e modelos de mineração associados.|  
-|[Ajuda F1 do Assistente de fonte de dados &#40;do Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use o Assistente para Fontes de Dados para definir uma nova fonte de dados.|  
-|[Ajuda de F1 do Assistente de exibição de fonte de dados &#40;do Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use o Assistente de Exibição da Fonte de Dados para definir uma nova exibição da fonte de dados.|  
+|[Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)|Use o Assistente de Mineração de Dados para definir uma nova estrutura de mineração e modelos de mineração associados.|  
+|[Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use o Assistente para Fontes de Dados para definir uma nova fonte de dados.|  
+|[Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use o Assistente de Exibição da Fonte de Dados para definir uma nova exibição da fonte de dados.|  
 |[Ajuda F1 do Assistente para Dimensões](dimension-wizard-f1-help.md)|Use o Assistente para Dimensões para definir uma nova dimensão.|  
 |[Ajuda F1 do Assistente para Importação de Bancos de Dados do Analysis Services](import-analysis-services-database-wizard-f1-help.md)|Use o Assistente para Importação de Bancos de Dados do Analysis Services 9.0 para importar um banco de dados existente do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |[Ajuda F1 do Assistente para Objetos Vinculados](linked-object-wizard-f1-help.md)|Use o Assistente para Objetos Vinculados para definir uma dimensão ou grupo de medidas vinculado e, opcionalmente, importar objetos relacionados.|  
@@ -45,6 +45,6 @@ ms.locfileid: "36122948"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Referência da Interface de usuário &#40;do Analysis Services&#41;](user-interface-reference-analysis-services.md)  
+ [Referência da Interface do usuário &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   
   

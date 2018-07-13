@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database IDs [SQL Server]
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2604b97a0285c551be52ea9b4af349b7a67e9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d8b33dc9e6bf4dc63f6eb8e9adc4d48d7f202c93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163757"
 ---
 # <a name="detach-database-id-32767"></a>Desanexar identificação 32767 do banco de dados
   O Supervisor de Atualização detectou um banco de dados com a identificação 32767. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, essa identificação do banco de dados é reservada. Desanexe o banco de dados antes da atualização. Isso pode ser feito também após a atualização.  

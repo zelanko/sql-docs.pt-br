@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HierarchyInfo element
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 54eb79259500f9004c7410f59943c0ec1aac8123
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ff2da32b09833d425f49f47769a98d01e888264a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180793"
 ---
 # <a name="hierarchyinfo-element-xmla"></a>Elemento HierarchyInfo (XMLA)
   Representa uma única hierarquia contida por um elemento pai [AxisInfo](axisinfo-element-xmla.md) .  

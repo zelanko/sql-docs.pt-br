@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159297"
 ---
 # <a name="new-search-property-list"></a>Nova Lista de Propriedades de Pesquisa
   Use essa caixa de diálogo para criar uma lista de propriedades de pesquisa.  
@@ -42,14 +41,14 @@ ms.locfileid: "36122677"
  **Criar de uma lista de propriedades de pesquisa existente**  
  Copia as propriedades de uma lista de propriedades de pesquisa existente na nova lista de propriedades. As listas de propriedades de pesquisa são objetos de banco de dados, de modo que você deve especificar o banco de dados que contém a lista de propriedades que deseja copiar.  
   
- **banco de dados de origem**  
+ **Banco de dados de origem**  
  Especifique o nome do banco de dados ao qual a lista de propriedades de pesquisa existente pertence. Por padrão, o banco de dados atual é selecionado. Se desejar, você pode usar a caixa de listagem para selecionar outro banco de dados, se sua conexão atual estiver associada a uma ID de usuário nesse banco de dados.  
   
  **Lista de propriedades de pesquisa de origem**  
  Selecione o nome de uma lista de propriedades de pesquisa existente pertencente ao banco de dados selecionado.  
   
 ## <a name="permissions"></a>Permissões  
- Consulte [criar lista de propriedades de pesquisa &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Ver [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Para usar o SQL Server Management Studio para gerenciar listas de propriedades de pesquisa  
  Para obter informações sobre como criar, exibir, alterar ou excluir uma lista de propriedades de pesquisa e sobre como configurar um índice de texto completo para pesquisa de propriedade, consulte [pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md).  

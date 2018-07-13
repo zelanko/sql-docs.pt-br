@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
 - sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a15f7470df4ba313e02828b4a7ef2be2c9c4e0c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d39d87c0896ba77d3e323dc762d2618098dfd39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161307"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Configurações de Armazenamento (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir configurações de cache pró-ativo, armazenamento e notificação para uma dimensão, cubo, grupo de medidas ou partição. É possível exibir a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da seguinte maneira:  
   
--   Clique no botão de reticências (**...** ) para o `ProactiveCaching` valor da propriedade de uma dimensão, cubo, grupo de medidas ou partição de **propriedades** janela de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Clicar no botão de reticências (**...** ) para o `ProactiveCaching` valor da propriedade de uma dimensão, cubo, grupo de medidas ou partição no **Properties** janela de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   Expandindo um grupo de medidas na guia **Partições** do **Designer de Cubo** e clicando em **Configurações de Armazenamento**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36121352"
 |Termo|Definição|Valores|  
 |----------|----------------|------------|  
 |**Configuração padrão**|Selecione para habilitar o **controle deslizante Configuração padrão** e usar configurações predefinidas para modo de armazenamento e recursos de cache pró-ativos.||  
-|**Controle deslizante de configuração padrão**|Defina como uma das seguintes configurações predefinidas:<br /><br /> **ROLAP em tempo real**<br /><br /> Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:|Modo de armazenamento ROLAP<br /><br /> Habilita o cache pró-ativo<br /><br /> Descarta o cache desatualizado com um período de latência de 0 segundos<br /><br /> Coloca o objeto online imediatamente|  
+|**Controle deslizante configuração padrão**|Defina como uma das seguintes configurações predefinidas:<br /><br /> **ROLAP em tempo real**<br /><br /> Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:|Modo de armazenamento ROLAP<br /><br /> Habilita o cache pró-ativo<br /><br /> Descarta o cache desatualizado com um período de latência de 0 segundos<br /><br /> Coloca o objeto online imediatamente|  
 ||**HOLAP em tempo real**<br /><br /> Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:|Modo de armazenamento HOLAP<br /><br /> Habilita o cache pró-ativo<br /><br /> Descarta o cache desatualizado com um período de latência de 0 segundos<br /><br /> Atualiza o cache quando os dados são alterados, com um intervalo de silêncio de 0 segundos e um intervalo de substituição de não silêncio<br /><br /> Coloca o objeto online imediatamente|  
 ||**MOLAP de baixa latência**<br /><br /> Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:|Modo de armazenamento MOLAP<br /><br /> Habilita o cache pró-ativo<br /><br /> Descarta o cache desatualizado com um período de latência de 30 minutos<br /><br /> Atualiza o cache quando os dados são alterados com um intervalo de silêncio de 10 segundos e um intervalo de substituição de silêncio de 10 minutos<br /><br /> Coloca o objeto online imediatamente|  
 ||**MOLAP de latência média**<br /><br /> Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:|Modo de armazenamento MOLAP<br /><br /> Habilita o cache pró-ativo<br /><br /> Descarta o cache desatualizado com um período de latência de 4 horas<br /><br /> Atualiza o cache quando os dados são alterados com um intervalo de silêncio de 10 segundos e um intervalo de substituição de silêncio de 10 minutos<br /><br /> Coloca o objeto online imediatamente|  
@@ -52,7 +52,7 @@ ms.locfileid: "36121352"
   
 ## <a name="see-also"></a>Consulte também  
  [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [O cache pró-ativo &#40;partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [Cache pró-ativo &#40;partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Armazenamento de cubo &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
   
   
