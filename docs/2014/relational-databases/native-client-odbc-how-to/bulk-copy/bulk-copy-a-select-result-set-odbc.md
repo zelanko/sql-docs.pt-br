@@ -1,13 +1,11 @@
 ---
-title: Em massa copiar um conjunto de resultados de SELECT (ODBC) | Microsoft Docs
+title: Copiar em massa um conjunto de resultados de SELECT (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2163634fa84fc299a10c2bd608ec0da8e7aa87b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d537846035a35497404ec9a26557507b34d08a18
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122148"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428595"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copiar em massa um conjunto de resultados de SELECT (ODBC)
   Este exemplo mostra como usar funções de cópia em massa para copiar em massa o conjunto de resultados de uma instrução SELECT. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
@@ -40,7 +38,7 @@ ms.locfileid: "36122148"
   
 3.  Conecte-se ao SQL Server.  
   
-4.  Chamar [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
+4.  Chame [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
     -   Especifique NULL para o *szTable* parâmetro.  
   
@@ -50,9 +48,9 @@ ms.locfileid: "36122148"
   
     -   A direção da cópia: DB_OUT.  
   
-5.  Chamar [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina eOption como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR contendo a instrução SELECT.  
+5.  Chame [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina eOption como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR contendo a instrução SELECT.  
   
-6.  Chamar [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
+6.  Chame [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
  Ao usar essas etapas, o arquivo será criado no formato nativo. Você pode converter os valores de dados para outros tipos de dados usando [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para obter mais informações, consulte [criar um arquivo de formato de cópia em massa &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
   

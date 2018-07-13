@@ -1,28 +1,26 @@
 ---
-title: Parâmetro e metadados de resultado | Microsoft Docs
+title: Parameter and Result Metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116923"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420176"
 ---
 # <a name="parameter-and-result-metadata"></a>Parâmetro e metadados de resultado
   Este tópico descreve o que é retornado nos campos IPD (descritor de parâmetro de implementação) e IRD (descritor de linha de implementação) dos tipos de dados de data e hora.  
@@ -67,11 +65,11 @@ ms.locfileid: "36116923"
   
 -   No momento da preparação ou da execução (quando SQLExecute, SQLExecDirect, SQLSetPos ou SQLBulkOperations é chamado).  
   
--   Quando uma força de aplicativo preparação não adiada chamando SQLPrepare com adiada preparar desabilitado ou chamando SQLNumResultCols, SQLDescribeCol ou SQLDescribeParam para uma instrução preparada mas não executada.  
+-   Quando uma força de aplicativo preparação não adiada chamando SQLPrepare com adiada preparar desabilitado ou chamando SQLNumResultCols, SQLDescribeCol ou SQLDescribeParam para uma instrução preparada, mas não executado.  
   
  Quando SQL_CA_SS_SERVER_TYPE é definido por uma chamada para SQLSetDescField, seu valor deve ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME ou SQL_SS_TYPE_DATETIME. Caso não seja esse o caso, SQL_ERROR é retornado, e um registro de diagnóstico é feito com SQLState HY092 e a mensagem "Identificador de atributo/opção inválido".  
   
- O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade para a qual `datetime` e `smalldatetime` oferecem suporte, mas não `datetime2`. Por exemplo, `datetime2` requer o uso do `dateadd` e **datediif** funções, enquanto `datetime` e `smalldatetime` também permitem operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
+ O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade para a qual `datetime` e `smalldatetime` oferecem suporte, mas não `datetime2`. Por exemplo, `datetime2` requer o uso do `dateadd` e **datediif** funções, enquanto que `datetime` e `smalldatetime` também permitem operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informações retornadas nos campos IRD  
  As seguintes informações são retornadas nos campos IRD:  

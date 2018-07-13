@@ -1,13 +1,11 @@
 ---
-title: Usar cursores (ODBC) | Microsoft Docs
+title: Usando cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 240910c0c6be92537a15a0560ebde1236a3a6593
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee00b752236032b7123eb557e82bed12de8ecb00
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119331"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416345"
 ---
 # <a name="using-cursors-odbc"></a>Usando cursores (ODBC)
   ODBC dá suporte a um modelo de cursor que permite:  
@@ -39,7 +37,7 @@ ms.locfileid: "36119331"
   
 -   Atualizações posicionadas.  
   
- Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas por atributos de instrução definidos com [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) antes do comando SQL a instrução é executada. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
+ Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas por atributos de instrução definidos com [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) antes do SQL de instrução é executada. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
   
  Esta é uma comparação de como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e aplicativos ODBC funcionam com cursores.  
   
@@ -63,7 +61,7 @@ ms.locfileid: "36119331"
   
 -   [Propriedades do cursor](properties/cursor-properties.md)  
   
--   [Detalhes da programação de cursor &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
+-   [Detalhes de programação de cursor &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
   
 -   [Rolagem e busca de linhas](../native-client-ole-db-rowsets/fetching-rows.md)  
   

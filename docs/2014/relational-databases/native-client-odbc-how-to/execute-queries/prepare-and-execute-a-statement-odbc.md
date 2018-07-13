@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58a3ecf2419f0b3e3b74ba6e3b1a6293d928d550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d7520d040f55962821b3c0e863400c68f5fd35d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117676"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420355"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar e executar uma instrução (ODBC)
     
@@ -35,7 +33,7 @@ ms.locfileid: "36117676"
   
 3.  Opcionalmente, para cada parâmetro na instrução preparada:  
   
-    -   Chamar [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) para obter informações de parâmetro.  
+    -   Chame [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) para obter informações de parâmetro.  
   
     -   Associe cada parâmetro a uma variável de programa usando [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Configure qualquer parâmetro de dados em execução.  
   
@@ -71,7 +69,7 @@ ms.locfileid: "36117676"
   
     -   Aloque uma matriz de S buffers de parâmetro para armazenar comprimentos de dados.  
   
-    -   Chame SQLBindParameter para associar as matrizes de comprimento do parâmetro dados dados e de valor para o parâmetro da instrução.  
+    -   Chame SQLBindParameter para associar as matrizes de comprimento do parâmetro dados dados e de valor ao parâmetro de instrução.  
   
     -   Se o parâmetro for um parâmetro de imagem ou de texto de dados em execução, configure-o.  
   
@@ -83,7 +81,7 @@ ms.locfileid: "36117676"
   
     -   Chame SQLExecute para executar a instrução preparada.  
   
-    -   Se forem usados parâmetros de entrada de dados em execução, SQLExecute retornará SQL_NEED_DATA. Envie os dados em partes usando SQLParamData e SQLPutData.  
+    -   Se forem usados parâmetros de entrada de dados em execução, SQLExecute retornará SQL_NEED_DATA. Envie os dados em partes por meio de SQLParamData e SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Para preparar uma instrução com parâmetros associados de linha  
   
@@ -113,9 +111,9 @@ ms.locfileid: "36117676"
   
     -   Chame SQLExecute para executar a instrução preparada. O driver executa, com eficiência, a instrução SQL S vezes, uma vez para cada conjunto de parâmetros.  
   
-    -   Se forem usados parâmetros de entrada de dados em execução, SQLExecute retornará SQL_NEED_DATA. Envie os dados em partes usando SQLParamData e SQLPutData.  
+    -   Se forem usados parâmetros de entrada de dados em execução, SQLExecute retornará SQL_NEED_DATA. Envie os dados em partes por meio de SQLParamData e SQLPutData.  
   
 ## <a name="see-also"></a>Consulte também  
- [Executar consultas tópicos de instruções &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Executar consultas de tópicos de instruções &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

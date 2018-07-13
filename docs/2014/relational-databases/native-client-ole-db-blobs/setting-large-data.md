@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118882"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423015"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
-  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB Native Client, você pode definir dados BLOB transmitindo um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client, você pode definir dados de BLOB, passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
- Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. O consumidor chama o **IRowsetChange:: SetData** ou **IRowsetChange:: Insertrow** método com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
+ Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. O consumidor, em seguida, chama o **IRowsetChange:: SetData** ou **IRowsetChange:: Insertrow** método com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
   
  Este tópico aborda a funcionalidade disponível nas funções a seguir:  
   
@@ -46,11 +44,11 @@ ms.locfileid: "36118882"
 ## <a name="how-to-set-large-data"></a>Como definir dados grandes  
  Para transmitir um ponteiro para seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna BLOB e chama os métodos **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Para definir dados de BLOB:  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Definir o *Dwfrag* elemento da estrutura DBOBJECT como STGM_READ e defina o *iid* elemento como IID_ISequentialStream (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina as *dwFlag* elemento da estrutura DBOBJECT como STGM_READ e defina as *iid* elemento como IID_ISequentialStream (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Definir o *wType* elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o *pObject* elemento para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina as *wType* elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o *pObject* elemento para apontar para a estrutura DBOBJECT que você criou.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   

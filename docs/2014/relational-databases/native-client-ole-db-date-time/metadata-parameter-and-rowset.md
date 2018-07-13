@@ -5,24 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8b3365cdf3a2773b6627dfd49edd20b839ef9a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d2f6d55777a6f11e968a75be0f3d5509294c484d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130966"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427855"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas
   Este tópico fornece informações sobre o tipo e os membros de tipo a seguir, relacionados aos aprimoramentos de data e hora de OLE DB.  
@@ -38,7 +36,7 @@ ms.locfileid: "36130966"
 -   `IColumnsInfo::GetColumnInfo`  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- As seguintes informações são retornadas na estrutura DBPARAMINFO por meio de *prgParamInfo*:  
+ As seguintes informações são retornadas na estrutura DBPARAMINFO por meio *prgParamInfo*:  
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
@@ -67,11 +65,11 @@ ms.locfileid: "36130966"
 |datetime2 ou DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- O *bPrecision* parâmetro é ignorado.  
+ O *bPrecision* parâmetro será ignorado.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos TDS (tabular-data stream) herdados usando nomes de tipo específicos do provedor "`datetime`" e "`smalldatetime`". Quando conectado a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) servidores, "`datetime2`"formato será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando é o nome do tipo"`datetime2`" ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se os nomes de tipo específicos do provedor "`datetime`"ou"`smalldatetime`" são usadas. Caso contrário, os aplicativos devem garantir que *bScale* está definida corretamente. Aplicativos foram atualizados do MDAC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que usam "DBTYPE_DBTIMESTAMP" apresentará falha se eles não definirem *bScale* corretamente. Quando conectado a instâncias de servidor anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um *bScale* valor diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" é um erro e E_FAIL será retornado.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos TDS (tabular-data stream) herdados usando nomes de tipo específicos do provedor "`datetime`" e "`smalldatetime`". Quando conectado a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) servidores, "`datetime2`"formato será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando é o nome do tipo"`datetime2`" ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se o provedor específico de nomes de tipo "`datetime`"ou"`smalldatetime`" são usados. Caso contrário, os aplicativos devem garantir que *bScale* está definida corretamente. Aplicativos atualizados do MDAC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que usam "DBTYPE_DBTIMESTAMP" apresentará falha se eles não definirem *bScale* corretamente. Quando conectado a instâncias de servidor anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um *bScale* valor diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" é um erro e E_FAIL será retornado.  
   
- Quando ICommandWithParameters:: SetParameterInfo não for chamado, deduz o provedor do servidor de tipo de associação, como especificado em IAccessor:: CreateAccessor da seguinte maneira:  
+ Quando ICommandWithParameters:: SetParameterInfo não for chamado, o provedor de deduz o servidor de tipo do tipo de associação, conforme especificado na IAccessor:: CreateAccessor da seguinte maneira:  
   
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  
@@ -128,7 +126,7 @@ ms.locfileid: "36130966"
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Defina|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Defina|  
   
- Em *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH é sempre true para tipos de data/hora e os seguintes sinalizadores são sempre falsos:  
+ Na *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH é sempre true para tipos de data/hora e os seguintes sinalizadores são sempre falsos:  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -144,7 +142,7 @@ ms.locfileid: "36130966"
   
  Os sinalizadores restantes (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE e DBCOLUMNFLAGS_WRITEUNKNOWN) podem ser definidos.  
   
- Um novo sinalizador DBCOLUMNFLAGS_SS_ISVARIABLESCALE é fornecido em *dwFlags* para permitir que um aplicativo determinar o tipo de servidor de colunas, onde *wType* é DBTYPE_DBTIMESTAMP. *bScale* também deve ser usado para identificar o tipo de servidor.  
+ Um novo sinalizador DBCOLUMNFLAGS_SS_ISVARIABLESCALE é fornecido em *dwFlags* permitir que um aplicativo determinar o tipo de servidor de colunas, onde *wType* é DBTYPE_DBTIMESTAMP. *bScale* também deve ser usado para identificar o tipo de servidor.  
   
 ## <a name="see-also"></a>Consulte também  
  [Metadados &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

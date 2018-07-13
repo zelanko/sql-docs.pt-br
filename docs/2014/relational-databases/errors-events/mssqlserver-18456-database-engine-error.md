@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 206996d8130897fd4be54a252fbbe2631b37e144
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0221b5775c0127624b4226893f294da6ef6fdaf5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119869"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415895"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -95,7 +94,7 @@ ms.locfileid: "36119869"
 |data|Origem|Mensagem|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Logon|Erro: 18456, Severidade: 14, Estado: 8.|  
-|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [CLIENT: \<endereço ip >]|  
+|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [Cliente: \<endereço ip >]|  
   
 > [!NOTE]  
 >  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso provoca o erro de estado 7: "Falha no logon do usuário 'sa'". Para habilitar o logon **sa**, consulte [Alterar modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
