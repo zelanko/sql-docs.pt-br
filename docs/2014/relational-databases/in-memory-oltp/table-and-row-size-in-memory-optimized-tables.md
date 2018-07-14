@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5c35ff979ce6d5e37d8eaba1942da681d3a73470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231086"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
   Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. Entender o tamanho de uma tabela com otimização de memória ajudará você a saber se o computador tem memória suficiente.  
@@ -76,7 +76,7 @@ Tabela com otimização de memória composta por índices e linhas.
   
 |Seção|Tamanho|Comentários|  
 |-------------|----------|--------------|  
-|Colunas do tipo superficial|SUM([tamanho dos tipos superficiais])<br /><br /> **Tamanho dos tipos individuais é o seguinte:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérica (precisão < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Colunas do tipo superficial|SUM([tamanho dos tipos superficiais])<br /><br /> **Tamanho dos tipos individuais é da seguinte maneira:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérica (precisão < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Preenchimento da coluna superficial|Os valores possíveis são:<br /><br /> 1 se houver colunas do tipo profundas e o tamanho total dos dados das colunas superficiais for como um número ímpar.<br /><br /> Caso contrário, será 0|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
 |Matriz de deslocamento para colunas do tipo profundas|Os valores possíveis são:<br /><br /> 0 se não houver nenhuma coluna do tipo profunda<br /><br /> Caso contrário, 2 + 2 * [número de colunas do tipo profundas]|Os tipos profundos são os tipos (var)binary e (n)(var)char.|  
 |Matriz NULL|[número de colunas que permitem valor nulo] / 8, arredondado para bytes completos.|A matriz tem um bit por coluna que permite valor nulo. Ele é arredondado para bytes completos.|  

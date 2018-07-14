@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228146"
 ---
 # <a name="object-element-dimension-xmla"></a>Elemento Object (Dimension) (XMLA)
   Contém uma referência de objeto para a dimensão na qual o pai [inserir](../xml-elements-commands/insert-element-xmla.md), [atualização](../xml-elements-commands/update-element-xmla.md), ou [Drop](../xml-elements-commands/drop-element-xmla.md) comando é executado.  
@@ -64,7 +64,7 @@ ms.locfileid: "36008717"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Descartar](../xml-elements-commands/drop-element-xmla.md), [inserir](../xml-elements-commands/insert-element-xmla.md), [atualização](../xml-elements-commands/update-element-xmla.md)|  
+|Elementos pai|[Drop](../xml-elements-commands/drop-element-xmla.md), [inserir](../xml-elements-commands/insert-element-xmla.md), [atualização](../xml-elements-commands/update-element-xmla.md)|  
 |Elementos filho|[Cubo](cube-element-xmla.md), [banco de dados](database-element-xmla.md), [dimensão](dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249166"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Excluir relações (SSAS tabular)
   É possível excluir relações existentes usando o designer de modelos na Exibição de Diagrama ou usando a caixa de diálogos Gerenciar Relações. Para obter informações sobre como as relações são usadas em modelos tabulares, consulte [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36006440"
 4.  Na caixa de diálogo **Gerenciar Relações** , clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Relações &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)   
+ [Relações de &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)   
  [Criar uma relação entre duas tabelas &#40;Tabular do SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

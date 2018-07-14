@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95f347b876673bd178f2059136bbbf6e79d8df5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73c3627f3861b978a9e539943bcb65777b2f36b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257402"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configuração de Erros (Caixa de diálogo Estrutura de Mineração) (Analysis Services – Dados Multidimensionais)
   Utilize a página **Configuração de Erros** da caixa de diálogo **Propriedades da Estrutura de Mineração** no **SQL Server Management Studio** para definir as propriedades de configuração de erros de uma estrutura de mineração em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -93,7 +93,7 @@ ms.locfileid: "36006228"
  Digite o caminho completo e nome do arquivo de log de erros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades de estrutura de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [Geral &#40;caixa de diálogo estrutura de mineração&#41; &#40;Analysis Services – mineração de dados&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+ [Caixa de diálogo de propriedades de estrutura de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [Geral &#40;caixa de diálogo estrutura de mineração&#41; &#40;Analysis Services - mineração de dados&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00d151f80439062ca67a1320d4453155079a332e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2635ba00fdbeaf0a55567539911b974a7d9265d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215526"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
   Use a página **Geral** do **Editor da Tarefa Criação de Perfil de Dados** para configurar as seguintes opções:  
@@ -83,7 +83,7 @@ ms.locfileid: "36007298"
 >  Você também pode abrir o Visualizador de Perfil de Dados executando o DataProfileViewer.exe na pasta, *\<unidade>*:\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Consulte também  
- [Um único formulário de perfil rápido de tabela &#40;tarefa criação de perfil de dados&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+ [Formulário de perfil rápido de tabela única &#40;tarefa de criação de perfil&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Solicitações de Perfil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

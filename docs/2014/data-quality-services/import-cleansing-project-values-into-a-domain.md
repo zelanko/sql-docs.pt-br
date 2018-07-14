@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd5353f86fd042c556d0c7287f176514e262903f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86290de5911ed16aa0c662ccdd0e93057bedc52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273182"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
   No [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), você pode importar conhecimento de qualidade de dados coletado durante o processo de limpeza em um projeto de limpeza de qualidade de dados ou um pacote do Integration Services que contém o componente de limpeza DQS em um domínio. Isto assegura que o conhecimento confiável não seja perdido, e que a base de dados de conhecimento seja aprimorada continuamente.  
@@ -73,7 +73,7 @@ ms.locfileid: "36006197"
 10. Clique em **Concluir**.  
   
     > [!NOTE]  
-    >  Para obter mais informações sobre como trabalhar com valores de **valores de domínio** guia, consulte [alterar valores de domínio](../../2014/data-quality-services/change-domain-values.md).  
+    >  Para obter mais informações sobre como trabalhar com valores de **valores de domínio** guia, consulte [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após a importação dos valores do projeto para um domínio  
  Depois que você importar o conhecimento de qualidade de dados reunido durante o processo de limpeza para um domínio, você pode executar outras tarefas de gerenciamento de domínio no domínio e seus valores. Para obter mais informações, consulte [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md).  

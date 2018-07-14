@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce072951db7d254fd9b8a8e923c6646915b30aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f9a2406425ee0bf3673f4f3e21e01b977fcf39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212796"
 ---
 # <a name="administrative-password"></a>Senha Administrativa
   Se na página **Distribuidores** deste assistente você selecionou um Distribuidor remoto para esse Publicador, terá de inserir uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor, usando o logon **distributor_admin** . A senha deve corresponder à senha especificada na página **Senha do Distribuidor** do Assistente para Configurar Distribuição ou da página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200786"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar um servidor de relatórios (modo nativo do Reporting Services)
   Dependendo das opções selecionadas durante a instalação, o Servidor de Relatórios possivelmente exigir uma configuração adicional para que você possa usá-lo. A configuração de um servidor de relatório é formada no mínimo por estes itens:  
@@ -37,7 +37,7 @@ ms.locfileid: "36006999"
   
  O Gerenciador de Relatórios é um recurso opcional para um servidor de relatório no modo nativo, mas é recomendável configurá-lo de forma que você possa conceder acesso ao servidor de relatório ao usuário e gerenciar o conteúdo do servidor de relatório. Se você implantar um servidor de relatório no modo integrado do SharePoint, use o front-end da Web de um servidor SharePoint para conceder acesso.  
   
- Recursos adicionais, como e-mail de servidor de relatório e a conta de execução autônoma, podem ser configurados conforme necessário. Para obter mais informações, consulte [gerenciar um Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
+ Recursos adicionais, como e-mail de servidor de relatório e a conta de execução autônoma, podem ser configurados conforme necessário. Para obter mais informações, consulte [gerenciar um Reporting Services modo de servidor de relatório nativo](manage-a-reporting-services-native-mode-report-server.md).  
   
  Para configurar um servidor de relatório, use a ferramenta Configuração do Reporting Services.  
   

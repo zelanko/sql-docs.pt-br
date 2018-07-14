@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5329be878ed1353acb4fbed5f4fc6a21367065c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0d6af0d7f643ae312015479a31cae4b04f1d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198216"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definir Escopo de Cálculos (Assistente de Business Intelligence)
   Use a página **Definir Escopo de Cálculos** para associar os novos cálculos de tempo a medidas individuais.  

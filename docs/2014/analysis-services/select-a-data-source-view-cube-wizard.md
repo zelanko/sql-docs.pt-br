@@ -1,5 +1,5 @@
 ---
-title: Selecione um modo de exibição de fonte de dados (Assistente para cubos) | Microsoft Docs
+title: Selecione uma exibição da fonte de dados (Assistente para cubos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourceselection.f1
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48661166ba8994e8d523138cfa0e9ba8c58fd09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34ddd344b2fa9116c1ecc0ea7dd1cc45ec44f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235626"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Selecionar uma Exibição da Fonte de Dados (Assistente para Cubos)
   Use a página **Selecionar uma Exibição da Fonte de Dados** para selecionar a exibição da fonte de dados para o cubo vazio.  
@@ -30,7 +30,7 @@ ms.locfileid: "36006443"
 >  Essa página só será exibida se você tiver selecionado **Criar um cubo vazio** na página **Selecionar Método de Criação** .  
   
 ## <a name="options"></a>Opções  
- **exibição da fonte de dados**  
+ **Exibição da fonte de dados**  
  Selecione a exibição da fonte de dados que será usada para o cubo vazio.  
   
  **Nenhuma**  

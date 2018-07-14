@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - push subscriptions [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6ba955bddebbcf950e8559f9b35bcdd64b8fa275
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c1f8f2dd21d385207164d520a108a2ef6621e53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212816"
 ---
 # <a name="delete-a-push-subscription"></a>Excluir uma assinatura push
   Este tópico descreve como excluir uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -101,7 +101,7 @@ ms.locfileid: "36007061"
   
 4.  Defina a propriedade <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 para o <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
+5.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
   
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36007061"
   
 4.  Defina a propriedade <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 para o <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
+5.  Verifique a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para verificar se a assinatura existe. Se o valor dessa propriedade é `false`, significa que as propriedades de assinatura na etapa 2 foram definidas incorretamente ou a assinatura não existe.  
   
 6.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> .  
   

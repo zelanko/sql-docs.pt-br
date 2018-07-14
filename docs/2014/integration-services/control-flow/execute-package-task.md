@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171137"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -101,7 +101,7 @@ ms.locfileid: "36007540"
  Para obter mais informações, consulte [Usar os valores de variáveis e parâmetros em um pacote filho](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Acessando variáveis de pacote pai  
- Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Quando você insere o nome da variável de pacote pai na página de **Script** no **Editor da Tarefa Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa de Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+ Os pacotes filho podem acessar variáveis de pacote pai usando a tarefa de Script. Quando você insere o nome da variável de pacote pai na página de **Script** no **Editor da Tarefa Script**, não inclua **Usuário:** no nome da variável. Caso contrário, o pacote filho não localizará a variável quando você executar o pacote pai. Para obter mais informações sobre como usar a tarefa Script para acessar variáveis de pacote pai, consulte essa entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurando a tarefa Executar Pacote  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
@@ -120,8 +120,8 @@ ms.locfileid: "36007540"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [SSIS: você deve executar pacotes filho em processo ou fora de processo?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
+-   Entrada de blog [SSIS: você deve executar pacotes filho em processo ou out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
   
--   Entrada de blog, [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+-   Entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
   

@@ -1,14 +1,13 @@
 ---
-title: Clustering de failover e grupos de disponibilidade do AlwaysOn (SQL Server) | Microsoft Docs
+title: Clustering de failover e grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267142"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
   O [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a solução de alta disponibilidade e recuperação de desastre incorporada no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requer o WSFC (Windows Server Failover Clustering). Além disso, embora o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não seja dependente do clustering de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você pode usar uma FCI (instância de clustering de failover) para hospedar uma réplica de disponibilidade para um grupo de disponibilidade. É importante saber a função de cada tecnologia de clustering e quais considerações precisam ser observadas ao criar o ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -80,7 +79,7 @@ ms.locfileid: "36006196"
  **As configurações de política de failover do grupo de disponibilidade se aplicam a todas as réplicas, sejam elas armazenadas em uma instância autônoma ou em uma instância FCI.  
   
 > [!NOTE]  
->  Para obter mais informações sobre **número de nós** no Clustering de Failover e **grupos de disponibilidade do AlwaysOn** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com o Edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre **número de nós** dentro do cluster de Failover e **grupos de disponibilidade AlwaysOn** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com o Edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerações para hospedar uma réplica de disponibilidade em uma FCI  
   
@@ -124,7 +123,7 @@ ms.locfileid: "36006196"
   
 -   **Whitepapers:**  
   
-     [Guia de arquitetura do AlwaysOn: Criando uma alta disponibilidade e a solução de recuperação de desastres usando instâncias de Cluster de Failover e grupos de disponibilidade](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Guia de arquitetura do AlwaysOn: Criando uma alta disponibilidade e solução de recuperação de desastres usando instâncias de Cluster de Failover e grupos de disponibilidade](http://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -133,7 +132,7 @@ ms.locfileid: "36006196"
      [White papers da equipe de consultoria do cliente do SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [habilitar e desabilitar grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
- [Instâncias de Cluster de Failover do AlwaysOn &#40;do SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [habilitar e desabilitar grupos de disponibilidade AlwaysOn &#40;SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
+ [Instâncias de Cluster de Failover do AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

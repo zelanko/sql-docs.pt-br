@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b8fb7a2bf155eda1fa683e953ebcb2efee3a36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe1522fc538b8ad2d70ccb6f8a6d69e035efe17b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253570"
 ---
 # <a name="run-queries-visual-database-tools"></a>Executar consultas (Visual Database Tools)
   Quando você tiver terminado de criar a consulta, execute-a.  

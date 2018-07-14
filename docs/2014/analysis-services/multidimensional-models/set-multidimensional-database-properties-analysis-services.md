@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200226"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Definir propriedades de banco de dados multidimensional (Analysis Services)
   Há várias propriedades de banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que você pode configurar no designer de banco de dados [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36007611"
   
 -   Você pode fornecer uma descrição do banco de dados que pode ser apresentada aos usuários. Você também pode exibir o nome do banco de dados, mas não pode alterá-lo. Para alterar o nome de banco de dados, você deve editar as propriedades do projeto.  
   
--   Você pode fornecer traduções para o nome do banco de dados e descrição para um ou mais idiomas. Para obter mais informações, consulte [traduções de cubo](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções da dimensão](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), e [traduções &#40;Analysis Services&#41;](../translations-analysis-services.md).  
+-   Você pode fornecer traduções para o nome do banco de dados e descrição para um ou mais idiomas. Para obter mais informações, consulte [traduções de cubo](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções de dimensão](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), e [traduções &#40;do Analysis Services&#41;](../translations-analysis-services.md).  
   
 -   Você pode exibir e pode modificar mapeamentos de tipo de conta padrão. Os mapeamentos de tipo da conta são usados quando uma ou mais medidas usarem a função de agregação *ByAccount* . Para cada tipo de conta, você pode especificar um alias e modificar a função de agregação padrão associada ao tipo de conta. Para obter mais informações sobre como modificar a agregação padrão, consulte [Definir comportamento semiaditivo](define-semiadditive-behavior.md).  
   

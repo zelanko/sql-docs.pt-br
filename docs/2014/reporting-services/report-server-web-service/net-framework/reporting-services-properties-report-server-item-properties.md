@@ -17,15 +17,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f4d96b577c82797d408813a90b8b9a8e7dd7455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6f4c94f85e4dad79f03963a300ada3fabd8a9cfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190013"
 ---
 # <a name="report-server-item-properties"></a>Propriedades do item do servidor de relatório
   As propriedades de item são propriedades específicas de itens do banco de dados do servidor de relatório. Tais itens incluem relatórios, relatórios vinculados, pastas, recursos, modelos e fontes de dados.  
@@ -63,7 +63,7 @@ ms.locfileid: "36008344"
 |Propriedade|Description|  
 |--------------|-----------------|  
 |**Idioma**|O idioma usado em um relatório. O valor é um código de idioma definido na especificação RFC1766 do IETF. A primeira parte é uma designação de dois caracteres do idioma básico. A segunda parte é separada por um hífen e indica a variação ou o dialeto do idioma. Se um valor não for especificado no elemento `Style` associado ao elemento `Body` na definição de relatório, o valor padrão será o idioma do servidor de relatório.|  
-|`ReportProcessingTimeout`|O tempo limite, em segundos, para um relatório individual. Se esse valor for definido, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado tiver decorrido. Os valores válidos são `-1` por meio de `2`,`147`,`483`,`647`. Se o valor for `-1`, o relatório não terá seu limite expirado durante o processamento. Se o valor for `null`, o valor da propriedade do sistema propriedade `ReportProcessingTimeout` será usado para o tempo limite de processamento do relatório. O valor padrão é `null`. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|O tempo limite, em segundos, para um relatório individual. Se esse valor for definido, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado tiver decorrido. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, o relatório não terá seu limite expirado durante o processamento. Se o valor for `null`, o valor da propriedade do sistema propriedade `ReportProcessingTimeout` será usado para o tempo limite de processamento do relatório. O valor padrão é `null`. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|A data e hora em que um instantâneo de relatório foi criado pela última vez para um relatório.|  
 |**CanRunUnattended**|Um valor que indica se um relatório pode ser executado em estado autônomo em uma agenda. Se essa propriedade for definida como `true`, os valores padrão para parâmetros de relatório serão definidos e as credenciais de fonte de dados serão armazenadas com o relatório, ou a opção de recuperação de credencial será definida como `None`. Se essa propriedade for definida como `false`, não serão atendidos os pré-requisitos para a execução autônoma de um relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma do &#40;Configuration Manager do SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Um valor que indica se o relatório tem valores padrão válidos definidos para todos os parâmetros de relatório. O valor também será `true` se um relatório não tiver parâmetros de relatório. Se essa propriedade for definida como `false`, um ou mais parâmetros de relatório não terão um valor padrão válido.|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e20795ecf10dbfb1bcf2daa8b4808221fa2ba7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1cd491119fb0af27eb9e2692271fe168e630dc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219636"
 ---
 # <a name="operator-precedence-and-associativity"></a>Precedência de operador e capacidade de associação
   Cada operador no conjunto de operadores que o avaliador de expressão aceita tem uma precedência designada na hierarquia de precedência e inclui uma direção na qual ele será avaliado. A direção de avaliação para um operador é a capacidade de associação do operador. Os operadores com maior precedência são avaliados antes dos operadores com menor precedência. Se uma expressão complexa tiver vários operadores, a precedência de operador determina a ordem na qual as operações são executadas. A ordem de execução pode afetar o valor resultante significativamente. Alguns operadores têm precedência igual. Se uma expressão contiver vários operadores de precedência igual, os operadores serão avaliados de forma direcional, da esquerda para a direita ou da direita para a esquerda.  
@@ -46,6 +46,6 @@ ms.locfileid: "36008443"
 |? :|Expressões condicionais|Da direita para a esquerda|  
   
 ## <a name="see-also"></a>Consulte também  
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

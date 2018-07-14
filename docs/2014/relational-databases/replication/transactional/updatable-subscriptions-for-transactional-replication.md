@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268662"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "36006793"
   
 -   Dados de republicação não oferecem suporte.  
   
--   A replicação adiciona a coluna **msrepl_tran_version** a tabelas publicadas para propósitos de rastreamento. Devido a essa coluna adicional, todas as `INSERT` instruções devem incluir uma lista de colunas.  
+-   A replicação adiciona a coluna **msrepl_tran_version** a tabelas publicadas para propósitos de rastreamento. Devido à coluna adicional, todas as `INSERT` instruções devem incluir uma lista de colunas.  
   
 -   Para efetuar alterações de esquema em uma tabela em uma publicação que ofereça suporte a assinaturas de atualização, toda a atividade na tabela deve ser interrompida no Publicador e Assinantes, e alterações de dados pendentes devem ser propagadas a todos os nós antes de fazer qualquer alteração de esquema. Isso assegura que transações pendentes não entrem em conflito com a alteração de esquema pendente. Depois que as alterações de esquema tenham se propagado para todos os nós, a atividade pode ser retomada nas tabelas publicadas. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36006793"
   
 -   Atualizações no Assinante são propagadas para o Publicador mesmo se uma assinatura tiver expirado ou estiver inativa. Assegure-se de que qualquer dessas assinaturas seja cancelada ou reinicializada.  
   
--   Se `TIMESTAMP` ou `IDENTITY` colunas são usadas e eles são replicados como seus tipos de dados básicos, valores nessas colunas não devem ser atualizados no assinante.  
+-   Se `TIMESTAMP` ou `IDENTITY` forem usadas colunas e elas são replicadas como seus tipos de dados básicos, valores nessas colunas não devem ser atualizados no assinante.  
   
--   Os assinantes não podem atualizar ou inserir `text`, `ntext` ou `image` valores porque não é possível ler das tabelas inseridas ou excluídas dentro dos gatilhos de controle de alterações de replicação. Da mesma forma, assinantes não podem atualizar ou inserir `text` ou `image` valores usando `WRITETEXT` ou `UPDATETEXT` porque os dados são substituídos pelo publicador. Em vez disso, é possível particionar a `text` e `image` colunas em uma função de tabela e modificar as duas tabelas em uma transação.  
+-   Os assinantes não podem atualizar ou inserir `text`, `ntext` ou `image` valores porque não é possível ler das tabelas inseridas ou excluídas dentro dos gatilhos de controle de alterações de replicação. Da mesma forma, assinantes não podem atualizar ou inserir `text` ou `image` valores usando `WRITETEXT` ou `UPDATETEXT` porque os dados são substituídos pelo publicador. Em vez disso, é possível particionar as `text` e `image` colunas em um separado de tabela e modificar as duas tabelas em uma transação.  
   
      Para atualizar objetos grandes em um assinante, use os tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)` em vez de `text`, `ntext`, e `image` tipos de dados, respectivamente.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36006793"
   
 -   Atualizações feitas para colunas de chave primária não são recomendadas quando se usa atualização enfileirada, uma vez que a chave primária é usada como um localizador de registro para todas as consultas. Quando a política de resolução de conflito é definida como Assinante Vence, atualizações para chaves primárias devem ser feitas com cuidado. Se atualizações para a chave primária são feitas tanto no Publicador quanto no Assinante, o resultado será duas linhas com chaves primárias diferentes.  
   
--   Para colunas do tipo de dados `SQL_VARIANT`: quando dados são inseridos ou atualizados no assinante, ele é mapeado da seguinte forma pelo agente de leitor de fila quando ele for copiado do assinante para a fila:  
+-   Para colunas do tipo de dados `SQL_VARIANT`: quando dados são inseridos ou atualizados no assinante, ele é mapeado da seguinte forma pelo agente de leitor de fila ao serem copiado do assinante para a fila:  
   
     -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, e `SMALLMONEY` são mapeados para `NUMERIC`.  
   
-    -   `BINARY` e `VARBINARY` são mapeados para `VARBINARY` dados.  
+    -   `BINARY` e `VARBINARY` são mapeadas para `VARBINARY` dados.  
   
 ### <a name="conflict-detection-and-resolution"></a>Detecção de conflito e resolução  
   

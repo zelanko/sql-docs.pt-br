@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263242"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
-  Contém o valor desejado de um [atributo](attribute-element-xmla.md) elemento a ser adicionado por um [inserir](../xml-elements-commands/insert-element-xmla.md) comando, ou um [célula](cell-element-xmla.md) elemento a ser atualizada por um [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)comando.  
+  Contém o valor desejado de um [atributo](attribute-element-xmla.md) elemento a ser adicionado por um [inserir](../xml-elements-commands/insert-element-xmla.md) comando, ou uma [célula](cell-element-xmla.md) elemento a ser atualizada por um [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,8 +73,8 @@ ms.locfileid: "36007120"
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [O elemento CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Elemento CellOrdinal &#40;XMLA&#41;](cellordinal-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Elemento UpdateCells &#40;XMLA&#41;](../xml-elements-commands/updatecells-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ConnectionID element
 ms.assetid: de044fb2-f713-46b2-8899-14e8d515e823
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6bf8ac8107533be74bec61e52abd824d379d0587
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: eb5a4c5a358c3be6629d579c140cb2407e74b838
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265282"
 ---
 # <a name="connectionid-element-xmla"></a>Elemento ConnectionID (XMLA)
   Identifica uma conexão ativa na qual executar o pai [Cancelar](../xml-elements-commands/cancel-element-xmla.md) elemento.  

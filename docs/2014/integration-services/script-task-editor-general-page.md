@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.general.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c00a77cf5e83e82cd13b623520aa21217b365395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44373be3f5988cb166e29b61f3d8588559310f33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269132"
 ---
 # <a name="script-task-editor-general-page"></a>Editor da Tarefa Script (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Script** para nomear e descrever a tarefa Script.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177543"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece o SharePoint tipos de conteúdo predefinidos que são usados para gerenciar arquivos de origem (. rsds) de dados compartilhadas, modelos de relatório (. SMDL) e arquivos de definição (. RDL) de relatório do construtor de relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.  
@@ -28,7 +28,7 @@ ms.locfileid: "36005640"
   
  Para adicionar tipos de conteúdo a uma biblioteca, é necessário que você seja administrador de site ou ter o nível de permissão Controle Total.  
   
- O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] conteúdo de tipos e gerenciamento de tipo de conteúdo serão automaticamente habilitados em todas as bibliotecas de documentos para conjuntos de sites existentes criados das seguintes **Central de Business Intelligence** modelo de site.  
+ O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] conteúdo de tipos e gerenciamento de tipo de conteúdo serão automaticamente habilitados em todas as bibliotecas de documentos para conjuntos de sites existentes criados para o seguinte **Central de Business Intelligence** modelo de site.  
   
  Sites criados depois da integração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não terão os tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] habilitados.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36005640"
 8.  Quando terminar de adicionar tipos de conteúdo, clique em **OK**.  
   
 9. > [!NOTE]  
-    >  Se o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] grupo do tipo de conteúdo **tipos de conteúdo do SQL Server Reporting Services** não está visível a **adicionar tipos de conteúdo** página, uma das seguintes condições for verdadeira:  
+    >  Se o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] grupo de tipo de conteúdo **tipos de conteúdo do SQL Server Reporting Services** não estiver visível na **adicionar tipos de conteúdo** página, uma das seguintes condições for verdadeira:  
   
     -   O suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint não foi instalado. Para obter mais informações, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). O tópico inclui informações sobre a instalação do suplemento e apresenta as etapa de instalação somente de arquivos do suplemento para oferecer soluções alternativas.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36005640"
 4.  Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de permissão de lista de itens do servidor de relatório e sites do SharePoint](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Site do SharePoint e a referência à permissão de listas para itens do servidor de relatório](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar o construtor de relatórios &#40;construtor de relatórios&#41;](report-builder/start-report-builder.md)  
   
   

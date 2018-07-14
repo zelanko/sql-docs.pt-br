@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DisplayName property
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a6cb6dcbc9872f049e3c534296a26b1028b991b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2295409a459c9b5264876cc4201beb86cae9a356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177323"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propriedade DisplayName (classe SqlService)
   Obtém o nome para exibição do serviço.  

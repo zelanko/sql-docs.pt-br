@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb9453806d27f55cf081eb1196e886cecf1789c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188943"
 ---
 # <a name="change-source-control-connections"></a>Alterar conexões de controle do código-fonte
   A primeira vez que você adiciona ou abre uma solução de controle do código-fonte, seu provedor cria uma associação entre a pasta raiz do diretório da solução local e a pasta do servidor correspondente.  
@@ -35,11 +35,11 @@ ms.locfileid: "36008990"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Para abrir a interface de usuário de controle do código-fonte do ambiente do Studio  
   
-1.  Sobre o **arquivo** , aponte para **controle de origem**e, em seguida, clique em **Launch Microsoft Visual SourceSafe**.  
+1.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **inicie o Microsoft Visual SourceSafe**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas de controle de origem](../../2014/database-engine/source-control-basics.md)   
- [Definir as opções de controle de origem](../../2014/database-engine/set-source-control-options.md)   
+ [Noções básicas de controle do código-fonte](../../2014/database-engine/source-control-basics.md)   
+ [Definir opções de controle do código-fonte](../../2014/database-engine/set-source-control-options.md)   
  [Excluir arquivos do controle do código-fonte](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

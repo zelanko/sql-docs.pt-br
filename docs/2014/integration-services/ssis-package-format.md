@@ -1,5 +1,5 @@
 ---
-title: Formato de pacote SSIS | Microsoft Docs
+title: Formato de pacote do SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dcb50760bcbe0ce1a4eb01a9a1a2de29565defdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025877f39e66fcf25e6ed2b27d6e1b422a299d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237116"
 ---
 # <a name="ssis-package-format"></a>Formato do pacote SSIS
   Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança pacotes que não contêm alterações conflitantes ou alterações armazenadas no formato binário.  
@@ -36,7 +36,7 @@ ms.locfileid: "36006132"
   
      O `refId` valor é uma cadeia de caracteres exclusiva que é legível e compreensível, em comparação com GUIDs ou valores inteiros. A cadeia de caracteres é semelhante aos valores de caminho usados para configurações de pacote nas versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Se você estiver mesclando alterações entre as duas versões de um pacote, o `refId` pode ser usado em operações de localizar/substituir para garantir que todas as referências a esse objeto foi atualizadas corretamente.  
+     Se você estiver mesclando alterações entre duas versões de um pacote, o `refId` pode ser usado em operações de localizar/substituir para assegurar que todas as referências a esse objeto tenham sido atualizadas corretamente.  
   
 -   As informações de layout estão contidas em uma seção CData.  
   

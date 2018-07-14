@@ -1,5 +1,5 @@
 ---
-title: Relatórios de Clickthrough página (Gerenciador de relatórios) | Microsoft Docs
+title: Relatórios de Clickthrough de página (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244346"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página Relatórios de Clickthrough (Gerenciador de Relatórios)
   Um relatório de clickthrough é aquele que exibe dados relacionados quando você clica nos dados interativos contidos no relatório. Esses relatórios são gerados pelo servidor de relatórios com base nas informações contidas no modelo usado para criar o relatório. Se você não quiser usar os relatórios de clickthrough gerados pelo servidor de relatórios, você pode criar relatórios personalizados publicados em um servidor de relatórios e mapear até pontos de dados interativos definidos no modelo. Os relatórios personalizados devem ser criados no Construtor de Relatórios do mesmo modelo e depois publicados no servidor de relatórios. Para mapear relatórios personalizados para itens no modelo, use a página Relatórios de Clickthrough no Gerenciador de Relatórios.  
@@ -51,7 +51,7 @@ ms.locfileid: "36006061"
 4.  Selecione a guia **Clickthrough** .  
   
 ## <a name="options"></a>Opções  
- **Hierarquia de item de modelo**  
+ **Hierarquia de modelo de item**  
  Mostra as entidades, pastas e itens no namespace de modelo para o qual você pode fornecer um relatório personalizado.  
   
  **Relatório de instância única**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288052"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
   Este artigo descreve o recurso Power View para Modelos Multidimensionais no Microsoft SQL Server 2014 e oferece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para Modelos Multidimensionais na respectiva organização.  
@@ -30,7 +30,7 @@ ms.locfileid: "36006954"
   
  **Power View para arquitetura de Modelos Multidimensionais**  
   
- ![Power View para modelos multidimensionais arquitetura](../media/daxmd-architecture.gif "Power View para arquitetura de modelos multidimensionais")  
+ ![Power View para arquitetura de modelos multidimensionais](../media/daxmd-architecture.gif "Power View para arquitetura de modelos multidimensionais")  
   
 ## <a name="prerequisites"></a>Prerequisites  
  **Requisitos do servidor**  
@@ -129,7 +129,7 @@ ms.locfileid: "36006954"
   
  **Relatório do Power View com membros calculados**  
   
- ![Membros calculados em Power View](../media/daxmd-calcmembersinpowerview.gif "membros calculados em Power View")  
+ ![Membros calculados na Power View](../media/daxmd-calcmembersinpowerview.gif "membros calculados na Power View")  
   
 ### <a name="default-members"></a>Membros padrão  
  Membros padrão de suporte a modelos multidimensionais para atributos de dimensão. O membro padrão é usado pelo Analysis Services durante a agregação de dados para uma consulta. O membro padrão de um atributo de dimensão é exposto como o valor ou o filtro padrão para a coluna correspondente nos metadados tabulares.  

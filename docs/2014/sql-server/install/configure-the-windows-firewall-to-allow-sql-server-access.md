@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67bf7427229a117ff541ae353c222839e27a8aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198818"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Se um firewall estiver ativado mas não corretamente configurado, as tentativas de conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão ser bloqueadas.  
@@ -147,7 +147,7 @@ ms.locfileid: "36007077"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Porta TCP 4022. Para verificar a porta usada, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Não existe uma porta padrão para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], mas esta é a configuração convencional usada nos exemplos dos Manuais Online.|  
 |Espelhamento de banco de dados|Porta escolhida pelo administrador. Para determinar a porta, execute a seguinte consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Não existe uma porta padrão para o espelhamento de banco de dados, mas os exemplos dos Manuais Online usam a porta TCP 7022. É muito importante evitar interromper um ponto de extremidade de espelhamento em uso, principalmente no modo de alta segurança com failover automático. Sua configuração de firewall deve evitar dividir o quorum. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replicação|As conexões de replicação com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam as portas normais típicas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] (porta TCP 1433 para a instância padrão etc.)<br /><br /> A sincronização da Web e o acesso FTP/UNC para instantâneo de replicação exigem a abertura de portas adicionais no firewall. Para transferir o esquema e os dados iniciais de um local para outro, a replicação pode usar o FTP (porta TCP 21) ou sincronizar via HTTP (porta TCP 80) ou Compartilhamento de Arquivos. O compartilhamento de arquivos usa a porta UDP 137 e 138, e a porta TCP 139 caso esteja usando o NetBIOS. O compartilhamento de arquivos usa a porta TCP 445.|Para sincronização por HTTP, a replicação usa o ponto de extremidade do IIS (portas configuráveis, mas o padrão é a porta 80), mas o processo do IIS se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] back-end através das portas padrão (1433 para a instância padrão).<br /><br /> Durante a sincronização da Web usando FTP, a transferência por FTP ocorre entre o IIS e o publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e não entre o assinante e o IIS.|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)<br /><br /> A exceção [IPsec](#BKMK_IPsec) também pode ser necessária.|Se estiver usando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no computador host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , você também deverá adicionar **Devenv.exe** à lista Exceções e abrir a porta TCP 135.<br /><br /> Se estiver usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], no computador host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , você também deverá adicionar **ssms.exe** à lista Exceções e abrir a porta TCP 135. Para obter mais informações, consulte [configurar o depurador Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Porta TCP 135<br /><br /> Consulte [Considerações especiais sobre a porta 135](#BKMK_port_135)<br /><br /> A exceção [IPsec](#BKMK_IPsec) também pode ser necessária.|Se estiver usando [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no computador host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , você também deverá adicionar **Devenv.exe** à lista Exceções e abrir a porta TCP 135.<br /><br /> Se estiver usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], no computador host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , você também deverá adicionar **ssms.exe** à lista Exceções e abrir a porta TCP 135. Para obter mais informações, consulte [configurar o depurador do Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
  Para obter instruções passo a passo para configurar o Firewall do Windows para o [!INCLUDE[ssDE](../../includes/ssde-md.md)], veja [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36007077"
   
 1.  Na guia **Exceções** do item **Firewall do Windows** , clique em **Adicionar um programa**.  
   
-2.  Navegue até o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja permitir através do firewall, por exemplo **C:\Program Files\Microsoft SQL Server \ mssql12. < nome_da_instância > \MSSQL\Binn**, selecione  **sqlservr.exe**e, em seguida, clique em **abrir**.  
+2.  Navegue até o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja permitir através do firewall, por exemplo **C:\Program Files\Microsoft SQL Server\MSSQL12. < nome_da_instância > \MSSQL\Binn**, selecione  **sqlservr.exe**e, em seguida, clique em **aberto**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
 - monitoring server performance [SQL Server], tools
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 76cb6106fb7b4c21ec8fbb8101ad7cfecea82282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262462"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Ferramentas para monitoramento e ajuste de desempenho
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto abrangente de ferramentas para monitorar eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ajustar o design do banco de dados físico. A escolha da ferramenta depende do tipo de monitoramento ou de ajuste a ser feito e dos eventos em particular a monitorar.  
@@ -43,7 +43,7 @@ ms.locfileid: "36007063"
 |[Abrir o Monitor de Atividade &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|O Monitor de Atividade no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é útil para exibições ad hoc da atividade atual, além disso, exibe graficamente informações sobre:<br /><br /> Processos em execução em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Processos bloqueados.<br /><br /> Bloqueios.<br /><br /> Atividade de usuário.|  
 |[Rastreamento do SQL](../sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] que criam, filtram e definem rastreamentos:<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|  
 |Logs de erros|O log de eventos dos aplicativos Windows fornece um panorama dos eventos que ocorrem nos sistemas operacionais Windows Server e Windows como um todo, bem como dos eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e em pesquisas de texto completo. Ele contém informações sobre eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não se encontram em nenhum outro lugar. Você pode usar as informações do log de erros para solucionar problemas relacionados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|Os seguintes procedimentos armazenados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constituem uma excelente alternativa para muitas tarefas de monitoramento:<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    Fornece informações retratando usuários e processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atuais, inclusive a instrução executada atualmente e se está bloqueada.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): fornece informações retratando bloqueios, inclusive o ID de objeto, ID de índice, tipo de bloqueio e tipo ou recurso ao qual o bloqueio se aplica.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): exibe uma estimativa da quantidade atual de espaço em disco usado por uma tabela (ou um banco de dados inteiro).<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): exibe estatísticas, incluindo o uso da CPU, uso de e/s e a quantidade de tempo ocioso desde **sp_monitor** foi executada pela última vez.|  
+|[Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|Os seguintes procedimentos armazenados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constituem uma excelente alternativa para muitas tarefas de monitoramento:<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    Fornece informações retratando usuários e processos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atuais, inclusive a instrução executada atualmente e se está bloqueada.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): fornece informações retratando bloqueios, incluindo a ID de objeto, ID de índice, tipo de bloqueio, tipo ou recurso ao qual o bloqueio se aplica.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): exibe uma estimativa da quantidade atual de espaço em disco usado por uma tabela (ou um banco de dados inteiro).<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): exibe estatísticas, incluindo o uso da CPU, uso de e/s e a quantidade de tempo ocioso desde **sp_monitor** foi executada pela última vez.|  
 |[DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|Instruções DBCC (Database Console Command) lhe permitem examinar as estatísticas de desempenho e a consistência lógica e física de um banco de dados.|  
 |[Funções internas &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|Funções internas exibem estatísticas que retratam a atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde o momento em que o servidor foi iniciado; essas estatísticas são armazenadas em contadores predefinidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, **@@CPU_BUSY** contém o tempo durante o qual a CPU executa o código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; **@@CONNECTIONS** contém o número de conexões ou tentativas de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e **@@PACKET_ERRORS** contém o número de pacotes de rede que ocorrem em conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|Sinalizadores de rastreamento exibem informações sobre uma atividade específica no servidor e são usados para diagnosticar problemas ou questões de desempenho (por exemplo, cadeias de deadlock).|  
@@ -61,7 +61,7 @@ ms.locfileid: "36007063"
 |Interface gráfica|Sim||Sim|Sim||Sim|  
 |Uso em aplicativo personalizado|Sim <sup>1</sup>||||Sim||  
   
- <sup>1</sup> usando [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] procedimentos armazenados do sistema.  
+ <sup>1</sup> Using [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] procedimentos armazenados do sistema.  
   
 ## <a name="windows-monitoring-tools"></a>Ferramentas de monitoramento do Windows  
  Os sistemas operacionais Windows e Windows Server 2003 também fornecem as seguintes ferramentas de monitoramento.  

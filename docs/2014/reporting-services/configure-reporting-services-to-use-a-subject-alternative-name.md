@@ -1,5 +1,5 @@
 ---
-title: Configurar o Reporting Services para usar um nome alternativo da entidade | Microsoft Docs
+title: Configurar o Reporting Services para usar um nome alternativo do assunto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 4
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3826590033cfd21bc12fa623633f88d9fa11d76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2890cea5f4c39d27ce89d4d9c5bcc3efe7384039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284782"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar o Reporting Services para usar um nome alternativo da entidade
   Este tópico explica como configurar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) para usar um SAN (Nome alternativo da entidade) modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.  
@@ -34,7 +34,7 @@ ms.locfileid: "36005852"
   
  URLs em [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser configurado para usar um certificado SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão SSL (protocolo SSL). O SAN é um campo adicional no certificado que permite que um serviço SSL ouça e seja válido para muitas URLs e compartilhe a porta SSL com outros aplicativos. O SAN é semelhante ao seguinte: www.s2.com.  
   
- Para obter mais informações sobre configurações de SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [configurar conexões SSL em um servidor de relatório do modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para obter mais informações sobre as configurações de SSL para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [configurar conexões SSL em um servidor de relatório do modo nativo](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar o SSRS para usar um nome alternativo da entidade para a URL do Web Service  
   

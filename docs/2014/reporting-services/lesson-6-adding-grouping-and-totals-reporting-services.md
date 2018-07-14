@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218872"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Adicione agrupamento e totais ao relatório para organizar e resumir os dados.  
   
- Para obter informações sobre como adicionar totais em execução para relatórios, consulte este artigo do curah.microsoft.com: [adicionar totais aos relatórios do Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Para obter informações sobre como adicionar totais em execução aos relatórios, consulte este artigo do curah.microsoft.com: [adicionar totais aos relatórios do Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **Neste tópico:**  
   
@@ -36,25 +36,25 @@ ms.locfileid: "36006980"
   
 -   [Para adicionar um total geral a um relatório](#bkmk_addgrandtotal)  
   
--   [Para publicar o relatório para o servidor de relatório (opcional)](#bkmk_publishreport)  
+-   [Para publicar o relatório ao servidor de relatório (opcional)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Para agrupar dados em um relatório  
   
 1.  Clique na guia **Design** .  
   
-2.  Se você não vir o **grupos de linhas** painel, clique na superfície de design e clique em **exibição** e, em seguida, clique em **agrupamento**.  
+2.  Se você não vir as **grupos de linhas** painel, clique com botão direito na superfície de design e clique em **exibição** e, em seguida, clique em **agrupamento**.  
   
-3.  Do **dados de relatório** painel, arraste o `Date` campo para o **grupos de linhas** painel. Coloque-o acima da linha chamada **(Detalhes)**.  
+3.  Dos **dados do relatório** painel, arraste o `Date` campo para o **grupos de linhas** painel. Coloque-o acima da linha chamada **(Detalhes)**.  
   
      Observe que a alça de linha agora exibe um colchete para mostrar um grupo. A tabela também tem duas colunas Data – uma em cada lado de uma linha pontilhada vertical.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Do **dados de relatório** painel, arraste o `Order` campo para o **grupos de linhas** painel. Coloque-o abaixo de Data e acima de **(Detalhes)**.  
+4.  Dos **dados do relatório** painel, arraste o `Order` campo para o **grupos de linhas** painel. Coloque-o abaixo de Data e acima de **(Detalhes)**.  
   
      Observe que a alça de linha agora exibe dois colchetes para mostrar dois grupos. A tabela tem agora duas `Order` colunas, muito.  
   
-5.  Excluir as colunas de data e a ordem originais para o **direita** da linha dupla. Isso removerá os valores do registro individual para que apenas o valor do grupo seja exibido. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e clique em **Excluir Colunas**.  
+5.  Exclua as colunas de data e a ordem originais para o **certa** da linha dupla. Isso removerá os valores do registro individual para que apenas o valor do grupo seja exibido. Selecione as alças de coluna das duas colunas, clique com o botão direito do mouse e clique em **Excluir Colunas**.  
   
      ![Selecionar colunas a serem excluídas](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Selecionar colunas a serem excluídas")  
   
@@ -86,9 +86,9 @@ ms.locfileid: "36006980"
   
 ##  <a name="bkmk_adddailytotal"></a> Para adicionar um total diário a um relatório  
   
-1.  Clique na célula pedido, aponte para **Adicionar Total**e clique em **após**.  
+1.  Clique com botão direito na célula pedido, aponte para **Adicionar Total**e clique em **após**.  
   
-     Isso adiciona uma nova linha contendo as somas da quantidade e valor monetário de cada dia e o rótulo "**Total**" na coluna ordem.  
+     Isso adiciona uma nova linha contendo as somas da quantidade e valor monetário de cada dia e o rótulo "**Total**" na coluna pedido.  
   
 2.  Digite o palavra **Diário** depois da palavra **Total** na mesma célula para que apareça **Total Diário**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36006980"
   
 1.  Clique com o botão direito do mouse na célula Data, aponte para **Adicionar Total**e clique em **Após**.  
   
-     Isso adiciona uma nova linha contendo as somas da quantidade e valor monetário de todo o relatório e o **Total** da etiqueta de `Date` coluna.  
+     Isso adiciona uma nova linha contendo as somas da quantidade e valor monetário de todo o relatório e o **Total** rotular no `Date` coluna.  
   
 2.  Digite a palavra **Geral** depois da palavra **Total** na mesma célula para que apareça **Total Geral**.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "36006980"
   
      ![Visualização: tabela básica com total geral](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Visualização: tabela básica com total geral")  
   
-##  <a name="bkmk_publishreport"></a> Para publicar o relatório para o servidor de relatório (opcional)  
+##  <a name="bkmk_publishreport"></a> Para publicar o relatório ao servidor de relatório (opcional)  
   
 1.  Uma etapa opcional é publicar o relatório concluído no servidor de relatório de modo nativo para que você possa exibir o relatório no Gerenciador de Relatórios.  
   
 2.  Na barra de ferramentas, clique em **Projeto** e, em seguida, em **tutorial Propriedades...**.  
   
-3.  No **TargetServerURL** digite o nome do nome do servidor de relatórios, por exemplo **http://\<servername > / reportserver**  
+3.  No **TargetServerURL** digite o nome do nome do seu servidor de relatório, por exemplo **http://\<servername > / reportserver**  
   
 4.  Clique em **OK**.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "36006980"
   
      Se você vir uma mensagem semelhante à seguinte na janela de saída, ela indicará uma implantação com êxito.  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Item está atualizado. Compilação concluída – 0 erros, 0 avisos---implantação iniciada: projeto: tutorial, Configuration: Debug---Implantando http://\<nome do servidor > / reportserverDeploying de relatório '/ tutorial/pedidos de vendas'. Implantação concluída-- 0 erros, 0 avisos = = = compilação: 0 bem-sucedido ou atualizado, 1 falha, 0 ignorado = = = Deploy: 1 bem-sucedido, 0 falhou, 0 ignorado = = =  
+    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Item está atualizado. Compilação concluída – 0 erros, 0 avisos---implantação iniciada: projeto: tutorial, configuração: Debug---implantação http://\<nome do servidor > / reportserverDeploying relatar '/ tutorial/Sales Orders'. Implantação concluída-- 0 erros, 0 avisos = = = Build: 1 com êxito ou atualizados, 0 falhou, 0 ignorado = = = Deploy: 1 com êxito, 0 falhou, 0 ignorado = = =  
   
      Se você vir uma mensagem de erro semelhante à seguinte, verifique se você tem permissões no servidor de relatório e se iniciou o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] com privilégios de administrador.  
   
-    > "As permissões concedidas ao usuário ' XXXXXXXX\\< seu nome de usuário\>' são insuficientes para executar esta operação"  
+    > "As permissões concedidas ao usuário ' XXXXXXXX\\< seu nome de usuário\>' são insuficientes para realizar esta operação"  
   
-6.  Iniciar o Gerenciador de relatórios com privilégios de administrador, por exemplo, com o botão direito no ícone para o Internet Explorer e clique em **executar como administrador**.  
+6.  Iniciar o Gerenciador de relatórios com privilégios de administrador, por exemplo, clique com botão direito no ícone do Internet Explorer e clique em **executar como administrador**.  
   
      Navegue até a URL do Gerenciador de Relatórios, por exemplo: `http://<server name>/reports`.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36006980"
  Você concluiu com êxito o tutorial Criando um relatório de tabela básico.  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtrar, agrupar e classificar dados &#40;SSRS e construtor de relatórios&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

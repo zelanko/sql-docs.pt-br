@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 78c8cb99023f4e28300ff8eb3f8eb27e4884bf0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 614491293ed7cafc51ca885876b401a99e0a4ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197966"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Guia Regras (Visualizador do Modelo de Mineração)
   Use o painel **Regras** em um modelo de associação para exibir as regras que o algoritmo extraiu dos dados. As regras descrevem como os itens estão relacionados uns com os outros e podem ser usados para criar recomendações.  
@@ -91,7 +91,7 @@ ms.locfileid: "36007139"
  Clique no cabeçalho da coluna para classificar pelo texto da regra.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing logical primary keys
 - logical primary keys [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], logical primary keys
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45abeb6540ca6c09e2376fa92d42ecca21cc9578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab45dd923ca3efd4f04504e2b309f4dda4f7bf58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255658"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definir chaves primárias lógicas em uma exibição da fonte de dados (Analysis Services)
   O Assistente de Exibição da Fonte de Dados e o Designer de Exibição da Fonte de Dados definem automaticamente uma chave primária para uma tabela que é adicionada a uma exibição da fonte de dados baseada na tabela do banco de dados subjacente.  
@@ -50,6 +50,6 @@ ms.locfileid: "36006219"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
- [Definir cálculos nomeados em uma exibição da fonte de dados &#40;do Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

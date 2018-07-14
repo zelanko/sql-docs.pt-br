@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64b1138d88cf6a247902eedf3903dc2221221e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 118d3a51afe868f1fa6449290a820e9b1b479867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199626"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Editor da Transformação Pesquisa (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor da Transformação Pesquisa** para especificar a junção entre a tabela de origem e a tabela de referência, e para selecionar as colunas de pesquisa a partir da tabela de referência.  
@@ -57,10 +57,10 @@ ms.locfileid: "36007725"
  Digite um alias para a saída de cada coluna de pesquisa. O padrão é o nome da coluna de pesquisa; entretanto, é possível selecionar qualquer nome descritivo exclusivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de transformação pesquisa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de transformação pesquisa &#40;página de Conexão&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Editor de transformação pesquisa &#40;página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor de transformação pesquisa &#40;página de saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Editor de transformação de pesquisa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de transformação de pesquisa &#40;página de Conexão&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Editor de transformação de pesquisa &#40;página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformação de pesquisa &#40;página de saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformação Pesquisa Difusa](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195936"
 ---
 # <a name="ordinal-element-assl"></a>Elemento Ordinal (ASSL)
   Indica o número ordinal a ser associado às coleções como chaves e traduções.  
@@ -62,9 +62,9 @@ ms.locfileid: "36008013"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- `AttributeBinding` e `CubeAttributeBinding` elementos no qual o [tipo](type-element-binding-assl.md) propriedade está definida como *chave* ou *tradução* pode ser associado a um atributo que por sua vez é associado a uma coleção de colunas nos dados de exibição da fonte. O valor do elemento `Ordinal` determina a qual coluna o elemento `AttributeBinding` ou `CubeAttributeBinding` faz referência nessa coleção.  
+ `AttributeBinding` e `CubeAttributeBinding` elementos nos quais o [tipo](type-element-binding-assl.md) propriedade está definida como *chave* ou *tradução* pode ser associado a um atributo que por sua vez é associado a uma coleção de colunas nos dados de exibição da fonte. O valor do elemento `Ordinal` determina a qual coluna o elemento `AttributeBinding` ou `CubeAttributeBinding` faz referência nessa coleção.  
   
- Os elementos que correspondem aos pais de `Ordinal` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.AttributeBinding> e <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
+ Os elementos que correspondem aos pais de `Ordinal` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.AttributeBinding> e <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

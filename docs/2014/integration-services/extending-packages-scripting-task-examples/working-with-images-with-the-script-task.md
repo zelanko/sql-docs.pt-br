@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242996"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
   Um banco de dados de produtos ou usuários costuma incluir imagens além de texto e dados numéricos. O namespace `System.Drawing` no Microsoft .NET Framework fornece classes para manipular imagens.  
@@ -52,7 +52,7 @@ ms.locfileid: "36005914"
   
 1.  Crie uma variável de cadeia de caracteres nomeada `CurrentImageFile` e defina seu valor com o caminho e nome de arquivo de um arquivo de imagem existente.  
   
-2.  No **Script** página do **Editor da tarefa Script**, adicionar o `CurrentImageFile` variável para o `ReadOnlyVariables` propriedade.  
+2.  No **Script** página do **Editor da tarefa Script**, adicione o `CurrentImageFile` variável para o `ReadOnlyVariables` propriedade.  
   
 3.  No projeto de script, defina uma referência ao namespace `System.Drawing`.  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - viewing event targets
 - extended events [SQL Server], viewing targets
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5552ca54f3297226fad6a15de2d5c80bc49067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99205caab9b42d8d17f165f7e75d434b0c9cccae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257382"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>Exibir os destinos dos Eventos Estendidos de pacotes registrados
   Antes de criar uma sessão de Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , determine quais destinos de Eventos Estendidos estão disponíveis. Essa tarefa envolve o uso do Editor de Consultas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para executar o seguinte procedimento.  

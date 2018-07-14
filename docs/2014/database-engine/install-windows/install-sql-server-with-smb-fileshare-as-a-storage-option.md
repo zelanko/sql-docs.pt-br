@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200026"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar o SQL Server com o compartilhamento de arquivos SMB como uma opção de armazenamento
   Iniciando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], bancos de dados do sistema (mestre, modelo, MSDB e TempDB) e [!INCLUDE[ssDE](../../includes/ssde-md.md)] bancos de dados de usuário podem ser instalados com o servidor de arquivos do bloco de mensagens de servidor (SMB) como uma opção de armazenamento. Isso se aplica a instalações autônomas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a FCI (instalações de cluster de failover) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "36007569"
   
 -   \\\ServerName\ShareName  
   
- Para obter mais informações sobre a Convenção Universal de nomenclatura, consulte [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Para obter mais informações sobre UNC, consulte [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
   
  O caminho UNC de loopback (um caminho UNC cujo nome de servidor é localhost, 127.0.0.1 ou o nome do computador local) não tem suporte. Como um caso especial, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o cluster de servidor de arquivos que está hospedado no mesmo nó em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado também não tem suporte. Para impedir essa situação, é recomendável que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o cluster de servidor de arquivos seja criado em clusters do Windows separados.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36007569"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Para obter mais informações sobre o uso de várias opções de parâmetro de linha de comando no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Para obter mais informações sobre o uso de várias opções de parâmetro de linha de comando na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte [instalar o SQL Server 2014 do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Considerações sobre o sistema operacional (protocolo SMB vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Sistemas operacionais Windows diferentes têm versões de protocolo SMB diferentes e a versão do protocolo SMB é transparente para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode localizar os benefícios das versões diferentes do protocolo SMB com relação ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -102,7 +102,7 @@ ms.locfileid: "36007569"
     > [!NOTE]  
     >  As permissões de compartilhamento FULL CONTROL e as permissões NTFS nas pastas de compartilhamento SMB devem ser restritas a: conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e usuários do Windows com funções de servidor admin.  
   
-     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema é usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: * < nome_do_domínio >***\\***< nome_do_computador > ***$**.  
+     Era recomendado usar a conta de domínio como uma conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a conta do sistema é usada como uma conta de serviço, conceda as permissões para a conta do computador no formato: * < domain_name >***\\***< computer_name > ***$**.  
   
     > [!NOTE]  
     >  -   Durante instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será necessário especificar a conta de domínio como uma conta de serviço se o compartilhamento de arquivos SMB for especificado como uma opção de armazenamento. Com o compartilhamento de arquivos SMB, a conta de Sistema somente poderá ser especificada como uma conta de serviço após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -116,9 +116,9 @@ ms.locfileid: "36007569"
   
 -   Ao desanexar um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside no armazenamento anexado por rede, você poderá ter um problema de permissão de banco de dados ao tentar reanexar o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O problema é definido [neste artigo da base de dados](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321)). Para resolver este problema, consulte a seção **Mais Informações** no artigo da Base de Dados de Conhecimento.  
   
--   Alguns terceiros, como o dispositivo NetApp, não dão suporte a todas as chamadas de API do SQL Server. Com isso, você pode obter:   
+-   Alguns terceiros, como o dispositivo NetApp, não dão suporte a todas as chamadas de API do SQL Server. Com isso, você poderá receber:   
     2015-06-04 13:14:19.97 spid9s erro: 17053, severidade: 16, estado: 1.  
-    2015-06-04 13:14:19.97 spid9s Dodevioctlout GetOverlappedResult(): erro de sistema operacional 1 (incorreta função.) encontrado.  
+    2015-06-04 13:14:19.97 spid9s Dodevioctlout GetOverlappedResult(): erro de sistema operacional 1 (incorreto função.) encontrado.  
   
      Para NTFS, o erro é inofensivo.  No entanto, para ReFS, o erro pode causar uma degradação significativa no desempenho.  
   

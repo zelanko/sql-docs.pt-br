@@ -1,5 +1,5 @@
 ---
-title: Especifique um operador unário (Assistente de Business Intelligence) | Microsoft Docs
+title: Especificar um operador unário (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4edbf414a962f5ed057c68fe824d09200f4ea3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc5c8210dee9960dbb40320d1923d8e8681b4988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237316"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Especificar um Operador Unário (Assistente de Business Intelligence)
   Use a página **Especificar um Operador Unário** para identificar a relação pai-filho da coluna que contém um operador unário (para agregações normais) ou um valor que represente um fator de peso (para agregações ponderadas.) Para obter mais informações sobre agregações normais e ponderadas, consulte [Agregações e designs de agregação](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

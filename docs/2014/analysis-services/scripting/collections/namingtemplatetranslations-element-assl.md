@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204396"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>Elemento NamingTemplateTranslations (ASSL)
   Fornece uma coleção de traduções localizadas para o elemento [NamingTemplate](../properties/namingtemplate-element-assl.md) do pai [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36009018"
 |Elementos filho|[NamingTemplateTranslation](../objects/translation-element-assl.md) to tipo [Translation](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `NamingTemplateTranslation` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento do pai `DimensionAttribute` é definido como *pai*.)  
+ O valor da `NamingTemplateTranslation` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento pai `DimensionAttribute` está definido como *pai*.)  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   

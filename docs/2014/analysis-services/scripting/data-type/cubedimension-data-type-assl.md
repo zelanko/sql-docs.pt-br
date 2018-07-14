@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a043895929e09a59d3ae14c5995804c4fa5c7eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220316"
 ---
 # <a name="cubedimension-data-type-assl"></a>Tipo de dados CubeDimension (ASSL)
   Define um tipo de dados primitivo que representa a relação entre uma dimensão e um cubo.  
@@ -72,9 +72,9 @@ ms.locfileid: "36006745"
 ## <a name="remarks"></a>Remarks  
  Há um elemento `CubeDimension` para cada relação de dimensão em um `Cube`. O elemento `CubeDimension` cobre todos os `MeasureGroups` do cubo.  
   
- Um `CubeDimension` deve incluir um [CubeHierarchy](hierarchy-data-type-assl.md) se a dimensão tiver algo específico a dizer sobre a hierarquia, incluindo a desabilitação da hierarquia (assim, permitindo a seleção das hierarquias aplicáveis a um determinado uso da dimensão), ou fazendo com que a hierarquia invisível.  
+ Um `CubeDimension` deve incluir uma [CubeHierarchy](hierarchy-data-type-assl.md) se a dimensão tiver algo específico a dizer sobre a hierarquia, incluindo a desabilitação da hierarquia (, permitindo a seleção das hierarquias aplicáveis a um determinado uso da dimensão), ou a invisibilidade da hierarquia.  
   
- Da mesma forma, um `CubeDimension` deve incluir um [CubeAttribute](cubeattribute-data-type-assl.md) somente se a dimensão tiver algo específico a dizer sobre o atributo. Não é possível selecionar os atributos aplicáveis a um uso de dimensão específico, visto que os atributos podem ficar invisíveis.  
+ Da mesma forma, uma `CubeDimension` deve incluir uma [CubeAttribute](cubeattribute-data-type-assl.md) somente se a dimensão tiver algo específico a dizer sobre o atributo. Não é possível selecionar os atributos aplicáveis a um uso de dimensão específico, visto que os atributos podem ficar invisíveis.  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.CubeDimension>.  
   

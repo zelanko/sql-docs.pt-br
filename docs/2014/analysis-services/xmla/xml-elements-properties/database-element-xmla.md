@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f1b643a12ab1dbf2dc151fe91a8663b138e581ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 22e385380b2757427b5fa3a33725f6c25e8dde36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249426"
 ---
 # <a name="database-element-xmla"></a>Elemento Database (XMLA)
   Identifica o banco de dados que contém a dimensão representada pelo pai [objeto](object-element-dimension-xmla.md) elemento.  

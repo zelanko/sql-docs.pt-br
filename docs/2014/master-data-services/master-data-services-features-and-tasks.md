@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191926"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
   Aprenda a usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para gerenciar os dados mestre de sua organização. Aprenda a criar e manipular objetos de modelo que são contêineres de dados. Aprenda a organizar e manter os próprios dados mestre. Aprenda a importar e exportar dados mestre, bem como compartilhar modelos entre ambientes de teste e produção. Por fim, saiba como desenvolver aplicativos personalizados que acessam o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -44,7 +44,7 @@ ms.locfileid: "36007309"
   
 -   [Transações &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [As anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
 -   [Hierarquias &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36007309"
   
 -   [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Notificações &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36007309"
   
 -   [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
--   [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [Implantação de modelos de &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## <a name="develop-a-custom-application"></a>Desenvolver um aplicativo personalizado  
   
--   [Guia do desenvolvedor &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
+-   [Guia do desenvolvedor do &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

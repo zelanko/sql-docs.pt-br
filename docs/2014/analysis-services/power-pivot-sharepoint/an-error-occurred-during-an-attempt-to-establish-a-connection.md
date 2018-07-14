@@ -1,5 +1,5 @@
 ---
-title: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: dados do PowerPivot | Microsoft Docs'
+title: 'Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: dados PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36c9846ec1af5589f7fb29d3486ef11632eb01fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8d31afd4bb907256fc548c8102cdfaa8a927f174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206216"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Erro ao tentar estabelecer uma conexão com a fonte de dados externa. As seguintes conexões não foram atualizadas: Dados PowerPivot
   Esse erro ocorrerá se você consultar dados PowerPivot em um servidor que não tenha o PowerPivot para SharePoint instalado. Isso também ocorrerá se o serviço do SQL Server Analysis Services (PowerPivot) for parado, ou se você estiver tentando exibir dados PowerPivot de uma versão anterior.  

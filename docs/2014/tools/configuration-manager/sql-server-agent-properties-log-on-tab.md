@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5cfc683639e418a6fab6720fe3aa5b00f6e5767
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d69d6f159e0e1597fdc6b59c0ba4aadf80b3748
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234386"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Propriedades do SQL Server Agent (guia Fazer Logon)
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades do SQL Server Agent** para especificar a conta usada pelo serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e para iniciar e parar o serviço. A alteração da senha de uma conta entra em vigor imediatamente sem a reinicialização do serviço.  

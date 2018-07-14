@@ -1,5 +1,5 @@
 ---
-title: 'Criando válido ID, IDREF e IDREFS tipo atributos usando SQL: Prefix (SQLXML 4.0) | Microsoft Docs'
+title: 'Criando válido de ID, IDREF e IDREFS tipo atributos usando SQL: Prefix (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da57705288df64e630b0d69781c151cd1310299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 49576de626183ab603699311b9c18f02013685d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215026"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  
   
- ID, IDREF e IDREFS correspondem a relações do PK/FK (chave primária/estrangeira chave) no banco de dados, com algumas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se **CustomerID** e **OrderID** atributos são especificados como tipo ID em um documento XML, esses valores devem ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
+ ID, IDREF e IDREFS correspondem às relações do PK/FK (chave estrangeira/chave primária) no banco de dados, com algumas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se **CustomerID** e **OrderID** atributos são especificados como tipo ID em um documento XML, esses valores devem ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
   
  Para que os atributos ID, IDREF e IDREFS sejam válidos:  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36006560"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificando os tipos ID e IDREFS  
- No esquema a seguir, o  **\<cliente >** elemento consiste de  **\<ordem >** elemento filho. O  **\<ordem >** elemento também tem um elemento filho, o  **\<OrderDetail >** elemento.  
+ No esquema a seguir, o  **\<cliente >** elemento consiste o  **\<Order >** elemento filho. O  **\<ordem >** elemento também tem um elemento filho, o  **\<OrderDetail >** elemento.  
   
- O **OrderIDList** atributo de  **\<cliente >** é um atributo de tipo IDREFS que se refere ao **OrderID** atributo do  **\< Ordem >** elemento.  
+ O **OrderIDList** atributo do  **\<cliente >** é um atributo de tipo IDREFS que se refere ao **OrderID** atributo do  **\< Ordem >** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ea741676f07020291c2aa94d130c2f595a50f323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b8b1b0b3c38374061361df9980c74cfb6e5cbf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247816"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lição 10: Criar hierarquias
   Nesta lição, você criará hierarquias. Hierarquias são grupos de colunas organizados em níveis; por exemplo, uma hierarquia Geografia poderia ter subníveis para País, Estado, Município e Cidade. As hierarquias podem aparecer separadas de outras colunas em uma lista de campo de aplicativo cliente de relatório, tornando mais fácil para os usuários clientes navegarem e incluírem itens em um relatório. Para saber mais, consulte [Hierarquias &#40;SSAS Tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36006231"
   
 #### <a name="to-create-a-category-hierarchy-in-the-product-table"></a>Para criar uma hierarquia Categoria na tabela Produto  
   
-1.  No designer de modelo, clique no `Model` menu e, em seguida, aponte para **exibição do modelo de**e, em seguida, clique em **exibição de diagrama**.  
+1.  No designer de modelo, clique no `Model` menu, em seguida, aponte para **exibição de modelo**e, em seguida, clique em **exibição de diagrama**.  
   
     > [!TIP]  
     >  Use os controles do Minimapa no lado superior direito do designer de modelos para alterar o modo de exibição dos objetos em Exibição de Diagrama. Se você reposicionar objetos na Exibição de Diagrama, essa exibição será retida quando você salvar o projeto.  
@@ -44,18 +44,18 @@ ms.locfileid: "36006231"
   
 3.  O nome da hierarquia, renomeie a hierarquia digitando `Category`, e pressione ENTER.  
   
-4.  No `Product` da tabela, clique no **Product Category Name** coluna, em seguida, arraste-o para o `Category` hierarquia e solte sobre a `Category` nome.  
+4.  No `Product` da tabela, clique em de **Product Category Name** coluna, em seguida, arraste-o para o `Category` hierarquia e, em seguida, solte na parte superior do `Category` nome.  
   
-5.  No `Category` hierarquia, com o botão direito a **Product Category Name** coluna, em seguida, clique em **Renomear**e, em seguida, digite `Category`.  
+5.  No `Category` hierarquia, clique com botão direito a **Product Category Name** coluna, em seguida, clique em **Renomear**e, em seguida, digite `Category`.  
   
     > [!NOTE]  
     >  A renomeação de uma coluna em uma hierarquia não renomeia essa coluna na tabela. Uma coluna em uma hierarquia é apenas uma representação da coluna na tabela.  
   
-6.  No `Product` da tabela, clique o **nome da subcategoria do produto** coluna, no menu de contexto, aponte para **adicionar à hierarquia**e, em seguida, clique em `Category`.  
+6.  No `Product` da tabela, clique com botão direito a **nome da subcategoria do produto** coluna, em seguida, no menu de contexto, aponte para **adicionar à hierarquia**e, em seguida, clique em `Category`.  
   
-7.  Renomear **nome da subcategoria do produto** para `Subcategory`.  
+7.  Renomeie **nome da subcategoria do produto** para `Subcategory`.  
   
-8.  Usando clicar e arrastar ou usando o **adicionar à hierarquia** comando no menu de contexto, adicione o **nome do modelo** e **nome do produto** colunas (em ordem) e colocá-los abaixo de **Nome da subcategoria do produto** coluna. Renomeie as colunas `Model` e `Product`, respectivamente.  
+8.  Usando clicar e arrastar ou usando o **adicionar a hierarquia** comando no menu de contexto, adicione o **nome do modelo** e **nome do produto** colunas (nessa ordem) e coloque-as sob o **Nome da subcategoria do produto** coluna. Renomeie as colunas `Model` e `Product`, respectivamente.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>Para criar hierarquias na tabela Data  
   

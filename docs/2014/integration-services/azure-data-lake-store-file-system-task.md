@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 caps.latest.revision: 3
-author: Lingxi-Li
-ms.author: lingxl
-manager: jhubbard
-ms.openlocfilehash: 240780efd1b12596b0ebb6156ad98c508f0e8051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslms
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 768113129fd380d335895364344742eb9bb8e791
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292846"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarefa do sistema de arquivos do Azure Data Lake Store
-O **tarefa de sistema de arquivos de armazenamento do Azure Data Lake** permite que os usuários executar várias operações de sistema de arquivos em [Azure Data Lake ADLS (repositório)](https://azure.microsoft.com/en-us/services/data-lake-store/).
+O **tarefa de sistema de arquivos do Azure Data Lake Store** permite aos usuários executar várias operações de sistema de arquivos na [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
 
-Para adicionar uma tarefa do sistema de arquivos do Azure Data Lake Store para um pacote, arraste-o da Caixa de Ferramentas do SSIS para a tela do designer. Em seguida, clique duas vezes em tarefa, ou a tarefa e selecione **editar**, para abrir a caixa de diálogo do editor de tarefa.
+Para adicionar uma tarefa do sistema de arquivos do Azure Data Lake Store para um pacote, arraste-o da Caixa de Ferramentas do SSIS para a tela do designer. Clique duas vezes na tarefa, ou a tarefa com o botão direito e selecione **editar**, para abrir a caixa de diálogo do editor de tarefa.
 
 A propriedade **Operation** especifica a operação do sistema de arquivos a ser executada. As seguintes operações têm suporte.
 
@@ -43,7 +43,7 @@ Aqui estão as descrições das propriedades específicas para cada operação.
 * **FileNamePattern:** especifica um filtro de nome de arquivo para arquivos de origem. Somente os arquivos cujo nome corresponde ao padrão especificado serão carregados. Curingas `*` e `?` são compatíveis.
 * **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a serem carregados.
 * **AzureDataLakeDirectory:** especifica o diretório de destino do ADLS para o qual carregar arquivos.
-* **FileExpiry:** Especifica uma data de expiração para os arquivos carregados ADLS ou deixam essa propriedade em branco para indicar que os arquivos nunca expirarem.
+* **FileExpiry:** Especifica uma data de expiração para os arquivos carregados para o ADLS ou deixe essa propriedade em branco para indicar que os arquivos nunca expiram.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 * **AzureDataLakeDirectory:** especifica o diretório de origem do ADLS que contém os arquivos a serem baixados.

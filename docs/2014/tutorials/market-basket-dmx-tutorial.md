@@ -1,5 +1,5 @@
 ---
-title: Tutorial DMX de cesta de compras | Microsoft Docs
+title: Tutorial DMX do Market Basket | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220576"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial de DMX do Market Basket
   Nesse tutorial, você aprenderá como criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Você então utilizará esses modelos de mineração de dados para criar previsões que descrevem quais produtos tendem a ser adquiridos ao mesmo tempo.  
@@ -45,7 +45,7 @@ ms.locfileid: "36312924"
   
 -   Editor de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- DMX (Extensões de Mineração de Dados) é uma linguagem de consulta fornecida por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que pode ser usada para criar e trabalhar com modelos de mineração. O [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo associação cria modelos que podem prever os produtos que têm probabilidade de serem comprados juntos.  
+ DMX (Extensões de Mineração de Dados) é uma linguagem de consulta fornecida por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que pode ser usada para criar e trabalhar com modelos de mineração. O [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de associação cria modelos que podem predizer os produtos que têm probabilidade de serem adquiridos juntos.  
   
  O objetivo deste tutorial é fornecer as consultas DMX que serão usadas no aplicativo personalizado.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36312924"
   
  **Para obter mais informações**  
   
- [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference), [Noções básicas sobre o DMX instrução Select](/sql/dmx/understanding-the-dmx-select-statement), [estrutura e o uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference), [Noções básicas sobre o DMX instrução Select](/sql/dmx/understanding-the-dmx-select-statement), [estrutura e uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Ele se divide nas lições a seguir:  
@@ -111,14 +111,14 @@ ms.locfileid: "36312924"
   
 -   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
- Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vá para [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
+ Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], acesse [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
   
 > [!NOTE]  
 >  Ao examinar os tutoriais, recomendamos que você adicione os botões **Próximo Tópico** e **Tópico Anterior** à barra de ferramentas do visualizador de documentos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial DMX comprador de bicicleta](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
+ [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lição 3: Criando um cenário de cesta de compras &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

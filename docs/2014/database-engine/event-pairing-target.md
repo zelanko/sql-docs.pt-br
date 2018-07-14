@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291332"
 ---
 # <a name="event-pairing-target"></a>Destino de emparelhamento de evento
   O destino de emparelhamento de eventos efetua a correspondência entre dois eventos por meio de uma ou mais colunas de dados presentes em cada evento. Muitos eventos vêm em pares, por exemplo, aquisições de bloqueio e liberações de bloqueio. Após o emparelhamento de uma sequência de eventos, ambos são descartados. O descarte de conjuntos correspondidos facilita a detecção de aquisições de bloqueios que não foram liberados.  

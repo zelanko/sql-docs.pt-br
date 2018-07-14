@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199546"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
-  O Assistente para Copiar Banco de Dados lhe permite migrar ou copiar bancos de dados e seus objetos facilmente de um servidor para outro, sem inatividade do servidor. Você também pode atualizar bancos de dados do anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Com esse assistente, é possível fazer o seguinte:  
+  O Assistente para Copiar Banco de Dados lhe permite migrar ou copiar bancos de dados e seus objetos facilmente de um servidor para outro, sem inatividade do servidor. Você também pode atualizar os bancos de dados do anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Com esse assistente, é possível fazer o seguinte:  
   
 -   Selecionar um servidor de origem e de destino.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36007075"
   
      [Segurança](#Security)  
   
--   **Usando o Assistente para copiar banco de dados para:**  
+-   **Usando o Assistente de cópia de banco de dados para:**  
   
      [Copiar, mover ou atualizar bancos de dados](#Copy_Move)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36007075"
   
 ##  <a name="Copy_Move"></a> Copiar, mover ou atualizar bancos de dados  
   
-1.  Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, expanda **bancos de dados**, clique em um banco de dados, aponte para **tarefas**e, em seguida, clique em **copiar banco de dados**.  
+1.  Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, expanda **bancos de dados**, clique com botão direito a um banco de dados, aponte para **tarefas**e, em seguida, clique em **copiar banco de dados**.  
   
 2.  Na página **Selecionar um Servidor de Origem** , especifique o servidor com o banco de dados que deseja mover ou copiar e digite as informações de logon. Depois de selecionar o método de autenticação e digitar as informações de logon, clique em **Avançar** para estabelecer conexão com o servidor de origem. Essa conexão permanece aberta durante a sessão.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36007075"
      Permite que um usuário conecte por meio de uma conta de usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usar Autenticação do SQL Server**  
-     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário de autenticação e a senha.  
+     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário e senha.  
   
      **Nome de usuário**  
      Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver optado por conectar-se usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
@@ -145,13 +145,13 @@ ms.locfileid: "36007075"
      Permite que um usuário conecte por meio de uma conta de usuário [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usar Autenticação do SQL Server**  
-     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário de autenticação e a senha.  
+     Permitir que um usuário conecte-se fornecendo um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de usuário e senha.  
   
      **Nome de usuário**  
-     Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você selecionou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+     Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver selecionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
   
      **Senha**  
-     Digite a senha do logon. Essa opção só estará disponível se você selecionou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
+     Digite a senha do logon. Essa opção só estará disponível se você tiver selecionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
   
      **Próximo**  
      Conecta ao servidor e valida o usuário. Esse processo verifica se o usuário tem as permissões listadas acima nos computadores selecionados.  
@@ -201,13 +201,13 @@ ms.locfileid: "36007075"
      Inclua logons na operação de mover ou copiar. Selecionadas por padrão.  
   
      **Procedimentos armazenados do banco de dados mestre**  
-     Incluem procedimentos armazenados a partir de **mestre** banco de dados na operação de mover ou copiar.  
+     Inclua procedimentos armazenados do **mestre** na operação de mover ou copiar.  
   
     > [!NOTE]  
     >  Procedimentos armazenados estendidos e seus DLLs associados não são qualificados para cópia automatizada.  
   
      **trabalhos do SQL Server Agent**  
-     Incluir trabalhos a partir de **msdb** banco de dados na operação de mover ou copiar.  
+     Incluir trabalhos a partir de **msdb** na operação de mover ou copiar.  
   
      **Mensagens de erro definidas pelo usuário**  
      Inclua mensagens de erro definidas pelo usuário na operação de mover e copiar.  
@@ -239,7 +239,7 @@ ms.locfileid: "36007075"
   
      Por exemplo: "\\\\*nome_do_servidor*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. O Assistente para cópia de banco de dados cria um [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote para transferir o banco de dados de **configurar o pacote** página, personalize o pacote, se apropriado.  
+9. O Assistente para cópia de banco de dados cria uma [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote para transferir o banco de dados de **configurar o pacote** página, personalize o pacote, se apropriado.  
   
      **Local do pacote**  
      Exibe onde o [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote será gravado.  
@@ -253,10 +253,10 @@ ms.locfileid: "36007075"
      **Caminho do arquivo de log de erros**  
      Forneça um caminho para o local do arquivo de log. Essa opção só estará disponível se a opção de log de arquivo de texto for selecionada.  
   
-10. Na página **Agendar o Pacote** , especifique quando você quer que a operação de movimentação ou cópia seja iniciada. Se você não for um administrador de sistema, você deve especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de Proxy de agente que tenha acesso para o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] subsistema de execução de pacote (SSIS).  
+10. Na página **Agendar o Pacote** , especifique quando você quer que a operação de movimentação ou cópia seja iniciada. Se você não for um administrador do sistema, você deve especificar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de Proxy de agente que tem acesso ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] subsistema de execução de pacote (SSIS).  
   
      **Run immediately**  
-     Iniciar a operação de mover ou copiar depois de clicar em **próximo**.  
+     Iniciar a operação de mover ou copiar depois de clicar em **próxima**.  
   
      **Agenda**  
      Iniciar a operação de mover ou copiar mais tarde. As configurações de agenda atuais aparecem na caixa de descrição. Para alterar a agenda, clique em **Alterar**.  
@@ -264,10 +264,10 @@ ms.locfileid: "36007075"
      **Alteração**  
      Abra o **nova agenda de trabalho** caixa de diálogo.  
   
-     **Conta de proxy do Integration Services**  
+     **Conta proxy do Integration Services**  
      Selecione uma conta proxy disponível. Para agendar a transferência, deve haver pelo menos uma conta proxy disponível para o usuário, configurada com permissão para o subsistema de **execução do pacote SQL Server Integration Services** .  
   
-     Para criar uma conta proxy para [!INCLUDE[ssIS](../../includes/ssis-md.md)] execução, no Pesquisador de objetos do pacote, expanda **do SQL Server Agent**, expanda **Proxies**, clique com botão direito **execução de pacotes do SSIS**e, em seguida, clique em **novo Proxy**.  
+     Para criar uma conta proxy para [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacote de execução, no Pesquisador de objetos, expanda **SQL Server Agent**, expanda **Proxies**, clique com botão direito **execução de pacotes do SSIS**e, em seguida, clique em **novo Proxy**.  
   
      Os membros da função de servidor fixa **sysadmin** podem selecionar a **Conta de Serviço do SQL Server Agent**que tenha as permissões necessárias.  
   

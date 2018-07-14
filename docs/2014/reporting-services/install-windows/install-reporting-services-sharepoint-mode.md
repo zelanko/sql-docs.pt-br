@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - installing Reporting Services, SharePoint integrated mode
@@ -17,13 +17,13 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f0e75a75ffb14f720f2b421d659fa6142b579019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8800556239018222cd3ac63650a1a44c2a750227
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249666"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Instalação do modo do SharePoint do Reporting Services (SharePoint 2010 e SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no SharePoint modo é uma coleção de componentes de servidor que fornecem geração de relatórios e entrega, com base em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] produtos do SharePoint.  
@@ -42,21 +42,21 @@ ms.locfileid: "36005846"
  Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: instalar o Reporting Services em um existente Farm do SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Combinações do SharePoint e Reporting Services Server e o suplemento com suporte &#40;do SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ [Combinações do SharePoint e do servidor e suplemento Reporting Services com suporte &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [Instalar o Reporting Services SharePoint Mode para SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
  [Instalar o Reporting Services no modo do SharePoint para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
- [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Adicionar um servidor de relatório a um Farm &#40;expansão do SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Adicionar um servidor de relatório a um Farm &#40;expansão SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Adicionar um front-end da Web do Reporting Services a um farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configure o email para o do aplicativo de serviço Reporting Services &#40;do SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Configurar o email para um relatório dos serviços de aplicativo de serviço &#40;SharePoint 2010 e SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Provisionar assinaturas e alertas para aplicativos de serviço SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250906"
 ---
 # <a name="goal-element-assl"></a>Elemento Goal (ASSL)
-  Identifica a meta desejada em uma [Kpi](../objects/kpi-element-assl.md) elemento.  
+  Identifica a meta desejada em um [Kpi](../objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36006722"
 ## <a name="remarks"></a>Remarks  
  O elemento `Goal` contém uma linguagem MDX.  
   
- O elemento que corresponde ao pai do `Goal` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
+ O elemento que corresponde ao pai de `Goal` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento status &#40;ASSL&#41;](status-element-assl.md)   

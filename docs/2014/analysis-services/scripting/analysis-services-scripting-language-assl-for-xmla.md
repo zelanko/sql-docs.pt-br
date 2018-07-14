@@ -1,5 +1,5 @@
 ---
-title: Referência de linguagem (ASSL) do script do Analysis Services | Microsoft Docs
+title: Referência de linguagem (ASSL) script do Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - object definition language [Analysis Services Scripting Language]
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99ae3057baf60cda23fdce68289d07c213e89d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd9fbcce8769deb49168e734542fe5296c5672f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234236"
 ---
 # <a name="analysis-services-scripting-language-assl-reference"></a>Referência do ASSL (Linguagem de Scripts do Analysis Services)
-  Aplicativos se comunicam com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando comandos XML e descrições de objeto. O ASSL representa a parte de linguagem de definição do objeto desse dialeto de XML.  
+  Aplicativos se comuniquem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando comandos XML e descrições de objeto. O ASSL representa a parte de linguagem de definição do objeto desse dialeto de XML.  
   
  Essa seção de referência contém informações sobre sintaxe e uso para cada elemento no esquema ASSL.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36007136"
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Hierarquia de elemento XML de linguagem script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)|Um diagrama detalhado da hierarquia de elementos em ASSL.|  
+|[Hierarquia Analysis Services Scripting Language XML elemento &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)|Um diagrama detalhado da hierarquia de elementos em ASSL.|  
 |[Hierarquia de tipo de dados XML de linguagem de script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)|Um diagrama detalhado da hierarquia de herança de tipos de dados em ASSL.|  
-|[Elementos XML de linguagem do script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)|Referência de sintaxe para cada elemento no esquema ASSL.|  
+|[Elementos XML de linguagem de script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)|Referência de sintaxe para cada elemento no esquema ASSL.|  
 |[Tipos de dados XML de linguagem script do Analysis Services &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)|Referência de sintaxe para cada tipo de dados no esquema ASSL.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c299c50e06b4e7959a5848adabe0a53142bf2e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 651afe94debc9e96ff8a2e0df10515d66da517d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238366"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Recursos e tarefas do Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é organizado por meio de relatórios e recursos de relatório, recursos de servidor de relatório e recursos do produto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

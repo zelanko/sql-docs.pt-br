@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270222"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar o SQL Server Management Studio
   Para iniciar este tutorial, vamos olhar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,12 +26,12 @@ ms.locfileid: "36006960"
   
 #### <a name="to-open-sql-server-management-studio"></a>Para abrir o SQL Server Management Studio  
   
-1.  Sobre o **iniciar** , aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, clique em **SQL Server Management Studio**.  
+1.  Sobre o **inicie** , aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, clique em **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não é instalado por padrão. Se o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não estiver disponível, instale-o executando a Instalação. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não está disponível com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express está disponível como um download gratuito do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), mas tem uma interface de usuário diferente, que está descrito neste tutorial.  
+    >  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não é instalado por padrão. Se o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não estiver disponível, instale-o executando a Instalação. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não está disponível com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express está disponível como um download gratuito do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), mas tem uma interface de usuário diferente do que é descrito neste tutorial.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor** , verifique as configurações padrão e clique em **Conectar**. Para se conectar, o **nome do servidor** caixa deve conter o nome do computador onde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma instância nomeada, o **nome do servidor** caixa também deverá conter o nome da instância no formato \< *nome_do_computador* > \\ < *instance_name*>.  
+2.  Na caixa de diálogo **Conectar ao Servidor** , verifique as configurações padrão e clique em **Conectar**. Para se conectar, o **nome do servidor** caixa deve conter o nome do computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma instância nomeada, o **nome do servidor** caixa também deverá conter o nome da instância no formato \< *nome_do_computador* > \\ < *nome_da_instância*>.  
   
 ## <a name="management-studio-components"></a>Componentes do Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apresenta informações em janelas dedicadas a tipos específicos de informações. Informações de banco de dados são exibidas no Pesquisador de Objetos e janelas de documentos.  

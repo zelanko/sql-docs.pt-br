@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232426"
 ---
 # <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
   Há muitas vantagens na criação de um modelo de mineração de dados baseado em um cubo OLAP ou em outro repositório de dados multidimensional. Uma solução de OLAP já contém grandes volumes de dados que estão bem-organizados, limpos e corretamente formatados; contudo, a complexidade dos dados é tamanha que é pouco provável que usuários localizem padrões significativos pela exploração ad hoc. A mineração de dados permite descobrir novas correlações e apresenta ideias acionáveis.  
@@ -163,7 +163,7 @@ ms.locfileid: "36006230"
 >  Apenas estes tipos de modelo oferecem suporte à criação de dimensões de mineração de dados: modelos baseados no algoritmo Microsoft Clustering, no algoritmo Árvores de Decisão da Microsoft ou no algoritmo Associação da Microsoft.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Colunas de estrutura de mineração](mining-structure-columns.md)   
  [Colunas do modelo de mineração](mining-model-columns.md)   
  [Propriedades do modelo de mineração](mining-model-properties.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sintaxe de filtro e exemplos de modelo (Analysis Services – mineração de dados) | Microsoft Docs
+title: Sintaxe de filtro e exemplos de modelo (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236336"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
   Esta seção fornece informações detalhadas sobre a sintaxe de filtros de modelo, além de expressões de exemplo.  
@@ -242,7 +242,7 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> Exemplo 7: combinações complexas de filtro  
- O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada, **ProductsOnSale**, tem a condição de filtro `(OnSale)` que significa que o valor de **OnSale** devem ser `true` para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
+ O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada, **ProductsOnSale**, tem a condição de filtro `(OnSale)` significando que o valor de **OnSale** deve ser `true` para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
   
  A segunda parte do filtro, para **ProductsNotOnSale**, repete essa sintaxe, mas filtra por produtos para os quais o valor de **OnSale** é `not true``(!OnSale)`.  
   
@@ -287,7 +287,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> Exemplo 8: filtrando por datas  
  É possível filtrar colunas de entrada por datas, como você faria com qualquer outro dado. As datas contidas em uma coluna de tipo de data/hora são valores contínuos; por isso, é possível especificar um intervalo de datas usando-se operadores como maior que (>) ou menos que (<). Se a fonte de dados não representar datas por um tipo de dados Contínuo, mas como valores discretos ou de texto, não será possível filtrar por um intervalo de datas, e você deverá especificar valores discretos individuais.  
   
- No entanto, não será possível criar um filtro na coluna de data em um modelo de série temporal se a coluna de data usada para o filtro também for a coluna de chave do modelo. Isso ocorre porque, em modelos de série temporal e modelos de clustering de sequência, a coluna de data pode ser tratada como tipo `KeyTime` ou `KeySequence`.  
+ No entanto, não será possível criar um filtro na coluna de data em um modelo de série temporal se a coluna de data usada para o filtro também for a coluna de chave do modelo. Isso ocorre porque, em modelos de série temporal e modelos de clustering de sequência, a coluna de data pode ser manipulada como tipo `KeyTime` ou `KeySequence`.  
   
  Se precisar filtrar por datas contínuas em um modelo de série temporal, você poderá criar uma cópia da coluna na estrutura de mineração e filtrar o modelo na nova coluna.  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  Observe que qualquer coluna extra adicionada ao modelo pode afetar os resultados. Por isso, se não quiser usar a coluna na computação da série, você só deverá adicionar a coluna à estrutura de mineração, e não ao modelo. Você também pode definir o sinalizador de modelo na coluna para `PredictOnly` ou `Ignore`. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
+>  Observe que qualquer coluna extra adicionada ao modelo pode afetar os resultados. Por isso, se não quiser usar a coluna na computação da série, você só deverá adicionar a coluna à estrutura de mineração, e não ao modelo. Você também pode definir o sinalizador de modelo na coluna para `PredictOnly` ou a `Ignore`. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
- Para outros tipos de modelo, é possível usar datas como critérios de entrada ou de filtro exatamente como você faria em qualquer outra coluna. No entanto, se você precisar usar um nível específico de granularidade que não é suportado por um `Continuous` tipo de dados, você pode criar um valor derivado na fonte de dados usando expressões para extrair a unidade a ser usada na filtragem e análise.  
+ Para outros tipos de modelo, é possível usar datas como critérios de entrada ou de filtro exatamente como você faria em qualquer outra coluna. No entanto, se você precisar usar um nível específico de granularidade não é compatível com um `Continuous` tipo de dados, você pode criar um valor derivado na fonte de dados usando expressões para extrair a unidade a ser usada na filtragem e análise.  
   
 > [!WARNING]  
 >  Ao especificar uma data como critério de filtro, você deve usar o formato a seguir, independentemente do formato de data do SO atual: `mm/dd/yyyy`. Qualquer outro formato resulta em um erro.  
@@ -308,7 +308,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
  [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

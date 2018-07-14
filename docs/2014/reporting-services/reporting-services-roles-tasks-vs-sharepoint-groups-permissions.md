@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -21,20 +21,20 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 181985b908c1ab5f2556d8fb58b7d54efa6bcb27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204887"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint
   Este tópico compara recursos de autorização baseado em função e tarefas no modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com os recursos de segurança nos produtos do SharePoint. Este tópico compara a terminologia e as características de funções, tarefas, grupos do SharePoint, níveis de permissão e permissões.  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; do SharePoint 2010 e SharePoint 2013<br /><br /> Modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> Modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
   
  **Neste tópico:**  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36007216"
 |Exibir agendas compartilhadas|Sistema|Abrir itens.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;Reporting Services no SharePoint modo integrado&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;modo integrado do Reporting Services no SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Concedendo permissões em itens de servidor de relatório em um Site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Definições de função](security/role-definitions.md)   
  [Funções predefinidas](security/role-definitions-predefined-roles.md)  
   

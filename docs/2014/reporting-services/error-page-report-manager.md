@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fa12d7a40e475a93c8967e2acd42661d72bd8366
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b133cd5882ea3dfa2d44a9fa4984091bf1fbab10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276102"
 ---
 # <a name="error-page-report-manager"></a>Página Erro (Gerenciador de Relatórios)
   Use a página Erro para exibir detalhes sobre uma condição de erro. Erros com base em servidor ou em sessão são exibidos nesta página. Erros de validação relacionados a uma página específica controlam exibições embutidas próximas ao controle.  

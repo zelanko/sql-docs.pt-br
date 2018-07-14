@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e69e9bbdefb40773a56b5dff974c5a7406aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e0870761f4281b6897fb9cc9395d9f7720c865f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176073"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa de Termos (guia Tabela de Referência)
   Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar a conexão com a tabela de referência (pesquisa).  
@@ -45,8 +45,8 @@ ms.locfileid: "36005676"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação de pesquisa de termos &#40;guia pesquisa de termos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Editor de transformação de pesquisa de termos &#40;guia Avançado&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [Editor de transformação de pesquisa de termo &#40;guia de pesquisa de termos&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Editor de transformação de pesquisa de termo &#40;guia Avançado&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformação Extração de Termos](data-flow/transformations/term-extraction-transformation.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 737083dfc08633789edc7bac78fb2d7301a9c74e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8b6154cae9ce3fcc2878797bce63ccf1e1f59edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284582"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma tabela, matriz ou lista (Construtor de Relatórios e SSRS)
   Uma região de dados exibe dados a partir de um conjunto de dados de relatório. As regiões de dados incluem tabela, matriz, gráfico e medidor. Para aninhar uma região de dados dentro de outra, adicione cada uma separadamente e arraste a região de dados filho para a região de dados pai.  
@@ -36,7 +36,7 @@ ms.locfileid: "36005842"
   
 1.  Na guia **Inserir** , clique em **Tabela** ou **Matriz**e clique em **Assistente de Tabela** ou **Assistente de Matriz**.  
   
-2.  Siga as etapas a **NovaTabela** ou **nova matriz** assistente.  
+2.  Siga as etapas a **NewTable** ou **nova matriz** assistente.  
   
 3.  Na guia **Página Inicial** , clique em **Executar** para visualizar o relatório renderizado.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Opções (ambiente: fontes e cores de página) | Microsoft Docs'
+title: 'Opções (ambiente: Fonts and Colors Page) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200776"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opções (ambiente: fontes e cores de página)
+# <a name="options-environment-fonts-and-colors-page"></a>Opções (ambiente: Fonts and Colors Page)
   A caixa de diálogo **Opções** permite que você determine um esquema personalizado de fontes e cores para diversos elementos da interface do usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No menu **Ferramentas** , clique em **Opções** , expanda a pasta **Ambiente** e selecione **Fontes e Cores**.  
   
  As alterações no esquema de cores não são implementadas durante a sessão em que foram feitas. Você pode avaliar as alterações de cores abrindo outra instância do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e produzindo as condições sob as quais espera que suas alterações se apliquem.  
@@ -35,7 +35,7 @@ ms.locfileid: "36007189"
 |Termo|Definição|  
 |----------|----------------|  
 |Editor de Texto|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte no Editor de Texto afetam a aparência do texto em seu editor de texto padrão. Documentos abertos em um editor de texto fora do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não serão afetados por essas configurações.|  
-|Impressora|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte da impressora afetam a aparência do texto impresso em documentos.<br /><br /> Dica: Conforme necessário, você pode selecionar uma fonte diferente do padrão para impressão diferente daquela usada para exibição no Editor de texto. Isso pode ser útil ao imprimir códigos que contenham caracteres de um byte e caracteres de dois bytes.|  
+|Impressora|Alterações nas configurações de vídeo de estilo, tamanho, e cor da fonte da impressora afetam a aparência do texto impresso em documentos.<br /><br /> Dica: Conforme necessário, você pode selecionar uma fonte padrão para impressão diferente daquela usada para exibição no Editor de texto. Isso pode ser útil ao imprimir códigos que contenham caracteres de um byte e caracteres de dois bytes.|  
 |[Janelas de Ferramentas Todo o Texto **]**|Alterações nas configurações de vídeo de estilo, tamanho e cor da fonte neste item afetam a aparência do texto nas janelas de ferramentas que têm painéis de saída no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por exemplo, janela Saída, janela Resultados de Texto e assim por diante.<br /><br /> Observação: alterações no texto dos itens [Janelas de Ferramentas Todo o Texto] não entram em vigor durante a sessão em que foram feitas. Você pode avaliar essas alterações abrindo outra instância do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Janela Localizar Resultados|Alterações nas configurações de exibição de estilo, tamanho e cor da fonte deste item afetam a aparência do texto na janela Localizar Resultados.|  
 |Janela Saída|Alterações nas configurações de vídeo de estilo, tamanho e cor da fonte deste item afetam a aparência do texto na janela Saída.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36007189"
  Exibe um exemplo de estilo e tamanho de fonte e esquema de cores para valores selecionados em **Mostrar configurações de** e **Itens de exibição**. Você pode usar essa caixa de texto para visualizar os resultados à medida que experimenta opções de formatação diferentes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Codificação por cores no Editor de consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)   
+ [Codificação de cores nos editores de consulta](../../relational-databases/scripting/color-coding-in-query-editors.md)   
  [Opções de &#40;Editor de texto: página guia Editor e barra de Status&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

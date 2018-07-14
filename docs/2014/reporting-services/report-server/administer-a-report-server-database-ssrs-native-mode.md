@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - renaming databases
@@ -20,13 +20,13 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ee0c8711727a4661a9f9ac7a75d9739d98afc1b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198756"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar um banco de dados de servidor de relatório (modo nativo do SSRS)
   Uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dois bancos de dados relacionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. Por padrão, os bancos de dados são nomeados como ReportServer e ReportServerTempdb. O ReportServerTempdb é criado com o banco de dados primário do servidor de relatórios e é usado para armazenar dados temporários, informações de sessão e relatórios em cache.  
@@ -39,7 +39,7 @@ ms.locfileid: "36006979"
   
 -   Para copiar o conteúdo do banco de dados existente em outro banco de dados do servidor de relatórios, anexe uma cópia de um banco de dados do servidor de relatórios e use-a com uma instância diferente do servidor de relatórios. Se preferir, crie e execute um script que usa chamadas SOAP para recriar o conteúdo do servidor de relatórios em um novo banco de dados. Você pode usar o utilitário **rs** para executar o script.  
   
--   Para gerenciar conexões entre o servidor de relatórios e o banco de dados do servidor de relatórios e para descobrir qual banco de dados é usado para uma instância específica do servidor de relatórios, use a página Instalação do Banco de Dados da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para saber mais sobre a conexão do servidor de relatório para o banco de dados do servidor de relatório, consulte [configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Para gerenciar conexões entre o servidor de relatórios e o banco de dados do servidor de relatórios e para descobrir qual banco de dados é usado para uma instância específica do servidor de relatórios, use a página Instalação do Banco de Dados da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para saber mais sobre a conexão do servidor de relatório para o banco de dados do servidor de relatório, consulte [configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="sql-server-login-and-database-permissions"></a>Permissões de logon e de banco de dados do SQL Server  
  Os bancos de dados do servidor de relatórios são usados internamente pelo servidor de relatórios. As conexões com qualquer banco de dados são feitas pelo serviço Servidor de relatórios. Use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a conexão do servidor de relatório com o banco de dados do servidor de relatório.  
@@ -48,7 +48,7 @@ ms.locfileid: "36006979"
   
  Um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o banco de dados do servidor de relatório é criado automaticamente para a conta especificada.  
   
- As permissões para o banco de dados também são configuradas automaticamente. A ferramenta de configuração do Reporting Services atribuirá o usuário de conta ou o banco de dados para o `Public` e `RSExecRole` funções para os bancos de dados do servidor de relatório. O `RSExecRole` fornece permissões para acessar as tabelas de banco de dados e para executar procedimentos armazenados. O `RSExecRole` é criado em master e msdb quando você criar o banco de dados do servidor de relatório. O `RSExecRole` é membro de `db_owner` função para os bancos de dados de servidor de relatório, permitindo que o servidor de relatório atualizar seu próprio esquema para oferecer suporte a um processo de atualização automática.  
+ As permissões para o banco de dados também são configuradas automaticamente. A ferramenta de configuração do Reporting Services atribuirá o usuário da conta ou banco de dados para o `Public` e `RSExecRole` funções para os bancos de dados do servidor de relatório. O `RSExecRole` fornece permissões para acessar as tabelas de banco de dados e para executar procedimentos armazenados. O `RSExecRole` é criado em master e msdb quando você cria o banco de dados do servidor de relatório. O `RSExecRole` é um membro do `db_owner` função para os bancos de dados de servidor de relatório, permitindo que o servidor de relatório atualizar seu próprio esquema para dar suporte a um processo de atualização automática.  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>Convenções de nomenclatura para os bancos de dados do servidor de relatórios  
  Ao criar o banco de dados primário, o nome do banco de dados deve seguir as regras especificadas para [Identificadores de Banco de Dados](../../relational-databases/databases/database-identifiers.md). O nome do banco de dados temporário sempre usa o mesmo nome do banco de dados primário do servidor de relatórios, mas com um sufixo Tempdb. Você não pode escolher um nome diferente para o banco de dados temporário.  
@@ -80,18 +80,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Sobre as versões de banco de dados  
- No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], não há informações explícitas sobre a versão do banco de dados disponíveis. No entanto, como as versões de banco de dados sempre são sincronizados com as versões de produto, você pode usar as informações de versão do produto para saber quando a versão de banco de dados foi alterada. Informações de versão do produto para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é indicada por meio de informações de versão do arquivo que aparece nos arquivos de log, os cabeçalhos de todas as chamadas SOAP, e quando você se conectar à URL do servidor de relatório (por exemplo, quando você abre um navegador para http://localhost/reportserver).  
+ No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], não há informações explícitas sobre a versão do banco de dados disponíveis. No entanto, como as versões de banco de dados sempre são sincronizados com as versões de produto, você pode usar as informações de versão do produto para saber quando a versão de banco de dados foi alterada. Informações de versão do produto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são indicadas pelas informações de versão do arquivo que aparece nos arquivos de log, nos cabeçalhos de todas as chamadas SOAP, e quando você se conectar à URL do servidor de relatório (por exemplo, quando você abre um navegador para http://localhost/reportserver).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Criar um banco de dados do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório do modo nativo &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configurar a conta de serviço do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Operações de backup e restauração do Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

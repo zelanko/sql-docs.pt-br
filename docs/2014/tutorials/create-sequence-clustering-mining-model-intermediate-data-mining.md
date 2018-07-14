@@ -1,5 +1,5 @@
 ---
-title: Criando uma estrutura de modelo de mineração (Tutorial de mineração de dados intermediário) msc | Microsoft Docs
+title: Criando uma estrutura de modelo de mineração (Tutorial de mineração de dados intermediário) Clustering de sequência | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 09aaac50873d6c4c63b46fdf37dd7ee854000886
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c18097b6851bc23522882227158b5aad390570e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189563"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de clustering de sequências (Tutorial de mineração de dados intermediário)
   A primeira etapa da criação de um modelo de mineração de clustering de sequências é usar o Assistente de Mineração de Dados para criar uma nova estrutura de mineração e um modelo de mineração baseado no algoritmo Clustering de Sequências da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -34,24 +34,24 @@ ms.locfileid: "36312694"
   
 2.  Na página **Bem-vindo ao Assistente de Mineração de Dados** , clique em **Avançar**.  
   
-3.  No **Selecionar método de definição** Verifique **de warehouse existente de dados ou banco de dados relacional** está selecionado e, em seguida, clique em **próximo**.  
+3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
   
-4.  No **criar a estrutura de mineração de dados** , verifique se que a opção **criar estrutura de mineração com um modelo de mineração** está selecionado. Em seguida, clique na lista suspensa para a opção **qual técnica de mineração de dados você deseja usar?** e selecione **msc**. Clique em **Avançar**.  
+4.  Sobre o **criar a estrutura de mineração de dados** página, verifique a opção **criar estrutura de mineração com um modelo de mineração** está selecionado. Em seguida, clique na lista suspensa a opção **qual técnica de mineração de dados você deseja usar?** e selecione **msc**. Clique em **Avançar**.  
   
-     O **Selecionar exibição da fonte de dados** página será exibida. Em **modos de exibição de fonte de dados disponíveis**, selecione `Orders`.  
+     O **Selecionar exibição da fonte de dados** página será exibida. Sob **modos de exibição de fonte de dados disponíveis**, selecione `Orders`.  
   
-     Pedidos é a mesma exibição da fonte de dados utilizada para a análise do cenário de cesta de compras. Se você não tiver criado essa exibição da fonte de dados, consulte [adicionando uma exibição da fonte de dados com tabelas aninhadas &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
+     Pedidos é a mesma exibição da fonte de dados utilizada para a análise do cenário de cesta de compras. Se você não tiver criado essa exibição da fonte de dados, consulte [adicionando uma exibição da fonte de dados com tabelas aninhadas &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
 5.  Clique em **Avançar**.  
   
-6.  No **especificar tipos de tabela** página, selecione o **caso** caixa de seleção próxima ao **vAssocSeqOrders** de tabela e selecione o **aninhadas** caixa de seleção ao lado de **vAssocSeqLineItems** tabela. Clique em **Avançar**.  
+6.  No **especificar tipos de tabela** página, selecione o **caso** caixa de seleção ao lado a **vAssocSeqOrders** tabela e, em seguida, selecione o **Nested** caixa de seleção ao lado de **vAssocSeqLineItems** tabela. Clique em **Avançar**.  
   
     > [!NOTE]  
-    >  Se ocorrer um erro quando você seleciona o **caso** ou **aninhadas** caixas de seleção, pode ser que a junção na exibição da fonte de dados não está correta. A tabela aninhada, **vAssocSeqLineItems**, deve estar conectado à tabela de casos, **vAssocSeqOrders** por uma junção de muitos-para-um. Você pode editar a relação clicando com o botão direito do mouse na linha de junção e invertendo a direção da junção. Para obter mais informações, consulte [criar ou caixa de diálogo Editar relação &#40;Analysis Services - dados multidimensionais&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
+    >  Se ocorrer um erro quando você seleciona os **caso** ou **Nested** caixas de seleção, ele pode ser que a junção na exibição da fonte de dados não está correta. A tabela aninhada, **vAssocSeqLineItems**, deve estar conectado à tabela de casos **vAssocSeqOrders,** por uma junção de muitos-para-um. Você pode editar a relação clicando com o botão direito do mouse na linha de junção e invertendo a direção da junção. Para obter mais informações, consulte [criar ou Editar relação de caixa de diálogo &#40;Analysis Services - dados multidimensionais&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
   
-7.  Sobre o **especificar os dados de treinamento** página, escolha as colunas para uso no modelo, selecionando a caixa de seleção da seguinte maneira:  
+7.  Sobre o **especificar os dados de treinamento** página, escolha as colunas para uso no modelo, selecionando uma caixa de seleção da seguinte maneira:  
   
-    -   **IncomeGroup** selecionar o **entrada** caixa de seleção.  
+    -   **IncomeGroup** selecione o **entrada** caixa de seleção.  
   
          Essa coluna contém informações interessantes sobre os clientes que poderão ser usadas para clustering. Você a usará no primeiro modelo e vai ignorá-la no segundo.  
   
@@ -59,19 +59,19 @@ ms.locfileid: "36312694"
   
          Esse campo será usado como o identificador da tabela de casos, ou `Key`. Em geral, você nunca deve usar o campo de chave da tabela de casos como uma entrada, já que a chave contém valores exclusivos que não são úteis para clustering.  
   
-    -   **Região** selecionar o **entrada** caixa de seleção.  
+    -   **Região** selecione o **entrada** caixa de seleção.  
   
          Essa coluna contém informações interessantes sobre os clientes que poderão ser usadas para clustering. Você a usará no primeiro modelo e vai ignorá-la no segundo.  
   
-    -   **LineNumber** selecionar o `Key` e **entrada** caixas de seleção.  
+    -   **LineNumber** selecione o `Key` e **entrada** caixas de seleção.  
   
          O **LineNumber** campo será usado como o identificador para a tabela aninhada, ou `Sequence Key`. A chave para uma tabela aninhada sempre deve ser usada como entrada.  
   
-    -   **Modelo** selecionar o **entrada** e **previsível** caixas de seleção.  
+    -   **Modelo** selecione o **entrada** e **previsível** caixas de seleção.  
   
-     Verifique se as seleções estão corretas e, em seguida, clique em **próximo**.  
+     Verifique se as seleções estão corretas e, em seguida, clique em **próxima**.  
   
-8.  Sobre o **colunas especificar conteúdo e tipo de dados** página, verifique se a grade contém as colunas, tipos de conteúdo e tipos de dados mostrados na tabela a seguir e, em seguida, clique em **próximo**.  
+8.  Sobre o **colunas especificar conteúdo e tipo de dados** página, verifique se a grade contém as colunas, tipos de conteúdo e tipos de dados mostrados na tabela a seguir e, em seguida, clique em **próxima**.  
   
     |Tabelas/Colunas|Tipo de Conteúdo|Tipo de Dados|  
     |---------------------|------------------|---------------|  
@@ -82,13 +82,13 @@ ms.locfileid: "36312694"
     |Número da Linha|Key Sequence|Longo|  
     |Modelo|Discreto|Texto|  
   
-9. No **criar conjunto de testes** página, altere o **porcentagem de dados de teste** para 20 e depois clique em **próximo**.  
+9. No **criar conjunto de testes** página, altere a **porcentagem de dados de teste** para 20 e, em seguida, clique **próxima**.  
   
 10. Sobre o **Concluindo o assistente** página, para o **nome da estrutura de mineração**, tipo `Sequence Clustering with Region`.  
   
 11. Para o **nome do modelo de mineração**, tipo `Sequence Clustering with Region`.  
   
-12. Verifique o **Permitir drill-through** caixa e, em seguida, clique em **concluir**.  
+12. Verifique as **Permitir drill-through** caixa e, em seguida, clique em **concluir**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Processando o modelo de clustering de sequências](../../2014/tutorials/processing-the-sequence-clustering-model.md)  

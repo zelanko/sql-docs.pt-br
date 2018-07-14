@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233886"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36008490"
   
 -   Aumenta a disponibilidade do banco de dados de produção durante as atualizações.  
   
-     Para minimizar o tempo de inatividade de um banco de dados espelho, atualize de forma sequencial as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão hospedando os parceiros de failover. Isso ocasionará o tempo de inatividade de um único failover. Essa forma de atualização é conhecida como *atualização sem-interrupção*. Para obter mais informações, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+     Para minimizar o tempo de inatividade de um banco de dados espelho, atualize de forma sequencial as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão hospedando os parceiros de failover. Isso ocasionará o tempo de inatividade de um único failover. Essa forma de atualização é conhecida como *atualização sem-interrupção*. Para obter mais informações, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhado](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Termos e definições de espelhamento de banco de dados  
  failover automático  
@@ -331,11 +330,11 @@ ms.locfileid: "36008490"
   
 ## <a name="see-also"></a>Consulte também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Reparo automático de página &#40;para espelhamento de banco de dados e grupos de disponibilidade&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparo automático de página &#40;para grupos de disponibilidade e espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  
   
   

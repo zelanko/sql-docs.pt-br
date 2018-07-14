@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0538b89cca49e07d9d13841c95e2cea6ef2de9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7cb0a41dca5a081aa1774b6aeef17e3671c89afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243994"
 ---
 # <a name="create-a-new-solution"></a>Criar uma nova solução
   Quando você cria um projeto, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cria uma solução para contê-lo. Você só pode abrir uma solução de cada vez. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não permite a criação de pastas dentro de projetos. Para organizar seu trabalho, crie vários projetos.  

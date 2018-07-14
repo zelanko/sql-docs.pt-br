@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 caps.latest.revision: 45
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fc7e1ab0e855bd9ddd208b295cf3a10d44dfce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e8ca9dc1a2213a4f95617dcd54951cfc4b9041
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220508"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Acessando o Serviço Web do Servidor de Relatórios com Visual Basic ou Visual C# (Tutorial SSRS)
-  O tutorial a seguir mostra como acessar o serviço Web do servidor de relatório de um aplicativo criado com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+  O tutorial a seguir mostra como acessar o serviço Web servidor de relatório de um aplicativo criado com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  No decorrer deste tutorial, você fará o seguinte:  
@@ -46,7 +46,7 @@ ms.locfileid: "36007177"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] ou semelhantes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-ferramenta de desenvolvimento compatível.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] ou uma semelhante [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-ferramenta de desenvolvimento compatível.  
   
 -   Permissões suficientes para acessar o serviço Web Servidor de Relatórios do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador em que o servidor de relatório está localizado.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36007177"
   
  [Lição 3: Acessando o serviço Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [Lição 4: Executando o aplicativo &#40;VC VB&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [Lição 4: Executando o aplicativo &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

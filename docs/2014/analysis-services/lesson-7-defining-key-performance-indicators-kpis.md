@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: bcd70da10c33ed7296e07ac2f0aade0832bf9f43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 23f76cbefd4bd9c944928e2875dc59fe6f177955
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185363"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lição 7: Definindo KPIs (indicadores chave de desempenho)
   Nesta lição, você aprenderá a definir os KPIs (indicadores chave de desempenho) no projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Os KPIs fornecem uma estrutura para a definição de cálculos no servidor que medem seus negócios e padronizam a forma como as informações resultantes são exibidas. Eles podem ser exibidos em relatórios, portais e painéis, através das APIs de acesso a dados e das ferramentas da [!INCLUDE[msCoName](../includes/msconame-md.md)] e de terceiros. Os KPIs são wrappers de metadados em torno de medidas normais e outras expressões MDX (Multidimensional Expressions). Para obter mais informações, consulte [KPIs &#40;Indicadores Chave de Desempenho &#41; em modelos multidimensionais](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

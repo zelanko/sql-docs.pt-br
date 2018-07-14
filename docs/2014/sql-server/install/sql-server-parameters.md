@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine analysis [Upgrade Advisor]
 - SQL Server Upgrade Advisor, Database Engine
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], Database Engine
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0c7676aa40d78967f6ff97a6ac91cdef4f0844
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f6c34842d1a157629b123b813779a7c3fd3ee142
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261912"
 ---
 # <a name="sql-server-parameters"></a>Parâmetros do SQL Server
   Nesta página, é possível definir os parâmetros que o analisador usará para análise do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. É possível analisar um, vários ou todos os bancos de dados, analisar arquivos de rastreamento criados usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e analisar arquivos em lote do SQL.  
@@ -34,26 +34,26 @@ ms.locfileid: "36006259"
   
 ## <a name="options"></a>Opções  
  **Bancos de dados para analisar**  
- Para analisar todos os bancos de dados, selecione o **todos os bancos de dados** caixa de seleção. Para analisar uma seleção de bancos de dados, marque a caixa de seleção próxima a cada banco de dados para incluir na verificação.  
+ Para analisar todos os bancos de dados, selecione a **todos os bancos de dados** caixa de seleção. Para analisar uma seleção de bancos de dados, marque a caixa de seleção próxima a cada banco de dados para incluir na verificação.  
   
- **Analisar arquivos de rastreamento**  
+ **Analisar arquivo (s) de rastreamento**  
  Marque esta caixa de seleção para analisar arquivos de rastreamento no sistema de arquivos.  
   
  **Caminho para arquivos de rastreamento**  
  Você pode analisar um ou mais arquivos. É possível navegar até um local e selecionar vários arquivos ou fornecer vários nomes de arquivos. Use o nome do caminho completo para cada arquivo, incluindo o nome do arquivo, e separe as entrada usando o caractere barra vertical (|).  
   
- Se você habilitar **analisar arquivos de rastreamento**, **próximo** é desabilitado até que você digite um nome de caminho e um nome de arquivo.  
+ Se você habilitar **analisar arquivo (s) de rastreamento**, **próxima** é desabilitado até que você insira um nome de caminho e um nome de arquivo.  
   
- **Analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivos de lote**  
+ **Analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) do lote**  
  Marque essa caixa de seleção para analisar arquivos em lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] no sistema de arquivos.  
   
- **Caminho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivos de lote**  
+ **Caminho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) do lote**  
  Você pode analisar um ou mais lotes de arquivos. Você pode navegar até um local e selecionar vários arquivos ou pode digitar vários nomes de arquivos. Use o nome do caminho completo para cada arquivo, incluindo o nome do arquivo, e separe as entrada usando o caractere barra vertical (|).  
   
- Se você habilitar **arquivos em lote de SQL analisar**, o **próximo** botão será desabilitado até que você insira um nome de caminho e um nome de arquivo.  
+ Se você habilitar **arquivos em lote de SQL analisar**, o **próxima** botão será desabilitado até que você insira um nome de caminho e um nome de arquivo.  
   
  **Separador de lotes SQL**  
- O texto que é usado para separar lotes de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)]. O valor padrão é **VÁ**.  
+ O texto que é usado para separar lotes de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)]. O valor padrão é **ACESSE**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

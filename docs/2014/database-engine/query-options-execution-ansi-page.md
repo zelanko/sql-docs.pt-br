@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41c8957ebd2dfb77b13803945c210d6a09f1e874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252648"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
   Use esta página para especificar que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  

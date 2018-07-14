@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187243"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lição 8: Criar indicadores chave de desempenho
   Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36008765"
   
 6.  No **valor absoluto** , digite `1.1`, e pressione ENTER.  
   
-7.  Em **definir limites de Status**, no campo esquerdo deslizante (baixa), digite `1`e à direita (alto) no campo de controle deslizante, digite `1.07`.  
+7.  Na **definir limites de Status**, no campo de controle deslizante esquerdo de (baixo), digite `1`e à direita (alto) no campo de controle deslizante, digite `1.07`.  
   
 8.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde).  
   

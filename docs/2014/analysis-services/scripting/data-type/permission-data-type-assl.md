@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff5fb67e4f7989fb329e60a106ea8e6d0c734c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233946"
 ---
 # <a name="permission-data-type-assl"></a>Tipo de dados Permission (ASSL)
   Define um tipo de dados primitivo abstrato que representa as informações sobre uma permissão individual.  
@@ -70,22 +70,22 @@ ms.locfileid: "36006432"
 |Elementos derivados|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- `Permission` serve como o tipo de base abstrato para uma variedade de tipos de permissões derivadas usadas em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ `Permission` serve como o tipo base abstrato para diversos tipos de permissões derivadas usadas em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Este tipo de dados tem as validações a seguir no valor 2 de DeploymentMode (modo de servidor de tabela).  
   
--   *Processo* valor padrão do atributo é definido como `False`, exceto quando o usuário tem o **atualização** permissão. Para usuários com o **atualizar** permissão a *processo* valor de atributo é definido como `True`.  
+-   *Processo* valor padrão do atributo é definido como `False`, exceto quando o usuário tem a **atualizar** permissão. Para usuários com o **Refresh** permissão a *processo* valor de atributo é definido como `True`.  
   
 -   *ReadDefinition* valor de atributo é definido como `None`; qualquer outro valor gera um erro.  
   
--   *Leitura* valor de atributo é definido como `Allowed` para usuários com o **usuário** permissão e `None` quando os usuários são atribuídos para a **atualizar** permissão; se um usuário tiver as **Usuário** e **atualizar** permissões e, em seguida, o atributo é definido como `Allowed`. Para usuários com privilégios administrativos, o valor do atributo é definido como `Allowed`.  
+-   *Leia* valor de atributo é definido como `Allowed` para usuários com o **usuário** permissão e, ao `None` quando os usuários são atribuídos ao **atualizar** permissão; se um usuário tiver as **Usuário** e **atualize** permissões e, em seguida, o atributo é definido como `Allowed`. Para usuários com privilégios administrativos, o valor do atributo é definido como `Allowed`.  
   
 -   *Gravar* valor de atributo é definido como `None`; qualquer outro valor gera um erro.  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [Elemento de função &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [Tipos de dados XML de linguagem script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

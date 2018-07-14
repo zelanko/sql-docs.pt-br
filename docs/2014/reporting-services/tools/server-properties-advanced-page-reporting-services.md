@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258115"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
   Use essa página para definir propriedades do sistema no servidor de relatórios. Há vários modos de definir propriedades do sistema. Essa ferramenta fornece uma interface gráfica do usuário para que você possa definir propriedades sem precisar gravar código.  
@@ -39,10 +39,10 @@ ms.locfileid: "36006977"
  Determina se o controle ActiveX de RSClientPrint está disponível para download no servidor de relatório. Os valores válidos são `true` e `false`. O valor padrão é `true`. Para obter mais informações sobre configurações adicionais necessárias para esse controle, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica se o log de execução de relatório está habilitado. O valor padrão é `true`. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [o Log de execução do servidor de relatório e a exibição do ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica se o log de execução de relatório está habilitado. O valor padrão é `true`. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `-1` por meio de `2`,`147`,`483`,`647`. Se o valor for `-1` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.  
+ O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.  
   
  **SessionTimeout**  
  A quantidade de tempo, em segundos, que uma sessão permanece ativa. O valor padrão é `600`.  
@@ -75,10 +75,10 @@ ms.locfileid: "36006977"
  **All =** Instantâneos são compactados para todas as opções de armazenamento que incluem o banco de dados do servidor de relatórios ou o sistema de arquivos.  
   
  **SystemReportTimeout**  
- O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são `-1` por meio de `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
+ O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
   
  **SystemSnapshotLimit**  
- O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são `-1` por meio de `2`,`147`,`483`,`647`. Se o valor for `-1`, não há nenhum limite de instantâneo.  
+ O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, não há nenhum limite de instantâneo.  
   
  **EnableIntegratedSecurity**  
  Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é `True`. Os valores válidos são os seguintes:  
@@ -88,7 +88,7 @@ ms.locfileid: "36006977"
  `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
   
  `EnableLoadReportDefinition`  
- Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. Definir essa opção determina o valor de `EnableLoadReportDefinition` propriedade no servidor de relatório.  
+ Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. Essa opção determina o valor da `EnableLoadReportDefinition` propriedade no servidor de relatório.  
   
  Se você desmarcar esta opção, a propriedade será definida como False e o servidor de relatório não irá gerar relatórios de clickthrough de relatórios que usam um modelo como uma fonte de dados. Qualquer chamada ao método LoadReportDefinition será bloqueada.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36006977"
  Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é `true`. Se a opção for definida como `false`, somente as mensagens de erro genéricas são enviadas.  
+ Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é `true`. Se a opção é definida como `false`, apenas as mensagens de erro genéricas são enviadas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

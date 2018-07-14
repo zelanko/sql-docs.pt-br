@@ -1,5 +1,5 @@
 ---
-title: Tratamento de problemas de simultaneidade de banco de dados em diagramas de atualização (SQLXML 4.0) | Microsoft Docs
+title: Tratamento de problemas de simultaneidade de banco de dados nos diagramas de atualização (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1cf878446a7fefa0b0bd6f1217ffa1ee083e241
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8dabeb92af34525e247f5144a4c131c6185b0b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234906"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Manipulando problemas de simultaneidade de banco de dados nos diagramas de atualização (SQLXML 4.0)
-  Da mesma forma que outros mecanismos de atualização de banco de dados, os diagramas de atualização devem lidar com atualizações simultâneas dos dados em um ambiente multiusuário. Os diagramas de atualização usam o Controle de simultaneidade otimista, que usa a comparação de dados de campos selecionados como instantâneos para garantir que os dados a serem atualizados não foram alterados por outro aplicativo de usuário desde que foram lidos do banco de dados. Diagramas de atualização incluem estes valores de instantâneo no  **\<antes >** bloco dos diagramas de atualização. Antes de atualizar o banco de dados, o diagrama de atualização verifica os valores que são especificados no  **\<antes >** bloco em relação aos valores no momento no banco de dados para garantir que a atualização é válida.  
+  Da mesma forma que outros mecanismos de atualização de banco de dados, os diagramas de atualização devem lidar com atualizações simultâneas dos dados em um ambiente multiusuário. Os diagramas de atualização usam o Controle de simultaneidade otimista, que usa a comparação de dados de campos selecionados como instantâneos para garantir que os dados a serem atualizados não foram alterados por outro aplicativo de usuário desde que foram lidos do banco de dados. Diagramas de atualização incluem esses valores de instantâneo na  **\<antes de >** bloco dos diagramas de atualização. Antes de atualizar o banco de dados, o diagrama de atualização verifica os valores que são especificados na  **\<antes de >** bloco com os valores que atualmente no banco de dados para garantir que a atualização é válida.  
   
  O Controle de simultaneidade otimista oferece três níveis de proteção em um diagrama de atualização: baixo (nenhum), intermediário e alto. Você pode decidir qual o nível de proteção necessário especificando o diagrama de atualização de acordo com ele.  
   
 ## <a name="lowest-level-of-protection"></a>Nível de proteção mais baixo  
- Este nível é uma atualização cega, no qual a atualização é processada sem referência a outras atualizações que foram feitas desde que o banco de dados foi lido pela última vez. Nesse caso, você especifica apenas as colunas de chave primárias no  **\<antes >** bloquear para identificar o registro e especificar as informações atualizadas no  **\<depois >** bloco.  
+ Este nível é uma atualização cega, no qual a atualização é processada sem referência a outras atualizações que foram feitas desde que o banco de dados foi lido pela última vez. Nesse caso, você especifica apenas as colunas de chave primárias na  **\<antes de >** bloco para identificar o registro e especificar as informações atualizadas no  **\<depois >** bloco.  
   
- Por exemplo, o novo número de telefone de contato no seguinte diagrama de atualização está correto, não importando qual tenha sido o número de telefone anteriormente. Observe como o  **\<antes >** bloco especifica somente a coluna de chave primária (ContactID).  
+ Por exemplo, o novo número de telefone de contato no seguinte diagrama de atualização está correto, não importando qual tenha sido o número de telefone anteriormente. Observe como o  **\<antes de >** bloco especifica somente a coluna de chave primária (ContactID).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -58,9 +58,9 @@ ms.locfileid: "36006074"
 ## <a name="intermediate-level-of-protection"></a>Nível de proteção intermediário  
  Neste nível de proteção, o diagrama de atualização compara os valores atuais dos dados que estão sendo atualizados com os valores nas colunas do banco de dados, para garantir que os valores não foram alterados por alguma outra transação desde que o registro foi lido pela sua transação.  
   
- Você pode obter esse nível de proteção, especificando as colunas de chave primárias e as colunas que você está atualizando no  **\<antes >** bloco.  
+ Você pode obter esse nível de proteção, especificando as colunas de chave primárias e as colunas que você está atualizando na  **\<antes de >** bloco.  
   
- Por exemplo, este diagrama de atualização altera o valor na coluna Phone da tabela Person.Contact para o contato com ContactID igual a 1. O  **\<antes >** bloco Especifica o **Phone** atributo para garantir que o valor do atributo corresponde ao valor na coluna correspondente no banco de dados antes de aplicar o valor atualizado .  
+ Por exemplo, este diagrama de atualização altera o valor na coluna Phone da tabela Person.Contact para o contato com ContactID igual a 1. O  **\<antes de >** bloco Especifica os **Phone** atributo para garantir que esse valor de atributo corresponde ao valor na coluna correspondente no banco de dados antes de aplicar o valor atualizado .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,11 +80,11 @@ ms.locfileid: "36006074"
   
  Há duas formas através das quais você pode obter esse nível de proteção alto contra atualizações simultâneas:  
   
--   Especificar colunas adicionais na tabela de  **\<antes >** bloco.  
+-   Especificar colunas adicionais na tabela de  **\<antes de >** bloco.  
   
-     Se você especificar colunas adicionais a  **\<antes >** bloco, o diagrama de atualização compara os valores especificados para essas colunas com os valores que estavam no banco de dados antes de aplicar a atualização. Se qualquer uma das colunas do registro tiver sido alterada desde que a sua transação leu o registro, o diagrama de atualização não realizará a atualização.  
+     Se você especificar colunas adicionais na  **\<antes de >** bloco, o diagrama de atualização compara os valores que são especificados para estas colunas com valores que tinham no banco de dados antes de aplicar a atualização. Se qualquer uma das colunas do registro tiver sido alterada desde que a sua transação leu o registro, o diagrama de atualização não realizará a atualização.  
   
-     Por exemplo, o diagrama a seguir atualiza o nome do turno, mas Especifica colunas adicionais (StartTime, EndTime) no  **\<antes >** bloco, assim, solicitando um nível mais alto de proteção contra simultâneas atualizações.  
+     Por exemplo, o diagrama a seguir atualiza o nome do turno, mas Especifica colunas adicionais (StartTime, EndTime) na  **\<antes de >** bloco, assim, solicitando um nível mais alto de proteção contra simultâneas atualizações.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -102,15 +102,15 @@ ms.locfileid: "36006074"
     </ROOT>  
     ```  
   
-     Este exemplo especifica o nível mais alto de proteção, especificando todos os valores de coluna para o registro de  **\<antes >** bloco.  
+     Este exemplo especifica o nível mais alto de proteção, especificando todos os valores de coluna para o registro na  **\<antes de >** bloco.  
   
--   Especificar a coluna de carimbo de hora (se disponível) no  **\<antes >** bloco.  
+-   Especificar a coluna de carimbo de hora (se disponível) na  **\<antes de >** bloco.  
   
-     Em vez de especificar todas as colunas no registro o `<before`> bloco, você pode especificar apenas a coluna de carimbo de hora (se a tabela tiver uma) junto com as colunas de chave primárias no  **\<antes >** bloco. O banco de dados atualiza a coluna de carimbo de data e hora com um valor exclusivo depois de cada atualização do registro. Nesse caso, o diagrama de atualização compara o valor do carimbo de data e hora com o valor correspondente no banco de dados. O valor do carimbo de data e hora armazenado no banco de dados é um valor binário. Portanto, a coluna de carimbo de data e hora deve ser especificada no esquema como `dt:type="bin.hex"`, `dt:type="bin.base64"`ou `sql:datatype="timestamp"`. (Você pode especificar o `xml` tipo de dados ou o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados.)  
+     Em vez de especificar todas as colunas no registro a `<before`> bloco, você pode especificar apenas a coluna de carimbo de hora (se a tabela tiver uma) junto com as colunas de chave primárias em de  **\<antes de >** bloco. O banco de dados atualiza a coluna de carimbo de data e hora com um valor exclusivo depois de cada atualização do registro. Nesse caso, o diagrama de atualização compara o valor do carimbo de data e hora com o valor correspondente no banco de dados. O valor do carimbo de data e hora armazenado no banco de dados é um valor binário. Portanto, a coluna de carimbo de data e hora deve ser especificada no esquema como `dt:type="bin.hex"`, `dt:type="bin.base64"`ou `sql:datatype="timestamp"`. (Você pode especificar o `xml` tipo de dados ou o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados.)  
   
 #### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
-1.  Criar essa tabela no **tempdb** banco de dados:  
+1.  Criar essa tabela na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  

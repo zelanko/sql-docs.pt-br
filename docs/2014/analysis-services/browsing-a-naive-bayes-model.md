@@ -1,5 +1,5 @@
 ---
-title: Procurando um modelo Naive Bayes | Microsoft Docs
+title: Procurar um modelo Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36031bb080ff80c14a4f91bca102bd859df1f539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61592c58fd629ef705e044a13c7a2bd90cca8ae2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244060"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Procurando um modelo Naive Bayes
-  Quando você abre um modelo de Naïve Bayes usando **procurar**, o modelo é exibido em um visualizador interativo com quatro painéis diferentes. Use o visualizador para explorar correlações e obter informações sobre o modelo e os dados subjacentes.  
+  Quando você abre um modelo de Naïve Bayes usando **procurar**, o modelo é exibido em um visualizador interativo com quatro painéis diferente. Use o visualizador para explorar correlações e obter informações sobre o modelo e os dados subjacentes.  
   
 -   [Rede de dependências](#bkmk_DepNet)  
   
@@ -35,18 +35,18 @@ ms.locfileid: "36006019"
 ##  <a name="BKMK_Tabs"></a> Explorar o modelo  
  A finalidade do visualizador é ajudar a explorar a interação entre os atributos de entrada e saída (entradas e variáveis dependentes) que foram descobertos pelo modelo Naïve Bayes da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
- Se você quiser fazer experiências com o Visualizador de Naïve Bayes, use o [classificar assistente &#40;suplementos de mineração de dados para Excel&#41; ](classify-wizard-data-mining-add-ins-for-excel.md) assistente na faixa de opções mineração de dados, clique no **avançado** opção e alterar o algoritmo para usar o algoritmo Naïve Bayes  
+ Se você quiser fazer experiências com o Visualizador de Naïve Bayes, use o [Assistente de classificação &#40;Data Mining Add-ins para Excel&#41; ](classify-wizard-data-mining-add-ins-for-excel.md) wizard na faixa de opções mineração de dados, clique no **avançado** opção e alterar o algoritmo para usar o algoritmo Naïve Bayes  
   
- Para esses exemplos, é usada a fonte de dados na pasta de trabalho de exemplo e agrupamos a coluna **Renda anual**, em cinco grupos de renda, de **muito baixo** para **muito alta**. O modelo Naïve Bayes analisou os fatores correlacionadas com cada categoria de renda.  
+ Para esses exemplos, é usada a fonte de dados na pasta de trabalho de exemplo e agrupamos a coluna **Renda anual**, em cinco grupos de renda, do **muito baixa** para **muito alta**. O modelo Naïve Bayes analisou os fatores correlacionadas com cada categoria de renda.  
   
 ###  <a name="bkmk_DepNet"></a> Rede de dependências  
- A primeira janela que você usará o **rede de dependência**. Ela mostra uma visão geral cujas entradas estão estreitamente correlacionadas ao resultado selecionado.  
+ A primeira janela que você usará é o **rede de dependências**. Ela mostra uma visão geral cujas entradas estão estreitamente correlacionadas ao resultado selecionado.  
   
  ![rede de dependências no visualizador Naive Bayes](media/dm13-nb.gif "rede de dependências no visualizador Naive Bayes")  
   
 ##### <a name="explore-the-dependency-network"></a>Explorar a rede de dependências  
   
-1.  Primeiro, clique no resultado pretendido, **Renda anual**, que é representado como um nó no gráfico.  
+1.  Primeiro, clique o resultado de destino **Renda anual**, que é representado como um nó no gráfico.  
   
      Os nós realçados em volta da variável pretendida são os que estão correlacionadas estatisticamente com esse resultado. Use a legenda na parte inferior do visualizador para entender a natureza da relação.  
   
@@ -61,15 +61,15 @@ ms.locfileid: "36006019"
  [Voltar ao início](#BKMK_Tabs)  
   
 ###  <a name="bkmk_AttProf"></a> Perfis de atributo  
- O **perfis de atributo** windows fornece uma indicação visual de como todas as outras variáveis estão relacionadas aos resultados individuais.  
+ O **perfis de atributo** windows fornece uma indicação visual de como todas as outras variáveis estão relacionados aos resultados individuais.  
   
 ##### <a name="explore-the-profiles"></a>Explorar os perfis  
   
 1.  Para ocultar alguns valores para que você possa comparar resultados mais facilmente, clique no título da coluna e arraste-o para baixo de outra coluna.  
   
-     ![atributo perfis no visualizador Naive Bayes](media/dm13-nb-attprof.gif "atributo perfis no visualizador Naive Bayes")  
+     ![atributo perfis no visualizador Naive Bayes](media/dm13-nb-attprof.gif "perfis no visualizador Naive Bayes de atributo")  
   
-2.  Clique em qualquer célula para exibir a distribuição de valores no **legenda de mineração**.  
+2.  Clique em qualquer célula para exibir a distribuição de valores na **legenda de mineração**.  
   
      Como os atributos associados a resultados diferentes são exibidos visualmente, é fácil reconhecer correlações interessantes, por exemplo, como as rendas são distribuídas por região.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36006019"
   
 ##### <a name="explore-the-attribute-characteristics"></a>Explorar as características do atributo  
   
-1.  Clique em **valor** e selecione um item a partir de **valor**.  
+1.  Clique em **valor** e selecione um item das **valor**.  
   
      Quando você selecionar um resultado pretendido, o gráfico será atualizado para mostrar os fatores que estão mais fortemente associados ao resultado, classificados por importância.  
   
@@ -95,23 +95,23 @@ ms.locfileid: "36006019"
  [Voltar ao início](#BKMK_Tabs)  
   
 ###  <a name="bkmk_AttDisc"></a> Distinção de atributo  
- O **distinção de atributo** exibir ajuda a comparar dois resultados ou um resultado versus todos os outros resultados.  
+ O **distinção de atributo** exibição ajuda a comparar dois resultados ou um resultado versus todos os outros resultados.  
   
- ![atributo distinção no visualizador Naive Bayes](media/dm13-nb-attdisc.gif "atributo distinção no visualizador Naive Bayes")  
+ ![atributo discriminação no visualizador Naive Bayes](media/dm13-nb-attdisc.gif "atributo discriminação no visualizador Naive Bayes")  
   
 ##### <a name="explore-attribute-discrimination"></a>Explorar distinção de atributo  
   
 1.  Use os controles **valor 1** e **valor 2**, para selecionar os resultados que você deseja comparar.  
   
-     Por exemplo, neste modelo havia alguns atributos interessantes no grupo de baixa renda, podemos escolher o grupo de renda mais baixo na primeira lista suspensa e escolher **todos os outros estados** na segunda lista suspensa.  
+     Por exemplo, neste modelo havia alguns atributos interessantes no grupo de baixa renda, portanto, podemos escolher o grupo de renda mais baixo na primeira lista suspensa e escolheu **todos os outros estados** na segunda lista suspensa.  
   
      Os atributos são classificados por ordem de importância (calculada com base nos dados de treinamento). Consequentemente, a ocupação é o fator mais correlacionado com renda (para este grupo-alvo, pelo menos).  
   
-     Para ver os valores exatos, clique a barra colorida e exiba o **legenda de mineração**.  
+     Para ver os valores exatos, clique na barra colorida e exibir o **legenda de mineração**.  
   
 2.  Observe que rendas mais baixas também estão correlacionadas com a região da Europa.  
   
-     O modelo Naïve Bayes não oferece suporte à busca detalhada; no entanto, se você quiser verificar os casos associados a esse grupo de resultados, poderá usar uma consulta. Para obter informações sobre esse tipo de modelo, consulte [Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md).  
+     O modelo Naïve Bayes não oferece suporte à busca detalhada; no entanto, se você quiser verificar os casos associados a esse grupo de resultados, poderá usar uma consulta. Para obter informações sobre consultas sobre esse tipo de modelo, consulte [exemplos de consulta de modelo de Naive Bayes](data-mining/naive-bayes-model-query-examples.md).  
   
  [Voltar ao início](#BKMK_Tabs)  
   

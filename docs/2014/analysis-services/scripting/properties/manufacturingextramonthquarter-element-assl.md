@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d4bc2e36bb67e64aabb5bfdaee67ea945f4bb077
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e57e3e7dbaa07ce86eaa5c0b29749fdc6c974cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243626"
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>Elemento ManufacturingExtraMonthQuarter (ASSL)
   Define o mês do período de fabricação para o qual um mês extra é atribuído para um [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36006208"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `ManufacturingExtraMonthQuarter` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ O elemento que corresponde ao pai de `ManufacturingExtraMonthQuarter` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

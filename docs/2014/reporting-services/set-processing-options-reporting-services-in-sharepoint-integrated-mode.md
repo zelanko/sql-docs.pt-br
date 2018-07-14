@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255648"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
   Você pode definir opções de processamento em um relatório [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para determinar quando ocorre o processamento de dados. Pode também definir um valor de tempo limite para o processamento de relatórios, além de opções que determinam se o histórico de relatórios está habilitado para o relatório atual.  
@@ -109,7 +109,7 @@ ms.locfileid: "36006986"
 1.  Use o Windows PowerShell para definir o tempo limite de banco de dados de um servidor de relatório do SharePoint. Para obter mais informações, consulte o de "obter e definir propriedades do banco de dados de aplicativo de serviço Reporting" seção [cmdlets do PowerShell para o Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatório](report-server/set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatórios](report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Definindo valores de tempo limite para processamento de relatório e conjunto de dados compartilhado &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   

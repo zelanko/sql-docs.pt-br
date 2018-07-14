@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f8aa0ba1d8445a2da5e7ffeb8836848875e8db5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4cdec05ce4abc1a6bfd3585bdd4215ce15be7b39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241798"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Criar um rastreamento (SQL Server Profiler)
   Este tópico descreve como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para criar um rastreamento.  
@@ -59,7 +59,7 @@ ms.locfileid: "36006257"
 7.  Clique em **Executar** para iniciar o rastreamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Permissões necessárias para executar o SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
+ [Modificar modelos de rastreamento](permissions-required-to-run-sql-server-profiler.md)   
  [Modelos e permissões do SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)   
  [Correlacionar um rastreamento com dados do log de desempenho do Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

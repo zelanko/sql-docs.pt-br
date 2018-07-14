@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FirstDayOfWeek element
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c17e6e589e10cb27316f60e92b2dc17ab292f60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b24ce90da622a95543df5213e62aeacb2368598
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224006"
 ---
 # <a name="firstdayofweek-element-assl"></a>Elemento FirstDayOfWeek (ASSL)
-  Define o primeiro dia da semana para um [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
+  Define o primeiro dia da semana para uma [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36006920"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `FirstDayOfWeek` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ O elemento que corresponde ao pai de `FirstDayOfWeek` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

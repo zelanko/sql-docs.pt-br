@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218296"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece ferramentas de cliente que você pode usar para gerenciar estruturas de mineração e modelos de mineração existentes. Esta seção descreve as operações de gerenciamento que você pode executar usando cada ambiente.  
@@ -34,12 +34,12 @@ ms.locfileid: "36008794"
   
  [Requisitos e considerações de processamento &#40;mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usando o SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services – mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Usando o SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services - mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Localização de objetos de mineração de dados  
  As estruturas e os modelos de mineração que foram processados são armazenados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Se você criar uma conexão para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados `Immediate` objetos modo ao desenvolver a mineração de dados, todos os objetos que você cria são imediatamente adicionados ao servidor enquanto você trabalha. Entretanto, se você criar objetos de mineração de dados no modo **Offline** , que é o padrão quando trabalha no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], os objetos de mineração criados serão apenas contêineres de metadados, até serem implantados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Assim, sempre que você fizer uma alteração em um objeto, deverá reimplantar o objeto no servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre a arquitetura de mineração de dados, consulte [Arquitetura física &#40;Analysis Services – Mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Se você criar uma conexão para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados no `Immediate` objetos de modo ao desenvolver a mineração de dados, todos os objetos que você cria são imediatamente adicionados ao servidor enquanto você trabalha. Entretanto, se você criar objetos de mineração de dados no modo **Offline** , que é o padrão quando trabalha no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], os objetos de mineração criados serão apenas contêineres de metadados, até serem implantados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Assim, sempre que você fizer uma alteração em um objeto, deverá reimplantar o objeto no servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre a arquitetura de mineração de dados, consulte [Arquitetura física &#40;Analysis Services – Mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Alguns clientes, como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, também permitem criar modelos e estruturas de mineração de sessão que usam uma conexão com uma instância, mas armazenam a estrutura e os modelos de mineração no servidor somente durante a sessão. Também é possível gerenciar esses modelos através do cliente, da mesma forma que estruturas e modelos armazenados no banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , porém os objetos não persistem depois de desconectar da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "36008794"
 > [!WARNING]  
 >  Todas as alterações em uma estrutura ou um modelo de mineração, inclusive alterações em metadados como um nome ou uma descrição, requerem que a estrutura ou o modelo sejam reprocessados.  
   
- Se você não tiver o arquivo de solução que foi usado para criar o projeto de mineração de dados ou objetos, você pode importar o projeto existente do servidor usando o Assistente de importação do Analysis Services, fazer modificações nos objetos e, em seguida, reimplantar usando a `Incremental` opção. Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Se você não tiver o arquivo de solução que foi usado para criar o projeto de mineração de dados ou objetos, você pode importar o projeto existente do servidor usando o Assistente de importação do Analysis Services, fazer modificações aos objetos e, em seguida, reimplantar usando a `Incremental` opção. Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Gerenciando objetos de mineração de dados no SQL Server Management Studio  
  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível fazer scripts, processar ou excluir estruturas e modelos de mineração. Você pode exibir apenas um conjunto limitado de propriedades usando o Pesquisador de Objetos; entretanto, é possível exibir metadados adicionais sobre modelos de mineração abrindo a janela **Consultas DMX** e selecionando uma estrutura de mineração.  
@@ -98,6 +98,6 @@ ms.locfileid: "36008794"
  **Restrições:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera algumas instruções XMLA que têm suporte apenas para uso interno e não podem ser usadas em scripts XML DDL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia do desenvolvedor &#40;do Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [Guia do desenvolvedor do &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

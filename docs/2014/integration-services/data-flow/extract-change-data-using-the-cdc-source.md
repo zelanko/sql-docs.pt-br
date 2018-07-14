@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e570cf245e261fb10c7eb07cc318c7ee9df470ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86ea9dd907eac082321b2b6d8edd45475912a545
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233836"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
   Para adicionar e configurar uma origem de CDC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma tarefa Controle de CDC.  
@@ -75,8 +75,8 @@ ms.locfileid: "36006668"
 15. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC &#40;página Gerenciador de Conexão&#41;](../cdc-source-editor-connection-manager-page.md)   
- [Editor de origem CDC &#40;página colunas&#41;](../cdc-source-editor-columns-page.md)   
+ [Editor de origem CDC &#40;página do Gerenciador de Conexão&#41;](../cdc-source-editor-connection-manager-page.md)   
+ [Editor de origem CDC &#40;página de colunas&#41;](../cdc-source-editor-columns-page.md)   
  [Editor de origem CDC &#40;página de saída de erro&#41;](../cdc-source-editor-error-output-page.md)  
   
   

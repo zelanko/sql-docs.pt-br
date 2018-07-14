@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa25c4dcac782d67675888679efd1700097b4e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243526"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar Moedas de Relatório (Assistente de Business Intelligence)
   Use a página **Definir Moedas de Relatório** para definir as moedas de relatório para a funcionalidade de conversão de moedas que abrange o tipo de conversão muitos-para-muitos ou um para muitos especificado na página **Selecionar Tipo de Conversão**. (Uma moeda de relatório é a moeda na qual os valores de medidas selecionadas na página **Selecionar Medidas** são convertidos.) Os membros selecionados na dimensão de moedas definem uma dimensão de moedas de relatório para a conversão de moedas gerada pelo Assistente de Business Intelligence.  

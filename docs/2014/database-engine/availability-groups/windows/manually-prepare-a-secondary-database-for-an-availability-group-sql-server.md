@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
 - sql12.swb.availabilitygroup.preparedbs.f1
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 44
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e98f8b7db76d0a19041424242d3035934d02c5a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295462"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
-  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade do AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell. A preparação de um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados primário e os backups de log subsequentes em cada instância do servidor que hospede a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado ao grupo de disponibilidade.  
+  Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell. A preparação de um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados primário e os backups de log subsequentes em cada instância do servidor que hospede a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado ao grupo de disponibilidade.  
   
 > [!TIP]  
->  Se você tiver uma configuração de envio de logs existente, poderá ser capaz de converter o banco de dados primários de envio de logs junto com um ou mais de seus bancos de dados secundários em um banco de dados primário AlwaysOn e um ou mais bancos de dados secundários AlwaysOn. Para obter mais informações, consulte [pré-requisitos para migrar do envio de logs para grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Se você tiver uma configuração de envio de logs existente, poderá ser capaz de converter o banco de dados primários de envio de logs junto com um ou mais de seus bancos de dados secundários em um banco de dados primário AlwaysOn e um ou mais bancos de dados secundários AlwaysOn. Para obter mais informações, consulte [pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Antes de começar:**  
   
@@ -199,7 +198,7 @@ ms.locfileid: "36005954"
         > [!IMPORTANT]  
         >  Se os nomes dos caminhos dos bancos de dados primário e secundário forem diferentes, não será possível adicionar um arquivo. Isso acontece porque, ao receber o log para a operação de adição de arquivo, a instância do servidor da réplica secundária tenta colocar o novo arquivo no mesmo caminho usado pelo banco de dados primário.  
   
-         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. A operação de banco de dados de restauração deve mover o banco de dados para o diretório de dados de uma instância remota do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] chamado (*AlwaysOn1*), que hospeda a réplica secundária em outro nó do cluster. Lá, os arquivos de dados e de log são restaurados para o *Server \ mssql12 do C:\Program Files\Microsoft SQL. ALWAYSON1\MSSQL\DATA* directory. O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
+         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Operação de restauração de banco de dados deve mover o banco de dados para o diretório de dados de uma instância remota do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nomeado (*AlwaysOn1*), que hospeda a réplica secundária em outro nó do cluster. Lá, os arquivos de dados e de log são restaurados para o *C:\Program Files\Microsoft SQL Server\MSSQL12. ALWAYSON1\MSSQL\DATA* directory. O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -258,7 +257,7 @@ ms.locfileid: "36005954"
 4.  Para restaurar os backups do banco de dados e de log de cada banco de dados primário, use o cmdlet `restore-SqlDatabase`, especificando o parâmetro de restauração `NoRecovery`. Se os caminhos dos arquivos forem diferentes nos computadores que hospedam a réplica primária e a réplica secundária de destino, use também o parâmetro de restauração `RelocateFile`.  
   
     > [!NOTE]  
-    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para exibir a sintaxe de um cmdlet, use o `Get-Help` cmdlet no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ambiente do PowerShell. Para obter mais informações, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Para concluir a configuração do banco de dados secundário, você precisa uni-lo ao grupo de disponibilidade. Para obter mais informações, veja [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -285,10 +284,10 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  Para concluir a configuração do banco de dados secundário, una o banco de dados recém-restaurado ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Solucionar problemas de uma falha na operação adicionar arquivo &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [Solucionar problemas de uma operação de adição de arquivos com falha &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
   

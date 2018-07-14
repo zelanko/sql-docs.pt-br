@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268672"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
   Ao criar um índice de texto completo, você precisa especificar um idioma no nível de coluna para a coluna indexada. O [separador de palavras e os lematizadores](configure-and-manage-word-breakers-and-stemmers-for-search.md) do idioma especificado serão usados por consultas de texto completo na coluna. Há algumas coisas a considerar ao escolher o idioma da coluna ao criar um índice de texto completo. Essas considerações estão relacionadas a como seu texto é transformado em token e, depois, indexado pelo Mecanismo de Texto Completo.  
@@ -65,7 +64,7 @@ ms.locfileid: "36007070"
   
 -   Cobertura de uma lista extensa de idiomas, separadores de palavras são incluídos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prontos e habilitado por padrão.  
   
- Para obter uma lista dos idiomas para os quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Para obter uma lista de idiomas para os quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -73,7 +72,7 @@ ms.locfileid: "36007070"
  Ao criar um índice de texto completo, você precisa especificar um nome de idioma válido para cada coluna. Se um nome de idioma for válido, mas não for retornado pela exibição de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , a pesquisa de texto completo reverterá para o nome de idioma mais próximo disponível da mesma família de idiomas, se houver. Caso contrário, a pesquisa de texto completo reverterá para o separador de palavras Neutro. Esse comportamento de reversão poderá afetar a precisão da recuperação. Portanto, é altamente recomendável especificar um nome de idioma válido e disponível para cada coluna quando você criar um índice de texto completo.  
   
 > [!NOTE]  
->  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como `char` ou `nchar`). Se você tiver a ordem de classificação de um `char`, `varchar`, ou `text` coluna de tipo definida para um configuração de idioma diferente do idioma identificado pelo LCID, o LCID é usada de qualquer forma durante a indexação e consulta dessas colunas de texto completo.  
+>  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como `char` ou `nchar`). Se você tiver a ordem de classificação de um `char`, `varchar`, ou `text` coluna de tipo definida como um configuração de idioma diferente do idioma identificado pelo LCID, o LCID é usada de qualquer forma durante a indexação e consulta dessas colunas de texto completo.  
   
 
   
@@ -110,7 +109,7 @@ ms.locfileid: "36007070"
 
   
 ##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
- Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para dados que não são armazenados em `varbinary(max)` coluna, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
+ Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para os dados que não são armazenados em `varbinary(max)` coluna, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
   
  Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções – o método preferencial é simplesmente armazenar dados na coluna `varbinary(max)`, e indicar seu tipo de documento para que possa ser filtrada. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
   

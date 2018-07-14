@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 648e743d67b308e7dae75106165d65183fd735c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273352"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
@@ -63,7 +63,7 @@ ms.locfileid: "36006163"
   
  Para obter mais informações, consulte um dos tópicos a seguir.  
   
--   [Editor de destino ODBC &#40;página Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [Editor de destino ODBC &#40;página mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36006163"
   
 -   [Editor de destino ODBC &#40;página mapeamentos&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Editor de destino ODBC &#40;página Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [Carregar dados por meio do destino ODBC](odbc-destination.md)  
   

@@ -28,13 +28,13 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d3253edf3649c7a9e530a68b7830b2b843b2b11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818e202333a807b457e20b4372d10d2f57b909fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195646"
 ---
 # <a name="handling-events-programmatically"></a>Manipulando eventos programaticamente
   O tempo de execução [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece uma coleção de eventos que ocorrem antes, durante e depois da validação e execução de um pacote. Esses eventos podem ser capturados de duas formas. O primeiro método é através da implementação da interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> em uma classe e do fornecimento da classe como um parâmetro para os métodos `Execute` e `Validate` do pacote. O segundo método é através da criação de objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, que podem conter outros objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], tais como tarefas e loops, que são executados quando ocorre um evento em <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Essa seção descreve esses dois métodos e fornece exemplos de código para demonstrar o seu uso.  
@@ -44,7 +44,7 @@ ms.locfileid: "36008229"
   
  A classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> é uma classe que já implementa a interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; portanto, outro alternativa à implementação direta de <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> é derivar de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> e substituir os eventos específicos aos quais você deseja responder. Depois, você fornece sua classe como um parâmetro para os métodos `Validate` e `Execute` do <xref:Microsoft.SqlServer.Dts.Runtime.Package> para receber retornos de chamada de eventos.  
   
- O exemplo de código a seguir demonstra uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>e substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. A classe é fornecida como aparameter para o `Validate` e `Execute` métodos do pacote.  
+ O exemplo de código a seguir demonstra uma classe que deriva de <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>e substitui o método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. A classe é fornecida como portanto para o `Validate` e `Execute` métodos do pacote.  
   
 ```csharp  
 using System;  
@@ -252,7 +252,7 @@ Module Module1
 End Module  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../integration-services-ssis-event-handlers.md)   

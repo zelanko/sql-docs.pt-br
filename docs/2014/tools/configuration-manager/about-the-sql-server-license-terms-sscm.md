@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c3e8f4976f2ceafd73970e44b7d6f797298c672
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268092"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Sobre os termos de licença do SQL Server (SSCM)
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)]termos de licença de Software são copiados para o computador local quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em: %ProgramFiles%\Microsoft SQL Server\110\License \ ou % ProgramFiles (x86) %\Microsoft SQL Server\110\License termos\\.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)]termos de licença de Software são copiados para o computador local quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em: %ProgramFiles%\Microsoft SQL Server\110\License terms \ ou % ProgramFiles (x86) %\Microsoft SQL Server\110\License termos\\.  
   
  Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos da licença é aplicável a todas as instâncias dessa edição e idioma.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36006510"
 -   RUS - russo  
   
 ## <a name="sql-server-licensing-options"></a>Opções de licenciamento do SQL Server  
- Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preço e opções de licenciamento, consulte o [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) site da Web.  
+ Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preços e opções de licenciamento, consulte o [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) site da Web.  
   
 ## <a name="see-also"></a>Consulte também  
  [Declaração de privacidade do Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

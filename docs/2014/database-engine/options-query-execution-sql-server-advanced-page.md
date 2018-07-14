@@ -1,5 +1,5 @@
 ---
-title: 'Opções (consultar execução: SQL Server: página Avançado) | Microsoft Docs'
+title: 'Opções (consulta de execução: SQL Server: página Avançado) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187233"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>Opções (consultar execução: SQL Server: página Avançado)
+# <a name="options-query-executionsql-serveradvanced-page"></a>Opções (consulta de execução: SQL Server: página Avançado)
   Várias opções estão disponíveis usando o comando SET. Use essa página para especificar uma opção **set** para executar consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Editor de Consultas do SQL Server. Elas não têm nenhum efeito em outros editores de códigos. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou no menu de atalho da janela de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Em **Execução**, clique em **Avançado**. Para obter informações sobre cada um, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
@@ -59,7 +59,7 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 GO  
 ```  
   
- **DEFINIR PRIORIDADE DE DEADLOCK**  
+ **DEFINIR A PRIORIDADE DE DEADLOCK**  
  O valor padrão Normal permite que cada consulta tenha a mesma prioridade quando ocorrer um deadlock. Selecione uma prioridade Baixa se você deseja que essa consulta perca qualquer conflito de deadlock e seja selecionada como a consulta a ser finalizada.  
   
  **DEFINIR TEMPO LIMITE DE BLOQUEIO**  
@@ -71,7 +71,7 @@ GO
  **Suprimir cabeçalhos de mensagem do provedor**  
  Quando essa caixa de seleção está marcada, as mensagens de status do provedor (como o provedor SQLClient) não são exibidas. Esta caixa de seleção fica marcada por padrão. Desmarque essa caixa de seleção para ver as mensagens do provedor ao solucionar problemas com consultas que podem estar falhando no nível do provedor.  
   
- **Desconectar depois que a execução da consulta**  
+ **Desconectar depois que a consulta é executada**  
  Quando essa caixa de seleção está marcada, a conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é finalizada após a conclusão da consulta. Essa caixa de seleção é desmarcada por padrão.  
   
  **Redefinir para padrão**  
