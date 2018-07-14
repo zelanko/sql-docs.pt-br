@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243086"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
   O destino OLE DB carrega os dados em uma variedade de bancos de dados compatíveis com OLE DB usando uma tabela ou exibição de banco de dados ou um comando SQL. Por exemplo, a fonte OLE DB pode carregar dados em tabelas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e nos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -80,7 +80,7 @@ ms.locfileid: "36324700"
   
 -   Especificar o número de linhas no lote e o tamanho de confirmação.  
   
- Algumas opções de carregamento rápido são armazenadas em propriedades específicas do destino OLE DB. Por exemplo, FastLoadKeepIdentity especifica se os valores de identidade são mantidos ou não, FastLoadKeepNulls especifica se valores nulos são mantidos ou não e FastLoadMaxInsertCommitSize especifica o número de linhas a serem confirmadas como um lote. Outras opções de carregamento rápido são armazenadas em uma lista separada por vírgulas na propriedade FastLoadOptions. Se o destino de OLE DB usa todas as opções de carregamento rápido que são armazenadas em FastLoadOptions e listadas o **Editor de destino do OLE DB** caixa de diálogo, o valor da propriedade é definido como `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. O valor 1000 indica que o destino é configurado para usar lotes de 1000 linhas.  
+ Algumas opções de carregamento rápido são armazenadas em propriedades específicas do destino OLE DB. Por exemplo, FastLoadKeepIdentity especifica se os valores de identidade são mantidos ou não, FastLoadKeepNulls especifica se valores nulos são mantidos ou não e FastLoadMaxInsertCommitSize especifica o número de linhas a serem confirmadas como um lote. Outras opções de carregamento rápido são armazenadas em uma lista separada por vírgulas na propriedade FastLoadOptions. Se o destino de OLE DB usa todas as opções de carregamento rápido que são armazenadas em FastLoadOptions e listadas na **Editor de destino do OLE DB** caixa de diálogo, o valor da propriedade é definido como `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. O valor 1000 indica que o destino é configurado para usar lotes de 1000 linhas.  
   
 > [!NOTE]  
 >  Qualquer falha de restrição ao destino fará com que todo o lote de linhas definido por FastLoadMaxInsertCommitSize falhe.  
@@ -105,7 +105,7 @@ ms.locfileid: "36324700"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino de OLE DB** clique em um dos seguintes tópicos:  
   
--   [Editor de destino do OLE DB &#40;página Gerenciador de Conexão&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Editor de destino do OLE DB &#40;página do Gerenciador de Conexão&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
 -   [Editor de destino do OLE DB &#40;página mapeamentos&#41;](../ole-db-destination-editor-mappings-page.md)  
   

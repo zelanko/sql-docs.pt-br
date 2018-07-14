@@ -1,5 +1,5 @@
 ---
-title: Monitorar e solucionar problemas de replicação de mesclagem para dados e Delta pares de arquivos | Microsoft Docs
+title: Pares de arquivos de monitoramento e solução de problemas de mesclagem para dados e Delta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 31c717aca9153ee851a35992ebdced9cea2d86c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b92439b6ce1edd974d184ac910a65716dec812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180373"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Monitorando e solucionando problemas de mesclagem de pares de arquivos delta e de dados
   O OLTP na memória usa uma política de mesclagem para mesclar automaticamente pares adjacentes de arquivos delta e de dados. Você não pode desabilitar a atividade de mesclagem.  
@@ -28,7 +28,7 @@ ms.locfileid: "36009206"
   
 -   Compare o tamanho do armazenamento na memória ao tamanho geral do armazenamento. Se o armazenamento for desproporcionalmente grande, provavelmente a mesclagem não está sendo disparada. Para obter informações  
   
--   Examine o espaço usado nos arquivos delta e de dados usando [sys.DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) para ver se a mesclagem não está sendo disparada quando deveria.  
+-   Examine o espaço usado nos arquivos delta e de dados usando [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) para ver se a mesclagem não está sendo disparada quando deveria.  
   
 ## <a name="performing-a-manual-merge"></a>Executando uma mesclagem manual  
  Você pode usar [sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql) para executar uma mesclagem manual.  
@@ -51,7 +51,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Suponha que os três pares de arquivos delta e de dados tinham 15.836 linhas e 5.279 linhas excluídas cada um. Após a mesclagem, o novo arquivo de dados tem 31.872 linhas e 0 linhas excluídas. O tamanho do novo arquivo de dados pode ser muito maior que o tamanho inicialmente alocado de 128 MB. Isso acontece porque a mesclagem manual substitui a política de mesclagem e força a mesclagem dos arquivos solicitados.  
   
- Blog do [estado de transição de ponto de verificação de arquivos em bancos de dados com tabelas com otimização de memória](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) descreve a transição de estado de pares de arquivos de dados e delta a do início à coleta de lixo.  
+ O blog [estado Transition of Checkpoint Files em bancos de dados com tabelas com otimização de memória](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) descreve a transição de estado de pares de arquivos de dados e delta a do início à coleta de lixo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

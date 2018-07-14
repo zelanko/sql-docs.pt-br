@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293366"
 ---
 # <a name="cellpermission-element-assl"></a>Elemento CellPermission (ASSL)
-  Descreve as permissões que os membros de um [função](role-element-assl.md) elemento têm em células individuais de um [cubo](cube-element-assl.md) elemento.  
+  Descreve as permissões que os membros de um [função](role-element-assl.md) elemento têm em células individuais de uma [cubo](cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

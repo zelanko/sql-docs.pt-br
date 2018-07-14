@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220032"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implantação de uma solução de modelo tabular (SSAS tabular)
   Depois de criar um projeto de modelo de tabela, você deve implantá-lo para que os usuários procurem o modelo usando um aplicativo cliente de relatório. Este tópico descreve as várias propriedades e os vários métodos que você pode usar ao implantar soluções de modelo de tabela em seu ambiente.  
@@ -65,7 +65,7 @@ ms.locfileid: "36010982"
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Defina quando o projeto é criado.|**localhost**|Essa propriedade, definida quando o projeto é criado, especifica a instância do Analysis Services por nome no qual o modelo será implantado. Por padrão, o modelo será implantado na instância padrão do Analysis Services no computador local. Contudo, é possível alterar essa configuração para especificar uma instância nomeada no computador local ou uma instância em qualquer computador remoto no qual você tenha permissão para criar objetos do Analysis Services.|  
 |**Edição**|A mesma edição como a instância na qual o Servidor de Espaço de trabalho está localizado.|Essa propriedade especifica a edição do servidor do Analysis Services no qual o modelo será implantado. A edição do servidor define vários recursos que podem ser incorporados no projeto. Por padrão, a edição será do servidor do Analysis Services local. Se você especificar outro servidor do Analysis Services, como, por exemplo, um servidor de produção do Analysis Services, especifique a edição desse servidor do Analysis Services.|  
-|**Backup de banco de dados**|**\<projectname>**|Essa propriedade especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome também será especificado em uma conexão de dados de cliente de relatório ou em um arquivo de conexão de dados .bism.<br /><br /> Você poderá alterar este nome a qualquer momento quando estiver criando o modelo. Se você alterar o nome depois de implantar o modelo, as alterações feitas depois da implantação não afetarão o modelo implantado previamente. Por exemplo, se você abrir uma solução nomeada `TestDB` e implantar sua solução com o nome padrão de banco de dados modelo e, em seguida, modificar a solução e renomear o banco de dados de modelo `Sales`, a instância do Analysis Services, as soluções foram implantadas para será exibição separar bancos de dados, um denominado Model e outra chamada Sales.|  
+|**Backup de banco de dados**|**\<projectname>**|Essa propriedade especifica o nome do banco de dados do Analysis Services no qual os objetos modelo serão instanciados na implantação. Esse nome também será especificado em uma conexão de dados de cliente de relatório ou em um arquivo de conexão de dados .bism.<br /><br /> Você poderá alterar este nome a qualquer momento quando estiver criando o modelo. Se você alterar o nome depois de implantar o modelo, as alterações feitas depois da implantação não afetarão o modelo implantado previamente. Por exemplo, se você abrir uma solução nomeada `TestDB` e implantar sua solução com o nome padrão de banco de dados modelo e, em seguida, modificar a solução e renomear o banco de dados de modelo `Sales`, a instância do Analysis Services, as soluções foram implantadas para será exibição separar os bancos de dados, um denominado Model e outro denominado Sales.|  
 |**Nome do Cubo**|**Modelo**|Esta propriedade especifica o nome de cubo como mostrado nas ferramentas de cliente (como o Excel) e AMO (Objetos de Gerenciamento de Análise).|  
   
 ### <a name="directquery-options-properties"></a>Propriedades de opções do DirectQuery  
@@ -80,7 +80,7 @@ ms.locfileid: "36010982"
   
 |Método|Description|Link|  
 |------------|-----------------|----------|  
-|**Implantar comando em Ferramentas de Dados do SQL Server**|O comando Implantar fornece um método simples e intuitivo para implantar um projeto de modelo de tabela do ambiente de criação do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **\*\* Cuidado \*\*** Este método não deve ser usado para implantar em servidores de produção. Usar este método pode substituir determinadas propriedades em um modelo existente.|[Implantação do SQL Server Data Tools &#40;Tabular do SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**Implantar comando em Ferramentas de Dados do SQL Server**|O comando Implantar fornece um método simples e intuitivo para implantar um projeto de modelo de tabela do ambiente de criação do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .<br /><br /> **\*\* Cuidado \*\*** Este método não deve ser usado para implantar em servidores de produção. Usar este método pode substituir determinadas propriedades em um modelo existente.|[Implantar do SQL Server Data Tools &#40;Tabular do SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**Usando Automação AMO (Objetos de Gerenciamento de Análise)**|AMO fornece uma interface programática para o conjunto completo de comandos definidos para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo comandos que podem ser usados para implantação de solução. Como uma abordagem para implantação de solução, a automação AMO é a mais flexível, mas também a que exige um esforço de programação.  Uma vantagem importante para usar AMO é que você pode usar o SQL Server Agent com o aplicativo AMO para executar a implantação em uma programação predefinida.|[Desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerar um script XMLA dos metadados de um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, em seguida, executar esse script em outro servidor para recriar o banco de dados inicial. Os scripts XMLA são gerados facilmente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ao definir o processo de implantação e, em seguida, codificá-lo e salvá-lo como um script XMLA. Quando o script XMLA está em um arquivo salvo, é possível executá-lo de acordo com uma programação ou inseri-lo em um aplicativo que se conecta diretamente em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Também é possível executar scripts XMLA em uma base predefinida com o SQL Server Agent, mas não haverá a mesma flexibilidade do AMO. O AMO fornece uma amplitude maior de funcionalidade hospedando o espectro completo de comandos administrativos.|[Implantar soluções de modelo usando XMLA](../multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Assistente para Implantação**|Use o Assistente para Implantação para usar os arquivos de saída do XMLA gerados por um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar os metadados do projeto em um servidor de destino. Com o Assistente para Implantação, é possível implantar diretamente a partir do arquivo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , conforme criado pelo diretório de saída do construtor de projetos.<br /><br /> A vantagem principal de usar o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é conveniência. Da mesma maneira que você pode salvar um script XMLA para usar posteriormente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pode salvar scripts do Assistente de Implantação. O Assistente para Implantação pode ser executado de modo interativo e no prompt de comando utilizando o Utilitário de Implantação.|[Implantar soluções de modelo usando o Assistente de implantação](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
@@ -97,13 +97,13 @@ ms.locfileid: "36010982"
   
 |Tarefa|Description|  
 |----------|-----------------|  
-|[Implantação do SQL Server Data Tools &#40;Tabular do SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|Descreve como configurar propriedades de implantação e implantar um projeto de modelo de tabela usando o comando Implantar no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
+|[Implantar do SQL Server Data Tools &#40;Tabular do SSAS&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|Descreve como configurar propriedades de implantação e implantar um projeto de modelo de tabela usando o comando Implantar no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
 |[Implantar soluções de modelo usando o Assistente de implantação](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|Os tópicos nesta seção descrevem como usar o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
 |[Implantar soluções de modelo com o Utilitário de Implantação](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Descreve como usar o Utilitário de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implantar soluções de modelo de tabela e multidimensionais.|  
 |[Implantar soluções de modelo usando XMLA](../multidimensional-models/deploy-model-solutions-using-xmla.md)|Descreve como usar XMLA para implantar as soluções de tabela e multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Sincronizar bancos de dados do Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)|Descreve como usar o Assistente para Sincronizar Bancos de Dados para sincronizar os metadados e os dados entre quaisquer dois bancos de dados de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se a um banco de dados de modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar um banco de dados do modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
   

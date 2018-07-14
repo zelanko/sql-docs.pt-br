@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212216"
 ---
 # <a name="preview-view"></a>Modo Visualizar
   Use o modo **Visualizar** para exibir o relatório renderizado. Quando um relatório é visualizado, o Designer de Relatórios o executa localmente e o exibe no modo Visualizar. Nesse modo de exibição, o relatório é processado por completo. Se o relatório tiver uma consulta complexa ou se contiver muitos dados, a visualização poderá demorar vários minutos para ser concluída na primeira vez. Nas alterações subsequentes que afetam apenas o formato do relatório, a visualização usa dados armazenados em cache.  
@@ -37,7 +37,7 @@ ms.locfileid: "36010137"
  **Mostrar ou ocultar mapa do documento**  
  Escolha essa opção para mostrar ou ocultar o mapa do documento, se houver.  
   
- **Mostrar ou ocultar área de parâmetro**  
+ **Mostrar ou ocultar área de parâmetros**  
  Escolha essa opção para mostrar ou ocultar as caixas de parâmetros dos relatórios com parâmetros.  
   
  **Primeira página**  
@@ -67,7 +67,7 @@ ms.locfileid: "36010137"
  **Atualizar**  
  Escolha essa opção para atualizar o cache de dados e executar o relatório novamente.  
   
- **Impressão**  
+ **Imprimir**  
  Escolha essa opção para imprimir o relatório.  
   
  **Layout de impressão**  

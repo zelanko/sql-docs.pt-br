@@ -1,5 +1,5 @@
 ---
-title: Conecte-se a um banco de dados do modelo de tabela (SSAS) | Microsoft Docs
+title: Conectar-se ao banco de dados modelo Tabular (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190916"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
@@ -96,7 +96,7 @@ ms.locfileid: "36011561"
  Depois que a conexão é estabelecida, você pode usar os dados para criar uma Tabela Dinâmica ou um Gráfico Dinâmico. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Conectar do SharePoint  
- Se você estiver usando o PowerPivot para SharePoint, poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que forneça redirecionamento a um banco de dados executado em um servidor de modo de tabela do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico do PowerPivot BI &#40;. bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [criar uma Conexão de modelo semântico do BI a um modelo de tabela Banco de dados](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+ Se você estiver usando o PowerPivot para SharePoint, poderá criar um arquivo de conexão de modelo semântico de BI no SharePoint que forneça redirecionamento a um banco de dados executado em um servidor de modo de tabela do Analysis Services. Uma conexão de modelo semântico de BI fornece um ponto de extremidade HTTP a um banco de dados. Isso também simplifica o acesso a modelo de tabela para trabalhadores do conhecimento que costumam usar documentos em um site do SharePoint. Trabalhadores do conhecimento só precisam saber o local do arquivo de conexão de modelo semântico de BI ou sua URL para acessar bancos de dados de modelo de tabela. Detalhes sobre o local do servidor ou o nome do banco de dados são encapsulados na conexão de modelo semântico de BI. Para obter mais informações sobre como criar e usar arquivos de conexão de modelo semântico de BI, consulte [Conexão de modelo semântico do PowerPivot BI &#40;. bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) e [criar uma Conexão de modelo semântico do BI para um modelo de tabela Banco de dados](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_Tshoot"></a> Solucionando problemas de conexão  
  Esta seção apresenta a causa e etapas de resolução de problemas que ocorrem na conexão a um banco de dados de modelo de tabela.  
@@ -109,7 +109,7 @@ ms.locfileid: "36011561"
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque você não tem permissões suficientes no servidor remoto do Analysis Services. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Ocorreu um erro durante a tentativa de executar esta operação. Recarregar a pasta de trabalho e, em seguida, tente executar a operação novamente.**  
+ **Ocorreu um erro durante a tentativa de executar esta operação. Recarregar a pasta de trabalho e, em seguida, tente executar esta operação novamente.**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque os Serviços do Excel não são confiáveis para a instância do Analysis Services na qual os dados modelo são implantados. Para resolver este erro, conceda permissão administrativa de Serviços do Excel na instância do serviço Analysis Services. Consulte as instruções apresentadas antes neste tópico para conceder permissões de administrador. Se o erro persistir, recicle o pool de aplicativos de Serviços do Excel.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "36011561"
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque o usuário não tem permissões do SharePoint suficientes na pasta de trabalho. O usuário deve ter permissões de **Leitura** ou superior. Permissões**Exibir Apenas** não são suficientes para o acesso a dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantação de solução de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

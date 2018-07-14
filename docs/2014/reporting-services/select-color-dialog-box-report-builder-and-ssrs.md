@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185757"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Selecionar Cor (Construtor de Relatórios SSRS)
   Use a caixa de diálogo **Selecionar Cor** para especificar as opções de cor da tela de fundo de uma única ou de várias células em uma região de dados ou de uma caixa de texto, ou para um gráfico.  
@@ -50,7 +50,7 @@ ms.locfileid: "36011726"
  Quando você escolhe uma cor, o centro do quadrado determina a cor. Use o controle deslizante de cor para alterar o faixa da cor escolhida. As coordenadas x e y representam as outras duas cores. Por exemplo, se selecionar o verde, o controle deslizando mostra a faixas dos valores do verde, e as coordenadas x e y representam respectivamente os valores do vermelho e do azul.  
   
  **Cor da paleta padrão**  
- Use para cores nomeadas do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeração.  
+ Use para as cores nomeadas dos [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeração.  
   
  **Sistema de cores**  
  Especifique as cores RGB ou HSB. Esta escolha altera a exibição para mostrar os valores de RGB ou HSB, que são atualizados interativamente ao usar um circulo de cores ou um quadrado de cores para o **Selecionador de cores**.  
@@ -66,7 +66,7 @@ ms.locfileid: "36011726"
  **Azul**  
  O valor decimal para a parte azul da cor de RGB. Use a caixa de rotação para alterar o valor ou digitar um valor entre 0 e 255.  
   
- **Alpha**  
+ **Alfa**  
  O valor decimal para o alfa ou parte de transparência da cor. Quando este valor é ativado, você pode usar a opção de controle deslizante para ajustar o grau de transparência desejado.  
   
  **Matiz**  
@@ -83,6 +83,6 @@ ms.locfileid: "36011726"
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formatando texto e espaços reservados &#40;SSRS e construtor de relatórios&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

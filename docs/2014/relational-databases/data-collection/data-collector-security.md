@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235276"
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
   O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  
@@ -52,13 +52,13 @@ ms.locfileid: "36009360"
   
  Essas funções são armazenadas no banco de dados msdb. Por padrão, nenhum usuário é membro dessas funções de banco de dados. A associação do usuário a elas deve ser explicitamente concedida.  
   
- Os usuários que são membros do `sysadmin` função de servidor fixa têm acesso total ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibições do coletor de dados e objetos de agente. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
+ Os usuários que são membros do `sysadmin` função de servidor fixa têm acesso completo aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibições do coletor de dados e objetos de agente. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
   
 > [!IMPORTANT]  
 >  Os membros das funções db_ssisadmin e dc_admin podem elevar seus privilégios para sysadmin. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégios ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros sysadmin às funções db_ssisadmin e dc_admin.  
   
 ### <a name="dcadmin-role"></a>Função dc_admin  
- Os usuários atribuídos ao `dc_admin` função têm acesso de administrador completo (criação, leitura, atualização e exclusão) à configuração do coletor de dados em uma instância de servidor. Membros dessa função podem executar as seguintes operações:  
+ Os usuários atribuídos ao `dc_admin` função têm acesso total de administrador (criação, leitura, atualização e exclusão) à configuração do coletor de dados em uma instância de servidor. Membros dessa função podem executar as seguintes operações:  
   
 -   Definir propriedades de nível de coletor.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36009360"
     > [!NOTE]  
     >  Proxies criados para o coletor de dados deve conceder acesso ao `dc_admin` criá-los e usá-los em qualquer etapa de trabalho que exija um proxy.  
   
--   **dc_operator**. Membros de `dc_admin` herdam as permissões fornecidas ao **dc_operator**.  
+-   **dc_operator**. Os membros `dc_admin` herdam as permissões dadas a **dc_operator**.  
   
 ### <a name="dcoperator-role"></a>Função dc_operator  
  Membros da função **dc_operator** têm acesso de Leitura e Atualização. Essa função suporta tarefas de operações relacionadas com a execução e configuração de conjuntos de coleta. Membros dessa função podem executar as seguintes operações:  
@@ -138,7 +138,7 @@ ms.locfileid: "36009360"
 -   Alterar o esquema do data warehouse de gerenciamento quando necessário (por exemplo, adicionando uma tabela nova quando é instalado um novo tipo de coleta).  
   
     > [!NOTE]  
-    >  Quando há uma alteração de esquema, o usuário também deve ser um membro do `dc_admin` função para instalar um novo tipo de coletor, pois esta ação exige permissão para atualizar a configuração do coletor de dados no msdb.  
+    >  Onde houver uma alteração de esquema, o usuário também deve ser um membro do `dc_admin` função para instalar um novo tipo de coletor, pois esta ação exige permissão para atualizar a configuração do coletor de dados no msdb.  
   
 -   Executar tarefas de manutenção no data warehouse de gerenciamento, como arquivo ou limpeza.  
   

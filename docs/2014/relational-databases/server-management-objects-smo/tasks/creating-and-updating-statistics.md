@@ -16,15 +16,15 @@ helpviewer_keywords:
 - statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6717d724b7edbf7185e631bca06dc6b2a9d01611
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b39e736f3d1bb13f3b04aae7ee5ece81386ec5c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204956"
 ---
 # <a name="creating-and-updating-statistics"></a>Criando e atualizando estatísticas
   No SMO, as informações estatísticas sobre o processamento de consultas no banco de dados podem ser coletadas por meio do objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>.  
@@ -32,7 +32,7 @@ ms.locfileid: "36010171"
  É possível criar estatísticas para qualquer coluna através dos objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> e <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. O método <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> pode ser executado para atualizar as estatísticas no objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Os resultados podem ser exibidos no Otimizador de Consulta.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Criando e atualizando estatísticas no Visual Basic  
  Este exemplo de código cria uma nova tabela em um banco de dados existente para o qual os objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> e <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> são criados.  

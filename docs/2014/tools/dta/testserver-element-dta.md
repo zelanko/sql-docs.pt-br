@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5eced520aee906a2b56abfa5034196add27bfe7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 574f391a94df9881bdec346635197fd273bc836f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194416"
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
   Especifica o servidor de teste para ser usado ao ajustar um servidor de produção.  
@@ -44,7 +44,7 @@ ms.locfileid: "36012195"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode usar uma vez para cada `TuningOptions` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `TuningOptions` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

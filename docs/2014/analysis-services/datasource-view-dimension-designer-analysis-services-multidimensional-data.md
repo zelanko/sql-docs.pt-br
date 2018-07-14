@@ -1,5 +1,5 @@
 ---
-title: Modo de exibição (guia estrutura da dimensão, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: (Guia estrutura da dimensão, Designer de dimensão) de exibição da fonte de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246152"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use o painel **Exibição da Fonte de Dados** para exibir tabelas e colunas da exibição da fonte de dados associada à dimensão selecionada. Esse painel é usado para criar atributos, propriedades de membros, hierarquias e níveis arrastando colunas do painel **Exibição da Fonte de Dados** para o painel **Atributos** ou **Hierarquias e Níveis** .  
@@ -72,7 +72,7 @@ ms.locfileid: "36008793"
  **Editar exibição da fonte de dados**  
  Exibe o **Designer da Exibição da Fonte de Dados** da exibição da fonte de dados associada à dimensão. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Mostrar na exibição da fonte de dados**  
+ **Mostrar exibição de fonte de dados em**  
  Selecione uma das seguintes opções para ativar/desativar a exibição do painel **Exibição da Fonte de Dados** nos seguintes modos:  
   
 -   Diagrama  

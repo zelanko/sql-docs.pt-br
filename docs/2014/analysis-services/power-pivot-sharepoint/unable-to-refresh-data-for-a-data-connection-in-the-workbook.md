@@ -1,5 +1,5 @@
 ---
-title: 'Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As seguintes conexões não foram atualizadas: dados do PowerPivot | Microsoft Docs'
+title: 'Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As seguintes conexões não foram atualizadas: dados PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220266"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As seguintes conexões não foram atualizadas: Dados PowerPivot
   Para pastas de trabalho do Excel contendo dados PowerPivot, os Serviços do Excel retornam este erro quando submetem uma solicitação de conexão a um servidor do PowerPivot e a solicitação falha.  
@@ -44,7 +44,7 @@ ms.locfileid: "36008519"
   
  A pasta de trabalho que você está tentando abrir pode ter sido criada na versão SQL Server 2008 R2 do PowerPivot para Excel. Muito provavelmente, o provedor de dados do Analysis Services especificado na cadeia de conexão de dados não está presente no computador que está executando a solicitação.  
   
- Se esse for o caso, você encontrará esta mensagem no log ULS: "Falha na atualização de dados do PowerPivot na pasta de trabalho '\<URL para a pasta de trabalho >'", seguido por "Não é possível obter uma conexão".  
+ Se esse for o caso, você encontrará esta mensagem no log ULS: "Falha na atualização dos 'Dados PowerPivot' na pasta de trabalho '\<URL para a pasta de trabalho >'", seguido por "Não é possível obter uma conexão".  
   
  Para determinar a versão da pasta de trabalho, abra-a no Excel e verifique o provedor de dados que está especificado na cadeia de conexão. Uma pasta de trabalho do SQL Server 2008 R2 usa MSOLAP.4 como provedor de dados.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36008519"
   
  Para solucionar este problema, una o computador ao mesmo domínio de servidor do PowerPivot ou instale um controlador de domínio em seu computador local. A segunda solução, instalar o controlador de domínio, exigirá que você crie contas de domínio locais para todos os serviços e usuários. Você precisará configurar contas de serviço e permissões do SharePoint para as contas que definir.  
   
- Instale um controlador de domínio em seu computador será útil se o seu objetivo for usar o PowerPivot para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar o PowerPivot offline, a entrada de blog, consulte "Remover seu servidor do PowerPivot fora da rede" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Instale um controlador de domínio em seu computador será útil se o seu objetivo for usar o PowerPivot para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar o PowerPivot offline, consulte a entrada de blog "Fazendo o seu servidor PowerPivot fora da rede" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Cenário 4: servidor instável**  
   

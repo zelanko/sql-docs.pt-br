@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98d2de4a0ce93e857a63ebd9fe79dd18d0f9a86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267472"
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
-  Descreve o conteúdo da coluna no [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
+  Descreve o conteúdo da coluna na [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,22 +71,22 @@ ms.locfileid: "36009426"
 |*Discreto*|A coluna contém valores discretos.|  
 |*Contínua*|Os valores para a coluna definem um conjunto contínuo de dados numéricos.|  
 |*Dados discretos*|Os valores da coluna representam grupos (ou blocos) de valores derivados de uma coluna contínua.|  
-|*Ordenados*|Os valores da coluna definem um conjunto ordenado.|  
+|*Ordenado*|Os valores da coluna definem um conjunto ordenado.|  
 |*Cíclico*|Os valores da coluna definem um conjunto ordenado cíclico.|  
-|*Probabilidade*|Os valores da coluna especificam uma probabilidade para as colunas contidas no [ClassifiedColumns](../collections/columns-element-assl.md) elemento do pai `ScalarMiningStructureColumn`.|  
+|*Probabilidade*|Os valores da coluna especificam uma probabilidade para as colunas contidas na [ClassifiedColumns](../collections/columns-element-assl.md) elemento pai `ScalarMiningStructureColumn`.|  
 |*Variance*|Os valores da coluna especificam uma variância para as colunas contidas no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`.|  
 |*StdDev*|Os valores da coluna especificam um desvio padrão para as colunas contidas no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`.|  
 |*ProbabilityVariance*|Os valores da coluna especificam uma probabilidade de variância para as colunas contidas no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`.|  
 |*ProbabilityStdDev*|Os valores da coluna especificam uma probabilidade de desvio padrão para as colunas contidas no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`.|  
-|*Suporte*|Os valores da coluna especificam informações de suporte para a coluna contida no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`. **Observação:** essa coluna é fornecida como parte do padrão para provedores de algoritmo de mineração de terceiros. **Observação:** fornecidos pela Microsoft algoritmos não têm nenhum uso para esta coluna. <br /><br /> para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
+|*Suporte*|Os valores da coluna especificam informações de suporte para a coluna contida no elemento `ClassifiedColumns` do pai `ScalarMiningStructureColumn`. **Observação:** esta coluna é fornecida como parte do padrão para provedores de algoritmo de mineração de terceiros. **Observação:** a Microsoft forneceu algoritmos não têm nenhum uso para esta coluna. <br /><br /> para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |*Chave*|A coluna é uma coluna de chave. **Observação:** esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o `IsKey` é definido como `True`.|  
   
- Além desses valores padrão, os provedores de algoritmo incluídos de mineração [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] suporte os valores na tabela a seguir.  
+ Além desses valores padrão, os provedores de algoritmos incluídos com de mineração [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte os valores na tabela a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |*Sequência de teclas*|A coluna é uma coluna de chave e os valores da coluna representam uma sequência de eventos. **Observação:** esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o `IsKey` é definido como `True`.|  
-|*Chave de tempo*|A coluna é uma coluna de chave e os valores da coluna representam unidades de medição de tempo. **Observação:** esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o `IsKey` é definido como `True`.|  
+|*Tempo-chave*|A coluna é uma coluna de chave e os valores da coluna representam unidades de medição de tempo. **Observação:** esse tipo de conteúdo é aplicável somente às colunas de chave, no qual o `IsKey` é definido como `True`.|  
 |*Sequência*|Os valores da coluna representam uma sequência de eventos.|  
 |*Hora*|Os valores da coluna representam unidades de medição de tempo.|  
   

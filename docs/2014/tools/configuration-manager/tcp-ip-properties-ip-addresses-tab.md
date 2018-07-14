@@ -1,5 +1,5 @@
 ---
-title: Propriedades de TCP IP (guia de endereços IP) | Microsoft Docs
+title: Propriedades de TCP / IP (guia de endereços IP) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187583"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriedades de TCP IP (guia de endereços IP)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriedades de TCP / IP (guia de endereços IP)
   Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
   
  As alterações entram em vigor quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado. Para obter informações sobre como iniciar e parar o serviço do SQL Server Browser, consulte Como: Iniciar e parar o serviço SQL Server Browser nos Manuais Online.  
@@ -58,7 +58,7 @@ ms.locfileid: "36012407"
  Para configurar um único endereço IP para escutar em várias portas, o parâmetro **Escutar Tudo** também deve ser definido como **Não**, na **Guia Protocolos** da caixa de diálogo **Propriedades do TCP/IP** . Para obter mais informações, consulte "Como: Configurar o mecanismo de banco de dados para escutar em várias portas TCP" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Adicionando ou removendo endereços IP  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Configuration Manager exibe os endereços IP que estavam disponíveis no momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado. Os endereços IP disponíveis podem ser alterados quando placas de rede são adicionadas ou removidas, quando um endereço IP atribuído dinamicamente expira, quando a estrutura de rede é reconfigurada ou quando o local físico do computador é alterado, como quando um computador laptop se conecta à rede em um edifício diferente. Para alterar um endereço IP, edite a caixa **Endereço IP** e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager exibe os endereços IP que estavam disponíveis no momento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado. Os endereços IP disponíveis podem ser alterados quando placas de rede são adicionadas ou removidas, quando um endereço IP atribuído dinamicamente expira, quando a estrutura de rede é reconfigurada ou quando o local físico do computador é alterado, como quando um computador laptop se conecta à rede em um edifício diferente. Para alterar um endereço IP, edite a caixa **Endereço IP** e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

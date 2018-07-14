@@ -14,18 +14,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), how-to topics
 ms.assetid: 3f52b7a7-f2bd-4455-b79e-d015fb397726
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 041885beb2b5f8ad4e720e11a8d6dac851e543fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 94d4b5b8928c49dabc3406fbcaaec4e8da8a8259
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283862"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Exemplos de programação de parâmetros com valor de tabela (ODBC)
-  Esta seção descreve como executar tarefas comuns usando parâmetros com valor de tabela e ODBC. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+  Esta seção descreve como executar tarefas comuns usando parâmetros com valor de tabela e ODBC. Para obter outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

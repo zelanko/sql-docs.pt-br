@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800b6fdbe63ca1c7adb5f79367e317a4a2a62167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256475"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Página Seleção de Fonte de Dados (Gerenciador de Relatórios)
   Use a página Seleção de Fonte de Dados para selecionar um item de fonte de dados compartilhada existente a ser usado em um relatório ou modelo de relatório. Você também pode usar essa página para selecionar uma fonte de dados diferente. Para exibir o tipo de fonte de dados ou a cadeia de conexão, é necessário navegar até a fonte de dados compartilhada e abrir a página de propriedades.  

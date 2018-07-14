@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218586"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
     
@@ -79,7 +79,7 @@ ms.locfileid: "36008567"
 -   Se você estiver conectado como um administrador local no servidor de relatórios, pesquise por `ReportProcessingException`no arquivo de log. As entradas de log contêm mais informações. Normalmente, o arquivo de log do servidor de relatório está localizado em \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Falha ao carregar o assembly de host de expressão  
- Assemblies personalizados devem ter uma assinatura de nome forte e o atributo AllowPartiallyTrustedCallers definido. Para obter mais informações, consulte [usando Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) e [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md).  
+ Assemblies personalizados devem ter uma assinatura de nome forte e o atributo AllowPartiallyTrustedCallers definido. Para obter mais informações, consulte [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) e [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md).  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>Um nome global incorporado não existe  
  Verifique a ortografia nas expressões. Os nomes de campos e parâmetros globais e incorporados fazem distinção entre maiúsculas e minúsculas. Se a expressão estiver causando o erro, verifique se o nome real já existe no relatório e se ele está escrito corretamente. Para obter mais informações, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "36008567"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Relatório principal com sub-relatório que não possa ser processado  
  Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a mensagem a seguir será exibida: "Não foi possível processar o sub-relatório".  
   
- Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre por que um relatório de falha atualizar, consulte [atualizar relatórios](../install-windows/upgrade-reports.md).  
+ Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre por que um relatório Falha ao atualizar, consulte [atualizar relatórios](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Verifique se as chamadas de função são do Visual Basic e não do SQL  
  Você pode usar as funções do SQL em texto de consulta em um banco de dados relacional. As funções do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] não podem ser usadas em texto de consulta.  
@@ -121,7 +121,7 @@ ms.locfileid: "36008567"
   
  Para funções de agregação que calculam os totais de execução (`Previous`, `RunningValue` ou `RowNumber`), você pode especificar um parâmetro de escopo que seja um nome de grupo de linha ou de coluna, mas não ambos. Isso se aplica à seguinte mensagem de erro:  
   
--   `Previous`, `RunningValue` ou `RowNumber` usadas nas células de dados de funções de agregação a  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' fazem referência a escopos de agrupamento em colunas e linhas do  *\<tipo de item de relatório >*. Os parâmetros de escopo de todos os `Previous`, `RunningValue` e `RowNumber` agregar funções dentro de um  *\<tipo de item de relatório >* pode fazer referência a agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
+-   `Previous`, `RunningValue` ou `RowNumber` usadas nas células de dados de funções de agregação a  *\<tipo de item de relatório >* '*\<nome do item de relatório >*' fazem referência a escopos de agrupamento em colunas e linhas do  *\<tipo de item de relatório >*. Os parâmetros de escopo de todos os `Previous`, `RunningValue` e `RowNumber` agregar funções dentro de uma  *\<tipo de item de relatório >* pode fazer referência a agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
   
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36008567"
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Referência de funções de agregação &#40;SSRS e construtor de relatórios&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referência de funções de agregação &#40;relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](../report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros geralmente usados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referências de coleção de parâmetros &#40;SSRS e construtor de relatórios&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Referências de coleção de parâmetros &#40;relatórios e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

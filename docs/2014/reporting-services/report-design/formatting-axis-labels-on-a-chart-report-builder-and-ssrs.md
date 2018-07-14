@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10148"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e33900e5dbc81d65d6304e82ba87f56cbcdcc89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181693"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
   Os tipos de gráficos baseados em coordenadas (colunas, barras, áreas, pontos, linhas e intervalo) possuem dois eixos usados para categorizar e exibir relações de dados. Diferentes tipos de formatação são aplicados a cada eixo.  
@@ -95,13 +95,13 @@ ms.locfileid: "36011744"
  O campo Nome é plotado ao longo do eixo de categoria. O gráfico calcula entre quatro e seis rótulos e calcula configurações de ajuste automático para determinar como os rótulos podem se ajustar no eixo de categoria sem provocar colisões de rótulos. Como resultado, alguns rótulos de categoria podem ser omitidos. É possível substituir as opções de ajuste automático para cada eixo independentemente.  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>Exibindo todos os rótulos no eixo de categoria  
- No eixo de valor, os intervalos do eixo fornecem uma medida consistente dos pontos de dados no gráfico. No entanto, no eixo de categoria, esta funcionalidade pode fazer com que as categorias sejam exibidas sem os rótulos do eixo. Geralmente, você deseja que todas as categorias sejam rotuladas. É possível definir o número de intervalos como 1 para mostrar todas as categorias.  Para obter mais informações, consulte [especificar um intervalo de eixo &#40;construtor de relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ No eixo de valor, os intervalos do eixo fornecem uma medida consistente dos pontos de dados no gráfico. No entanto, no eixo de categoria, esta funcionalidade pode fazer com que as categorias sejam exibidas sem os rótulos do eixo. Geralmente, você deseja que todas as categorias sejam rotuladas. É possível definir o número de intervalos como 1 para mostrar todas as categorias.  Para obter mais informações, consulte [especificar um intervalo do eixo &#40;construtor de relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Substituindo os recursos de rótulos automáticos por um intervalo manual em um eixo, o gráfico deve redimensionar todos os outros elementos adequadamente. Como resultado, você pode encontrar resultados imprevistos com o tamanho e o posicionamento dos rótulos ou com o tamanho de outros elemento no gráfico.  
   
 ## <a name="variable-axis-intervals"></a>Intervalos de eixo variável  
- O gráfico calcula aproximadamente cinco intervalos de rótulos do eixo independentemente do tamanho do gráfico. Em gráficos mais largos ou mais altos, se você mostrar apenas cinco rótulos em um eixo, grandes lacunas poderão ser exibidas entre cada rótulo. Isso dificulta a identificação do valor de cada ponto de dados em relação ao eixo. Para evitar esse comportamento em gráficos mais largos ou mais altos, defina um intervalo de eixo variável. O gráfico calcula o número ideal de rótulos que podem ser exibidos no eixo baseados na largura ou altura do gráfico de acordo com o eixo correspondente. Para obter mais informações, consulte [especificar um intervalo de eixo &#40;construtor de relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ O gráfico calcula aproximadamente cinco intervalos de rótulos do eixo independentemente do tamanho do gráfico. Em gráficos mais largos ou mais altos, se você mostrar apenas cinco rótulos em um eixo, grandes lacunas poderão ser exibidas entre cada rótulo. Isso dificulta a identificação do valor de cada ponto de dados em relação ao eixo. Para evitar esse comportamento em gráficos mais largos ou mais altos, defina um intervalo de eixo variável. O gráfico calcula o número ideal de rótulos que podem ser exibidos no eixo baseados na largura ou altura do gráfico de acordo com o eixo correspondente. Para obter mais informações, consulte [especificar um intervalo do eixo &#40;construtor de relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Classificando valores do eixo  
  Categorias são exibidas ao longo do eixo x para que sejam exibidas no conjunto de resultados. É possível alterar a ordem do grupo adicionando um comando SORT à consulta ou classificando o conjunto de dados usando uma expressão. As regiões de dados do gráfico são classificadas da mesma maneira que todas as outras regiões de dados. Para obter mais informações sobre como classificar dados, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
@@ -116,18 +116,18 @@ ms.locfileid: "36011744"
 -   Selecione um campo ou digite uma expressão para a opção **Campo de categoria** na caixa de diálogo **Propriedades da Série** . O gráfico adicionará intervalos do eixo para todos os valores no campo de categoria especificado.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Adicionando ou removendo margens laterais do eixo de categoria  
- Nos tipos de gráfico de Barras, Colunas Dispersão, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo x. Não é possível alterar o tamanho da margem. Em todos os outros tipos de gráfico, as margens laterais não são adicionadas. Para obter mais informações, consulte [adicionar ou remover margens de um gráfico &#40;construtor de relatórios e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ Nos tipos de gráfico de Barras, Colunas Dispersão, o gráfico adiciona automaticamente margens laterais nas extremidades do eixo x. Não é possível alterar o tamanho da margem. Em todos os outros tipos de gráfico, as margens laterais não são adicionadas. Para obter mais informações, consulte [adicionar ou remover margens de um gráfico de &#40;construtor de relatórios e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Formatar rótulos de eixo como datas ou moedas &#40;SSRS e construtor de relatórios&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Formatar rótulos de eixo como datas ou moedas &#40;relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Posicionar rótulos em um gráfico &#40;SSRS e construtor de relatórios&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Posicionar rótulos em um gráfico &#40;relatórios e SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Especifique um intervalo do eixo &#40;SSRS e construtor de relatórios&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Especifique um intervalo do eixo &#40;relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [Adicionar ou remover margens de um gráfico &#40;SSRS e construtor de relatórios&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou remover margens de um gráfico &#40;relatórios e SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Especificar uma escala logarítmica &#40;SSRS e construtor de relatórios&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Especificar uma escala logarítmica &#40;relatórios e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

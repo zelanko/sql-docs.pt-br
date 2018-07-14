@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Databases element
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55063b20e5a98c2fc9d716083eebaf6e92d96ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadc9be7e7abc588c83515a6a199a37161075916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289642"
 ---
 # <a name="databases-element-assl"></a>Elemento Databases (ASSL)
   Contém a coleção de [banco de dados](../objects/database-element-assl.md) elementos associados a um [Server](../objects/server-element-assl.md) elemento.  

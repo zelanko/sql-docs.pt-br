@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
 - connections [Reporting Services], report server
@@ -18,13 +18,13 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34145968707e6ccc2a531fdddead84ba805aadb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172143"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece o Pesquisador de Objetos, que permite a conexão a qualquer servidor da família do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a navegação gráfica por seu conteúdo. Para o Reporting Services, você pode usar o Pesquisador de Objetos para fazer o seguinte:  
@@ -63,7 +63,7 @@ ms.locfileid: "36008843"
   
 2.  Clique em Conectar para exibir a lista de tipos de servidor e, então, selecione **Reporting Services**.  
   
-3.  Na caixa de diálogo **Conectar-se ao Servidor** , digite uma URL de um site do SharePoint. O exemplo a seguir ilustra a sintaxe: http://\<servidor web >/sites /\<site >.  
+3.  Na caixa de diálogo **Conectar-se ao Servidor** , digite uma URL de um site do SharePoint. O exemplo a seguir ilustra a sintaxe: http://\<servidor web > /sites/\<site >.  
   
 4.  Selecione o tipo de autenticação. Se você estiver usando a Autenticação do Windows, deverá se conectar usando suas credenciais. Se selecionar a autenticação Básica ou a autenticação Formulários, digite a conta e a senha.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36008843"
 |O servidor de relatório de modo integrado do SharePoint conectado pelo nome da instância do servidor de relatório:<br /><br /> \<server name>\<_instance>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.|Nível de permissão de controle total no site do SharePoint integrado ao servidor de relatório.<br /><br /> Observe que, quando você se conecta ao servidor de relatório ao invés do site do SharePoint, o número de tarefas que pode executar é reduzido significativamente. Isso se deve ao fato de o servidor de relatório poder apenas retornar dados de aplicativo armazenados ou gerenciados no banco de dados do servidor de relatório e não na configuração do SharePoint e bancos de dados de conteúdo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services no SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175773"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidade do FILESTREAM com outros recursos do SQL Server
   Como dados FILESTREAM estão no sistema de arquivos, este tópico fornece algumas considerações, diretrizes e limitações para o uso de FILESTREAM com os seguintes recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -55,7 +54,7 @@ ms.locfileid: "36008468"
  Você pode usar a transformação Importar Coluna para carregar arquivos do sistema de arquivos em uma coluna FILESTREAM. Você também pode usar a transformação Exportar Coluna para extrair arquivos de uma coluna FILESTREAM para outro local do sistema de arquivos.  
   
 ##  <a name="distqueries"></a> Consultas distribuídas e servidores vinculados  
- Você pode trabalhar com dados FILESTREAM em consultas distribuídas e servidores vinculados, tratando-o `varbinary(max)` dados. Não é possível usar a função **PathName()** de FILESTREAM em consultas distribuídas que usam um nome de quatro partes, mesmo quando o nome referencia o servidor local. Entretanto, você pode usar **PathName()** na consulta interna de uma consulta passagem que usa **OPENQUERY()**.  
+ Você pode trabalhar com dados FILESTREAM em consultas distribuídas e servidores vinculados, tratando-os `varbinary(max)` dados. Não é possível usar a função **PathName()** de FILESTREAM em consultas distribuídas que usam um nome de quatro partes, mesmo quando o nome referencia o servidor local. Entretanto, você pode usar **PathName()** na consulta interna de uma consulta passagem que usa **OPENQUERY()**.  
   
 ##  <a name="encryption"></a> Criptografia  
  Os dados de FILESTREAM não são criptografados mesmo quando a criptografia transparente de dados está habilitada.  
@@ -70,7 +69,7 @@ ms.locfileid: "36008468"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Uma coluna `varbinary(max)` que tenha o atributo FILESTREAM ativado no Publicador pode ser replicada para um Assinante com ou sem o atributo FILESTREAM. Para especificar o modo de replicação da coluna, use a caixa de diálogo **Propriedades do Artigo – \<Artigo>** ou o parâmetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Dados replicados para uma coluna `varbinary(max)` que não tenham o atributo FILESTREAM não devem exceder o limite de 2 GB daquele tipo de dados. Caso contrário, um erro em tempo de execução será gerado. Recomendamos replicar o atributo FILESTREAM, a menos que você esteja replicando dados para [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] assinantes não tem suporte, independentemente da opção de esquema especificado.  
+ Uma coluna `varbinary(max)` que tenha o atributo FILESTREAM ativado no Publicador pode ser replicada para um Assinante com ou sem o atributo FILESTREAM. Para especificar o modo de replicação da coluna, use a caixa de diálogo **Propriedades do Artigo – \<Artigo>** ou o parâmetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Dados replicados para uma coluna `varbinary(max)` que não tenham o atributo FILESTREAM não devem exceder o limite de 2 GB daquele tipo de dados. Caso contrário, um erro em tempo de execução será gerado. Recomendamos que você replicar o atributo FILESTREAM, a menos que você esteja replicando dados para [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] assinantes não é suportada, independentemente da opção de esquema especificado.  
   
 > [!NOTE]  
 >  A replicação de valores de dados grandes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para Assinantes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] é limitada a um máximo de 256 MB de valores de dados. Para obter mais informações, consulte [Especificações de capacidade máxima](http://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -82,7 +81,7 @@ ms.locfileid: "36008468"
   
 -   A opção max text repl size especifica a quantidade máxima de dados que podem ser inseridos em uma coluna publicada para replicação. Essa opção pode ser usada para controlar o tamanho de dados FILESTREAM que são replicados.  
   
--   Se você especificar a opção de esquema para replicar o atributo FILESTREAM, mas filtrar a `uniqueidentifier` coluna requerida pelo FILESTREAM ou se especificar não replicar a restrição UNIQUE da coluna, a replicação não replicará FILESTREAM atributo. A coluna é replicada apenas como uma coluna `varbinary(max)`.  
+-   Se você especificar a opção de esquema para replicar o atributo FILESTREAM, mas filtrar a `uniqueidentifier` coluna requerida pelo FILESTREAM ou se especificar não replicar a restrição UNIQUE da coluna, a replicação não replicará o FILESTREAM atributo. A coluna é replicada apenas como uma coluna `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Considerações sobre replicação de mesclagem  
  Se você usar colunas FILESTREAM em tabelas que são publicadas para replicação de mesclagem, observe as seguintes considerações:  

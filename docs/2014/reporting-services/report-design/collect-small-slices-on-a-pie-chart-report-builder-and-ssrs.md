@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177183"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios e SSRS)
   Quando os gráficos de pizza exibem muitos pontos de dados, eles começam a parecer clusterizados. Para resolver esse problema, você pode mostrar todos os dados sejam inferiores a um determinado valor como uma fatia no gráfico de pizza.  
@@ -51,7 +51,7 @@ ms.locfileid: "36009924"
          Defina a propriedade CollectedThreshold como **10**.  
   
         > [!NOTE]  
-        >  Se você definir CollectedStyle como **SingleSlice**, CollectedThreshold para um valor maior que **100**, e CollectedThresholdUsePercent é `True`, o gráfico gerará uma exceção porque ele não pode Calcule uma porcentagem. Para resolver esse problema, defina CollectedThreshold como um valor menor do que **100**.  
+        >  Se você definir CollectedStyle como **SingleSlice**, CollectedThreshold com um valor maior que **100**, e CollectedThresholdUsePercent for `True`, o gráfico gerará uma exceção porque ele não é possível Calcule uma porcentagem. Para resolver esse problema, defina CollectedThreshold como um valor menor do que **100**.  
   
     -   **Por valor de dados.** Por exemplo, para coletar qualquer fatia no gráfico de pizza que seja menor do que 5000 em uma única fatia:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36009924"
   
 2.  Defina a propriedade CollectedStyle como **CollectedPie**.  
   
-3.  Defina a propriedade CollectedThreshold como um valor que represente o limite no qual pequenas fatias serão coletadas em uma fatia. Quando a propriedade CollectedStyle é definida como **CollectedPie**, o CollectedThresholdUsePercentproperty é sempre definido como `True`, e o limite coletado será sempre medido em porcentagem.  
+3.  Defina a propriedade CollectedThreshold como um valor que represente o limite no qual pequenas fatias serão coletadas em uma fatia. Quando a propriedade CollectedStyle é definida como **CollectedPie**, CollectedThresholdUsePercentproperty é sempre definido como `True`, e o limite coletado será sempre medido em porcentagem.  
   
 4.  (Opcional) Defina as propriedades CollectedColor, CollectedLabel, CollectedLegendText e CollectedToolTip. Todas as outras propriedades denominadas "Coletadas" não se aplicam ao gráfico de pizza coletado.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36009924"
 >  Não é possível formatar o gráfico de pizza secundário. Por esse motivo, é altamente recomendável usar a primeira abordagem ao coletar fatias da pizza.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)   
- [Formatando pontos de dados em um gráfico &#40;SSRS e construtor de relatórios&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;SSRS e construtor de relatórios&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formatando pontos de dados em um gráfico &#40;relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Exibir valores percentuais em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Adicionar efeitos 3D a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   

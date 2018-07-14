@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216726"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Como implantar uma extensão de processamento de dados para o Designer de Relatórios
   O Designer de Relatórios usa extensões de processamento de dados para recuperar e processar dados enquanto você estiver criando relatórios. Você deve implantar o seu assembly de extensão de processamento de dados para o Designer de Relatórios como um assembly privado. Precisa também criar uma uma entrada no arquivo de configuração do Designer de Relatórios, RSReportDesigner.config.  
@@ -44,13 +44,13 @@ ms.locfileid: "36008570"
     </Extensions>  
     ```  
   
-4.  Adicione uma entrada para a sua extensão de processamento de dados que inclui um **extensão** elemento com valores para o `Name`, `Type`, e `Visible` atributos. A sua entrada poderia ser assim:  
+4.  Adicionar uma entrada para a sua extensão de processamento de dados que inclui um **extensão** elemento com valores para o `Name`, `Type`, e `Visible` atributos. A sua entrada poderia ser assim:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     O valor de `Name` é o nome exclusivo da extensão de processamento de dados. O valor de `Type` é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa as interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguida do nome do seu assembly (sem incluir a extensão de arquivo .dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão de interfaces do usuário, como o Designer de relatórios, adicione um `Visible` de atributo para o **extensão** elemento e defina-a como `false`.  
+     O valor de `Name` é o nome exclusivo da extensão de processamento de dados. O valor de `Type` é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa as interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguida do nome do seu assembly (sem incluir a extensão de arquivo .dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão de interfaces do usuário, como o Designer de relatórios, adicione uma `Visible` de atributo para o **extensão** elemento e defina-o como `false`.  
   
 5.  Por fim, adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão. Faça isso adicionando o grupo de códigos ao arquivo rspreviewpolicy.config localizado por padrão em C:\Arquivos de Programas\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. O grupo de códigos pode ter esta aparência:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36008570"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Para habilitar o designer de consulta genérico para uma extensão personalizada.  
   
--   Adicione a seguinte entrada ao arquivo RSReportDesigner. config sob o **Designer** elemento, substituindo o `Name` atributo com o nome que você forneceu nas entradas anteriores.  
+-   Adicione a seguinte entrada ao arquivo RSReportDesigner config sob o **Designer** elemento, substituindo o `Name` atributo com o nome que você forneceu nas entradas anteriores.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

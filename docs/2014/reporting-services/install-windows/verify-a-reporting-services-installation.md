@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,13 +21,13 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272522"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados em um de dois modos: Nativo ou SharePoint. As etapas que você deve seguir para verificar a instalação dependem do modo do servidor de relatório.  
@@ -46,7 +46,7 @@ ms.locfileid: "36009932"
   
 2.  Verifique se o **Serviço SQL Server Reporting Services** está instalado e no estado **Executando** .  
   
-     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para obter mais informações, consulte a seção "Instalar e iniciar o Reporting Services SharePoint Service" do [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para obter mais informações, consulte a seção "Instalar e iniciar o Reporting Services SharePoint Service" de [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 #### <a name="to-verify-the-service-application"></a>Para verificar o aplicativo de serviço  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36009932"
   
 #### <a name="to-verify-reporting-server-content-types"></a>Para verificar tipos de conteúdo do servidor de relatório  
   
-1.  Para verificar ou adicionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de conteúdo do servidor de relatório, consulte [adicionar tipos de conteúdo do relatório de servidor em uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
+1.  Para verificar ou adicionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tipos de conteúdo do servidor de relatório, consulte [adicionar tipos de conteúdo do relatório de servidor em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>Para verificar se você pode iniciar o Construtor de Relatórios  
   

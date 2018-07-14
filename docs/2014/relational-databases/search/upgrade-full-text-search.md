@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264322"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
   A atualização da pesquisa de texto completo para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é feita durante a instalação e quando os arquivos de banco de dados e os catálogos de texto completo da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são anexados, restaurados ou copiados por meio do Assistente para Copiar Banco de Dados.  
@@ -186,7 +185,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> Anexando um banco de dados SQL Server 2005 para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Attaching_2005_ft_catalogs"></a> Anexando um banco de dados SQL Server 2005 ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, um catálogo de texto completo é um conceito lógico que se refere a um grupo de índices de texto completo. O catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos. No entanto, quando você anexa um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contém arquivos de catálogo de texto completo a uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , os arquivos de catálogo são anexados de seus locais anteriores junto com os outros arquivos de banco de dados, assim como ocorre no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  O estado de cada catálogo de texto completo anexado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é o mesmo de quando o banco de dados foi desanexado do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Se uma população de índice de texto completo for suspensa pela operação de desanexação, ela será retomada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], e o índice de texto completo ficará disponível para pesquisa de texto completo.  

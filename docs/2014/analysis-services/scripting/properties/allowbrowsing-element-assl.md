@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 722923cff6a839b6882c5a44de67ca075d0ea46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c93ea360fb7036179375ff62aa6f182c9b790f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282002"
 ---
 # <a name="allowbrowsing-element-assl"></a>Elemento AllowBrowsing (ASSL)
   Define se os membros de um [função](../objects/role-element-assl.md) elemento têm permissão de navegação um [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36010104"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `AllowBrowsing` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
+ O elemento que corresponde ao pai de `AllowBrowsing` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

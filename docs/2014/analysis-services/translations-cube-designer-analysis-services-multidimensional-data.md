@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.f1
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36f8d0a6625e618c21ff9050284f21c724d8e754
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5cf6cabf68582854a80cab3cd4b931302f91045
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237616"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traduções (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Traduções** do Designer de Cubo para criar e modificar perspectivas do cubo selecionado.  

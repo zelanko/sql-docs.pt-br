@@ -1,5 +1,5 @@
 ---
-title: O SQL Server Distributed Replay | Microsoft Docs
+title: SQL Server Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232626"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   O recurso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay ajuda a avaliar o impacto de atualizações futuras do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "36009267"
 ## <a name="distributed-replay-concepts"></a>Conceitos do Distributed Replay  
  Os seguintes componentes fazem parte do ambiente do Distributed Replay:  
   
--   **Ferramenta de administração do Distributed Replay**: um aplicativo de console, `DReplay.exe`, usado para se comunicar com o controlador de reprodução distribuída. Use a ferramenta de administração para controlar a reprodução distribuída.  
+-   **Ferramenta de administração do Distributed Replay**: um aplicativo de console, `DReplay.exe`, usado para se comunicar com o distributed replay controller. Use a ferramenta de administração para controlar a reprodução distribuída.  
   
 -   **controlador Distributed Replay**: um computador que executa o serviço Windows denominado controlador Distributed Replay do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O controlador Distributed Replay orquestra as ações dos clientes de reprodução distribuída. Cada ambiente de Distributed Replay pode conter apenas uma instância de controlador.  
   

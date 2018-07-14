@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214496"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
   Neste tutorial, você cria um relatório de tabela básico com base em dados de vendas de exemplo e, em seguida, adiciona um minigráfico a uma célula da tabela.  
@@ -63,10 +63,10 @@ ms.locfileid: "36009490"
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     O **Introdução** caixa de diálogo é aberta.  
+     O **guia de Introdução** caixa de diálogo é aberta.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -200,17 +200,17 @@ ms.locfileid: "36009490"
   
 3.  Clique com o botão direito do mouse, aponte para **Inserir Coluna**e clique em **Esquerda**.  
   
-4.  Na nova coluna, clique na linha [Product], aponte para o **inserir** guia de faixa de opções e, em seguida, clique em **Minigráfico**.  
+4.  Na nova coluna, clique com botão direito na linha [Product], aponte para o **inserir** guia de faixa de opções e, em seguida, clique em **Minigráfico**.  
   
-5.  Verifique se o primeiro Minigráfico no **coluna** linha está selecionada e, em seguida, clique em **Okey**.  
+5.  Verifique se o primeiro Minigráfico na **coluna** linha está selecionada e, em seguida, clique em **Okey**.  
   
 6.  Clique no minigráfico para mostrar o painel Dados do Gráfico.  
   
-7.  Clique no sinal de adição (+) entrar na caixa valores e, em seguida, clique em **vendas**.  
+7.  Clique no sinal de adição (+) na caixa valores e, em seguida, clique em **vendas**.  
   
      Os valores no campo **Sales** agora são os valores do minigráfico.  
   
-8.  Clique no sinal de adição (+) entrar na caixa de grupos de categorias e, em seguida, clique em **SalesDate**.  
+8.  Clique no sinal de adição (+) na caixa grupos de categorias e, em seguida, clique em **SalesDate**.  
   
 9. Clique em **Executar** para visualizar o relatório.  
   
@@ -254,11 +254,11 @@ ms.locfileid: "36009490"
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
-2.  Clique na célula na segunda linha (sob a linha de cabeçalhos de coluna) no **SalesDate** coluna e arraste para selecionar todas as células que contêm `[Sum(Sales)]`.  
+2.  Clique na célula na segunda linha (sob a linha de cabeçalhos de coluna) na **SalesDate** coluna e arraste para selecionar todas as células que contêm `[Sum(Sales)]`.  
   
 3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda** . As células são alteradas para mostrar a moeda formatada.  
   
-     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** no **números** de grupo e, em seguida, clique em **valores de exemplo**.  
+     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** na **números** agrupar e, em seguida, clique em **valores de exemplo**.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "36009490"
   
 2.  Clique na célula que contém `[SalesDate]`.  
   
-3.  Na faixa de opções, no **início** guia o **número** grupo na lista suspensa, selecione **data**.  
+3.  Na faixa de opções, no **Home** guia, o **número** grupo, na lista suspensa, selecione **data**.  
   
      A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36009490"
   
      As barras em cinza ao longo da parte superior e ao lado da tabela são os identificadores de coluna e de linha.  
   
-3.  Aponte para a linha entre os identificadores de coluna para que o cursor seja alterado para uma seta dupla. Arraste as colunas de acordo com o tamanho desejado. Por exemplo, expanda a coluna **produto** para que o nome do produto seja exibido em uma linha.  
+3.  Aponte para a linha entre os identificadores de coluna para que o cursor seja alterado para uma seta dupla. Arraste as colunas de acordo com o tamanho desejado. Por exemplo, expanda a coluna **produto** para que o nome do produto seja exibido em uma única linha.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "36009490"
  Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

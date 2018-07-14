@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245246"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
   Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre como atualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo do SharePoint, consulte [atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar um servidor existente do SQL da instância, consulte [atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36008235"
   
 -   [Notas de Versão do SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Para saber quais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recursos e funcionalidades foram descontinuados, preteridos ou alterados consulte [compatibilidade com versões anteriores do Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   Para saber quais [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recursos e funcionalidades foram descontinuados, preteridos ou alterados ver [compatibilidade com versões anteriores do Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de verificação anterior à atualização  
  Antes de atualizar, revise as informações a seguir:  
@@ -59,7 +59,7 @@ ms.locfileid: "36008235"
 ## <a name="upgrading-analysis-services"></a>Atualizando o Analysis Services  
  Você pode escolher entre várias abordagens para atualizar o servidor e os dados:  
   
--   Um **atualização in-loco** substitui o programa existente de arquivos com [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de programa. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
+-   Uma **atualização in loco** substitui o programa existente de arquivos com [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de programa. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
   
 -   Um **atualização lado a lado** é uma nova instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no mesmo computador que tenha uma instância existente do Analysis Services. Você pode mover bancos de dados para a nova instância no mesmo computador e, em seguida, desinstalar a versão antiga se você não for mais usá-la.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228406"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lição 6: Criar colunas calculadas
   Nesta lição, você criará novos dados no modelo adicionando colunas calculadas. Uma coluna calculada se baseia nos dados que já existem no modelo. Para saber mais, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36009444"
     > [!NOTE]  
     >  Se você receber um erro, verifique se os nomes de coluna na fórmula correspondem aos nomes de coluna alterados na [Lição 3: Renomear colunas](rename-columns.md).  
   
-5.  Renomear esta coluna como `Month Calendar`.  
+5.  Renomeie esta coluna como `Month Calendar`.  
   
  A coluna calculada Month Calendar fornece um nome classificável para o mês.  
   

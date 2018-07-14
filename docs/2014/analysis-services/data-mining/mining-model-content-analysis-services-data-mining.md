@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Conteúdo do modelo de mineração (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282422"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   Depois de projetar e processar um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém o *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
@@ -163,9 +163,9 @@ ms.locfileid: "36010561"
   
  Se o nome do atributo for uma coluna, então, no caso mais simples, ATTRIBUTE_VALUE conterá um dos valores discretos para aquela coluna.  
   
- Dependendo de como o algoritmo processa os valores, ATTRIBUTE_VALUE também pode conter um sinalizador que indica se um valor existe para o atributo (`Existing`), ou se o valor é nulo (`Missing`).  
+ Dependendo de como o algoritmo processa os valores, ATTRIBUTE_VALUE também pode conter um sinalizador que informa se um valor existe para o atributo (`Existing`), ou se o valor é nulo (`Missing`).  
   
- Por exemplo, se seu modelo estiver configurado para encontrar clientes que adquiriram um item específico pelo menos uma vez, a coluna ATTRIBUTE_NAME poderá conter o par atributo-valor que define o item de interesse, como `Model = 'Water bottle'`e a coluna ATTRIBUTE_VALUE contém apenas a palavra-chave `Existing` ou `Missing`.  
+ Por exemplo, se seu modelo estiver configurado para encontrar clientes que adquiriram um item específico pelo menos uma vez, a coluna ATTRIBUTE_NAME poderá conter o par atributo-valor que define o item de interesse, como `Model = 'Water bottle'`e a coluna ATTRIBUTE_VALUE conteria apenas a palavra-chave `Existing` ou `Missing`.  
   
  SUPPORT  
  Contagem dos casos que têm este par de valores de atributo ou este conjunto de itens ou regra.  
@@ -276,15 +276,15 @@ ms.locfileid: "36010561"
   
 |Algoritmo ou tipo de modelo|model content|Consultando modelos de mineração|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelos de regras de associação|[Conteúdo do modelo de associação de modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de associação](association-model-query-examples.md)|  
-|Modelos de clustering|[Conteúdo do modelo de árvore de decisão de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)|  
-|Modelo de árvores de decisão|[Conteúdo do modelo de árvore de decisão de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)|  
-|Modelos de regressão linear|[Conteúdo do modelo de regressão Linear modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
-|Modelos de regressão logística|[Conteúdo do modelo de regressão logística modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
-|Modelos Naïve Bayes|[Conteúdo do modelo para modelos Naive Bayes de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta do modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modelos de rede neural|[Conteúdo do modelo de rede Neural modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de rede neural](neural-network-model-query-examples.md)|  
-|Clustering de sequências|[Conteúdo do modelo para modelos de Clustering de sequência de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemplos de consulta dos modelos de clustering de sequências](sequence-clustering-model-query-examples.md)|  
-|Modelos de série temporal|[Conteúdo do modelo para modelos de série temporal mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)|  
+|Modelos de regras de associação|[Mining Model Content para modelos de associação &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de associação](association-model-query-examples.md)|  
+|Modelos de clustering|[Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)|  
+|Modelo de árvores de decisão|[Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)|  
+|Modelos de regressão linear|[Mining Model Content para modelos de regressão Linear &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
+|Modelos de regressão logística|[Mining Model Content para modelos de regressão logística &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
+|Modelos Naïve Bayes|[Mining Model Content para modelos Naive Bayes &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta do modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modelos de rede neural|[Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de rede neural](neural-network-model-query-examples.md)|  
+|Clustering de sequências|[Mining Model Content para modelos de Clustering de sequência &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemplos de consulta dos modelos de clustering de sequências](sequence-clustering-model-query-examples.md)|  
+|Modelos de série temporal|[Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Ferramentas para exibir o conteúdo do modelo de mineração  
  Ao procurar ou explorar um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você poderá exibir as informações no **Visualizador de Árvore de Conteúdo Genérica da Microsoft**, disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -308,6 +308,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>Consulte também  
  [Visualizador de árvore de conteúdo genérica da Microsoft &#40;mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

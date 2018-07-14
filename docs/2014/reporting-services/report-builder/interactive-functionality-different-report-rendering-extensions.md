@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238486"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidade interativa para extensões de renderização de relatório diferentes (Construtor de Relatórios e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos de relatórios interativos que permitem que você trabalhe com um relatório em tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Você pode usar a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  
@@ -113,10 +113,10 @@ ms.locfileid: "36009709"
 |Outro|O servidor de relatórios exporta o relatório para outros formatos usando dados filtrados no relatório atual.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exportando relatórios &#40;SSRS e construtor de relatórios&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;SSRS e construtor de relatórios&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Gráficos de &#40;relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

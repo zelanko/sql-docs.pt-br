@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235556"
 ---
 # <a name="execute-method-xmla"></a>Método Execute (XMLA)
-  Envia o XML para comandos Analysis (XMLA) para uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Isso inclui solicitações que envolvem transferência de dados, como a recuperação ou a atualização dos dados no servidor.  
+  Envia o XML para comandos Analysis (XMLA) para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Isso inclui solicitações que envolvem transferência de dados, como a recuperação ou a atualização dos dados no servidor.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36008703"
 |Elementos filho|[Comando](xml-elements-properties/command-element-xmla.md), [parâmetros](xml-elements-properties/parameters-element-xmla.md), [propriedades](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O `Execute` método executa comandos XMLA fornecidos no `Command` elemento e retorna qualquer dado resultante usando o XMLA [linhas](xml-data-types/rowset-data-type-xmla.md) tipo de dados (para conjuntos de resultados de tabela) ou o XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) tipo de dados (para conjuntos de resultados multidimensionais).  
+ O `Execute` comandos XMLA fornecidos no método é executado o `Command` elemento e retorna qualquer dado resultante usando o XMLA [conjunto de linhas](xml-data-types/rowset-data-type-xmla.md) tipo de dados (para conjuntos de resultados de tabela) ou o XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) tipo de dados (para conjuntos de resultados multidimensionais).  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir é um exemplo da chamada do método `Execute` que contém uma instrução SELECT da linguagem MDX.  
@@ -95,7 +95,7 @@ ms.locfileid: "36008703"
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados XML &#40;XMLA&#41;](xml-data-types/xml-data-types-xmla.md)   
- [Método Discover &#40;XMLA&#41;](xml-elements-methods-discover.md)   
+ [Descobrir o método &#40;XMLA&#41;](xml-elements-methods-discover.md)   
  [Métodos &#40;XMLA&#41;](xml-elements-methods.md)   
  [Elementos XML &#40;XMLA&#41;](../dev-guide/xml-elements-xmla.md)   
  [Conjuntos de linhas de esquema do Analysis Services](../schema-rowsets/analysis-services-schema-rowsets.md)  

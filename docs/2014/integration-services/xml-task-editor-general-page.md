@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237156"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Use o **nó Geral** da caixa de diálogo **Editor da Tarefa XML** para especificar o tipo de operação e configurar a operação.  
@@ -316,11 +316,11 @@ ms.locfileid: "36008227"
 |**IgnoreXMLDeclaration**|Especifique se a declaração XML deve ser comparada.|  
 |**IgnoreDTD**|Especifique se a DTD deve ser ignorada.|  
 |**IgnoreWhite Spaces**|Especifique se devem ser ignoradas as diferenças na quantidade de espaços em branco ao comparar documentos.|  
-|**IgnoreNamespaces**|Especifique se devem ser comparados o URI (Uniform Resource Identifier) no namespace de um elemento e seus nomes de atributo.<br /><br /> Observação: Se essa opção é definida como `True`, dois elementos que têm o mesmo local nome mas diferentes namespaces serão considerados idênticos.|  
+|**IgnoreNamespaces**|Especifique se devem ser comparados o URI (Uniform Resource Identifier) no namespace de um elemento e seus nomes de atributo.<br /><br /> Observação: Se essa opção é definida como `True`, dois elementos que têm o mesmo local nome, mas diferentes namespaces serão considerados idênticos.|  
 |**IgnoreProcessingInstructions**|Especifique se as instruções de processamento devem ser comparadas.|  
-|**IgnoreOrderOf ChildElements**|Especifique se a ordem de elementos filho deve ser comparada.<br /><br /> Observação: Se essa opção é definida como `True`, os elementos filho que diferem apenas em sua posição em uma lista de irmãos serão considerados idênticos.|  
+|**IgnoreOrderOf ChildElements**|Especifique se a ordem de elementos filho deve ser comparada.<br /><br /> Observação: Se essa opção é definida como `True`, elementos filho que diferem apenas em sua posição em uma lista de irmãos serão considerados idênticos.|  
 |**IgnoreComments**|Especifique se os nós de comentário devem ser comparados.|  
-|**IgnorePrefixes**|Especifique se os prefixos de elemento e nomes de atributo devem ser comparados.<br /><br /> Observação: Se você definir esta opção como `True`, dois elementos que têm o mesmo nome local, mas os URIs de namespace diferentes e prefixos, serão considerados idênticos.|  
+|**IgnorePrefixes**|Especifique se os prefixos de elemento e nomes de atributo devem ser comparados.<br /><br /> Observação: Se você definir essa opção como `True`, dois elementos que têm o mesmo nome local, mas outro namespace URIs e prefixos, serão considerados idênticos.|  
   
  **FailOnDifference**  
  Especifique se a tarefa falha caso a operação Diff falhar.  

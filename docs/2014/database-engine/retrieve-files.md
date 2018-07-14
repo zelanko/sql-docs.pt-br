@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file retrieval
 - file retrieval [SQL Server]
 - retrieving files
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f1b53eb99abc77e809bd7aaac30f8f218cd4ee03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 648b7833ddb8a1dd74f98ad15cdb1c5072d91165
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171377"
 ---
 # <a name="retrieve-files"></a>Recuperar arquivos
   Após abrir um projeto com controle do código-fonte, você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para recuperar cópias locais de arquivos do projeto da armazenagem do controle do código-fonte para o diretório local em que o projeto fica armazenado.  
@@ -36,13 +36,13 @@ ms.locfileid: "36008707"
   
 -   **Obter** comando  
   
-     Exibe o **obter** caixa de diálogo, você pode usar para recuperar a versão mais recente de um arquivo selecionado ou para recuperar um subconjunto dos arquivos de solução ou projeto selecionado.  
+     Exibe a **obter** caixa de diálogo que você pode usar para recuperar a versão mais recente de um arquivo selecionado, ou para recuperar um subconjunto dos arquivos no projeto ou solução selecionada.  
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>Para recuperar a versão mais recente registrada de todos os arquivos em um projeto  
   
 1.  No Gerenciador de Soluções, selecione o projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle de origem**e, em seguida, clique em **obter versão mais recente (recursivo)**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter versão mais recente (recursivo)**.  
   
  As versões mais recentes dos arquivos do projeto são recuperadas no local do projeto no disco local.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "36008707"
   
 1.  No Gerenciador de Soluções, selecione o item que você deseja recuperar.  
   
-2.  Sobre o **arquivo** , aponte para **controle de origem**e, em seguida, clique em **obter**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter**.  
   
-3.  No **obter** caixa de diálogo, clique em **Okey**. Como alternativa, se você tiver selecionado uma solução ou um projeto no Gerenciador de Soluções, desmarque as caixas de seleção que aparecem próximas aos itens que não deseja recuperar.  
+3.  No **Obtenha** caixa de diálogo, clique em **Okey**. Como alternativa, se você tiver selecionado uma solução ou um projeto no Gerenciador de Soluções, desmarque as caixas de seleção que aparecem próximas aos itens que não deseja recuperar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo obter &#40;controle de origem&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
+ [Obtém uma caixa de diálogo &#40;controle de origem&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Exibir histórico de projetos](../../2014/database-engine/view-project-history.md)   
  [Exibir status de arquivos](../../2014/database-engine/view-file-status.md)  

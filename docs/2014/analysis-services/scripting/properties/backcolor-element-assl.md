@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274112"
 ---
 # <a name="backcolor-element-assl"></a>Elemento BackColor (ASSL)
   Descreve características de exibição relacionadas a cores do elemento pai.  
@@ -62,9 +62,9 @@ ms.locfileid: "36008742"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `BackColor` propriedade contém uma expressão de linguagem MDX (Multidimensional Expressions) e se aplica a `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) de *membro* ou  *Células*.  
+ O `BackColor` propriedade contém uma expressão de linguagem MDX (Multidimensional Expressions) e aplica-se ao `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) dos *membro* ou  *Células*.  
   
- O elemento que corresponde ao pai do `BackColor` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ O elemento que corresponde ao pai de `BackColor` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

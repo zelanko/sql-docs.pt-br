@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280292"
 ---
 # <a name="rootmemberif-element-assl"></a>Elemento RootMemberIf (ASSL)
   Determina como são identificados os membros raiz ou membros de um atributo pai.  
@@ -62,14 +62,14 @@ ms.locfileid: "36010518"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `RootMemberIf` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai está definido como *pai*) para determinar a raiz ( membros superiores) de uma hierarquia pai-filho.  
+ O valor da `RootMemberIf` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai é definido como *pai*) para determinar a raiz ( membros superiores) de uma hierarquia pai-filho.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*ParentIsBlankSelfOrMissing*|Somente os membros que atendam a uma ou mais das condições descritas para *ParentIsBlank*, *ParentIsSelf*, ou *ParentIsMissing* são tratados como membros raiz.|  
-|*ParentIsBlank*|Somente membros com um valor nulo, um zero ou uma cadeia de caracteres vazia em colunas de chave representados pelo [KeyColumns](../collections/columns-element-assl.md) coleção de `DimensionAttribute` são tratados como membros raiz.|  
+|*ParentIsBlankSelfOrMissing*|Somente os membros que atendem a uma ou mais das condições descritas para *ParentIsBlank*, *ParentIsSelf*, ou *ParentIsMissing* são tratados como membros raiz.|  
+|*ParentIsBlank*|Somente membros com um valor nulo, um zero ou uma cadeia de caracteres vazia nas colunas de chave representado pela [KeyColumns](../collections/columns-element-assl.md) coleção de `DimensionAttribute` são tratados como membros raiz.|  
 |*ParentIsSelf*|Somente os membros com eles próprios como pais são tratados como membros raiz.|  
 |*ParentIsMissing*|Somente membros com pais que não podem ser encontrados são tratados como membros raiz.|  
   

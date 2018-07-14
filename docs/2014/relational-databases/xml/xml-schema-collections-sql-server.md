@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221086"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio de `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD com uma variável ou uma coluna de `xml` tipo por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -45,14 +45,14 @@ ms.locfileid: "36010387"
   
  O mecanismo do processamento de consultas também usa o esquema para verificação de tipo e otimizar modificação de dados e consultas.  
   
- Além disso, o SQL Server usa a coleção de esquema XML associada, no caso do tipo `xml`, para validar a instância XML. Se a instância XML estiver de acordo com o esquema, o banco de dados permitirá que a instância seja armazenada no sistema com suas informações de tipo. Caso contrário, a instância será rejeitada.  
+ Além disso, o SQL Server usa a coleção de esquema XML associada, no caso de digitado `xml`, para validar a instância XML. Se a instância XML estiver de acordo com o esquema, o banco de dados permitirá que a instância seja armazenada no sistema com suas informações de tipo. Caso contrário, a instância será rejeitada.  
   
  É possível usar a função intrínseca XML_SCHEMA_NAMESPACE para recuperar a coleção de esquema que está armazenada no banco de dados. Para obter mais informações, veja [Exibir uma coleção de esquemas XML armazenados](../xml/view-a-stored-xml-schema-collection.md).  
   
  Também é possível usar a coleção de esquema XML para digitar variáveis, parâmetros e colunas XML.  
   
 ##  <a name="ddl"></a> DDL para gerenciar coleções de esquemas  
- Você pode criar coleções de esquema XML no banco de dados e associá-las a variáveis e colunas do `xml` tipo. Para gerenciar coleções de esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções DDL:  
+ Você pode criar coleções de esquemas XML no banco de dados e associá-las a variáveis e colunas do `xml` tipo. Para gerenciar coleções de esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece as seguintes instruções DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) Importa os componentes de esquema para um banco de dados.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36010387"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Exclui uma coleção de esquema XML completa e todos os seus componentes.  
   
- Para usar uma coleção de esquema XML e os esquemas contidos nela, você deve primeiro criar a coleção e os esquemas usando a instrução CREATE XML SCHEMA COLLECTION. Depois que a coleção de esquema é criada, você pode criar variáveis e colunas do `xml` tipo e associar a coleção de esquema elas. Observe que depois que uma coleção de esquema é criada, são armazenados vários componentes de esquema nos metadados. Também é possível usar ALTER XML SCHEMA COLLECTION para adicionar mais componentes a esquemas existentes ou adicionar novos esquemas a uma coleção existente.  
+ Para usar uma coleção de esquema XML e os esquemas contidos nela, você deve primeiro criar a coleção e os esquemas usando a instrução CREATE XML SCHEMA COLLECTION. Depois que a coleção de esquema é criada, você pode criar variáveis e colunas do `xml` de tipo e associar a coleção de esquema elas. Observe que depois que uma coleção de esquema é criada, são armazenados vários componentes de esquema nos metadados. Também é possível usar ALTER XML SCHEMA COLLECTION para adicionar mais componentes a esquemas existentes ou adicionar novos esquemas a uma coleção existente.  
   
  Para descartar a coleção de esquema, use a instrução DROP XML SCHEMA COLLECTION. Ela descarta todos os esquemas que estão contidos na coleção e remove o objeto da coleção. Observe que, antes de conseguir remover uma coleção de esquema, as condições descritas em [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) deverão ser atendidas.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36010387"
   
 -   Descartar a coleção de esquema XML  
   
--   Usar a coleção de esquemas XML para digitar `xml` colunas, variáveis e parâmetros de tipo ou usá-la em restrições de tabela ou coluna  
+-   Use a coleção de esquemas XML para digitar `xml` colunas, variáveis e parâmetros de tipo, ou usá-la em restrições de tabela ou coluna  
   
  O modelo de segurança do SQL permite a permissão CONTROL em todos os objetos. O usuário autorizado dessa permissão obtém todas as outras permissões no objeto. O proprietário do objeto também tem todas as permissões no objeto.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36010387"
 ##  <a name="info"></a> Adquirindo Informações sobre esquemas XML e coleções de esquemas  
  Coleções de esquema XML são enumeradas na exibição do catálogo sys.xml_schema_collections. A coleção de esquema XML "sys" está definida pelo sistema. Ela contém os namespaces predefinidos que podem ser usados em todas as coleções de esquema XML definidas pelo usuário sem precisar carregá-las explicitamente. Essa lista contém os namespaces para xml, xs, xsi, fn e xdt. Duas outras exibições do catálogo são sys.xml_schema_namespaces, que enumera todos os namespaces dentro de cada coleção de esquema XML, e sys.xml_components, que enumera todos os componentes do esquema XML dentro de cada esquema XML.  
   
- A função interna **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, gera um `xml` instância de tipo de dados. Essa instância contém fragmentos de esquema XML estão contidos em uma coleção de esquema XML, exceto os esquemas XML predefinidos.  
+ A função interna **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produz uma `xml` instância de tipo de dados... Essa instância contém fragmentos de esquema XML estão contidos em uma coleção de esquema XML, exceto os esquemas XML predefinidos.  
   
  É possível enumerar o conteúdo de uma coleção de esquema XML das seguintes maneiras:  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216196"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
@@ -47,11 +47,11 @@ ms.locfileid: "36008508"
 >  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## <a name="prerequisites"></a>Prerequisites  
- No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre funções de administrador de servidor e permissões de banco de dados, consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
+ No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre as funções de administrador do servidor e permissões de banco de dados, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  A porta TCP 2383 deve estar aberta em ambos os servidores para permitir conexões remotas entre instâncias padrão. Para obter mais informações sobre a criação de uma exceção no Firewall do Windows, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Servidores de origem e de destino devem ser a mesma versão e o service pack. Porque os metadados do modelo é sincronizado, para garantir a compatibilidade de compilação número para ambos os servidores deve ser o mesmo. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre os recursos em cada edição, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Servidores de origem e de destino devem ser a mesma versão e service pack. Porque os metadados do modelo também são sincronizados, para garantir a compatibilidade da compilação número para ambos os servidores deve ser o mesmo. A edição de cada instalação deve oferecer suporte à sincronização de banco de dados. No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a sincronização do banco de dados tem suporte nas edições enterprise, developer e business intelligence. Para obter mais informações sobre os recursos em cada edição, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  O modo de implantação de servidor deve ser idêntico em cada servidor. Se o banco de dados que você estiver sincronizando for multidimensional, os servidores de origem e de destino deverão ser configurados no modo de servidor multidimensional. Para obter mais informações sobre modos de implantação, consulte [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36008508"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Implantar soluções modelo usando XMLA](deploy-model-solutions-using-xmla.md)   
+ [Implantar soluções de modelo usando XMLA](deploy-model-solutions-using-xmla.md)   
  [Implantar soluções de modelo usando o Assistente de implantação](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

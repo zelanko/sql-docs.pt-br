@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
 - sql12.asvs.dsvdesigner.findtable.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1a5a11bd381687612641d218c9a4dd04b26c8cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4bf8063097028c39dce47f2be36520b675679dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211856"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
   Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  
@@ -50,7 +50,7 @@ ms.locfileid: "36010316"
   
  Para criar um novo diagrama, clique com o botão direito do mouse em qualquer lugar do painel **Organizador de Diagramas** , clique em **Novo Diagrama**.  
   
- Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas à exibição de fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, como adicionar tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualização das relações, particularmente como várias tabelas de fatos são adicionadas ao diagrama e de dimensão tabelas se relacionam com várias tabelas de fatos.  
+ Quando você define inicialmente uma exibição da fonte de dados (DSV) em um projeto do Analysis Services, todas as tabelas e exibições adicionadas a exibição da fonte de dados são adicionadas para o \<todas as tabelas > diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, que você adicione tabelas, exibições e consultas nomeadas para o \<todas as tabelas > diagrama, o número absoluto de objetos nesse diagrama dificulta a visualização das relações — especialmente como várias tabelas de fatos são adicionadas ao diagrama e de dimensão tabelas estão relacionadas a várias tabelas de fatos.  
   
  Para reduzir a poluição visual quando você quer apenas exibir um subconjunto das tabelas da exibição da fonte de dados, é possível definir subdiagramas (chamados simplesmente de diagramas) formados por subconjuntos das tabelas, exibições e consultas nomeadas da exibição da fonte de dados. Você pode usar diagramas para agrupar itens da exibição da fonte de dados de acordo com as necessidades dos negócios ou da solução.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36010316"
 ##  <a name="bkmk_edit"></a> Editar ou excluir um diagrama  
  Ao trabalhar com um diagrama, preste atenção aos comandos usados por adicionar e remover objetos. Por exemplo, excluir um objeto de um diagrama o excluirá da DSV. Se você apenas desejar excluí-lo do diagrama, use **Ocultar Tabela** em vez disso.  
   
- ![Captura de tela de espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela de espaço de trabalho de diagrama, menu de atalho")  
+ ![Captura de tela do espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela do espaço de trabalho de diagrama, menu de atalho")  
   
  Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o espaço de trabalho, arraste-os do painel de Tabelas em vez disso.  
   

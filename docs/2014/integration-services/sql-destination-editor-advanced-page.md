@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f793be2507c1d390cbf955cce200b8edcf4d8bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fa256ff2a160572f91ea4d885d572341f4357b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207716"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de Destino SQL (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor de Destino SQL** para especificar opções avançadas de inserção em massa.  
@@ -72,8 +72,8 @@ ms.locfileid: "36010281"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino SQL &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Editor de destino SQL &#40;página mapeamentos&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Editor de destinos SQL &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Editor de destinos SQL &#40;página mapeamentos&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Carregar dados em massa por meio do destino do SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

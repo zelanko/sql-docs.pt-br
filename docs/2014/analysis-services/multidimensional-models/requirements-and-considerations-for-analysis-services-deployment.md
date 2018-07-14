@@ -1,5 +1,5 @@
 ---
-title: Requisitos e considerações para Analysis Services implantação | Microsoft Docs
+title: Implantação de requisitos e considerações para o Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
 - scalability [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c77a12ddc9a5be49fbdcd531f0485bbdf5f4055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b81c5125f8d4f0e9dd2e0760a072d655f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247766"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
   O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
@@ -56,7 +56,7 @@ ms.locfileid: "36009449"
   
  [Recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [Especificações de capacidade máxima &#40;do Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [Especificações de capacidade máxima &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>Requisitos de espaço em disco  
  Aspectos diferentes da instalação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e as tarefas relacionadas ao processamento de objetos requerem diferentes quantidades de espaço em disco. A lista a seguir descreve esses requisitos.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
 - sql12.ssis.bids.projectprotectionlevel.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6e1f6bea2a13e223aa1466e43c600a83e32544f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 038c4b3f03b2dca9b0c6fd9676d21f7c16747a47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248826"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Caixa de diálogo Nível de Proteção do Pacote e do Projeto
   Use a caixa de diálogo **Nível de Proteção do Pacote** para atualizar o nível de proteção de um pacote. O nível de proteção determina o método de proteção, a senha ou a chave de usuário, bem como o escopo de proteção do pacote. A proteção pode incluir todos os dados ou apenas os dados confidenciais.  

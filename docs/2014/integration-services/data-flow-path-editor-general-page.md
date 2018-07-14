@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.general.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ba5e08523500fa104f96a760cf57c9657e473d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6bc1f4409fc762e7f21531f9f989439534ee58d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213506"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de Caminho do Fluxo de Dados (página Geral)
   Use a caixa de diálogo **Editor de Caminho de Fluxo de Dados** para definir propriedades de caminho, visualizar metadados de colunas e gerenciar os visualizadores de dados que estão anexados ao caminho.  
@@ -53,7 +53,7 @@ ms.locfileid: "36009415"
  Exibe a saída que é o início do caminho.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de caminho de fluxo de dados &#40;página metadados&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [Editor de caminho de fluxo de dados &#40;página de metadados&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor de caminho de fluxo de dados &#40;página visualizadores de dados&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
  [Usar anotações em pacotes](use-annotations-in-packages.md)  

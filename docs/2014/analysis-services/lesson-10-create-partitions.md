@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261352"
 ---
 # <a name="lesson-11-create-partitions"></a>Lição 11: Criar partições
   Nesta lição, você criará partições para dividir a tabela Internet Sales em partes lógicas menores que podem ser processadas (Atualizadas) independentemente de outras partições. Por padrão, cada tabela que você inclui no modelo tem uma partição que contém todas as colunas e linhas da tabela. No caso da tabela Internet Sales, desejamos dividir os dados por ano; uma partição para cada um dos cinco anos da tabela.  Cada partição pode ser processada independentemente. Para obter mais informações, consulte [Partições &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36009866"
   
 2.  No **Gerenciador de partições** na caixa **partições**, clique no **vendas pela Internet** partição.  
   
-3.  Em **nome da partição**, altere o nome para `Internet Sales 2005`.  
+3.  Na **nome da partição**, altere o nome para `Internet Sales 2005`.  
   
     > [!TIP]  
     >  Antes de passar para a próxima etapa, observe que os nomes de coluna na janela Visualização de Tabela exibem essas colunas incluídas na tabela de modelo (marcada) com os nomes de coluna da origem. Isso acontece porque a janela Visualização de Tabela exibe colunas da tabela de origem, e não da tabela de modelo.  
@@ -83,43 +83,43 @@ ms.locfileid: "36009866"
   
 6.  Clique em **Validar**.  
   
-     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque no [lição 3: renomear colunas](rename-columns.md), você renomeou essas colunas na tabela de vendas pela Internet no modelo a ser diferentes das mesmas colunas na origem.  
+     Observe que um aviso é exibido, declarando que determinadas colunas não estão presentes na origem. Isso ocorre porque na [lição 3: renomear colunas](rename-columns.md), você renomeou essas colunas na tabela de vendas pela Internet no modelo a ser diferente das mesmas colunas na origem.  
   
-#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para criar uma partição do ano 2006 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2006 na tabela de vendas pela Internet  
   
 1.  No **Gerenciador de partições** na caixa **partições**, clique no `Internet Sales 2005` partição que você acabou de criar e, em seguida, **cópia**.  
   
-2.  Em **nome da partição**, tipo `Internet Sales 2006`.  
+2.  Na **nome da partição**, tipo `Internet Sales 2006`.  
   
-3.  Na instrução SQL, em ordem para a partição inclua somente as linhas para o ano de 2006, substitua a cláusula WHERE com o seguinte:  
+3.  Na instrução SQL, para que a partição inclua somente as linhas para o ano de 2006, substitua a cláusula WHERE pelo seguinte:  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2007 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano 2007 na tabela de vendas pela Internet  
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Copiar**.  
   
-2.  Em **nome da partição**, tipo `Internet Sales 2007`.  
+2.  Na **nome da partição**, tipo `Internet Sales 2007`.  
   
-3.  Em **alternar para**, selecione **Editor de consultas**.  
+3.  Na **alternar para**, selecione **Editor de consultas**.  
   
-4.  Na instrução SQL, em ordem para a partição inclua somente as linhas para o ano de 2007, substitua a cláusula WHERE com o seguinte:  
+4.  Na instrução SQL, para que a partição inclua somente as linhas para o ano 2007, substitua a cláusula WHERE pelo seguinte:  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Para criar uma partição para o ano de 2008 na tabela de vendas pela Internet  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Para criar uma partição do ano 2008 na tabela de vendas pela Internet  
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Novo**.  
   
-2.  Em **nome da partição**, tipo `Internet Sales 2008`.  
+2.  Na **nome da partição**, tipo `Internet Sales 2008`.  
   
-3.  Em **alternar para**, selecione **Editor de consultas**.  
+3.  Na **alternar para**, selecione **Editor de consultas**.  
   
-4.  Na instrução SQL, em ordem para a partição inclua somente as linhas para o ano de 2008, substitua a cláusula WHERE com o seguinte:  
+4.  Na instrução SQL, para que a partição inclua somente as linhas do ano 2008, substitua a cláusula WHERE pelo seguinte:  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -129,9 +129,9 @@ ms.locfileid: "36009866"
   
 1.  Na caixa de diálogo **Gerenciador de Partições** , clique em **Novo**.  
   
-2.  Em **nome da partição**, tipo `Internet Sales 2009`.  
+2.  Na **nome da partição**, tipo `Internet Sales 2009`.  
   
-3.  Em **alternar para**, selecione **Editor de consultas**.  
+3.  Na **alternar para**, selecione **Editor de consultas**.  
   
 4.  Na Instrução SQL, para que a partição inclua somente as linhas do ano 2009, substitua a cláusula WHERE pelo seguinte:  
   

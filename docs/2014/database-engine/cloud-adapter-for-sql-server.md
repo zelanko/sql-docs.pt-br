@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243376"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador de nuvem para SQL Server
   O serviço de Adaptador de Nuvem é criado como parte do provisionamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina virtual do Windows Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O Adaptador de Nuvem também cria uma regra de Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  
@@ -32,7 +32,7 @@ ms.locfileid: "36009830"
 ## <a name="cloud-adapter-requirements"></a>Requisitos do Adaptador de Nuvem  
  Observe os requisitos a seguir para instalação, habilitação e execução do Adaptador de Nuvem para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Há suporte para o adaptador de nuvem com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 e superior. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, o Adaptador de Nuvem para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exige SQL Management Objects para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
+-   O adaptador de nuvem é compatível com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 e superior. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, o Adaptador de Nuvem para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exige SQL Management Objects para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
 -   O serviço Web do Adaptador de Nuvem é executado como uma conta **Sistema Local** e verifica as credenciais do cliente antes de executar qualquer tarefa. As credenciais fornecidas pelo cliente devem pertencer à conta do usuário que seja membro do local **administradores** grupo no computador remoto.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36009830"
   
         -   \</appSettings >  
   
-    -   \<Configuração >  
+    -   \</ Configuração >  
   
 -   **Detalhes do certificado** – o certificado tem os seguintes valores:  
   

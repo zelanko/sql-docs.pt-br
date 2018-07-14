@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286712"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
   Antes de definir uma assinatura controlada por dados, você deve ter uma fonte de dados que fornece dados de assinatura. Nesta etapa, você criará um banco de dados pequeno para armazenar os dados de assinatura usados neste tutorial. Posteriormente, quando a assinatura for processada, o servidor de relatório recuperará esses dados e os utilizará para personalizar a saída de relatório, as opções de entrega e o formato de apresentação do relatório.  
   
- Esta lição supõe que você está usando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar um [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] banco de dados.  
+ Esta lição pressupõe que você está usando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar um [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] banco de dados.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Para criar um banco de dados de assinantes de exemplo  
   
@@ -69,6 +69,6 @@ ms.locfileid: "36009082"
 ## <a name="see-also"></a>Consulte também  
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Criar um banco de dados](../relational-databases/databases/create-a-database.md)   
- [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Criar um relatório de tabela básica &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

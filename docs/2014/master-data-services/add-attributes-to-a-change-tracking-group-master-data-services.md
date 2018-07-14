@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235176"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Adicionar atributos a um grupo de controle de alterações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], adicione atributos ao grupo de controle de alterações quando desejar controlar as alterações feitas nos valores dos atributos.  
@@ -54,11 +54,11 @@ ms.locfileid: "36007282"
   
 6.  Na página **Editar Entidade** :  
   
-    -   Se o atributo for para membros folha, no **atributos folha** painel, selecione o atributo e clique em **Editar atributo de folha**.  
+    -   Se o atributo for para membros folha, nos **atributos de folha** painel, selecione o atributo e clique em **Editar atributo de folha**.  
   
-    -   Se o atributo for para membros consolidados, no **consolidados atributos** painel, selecione o atributo e clique em **Editar atributo consolidado**.  
+    -   Se o atributo for para membros consolidados, nos **consolidado de atributos** painel, selecione o atributo e clique em **Editar atributo consolidado**.  
   
-    -   Se o atributo for para coleções, no **atributos de coleção** painel, selecione o atributo e clique em **Editar atributo de coleção**.  
+    -   Se o atributo for para coleções, nos **atributos de coleção** painel, selecione o atributo e clique em **Editar atributo de coleção**.  
   
 7.  Marque a caixa de seleção **Habilitar controle de alterações** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36007282"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Iniciar ações com base em alterações de valor de atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Iniciar ações com base em alterações de valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   

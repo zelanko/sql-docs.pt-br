@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d4f9da688927d7e96ac2162eb504e0bc15f27526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4722b2eb26f86537deb0283df0df384a4b565101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292706"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
   O otimizador de consulta usa estatísticas sobre colunas para criar planos de consulta que melhoram o desempenho das consultas. As estatísticas são coletadas de tabelas no banco de dados e armazenadas nos metadados do banco de dados.  
@@ -28,9 +28,9 @@ ms.locfileid: "36008168"
   
  Geralmente, os dados de tabela são alterados com o tempo, à medida que linhas são inseridas, atualizadas e excluídas. Isso significa que as estatísticas precisam ser atualizadas periodicamente. Por padrão, as estatísticas em tabelas baseadas em disco são atualizadas automaticamente quando o otimizador determina que elas podem estar desatualizadas.  
   
- As estatísticas sobre tabelas com otimização de memória não são atualizadas por padrão. É preciso atualizá-las manualmente. Use [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) para colunas individuais, índices ou tabelas. Use [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) para atualizar as estatísticas para todos os usuários e as tabelas internas no banco de dados.  
+ As estatísticas sobre tabelas com otimização de memória não são atualizadas por padrão. É preciso atualizá-las manualmente. Use [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) para colunas individuais, índices ou tabelas. Use [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) para atualizar as estatísticas de todas as tabelas internas no banco de dados e do usuário.  
   
- Ao usar [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), você deve especificar `NORECOMPUTE` para desabilitar automática de estatísticas atualização para tabelas com otimização de memória. Para tabelas baseadas em disco, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) atualizará as estatísticas somente se a tabela tiver sido modificada desde a última [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para tabelas com otimização de memória, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) sempre gera estatísticas atualizadas. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) é uma boa opção para tabelas com otimização de memória; caso contrário, você precisa saber quais tabelas têm alterações significativas para que você possa atualizar estatísticas individualmente.  
+ Ao usar [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) ou [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), você deve especificar `NORECOMPUTE` desabilitar automática de estatísticas atualização para tabelas com otimização de memória. Para tabelas baseadas em disco, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) atualizará as estatísticas somente se a tabela tiver sido modificada desde a última [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para tabelas com otimização de memória, [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) sempre gera estatísticas atualizadas. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) é uma boa opção para tabelas com otimização de memória; caso contrário, você precisa saber quais tabelas têm alterações significativas para que você possa atualizar estatísticas individualmente.  
   
  As estatísticas podem ser geradas pela amostragem dos dados ou executando um exame completo. As estatísticas por amostra usam apenas uma amostra dos dados da tabela para estimar a distribuição de dados. As estatísticas por exame completo verificam a tabela inteira para determinar a distribuição de dados. As estatísticas por exame completo geralmente são mais precisas, mas levam mais tempo para serem calculadas. As estatísticas por amostra podem ser coletadas mais rapidamente.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36008168"
   
  Para atualizar estatísticas:  
   
--   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para [criar um plano de manutenção](../maintenance-plans/create-a-maintenance-plan.md) com um [estatística de tarefa de atualização](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à [criar um plano de manutenção](../maintenance-plans/create-a-maintenance-plan.md) com um [estatística de tarefa de atualização](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
 -   Ou atualize estatísticas usando um script [!INCLUDE[tsql](../../../includes/tsql-md.md)], conforme discutido abaixo.  
   

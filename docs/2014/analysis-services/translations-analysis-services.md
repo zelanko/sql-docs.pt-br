@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293286"
 ---
 # <a name="translations-analysis-services"></a>Traduções (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
   
  Em um modelo de dados multidimensionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode inserir várias traduções de uma legenda para fornecer sequências de caracteres específicas da localidade com base no LCID. As traduções podem ser adicionadas ao nome do banco de dados, objetos de cubo e objetos de dimensão do banco de dados.  
   
- Definir uma tradução cria os metadados e legenda traduzida dentro do modelo, mas para processar cadeias de caracteres localizadas em um aplicativo cliente, você deve definir a propriedade `Language` no objeto ou aprovar um parâmetro `Locale Identifier` na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar sequências em francês). Planeje o uso de `Locale Identifier` se desejar dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definindo o `Language` propriedade funciona, mas ele também afeta o processamento e consultas, que pode ter consequências não intencionais. Configuração `Locale Identifier` é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
+ Definir uma tradução cria os metadados e legenda traduzida dentro do modelo, mas para processar cadeias de caracteres localizadas em um aplicativo cliente, você deve definir a propriedade `Language` no objeto ou aprovar um parâmetro `Locale Identifier` na cadeia de conexão (por exemplo, definindo `LocaleIdentifier=1036` para retornar sequências em francês). Planeje o uso de `Locale Identifier` se desejar dar suporte a várias traduções simultâneas do mesmo objeto em idiomas diferentes. Definindo o `Language` propriedade funciona, mas isso também afeta o processamento e consultas, que pode ter consequências não intencionais. Definindo `Locale Identifier` é a melhor opção porque ele é usado somente para retornar cadeias de caracteres traduzidas.  
   
  Uma tradução consiste em um LCID (Identificador de Localidade), uma legenda traduzida para o objeto (por exemplo, dimensão ou nome do atributo), e, opcionalmente, uma associação a uma coluna que fornece valores de dados no idioma de destino. Você pode ter várias traduções, mas só pode usar uma para determinada conexão. Não há limite teórico no número de traduções que você pode inserir no modelo, mas cada tradução adiciona complexidade ao teste e todas as traduções devem compartilhar o mesmo agrupamento, então, quando criar a solução, tenha essas restrições naturais em mente.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36009424"
   
 2.  Em Traduções, especifique o idioma de destino (resolve para um LCID), legenda traduzida e descrição traduzida. A lista de idiomas é consistente em todo o Analysis Services, quer você esteja definindo o idioma do servidor no Management Studio ou adicionando uma substituição de tradução em um único atributo.  
   
-3.  Na página de propriedades do banco de dados, defina `Language` com o mesmo LCID especificado para a tradução. Opcionalmente, defina a `Collation` também se o padrão não faz mais sentido.  
+3.  Na página de propriedades do banco de dados, defina `Language` com o mesmo LCID especificado para a tradução. Opcionalmente, defina o `Collation` também se o padrão não faz mais sentido.  
   
 4.  Compilar e implantar o banco de dados.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "36009424"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Idiomas e agrupamentos &#40;do Analysis Services&#41;](languages-and-collations-analysis-services.md)   
+ [Idiomas e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Definir ou alterar o agrupamento de coluna](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Dicas de globalização e práticas recomendadas &#40;do Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Dicas de globalização e práticas recomendadas para o &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

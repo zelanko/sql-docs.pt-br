@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 69be783360a3b72cec7edb4c9ecb8f8d9d2cc50a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: be3fb744022df7e0dac893a48cc1904ffc0d20a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272612"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Converter colunas existentes em colunas XML
-  A instrução ALTER TABLE oferece suporte a `xml` tipo de dados. Por exemplo, você pode alterar qualquer coluna de tipo de cadeia de caracteres para o `xml` tipo de dados. Observe que nesses casos os documentos contidos na coluna devem estar bem formados. Além disso, se você estiver alterando o tipo da coluna de cadeia de caracteres para xml com tipo, os documentos da coluna serão validados em relação aos esquemas XSD especificados.  
+  A instrução ALTER TABLE dá suporte a `xml` tipo de dados. Por exemplo, você pode alterar qualquer coluna de tipo de cadeia de caracteres para o `xml` tipo de dados. Observe que nesses casos os documentos contidos na coluna devem estar bem formados. Além disso, se você estiver alterando o tipo da coluna de cadeia de caracteres para xml com tipo, os documentos da coluna serão validados em relação aos esquemas XSD especificados.  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 nvarchar(max))  

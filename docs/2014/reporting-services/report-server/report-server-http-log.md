@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202596"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -36,7 +36,7 @@ ms.locfileid: "36009927"
 |**Nome do arquivo**|Por padrão, os nomes do arquivo de log são<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Você pode personalizar o prefixo do nome do arquivo modificando o atributo HttpTraceFileName no arquivo ReportingServicesService.exe.config. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado).|  
 |**Local do arquivo**|Os arquivos são copiados no seguinte local:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Formato do arquivo**|O arquivo está em formato pt-BR. É um arquivo de texto ASCII.|  
-|**Criação de arquivos e de retenção**|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o Gerenciador de Relatórios) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
+|**Criação de arquivo e retenção**|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o Gerenciador de Relatórios) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Configurações do log HTTP do servidor de relatório  
  Para configurar o log HTTP do servidor de relatório, use o bloco de notas para modificar o arquivo **ReportingServicesService.exe.config** . O arquivo de configuração está localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
@@ -58,7 +58,7 @@ ms.locfileid: "36009927"
 ```  
   
 ## <a name="log-file-fields"></a>Campos do arquivo de log  
- A tabela a seguir descreve os campos disponíveis no log. A lista de campos é configurável; Você pode especificar quais campos devem ser incluídos com o `HTTPTraceSwitches` de configuração. O **padrão** coluna Especifica se o campo será incluído no arquivo de log automaticamente se você não especificar `HTTPTraceSwitches`.  
+ A tabela a seguir descreve os campos disponíveis no log. A lista de campos é configurável; Você pode especificar quais campos serão incluídos por meio de `HTTPTraceSwitches` definição de configuração. O **padrão** coluna Especifica se o campo será incluído no arquivo de log automaticamente se você não especificar `HTTPTraceSwitches`.  
   
 |Campo|Description|Padrão|  
 |-----------|-----------------|-------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "36009927"
 |Referenciador|O site anterior visitado pelo cliente.|não|  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de rastreamento do serviço de servidor de relatório](report-server-service-trace-log.md)   
+ [Log de rastreamento de serviço de servidor de relatório](report-server-service-trace-log.md)   
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d0291713da7d8caccf5461eaf92de21207b0bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14156938fc2e80678af2d75d5cdc037532307673
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166707"
 ---
 # <a name="working-with-database-objects"></a>Trabalhando com objetos de banco de dados
   As fases da criação de objetos SMO são as seguintes:  

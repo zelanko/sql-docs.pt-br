@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 57452567fcc01aef2bce0908a8ada4b4395c1425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b1865b395566258684d40305b333f8baecd0c9ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267194"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administração de um grupo de disponibilidade (SQL Server)
   O gerenciamento de um grupo de disponibilidade AlwaysOn existente no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] envolve uma ou mais das seguintes tarefas:  
@@ -139,17 +138,17 @@ ms.locfileid: "36008998"
   
   
 ## <a name="see-also"></a>Consulte também  
- [Grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](always-on-availability-groups-sql-server.md)   
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Configuração de uma instância de servidor para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
+ [Grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Configuração de uma instância de servidor para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Secundárias ativas: Réplicas secundárias legíveis &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [Grupos de disponibilidade do AlwaysOn: Interoperabilidade &#40;do SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
- [Visão geral de instruções Transact-SQL para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
- [Visão geral dos Cmdlets do PowerShell para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Grupos de disponibilidade do AlwaysOn: Interoperabilidade &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [Visão geral de instruções Transact-SQL para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
+ [Visão geral dos Cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

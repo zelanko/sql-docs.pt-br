@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af040fcbc4a93448c54aa773d4840af5f7f2118a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cf429029dd4254aecb1dc0349a6dc5c695c72a0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241786"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>Protocolos de cliente (SQL Server Configuration Manager)
   Para configurar a ordem em que os protocolos são usados pelos clientes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neste computador, clique com o botão direito do mouse em **Protocolos de Cliente** no painel do console e, em seguida, clique em **Propriedades**ou clique com o botão direito do mouse em um protocolo no painel de detalhes e clique em **Ordem**.  

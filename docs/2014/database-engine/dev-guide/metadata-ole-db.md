@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB, metadata
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9979d9f2005f1d383206cb26c0f5fb5d1c6d95d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47d727e52109aa19f9ebf21b2b93d82b91fce4a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263322"
 ---
 # <a name="metadata-ole-db"></a>Metadados (OLE DB)
   Esta seção descreve metadados de parâmetros, metadados de colunas de conjunto de resultados e metadados de conjuntos de linhas de esquema.  
@@ -36,6 +36,6 @@ ms.locfileid: "36009611"
  Contém informações sobre atualizações para conjuntos de linhas do esquema OLE DB.  
   
 ## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Aprimoramentos de data e hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

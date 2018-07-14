@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2913a032f6013678042901dc7fdff6954522da7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afd7f3ca3f39d2c416eeb0e4f05b9dac28a99b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269852"
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
   O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  
@@ -92,7 +92,7 @@ ms.locfileid: "36009670"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar diagramas de banco de dados &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
- [Criar tabelas &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+ [Projetar tabelas &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

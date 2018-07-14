@@ -5,10 +5,9 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 77435fe5d7eba76fd56371d344078420020190e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: b8dd9598fa04b51f250daacaab010739b3855341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225269"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
   O recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
@@ -84,7 +83,7 @@ ms.locfileid: "36009961"
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Esse evento é gerado sempre que um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados. Equivalente à classe de evento Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte de espelhamento de banco de dados. Equivalente a [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados.<br /><br /> Ele é gerado para qualquer acesso a qualquer banco de dados. **Observação:** potencialmente isso poderia gerar registros de auditoria grandes. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados.<br /><br /> Ele é gerado para qualquer acesso a qualquer banco de dados. **Observação:** isso poderia levar a registros de auditoria grandes. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. **Observação:** isso poderia gerar volumes muito grandes de registros de auditoria. <br /><br /> Equivalente a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Esse evento é gerado quando há uma alteração de proprietário para objetos dentro do escopo do banco de dados. Ele é gerado para qualquer alteração de propriedade de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Esse evento é gerado quando GRANT, REVOKE ou DENY é emitido para objetos de banco de dados, como assemblies e esquemas. Ele é gerado para qualquer alteração de permissão de objeto em qualquer banco de dados no servidor. Equivalente a [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
@@ -181,7 +180,7 @@ ms.locfileid: "36009961"
   
 |Nome do grupo de ação|Description|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|Esse evento é gerado sempre que um dos comandos a seguir é emitido:<br /><br /> -CRIAR AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT<br />-AUDITORIA DE SERVIDOR SOLTAR<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT SPECIFICATION<br />-DROP SERVER AUDIT SPECIFICATION<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS<br />-ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS ALTER<br />-ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS SOLTAR|  
+|AUDIT_ CHANGE_GROUP|Esse evento é gerado sempre que um dos comandos a seguir é emitido:<br /><br /> -CRIAR AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT<br />-DROP SERVER AUDIT<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-ALTER SERVER AUDIT SPECIFICATION<br />-DROP SERVER AUDIT SPECIFICATION<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS<br />-ALTER DATABASE AUDIT SPECIFICATION<br />-ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS SOLTAR|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md)  

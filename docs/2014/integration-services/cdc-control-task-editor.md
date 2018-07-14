@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 498c46942b397f48fbaded6d4e98cb088d3c2dd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6ce35e58b34e44690de9992f5e0296edbe4589f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256952"
 ---
 # <a name="cdc-control-task-editor"></a>CDC Control Task Editor
   Use a caixa de diálogo **Editor da tarefa Controle CDC** para configurar a tarefa Controle CDC. A configuração da tarefa Controle CDC inclui definir uma conexão para o banco de dados CDC, a operação de tarefa CDC e as informações de gerenciamento de estado.  

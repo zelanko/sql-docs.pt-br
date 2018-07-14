@@ -1,5 +1,5 @@
 ---
-title: Objetos de programação AMO OLAP avançados | Microsoft Docs
+title: Objetos OLAP AMO de programação avançados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254918"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programando objetos OLAP AMO avançados
   Este tópico explica os detalhes de programação AMO (Objetos de Gerenciamento de Análise) de objetos OLAP avançados. Este tópico contém as seguintes seções:  
@@ -428,7 +428,7 @@ static public void CreatePerspectives(Cube cube)
 |Latência|O período de tempo entre a primeira notificação e o momento em que as imagens MOLAP são destruídas.|  
 |SilenceOverrideInterval|O tempo depois de uma notificação inicial depois da qual o processamento de imagens MOLAP é acionado incondicionalmente.|  
 |ForceRebuildInterval|O tempo (começando depois que uma imagem MOLAP atualizada é descartada) depois do qual o processamento de imagens MOLAP é iniciado incondicionalmente (sem notificações).|  
-|OnlineMode|Quando a imagem MOLAP está disponível.<br /><br /> Pode ser uma `Immediate` ou `OnCacheComplete`.|  
+|OnlineMode|Quando a imagem MOLAP está disponível.<br /><br /> Pode ser `Immediate` ou `OnCacheComplete`.|  
   
 1.  Adicione o objeto <xref:Microsoft.AnalysisServices.ProactiveCaching> à coleção pai. Você precisará atualizar o pai, porque <xref:Microsoft.AnalysisServices.ProactiveCaching> não é um objeto atualizável.  
   

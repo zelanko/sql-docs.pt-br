@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209366"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Compilando, implantando e depurando objetos personalizados
   Depois de escrever o código de um objeto personalizado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve compilar o assembly, implantá-lo e integrá-lo ao [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer para disponibilizar seu uso em pacotes, além de testá-lo e depurá-lo.  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> Implantando o assembly  
- O Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] localiza os objetos personalizados disponíveis para serem usados em pacotes, enumerando os arquivos encontrados em uma série de pastas que são criadas quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado. Quando o padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurações de instalação são usadas, esse conjunto de pastas está localizado em **C:\Program Files\Microsoft SQL Server\120\DTS**. No entanto se você criar um programa de instalação para seu objeto personalizado, você deve verificar o valor da **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** chave do registro para verificar o local deste pasta.  
+ O Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] localiza os objetos personalizados disponíveis para serem usados em pacotes, enumerando os arquivos encontrados em uma série de pastas que são criadas quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é instalado. Quando o padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurações de instalação são usadas, esse conjunto de pastas é localizado sob **C:\Program Files\Microsoft SQL Server\120\DTS**. No entanto se você criar um programa de instalação para seu objeto personalizado, você deve verificar o valor da **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** chave do registro para verificar o local deste pasta.  
   
  Você pode colocar o assembly na pasta de dois modos:  
   
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   Compile o assembly diretamente na pasta apropriada.  
   
- As seguintes pastas de implantação em **C:\Program Files\Microsoft SQL Server\120\DTS** são usadas para os vários tipos de objetos personalizados:  
+ As seguintes pastas de implantação sob **C:\Program Files\Microsoft SQL Server\120\DTS** são usados para os diversos tipos de objetos personalizados:  
   
 |Objeto personalizado|Pasta de implantação|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> Testar e depurar o código  
  A abordagem mais simples para depurar os métodos de tempo de execução de um objeto personalizado é iniciar **dtexec.exe** de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] depois de compilar seu objeto personalizado e executar um pacote que use o componente.  
   
- Se você deseja depurar os métodos do componente em tempo de design, como o `Validate` método, abra um pacote que usa o componente em uma segunda instância de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e anexar a sua **devenv.exe** processo.  
+ Se você quiser depurar os métodos do componente de tempo de design, como o `Validate` método, abra um pacote que usa o componente em uma segunda instância do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e anexe ao seu **devenv.exe** processo.  
   
  Se você também desejar depurar os métodos de tempo de execução do componente quando um pacote estiver aberto e em execução no designer [!INCLUDE[ssIS](../../includes/ssis-md.md)], deverá forçar uma pausa na execução do pacote para que também seja possível anexar ao processo **DtsDebugHost.exe**.  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Retorne ao pacote em pausa e continue até o ponto de interrupção ou clique em **OK** para ignorar a caixa de mensagem gerada pela tarefa Script e continue a execução e a depuração do pacote.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Desenvolvendo objetos personalizados para o Integration Services](developing-custom-objects-for-integration-services.md)   

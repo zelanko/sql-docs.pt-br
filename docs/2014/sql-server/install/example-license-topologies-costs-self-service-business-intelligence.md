@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5939b834b50161e31cbbbf3290ab2342bcda59fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185789"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Topologias de licença de exemplo e custos para o autoatendimento de business intelligence do SQL Server 2014
-  Este tópico ilustra considerações de alto nível para selecionar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edição Business Intelligence ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. O tópico inclui diversas topologias locais de exemplo de Business Intelligence (BI) de autoatendimento da Microsoft. Os exemplos incluem as edições e licenças que você pode utilizar para otimizar o equilíbrio entre custo e desempenho. As topologias, o número de servidores e o custo de licenciamento são fornecidos **somente como exemplos**. O Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e o Microsoft SharePoint 2013 introduziram diversas alterações em licenciamento para oferecerem mais opções para você licenciar seus servidores, usuários e dispositivos. O licenciamento do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte aos mesmos cenários relacionados de Business Intelligence.  
+  Este tópico ilustra considerações de alto nível para selecionar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edição Business Intelligence ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. O tópico inclui diversas topologias locais de exemplo de Business Intelligence (BI) de autoatendimento da Microsoft. Os exemplos incluem as edições e licenças que você pode utilizar para otimizar o equilíbrio entre custo e desempenho. As topologias, o número de servidores e o custo de licenciamento são fornecidos **somente como exemplos**. O Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e o Microsoft SharePoint 2013 introduziram diversas alterações em licenciamento para oferecerem mais opções para você licenciar seus servidores, usuários e dispositivos. O licenciamento do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte aos mesmos cenários relacionados de Business Intelligence.  
   
 -   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponível na edição Business Intelligence e oferece licenciamento por núcleo para algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36011057"
   
 -   [Resumo do licenciamento do SharePoint 2013](#bkmk_sharepoint_license)  
   
--   [Topologia de camada 3 com servidores PowerPivot separados](#bkmk_3tier_powerpivot)  
+-   [Topologia de 3 camadas com servidores PowerPivot separados](#bkmk_3tier_powerpivot)  
   
 -   [Topologia de 3 camadas](#bkmk_3tier)  
   
@@ -90,15 +90,15 @@ ms.locfileid: "36011057"
   
 -   [Licenciamento para ambientes virtuais](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
--   [SQL Server 2014 licenciamento folha de dados - Home Page da Microsoft](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
+-   [SQL Server 2014 licenciamento de folha de dados - Home Page da Microsoft](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
 -   [Licenciamento e edições do SQL server 2014](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx#tab=2)  
   
-1.  **Suposições sobre o SQL Server e mais informações de licenciamento:**  
+1.  **Suposições do SQL Server e mais informações de licenciamento:**  
   
 2.  Os diagramas deste tópico usam o Enterprise Edition do SQL Server para servidores de banco de dados de forma que o conjunto completo de recursos de alta disponibilidade esteja disponível; por exemplo, os Grupos de Disponibilidade AlwaysOn. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-3.  Os servidores deste exemplo são 2 processadores Intel Xeon de 6 núcleos, portanto há um **fator de núcleo do SQL Server** de **1** no cálculo de custos de licenciamento. Para obter mais informações sobre fatores de núcleo e custos de licenciamento, consulte [tabela de fator de núcleo do SQL Server](http://download.microsoft.com/download/9/B/F/9BF63163-D8F9-4339-90AA-EBC9AAFC49AD/SQL2012_CoreFactorTable_Mar2012.pdf) (http://download.microsoft.com/download/0/C/8/0C85665B-11EA-4FF5-B37C-8CC21CF95AC4/BizTalk%202013_CoreFactorTable_**3.19.2013**. v4.pdf).  
+3.  Os servidores deste exemplo são 2 processadores Intel Xeon de 6 núcleos, portanto há um **fator de núcleo do SQL Server** de **1** no cálculo de custos de licenciamento. Para obter mais informações sobre fatores de núcleo e custos de licenciamento, consulte [tabela de fatores de núcleo do SQL Server](http://download.microsoft.com/download/9/B/F/9BF63163-D8F9-4339-90AA-EBC9AAFC49AD/SQL2012_CoreFactorTable_Mar2012.pdf) (http://download.microsoft.com/download/0/C/8/0C85665B-11EA-4FF5-B37C-8CC21CF95AC4/BizTalk%202013_CoreFactorTable_**3.19.2013**. v4.pdf).  
   
 ###  <a name="bkmk_sharepoint_license"></a> Resumo do licenciamento do SharePoint 2013  
  A lista a seguir resume os modelos de licença usados para design da implantação e estimativa de custo da licença. Os preços mostrados são apenas para demonstração.  
@@ -127,7 +127,7 @@ ms.locfileid: "36011057"
   
  As implantações de exemplo são todas ambientes de intranet e, portanto, o licenciamento CAL do SharePoint é necessário.  
   
--   [A lista completa do SharePoint de licenciamento do](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [Lista completa de SharePoint de licenciamento](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
 -   [Como comprar o SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36011057"
   
 -   Este exemplo é uma implantação de intranet; portanto, o licenciamento CAL do SharePoint aplica-se ao SharePoint 2013.  
   
--   Analysis Services no modo PowerPivot (2) é executado fora do farm, mas PowerPivot estiver **no mesmo físico** servidores na função de aplicativo.  
+-   Analysis Services no modo PowerPivot (2) é executado fora do farm, mas o PowerPivot está sendo executado **no mesmo físico** servidores na função de aplicativo.  
   
 -   A função de banco de dados (3) usa o SQL Server Enterprise para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso, grupos de disponibilidade AlwaysOn estão disponíveis.  
   
@@ -190,15 +190,15 @@ ms.locfileid: "36011057"
   
 -   [Supervisor de licenças da Microsoft](http://mla.microsoft.com/default.aspx) (http://mla.microsoft.com/default.aspx).  
   
--   [Licença de acesso para cliente (CAL) decisão ferramenta](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
+-   [Licença de acesso para cliente (CAL) ferramenta de decisão](http://www.microsoft.com/licensing/CalTool/) (http://www.microsoft.com/licensing/CalTool/).  
   
 -   [Microsoft Business Hub: Como comprar](http://www.microsoftbusinesshub.com/How_To_Buy#) (http://www.microsoftbusinesshub.com/How_To_Buy#).  
   
 ### <a name="microsoft-license-information"></a>Informações sobre licença da Microsoft  
   
--   [Sobre licenciamento: Licenças de acesso para cliente e gerenciamento de licenças](http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx) (http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx).  
+-   [Sobre licenciamento: Licenças de acesso para cliente e licenças de gerenciamento](http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx) (http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx).  
   
--   [Sobre licenciamento: Produto pesquisa de licenciamento](http://www.microsoftvolumelicensing.com/default.aspx) (http://www.microsoftvolumelicensing.com/default.aspx).  
+-   [Sobre licenciamento: Pesquisa de licenciamento de produtos](http://www.microsoftvolumelicensing.com/default.aspx) (http://www.microsoftvolumelicensing.com/default.aspx).  
   
 -   [Licenciamento por volume: preços e como comprar](http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx) (http://www.microsoft.com/licensing/how-to-buy/how-to-buy.aspx).  
   
@@ -206,7 +206,7 @@ ms.locfileid: "36011057"
   
 -   [Licenciamento do SQL Server 2014 Developer Edition](http://sqlmag.com/sql-server-2014/sql-server-2014-developer-edition-licensing).  
   
--   [Alterações no licenciamento do SQL Server 2014](http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes)(http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes).  
+-   [Alterações de licenciamento do SQL Server 2014](http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes)(http://www.brentozar.com/archive/2014/04/sql-server-2014-licensing-changes).  
   
 -   [Alterações no licenciamento do SQL Server 2014](https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf)(https://www.directionsonmicrosoft.com/sites/default/files/PDFs/Licensing_Changes_for_SQL_Server_2014.pdf).  
   

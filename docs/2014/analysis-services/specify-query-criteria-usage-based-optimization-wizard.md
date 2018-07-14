@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f350959b0e42b4f2b9adca364ff6bc40bfb1d5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a0877a1f51964287f9a01f00adeae23d2dcfd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176423"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar Critérios de Consulta (Assistente de Otimização com Base no Uso)
   Use a página **Especificar Critérios de Consulta** para escolher uma ou mais opções de filtro para identificar as consultas a serem otimizadas.  

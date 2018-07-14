@@ -1,25 +1,23 @@
 ---
-title: Alterações de comportamento ao gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
+title: Alterações de comportamento no gerenciamento de recursos das ferramentas do SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: ssms
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 151dfd40d56610d8411c33b997ab30d526ffcfa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec19ad96caaf2fd4c9016a35219c260ddef68ff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243476"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
   Este tópico descreve alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

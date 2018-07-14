@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Adicionando loop | Microsoft Docs'
+title: 'Lição 2: Adicionando um loop | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 31
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f67531366ef7ff91e3afcc4b8d55b7cc08635e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1d67ffcac889a49de14f628cf7eb996895cf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281472"
 ---
 # <a name="lesson-2-adding-looping"></a>Lição 2: Adicionando loop
-  Em [lição 1: Criando o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extraiu dados de uma fonte de arquivo simples, transformou os dados usando transformações pesquisa e, finalmente, carregou os dados para o  **FactCurrency** tabela de fatos a **AdventureWorksDW2012** banco de dados de exemplo.  
+  Na [lição 1: Criando o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), você criou um pacote que extraiu dados de uma fonte de arquivo simples, transformou os dados usando transformações pesquisa e, por fim, carregou os dados no  **FactCurrency** tabela de fatos a **AdventureWorksDW2012** banco de dados de exemplo.  
   
  Porém, é raro para um processo de extração, transformação e carregamento (ETL) usar um único arquivo simples. Um típico processo ETL extrairia dados de várias fontes de arquivo simples. Extrair dados de várias fontes requer um fluxo de controle iterativo. Um dos recursos mais aguardados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é a capacidade de adicionar iterações ou loops aos pacotes com facilidade.  
   

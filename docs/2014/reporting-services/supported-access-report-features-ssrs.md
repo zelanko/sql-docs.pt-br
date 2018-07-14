@@ -1,5 +1,5 @@
 ---
-title: Recursos de relatório do Access (SSRS) com suporte | Microsoft Docs
+title: Suporte para recursos de relatório do Access (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268472"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Recursos de relatórios do Access com suporte (SSRS)
   Quando você importa um relatório no Designer de Relatórios, o processo de importação converte o relatório do [!INCLUDE[msCoName](../includes/msconame-md.md)] Access em um arquivo de Linguagem RDL do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a vários recursos do Access. No entanto, devido às diferenças entre o Access e o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], alguns itens são ligeiramente modificados ou não têm suporte. Este tópico descreve como os recursos de relatórios do Access são convertidos em RDL.  
@@ -53,7 +53,7 @@ ms.locfileid: "36008357"
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte a fontes de dados OLE DB, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se você estiver importando relatórios de um arquivo de projeto do Access (.adp), a cadeia de conexão para a fonte de dados será obtida da cadeia de conexão no arquivo .adp. Se você estiver importando relatórios de um arquivo de banco de dados do Access (.mdb ou .accdb), a cadeia de conexão poderá apontar para o banco de dados do Access e talvez seja necessário corrigi-la após a importação dos relatórios. Se a fonte de dados para o relatório do Access for uma consulta, as informações da consulta serão armazenadas sem modificações no RDL. Se a fonte de dados para o relatório do Access for uma tabela, o processo de conversão criará uma consulta baseada no nome da tabela e nos campos da tabela.  
   
 ## <a name="reports-with-custom-modules"></a>Relatórios com módulos personalizados  
- Se não houver personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código contido nos módulos, ele não será convertido. Se o Designer de relatórios encontrar código durante o processo de importação, um aviso será gerado e exibido no **lista de tarefas** janela.  
+ Se não houver personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código contido nos módulos, ele não será convertido. Se o Designer de relatórios encontrar código durante o processo de importação, um aviso será gerado e exibido na **lista de tarefas** janela.  
   
 ## <a name="report-controls"></a>Controles de relatório  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte aos controles do Access a seguir e os inclui em definições do relatório convertidas.  
@@ -71,7 +71,7 @@ ms.locfileid: "36008357"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Se o Designer de relatórios encontrar qualquer um desses controles durante o processo de importação, um aviso será gerado e exibido no **lista de tarefas** janela.  
+ Se o Designer de relatórios encontrar qualquer um desses controles durante o processo de importação, um aviso será gerado e exibido na **lista de tarefas** janela.  
   
  Outros controles, como o ActiveX e Office Web Components, não serão importados. Por exemplo, se um relatório do Access contiver um controle OWC Chart, ele não será convertido quando o relatório for importado.  
   

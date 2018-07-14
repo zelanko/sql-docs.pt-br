@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Locations element
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 692159e12313c20a7e91804cccdeb376228c88e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 901c2d1cccacef54462d5f8cf9df4a4c59907a11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263312"
 ---
 # <a name="locations-element-xmla"></a>Elemento Locations (XMLA)
   Contém uma coleção de elementos [Location](query-element-xmla.md) usados pelo comando pai [Backup](../xml-elements-commands/backup-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md) ou [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) .  

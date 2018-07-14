@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225586"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilando o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
@@ -38,7 +38,7 @@ ms.locfileid: "36009575"
   
 4.  Na caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , expanda Propriedades de Configurações e clique em Utilitário de Implantação.  
   
-5.  No painel à direita do **páginas de propriedade do Tutorial de implantação** caixa de diálogo caixa, verifique `AllowConfigurationChanges` é definido como `true`, defina `CreateDeploymentUtility` para `true`e, opcionalmente, atualize o valor padrão de `DeploymentOutputPath`.  
+5.  No painel à direita do **páginas de propriedade do Tutorial de implantação** diálogo caixa, verifique `AllowConfigurationChanges` é definido como `true`, defina `CreateDeploymentUtility` para `true`e, opcionalmente, atualize o valor padrão de `DeploymentOutputPath`.  
   
 6.  Clique em **OK**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36009575"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um utilitário de implantação](../../2014/integration-services/create-a-deployment-utility.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176483"
 ---
 # <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
   Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
@@ -71,12 +71,12 @@ ms.locfileid: "36008987"
   
 |Opção|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**Nome de usuário específico do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
+|**Nome de usuário específicos do Windows e senha** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usa o seguinte formato:**\<nome de domínio >\\< nome da conta de usuário\>**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de Serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
  <sup>1</sup>ImpersonationMode Especifica o valor para o [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propriedade na fonte de dados.  
   
- <sup>2</sup>ao usar essa opção, se o banco de dados do espaço de trabalho for removido da memória, devido a uma reinicialização ou **retenção de espaço de trabalho** está definida como **descarregar da memória** ou  **Excluir do espaço de trabalho**, e o projeto de modelo é fechado, na sessão subsequente, se você tentar processar dados de tabela, você será solicitado a inserir as credenciais para cada fonte de dados. De maneira semelhante, se um banco de dados modelo implantado for removido da memória, as credenciais para cada fonte de dados serão solicitadas a você.  
+ <sup>2</sup>ao usar essa opção, se o banco de dados do espaço de trabalho for removido da memória, devido a uma reinicialização ou o **retenção de espaço de trabalho** estiver definida como **descarregar da memória** ou  **Excluir do espaço de trabalho**, e o projeto de modelo é fechado, na sessão subsequente, se você tentar processar dados de tabela, você será solicitado a inserir as credenciais para cada fonte de dados. De maneira semelhante, se um banco de dados modelo implantado for removido da memória, as credenciais para cada fonte de dados serão solicitadas a você.  
   
 ##  <a name="bkmk_impers_sec"></a> Segurança  
  As credenciais usadas com representação são persistidas na memória pelo mecanismo analítico na memória xVelocity (VertiPaq) associado ao servidor do Analysis Services que gerencia o banco de dados de espaço de trabalho ou um modelo implantado.  Em nenhum momento as credenciais são gravadas em disco. Se o banco de dados de espaço de trabalho não estiver na memória quando o modelo for implantado, o usuário será solicitado a digitar as credenciais usadas para conectar-se à fonte de dados e buscar dados.  
@@ -87,18 +87,18 @@ ms.locfileid: "36008987"
 ##  <a name="bkmk_imp_newmodel"></a> Representação ao importar um modelo  
  Ao contrários dos modelos tabulares, que podem usar vários diferentes modos de representação para dar suporte à coleta de dados fora do processo, o PowerPivot usa apenas um modo, o ImpersonateCurrentUser. Como o PowerPivot sempre é executado em processo, ele conecta-se a fontes de dados por meio das credenciais do usuário conectado no momento. Em modelos tabulares, as credenciais do usuário conectado no momento são usadas apenas com o recurso **Visualizar e Filtrar** no Assistente de Importação de Tabela e ao exibir as **Propriedades da Tabela**. As credenciais de representação usadas ao importar ou processar dados no banco de dados de espaço de trabalho ou ao importar ou processar dados em um modelo implantado.  
   
- Ao criar um novo modelo com a importação de uma pasta de trabalho PowerPivot existente, por padrão, o designer de modelo configurará a representação para usar a conta de serviço (ImpersonateServiceAccount). É recomendável alterar as credenciais de representação em modelos importados PowerPivot para uma conta de usuário do Windows. Depois que a pasta de trabalho PowerPivot foi importada e o novo modelo criado no designer de modelo, você pode alterar as credenciais usando o **conexões existentes** caixa de diálogo.  
+ Ao criar um novo modelo com a importação de uma pasta de trabalho PowerPivot existente, por padrão, o designer de modelo configurará a representação para usar a conta de serviço (ImpersonateServiceAccount). É recomendável alterar as credenciais de representação em modelos importados PowerPivot para uma conta de usuário do Windows. Depois que a pasta de trabalho do PowerPivot foi importada e o novo modelo criado no designer de modelo, você pode alterar as credenciais usando o **conexões existentes** caixa de diálogo.  
   
  Ao criar um novo modelo com a importação de um modelo existente em um servidor do Analysis Services, as credenciais de representação são passadas do banco de dados modelo existente para o novo banco de dados de espaço de trabalho modelo. Se necessário, você pode alterar as credenciais no novo modelo com o uso da caixa de diálogo **Conexões Existentes** .  
   
 ##  <a name="bkmk_conf_imp_info"></a> Configurando a representação  
  O local e o contexto onde um modelo existe determinará como as informações de representação serão configuradas. Para modelos que estão sendo criados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode configurar informações de representação na página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados na caixa de diálogo **Conexões Existentes** . Para exibir conexões existentes, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Model** , clique em **Conexões Existentes**.  
   
- Para modelos que são implantados em um servidor do Analysis Services, informações de representação podem ser configuradas clicando no botão de reticências (...) da **informações de representação de fonte de dados** propriedade o **depropriedadesdebancodedados** caixa de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Para modelos que são implantados em um servidor do Analysis Services, informações de representação podem ser configuradas clicando no botão de reticências (...) do **informações de representação de fonte de dados** propriedade no **depropriedadesdebancodedados** caixa de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](directquery-mode-ssas-tabular.md)   
  [Fontes de dados &#40;Tabular do SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Implantação de solução de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

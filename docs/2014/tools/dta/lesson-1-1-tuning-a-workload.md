@@ -1,5 +1,5 @@
 ---
-title: Ajuste uma carga de trabalho | Microsoft Docs
+title: Ajustando uma carga de trabalho | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a414a8fac51b52549982ef08456288981b1c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172087"
 ---
 # <a name="tuning-a-workload"></a>Ajustando uma carga de trabalho
   O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para achar o melhor design de banco de dados físico para desempenho de consulta nos bancos de dados e tabelas que você seleciona para ajustar.  
@@ -30,7 +30,7 @@ ms.locfileid: "36009664"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Ajustar uma carga de trabalho de arquivo de script do Transact-SQL  
   
-1.  Copie uma instrução ou instruções de exemplo SELECT de “ A. Usando SELECT para recuperar linhas e colunas” em [Exemplos de SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e cole as instruções no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salve o arquivo como **MyScript.sql** em um diretório onde você pode localizar facilmente.  
+1.  Copie uma instrução ou instruções de exemplo SELECT de “ A. Usando SELECT para recuperar linhas e colunas” em [Exemplos de SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) e cole as instruções no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Salve o arquivo como **Myscript** em um diretório em que você pode localizar facilmente.  
   
 2.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados. Consulte [Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

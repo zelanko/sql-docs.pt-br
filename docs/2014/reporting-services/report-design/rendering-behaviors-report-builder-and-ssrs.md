@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99447693a466e016e84c29cb254bbddd4a75b05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 710d30f8a59abedd98dc3e82cf4233f0ef2c7a66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202506"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamentos de renderização (Construtor de Relatórios e SSRS)
   Dependendo do renderizador selecionado, algumas regras são aplicadas ao corpo do relatório e ao seu conteúdo quando um relatório é renderizado. Como os itens de relatório são ajustados juntos em uma página é determinado pela combinação destes fatores:  
@@ -132,8 +132,8 @@ ms.locfileid: "36008844"
 -   As quebras de página lógicas definidas em itens em células de tabela ou matriz não são mantidas. Isso não se aplica a itens em listas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;SSRS e construtor de relatórios&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Layout de página e renderização &#40;SSRS e construtor de relatórios&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout de página e renderização &#40;relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

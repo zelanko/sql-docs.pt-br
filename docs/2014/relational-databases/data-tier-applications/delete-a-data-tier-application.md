@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
 - sql12.swb.deletedacwizard.deletedac.f1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c5afc38b9c3864790888a41496261adeed76661
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3613ce8ccee33accac25dc702d70fea9536587e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166917"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
@@ -148,7 +148,7 @@ ms.locfileid: "36009570"
   
     -   Para excluir o registro do DAC e desanexar o banco de dados, use o método `Uninstall()` e especifique `DetachDatabase`.  
   
-    -   Para excluir o registro do DAC e descartar o banco de dados, use o `Uninstall()` método e especifique `DropDatabase`.  
+    -   Para excluir o registro do DAC e descartar o banco de dados, use o `Uninstall()` método e especificar `DropDatabase`.  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Exemplo Excluindo o DAC mas deixando o banco de dados (PowerShell)  
  O exemplo a seguir exclui um DAC chamado MyApplication usando o `Unmanage()` método para excluir o DAC, mas deixar o banco de dados intacto.  

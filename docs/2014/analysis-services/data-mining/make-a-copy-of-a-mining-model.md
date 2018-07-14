@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187773"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Criar uma cópia de um modelo de mineração
   A criação de uma cópia de um modelo de mineração é útil quando você deseja criar rapidamente vários modelos de mineração com base nos mesmos dados. Após copiar o modelo, você pode editar a nova cópia alterando parâmetros ou adicionando um filtro.  
@@ -57,13 +57,13 @@ ms.locfileid: "36011497"
   
      Para obter mais informações sobre como utilizar as caixas de diálogo do editor de filtro, consulte [Aplicar um filtro a um modelo de mineração](apply-a-filter-to-a-mining-model.md).  
   
-4.  No **propriedades** janela, no `AlgorithmParameters` caixa de texto, clique em **Setalgorithm parâmetros**e altere os parâmetros de algoritmo, se desejado.  
+4.  No **propriedades** janela, no `AlgorithmParameters` caixa de texto, clique em **definir parâmetros de algoritmo**e altere os parâmetros de algoritmo, se desejado.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
- [Tutoriais e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](delete-a-filter-from-a-mining-model.md)  
   
   

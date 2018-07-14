@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4afba941b06e073f2dddffdb96a2dd95ffda5b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9f39f0eb06bb3a4bd4c2921b23736d1305db3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281502"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapeamentos de coluna (Assistente de Importação e Exportação do SQL Server)
   Use o **mapeamentos de coluna** caixa de diálogo para editar os parâmetros de transformação.  
@@ -50,7 +50,7 @@ ms.locfileid: "36008691"
  Especifique se deseja acrescentar os dados novos aos dados já presentes em uma tabela existente.  
   
  **Editar SQL**  
- Use a instrução padrão no **instrução Create Table SQL** caixa de diálogo caixa, ou modificá-la para suas finalidades. Se essa instrução for modificada, também será necessário fazer alterações associadas no mapeamento de tabela.  
+ Use a instrução padrão na **instrução SQL Create Table** caixa de diálogo caixa, ou modificá-la para suas finalidades. Se essa instrução for modificada, também será necessário fazer alterações associadas no mapeamento de tabela.  
   
  **Ignorar e recriar tabela de destino**  
  Escolha esta opção para substituir a tabela de destino. Esta opção só está disponível ao usar o assistente para criar a tabela de destino. A tabela de destino é ignorada e recriada somente se o pacote criado pelo assistente for salvo e o pacote for executado novamente.  

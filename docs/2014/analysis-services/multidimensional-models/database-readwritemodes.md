@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8a655c379f512f882534166a8c561524e02ce88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1e082e96f5932fa56d4b71eea90d4ae9083cab8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206196"
 ---
 # <a name="database-readwritemodes"></a>Banco de dados ReadWriteModes
-  Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer alterar o banco de dados de leitura/gravação para um banco de dados somente leitura ou vice-versa. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como o compartilhamento da mesma pasta do banco de dados com vários servidores para expandir uma solução e melhorar o desempenho. Nessas situações, o `ReadWriteMode` permite que a propriedade de banco de dados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba facilmente alterar o modo de operação de banco de dados.  
+  Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer alterar o banco de dados de leitura/gravação para um banco de dados somente leitura ou vice-versa. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como o compartilhamento da mesma pasta do banco de dados com vários servidores para expandir uma solução e melhorar o desempenho. Nessas situações, o `ReadWriteMode` permite que a propriedade de banco de dados a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para alterar o modo de operação do banco de dados.  
   
 ## <a name="readwritemode-database-property"></a>Propriedade ReadWriteMode do banco de dados  
- A propriedade `ReadWriteMode` do banco de dados especifica se o banco de dados está em modo de leitura/gravação ou somente leitura. Estes são os únicos dois possíveis valores da propriedade. Quando o banco de dados está no modo somente leitura, nenhuma alteração ou atualização pode ser aplicada a ele. Entretanto, quando o banco de dados está no modo de leitura/gravação, podem ocorrer alterações e atualizações. O `ReadWriteMode` banco de dados está definida como uma propriedade somente leitura; ela só pode ser definida por meio de um `Attach` comando.  
+ A propriedade `ReadWriteMode` do banco de dados especifica se o banco de dados está em modo de leitura/gravação ou somente leitura. Estes são os únicos dois possíveis valores da propriedade. Quando o banco de dados está no modo somente leitura, nenhuma alteração ou atualização pode ser aplicada a ele. Entretanto, quando o banco de dados está no modo de leitura/gravação, podem ocorrer alterações e atualizações. O `ReadWriteMode` banco de dados está definida como uma propriedade somente leitura; ela só pode ser definida por um `Attach` comando.  
   
  Quando um banco de dados é definido para o modo somente leitura, determinadas restrições entram em vigor e afetam o conjunto comum das operações permitidas no banco de dados. Consulte a tabela a seguir para obter as operações restritas.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36011245"
 |Operações em segundo plano|Todas as operações em segundo plano que poderiam modificar o banco de dados são desabilitadas. Isso inclui o processamento lento e o cache pró-ativo.|  
   
 ## <a name="readwritemode-usage"></a>Uso de ReadWriteMode  
- A propriedade `ReadWriteMode` do banco de dados será usada como parte de um comando `Attach` do banco de dados. O `Attach` comando permite que a propriedade de banco de dados seja definida como `ReadWrite` ou `ReadOnly`. O valor da propriedade `ReadWriteMode` do banco de dados não pode ser atualizado diretamente, pois a propriedade está definida como somente leitura. Os bancos de dados são criados com a propriedade `ReadWriteMode` definida como `ReadWrite`. Um banco de dados não pode ser criado no modo somente leitura.  
+ A propriedade `ReadWriteMode` do banco de dados será usada como parte de um comando `Attach` do banco de dados. O `Attach` comando permite que a propriedade de banco de dados a ser definido como `ReadWrite` ou `ReadOnly`. O valor da propriedade `ReadWriteMode` do banco de dados não pode ser atualizado diretamente, pois a propriedade está definida como somente leitura. Os bancos de dados são criados com a propriedade `ReadWriteMode` definida como `ReadWrite`. Um banco de dados não pode ser criado no modo somente leitura.  
   
- Para alternar o `ReadWriteMode` propriedade entre o banco de dados `ReadWrite` e `ReadOnly`, você deve executar uma sequência de `Detach/Attach` comandos.  
+ Para alternar a `ReadWriteMode` propriedade entre banco de dados `ReadWrite` e `ReadOnly`, você deve emitir uma sequência de `Detach/Attach` comandos.  
   
  Todos os banco de dados operações, com exceção de `Attach`, mantenha o `ReadWriteMode` propriedade em seu estado atual do banco de dados. Por exemplo, operações como `Alter`, `Backup`, `Restore` e `Synchronize` preservam o valor `ReadWriteMode`.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c02ad64dfada49434900795f49802e75cf8d2945
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad78ef3b5a142ca7b9d3f1d9a805d7b46e36ce7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189573"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propriedades do NS$&lt;nome do serviço&gt; (guia Serviço)
   Este é o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  

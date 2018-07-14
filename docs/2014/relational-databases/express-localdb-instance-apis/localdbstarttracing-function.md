@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e54d3381fcec5da1d82ce512ead0474ae2c4c82c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7fa1c2519361ac4b4eb37bb0af6ef8c14b82035e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177645"
 ---
 # <a name="localdbstarttracing-function"></a>Função LocalDBStartTracing
   Habilita o rastreamento de chamadas de API para todas as instâncias de LocalDB do SQL Server Express de propriedade do usuário atual do Windows.  

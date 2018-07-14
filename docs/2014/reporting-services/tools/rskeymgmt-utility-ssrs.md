@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -24,13 +24,13 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 46b2afdb0687586761160397b1af197cdba8cd0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214826"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -82,30 +82,30 @@ ms.locfileid: "36009695"
  **-r**  *installationID*  
  Remove as informações de chave simétrica de uma instância de servidor de relatório específica, removendo assim o servidor do relatório de uma implantação em expansão. O *ID_instalação* é um valor GUID que pode ser localizado no arquivo RSReportserver.config.  
   
- `-f`  *Arquivo*  
+ `-f`  *arquivo*  
  Especifica um caminho totalmente qualificado ao arquivo que armazena uma cópia de backup das chaves simétricas.  
   
  Para **rskeymgmt -e**, a chave simétrica é gravada no arquivo especificado.  
   
  Para **rskeymgmt -a**, o valor da chave simétrica armazenado no arquivo é aplicado à instância do servidor de relatório.  
   
- `-p`  *Senha*  
+ `-p`  *senha*  
  (Necessário para `-f`) Especifica a senha usada para fazer backup ou para aplicar uma chave simétrica. Esse valor não pode ficar em branco.  
   
  `-i`  
- Especifica uma instância do servidor de relatório local. Esse argumento é opcional se você instalou o servidor de relatório no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-i` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-i` é necessária.  
+ Especifica uma instância do servidor de relatório local. Esse argumento é opcional se você instalou o servidor de relatórios no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-i` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-i` é necessária.  
   
  `-m`  
  Especifica o nome do computador remoto que hospeda a instância do servidor de relatório que está sendo unido à implantação em expansão do servidor de relatório. Use o nome do computador que o identifica em sua rede.  
   
  `-n`  
- Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento é opcional se você instalou o servidor de relatório no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` é necessária.  
+ Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento é opcional se você instalou o servidor de relatórios no padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` é necessária.  
   
  `-u`  *conta do usuário*  
  Especifica a conta de administrador no computador remoto que você está unindo à implantação em expansão. Se uma conta não for especificada, as credenciais do usuário atual serão usadas.  
   
- `-v`  *Senha*  
- (Necessário para `-u`) Especifica a senha de uma conta de administrador no computador remoto que você deseja unir à implantação em expansão.  
+ `-v`  *senha*  
+ (Necessário para `-u`) Especifica a senha da conta de administrador no computador remoto que você deseja unir à implantação em expansão.  
   
  **-t**  *trace*  
  Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -151,7 +151,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Uma implantação em expansão de servidor de relatório se refere a um modelo de implantação onde várias instâncias do servidor de relatório compartilham o mesmo banco de dados do servidor de relatório. Um banco de dados do servidor de relatório pode ser usado por qualquer instância que armazena suas chaves simétricas no banco de dados. Por exemplo, se um banco de dados do servidor de relatório contiver informações de chave para três instâncias do servidor de relatório, todas as três instâncias serão consideradas membros da mesma implantação em expansão.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
- Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina o `-u` e `-v` argumentos se você estiver unindo instâncias do servidor de relatório são instalados localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
+ Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina a `-u` e `-v` argumentos, se você estiver unindo instâncias do servidor de relatório instalados localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
   
  O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância já iniciada para usar o banco de dados do servidor de relatório e <`newinstance`> é o nome da instância que você quer adicionar à implantação:  
   
@@ -182,6 +182,6 @@ rskeymgmt -r <installationID>
  [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitários de Prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

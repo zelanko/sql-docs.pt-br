@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: fdb1b87e74c93cbacca1f1d18fe4e5c25bc65256
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263353"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Verificação de migração e restrições de chave estrangeira
-  Verificação e restrições de chave estrangeira não são suportadas em [!INCLUDE[hek_2](../includes/hek-2-md.md)] em [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Essas construções são geralmente usadas para impor integridade de dados lógicos no esquema e podem ser importantes em manter a exatidão funcional de aplicativos.  
+  Não há suporte para verificação e restrições de chave estrangeira na [!INCLUDE[hek_2](../includes/hek-2-md.md)] em [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Essas construções são geralmente usadas para impor a integridade de dados lógicos no esquema e podem ser importantes para manter a exatidão funcional de aplicativos.  
   
- Verificações de integridade lógica em uma tabela, como verificação e restrições de chave estrangeira exigem processamento adicional em transações e geralmente devem ser evitadas para aplicações sensíveis ao desempenho. No entanto, se essas verificações são cruciais para seu aplicativo, existem duas soluções alternativas.  
+ Verificações de integridade lógica em uma tabela como a seleção e restrições de chave estrangeira exigem processamento adicional em transações e geralmente devem ser evitadas para aplicativos sensíveis ao desempenho. No entanto, se essas verificações são cruciais para seu aplicativo, existem duas soluções alternativas.  
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verificação de restrições após uma inserção, atualização ou operação de exclusão  
- Essa solução alternativa é otimista, com base na suposição de que a maioria das alterações não violam as restrições. Nessa solução alternativa, dados são modificados primeiro antes das restrições serão avaliadas. Se uma restrição for violada, seriam detectado, mas a alteração não será revertida novamente.  
+ Essa solução alternativa otimista, baseia-se na suposição de que a maioria das alterações não violem as restrições. Nessa solução alternativa, dados são modificados pela primeira vez antes das restrições serão avaliadas. Se uma restrição for violada, seriam detectado, mas a alteração será não será revertida.  
   
- Essa solução tem a vantagem de ter um impacto mínimo no desempenho, pois a modificação de dados não está bloqueada por verificações de restrição. No entanto, se ocorrer uma mudança que violam as restrições de um ou mais, o processo de reverter essa alteração pode levar muito tempo.  
+ Essa solução alternativa tem a vantagem de ter um impacto mínimo sobre o desempenho porque a modificação de dados não está bloqueada por verificações de restrição. No entanto, se ocorrer uma alteração que viola uma ou mais restrições, o processo de reverter essa alteração pode levar muito tempo.  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Impor restrições antes de uma operação de inserção, atualização ou Delete  
- Essa solução alternativa emula o comportamento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restrições. As restrições são verificadas antes de modificação de dados ocorre e encerrará a transação se uma verificação falhar. Esse método gera uma penalidade de desempenho de modificações de dados, mas garante que os dados em uma tabela sempre satisfaçam as restrições.  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Impor restrições antes de uma inserção, atualização ou operação de exclusão  
+ Essa solução alternativa emula o comportamento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restrições. As restrições são verificadas antes de modificação de dados ocorre e encerrará a transação se uma verificação falhar. Esse método resulta em uma penalidade de desempenho em modificações de dados, mas garante que os dados dentro de uma tabela sempre satisfazem as restrições.  
   
- Quando a integridade de dados lógico é crucial para correção e modificações que violam uma restrição provavelmente usá-lo. No entanto, para garantir a integridade, todas as modificações de dados devem ocorrer através de procedimentos armazenados que incluem esses imposições. Modificações por meio de consultas ad hoc e outros procedimentos armazenados não irá impor essas restrições e, portanto, podem violá-los sem qualquer aviso.  
+ Use essa solução alternativa quando a integridade de dados lógico é crucial para correção e provavelmente modificações que violam uma restrição. No entanto, para garantir a integridade, todas as modificações de dados devem ocorrer por meio de procedimentos armazenados que incluem essas imposições. Modificações por meio de consultas ad hoc e outros procedimentos armazenados não irá impor essas restrições e, portanto, podem violá-los sem aviso.  
   
 ## <a name="sample-code"></a>Código de exemplo  
- Os exemplos a seguir baseiam-se no banco de dados AdventureWorks2012. Especificamente, esses exemplos são baseados em [vendas]. Tabela [SalesOrderDetail] e a seleção associada e restrições de chave estrangeira, além de índice exclusivo.  
+ Os exemplos a seguir baseiam-se no banco de dados AdventureWorks2012. Especificamente, esses exemplos são baseados em [Sales]. Tabela [SalesOrderDetail] e sua seleção associada e restrições de chave estrangeira, além de índice exclusivo.  
   
- Os procedimentos armazenados especificados aqui são para apenas operações de inserção. Procedimentos armazenados para atualizar e excluir operações deve ter estruturas semelhantes.  
+ Os procedimentos armazenados especificados aqui são para somente operações de inserção. Procedimentos armazenados para atualizar e excluir operações deve ter estruturas semelhantes.  
   
 ## <a name="table-definition-for-the-workarounds"></a>Definição de tabela para as soluções alternativas  
- Antes de converter em uma tabela com otimização de memória, a definição de [vendas]. [SalesOrderDetail] é o seguinte:  
+ Antes de converter em uma tabela com otimização de memória, a definição para [Sales]. [SalesOrderDetail] é o seguinte:  
   
 ```tsql  
 USE [AdventureWorks2012]  
@@ -101,9 +101,9 @@ ALTER TABLE [Sales].[SalesOrderDetail] CHECK CONSTRAINT [CK_SalesOrderDetail_Uni
 GO  
 ```  
   
- Depois de converter em uma tabela com otimização de memória, a definição de [vendas]. [SalesOrderDetail] é o seguinte:  
+ Depois de converter em uma tabela com otimização de memória, a definição para [Sales]. [SalesOrderDetail] é o seguinte:  
   
- Observe que rowguid não é mais um ROWGUIDCOL pois ele não é suportado em [!INCLUDE[hek_2](../includes/hek-2-md.md)]. A coluna foi removida. Além disso, LineTotal é uma coluna computada e fora do escopo deste artigo, portanto ele também foi removido.  
+ Observe que rowguid é mais um ROWGUIDCOL porque não tem suporte no [!INCLUDE[hek_2](../includes/hek-2-md.md)]. A coluna foi removida. Além disso, LineTotal é uma coluna computada e fora do escopo deste artigo, portanto, ele também foi removido.  
   
 ```tsql  
 USE [AdventureWorks2012]  
@@ -187,7 +187,7 @@ BEGIN TRANSACTION
 END  
 ```  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Impor restrições antes de uma inserção, atualização ou exclusão da operação  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Impor restrições antes de uma inserção, atualização ou operação de exclusão  
   
 ```tsql  
 USE AdventureWorks2012  

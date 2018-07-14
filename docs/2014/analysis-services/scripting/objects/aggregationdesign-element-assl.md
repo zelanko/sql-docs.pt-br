@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8b02460500a79d1ff98dfac84a07782c388ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfebce28ae08d0d76fa851b9d9df3ded8f6c28fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200086"
 ---
 # <a name="aggregationdesign-element-assl"></a>Elemento AggregationDesign (ASSL)
   Define um conjunto de definições de agregação que podem ser compartilhadas entre várias partições de um banco de dados.  
@@ -66,7 +66,7 @@ ms.locfileid: "36009840"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[AggregationDesigns](../collections/aggregationdesigns-element-assl.md)|  
-|Elementos filho|[Agregações](../collections/aggregations-element-assl.md), [anotações](../collections/annotations-element-assl.md), [descrição](../properties/description-element-assl.md), [dimensões](../collections/dimensions-element-assl.md), [EstimatedPerformanceGain](../properties/estimatedperformancegain-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md)|  
+|Elementos filho|[As agregações](../collections/aggregations-element-assl.md), [anotações](../collections/annotations-element-assl.md), [descrição](../properties/description-element-assl.md), [dimensões](../collections/dimensions-element-assl.md), [EstimatedPerformanceGain](../properties/estimatedperformancegain-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AggregationDesign>.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - classification matrix
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1944620e5c83485a01b9bc856cc67e9e6908c769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d87c2d37ed69e2cc3f3e224ddf1a489b34425b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249636"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de classificação (Suplementos de Mineração de Dados do SQL Server)
   ![Botão matriz de classificação, faixa de opções mineração de dados](media/dmc-cmatrix.gif "botão matriz de classificação, faixa de opções mineração de dados")  
@@ -40,11 +40,11 @@ ms.locfileid: "36008080"
   
 ||Bronze (real)|Ouro (real)|Prata (real)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45%**|15.18%|% de 1,70|  
-|Ouro|2.72%|**84.82%**|0.00%|  
-|Prata|1.84%|0.00%|**93.80%**|  
-|*Corrigir*|*95.45%*|*84.82%*|*98.30%*|  
-|*Classificadas incorretamente*|*4.55%*|*15.18%*|*% de 1,70*|  
+|Bronze|**% 94.45**|% 15.18|% 1,70|  
+|Ouro|% 2.72|**% 84.82**|0.00%|  
+|Prata|% 1.84|0.00%|**% 93.80**|  
+|*Corrigir*|*% 95.45*|*% 84.82*|*% 98.30*|  
+|*Classificado incorretamente*|*% 4.55*|*% 15.18*|*% 1,70*|  
   
 -   Cada coluna mostra os valores reais no conjunto de dados de teste.  
   
@@ -66,15 +66,15 @@ ms.locfileid: "36008080"
   
      Dica: talvez seja difícil interpretar uma matriz de classificação se a coluna previsível tiver muitas colunas a serem comparadas.  
   
-     No **selecionar colunas para prever** página, você também pode especificar se deseja exibir a contagem de valores corretos e incorretos, ou uma porcentagem.  
+     No **selecionar colunas para prever** página, você também pode especificar se deseja exibir a contagem de valores corretos e incorretos ou exibir uma porcentagem.  
   
 4.  Na página Selecionar Dados de Origem, indique se você está usando dados de teste externos, ou os dados de teste salvos com o modelo.  
   
-5.  Se você usar dados de teste externos, você deve mapear o modelo para as colunas de entrada no **especificar relação** página do assistente.  
+5.  Se você usar dados externos de teste, você precisará mapear o modelo para as colunas de entrada sobre o **especifique a relação** página do assistente.  
   
      Se você usar o conjunto de dados de teste inserido, o mapeamento será realizado para você  
   
-6.  Clique em **concluir** para executar previsões em relação ao modelo e gerar a matriz de classificação.  
+6.  Clique em **concluir** para executar previsões no modelo e gerar a matriz de classificação.  
   
      O assistente cria um relatório que contém a matriz de classificação e outros detalhes sobre a análise. Este relatório é salvo como uma tabela no Excel, com um resumo acima do relatório que indica quantos casos foram previstos corretamente e quantas previsões foram incorretas.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "36008080"
 -   O modelo de mineração de dados e os novos dados que você estiver usando para teste deverão conter pelo menos uma coluna que possa ser prevista, e as colunas devem conter o mesmo tipo de dados.  
   
 ### <a name="known-issues"></a>Problemas conhecidos  
- No SQL Server 2012 e SQL Server 2014, a capacidade de mapear o conjunto de dados de teste interno para o modelo não está funcionando **matriz de classificação** ferramenta. No entanto, você pode especificar um conjunto de dados externo, e selecionar o treinamento definido como a entrada para determinar o erro no conjunto de dados original.  
+ No SQL Server 2012 e SQL Server 2014, a capacidade de mapear o conjunto de dados de teste interno para o modelo não está funcionando na **matriz de classificação** ferramenta. No entanto, você pode especificar um conjunto de dados externo, e selecionar o treinamento definido como a entrada para determinar o erro no conjunto de dados original.  
   
 ## <a name="see-also"></a>Consulte também  
- [Validando modelos e usando modelos para previsão &#40;dados suplementos de mineração para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Explorar dados &#40;suplementos de mineração de dados do SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [Detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   

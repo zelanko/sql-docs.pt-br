@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 - sql12.rtp.rptdesigner.dataview.genericquerydesigner.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e7fa6d6f2d3ae55d6a01ffdfcaa541e1d29e34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e24396a7b851bf3e210bd31318f52b757f15a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177083"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta baseado em texto
   Use o designer de consulta baseado em texto para especificar uma consulta usando o idioma de consulta suportado pela fonte de dados, execute a consulta e exiba os resultados no tempo de design. Você pode especificar várias instruções do [!INCLUDE[tsql](../includes/tsql-md.md)] , consulta ou sintaxe de comando para as extensões de processamento de dados e consultas que são especificadas como expressões. Como o designer de consulta baseado em texto não processa previamente a consulta e pode acomodar qualquer tipo de sintaxe de consulta, esta é a ferramenta de designer de consulta padrão para muitos tipos de fontes de dados.  
@@ -65,7 +65,7 @@ ms.locfileid: "36008839"
 SELECT LastName FROM Person.Person;  
 ```  
   
- Você pode usar qualquer instrução do [!INCLUDE[tsql](../includes/tsql-md.md)] para o Tipo de Comando Text, incluindo as instruções `EXEC`. A consulta a seguir chama o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procedimento armazenado `uspGetEmployeeManagers` e retorna o cadeia de comandos para o funcionário com o número de identificação 1.  
+ Você pode usar qualquer instrução do [!INCLUDE[tsql](../includes/tsql-md.md)] para o Tipo de Comando Text, incluindo as instruções `EXEC`. A consulta a seguir chama o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] procedimento armazenado `uspGetEmployeeManagers` e retorna a cadeia de comando para o funcionário com o número de identificação 1.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -91,14 +91,14 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- Quando você inserir o nome da tabela Sales. Customer, é o equivalente de criação de [!INCLUDE[tsql](../includes/tsql-md.md)] instrução `SELECT * FROM Sales.Customer;`.  
+ Quando você insere o nome da tabela Sales. Customer, é o equivalente a criar o [!INCLUDE[tsql](../includes/tsql-md.md)] instrução `SELECT * FROM Sales.Customer;`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de Design no relatório Designer do SQL Server Data Tools consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [O tipo de conexão do SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tipo de conexão OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Tipo de Conexão ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Tipo de Conexão do ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   

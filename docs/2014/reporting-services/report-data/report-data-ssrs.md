@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214786"
 ---
 # <a name="report-data-ssrs"></a>Dados de relatório (SSRS)
   Os dados do relatório podem vir de várias fontes de dados de sua organização. Sua primeira etapa de criação de um relatório é criar fontes de dados e conjuntos de dados que representem os dados de relatório subjacentes. Cada fonte de dados inclui informações sobre a conexão de dados. Cada conjunto de dados inclui um comando de consulta que define o conjunto de campos a serem usados como dados de uma fonte de dados. Para visualizar os dados de cada conjunto de dados, adicione uma região de dados, como uma tabela, uma matriz ou um mapa. Quando o relatório é processado, as consultas são executadas na fonte de dados e cada região de dados é expandida conforme necessário para exibir os resultados da consulta do conjunto de dados.  
   
 ##  <a name="BkMk_ReportDataTerms"></a> Termos  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ Se você estiver familiarizado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conceitos, examine os termos a seguir no [conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *conexão de dados*, *dados inseridos fontes*, *fontes de dados compartilhadas*, *conjuntos de dados inseridos*, *conjuntos de dados compartilhados*, *consultas de conjunto de dados* , *partes de relatório*, e *alertas de dados*.  
   
 ##  <a name="BkMk_ReportDataTips"></a> Dicas para especificar dados de relatório  
  Use as informações a seguir para criar sua estratégia de dados de relatório.  
@@ -61,7 +61,7 @@ ms.locfileid: "36009925"
   
 -   Compreenda as arquiteturas e as ferramentas de cliente/servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo, no Designer de Relatórios, você cria relatórios em uma máquina cliente que usa tipos de fonte de dados internos. Quando você publica um relatório, os tipos de fonte de dados devem ter suporte no servidor de relatório ou no site do SharePoint.  Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
--   As fontes de dados e os conjuntos de dados são criados em um relatório e publicados em um servidor de relatório ou site do SharePoint em uma ferramenta de criação de cliente. As fontes de dados podem ser criadas diretamente no servidor de relatório. Depois de elas serem publicadas, você pode configurar credenciais e outras propriedades no servidor de relatório. Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [Reporting Services ferramentas](../tools/reporting-services-tools.md).  
+-   As fontes de dados e os conjuntos de dados são criados em um relatório e publicados em um servidor de relatório ou site do SharePoint em uma ferramenta de criação de cliente. As fontes de dados podem ser criadas diretamente no servidor de relatório. Depois de elas serem publicadas, você pode configurar credenciais e outras propriedades no servidor de relatório. Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) e [ferramentas do Reporting Services](../tools/reporting-services-tools.md).  
   
 -   As fontes de dados que você pode usar dependem de quais extensões de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] estão instaladas. O suporte para fontes de dados pode diferir por ferramenta de criação de cliente, por versão do servidor de relatório e por plataforma de servidor de relatório. Para obter mais informações, consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36009925"
 |Gerenciar fontes de dados depois de elas serem publicadas|[Gerenciar fontes de dados de relatório](manage-report-data-sources.md)|  
 |Gerenciar conjuntos de dados compartilhados depois de eles serem publicados|[Gerenciar conjuntos de dados compartilhados](manage-shared-datasets.md)|  
 |Criar e gerenciar alertas de dados|[Alertas de dados do Reporting Services](../tutorial-creating-a-basic-table-report-report-builder.md)|  
-|Armazenar um conjunto de dados compartilhado|[Conjuntos de dados compartilhado em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)|  
+|Armazenar um conjunto de dados compartilhado|[Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)|  
 |Agendar um conjunto de dados compartilhado para pré-carregar o cache|[Agendas](../subscriptions/schedules.md)|  
 |Adicionar uma extensão de dados|[Implementar uma extensão de processamento de dados](../extensions/data-processing/implementing-a-data-processing-extension.md)|  
   

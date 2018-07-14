@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 700c24ee55579fef980f57f1d4fd39e9f545872a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 071ff48b4b259eb35b913b63ff3547da7bf0fb28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222946"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStringValue (classe ClientNetworkProtocolProperty)
   Define o valor de cadeia de caracteres da propriedade atual referenciado pelo [PropertyIdx Property (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  

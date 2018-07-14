@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 810ad8d5d3d977d49469e441efff0b5189c0e4f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a22c2d234ca855d7de9f9dad81d0be4c6b014199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177724"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
   Usar um servidor de teste para ajustar um banco de dados em um servidor de produção é uma vantagem importante do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Usando esse recurso, você pode descarregar a sobrecarga de ajuste em um servidor de teste sem copiar os dados reais no servidor de teste do servidor de produção.  
@@ -42,7 +42,7 @@ ms.locfileid: "36008631"
   
 -   O usuário que deseje usar um servidor de teste para ajustar um banco de dados em um servidor de produção deve existir em ambos os servidores ou este cenário não funcionará.  
   
--   O procedimento armazenado estendido, **xp_msver**, deve ser habilitado para usar o cenário de servidor de teste/servidor de produção. [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa esse procedimento armazenado estendido para buscar o número de processadores e a memória disponível do servidor de produção a ser usado durante a otimização do servidor de teste. Se **xp_msver** não for habilitado, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumirá as características de hardware do computador no qual o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está sendo executado. Se as características de hardware do computador onde Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está sendo executado não estão disponíveis, são assumidos um processador e 1024 MB (megabytes) de memória. Esse procedimento armazenado estendido é ativado por padrão quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [configuração da área de superfície](../security/surface-area-configuration.md) e [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   O procedimento armazenado estendido, **xp_msver**, deve ser habilitado para usar o cenário de servidor de teste/servidor de produção. [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa esse procedimento armazenado estendido para buscar o número de processadores e a memória disponível do servidor de produção a ser usado durante a otimização do servidor de teste. Se **xp_msver** não for habilitado, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumirá as características de hardware do computador no qual o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está sendo executado. Se as características de hardware do computador onde Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está sendo executado não estão disponíveis, são assumidos um processador e 1024 MB (megabytes) de memória. Esse procedimento armazenado estendido é ativado por padrão quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [configuração da área da superfície](../security/surface-area-configuration.md) e [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] espera que as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sejam iguais no servidor de teste e no servidor de produção. Se houver duas edições diferentes, a edição no servidor de teste terá precedência. Por exemplo, se o servidor de teste estiver executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não incluirá exibições indexadas, particionamentos e operações online em suas recomendações mesmo que o servidor de produção esteja executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise.  
   

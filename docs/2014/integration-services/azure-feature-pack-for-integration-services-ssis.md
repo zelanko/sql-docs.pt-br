@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281732"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack do Azure
 O Feature Pack do SSIS (SQL Server Integration Services) para Azure é uma extensão que oferece os componentes listados nesta página para o SSIS se conectar aos serviços do Azure, transferir dados entre o Azure e fontes de dados locais e processar dados armazenados no Azure.
@@ -69,7 +69,7 @@ O Feature Pack do SSIS (SQL Server Integration Services) para Azure é uma exten
     
     -   [Destino do Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Enumerador de BLOBs do Azure & ADLS enumerador de arquivo. Consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Enumerador de Blob do Azure & enumerador de arquivos ADLS. Consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Baixe o Feature Pack  
@@ -98,7 +98,7 @@ Você deve instalar os seguintes pré-requisitos antes de instalar este feature 
   
 5.  Use a tarefa Download de Blob do Azure HDInsight para baixar dados de saída de Pig/Hive do armazenamento de blobs do Azure.  
   
- ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "BigDataScenario de AzureConnector de SSIS")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>Arquivamento de dados em nuvem  
  Use o destino de blob do Azure em um pacote do SSIS para gravar dados de saída em um armazenamento de blobs do Azure ou use a fonte de blob do Azure para ler dados de um armazenamento de blobs do Azure.  
@@ -109,6 +109,6 @@ Você deve instalar os seguintes pré-requisitos antes de instalar este feature 
   
  E use o contêiner Loop Foreach com o enumerador de blob do Azure para processar dados em vários arquivos de blob.  
   
- ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
+ ![SSIS-AzureConnector-3 CloudArchive](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

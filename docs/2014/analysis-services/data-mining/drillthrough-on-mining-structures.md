@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f65a4b6e97fab978ec156d97f525818722b299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e01f903d28368179a7c249f3a8bbb7ac7c159e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246086"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Detalhamento em estruturas de mineração
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
@@ -40,7 +40,7 @@ ms.locfileid: "36009261"
   
 -   Se você criar a estrutura de mineração usando DMX, use a cláusula WITH DRILLTHROUGH. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
--   O detalhamento funciona com a recuperação de informações sobre os casos de treinamento armazenados em cache quando você processou a estrutura de mineração. Portanto, se você limpar os dados armazenados em cache após processar a estrutura alterando o <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriedade `ClearAfterProcessing`, o detalhamento não funcionará. Para habilitar o detalhamento para colunas de estrutura, você deve alterar o <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriedade `KeepTrainingCases` e, em seguida, reprocessar a estrutura.  
+-   O detalhamento funciona com a recuperação de informações sobre os casos de treinamento armazenados em cache quando você processou a estrutura de mineração. Portanto, se você limpar os dados armazenados em cache após processar a estrutura alterando a <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriedade para `ClearAfterProcessing`, detalhamento não funcionará. Para habilitar o detalhamento para colunas de estrutura, você deve alterar o <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> propriedade para `KeepTrainingCases` e, em seguida, reprocessar a estrutura.  
   
 -   Verifique se a estrutura de mineração e o modelo de mineração tem o [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) propriedade definida como `True`. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36009261"
 |-|-|  
 |Use o detalhamento para estruturar a partir de visualizadores do modelo de mineração|[Usar detalhamento dos visualizadores do modelo](use-drillthrough-from-the-model-viewers.md)|  
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](data-mining-queries.md)|  
-|Obtenha informações sobre permissões que se aplicam a estruturas de mineração e modelos de mineração específicos.|[Conceder permissões em estruturas de mineração de dados e modelos de &#40;do Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Obtenha informações sobre permissões que se aplicam a estruturas de mineração e modelos de mineração específicos.|[Conceder permissões em estruturas de mineração de dados e modelos de &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Detalhamento em modelos de mineração](drillthrough-on-mining-models.md)  

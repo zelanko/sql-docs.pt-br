@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Change Audit event class
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb94391f1e991b612c2b19a3e6c7f50ce06031d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 71e90f9b20603601e96981ac8aab37e615ad9d1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233396"
 ---
 # <a name="audit-change-audit-event-class"></a>Classe de evento Audit Change Audit
   A classe de evento **Audit Change Audit** ocorre sempre que uma modificação de rastreamento de auditoria é feita.  

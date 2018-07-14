@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294056"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
   Um gráfico de forma exibe os dados de valor como porcentagens do todo. São usados gráficos de forma normalmente para mostrar comparações proporcionais entre valores diferentes em um conjunto. Categorias são representadas por segmentos individuais da forma. O tamanho do segmento é determinado pelo valor. Os gráficos de forma tem uso semelhante aos gráficos de pizza, exceto que eles classificam as categorias do maior para o menor.  
@@ -45,7 +45,7 @@ ms.locfileid: "36006761"
   
 -   Os gráficos de forma são mais eficientes para mostrar porcentagens proporcionais na ordem classificada. No entanto, para manter a consistência, o gráfico não classifica os valores no seu conjunto de dados por padrão. Considere classificar seus valores do mais alto para o mais baixo para representar com mais precisão seus dados como um funil ou uma pirâmide. Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Valores nulos, vazios, negativos e zero não têm nenhum valor quando for calcular as razões. Por isso, esses valores não são mostrados em um gráfico de forma. Se quiser indicar visualmente esse tipo de valores no seu gráfico, mude o tipo de gráfico para algo diferente de gráfico de forma. Para obter mais informações sobre como adicionar pontos vazios ao gráfico de forma não, consulte [adicionar pontos de vazios ao gráfico &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Valores nulos, vazios, negativos e zero não têm nenhum valor quando for calcular as razões. Por isso, esses valores não são mostrados em um gráfico de forma. Se quiser indicar visualmente esse tipo de valores no seu gráfico, mude o tipo de gráfico para algo diferente de gráfico de forma. Para obter mais informações sobre como adicionar pontos vazios a um gráfico sem forma, consulte [adicionar pontos vazios a gráfico de &#40;construtor de relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Se estiver definindo suas próprias cores em um gráfico de forma usando uma paleta personalizada, certifique-se de ter cores suficientes na sua paleta para realçar cada ponto de dados com sua própria cor exclusiva. Para obter mais informações, consulte [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36006761"
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

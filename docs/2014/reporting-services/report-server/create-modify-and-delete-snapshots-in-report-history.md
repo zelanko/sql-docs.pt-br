@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6bfd685dd37b40f943a014c2a7230b11c4495216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8954e5f1959460c8546543e79b2db9cd49c8342b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270242"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Criar, modificar e excluir instantâneos no histórico de relatório
   O histórico de relatórios é uma coleção de instantâneos de relatório. Você pode manter o histórico de relatórios adicionando e excluindo instantâneos ou modificando propriedades que afetam o armazenamento do histórico de relatórios. O histórico de relatórios pode ser criado manualmente ou em uma agenda.  
@@ -64,7 +64,7 @@ ms.locfileid: "36009917"
  O histórico de relatórios também é excluído quando você exclui um relatório. Por exemplo, se você excluir um relatório de vendas mensais porque está substituindo esse relatório por uma versão mais recente, todo o histórico associado ao relatório também será excluído. No entanto, se você mover um relatório, todo o histórico de relatórios também será movido.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar histórico de relatórios &#40;Reporting Services no SharePoint modo integrado&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Criar histórico de relatórios &#40;modo integrado do Reporting Services no SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Adicionar um instantâneo ao histórico de relatórios &#40;Gerenciador de relatórios&#41;](add-a-snapshot-to-report-history-report-manager.md)   

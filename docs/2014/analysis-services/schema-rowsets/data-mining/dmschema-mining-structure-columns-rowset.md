@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171577"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS
-  Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que esteja executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Descreve as colunas individuais de todas as estruturas de mineração implantadas em um servidor que está executando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_STRUCTURE_COLUMNS` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_STRUCTURE_COLUMNS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36010307"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Um booliano que indica se esta coluna tem um valor padrão.<br /><br /> Será `TRUE` se a coluna puder conter `NULL`; caso contrário, será `FALSE`.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||O indicador do tipo de dados da coluna. Por exemplo:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||O GUID do tipo de dados da coluna. Os provedores que não usam os GUIDs para identificar tipos de dados deverão retornar `NULL` nesta coluna.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||O comprimento máximo possível de um valor na coluna. Para colunas de caracteres, de binários ou de bits, será uma das opções a seguir:<br /><br /> -O comprimento máximo da coluna em caracteres, em bytes ou em bits, respectivamente, se o comprimento é definido. Por exemplo, uma coluna `CHAR(5)` de uma tabela SQL terá o comprimento máximo de 5.<br />-O comprimento máximo dos dados de tipo em caracteres, em bytes ou bits, respectivamente, se a coluna não tiver um comprimento definido.<br />-Zero (0) se a coluna ou o tipo de dados tem um comprimento máximo definido.<br />-   `NULL` todos os outros tipos de colunas.|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||O comprimento máximo possível de um valor na coluna. Para colunas de caracteres, de binários ou de bits, será uma das opções a seguir:<br /><br /> -O comprimento máximo da coluna em caracteres, bytes ou em bits, respectivamente, se o comprimento é definido. Por exemplo, uma coluna `CHAR(5)` de uma tabela SQL terá o comprimento máximo de 5.<br />-O comprimento máximo dos dados de tipo em caracteres, bytes ou em bits, respectivamente, se a coluna não tiver um comprimento definido.<br />-Zero (0) se a coluna ou o tipo de dados tem um comprimento máximo definido.<br />-   `NULL` para todos os outros tipos de colunas.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||O comprimento máximo em octetos (bytes) da coluna, se o tipo da coluna for caractere ou binário. Um valor zero (0) significa que a coluna não tem um comprimento máximo. Será `NULL` para todos os outros tipos de colunas.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||A precisão máxima da coluna se o seu tipo de dados for um tipo numérico diferente de `VARNUMERIC`; será `NULL` se o tipo de dados da coluna não for numérico ou se for `VARNUMERIC`.<br /><br /> A precisão de colunas com o tipo de dados `DBTYPE_DECIMAL` ou `DBTYPE_NUM`ERIC dependerá da definição da coluna.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||O número de dígitos à direita da vírgula decimal se o indicador do tipo da coluna for `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` ou `DBTYPE_VARNUMERIC`. Caso contrário, será `NULL`.|  
@@ -69,7 +69,7 @@ ms.locfileid: "36010307"
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Uma lista delimitada por vírgulas de sinalizadores de modelagem. O único sinalizador suportado para uma coluna de estrutura é "`NOT NULL`".|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Um booliano que indica se esta coluna está relacionada à chave.<br /><br /> Será `VARIANT_TRUE` se esta coluna for relacionada à chave; caso contrário, será `VARIANT_FALSE`. Se a chave for uma única coluna, o `RELATED_ATTRIBUTE` campo opcionalmente pode conter seu nome de coluna.|  
 |`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||O nome da coluna de destino à qual a coluna atual está relacionada ou de quem é uma propriedade especial.|  
-|`CONTAINING_COLUMN`|`DBTYPE_WSTR`||O nome do `TABLE` coluna que contém esta coluna. `NULL` se nenhuma tabela contiver a coluna.|  
+|`CONTAINING_COLUMN`|`DBTYPE_WSTR`||O nome da `TABLE` coluna que contém esta coluna. `NULL` se nenhuma tabela contiver a coluna.|  
 |`IS_POPULATED`|`DBTYPE_BOOL`||Um booliano que indica se esta coluna aprendeu um conjunto de valores possíveis.<br /><br /> Será `TRUE` se a coluna aprendeu um conjunto de valores possíveis; caso contrário, será `FALSE`.|  
   
 ## <a name="restriction-columns"></a>Colunas de restrição  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.completion.f1
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48ca2eb92d263bb4244dd173b1ca818df2f814aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 594e28807eb33e28a74102681bc867ebbe5b7b9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279862"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Concluindo o Assistente (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Concluindo o Assistente** do assistente para analisar a cadeia de conexão e especificar um nome para a nova fonte de dados.  
@@ -34,8 +34,8 @@ ms.locfileid: "36009659"
  Exibe a cadeia de conexão da fonte de dados. Clique em **Voltar** para fazer alterações nessas configurações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de fonte de dados &#40;do Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

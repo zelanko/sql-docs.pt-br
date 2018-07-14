@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267542"
 ---
 # <a name="standardaction-data-type-assl"></a>Tipo de dados StandardAction (ASSL)
-  Define um tipo de dados derivado que representa qualquer [ação](../objects/action-element-assl.md) elemento diferente de um [DrillThroughAction](action-data-type-assl.md) elemento ou um [ReportAction](reportaction-data-type-assl.md) elemento.  
+  Define um tipo de dados derivado que representa qualquer [ação](../objects/action-element-assl.md) elemento diferente de uma [DrillThroughAction](action-data-type-assl.md) elemento ou uma [ReportAction](reportaction-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2a5d37578ac8336b67201161ef4de59baf90649c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5abc5bc02b2c7ee365886ba54a603890c4b2aa0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228342"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarefa 10: Configurando o domínio composto para usar o serviço de dados de referência
-  Nesta tarefa, você deve configurar o **Address Validation** domínio composto para usar o **Melissa Data – Address Check** serviço. Em tempo de execução, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Consulte [mapear domínio/domínio composto para dados de referência](http://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  
+  Nesta tarefa, você configura a **Address Validation** domínio composto para usar o **Melissa Data – Address Check** service. Em tempo de execução, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Ver [mapa de domínio/domínio composto para dados de referência](http://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  
   
-1.  Na página principal do **cliente DQS**, clique em **fornecedores (gerenciamento de domínio)** em **Bases de conhecimento recente** para iniciar o **gerenciamento de domínio**página.  
+1.  Na página principal do **cliente DQS**, clique em **fornecedores (gerenciamento de domínio)** sob **Bases de dados de Conhecimento recentes** para iniciar o **gerenciamento de domínio**página.  
   
-2.  Selecione o **Address Validation** domínio composto no **lista de domínios**.  
+2.  Selecione o **Address Validation** domínio composto na **lista de domínios**.  
   
 3.  No painel direito, alterne para o **dados de referência** guia.  
   
-     ![Guia dados de referência](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "guia dados de referência")  
+     ![Guia de dados de referência](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "guia dados de referência")  
   
 4.  Clique em **procurar** na barra de ferramentas.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36010569"
   
      ![Selecionar Melissa Data - verificação de endereço](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "selecionar Melissa Data - verificação de endereço")  
   
-6.  No painel direito, no **esquema** seção, mapeie **Address Line** domínio para o **Address Line (M)** item do esquema usando a lista suspensa.  
+6.  No painel direito, na **esquema** seção, mapeie **Address Line** domínio para o **Address Line (M)** item de esquema usando a lista suspensa.  
   
      ![Mapear Item de esquema do RDS para domínio](../../2014/tutorials/media/et-configuringcdtouserds-03.jpg "mapear Item de esquema do RDS para domínio")  
   
 7.  Clique em **Adicionar entrada de esquema (+)** na barra de ferramentas para criar uma entrada na lista.  
   
-     ![Adicionar um botão de barra de ferramentas de entrada de esquema](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "adicionar um botão de barra de ferramentas de entrada de esquema")  
+     ![Adicionar botão de barra de ferramentas de entrada de esquema](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "adicionar botão de barra de ferramentas de entrada de esquema")  
   
 8.  Mapeie os seguintes domínios do DQS usando as listas suspensas como mostra a imagem a seguir.  
   

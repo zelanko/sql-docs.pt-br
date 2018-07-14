@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e292a0c509a746130493c7df601a9d373096c406
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261202"
 ---
 # <a name="aggregatefunction-element-assl"></a>Elemento AggregateFunction (ASSL)
-  Define o tipo de função de agregação usado por um [medidas](../objects/measure-element-assl.md) elemento.  
+  Define o tipo de função de agregação usado por um [medida](../objects/measure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

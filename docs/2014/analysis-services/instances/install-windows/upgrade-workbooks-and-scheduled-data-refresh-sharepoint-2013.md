@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216176"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Atualizar pastas de trabalho e atualização de dados agendada (SharePoint 2013)
   Este tópico explica a experiência do usuário das pastas de trabalho criadas em ambientes anteriores do PowerPivot e como atualizar pastas de trabalho PowerPivot de forma que você possa aproveitar os novos recursos introduzidos nesta versão. Para saber mais sobre os novos recursos, consulte o artigo sobre [Novidades no PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -35,7 +35,7 @@ ms.locfileid: "36010553"
   
 -   [Atualizar para pastas de trabalho do Office 2013 de versões criadas usando o 2012 Add-In PowerPivot para Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [Atualizar pastas de trabalho do SQL Server 2012 de versões criadas usando o 2008 R2 PowerPivot Add-In para o Excel 2010](#bkmk_to_2012_from_2008R2)  
+-   [Atualizar para pastas de trabalho do SQL Server 2012 de versões criadas usando o 2008 R2 PowerPivot Add-In para o Excel 2010](#bkmk_to_2012_from_2008R2)  
   
 -   [Executando várias versões de pasta de trabalho em um servidor mais recente](#bkmk_runold)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36010553"
   
      Salve a pasta de trabalho e republique-a no servidor do SharePoint.  
   
- Para obter mais informações sobre alterações de recursos do Analysis Services, consulte [alterações de comportamento para recursos do Analysis Services no SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ Para obter mais informações sobre alterações em recursos do Analysis Services, consulte [alterações de comportamento para recursos do Analysis Services no SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
  Para obter mais informações sobre o histórico de atualização, consulte [histórico de atualização de dados de exibição &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36010553"
   
 4.  Salve a pasta de trabalho e republique-a no servidor do SharePoint 2013.  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> Atualizar pastas de trabalho do SQL Server 2012 de versões criadas usando o 2008 R2 PowerPivot Add-In para o Excel 2010  
+##  <a name="bkmk_to_2012_from_2008R2"></a> Atualizar para pastas de trabalho do SQL Server 2012 de versões criadas usando o 2008 R2 PowerPivot Add-In para o Excel 2010  
  Essa seção descreve como atualizar **para** o SQL Server 2012 PowerPivot para Excel 2010 **de** pastas de trabalho do SQL Server 2008 R2 PowerPivot para Excel 2010.  
   
  Atualizar uma pasta de trabalho resolve o seguinte erro que ocorre ao tentar atualizar dados agendados na versão anterior da pasta de trabalho:  
@@ -119,9 +119,9 @@ ms.locfileid: "36010553"
   
  A atualização pode ser feita de duas maneiras:  
   
-1.  Atualizar cada pasta de trabalho manualmente abrindo-a no Excel em um computador que tenha o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versão do PowerPivot para Excel e então republicá-la para o servidor. Quando a pasta de trabalho é aberta na versão mais recente do suplemento, ocorrem as seguintes operações internas: o provedor de dados na cadeia de conexão de dados da pasta de trabalho é atualizado para o MSOLAP.5; os metadados são atualizados e as relações são recriadas para se conformarem à implementação mais recente.  
+1.  Atualizar cada pasta de trabalho manualmente abrindo-a no Excel em um computador que tenha o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versão do PowerPivot para Excel e, em seguida, republicá-lo para o servidor. Quando a pasta de trabalho é aberta na versão mais recente do suplemento, ocorrem as seguintes operações internas: o provedor de dados na cadeia de conexão de dados da pasta de trabalho é atualizado para o MSOLAP.5; os metadados são atualizados e as relações são recriadas para se conformarem à implementação mais recente.  
   
-2.  Como alternativa, um administrador do SharePoint pode habilitar o recurso de atualização automática para o serviço de sistema PowerPivot em um farm do SharePoint atualizar automaticamente um [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] pasta de trabalho PowerPivot quando agendar atualização de dados é executada (somente pastas de trabalho configurada para atualização de dados agendada são atualizados).  
+2.  Como alternativa, um administrador do SharePoint pode habilitar o recurso de atualização automática para o serviço do sistema PowerPivot em um farm do SharePoint atualizar automaticamente um [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] pasta de trabalho PowerPivot quando dados agendada for executado (somente pastas de trabalho configurado para atualização de dados agendada são atualizados).  
   
     > [!NOTE]  
     >  Atualização automática é um recurso de configuração de servidor; você não pode habilitá-lo nem desabilitá-lo para pastas de trabalho, bibliotecas ou coleções de sites específicas.  
@@ -164,7 +164,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
      **Provider=MSOLAP.4** indica [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].  
   
-     **Fonte de dados = $ $Embedded** indica que a pasta de trabalho é uma pasta de trabalho PowerPivot, usando um banco de dados inserido.  
+     **Fonte de dados = $ $Embedded** indica que a pasta de trabalho é uma pasta de trabalho do PowerPivot, usando um banco de dados inserido.  
   
 ###  <a name="bkmk_msolappc"></a> Como verificar a versão atual do provedor de dados MSOLAP em um computador local  
  Use as instruções a seguir para verificar qual provedor OLE DB é a versão atual no servidor ou estação de trabalho que executa pastas de trabalho PowerPivot. Saber a versão atual pode ajudar a solucionar problemas relacionados a erros de conexão de dados após a atualização.  
@@ -176,7 +176,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
 ## <a name="see-also"></a>Consulte também  
  [Migrar o PowerPivot para SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [Atualizar o PowerPivot para SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Novidades no Analysis Services e Business Intelligence](../../what-s-new-in-analysis-services.md)   
+ [O que há de novo no Analysis Services e Business Intelligence](../../what-s-new-in-analysis-services.md)   
  [Exibir histórico de atualização de dados &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

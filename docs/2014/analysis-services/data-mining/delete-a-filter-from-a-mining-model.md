@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289842"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Excluir um filtro de um modelo de mineração
   Quando você cria um filtro em um modelo de mineração, pode criar modelos em um subconjunto dos dados na exibição da fonte de dados. Os filtros também são úteis para testar a precisão do modelo em um subconjunto dos dados originais.  
@@ -58,13 +58,13 @@ ms.locfileid: "36008511"
   
 1.  No Gerenciador de Soluções, clique no modelo de mineração que contém o filtro.  
   
-2.  No **propriedades** janela, clique o texto do filtro no `Filter` propriedade e selecione **Selecionar tudo**.  
+2.  No **propriedades** janela, clique com botão direito do texto do filtro na `Filter` propriedade e selecione **Selecionar tudo**.  
   
 3.  Pressione a tecla Backspace ou Delete.  
   
 ## <a name="see-also"></a>Consulte também  
  [Detalhar dados do caso de um modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)   
- [Tutoriais e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+ [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
   
   

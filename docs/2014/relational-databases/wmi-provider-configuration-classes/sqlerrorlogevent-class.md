@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95588b82a36bb5d7d5d520a5f54ca968a9198112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 65c2eb3758524788d0c65645d3b5736c930d58ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204886"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
   Fornece propriedades para exibir eventos em um arquivo de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
@@ -62,7 +62,7 @@ class SQLErrorLogEvent
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como recuperar valores para todos os eventos registrados em um arquivo de log especificado. Para executar o exemplo, substitua \< *Instance_Name*> com o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como 'Instance1' e substitua 'File_Name' pelo nome do arquivo de log de erros, como 'ERRORLOG.1'.  
+ O exemplo a seguir mostra como recuperar valores para todos os eventos registrados em um arquivo de log especificado. Para executar o exemplo, substitua \< *nome_instância*> com o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como 'Instance1' e substitua 'File_Name' pelo nome do arquivo de log de erros, como 'ERRORLOG.1.'.  
   
 ```  
 on error resume next  
@@ -83,7 +83,7 @@ Next
 ```  
   
 ## <a name="comments"></a>Comentários  
- Quando *InstanceName* ou *FileName* não são fornecidos na instrução WQL, a consulta retornará informações para a instância padrão e atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log. Por exemplo, a instrução WQL a seguir retornará todos os eventos de log do arquivo de log atual (ERRORLOG) na instância padrão (MSSQLSERVER).  
+ Quando *nome_da_instância* ou *FileName* não são fornecidos na instrução WQL, a consulta retornará informações para a instância padrão e atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log. Por exemplo, a instrução WQL a seguir retornará todos os eventos de log do arquivo de log atual (ERRORLOG) na instância padrão (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
@@ -94,11 +94,11 @@ Next
   
 -   Acesso de leitura para o **Root\Microsoft\SqlServer\ComputerManagement10** namespace WMI. Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
   
--   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *Drive >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *unidade >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidade >: Server \ mssql12 SQL de \Program Files\Microsoft** **.\< InstanceName > \mssql\log.**  
+     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< InstanceName > \mssql\log.**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [se conectar ao WMI remotamente começando com o Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectar-se ao WMI iniciando remotamente com o Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe SqlErrorLogFile](sqlerrorlogfile-class.md)   

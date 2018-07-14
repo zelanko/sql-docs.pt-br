@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precompute rank option
 - FREETEXTTABLE function (Transact-SQL)
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6618dc91cee6635f11d0ef0268d35514c9288242
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5682fd6c1079057feaf5ff36e67005b4d5f0f960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273722"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>Opção de configuração de servidor precompute rank
   Esta opção não é implementada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Essa é uma alteração de quebra. Modifique os aplicativos que usam esse recurso o mais rápido possível.  

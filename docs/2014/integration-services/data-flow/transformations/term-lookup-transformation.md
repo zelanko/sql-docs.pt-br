@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225826"
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
@@ -82,7 +82,7 @@ ms.locfileid: "36010714"
   
  As colunas de saída da transformação cuja propriedade InputColumnType é definida como 0 ou 2 incluem a propriedade CustomLineageID para uma coluna, que contém o identificador de linhagem atribuído à coluna por um componente de fluxo de dados upstream.  
   
- A transformação de pesquisa de termos adiciona duas colunas à saída da transformação, chamada por padrão `Term` e `Frequency`. A coluna `Term` contém um termo da tabela de pesquisa e a `Frequency` contém o número de vezes que o termo na tabela de referência ocorre no conjunto de dados de entrada. Essas colunas não incluem a propriedade CustomLineageID.  
+ A transformação pesquisa de termos adiciona duas colunas à saída da transformação, chamada por padrão `Term` e `Frequency`. A coluna `Term` contém um termo da tabela de pesquisa e a `Frequency` contém o número de vezes que o termo na tabela de referência ocorre no conjunto de dados de entrada. Essas colunas não incluem a propriedade CustomLineageID.  
   
  A tabela de pesquisa deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou do Access. Se a saída da transformação extração de termos for salva em uma tabela, esta tabela poderá ser usada como tabela de referência, mas outras tabelas também poderão ser usadas. Texto em arquivos simples, pastas de trabalho do Excel ou outras fontes precisam ser importadas em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou em um banco de dados do Access antes de você poder usar a transformação pesquisa de termos.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "36010714"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação de pesquisa de termos &#40;guia da tabela de referência&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformação de pesquisa de termo &#40;guia da tabela de referência&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor de transformação de pesquisa de termos &#40;guia pesquisa de termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [Editor de transformação de pesquisa de termo &#40;guia de pesquisa de termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Editor de transformação de pesquisa de termos &#40;guia Avançado&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformação de pesquisa de termo &#40;guia Avançado&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

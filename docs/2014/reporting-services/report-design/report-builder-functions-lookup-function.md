@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222906"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Função Lookup (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -51,7 +51,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Retorna um `Variant`, ou `Nothing` se não houver nenhuma correspondência.  
   
 ## <a name="remarks"></a>Remarks  
- Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par nome/valor onde há uma relação de 1 a 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
+ Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par nome/valor onde há uma relação de 1 para 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  `Lookup` faz o seguinte:  
   
@@ -63,7 +63,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Retorna o valor da expressão resultante.  
   
- Para recuperar diversos valores para um único nome ou campo de chave em que há uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookupset-function.md). Para chamar `Lookup` para um conjunto de valores, use [Multilookup função &#40;construtor de relatórios e SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Para recuperar diversos valores para um único nome ou campo de chave em que há uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookupset-function.md). Para chamar `Lookup` para um conjunto de valores, use [função Multilookup &#40;construtor de relatórios e SSRS&#41;](report-builder-functions-lookup-function.md).  
   
  As seguintes restrições são aplicadas:  
   
@@ -101,9 +101,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

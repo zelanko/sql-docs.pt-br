@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
 - metadata [Master Data Services], about metadata
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25fa2078127816b2fd9d50bd7bd4c074c3577dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296676"
 ---
 # <a name="metadata-master-data-services"></a>Metadados (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], metadados definidos pelo usuário são informações usadas para descrever objetos de modelo. Por exemplo, você pode acompanhar os proprietários de um modelo ou entidade específicos ou acompanhar os sistemas de origem que fornecem dados a uma entidade.  
   
- Metadados definidos pelo usuário é gerenciado por um modelo chamado **metadados**. Esse modelo é incluído automaticamente quando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] estiver instalado, e é semelhante a todos os outros modelos do MDS, exceto que você não pode criar versões dele.  
+ Metadados definidos pelo usuário é gerenciado por um modelo chamado **metadados**. Esse modelo é incluído automaticamente quando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] estiver instalado, e é semelhante a todos os outros modelos do MDS, exceto que não é possível criar versões dele.  
   
  Depois de popular o modelo de Metadados com metadados definidos pelo usuário, você pode incluí-lo em exibições de assinatura para que seja consumido por sistemas assinantes.  
   
 ## <a name="metadata-entities"></a>Entidades de metadados  
- O modelo Metadados inclui cinco entidades, cada uma representando um tipo de objeto de modelo de dados mestres que oferece suporte a metadados definidos pelo usuário. Por exemplo, o **definição de metadados de modelo** entidade contém membros que representam modelos, e o **definição de metadados do atributo** entidade tem membros que representam todos os atributos em todos os modelos.  
+ O modelo Metadados inclui cinco entidades, cada uma representando um tipo de objeto de modelo de dados mestres que oferece suporte a metadados definidos pelo usuário. Por exemplo, o **definição de metadados de modelo** entidade contém membros que representam modelos e o **definição de metadados de atributo** entidade tem membros que representam todos os atributos em todos os modelos.  
   
- Para definir metadados para um objeto de modelo, popule um destes atributos de membro. Por exemplo, o **definição de metadados de entidade** entidade, você pode preencher o atributo de descrição do membro preço com o texto: **o preço do produto quando vendido a um cliente**.  
+ Para definir metadados para um objeto de modelo, popule um destes atributos de membro. Por exemplo, nos **definição de metadados de entidade** entidade, você pode preencher o atributo de descrição do membro preço com o texto: **o preço do produto quando vendido a um cliente**.  
   
  Os membros do modelo Metadados são atualizados automaticamente sempre que objetos de modelo que oferecem suporte a metadados definidos pelo usuário são adicionados ou excluídos.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36009782"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

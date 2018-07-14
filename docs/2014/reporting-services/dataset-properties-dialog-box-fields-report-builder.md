@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e9fa18bb0edfc2edac3e58e22467ba49a01cf50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cffc9683eacab63c3c8175406ba8ba724cf0ccce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262242"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Campos (Construtor de Relatórios)
   Selecione **Campos** na caixa de diálogo **Propriedades do Conjunto de Dados** para alterar a coleção de campos para o conjunto de dados de relatório. A lista de campos é preenchida automaticamente, mas você pode usar os **Campos** para adicionar, editar e excluir campos calculados e consultas.  
@@ -52,10 +52,10 @@ ms.locfileid: "36009935"
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, opções &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [Caixa de diálogo de propriedades do conjunto de dados, opções de &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
  [Caixa de diálogo de propriedades do conjunto de dados, filtros &#40;construtor de relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, parâmetros &#40;construtor de relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, a consulta &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Caixa de diálogo de propriedades do conjunto de dados, os parâmetros &#40;construtor de relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [Caixa de diálogo de propriedades do conjunto de dados, consulta &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

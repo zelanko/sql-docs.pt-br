@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
 - importing data, file storage types
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 68630ac6e4a2ffad9079ed620e8d7d9660bf6381
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fff9084513f21333125eaee8995eebfd3e22e1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251988"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
-  O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados em que há suporte para conversão implícita; Por exemplo, copiando um `smallint` como um `int`. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
+  O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados onde há suporte para conversão implícita; Por exemplo, copiando um `smallint` como um `int`. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Solicitação de bcp para o tipo de armazenamento de arquivo  
  Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos (**-f**) ou uma opção do formato de dados (**-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
@@ -39,9 +38,9 @@ ms.locfileid: "36009750"
   
 -   Para exportar dados em massa de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados no armazenamento mais compacto possível (formato de dados nativo), aceite os tipos de armazenamento de arquivos padrão fornecidos pelo **bcp**. Para obter uma lista de tipos de armazenamento de arquivos nativos, digite "Tipos de Armazenamento de Arquivos Nativos", mais adiante neste tópico.  
   
--   Para agrupar dados exportados de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados em formato de caractere, especifique `char` como o tipo de armazenamento de arquivo para todas as colunas na tabela.  
+-   Para dados de exportação em massa de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados em formato de caractere, especifique `char` como o tipo de armazenamento de arquivos para todas as colunas na tabela.  
   
--   Para dados de importação em massa para uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados, especifique o tipo de armazenamento de arquivo como `char` para tipos armazenados no caractere de formato e, para dados armazenados no formato de tipo de dados nativo, especifique um dos tipos de armazenamento de arquivo, como apropriado:  
+-   Para importar em massa de dados a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um arquivo de dados, especifique o tipo de armazenamento de arquivo como `char` para tipos armazenados no caractere de formato e, para dados armazenados no formato de tipo de dados nativo, especifique um dos tipos de armazenamento de arquivo, conforme apropriado:  
   
     |tipo de armazenamento de arquivo|Digite no prompt de comando|  
     |-----------------------|-----------------------------|  
@@ -77,9 +76,9 @@ ms.locfileid: "36009750"
     |`UDT` (um tipo de dados definido pelo usuário)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> a interação do tamanho do campo, comprimento do prefixo e dos terminadores determina a quantidade de espaço de armazenamento é alocado em um arquivo de dados para obter dados que são exportados como o `char` tipo de armazenamento de arquivo.  
+     <sup>1</sup> a interação do tamanho do campo, o comprimento do prefixo e dos terminadores determina a quantidade de espaço de armazenamento é alocado em um arquivo de dados para os dados que são exportados como o `char` tipo de armazenamento de arquivo.  
   
-     <sup>2</sup> o `ntext`, `text`, e `image` tipos de dados serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Use `nvarchar(max)`, `varchar(max)`, e `varbinary(max)` em vez disso.  
+     <sup>2</sup> as `ntext`, `text`, e `image` tipos de dados serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Use `nvarchar(max)`, `varchar(max)`, e `varbinary(max)` em vez disso.  
   
 ## <a name="native-file-storage-types"></a>Tipos de armazenamento de arquivos nativos  
  Cada tipo de armazenamento de arquivo nativo é registrado no arquivo de formato como um tipo de dados do arquivo host correspondente.  
@@ -113,7 +112,7 @@ ms.locfileid: "36009750"
 |`timestamp`|SQLBINARY|  
 |UDT (um tipo de dados definido pelo usuário)|SQLUDT|  
   
- <sup>1</sup> arquivos de dados que são armazenados no caractere de formato usam `char` como o tipo de armazenamento de arquivo. Então, para arquivos de dados de caractere, SQLCHAR é o único tipo de dados que aparece em um arquivo de formato.  
+ <sup>1</sup> arquivos de dados que são armazenados em um caractere de formato usam `char` como o tipo de armazenamento de arquivos. Então, para arquivos de dados de caractere, SQLCHAR é o único tipo de dados que aparece em um arquivo de formato.  
   
  <sup>2</sup> você não pode importar dados em massa em `text`, `ntext`, e `image` colunas que têm valores padrão.  
   
@@ -122,9 +121,9 @@ ms.locfileid: "36009750"
   
 -   Você sempre pode especificar `char` como o tipo de armazenamento de arquivo.  
   
--   Se você inserir um tipo de armazenamento de arquivo que representa uma conversão implícita inválida, **bcp** falhar; por exemplo, embora você possa especificar `int` para `smallint` dados, se você especificar `smallint` para `int` dados, resultado de erros de estouro.  
+-   Se você inserir um tipo de armazenamento de arquivo que representa uma conversão implícita inválida **bcp** falhar; por exemplo, embora você possa especificar `int` para `smallint` dados, se você especificar `smallint` para `int` dados, Isso resultará em erros de estouro.  
   
--   Quando os dados não caracteres tipos, como `float`, `money`, `datetime`, ou `int` são armazenados como seus tipos de banco de dados, os dados são gravados no arquivo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
+-   Quando os dados não caracteres tipos, como `float`, `money`, `datetime`, ou `int` são armazenados como seus tipos de banco de dados, os dados são gravados para o arquivo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] formato nativo.  
   
     > [!NOTE]  
     >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  

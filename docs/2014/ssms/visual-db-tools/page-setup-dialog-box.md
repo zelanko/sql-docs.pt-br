@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1a94e294d52b7f381d4759c979bc5292a471126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42a8b0f67544bebc7642b8218c714f3f195d8888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284442"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
   Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  

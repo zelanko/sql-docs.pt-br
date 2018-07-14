@@ -22,15 +22,15 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3b9f58369cea876bc345300a945f85260b4326a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b97dc99b7de5d8829f88faad6a6df282e9cecd5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234776"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
     
@@ -50,7 +50,7 @@ ms.locfileid: "36009963"
   
      Contém o pai do nó de contexto.  
   
-     A seguinte expressão XPath seleciona todos os  **\<cliente >** pais do  **\<ordem >** filhos:  
+     A seguinte expressão XPath seleciona todos os  **\<cliente >** pais da  **\<ordem >** filhos:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -62,7 +62,7 @@ ms.locfileid: "36009963"
   
      Contém o atributo do nó de contexto.  
   
-     A seguinte expressão XPath seleciona o **CustomerID** atributo do nó de contexto:  
+     A seguinte expressão XPath seleciona os **CustomerID** atributo do nó de contexto:  
   
     ```  
     attribute::CustomerID  

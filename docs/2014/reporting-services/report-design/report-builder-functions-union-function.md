@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206686"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Função Union (Construtor de Relatórios e SSRS)
   Retorna a união de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  
@@ -45,7 +45,7 @@ Union(expression, scope, recursive)
  (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
   
 ## <a name="return"></a>Retorno  
- Retorna um objeto espacial, ou `SqlGeometry` ou `SqlGeography`, com base no tipo de expressão. Para obter mais informações sobre `SqlGeometry` e `SqlGeography` tipos de dados espaciais, consulte [visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Retorna um objeto espacial, `SqlGeometry` ou `SqlGeography`, com base no tipo de expressão. Para obter mais informações sobre `SqlGeometry` e `SqlGeography` tipos de dados espaciais, consulte [visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
 ## <a name="remarks"></a>Remarks  
  O conjunto de dados especificado na expressão deve ter o mesmo tipo de dados.  
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  Para obter mais informações sobre agregações recursivas, consulte [Criando grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Exemplo  
- A tabela a seguir mostra exemplos de `SqlGeometry` expressões e `Union` expressões, como mostrado no formato WKT (Well Known Text) para dados espaciais de resultado.  
+ A tabela a seguir mostra exemplos de `SqlGeometry` expressões e `Union` resultam de expressão, como mostrado no formato WKT (Well Known Text) para dados espaciais.  
   
 |Campo com dados espaciais|Exemplo|Resultado de Union|  
 |-----------------------------|-------------|------------------|  
@@ -82,9 +82,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

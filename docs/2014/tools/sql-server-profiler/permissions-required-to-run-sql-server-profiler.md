@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
 - traces [SQL Server], replaying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 981305998f4526f10accfd7a4787a6854c6c910d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a03ef4f76007dc4d3366b2ac78b3df02dbebb206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274222"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
   Por padrão, executar o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] requer as mesmas permissões de usuário que os procedimentos armazenados Transact-SQL utilizados para criar rastreamentos. Para executar o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], os usuários devem dispor da permissão ALTER TRACE. Para obter mais informações, veja [Permissões GRANT do servidor &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
@@ -66,7 +66,7 @@ ms.locfileid: "36008798"
   
  O diagrama a seguir mostra esse processo de verificação de permissões durante a repetição de rastreamentos:  
   
- ![Permissões de rastreamento do SQL Server Profiler replay](../../database-engine/media/replaytracedecisiontree.gif "permissões de rastreamento de reprodução do SQL Server Profiler")  
+ ![Permissões de rastreamento de reprodução do SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "permissões de rastreamento de reprodução do SQL Server Profiler")  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289582"
 ---
 # <a name="dataaggregation-element-assl"></a>Elemento DataAggregation (ASSL)
   Determina se a instância pode agregar dados persistidos ou dados armazenados em cache para o [MeasureGroup](../objects/group-element-assl.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "36007784"
 |*CacheAggregatable*|Os dados armazenados em cache podem ser agregados para este grupo de medidas.|  
 |*DataAndCacheAggregatable*|Ambos os dados persistidos e armazenados em cache podem ser agregados para este grupo de medidas.|  
   
- O elemento que corresponde ao pai do `DataAggregation` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ O elemento que corresponde ao pai de `DataAggregation` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

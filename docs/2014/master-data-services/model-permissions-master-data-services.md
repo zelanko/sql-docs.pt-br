@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e92f595bcf701e20378fe94dfde6c91d8c57bee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b83229221afc84634689c70e29311fba7b2c1374
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289102"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
   As permissões de modelo se aplicam a todas as entidades, hierarquias derivadas, hierarquias explícitas e coleções existentes dentro do modelo. As permissões atribuídas ao modelo podem ser substituídas para qualquer objeto individual.  
@@ -32,15 +32,15 @@ ms.locfileid: "36009571"
   
 |Permissão|Description|  
 |----------------|-----------------|  
-|**Somente leitura**|Em **Explorer**, o modelo é exibido, mas o usuário não é possível adicionar ou remover membros e não pode atualizar valores de atributos, associações de hierarquia ou associações de coleção.|  
-|**Update (atualizar)**|Em **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributos, associações e associações de coleção.|  
+|**Somente leitura**|Na **Explorer**, o modelo é exibido, mas o usuário não é possível adicionar ou remover membros e não é possível atualizar valores de atributos, associações de hierarquia ou associações de coleção.|  
+|**Update (atualizar)**|Na **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributos, associações de hierarquia e associações de coleção.|  
 |**Deny**|O modelo não é exibido.|  
   
  Quando você atribui permissão a um modelo, o usuário obtém acesso a todas as versões do modelo. Não é possível atribuir permissão a uma versão individual.  
   
 ## <a name="see-also"></a>Consulte também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Permissões de objeto modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de entidade &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)   
  [Permissões de coleção &#40;Master Data Services&#41;](../../2014/master-data-services/collection-permissions-master-data-services.md)  
   

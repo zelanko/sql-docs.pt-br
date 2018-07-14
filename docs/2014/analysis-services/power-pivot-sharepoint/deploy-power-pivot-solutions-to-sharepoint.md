@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243656"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implantar soluções PowerPivot para SharePoint
-  Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam recursos do PowerPivot a um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o PowerPivot para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa das etapas necessárias, consulte [configuração na Administração Central e administração de servidor do PowerPivot](power-pivot-server-administration-and-configuration-in-central-administration.md).  
+  Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam recursos do PowerPivot a um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o PowerPivot para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [administração de servidor do PowerPivot e a configuração na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Como alternativa, você pode usar a Ferramenta de Configuração do PowerPivot para implantar as soluções. Usar a ferramenta de configuração é mais fácil e mais eficiente para uma única instalação de servidor, mas você pode querer usar a Administração Central e o PowerShell se preferir usar uma ferramenta familiar ou se estiver configurando vários recursos ao mesmo tempo. Para obter mais informações sobre como usar a ferramenta de configuração, consulte [ferramentas de configuração do PowerPivot](power-pivot-configuration-tools.md).  
+ Como alternativa, você pode usar a Ferramenta de Configuração do PowerPivot para implantar as soluções. Usar a ferramenta de configuração é mais fácil e mais eficiente para uma única instalação de servidor, mas você pode querer usar a Administração Central e o PowerShell se preferir usar uma ferramenta familiar ou se estiver configurando vários recursos ao mesmo tempo. Para obter mais informações sobre como usar a ferramenta de configuração, consulte [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
  Antes de implantar as soluções, você deverá primeiro instalar o PowerPivot para SharePoint usando a mídia de instalação do SQL Server 2012. A instalação do SQL Server instala os pacotes de solução que você está prestes a implantar.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "36009632"
  [Sobre as soluções do PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico  
- O PowerPivot para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo usa o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo `http://<top-level site name>` com o nome do seu site do SharePoint:  
+ O PowerPivot para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo utiliza o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo `http://<top-level site name>` com o nome do seu site do SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- O valor retornado deve ser **false**. Se for **true**, você não pode acessar dados do PowerPivot com este aplicativo web.  
+ O valor retornado deve ser **false**. Se ele estiver **verdadeira**, você não pode acessar dados do PowerPivot com este aplicativo web.  
   
 ##  <a name="bkmk_farm"></a> Etapa 1: implantar a solução de farm  
  Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do PowerPivot para concluir esta tarefa. Para obter mais informações, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Clique em **Implantar Solução**.  
   
-4.  Em **implantar em?**, selecione o aplicativo web do SharePoint para o qual você deseja adicionar suporte ao recurso PowerPivot.  
+4.  Na **implantar em?**, selecione o aplicativo web do SharePoint para o qual você deseja adicionar suporte ao recurso PowerPivot.  
   
 5.  Clique em **OK**.  
   
@@ -123,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Clique em **Cancelar Solução**.  
   
- Se você encontrar problemas de implantação de servidor rastreados desde a solução de farm, poderá reimplantá-lo executando o **reparo** opção na ferramenta de configuração do PowerPivot. As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
+ Se você encontrar problemas de implantação de servidor rastreados para solução de farm, poderá reimplantá-lo executando o **reparo** opção na ferramenta de configuração do PowerPivot. As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [configurar ou reparar o PowerPivot para SharePoint 2010 &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Se você ainda desejar reimplantar todas as soluções, siga esta ordem:  
   

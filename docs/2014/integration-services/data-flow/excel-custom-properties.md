@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e7d5c7df84ed001aa969f3fb164fa9691670fc3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fe10fcfbfde6494ff1b2a354d3958ac65e372c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235286"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
   **Propriedades personalizadas de fontes**  
@@ -58,7 +58,7 @@ ms.locfileid: "36009601"
 |FastLoadOptions|Cadeia de caracteres|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: algumas opções dessa propriedade não estão disponíveis no **Editor de Destinos do Excel**, mas podem ser definidas no **Editor Avançado**.|  
 |OpenRowset|Cadeia de caracteres|Quando AccessMode é `OpenRowset`, o nome da tabela ou exibição acessada pelo destino Excel.|  
 |OpenRowsetVariable|Cadeia de caracteres|Quando AccessMode é `OpenRowset from Variable`, o nome da variável que contém o nome da tabela ou exibição acessada pelo destino Excel.|  
-|SqlCommand|Cadeia de caracteres|Quando AccessMode é `SQL Command`, a instrução Transact-SQL que usa o destino do Excel para especificar as colunas de destino para os dados.|  
+|SqlCommand|Cadeia de caracteres|Quando AccessMode é `SQL Command`, a instrução Transact-SQL que o destino do Excel usa para especificar as colunas de destino para os dados.|  
   
  A entrada e as colunas de entrada do destino Excel não têm nenhuma propriedade personalizada.  
   

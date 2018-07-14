@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71d4174e159f84b7596600d1e4f8b5b4b99eb2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14c42bbfb8bab13d074914ce8c1de37d4c35a133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247956"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importar informações de servidor registrado (SQL Server Management Studio)
   Este tópico descreve como importar informações do servidor registrado salvas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ao exportar e, em seguida, importar os arquivos de servidores registrados, você poderá facilmente configurar vários computadores com os mesmos servidores em Servidores Registrados. Isso é útil ao gerenciar um grande número de servidores de computadores em diversos locais ou quando você deseja definir configurações de conexão básica para um usuário menos experiente.  
@@ -56,7 +56,7 @@ ms.locfileid: "36008264"
  Os registros de servidores que usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenam senhas por usuário. Depois de importar os registros de servidores, os usuários devem digitar a senha para cada servidor quando se conectarem pela primeira vez, armazenando as senhas em suas listas de servidores registrados. Isso não é necessário para servidores registrados por meio da autenticação do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterar um registro de servidor &#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [exportar informações de servidor registrado &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+ [Alterar um registro do servidor &#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [exportar informações de servidor registrado &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [Criar um novo servidor registrado &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

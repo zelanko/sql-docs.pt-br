@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260392"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
   Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados de lista dos sites do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -58,11 +58,11 @@ ms.locfileid: "36009706"
 |Lista remota do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Não<sup>2</sup>|  
 ||Armazenado, Prompt, nenhum (com credenciais do Windows<sup>1</sup>)|não|Não<sup>2</sup>|  
   
- <sup>1</sup> armazenado e solicitar credenciais com as credenciais do Windows não não é suportada.  
+ <sup>1</sup> não há suporte para credenciais armazenadas e prompt com credenciais de não-Windows.  
   
- <sup>2</sup> autenticação baseada em formulários e autenticação de declarações não têm suporte para listas remotas do SharePoint.  
+ <sup>2</sup> autenticação de declarações e autenticação baseada em formulários não há suporte para listas remotas do SharePoint.  
   
- <sup>3</sup> a autenticação do Windows, autenticação baseada em formulários (FBA), tokens SAML aplicativos seguros Markup Language (), outros provedores de identidade ou uma combinação de mais de uma das opções acima mencionadas provedores de autenticação.  
+ <sup>3</sup> autenticação do Windows, autenticação baseada em formulários (FBA), tokens SAML aplicativos seguros Markup Language (), outros provedores de identidade ou uma combinação de mais de uma das opções acima mencionadas provedores de autenticação.  
   
  **Autenticação do Windows**  
  Para uma tecnologia do SharePoint configurada para funcionar com um servidor de relatório no modo Conta Confiável, não há suporte a essa opção. Isso aplica-se apenas às versões anteriores do SQL Server 2012 Reporting Services.  
@@ -76,7 +76,7 @@ ms.locfileid: "36009706"
   
  Para obter informações sobre o suporte à autenticação de declarações na pilha Microsoft BI, consulte [Usando a autenticação de declarações na pilha Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md), e [dados fontes com suporte no O Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md), e [dados de fontes com suporte O Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="Query"></a> Consultas  
  Para criar uma consulta, crie um novo conjunto de dados com base na fonte de dados e, em seguida, abra o designer de consulta associado. Para obter mais informações, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "36009706"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;SSRS e construtor de relatórios&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36009706"
 ##  <a name="Related"></a> Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

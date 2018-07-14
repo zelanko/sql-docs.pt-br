@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54ed1dcca5d1e690990953cd2c02d4ad4e1b7879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9e18fe47a84785d7450a481c1eb6f1173b8bcf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292126"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Alterar o texto de um item de legenda (Construtor de Relatórios e SSRS)
   Quando um campo é colocado na área Valores do gráfico, um item de legenda é gerado automaticamente contendo o nome desse campo. Cada item de legenda está conectado a uma série individual no gráfico, exceto para gráficos de forma, nos quais a legenda está conectada a pontos de dados individuais em vez de séries individuais.  
@@ -58,7 +58,7 @@ ms.locfileid: "36007899"
 2.  Clique em **Legenda** e, na caixa **Texto da legenda personalizada** , digite um rótulo para a legenda. A série é atualizada com o texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando a legenda em um gráfico &#40;SSRS e construtor de relatórios&#41;](chart-legend-formatting-report-builder.md)   
+ [Formatando a legenda em um gráfico &#40;relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Ocultar itens de legenda no gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   

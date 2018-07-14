@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,19 +19,19 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266082"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos cliente em relação ao servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.  
   
 > [!NOTE]  
->  Em versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], todo o suporte de autenticação era dado pelo IIS. A partir da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o IIS não é mais usado. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] manipula todas as solicitações de autenticação internamente.  
+>  Em versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], todo o suporte de autenticação era dado pelo IIS. A partir da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o IIS não é mais usado. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trata todas as solicitações de autenticação internamente.  
   
  Todos os usuários ou aplicativos que solicitam acesso a conteúdo ou operações do servidor de relatório devem ser autenticados antes de o acesso ser permitido.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36008106"
 |Digest|Não há suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ## <a name="configuration-of-authentication-settings"></a>Configuração dos parâmetros de autenticação  
- Configurações de autenticação são definidas para segurança padrão quando a URL do servidor de relatório é reservada. Se essas configurações forem modificadas incorretamente, o servidor de relatório retornará erros HTTP 401 – Acesso Negado para solicitações HTTP que não podem ser autenticadas. Para escolher um tipo de autenticação, você deve saber de que forma a Autenticação do Windows é suportada na rede. Especifique pelo menos um tipo de autenticação. Podem ser especificados vários tipos de autenticação para RSWindows. Tipos de autenticação RSWindows (ou seja, `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, e **RSWindowsNegotiate**) são mutuamente exclusivos com personalizado.  
+ Configurações de autenticação são definidas para segurança padrão quando a URL do servidor de relatório é reservada. Se essas configurações forem modificadas incorretamente, o servidor de relatório retornará erros HTTP 401 – Acesso Negado para solicitações HTTP que não podem ser autenticadas. Para escolher um tipo de autenticação, você deve saber de que forma a Autenticação do Windows é suportada na rede. Especifique pelo menos um tipo de autenticação. Podem ser especificados vários tipos de autenticação para RSWindows. Tipos de autenticação RSWindows (ou seja, `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, e **RSWindowsNegotiate**) se excluem mutuamente com personalizado.  
   
 > [!IMPORTANT]  
 >  O Reporting Services não valida as configurações especificadas para determinar se elas estão corretas para o ambiente de computação. É possível que a segurança padrão não funcione para a sua instalação ou que você especificará parâmetros de configuração inválidos para sua infraestrutura de segurança. Por isso, é importante testar a implantação do servidor de relatório com cautela no ambiente de teste controlado antes de disponibilizá-la para sua organização de uma maneira mais ampla.  
@@ -91,7 +91,7 @@ ms.locfileid: "36008106"
  [Implementando uma extensão de segurança](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurar conexões SSL em um servidor de relatório do modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurar o acesso do construtor de relatórios](../report-server/configure-report-builder-access.md)   
- [Visão geral de extensões de segurança](../extensions/security-extension/security-extensions-overview.md)   
+ [Visão geral das extensões de segurança](../extensions/security-extension/security-extensions-overview.md)   
  [Autenticação no Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Autorização no Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
   

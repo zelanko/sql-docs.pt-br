@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd91a175738da87a77857bc74f8b09d357b0dd12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: aff62adeb15d83cdf5e543d5ecea77b70911b76c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169127"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua as permissões do objeto de modelo para remover as atribuições feitas.  
@@ -47,15 +47,15 @@ ms.locfileid: "36009366"
   
 5.  Opcionalmente, selecione um modelo na lista **Modelo** .  
   
-6.  No **resumo de permissão de modelo** painel, selecione a linha para a permissão que você deseja excluir.  
+6.  No **resumo de permissões de modelo** painel, selecione a linha para a permissão que você deseja excluir.  
   
-7.  Clique em **excluir a permissão selecionada**.  
+7.  Clique em **excluir permissão selecionada**.  
   
     > [!NOTE]  
     >  Você não poderá remover uma permissão de um usuário se a permissão for herdada de um grupo. Em vez disso, você deve remover a permissão do grupo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Permissões de objeto modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f8982e0f600d48680283507dc7ef3d6fba274520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218706"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Gera um Script SQL que pode ser usado para conceder direitos de usuário ao banco de dados do servidor de relatório e a outros bancos de dados necessários para a execução de um servidor de relatório. O chamador deve se conectar ao servidor de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar o script.  
@@ -73,7 +73,7 @@ out Int32 HRESULT);
   
  Se *IsWindowsUser* é definido como `true`, *UserName* devem estar no formato \<domínio >\\< nome de usuário\>.  
   
- Quando *IsWindowsUser* é definido como `true`, o script gerado concede direitos de logon para o usuário para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], definir o banco de dados do servidor de relatório como o banco de dados padrão e concede a **RSExec** função de banco de dados do servidor de relatório, dados temporário do servidor de relatório, o banco de dados mestre e o banco de dados do sistema MSDB.  
+ Quando *IsWindowsUser* é definido como `true`, o script gerado concede direitos de logon para o usuário para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], definir o banco de dados do servidor de relatório como o banco de dados padrão e concede a **RSExec** função de banco de dados de servidor de relatório, relatório servidor banco de dados temporário, o banco de dados mestre e o banco de dados do sistema MSDB.  
   
  Quando *IsWindowsUser* é definido como `true`, o método aceita os SIDs do Windows padrão como entrada. Quando um SID do Windows padrão ou nome de conta de serviço é fornecido, ele é convertido em uma cadeia de caracteres de nome de usuário. Se o banco de dados for local, a conta será convertida para a representação localizada correta da conta. Se o banco de dados for remoto, a conta será representada como a conta do computador.  
   
@@ -92,7 +92,7 @@ out Int32 HRESULT);
   
  No [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], se você estiver usando uma conta interna e o banco de dados do servidor de relatório for remoto, será retornado um erro.  
   
- Se o `LocalService` conta interna for especificada e o banco de dados do servidor de relatório for remoto, um erro será retornado.  
+ Se o `LocalService` conta interna é especificada e o banco de dados do servidor de relatório for remoto, um erro será retornado.  
   
  Quando *IsWindowsUser* for true e o valor fornecido no *UserName* precisar ser convertido, o provedor WMI determinará se o banco de dados do servidor de relatório está localizado no mesmo computador ou em um computador remoto. Para determinar se a instalação é local, o provedor de WMI avaliará a propriedade DatabaseServerName da lista de valores a seguir. Se uma correspondência for localizada, o banco de dados é local. Caso contrário, é remoto. A comparação não diferencia maiúsculas e minúsculas.  
   
@@ -108,7 +108,7 @@ out Int32 HRESULT);
   
  Quando *IsWindowsUser* é definido como `true`, o provedor WMI chama LookupAccountName para obter o SID para a conta e, em seguida, chama LookupAccountSID para obter o nome para colocar no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] script. Isso assegura que o nome da conta usado transmitirá a validação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Quando *IsWindowsUser* é definido como `false`, o script gerado concede a **RSExec** função de banco de dados do servidor de relatório, dados temporário do servidor de relatório e o banco de dados MSDB.  
+ Quando *IsWindowsUser* é definido como `false`, o script gerado concede a **RSExec** função no banco de dados de servidor de relatório, relatório servidor banco de dados temporário e o banco de dados MSDB.  
   
  Quando *IsWindowsUser* é definido como `false`, o usuário do SQL Server já deve existir no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o script seja executado com êxito.  
   

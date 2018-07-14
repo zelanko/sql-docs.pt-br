@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyIndex property
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dca1e193545f060b3030c4c85e0f9765ee9b67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1fb6d43c9abf50b225e60bc1aca4fef99b44bef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213036"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyIndex (classe SqlServiceAdvancedProperty)
   Obtém ou define o índice de propriedade que especifica a posição de uma propriedade avançada em uma matriz de propriedades avançadas que pertencem a um serviço referenciado.  

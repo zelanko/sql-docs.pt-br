@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250616"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Instalar o SQL Server 2014 por meio do Assistente de Instalação (Instalação)
-  Este tópico apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre os vários componentes que podem ser instalados, consulte [instalação para SQL Server 2014](installation-for-sql-server.md).  Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes individualmente, consulte [instalar o SQL Server 2014](install-sql-server.md).  
+  Este tópico apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o assistente para instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que você não precise instalá-los individualmente. Para obter mais informações sobre os vários componentes que podem ser instalados, consulte [instalação do SQL Server 2014](installation-for-sql-server.md).  Para obter mais informações sobre como instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes individualmente, veja [instalar o SQL Server 2014](install-sql-server.md).  
   
  Estes tópicos adicionais documentam outras maneiras de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36010291"
  [Validar uma instalação do SQL Server](validate-a-sql-server-installation.md)   
  [Remover uma instalação do SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Exibir e ler arquivos de log da Instalação do SQL Server](view-and-read-sql-server-setup-log-files.md)   
- [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Atualizar para o SQL Server 2014 usando o Assistente de instalação &#40;programa de instalação&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar o SQL Server 2014 do Prompt de Comando](install-sql-server-from-the-command-prompt.md)  
   
   

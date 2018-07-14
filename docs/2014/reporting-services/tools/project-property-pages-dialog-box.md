@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5ccad4480d09fad1aab6b406cbd3a42ad9083b9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238376"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
   Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em *\<Report Project Name>***Propriedades**.  
@@ -57,21 +57,21 @@ ms.locfileid: "36009916"
  Selecione **True** para substituir a fonte de dados no servidor pela fonte de dados no projeto quando os relatórios são publicados. Selecione **False** para deixar a fonte de dados existente no servidor.  
   
  **TargetServerVersion**  
- Selecione o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no servidor identificado pelo **TargetServer URL** propriedade. O valor padrão é **SQL Server 2008 R2**.  
+ Selecione o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no servidor identificado pela **TargetServer URL** propriedade. O valor padrão é **SQL Server 2008 R2**.  
   
  **TargetDataSourceFolder**  
  O nome da pasta na qual serão armazenadas as fontes de dados compartilhadas publicadas. Se você não especificar uma pasta, a fonte de dados será publicada na mesma pasta do relatório. Se a pasta não existir no servidor de relatório, o Designer de Relatórios irá criar a pasta quando os relatórios forem publicados.  
   
  Quando publicar em um servidor de relatório executado no modo nativo, especifique o caminho completo da hierarquia de pastas a partir da raiz. Por exemplo, Folder1/Folder2/Folder3.  
   
- Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername > /\<site >*/Documents/MyFolder.  
+ Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername > /\<site >*  /documentos/MyFolder.  
   
  **TargetReportFolder**  
  O nome da pasta em que serão armazenados os relatórios publicados. Por padrão, corresponde ao nome do projeto de relatório. Se a pasta não existir no servidor de relatório, o Designer de Relatórios irá criar a pasta quando os relatórios forem publicados.  
   
  Quando publicar em um servidor de relatório executado no modo nativo, especifique o caminho completo da hierarquia de pastas a partir da raiz. Se uma pasta estiver dentro de outra pasta, inclua um caminho para ela a partir da raiz (por exemplo, Folder1/Folder2/Folder3).  
   
- Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername >*/*\<site >*/Documents/MyFolder.  
+ Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL da biblioteca do SharePoint. Por exemplo, http://*\<servername >*/*\<site >*  /documentos/MyFolder.  
   
  **TargetServerURL**  
  A URL do servidor de relatório de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida.  

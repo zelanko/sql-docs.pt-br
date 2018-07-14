@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170279"
 ---
 # <a name="choosing-data-for-data-mining"></a>Escolhendo os dados para a mineração de dados
   Quando você começa a mineração de dados, você pode perguntar "De quantos dados precisarei?" ou "Há algum requisito especial sobre o qual eu deva saber ao apagar ou formatar meus dados?"  
@@ -67,7 +67,7 @@ ms.locfileid: "36009922"
   
 -   Crie várias versões dos seus dados e compile vários modelos.  
   
- Para obter dicas adicionais sobre como selecionar, modificar e analisar dados, consulte [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
+ Para obter dicas adicionais sobre como selecionar, modificar e examinar os dados, consulte [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
   
 ### <a name="how-much-data-do-i-need"></a>De quantos dados precisarei?  
  Uma regra básica é nunca ter menos de 50 a 100 linhas de dados para os tipos e cenários de modelos mais simples. Por exemplo, se você estiver prevendo um único atributo usando um modelo Naïve Bayes e o conjunto de dados estiver bem-formado, poderá gerar previsões razoavelmente precisas usando de 50 a 100 linhas de dados.  
@@ -160,13 +160,13 @@ ms.locfileid: "36009922"
   
 -   Esse tipo de modelo também não pode prever valores contínuos. Em virtude disso, se você quiser prever um número contínuo como renda (por exemplo), você deve primeiro compartimentalizar os valores em intervalos significativos. Se você não tiver certeza de quais são os intervalos apropriados, você pode usar o algoritmo de clustering para identificar grupos de números em seus dados.  
   
--   Quando você usa um assistente baseado neste algoritmo (como [analisar os influenciadores principais &#40;ferramentas de análise de tabela para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), colunas contínuas serão compartimentalizadas pelo Assistente para você.  
+-   Quando você usa um assistente baseado neste algoritmo (como [analisar os influenciadores principais &#40;ferramentas de análise de tabela para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), colunas contínuas serão compartimentalizadas pelo Assistente de você.  
   
--   Se você criar um modelo Naive Bayes usando a [avançadas de modelagem &#40;suplementos de mineração de dados para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opção, colunas numéricas serão removidas do modelo. Se você quiser evitar isso, use o [rotular novamente &#40;suplementos de mineração de dados do SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta para criar uma nova coluna com valores guardados.  
+-   Se você criar um modelo Naive Bayes usando a [avançadas de modelagem &#40;Data Mining Add-ins para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opção, colunas de número serão removidas do modelo. Se você quiser evitar isso, use o [rotular novamente &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) ferramenta para criar uma nova coluna com valores guardados.  
   
  **Modelos de clustering**  
   
--   As ferramentas de clustering ([Assistente de Cluster &#40;suplementos de mineração de dados para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e [detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) também não é possível usar contínua números, mas essas duas ferramentas automaticamente guardar colunas numéricas para você.  
+-   As ferramentas de clustering ([Assistente de Cluster &#40;Data Mining Add-ins para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) e [detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) também não é possível usar contínua números, mas ambas as ferramentas serão automaticamente compartimentalizar as colunas numéricas para você.  
   
 -   Ambas as ferramentas oferecem a opção de escolher o número de categorias de saída nos resultados, mas se você quiser controlar a maneira como os valores em colunas individuais são agrupados, deverá criar uma nova coluna com o agrupamento desejado.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36009922"
   
  Por exemplo, se uma coluna contiver números que se repetem em um determinado intervalo para indicar os dias da semana, você poderia especificar o tipo de conteúdo dessa coluna como `Cyclical`.  
   
- Você não precisa se preocupar sobre tipos de conteúdo se usar os assistentes e ferramentas fornecidos neste suplemento. No entanto, se você usar o [Adicionar modelo à estrutura &#40;suplementos de mineração de dados para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modelagem opção para adicionar um novo modelo de dados existente, você pode obter um erro relacionado a tipos de conteúdo.  
+ Você não precisa se preocupar sobre tipos de conteúdo se usar os assistentes e ferramentas fornecidos neste suplemento. No entanto, se você usar o [Adicionar modelo à estrutura &#40;Data Mining Add-ins para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modelagem opção para adicionar um novo modelo de dados existentes, você poderá receber um erro relacionado a tipos de conteúdo.  
   
  O motivo é que alguns tipos de modelo exigem um determinado tipo de dados (como um carimbo de data e hora). As ferramentas processam essas colunas de acordo com requisitos específicos e também adicionam uma propriedade de tipo de conteúdo. Em virtude disso, se você reutilizar os dados com um algoritmo completamente diferente, poderá ser necessário alterar o tipo de dados ou tipo de conteúdo.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36009922"
   
  Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long`, `Text`, e `Date`.  
   
- **Chave de tempo**  
+ **Tempo-chave**  
  A coluna contém valores que são ordenados e representam uma escala de tempo. Use o tipo de conteúdo Key Time somente se o modelo for um modelo de série temporal ou de clustering de sequências.  
   
  Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long` e `Date`.  
@@ -228,7 +228,7 @@ ms.locfileid: "36009922"
   
  O que isso significa é que cada linha de dados realmente contém uma tabela de dados aninhada, com uma ou mais colunas e uma ou mais linhas.  
   
- Tabelas aninhadas são muito úteis, mas você pode usá-los apenas com o [avançadas de modelagem &#40;suplementos de mineração de dados para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opções de modelagem. Por exemplo, os dados de exemplo para o [Assistente associar &#40;cliente de mineração de dados para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) assistente e [análise da cesta de compras &#40;ferramentas de análise de tabela para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) ferramenta contém dados bidimensionais de uma tabela aninhada.  
+ Tabelas aninhadas são muito úteis, mas você pode usá-los apenas com o [avançadas de modelagem &#40;Data Mining Add-ins para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opções de modelagem. Por exemplo, os dados de exemplo para o [Assistente de associação de &#40;cliente de mineração de dados para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) assistente e [análise da cesta de compras &#40;ferramentas de análise de tabela para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) ferramenta contém dados bidimensionais de uma tabela aninhada.  
 
   
   

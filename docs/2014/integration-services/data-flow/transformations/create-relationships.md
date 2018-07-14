@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebcf3e48cdb2648556c5066c96258cda58e5c51c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2ca9f48a5f5cc545f89b226b869291ecef54907
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269392"
 ---
 # <a name="create-relationships"></a>Criar Relações
   Use a caixa de diálogo **Criar Relações** para editar mapeamentos entre as colunas de origem e as colunas da tabela de pesquisa que você configurou no Editor de Transformação Pesquisa Difusa, no Editor de Transformação Pesquisa e no Editor de Transformação Pesquisa de Termos.  
@@ -56,6 +56,6 @@ ms.locfileid: "36010096"
  [Referência de mensagens e erros do Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../lookup-transformation-editor-columns-page.md)   
- [Editor de transformação de pesquisa de termos &#40;guia pesquisa de termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Editor de transformação de pesquisa de termo &#40;guia de pesquisa de termos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

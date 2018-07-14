@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217846"
 ---
 # <a name="source-control-basics"></a>Noções básicas de controle do código-fonte
   O controle do código-fonte recorre a um sistema em que uma parte central do software de servidor armazena e rastreia versões de arquivos e também controla o acesso a eles. Um sistema de controle do código-fonte típico inclui um provedor de controle do código-fonte, e dois ou mais clientes de controle do código-fonte.  
@@ -56,8 +56,8 @@ ms.locfileid: "36011203"
 |||  
 |-|-|  
 |**Tarefa**|**Tópico**|  
-|Definir opções de controle de origem|[Definir opções de controle do código-fonte](../../2014/database-engine/set-source-control-options.md)|  
-|Alterar conexões de controle de origem|[Alterar conexões de controle do código-fonte](../../2014/database-engine/change-source-control-connections.md)|  
+|Definir opções de controle do código-fonte|[Definir opções de controle do código-fonte](../../2014/database-engine/set-source-control-options.md)|  
+|Alterar controle do código-fonte conexões|[Alterar conexões de controle do código-fonte](../../2014/database-engine/change-source-control-connections.md)|  
 |Excluir arquivos do controle de origem|[Excluir arquivos do controle do código-fonte](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupColumn element
 ms.assetid: 8c825f16-0d17-4ff8-bc18-b52cf11edba7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e57329b1112441ddba51eeaaf709f18219d8db33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac09217cc0a48b079580b908db599f109a029982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291482"
 ---
 # <a name="customrollupcolumn-element-assl"></a>Elemento CustomRollupColumn (ASSL)
   Define os detalhes da coluna que fornece uma fórmula de acúmulo personalizada.  
@@ -50,7 +50,7 @@ ms.locfileid: "36008747"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Comprimento e tipo de dados|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor padrão|Nenhum|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36008747"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter informações adicionais sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tipo, consulte [o tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tipo, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- O elemento que corresponde ao pai do `CustomRollupColumn` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `CustomRollupColumn` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos &#40;ASSL&#41;](objects-assl.md)  
