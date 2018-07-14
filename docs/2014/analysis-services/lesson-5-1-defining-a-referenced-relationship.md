@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200376"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definindo uma relação referenciada
   Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como base uma tabela que estava diretamente vinculada à tabela de fatos de um grupo de medidas por uma relação de chave primária para chave estrangeira. Nas tarefas deste tópico, você vinculará a dimensão **Geografia** à tabela de fatos para vendas do revendedor por meio da dimensão **Revendedor** , conhecida como *dimensão de referência*. Isso permite aos usuários dimensionar as vendas do revendedor por geografia. Para obter mais informações, consulte [Definir uma relação referenciada e as propriedades da relação referenciada](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36006459"
   
      Observe que a medida **Vendas do Revendedor/Valor das Vendas** não foi dimensionada corretamente pelos membros do atributo **País/Região** na hierarquia **Regiões** . O valor de **Vendas do Revendedor/Valor das Vendas** é repetido para cada membro de atributo **País/Região** .  
   
-     ![Dimensionadas medida quantidade de vendas de revendedor](../../2014/tutorials/media/l5-referencedrelationship-1.gif "medida quantidade de vendas de revendedor dimensionadas")  
+     ![Dimensionadas medidas de vendas do revendedor](../../2014/tutorials/media/l5-referencedrelationship-1.gif "medida quantidade de vendas de revendedor dimensionadas")  
   
 4.  Abra o Designer de Exibição da Fonte de Dados para a exibição da fonte de dados do **Adventure Works DW 2012**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36006459"
   
 9. Na lista **Dimensões** da guia **Uso da Dimensão** , clique com o botão direito do mouse em **Geografia**e clique em **Renomear**.  
   
-10. Alterar o nome da dimensão do cubo para `Reseller Geography`.  
+10. Altere o nome desta dimensão de cubo para `Reseller Geography`.  
   
      Como agora essa dimensão de cubo está vinculada ao grupo de medidas **Vendas do Revendedor** , os usuários poderão definir seu uso explicitamente no cubo, evitando uma possível confusão do usuário.  
   

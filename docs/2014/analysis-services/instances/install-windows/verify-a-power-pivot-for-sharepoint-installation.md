@@ -1,5 +1,5 @@
 ---
-title: Verifique se um PowerPivot para SharePoint | Microsoft Docs
+title: Verify a PowerPivot for SharePoint Installation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 10
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 84457199c37eea8445911e25706928305db0d380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7116c698e987ca86da83763dd1994c098a99026d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189373"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verificar uma instalação do PowerPivot para SharePoint
   Uma instância do PowerPivot para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor PowerPivot. No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho PowerPivot que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha os dados PowerPivot e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
@@ -90,11 +90,11 @@ ms.locfileid: "36006741"
   
 7.  Em Tipo de Servidor, selecione **Analysis Services**.  
   
-8.  Em nome do servidor, digite  **\<nome do servidor > \powerpivot**, onde  **\<nome do servidor >** é o nome do computador que tenha o PowerPivot para SharePoint.  
+8.  Em nome do servidor, digite  **\<server-name > \powerpivot.**, onde  **\<nome do servidor >** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 9. Clique em **Conectar**. Isso verifica se o servidor do Analysis Services está disponível.  
   
-10. No Pesquisador de objetos, você pode clicar em **bancos de dados** para exibir a lista de arquivos de dados do PowerPivot que são carregados.  
+10. No Pesquisador de objetos, você pode clicar **bancos de dados** para exibir a lista de arquivos de dados do PowerPivot que são carregados.  
   
 11. No sistema de arquivos do computador, verifique a pasta a seguir para determinar se os arquivos estão armazenados no cache em disco. A presença de arquivos armazenados em cache é a verificação adicional de que a implantação é operacional. Para exibir o cache de arquivos, vá para o \<unidade >: \Program Files\Microsoft SQL Server\MSAS11. Pasta do aplicativo de serviço PowerPivot POWERPIVOT\OLAP\Backup\Sandboxes\Default. Cada banco de dados armazenado em cache é armazenado em sua própria pasta, usando uma convenção de nomenclatura baseada em GUID para assegurar um nome exclusivo.  
   

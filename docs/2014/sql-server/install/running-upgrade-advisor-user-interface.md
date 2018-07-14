@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - Upgrade Advisor [SQL Server], running
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, running
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 36a31e74e95b966137df96f5e3f2ab05fa7a991f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216586"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Executando o Supervisor de Atualização (Interface do usuário)
   Você pode executar o Supervisor de Atualização para analisar componentes locais ou remotos durante o planejamento da atualização. O Supervisor de Atualização gera um relatório para cada componente e instância que é analisado.  
@@ -51,7 +51,7 @@ ms.locfileid: "36006039"
   
 6.  Gerar o relatório dos problemas de atualização.  
   
- Para obter mais informações sobre o Assistente para análise de Supervisor de atualização, consulte [como: executar o Assistente de análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Para obter mais informações sobre o Assistente de análise do Supervisor de atualização, consulte [como: executar o Assistente de análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
  Para obter informações específicas necessárias para cada etapa, consulte [Atualizar referência de Interface de usuário do Orientador de](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
@@ -72,16 +72,16 @@ ms.locfileid: "36006039"
   
  Para verificar as instruções passo a passo de como usar o Visualizador de Relatórios, consulte os seguintes tópicos:  
   
--   [Como: exibir um relatório do Supervisor de atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Como exibir um relatório do Supervisor de Atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Como: Filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Como filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Como: exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Como exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Como: executar o Assistente para análise do Supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

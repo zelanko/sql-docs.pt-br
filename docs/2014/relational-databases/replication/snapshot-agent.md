@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.snapshotagent.f1
 helpviewer_keywords:
 - Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 75d39a1152138a39a676612df45e76fa0e74dbb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 32a0bc465078416671a2cf22a2c6f7cdbf61f5af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191646"
 ---
 # <a name="snapshot-agent"></a>Snapshot Agent
   A caixa de diálogo **Snapshot Agent** exibe informações detalhadas sobre o Snapshot Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  

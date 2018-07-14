@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
@@ -16,13 +16,13 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b71a4c63dbe81184c70f18fff53c90e048d7d4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e61faf60834ecfb312859ba80d953d49b82a477a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225646"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (Menor que) (Expressão SSIS)
   Executa uma comparação para determinar se a primeira expressão é menor que a segunda. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  
@@ -104,10 +104,10 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [&#62;&#40;Maior&#41; &#40;expressão SSIS&#41;](greater-than-ssis-expression.md)   
+ [&#62;&#40;Maior que&#41; &#40;expressão do SSIS&#41;](greater-than-ssis-expression.md)   
  [&#62;= &#40;Maior ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= &#40;Menor ou igual a&#41; &#40;Expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

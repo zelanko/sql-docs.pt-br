@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10810e19ec00aa77a14cb5a21789dfee1f9ae09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206276"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definir Referência de Moeda Local (Assistente de Business Intelligence)
   Use a página **Definir Referência de Moeda Local** para definir as moedas locais para a funcionalidade de conversão de moedas que cobre os tipos de conversão muitos para muitos ou muitos para um especificados na página **Selecionar Tipo de Conversão** . Uma moeda local é a moeda na qual as transações de medidas selecionadas na página **Selecionar Medidas** estão armazenadas.  
@@ -31,17 +31,17 @@ ms.locfileid: "36006467"
   
 ## <a name="options"></a>Opções  
  **Identificadores da tabela de fatos**  
- Selecione para especificar um atributo que forneça identificadores de moedas locais em uma dimensão de moedas referenciada pela tabela de fatos que contém as medidas selecionadas na página **Selecionar Medidas** . (Dimensão de moeda em um cuja `Type` está definida como *moeda*.)  
+ Selecione para especificar um atributo que forneça identificadores de moedas locais em uma dimensão de moedas referenciada pela tabela de fatos que contém as medidas selecionadas na página **Selecionar Medidas** . (Uma moeda de dimensão de uma dimensão cuja `Type` estiver definida como *moeda*.)  
   
  Use esta opção quando a própria transação determinar a moeda local daquela transação. Por exemplo, no banco de dados de exemplo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ,[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], o grupo de medidas Vendas pela Internet tem uma relação regular de dimensão com a dimensão Moeda. A tabela de fatos desse grupo de medidas contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões daquela dimensão.  
   
- **Atributo referenciados pelos dados de fatos e dimensão de moeda**  
- Selecione o atributo de moeda dentro de uma dimensão de moedas cujos membros representam identificadores de moedas locais. (Atributo de moeda é uma cujo `Type` está definida como *moeda*.)  
+ **Dimensão de moeda e atributo referenciados pelos dados de fato**  
+ Selecione o atributo de moeda dentro de uma dimensão de moedas cujos membros representam identificadores de moedas locais. (Atributo de moeda é um cuja `Type` estiver definida como *moeda*.)  
   
 > [!NOTE]  
 >  Esta opção não estará disponível se a opção **Identificadores da tabela de fatos** não estiver selecionada.  
   
- **Atributos da tabela de dimensão**  
+ **Atributos na tabela de dimensões**  
  Selecione para especificar um atributo de uma dimensão relacionada ao grupo de medidas que contém identificadores de moedas locais.  
   
  Use esta opção quando a relação entre uma transação e outra entidade corporativa, como um local, determinar a moeda local daquela transação. Por exemplo, no banco de dados de exemplo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ,[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], o grupo de medidas Relatórios Financeiros tem uma relação de dimensão referenciada com a dimensão Moeda por meio da dimensão Organização. Isto é, a tabela de fatos do grupo de medidas Relatório Financeiro contém uma coluna de chave estrangeira que faz referência a membros na tabela de dimensões daquela dimensão. A tabela de dimensões da dimensão Organização, por sua vez, contém uma coluna de chave estrangeira que faz referência aos identificadores de moedas na tabela de dimensões Moeda.  

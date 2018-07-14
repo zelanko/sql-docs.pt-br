@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
 - sources [Integration Services], OLE DB
@@ -17,13 +17,13 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf9323df10ced9f09ee96e9a3790a10b40d3bd39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 841a62a4b7667cfbf9232e678f0551da8a6c9880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233766"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrair dados por meio da origem OLE DB
   Para adicionar e configurar uma origem OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  
@@ -69,7 +69,7 @@ ms.locfileid: "36005693"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Origem de OLE DB](ole-db-source.md)   
+ [Origem OLE DB](ole-db-source.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](integration-services-paths.md)   
  [Tarefa de Fluxo de Dados](../control-flow/data-flow-task.md)  

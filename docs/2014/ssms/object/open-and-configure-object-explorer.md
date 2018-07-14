@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abc9d5df546baf36bdf566e4669faf6a2611a612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9005404601b3600da088678741434bd192d0579
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237996"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
   Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  

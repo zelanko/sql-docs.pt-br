@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234416"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
   O Supervisor de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda você a se preparar para atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização analisa os componentes instalados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório que identifica os problemas a serem corrigidos antes ou depois da atualização.  
@@ -68,17 +68,17 @@ ms.locfileid: "36005467"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer a partir de [site do Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer a partir de [site da Web do Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e o [página de download do .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e para o [página de download do .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar o .NET Framework 4 a partir da mídia do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localize a raiz da unidade de disco. Clique duas vezes nas pastas \redist e DotNetFrameworks; execute o dotNetFx40_Full_x86_x64.exe (para sistemas operacionais de 32 ou 64 bits).  
   
- Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando do disco do produto, execute SQLUA.msi diretamente do disco do produto.  
+ Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando de disco do produto, execute sqlua. msi diretamente no disco do produto.  
   
- Depois de instalar o Supervisor de atualização, você pode abri-lo no **iniciar** menu:  
+ Depois de instalar o Supervisor de atualização, você poderá abri-lo partir o **iniciar** menu:  
   
--   Clique em **iniciar**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, clique em  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização**.  
+-   Clique em **inicie**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, clique em  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização**.  
   
  Para obter mais informações, consulte a documentação do Supervisor de Atualização incluída no download do Supervisor de Atualização e nas Notas de Versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d6232128f0c718b17c93471b245476c31f379f09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 759f9ff43075f5285fba0c3799577855c5e8f20d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208466"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Exibir rótulos de pontos de dados fora de um gráfico de pizza (Construtor de Relatórios e SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o rótulo do gráfico de pizza é otimizado para exibir rótulos apenas em várias fatias de dados. Os rótulos poderão ser sobrepostos, se o gráfico de pizza contiver muitas fatias. Uma solução é exibir os rótulos fora do gráfico de pizza, o que pode criar mais espaço para rótulos de dados mais longos. Se os rótulos ainda estiverem sobrepostos, você poderá criar mais espaço para eles habilitando 3D. Isso reduz o diâmetro do gráfico de pizza criando mais espaço em torno do gráfico.  
@@ -45,7 +45,7 @@ ms.locfileid: "36006307"
   
 5.  Defina a propriedade **PieLabelStyle** para **Externo**.  
   
-6.  Definir o `PieLineColor` propriedade **preto**. A propriedade PieLineColor define as linhas do texto explicativo para cada rótulo de ponto de dados.  
+6.  Defina as `PieLineColor` propriedade para **preto**. A propriedade PieLineColor define as linhas do texto explicativo para cada rótulo de ponto de dados.  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>Para evitar rótulos sobrepostos exibidos fora de um gráfico de pizza  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36006307"
 4.  Se desejar que o gráfico tenha mais espaço para rótulos, mas ainda pareça bidimensional, defina as propriedades **Rotação** e **Inclinação** em **0**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Coletar fatias pequenas em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Exibir valores percentuais em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   

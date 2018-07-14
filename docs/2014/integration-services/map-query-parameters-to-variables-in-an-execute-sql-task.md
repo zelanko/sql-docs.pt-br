@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233386"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL
   Este tópico descreve como usar uma instrução SQL parametrizada na tarefa Executar SQL e criar mapeamentos entre variáveis e os parâmetros na instrução SQL.  

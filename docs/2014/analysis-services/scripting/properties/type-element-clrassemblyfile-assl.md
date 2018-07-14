@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218016"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Elemento Type (ClrAssemblyFile) (ASSL)
   Especifica o tipo de arquivo de um dos arquivos que pertencem a um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] assembly do .NET Framework.  
@@ -66,17 +66,17 @@ ms.locfileid: "36006200"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*Principal*|O arquivo especificado é o arquivo principal no assembly.|  
+|*Main*|O arquivo especificado é o arquivo principal no assembly.|  
 |*Dependentes*|O arquivo especificado é um arquivo dependente no assembly.|  
 |*Depurador*|O arquivo especificado contém informações de depuração.|  
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de arquivo &#40;ASSL&#41;](../objects/file-element-assl.md)   
- [Elemento de arquivos &#40;ASSL&#41;](../collections/files-element-assl.md)   
+ [Arquivos de elemento &#40;ASSL&#41;](../collections/files-element-assl.md)   
  [Tipo de dados ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
  [Elemento assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Elemento assemblies &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   

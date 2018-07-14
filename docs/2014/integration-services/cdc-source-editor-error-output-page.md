@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cc9a22330adc00566f18250feba330046c468c0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5131f6f2b7735bd083b68e25d2237119d689faf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203876"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor de Origem CDC (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem CDC** para selecionar as opções para tratamento de erros.  
@@ -72,7 +72,7 @@ ms.locfileid: "36006161"
  O erro ou a linha de dados de truncamento é direcionada para a saída do erro da origem CDC. Neste caso, o tratamento de erro da origem CDC é usado. Para obter mais informações, consulte [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [Editor de origem CDC &#40;página colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [Editor de origem CDC &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [Editor de origem CDC &#40;página de colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

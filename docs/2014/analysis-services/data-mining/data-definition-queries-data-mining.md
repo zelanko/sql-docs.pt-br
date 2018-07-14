@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01a4385f97f7edcb6771d122c1ab90d5ce633e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f521923f6fb94bda3465ff8d85ef93d91bceef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234336"
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definição de dados (mineração de dados)
   Para mineração de dados, a categoria *consulta de definição de dados* significa instruções DMX ou comandos XMLA que fazem o seguinte:  
@@ -93,6 +93,6 @@ ms.locfileid: "36005754"
 |Saiba mais sobre OPENROWSET e outros modos de consultar dados externos.|[&#60;consulta de dados de origem&#62;](/sql/dmx/source-data-query).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
   

@@ -6,7 +6,7 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -14,22 +14,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
-caps.latest.revision: 8
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d99d5994e65eb00e8980bf95997571e9759863b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 5a034ad868375b031a2d6dbd3cea280d279928ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702549"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926617"
 ---
 # <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use **sp_pdw_database_encryption_regenerate_system_keys** para girar a chave de criptografia do certificado e o banco de dados para bancos de dados internos que são criptografadas quando a TDE está habilitada no dispositivo. Isso inclui o `tempdb`. Isso funcionará apenas se o TDE estiver habilitada.  
+  Use **sp_pdw_database_encryption_regenerate_system_keys** para girar a chave de criptografia do certificado e o banco de dados para bancos de dados internos que são criptografadas quando a TDE está habilitada no dispositivo. Isso inclui o `tempdb`. Essa ação terá êxito apenas se a TDE estiver habilitada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,10 +47,10 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
  Esse procedimento deve ser usado quando o tráfego no dispositivo é baixo.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** função de banco de dados fixa ou **CONTROL SERVER** permissão.  
+ Requer associação na **sysadmin** função de banco de dados fixa ou **CONTROL SERVER** permissão.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir regenera as chaves de criptografia de banco de dados.  
+ O exemplo a seguir gera novamente as chaves de criptografia de banco de dados.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  

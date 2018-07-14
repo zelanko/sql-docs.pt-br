@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236766"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuração do armazenamento para tabelas com otimização de memória
   Você precisa configurar a capacidade de armazenamento e operações de entrada/saída por segundo (IOPS).  
@@ -34,11 +34,11 @@ ms.locfileid: "36005877"
   
 -   Tabelas com otimização de memória persistem em arquivos distribuídos em um ou mais contêineres. Cada contêiner deve ser normalmente mapeado para seu próprio eixo e é usado para obter uma maior capacidade de armazenamento e um melhor desempenho. Você precisa garantir que o IOPS sequencial da mídia de armazenamento possa oferecer suporte 3 vezes maior em produtividade de logs de transações.  
   
-     Por exemplo, se tabelas com otimização de memória gerarem 500MB/s de atividade no log de transações, o armazenamento para tabelas com otimização de memória deve suportar 1,5 GB/s. A necessidade de oferecer suporte 3 vezes aumento na produtividade do log de transações é proveniente da observação de que os pares de arquivos de dados e delta são gravados primeiro com os dados iniciais e, em seguida, precisam ser leitura/regravação como parte de uma operação de mesclagem.  
+     Por exemplo, se tabelas com otimização de memória gerarem 500MB/s de atividade no log de transações, o armazenamento para tabelas com otimização de memória deve dar suporte a 1,5 GB/s. A necessidade de dar suporte a 3 vezes o aumento na taxa de transferência de log de transações surge da observação de que os pares de arquivos de dados e delta são gravados primeiro com os dados iniciais e, em seguida, precisam ser leitura/regravados como parte de uma operação de mesclagem.  
   
      Outro fator na estimativa de taxa de transferência de armazenamento é o tempo de recuperação para tabelas com otimização de memória. Dados de tabelas duráveis devem ser lidos na memória antes de um banco de dados ser disponibilizado para aplicativos. Normalmente, carregar dados em tabelas com otimização de memória pode ser feito na velocidade do IOPS. Portanto, se o armazenamento total para tabelas duráveis com otimização de memória for de 60 GB e você desejar ser capaz de carregar esses dados em 1 minuto, o IOPS do armazenamento deverá ser definido em 1 GB/s.  
   
--   Se você tiver um número par de eixos, deverá criar duas vezes o número de contêineres, cada par mapeado para o mesmo eixo. Isso é necessário para distribuir o IOPS e o armazenamento. Para obter mais informações, consulte [os arquivos de otimização de memória](the-memory-optimized-filegroup.md).  
+-   Se você tiver um número par de eixos, deverá criar duas vezes o número de contêineres, cada par mapeado para o mesmo eixo. Isso é necessário para distribuir o IOPS e o armazenamento. Para obter mais informações, consulte [a memória grupo de arquivos otimizado](the-memory-optimized-filegroup.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)  

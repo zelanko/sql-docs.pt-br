@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231546"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -84,7 +84,7 @@ ms.locfileid: "36005919"
 -   Se a tarefa usar associações de parâmetro, todas as consultas do lote devem ter o mesmo número e os mesmos tipos de parâmetros.  
   
 ## <a name="running-parameterized-sql-commands"></a>Executando comandos SQL parametrizados  
- As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros de entrada, parâmetros de saída e códigos de retorno. A tarefa Executar SQL dá suporte a `Input`, `Output`, e `ReturnValue` tipos de parâmetro. Você usa o `Input` tipo para parâmetros de entrada, `Output` parâmetros de saída, e `ReturnValue` para códigos de retorno.  
+ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetros de entrada, parâmetros de saída e códigos de retorno. A tarefa Executar SQL dá suporte a `Input`, `Output`, e `ReturnValue` tipos de parâmetro. Você usa o `Input` tipo para parâmetros de entrada `Output` para parâmetros de saída e `ReturnValue` para códigos de retorno.  
   
 > [!NOTE]  
 >  Você só poderá usar parâmetros em uma tarefa Executar SQL se o provedor de dados der suporte a eles.  
@@ -99,7 +99,7 @@ ms.locfileid: "36005919"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Solucionando problemas da tarefa Executar SQL  
  Você pode registrar as chamadas que a tarefa Executar SQL faz para provedores de dados externos. É possível usar esse recurso de registro para solucionar problemas dos comandos SQL executados pela tarefa Executar SQL. Para registrar as chamadas que a tarefa Executar SQL faz aos provedores de dados externos, habilite o registro de pacotes e selecione o evento **Diagnóstico** no nível de pacotes. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Às vezes um comando SQL ou procedimento armazenado retorna vários conjuntos de resultados. Esses conjuntos de resultados incluem não só conjuntos de linhas que são o resultado de `SELECT` consultas, mas valores únicos são o resultado de erros de `RAISERROR` ou `PRINT` instruções. A tarefa poderá ignorar ou não os erros nos conjuntos de resultados que ocorrem após o primeiro conjunto de resultados dependendo do tipo de gerenciador de conexões usado:  
+ Às vezes um comando SQL ou procedimento armazenado retorna vários conjuntos de resultados. Esses conjuntos de resultados incluem não só conjuntos de linhas que são o resultado de `SELECT` consultas, mas também valores únicos que resultam de erros do `RAISERROR` ou `PRINT` instruções. A tarefa poderá ignorar ou não os erros nos conjuntos de resultados que ocorrem após o primeiro conjunto de resultados dependendo do tipo de gerenciador de conexões usado:  
   
 -   Quando você usa gerenciadores de conexões OLE DB e ADO, a tarefa ignora os conjuntos de resultados que ocorrem após o primeiro conjunto de resultados. Portanto, com esses gerenciadores de conexões, a tarefa ignora um erro retornado por um comando SQL ou um procedimento armazenado quando o erro não faz parte do primeiro conjunto de resultados.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36005919"
   
 -   [SQL Editor da tarefa executar &#40;página geral&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [SQL Editor da tarefa executar &#40;página mapeamento de parâmetros&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [SQL Editor da tarefa executar &#40;página de mapeamento de parâmetro&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
 -   [SQL Editor da tarefa executar &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
   

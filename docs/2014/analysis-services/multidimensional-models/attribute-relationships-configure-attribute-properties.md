@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flexible relationships (Analysis Services)
 - attributes [Analysis Services], relationships
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69c3799eb831c63a919a76663f9ba689b68ec009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6ab5ee2e704b7783c88ea032ea71d110da6561e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187263"
 ---
 # <a name="configure-attribute-relationship-properties"></a>Configurar propriedades de relação de atributo
   A tabela a seguir lista e descreve as propriedades de uma relação de atributo.  

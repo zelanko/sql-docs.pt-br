@@ -1,5 +1,5 @@
 ---
-title: Distribuições de coluna (mineração de dados) | Microsoft Docs
+title: Distribuições de colunas (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - normal distribution type [data mining]
 - uniform distribution type [data mining]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributions [data mining]
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5170f490f6e6940b2d5bf4d8f7de7880f88d2e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee97f2b92aa1d98317ac9f420d6065340a60dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189423"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuições de colunas (mineração de dados)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível definir as distribuições de colunas em uma estrutura de mineração para simular como os algoritmos processarão os dados na colunas quando você criar modelos de mineração. Com relação a certos algoritmos, é útil definir a distribuição de colunas contínuas antes de processar o modelo, principalmente quando se sabe que as colunas contêm distribuições comuns de valores. Se as distribuições não estiverem definidas, os modelos de mineração resultantes poderão produzir previsões menos precisas do que se as distribuições estiverem definidas, uma vez que os algoritmos terão menos informações com as quais interpretar dados.  
@@ -52,8 +52,8 @@ ms.locfileid: "36006730"
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
- [Os métodos de diferenciação &#40;mineração de dados&#41;](discretization-methods-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md)   
  [Distribuições &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Colunas da estrutura de mineração](mining-structure-columns.md)  
   

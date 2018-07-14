@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb4bfcab9de31851c054a5f24382a01af1d2d9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200076"
 ---
 # <a name="aggregationstorage-element-assl"></a>Elemento AggregationStorage (ASSL)
   Identifica o método de armazenamento para agregações.  

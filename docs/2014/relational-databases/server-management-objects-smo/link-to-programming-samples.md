@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215006"
 ---
 # <a name="link-to-programming-samples"></a>Link para exemplos de programação
-  A tabela a seguir lista exemplos de programação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) que estão disponíveis no diretório [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Esses exemplos estão disponíveis no [!INCLUDE[csprcs](../../includes/csprcs-md.md)] e [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
+  A tabela a seguir lista exemplos de programação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) que estão disponíveis no diretório [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Esses exemplos estão disponíveis em ambas [!INCLUDE[csprcs](../../includes/csprcs-md.md)] e [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  Para obter mais informações sobre como instalar exemplos, consulte [AdventureWorks para SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36006559"
 |DatabaseSearch|Exibe todos os objetos em um banco de dados.|  
 |DependencyExplorer|Implementa a árvore de dependências e a janela do monitor de propriedade.|  
 |IndexSizes|Exibe o nome do índice e o tamanho do banco de dados selecionado.|  
-|LoadRegAssembly|Demonstra como carregar e registrar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Assembly .NET no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usa o assembly do UtilityConversion.|  
+|LoadRegAssembly|Demonstra como carregar e registrar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Assembly do .NET em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usa o assembly do UtilityConversion.|  
 |ManageDatabases|Demonstra como criar, alterar e descartar um banco de dados. Inclui o acréscimo de um novo grupo de arquivos e de arquivo de log.|  
 |ManageDatabaseUsers|Demonstra como adicionar, modificar e remover usuários.|  
 |ManageTables|Demonstra como criar, alterar e descartar tabelas.|  

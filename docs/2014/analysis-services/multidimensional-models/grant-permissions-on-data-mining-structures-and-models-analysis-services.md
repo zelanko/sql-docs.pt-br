@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5558e0ca08d13a5f746eb4694fdafc271e49df9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2763f0af1b911c8fca27dad035ed25be8b29f7c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200306"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Conceder permissões em estruturas e modelos de mineração de dados (Analysis Services)
   Por padrão, apenas um administrador do servidor do Analysis Services tem permissões para exibir estruturas ou modelos de mineração no banco de dados. Siga as instruções abaixo para conceder permissões a usuários não administradores.  
@@ -71,9 +71,9 @@ ms.locfileid: "36006004"
 >  Por padrão, o envio de consultas de DMX usando OPENROWSET está desabilitado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceder permissões de administrador de servidor &#40;do Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Conceder permissões de cubo ou modelo &#40;do Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado a dados de dimensão &#40;do Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acesso personalizado aos dados da célula &#40;do Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Conceder permissões de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder acesso personalizado a dados da célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

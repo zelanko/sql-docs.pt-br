@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d947f43f2f08c38a01102971dd62581affc80b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0b96ae16398f9ed8fd3ec6c62c61451966b458f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212696"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server
   Este tópico descreve como os seguintes recursos interagem com a captura de dados de alteração:  
@@ -67,7 +67,7 @@ ms.locfileid: "36006072"
   
 -   Se um banco de dados for restaurado para outro servidor, por padrão a captura de dados de alteração será desabilitada, e todos os metadados relacionados serão excluídos.  
   
-     Para manter a captura de dados de alteração, use o `KEEP_CDC` opção ao restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para manter o change data capture, use o `KEEP_CDC` opção ao restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Se um banco de dados for desanexado e anexado ao mesmo servidor ou a outro servidor, a captura de dados de alteração permanecerá habilitada.  
   

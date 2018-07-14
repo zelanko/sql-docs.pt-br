@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222216"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implantação de solução de modelo multidimensional
   Depois de você ter concluído o desenvolvimento de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , poderá implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: automatização AMO, XMLA, Assistente para Implantação, Utilitário de Implantação, Assistente para Sincronizar, backup e restauração.  
@@ -58,7 +58,7 @@ ms.locfileid: "36005991"
 |Deseja conceder aos usuários acesso aos dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pela Internet?|[Configurar o acesso HTTP ao Analysis Services nos serviços de informações da Internet &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Deseja fornecer acesso de consulta contínuo aos dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Requisitos e considerações sobre a implantação do Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Deseja implantar objetos em um ambiente distribuído usando objetos vinculados ou partições remotas?|[Criar e gerenciar uma partição local&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [Criar e gerenciar uma partição remota&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) e [Grupos de medidas vinculados](linked-measure-groups.md).|  
-|Como os dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão protegidos?|[Autorizar o acesso a objetos e operações &#40;do Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Como os dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão protegidos?|[Autorizar o acesso a objetos e operações de &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Tarefas relacionadas  
  [Requisitos e considerações sobre a implantação do Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
 - dates [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ade2a78dd95ad26f9560bb992a6da3a4811b4583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 061ded2d69926f07a82e80cf59200a8e0f4245b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223706"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (Expressão SSIS)
   Retorna um novo valor DT_DBTIMESTAMP depois de adicionar um número que representa um intervalo de data ou hora para a parte especificada na data. O parâmetro de número deve ser avaliado como um inteiro e o parâmetro de data deve ser avaliado como uma data válida.  
@@ -95,11 +95,11 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [DATEDIFF &#40;expressão SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEDIFF &#40;expressão do SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;Expressão do SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;Expressão do SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;Expressão do SSIS&#41;](month-ssis-expression.md)   
  [YEAR &#40;Expressão do SSIS&#41;](year-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

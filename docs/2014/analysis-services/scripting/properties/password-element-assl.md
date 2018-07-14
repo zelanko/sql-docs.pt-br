@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197736"
 ---
 # <a name="password-element-assl"></a>Elemento Password (ASSL)
   Contém a senha da conta de usuário para o [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) elemento.  
@@ -60,7 +60,7 @@ ms.locfileid: "36006429"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `Password` elemento, bem como o valor da [conta](account-element-impersonationinfo-assl.md) elemento, será usado para fins de representação se o valor da [ImpersonationMode](impersonationmode-element-assl.md) de qualquer elemento derivado do `ImpersonationInfo` tipo de dados é definido como *ImpersonateAccount*.  
+ O valor da `Password` elemento, bem como o valor da [conta](account-element-impersonationinfo-assl.md) elemento, será usado para fins de representação se o valor da [ImpersonationMode](impersonationmode-element-assl.md) elemento para qualquer elemento derivado do `ImpersonationInfo` tipo de dados é definido como *ImpersonateAccount*.  
   
  Apenas os membros da função do administrador do servidor da instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode fornecer um valor em branco para o elemento `Password`  
   

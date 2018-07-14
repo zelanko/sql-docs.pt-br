@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209076"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
   Tabelas com otimização de memória são aquelas criadas com [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
@@ -62,7 +62,7 @@ ms.locfileid: "36006108"
 |[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|não|  
 |[Procedimentos armazenados compilados nativamente](http://msdn.microsoft.com/library/dn133184.aspx)|Você não pode usar a instrução EXECUTE para executar nenhum procedimento armazenado em um procedimento armazenado compilado nativamente.|Sim|Não <sup>1</sup>|  
   
- <sup>1</sup> não é possível acessar uma tabela com otimização de memória ou o procedimento armazenado compilado nativamente da conexão de contexto (a conexão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [vs Regular. Conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> não é possível acessar uma tabela com otimização de memória ou procedimento armazenado compilado nativamente da conexão de contexto (a conexão de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [vs Regular. Conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Desempenho e escalabilidade  
  Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com o OLTP na memória:  

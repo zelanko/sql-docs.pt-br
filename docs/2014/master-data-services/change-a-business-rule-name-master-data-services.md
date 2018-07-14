@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b70b2ee10b092be94df67c13be09944824546b77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d10fa33ef28b7b8cf6b46bb15d35b5975f979cb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239136"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Alterar o nome de uma regra de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], altere o nome de uma regra de negócio quando o nome atribuído não atender às suas necessidades comerciais.  
@@ -45,7 +45,7 @@ ms.locfileid: "36005684"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Do **tipo de membro** , selecione um tipo de membro.  
+5.  Dos **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
