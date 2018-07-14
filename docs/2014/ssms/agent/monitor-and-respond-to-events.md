@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [SQL Server], alert
 - events [SQL Server], alerts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c07dc3709a11b2ff416b9ee31d5d4dbb3bc1315
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18dce0f5566da3cae4de2f0943ac32fc93a1fc94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189713"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitorar e responder a eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent pode monitorar e responder automaticamente a *eventos*, como mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condições de desempenho específicas e eventos WMI (Instrumentação de Gerenciamento do Windows).  

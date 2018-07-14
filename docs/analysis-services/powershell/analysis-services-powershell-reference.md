@@ -1,6 +1,6 @@
 ---
 title: Referência do PowerShell do Analysis Services | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 06/25/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: powershell
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9632b9aaecfc6f6fa86684ac604706ecaac90071
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.openlocfilehash: 13ea15a23bbf6de6c50b494f709f65cae2f7c48b
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037390"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943192"
 ---
 # <a name="analysis-services-powershell-reference"></a>Referência do Analysis Services PowerShell
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cmdlets do PowerShell são incluídos no [módulo do SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cmdlets do PowerShell estão incluídos na [módulo do SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
 >[!NOTE] 
-> Operações de banco de dados do Analysis Services do Azure usam o módulo do SqlServer mesmo como o SQL Server Analysis Services. No entanto, nem todos os cmdlets têm suporte para serviços de análise do Azure. Para obter mais informações, consulte [gerenciar serviços de análise do Azure com o PowerShell](https://docs.microsoft.com/azure/analysis-services/analysis-services-powershell).
+> Operações de banco de dados do Analysis Services do Azure usam o mesmo módulo SqlServer que o SQL Server Analysis Services. No entanto, nem todos os cmdlets têm suporte para o Azure Analysis Services. Para obter mais informações, consulte [gerenciar o Azure Analysis Services com PowerShell](https://docs.microsoft.com/azure/analysis-services/analysis-services-powershell).
   
 ##  <a name="bkmk_cmdlets"></a> Cmdlets do Analysis Services  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece cmdlets correspondem aos métodos no **Microsoft. AnalysisServices** namespace. A tabela a seguir descreve cada cmdlet e fornece um link para o método AMO correspondente.  
@@ -31,19 +31,19 @@ ms.locfileid: "34037390"
   
 |Cmdlet|Description|Métodos equivalentes do AMO|  
 |------------|-----------------|----------------------------|  
-|[Cmdlet Add-RoleMember](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Adicionar um membro a uma função de banco de dados.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
-|[Cmdlet Backup-ASDatabase](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Fazer backup de um banco de dados do Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
-|[Cmdlet Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Executar uma consulta ou script no formato XMLA ou TSML (JSON).|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
-|[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Processar um banco de dados.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet Invoke-ProcessCube](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Processar um cubo.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Processar uma dimensão.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)|Processar uma partição.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet Invoke-ProcessTable](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Processe uma tabela em um modelo Tabular, o modelo de compatibilidade 1200 ou superior.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Cmdlet Merge-Partition](../../analysis-services/powershell/merge-partition-cmdlet.md)|Mesclar uma partição.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
-|[Cmdlet New-RestoreFolder](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Criar uma pasta para conter um backup de banco de dados.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
-|[Cmdlet New-RestoreLocation](../../analysis-services/powershell/new-restorelocation-cmdlet.md)|Especificar um ou mais servidores remotos nos quais o banco de dados deve ser restaurado.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
-|[Cmdlet Remove-RoleMember](../../analysis-services/powershell/remove-rolemember-cmdlet.md)|Remover um membro de uma função de banco de dados.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
-|[Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restaurar um banco de dados em uma instância de servidor.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
+|[Cmdlet Add-RoleMember](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|Adicionar um membro a uma função de banco de dados.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
+|[Cmdlet Backup-ASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|Fazer backup de um banco de dados do Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
+|[Cmdlet Invoke-ASCmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-ascmd)|Executar uma consulta ou script no formato XMLA ou TSML (JSON).|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
+|[Invoke-ProcessASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processasdatabase)|Processar um banco de dados.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Invoke-ProcessCube](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processcube)|Processar um cubo.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Invoke-ProcessDimension](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processdimension)|Processar uma dimensão.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Invoke-ProcessPartition](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Processar uma partição.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Invoke-ProcessTable](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processtable)|Processe uma tabela em um modelo Tabular, o modelo de compatibilidade 1200 ou superior.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Cmdlet Merge-Partition](https://docs.microsoft.com/powershell/module/sqlserver/merge-partition)|Mesclar uma partição.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
+|[Cmdlet New-RestoreFolder](https://docs.microsoft.com/powershell/module/sqlserver/new-restorefolder)|Criar uma pasta para conter um backup de banco de dados.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
+|[Cmdlet New-RestoreLocation](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|Especificar um ou mais servidores remotos nos quais o banco de dados deve ser restaurado.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
+|[Cmdlet Remove-RoleMember](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|Remover um membro de uma função de banco de dados.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
+|[Cmdlet Restore-ASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/restore-asdatabase)|Restaurar um banco de dados em uma instância de servidor.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 
   
