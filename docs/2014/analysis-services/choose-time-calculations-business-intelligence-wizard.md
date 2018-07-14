@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.addintelligence.f1
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74f5918a2ad1b55d26b38310f38de3c1a5574261
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0188728f4e60a3b96cccf6dcbfdd9c318fc11367
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167677"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Escolher Cálculos de Tempo (Assistente de Business Intelligence)
   Use a página **Escolher Cálculos de Tempo** para definir a resolução dos novos cálculos de tempo a serem criados para uma hierarquia de tempo existente.  

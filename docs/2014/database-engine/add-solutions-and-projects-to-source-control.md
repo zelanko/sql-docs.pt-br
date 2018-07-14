@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], source controls
 - solutions [SQL Server Management Studio], source controls
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57e6ec237aa980732b4a096f7198c0d272677959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171433"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Adicionar soluções e projetos ao controle do código-fonte
   Ao adicionar uma solução a um controle do código-fonte, ela se torna parte de um arquivo morto de controle de versão dinâmico criado e mantido pelo provedor de controle de código-fonte. Sempre que alguém fizer o check-in de uma nova versão da solução, essa versão se tornará parte do arquivo morto e estará disponível para outros usuários do controle de código-fonte.  
