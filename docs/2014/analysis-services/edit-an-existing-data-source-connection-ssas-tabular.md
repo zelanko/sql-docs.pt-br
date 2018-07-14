@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c181ada4cb40eba4697f70d78933dcc26fc7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 412529e536e23a988fddd78f83611f4460e3dbf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248026"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Editar uma conexão de fonte de dados existente (SSAS tabular)
   Este tópico descreve como editar as propriedades de uma conexão de fonte de dados existentes em um modelo tabular.  
@@ -82,7 +82,7 @@ ms.locfileid: "36008075"
      Quando você salvar o conjunto atual de propriedades de tabela, uma mensagem poderá aparecer indicando que você precisa processar as tabelas. Clique em **Processar** para carregar dados atualizados no modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Processar dados &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
+ [Processar dados de &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
  [Fontes de dados com suporte &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

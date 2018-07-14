@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Prepare SQL event class
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3bb475c3733c582d5bb3b433727694952a4c664a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8825c2d925658e16b220aa0e33077b11445984ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172857"
 ---
 # <a name="prepare-sql-event-class"></a>classe de evento Prepare SQL
   A classe de evento Prepare SQL indica que SqlClient, ODBC, OLE DB ou DB-Library preparou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a serem usadas.  

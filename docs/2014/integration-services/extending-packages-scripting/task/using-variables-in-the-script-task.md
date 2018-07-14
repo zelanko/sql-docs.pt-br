@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193516"
 ---
 # <a name="using-variables-in-the-script-task"></a>Usando variáveis na tarefa Script
   Variáveis possibilitam que a tarefa Script troque dados com outros objetos no pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "36009192"
   
  As variáveis possibilitam essa comunicação entre o contêiner Loop Foreach e a tarefa Script. Na página **Mapeamentos de Variáveis** do **Editor de Loop Foreach**, atribua variáveis a cada item de dados retornado por um único item enumerado. Por exemplo, um enumerador de Arquivo Foreach retorna apenas um nome de arquivo no Índice 0 e, portanto, requer apenas um mapeamento de variável, enquanto um enumerador que retorna várias colunas de dados em cada linha requer o mapeamento de uma variável diferente para cada coluna a ser usada na tarefa Script.  
   
- Após mapear itens enumerados para variáveis, em seguida, você deve adicionar as variáveis mapeadas para o `ReadOnlyVariables` propriedade no **Script** página do **Editor da tarefa Script** para disponibilizá-los para seu script. Para obter um exemplo de uma tarefa Script dentro de um contêiner do Loop Foreach que processa os arquivos de imagem em uma pasta, consulte [Trabalhando com imagens com a Tarefa Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
+ Depois de mapear itens enumerados para variáveis, em seguida, você deve adicionar as variáveis mapeadas para o `ReadOnlyVariables` propriedade no **Script** página da **Editor da tarefa Script** para disponibilizá-las para seu script. Para obter um exemplo de uma tarefa Script dentro de um contêiner do Loop Foreach que processa os arquivos de imagem em uma pasta, consulte [Trabalhando com imagens com a Tarefa Script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Exemplo de variáveis  
  O exemplo a seguir demonstra como acessar e usar variáveis em uma tarefa Script para determinar o caminho do fluxo de trabalho do pacote. O exemplo supõe que você criou variáveis de inteiro nomeadas `CustomerCount` e `MaxRecordCount` e adicioná-las para o `ReadOnlyVariables` coleção no **Editor da tarefa Script**. A variável `CustomerCount` contém o número de registros de cliente a serem importados. Se seu valor for maior que o valor de `MaxRecordCount`, a tarefa Script reportará uma falha. Quando uma falha ocorre porque o limite de `MaxRecordCount` foi excedido, o caminho de erro do fluxo de trabalho pode implementar qualquer limpeza exigida.  
@@ -119,7 +119,7 @@ public class ScriptMain
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviços de integração &#40;SSIS&#41; variáveis](../../integration-services-ssis-variables.md)   

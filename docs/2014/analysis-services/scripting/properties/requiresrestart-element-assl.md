@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295416"
 ---
 # <a name="requiresrestart-element-assl"></a>Elemento RequiresRestart (ASSL)
-  Contém um valor somente leitura associado a um [ServerProperty](../objects/serverproperty-element-assl.md) elemento que determina se a alteração do valor da propriedade de servidor requer que a instância seja reiniciado para que a alteração tenha efeito.  
+  Contém um valor somente leitura associado a um [ServerProperty](../objects/serverproperty-element-assl.md) elemento que determina se a alteração do valor da propriedade do servidor requer que a instância seja reiniciado para que a alteração tenha efeito.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36007325"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `RequiresRestart` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ O elemento que corresponde ao pai de `RequiresRestart` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Elemento Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Elemento de servidor &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

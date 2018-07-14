@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 223a3e0db58b73f2b841cebd23d41bc36ba4a85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e1f9e7a0b6f7c9b62e431062f1cd778fe3ef998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201996"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Propriedades do Índice de Texto Completo (página Colunas)
   **Para exibir ou alterar as propriedades de um índice de texto completo**  
@@ -29,7 +28,7 @@ ms.locfileid: "36009207"
 -   [Administrar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **índice exclusivo**  
+ **Índice exclusivo**  
  Selecione um índice na lista suspensa. O índice deve ser um índice não nulo, exclusivo e de coluna de chave única.  
   
  **Selecione as colunas qualificadas que serão indexada com texto completo**  

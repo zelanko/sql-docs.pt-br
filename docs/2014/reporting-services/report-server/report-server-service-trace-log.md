@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
@@ -18,19 +18,19 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5473021393acf02a3910b4eb8090486d838e0770
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270272"
 ---
 # <a name="report-server-service-trace-log"></a>Log de rastreamento do serviço Servidor de Relatório
-  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o log de rastreamento do servidor de relatório é um arquivo de texto ASCII que contém informações detalhadas para operações de serviço do servidor de relatório, incluindo as operações executadas pelo Web do servidor de relatório de serviço Gerenciador de relatórios e processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução.  
+  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] log de rastreamento do servidor de relatório é um arquivo de texto ASCII que contém informações detalhadas para operações de serviço do servidor de relatório, incluindo as operações executadas pelo Web servidor de relatórios de serviço Gerenciador de relatórios e processamento em segundo plano. O arquivo de log de rastreamento inclui informações redundantes que estão registradas em outros arquivos de log, além de informações adicionais que, de outro modo, não seriam disponibilizadas. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução.  
   
 > [!NOTE]  
->  Em versões anteriores, havia vários arquivos de log de rastreamento, um para cada aplicativo. Os arquivos a seguir estão obsoletos e não são mais criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores: reportserverwebapp _*\<timestamp >*. log, ReportServer _*\<timestamp >* e reportserverservice_main _*\<timestamp >*. log.  
+>  Em versões anteriores, havia vários arquivos de log de rastreamento, um para cada aplicativo. Os arquivos a seguir são obsoletos e não são mais criados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores: reportserverwebapp _*\<timestamp >*. log, ReportServer _*\<timestamp >*. log e reportserverservice_main _*\<timestamp >*. log.  
   
  **Neste tópico:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36007656"
   
 -   [Configurações de rastreamento](#bkmk_trace_configuration_settings)  
   
--   [Adicionando configurações personalizadas para especificar um local de arquivo de despejo de memória](#bkmk_add_custom)  
+-   [Adicionando configurações personalizadas para especificar um local de arquivo de despejo](#bkmk_add_custom)  
   
 -   [Campos de arquivo de log](#bkmk_log_file_fields)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36007656"
   
  `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`.  
   
- O exemplo a seguir ilustra a estrutura XML das configurações `RStrace`. O valor `DefaultTraceSwitch` determina o tipo de informação que é adicionado no log. Exceto para o `Components` de atributo, os valores de `RStrace` são os mesmos em todos os arquivos de configuração.  
+ O exemplo a seguir ilustra a estrutura XML das configurações `RStrace`. O valor para `DefaultTraceSwitch` determina o tipo de informação que é adicionado ao log. Exceto para o `Components` de atributo, os valores para `RStrace` são os mesmos em todos os arquivos de configuração.  
   
 ```  
 <system.diagnostics>  
@@ -89,7 +89,7 @@ ms.locfileid: "36007656"
 |`Prefix`|Especifica um valor gerado que diferencia uma instância de log de outra. Por padrão, os valores do carimbo de data/hora são adicionados aos nomes de arquivo de log de rastreamento. Esse valor é definido como " tid, time ". Não modifique esta configuração.|  
 |**TraceListeners**|Especifica um destino para a saída do conteúdo do log de rastreamento. Você pode especificar vários destinos usando uma vírgula para separar cada um. Os valores válidos são:<br /><br /> DebugWindow<br /><br /> File (padrão)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica se os logs de rastreamento contêm dados para um período de 24 horas. Um log de rastreamento exclusivo deve existir para cada componente em cada dia. Esse valor é definido como "Unique (default)". Não modifique esse valor.|  
-|`Components`|Especifica os componentes para os quais as informações do log de rastreamento são geradas e o nível de rastreamento neste formato:<br /><br /> \<component category>:\<tracelevel><br /><br /> As categorias de componente podem ser definidas como:<br />`All` é usado para rastrear atividades gerais dos servidor de relatório para todos os processos que não estão incluídos em categorias específicas.<br />`RunningJobs` é usado para rastrear uma operação de relatório ou assinatura em andamento.<br />`SemanticQueryEngine` é usado para rastrear uma consulta semântica que é processada quando um usuário executa a exploração de dados ad hoc em um relatório baseado em modelos. <br />`SemanticModelGenerator` é usado para rastrear a geração do modelo.<br />`http` é usado para habilitar o arquivo de log HTTP do servidor de relatório. Para obter mais informações, consulte [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Os valores válidos de nível de rastreamento são:<br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".<br /><br /> Você pode especificar todos ou alguns dos componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Se não desejar gerar informações para um componente específico, desabilite o rastreamento desse componente (por exemplo, "SemanticModelGenerator:0"). Não desabilite o rastreamento para `all`.<br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para `DefaultTraceSwitch` será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.<br /><br /> Defina "SemanticQueryEngine:4" se desejar exibir as instruções Transact-SQL geradas para cada consulta semântica. As instruções Transact-SQL são registradas no log de rastreamento. O exemplo a seguir ilustra a configuração que adiciona instruções Transact-SQL ao log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|Especifica os componentes para os quais as informações do log de rastreamento são geradas e o nível de rastreamento neste formato:<br /><br /> \<component category>:\<tracelevel><br /><br /> As categorias de componente podem ser definidas como:<br />`All` é usado para rastrear atividades gerais dos servidor de relatório para todos os processos que não estão incluídos em categorias específicas.<br />`RunningJobs` é usado para rastrear uma operação de relatório ou assinatura em andamento.<br />`SemanticQueryEngine` é usado para rastrear uma consulta semântica que é processada quando um usuário executa a exploração de dados ad hoc em um relatório baseado em modelos. <br />`SemanticModelGenerator` é usado para rastrear a geração do modelo.<br />`http` é usado para habilitar o arquivo de log HTTP do servidor de relatório. Para obter mais informações, consulte [Log de HTTP do servidor de relatório](report-server-http-log.md).<br /><br /> <br /><br /> Os valores válidos de nível de rastreamento são:<br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado<br /><br /> O valor padrão do servidor de relatório é: "all:3".<br /><br /> Você pode especificar todos ou alguns dos componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Se não desejar gerar informações para um componente específico, desabilite o rastreamento desse componente (por exemplo, "SemanticModelGenerator:0"). Não desabilite o rastreamento para `all`.<br /><br /> Se você não adicionar um nível de rastreamento ao componente, o valor especificado para `DefaultTraceSwitch` será usado. Por exemplo, se você especificar "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos os componentes utilizarão o nível de rastreamento padrão.<br /><br /> Defina "SemanticQueryEngine:4" se desejar exibir as instruções Transact-SQL geradas para cada consulta semântica. As instruções Transact-SQL são registradas no log de rastreamento. O exemplo a seguir ilustra a configuração que adiciona instruções Transact-SQL ao log:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Adicionando configurações personalizadas para especificar um local de arquivo de despejo  
  Você pode adicionar uma configuração personalizada para definir o local usado pela ferramenta Dr. Watson para Windows usa para armazenar arquivos de despejo. A configuração personalizada é `Directory`. O exemplo a seguir fornece uma ilustração de como esta configuração é especificada na seção `RStrace`:  

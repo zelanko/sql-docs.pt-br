@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cca142282c59539d54d5e1d42d5d2269ac41635
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0383bc1c8bef5a84b77c8b63fb424995a2181ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241746"
 ---
 # <a name="configuration-element-dta"></a>Elemento de configuração (DTA)
   Determina uma configuração especificada pelo usuário, que consiste em estruturas existentes e hipotéticas de design físico do Orientador de Otimização do Mecanismo de Banco de Dados, para análise, quando uma carga de trabalho é analisada.  
@@ -54,14 +54,14 @@ ms.locfileid: "36007635"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode usar uma vez para cada `DTAInput` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `DTAInput` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Elementos filho**|[Elemento Server para configuração &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Elementos filho**|[Elemento Server para a configuração &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  

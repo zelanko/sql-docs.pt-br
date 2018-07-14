@@ -1,5 +1,5 @@
 ---
-title: Editor de tarefa da fila de mensagens (página receber) | Microsoft Docs
+title: Editor da tarefa fila de mensagens (página receber) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 458b1ddb5453a65dbfd96a9231f18b0ea81f507c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256822"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
   Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -140,8 +140,8 @@ ms.locfileid: "36007095"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de tarefa da fila de mensagens &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de tarefa da fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Editor da tarefa fila de mensagens &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página expressões](expressions/expressions-page.md)   
  [Tarefa Fila de Mensagens](control-flow/message-queue-task.md)  
   

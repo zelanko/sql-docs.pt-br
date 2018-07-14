@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 - Upgrade Advisor [SQL Server], process description
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrade process [Upgrade Advisor]
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1cab41d5ec522964887237decdf426da3cf833d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb54124a1646b65632a74db6d8c4cc9630e30046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288252"
 ---
 # <a name="upgrade-process-overview"></a>Visão geral do processo de atualização
   Este tópico fornece informações sobre as práticas recomendadas do Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e um resumo dos processos recomendados para a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -59,6 +59,6 @@ ms.locfileid: "36007427"
 ## <a name="see-also"></a>Consulte também  
  [Executando o Supervisor de atualização &#40;Interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Usando relatórios](../../../2014/sql-server/install/using-reports.md)   
- [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

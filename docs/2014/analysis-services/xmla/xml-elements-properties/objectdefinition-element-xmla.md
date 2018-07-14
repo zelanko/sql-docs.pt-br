@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ObjectDefinition element
 ms.assetid: 1911868c-a018-4308-8cf9-972a57f610a1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be9a1f234382fff074fe3ee37ebbabf4d6f226f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3c4fe23e2f77dd28823094cf6a77067d9365e6ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190786"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
-  Contém um ou mais elementos de Analysis Services Scripting Language (ASSL), usados para criar ou alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contém um ou mais elementos ASSL Analysis Services Scripting Language (), usados para criar ou alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36009828"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Alterar](../xml-elements-commands/alter-element-xmla.md), [criar](../xml-elements-commands/create-element-xmla.md)|  
+|Elementos pai|[ALTER](../xml-elements-commands/alter-element-xmla.md), [criar](../xml-elements-commands/create-element-xmla.md)|  
 |Elementos filho|Elementos ASSL obrigatórios. Um ou mais elementos ASSL, usados para definir objetos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre ASSL, consulte [propriedades &#40;XMLA&#41;](xml-elements-properties.md).|  
   
 ## <a name="remarks"></a>Remarks  

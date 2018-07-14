@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c26114e9b2624a3216afaf4c1deb45af9492eb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 882bf7a047cdd4251c9da60696c6e5707598e054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207676"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Especifique Marcar como Tabela de Data para uso com Inteligência de Tempo (SSAS tabular)
   Para usar funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de datas e uma coluna de identificador exclusivo (datetime) do tipo de dados de data. Quando uma coluna na tabela de datas é especificada como um identificador exclusivo, você pode criar relações entre colunas na tabela de datas e qualquer tabela de fatos.  
@@ -55,7 +55,7 @@ ms.locfileid: "36007776"
 4.  Se necessário, crie qualquer relação entre tabelas de fatos e a tabela de datas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cálculos &#40;Tabular do SSAS&#41;](calculations-ssas-tabular.md)   
+ [Cálculos de &#40;Tabular do SSAS&#41;](calculations-ssas-tabular.md)   
  [Funções de inteligência de tempo &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

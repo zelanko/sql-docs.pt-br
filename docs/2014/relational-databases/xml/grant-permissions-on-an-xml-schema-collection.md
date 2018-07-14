@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276112"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
   É possível conceder permissões para criar uma coleção de esquema XML e também permissões em um objeto da coleção de esquemas XML.  
@@ -65,7 +65,7 @@ ms.locfileid: "36006552"
   
 -   A permissão VIEW DEFINITION permite que a entidade de segurança consulte o conteúdo de uma coleção de esquema XML por meio de XML_SCHEMA_NAMESPACE ou de exibições de catálogo, desde que a entidade de segurança tenha uma das permissões ALTER, REFERENCES ou CONTROL na coleção.  
   
--   A permissão EXECUTE é necessária para validar valores inseridos ou atualizados pela entidade de segurança na coleção de esquemas XML que está digitando ou restringindo as `xml` colunas, variáveis e parâmetros de tipo. Essa permissão também é necessária para consultar o XML armazenado nessas colunas e variáveis.  
+-   A permissão EXECUTE é necessária para validar valores inseridos ou atualizados pela entidade de segurança na coleção de esquemas XML que está digitando ou restringindo o `xml` colunas, variáveis e parâmetros de tipo. Essa permissão também é necessária para consultar o XML armazenado nessas colunas e variáveis.  
   
 ## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos seguintes ilustram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  

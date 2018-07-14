@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273392"
 ---
 # <a name="mdschemadimensions-rowset"></a>Conjunto de linhas MDSCHEMA_DIMENSIONS
   Descreve as dimensões compartilhadas e privadas dentro de um banco de dados.  
@@ -67,7 +67,7 @@ ms.locfileid: "36008294"
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -CUBO DE 1<br />-DIMENSÃO DE 2<br /><br /> A restrição padrão tem valor 1.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -1 visível<br />-2 não visível<br /><br /> A restrição padrão tem valor 1.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -Visible 1<br />-2 não visível<br /><br /> A restrição padrão tem valor 1.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](ole-db-for-olap-schema-rowsets.md)  

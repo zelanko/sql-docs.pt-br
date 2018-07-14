@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 270c14a32d86286b02dbeb89767c609b92a2e431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80869fbba015492b469af030d5cc297e7127e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205816"
 ---
 # <a name="for-loop-editor"></a>Editor do Loop For
   Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para configurar um loop que repita um fluxo de trabalho até que uma condição especificada seja avaliada como falsa.  

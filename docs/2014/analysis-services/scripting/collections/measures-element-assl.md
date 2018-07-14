@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b21b53bf8173b709a43393710256b7040648b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f781eb542d290635bb01b8582c8e51a7cb2b05f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272292"
 ---
 # <a name="measures-element-assl"></a>Elemento Measures (ASSL)
-  Contém a coleção de [medidas](../objects/measure-element-assl.md) elementos associados ao elemento pai.  
+  Contém a coleção de [medida](../objects/measure-element-assl.md) elementos associados ao elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   

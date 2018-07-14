@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetProtocolsOrder method
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd3281ff6bcd92d53b76a25c1f7b5a127dc9cd7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0befa20fdc25df354bbfe60cfb9e3313a65ddf48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262262"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Método SetProtocolsOrder (classe ClientNetworkProtocol)
   Altera a ordem da lista de protocolo.  
@@ -61,6 +61,6 @@ ProtocolOrderList
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configurar protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurando protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

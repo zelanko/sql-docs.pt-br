@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272162"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Detalhar dados do caso a partir do modelo de mineração
   Se um modelo de mineração foi configurado para permitir que você detalhe os casos de modelo, quando você procurar o modelo, poderá recuperar informações detalhadas sobre os casos usados para criar o modelo. Além do mais, se a estrutura de mineração subjacente tiver sido configurada para permitir o detalhamento para casos de estrutura e você tiver as permissões adequadas, poderá retornar as informações a partir da estrutura de mineração. Isso pode incluir colunas que não foram incluídas no modelo de mineração.  
@@ -35,7 +35,7 @@ ms.locfileid: "36007808"
   
 |Nome do visualizador|Painel ou nome da guia|Selecionar nó|  
 |-----------------|----------------------|-----------------|  
-|**Visualizador de árvores da Microsoft**|Guia**Árvore de Decisão** |Clique em um nó de árvore.<br /><br /> **Observação** evitar usando o detalhamento no `All` nó, porque pode levar muito tempo para retornar resultados.|  
+|**Visualizador de árvores da Microsoft**|Guia**Árvore de Decisão** |Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o detalhamento no `All` nó, porque pode levar muito tempo para retornar os resultados.|  
 |**Visualizador de cluster da Microsoft**|**Diagrama de Cluster**|Clique em um nó de cluster.|  
 |**Visualizador de cluster da Microsoft**|**Perfis de Cluster**|Clique em qualquer parte da coluna de cluster.|  
 |**Visualizador de Associação da Microsoft**|Guia**Regras** |Clique em uma linha que contém um conjunto de regras.|  

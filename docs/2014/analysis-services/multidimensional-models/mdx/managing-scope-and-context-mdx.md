@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [MDX], context
 - scope [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - scripts [MDX], scope
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a712947ef820a573eed7839bb20329ee15180f23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28d50024f2419ab3ee135aede45abc7243ec5084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288032"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gerenciando escopo e contexto (MDX)
   No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script de expressões multidimensionais (MDX) pode ser aplicado ao cubo inteiro ou a partes específicas dele, a pontos específicos da execução do script. O script MDX pode adotar uma abordagem em camadas dos cálculos em um cubo usando passagens de cálculo.  
@@ -34,7 +34,7 @@ ms.locfileid: "36007615"
 > [!NOTE]  
 >  Para obter mais informações sobre como as passagens de cálculo podem afetar os cálculos, consulte [Noções básicas sobre a ordem de passagem e a ordem de resolução &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
   
- Para controlar a fase de cálculo, o escopo e o contexto de um script MDX, você usar a instrução CACULATE, especificamente o `This` função e a instrução SCOPE.  
+ Para controlar a passagem de cálculo, o escopo e contexto de um script MDX, use especificamente a instrução CACULATE, a `This` função e a instrução SCOPE.  
   
 ## <a name="using-the-calculate-statement"></a>Usando a instrução CALCULATE  
  A instrução CALCULATE preenche cada célula do cubo com dados agregados. Por exemplo, o script MDX padrão possui uma única instrução CALCULATE no início do script.  
@@ -45,13 +45,13 @@ ms.locfileid: "36007615"
 >  Se o script contiver uma instrução SCOPE com uma instrução CALCULATE, a linguagem MDX avaliará a instrução CALCULATE no contexto do subcubo definido pela instrução SCOPE e não com relação ao cubo inteiro.  
   
 ## <a name="using-the-this-function"></a>Usando a função This  
- A função `This` permite a recuperação do subcubo atual dentro de um script MDX. Você pode usar o `This` função para configurar rapidamente o valor das células do subcubo atual para uma expressão MDX. Você também usar o `This` função em conjunto com a instrução SCOPE para alterar o conteúdo de um subcubo específico durante uma passagem de cálculo específico.  
+ A função `This` permite a recuperação do subcubo atual dentro de um script MDX. Você pode usar o `This` função para configurar rapidamente o valor de células do subcubo atual para uma expressão MDX. Você geralmente usa o `This` função em conjunto com a instrução SCOPE para alterar o conteúdo de um subcubo específico durante uma passagem de cálculo específico.  
   
 > [!NOTE]  
->  Se o script contiver uma instrução de escopo que contenha um `This` função, o MDX avalia o `This` função dentro do contexto do subcubo definido pela instrução SCOPE e não em relação ao cubo inteiro.  
+>  Se o script contiver uma instrução de escopo que contém um `This` função, o MDX avalia o `This` função dentro do contexto do subcubo definido pela instrução SCOPE e não em relação ao cubo inteiro.  
   
 ### <a name="this-function-example"></a>Exemplo da função This  
- Exemplo de comando de script MDX a seguir usa o `This` função para aumentar o valor da medida Amount, no grupo de medidas finanças do [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] cubo de exemplo, 10% mais alto para os filhos do membro Redmond da dimensão cliente:  
+ O seguinte exemplo de comando de script MDX usa o `This` função para aumentar o valor da medida Amount, no grupo de medidas finanças do [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] cubo de exemplo, 10% mais alto para os filhos do membro Redmond da dimensão Customer:  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -62,7 +62,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- Para obter mais informações sobre a sintaxe do `This` funcionam, consulte [isso &#40;MDX&#41;](/sql/mdx/this-mdx).  
+ Para obter mais informações sobre a sintaxe do `This` , consulte [esse &#40;MDX&#41;](/sql/mdx/this-mdx).  
   
 ## <a name="using-the-scope-statement"></a>Usando a instrução SCOPE  
  A instrução SCOPE define o subcubo atual que contém outras expressões MDX e instruções em um script MDX e especifica seu escopo. A linguagem MDX avalia essas outras expressões e instruções MDX, incluindo a função `This` e a instrução CALCULATE, no contexto do subcubo.  
@@ -118,8 +118,8 @@ END SCOPE;
  Para obter mais informações sobre a sintaxe da instrução SCOPE, consulte [Instrução SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [O Script básico de MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [O Script básico MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

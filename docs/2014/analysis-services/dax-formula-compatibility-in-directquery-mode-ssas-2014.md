@@ -9,35 +9,35 @@ ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 700fed6039c53bd7e3c485d06fe5df4eae32e7f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189470"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidade de fórmula do DAX no modo DirectQuery (SSAS 2014)
-A linguagem de expressão de análise de dados (DAX) pode ser usada para criar medidas e outras fórmulas personalizadas para uso em modelos de tabela do Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados em pastas de trabalho do Excel e modelos de dados de área de trabalho do Power BI. Na maioria dos aspectos, os modelos criados nesses ambientes são idênticos, e você pode usar o mesmo medidas, relações e KPIs, etc. No entanto, se você cria um modelo de tabela do Analysis Services e implantá-lo no modo DirectQuery, há algumas restrições sobre as fórmulas que você pode usar. Este tópico fornece uma visão geral dessas diferenças, lista as funções que não têm suporte no modelo do SQL Server 2014 Analysis Services tabulars no nível de compatibilidade 1100 ou 1103 e no modo DirectQuery, e lista as funções que têm suporte, mas pode retorne resultados diferentes.  
+A linguagem de expressão de análise de dados (DAX) pode ser usada para criar medidas e outras fórmulas personalizadas para uso em modelos de tabela do Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados em pastas de trabalho do Excel e modelos de dados do Power BI Desktop. Na maioria dos aspectos, os modelos que você cria nesses ambientes são idênticos, e você pode usar o mesmo medidas, relações e KPIs, etc. No entanto, se você cria um modelo de tabela do Analysis Services e implantá-lo no modo DirectQuery, há algumas restrições sobre as fórmulas que você pode usar. Este tópico fornece uma visão geral dessas diferenças, lista as funções que não são suportadas no modelo do SQL Server 2014 Analysis Services tabulars no nível de compatibilidade 1100 ou 1103 e no modo DirectQuery, e lista as funções que têm suporte, mas talvez retorne resultados diferentes.  
   
-Neste tópico, usamos o termo *modelo na memória* para consultar modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos DirectQuery* para referir-se a modelos de tabela que tem sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+Neste tópico, usamos o termo *modelo na memória* para se referir aos modelos de tabela, que são totalmente hospedados dados armazenados em cache na memória em um servidor do Analysis Services em execução no modo de tabela. Usamos *modelos do DirectQuery* para se referir aos modelos de tabela que tiveram sido criados e/ou implantados no modo DirectQuery. Para obter informações sobre o modo DirectQuery, consulte [o modo DirectQuery (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
-## <a name="bkmk_SemanticDifferences"></a>Diferenças entre na memória e DirectQuery  
-Consultas em um modelo implantado no modo DirectQuery podem retornar resultados diferentes do mesmo modelo implantado no modo na memória. Isso ocorre porque, com o DirectQuery, os dados são consultados diretamente de um repositório de dados relacional e agregações necessárias por fórmulas são executadas usando o mecanismo relacional relevante, em vez de usar o mecanismo de análise na memória xVelocity (VertiPaq) para armazenamento e cálculo.  
+## <a name="bkmk_SemanticDifferences"></a>Diferenças entre os modos na memória e DirectQuery  
+Consultas em um modelo implantado no modo DirectQuery podem retornar resultados diferentes do mesmo modelo implantado no modo na memória. Isso ocorre porque, com o DirectQuery, os dados são consultados diretamente de um repositório de dados relacionais e agregações necessárias por fórmulas são executadas usando o mecanismo relacional relevante, em vez de usar o mecanismo de análise na memória xVelocity (VertiPaq) para armazenamento e o cálculo.  
   
 Por exemplo, há diferenças no modo como certos repositórios de dados relacionais tratam valores numéricos, datas, nulos etc.  
   
 Em contrapartida, a linguagem DAX destina-se a emular, do modo mais semelhante possível, o comportamento das funções no Microsoft Excel. Por exemplo, ao tratar nulos, cadeias de caracteres vazias e valores de zero, o Excel tenta fornecer a melhor resposta, independentemente do tipo de dados preciso e, portanto, o mecanismo xVelocity faz o mesmo. No entanto, quando um modelo de tabela é implantado no modo DirectQuery e passa fórmulas a uma fonte de dados relacional para avaliação, os dados devem ser tratados de acordo com a semântica da fonte de dados relacional, o que geralmente requer o tratamento distinto de cadeias de caracteres e nulos. Por isso, a mesma fórmula pode retornar um resultado diferente quando avaliada em relação aos dados armazenados em cache e em relação aos dados retornados exclusivamente do repositório relacional.  
   
-Além disso, algumas funções não podem ser usadas em todos os no modo DirectQuery porque o cálculo exigiria que os dados no contexto atual ser enviados para a fonte de dados relacionais como um parâmetro. Por exemplo, medidas em um [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pasta de trabalho geralmente usam funções de inteligência de tempo que fazem referência a intervalos de datas disponíveis na pasta de trabalho. Em geral, essas fórmulas não podem ser usadas no modo DirectQuery.  
+Além disso, algumas funções não podem ser usadas em todos os no modo DirectQuery porque o cálculo exigiria que os dados no contexto atual ser enviados para a fonte de dados relacionais como um parâmetro. Por exemplo, medidas em um [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pasta de trabalho frequentemente usam funções de inteligência de tempo que fazem referência a intervalos de datas disponíveis na pasta de trabalho. Em geral, essas fórmulas não podem ser usadas no modo DirectQuery.  
   
 ## <a name="semantic-differences"></a>Diferenças semânticas  
 Esta seção lista os tipos de diferenças semânticas que você pode esperar e descreve as limitações que podem se aplicar ao uso de funções ou aos resultados da consulta.  
@@ -76,7 +76,7 @@ Esta fórmula compara o SQL equivalente de um nulo a um nulo. Retorna **true** e
   
 Observe que, no Transact-SQL, um nulo nunca é igual a um nulo. No entanto, na DAX, um espaço em branco é igual a outro espaço em branco. Esse comportamento é o mesmo para todos os modelos na memória. É importante observar que o modo DirectQuery usa grande parte da semântica do SQL Server; mas, nesse caso, se separa dela, proporcionando um novo comportamento a comparações NULL.  
   
-### <a name="bkmk_Casts"></a>conversões  
+### <a name="bkmk_Casts"></a>Conversões  
   
 Não há nenhuma função de conversão como na DAX, mas conversões implícitas são executadas em muitas operações de comparação e aritméticas. É a operação de comparação ou aritmética que determina o tipo de dados do resultado. Por exemplo,  
   
@@ -92,7 +92,7 @@ As conversões no tipo de dados Boolean de qualquer outra cadeia de caracteres r
 **Conversão de cadeia de caracteres em data/hora**  
 No modo DirectQuery, conversões de representações de cadeias de caracteres de datas e horas em valores **datetime** reais apresentam o mesmo comportamento que teriam no SQL Server.  
   
-Para obter informações sobre as regras que controlam conversões de cadeia de caracteres para **datetime** tipos de dados em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, consulte o [referência de sintaxe DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Para obter informações sobre as regras que controlam conversões de cadeia de caracteres **datetime** tipos de dados em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, consulte o [referência de sintaxe DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 Os modelos que usam o repositório de dados na memória oferecem suporte a um intervalo mais limitado de formatos de texto para datas que os formatos de cadeias de caracteres para datas que têm suporte no SQL Server. No entanto, a DAX oferece suporte a formatos de data e hora personalizados.  
   
@@ -161,8 +161,8 @@ As seguintes expressões são válidas em modelos na memória, mas falharão no 
   
 A expressão `BLANK/BLANK` é um caso especial que retorna `BLANK` em modelos na memória e no modo DirectQuery.  
   
-### <a name="bkmk_Ranges"></a>Intervalos numéricos e de data e hora com suporte  
-As fórmulas em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e modelos de tabela na memória está sujeita às mesmas limitações que o Excel em relação ao máximo valores permitidos para números reais e datas. No entanto, podem surgir diferenças quando o valor máximo é retornado de um cálculo ou consulta ou quando valores são convertidos, arredondados ou truncados.  
+### <a name="bkmk_Ranges"></a>Suporte para intervalos numéricos e de data e hora  
+Fórmulas em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e modelos de tabela na memória estão sujeitas às mesmas limitações do Excel em relação ao máximo valores permitidos para números reais e datas. No entanto, podem surgir diferenças quando o valor máximo é retornado de um cálculo ou consulta ou quando valores são convertidos, arredondados ou truncados.  
   
 -   Se valores de tipos **Currency** e **Real** forem multiplicados e o resultado for maior do que o máximo possível, no modo DirectQuery, nenhum erro será gerado e um nulo será retornado.  
   
@@ -222,7 +222,7 @@ O seguinte exemplo demonstra como esse valor é calculado:
 **Não há suporte para o tipo de dados SQL Time**  
 Modelos na memória não dão suporte ao uso do novo tipo de dados SQL **Time** . No modo DirectQuery, fórmulas que referenciam colunas com esse tipo de dados retornarão um erro. Colunas de dados temporais não podem ser importadas para um modelo na memória.  
   
-No entanto, no [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] em modelos armazenados em cache, às vezes, o mecanismo converte o valor de tempo para um tipo de dados aceitável e a fórmula retornará um resultado.  
+No entanto, em [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] em modelos armazenados em cache, às vezes, o mecanismo converte o valor de tempo para um tipo de dados aceitável e a fórmula retorna um resultado.  
   
 Esse comportamento afeta todas as funções que usam uma coluna de data como um parâmetro.  
   

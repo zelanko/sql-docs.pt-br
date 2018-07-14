@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274202"
 ---
 # <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
   É possível excluir um grupo de carga de trabalho ou um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Transact-SQL.  
@@ -71,7 +71,7 @@ ms.locfileid: "36007266"
 ##  <a name="DelWGTSQL"></a> Excluir grupo de cargas de trabalho usando Transact-SQL  
  **Para mover um grupo de cargas de trabalho usando Transact-SQL**  
   
-1.  Execute o `DROP WORKLOAD GROUP` instrução especificando o nome do grupo de carga de trabalho para excluir.  
+1.  Execute o `DROP WORKLOAD GROUP` instrução, especificando o nome do grupo de carga de trabalho a ser excluído.  
   
 2.  Antes de emitir a instrução `ALTER RESOURCE GOVERNOR RECONFIGURE`, verifique se não há solicitações ativas no grupo de cargas de trabalho que está sendo excluído. Se houver solicitações ativas, `ALTER RESOURCE GOVERNOR` falhará. Para evitar esse problema, é possível executar uma das seguintes ações:  
   

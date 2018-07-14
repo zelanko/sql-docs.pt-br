@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246238"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Essa coluna é especificada no esquema usando a anotação `sql:overflow-field`. É possível ter várias colunas de estouro.  
@@ -78,9 +78,9 @@ ms.locfileid: "36006789"
 </xsd:schema>  
 ```  
   
- No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<ordem >** elemento é mapeado para a tabela CustOrder.  
+ No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<Order >** elemento é mapeado para a tabela CustOrder.  
   
- Ambos os  **\<cliente >** e  **\<ordem >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filhos não consumidos e atributos da  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
+ Os dois os  **\<cliente >** e  **\<Order >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filho não consumido e atributos dos  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

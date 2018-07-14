@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21a0748e56da92409e29e2559810bb81215a5a65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: baf570df551a8168faa32dc3defe09d1b019cf36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285652"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar e gerar scripts de log suplementares
   Use a guia **Scripts** para executar ou executar novamente um script no banco de dados de origem Oracle que configura o registro em log suplementar.  
@@ -58,7 +58,7 @@ ms.locfileid: "36006393"
 2.  Dê ao arquivo um nome e clique em **Salvar** para salvar o arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Credenciais Oracle para executar scripts](oracle-credentials-for-running-script.md)  
   
   

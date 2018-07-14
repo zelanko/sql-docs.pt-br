@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlservercompactdest.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 59754dabe5cfb4da9fc131874fb6e04057cee959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 644bc6b867516420565cae4e78518d90a08ecf5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173117"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Destino do SQL Server Compact Edition
   O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact grava dados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  

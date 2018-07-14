@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de7eea9099b458a9f16e6928c1535dc4a03eb81a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255228"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modelagem avançada (Suplementos de Mineração de Dados para Excel)
   Você pode usar o **avançado** opções para criar modelos e estruturas de mineração de dados personalizados com parâmetros diferentes daqueles criados pelos assistentes de modelagem de dados. Os dois assistentes descritos nesta seção o ajudam a criar uma estrutura de mineração de dados completamente nova e um novo modelo de mineração para aplicar a uma estrutura de mineração de dados existente.  
   
 ## <a name="create-mining-structure"></a>Criar a Estrutura de Mineração  
- ![Criar botão de estrutura de mineração, faixa de opções mineração de dados](media/dmc-createstruct.gif "botão Criar estrutura de mineração, faixa de opções mineração de dados")  
+ ![O botão Criar estrutura de mineração, faixa de opções mineração de dados](media/dmc-createstruct.gif "botão Criar estrutura de mineração, faixa de opções mineração de dados")  
   
  O **Assistente para criar estrutura de mineração** ajuda você a criar uma nova estrutura de mineração de dados. Uma estrutura é uma coleção dos dados extraídos de uma fonte de dados especificada.  Uma estrutura de mineração pode ser atualizada com novos dados na origem, mas quando você cria a estrutura de mineração, define tipos de dados e nomes que definem como os dados são usados para análise.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "36009040"
   
  Após ter criado uma estrutura de mineração, é possível adicionar vários modelos para aplicar a diferentes métodos de análise.  
   
- Para obter mais informações sobre como usar o **criar Assistente de estrutura de mineração**, consulte [Create Mining Structure &#40;suplementos de mineração de dados do SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md).  
+ Para obter mais informações sobre como usar o **criar Assistente de estrutura de mineração**, consulte [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](create-mining-structure-sql-server-data-mining-add-ins.md).  
   
 ## <a name="add-model-to-structure"></a>Adicionar modelo à estrutura  
- ![Adicionar modelo de botão de estrutura de](media/dmc-addmodel.gif "Adicionar modelo de botão de estrutura")  
+ ![Adicionar modelo de botão de estrutura](media/dmc-addmodel.gif "Add Model ao botão de estrutura")  
   
  Quando você adiciona um novo modelo a uma estrutura, analisa os dados usando um algoritmo diferente ou com parâmetros diferentes. Essa opção é particularmente útil se você quiser criar um modelo usando um dos algoritmos não expostos nas ferramentas de cliente de mineração de dados.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "36009040"
   
 -   Análise de associação em conjuntos de dados aninhados  
   
- Para ver quais são os tipos de estruturas de mineração disponível, você pode procurar os modelos e estruturas armazenados em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] clicando em **gerenciar modelos** ou **procurar**.  
+ Para ver quais são os tipos de estruturas de mineração disponível, você pode procurar os modelos e estruturas armazenados em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] clicando **gerenciar modelos** ou **procurar**.  
   
  Você está limitado às estruturas de mineração de dados criados durante a sessão atual ou as estruturas de mineração que foram salvas em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Para obter mais informações, consulte [Adicionar modelo à estrutura &#40;suplementos de mineração de dados para Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
+ Para obter mais informações, consulte [Adicionar modelo à estrutura &#40;Data Mining Add-ins para Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciar modelos &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)   
+ [Gerenciar modelos de &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)   
  [Procurando modelos no Excel &#40;suplementos de mineração de dados do SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

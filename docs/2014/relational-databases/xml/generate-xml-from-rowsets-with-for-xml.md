@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201106"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Gerar XML de conjuntos de linhas com FOR XML
-  Você pode gerar um `xml` instância de tipo de dados de um conjunto de linhas usando FOR XML com o novo **tipo** diretiva.  
+  Você pode gerar uma `xml` instância de tipo de dados de um conjunto de linhas usando FOR XML com o novo **tipo** diretiva.  
   
  O resultado pode ser atribuído a um `xml` coluna, variável ou parâmetro de tipo de dados. Além disso, o FOR XML pode ser aninhado para gerar qualquer estrutura hierárquica. Isso torna o FOR XML aninhado muito mais conveniente de escrever do que o FOR XML EXPLICIT, mas ele pode não executar tão bem para hierarquias profundas. O FOR XML também introduz um modo de PATH novo. Esse novo modo especifica o caminho na árvore XML onde o valor de uma coluna aparece.  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- A exibição V contém uma única linha com uma única columnxmlVal de tipo XML`.` ela pode ser consultada como uma `xml` instância de tipo de dados. Por exemplo, a consulta a seguir retorna o autor cujo primeiro nome é "David":  
+ A exibição V contém uma única linha com uma única columnxmlVal de tipo XML`.` ele pode ser consultado como uma `xml` instância de tipo de dados. Por exemplo, a consulta a seguir retorna o autor cujo primeiro nome é "David":  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

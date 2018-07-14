@@ -1,5 +1,5 @@
 ---
-title: TCP - IP propriedades (guia Protocolos) | Microsoft Docs
+title: TCP - propriedades de IP (guia Protocolos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57b3bd32574aadbd42b25b626756cc20369d9b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 169e1c0d19cecf50f7c995ff4b4d46f4badb32eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249536"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP propriedades (guia Protocolos)
+# <a name="tcp---ip-properties-protocols-tab"></a>TCP - propriedades de IP (guia Protocolos)
   Use a caixa de diálogo **Propriedades do TCP/IP** para configurar as opções do protocolo TCP/IP. Clique em **TCP/IP** no painel esquerdo, para mostrar configurações individuais de endereço IP no painel de detalhes.  
   
  O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser reiniciado para que as alterações entrem em vigor.  

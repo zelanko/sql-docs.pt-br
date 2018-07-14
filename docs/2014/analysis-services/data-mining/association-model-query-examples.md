@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173607"
 ---
 # <a name="association-model-query-examples"></a>Exemplos de consulta de um modelo de associação
   Ao criar uma consulta em um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes sobre as regras e os conjuntos de itens descobertos durante a análise ou criar uma consulta de previsão, que usa as associações descobertas nos dados para fazer previsões. Para um modelo de associação, normalmente, as previsões baseiam-se em regras e pode ser usadas para fazer recomendações, enquanto as consultas em conteúdo geralmente exploram a relação entre os conjuntos de itens. Você também pode recuperar metadados sobre o modelo.  
@@ -240,8 +240,8 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retorna a variância para o valor previsto.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de associação da Microsoft](microsoft-association-algorithm.md)   
+ [Algoritmo associação da Microsoft](microsoft-association-algorithm.md)   
  [Referência técnica do algoritmo de associação da Microsoft](microsoft-association-algorithm-technical-reference.md)   
- [Conteúdo do modelo de associação de modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de associação &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ec09219d146affcceda8194c8e7a60d8e128ef12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242276"
 ---
 # <a name="choose-link-page-report-manager"></a>Página Escolher Link (Gerenciador de Relatórios)
   Use a página Escolher Link para escolher um relatório diferente no qual basear o relatório vinculado atualmente selecionado. Relatórios vinculados são baseados em outros relatórios já publicados em um servidor de relatórios. Um relatório vinculado usa o layout e os dados de um relatório base, mas tem páginas de propriedades separadas para que você possa personalizar propriedades de parâmetros, configurações de segurança, nome, descrição e local.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event start times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f52726d45b27dfc9a4a7f86f4a0261219e26c7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f72628b01609d055971bcf6446f5afcb0879776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204536"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtrar eventos com base na hora de início do evento (SQL Server Profiler)
   Este tópico descreve como filtrar eventos de rastreamento de acordo com a hora de início do evento, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "36008525"
   
 5.  Na guia **Seleção de Eventos**, clique no título de coluna **StartTime** . Você também pode clicar com o botão direito do mouse no título de coluna e clicar em **Editar Filtro de Coluna** para iniciar a caixa de diálogo **Editar Filtro** .  
   
-6.  Expanda **maior** ou **menor**e, em seguida, insira um `datetime` valor no campo que aparece abaixo do operador de comparação.  
+6.  Expandir **maior que** ou **menor que**e, em seguida, insira um `datetime` valor no campo que aparece abaixo do operador de comparação.  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Profiler](sql-server-profiler.md)  

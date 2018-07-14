@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 706d13e68b21a71fa9be80bf89fc4f9cdd4c6014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231866"
 ---
 # <a name="datatype-element-assl"></a>Elemento DataType (ASSL)
   Define o tipo de dados do elemento associado.  
@@ -66,20 +66,20 @@ ms.locfileid: "36007589"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*BigInt*|Um inteiro de 64 bytes com sinal. Esse tipo de dados mapeado para o `Int64` tipo de dados na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de tipo do .NET Framework e os dados DBTYPE_I8 no OLE DB.|  
-|*Bool*|Um valor booliano. Este tipo de dados mapeia para o tipo de dados `Boolean` no .NET Framework e o tipo de dados DBTYPE_BOOL no OLE DB.|  
+|*BigInt*|Um inteiro de 64 bytes com sinal. Esse tipo de dados é mapeado para o `Int64` tipo de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de tipo do .NET Framework e os dados DBTYPE_I8 no OLE DB.|  
+|*bool*|Um valor booliano. Este tipo de dados mapeia para o tipo de dados `Boolean` no .NET Framework e o tipo de dados DBTYPE_BOOL no OLE DB.|  
 |*Moeda*|Um valor de moeda variando de -2<sup>63</sup> (ou -922.337.203.685.477,5808) a 2<sup>63</sup>-1 (ou + 922.337.203.685.477,5807) com uma precisão de dez milésimos de uma unidade monetária. Este tipo de dados mapeia para o tipo de dados `Decimal` no .NET Framework e o tipo de dados DBTYPE_CY no OLE DB.|  
 |*Data*|Dados de data, armazenados como um número de ponto flutuante de precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Este tipo de dados mapeia para o tipo de dados `DateTime` no .NET Framework e o tipo de dados DBTYPE_DATE no OLE DB.|  
-|*duplo*|Número de ponto flutuante de precisão dupla dentro do intervalo de - 1, 79E 308 a 1, 79E 308. Este tipo de dados mapeia para o tipo de dados `Double` no .NET Framework e o tipo de dados DBTYPE_R8 no OLE DB.|  
+|*Dupla*|Número de ponto flutuante de precisão dupla dentro do intervalo de - 1,79E 1,79E + 308 + 308. Este tipo de dados mapeia para o tipo de dados `Double` no .NET Framework e o tipo de dados DBTYPE_R8 no OLE DB.|  
 |*Integer*|Um inteiro de 32 bytes com sinal. Esse tipo de dados mapeia para o tipo de dados `Int32` no .NET Framework e o tipo de dados DBTYPE_I4 no OLE DB.|  
-|*Single*|Número de ponto flutuante de precisão única dentro do intervalo de - 3, 40E + 38, até 3, 40E + 38. Esse tipo de dados mapeia para o tipo de dados `Single` no .NET Framework e o tipo de dados DBTYPE_R4 no OLE DB.|  
+|*Single*|Número de um ponto flutuante de precisão simples dentro do intervalo de - 3,40E + 38 a 3,40E + 38. Esse tipo de dados mapeia para o tipo de dados `Single` no .NET Framework e o tipo de dados DBTYPE_R4 no OLE DB.|  
 |*SmallInt*|Um inteiro com sinal de 16 bits. Esse tipo de dados mapeia para o tipo de dados `Int16` no .NET Framework e o tipo de dados DBTYPE_I2 no OLE DB.|  
 |*TinyInt*|Um inteiro com sinal de 8 bits. Esse tipo de dados mapeia para o tipo de dados `SByte` no .NET Framework e o tipo de dados DBTYPE_I1 no OLE DB.|  
 |*UnsignedBigInt*|Um inteiro não assinado de 64 bits. Esse tipo de dados mapeia para o tipo de dados `UInt64` no .NET Framework e o tipo de dados DBTYPE_UI8 no OLE DB.|  
 |*UnsignedInt*|Um inteiro não assinado de 32 bits. Esse tipo de dados mapeia para o tipo de dados `UInt32` no .NET Framework e o tipo de dados DBTYPE_UI4 no OLE DB.|  
 |*UnsignedSmallInt*|Um inteiro sem sinal de 16 bits. Esse tipo de dados mapeia para o tipo de dados `UInt16` no .NET Framework e o tipo de dados DBTYPE_UI2 no OLE DB.|  
 |*WChar*|Um fluxo com terminação nula de caracteres Unicode. Este tipo de dados mapeia para o tipo de dados `String` no .NET Framework e o tipo de dados DBTYPE_WSTR no OLE DB.|  
-|*Herdado*|O tipo de dados o `DataItem` contidos no [fonte](source-element-measure-assl.md) elemento o `Measure` elemento. **Observação:** aplicável somente ao `Measure` elementos.|  
+|*Herdado*|O tipo de dados a `DataItem` contidos na [código-fonte](source-element-measure-assl.md) elemento do `Measure` elemento. **Observação:** aplicável somente ao `Measure` elementos.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

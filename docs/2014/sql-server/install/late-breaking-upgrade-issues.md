@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - readme [Upgrade Advisor]
 ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc43d7cc31e59a904950db4c5ceba53b5dfd5e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9ba079260513c6d6753b2d97b5c026ba0f8a4ff3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275692"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Problemas detectados recentemente que podem interromper a instalação
   A lógica de detecção pode ter sido melhorada ou alterada depois da conclusão da documentação. Caso tenha acessado este tópico a partir do Visualizador de Relatórios do Supervisor de Atualização ou se quiser verificar os itens recentes que podem interromper a atualização, verifique o arquivo Leiame instalado com o Supervisor de Atualização para obter mais informações.   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.columns.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d4795853fd0b7018eac474e23177a7a89047c84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6acc421b173cb80b388f7db306ebf18bdb07c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271272"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor de Origem de OLE DB (página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem de OLE DB** para mapear uma coluna de saída para cada coluna externa (origem).  
@@ -42,7 +42,7 @@ ms.locfileid: "36008690"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem OLE DB &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [Editor de origem OLE DB &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Editor de origem OLE DB &#40;página de saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gerenciador de Conexões OLE DB](connection-manager/ole-db-connection-manager.md)  

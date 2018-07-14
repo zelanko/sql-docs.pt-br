@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
 - security extensions [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4ae9dbac7395e44bf67731bd0e7a714c73fac296
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220836"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Extensões personalizadas foram detectadas no servidor de relatório (Supervisor de Atualização)
   O Supervisor de Atualização detectou configurações de extensão personalizada nos arquivos de configuração, o que indica que sua instalação tem uma ou mais extensões personalizadas para processamento de dados, entrega, renderização, segurança ou autenticação. A atualização moverá os parâmetros de configuração de extensão com o servidor de relatório atualizado. No entanto, se houver extensões personalizadas instaladas na pasta existente do servidor de relatório, os arquivos de assembly dessas extensões personalizadas não serão movidos para a nova pasta de instalação durante o processo de atualização. Concluída a atualização, mova os arquivos de assembly para a nova pasta de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "36007894"
 ## <a name="corrective-action"></a>Ação corretiva  
  Use as seções seguintes para determinar as etapas que devem ser executadas depois ou antes de executar uma atualização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
- [Processamento de dados personalizada ou extensões de entrega](#dataprocdeliver)  
+ [Processamento de dados personalizadas ou extensões de entrega](#dataprocdeliver)  
   
  [Extensões de renderização personalizadas](#render)  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36007894"
   
 3.  Recrie a solução para associá-la à extensão.  
   
- Se você decidir não continuar com a atualização, convém migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter etapas sobre migrar extensões personalizadas, consulte [migrando extensões personalizadas](#migrcustext) neste tópico.  
+ Se você decidir não continuar com a atualização, convém migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para etapas sobre como migrar extensões personalizadas, consulte [migrando extensões personalizadas](#migrcustext) neste tópico.  
   
-###  <a name="dataprocdeliver"></a> Processamento de dados personalizada ou extensões de entrega  
+###  <a name="dataprocdeliver"></a> Processamento de dados personalizadas ou extensões de entrega  
  Se o Supervisor de Atualização detectar extensões de processamento de dados ou de entrega personalizadas, o processo de atualização não será bloqueado. No entanto, concluída a atualização, pode ser necessário executar etapas adicionais para que a funcionalidade personalizada fornecida por essas extensões funcione. Por exemplo, você terá que executar etapas adicionais quando os arquivos de extensão personalizados forem instalados na pasta de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Etapas pós-atualização para extensões de processamento de dados ou de entrega personalizadas  
   
-1.  Mova os arquivos de extensão para a nova pasta de programa do servidor de relatório. Por padrão, a pasta de programa do servidor de relatório está em \Program Files\Microsoft Server\MSRS10_50 SQL. \< *instance_name*> \report servidor_de_relatório.  
+1.  Mova os arquivos de extensão para a nova pasta de programa do servidor de relatório. Por padrão, a pasta de programa do servidor de relatório está em \Program Files\Microsoft SQL Server\MSRS10_50. \< *instance_name*> servidor da \report.  
   
  Para obter mais informações, consulte "Implantando uma extensão de processamento de dados" e "Implementando uma extensão de entrega" nos Manuais Online do SQL Server.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36007894"
   
  Se você estiver usando uma extensão de autenticação personalizada criada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], deverá modificar o código-fonte para que haja suporte para novas classes e membros apresentados nos relatórios controlados por modelos.  
   
-##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>Para atualizar as extensões de segurança ou de autenticação personalizadas de um servidor de relatório do SQL Server 2000  
+##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>Atualizar extensões de segurança ou de autenticação personalizadas de um servidor de relatório do SQL Server 2000  
   
 1.  Atualize e recompile qualquer extensão de segurança ou de autenticação com as interfaces mais recentes.  
   

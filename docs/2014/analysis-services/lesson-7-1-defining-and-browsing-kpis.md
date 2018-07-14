@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243726"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
   Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:  
@@ -265,7 +265,7 @@ ms.locfileid: "36006957"
   
 2.  Quando a implantação for concluída com êxito, clique no botão **Reconectar** na barra de ferramentas da guia **KPIs** e clique em **Exibição de Navegador**.  
   
-     O `Product Gross Profit Margin` KPI aparece e exibe o valor do KPI para **Q3 CY 2007** e **América do Norte** território de vendas.  
+     O `Product Gross Profit Margin` KPI aparece e exibe o valor do KPI para **Q3 CY 2007** e o **América do Norte** território de vendas.  
   
 3.  No painel **Filtro** , selecione **Produto** na lista **Dimensão** , **Categoria** na lista **Hierarquia** , **Igual** na lista **Operador** , **Bicicletas** na lista **Expressão de Filtro** e clique em **OK**.  
   

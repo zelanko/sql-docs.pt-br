@@ -1,5 +1,5 @@
 ---
-title: Instalar o ADO.NET Data Services para dar suporte a dados exportações do feed das listas do SharePoint | Microsoft Docs
+title: Instalar o ADO.NET Data Services para dar suporte a dados do feed exportações das listas do SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d4241d56aa3257bd0ec2cddf4b439a4939f8ab9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3bcf01f3cbb33ae11a3961a6d492040afb1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187723"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Instalar o ADO.NET Data Services para dar suporte a exportações do feed de dados das listas do SharePoint
   O ADO.NET Data Services é obrigatório para uma exportação do feed de dados das listas do SharePoint. Como o SharePoint 2010 não inclui esse componente no programa SharePoint Prerequisite Installer, você deve instalá-lo manualmente.  
@@ -30,9 +30,9 @@ ms.locfileid: "36010322"
   
 ### <a name="download-and-install-adonet-data-services"></a>Baixar e instalar o ADO.NET Data Services  
   
-1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010, [requisitos de Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Vá para a documentação de requisitos de hardware e software para o SharePoint 2010 [requisitos de Hardware e Software (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
-2.  Em **acesso ao software aplicável**, localize o link para o ADO.NET Data Services 3.5 correspondente ao sistema operacional que você está usando (Windows Server 2008 SP2 ou Windows Server 2008 R2).  
+2.  Na **acesso ao software aplicável**, localize o link para o ADO.NET Data Services 3.5 que corresponde ao sistema operacional que você está usando (Windows Server 2008 SP2 ou Windows Server 2008 R2).  
   
 3.  Clique no link e execute o programa de instalação que instala o serviço.  
   

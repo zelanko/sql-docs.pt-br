@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - validating versions [Master Data Services]
 - validating versions [Master Data Services], about validating versions
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce0e501a861486fc309709818e81cdbb81f22370
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8b40c03711cea6e6bf840bdb9ce63fa9cf6e302a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296536"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Validar uma versão em relação a regras de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], valide uma versão para aplicar regras de negócio a todos os membros da versão do modelo.  
@@ -67,7 +67,7 @@ ms.locfileid: "36006379"
 ## <a name="see-also"></a>Consulte também  
  [Status da validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [Procedimento armazenado de validação &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
- [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Validar membros específicos em relação a regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   

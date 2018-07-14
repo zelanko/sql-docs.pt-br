@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ae469982f39e1274759eaaea992fe456330d8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196026"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>Elemento SkippedLevelsColumn (ASSL)
     
@@ -54,7 +54,7 @@ ms.locfileid: "36010990"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Comprimento e tipo de dados|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor padrão|Nenhum|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36010990"
 ## <a name="remarks"></a>Remarks  
  O `SkippedLevelsColumn` elemento é aplicável somente a atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento para o `DimensionAttribute` pai está definido como *pai*). O elemento `SkippedLevelsColumn` contém a coluna ou o atributo para o atributo pai que armazena o número de níveis ignorados entre cada membro e seu pai. Isso permite que hierarquias pai-filho baseadas no atributo pai ignorem níveis entre membros. Os valores contidos nessa coluna ou atributo devem ser inteiros não negativos; caso contrário, um erro de processamento ocorrerá. Se o elemento `SkippedLevelsColumn` não for especificado ou não contiver nenhum valor, o membro atual terá um nível abaixo de seu pai.  
   
- Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tabela, consulte [o tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` da tabela, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- O elemento que corresponde ao pai do `SkippedLevelsColumn` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `SkippedLevelsColumn` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Atributos do elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Elemento de dimensão &#40;ASSL&#41;](dimension-element-assl.md)   
  [Objetos &#40;ASSL&#41;](objects-assl.md)  
   

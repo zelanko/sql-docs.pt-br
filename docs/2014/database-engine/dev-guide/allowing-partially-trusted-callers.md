@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ef6354d8dee0373af005d7da782bffc3a90eb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265295"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitindo chamadores parcialmente confiáveis
   O compartilhamento de bibliotecas de códigos é um cenário comum na integração do CLR (common language runtime), onde um assembly que contém um tipo definido pelo usuário, procedimento armazenado, função definida pelo usuário, agregação definida pelo usuário, gatilho ou classe de utilitário é normalmente acessada por outro assembly ou aplicativo. Bibliotecas de códigos a serem compartilhadas entre vários aplicativos devem ser assinadas com um nome forte.  

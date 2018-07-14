@@ -1,5 +1,5 @@
 ---
-title: Especifique o tipo de dimensão (Assistente para dimensões) | Microsoft Docs
+title: Especificar o tipo de dimensão (Assistente para dimensões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185313"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar Tipo de Dimensão (Assistente para Dimensões)
   Use a página **Especificar Tipo de Dimensão** para definir o tipo de dimensão e adicionar tipos especiais de atributo associados com o tipo de dimensão selecionado para a dimensão.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293716"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e agrupamentos (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e agrupamentos fornecidos pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operacionais do Windows. As propriedades `Language` e `Collation` são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
@@ -71,7 +71,7 @@ ms.locfileid: "36006013"
   
      Qualquer idioma e agrupamento definido no cubo é usado por todas as medidas e dimensões contidas no cubo. A única maneira de definir propriedades de agrupamento mais individualizadas é se você estiver criando traduções em um atributo de dimensão. Caso contrário, supondo que não existe tradução no nível do atributo, haverá um agrupamento por cubo.  
   
- Além disso, você pode definir `Language`, por si só, em uma **tradução** objeto.  
+ Além disso, você pode definir `Language`, por si só, em um **tradução** objeto.  
   
  Um objeto de tradução é criado quando você adiciona traduções a um cubo ou dimensão. `Language` faz parte da definição de tradução. `Collation`, por outro lado, é definido no cubo ou superior e compartilhado por todas as traduções. Isso fica evidente no XMLA de um cubo que contém traduções, onde você verá várias propriedades de idioma (uma para cada tradução), mas apenas um agrupamento. Observe que há uma exceção para traduções do atributo de dimensão, onde você pode substituir o agrupamento do cubo para especificar um agrupamento de atributos que corresponda à coluna de origem (o mecanismo de banco de dados dá suporte a agrupamento de configuração em colunas individuais e é comum configurar traduções individuais para obter dados de membro de diferentes colunas de origem). Caso contrário, para todas as traduções, `Language` é usado por si só, sem um resultado `Collation`. Consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md) para ver mais detalhes.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36006013"
      Classificação de agrupamentos binários em pontos de código Unicode, não em valores linguísticos. Por exemplo, Latin1_General_BIN e Japanese_BIN resultam em classificação idêntica quando usados em dados Unicode. Enquanto uma classificação linguística pode produzir resultados como aAbBcCdD, uma classificação binária seria ABCDabcd porque o ponto de código de todos os caracteres em maiúsculas é coletivamente maior do que os pontos de código dos caracteres em minúsculas.  
   
 ###  <a name="bkmk_sortorder"></a> Opções de ordem de classificação  
- Opções de classificação são usadas para refinar regras de classificação e comparação com base na sensibilidade caso, acentuação, kana e largura. Por exemplo, o valor padrão da `Collation` propriedade de configuração [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é Latin1_General_AS_CS, especificando o agrupamento Latin1_General é usado, com uma ordem de classificação que diferencia acentos.  
+ Opções de classificação são usadas para refinar regras de classificação e comparação com base na sensibilidade caso, acentuação, kana e largura. Por exemplo, o valor padrão do `Collation` propriedade de configuração [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é Latin1_General_AS_CS, especificando o agrupamento Latin1_General é usado, com uma ordem de classificação de acentos, diferencia maiusculas de minúsculas.  
   
  Observe que BIN e BIN2 são mutuamente exclusivos de outras opções de classificação; se você quiser usar BIN ou BIN2, desmarque a opção de classificação Diferenciar Acentos. Da mesma forma, se BIN2 for selecionado, as opções de distinção entre maiúsculas e minúsculas, acento, kana e largura não estarão disponíveis.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36006013"
   
 -   Reprocessar partições e dimensões após atualização do agrupamento.  
   
- Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou o agrupamento no nível de servidor. Como alternativa, você pode modificar o  **\<idioma >** e  **\<CollationName >** configurações no arquivo msmdsrv.ini, especificando o LCID do idioma.  
+ Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou o agrupamento no nível de servidor. Como alternativa, você pode modificar os  **\<Language >** e  **\<CollationName >** configurações no arquivo msmdsrv. ini, especificando o LCID do idioma.  
   
 1.  No Management Studio, clique com o botão direito do mouse no nome do servidor | **Propriedades** | **Idioma/Agrupamento**.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "36006013"
   
 ## <a name="see-also"></a>Consulte também  
  [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Dicas de globalização e práticas recomendadas &#40;do Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
+ [Dicas de globalização e práticas recomendadas para o &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Suporte a agrupamentos e a Unicode](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

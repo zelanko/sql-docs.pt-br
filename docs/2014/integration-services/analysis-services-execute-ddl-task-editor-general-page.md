@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.general.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cfa2d938d4883925bff53142c2dcd7444b0c451d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1d4d46cda4359ea01cdd87fbf3846ece5f359f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188883"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor da Tarefa Executar DDL do Analysis Services (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para nomear e descrever a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36009597"
  [Analysis Services Execute DDL Editor da tarefa &#40;página DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Página expressões](expressions/expressions-page.md)   
  [Fluxo de controle](control-flow/control-flow.md)   
- [Linguagem de script do Analysis Services &#40;ASSL&#41; referência](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; referência](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML for Analysis &#40;XMLA&#41; referência](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
 - versions [SQL Server], upgrading
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 132
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc7140188a24ba8b8ca51b792d4dd2beb8384ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252638"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
   Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -58,9 +58,9 @@ ms.locfileid: "36008487"
 > [!NOTE]  
 >  O suporte para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] é descrito com mais detalhes na próxima seção, 'suporte do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]'.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições de 32 bits podem ser atualizadas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no subsistema de 32 bits (WOW64) de um servidor de 64 bits.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as edições de 32 bits podem ser atualizadas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no subsistema de 32 bits (WOW64) de um servidor de 64 bits.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versões de 64 bits podem ser atualizadas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server de 64 bits apenas.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versões de 64 bits podem ser atualizadas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] somente o servidor de 64 bits.  
   
 > [!NOTE]  
 >  Quando você atualizar para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] de uma versão anterior da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, escolha entre Enterprise Edition: Licenciamento baseado em núcleo e Enterprise Edition. Estas edições Enterprise só diferem com relação aos modos de licenciamento e o número máximo de núcleos com suporte. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
@@ -83,14 +83,14 @@ ms.locfileid: "36008487"
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express,<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Tools e<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express com Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express,<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Tools e<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express,<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools e<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express com Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express,<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools e<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Datacenter|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -103,13 +103,13 @@ ms.locfileid: "36008487"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio, e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express com Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio, e<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
 ### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Suporte para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  Esta seção aborda o suporte do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], você poderá fazer o seguinte:  
   
--   Atualizar um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instância do mecanismo de banco de dados para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] executando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usando o Assistente de instalação ou no prompt de comando de instalação.  
+-   Atualizar uma [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instância do mecanismo de banco de dados para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] executando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usando o Assistente de instalação ou do prompt de comando de instalação.  
   
 -   Anexar um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (arquivos mdf/ldf) à instância do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] do mecanismo de banco de dados.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "36008487"
   
 -   Atualizar um pacote do [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Executar pacotes com atualizações automáticas locais.  
   
--   Atualizar um [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] executando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instalação.  
+-   Atualizar uma [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] executando [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a instalação.  
   
 -   Fazer backup de um cubo do [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] e restaurar no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 -   Atualizar o [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] executando a instalação do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   Conecte-se ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
+-   Conectar-se ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
  Quando um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] é atualizado para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o nível de compatibilidade do banco de dados é alterado de 90 para 100. (No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os valores válidos para o nível de compatibilidade do banco de dados são 100, 110 e 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) aborda como a alteração do nível de compatibilidade pode afetar os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -156,9 +156,9 @@ ms.locfileid: "36008487"
   
 |Atualização de|Atualização para|  
 |------------------|----------------|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server + CAL e Core) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Server + CAL e núcleo) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Evaluation <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> A atualização da Evaluation Enterprise (uma edição gratuita) para qualquer uma das edições pagas é suportada para instalações autônomas, mas não é suportada para instalações clusterizadas.|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Evaluation Enterprise <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> A atualização da Evaluation Enterprise (uma edição gratuita) para qualquer uma das edições pagas é suportada para instalações autônomas, mas não é suportada para instalações clusterizadas.|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Padrão <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Desenvolvedor <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL ou Baseada em Núcleo)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
@@ -171,9 +171,9 @@ ms.locfileid: "36008487"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licença Server + CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Baseada em Núcleo)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Baseada em Núcleo)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (Licença Server+CAL)|  
   
- <sup>1</sup> também se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express com Advanced Services.  
+ <sup>1</sup> também se aplica às [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Advanced Services.  
   
- <sup>2</sup> alteração da edição de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster de failover é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:  
+ <sup>2</sup> a alteração da edição de um [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster de failover é limitada. Os cenários a seguir não têm suporte para clusters de failover do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:  
   
 -   SQL Server 2014 Enterprise para SQL Server 2014 Developer, Standard ou Enterprise Evaluation.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f102fa4366106581c5f3ec4ff141d537531dbaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e2d0cc8bb86c84b9b4c9416f844eaff8251b3445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233076"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Objetos com suporte no Assistente para Gerar Scripts
   O Assistente para Gerar e Publicar Scripts oferece suporte a um subconjunto dos objetos com suporte no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "36008132"
   
 ||||||  
 |-|-|-|-|-|  
-|Função de aplicativo|Função de banco de dados|esquema|Agregação definida pelo usuário|Exibição<sup>1</sup>|  
+|Função de aplicativo|Função de banco de dados|esquema|Agregação definida pelo usuário|Modo de exibição<sup>1</sup>|  
 |Assembly|Restrição DEFAULT|Procedimento armazenado<sup>1</sup>|Tipo de dados definido pelo usuário|Coleção de esquemas XML|  
 |Restrição CHECK|Catálogo de texto completo|Sinônimo|Função definida pelo usuário||  
 |Procedimento armazenado CLR (common language runtime)<sup>1</sup>|Índice|Table|Tabela definida pelo usuário||  
@@ -37,6 +37,6 @@ ms.locfileid: "36008132"
   
  <sup>1</sup> publicado sem criptografia.  
   
- <sup>2</sup> quaisquer usuários de sistema não existem no banco de dados são publicados como funções.  
+ <sup>2</sup> quaisquer usuários de fora do sistema que existem no banco de dados são publicados como funções.  
   
   

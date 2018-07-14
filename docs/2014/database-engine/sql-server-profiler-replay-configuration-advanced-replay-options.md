@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler – configuração de repetição (opções de repetição avançadas) | Microsoft Docs
+title: SQL Server Profiler - configuração de repetição (opções de repetição avançadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.advanced.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4147fa559e52373afab9352aabaaa46a79d8a266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d010365e010fc7748e6cb04d6d71479f0f2f9d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280312"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - configuração de repetição (Opções de Repetição Avançadas)
   Na caixa de diálogo **Configuração de Reprodução** , use a guia **Opções de Reprodução Avançadas** para especificar como reproduzir um arquivo de rastreamento.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication]
 - MSMQ [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb1b244385061bee985ec04b5f90d3fb349aef3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 37fcfeecfb7160b48d2ed875f76e3b970c29a880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272362"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>A atualização modificará assinaturas de atualização enfileiradas que usam o serviço de enfileiramento de mensagens
   O Supervisor de Atualização detectou que podem haver uma ou mais assinaturas de atualização na fila que usam o serviço de enfileiramento de mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] (também conhecido como MSMQ). A replicação não oferece mais suporte para o serviço de enfileiramento de mensagens. Portanto, as assinaturas serão modificadas para usar uma fila do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,6 +36,6 @@ ms.locfileid: "36008547"
  Se o serviço de enfileiramento de mensagens não estiver em execução, remova as filas manualmente depois da atualização. Para obter mais informações sobre a remoção de filas, consulte a documentação do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de replicação](../../../2014/sql-server/install/replication-upgrade-issues.md)  
+ [Problemas na atualização da replicação](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

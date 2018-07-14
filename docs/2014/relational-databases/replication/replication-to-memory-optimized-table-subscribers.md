@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188483"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
   As tabelas que atuam como assinantes de replicação transacional, com exceção da replicação transacional ponto a ponto, podem ser configuradas como tabelas com otimização de memória. Outras configurações de replicação não são compatíveis com tabelas com otimização de memória.  
@@ -63,9 +63,9 @@ ms.locfileid: "36009326"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server \ mssql12. \<Instância > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
+2.  Navegue para a pasta do instantâneo. O local padrão é "C:\Program Files\Microsoft SQL Server\MSSQL12. \<Instância > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
   
-3.  Localize o **. SCH** para a tabela de arquivo e abra-o no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
+3.  Localize o **. SCH** para sua tabela de arquivo e abri-lo no Management Studio. Altere o esquema da tabela e atualize o procedimento armazenado conforme descrito abaixo.  
   
      Avalie os índices definidos no arquivo IDX. Modifique `CREATE TABLE` para especificar os índices necessários, as restrições, a chave primária e a sintaxe com otimização de memória. Para tabelas com otimização de memória, as colunas de índice devem ser NOT NULL e as colunas de índice de tipos de caractere devem ser Unicode e usar o agrupamento BIN2. Veja o seguinte exemplo:  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36009326"
     go  
     ```  
   
-5.  Criar banco de dados do assinante usando o **elevar para o isolamento de instantâneo** opção e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso de usar tipos de dados de caractere não Unicode.  
+5.  Criar banco de dados do assinante usando o **elevar para isolamento de instantâneo** opção e defina o agrupamento padrão como Latin1_General_CS_AS_KS_WS no caso de usando tipos de dados de caractere não Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -305,7 +305,7 @@ GO
   
 -   Há restrições na atualização da chave primária das tabelas que estão sendo replicadas para uma tabela com otimização de memória em um assinante. Para obter mais informações, consulte [replicando alterações para uma chave primária](#PrimaryKey).  
   
--   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Transact-SQL construções sem suporte pelo OLTP na memória](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
+-   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Ver [construções do Transact-SQL não suporte pelo OLTP na memória](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
   
 ##  <a name="Schema"></a> Modificando um arquivo de esquema  
   

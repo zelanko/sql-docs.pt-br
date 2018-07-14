@@ -15,15 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c3589b34087c5615179d2e7b6449372bea54d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 639dbfab6191b7266c367997396fa0d127031e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296356"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Suporte ao tipo de dados xml no SQLXML 4.0
   Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a XML digitado dados usando o `xml` tipo de dados. Este tópico fornece informações sobre como o SQLXML 4.0 reconhece instâncias do tipo de dados `xml` e implementa o suporte para elas.  
@@ -33,7 +33,7 @@ ms.locfileid: "36008370"
   
 |Tarefa|Exemplo|Tópico|  
 |----------|-------------|-----------|  
-|Como mapear e incluir uma coluna `xml` em uma exibição XML|"Mapeando um elemento XML para uma coluna de tipo de dados XML"|[Mapeamento de padrão de atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Como mapear e incluir uma coluna `xml` em uma exibição XML|"Mapeando um elemento XML para uma coluna de tipo de dados XML"|[Mapeamento padrão dos atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |Como inserir dados em uma coluna `xml` com diagramas de atualização|"Inserindo dados em uma coluna de tipo de dados XML"|[Inserindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
 |Carregando em massa dados XML em uma coluna `xml`|"Carregamento em massa em colunas de tipo de dados xml"|[Exemplos de carregamento em massa XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   

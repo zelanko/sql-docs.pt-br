@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
 - full-text catalogs [SQL Server], breaking changes
@@ -18,13 +17,13 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a1644dd4bb7cda6a77c91f9d9b33a4bd62c718b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0252eb3ba9d0aea5e69ffa077dfc6b3ac1f3bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275382"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Alterações recentes na pesquisa de texto completo
   Este tópico descreve as alterações recentes feitas na pesquisa de texto completo. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -35,24 +34,24 @@ ms.locfileid: "36006707"
 ## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Alterações mais recentes na pesquisa de texto completo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Agrupamento alterado para o nome Coluna em sys.fulltext_languages  
- O agrupamento do idioma **nome** coluna na exibição de catálogo [sys. fulltext_languages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterado do agrupamento fixo do banco de dados de recurso para o padrão de agrupamento selecionado para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa alteração torna possível comparar os valores no **nome** coluna quando você associa o [sys. syslanguages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) exibir com **sys. fulltext_languages** . Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
+ O agrupamento do idioma **nome** coluna na exibição do catálogo [sys. fulltext_languages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterado do agrupamento fixo do banco de dados de recurso para o agrupamento selecionado para a instância do padrão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa alteração torna possível comparar os valores a **nome** coluna quando você unir a [sys. syslanguages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) exibir com **sys. fulltext_languages** . Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
   
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Analisando as alterações feitas na pesquisa de texto completo no SQL Server 2008  
  As últimas alterações a seguir aplicam-se à Pesquisar de texto completo entre o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores.  
   
 |Recurso|Cenário|SQL Server 2005|SQL Server 2008 e versões posteriores|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) com tipos definidos pelo usuário (UDTs)|A chave de texto completo é um tipo definido pelo usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo, `MyType = char(1)`.|A chave retornada é do tipo atribuído ao tipo definido pelo usuário.<br /><br /> No exemplo, isso seria **char (1)**.|A chave retornada é do tipo definido pelo usuário. No exemplo, isso seria **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) com tipos definidos pelo usuário (UDTs)|A chave de texto completo é um tipo definido pelo usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo, `MyType = char(1)`.|A chave retornada é do tipo atribuído ao tipo definido pelo usuário.<br /><br /> No exemplo, isso seria **char(1)**.|A chave retornada é do tipo definido pelo usuário. No exemplo, isso seria **MyType**.|  
 |*top_n_by_rank* parâmetro (da CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] instruções)|*top_n_by_rank* consultas usando 0 como parâmetro.|Falha com uma mensagem de erro, indicando que você deve usar um valor maior que zero.|Tem êxito, não retornando nenhuma linha.|  
 |CONTAINSTABLE e **ItemCount**|Excluir linhas da tabela base antes do envio por push de alterações para MSSearch.|CONTAINSTABLE retorna registro fantasma. **ItemCount** não é alterado.|CONTAINSTABLE não retorna nenhum registro fantasma.|  
-|**ItemCount**|A tabela contém colunas de tipo ou documentos nulos.|Além de documentos indexados, os documentos que são nulos ou que têm tipos nulos são contados no **ItemCount** valor.|Somente documentos indexados são contados no **ItemCount** valor.|  
-|Catálogo **ItemCount**|Coluna blob com uma extensão NULL.|É contada em **ItemCount** do catálogo|Não é contado em **ItemCount** do catálogo.|  
-|**UniqueKeyCount**|Consultar uma contagem de chave exclusiva a partir de um catálogo, por exemplo, duas tabelas (table1 e table2) em que cada uma tem três palavras: word1, word2 e word3.|**UniqueKeyCount** = 9. A tabela a seguir resume como esse valor é obtido:<br /><br /> table1 = 3<br /><br /> EOF para índice de texto completo de table1 = 1<br /><br /> table2 = 3<br /><br /> EOF para índice de texto completo de table2 = 1<br /><br /> catálogo de texto completo = 1|Para cada tabela, **UniqueKeyCount** é o número de palavras-chave distintas + 1 (0xFF).  Isso NÃO trata as mesmas palavras em > 1 doc como uma nova chave exclusiva.<br /><br /> Para um catálogo, **UniqueKeyCount** é a soma de **UniqueKeyCount** de cada uma das tabelas no catálogo. Palavras idênticas de tabelas diferentes são tratadas como chaves exclusivas. Nesse caso, a contagem de chaves exclusivas é 8.|  
+|**ItemCount**|A tabela contém colunas de tipo ou documentos nulos.|Além de documentos indexados, os documentos que são nulos ou que têm tipos nulos são contados na **ItemCount** valor.|Somente documentos indexados são contados na **ItemCount** valor.|  
+|Catálogo **ItemCount**|Coluna blob com uma extensão NULL.|É contado em **ItemCount** do catálogo|Não é contado em **ItemCount** do catálogo.|  
+|**UniqueKeyCount**|Consultar uma contagem de chave exclusiva a partir de um catálogo, por exemplo, duas tabelas (table1 e table2) em que cada uma tem três palavras: word1, word2 e word3.|**UniqueKeyCount** = 9. A tabela a seguir resume como esse valor é obtido:<br /><br /> table1 = 3<br /><br /> EOF para índice de texto completo de table1 = 1<br /><br /> table2 = 3<br /><br /> EOF para índice de texto completo de table2 = 1<br /><br /> catálogo de texto completo = 1|Para cada tabela, **UniqueKeyCount** é o número de palavras-chave distintas + 1 (0xFF).  Isso NÃO trata as mesmas palavras em > 1 doc como uma nova chave exclusiva.<br /><br /> Para um catálogo **UniqueKeyCount** é a soma dos **UniqueKeyCount** de cada uma das tabelas no catálogo. Palavras idênticas de tabelas diferentes são tratadas como chaves exclusivas. Nesse caso, a contagem de chaves exclusivas é 8.|  
 |**classificação pré-computada** opção de nível de servidor|Otimização do desempenho de consultas FREETEXTTABLE.|Quando a opção é definida como 1, as consultas FREETEXTTABLE especificadas com *top_n_by_rank* usar dados de classificação pré-computada armazenados nos catálogos de texto completo.|Não tem suporte.|  
 |[sp_fulltext_pendingchanges](/sql/relational-databases/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql) ao atualizar a coluna de chave|Atualizar a coluna de chave de texto completo em uma linha de uma tabela de 2 linhas e executar sp_fulltext_pendingchanges.|As duas linhas aparecem.|Somente uma linha aparece.|  
 |Funções embutidas|Funções embutidas com um operador de texto completo|Retorna uma mensagem de erro.|Retorna as linhas relevantes.|  
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|Habilitar ou desabilitar pesquisa de texto completo usando sp_fulltext_database.|Nenhum resultado é retornado para consultas de texto completo. Se o texto completo estiver desabilitado para o banco de dados, não serão permitidas operações de texto completo.|Retorna resultados para consultas de texto completo e operações de texto completo permitidas, mesmo se o texto completo estiver desabilitado para o banco de dados.|  
-|Palavras irrelevantes (stop words) específicas da localidade|Consulta variantes de inlocale específicas de um idioma pai, como francês belga e francês canadense.|Variantes de inlocale específicas de consultas são processadas pelos componentes (separadores de palavras, lematizadores e palavras de parada) de seu idioma pai. Por exemplo, os componentes de francês (França) são usados para analisar francês (Bélgica).|Você deve adicionar palavras irrelevantes explicitamente para cada identificador de localidade (LCID). Por exemplo, você precisaria especificar um LCID para Bélgica, Canadá e França.|  
+|Palavras irrelevantes (stop words) específicas da localidade|Consulta variantes de inlocale específicas de um idioma pai, como francês belga e francês canadense.|Variantes de inlocale específicas de consultas são processadas pelos componentes (separadores de palavras, lematizadores e palavras irrelevantes) do idioma pai. Por exemplo, os componentes de francês (França) são usados para analisar francês (Bélgica).|Você deve adicionar palavras irrelevantes explicitamente para cada identificador de localidade (LCID). Por exemplo, você precisaria especificar um LCID para Bélgica, Canadá e França.|  
 |Processo de lematização do dicionário de sinônimos|Usando o dicionário de sinônimos e formas flexivas (lematização).|Uma palavra do dicionário de sinônimos é lematizada automaticamente depois de sua expansão.|Se você deseja a forma lematizada na expansão, precisará adicionar explicitamente a forma lematizada.|  
 |Caminho de catálogo de texto completo e grupo de arquivos|Trabalhando com catálogos de texto completo.|Cada catálogo de texto completo tem um caminho físico e pertence a um grupo de arquivos. Ele é tratado como um arquivo de banco de dados.|Um catálogo de texto completo é um objeto virtual; ele não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.<br /><br /> Observação: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] instruções DDL que especificam catálogos de texto completo funcionem corretamente.|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|Usando o caminho, data_space_id e file_id dessa exibição de catálogo.|Essas colunas retornam um valor específico.|Essas colunas retornam NULL porque o catálogo de texto completo não está mais localizado no sistema de arquivos.|  

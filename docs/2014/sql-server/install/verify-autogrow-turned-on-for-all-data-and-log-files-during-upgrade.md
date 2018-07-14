@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
 - data files [SQL Server], size
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b903e8f22fce7404f418cfc0a81ac81e954ab06f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181463"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificar se o crescimento automático está ativado em todos os arquivos de dados e de log durante o processo de atualização
-  O Supervisor de Atualização detectou arquivos de dados ou de log que não estão com a opção de crescimento automático ativada. Recursos novos e aprimorados exigem espaço adicional em disco para bancos de dados de usuário e o **tempdb** banco de dados do sistema. Para garantir recursos acomodem esse crescimento durante as operações de atualização e produção subsequente, recomendamos definir o crescimento automático como ON para todos os arquivos de log e de dados de usuário e o **tempdb** dados e arquivos de log antes de atualizar.  
+  O Supervisor de Atualização detectou arquivos de dados ou de log que não estão com a opção de crescimento automático ativada. Recursos novos e aprimorados exigem espaço em disco adicional para bancos de dados de usuário e o **tempdb** banco de dados do sistema. Para garantir que os recursos possam acomodar esse crescimento durante as operações de atualização e produção subsequente, recomendamos definir o crescimento automático como ON para todos os arquivos de log e dados de usuário e o **tempdb** dados e arquivos de log antes de atualizar.  
   
  Depois de atualizar e testar as cargas de trabalho, convém desativar o crescimento automático ou ajustar o incremento FILEGROWTH para os arquivos de log e de dados do usuário. É recomendável que o crescimento automático permanecem para o **tempdb** banco de dados do sistema. Para obter mais informações, consulte ‘Planejamento de capacidade para tempdb’ nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36006534"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- **arquivos de dados**  
+ **Arquivos de dados**  
   
  A tabela a seguir lista as alterações em recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que resultam em requisitos de espaço em disco adicionais para arquivos de dados definidos pelo usuário.  
   
@@ -63,16 +63,16 @@ ms.locfileid: "36006534"
   
 -   Resulta das classificações temporárias quando você cria ou recria índices, se SORT_IN_TEMPDB for especificado.  
   
- Objetos adicionais também usam o **tempdb** banco de dados. A tabela a seguir lista as alterações ou adições ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos que resultam em mais espaço em disco para **tempdb** dados e arquivos de log.  
+ Objetos adicionais também usam o **tempdb** banco de dados. A tabela a seguir lista as alterações ou adições ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requisitos de espaço para os recursos que resultam em adicionais do disco **tempdb** dados e arquivos de log.  
   
 |Recurso|Alterações introduzidas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |-------------|-----------------------------------------------------|  
-|Controle de versão de linha|O controle de versão de linha é uma estrutura geral do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para:<br /><br /> Oferece suporte a gatilhos: criar as tabelas inseridas e excluídas em gatilhos. Qualquer linha modificada pelo gatilho tem controle de versão. Isso inclui as linhas modificadas pela instrução que iniciou o gatilho, bem como quaisquer modificações de dados feitas pelo gatilho. Gatilhos AFTER usam o repositório de versão **tempdb** para manter as imagens anteriores das linhas alteradas pelo gatilho. Quando você carrega dados em massa com gatilhos habilitados, uma cópia de cada linha é adicionada ao repositório da versão.<br /><br /> Oferecer suporte a vários conjuntos de resultados ativos (MARS) Se uma sessão MARS emitir uma instrução de modificação de dados (como INSERT, UPDATE ou DELETE) cada vez que houver um conjunto de resultados ativos, as linhas afetadas pela instrução de modificação terão controle de versão.<br /><br /> Oferecer suporte a operações de índice que especificam a opção ONLINE. As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. Além disso, o usuários simultâneos atualizar e excluir operações durante o índice online operações exigem espaço para registros de versão no **tempdb**.<br /><br /> Suporte a níveis de isolamento de transação com base em controle de versão de linha: uma nova implementação de leitura confirmada nível de isolamento que usa o controle de versão de linha para fornecer consistência de leitura em nível de instrução. Um novo nível de isolamento, instantâneo, para fornecer a consistência de leitura em nível de transações.<br /><br /> <br /><br /> Versões de linha são mantidas no **tempdb** longo o suficiente para atender os requisitos das transações executadas em níveis de isolamento com base em controle de versão de linha de armazenamento de versão.<br /><br /> Para obter mais informações sobre controle de versão de linha e repositório de versão, consulte o tópico ‘Compreendendo níveis de isolamento com base em controle de versão de linha’ nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Armazenando metadados de tabela e variáveis temporárias em cache|Para todos os metadados de tabela temporária e variável temporária armazenados no cache de metadados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], duas páginas extras são alocadas para **tempdb**.<br /><br /> Se um procedimento armazenado ou gatilho criar uma tabela temporária ou variável temporária, o objeto temporário não será excluído quando o procedimento ou gatilho concluir a execução. Em vez disso, o objeto temporário fica truncado em uma página e é usado novamente a próxima vez que o procedimento ou gatilho é executado.|  
-|Índices em tabelas particionadas|Quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] faz uma classificação para criar índices particionados, espaço suficiente para manter a execução intermediária de classificação de cada partição é necessário em **tempdb** se a opção de índice SORT_IN_TEMPDB for especificada.|  
-|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] usa explicitamente **tempdb** ao preservar o contexto de caixa de diálogo existente que não pode ficar na memória (aproximadamente 1 KB por caixa de diálogo).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa implicitamente **tempdb** pelo cache de objetos no contexto de execução da consulta. Por exemplo, tabelas de trabalho usadas para eventos de timer e plano de fundo entregaram conversações.<br /><br /> Os recursos DBMail, notificações de eventos e notificações de consulta usam o [!INCLUDE[ssSB](../../includes/sssb-md.md)] implicitamente.|  
-|Tipos de dados LOB (objeto grande)<br /><br /> Variáveis e parâmetros LOB|Os tipos de dados `varchar(max)`, `nvarchar(max)`, **texto varbinary (max)**, `ntext`, `image,` e `xml` são tipos de objeto grande.<br /><br /> Quando um nível de isolamento da transação com base em controle de versão de linha é habilitado no banco de dados e são feitas modificações de objetos grandes, o fragmento alterado LOB é copiado no repositório de versão no **tempdb**.<br /><br /> Parâmetros definidos como um tipo de dados de objeto grande são armazenados em **tempdb**.|  
-|CETs (expressões de tabela comuns)|Tabelas de trabalho temporárias para operações de spool são criadas no **tempdb** quando são executadas consultas de expressão de tabela comuns.|  
+|Controle de versão de linha|O controle de versão de linha é uma estrutura geral do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para:<br /><br /> Suporte a gatilhos: criar as tabelas inseridas e excluídas em gatilhos. Qualquer linha modificada pelo gatilho tem controle de versão. Isso inclui as linhas modificadas pela instrução que iniciou o gatilho, bem como quaisquer modificações de dados feitas pelo gatilho. Gatilhos AFTER usam o repositório de versão **tempdb** para manter as imagens anteriores das linhas alteradas pelo gatilho. Quando você carrega dados em massa com gatilhos habilitados, uma cópia de cada linha é adicionada ao repositório da versão.<br /><br /> Oferecer suporte a vários conjuntos de resultados ativos (MARS) Se uma sessão MARS emitir uma instrução de modificação de dados (como INSERT, UPDATE ou DELETE) cada vez que houver um conjunto de resultados ativos, as linhas afetadas pela instrução de modificação terão controle de versão.<br /><br /> Oferecer suporte a operações de índice que especificam a opção ONLINE. As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. Além disso, o usuário simultâneas atualizar e excluir operações durante o índice online operações exigem espaço para os registros de versão **tempdb**.<br /><br /> Suporte a níveis de isolamento de transação com base em controle de versão de linha: uma nova implementação de leitura confirmada nível de isolamento que usa o controle de versão de linha para fornecer consistência de leitura em nível de instrução. Um novo nível de isolamento, instantâneo, para fornecer a consistência de leitura em nível de transações.<br /><br /> <br /><br /> As versões de linha são mantidas na **tempdb** tempo suficiente para atender aos requisitos das transações executadas em níveis de isolamento com base em controle de versão de linha de armazenamento de versão.<br /><br /> Para obter mais informações sobre controle de versão de linha e repositório de versão, consulte o tópico ‘Compreendendo níveis de isolamento com base em controle de versão de linha’ nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|Armazenando metadados de tabela e variáveis temporárias em cache|Para todos os metadados de tabela temporária e variável temporária armazenados no cache de metadados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], duas páginas extras são alocadas para **tempdb**.<br /><br /> Se um procedimento armazenado ou gatilho criar uma tabela temporária ou variável temporária, o objeto temporário não será excluído quando o procedimento ou gatilho concluir a execução. Em vez disso, o objeto temporário fica truncado em uma página e é usado novamente a próxima vez que o procedimento ou gatilho é executado.|  
+|Índices em tabelas particionadas|Quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] faz uma classificação para criar índices particionados, espaço suficiente para manter as execuções intermediárias de classificação de cada partição é necessária **tempdb** se a opção de índice SORT_IN_TEMPDB for especificada.|  
+|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] usa explicitamente **tempdb** ao preservar o contexto de caixa de diálogo existente que não pode ficar na memória (aproximadamente 1 KB por caixa de diálogo).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa implicitamente **tempdb** por meio do cache de objetos no contexto de execução da consulta. Por exemplo, tabelas de trabalho usadas para eventos de timer e plano de fundo entregaram conversações.<br /><br /> Os recursos DBMail, notificações de eventos e notificações de consulta usam o [!INCLUDE[ssSB](../../includes/sssb-md.md)] implicitamente.|  
+|Tipos de dados LOB (objeto grande)<br /><br /> Variáveis e parâmetros LOB|Os tipos de dados `varchar(max)`, `nvarchar(max)`, **varbinary (max) de texto**, `ntext`, `image,` e `xml` são tipos de objeto grande.<br /><br /> Quando um nível de isolamento de transação com base em controle de versão de linha está habilitado no banco de dados e são feitas modificações de objetos grandes, o fragmento alterado LOB é copiado no repositório de versão **tempdb**.<br /><br /> Parâmetros definidos como um tipo de dados de objeto grande são armazenados no **tempdb**.|  
+|CETs (expressões de tabela comuns)|Tabelas de trabalho temporárias para operações de spool são criadas no **tempdb** quando consultas de expressão de tabela comuns são executadas.|  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Para definir um arquivo de log ou de dados para crescimento automático, modifique as seguintes instruções para especificar os dados e o log para seu banco de dados. Você deve ajustar o incremento FILEGROWTH para um valor que é apropriado para seu ambiente.  

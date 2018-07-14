@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ClusterCount property
 - AllowedProvidersInOpenRowset property
@@ -58,15 +58,15 @@ helpviewer_keywords:
 - MaximumSeriesValue property
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7febe30dd05f52525b579474ec7a68cdd15a31f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c7db78e6f09191f0c778fd8026d1b8a251eb126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253048"
 ---
 # <a name="data-mining-properties"></a>Propriedades de mineração de dados
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de mineração de dados listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "36007777"
 >  Além das propriedades que definem os serviços mineração de dados disponíveis no servidor, há propriedades de mineração de dados que definem o comportamento de algoritmos específicos. Essas propriedades são configuradas quando você criar um modelo de mineração de dados individual, não ao nível do servidor. Para obter mais informações, consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de Dados&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura física &#40;Analysis Services – mineração de dados&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
  [Determina o Modo de Servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

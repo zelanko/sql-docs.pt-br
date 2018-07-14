@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274662"
 ---
 # <a name="create-a-login"></a>Crie um logon
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -58,7 +57,7 @@ ms.locfileid: "36009345"
 > [!NOTE]  
 >  Para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve usar a autenticação de modo misto. Para obter mais informações, veja [Escolher um modo de autenticação](../choose-an-authentication-mode.md).  
   
- Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. Permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, o `CREATE ENDPOINT` permissão) podem ser concedidas a um logon.  
+ Como uma entidade de segurança, as permissões podem ser concedidas a logons. O escopo de um logon é o [!INCLUDE[ssDE](../../../includes/ssde-md.md)]inteiro. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados. As permissões que têm o escopo da instância inteira do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (por exemplo, o `CREATE ENDPOINT` permissão) podem ser concedidas a um logon.  
   
 ##  <a name="Security"></a> Segurança  
   
@@ -183,7 +182,7 @@ ms.locfileid: "36009345"
 2.  Na caixa de diálogo **Adicionar Objetos**, selecione uma das seguintes opções: **Objetos específicos...**, **Todos os objetos dos tipos...** ou **O servidor***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selecionar **o servidor * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
+    >  Selecionando **o servidor * * * nome_do_servidor* preenche automaticamente a grade superior com todos os objetos protegíveis de servidores.  
   
 3.  Se você selecionar **Objetos específicos…**:  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58d8827fe160ef1acb300e7501fd9faeaa369efd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bfd0483abe0b5c5134f34361040cb46e033e6214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175002"
 ---
 # <a name="column-element-for-index-dta"></a>Elemento de coluna para índice (DTA)
   Especifica as colunas onde o índice é criado para uma configuração especificada pelo usuário.  
@@ -60,7 +60,7 @@ ms.locfileid: "36006955"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento de índice &#40;DTA&#41;](index-element-dta.md)|  
-|**Elementos filho**|[Nome de elemento para a coluna &#40;DTA&#41;](name-element-for-column-dta.md)|  
+|**Elementos filho**|[Nomeie o elemento para a coluna &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  

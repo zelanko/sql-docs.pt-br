@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175085"
 ---
 # <a name="create-a-model-using-report-manager"></a>Criar um modelo com o Gerenciador de Relatórios
   Você pode gerar modelos de um cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou um banco de dados Oracle usando o Gerenciador de Relatórios. Os modelos de relatório são gerados a partir de fontes de dados compartilhadas que são publicadas no servidor de relatório. Se você ainda não tiver uma fonte de dados compartilhada, é preciso criar uma.  
@@ -30,7 +30,7 @@ ms.locfileid: "36007912"
  O modelo de relatório que você gera se baseia totalmente no esquema de fonte de dados compartilhados. Não é possível escolher quais partes da fonte de dados são incluídas no modelo, nem é possível editar as regras ou metadados de um modelo gerado. Entretanto, você pode definir propriedades no modelo após ele ser gerado e definir atribuições de funções que restringem o acesso à parte ou a todo o modelo.  
   
 > [!NOTE]  
->  Um modelo com base em Oracle gerado usando o Gerenciador de relatórios ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de banco de dados que fazem parte do esquema para a conta de usuário usada para se conectar à fonte de dados Oracle. O nome de conta de usuário é especificado nas credenciais de propriedades de fonte de dados.  
+>  Um modelo baseado no Oracle gerado usando o Gerenciador de relatórios ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de banco de dados que fazem parte do esquema para a conta de usuário usada para se conectar à fonte de dados Oracle. O nome de conta de usuário é especificado nas credenciais de propriedades de fonte de dados.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Para criar uma nova fonte de dados para um modelo de relatório que usa o Gerenciador de Relatórios  
   

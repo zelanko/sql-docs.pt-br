@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204546"
 ---
 # <a name="discovertransactions-rowset"></a>Conjunto de linhas DISCOVER_TRANSACTIONS
   Retorna o conjunto atual de transações pendentes no sistema.  
@@ -28,7 +28,7 @@ ms.locfileid: "36008064"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_TRANSACTIONS` linhas contém as seguintes colunas.  
+ O `DISCOVER_TRANSACTIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Description|  
 |-----------------|--------------------|-----------------|  

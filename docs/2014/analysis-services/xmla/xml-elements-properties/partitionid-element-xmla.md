@@ -24,15 +24,15 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 19f06454-9719-488e-aeb6-3fc879313351
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 54631af41d95d7ab149f853c6c94b7af1965f1ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 663d1723598354cf4ea762ee51d34921feb516c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231826"
 ---
 # <a name="partitionid-element-xmla"></a>Elemento PartitionID (XMLA)
   Identifica uma partição de um elemento pai que contém uma referência de objeto.  

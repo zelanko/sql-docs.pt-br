@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyIdx property
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42388eb8158e12f5a4458364e39bf9ce1576e70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 331827dfd16ed941d903b5e877cb9c31b7ccc621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186183"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyIdx (classe ClientNetworkProtocolProperty)
   Obtém ou define o valor de índice da propriedade na matriz de propriedade referenciada pela [propriedade Properties (classe ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) do objeto da [classe ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  

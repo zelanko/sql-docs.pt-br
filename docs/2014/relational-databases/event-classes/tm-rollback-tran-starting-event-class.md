@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f1eb68e637a61dd54435706ac949a969fab98dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 252686d868a9baa95c5be2f3b8da6a2cfd1a64e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271002"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>classe de evento TM: Rollback Tran Starting
   A classe de evento TM: Rollback Tran Startingindica que uma solicitação de ROLLBACK TRANSACTION está iniciando. O cliente envia a solicitação pela interface de administração de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  

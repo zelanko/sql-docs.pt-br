@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c05f2575c1c3d49c76024e50e6defdff12185b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197236"
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
   Este tópico descreve como adicionar colunas incluído (ou não chave) para estender a funcionalidade de índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao incluir colunas não chave, você pode criar você índices não clusterizados que abrangem mais consultas. Isto porque as colunas não chave têm os seguintes benefícios:  
@@ -71,7 +70,7 @@ ms.locfileid: "36007944"
   
 -   As colunas não chave só podem ser definidas em índices não clusterizados.  
   
--   Todos os tipos de dados exceto `text`, `ntext`, e `image` podem ser usadas como colunas não chave.  
+-   Todos os tipos de dados, exceto `text`, `ntext`, e `image` podem ser usados como colunas não chave.  
   
 -   As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas não chave. Para obter mais informações, consulte [Indexes on Computed Columns](indexes-on-computed-columns.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36007944"
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumentar o tamanho de `varchar`, `nvarchar`, ou `varbinary` colunas.  
+    -   Aumente o tamanho das `varchar`, `nvarchar`, ou `varbinary` colunas.  
   
 ###  <a name="Security"></a> Segurança  
   

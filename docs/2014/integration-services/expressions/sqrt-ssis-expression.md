@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQRT function
 - square root of given expression
@@ -16,13 +16,13 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e6699dff664d192f16aea591e4eecd2fe045098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e9e871242572df1f66faa1cbf19c948e0be6f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271482"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (Expressão SSIS)
   Retorna a raiz quadrada de uma expressão numérica.  
@@ -71,6 +71,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  Em expressões, nomes de variável incluem sempre o prefixo @.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

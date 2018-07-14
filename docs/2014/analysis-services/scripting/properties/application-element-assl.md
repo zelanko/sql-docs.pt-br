@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279492"
 ---
 # <a name="application-element-assl"></a>Elemento Application (ASSL)
   Identifica o aplicativo associado com um [ação](../objects/action-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36006723"
 ## <a name="remarks"></a>Remarks  
  O elemento `Application` pode ser usado pelos aplicativos cliente para determinar quais ações devem ser aplicadas a um determinado aplicativo cliente. O aplicativo cliente é responsável por avaliar o valor desse elemento.  
   
- O elemento que corresponde ao pai do `Application` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Action>.  
+ O elemento que corresponde ao pai de `Application` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Actions &#40;ASSL&#41;](../collections/actions-element-assl.md)   

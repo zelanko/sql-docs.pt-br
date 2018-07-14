@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 342cca1892640e1e5c32fda049427d70c478f910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220776"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
   Use o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Modo Nativo. Se você instalou um servidor de relatório usando a opção de instalação somente arquivos, deverá usar o Gerenciador de Configuração para configurar o servidor antes de poder usá-lo. Se você instalou um servidor de relatório usando a opção de instalação de configuração padrão, poderá usar o Gerenciador de Configurações para verificar ou modificar as configurações que foram especificadas durante a instalação. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser usado para configurar uma instância local ou remota do servidor de relatório.  
@@ -42,16 +42,16 @@ ms.locfileid: "36009279"
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Descreve como configurar as URLs usadas para acessar o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios.  
   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  Descreve como criar um banco de dados de servidor de relatório, exigido por armazenar metadados e objetos de servidor.  
   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Descreve como modificar a cadeia de conexão usada pelo servidor de relatório para conexão com o banco de dados do servidor de relatório.  
   
  [Configurar a conta de execução autônoma &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Descreve como configurar uma conta do usuário para processar relatórios no modo autônomo.  
   
- [Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Descreve como configurar um servidor de relatório para dar suporte à distribuição de relatório por email.  
   
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -64,11 +64,11 @@ ms.locfileid: "36009279"
  Fornece instruções passo a passo para tarefas comuns.  
   
  [Tópicos de Ajuda F1 do Configuration Manager do Reporting Services &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Fornece tópicos de ajuda para as páginas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração.  
+ Fornece tópicos de ajuda para as páginas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ferramenta de configuração.  
   
  **Neste tópico:**  
   
--   [Cenários para usar o Reporting Services Configuration Manager](#bkmk_scenarios)  
+-   [Cenários para usar o Gerenciador de configuração do Reporting Services](#bkmk_scenarios)  
   
 -   [Requisitos](#bkmk_requirements)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36009279"
   
     -   Na tela inicial do Windows, digite **Relatórios** e selecione **Gerenciador de Configurações do Reporting Services** nos resultados da pesquisa.  
   
-    -   Clique em **iniciar**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, aponte para **ferramentas de configuração**.  
+    -   Clique em **inicie**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e, em seguida, aponte para **ferramentas de configuração**.  
   
          Para configurar uma instância do servidor de relatório de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra a pasta do programa dessa versão. Por exemplo, aponte para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] em vez de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] para abrir as ferramentas de configuração para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes de servidor.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36009279"
 ## <a name="see-also"></a>Consulte também  
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ferramentas do Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216466"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
@@ -43,7 +43,7 @@ ms.locfileid: "36008835"
   
 -   Gerenciar sessões de relatório  
   
- Para obter uma lista de comandos e configurações disponíveis por meio de acesso à URL, consulte [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Para obter uma lista de comandos e configurações disponíveis por meio do acesso à URL, consulte [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Conceitos do acesso à URL  
  As solicitações de URL ao servidor de relatório contêm parâmetros processados pelo servidor de relatório. A forma como o servidor de relatório manipula as solicitações de URL dependerá dos parâmetros, dos prefixos de parâmetro e dos tipos de item incluídos na URL. As URLs dos servidores de relatório aderem às diretrizes de formatação de URL propostas pelo padrão de rascunho do consórcio W3C/IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é compatível com a maioria dos navegadores de Internet ou dos aplicativos que dão suporte ao endereçamento de URL padrão.  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  O texto da URL correspondente ao valor do parâmetro usado.  
   
- **Observação:** para obter uma lista de parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos sobre como transmitir parâmetros de relatório na URL, consulte [passar um parâmetro de relatório em uma URL](pass-a-report-parameter-within-a-url.md).  
+ **Observação:** para obter uma lista de parâmetros de acesso a URL disponíveis, consulte [URL Access Parameter Reference](url-access-parameter-reference.md). Para obter exemplos sobre como transmitir parâmetros de relatório na URL, consulte [passar um parâmetro de relatório dentro de uma URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

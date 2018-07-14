@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fcc05df0f670deb737b70e0de276e698501c85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176183"
 ---
 # <a name="write-element-assl"></a>Elemento Write (ASSL)
   Determina se os dados ou metadados podem ser gravados em um determinado [CubeDimensionPermission](../data-type/permission-data-type-assl.md) ou [permissão](../data-type/permission-data-type-assl.md) elemento.  
@@ -68,7 +68,7 @@ ms.locfileid: "36006918"
 |*Permitido*|O acesso de gravação é permitido para dados e metadados do objeto pai.|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `Write` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeDimensionPermission> e <xref:Microsoft.AnalysisServices.Permission>.  
+ Os elementos que correspondem aos pais de `Write` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeDimensionPermission> e <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

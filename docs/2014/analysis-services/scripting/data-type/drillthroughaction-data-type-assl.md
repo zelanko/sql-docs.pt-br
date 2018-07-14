@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DrillThroughAction data type
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dfdaf05f2e35c41d99ca61f3cac3624ba28cc82d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8142fd9978ae456b03b4a0381e2ab9261cdc8c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241436"
 ---
 # <a name="drillthroughaction-data-type-assl"></a>Tipo de dados DrillThroughAction (ASSL)
   Define um tipo de dados derivado que representa uma ação de extração de detalhes.  

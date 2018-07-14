@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Object Derived Permission event class
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 32164863d0774d7b05df4829dd2aa77723bb7bc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d81427ffc7c66538ed408b2f26c4ed7039e44650
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266672"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Classe de evento Audit Object Derived Permission
   A classe de evento **Audit Object Derived Permission** registra quando um comando CREATE, ALTER ou DROP é emitido para um objeto especificado. Esse evento só acontecerá se o objeto não tiver permissões ou proprietários diretamente associados a ele.  

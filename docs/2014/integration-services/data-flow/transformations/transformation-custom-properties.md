@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243186"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos Data Flow no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muitos objetos Data Flow têm propriedades personalizadas específicas. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "36008021"
 |AggregationType|Inteiro (enumeração)|Um valor que especifica a operação de agregação a ser executada na coluna. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Contagem** (1)<br /><br /> **Contagem total** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Soma** (4)<br /><br /> **Médio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Máximo** (6)<br /><br /> **Agrupar por** (0)|  
 |CountDistinctKeys|Integer|Quando o tipo de agregação é **Contar distintos**, um valor que especifica o número exato de chaves que a agregação pode gravar. Se um valor de CountDistinctScale for especificado, o valor em CountDistinctKeys terá precedência.|  
 |CountDistinctScale|Inteiro (enumeração)|Quando o tipo de agregação é **Contar distintos**, um valor que especifica o número aproximado de valores de chave que podem ser gravados pela agregação. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **Baixo** (1) — indica até 500.000 valores de chave.<br /><br /> **Médio** (2) — indica até 5 milhões de valores de chave.<br /><br /> **Alto** (3) — indica mais de 25 milhões de valores de chave.<br /><br /> **Não especificado** (0) — indica que nenhum valor de CountDistinctScale foi usado.|  
-|IsBig|Booliano|Um valor que indica se a coluna contém um valor superior a 4 bilhões ou com mais precisão que um valor de precisão dupla de ponto flutuante. O valor pode ser 0 ou 1. 0 indica que IsBig `False` e a coluna não contém um valor grande ou preciso. O valor padrão desta propriedade é 1.|  
+|IsBig|Booliano|Um valor que indica se a coluna contém um valor superior a 4 bilhões ou com mais precisão que um valor de precisão dupla de ponto flutuante. O valor pode ser 0 ou 1. 0 indica que IsBig é `False` e a coluna não contém um valor grande ou preciso. O valor padrão desta propriedade é 1.|  
   
  A entrada e as colunas de entrada da transformação Agregação não têm nenhuma propriedade personalizada.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36008021"
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Booliano|Um valor que especifica se a transformação Importar Coluna deve esperar por uma marca de ordem de byte (BOM). Uma BOM só será esperada se os dados tiverem o tipo de dados de DT_NTEXT.|  
-|FileDataColumnID|Integer|Um valor que identifica a coluna que contém os dados inseridos pela transformação no fluxo de dados. Na coluna de dados a ser inserida, essa propriedade tem um valor de 0; na coluna que contém os caminhos de arquivo de origem, esta propriedade contém o `LineageID` da coluna de dados a serem inseridos.|  
+|FileDataColumnID|Integer|Um valor que identifica a coluna que contém os dados inseridos pela transformação no fluxo de dados. Na coluna de dados a ser inserida, essa propriedade tem um valor de 0; na coluna que contém os caminhos de arquivo de origem, essa propriedade contém o `LineageID` da coluna de dados a serem inseridos.|  
   
  A entrada, a saída e as colunas de saída da transformação Importar Coluna não têm nenhuma propriedade personalizada.  
   
@@ -293,13 +293,13 @@ ms.locfileid: "36008021"
 ##  <a name="flookup"></a> Propriedades personalizadas da transformação Pesquisa Difusa  
  A transformação Pesquisa Difusa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
- A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto `ReferenceMetadataXML` são de leitura/gravação.  
+ A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa Difusa. Todas as propriedades, exceto `ReferenceMetadataXML` são leitura/gravação.  
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booliano|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é `True`.|  
 |Delimitadores|Cadeia de caracteres|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
-|DropExistingMatchIndex|Booliano|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão dessa propriedade é `True`.|  
+|DropExistingMatchIndex|Booliano|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão desta propriedade é `True`.|  
 |Exhaustive|Booliano|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação da Pesquisa Difusa**, mas pode ser definida usando o **Editor Avançado**.|  
 |MatchIndexName|Cadeia de caracteres|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
 |MatchIndexOptions|Inteiro (enumeração)|Um valor que especifica como a transformação gerencia o índice de correspondência. Essa propriedade pode ter um dos seguintes valores:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
@@ -323,7 +323,7 @@ ms.locfileid: "36008021"
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Pesquisa Difusa. Todas as propriedades são de leitura/gravação.  
   
 > [!NOTE]  
->  Colunas de saída que contêm valores de passagem de colunas de entrada correspondentes, CopyFromReferenceColumn está vazia e SourceInputColumnLineageID contém o `LineageID` da coluna de entrada correspondente. Em colunas de saída que contêm resultados de pesquisa, CopyFromReferenceColumn contém o nome da coluna de pesquisa e SourceInputColumnLineageID fica vazio.  
+>  Colunas de saída que contêm valores de passagem das colunas de entrada correspondentes, CopyFromReferenceColumn fica vazio e SourceInputColumnLineageID contém o `LineageID` da coluna de entrada correspondente. Em colunas de saída que contêm resultados de pesquisa, CopyFromReferenceColumn contém o nome da coluna de pesquisa e SourceInputColumnLineageID fica vazio.  
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
@@ -338,7 +338,7 @@ ms.locfileid: "36008021"
 ##  <a name="lookup"></a> Propriedades personalizadas da transformação Pesquisa  
  A transformação Pesquisa tem as propriedades personalizadas e as propriedades comuns a todos os componentes de fluxo de dados.  
   
- A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto `ReferenceMetadataXML` são de leitura/gravação.  
+ A tabela a seguir descreve as propriedades personalizadas da transformação Pesquisa. Todas as propriedades, exceto `ReferenceMetadataXML` são leitura/gravação.  
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
@@ -377,7 +377,7 @@ ms.locfileid: "36008021"
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Inteiro (enumeração)|Especifica se a junção é uma junção interna (2), esquerda externa (1) ou cheia (0).|  
-|MaxBuffersPerInput|Integer|Você não precisa configurar o valor da `MaxBuffersPerInput` propriedade porque a Microsoft fez alterações que reduzem o risco de que a transformação junção de mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.|  
+|MaxBuffersPerInput|Integer|Você não precisa configurar o valor da `MaxBuffersPerInput` propriedade porque a Microsoft fez alterações que reduzem o risco que a transformação junção de mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.|  
 |NumKeyColumns|Integer|O número de colunas usadas na junção.|  
 |TreatNullsAsEqual|Booliano|Um valor que especifica se a transformação controla valores nulos como valores iguais. O valor padrão dessa propriedade é `True`. Se o valor de propriedade for `False`, a transformação controlará valores nulos, como faz o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
@@ -385,7 +385,7 @@ ms.locfileid: "36008021"
   
 |Nome da propriedade|Tipo de dados|Description|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Integer|O `LineageID` da coluna de entrada da qual os dados são copiados para a coluna de saída.|  
+|InputColumnID|Integer|O `LineageID` da coluna de entrada do qual os dados são copiados para a coluna de saída.|  
   
  A entrada, as colunas de entrada e a saída da transformação Mesclar Junção não têm nenhuma propriedade personalizada.  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36008021"
   
 |Nome da propriedade|Tipo de dados|Description|  
 |-------------------|---------------|-----------------|  
-|Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`, e a saída não selecionado, selecionado é definido como `False`.|  
+|Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`, e na saída não selecionada, selecionado é definido como `False`.|  
   
  A entrada, as colunas de entrada e as colunas de saída da transformação Amostragem Percentual não têm nenhuma propriedade personalizada.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "36008021"
   
 |Propriedade|Tipo de dados|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Inteiro (enumeração)|Um dos seguintes valores que especificam a função de uma coluna quando o conjunto de dados é dinamizado:<br /><br /> **0**: a coluna não é dinamizada e os valores de coluna são passados à saída da transformação.<br /><br /> **1**: a coluna faz parte da chave definida que identifica uma ou mais linhas como parte de um conjunto. Todas as linhas de entrada com a mesma chave definida são combinadas em uma linha de saída.<br /><br /> **2**: a coluna é uma coluna dinâmica. Pelo menos uma coluna é criada a partir de cada valor da coluna.<br /><br /> **3**: os valores desta coluna são colocados em colunas que são criadas como resultado da dinamização.|  
+|PivotUsage|Inteiro (enumeração)|Um dos seguintes valores que especificam a função de uma coluna quando o conjunto de dados é dinamizado:<br /><br /> **0**: a coluna não é dinamizada e os valores de coluna são passados para a saída de transformação.<br /><br /> **1**: a coluna faz parte da chave definida que identifica uma ou mais linhas como parte de um conjunto. Todas as linhas de entrada com a mesma chave definida são combinadas em uma linha de saída.<br /><br /> **2**: a coluna é uma coluna dinâmica. Pelo menos uma coluna é criada a partir de cada valor da coluna.<br /><br /> **3**: os valores nesta coluna são colocados em colunas que são criadas como resultado da dinamização.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Dinâmica. Todas as propriedades são de leitura/gravação.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36008021"
   
 |Nome da propriedade|Tipo de dados|Description|  
 |-------------------|---------------|-----------------|  
-|Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`, e a saída não selecionado, selecionado é definido como `False`.|  
+|Selecionado|Booliano|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`, e na saída não selecionada, selecionado é definido como `False`.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36008021"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|Cadeia de caracteres|A cláusula WHERE na instrução SELECT que seleciona a linha atual entre linhas com a mesma chave de negócio.|  
 |EnableInferredMember|Booliano|Um valor que especifica se atualizações de membros inferidos foram detectadas. O valor padrão dessa propriedade é `True`.|  
-|FailOnFixedAttributeChange|Booliano|Um valor que especifica se a transformação falha quando colunas de linha com atributos fixos contêm alterações ou a pesquisa na tabela da dimensão falha. Se você espera que linhas de entrada contenham novos registros, defina esse valor como `True` para que a transformação continue após a falha na pesquisa, como a transformação usa a falha para identificar novos registros. O valor padrão dessa propriedade é `False`.|  
+|FailOnFixedAttributeChange|Booliano|Um valor que especifica se a transformação falha quando colunas de linha com atributos fixos contêm alterações ou a pesquisa na tabela da dimensão falha. Se você espera que as linhas de entrada contenham novos registros, defina esse valor como `True` para que a transformação continue após a pesquisa falhar, já que a transformação usa a falha para identificar novos registros. O valor padrão dessa propriedade é `False`.|  
 |FailOnLookupFailure|Booliano|Um valor que especifica se a transformação falha quando a pesquisa de um registro existente falha. O valor padrão dessa propriedade é `False`.|  
 |IncomingRowChangeType|Integer|Um valor que especifica se todas as linhas de entrada são novas ou se a transformação deve detectar o tipo de alteração.|  
 |InferredMemberIndicator|Cadeia de caracteres|O nome de coluna para o membro inferido.|  
@@ -624,7 +624,7 @@ ms.locfileid: "36008021"
   
 |Nome da propriedade|Tipo de dados|Description|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Booliano|Indica se os valores de `PivotKeyValue` propriedades de colunas de entrada são gravados nesta coluna de saída.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](unpivot-transformation.md), o nome da coluna de Valores Dinâmicos é **Produto** e designa a nova coluna **Produto** , na qual as colunas Ham, Coke, Milk, Beer e Chips não são dinâmicos.|  
+|PivotKey|Booliano|Indica se os valores de `PivotKeyValue` propriedade de colunas de entrada são gravados nesta coluna de saída.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](unpivot-transformation.md), o nome da coluna de Valores Dinâmicos é **Produto** e designa a nova coluna **Produto** , na qual as colunas Ham, Coke, Milk, Beer e Chips não são dinâmicos.|  
   
  A entrada e a saída da transformação Não Dinâmica não têm nenhuma propriedade personalizada.  
   

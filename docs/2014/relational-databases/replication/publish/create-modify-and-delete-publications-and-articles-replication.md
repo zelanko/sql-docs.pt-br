@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33737cc5d08f029696a088393b494aef007b9506
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c362d75076a5d52a9696717cc866a4e7d195c5da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197106"
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Criar, modificar e excluir publicações e artigos (Replicação)
   Esta seção da documentação contém informações de procedimentos sobre tarefas relacionadas para criar publicações e definir artigos.  

@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223317"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
   Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
@@ -41,7 +40,7 @@ ms.locfileid: "36007931"
   
 -   [Fatores que podem atrasar o truncamento de Log](#FactorsThatDelayTruncation)  
   
--   [Operações que podem ser minimamente registradas em log](#MinimallyLogged)  
+-   [Operações que podem ser minimamente registradas](#MinimallyLogged)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -91,15 +90,15 @@ ms.locfileid: "36007931"
 |6|REPLICATION|Durante as replicações transacionais, as transações relevantes para as publicações ainda não foram entregues no banco de dados de distribuição. (Apenas modelo de recuperação completa)<br /><br /> Para obter mais informações sobre a replicação transacional, consulte [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Um instantâneo de banco de dados está sendo criado. (Todos os modelos de recuperação)<br /><br /> Esse é um motivo rotineiro e, normalmente breve, de truncamento de log atrasado.|  
 |8|LOG_SCAN|Um exame de log está ocorrendo. (Todos os modelos de recuperação)<br /><br /> Esse é um motivo rotineiro e, normalmente breve, de truncamento de log atrasado.|  
-|9|AVAILABILITY_REPLICA|Uma réplica secundária de um grupo de disponibilidade está aplicando registros de log de transações desse banco de dados para um banco de dados secundário correspondente. (Modelo de recuperação completa)<br /><br /> Para obter mais informações, consulte [visão geral dos grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|9|AVAILABILITY_REPLICA|Uma réplica secundária de um grupo de disponibilidade está aplicando registros de log de transações desse banco de dados para um banco de dados secundário correspondente. (Modelo de recuperação completa)<br /><br /> Para obter mais informações, consulte [visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |10|—|Somente para uso interno|  
 |11|—|Somente para uso interno|  
 |12|—|Somente para uso interno|  
 |13|OLDEST_PAGE|Se um banco de dados estiver configurado para usar pontos de verificação indiretos, a página mais antiga no banco de dados poderá ser mais antiga do que o LSN do ponto de verificação. Nesse caso, a página mais antiga pode atrasar o truncamento de log. (Todos os modelos de recuperação)<br /><br /> Para obter informações sobre pontos de verificação indiretos, consulte [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Esse valor não é usado atualmente.|  
-|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ponto de verificação é disparado (o que acontece a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando de Checkpoint manualmente no banco de dados em questão.|  
+|16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ponto de verificação é disparado (o que ocorre a cada 512 MB de aumento do log).<br /><br /> Observação: Para truncar o log de transações antes de 512 MB de tamanho, dispare o comando Checkpoint manualmente no banco de dados em questão.|  
   
-##  <a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas em log  
+##  <a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas  
  O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no modelo de recuperação bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
   
 > [!NOTE]  
@@ -139,7 +138,7 @@ ms.locfileid: "36007931"
     -   Recriação de novo heap DROP INDEX (se aplicável).  
   
         > [!NOTE]  
-        >  Índice de desalocação de página durante uma [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operação é sempre totalmente registrada.  
+        >  Índice de desalocação de página durante uma [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) operação sempre totalmente registrada em log.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  `Managing the transaction log`  

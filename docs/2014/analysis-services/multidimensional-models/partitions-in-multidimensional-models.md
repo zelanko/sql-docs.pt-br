@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 884f8cbf2157dcf06958c81437a1a177ac2ae282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270252"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partições em modelos multidimensionais
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma *partição* fornece o armazenamento físico de dados de fatos carregados em um grupo de medidas. Uma única partição é criada para cada grupo de medidas automaticamente, mas é comum criar partições adicionais que segmentam mais os dados, resultando em processamento mais eficiente e em desempenho mais rápido das consultas.  
@@ -44,17 +44,17 @@ ms.locfileid: "36007799"
  As agregações são resumos pré-calculados de dados de cubo que ajudam a habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer rápidas respostas de consultas. Você pode controlar o número de agregações criadas para um grupo de medidas definindo limites de armazenamento, ganhos de desempenho, ou arbitrariamente interrompendo o processo de criação de agregação após sua execução por algum tempo. Mais agregações não são necessariamente melhores. Cada nova agregação tem a custo, em termos de espaço em disco e de tempo de processamento. Recomendamos criar agregações para um ganho de 30% em desempenho e, depois, aumentar o número apenas se o teste ou a experiência o justificar. Para obter mais informações, consulte [Projetando agregações &#40;Analysis Services – Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Mesclando e editando partições  
- Se duas partições usarem o mesmo design de agregação, é possível mesclar essas duas partições em uma. Por exemplo, se você tiver uma dimensão de inventário particionada por mês, no final de cada mês do calendário, será possível mesclar a partição desse mês com a partição existente dos meses acumulados no ano. Desse modo, a partição do mês atual pode ser processada e analisada rapidamente, enquanto o resto do ano em meses só será reprocessado quando for mesclado. O reprocessamento requer um tempo maior e pode ser executado com menos frequência. Para obter mais informações sobre como gerenciar a processo de mesclagem de partições, consulte [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar as partições do cubo usando o **partições** guia no Designer de cubo, consulte [editar ou excluir partições &#40;Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ Se duas partições usarem o mesmo design de agregação, é possível mesclar essas duas partições em uma. Por exemplo, se você tiver uma dimensão de inventário particionada por mês, no final de cada mês do calendário, será possível mesclar a partição desse mês com a partição existente dos meses acumulados no ano. Desse modo, a partição do mês atual pode ser processada e analisada rapidamente, enquanto o resto do ano em meses só será reprocessado quando for mesclado. O reprocessamento requer um tempo maior e pode ser executado com menos frequência. Para obter mais informações sobre como gerenciar a processo de mesclagem de partições, consulte [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar as partições do cubo usando o **partições** no Designer de cubo, consulte [editar ou excluir partições &#40;Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Criar e gerenciar uma partição Local &#40;do Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Contém informações sobre como particionar dados usando filtros ou tabelas de fato diferentes sem duplicar dados.|  
+|[Criar e gerenciar uma partição Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Contém informações sobre como particionar dados usando filtros ou tabelas de fato diferentes sem duplicar dados.|  
 |[Definir armazenamento de partição &#40;do Analysis Services - Multidimensional&#41;](set-partition-storage-analysis-services-multidimensional.md)|Descreve como configurar o armazenamento para partições.|  
 |[Editar ou excluir partições &#40;do Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Descreve como exibir e editar partições.|  
 |[Mesclar partições no Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Contém informações sobre como mesclar partições que têm tabelas de fato diferentes ou fatias de dados diferentes sem duplicar dados.|  
 |[Definir o write-back de partições](set-partition-writeback.md)|Fornece instruções sobre como habilitar uma partição para gravação.|  
-|[Criar e gerenciar uma partição remota &#40;do Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Descreve como criar e gerenciar uma partição remota.|  
+|[Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Descreve como criar e gerenciar uma partição remota.|  
   
   

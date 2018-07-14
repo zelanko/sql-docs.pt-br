@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
 - Queue Reader Agent, alerts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d388688f07e27f71d2654e8745a8a7d1befa405
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251848"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
   Os Agentes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionam um modo para monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
@@ -49,7 +49,7 @@ ms.locfileid: "36008876"
 |20578|**Replicação: desligamento personalizado do agente**|||  
 |22815|**Alerta de detecção de conflito ponto a ponto**|O Agente de Distribuição detectou um conflito ao tentar aplicar uma alteração a um nó ponto a ponto.|Sim|  
   
- Além desses alertas, o Replication Monitor fornece um conjunto de avisos e alertas relacionado ao status e ao desempenho. Para obter mais informações, consulte [definir limites e avisos no Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infraestrutura de alerta. Para obter mais informações, consulte [Criar um evento definido pelo usuário](../../../ssms/agent/create-a-user-defined-event.md).  
+ Além desses alertas, o Replication Monitor fornece um conjunto de avisos e alertas relacionado ao status e ao desempenho. Para obter mais informações, consulte [definir limites e avisos no Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infraestrutura de alertas. Para obter mais informações, consulte [Criar um evento definido pelo usuário](../../../ssms/agent/create-a-user-defined-event.md).  
   
  **Para configurar os alertas de replicação predefinidos**  
   

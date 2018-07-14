@@ -1,14 +1,13 @@
 ---
-title: Reparo automático de página (para grupos de disponibilidade e o espelhamento de banco de dados) | Microsoft Docs
+title: Reparo automático de página (para grupos de disponibilidade e espelhamento de banco de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
 - Availability Groups [SQL Server], automatic page repair
@@ -16,17 +15,17 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d84c8eb5470ee6ef54dfdc1327ea40fafb961e41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257932"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Reparo automático de página (para grupos de disponibilidade e o espelhamento de banco de dados)
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Reparo automático de página (para grupos de disponibilidade e espelhamento de banco de dados)
   O reparo automático de página tem suporte do espelhamento de banco de dados e de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois que certos tipos de erros corrompem uma página, tornando-a ilegível, um parceiro de espelhamento de banco de dados (entidade de segurança ou espelho) ou uma réplica de disponibilidade (primária ou secundária) tenta recuperar a página automaticamente. O parceiro/réplica que não puder ler a página solicitará uma cópia atualizada da página do seu parceiro ou de outra réplica. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia legível. Isso costuma resolver o erro.  
   
  Em geral, o espelhamento de banco de dados e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tratam erros de E/S de formas equivalentes. As poucas diferenças são destacadas explicitamente aqui.  
@@ -111,7 +110,7 @@ ms.locfileid: "36007203"
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

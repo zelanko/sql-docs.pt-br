@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullProcessing element
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54b75b2e1a7bddd6f7b5df1aeda0311c1b60ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc55d97fabaf3f2391beb5c33e3889f6866738d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246087"
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
   Define como valores nulos são processados.  
@@ -58,7 +58,7 @@ ms.locfileid: "36007132"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Elemento pai|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
@@ -66,9 +66,9 @@ ms.locfileid: "36007132"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*Preservar*|Preserva o valor nulo. **Observação:** esse valor não é suportado para medidas de contagem distinta.|  
+|*Preservar*|Preserva o valor nulo. **Observação:** esse valor não há suporte para medidas de contagem distintas.|  
 |*Erro*|Gera um erro de chave nula. O valor de [NullKeyNotAllowed](nullkeynotallowed-element-assl.md) determina como a instância reage ao erro. **Observação:** esse valor não é suportado para medidas.|  
-|*UnknownMember*|Gera um membro desconhecido e um erro de conversão nula. O valor de [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) determina como a instância reage ao erro. **Observação:** esse valor não há suporte para colunas associadas às medidas.|  
+|*UnknownMember*|Gera um membro desconhecido e um erro de conversão nula. O valor de [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) determina como a instância reage ao erro. **Observação:** esse valor não há suporte para colunas associadas a medidas.|  
 |*ZeroOrBlank*|Converte o valor nulo em zero (para itens de dados numéricos) ou em uma cadeia de caracteres vazia (para itens de dados de cadeia de caracteres). **Observação:** esse valor fornece compatibilidade com versões anteriores do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |*Automático*|Usa o processamento padrão apropriado para o elemento:<br /><br /> -   *ZeroOrBlank* para itens de dados OLAP.<br />-   *UnknownMember* para itens de dados de mineração de dados.|  
   

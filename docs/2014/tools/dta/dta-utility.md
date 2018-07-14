@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200816"
 ---
 # <a name="dta-utility"></a>utilitário dta
   O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -153,7 +153,7 @@ dta -d AdventureWorks2012 ...
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
 |*database_name*|*database_name* especificado com a opção **–D**|  
-|*owner_name*|**dbo**<br /><br /> Observação: *owner_name* devem ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
+|*owner_name*|**dbo**<br /><br /> Observação: *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
 |*table_name*|Nenhum|  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  

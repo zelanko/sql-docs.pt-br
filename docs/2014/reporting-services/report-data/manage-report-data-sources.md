@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244306"
 ---
 # <a name="manage-report-data-sources"></a>Gerenciar fontes de dados de relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], relatórios, modelos de relatório e assinatura controladas por dados recuperam dados de fontes de dados externas. Para se conectar a uma fonte de dados externo, um servidor de relatório usa as informações de conexão de fonte de dados definidas em ou às quais é feita referência no relatório, modelo ou assinatura. As propriedades de conexão da fonte de dados são sempre definidas na criação do relatório ou modelo, mas podem ser gerenciadas de forma independente depois que o relatório ou modelo é publicado em um servidor de relatório.  
@@ -56,9 +56,9 @@ ms.locfileid: "36007230"
  Se você publicar um relatório com propriedades de fonte de dados inseridas em um relatório, considere alternar para propriedades da fonte de dados compartilhada. Fontes de dados compartilhadas são mais fáceis de administrar, pois você pode atualizar credenciais e cadeias de conexões em uma página. Todos os relatórios, modelos e assinaturas controladas por dados que usam aquela fonte de dados adquirem as alterações imediatamente. Você também pode colocar uma fonte de dados offline, pausando efetivamente o relatório ou a assinatura para evitar a execução durante a solução de problemas ou a investigação de qualquer problema que possa surgir.  
   
 ## <a name="controlling-access-data-source-properties"></a>Controlando acesso às propriedades de fonte de dados  
- Por padrão, qualquer um que tenha permissão para gerenciar relatórios pode definir qualquer propriedade em um relatório, incluindo propriedades que determinam o tipo da fonte de dados, cadeia de conexão, credenciais e se os relatórios obtêm informações e uma fonte de dados inserida ou compartilhada. Para obter mais informações sobre quais tarefas e permissões controlam o acesso a propriedades de fonte de dados em um servidor de relatório de modo nativo, consulte [proteger itens de fonte de dados compartilhada](../security/secure-shared-data-source-items.md) e [proteger relatórios e recursos](../security/secure-reports-and-resources.md).  
+ Por padrão, qualquer um que tenha permissão para gerenciar relatórios pode definir qualquer propriedade em um relatório, incluindo propriedades que determinam o tipo da fonte de dados, cadeia de conexão, credenciais e se os relatórios obtêm informações e uma fonte de dados inserida ou compartilhada. Para obter mais informações sobre quais tarefas e permissões controlam o acesso às propriedades de fonte de dados em um servidor de relatório do modo nativo, consulte [proteger itens de fonte de dados compartilhados](../security/secure-shared-data-source-items.md) e [proteger relatórios e recursos](../security/secure-reports-and-resources.md).  
   
- As permissões para exibir e editar propriedades de itens em uma biblioteca do SharePoint são determinadas pelo administrador do site. Para obter mais informações sobre quais permissões controlam o acesso a propriedades de conexão de fonte de dados, consulte [List Permission Reference para itens do servidor de relatório e sites do SharePoint](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ As permissões para exibir e editar propriedades de itens em uma biblioteca do SharePoint são determinadas pelo administrador do site. Para obter mais informações sobre quais permissões controlam o acesso às propriedades de conexão de fonte de dados, consulte [Site do SharePoint e a referência à permissão de listas para itens do servidor de relatório](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>Como trabalhar com propriedades de fonte de dados em um servidor de relatório  
  Você pode usar uma variedade de ferramentas para criar e modificar propriedades de fonte de dados. A tabela a seguir resume as abordagens e ferramentas e fornece um link para informações adicionais.  
@@ -74,17 +74,17 @@ ms.locfileid: "36007230"
 |Armazenar credenciais como um pré-requisito para criar assinaturas ou instantâneos de relatório.|Gerenciador de Relatórios|[Armazenar credenciais em uma fonte de dados do Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
 |Editar propriedades de conexão da fonte de dados em um relatório publicado.|Gerenciador de Relatórios|[Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Criar um item de fonte de dados compartilhada em um servidor de relatório.|Site do SharePoint|[Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|Usar informações de conexão .odc existentes com um relatório.|Site do SharePoint|[Usar uma Conexão de dados do Office &#40;. odc&#41; com relatórios &#40;Reporting Services no SharePoint modo integrado&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|Usar informações de conexão .odc existentes com um relatório.|Site do SharePoint|[Usar uma Conexão de dados do Office &#40;. odc&#41; com relatórios &#40;modo integrado do Reporting Services no SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Gerenciar as conexões de fonte de dados para relatar fontes de dados não é o mesmo que gerenciar a conexão do servidor de relatório para o banco de dados do servidor de relatório. Para obter mais informações sobre uma conexão do servidor de relatório com seu armazenamento de dados interno, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Associar um relatório ou modelo a uma fonte de dados compartilhados &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Armazenar as credenciais em uma fonte de dados do Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Fontes de dados suportadas pelo Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

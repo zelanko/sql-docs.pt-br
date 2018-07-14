@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do arquivo (página Gerenciador de Conexão) simples | Microsoft Docs
+title: Editor de origem (página Gerenciador de Conexão) do arquivo simples | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72cf4b3ee9dbcedb7a8f917328a0bdb715ba575a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88beab545eee8349672d6e2651882a84c110153
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252368"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de Fonte de Arquivo Simples (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para selecionar o gerenciador de conexões que a fonte do arquivo simples usará. A fonte de Arquivo Simples lê dados de um arquivo de texto, que pode estar em formato de largura delimitada, fixa ou mista.  
@@ -51,7 +51,7 @@ ms.locfileid: "36007310"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem de arquivo simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Editor de origem de arquivo simples &#40;página de colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Editor de origem de arquivo simples &#40;página de saída de erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md)  
   

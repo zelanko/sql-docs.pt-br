@@ -1,5 +1,5 @@
 ---
-title: Especifique uma versão como a versão mais recente | Microsoft Docs
+title: Especificar uma versão como a versão mais recente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], latest version
 - latest file version specified
 - file versions [SQL Server]
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 598fc6f2d90220f85cef590600d8fcf397384f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f90851ebb0c5425e7f3948f7f0e040d2cab0618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225916"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Especificar uma versão como a versão mais recente
   Quando você faz o check-in de um arquivo no controle do código-fonte, essa versão se torna a mais recente; usuários que fazem check-out ou recuperam a versão mais recente recebem cópias locais do item em que foi feito check-in recentemente.  
@@ -42,7 +42,7 @@ ms.locfileid: "36007752"
   
 2.  No Gerenciador de Soluções, selecione o arquivo que você deseja especificar como versão mais recente.  
   
-3.  Sobre o **arquivo** , aponte para **controle de origem** e clique em **ViewHistory**.  
+3.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **ViewHistory**.  
   
 4.  No **histórico de** \<arquivo > caixa de diálogo, selecione a versão que você deseja especificar como a versão mais recente e, em seguida, clique em **Pin**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36007752"
   
 2.  No Gerenciador de Soluções, selecione o item que você deseja especificar como versão mais recente.  
   
-3.  Sobre o **arquivo** , aponte para **controle de origem** e clique em **histórico**.  
+3.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **histórico**.  
   
 4.  No **opções de histórico** caixa de diálogo, clique em **Okey** para exibir o **histórico de arquivos** caixa de diálogo.  
   

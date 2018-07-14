@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de opções de exploração de dados (Analysis Services – mineração de dados) | Microsoft Docs
+title: Caixa de diálogo de opções de exploração de dados (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
 helpviewer_keywords:
 - Data Exploration Options dialog box
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb1785ea312e588c9c2246af6f33c8cebc7905b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 956c8ad82cc1675dd2e5838327a8300c3ffb22b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254968"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Caixa de diálogo Opções de Exploração de Dados (Analysis Services - Mineração de Dados)
   Use a caixa de diálogo **Opções de Exploração de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as opções de amostragem e de gráfico para a caixa de diálogo **Explorar Dados**. É possível exibir a caixa de diálogo **Opções de Exploração de Dados** clicando em **Opções de amostragem** na caixa de diálogo **Explorar Dados** .  

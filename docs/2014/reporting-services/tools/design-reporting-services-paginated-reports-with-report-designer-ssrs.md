@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218946"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Criar relatórios com o Designer de Relatórios (SSRS)
   Use o Designer de Relatórios para criar relatórios e soluções completas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. O Designer de Relatórios fornece uma interface gráfica na qual você pode definir fontes de dados, conjuntos de dados e consultas, posições do layout do relatório para regiões de dados e campos e recursos interativos, como parâmetros e conjuntos de relatórios que funcionam em conjunto.  
@@ -42,7 +42,7 @@ ms.locfileid: "36007449"
 ##  <a name="bkmk_SharedDataSources"></a> Fontes de dados compartilhadas  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar fontes de dados compartilhadas para uma solução de relatório. As fontes de dados compartilhadas podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDataSources** e **TargetDataSourceFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
- No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir as fontes de dados usadas em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir fontes de dados publicadas em um servidor de relatório ou site do SharePoint, mas não incluídas na solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Para esse recurso, use [Report Builder &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
+ No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir as fontes de dados usadas em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir fontes de dados publicadas em um servidor de relatório ou site do SharePoint, mas não incluídas na solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Para esse recurso, use [construtor de relatórios &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é uma ferramenta de cliente. Você pode testar sua solução de relatório localmente em seu computador, implantá-la em um ambiente de teste para testar a solução de servidor e, em seguida, implantá-la em um ambiente de produção. Depois da implantação, verifique se as extensões de processamento de fonte de dados e as credenciais de fonte de dados estão configuradas para o ambiente de servidor de relatório. Você pode usar o Gerenciador de Configurações para ajudar a gerenciar as propriedades de diferentes implantações. Para obter mais informações, consulte [Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36007449"
 ##  <a name="bkmk_SharedDatasets"></a> Conjuntos de dados compartilhados  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar conjuntos de dados compartilhados para uma solução de relatório. Os conjuntos de dados compartilhados podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDatasets** e **TargetDatasetFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
- No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir os conjuntos de dados compartilhados usados em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir conjuntos de dados publicados diretamente em um servidor de relatório ou site do SharePoint. Para esse recurso, use [Report Builder &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) no modo de conjunto de dados compartilhado.  
+ No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir os conjuntos de dados compartilhados usados em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir conjuntos de dados publicados diretamente em um servidor de relatório ou site do SharePoint. Para esse recurso, use [construtor de relatórios &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) no modo de conjunto de dados compartilhado.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é uma ferramenta de cliente. Você pode usar designers de consulta para ajudar a criar e testar os resultados de suas consultas localmente em Visualização. Depois da implantação, você pode gerenciar conjuntos de dados compartilhados independentemente das fontes de dados compartilhadas e dos relatórios dos quais eles dependem. Para obter mais informações, consulte [conjuntos de dados inseridos de relatório e conjuntos de dados compartilhados &#40;construtor de relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [ferramentas de Design de consulta no relatório Designer SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), e [gerenciar conjuntos de dados compartilhados](../report-data/manage-shared-datasets.md).  
   
@@ -121,10 +121,10 @@ ms.locfileid: "36007449"
   
     -   Pressione F5.  
   
-     Se você usar uma configuração de projeto que cria um relatório mas não implantá-lo, o relatório é especificado no `StartItem` propriedade da configuração atual é aberto em uma janela de visualização separada.  
+     Se você usar uma configuração de projeto que cria o relatório, mas não implantá-lo, o que é especificado no relatório de `StartItem` propriedade da configuração atual é aberto em uma janela de visualização separada.  
   
     > [!NOTE]  
-    >  Para usar o modo de Depuração, defina um item inicial. No Gerenciador de soluções, clique com botão direito no projeto de relatório, clique em **propriedades**e no `StartItem`, selecione o nome do relatório a ser exibido.  
+    >  Para usar o modo de Depuração, defina um item inicial. No Gerenciador de soluções, clique com botão direito no projeto de relatório, clique em **propriedades**e, em `StartItem`, selecione o nome do relatório a ser exibido.  
   
      Se quiser visualizar um relatório específico que não é o item inicial do projeto, selecione uma configuração que cria o relatório, mas que não o implanta (por exemplo, a configuração DebugLocal), clique com o botão direito do mouse no relatório e clique em **Executar**. Escolha uma configuração que não implante o relatório, caso contrário, o relatório será publicado no servidor de relatórios em vez de ser exibido localmente na janela de visualização.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36007449"
   
 ## <a name="see-also"></a>Consulte também  
  [O Reporting Services no SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
- [Ferramentas de Design no relatório Designer do SQL Server Data Tools consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206506"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar autenticação personalizada ou de formulários no servidor de relatório
   O Reporting Services fornece uma arquitetura extensível que lhe permite conectar módulos de autenticação personalizados ou baseados em formulários. Você poderá avaliar a possibilidade de implementar uma extensão de autenticação personalizada, caso os requisitos de implantação não incluam a segurança integrada do Windows ou a autenticação Básica. O cenário mais comum para uso da autenticação personalizada é no suporte ao acesso de Internet ou extranet para um aplicativo Web. Substituir a extensão de Autenticação do Windows padrão por uma extensão de personalizada proporciona a você mais controle sobre a forma como é concedido a usuários externos acesso ao servidor de relatório.  
@@ -51,7 +51,7 @@ ms.locfileid: "36009302"
     </Authentication>  
     ```  
   
-4.  Cole-o sobre entradas existentes para <`Authentication`>.  
+4.  Cole-a nas entradas existentes para <`Authentication`>.  
   
      Observe que não é possível usar `Custom` com outros tipos de autenticação.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "36009302"
   
 6.  Abra o arquivo Web.config do servidor de relatório. Por padrão, ele está localizado em \Arquivos de Programas\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
-7.  Localizar `authentication mode` e defina-o `Forms`.  
+7.  Encontre `authentication mode` e defini-lo `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-8.  Localizar `identity impersonate` e defina-a como `False`.  
+8.  Encontre `identity impersonate` e defina-o como `False`.  
   
     ```  
     <identity impersonate = "false" />  
@@ -73,19 +73,19 @@ ms.locfileid: "36009302"
   
 9. Abra o arquivo Web.config para o Gerenciador de Relatórios. Por padrão, ele está localizado em \Arquivos de Programas\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Localizar `authentication mode` e defina-o `Forms`.  
+10. Encontre `authentication mode` e defini-lo `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-11. Localizar `identity impersonate` e defina-a como `False`.  
+11. Encontre `identity impersonate` e defina-o como `False`.  
   
     ```  
     <identity impersonate = "false" />  
     ```  
   
-12. Adicionar o `PassThroughCookies` estrutura do elemento para o arquivo de configuração. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Adicionar o `PassThroughCookies` estrutura do elemento ao arquivo de configuração. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Salve o arquivo.  
   

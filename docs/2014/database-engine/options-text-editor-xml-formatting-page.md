@@ -1,5 +1,5 @@
 ---
-title: Opções (página de formatação do Editor de texto - XML -) | Microsoft Docs
+title: Opções (página de formatação do Editor de texto – XML –) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209586"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opções (página Editor de texto – XML – Formatação)
   Esta caixa de diálogo permite que você especifique as configurações de formatação para o Editor de XML. Você pode acessar a caixa de diálogo **Opções** no menu **Ferramentas**.  
@@ -47,10 +47,10 @@ ms.locfileid: "36007561"
 ```  
   
 ## <a name="auto-reformat"></a>Reformatação Automática  
- **Ao colar da área de transferência.**  
+ **Colar da área de transferência.**  
  Reformata o texto XML colado da área de transferência.  
   
- **Após a conclusão da marca de fim**  
+ **Após a conclusão de marca de fim**  
  Reformata o elemento quando a marca final é concluída.  
   
 ## <a name="mixed-content"></a>Conteúdo Misto  

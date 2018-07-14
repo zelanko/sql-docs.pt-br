@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246088"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
   Nesta lição, você renomeará muitas das colunas em cada tabela que você importou. A renomeação torna as colunas mais identificáveis e fáceis de navegar em ambos os designers de modelos, e também pelos usuários que selecionam campos em um aplicativo cliente. Para obter mais informações, consulte [Renomear uma tabela ou coluna &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36008072"
   
      Quando você clica em uma guia, essa tabela fica ativa na janela do designer de modelos.  
   
-2.  Clique duas vezes o **CustomerKey** coluna Nome, digite `Customer  Id`, e pressione ENTER.  
+2.  Clique duas vezes o **CustomerKey** coluna Nome e, em seguida, digite `Customer  Id`, e pressione ENTER.  
   
     > [!TIP]  
     >  Você também pode renomear uma coluna na propriedade **Nome da Coluna** na janela **Propriedades** da coluna ou na Exibição de Diagrama.  
@@ -138,7 +138,7 @@ ms.locfileid: "36008072"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **Subcategoria de produto**  
+     **Subcategoria do produto**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  

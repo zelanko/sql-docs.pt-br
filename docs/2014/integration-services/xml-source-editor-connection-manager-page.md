@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48193a85232443ea8a5fbc618582a2503e32f84b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88bbe341af005344a6c7e8984b2fa668291973fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262842"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de Origem XML (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** do **Editor de Origem XML** para especificar um arquivo XML e o XSD que transforma os dados XML.  
@@ -71,7 +71,7 @@ ms.locfileid: "36007521"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem XML &#40;página colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de origem XML &#40;página de colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Editor de origem XML &#40;página de saída de erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   

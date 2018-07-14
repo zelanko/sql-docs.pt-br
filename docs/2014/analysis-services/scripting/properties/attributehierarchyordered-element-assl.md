@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOrdered element
 ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2114243cdecf646b78abd769b70908f4961e201
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6731ab4d711e042bdefbed0cf713681d05f8812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188993"
 ---
 # <a name="attributehierarchyordered-element-assl"></a>Elemento AttributeHierarchyOrdered (ASSL)
   Determina se a hierarquia de atributo associada está ordenada.  
@@ -62,7 +62,7 @@ ms.locfileid: "36010756"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `AttributeHierarchyOrdered` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `AttributeHierarchyOrdered` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

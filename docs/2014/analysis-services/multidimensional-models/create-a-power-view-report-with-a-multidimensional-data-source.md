@@ -1,5 +1,5 @@
 ---
-title: Criar um relatório do Power View com uma fonte de dados Multidimensional | Microsoft Docs
+title: Criar um relatório do Power View com uma fonte de dados multidimensionais | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 736048d9cb6c8c2054c9d86bd3c8a8a0e2411daf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0edc1c2b45707afe65325e484ff2e772a224895a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220306"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Criar um relatório do Power View com uma fonte de dados multidimensional
   A criação de um relatório Power View com base em um modelo multidimensional não é diferente de criar um relatório com base em uma pasta de trabalho PowerPivot ou em um modelo de tabela do Analysis Services. Os relatórios do Power View são criados de um arquivo de conexão da Fonte de Dados de Relatório (.rsds) em uma biblioteca do SharePoint. Para obter mais informações sobre como criar um .rsds, consulte [Criar uma fonte de dados de relatórios](create-a-report-data-source.md).  

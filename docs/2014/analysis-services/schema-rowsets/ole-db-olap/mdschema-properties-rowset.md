@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c0e0506be8f531018285bba9145a587448e743e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f62a6e4f77053c1aec69fc2e16b8049193249466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189213"
 ---
 # <a name="mdschemaproperties-rowset"></a>Conjunto de linhas MDSCHEMA_PROPERTIES
   Descreve as propriedades de membros dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_PROPERTIES` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_PROPERTIES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "36009433"
 |`PROPERTY_CONTENT_TYPE`|`DBTYPE_I2`|(Opcional) Uma restrição padrão é estabelecida em `MDPROP_MEMBER` ou `MDPROP_CELL`.|  
 |`PROPERTY_ORIGIN`|`DBTYPE_UI2`|(Opcional) Uma restrição padrão é estabelecida em `MD_USER_DEFINED` ou `MD_SYSTEM_ENABLED`.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -CUBO DE 1<br />-DIMENSÃO DE 2<br /><br /> A restrição padrão tem valor 1.|  
-|`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -1 visível<br />-2 não visível<br /><br /> A restrição padrão tem valor 1.|  
+|`PROPERTY_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -Visible 1<br />-2 não visível<br /><br /> A restrição padrão tem valor 1.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](ole-db-for-olap-schema-rowsets.md)  

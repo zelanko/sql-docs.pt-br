@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279702"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
   Este tópico aborda as ações que você pode executar no **Pesquisador de Objetos** que afetam os Eventos Estendidos:  
@@ -40,7 +40,7 @@ ms.locfileid: "36007949"
  Para obter mais informações sobre como criar uma sessão de Eventos Estendidos, consulte [Criar uma sessão de Eventos Estendidos](../../database-engine/create-an-extended-events-session.md).  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>Iniciando ou interrompendo uma sessão de Eventos Estendidos  
- Você pode iniciar ou interromper uma sessão de eventos estendidos através do **Editor de consultas** usando o `ALTER EVENT SESSION` instrução, ou usando o **eventos estendidos** nó de **Pesquisador de objetos**.  
+ Você pode iniciar ou interromper uma sessão de eventos estendidos através de **Editor de consultas** usando o `ALTER EVENT SESSION` instrução, ou usando o **eventos estendidos** nó do **Pesquisador de objetos**.  
   
  Quando você interrompe uma sessão de eventos, a sessão não é mais listada como uma sessão ativa no DMV (exibição de gerenciamento dinâmico) sys.dm_xe_sessions. No entanto, a definição de sessão permanece intacta e você pode reiniciar a sessão. Para remover completamente uma definição de sessão, você deve excluir a sessão.  
   
@@ -132,7 +132,7 @@ STATE = STOP
  Quando você exclui uma sessão de eventos, todas as informações de configuração são removidas e a definição de sessão não aparece mais na exibição de catálogo sys.server_event_sessions.  
   
 > [!NOTE]  
->  system_health e AlwaysOn_health são incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não as exclua. system_health é habilitada por padrão (para obter mais informações, consulte [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health está desativada por padrão. Essas sessões coletam dados que podem ser úteis para diagnosticar problemas de desempenho.  
+>  system_health e AlwaysOn_health são incluídas com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não as exclua. system_health é habilitada por padrão (para obter mais informações, consulte [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)). AlwaysOn_health está desativada por padrão. Essas sessões coletam dados que podem ser úteis para diagnosticar problemas de desempenho.  
   
  Para excluir uma sessão de Eventos Estendidos, você deve ter a permissão ALTER ANY EVENT SESSION.  
   

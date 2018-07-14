@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 557fd858a02ed3e0d05679dca56740d2d8eb2128
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15009d244d0c110d15f1c7dc62e66dec76ce859b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253158"
 ---
 # <a name="cubepermission-element-assl"></a>Elemento CubePermission (ASSL)
-  Define as permissões dos membros de um determinado [função](role-element-assl.md) elemento em uma determinada [cubo](cube-element-assl.md) elemento.  
+  Define as permissões dos membros de um determinado [função](role-element-assl.md) elemento em um determinado [cubo](cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

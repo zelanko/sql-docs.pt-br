@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5cdff5f44079c6c4946f30f9d4cc12ecc1bcac85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293036"
 ---
 # <a name="query-options-execution-advanced-page"></a>Execução de opções de consulta (Página Avançado)
   Estão disponíveis diversas opções usando a instrução **SET** . Use essa página para especificar uma opção **set** para executar consultas no Microsoft SQL Server. Para obter informações detalhadas sobre cada uma dessas opções, consulte os manuais online do SQL Server.  
@@ -58,7 +58,7 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 GO  
 ```  
   
- **DEFINIR PRIORIDADE DE DEADLOCK**  
+ **DEFINIR A PRIORIDADE DE DEADLOCK**  
  O valor padrão **Normal** permite que cada consulta tenha a mesma prioridade quando ocorrer um deadlock. Selecione a prioridade como Baixa da lista suspensa, se você deseja que essa consulta libere qualquer conflito de deadlock e seja selecionado o encerramento da consulta.  
   
  **DEFINIR TEMPO LIMITE DE BLOQUEIO**  
@@ -70,7 +70,7 @@ GO
  **Suprimir cabeçalhos de mensagem do provedor**  
  Quando esta caixa de seleção é marcada, não são exibidas mensagens de status do provedor (como o provedor OLE DB). Esta caixa de seleção fica marcada por padrão. Desmarque essa caixa de seleção para ver as mensagens do provedor ao solucionar problemas com consultas que podem estar falhando no nível do provedor.  
   
- **Desconectar depois que a execução da consulta**  
+ **Desconectar depois que a consulta é executada**  
  Quando essa caixa de seleção é marcada, a conexão com SQL Server é encerrada depois que a consulta é completada. Essa opção é desmarcada por padrão.  
   
  **Redefinir para padrão**  

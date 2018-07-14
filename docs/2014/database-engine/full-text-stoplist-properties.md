@@ -1,14 +1,13 @@
 ---
-title: Propriedades de palavras irrelevantes de texto completo | Microsoft Docs
+title: Propriedades de palavras irrelevantes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
@@ -16,18 +15,18 @@ ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1b052e1987c120bb621da34c6f56d915333baf83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3802396c3b2ff6d64aa439af07e7dba2f9b30c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241286"
 ---
 # <a name="full-text-stoplist-properties"></a>Propriedades da lista de palavras irrelevantes (stoplist) de texto completo
   Use esta caixa de diálogo para adicionar ou excluir palavras irrelevantes individuais, para excluir todas as palavras irrelevantes em um idioma específico ou para limpar a lista de palavras irrelevantes atual. Uma palavra irrelevante é uma palavra usada comumente que é incluída em uma lista de palavras irrelevantes. As palavras irrelevantes são omitidas da indexação de texto completo para tabelas que usam a lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/full-text-search.md).  
   
- **Para usar o SQL Server Management Studio para alterar as propriedades de lista de palavras irrelevantes**  
+ **Para usar o SQL Server Management Studio para alterar as propriedades da lista de palavras irrelevantes**  
   
 -   [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/full-text-search.md)  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36006904"
  **Limpar lista de palavras irrelevantes**  
  Limpe a lista de palavras irrelevantes, excluindo todas as palavras irrelevantes para todos os idiomas.  
   
- **palavra irrelevante**  
+ **Palavra irrelevante**  
  Se você selecionou **Adicionar palavra irrelevante** ou **Excluir palavra irrelevante**, insira a palavra irrelevante no campo **Palavra irrelevante** . Uma nova palavra irrelevante deve ser exclusiva; ou seja, ainda não deve estar na lista de palavras irrelevantes para o idioma selecionado.  
   
  **Idioma de texto completo**  

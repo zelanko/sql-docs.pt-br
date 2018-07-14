@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [PowerShell]
 - Help [SQL Server], PowerShell
 - PowerShell [SQL Server], help
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 caps.latest.revision: 18
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 2275949b8380e407c8f759b77a7940659ded45a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cd87e91e3a463294d5039583f669a989d7e3ef3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265452"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Há várias origens de informações sobre como usar o provedor e os cmdlets do provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Isso inclui a ajuda que está disponível no ambiente Windows PowerShell.  

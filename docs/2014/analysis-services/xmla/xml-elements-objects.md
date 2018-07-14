@@ -19,26 +19,26 @@ helpviewer_keywords:
 - XMLA, objects
 ms.assetid: 768188ef-85d4-432a-9390-be05c835137f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 98ff50749cc45b5ffe4343acc19668f4dd0db126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fdaa8cc81b642212c6aa404a8b6d39e3872c743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205896"
 ---
 # <a name="objects-xmla"></a>Objetos (XMLA)
-  O protocolo XML for Analysis (XMLA) usa dois métodos, `Discover` e `Execute`, para oferecer uma maneira padronizada de aplicativos para acessar informações em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Uma vez que esses métodos são chamados usando o protocolo SOAP, eles aceitam a entrada e entregam a saída em XML.  
+  O protocolo XML for Analysis (XMLA) usa dois métodos, `Discover` e `Execute`, para oferecer uma maneira padronizada de aplicativos para acessar informações em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Uma vez que esses métodos são chamados usando o protocolo SOAP, eles aceitam a entrada e entregam a saída em XML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir descrevem os objetos XMLA implementados por [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
 |Método|Description|  
 |------------|-----------------|  
-|[Elemento DiscoverResponse &#40;XMLA&#41;](xml-elements-objects-discoverresponse.md)|Contém as informações retornadas por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em resposta a um [Discover](xml-elements-methods-discover.md) chamada de método.|  
-|[Elemento ExecuteResponse &#40;XMLA&#41;](xml-elements-objects-executeresponse.md)|Contém as informações retornadas por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em resposta a um [Execute](xml-elements-methods-execute.md) chamada de método.|  
+|[Elemento DiscoverResponse &#40;XMLA&#41;](xml-elements-objects-discoverresponse.md)|Contém as informações retornadas por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em resposta a uma [Discover](xml-elements-methods-discover.md) chamada de método.|  
+|[Elemento ExecuteResponse &#40;XMLA&#41;](xml-elements-objects-executeresponse.md)|Contém as informações retornadas por uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em resposta a uma [Execute](xml-elements-methods-execute.md) chamada de método.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Elementos XML &#40;XMLA&#41;](../dev-guide/xml-elements-xmla.md)   

@@ -1,5 +1,5 @@
 ---
-title: Modelo de propriedades (SSAS Tabular) | Microsoft Docs
+title: Propriedades (SSAS Tabular) de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.fileprop.f1
 - sql12.asvs.bidtoolset.wspacedbconfig.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 058329ff4ad5ca3bc61369dd52392a41dcd62244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd7defb693d6dbce28382a95e45b478293d2aadc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202206"
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
   Este tópico descreve as propriedades do modelo tabular. Cada projeto de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tem propriedades modelo que afetam o modo como o modelo que você está criando é criado, como o backup é feito e como o banco de dados de espaço de trabalho é armazenado. As propriedades do modelo descritas aqui não se aplicam a modelos que já foram implantados.  
@@ -31,7 +31,7 @@ ms.locfileid: "36009626"
   
 -   [Propriedades de modelo](#bkmk_model_properties)  
   
--   [Para definir as configurações de propriedade de modelo](#bkmk_conf)  
+-   [Para definir as configurações de propriedade do modelo](#bkmk_conf)  
   
 ##  <a name="bkmk_model_properties"></a> Propriedades de modelo  
  **Avançado**  
@@ -63,14 +63,14 @@ ms.locfileid: "36009626"
 |**Servidor de espaço de trabalho**|localhost|Essa propriedade especifica o servidor fora-de-processo padrão que será usado para hospedar o banco de dados de espaço de trabalho enquanto o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Todas as instâncias disponíveis do Analysis Services que executam no computador local são incluídas na caixa de listagem.<br /><br /> Observação: é recomendável especificar sempre um servidor do Analysis Services local como o servidor de espaço de trabalho. Para bancos de dados de espaços de trabalho em um servidor remoto, não há suporte para a importação do PowerPivot, o backup dos dados não pode ser feito localmente e a interface do usuário pode experimentar latência durante consultas.<br /><br /> A configuração padrão para essa propriedade pode ser alterada na página Modelagem de Dados nas configurações do Analysis Server na caixa de diálogo Ferramentas\Opções.|  
   
 ##  <a name="bkmk_conf_model_prop"></a>   
-###  <a name="bkmk_conf"></a> Para definir as configurações de propriedade de modelo  
+###  <a name="bkmk_conf"></a> Para definir as configurações de propriedade do modelo  
   
-1.  Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na **Solution Explorer**, clique no **Model.bim** arquivo.  
+1.  Na [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na **Gerenciador de soluções**, clique no **Model. BIM** arquivo.  
   
 2.  Na janela **Propriedades** , clique em uma propriedade e digite um valor ou clique na seta para baixo para selecionar uma opção de configuração.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)   
+ [Configurar as propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)   
  [Propriedades do projeto &#40;Tabular do SSAS&#41;](project-properties-ssas-tabular.md)  
   
   

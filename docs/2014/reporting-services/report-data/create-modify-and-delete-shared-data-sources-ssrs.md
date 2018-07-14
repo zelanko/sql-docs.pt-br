@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
 - shared data sources [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 18088f24c578ec2ee91e3a33e7cebe48c733d55a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c04c4da84040c97656c956698b4e66bd5a6a5862
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258102"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
@@ -41,7 +41,7 @@ ms.locfileid: "36008842"
 |Nome|Um nome que identifica o item dentro da hierarquia de pastas do servidor de relatórios.|  
 |Description|Uma descrição que aparece com o item no Gerenciador de Relatórios quando você exibe os conteúdos da pasta.|  
 |Tipo de conexão|A extensão de processamento de dados usada com a fonte de dados. Você só poderá usar extensões de processamento de dados que estiverem implantadas no servidor de relatórios. Para obter mais informações sobre as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
-|Cadeia de conexão|A cadeia de conexão para o banco de dados. Para obter mais informações e exibir exemplos de cadeias de caracteres de conexão a fontes de dados usados com frequência, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
+|Cadeia de conexão|A cadeia de conexão para o banco de dados. Para obter mais informações e exibir exemplos de cadeias de caracteres de conexão para fontes de dados usados com frequência, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
 |Tipo de credencial|Especifica como as credenciais são obtidas para a conexão e se elas serão usadas depois que a conexão for estabelecida. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md).|  
   
  Uma fonte de dados compartilhada não contém informações de consulta usadas para a recuperação de dados. A consulta sempre é mantida dentro de uma definição do relatório.  
@@ -60,7 +60,7 @@ ms.locfileid: "36008842"
  Para obter mais informações sobre como controlar o acesso às fontes de dados compartilhadas na hierarquia de pastas do servidor de relatório, consulte [Proteger itens de fontes de dados compartilhadas](../security/secure-shared-data-source-items.md).  
   
 ## <a name="deleting-a-shared-data-source"></a>Excluindo uma fonte de dados compartilhada  
- Você pode excluir uma fonte de dados compartilhada da mesma forma que exclui qualquer item do servidor de relatórios. No Gerenciador de relatórios, você abrir a pasta na exibição de detalhes, selecione o item e clique em **excluir**. Na página do aplicativo em um site do SharePoint, abra a biblioteca do SharePoint, selecione o item e clique em **excluir**.  
+ Você pode excluir uma fonte de dados compartilhada da mesma forma que exclui qualquer item do servidor de relatórios. No Gerenciador de relatórios, você abra a pasta na exibição de detalhes, selecione o item e clique em **excluir**. Na página do aplicativo em um site do SharePoint, abra a biblioteca do SharePoint, selecione o item e clique em **excluir**.  
   
  A exclusão de uma fonte de dados compartilhada desabilitará todos os relatórios, modelos ou assinaturas controladas por dados que a usam. Sem as informações de conexão da fonte de dados, os itens não poderão ser executados. Para habilitar esses itens, abra cada um deles e siga as etapas a seguir:  
   
@@ -73,11 +73,11 @@ ms.locfileid: "36008842"
  Não existe a operação Desfazer para a exclusão de uma fonte de dados compartilhada. Entretanto, em caso de exclusão acidental, você poderá criar uma nova fonte de dados compartilhada usando os mesmos valores de propriedades daquela que foi excluída. Também será preciso abrir cada relatório, modelo e assinatura controlada por dados para reassociar a fonte de dados compartilhada ao item que a usa, mas como as propriedades serão as mesmas, os relatórios, os modelos e as assinaturas continuarão funcionando normalmente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no SharePoint modo integrado&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Criar e gerenciar fontes de dados compartilhada &#40;modo integrado do Reporting Services no SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gerenciar fontes de dados de relatório](manage-report-data-sources.md)   
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;SSRS e construtor de relatórios&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Página de propriedades Fontes de Dados &#40;Gerenciador de Relatórios&#41;](../data-sources-properties-page-report-manager.md)   
  [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
