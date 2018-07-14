@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223662"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
   Um*banco de dados independente* é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajuda o usuário a isolar seu banco de dados da instância de 4 maneiras.  
@@ -43,7 +43,7 @@ ms.locfileid: "36011164"
   
 -   [Conceitos de banco de dados parcialmente independente](#Concepts)  
   
--   [Contenção](#containment)  
+-   [Confinamento](#containment)  
   
 -   [Benefícios dos bancos de dados parcialmente contido](#benefits)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36011164"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Benefício de usuários de banco de dados independentes com AlwaysOn  
  Reduzindo as associações à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados parcialmente independentes podem ser úteis durante o failover quando o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]é usado.  
   
- Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, consulte [visão geral dos grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, consulte [visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Desenvolvimento inicial de bancos de dados  
  Como um desenvolvedor talvez não saiba onde um novo banco de dados será implantado, a limitação dos impactos no ambiente implantados no banco de dados reduz o trabalho e a preocupação do desenvolvedor. No modelo não contido, o desenvolvedor deve considerar os possíveis impactos no ambiente no novo banco de dados e programa de maneira correspondente. No entanto, ao usar bancos de dados parcialmente independentes, os desenvolvedores podem detectar impactos de nível de instância no banco de dados e preocupações de nível de instância para o desenvolvedor.  
@@ -163,7 +163,7 @@ ms.locfileid: "36011164"
  Esse XEvent ocorre sempre que uma entidade não contida é identificada no momento de execução. Isso inclui entidades originadas no código de cliente. Esse XEvent ocorrerá somente para entidades reais não contidas. No entanto, o evento ocorre somente no momento de execução. Portanto, qualquer entidade de usuário não contida não executada não será identificada por esse XEvent.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Modificado recursos &#40;banco de dados independente&#41;](modified-features-contained-database.md)  
+ [Recursos modificados &#40;banco de dados independente&#41;](modified-features-contained-database.md)  
   
  [Agrupamentos de banco de dados independentes](contained-database-collations.md)  
   

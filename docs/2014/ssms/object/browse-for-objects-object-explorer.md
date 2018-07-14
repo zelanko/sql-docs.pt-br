@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.matchingobjects.f1
 - sql12.swb.common.browseobjects.f1
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8460e4a9c3ece83ff41177eb86b581c53edeb263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9c7893dcf6f250668b000c07126e62449518698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168317"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Procurar por objetos (Pesquisador de Objetos)
   Exibe uma lista de objetos do tipo selecionado. Selecione um ou mais objetos desta lista marcando a caixa de seleção correspondente. A caixa **Procurar por Objetos** só exibe itens apropriados para a ação e só exibe itens que você tem permissão para exibir.  

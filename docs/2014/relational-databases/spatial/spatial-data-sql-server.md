@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
 - planar spatial data [SQL Server], designing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f987594b4891467d5590202b9c88b358d290b18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f042b5ed328f0666fd3b9420963000b5b7898a51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250076"
 ---
 # <a name="spatial-data-sql-server"></a>Dados espaciais (SQL Server)
   Os dados espaciais representam informações sobre o local físico e a forma de objetos geométricos. Esses objetos podem ser locais de pontos ou objetos mais complexos como países, estradas ou lagos.  

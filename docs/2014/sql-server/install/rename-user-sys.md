@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202556"
 ---
 # <a name="rename-user-sys"></a>Renomear usuário sys
   O Supervisor de Atualização detectou o nome de usuário **sys** em um banco de dados. Esse nome é reservado. Renomeie o usuário antes de atualizar. Se isso não for feito, o banco de dados ficará em estado suspeito após o processo de atualização e não estará disponível até que banco de dados fique online novamente.  

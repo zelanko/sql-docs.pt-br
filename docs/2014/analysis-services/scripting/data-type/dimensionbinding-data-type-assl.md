@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionBinding data type
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac0dfce6e5c21ee901e065561b161c2d66cdd8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6da2c5696654bf019ac139f8de6ff11507f3701a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252898"
 ---
 # <a name="dimensionbinding-data-type-assl"></a>Tipo de dados DimensionBinding (ASSL)
-  Define um tipo de dados derivado que representa a associação entre uma fonte de dados e um [dimensão](../objects/dimension-element-assl.md) elemento.  
+  Define um tipo de dados derivado que representa a associação entre uma fonte de dados e uma [dimensão](../objects/dimension-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36010763"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter informações adicionais sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança de `Binding` tipos, consulte [ &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
+ Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [ &#40;ASSL&#41; ](binding-data-type-assl.md) elemento.  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.DimensionBinding>.  
   

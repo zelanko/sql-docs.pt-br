@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99a340f2bbeb1e5d61a20b4031beeade9fbcc5c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f335861084f86fa509b8c2bc3f977332d5e1da7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291322"
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression Element (ASSL)
   Contém uma expressão DAX, do tipo booliano, que define o conteúdo do elemento pai.  
@@ -52,7 +52,7 @@ ms.locfileid: "36006925"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para o `CellPermission` elemento, o `Expression` elemento contém uma expressão MDX lógica que identifica células aplicáveis aos direitos indicados pelo [acesso](access-element-assl.md) elemento o `CellPermission` elemento. Se o valor de um elemento `Expression` para um elemento `CellPermission` estiver vazio, o elemento `CellPermission` será ignorado.  
+ Para o `CellPermission` elemento, o `Expression` elemento contém uma expressão MDX lógica que identifica células aplicáveis aos direitos indicados pelo [Access](access-element-assl.md) elemento do `CellPermission` elemento. Se o valor de um elemento `Expression` para um elemento `CellPermission` estiver vazio, o elemento `CellPermission` será ignorado.  
   
  Para o elemento `StandardAction`, o elemento `Expression` contém uma linguagem MDX que representa o conteúdo da ação. Se o valor de um elemento `Expression` para um elemento `StandardAction` estiver vazio, o elemento `StandardAction` será ignorado.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251508"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>Guia Matriz de Classificação (Exibição do Gráfico de Precisão de Mineração)
   A guia de **Matriz de Classificação** exibe uma matriz de classificação para cada modelo selecionado na grade de modelos da guia do **Mapeamento de Colunas** . A matriz de classificação só estará disponível se a coluna previsível que for selecionada na guia **Mapeamento de Colunas** não for contínua. Para obter uma descrição mais detalhada da guia **Matriz de Classificação** , consulte [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "36008304"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**Prevista**|Contém uma linha para cada estado da coluna previsível.|  
+|**Previsto**|Contém uma linha para cada estado da coluna previsível.|  
 |**\<estados > (real)**|Uma coluna para cada estado da coluna previsível. Se o estado da linha e da coluna forem correspondentes, a célula representará o número real de vezes em que o estado aparece no banco de dados. Se não corresponderem, a célula representará o erro da previsão.|  
   
 ## <a name="see-also"></a>Consulte também  

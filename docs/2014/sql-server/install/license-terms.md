@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40520baaa6fbe6f2e6930820c4b4896c2fe718c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9bc0af811be1d3dee5578ad1c5eb1f93faf49ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294036"
 ---
 # <a name="license-terms"></a>Termos de licença
   Use a página Termos de Licença para aceitar os termos da licença desta versão.  

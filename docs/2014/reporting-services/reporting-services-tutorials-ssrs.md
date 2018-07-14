@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268412"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriais de Reporting Services (SSRS)
   Esta seção contém tutoriais para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -29,10 +29,10 @@ ms.locfileid: "36010148"
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece assinaturas controladas por dados para que você possa personalizar a distribuição de um relatório com base em uma lista dinâmica de assinantes que receberão o relatório. As assinaturas controladas por dados normalmente são criadas e mantidas por administradores de servidor de relatórios. A capacidade de criar assinaturas controladas por dados requer experiência em criação de consultas, conhecimento das fontes de dados que contêm dados de assinante e permissões elevadas em um servidor de relatório.  
   
- [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Criar um relatório de tabela básica &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
  Siga as etapas deste tutorial para aprender a criar seu primeiro relatório. Este tutorial mostra como trabalhar com o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma conexão de dados (fonte de dados), definir uma consulta simples (conjunto de dados) e configurar a região de dados para conter os dados.  
   
- [Acessando o serviço Web de servidor de relatório usando o Visual Basic ou Visual C#&#35; &#40;Tutorial do SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Acessando o serviço de Web do servidor de relatório usando o Visual Basic ou Visual C&#35; &#40;Tutorial do SSRS&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
  Siga as etapas deste tutorial para saber como acessar o [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] Web services de um aplicativo criado com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

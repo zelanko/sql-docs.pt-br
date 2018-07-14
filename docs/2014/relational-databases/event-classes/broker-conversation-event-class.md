@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0e58a9d4e8711a24da97b73c47d48b281d8ae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18b73246733a64d7250cf42c3814ba3f492e6bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275282"
 ---
 # <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera uma classe de evento **Broker:Conversa** para relatar o progresso de uma conversa do Agente de Serviços.  

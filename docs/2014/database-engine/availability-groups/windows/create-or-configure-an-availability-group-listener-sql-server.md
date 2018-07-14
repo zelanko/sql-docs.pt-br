@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225896"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
   Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -207,14 +206,14 @@ ms.locfileid: "36010755"
 ###  <a name="ADQuotas"></a> Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory  
  Pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante.  Para obter mais informações, consulte os artigos a seguir.  
   
--   [HYPERLINK "http://support.microsoft.com/kb/307532" como solucionar problemas com a conta de serviço de Cluster quando ela modifica objetos de computador](http://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "http://support.microsoft.com/kb/307532" como solucionar problemas da conta de serviço de Cluster quando ela modifica objetos de computador](http://support.microsoft.com/kb/307532)  
   
 -   [HYPERLINK "http://technet.microsoft.com/library/cc904295(WS.10).aspx" cotas do Active Directory](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Acompanhamento: após criar um ouvinte do grupo de disponibilidade  
   
 ###  <a name="MultiSubnetFailover"></a> Palavra-chave MultiSubnetFailover e recursos associados  
- `MultiSubnetFailover` uma palavra-chave cadeia de caracteres de conexão nova é usada para habilitar failover mais rápido com grupos de disponibilidade do AlwaysOn e instâncias de Cluster de Failover do AlwaysOn do SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
+ `MultiSubnetFailover` uma palavra-chave cadeia de caracteres de conexão nova é usada para habilitar failover mais rápido com grupos de disponibilidade AlwaysOn e instâncias de Cluster de Failover do AlwaysOn no SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
   
 -   Um failover de várias sub-redes mais rápido para um ouvinte de várias sub-redes para um Grupo de Disponibilidade AlwaysOn ou instâncias de cluster de failover.  
   
@@ -242,10 +241,10 @@ ms.locfileid: "36010755"
   
      **Prós:** você não precisa aumentar o valor de tempo limite de conexão de cliente.  
   
-     **Contras:** se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente pode ser de 15 minutos ou mais, dependendo de seu `HostRecordTTL` e da configuração do seu agendamento de replicação DNS/AD entre sites.  
+     **Contras:** se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da sua `HostRecordTTL` e da configuração de sua agenda de replicação DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
- Quando você usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o ponto de acesso de cliente é criado no WSFC com o `RegisterAllProvidersIP` propriedade definida como 1 (verdadeiro). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
+ Quando você usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o ponto de acesso do cliente é criado no WSFC com o `RegisterAllProvidersIP` propriedade definida como 1 (verdadeiro). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
   
 -   Cadeias de conexão que definem `MultiSubnetFailover` como true  
   
@@ -268,10 +267,10 @@ ms.locfileid: "36010755"
     >  Quando você cria um ouvinte de grupo de disponibilidade no cluster WSFC (GUI do Gerenciador de Cluster de Failover), `RegisterAllProvidersIP` será 0 (false) por padrão.  
   
 ###  <a name="HostRecordTTL"></a> Configuração HostRecordTTL  
- Por padrão, os clientes armazenam em cache registros DNS do cluster por 20 minutos.  Reduzindo `HostRecordTTL`, o tempo de vida (TTL), para o registro armazenado em cache, clientes herdados poderão se reconectar mais rapidamente.  No entanto, a redução de `HostRecordTTL` configuração pode também resultado em maior tráfego para os servidores DN.  
+ Por padrão, os clientes armazenam em cache registros DNS do cluster por 20 minutos.  Reduzindo `HostRecordTTL`, o tempo de vida (TTL), para o registro armazenado em cache, os clientes herdados poderão se reconectar mais rapidamente.  No entanto, a redução de `HostRecordTTL` definindo maio também resultado em maior tráfego para os servidores DN.  
   
 ###  <a name="SampleScript"></a> Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL  
- O exemplo a seguir do PowerShell demonstra como configurar ambos o `RegisterAllProvidersIP` e `HostRecordTTL` parâmetros para o recurso de ouvinte de cluster.  O registro DNS será armazenado em cache por 5 minutos, e não pelos 20 minutos padrão.  A modificação dos dois parâmetros de cluster pode reduzir o tempo de conexão ao endereço IP correto após um failover para clientes herdados que não podem usar o parâmetro `MultiSubnetFailover`.  Substitua `yourListenerName` pelo nome do ouvinte que você está alterando.  
+ O exemplo de PowerShell a seguir demonstra como configurar ambos os `RegisterAllProvidersIP` e `HostRecordTTL` parâmetros para o recurso de ouvinte de cluster.  O registro DNS será armazenado em cache por 5 minutos, e não pelos 20 minutos padrão.  A modificação dos dois parâmetros de cluster pode reduzir o tempo de conexão ao endereço IP correto após um failover para clientes herdados que não podem usar o parâmetro `MultiSubnetFailover`.  Substitua `yourListenerName` pelo nome do ouvinte que você está alterando.  
   
 ```  
 Import-Module FailoverClusters  
@@ -331,10 +330,10 @@ Start-ClusterResource yourAGResource
   
 -   [How to create multiple listeners for same availability group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [Blog da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn team blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: O blog oficial do SQL Server AlwaysOn da equipe](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   

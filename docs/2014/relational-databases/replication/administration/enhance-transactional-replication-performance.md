@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - performance [SQL Server replication], transactional replication
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb1f7f7d5caa95b0abe7d070ab11b2012fb669a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 97df339dc126d76476790b5bdc983f4bb5053d6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177773"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
   Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247246"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Tipo de dados AggregationDesignDimension (ASSL)
   Define um tipo de dados primitivo que representa a relação entre uma dimensão de cubo e um [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento.  

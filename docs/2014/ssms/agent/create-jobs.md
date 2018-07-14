@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40ec697eb5093ee690d944e0ec07cc01e2bf8ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed5eada15f8f63404c0d6053fad452d372b09cef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270182"
 ---
 # <a name="create-jobs"></a>Criar trabalhos
   Um trabalho é uma série especificada de operações executadas sequencialmente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Um trabalho pode realizar uma ampla gama de atividades, tais como a execução de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , aplicativos de prompt de comando, scripts Microsoft ActiveX, pacotes do Integration Services, comandos e consultas do Analysis Services ou tarefas de replicação. Os trabalhos podem executar tarefas repetitivas ou agendáveis, bem como notificar usuários automaticamente sobre o status do trabalho, desse modo simplificando bastante a administração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,7 +45,7 @@ ms.locfileid: "36008319"
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar etapas de trabalho](manage-job-steps.md)   
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)   
- [Criar e anexar agendas para trabalhos](create-and-attach-schedules-to-jobs.md)   
+ [Criar e anexar agendas a trabalhos](create-and-attach-schedules-to-jobs.md)   
  [Executar trabalhos](run-jobs.md)   
  [Exibir ou modificar trabalhos](view-or-modify-jobs.md)  
   

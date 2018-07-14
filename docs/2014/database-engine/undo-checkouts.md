@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourcControl.UndoCheckDialog
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - undoing checkouts
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 84fe5f531edfa8f122dea1b021aa4534b7c2a1f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c726f47ecb042b8d4ba87e972d14f8e384f7a88a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289492"
 ---
 # <a name="undo-checkouts"></a>Desfazer check-outs
   Você pode usar o comando **Desfazer check-out** para cancelar um check-out existente. Isso é particularmente útil quando você tiver modificado e salvado um arquivo, e depois precisar reverter as alterações.  
@@ -43,7 +43,7 @@ ms.locfileid: "36006903"
      **Colunas**  
      Identifique as colunas a serem exibidas e a ordem em que elas são exibidas.  
   
-     **Exibição simples**  
+     **Modo de exibição simples**  
      Exiba os itens como listas simples com sua conexão de controle do código-fonte.  
   
      **Nome**  
@@ -62,7 +62,7 @@ ms.locfileid: "36006903"
      Reverte o check-out, descartando qualquer alteração no arquivo onde foi feito o check-out.  
   
 ## <a name="see-also"></a>Consulte também  
- [Check-Out de arquivos](../../2014/database-engine/check-out-files.md)   
+ [Fazer Check-Out de arquivos](../../2014/database-engine/check-out-files.md)   
  [Gerenciar check-outs](../../2014/database-engine/manage-checkouts.md)  
   
   

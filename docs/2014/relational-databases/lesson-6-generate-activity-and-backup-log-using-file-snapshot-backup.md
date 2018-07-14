@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 014fd10ecd738f46160358506b3b165640d3fe09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162707"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lição 7: Mover os arquivos de dados para o Armazenamento do Windows Azure
   Nesta lição, você aprenderá a mover os arquivos de dados para o Armazenamento do Windows Azure (mas não a instância do SQL Server). Para acompanhar esta lição, você não precisará concluir as lições 4, 5 e 6.  
@@ -78,9 +78,9 @@ ms.locfileid: "36007033"
   
     ```  
   
-5.  Agora, você precisa copiar os arquivos de dados para o armazenamento do Windows Azure usando um dos métodos a seguir: [ferramenta AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referência de biblioteca de cliente de armazenamento](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou um ferramenta de Gerenciador de armazenamento de terceiros.  
+5.  Agora, você precisa copiar os arquivos de dados para o armazenamento do Windows Azure usando um dos seguintes métodos: [ferramenta AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referência de biblioteca de cliente de armazenamento](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou um ferramenta de Gerenciador de armazenamento de terceiros.  
   
-     **Importante:** ao usar esse novo aprimoramento, sempre Certifique-se de que você crie um blob de página não um blob de bloco.  
+     **Importante:** ao usar esse novo aprimoramento, sempre Certifique-se de que você crie um blob de página não é um blob de blocos.  
   
 6.  Em seguida, defina o banco de dados online.  
   

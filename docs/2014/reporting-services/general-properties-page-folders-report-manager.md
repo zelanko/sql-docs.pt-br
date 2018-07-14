@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255818"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página Propriedades Gerais, Pastas (Gerenciador de Relatórios)
   Use a página Propriedades Gerais de pastas para exibir e definir propriedades para pastas criadas. As informações sobre quem criou ou modificou a pasta e quando ela foi modificada aparecem na parte superior da página Propriedades gerais.  
