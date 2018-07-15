@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266322"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
   Um catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos; trata-se de um conceito lógico que faz referência a um grupo de índices de texto completo.  
@@ -64,7 +63,7 @@ ms.locfileid: "36116342"
   
   
   
-##  <a name="rebuildone"></a> Recriando um catálogo de texto completo  
+##  <a name="rebuildone"></a> Recriar um catálogo de texto completo  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Para recriar um catálogo de texto completo  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36116342"
   
   
   
-##  <a name="rebuildall"></a> Recriando todos os catálogos de texto completo para um banco de dados  
+##  <a name="rebuildall"></a> Recompilar todos os catálogos de texto completo para um banco de dados  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Para recriar os catálogos de texto completo para um banco de dados  
   

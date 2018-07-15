@@ -15,15 +15,15 @@ helpviewer_keywords:
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f88d9bb01d8604ec49538b6d4ff4cc6f3557d7bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3d98354505e34e08da219e1dd9dc276ef6d59948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313765"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
     
@@ -43,7 +43,7 @@ ms.locfileid: "36006824"
   
 -  
   
- Depois que o procedimento armazenado estendido DLL é carregada, a DLL permanece carregada no espaço de endereço do servidor até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está parado ou o administrador Descarregue explicitamente usando DBCC *DLL_name* (FREE).  
+ Depois que o procedimento armazenado estendido DLL é carregada, a DLL permanece carregada no espaço de endereço do servidor de até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for interrompido ou o administrador a Descarregue explicitamente o DLL usando DBCC *DLL_name* (gratuito).  
   
  O procedimento armazenado estendido pode ser executado a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] como um procedimento armazenado usando a instrução EXECUTE:  
   

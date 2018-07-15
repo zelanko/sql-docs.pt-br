@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15c92a525164cf2c8c2f89f2b3afb45bc47b70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 456bd7ca29338e2e78b57ffdd8f523e05da7ca1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271182"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
   Os tópicos a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
@@ -29,7 +29,7 @@ ms.locfileid: "36118115"
 ## <a name="in-this-section"></a>Nesta seção  
  [Painel do utilitário &#40;utilitário do SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [Implantado detalhes do aplicativo da camada de dados &#40;utilitário do SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [Implantado detalhes de aplicativo da camada de dados &#40;utilitário do SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
  [Detalhes de instâncias gerenciadas &#40;utilitário do SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   

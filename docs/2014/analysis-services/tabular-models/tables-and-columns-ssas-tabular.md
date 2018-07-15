@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319356"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelas e colunas (SSAS tabular)
   Depois de ter adicionado tabelas e os dados em um modelo usando o Assistente de Importação de Tabela, você pode começar a trabalhar com as tabelas adicionando novas colunas de dados, criando relacionamentos entre tabelas, definindo cálculos que estendem os dados e filtrando e classificando dados nas tabelas para facilitar a exibição.  
@@ -65,8 +65,8 @@ ms.locfileid: "36005707"
 |-----------|-----------------|  
 |[Adicionar colunas a uma tabela &#40;Tabular do SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)|Descreve como adicionar uma coluna de origem a uma definição de tabela.|  
 |[Excluir uma coluna &#40;Tabular do SSAS&#41;](delete-a-column-ssas-tabular.md)|Descreve como excluir uma coluna de tabela modelo usando o designer de modelos ou usando a caixa de diálogo de Propriedades de Tabela.|  
-|[Alterar os mapeamentos de filtro de linha, coluna ou tabela &#40;SSAS de tabela&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Descreve como alterar tabela, coluna ou mapeamentos de filtro de linha usando a visualização de tabela ou editor de consulta SQL na caixa de diálogo Editar Propriedades de Tabela.|  
-|[Especifique marcar como tabela de data para uso com inteligência de tempo &#40;SSAS de tabela&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Descreve como usar a caixa de diálogo Marcar como Tabela de Data para especificar uma tabela de data e coluna de identificador exclusivo. A especificação de uma tabela de data e identificador exclusivo é necessária durante o uso das funções de inteligência de tempo nas fórmulas DAX.|  
+|[Alterar tabela, coluna ou mapeamentos de filtro de linha &#40;tabela do SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Descreve como alterar tabela, coluna ou mapeamentos de filtro de linha usando a visualização de tabela ou editor de consulta SQL na caixa de diálogo Editar Propriedades de Tabela.|  
+|[Especifique marcar como tabela de data para uso com inteligência de tempo &#40;tabela do SSAS&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Descreve como usar a caixa de diálogo Marcar como Tabela de Data para especificar uma tabela de data e coluna de identificador exclusivo. A especificação de uma tabela de data e identificador exclusivo é necessária durante o uso das funções de inteligência de tempo nas fórmulas DAX.|  
 |[Adicionar uma tabela &#40;Tabular do SSAS&#41;](add-a-table-ssas-tabular.md)|Descreve como adicionar uma tabela de uma fonte de dados usando uma conexão de fonte de dados existente.|  
 |[Excluir uma tabela &#40;Tabular do SSAS&#41;](delete-a-table-ssas-tabular.md)|Descreve como excluir tabelas em seu banco de dados de espaço de trabalho modelo que você não precisa mais.|  
 |[Renomear uma tabela ou coluna &#40;Tabular do SSAS&#41;](rename-a-table-or-column-ssas-tabular.md)|Descreve como renomear uma tabela ou coluna para torná-la mais identificável em seu modelo.|  

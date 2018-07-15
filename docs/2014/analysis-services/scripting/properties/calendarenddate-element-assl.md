@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalendarEndDate element
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2702e10f6b772ff072212d1fc9ac3097b50e9308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd23c1747f25eb092a1c1e9a6d6ccd1029380d5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332556"
 ---
 # <a name="calendarenddate-element-assl"></a>Elemento CalendarEndDate (ASSL)
   Define a data de término do período de calendário para um [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36118980"
 ## <a name="remarks"></a>Remarks  
  O elemento `CalendarEndDate` deve ficar depois do `CalendarStartDate`.  
   
- O elemento que corresponde ao pai do `CalendarEndDate` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ O elemento que corresponde ao pai de `CalendarEndDate` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

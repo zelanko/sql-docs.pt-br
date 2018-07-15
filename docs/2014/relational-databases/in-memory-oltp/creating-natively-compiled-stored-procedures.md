@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 13
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 639202717573abdbd0ec6424c92039e37c042875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c89d7c7baf7422ba3bc6a457509ea7e8ac37a001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331716"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Criando procedimentos armazenados compilados nativamente
-  Os procedimentos armazenados compilados nativamente não implementam a programação [!INCLUDE[tsql](../../includes/tsql-md.md)] completa e a área de superfície da consulta. Há determinadas construções [!INCLUDE[tsql](../../includes/tsql-md.md)] que não podem ser usadas nos procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [construções suportadas em Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Os procedimentos armazenados compilados nativamente não implementam a programação [!INCLUDE[tsql](../../includes/tsql-md.md)] completa e a área de superfície da consulta. Há determinadas construções [!INCLUDE[tsql](../../includes/tsql-md.md)] que não podem ser usadas nos procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [construções suportadas em procedimentos armazenados compilados nativamente](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
   
  No entanto, existem vários recursos do [!INCLUDE[tsql](../../includes/tsql-md.md)] com suporte apenas nos procedimentos armazenados compilados nativamente:  
   
@@ -55,13 +55,13 @@ end
 go  
 ```  
   
- No exemplo de código, `NATIVE_COMPILATION` indica que esse [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado é um procedimento armazenado nativamente compilado. As seguintes opções são necessárias:  
+ No exemplo de código `NATIVE_COMPILATION` indica que este [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado é um procedimento armazenado nativamente compilado. As seguintes opções são necessárias:  
   
 |Opção|Description|  
 |------------|-----------------|  
 |`SCHEMABINDING`|Os procedimentos armazenados compilados nativamente devem ser associados ao esquema dos objetos que ele referencia. Isso significa que as referências de tabela pelo procedimento não podem ser eliminadas. As tabelas referenciadas no procedimento devem incluir seu nome de esquema e caracteres curinga (\*) não são permitidos em consultas. `SCHEMABINDING` Somente há suporte para procedimentos armazenados compilados nativamente nesta versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Os procedimentos armazenados compilados nativamente não oferecem suporte a `EXECUTE AS CALLER`, que é o contexto de execução padrão. Portanto, a especificação do contexto de execução é necessária. As opções `EXECUTE AS OWNER`, `EXECUTE AS` *usuário*, e `EXECUTE AS SELF` têm suporte.|  
-|`BEGIN ATOMIC`|O corpo do procedimento armazenado compilado nativamente deve consistir em exatamente um bloco atômico. Os blocos atômicos garantem a execução atômica do procedimento armazenado. Se o procedimento for chamado fora do contexto de uma transação ativa, ele iniciará uma nova transação, que é confirmada no fim do bloco atômico. Os blocos atômicos nos procedimentos armazenados compilados nativamente têm duas opções necessárias:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Consulte [níveis de isolamento da transação](../../database-engine/transaction-isolation-levels.md) para níveis de isolamento com suporte.<br /><br /> `LANGUAGE`. O idioma do procedimento armazenado deve ser definido para um dos idiomas ou alias de idioma disponíveis.|  
+|`BEGIN ATOMIC`|O corpo do procedimento armazenado compilado nativamente deve consistir em exatamente um bloco atômico. Os blocos atômicos garantem a execução atômica do procedimento armazenado. Se o procedimento for chamado fora do contexto de uma transação ativa, ele iniciará uma nova transação, que é confirmada no fim do bloco atômico. Os blocos atômicos nos procedimentos armazenados compilados nativamente têm duas opções necessárias:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Ver [níveis de isolamento da transação](../../database-engine/transaction-isolation-levels.md) para níveis de isolamento com suporte.<br /><br /> `LANGUAGE`. O idioma do procedimento armazenado deve ser definido para um dos idiomas ou alias de idioma disponíveis.|  
   
  Quanto a `EXECUTE AS` e aos logons do Windows, um erro poderá ocorrer devido à representação feita através de `EXECUTE AS`. Se uma conta de usuário usa a Autenticação do Windows, deve haver uma confiança total entre a conta de serviço usada para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o domínio do logon do Windows. Se não houver confiança total, a seguinte mensagem de erro será retornada durante a criação de um procedimento armazenado compilado nativamente: Msg 15404, Não foi possível obter informações sobre o grupo/usuário “nomedeusuário” do Windows NT, código de erro 0x5.  
   
@@ -69,7 +69,7 @@ go
   
 -   Use uma conta do mesmo domínio que o usuário do Windows para o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está usando uma conta de computador como serviço de rede ou sistema Local, o computador deve ser confiável no domínio que contém o usuário do Windows.  
+-   Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está usando uma conta de computador, como o serviço de rede ou sistema Local, a máquina deve ser confiável pelo domínio que contém o usuário do Windows.  
   
 -   Use a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

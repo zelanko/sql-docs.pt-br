@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324006"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, os bancos de dados são habilitados para texto completo. No entanto, para usar um índice de texto completo em uma tabela, você deve configurar o recurso de indexação de texto completo nas colunas das tabelas que deseja acessar usando o Mecanismo de Texto Completo.  
@@ -38,7 +37,7 @@ ms.locfileid: "36006288"
   
     1.  Identifique cada coluna de texto a ser incluída no índice de texto completo.  
   
-    2.  Se uma determinada coluna contiver documentos armazenados como dados binários (`varbinary(max)`, ou `image` dados), você deve especificar uma coluna de tabela (o *coluna de tipo*) que identifica o tipo de cada documento na coluna que está sendo indexado.  
+    2.  Se uma determinada coluna contiver documentos armazenados como dados binários (`varbinary(max)`, ou `image` dados), você deve especificar uma coluna de tabela (a *coluna de tipo*) que identifica o tipo de cada documento na coluna que está sendo indexada.  
   
     3.  Especifique o idioma que a pesquisa de texto completo deverá usar nos documentos da coluna.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36006288"
   
  A pesquisa de texto completo dá suporte a vários idiomas através do uso dos seguintes *componentes linguísticos*: separadores de palavras e lematizadores, listas de palavras irrelevantes (stoplists) (também conhecidas como palavras de ruído) e arquivos de dicionário de sinônimos. Os arquivos de dicionário de sinônimos e, em alguns casos, as listas de palavras irrelevantes exigem configuração pelo administrador de banco de dados. Um dado arquivo de dicionário de sinônimos oferece suporte a todos os índices de texto completo que usam o idioma correspondente, e uma determinada lista de palavras irrelevantes (stoplist) pode ser associada aos índices de texto completo que você desejar.  
   
-##  <a name="setup"></a> Configurando um catálogo de texto completo e um índice  
+##  <a name="setup"></a> Configurando um catálogo de texto completo e o índice  
  Isso envolve as seguintes etapas básicas:  
   
 1.  Criar um catálogo de texto completo para armazenar índices de texto completo.  
@@ -66,7 +65,7 @@ ms.locfileid: "36006288"
 |Agrupados no mesmo banco de dados em um ou mais catálogos de texto completo.|Não agrupado.|  
   
   
-##  <a name="options"></a> Escolhendo opções para um índice de texto completo  
+##  <a name="options"></a> Escolhendo opções de um índice de texto completo  
  Esta seção aborda os seguintes tópicos:  
   
 -   Escolhendo o idioma da coluna  
@@ -105,7 +104,7 @@ ms.locfileid: "36006288"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associando uma lista de palavras irrelevantes (stoplist) ao índice de texto completo  
  O [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduz as listas de palavras irrelevantes (stoplists). Uma *lista de palavras irrelevantes* também é conhecida como lista de palavras de ruído. Uma lista de palavras irrelevantes é associada a cada índice de texto completo, e as palavras dessa lista são aplicadas a consultas de texto completo nesse índice. Por padrão, a lista de palavras irrelevantes do sistema é associada a um novo índice de texto completo. Porém, você pode criar e usar sua própria lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Por exemplo, a seguinte [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução cria um novo stoplist de texto completo chamado myStoplist3 copiando da lista de palavras irrelevantes sistema:  
+ Por exemplo, a seguinte [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução cria um novo stoplist de texto completo chamado myStoplist3 copiando-se a lista de palavras irrelevantes do sistema:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  

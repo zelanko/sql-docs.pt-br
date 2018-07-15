@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyName property
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16a5cd55a912937f11eec999ea195c9ef1f5ae70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1059f1ddba9558846871a7b0b867b2ffd037c14c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331248"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyName (classe ServerNetworkProtocolProperty)
   Obtém o nome da propriedade referenciada atual.  

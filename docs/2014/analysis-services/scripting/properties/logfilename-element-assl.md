@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171337"
 ---
 # <a name="logfilename-element-assl"></a>Elemento LogFileName (ASSL)
-  Contém o nome do arquivo de log para o [rastreamento](../objects/trace-element-assl.md) elemento.  
+  Contém o nome do arquivo do arquivo de log para o [rastreamento](../objects/trace-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36118973"
 ## <a name="remarks"></a>Remarks  
  O arquivo de log é salvo na pasta de Log da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- O elemento que corresponde ao pai do `LogFileName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `LogFileName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreia o elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

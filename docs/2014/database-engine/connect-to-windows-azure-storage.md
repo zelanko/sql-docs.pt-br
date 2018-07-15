@@ -1,5 +1,5 @@
 ---
-title: Conectar ao Windows Azure Storage | Microsoft Docs
+title: Conectar-se ao Windows o armazenamento do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.windowsazurestorage.connect.f1
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9605fbea0b0721c9e2fcaf68437c167bd711543b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9a4cc0a0f871959278f5c434264370e70766ab9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300786"
 ---
 # <a name="connect-to-windows-azure-storage"></a>Conectar ao Windows Azure Storage
   Use a caixa de diálogo **Conexão de Armazenamento do Windows Azure** para especificar uma conta de armazenamento e validar sua conexão com o Windows Azure.  

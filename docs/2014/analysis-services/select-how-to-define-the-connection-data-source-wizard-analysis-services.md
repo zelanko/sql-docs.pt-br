@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55a2963fd36d25f7d163659fecbd854ab0660dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f74438c1591c5035117d974c838ca38cf2174b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330486"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Selecione como definir a conexão (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Selecione como definir a conexão** para criar ou selecionar a conexão de dados para uma fonte de dados.  

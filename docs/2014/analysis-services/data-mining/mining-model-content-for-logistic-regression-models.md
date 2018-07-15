@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo de regressão logística modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Mining Model Content para modelos de regressão logística (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328922"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -188,8 +188,8 @@ ms.locfileid: "36006016"
  Você pode usar essas IDs para determinar como os atributos de saída são relacionados a atributos específicos da camada de entrada exibindo a tabela NODE_DISTRIBUTION no nó de saída. Cada linha nessa tabela contém uma ID que indica um nó de atributo de entrada específico. A tabela NODE_DISTRIBUTION também contém o coeficiente para o par de entrada-saída.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Conteúdo do modelo de rede Neural modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algoritmo Regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de regressão logística](logistic-regression-model-query-examples.md)   
  [Referência técnica do algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

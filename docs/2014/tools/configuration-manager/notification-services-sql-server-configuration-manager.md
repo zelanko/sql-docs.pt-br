@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7868f75bcc3551a91ec3a05644b4ac028f2c363e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 22eaa06c068d198faf544df0c4d64b2de616dda2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236016"
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Notification Services (SQL Server Configuration Manager)
   Este é o serviço que dá suporte ao [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  

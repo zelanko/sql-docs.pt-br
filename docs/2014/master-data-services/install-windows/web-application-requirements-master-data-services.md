@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205676"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no Internet Explorer (IE) 7 ou posterior. Não há suporte para o IE 7 e versões anteriores, o Microsoft Edge e o Chrome.  
@@ -34,11 +34,11 @@ ms.locfileid: "36118688"
 ### <a name="operating-system"></a>Sistema operacional  
  Os sistemas operacionais Windows a seguir incluem a funcionalidade de IIS (Serviços de Informações da Internet) necessária para o aplicativo Web do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e o serviço Web.  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer x64 (64 bits)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise x64 (64 bits)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 bits) x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer x64 (64 bits)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 bits) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64 bits) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise e Ultimate<br /><br /> Windows 8.0 Professional, Enterprise e Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- Para obter uma lista completa dos sistemas operacionais Windows com suporte para a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Para obter uma lista completa dos sistemas operacionais Windows que têm suporte para sua edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Para trabalhar no aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , o Silverlight 5 deve estar instalado no computador cliente. Se você não tiver a versão exigida do Silverlight, será solicitado a instalá-la quando navegar até uma área do aplicativo Web que a exige. Você pode instalar o Silverlight 5 por [aqui](http://go.microsoft.com/fwlink/?LinkId=243096).  
@@ -47,7 +47,7 @@ ms.locfileid: "36118688"
  No Windows Server 2008 R2, você pode usar o **Gerenciador do Servidor**, que está disponível no Microsoft Management Console (MMC), para instalar a função **Servidor Web (IIS)** e os seguintes serviços de função necessários.  
   
 > [!NOTE]  
->  Em [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e os sistemas operacionais Windows 7, usam **programas e recursos** no painel de controle para habilitar essas opções no **recursos do Windows** caixa de diálogo.  
+>  Na [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e os sistemas operacionais Windows 7, usam **programas e recursos** no painel de controle para habilitar essas opções na **recursos do Windows** caixa de diálogo.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36118688"
 |Serviços de Informações da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo estático<br /><br /> [Observação: não instale a Publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Recursos (sistemas operacionais Windows Server 2008 ou Windows Server 2008 R2, Windows 7)  
- Em [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou Windows Server 2008 R2, você pode usar **Gerenciador do servidor** para instalar os seguintes recursos necessários.  
+ Na [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou Windows Server 2008 R2, você pode usar **Gerenciador do servidor** para instalar os seguintes recursos necessários.  
   
 > [!NOTE]  
->  Em [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e os sistemas operacionais Windows 7, usam **programas e recursos** no painel de controle para habilitar essas opções no **recursos do Windows** caixa de diálogo.  
+>  Na [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] e os sistemas operacionais Windows 7, usam **programas e recursos** no painel de controle para habilitar essas opções na **recursos do Windows** caixa de diálogo.  
   
 ||  
 |-|  

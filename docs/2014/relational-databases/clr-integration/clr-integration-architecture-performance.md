@@ -1,13 +1,11 @@
 ---
-title: Desempenho da integração CLR | Microsoft Docs
+title: Desempenho da integração do CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2259cf7be33fdf0e1ded99345db8102875f95618
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115465"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352578"
 ---
 # <a name="performance-of-clr-integration"></a>Desempenho da integração CLR
-  Este tópico discute algumas das opções de design que aprimoram o desempenho de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] runtime de linguagem comum (CLR) do .NET Framework.  
+  Este tópico discute algumas das escolhas de design que aprimoram o desempenho das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework CLR common language runtime ().  
   
 ## <a name="the-compilation-process"></a>O processo de compilação  
  Durante a compilação de expressões SQL, quando é encontrada uma referência a uma rotina, é gerado um stub do MSIL ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language). Esse stub inclui código para realizar marshaling dos parâmetros de rotina do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o CLR, invocar a função e retornar o resultado. Este código de "cola" se baseia no tipo de parâmetro e na direção do parâmetro (de entrada, de saída ou de referência).  
@@ -40,7 +38,7 @@ ms.locfileid: "36115465"
  O processo de compilação gera um ponteiro de função que pode ser chamado em tempo de execução a partir do código nativo. No caso de funções definidas pelo usuário com valor escalar, essa invocação de função ocorre por linha. A fim de minimizar o custo da transição entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o CLR, as instruções que contêm qualquer invocação gerenciada têm uma etapa de inicialização para identificar o domínio do aplicativo de destino. Essa etapa de identificação reduz o custo de transição de cada linha.  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
- Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração de CLR no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" no site do MSDN. Informações gerais sobre o desempenho de código gerenciado podem ser encontradas em "[melhorando o desempenho de aplicativos .NET e a escalabilidade](http://go.microsoft.com/fwlink/?LinkId=50333)" no site do MSDN.  
+ Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração CLR no SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" no site do MSDN. Informações gerais sobre o desempenho do código gerenciado podem ser encontradas em "[melhorando o desempenho de aplicativos .NET e a escalabilidade](http://go.microsoft.com/fwlink/?LinkId=50333)" no site do MSDN.  
   
 ### <a name="user-defined-functions"></a>Funções definidas pelo usuário  
  As funções CLR se beneficiam de um caminho de invocação mais rápido que o das funções definidas pelo usuário do [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Além disso, o código gerenciado tem uma vantagem de desempenho decisiva sobre o [!INCLUDE[tsql](../../../includes/tsql-md.md)] em termos de código de procedimento, computação e manipulação de cadeias de caracteres. As funções CLR que utilizam muitos recursos de computação e que não executam acesso a dados são melhor escritas em código gerenciado. Entretanto, as funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] executam o acesso a dados de forma mais eficiente que a integração CLR.  

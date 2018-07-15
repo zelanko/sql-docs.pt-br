@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 caps.latest.revision: 33
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 315091a829fc7294bb08be76d5231a43afb2fa20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cda8c213e8f14da1d36eeb3b71ad913762703f92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309356"
 ---
 # <a name="report-wizard-help"></a>Ajuda do Assistente de Relatório
   Esta seção fornece Ajuda por meio da tecla F1 para o Assistente de Relatório. O Assistente de Relatório automatiza o processo de criação de relatórios tabulares e de matriz. A tabela a seguir descreve os tópicos dessa seção.  
   
- Para abrir o Assistente de relatório, no **projeto** menu, clique em **Adicionar Novo Item**.  
+ Para abrir o Assistente de relatório, nos **Project** menu, clique em **Adicionar Novo Item**.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

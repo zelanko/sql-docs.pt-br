@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc9aa961911f8686ba3921fcf773ed47ecfb43a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292686"
 ---
 # <a name="database-features"></a>Recursos de banco de dados
   Esta seção contém os recursos e as tarefas associadas a bancos de dados, objetos de banco de dados, tipos de dados e os mecanismos usados para trabalhar com dados ou gerenciá-los.  
@@ -35,9 +35,9 @@ ms.locfileid: "36116169"
 |[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[Sinônimos &#40;Mecanismo de Banco de Dados&#41;](synonyms/synonyms-database-engine.md)|[Notificações de eventos](service-broker/event-notifications.md)|  
 |[Exibições](views/views.md)|[Dados XML &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[Monitorar e ajustar o desempenho](performance/monitor-and-tune-for-performance.md)|  
 |[Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md)|[Dados espaciais &#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
-|[Pesquisa &#40;do SQL Server&#41;](../database-engine/search-sql-server.md)|[Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
+|[Pesquisa &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Funções definidas pelo usuário](user-defined-functions/user-defined-functions.md)|[Aplicativos da Camada de Dados](data-tier-applications/data-tier-applications.md)||  
 |[Estatísticas](statistics/statistics.md)|[O log de transações &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[Guias de plano](performance/plan-guides.md)|[Pontos de verificação de banco de dados &#40;do SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Guias de plano](performance/plan-guides.md)|[Pontos de verificação de banco de dados &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

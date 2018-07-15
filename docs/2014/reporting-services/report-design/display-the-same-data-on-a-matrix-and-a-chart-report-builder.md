@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325616"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Exibir os mesmos dados em uma matriz e um gráfico (Construtor de Relatórios)
   Quando quiser mostrar os mesmos dados em uma matriz e em um gráfico, defina propriedades em ambas as regiões de dados para especificar o mesmo conjunto de dados, além das mesmas expressões para filtros, grupos, classificações e dados.  
@@ -28,7 +28,7 @@ ms.locfileid: "36006545"
   
  Para usar os valores do grupo de colunas da matriz como legenda do gráfico, você deve especificar as cores dos dados da série no gráfico e usar as mesmas cores como cores de preenchimento no plano de fundo das caixas de texto da célula da matriz que exibe os valores do grupo. Para obter mais informações, consulte [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
- Em tempo de execução, o relatório pode ficar desorganizado caso haja muitos valores para as definições de grupo. Você talvez precise filtrar valores, combinar grupos ou ajustar o limite do gráfico combinar grupos. Para obter mais informações, consulte [vinculando várias regiões de dados para o mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ Em tempo de execução, o relatório pode ficar desorganizado caso haja muitos valores para as definições de grupo. Você talvez precise filtrar valores, combinar grupos ou ajustar o limite do gráfico combinar grupos. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -73,7 +73,7 @@ ms.locfileid: "36006545"
   
 14. Clique em **Classificar**.  
   
-15. Clique em **Adicionar**. Uma nova linha é exibida na grade das expressões de classificação.  
+15.  Clique em **Adicionar**. Uma nova linha é exibida na grade das expressões de classificação.  
   
 16. Em **Classificar por**, na lista suspensa, escolha o mesmo campo de conjunto de dados escolhido para agrupamento na etapa 9.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36006545"
   
 21. Clique em **Classificar**.  
   
-22. Clique em **Adicionar**. Uma nova linha é exibida na grade das expressões de classificação.  
+22.  Clique em **Adicionar**. Uma nova linha é exibida na grade das expressões de classificação.  
   
 23. Em **Classificar por**, na lista suspensa, escolha o mesmo campo de conjunto de dados escolhido para agrupamento na etapa 16.  
   
@@ -103,6 +103,6 @@ ms.locfileid: "36006545"
  [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Gráficos &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)  
+ [Gráficos de &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

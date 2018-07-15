@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bc9940ccc136e8b6934efc9cc25526959cec667f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 24fe0a9aab029226757cc84ef70e4e8da898e9c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287962"
 ---
 # <a name="navigationproperty-element-csdlbi"></a>Elemento NavigationProperty (CSDLBI)
   O elemento NavigationProperty é um tipo complexo que estende o tipo Member da CSDL para oferecer suporte à navegação nos modelos de dados de business intelligence.  

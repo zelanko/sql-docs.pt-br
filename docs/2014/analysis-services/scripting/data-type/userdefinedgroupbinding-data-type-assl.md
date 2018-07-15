@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UserDefinedGroupBinding data type
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ebbc22ff9a9ff2d38e36b53d5e1e2e382739ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31c1867296ff00d8000b24640dfb44bef034a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194316"
 ---
 # <a name="userdefinedgroupbinding-data-type-assl"></a>Tipo de dados UserDefinedGroupBinding (ASSL)
   Define um tipo de dados derivado que representa um agrupamento definido pelo usuário para um atributo.  
@@ -62,11 +62,11 @@ ms.locfileid: "36120015"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `UserDefinedGroupBinding` é tratado automaticamente como um [AttributeBinding](attributebinding-data-type-assl.md), cujo [tipo](../properties/type-element-binding-assl.md) é definido como *todos os*.  
+ `UserDefinedGroupBinding` é tratado automaticamente como uma [AttributeBinding](attributebinding-data-type-assl.md), cujo [tipo](../properties/type-element-binding-assl.md) é definido como *todos os*.  
   
- Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança de `Binding` tipos, consulte [tipo de dados de associação &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>.  
   

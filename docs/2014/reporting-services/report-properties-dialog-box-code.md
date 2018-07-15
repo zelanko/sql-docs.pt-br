@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c31cd76f1de4ffe7ec528f6040718bb4551669e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60d1ee37f078c5abdc4043ef5ea743c3e9e4f883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272192"
 ---
 # <a name="report-properties-dialog-box-code"></a>Caixa de diálogo Propriedades do Relatório, Código
-  Selecione **código**no **propriedades do relatório** caixa de diálogo para definir o código personalizado a ser usado pelas expressões no relatório.  
+  Selecione **código**sobre o **propriedades do relatório** caixa de diálogo para definir o código personalizado a ser usado pelas expressões no relatório.  
   
 ## <a name="options"></a>Opções  
  **Código personalizado**  

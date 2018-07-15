@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120166"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351808"
 ---
 # <a name="accessing-the-current-transaction"></a>Acessando a transação atual
   Se uma transação estiver ativa no ponto em que o código CLR (Common Language Runtime) que está sendo executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for inserido, ela será exposta pela classe `System.Transactions.Transaction`. A propriedade `Transaction.Current` é usada para acessar a transação atual. Na maioria das vezes, não é necessário acessar a transação explicitamente. Para conexões de banco de dados, ADO.NET verifica `Transaction.Current` automaticamente quando o método `Connection.Open` é chamado e inscreve a conexão de forma transparente nessa transação (a menos que a palavra-chave `Enlist` esteja definida como falsa na cadeia de conexão).  
@@ -69,7 +67,7 @@ The context transaction which was active before entering user defined routine, t
  Essa exceção também é esperada e, para que a execução continue, é preciso ter um bloco try/catch em torno da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que executa a ação que aciona o gatilho. Apesar das duas exceções geradas, a transação é revertida e as alterações não são confirmadas.  
   
 ### <a name="example"></a>Exemplo  
- A seguir, é mostrado um exemplo de uma transação que é revertida de um procedimento gerenciado usando o método `Transaction.Rollback`. Observe o bloco try/catch em torno do método `Transaction.Rollback` no código gerenciado. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] cria um assembly e um procedimento armazenado gerenciado. Lembre-se que o `EXEC uspRollbackFromProc` instrução é encapsulado em um bloco try/catch, para que a exceção gerada quando o procedimento gerenciado for concluído a execução é capturada.  
+ A seguir, é mostrado um exemplo de uma transação que é revertida de um procedimento gerenciado usando o método `Transaction.Rollback`. Observe o bloco try/catch em torno do método `Transaction.Rollback` no código gerenciado. O script [!INCLUDE[tsql](../../includes/tsql-md.md)] cria um assembly e um procedimento armazenado gerenciado. Lembre-se que o `EXEC uspRollbackFromProc` instrução é encapsulado em um bloco try/catch, de forma que a exceção gerada quando o procedimento gerenciado for concluído seja capturada.  
   
 ```csharp  
 using System;  

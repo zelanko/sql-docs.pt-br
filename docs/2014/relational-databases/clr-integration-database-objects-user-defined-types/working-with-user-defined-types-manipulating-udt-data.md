@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349888"
 ---
 # <a name="manipulating-udt-data"></a>Manipulando dados UDT
   O [!INCLUDE[tsql](../../includes/tsql-md.md)] não fornece uma sintaxe especializada para instruções INSERT, UPDATE ou DELETE ao modificar dados nas colunas UDTs (tipos definidos pelo usuário). As funções [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT são usadas para converter tipos de dados nativos no tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserindo dados em uma coluna UDT  
- O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções inserirem três linhas de dados de exemplo para o **pontos** tabela. O **ponto** tipo de dados consiste em X e Y inteiro de valores que são expostos como propriedades do UDT. Você deve usar a função CAST ou CONVERT para converter o delimitada por vírgulas valores X e Y para o **ponto** tipo. As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o **ponto** tipo e a terceira instrução usa a função CAST:  
+ O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções inserirem três linhas de dados de exemplo para o **pontos** tabela. O **ponto** tipo de dados consiste em X e Y inteiro valores que são expostas como propriedades do UDT. Você deve usar a função CAST ou CONVERT para converter o delimitada por vírgulas para valores de X e Y para o **ponto** tipo. As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o **ponto** tipo e a terceira instrução usa a função CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -60,7 +58,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Para ver a saída exibida em um formato legível, chame o `ToString` método o **ponto** UDT, que converte o valor em sua representação de cadeia de caracteres.  
+ Para ver a saída exibida em um formato legível, chame o `ToString` método da **ponto** UDT, que converte o valor em sua representação de cadeia de caracteres.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Invocando métodos UDT   
- Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. O **ponto** classe contém três métodos, `Distance`, `DistanceFrom`, e `DistanceFromXY`. Para as listagens de código que definem esses três métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
+ Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. O **ponto** classe contém três métodos, `Distance`, `DistanceFrom`, e `DistanceFromXY`. Para as listagens de código definem esses três métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
   
  A seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] chama o método `PointValue.Distance`:  
   
@@ -182,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- O `DistanceFrom` método aceita um argumento do **ponto** tipo de dados e exibe a distância do ponto especificado até o PointValue:  
+ O `DistanceFrom` método usa um argumento do **aponte** tipo de dados e exibe a distância do ponto especificado até o PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

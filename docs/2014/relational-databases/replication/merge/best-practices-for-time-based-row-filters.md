@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331336"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
   Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função `GETDATE()` para realizar isso. Considere a seguinte instrução de filtro de linha:  
@@ -59,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   Crie um trabalho do SQL Server Agent (ou um trabalho agendada por algum outro mecanismo) que atualiza a coluna antes do agendamento para a execução do Merge Agent.  
   
- Essa abordagem trata das falhas usando `GETDATE()` ou outro método de tempo e evita o problema determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo para uma tabela **Eventos** :  
+ Essa abordagem trata das falhas usando `GETDATE()` ou outro método baseado em tempo e evita o problema em determinar quando os filtros são avaliados por partições. Considere o seguinte exemplo para uma tabela **Eventos** :  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

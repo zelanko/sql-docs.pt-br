@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306596"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
   Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
   
  Para obter informações adicionais sobre como usar modelos de clustering, consulte os seguintes tópicos:  
   
--   [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36006737"
 |NOT NULL|A coluna não pode conter um valor nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
   
 ## <a name="requirements"></a>Requisitos  
- Um modelo de clustering deve conter uma coluna de chave e colunas de entrada. Você também pode definir colunas de entrada como sendo previsíveis. Colunas definidas como `Predict Only` não são usados para criar clusters. A distribuição desses valores nos clusters é calculada após a criação dos clusters.  
+ Um modelo de clustering deve conter uma coluna de chave e colunas de entrada. Você também pode definir colunas de entrada como sendo previsíveis. As colunas definidas como `Predict Only` não são usados para criar clusters. A distribuição desses valores nos clusters é calculada após a criação dos clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
@@ -183,8 +183,8 @@ ms.locfileid: "36006737"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de Clustering da Microsoft](microsoft-clustering-algorithm.md)   
+ [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de Clustering &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

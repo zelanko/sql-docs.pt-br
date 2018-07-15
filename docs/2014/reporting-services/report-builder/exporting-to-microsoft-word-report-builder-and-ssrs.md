@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264272"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   A extensão de renderização do Word renderiza relatórios para o formato nativo do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. O formato é o Office Open XML.  
@@ -140,14 +140,14 @@ ms.locfileid: "36117619"
   
 -   Após o relatório ser exportado, o Word pagina o relatório novamente. Isto pode fazer com que quebras de página adicionais seja acrescentadas ao relatório renderizado.  
   
--   O Word não repete linhas de cabeçalho na página dois e acima, embora você defina a propriedade RepeatOnNewPage de linha de cabeçalho estática em um tablix (tabela, matriz ou lista) `True`. Você pode definir quebras de página explícitas em seu relatório para forçar linhas de cabeçalho a aparecerem em novas páginas. Porém, como o Word aplica sua própria paginação ao relatório renderizado exportado para o Word, os resultados poderão variar, e a linha de cabeçalho talvez não se repita de maneira previsível. A linha de cabeçalho estática é a linha que contém os cabeçalhos de coluna.  
+-   O Word não repete linhas de cabeçalho na página dois e acima, embora você defina a propriedade RepeatOnNewPage da linha de cabeçalho estática em um tablix (tabela, matriz ou lista) `True`. Você pode definir quebras de página explícitas em seu relatório para forçar linhas de cabeçalho a aparecerem em novas páginas. Porém, como o Word aplica sua própria paginação ao relatório renderizado exportado para o Word, os resultados poderão variar, e a linha de cabeçalho talvez não se repita de maneira previsível. A linha de cabeçalho estática é a linha que contém os cabeçalhos de coluna.  
   
 -   Caixas de Texto crescem quando contêm espaços sem-quebras.  
   
 -   Quando o texto é exportado para o Word, o texto que apresenta certas fontes com decoração pode gerar glifos inesperados ou não exibidos no relatório renderizado.  
   
 ##  <a name="WordBenefits"></a> Benefícios do uso do renderizador do Word  
- Além de disponibilizar os recursos que são novos no [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponíveis para exportar relatórios, os arquivos *.docx de relatórios exportados tendem a ser menores. Os relatórios exportados usando o renderizador do Word são geralmente significativamente menores que os mesmos relatórios exportados usando o renderizador do Word 2003.  
+ Além de disponibilizar os recursos que são novos no [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 exportada relatórios, arquivos docx de relatórios exportados tendem a ser menores. Os relatórios exportados usando o renderizador do Word são geralmente significativamente menores que os mesmos relatórios exportados usando o renderizador do Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidade com versões anteriores de relatórios exportados  
  Você pode selecionar um modo de compatibilidade de Word e definir opções de compatibilidade. O renderizador do Word cria documentos com o modo de compatibilidade ligado. Salvar novamente os documentos com o modo de compatibilidade desligado pode afetar o layout do documento.  
@@ -155,7 +155,7 @@ ms.locfileid: "36117619"
  Se você desligar o modo de compatibilidade e salvar um relatório novamente, o layout do relatório pode alterar de maneiras inesperadas.  
   
 ##  <a name="AvailabilityWord"></a> Disponibilidade do renderizador do Word 2003  
- Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o renderizador padrão do Word é a versão que renderiza para o formato nativo do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Esta é a opção do **Word** listada pelos menus **Exportar** no Gerenciador de Relatórios e no SharePoint. A versão anterior, compatível somente com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é nomeado Word 2003 e listada em menus usando esse nome. A opção de menu **Word 2003** não é visível por padrão, mas um administrador pode torná-la visível atualizando o arquivo de configuração RSReportServer. Para exportar relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o renderizador do Word 2003, atualize o arquivo de configuração RSReportDesigner. Porém, tornar o renderizador do Word 2003 visível não significa disponibilizá-lo em todos os cenários. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração. Se você usar ferramentas ou produtos em modo desconectado ou local, tornar o renderizador do Word 2003 visível não terá efeito. A opção de menu **Word 2003** permanece indisponível. Se você tornar o renderizador do Word 2003 visível no arquivo de configuração RSReportDesigner, a opção de menu **Word 2003** sempre estará disponível na visualização de relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ Na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o renderizador padrão do Word é a versão que renderiza para o formato nativo do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Esta é a opção do **Word** listada pelos menus **Exportar** no Gerenciador de Relatórios e no SharePoint. A versão anterior, compatível somente com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é nomeado Word 2003 e listada em menus usando esse nome. A opção de menu **Word 2003** não é visível por padrão, mas um administrador pode torná-la visível atualizando o arquivo de configuração RSReportServer. Para exportar relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o renderizador do Word 2003, atualize o arquivo de configuração RSReportDesigner. Porém, tornar o renderizador do Word 2003 visível não significa disponibilizá-lo em todos os cenários. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração. Se você usar ferramentas ou produtos em modo desconectado ou local, tornar o renderizador do Word 2003 visível não terá efeito. A opção de menu **Word 2003** permanece indisponível. Se você tornar o renderizador do Word 2003 visível no arquivo de configuração RSReportDesigner, a opção de menu **Word 2003** sempre estará disponível na visualização de relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  A opção de menu do **Word 2003** nunca fica visível nos seguintes cenários:  
   
@@ -181,9 +181,9 @@ ms.locfileid: "36117619"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- A extensão WORDOPENXML define o renderizador do Word para o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. A extensão WORD define a versão do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que o renderizador do Word 2003 está oculto. Para obter mais informações, consulte [arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ A extensão WORDOPENXML define o renderizador do Word para o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. A extensão WORD define a versão do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica que o renderizador do Word 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
   
-##  <a name="Differences"></a> Diferenças entre os renderizadores do Word e Word 2003  
+##  <a name="Differences"></a> Diferenças entre os renderizadores do Word 2003 e Word  
  Relatórios, renderizados usando renderizadores do Word ou Word 2003 tendem a ser visualmente indistinguíveis. Porém, você pode notar diferenças sutis entre os dois formatos do Word ou Word 2003.  
   
 ##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
@@ -192,7 +192,7 @@ ms.locfileid: "36117619"
 ## <a name="see-also"></a>Consulte também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;SSRS e construtor de relatórios&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

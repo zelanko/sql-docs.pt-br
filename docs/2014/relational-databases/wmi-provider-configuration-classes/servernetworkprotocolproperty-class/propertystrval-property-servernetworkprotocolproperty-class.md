@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyStrVal property
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3bf026f447c4a6fbab3894db02a8a8ba653904a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c3d062fb77e607882e2c20b35b315dccca628039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222966"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyStrVal (classe ServerNetworkProtocolProperty)
   Obtém o valor da cadeia de caracteres da propriedade referenciada.  

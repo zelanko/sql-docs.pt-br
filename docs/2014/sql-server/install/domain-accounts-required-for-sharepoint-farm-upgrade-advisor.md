@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251208"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Contas de domínio necessárias ao farm do SharePoint (Supervisor de Atualização)
   Os produtos do SharePoint configurados para um ambiente de farm requerem o uso de contas de domínio.  
@@ -43,11 +43,11 @@ ms.locfileid: "36116287"
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Para alterar a conta de serviço no Gerenciador de Configuração  
   
-1.  Do **iniciar** menu, selecione **todos os programas**e, em seguida, clique em **Microsoft SQL Server 2008 R2**.  
+1.  Dos **inicie** menu, selecione **todos os programas**e, em seguida, clique em **Microsoft SQL Server 2008 R2**.  
   
 2.  Selecione **ferramentas de configuração**e, em seguida, clique em **Reporting Services Configuration Manager**.  
   
-3.  No Gerenciador de configuração, selecione o **conta de serviço** guia.  
+3.  No Gerenciador de configuração, selecione a **conta de serviço** guia.  
   
 4.  Selecione **usar outra conta** e insira as credenciais para uma conta de domínio.  
   

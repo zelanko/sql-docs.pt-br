@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332566"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Elemento MoveWithDescendants (XMLA)
   Indica se os descendentes de membros de atributo também são atualizados pelo pai [atualização](../xml-elements-commands/update-element-xmla.md) comando.  
@@ -64,7 +64,7 @@ ms.locfileid: "36020098"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `MoveWithDescendants` elemento determina se o `Update` comando não deve apenas atualizar os membros de atributo identificados pelo [atributos](attributes-element-xmla.md) elemento, mas também que os descendentes daqueles membros de atributo devem ser também atualizado.  
+ O `MoveWithDescendants` elemento determina se o `Update` comando não deve apenas atualizar os membros de atributo identificados pelo [atributos](attributes-element-xmla.md) elemento, mas também que os descendentes daqueles membros de atributo devem ser atualizado também.  
   
 > [!NOTE]  
 >  Esse elemento só se aplica a membros de atributos nas hierarquias pai-filho.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267682"
 ---
 # <a name="aliases-element-assl"></a>Elemento Aliases (ASSL)
   Contém a coleção de [Alias](../properties/alias-element-assl.md) elementos associados a um [conta](../objects/account-element-assl.md) elemento  
@@ -64,7 +64,7 @@ ms.locfileid: "36116014"
 |Elementos filho|[Alias](../properties/alias-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento correspondente para o pai do `Aliases` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Account>.  
+ O elemento que corresponde ao pai de `Aliases` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contas de elemento &#40;ASSL&#41;](accounts-element-assl.md)   

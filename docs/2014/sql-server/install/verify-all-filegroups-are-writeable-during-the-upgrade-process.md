@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filegroups [SQL Server], writeable
 - writeable filegroups [SQL Server]
 ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e73899dd36a6413a2e7cdd50254049d5fcdc52ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 41ca2adb014d1cdaee23e32123772744fae76b68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328962"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Verificar se todos os grupos de arquivos podem ser gravados durante o processo de atualização
   O Supervisor de Atualização detectou um banco de dados que tem um ou mais grupos de arquivos somente leitura. Todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ter os grupos de arquivos definidos como READ_WRITE antes de atualizar.  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05bcbd306dc29769db143fb4614c01d527144b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 905d673939c1831cbe84d49e863ec401a03ec4b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290262"
 ---
 # <a name="server-properties-general-page"></a>Propriedades do Servidor (página Geral)
   Use essa página para exibir ou modificar o título usado no Gerenciador de Relatórios, habilitar ou desabilitar Meus Relatórios, selecionar uma definição de função para a segurança de Meus Relatórios e habilitar e desabilitar o controle de impressão do cliente.  
   
- Para abrir essa página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a uma instância de servidor de relatório, clique no nome do servidor de relatório e, em seguida, selecione **propriedades**.  
+ Para abrir essa página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a uma instância de servidor de relatório, o nome do servidor de relatório com o botão direito e, em seguida, selecione **propriedades**.  
   
  O modo de servidor determina quais propriedades de servidor você pode definir. Se você estiver gerenciando um servidor de relatório configurado para modo integrado do SharePoint, não poderá habilitar Meus Relatórios nem definir o título do aplicativo para o Gerenciador de Relatórios.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36116064"
  Especifique uma definição de função a ser usada na segurança de Meus Relatórios. A definição de função identifica o conjunto de tarefas que tem suporte em cada pasta Meus Relatórios.  
   
  **Habilitar download para o controle de impressão do cliente ActiveX**  
- Conjuntos de `EnableClientPrinting` propriedade de sistema do servidor de relatório. Se você habilitar impressão de cliente, os usuários com permissões de administrador local têm a opção de baixar um controle ActiveX assinado para imprimir relatórios HTML. Para obter mais informações, consulte [habilitar e desabilitar impressão de cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Conjuntos de `EnableClientPrinting` propriedade de sistema do servidor de relatório. Se você habilitar impressão de cliente, os usuários com permissões de administrador local têm a opção de baixar um controle ActiveX assinado para imprimir relatórios HTML. Para obter mais informações, consulte [habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

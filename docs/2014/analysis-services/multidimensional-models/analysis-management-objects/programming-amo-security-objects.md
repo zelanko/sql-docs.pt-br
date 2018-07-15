@@ -1,5 +1,5 @@
 ---
-title: Programação de objetos de segurança AMO | Microsoft Docs
+title: Programando objetos de segurança AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197946"
 ---
 # <a name="programming-amo-security-objects"></a>Programando objetos de segurança AMO
-  Em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programação de objetos de segurança ou executar aplicativos que usam objetos de segurança AMO exige um membro do grupo administrador do servidor ou o grupo de administradores de banco de dados. Administrador de servidor e administrador de banco de dados são um acesso níveis fornecido pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programação de objetos de segurança ou executar aplicativos que usam objetos de segurança AMO exige a associação do grupo administrador do servidor ou o grupo de administradores de banco de dados. Administrador do servidor e administrador de banco de dados são um acesso níveis fornecido pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  No [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o acesso de usuário a qualquer objeto é obtido pela combinação de Funções e Permissões atribuídas àquele objeto. Para obter mais informações, consulte [Classes de segurança AMO](amo-security-classes.md).  
   

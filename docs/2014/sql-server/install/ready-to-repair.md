@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea4bce669b4647ab9d7838a778152e74c5075ad0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17549988bd1a3ea18e06f627c773f32bab9eb7d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215046"
 ---
 # <a name="ready-to-repair"></a>Pronto para Reparar
   A página Pronto para Reparar fornece um resumo do processo de reparo através da Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

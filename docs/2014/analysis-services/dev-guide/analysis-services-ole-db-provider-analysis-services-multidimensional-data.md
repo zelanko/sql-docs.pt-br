@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Analysis Services OLE DB Provider
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32c717ef25e95192bceaa7084f3c8de63600f834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 037d81293836bb771fd28033e86d340fcc067e29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200346"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Provedor OLE DB do Analysis Services (Analysis Services - dados multidimensionais)
-  O Analysis Services OLE DB Provider é uma interface para aplicativos que interagem com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele é usado para compilar aplicativos cliente que interagem com dados multidimensionais. Esse provedor também fornece métodos para análise e mineração de dados online e offline dos dados multidimensionais e relacionais, e é incluído como parte do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele pode ser redistribuído através de aplicativos cliente de terceiros.  
+  O Analysis Services OLE DB Provider é uma interface para aplicativos que interagem com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele é usado para compilar aplicativos cliente que interagem com dados multidimensionais. Esse provedor também fornece métodos para análise e mineração de dados online e offline dos dados multidimensionais e relacionais, e é incluído como parte do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele pode ser redistribuído através de aplicativos cliente de terceiros.  
   
  O provedor OLE DB do Analysis Services é o principal método de interação com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para a execução de tarefas tais como a conexão a um cubo ou modelo de mineração de dados, a consulta a um cubo ou modelo de mineração de dados e a consulta a informações de esquema.  
   

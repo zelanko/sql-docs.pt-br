@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330896"
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
   Os modelos de mineração têm os seguintes tipos de propriedades:  
@@ -64,8 +64,8 @@ ms.locfileid: "36117063"
   
 ## <a name="see-also"></a>Consulte também  
  [Colunas do modelo de mineração](mining-model-columns.md)   
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tutoriais e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tarefas e tarefas do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)   
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)   

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - .NET Framework [CLR Integration]
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e24738e82e9e73c5777780377207fdc4471aa47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8c50e18862d2c3ca5b5e900c6eccebe6e921ea94
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130777"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351028"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliotecas do .NET Framework compatíveis
   Com o CLR (common language runtime) hospedado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode criar procedimentos armazenados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidas pelo usuário em código gerenciado. Com a funcionalidade contida nas bibliotecas de classe do .NET Framework, você tem acesso a classes pré-criadas que fornecem recursos de manipulação de cadeia de caracteres, operações matemáticas avançadas, acesso a arquivos, criptografia, e mais. Essas classes podem ser acessadas de qualquer procedimento armazenado gerenciado, tipo definido pelo usuário, gatilho, função definida pelo usuário ou agregação definida pelo usuário.  
   
 > [!NOTE]  
->  Se você reparar ou atualizar assemblies sem suporte no cache de assembly global (GAC), sua [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se um assembly existir tanto em uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração CLR. Se você reparar ou atualizar qualquer assembly no GAC que também está registrado no banco de dados, incluindo os assemblies do .NET Framework sem suporte, verifique se também reparou ou atualizou a cópia do assembly nos bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a instrução `ALTER ASSEMBLY`. Para obter mais informações, consulte [artigo 949080 da Base de dados de Conhecimento](http://support.microsoft.com/kb/949080).  
+>  Se você reparar ou atualizar assemblies sem suporte no cache de assembly global (GAC), seu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se um assembly existir tanto em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração CLR. Se você reparar ou atualizar qualquer assembly no GAC que também está registrado no banco de dados, incluindo os assemblies do .NET Framework sem suporte, verifique se também reparou ou atualizou a cópia do assembly nos bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a instrução `ALTER ASSEMBLY`. Para obter mais informações, consulte [artigo 949080 da Base de dados de Conhecimento](http://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Bibliotecas com suporte  
- Começando com [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] tem uma lista de bibliotecas com suporte do .NET Framework, que foram testados para garantir que eles atendam aos padrões de segurança e confiabilidade para interação com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] carrega diretamente do Global Assembly Cache (GAC).  
+ Começando com [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] tem uma lista de bibliotecas do .NET Framework com suporte, que foram testados para garantir que eles atendam aos padrões de confiabilidade e segurança para interação com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] carrega-os diretamente do Global Assembly Cache (GAC).  
   
  As bibliotecas/namespaces suportados pela integração CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são:  
   

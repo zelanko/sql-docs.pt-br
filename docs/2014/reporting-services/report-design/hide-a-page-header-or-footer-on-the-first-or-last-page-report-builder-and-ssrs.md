@@ -1,5 +1,5 @@
 ---
-title: Ocultar um cabeçalho ou rodapé de página na primeira ou na última página (construtor de relatórios e SSRS) | Microsoft Docs
+title: Ocultar um cabeçalho ou rodapé na primeira ou na última página (construtor de relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0abf817e5f4f05f6e9dd6507234712c20256a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 023dce7e8ced27e0ac549fef83b360812e878800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244226"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar um cabeçalho ou rodapé de página na primeira ou na última página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé de página nas partes superior e inferior de cada página, respectivamente. Depois de adicionar um cabeçalho ou rodapé, você pode ocultá-lo, de maneira seletiva, na primeira e última páginas de um relatório.  
@@ -52,8 +52,8 @@ ms.locfileid: "36117090"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;SSRS e construtor de relatórios&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Adicionar ou remover um cabeçalho ou rodapé &#40;SSRS e construtor de relatórios&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [Adicionar ou remover um cabeçalho ou rodapé de &#40;relatórios e SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

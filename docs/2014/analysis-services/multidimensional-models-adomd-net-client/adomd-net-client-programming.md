@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332746"
 ---
 # <a name="adomdnet-client-programming"></a>Programando o cliente no ADOMD.NET
-  Os componentes de cliente do ADOMD.NET residem no namespace `Microsoft.AnalysisServices.AdomdClient` (em microsoft.analysisservices.adomdclient.dll). Esses componentes de cliente fornecem a funcionalidade de cliente e aplicativos de camada intermediária para consultar facilmente os dados e metadados de um repositório de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Os componentes de cliente do ADOMD.NET residem no namespace `Microsoft.AnalysisServices.AdomdClient` (em microsoft.analysisservices.adomdclient.dll). Esses componentes clientes fornecem a funcionalidade de cliente e aplicativos de camada intermediária para consultar com facilidade dados e metadados de um repositório de dados analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Usando os objetos de cliente do ADOMD.NET  
  Durante a consulta a uma fonte de dados analíticos, existe um conjunto de tarefas comuns que precisam ser executadas. A tabela a seguir representa as tarefas comuns nas quais você usa os objetos de cliente do ADOMD.NET para executar uma consulta assim.  
@@ -43,8 +43,8 @@ ms.locfileid: "36120678"
   
 |Para|Use este objeto|  
 |--------|---------------------|  
-|Conectar a uma fonte de dados analíticos|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> representa uma conexão a uma fonte de dados e os metadados de fonte de dados. Por exemplo, você pode se conectar a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo local (. cub) de arquivo e, em seguida, examine o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> propriedade para obter metadados sobre os cubos presentes na fonte de dados analíticos. Esse objeto também representa a implementação da interface `IDbConnection`, que é exigida por todos os provedores de dados do .NET Framework.|  
-|Descobrir os recursos de mineração de dados da fonte de dados|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> exibe várias coleções de mineração:<br /><br /> -A <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contém uma lista de cada modelo de mineração na fonte de dados.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fornece informações sobre os algoritmos de mineração disponíveis.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expõe informações sobre as estruturas de mineração no servidor.|  
+|Conectar a uma fonte de dados analíticos|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> representa uma conexão a uma fonte de dados e os metadados de fonte de dados. Por exemplo, você pode se conectar a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo local (. cub) do arquivo e, em seguida, examine o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> propriedade para obter metadados sobre os cubos presentes na fonte de dados analíticos. Esse objeto também representa a implementação da interface `IDbConnection`, que é exigida por todos os provedores de dados do .NET Framework.|  
+|Descobrir os recursos de mineração de dados da fonte de dados|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> exibe várias coleções de mineração:<br /><br /> -O <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contém uma lista de cada modelo de mineração na fonte de dados.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fornece informações sobre os algoritmos de mineração disponíveis.<br />-O <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expõe informações sobre as estruturas de mineração no servidor.|  
 |Consulte a fonte de dados|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> representa a instrução ou consulta que será enviada ao servidor. Após o estabelecimento de uma conexão a uma fonte de dados, use o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> para executar instruções na linguagem suportada, como MDX (Multidimensional Expressions) ou DMX (Data Mining Extensions). Você também pode usar um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> para retornar resultados na forma de objetos <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> ou <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.|  
 |Recupere dados de uma forma rápida e eficiente|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> pode ser criado com uma chamada ao método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> ou <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. Esse objeto implementa a interface `IDbDataReader` do namespace `System.Data` da biblioteca de classes do .NET Framework.|  
 |Recupere dados analíticos com a maior quantidade de metadados|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> pode ser criado com uma chamada ao método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> ou <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A> de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>. Quando <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> tiver retornado <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, você poderá examinar os dados analíticos contidos por <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>.|  
@@ -52,7 +52,7 @@ ms.locfileid: "36120678"
 |Recupere dados usando a interface `System.Data.IDbDataAdapter`|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter> oferece suporte somente leitura para aplicativos cliente do .NET Framework existentes.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação do servidor do ADOMD.NET](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
+ [Programação de servidor do ADOMD.NET](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
  [Desenvolvendo com ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171637"
 ---
 # <a name="amo-data-mining-classes"></a>Classes de mineração de dados AMO
   As classes de mineração de dados ajudam você a criar, modificar, excluir e processar objetos de mineração de dados. O trabalho com objetos de mineração de dados inclui a criação de estruturas de mineração de dados, a criação de modelos de mineração de dados e o processamento dos modelos.  
   
- Para obter mais informações sobre como configurar o ambiente e sobre <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, e <xref:Microsoft.AnalysisServices.DataSourceView> objetos, consulte [as Classes fundamentais AMO](amo-fundamental-classes.md).  
+ Para obter mais informações sobre como configurar o ambiente e sobre <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, e <xref:Microsoft.AnalysisServices.DataSourceView> objetos, consulte [Classes fundamentais AMO](amo-fundamental-classes.md).  
   
  A definição de objetos no AMO (Objetos de Gerenciamento de Análise) exige a definição de várias propriedades em cada objeto para a configuração do contexto correto. Os objetos complexos, como os objetos OLAP e de mineração de dados, exigem uma codificação longa e detalhada.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36119220"
   
  Um <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> é criado ao ser adicionado ao <xref:Microsoft.AnalysisServices.MiningStructureCollection> pai e pela atualização do objeto <xref:Microsoft.AnalysisServices.MiningStructure> pai no servidor por meio do método Update.  
   
- Para remover um <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, ele deve ser removido da coleção do pai <xref:Microsoft.AnalysisServices.MiningStructure>e o pai <xref:Microsoft.AnalysisServices.MiningStructure> objeto deve ser atualizado para o servidor usando o método de atualização.  
+ Para remover uma <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, ele deverá ser removido da coleção do pai <xref:Microsoft.AnalysisServices.MiningStructure>e o pai <xref:Microsoft.AnalysisServices.MiningStructure> objeto deverá ser atualizado para o servidor usando o método de atualização.  
   
 #### <a name="tableminingstructurecolumn"></a>TableMiningStructureColumn  
  Um objeto simples <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> é composto de informações básicas e de colunas escalares.  

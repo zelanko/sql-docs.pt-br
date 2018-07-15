@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1ee024a1237916346e6a64dbd21aba208e34deb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78b04c27986224f1974dc35c3a60e02adcbe5483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217616"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa Difusa (guia Tabela de Referência)
   Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa Difusa** para especificar a tabela de origem e o índice a ser usado na pesquisa. A fonte de dados de referência deve ser uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "36118183"
 >  A transformação Pesquisa Difusa cria uma cópia de trabalho da tabela de referência. Os índices descritos abaixo são criados nesta tabela de trabalho usando uma tabela especial, não um índice do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comum. A transformação não modifica as tabelas de origem existentes a menos que você selecione **Manter índice armazenado**. Nesse caso, ela cria um gatilho na tabela de referência que atualiza a tabela de trabalho e a tabela de índices de pesquisa baseada em alterações na tabela de referência.  
   
 > [!NOTE]  
->  O `Exhaustive` e `MaxMemoryUsage` propriedades da transformação pesquisa difusa não estão disponíveis no **Editor de transformação pesquisa difusa**, mas pode ser definida usando o **Editor Avançado**. Além disso, um valor maior que 100 para `MaxOutputMatchesPerInput` pode ser especificado somente no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Transformação de Pesquisa Difusa em [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  O `Exhaustive` e o `MaxMemoryUsage` propriedades da transformação pesquisa difusa não estão disponíveis na **Editor de transformação pesquisa difusa**, mas pode ser definida usando o **Editor Avançado**. Além disso, um valor maior que 100 para `MaxOutputMatchesPerInput` pode ser especificado somente em de **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Transformação de Pesquisa Difusa em [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para saber mais sobre a transformação Pesquisa Difusa, consulte [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   

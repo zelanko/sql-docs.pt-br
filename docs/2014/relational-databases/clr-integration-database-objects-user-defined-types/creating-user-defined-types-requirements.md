@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14286261d2f157f208fe8d918e4fe1705f58eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117444"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350068"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos do tipo definido pelo usuário
-  Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) para ser instalado em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) a serem instalados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementação de UDTs  
  Para ser executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o UDT precisa implementar os seguintes requisitos na definição do UDT:  
@@ -56,7 +54,7 @@ ms.locfileid: "36117444"
   
 -   O UDT precisa expor elementos de dados como campos públicos ou procedimentos de propriedade.  
   
--   Nomes públicos não podem ter mais de 128 caracteres e deve estar de acordo com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as regras de nomenclatura para identificadores conforme definido em [identificadores de banco de dados](../databases/database-identifiers.md).  
+-   Nomes públicos não pode ter mais de 128 caracteres e deve estar de acordo com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regras de nomeação para identificadores conforme definido na [identificadores de banco de dados](../databases/database-identifiers.md).  
   
 -   As colunas `sql_variant` não podem conter instâncias de um UDT.  
   
@@ -153,7 +151,7 @@ ms.locfileid: "36117444"
  Além de especificar corretamente os atributos dos assemblies, sua classe também precisa suportar a nulidade. Os UDTs carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconhecem a nulidade, mas para que o UDT reconheça um valor nulo, a classe precisa implementar a interface `INullable`. Para obter mais informações e um exemplo de como implementar a nulidade em um UDT, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversões de cadeia de caracteres  
- Para suportar a conversão de cadeia de caracteres para o UDT e do UDT, você precisa fornecer um método `Parse` e um método `ToString` em sua classe. O método `Parse` permite converter uma cadeia de caracteres em uma UDT. Ele precisa ser declarado como `static` (ou `Shared` no Visual Basic) e usar um parâmetro do tipo `System.Data.SqlTypes.SqlString`. Para obter mais informações e um exemplo de como implementar a `Parse` e `ToString` métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
+ Para suportar a conversão de cadeia de caracteres para o UDT e do UDT, você precisa fornecer um método `Parse` e um método `ToString` em sua classe. O método `Parse` permite converter uma cadeia de caracteres em uma UDT. Ele precisa ser declarado como `static` (ou `Shared` no Visual Basic) e usar um parâmetro do tipo `System.Data.SqlTypes.SqlString`. Para obter mais informações e um exemplo de como implementar o `Parse` e `ToString` métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serialização XML  
  Os UDTs precisam suportar a conversão de e para o tipo de dados `xml` cumprindo o contrato para serialização XML. O namespace `System.Xml.Serialization` contém classes que são usadas para serializar objetos em documentos ou fluxos de formato XML. Você pode optar por implementar a serialização `xml` usando a interface `IXmlSerializable` que oferece formatação personalizada para serialização e desserialização XML.  

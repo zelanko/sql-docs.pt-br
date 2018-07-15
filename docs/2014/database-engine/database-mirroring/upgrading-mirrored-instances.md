@@ -1,35 +1,34 @@
 ---
-title: Minimizar o tempo de inatividade de bancos de dados espelhados ao atualizar instâncias do servidor | Microsoft Docs
+title: Minimizar o tempo de inatividade para bancos de dados espelhados ao atualizar instâncias de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300816"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar o tempo de inatividade de bancos de dados espelhados ao atualizar instâncias do servidor
   Ao atualizar instâncias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode reduzir o tempo de inatividade para cada banco de dados espelho para apenas um único failover manual executando uma atualização em sequência, conhecida como uma *atualização sem interrupção*. Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do servidor que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelho, atualizar o antigo servidor principal e continuar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do servidor que você está atualizando.  
   
 > [!NOTE]  
->  Para obter informações sobre como executar uma atualização sem interrupção para instalar um service pack ou hotfix, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Para obter informações sobre como executar uma atualização sem interrupção para instalar um service pack ou hotfix, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhado](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Preparação recomendada (práticas recomendadas)**  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36006699"
     > [!NOTE]  
     >  O estabelecimento de uma nova sessão de espelhamento exige que todas as instâncias de servidor estejam executando a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Depois de executar o failover, recomendamos que você execute o [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal banco de dados.  
+3.  Após o failover, é recomendável que você execute as [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando no banco de dados theprincipal.  
   
 4.  Atualize cada instância de servidor que seja agora o servidor espelho em todas as sessões de espelhamento nas quais é um parceiro. Pode necessário atualizar vários servidores nesse momento.  
   

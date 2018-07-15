@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322382"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
-  O interno `hierarchyid` tipo de dados torna mais fácil para armazenamento e consulta dados hierárquicos. `hierarchyid` é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
+  Interno `hierarchyid` tipo de dados torna mais fácil de armazenar e consultar dados hierárquicos. `hierarchyid` é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36006590"
  Use [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
   
 ##  <a name="keyprops"></a> Propriedades chave de hierarchyid  
- Um valor de `hierarchyid` tipo de dados representa uma posição em uma hierarquia de árvore. Os valores para `hierarchyid` têm as seguintes propriedades:  
+ Um valor da `hierarchyid` tipo de dados representa uma posição em uma hierarquia de árvore. Os valores para `hierarchyid` têm as seguintes propriedades:  
   
 -   Extremamente compacto  
   
@@ -108,11 +108,11 @@ GO
   
  Pai/Filho pode ser superior quando existem as seguintes:  
   
--   O tamanho da chave é crítico. Para o mesmo número de nós, um `hierarchyid` valor é igual ou maior do que uma família de inteiros (`smallint`, `int`, `bigint`) valor. Essa é a única razão para usar pai/filho em casos raros, porque `hierarchyid` tem localidade significativamente melhor de e/s e complexidade de CPU que as expressões de tabela comuns exigidas quando você estiver usando uma estrutura pai/filho.  
+-   O tamanho da chave é crítico. Para o mesmo número de nós, um `hierarchyid` valor é igual ou maior do que uma família de inteiros (`smallint`, `int`, `bigint`) valor. Isso é a única razão para usar pai/filho em casos raros, porque `hierarchyid` tem localidade significativamente melhor de e/s e complexidade de CPU que as expressões de tabela comuns exigidas quando você estiver usando uma estrutura pai/filho.  
   
 -   Consultas raramente examinam por seções da hierarquia. Em outras palavras, as consultas normalmente se dirigem apenas a um único ponto na hierarquia. Nesses casos, a colocação não é importante. Por exemplo, Pai/Filho é superior quando a tabela de organização é usada somente para processar a folha de pagamento de funcionários individuais.  
   
--   Subárvores de não folha mudam frequentemente e o desempenho é muito importante. Em uma representação pai/filho, alterando o local de uma linha em uma hierarquia afeta uma linha única. Alterar o local de uma linha em uma `hierarchyid` uso afeta *n* linhas, onde *n* é o número de nós na subárvore sendo movido.  
+-   Subárvores de não folha mudam frequentemente e o desempenho é muito importante. Em uma representação pai/filho, alterando o local de uma linha em uma hierarquia afeta uma linha única. Alterando o local de uma linha em uma `hierarchyid` uso afeta *n* linhas, onde *n* é o número de nós na subárvore sendo movida.  
   
      Se as subárvores sem folha mudarem frequentemente e o desempenho for importante, mas a maioria das mudanças estiver em um nível bem definido da hierarquia, considere dividir os níveis superiores e inferiores em duas hierarquias. Isso faz todas as mudanças em níveis de folha da hierarquia mais alta. Por exemplo, considere uma hierarquia de sites hospedados por um serviço. Sites contêm muitas páginas organizadas de uma maneira hierárquica. Sites hospedados poderiam ser movidos a outros locais na hierarquia do site, mas as páginas subordinadas raramente seriam reorganizadas. Isso poderia ser representado por:  
   
@@ -126,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando um índice XML é criado, `hierarchyid` valores são usados internamente para representar a posição na hierarquia.  
+ Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] quando um índice XML é criado, `hierarchyid` valores são usados internamente para representar a posição na hierarquia.  
   
  Usar um tipo de dados XML pode ser vantajoso quando todos os seguintes itens forem verdadeiros:  
   
@@ -273,7 +273,7 @@ VALUES ('/', 'Earth', 'Planet');
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gerenciando uma árvore com hierarchyid  
- Embora um `hierarchyid` coluna não representa necessariamente uma árvore, um aplicativo pode garantir facilmente que ele faz.  
+ Embora um `hierarchyid` coluna não represente necessariamente uma árvore, um aplicativo pode garantir facilmente que ele faz.  
   
 -   Para gerar novos valores, execute uma das ações abaixo:  
   

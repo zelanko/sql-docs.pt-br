@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29401c702cce49ed46415a1708da5fec9138fa9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f51966789f33cd535ff0322ec2f50caa392f5ccc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332786"
 ---
 # <a name="type-element-partition-assl"></a>Elemento Type (Partição) (ASSL)
-  Contém o tipo do [partição](../objects/partition-element-assl.md) elemento.  
+  Contém o tipo dos [partição](../objects/partition-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36130417"
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.PartitionType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Partition>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

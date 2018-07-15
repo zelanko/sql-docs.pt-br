@@ -1,5 +1,5 @@
 ---
-title: Interface do usuário Designers e caixas de diálogo análise Multidimensional | Microsoft Docs
+title: Designers de interface do usuário e caixas de diálogo de análise Multidimensional | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 918ae7edaba07762efa81937412e4aff9c20f32e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2e5c5fc61e206206df7666357990bdf517799f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267182"
 ---
-# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Interface do usuário Designers e caixas de diálogo análise Multidimensional
+# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Designers de interface do usuário e caixas de diálogo de análise Multidimensional
 
-Esta seção contém a documentação sobre os designers de interface de usuário e caixas de diálogo para análise multidimensional.
+Esta seção contém documentação sobre designers de (UI) de interface de usuário e caixas de diálogo para análise multidimensional.
 
 ## <a name="next-steps"></a>Próximas etapas
 

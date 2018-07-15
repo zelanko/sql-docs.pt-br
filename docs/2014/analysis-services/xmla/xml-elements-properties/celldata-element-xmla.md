@@ -25,15 +25,15 @@ helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ce445127e78f7f503bf3b81a640047f0d1f1d87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330406"
 ---
 # <a name="celldata-element-xmla"></a>Elemento CellData (XMLA)
   Contém uma coleção de elementos Cell que representam os dados de célula contidos por um elemento [root](root-element-xmla.md) que usa o tipo de dados [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) .  
@@ -63,7 +63,7 @@ ms.locfileid: "36121357"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[root](root-element-xmla.md)|  
-|Elementos filho|[célula](cell-element-mddataset-xmla.md)|  
+|Elementos filho|[Célula](cell-element-mddataset-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  No elemento root pai, o elemento `Axes` é seguido pelo elemento `CellData`, uma coleção de elementos `Cell` que contêm os valores de propriedade de célula para cada célula retornada no conjunto de dados multidimensionais.  

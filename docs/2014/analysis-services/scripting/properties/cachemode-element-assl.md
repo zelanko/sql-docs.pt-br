@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CacheMode element
 ms.assetid: bfb8f7bb-ccd3-4dfe-a36a-1cea15edfe40
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0698628ee699ab19abaf7c1b1857db3c1d68dfc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 790f3a087e0e7beda2d3cdbf228356fe1fa125d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330386"
 ---
 # <a name="cachemode-element-assl"></a>Elemento CacheMode (ASSL)
   Determina o mecanismo de cache usado por treinar dados recuperados durante o processamento de uma estrutura de mineração.  
@@ -68,7 +68,7 @@ ms.locfileid: "36008494"
 |*ClearAfterProcessing*|Casos de treinamento são colocados em cache durante o processamento, mas excluídas após o processamento.|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `CacheMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningStructure>.  
+ O elemento que corresponde ao pai de `CacheMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

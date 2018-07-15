@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a063af91090ff2e8d5eb1145bb5968573d04523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd50daa9250f46f17feecb7dfdd16e4998ea47d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290852"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie grupos de atributos quando você desejar exibir atributos em guias individuais na grade do **Gerenciador** .  
@@ -43,7 +43,7 @@ ms.locfileid: "36117247"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição do modelo de** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
+2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
   
 3.  Na lista **Modelo** , selecione um modelo.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "36117247"
   
 6.  Clique em **adicionar grupo de atributos**.  
   
-7.  No **nome do grupo de folha** , digite um nome para o grupo. Este é o nome exibido na guia **Explorer**.  
+7.  No **nome do grupo folha** , digite um nome para o grupo. Esse é o nome exibido na guia **Explorer**.  
   
     > [!NOTE]  
-    >  Se você selecionou **grupos consolidados** ou **grupos de coleção** na etapa 5, essa caixa é **nome do grupo consolidado** ou **nome do grupo de coleção**, respectivamente.  
+    >  Se você selecionou **grupos consolidados** ou **grupos de coleção** na etapa 5, essa caixa está **nome do grupo consolidado** ou **nomedogrupodecoleção**, respectivamente.  
   
 8.  Clique em **Salvar grupo**.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36117247"
   
 11. Clique em **Editar item selecionado**.  
   
-12. Clique nos atributos no **disponível** caixa e clique no **adicionar** seta. Para adicionar tudo, clique na seta **Adicionar Tudo** .  
+12. Clique nos atributos na **disponível** caixa e clique no **Add** seta. Para adicionar tudo, clique na seta **Adicionar Tudo** .  
   
-13. Opcionalmente, clique no **backup** e **para baixo** setas para alterar a ordem da esquerda para a direita dos atributos.  
+13. Opcionalmente, clique no **para cima** e **para baixo** setas para alterar a ordem da esquerda para a direita dos atributos.  
   
 14. Clique em **Salvar**.  
   

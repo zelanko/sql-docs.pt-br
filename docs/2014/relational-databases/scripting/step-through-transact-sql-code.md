@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331276"
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
   O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você controle quais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] são executadas em uma janela Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode pausar o depurador em instruções individuais e exibir o estado dos elementos de código nesse ponto.  
@@ -55,10 +55,10 @@ ms.locfileid: "36008618"
   
 |Ação|Procedimento|  
 |------------|---------------|  
-|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|Sobre o **depurar** menu, clique em **continuar**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **continuar** botão.|  
-|Avançar para a próxima instrução ou módulo|Sobre o **depurar** menu, clique em **intervir**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **intervir** botão.<br /><br /> Pressione F11.|  
-|Passar pela próxima instrução ou módulo|Sobre o **depurar** menu, clique em **passar por**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **passar por** botão.<br /><br /> Pressione F10.|  
-|Sair de um módulo|Sobre o **depurar** menu, clique em **sair**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **sair** botão.<br /><br /> Pressione SHIFT+F11.|  
+|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|Sobre o **Debug** menu, clique em **continuar**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **continuar** botão.|  
+|Avançar para a próxima instrução ou módulo|Sobre o **Debug** menu, clique em **intervir**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **intervir** botão.<br /><br /> Pressione F11.|  
+|Passar pela próxima instrução ou módulo|Sobre o **Debug** menu, clique em **Step Over**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **Step Over** botão.<br /><br /> Pressione F10.|  
+|Sair de um módulo|Sobre o **Debug** menu, clique em **depuração circular**.<br /><br /> Sobre o **depurar** barra de ferramentas, clique no **depuração circular** botão.<br /><br /> Pressione SHIFT+F11.|  
 |Executar para o local do cursor atual|Clique com o botão direito do mouse na janela Editor de Consultas e então clique em **Executar até o Cursor**.<br /><br /> Pressione CTRL+F10.|  
   
 ## <a name="see-also"></a>Consulte também  

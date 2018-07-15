@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AlgorithmParameters element
 ms.assetid: 240cbb60-7fa3-46ef-b5be-cd14c9ec10de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c73495677fd6a1eaf8ff1c70f154bf240b04e709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ab357b16b8b10b13d3ddb23b2a2bc1e7a32c486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330426"
 ---
 # <a name="algorithmparameters-element-assl"></a>Elemento AlgorithmParameters (ASSL)
   Contém a coleção de parâmetros para o algoritmo usado por um [MiningModel](../objects/miningmodel-element-assl.md) elemento.  

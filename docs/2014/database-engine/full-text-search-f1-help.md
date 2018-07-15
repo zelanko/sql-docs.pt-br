@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a906bf4f9993943634fb6a61bc30237557d5bf72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59663c31be7d28e899ca4299500e0b6225ace419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323196"
 ---
 # <a name="full-text-search-f1-help"></a>Ajuda F1 de pesquisa de texto completo
   Esta seção traz tópicos sobre as caixas de diálogo de pesquisa de texto completo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para acessar um tópico de interface do usuário, pressione F1 ou clique em **Ajuda** quando a caixa de diálogo estiver aberta.  
@@ -27,11 +26,11 @@ ms.locfileid: "36005699"
 |||  
 |-|-|  
 |[Novo catálogo de texto completo &#40;página geral&#41;](new-full-text-catalog-general-page.md)|[Propriedades do índice de texto completo &#40;página agendas&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
-|[Propriedades do catálogo de texto completo &#40;página geral&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[Palavras irrelevantes de texto completo novo &#40;página geral&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
+|[Propriedades do catálogo de texto completo &#40;página geral&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[Nova lista de palavras irrelevantes de texto completo &#40;página geral&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
 |[Propriedades do catálogo de texto completo &#40;página de agendamento de população&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[Propriedades da lista de palavras irrelevantes (stoplist) de texto completo](../../2014/database-engine/full-text-stoplist-properties.md)|  
 |[Propriedades do catálogo de texto completo &#40;tabelas e exibições de página&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[Nova Lista de Propriedades de Pesquisa](../../2014/database-engine/new-search-property-list.md)|  
 |[Propriedades do índice de texto completo &#40;página geral&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[Editor da Lista de Propriedades de Pesquisa](../../2014/database-engine/search-property-list-editor.md)|  
-|[Propriedades do índice de texto completo &#40;página colunas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
+|[Propriedades do índice de texto completo &#40;página de colunas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisa de Texto Completo](../relational-databases/search/full-text-search.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245714"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migrando do ADO MD para o ADOMD.NET
   A biblioteca do ADOMD.NET é semelhante à biblioteca do ADO MD (ActiveX Data Objects Multidimensional), uma extensão da biblioteca ADO (ActiveX Data Objects) usada no acesso a dados multidimensionais em aplicativos cliente baseados em COM (Component Object Model). O ADO MD oferece acesso fácil a dados multidimensionais de linguagens não gerenciadas, como o C++ e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. O ADOMD.NET oferece acesso fácil a dados analíticos (multidimensionais e de mineração de dados) de linguagens gerenciadas, como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Adicionalmente, o ADOMD.NET oferece um modelo de objeto de metadados avançado.  
@@ -59,7 +59,7 @@ ms.locfileid: "36117282"
  **Para recuperar metadados de modelo de mineração**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Nenhuma classe disponível.|Use uma das coleções de mineração de dados:<br /><br /> -A <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contém uma lista de cada modelo de mineração na fonte de dados.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fornece informações sobre os algoritmos de mineração disponíveis.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expõe informações sobre as estruturas de mineração no servidor.|  
+|Nenhuma classe disponível.|Use uma das coleções de mineração de dados:<br /><br /> -O <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contém uma lista de cada modelo de mineração na fonte de dados.<br />-A <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> fornece informações sobre os algoritmos de mineração disponíveis.<br />-O <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expõe informações sobre as estruturas de mineração no servidor.|  
   
  Para realçar essas diferenças, o exemplo de migração a seguir compara um aplicativo do ADO MD existente a um aplicativo do ADOMD.NET equivalente.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36117282"
  Os exemplos de código do ADO MD e do ADOMD.NET equivalente mostrados nesta seção executam o mesmo conjunto de ações: a criação de uma conexão, a execução de uma instrução MDX (Multidimensional Expressions) e a recuperação de metadados e de dados. No entanto, esses dois conjuntos de código não usam os mesmos objetos na execução dessas tarefas.  
   
 ### <a name="existing-ado-md-code"></a>Código ADO MD existente  
- O exemplo de código a seguir, retirado da documentação do ADO MD 2.8, escrito em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 e usa o ADO MD para demonstrar como se conectar e consultar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados. Este exemplo de ADO MD usa os seguintes objetos:  
+ O exemplo de código a seguir, extraído da documentação do ADO MD 2.8, escrito em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 e usa o ADO MD para demonstrar como se conectar e consultar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados. Este exemplo do ADO MD usa os seguintes objetos:  
   
 -   Cria uma conexão a partir de um objeto `Catalog`.  
   

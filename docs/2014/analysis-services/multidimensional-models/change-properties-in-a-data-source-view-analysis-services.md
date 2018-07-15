@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332506"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
   Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
@@ -85,6 +85,6 @@ ms.locfileid: "36121798"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
- [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;do Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

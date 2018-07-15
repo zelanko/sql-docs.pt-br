@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fd5f73f95dce1d40689062a368e1cc222023541c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e1f6f8700d0a5730785071f320b9ee88d80235b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299336"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarefa 3: Importando valores de domínio de um arquivo do Excel
   Nesta tarefa, você importará valores para o domínio **State** de uma planilha de um arquivo do Excel.  
@@ -42,7 +42,7 @@ ms.locfileid: "36006017"
   
 6.  Clique em **OK** para fechar a caixa de diálogo **Importar Valores de Domínio** . Você deve visualizar todos os nomes dos estados que importou na lista. Observe que a opção **Mostrar Somente Novo** é selecionada automaticamente após a importação. Quando você importar valores e não visualizar os valores antigos na lista, isso ocorre porque essa opção é habilitada automaticamente após a importação. Para visualizar todos os valores, desmarque a caixa de seleção. Se você importar o mesmo conjunto de valores novamente, nenhum dos valores será importado, pois já existem no domínio.  
   
-     ![Mostrar somente nova caixa de seleção em valores de domínio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "Mostrar apenas nova caixa de seleção em valores de domínio")  
+     ![Mostrar apenas nova caixa de seleção em valores de domínio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "mostram a nova caixa de seleção apenas nos valores de domínio")  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 4: Definindo regras de domínio](../../2014/tutorials/task-4-setting-domain-rules.md)  

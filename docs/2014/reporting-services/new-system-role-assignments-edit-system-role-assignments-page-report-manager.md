@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331266"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Atribuições de nova função do sistema: página Editar atribuições de função do sistema (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função do Sistema ou Editar Atribuições de Função do Sistema para definir a segurança do servidor de relatório. Toda a segurança é definida por atribuições de função que mapeiam usuários específicos ou grupos até as tarefas que eles podem executar. A lista de tarefas é representada como uma definição de função que você seleciona ao fazer a atribuição da função.  
@@ -55,7 +55,7 @@ ms.locfileid: "36118258"
  **Roles**  
  Fornece uma lista de funções no nível de sistema que você pode atribuir a outros usuários. Você pode especificar várias funções para uma única atribuição de função.  
   
- O Gerenciador de Relatórios não exibe as tarefas em cada função nem fornece um modo de adicionar ou modificar as tarefas. Você deve usar as funções como elas são definidas. Para criar, modificar ou excluir funções, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ O Gerenciador de Relatórios não exibe as tarefas em cada função nem fornece um modo de adicionar ou modificar as tarefas. Você deve usar as funções como elas são definidas. Para criar, modificar, ou excluir funções, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  Observe que, se você estiver usando [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] com Advanced Services, você deve usar as funções padrão que são fornecidas.  
   

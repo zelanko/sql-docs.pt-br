@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273962"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurar um servidor de relatório no modo nativo para a Administração Local (SSRS)
-  A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não instalou ou configurou o servidor de relatório, consulte [instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gerenciar um Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
+  A implantação de um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um dos seguintes sistemas operacionais exigirá mais etapas de configuração se você desejar administrar localmente a instância do servidor de relatório. Este tópico explica como configurar o servidor de relatório para administração local. Se você ainda não tiver instalado ou configurado o servidor de relatório, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gerenciar um Reporting Services modo de servidor de relatório nativo](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -97,7 +97,7 @@ ms.locfileid: "36117345"
   
 10. Desmarque a caixa de seleção **Exigir certificação do servidor (https:) para todos os sites desta zona** se não estiver usando HTTPS para o site padrão.  
   
-11. Clique em **Adicionar**.  
+11.  Clique em **Adicionar**.  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36117345"
   
  **Para executar com permissões elevadas a cada vez que você abrir o SSDT:**  
   
-1.  Na tela de início, digite `sql server` e, em seguida, clique com botão direito **SQL Server Data Tools para Visual Studio**. Clique em **Executar como administrador**  
+1.  Na tela inicial, digite `sql server` e, em seguida, clique com botão direito **SQL Server Data Tools para Visual Studio**. Clique em **Executar como administrador**  
   
      **Ou**em sistemas operacionais mais antigos:  
   

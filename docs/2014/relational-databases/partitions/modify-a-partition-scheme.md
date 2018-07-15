@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331416"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
   Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  
@@ -57,7 +56,7 @@ ms.locfileid: "36011364"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para modificar um esquema de partição:**  
   
- Essa ação específica não pode ser executada com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar um esquema de partição, primeiro você deve excluir o esquema e depois criar um novo com as propriedades desejadas usando o Assistente para Criar Partição. Para obter mais informações, consulte [criar tabelas particionadas e índices usando o SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) em **criar tabelas e índices particionados**.  
+ Essa ação específica não pode ser executada com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar um esquema de partição, primeiro você deve excluir o esquema e depois criar um novo com as propriedades desejadas usando o Assistente para Criar Partição. Para obter mais informações, consulte [criar tabelas particionadas e índices usando o SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) sob **criar tabelas e índices particionados**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Para excluir um esquema de partição  
   

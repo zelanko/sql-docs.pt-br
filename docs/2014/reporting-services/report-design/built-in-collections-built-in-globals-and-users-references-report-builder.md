@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331006"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
   A coleção de campos internos que inclui as coleções de `Globals` e de `User` representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de `Globals` fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de `User` fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  
@@ -33,7 +33,7 @@ ms.locfileid: "36007660"
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|A data e a hora em que o relatório começou a ser executado.|  
-|PageNumber|`Integer`|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de regiões de dados ou um mapa, na propriedade PageBreak, defina a propriedade de ResetPageNumber como `True`. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|PageNumber|`Integer`|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de região de dados ou um mapa, na propriedade PageBreak, defina a propriedade ResetPageNumber `True`. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
 |ReportFolder|`String`|O caminho completo para a pasta que contém o relatório. Isso não inclui a URL do servidor de relatório.|  
 |ReportName|`String`|O nome do relatório conforme armazenado no banco de dados do servidor de relatório.|  
 |ReportServerUrl|`String`|A URL do servidor de relatório na qual o relatório está sendo executado.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36007660"
 |OverallTotalPages|`Integer`|O número total de páginas para todo o relatório. Esse valor não é afetado por ResetPageNumber.<br /><br /> OverallTotalPages somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
 |RenderFormat|`RenderFormat`|Informações sobre a solicitação de renderização atual.<br /><br /> Para obter mais informações, consulte "RenderFormat" na próxima seção.|  
   
- Membros de `Globals` coleção retornam uma variante. Se você desejar usar um membro dessa coleção em uma expressão que exige um tipo de dados específico, deverá primeiro converter a variável. Por exemplo, para converter a variante de tempo de execução em um formato de Data, use `=CDate(Globals!ExecutionTime)`. Para obter mais informações, consulte [tipos de dados em expressões &#40;construtor de relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Os membros de `Globals` coleção retornam uma variante. Se você desejar usar um membro dessa coleção em uma expressão que exige um tipo de dados específico, deverá primeiro converter a variável. Por exemplo, para converter a variante de tempo de execução em um formato de Data, use `=CDate(Globals!ExecutionTime)`. Para obter mais informações, consulte [tipos de dados em expressões &#40;construtor de relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de `RenderFormat`.  
@@ -96,7 +96,7 @@ ms.locfileid: "36007660"
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;SSRS e construtor de relatórios&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

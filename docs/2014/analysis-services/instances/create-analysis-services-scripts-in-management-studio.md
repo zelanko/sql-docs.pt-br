@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5819b821bf482e02a8a5b189b5600aa6e4e637fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7a8102fdde22ada4f1b7bf4eb9edc6d1b31d7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330776"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Criar scripts do Analysis Services no Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclui recursos de geração de script, modelos e editores que você pode usar para gerar scripts de objetos e tarefas do Analysis Services.  
@@ -69,7 +69,7 @@ ms.locfileid: "36121372"
     >  Normalmente, você selecionaria **Arquivo** se quisesse criar várias versões diferentes do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Scripts de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Editor de consultas XMLA &#40;Analysis Services - dados multidimensionais&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

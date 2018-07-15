@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6316124a589b09d8b8dab39f866b9ce4585fcb9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb4fae568cb1301d1407a2694f6a2e527b0b4243
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247786"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
   Especifica que o Orientador de Otimização do Mecanismo de Banco de Dados deve apenas considerar descartar índices, exibições indexadas ou partições existentes durante a sessão de ajuste. Nenhuma nova estrutura de design físico é considerada quando esta opção de ajuste é especificada.  
@@ -44,7 +44,7 @@ ms.locfileid: "36115339"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode usar apenas uma vez para cada `TuningOptions` elemento. Não pode ser usado se os seguintes elementos são especificados no `TuningOptions` elemento:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento de particionamento &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
+|**Ocorrência**|Opcional. Pode usar apenas uma vez para cada `TuningOptions` elemento. Não pode ser usado se os elementos seguintes forem especificados no `TuningOptions` elemento:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento de particionamento &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36115339"
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  
- A exemplo a seguir mostra o `TuningOptions` seção de um arquivo de entrada XML do Orientador de otimização de mecanismo de banco de dados onde o `DropOnlyMode` for especificado. Nesse exemplo a hora de ajuste é limitada a 24 horas (1440 minutos) e todos os índices clusterizados e não clusterizados existentes serão considerados para o descarte:  
+ A exemplo a seguir mostra a `TuningOptions` seção de um arquivo de entrada XML do Orientador de otimização de mecanismo de banco de dados onde o `DropOnlyMode` for especificado. Nesse exemplo a hora de ajuste é limitada a 24 horas (1440 minutos) e todos os índices clusterizados e não clusterizados existentes serão considerados para o descarte:  
   
 ```xml  
 <TuningOptions  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74f296fd52640c950d7d2c4b227a1c3aedb17df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7186220ae32ceb8faa3fd5bdd906712d844d88e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317936"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (classe SqlService)
   Tenta alterar o nome de usuário e senha com os quais o serviço é executado.  
@@ -56,10 +56,10 @@ ServiceStartName , ServiceStartPassword
   
 -   Se NULL for especificado, o serviço será registrado como o **LocalSystem** conta.  
   
- Para o kernel ou drivers em nível de sistema, *StartName* contém o nome do objeto de driver, \FileSystem\Rdr ou \Driver\Xns, que usa o sistema de e/s ao carregar o driver de dispositivo. Se NULL for especificado, o driver será executado com o nome do objeto padrão criado pelo sistema de E/S com base no nome do serviço, por exemplo DWDOM\Admin.  
+ Para drivers de nível de sistema ou núcleo *StartName* contém o nome de objeto do driver, \FileSystem\Rdr ou \Driver\Xns, que o sistema de e/s usa para carregar o driver de dispositivo. Se NULL for especificado, o driver será executado com o nome do objeto padrão criado pelo sistema de E/S com base no nome do serviço, por exemplo DWDOM\Admin.  
   
  *ServiceStartPassword*  
- Um valor de cadeia de caracteres que especifica a senha para o nome da conta no *StartName* parâmetro. Especifique NULL se você não estiver alterando a senha. Especifique uma cadeia de caracteres vazia se o serviço não tiver nenhuma senha.  
+ Um valor de cadeia de caracteres que especifica a senha para o nome da conta de *StartName* parâmetro. Especifique NULL se você não estiver alterando a senha. Especifique uma cadeia de caracteres vazia se o serviço não tiver nenhuma senha.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito ou 1 se a solicitação não tiver suporte. Qualquer outro número indica um erro.  

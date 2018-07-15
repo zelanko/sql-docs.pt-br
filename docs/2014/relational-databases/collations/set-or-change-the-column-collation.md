@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298506"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar o agrupamento de coluna
   Você pode substituir o agrupamento de banco de dados para `char`, `varchar`, `text`, `nchar`, `nvarchar`, e `ntext` dados especificando um agrupamento diferente para uma coluna específica de uma tabela e usando um dos seguintes:  
@@ -42,7 +42,7 @@ ms.locfileid: "36006603"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, [Suporte a agrupamentos e a Unicode](collation-and-unicode-support.md).  
   
--   Usando o `Column.Collation` propriedade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Usando o `Column.Collation` propriedade em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Você não pode alterar o agrupamento de uma coluna atualmente referenciada por qualquer um dos seguintes:  
   

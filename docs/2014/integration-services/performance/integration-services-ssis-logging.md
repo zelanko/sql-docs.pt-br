@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291042"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -56,7 +56,7 @@ ms.locfileid: "36117459"
     > [!NOTE]  
     >  Não é possível usar o provedor de log [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] em um pacote executado no modo de 64 bits.  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log, que grava entradas de log a `sysssislog` tabela um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log, que grava entradas de log para o `sysssislog` na tabela um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
   
 -   O provedor de log de Eventos do Windows, que grava entradas no log de Aplicativo do log de Eventos do Windows no computador local.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36117459"
 ### <a name="configuration-of-log-provider"></a>Configuração do provedor de log  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
- Um provedor de log é criado e configurado como uma etapa na implementação do log em um pacote. Para obter mais informações, consulte [o log de serviços de integração](integration-services-ssis-logging.md).  
+ Um provedor de log é criado e configurado como uma etapa na implementação do log em um pacote. Para obter mais informações, consulte [log de serviços de integração](integration-services-ssis-logging.md).  
   
  Depois de criar um provedor de log, você pode exibir e modificar suas propriedades na janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

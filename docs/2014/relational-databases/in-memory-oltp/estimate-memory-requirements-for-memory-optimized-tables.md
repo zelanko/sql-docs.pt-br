@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207096"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
-  Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
+  Se você estiver criando um novo [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrar uma tabela existente com base em disco para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela, portanto, você pode provisionar o servidor com o suficiente memória. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
   
  Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](migrating-to-in-memory-oltp.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória.  
   
@@ -119,11 +119,11 @@ SELECT COUNT(DISTINCT [Col2])
   
  Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](../../database-engine/hash-indexes.md).  
   
- **Observação:** não é possível alterar o tamanho de matriz de índice de hash em tempo real. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
+ **Observação:** você não pode alterar dinamicamente o tamanho da matriz de índice de hash. Para alterar o tamanho da matriz de índice de hash é necessário remover a tabela, alterar o valor de bucket_count e recriar a tabela.  
   
  **Definindo o tamanho de matriz de índice de hash**  
   
- O tamanho da matriz de hash é definido `(bucket_count= <value>)` onde \<valor > é um valor inteiro maior que zero. Se \<valor > não é uma potência de 2, o bucket_count real é arredondado até a potência seguinte mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5000000), já que 5.000.000 não é uma potência de 2, a contagem de buckets real arredondado até 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
+ O tamanho da matriz de hash é definido `(bucket_count= <value>)` onde \<valor > é um valor inteiro maior que zero. Se \<valor > não for uma potência de 2, o bucket_count real será arredondado para a próxima potência mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5000000), já que 5.000.000 não é uma potência de 2, o número real de buckets arredondado até 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
   
  Assim, em nosso exemplo, a memória necessária para cada matriz de hash é:  
   
@@ -165,7 +165,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- Necessidades de memória para linhas obsoletas é estimada pela multiplicação do número de linhas obsoletas pelo tamanho da linha de uma tabela com otimização de memória (consulte [memória da tabela](#bkmk_MemoryForTable) acima).  
+ Necessidades de memória para linhas obsoletas é estimada pela multiplicação do número de linhas obsoletas pelo tamanho de uma linha da tabela com otimização de memória (consulte [memória da tabela](#bkmk_MemoryForTable) acima).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

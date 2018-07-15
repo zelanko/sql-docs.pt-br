@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331926"
 ---
 # <a name="xml-task"></a>XML Task
   A tarefa XML é usada para se trabalhar com dados XML. Usando essa tarefa, um pacote pode recuperar documentos XML, aplicar operações aos documentos usando folhas de estilos XSLT e expressões XPath, mesclar vários documentos ou validar, comparar e salvar os documentos atualizados em arquivos e variáveis.  
@@ -97,7 +97,7 @@ ms.locfileid: "36020299"
 ### <a name="validation-operation"></a>Operação Validation  
  A operação Validation pode ser configurada para usar um esquema de definição DTD (Document Type Definition) ou XSD (XML Schema).  
   
- Habilitar `ValidationDetails` para obter a saída de erro detalhadas. Para obter mais informações, consulte [Validate XML with the XML Task](xml-task.md).  
+ Habilitar `ValidationDetails` para obter a saída de erro detalhada. Para obter mais informações, consulte [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>Codificação de documentos XML  
  A tarefa XML oferece suporte a mesclagem apenas de documentos Unicode. Isso significa que a tarefa só pode ser aplicada à operação Merge em documentos que tenham a codificação Unicode. O uso de outras codificações fará a tarefa XML falhar.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Parameter element
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6e39068ff0fc5c1e0bf866029ad2e4413768c1c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 07af3cb2626fb0c6407ce07e0521e665f0d5d556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245616"
 ---
 # <a name="parameter-element-xmla"></a>Elemento Parameter (XMLA)
   Contém o nome e valor de um parâmetro usados pelo método [Execute](../xml-elements-methods-execute.md) .  

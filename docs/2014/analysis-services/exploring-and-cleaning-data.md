@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304716"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorando e limpando dados
   A preparação dos dados é muito mais do que limpeza de dados. Lembre-se de que o modo como os dados são preparados também afeta como os resultados são interpretados no final. A preparação dos dados envolve as seguintes tarefas:  
@@ -36,7 +36,7 @@ ms.locfileid: "36006963"
   
 -   Conversão dos tipos de dados ou categorização de valores se necessário para análise.  
   
- Se você for novo para modelagem de dados, é recomendável que você leia o tópico relacionado, [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
+ Se você for novo para a modelagem de dados, é recomendável que você leia o tópico relacionado, [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Ferramentas de preparação de dados  
  Os Suplementos de Mineração de Dados para Office incluem as seguintes ferramentas para limpeza e preparação dos dados:  
@@ -53,7 +53,7 @@ ms.locfileid: "36006963"
  [Explorar dados &#40;suplementos de mineração de dados do SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Detectar exceções e lidar com elas  
- O **exceções** Assistente representa graficamente a distribuição de valores em seus dados e ajuda a remover valores extremos. Use o **exceções** ferramenta para as seguintes tarefas de preparação de dados:  
+ O **exceções** Assistente representa graficamente a distribuição dos valores de seus dados e ajuda a remover valores extremos. Use o **exceções** ferramenta para as seguintes tarefas de preparação de dados:  
   
 -   Determine se valores individuais são confiáveis, com base em padrões encontrados nos dados.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36006963"
 ### <a name="sample-data"></a>Dados de Amostra  
  O assistente de Dados de Amostra fornece dois métodos para criar conjuntos de dados balanceados para modelos de treinamento e teste.  
   
--   **Amostragem aleatória.** Use esta opção para extrair um conjunto representativo de dados de um conjunto de dados maior, para usar em treinamento ou teste. Os suplementos de mineração de dados usam *amostragem estratificada* para garantir que um conjunto de valores balanceado seja obtido para cada variável de amostra.  
+-   **Amostragem aleatória.** Use esta opção para extrair um conjunto representativo de dados de um conjunto de dados maior, para usar em treinamento ou teste. Usam os suplementos de mineração de dados *estratificado* para garantir que um conjunto de valores balanceado é obtido para cada variável de exemplo.  
   
 -   **Sobreamostragem.** Use essa opção quando você tiver menos dados do que desejar para um resultado de destino, e precisar pesar esses dados de maneira mais pesada. Por exemplo, a fraude pode ser relativamente rara, mas você pode sobreamostrar os casos que envolvem fraude para obter dados suficientes para modelagem.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36006963"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)   
- [Validando modelos e usando modelos para previsão &#40;dados suplementos de mineração para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Implantando e dimensionando modelos de mineração &#40;dados suplementos de mineração para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Implantando e dimensionando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593421993631e4cffee671a92b343ee9b4b7e30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba98443b953f4107b209dd06af74349a81bb2a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224536"
 ---
 # <a name="miningmodel-element-assl"></a>Elemento MiningModel (ASSL)
   Define um único modelo de mineração de dados.  
@@ -75,7 +75,7 @@ ms.locfileid: "36117042"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[MiningModels](../collections/miningmodels-element-assl.md)|  
-|Elementos filho|[Algorithm](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [Columns](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [Name](../properties/name-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
+|Elementos filho|[Algoritmo](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [anotações](../collections/annotations-element-assl.md), [agrupamento](../properties/collation-element-assl.md), [ Colunas](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrição](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [idioma](../properties/language-element-assl.md), [ LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [nome](../properties/name-element-assl.md), [estado](../properties/state-element-assl.md), [ Traduções](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento `FoldingParameters` do modelo de mineração destina-se a uso interno do servidor e não tem suporte para uso em instruções DDL.  

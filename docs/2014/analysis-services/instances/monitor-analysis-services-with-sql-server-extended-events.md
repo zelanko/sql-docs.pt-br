@@ -1,5 +1,5 @@
 ---
-title: Use o SQL Server Extended Events (XEvents) para monitorar o Analysis Services | Microsoft Docs
+title: Usar eventos estendidos (XEvents) do SQL Server para monitorar o Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332796"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Usar eventos estendidos do SQL Server (XEvents) para monitorar o Analysis Services
   O Analysis Services fornece recursos de rastreamento através do uso de [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
   
  Eventos Estendidos são uma infraestrutura de evento que é altamente escalonável e configurável para sistemas de servidor. Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho.  
   
- Todos os serviços de análise de eventos podem ser capturados e destinados a consumidores específicos, conforme definido em [eventos estendidos](../../relational-databases/extended-events/extended-events.md), através de XEvents.  
+ Todos os serviços de análise de eventos podem ser capturados e destinados a consumidores específicos, conforme definido na [eventos estendidos](../../relational-databases/extended-events/extended-events.md), através de XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Iniciando Eventos Estendidos no Analysis Services  
  O rastreamento de Eventos Estendidos é habilitado usando um comando de script de objeto de criação XMLA, conforme mostrado abaixo:  

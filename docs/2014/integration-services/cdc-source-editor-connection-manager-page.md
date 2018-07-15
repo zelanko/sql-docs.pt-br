@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f60c9562a611ca3f396456abd80fb65c4fb5a99a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1e78f64882c002e8bb9f7ae2a2f424ac7367fd89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300546"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de Origem CDC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem CDC** para selecionar o gerenciador de conexões do ADO.NET para o banco de dados do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do qual a origem CDC lê as linhas de alteração (o banco de dados CDC). Quando o banco de dados CDC é selecionado, você precisa selecionar uma tabela capturada no banco de dados.  
@@ -79,7 +79,7 @@ ms.locfileid: "36006160"
  Para obter mais informações, consulte [Propriedades personalizadas da origem CDC](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem CDC &#40;página colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Editor de origem CDC &#40;página de colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Editor de origem CDC &#40;página de saída de erro&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

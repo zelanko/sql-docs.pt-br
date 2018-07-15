@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a0deaffca9298b29ceb3d22c85bd199fcfc55ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9844fbe92d37a440bda6a165481e00de5a72c2d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212526"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Um parâmetro de relatório fornece uma maneira de escolher dados de relatório, conectar relatórios relacionados e variar a apresentação do relatório. Você pode fornecer um valor padrão e uma lista de valores disponíveis e o usuário pode alterar a seleção.  
   
- Depois de publicar um relatório, você poderá alterar os valores padrão, os valores disponíveis e outras propriedades para um parâmetro de relatório no servidor de relatórios. Você pode fornecer vários conjuntos de valores de parâmetros padrão criando relatórios vinculados. Para obter mais informações, consulte "Setting Parameter Properties para uma publicação Report" o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentação em [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Depois de publicar um relatório, você poderá alterar os valores padrão, os valores disponíveis e outras propriedades para um parâmetro de relatório no servidor de relatórios. Você pode fornecer vários conjuntos de valores de parâmetros padrão criando relatórios vinculados. Para obter mais informações, consulte "Setting Parameter Properties para um publicado Report" na [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentação no [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,14 +62,14 @@ ms.locfileid: "36118256"
 2.  Clique com o botão direito do mouse no parâmetro do relatório e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório &#40;relatórios e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
  [Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Alterar a ordem de um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Alterar a ordem de um parâmetro de relatório &#40;relatórios e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Adicionar parâmetros em cascata a um relatório &#40;SSRS e construtor de relatórios&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Adicionar parâmetros em cascata a um relatório &#40;relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [Adicionar um parâmetro com vários valores a um relatório](add-a-multi-value-parameter-to-a-report.md)  

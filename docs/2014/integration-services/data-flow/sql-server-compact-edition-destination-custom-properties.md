@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cab1b8116142122f534bc5571e847f68d5004356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5e36e58addab5c15cddd33f22b696e2380d128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310306"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propriedades personalizadas do destino SQL Server Compact Edition
   O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  

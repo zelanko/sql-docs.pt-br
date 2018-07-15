@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299816"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistente de Mapa e Assistente de Camada do Mapa (Construtor de Relatórios e SSRS)
   O Assistente de Mapa e o Assistente de Camada do Mapa automatizam a tarefa de criar um mapa, adicionar uma camada a um mapa ou alterar as opções de camada do mapa em uma camada existente.  
@@ -33,7 +33,7 @@ ms.locfileid: "36006553"
   
  Antes de adicionar um mapa a um relatório ou uma camada a um mapa, você deve ter estas informações:  
   
--   **Fonte de dados espaciais.** O local ou conexão a uma fonte que fornece dados espaciais, por exemplo, o nome de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância e um banco de dados que contém dados espaciais ou o nome de um Shapefile do Environmental Systems Research Institute, Inc. (ESRI).  
+-   **Fonte de dados espaciais.** O local ou a conexão a uma fonte que fornece dados espaciais, por exemplo, o nome de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância e um banco de dados que contém dados espaciais ou o nome de um Shapefile do Environmental Systems Research Institute, Inc. (ESRI).  
   
 -   **.** Um campo que contém conjuntos de coordenadas que especificam locais da fonte de dados espaciais.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36006553"
   
  Depois que adicionar um mapa ou camada do mapa e visualizar o relatório, você poderá alterar as opções do mapa e da camada do mapa que definir nos assistentes. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre mapas, consulte [mapeia &#40;construtor de relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Para obter instruções passo a passo sobre como adicionar um mapa a um relatório, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md).  
+ Para obter mais informações sobre o maps, consulte [mapeia &#40;construtor de relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md). Para obter instruções passo a passo sobre como adicionar um mapa a um relatório, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36006553"
   
  Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](http://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [solucionar problemas de relatórios: relatórios de mapa &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e "Planning for Maps" no [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server .  
+ Para visualizar um plano de fundo de peça no modo Design, você deve ter acesso à Internet. Para visualizar o plano de fundo de peça na visualização de um relatório em um servidor de relatório, esse servidor deve ser configurado para dar suporte a peças de mapa do Bing. Para obter mais informações, consulte [solucionar problemas de relatórios: relatórios de mapa &#40;construtor de relatórios e SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) e em "Planning for Maps" no [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server .  
   
  Para obter mais informações sobre outras maneiras de personalizar uma camada lado a lado, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
