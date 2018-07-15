@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354008"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
   O código gerenciado é invocado no servidor quando você chama um procedimento ou uma função, quando chama um método em um tipo CLR (Common Language Runtime) definido pelo usuário ou quando sua ação dispara um gatilho definido em qualquer das linguagens do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Como a execução desse código é exigida como parte de uma conexão de usuário, o acesso ao contexto do chamador a partir do código em execução no servidor é necessário. Além disso, determinadas operações de acesso a dados podem ser válidas somente se executadas no contexto do chamador. Por exemplo, o acesso a pseudotabelas inseridas e excluídas usadas em operações de gatilho será válido somente no contexto do chamador.  
@@ -33,9 +31,9 @@ ms.locfileid: "36117440"
   
  `SqlContext` fornece acesso aos seguintes componentes:  
   
--   `SqlPipe`: o objeto `SqlPipe` representa o "pipe" pelo qual os resultados fluem para o cliente. Para obter mais informações sobre o `SqlPipe` de objeto, consulte [objeto SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe`: o objeto `SqlPipe` representa o "pipe" pelo qual os resultados fluem para o cliente. Para obter mais informações sobre o `SqlPipe` do objeto, consulte [objeto SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: o objeto `SqlTriggerContext` pode ser recuperado somente de dentro um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre o `SqlTriggerContext` de objeto, consulte [objeto SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: o objeto `SqlTriggerContext` pode ser recuperado somente de dentro um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre o `SqlTriggerContext` do objeto, consulte [objeto SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable`: a propriedade `IsAvailable` é usada para determinar a disponibilidade de contexto.  
   

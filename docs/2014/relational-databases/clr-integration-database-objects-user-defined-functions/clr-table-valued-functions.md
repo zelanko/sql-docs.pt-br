@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83d955467034448e5c9a7337b674b85a12acb0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 67bb174803f7368257217e5244ef023e2c274929
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353998"
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
   Uma função com valor de tabela é uma função definida pelo usuário que retorna uma tabela.  
@@ -50,7 +48,7 @@ ms.locfileid: "36020047"
  Os parâmetros com valor de tabela são tipos de tabela definidos pelo usuário, transmitidos em um procedimento ou função e fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem funcionalidade semelhante para matrizes de parâmetros, mas oferecem maior flexibilidade e integração maior com o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os parâmetros com valor de tabela também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um parâmetro com valor de tabela. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre parâmetros com valor de tabela, consulte [Usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parâmetros de saída e funções com valor de tabela  
- As informações podem ser retornadas de funções com valor de tabela que usam parâmetros de saída. O parâmetro correspondente na função com valor de tabela do código de implementação deve usar um parâmetro de passagem por referência como o argumento. Observe que o Visual Basic não suporta parâmetros de saída da mesma maneira que o Visual C#. Você deve especificar o parâmetro por referência e aplicar o \<out () > atributo para representar um parâmetro de saída, como no exemplo a seguir:  
+ As informações podem ser retornadas de funções com valor de tabela que usam parâmetros de saída. O parâmetro correspondente na função com valor de tabela do código de implementação deve usar um parâmetro de passagem por referência como o argumento. Observe que o Visual Basic não suporta parâmetros de saída da mesma maneira que o Visual C#. Você precisa especificar o parâmetro por referência e aplicar o \<out () > atributo para representar um parâmetro de saída, da seguinte maneira:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -81,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   Geradas de dados externos. Por exemplo, uma função com valor de tabela que lê o log de eventos e o expõe como uma tabela.  
   
- **Observação** uma função com valor de tabela só pode executar acesso a dados por meio de um [!INCLUDE[tsql](../../includes/tsql-md.md)] de consulta no `InitMethod` método e não no `FillRow` método. O método `InitMethod` deverá ser marcado com a propriedade do atributo `SqlFunction.DataAccess.Read` se uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] for executada.  
+ **Observação** uma função com valor de tabela só pode executar acesso a dados por meio de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar na `InitMethod` método e não no `FillRow` método. O método `InitMethod` deverá ser marcado com a propriedade do atributo `SqlFunction.DataAccess.Read` se uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] for executada.  
   
 ## <a name="a-sample-table-valued-function"></a>Um exemplo de função com valor de tabela  
  A função com valor de tabela a seguir retorna informações do log de eventos do sistema. A função adota um único argumento de cadeia de caracteres que contém o nome do log de eventos a ser lido.  
@@ -180,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Exemplo: Retornando os resultados de uma consulta do SQL Server  
- O exemplo a seguir mostra uma função com valor de tabela que consulta um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo usa o banco de dados AdventureWorks Light do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obter mais informações sobre o download do AdventureWorks.  
+ O exemplo a seguir mostra uma função com valor de tabela que consulta um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo usa o banco de dados AdventureWorks Light do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Ver [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obter mais informações sobre o download do AdventureWorks.  
   
  Nomeie seu arquivo de código-fonte como FindInvalidEmails.cs ou FindInvalidEmails.vb.  
   

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab1bc1114d6bfd0ab29a2cc1e16b73466baa1d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013354"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354418"
 ---
 # <a name="coding-user-defined-types"></a>codificando tipos definidos pelo usuário
   Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
@@ -292,7 +290,7 @@ public Int32 Y
 ```  
   
 ## <a name="validating-udt-values"></a>Validando valores de UDT  
- Ao trabalhar com dados de UDT, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente valores binários em valores de UDT. Esse processo de conversão envolve verificar se os valores são apropriados ao formato de serialização do tipo e garantir que o valor possa ser desserializado corretamente. Isso garante que o valor pode ser convertido para formato binário. No caso das UDTs ordenadas por byte, isso também garante que o valor binário resultante corresponda ao valor binário original. Isso impede a manutenção de valores inválidos no banco de dados. Em alguns casos, esse nível de verificação pode ser inadequado. Talvez seja obrigatória uma validação adicional quando os valores de UDT devem estar em um domínio ou intervalo esperado. Por exemplo, uma UDT que implementa uma data pode exigir que o valor de dia seja um número positivo e que esteja em um determinado intervalo de valores válidos.  
+ Ao trabalhar com dados de UDT, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente valores binários em valores de UDT. Esse processo de conversão envolve verificar se os valores são apropriados ao formato de serialização do tipo e garantir que o valor possa ser desserializado corretamente. Isso garante que o valor pode ser convertido de volta para o formato binário. No caso das UDTs ordenadas por byte, isso também garante que o valor binário resultante corresponda ao valor binário original. Isso impede a manutenção de valores inválidos no banco de dados. Em alguns casos, esse nível de verificação pode ser inadequado. Talvez seja obrigatória uma validação adicional quando os valores de UDT devem estar em um domínio ou intervalo esperado. Por exemplo, uma UDT que implementa uma data pode exigir que o valor de dia seja um número positivo e que esteja em um determinado intervalo de valores válidos.  
   
  A propriedade `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` de `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` permite fornecer o nome de um método de avaliação executado pelo servidor quando os dados são atribuídos a uma UDT ou convertidos em uma. `ValidationMethodName` também é chamado durante a execução do utilitário bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, consulta distribuída e operações RPC (chamada de procedimento remoto) do protocolo TDS. O valor padrão de `ValidationMethodName` é null, o que indica não haver nenhum método de validação.  
   
@@ -372,10 +370,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Limitações do método de validação  
  O servidor chama o método de validação ao realizar conversões, e não quando os dados são inseridos definindo propriedades individuais, ou quando eles são inseridos usando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT.  
   
- Você deve chamar explicitamente o método de validação nos setters de propriedade e o `Parse` método se você quiser que o método de validação para executar em todas as situações. Não se trata de um requisito e, em alguns casos, talvez não seja sequer desejável.  
+ Você deve chamar explicitamente o método de validação nos setters de propriedade e o `Parse` método se desejar que o método de validação para ser executado em todas as situações. Não se trata de um requisito e, em alguns casos, talvez não seja sequer desejável.  
   
 ### <a name="parse-validation-example"></a>Exemplo de validação de Parse  
- Para garantir que o `ValidatePoint` método é invocado no `Point` classe, você deverá chamá-la do `Parse` método e coordenam a valores da propriedade procedimentos que defina a X e Y. O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação do `Parse` função.  
+ Para garantir que o `ValidatePoint` método é invocado na `Point` classe, você deve chamá-lo no `Parse` método e coordenam a valores da propriedade procedimentos que defina X e Y. O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação do `Parse` função.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -421,7 +419,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Exemplo de validação da propriedade  
- O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação dos procedimentos de propriedade que defina as coordenadas X e Y.  
+ O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação dos procedimentos de propriedade que definir as coordenadas X e Y.  
   
 ```vb  
 Public Property X() As Int32  
@@ -495,7 +493,7 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>Codificando métodos de UDT  
- Durante a codificação dos métodos de UDT, considere se o algoritmo usado pode ser alterado com o passar do tempo. Em caso positivo, você talvez queira considerar a criação de uma classe separada para os métodos usados pela UDT. Caso o algoritmo seja alterado, é possível recompilar a classe com o novo código e carregar o assembly em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem afetar a UDT. Em muitos casos, as UDTs podem ser recarregadas usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mas isso pode causar problemas nos dados existentes. Por exemplo, o `Currency` UDT incluído com o **AdventureWorks** usa do banco de dados de exemplo um **ConvertCurrency** de função para converter valores de moeda, que é implementado em uma classe separada. É possível que algoritmos de conversão sejam alterados de maneiras imprevisíveis no futuro, ou que uma nova funcionalidade seja obrigatória. Separando o **ConvertCurrency** de função do `Currency` implementação de UDT fornece maior flexibilidade durante o planejamento de alterações futuras.  
+ Durante a codificação dos métodos de UDT, considere se o algoritmo usado pode ser alterado com o passar do tempo. Em caso positivo, você talvez queira considerar a criação de uma classe separada para os métodos usados pela UDT. Caso o algoritmo seja alterado, é possível recompilar a classe com o novo código e carregar o assembly em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem afetar a UDT. Em muitos casos, as UDTs podem ser recarregadas usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY, mas isso pode causar problemas nos dados existentes. Por exemplo, o `Currency` UDT incluído com o **AdventureWorks** usos do banco de dados de exemplo uma **ConvertCurrency** de função para converter valores de moeda, que é implementado em uma classe separada. É possível que algoritmos de conversão sejam alterados de maneiras imprevisíveis no futuro, ou que uma nova funcionalidade seja obrigatória. Separando o **ConvertCurrency** função do `Currency` implementação de UDT fornece maior flexibilidade ao planejar alterações futuras.  
   
 ### <a name="example"></a>Exemplo  
  O `Point` classe contém três métodos simples para calcular a distância: **distância**, **DistanceFrom** e **DistanceFromXY**. Cada um retorna `double` que calcula a distância entre `Point` e zero, a distância entre um ponto especificado e `Point`, além da distância entre as coordenadas X e Y e `Point`. **Distância** e **DistanceFrom** cada chamada **DistanceFromXY**e demonstram como usar argumentos diferentes para cada método.  
@@ -548,7 +546,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  A classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fornece atributos personalizados que podem ser usados para marcar definições de método a fim de especificar determinismo, comportamento em chamada nula e determinar se um método é um modificador. Os valores padrão dessas propriedades são pressupostos, e o atributo personalizado só é usado quando um valor não padrão é necessário.  
   
 > [!NOTE]  
->  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre a `IEnumerable` retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "método, propriedade ou campo '\<nome >' na classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido. "  
+>  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método compila e o assembly implanta, mas um erro sobre o `IEnumerable` retornar o tipo é gerado em tempo de execução com a seguinte mensagem: "método, propriedade ou campo '\<nome >' em classe\<classe >' no assembly '\<assembly >' tem o tipo de retorno inválido. "  
   
  A seguinte tabela descreve algumas das propriedades `Microsoft.SqlServer.Server.SqlMethodAttribute` relevantes que podem ser usadas em métodos de UDT, além de listar os valores padrão.  
   
@@ -625,7 +623,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  O propósito do preenchimento é assegurar que a cultura seja totalmente separada do valor de moeda, para que quando uma UDT seja comparada com outra no código [!INCLUDE[tsql](../../includes/tsql-md.md)], os bytes de cultura sejam comparados com os bytes de cultura e os valores de byte da moeda, com os valores de byte da moeda.  
   
- Para o código completo listagem para o `Currency` UDT, siga as instruções para instalar o CLR amostras em [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Para o código completo a listagem para o `Currency` UDT, siga as orientações para instalar o CLR amostras em [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Atributos Currency  
  A UDT `Currency` é definida com os atributos a seguir.  
@@ -749,7 +747,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Para o código completo listagem para o `Currency` UDT, consulte [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Para o código completo a listagem para o `Currency` UDT, consulte [exemplos do mecanismo de banco de dados do SQL Server](http://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando um tipo definido pelo usuário](creating-user-defined-types.md)  

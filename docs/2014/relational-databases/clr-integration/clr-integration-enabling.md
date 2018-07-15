@@ -1,13 +1,11 @@
 ---
-title: Habilitando integração CLR | Microsoft Docs
+title: Habilitando a integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15ad6087fc711de1ab818b10d591cd48512bb9a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f6f17415e13b3f0a9774a1e530756955f28c32dd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116159"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353288"
 ---
 # <a name="enabling-clr-integration"></a>Habilitando integração CLR
   O recurso de integração CLR (common language runtime) está desativado por padrão, e deve ser habilitado para usar objetos implementados com a integração CLR. Para habilitar a integração CLR, use o **clr habilitado** opção do **sp_configure** procedimento armazenado:  
@@ -43,7 +41,7 @@ GO
  Você pode desabilitar a integração CLR definindo a **clr habilitado** opção como 0. Quando você desabilitar integração de CLR, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deixará de executar todas as rotinas de CLR e descarregará todos os domínios de aplicativo.  
   
 > [!NOTE]  
->  Para habilitar a integração CLR, você deve ter permissão ALTER SETTINGS servidor nível, que é mantida implicitamente por membros do **sysadmin** e **serveradmin** funções de servidor fixas.  
+>  Para habilitar a integração CLR, você deve ter permissão ALTER SETTINGS servidor nível, que é mantida implicitamente por membros dos **sysadmin** e **serveradmin** funções de servidor fixas.  
   
 > [!NOTE]  
 >  Computadores configurados com grandes quantidades de memória e um número grande de processadores podem falhar ao carregar o recurso de integração CLR do SQL Server na inicialização do servidor. Para resolver esse problema, inicie o servidor usando o **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opção de inicialização de serviço e especifique um valor de memória grande o suficiente. Para obter mais informações, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
