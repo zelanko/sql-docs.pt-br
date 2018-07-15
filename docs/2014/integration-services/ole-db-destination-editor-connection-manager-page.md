@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328066"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de Destino OLE DB (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino de OLE DB** para selecionar a conexão OLE DB para o destino. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
   
 > [!NOTE]  
->  O `CommandTimeout` propriedade do destino OLE DB não está disponível na **Editor de destino do OLE DB**, mas pode ser definida usando o **Editor Avançado**. Além disso, determinadas opções de carregamento rápido só estarão disponíveis no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Destino OLE DB em [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  O `CommandTimeout` propriedade do destino OLE DB não está disponível na **Editor de destino do OLE DB**, mas pode ser definida usando a **Editor Avançado**. Além disso, determinadas opções de carregamento rápido só estarão disponíveis no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Destino OLE DB em [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Para obter mais informações sobre o destino OLE DB, consulte [OLE DB Destination](data-flow/ole-db-destination.md).  
   

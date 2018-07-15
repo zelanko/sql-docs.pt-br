@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29267826bd90ef82cdf28ffb99e265ec135d37cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224686"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemplos de consulta de modelo Naive Bayes
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Você também pode recuperar metadados sobre o modelo usando uma consulta no conjunto de linhas do esquema de mineração de dados. Esta seção explica como criar essas consultas para modelos baseados no algoritmo Naive Bayes da Microsoft.  
@@ -259,8 +259,8 @@ AS t
  Para ver a sintaxe de funções específicas, consulte [Referência de função de extensões de Data Mining &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Consulte também  
- [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Algoritmo Microsoft Naïve Bayes](microsoft-naive-bayes-algorithm.md)   
- [Conteúdo do modelo para modelos Naive Bayes de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Referência técnica do Microsoft Naive Bayes algoritmo](microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
+ [Mining Model Content para modelos Naive Bayes &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

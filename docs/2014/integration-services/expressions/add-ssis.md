@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
 - add operator (+)
@@ -17,13 +17,13 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b96a6e5c659925ea5eed876e1f7505997ea02b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b7b971521991be68d69efd2519b423958ef4fbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248856"
 ---
 # <a name="-add-ssis"></a>+ (Adição) (SSIS)
   Soma duas expressões numéricas.  
@@ -66,7 +66,7 @@ StandardCost + (StandardCost * @[Profit%])
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

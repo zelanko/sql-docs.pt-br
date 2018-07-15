@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 823604c6116c78f4313d5f1e328d98d7ed35f950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5e5b2f1c1792a2fdbc6b83d94f85dd5883b8954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206726"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades da Fonte de Dados** para exibir e modificar as informações de conexão para a fonte de dados no relatório.  
@@ -47,7 +47,7 @@ ms.locfileid: "36120313"
  Selecione esta opção para indicar que os conjuntos de dados que usam essa fonte de dados serão executados em uma única transação no banco de dados. Para incluir as transações de sub-relatórios que usam a mesma fonte de dados, defina **MergeTransactions** como **True** na seção de propriedades **Outros** do sub-relatório do painel **Propriedades** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Caixa de diálogo Propriedades da Fonte de Dados, Credenciais](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  

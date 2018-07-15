@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
 - replication [SQL Server], validating data
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 399bf86dc105495c3c1d16721e669fa8e3ed622f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d900cb88e99963fd57c7192d0f2934312434bc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282982"
 ---
 # <a name="validate-data-at-the-subscriber"></a>Validar dados no assinante
   Este tópico descreve como validar os dados no Assinante no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -316,7 +316,7 @@ ms.locfileid: "36116577"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, significa que as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Passe o seguinte:  
   
@@ -336,7 +336,7 @@ ms.locfileid: "36116577"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, significa que as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Passe o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
   
@@ -348,7 +348,7 @@ ms.locfileid: "36116577"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
-3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
+3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar `false`, significa que as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
 4.  Chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Passe o nome do Assinante e banco de dados de assinatura que estão sendo validados e o <xref:Microsoft.SqlServer.Replication.ValidationOption>desejado.  
   

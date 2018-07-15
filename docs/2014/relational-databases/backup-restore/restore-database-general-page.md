@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f310d762ca8a8d116b3accc618532b772eef8c26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219476"
 ---
 # <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
   Use a página **Geral** para especificar informações sobre os bancos de dados de origem e destino para uma operação de restauração de banco de dados.  
@@ -33,14 +32,14 @@ ms.locfileid: "36119384"
 -   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  Quando você especificar uma tarefa de restauração usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar correspondente [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTAURAR](/sql/t-sql/statements/restore-statements-transact-sql) script clicando **Script** e, em seguida, selecionando um destino para o script.  
+>  Quando você especifica uma tarefa de restauração usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar correspondente [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTAURAR](/sql/t-sql/statements/restore-statements-transact-sql) script clicando **Script** e, em seguida, selecionando um destino para o script.  
   
 ## <a name="permissions"></a>Permissões  
  Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE assumirão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** , e o proprietário (**dbo**) do banco de dados.  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
- Restauração de um backup criptografado requer `VIEW DEFINITION` permissões para o certificado ou chave assimétrica usada para criptografia durante o backup.  
+ Restaurar de um backup criptografado requer `VIEW DEFINITION` permissões para o certificado ou chave assimétrica usada para criptografia durante o backup.  
   
 ## <a name="options"></a>Opções  
   
@@ -59,13 +58,13 @@ ms.locfileid: "36119384"
 |Termo|Definição|  
 |----------|----------------|  
 |**Backup de banco de dados**|Insira o banco de dados a ser restaurado na lista. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.<br /><br /> Observação: para restaurar um backup protegido por senha, você deve usar a instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) .|  
-|**Restaurar para**|A caixa **Restaurar para** será definida, por padrão, como "Para o último backup obtido". Você também pode clicar em **Linha do Tempo** para mostrar a caixa de diálogo **Linha do Tempo do Backup** que exibe o histórico de backup de banco de dados no formato de uma linha do tempo. Clique em **cronograma** para designar um determinado `datetime` ao qual você deseja restaurar o banco de dados. O banco de dados será restaurado então no estado em que estava naquele momento determinado especificado. Consulte [Backup Timeline](backup-timeline.md).|  
+|**Restaurar para**|A caixa **Restaurar para** será definida, por padrão, como "Para o último backup obtido". Você também pode clicar em **Linha do Tempo** para mostrar a caixa de diálogo **Linha do Tempo do Backup** que exibe o histórico de backup de banco de dados no formato de uma linha do tempo. Clique em **linha do tempo** para designar um determinado `datetime` à qual você deseja restaurar o banco de dados. O banco de dados será restaurado então no estado em que estava naquele momento determinado especificado. Consulte [Backup Timeline](backup-timeline.md).|  
   
 ### <a name="restore-plan"></a>Plano de restauração  
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Conjuntos de backup a serem restaurados**|Exibe os conjuntos de backup disponíveis para o local especificado. Cada conjunto de backup, o resultado de uma operação de backup única, é distribuído por todos os dispositivos do conjunto de mídias. Por padrão, um plano de recuperação é sugerido para atingir a meta da operação de restauração que baseia-se na seleção dos conjuntos de backup necessários. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o histórico de backup no **msdb** para identificar quais backups são necessários para restaurar um banco de dados, e cria um plano de restauração. Por exemplo, para a restauração de um banco de dados, o plano de restauração seleciona o backup completo de banco de dados mais recente, seguido do backup de banco de dados mais recente, subsequente e diferencial, se houver. No modelo de recuperação completa, o plano de restauração, em seguida, seleciona todos os backups de log subsequentes.<br /><br /> Para substituir o plano de recuperação sugerido, você pode alterar as seguintes seleções na grade. Todos os backups que dependem de um backup não selecionado serão desmarcados automaticamente.<br /><br /> **Restaurar**:<br />                          As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.<br />**Nome**: O nome do conjunto de backup.<br />**Componente**: O componente de backup: **banco de dados**, **arquivo**, ou  **\<em branco >** (para logs de transação).<br />**Tipo**: tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.<br />**Servidor**: o nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.<br />**Banco de dados**: O nome do banco de dados envolvido na operação de backup.<br />**Posição**: a posição do conjunto de backup no volume.<br />**Primeiro LSN**: O número de sequência de log da primeira transação no conjunto de backup. Em branco para backups de arquivo.<br />**LSN da última**: O número de sequência de log da última transação no conjunto de backup. Em branco para backups de arquivo.<br />**Ponto de verificação LSN**: O número de sequência de log (LSN) do ponto de verificação mais recente no momento em que o backup foi criado.<br />**LSN completo**: O número de sequência de log do backup de banco de dados completo mais recente.<br />**Data de início**: A data e hora de início de operação de backup, apresentadas na configuração regional do cliente.<br />**Data de término**: A data e hora de término da operação de backup, apresentadas na configuração regional do cliente.<br />**Tamanho**: definir o tamanho do backup em bytes.<br />**Nome de usuário**: O nome do usuário que realizou a operação de backup.<br /><br /> **Expiração**: A data e a hora de expiração do conjunto de backup.<br /><br /> As caixas de seleção serão habilitadas apenas quando a caixa de **Seleção Manual** estiver marcada. Isso permite selecionar os conjuntos de backup a serem restaurados.<br /><br /> Quando a caixa **Seleção Manual** estiver marcada, a exatidão da opção Restaurar Plano será verificada a cada vez que for modificada. Se a sequência de backups estiver incorreta, será exibida uma mensagem de erro.|  
+|**Conjuntos de backup a serem restaurados**|Exibe os conjuntos de backup disponíveis para o local especificado. Cada conjunto de backup, o resultado de uma operação de backup única, é distribuído por todos os dispositivos do conjunto de mídias. Por padrão, um plano de recuperação é sugerido para atingir a meta da operação de restauração que baseia-se na seleção dos conjuntos de backup necessários. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o histórico de backup no **msdb** para identificar quais backups são necessários para restaurar um banco de dados, e cria um plano de restauração. Por exemplo, para a restauração de um banco de dados, o plano de restauração seleciona o backup completo de banco de dados mais recente, seguido do backup de banco de dados mais recente, subsequente e diferencial, se houver. No modelo de recuperação completa, o plano de restauração, em seguida, seleciona todos os backups de log subsequentes.<br /><br /> Para substituir o plano de recuperação sugerido, você pode alterar as seguintes seleções na grade. Todos os backups que dependem de um backup não selecionado serão desmarcados automaticamente.<br /><br /> **Restaurar**:<br />                          As caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.<br />**Nome**: O nome do conjunto de backup.<br />**Componente**: O componente de backup: **banco de dados**, **arquivo**, ou ** \<em branco >** (para logs de transação).<br />**Tipo**: tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.<br />**Servidor**: o nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.<br />**Banco de dados**: O nome do banco de dados envolvido na operação de backup.<br />**Posição**: a posição do conjunto de backup no volume.<br />**Primeiro LSN**: O número de sequência de log da primeira transação no conjunto de backup. Em branco para backups de arquivo.<br />**Último LSN**: O número de sequência de log da última transação no conjunto de backup. Em branco para backups de arquivo.<br />**Ponto de verificação LSN**: O número de sequência de log (LSN) do ponto de verificação mais recente no momento em que o backup foi criado.<br />**LSN completo**: O número de sequência de log do backup de banco de dados completo mais recente.<br />**Data de início**: A data e a hora em que iniciou a operação de backup, apresentadas na configuração regional do cliente.<br />**Data de término**: A data e hora de conclusão da operação de backup, apresentadas na configuração regional do cliente.<br />**Tamanho**: O tamanho do backup é definido em bytes.<br />**Nome de usuário**: O nome do usuário que realizou a operação de backup.<br /><br /> **Expiração**: A data e hora de expiração do conjunto de backup.<br /><br /> As caixas de seleção serão habilitadas apenas quando a caixa de **Seleção Manual** estiver marcada. Isso permite selecionar os conjuntos de backup a serem restaurados.<br /><br /> Quando a caixa **Seleção Manual** estiver marcada, a exatidão da opção Restaurar Plano será verificada a cada vez que for modificada. Se a sequência de backups estiver incorreta, será exibida uma mensagem de erro.|  
 |**Verificar mídia de backup**|Chama uma instrução RESTORE VERIFY_ONLY nos conjuntos de backup selecionados.<br /><br /> Observação: essa é uma operação de execução longa e seu progresso pode ser acompanhado e cancelado por meio do Monitor de Progresso na Estrutura da Caixa de Diálogo.<br /><br /> Esse botão permite verificar a integridade dos arquivos de backup selecionados antes da restauração.<br /><br /> Ao verificar a integridade de conjuntos de backup, o status do progresso na parte inferior esquerda da caixa de diálogo dirá "Verificando" em vez de "Executando".|  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  

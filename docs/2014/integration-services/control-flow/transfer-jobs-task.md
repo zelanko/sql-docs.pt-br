@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4bd6884ed4994f55fb9edd816505796ea47c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef0ed6a2af2d48010550997d7ba216a91f2728f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296986"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
   A tarefa Transferir Trabalhos transfere um ou mais trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "36010084"
  A tarefa Transferir Trabalhos gera um evento de informação com o número de trabalhos transferidos e um evento de aviso quando um trabalho é substituído. A tarefa não informa o progresso incremental da transferência de trabalhos; informa só 0% e 100% concluídos.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido na propriedade `ExecutionValue` da tarefa retorna o número de trabalhos que são transferidos. Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir trabalhos, informações sobre a transferência do trabalho pode ser disponibilizada para outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ O valor de execução, definido na propriedade `ExecutionValue` da tarefa retorna o número de trabalhos que são transferidos. Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir trabalhos, informações sobre a transferência de trabalhos pode se tornar disponível a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Trabalhos inclui as seguintes entradas de log personalizadas:  

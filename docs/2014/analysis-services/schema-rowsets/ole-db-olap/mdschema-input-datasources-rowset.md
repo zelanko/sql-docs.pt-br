@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_INPUT_DATASOURCES rowset
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba789133cddb1d8b074a58e36ee2018359ae504e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aedd2980b6c51872a9d78d6d1c2cbbecc84d7ec4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249106"
 ---
 # <a name="mdschemainputdatasources-rowset"></a>Conjunto de linhas MDSCHEMA_INPUT_DATASOURCES
   Descreve as fontes de dados definidas dentro do banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_INPUT_DATASOURCES` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_INPUT_DATASOURCES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

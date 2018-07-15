@@ -20,18 +20,18 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241366"
 ---
 # <a name="overridebehavior-element-assl"></a>Elemento OverrideBehavior (ASSL)
-  Indica o comportamento de substituição da relação descrita por um [AttributeRelationship](../objects/attributerelationship-element-assl.md) elemento.  
+  Indica o comportamento substituto da relação descrita por um [AttributeRelationship](../objects/attributerelationship-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36117979"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|*Alta segurança*|  
+|Valor padrão|*Forte*|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -66,7 +66,7 @@ ms.locfileid: "36117979"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*Alta segurança*|Indica o comportamento substituto da relação descrita por um elemento AttributeRelationship. Dita como o posicionamento em um atributo afeta a posição do outro.|  
+|*Forte*|Indica o comportamento substituto da relação descrita por um elemento AttributeRelationship. Dita como o posicionamento em um atributo afeta a posição do outro.|  
 |*Nenhuma*|Nenhum efeito.|  
   
  A enumeração que corresponde aos valores permitidos para `OverrideBehavior` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.OverrideBehavior>.  

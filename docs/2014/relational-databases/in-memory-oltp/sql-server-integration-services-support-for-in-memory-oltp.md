@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5097a030b16a0fe1e18919dc8b877f016660b923
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8848a26d5aee71036994e106fac2edf5bcbccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223306"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Suporte do SQL Server Integration Services para OLTP na memória
   Você pode usar uma tabela com otimização de memória, uma exibição que faça referência a tabelas com otimização de memória ou um procedimento armazenado compilado de modo nativo como a origem ou o destino de seu pacote SSIS ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). É possível usar [ADO NET Source](../../integration-services/data-flow/ado-net-source.md), [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)ou [ODBC Source](../../integration-services/data-flow/odbc-source.md) no fluxo de dados de um pacote SSIS e configurar o componente de origem para recuperar dados de uma tabela com otimização de memória ou uma exibição, ou especificar uma instrução SQL para executar um procedimento armazenado compilado de modo nativo. Da mesma forma, é possível usar [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md), [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)ou [ODBC Destination](../../integration-services/data-flow/odbc-destination.md) para carregar dados em uma tabela com otimização de memória ou em uma exibição, ou especificar uma instrução SQL para executar um procedimento armazenado compilado de modo nativo.  

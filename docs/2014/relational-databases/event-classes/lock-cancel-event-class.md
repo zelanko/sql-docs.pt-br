@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c121cbfef50c7f941f090ae54399bf0ad7760f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f9c82becfb066b6eb7da70d9e0524e0837be680
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242706"
 ---
 # <a name="lockcancel-event-class"></a>Classe de evento Lock:Cancel
   A classe de evento **Lock:Cancel** indica aquela aquisição de um bloqueio em um recurso cancelado; por exemplo, devido ao cancelamento de uma consulta.  

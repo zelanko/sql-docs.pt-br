@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: 206
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebd9a1aaf1b7a6c1e9130e3587ca286b4cf910c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 25dab69d079cf758a58669437e3e481eebe204a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173337"
 ---
 # <a name="what39s-new-database-engine"></a>O que&#39;novo para s (mecanismo de banco de dados)
   Esta versão mais recente do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] apresenta novos recursos e aprimoramentos que aumentam o poder e a produtividade de arquitetos, desenvolvedores e administradores que criam, desenvolvem e mantêm sistemas de armazenamento de dados. Estas são as áreas nas quais o [!INCLUDE[ssDE](../includes/ssde-md.md)] foi aprimorado.  
   
-##  <a name="Feature"></a> Aprimoramentos do mecanismo de banco de dados  
+##  <a name="Feature"></a> Aprimoramentos de recursos do mecanismo de banco de dados  
   
 ###  <a name="MemoryOpt"></a> Tabelas com otimização de memória  
  O OLTP em Memória é um mecanismo de banco de dados com otimização de memória integrado ao mecanismo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. OLTP em Memória é otimizado para OLTP. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "36120637"
   
   
 ###  <a name="AzureVM"></a> Hospedar um banco de dados SQL Server em uma janela de máquina Virtual do Azure  
- Use o [implantar um banco de dados do SQL Server para uma máquina Virtual Windows Azure](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Assistente para hospedar um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina Virtual Windows Azure.  
+ Use o [implantar um banco de dados do SQL Server para uma máquina Virtual Windows do Azure](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Assistente para hospedar um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina de Virtual do Windows Azure.  
   
   
 ###  <a name="Backup"></a> Backup e restauração aprimoramentos  
@@ -46,7 +46,7 @@ ms.locfileid: "36120637"
   
 -   **Backup do SQL Server para URL**  
   
-     O backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL foi introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 com suporte somente pelo [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell e SMO. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup ou restaurar do serviço de armazenamento de blob do Windows Azure. A nova opção está disponível tanto para a tarefa de backup como para os planos de manutenção. Para obter mais informações, consulte [usando a tarefa de Backup no SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), e [restauração do armazenamento do Windows Azure usando o SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     O backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL foi introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 com suporte somente pelo [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell e SMO. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup ou restaurar do serviço de armazenamento de blob do Windows Azure. A nova opção está disponível tanto para a tarefa de backup como para os planos de manutenção. Para obter mais informações, consulte [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), e [restauração do armazenamento do Windows Azure usando o SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 -   **Backup Gerenciado do SQL Server para Microsoft Azure**  
   
@@ -70,17 +70,17 @@ ms.locfileid: "36120637"
 ###  <a name="AlwaysOn"></a> Aprimoramentos do AlwaysOn  
  O [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] contém os seguintes aprimoramentos para Instâncias de Cluster de Failover AlwaysOn e Grupos de Disponibilidade AlwaysOn:  
   
--   Um Assistente para Adicionar Réplica do Azure simplifica a criação de soluções híbridas para grupos de disponibilidade AlwaysOn. Para obter mais informações, consulte [usar o Assistente para adicionar réplica Azure &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md).  
+-   Um Assistente para Adicionar Réplica do Azure simplifica a criação de soluções híbridas para grupos de disponibilidade AlwaysOn. Para obter mais informações, consulte [usar o assistente Adicionar réplica do Azure &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md).  
   
 -   O número máximo de réplicas secundárias é aumentado de 4 para 8.  
   
 -   Quando desconectadas da réplica primária ou durante a perda de quorum de cluster, as réplicas secundárias legíveis agora permanecem disponíveis para cargas de trabalho de leitura.  
   
--   Agora, as instâncias de cluster de failover (FCIs) podem usar Volumes Compartilhados Clusterizados (CSVs) como discos compartilhados de cluster. Para obter mais informações, consulte [sempre em Failover Cluster Instances](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Agora, as instâncias de cluster de failover (FCIs) podem usar Volumes Compartilhados Clusterizados (CSVs) como discos compartilhados de cluster. Para obter mais informações, consulte [Failover instâncias de Cluster AlwaysOn](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   Uma nova função de sistema, [sys. fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)e um novo DMV, [sys.DM io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), está disponível.  
+-   Uma nova função de sistema [sys. fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)e um novo DMV, [DM io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), está disponível.  
   
--   As DMVs a seguir foram aprimoradas e agora retornam informações de FCI: [sys.DM hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.DM hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), e [sys.DM hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
+-   As DMVs a seguir foram aprimorado e agora retornam informações sobre FCI: [DM hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [DM hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), e [DM hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
 ###  <a name="OIR"></a> Alternância de partição e indexação  
@@ -88,7 +88,7 @@ ms.locfileid: "36120637"
    
   
 ###  <a name="Lock"></a> Gerenciando a prioridade de bloqueio das operações Online  
- A opção `ONLINE = ON` agora contém uma opção `WAIT_AT_LOW_PRIORITY` que permite que você especifique por quanto tempo o processo de recriação deve aguardar os bloqueios necessários. A opção `WAIT_AT_LOW_PRIORITY` também permite configurar a conclusão dos processos de bloqueio relacionados à instrução REBUILD. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) e [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Informações sobre novos tipos de estados de bloqueio de solução de problemas está disponível em [sys.DM tran_locks &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) e [sys.DM os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
+ A opção `ONLINE = ON` agora contém uma opção `WAIT_AT_LOW_PRIORITY` que permite que você especifique por quanto tempo o processo de recriação deve aguardar os bloqueios necessários. A opção `WAIT_AT_LOW_PRIORITY` também permite configurar a conclusão dos processos de bloqueio relacionados à instrução REBUILD. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) e [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Solução de problemas de informações sobre novos tipos de estados de bloqueio está disponível no [DM tran_locks &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) e [DM os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
  
   
 ###  <a name="CCI"></a> Índices columnstore  
@@ -96,7 +96,7 @@ ms.locfileid: "36120637"
   
 -   **Índices columnstore clusterizados**  
   
-     Use um índice columnstore clusterizado para melhorar a compactação de dados e o desempenho de consultas para cargas de trabalho de data warehouse que basicamente executam carregamentos em massa e consultas somente leitura. Uma vez que o índice columnstore clusterizado é atualizável, a carga de trabalho pode executar muitas operações de inserção, atualização e exclusão. Para obter mais informações, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md) e [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+     Use um índice columnstore clusterizado para melhorar a compactação de dados e o desempenho de consultas para cargas de trabalho de data warehouse que basicamente executam carregamentos em massa e consultas somente leitura. Uma vez que o índice columnstore clusterizado é atualizável, a carga de trabalho pode executar muitas operações de inserção, atualização e exclusão. Para obter mais informações, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md) e [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 -   **PLANO DE EXECUÇÃO**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36120637"
    
   
 ###  <a name="Buffer"></a> Extensão do Pool de buffers  
- O [extensão do Pool de buffers](configure-windows/buffer-pool-extension.md) fornece a integração perfeita de unidades de estado sólido (SSD) como uma extensão de memória (NvRAM) de acesso aleatório não volátil para a [!INCLUDE[ssDE](../includes/ssde-md.md)] buffer pool para melhorar significativamente a taxa de transferência de e/s.  
+ O [extensão do Pool de buffers](configure-windows/buffer-pool-extension.md) fornece integração contínua das unidades de estado sólido (SSD) como uma extensão de memória (NvRAM) de acesso aleatório não volátil para o [!INCLUDE[ssDE](../includes/ssde-md.md)] melhorar significativamente a taxa de transferência de e/s do pool de buffers.  
    
   
 ###  <a name="Stats"></a> Estatísticas incrementais  
@@ -126,7 +126,7 @@ ms.locfileid: "36120637"
   
   
 ###  <a name="Compat"></a> Nível de compatibilidade do banco de dados  
- O nível de compatibilidade 90 não é válido no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Para obter mais informações, consulte [nível de compatibilidade do banco de dados ALTER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
+ O nível de compatibilidade 90 não é válido no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Para obter mais informações, consulte [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
 ##  <a name="TSQL"></a> Aprimoramentos de Transact-SQL  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36120637"
  A instrução `SELECT … INTO` é aprimorada e agora pode funcionar em paralelo. O nível de compatibilidade do banco de dados deve ser pelo menos 110.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)] Aprimoramentos para OLTP em Memória  
- Para obter informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)] alterações para oferecer suporte a OLTP na memória, consulte [suporte a Transact-SQL para OLTP na memória](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
+ Para obter informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)] alterações para dar suporte a OLTP na memória, consulte [Transact-SQL dá suporte para OLTP na memória](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
 ##  <a name="SystemTable"></a> Aprimoramentos do Modo de Exibição do Sistema  
@@ -146,22 +146,22 @@ ms.locfileid: "36120637"
  [sys. xml_indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) tem 3 colunas novas: `xml_index_type`, `xml_index_type_description`, e `path_id`.  
   
 ### <a name="sysdmexecqueryprofiles"></a>sys.dm_exec_query_profiles  
- [sys.DM exec_query_profiles &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) monitora o progresso da consulta em tempo real enquanto uma consulta está em execução.  
+ [DM exec_query_profiles &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) monitora o progresso da consulta em tempo real enquanto uma consulta está em execução.  
   
 ### <a name="syscolumnstorerowgroups"></a>sys.column_store_row_groups  
- [column_store_row_groups &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) fornece informações de índice columnstore clusterizado em uma base por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema.  
+ [column_store_row_groups &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) fornece informações de índice de columnstore clusterizado em uma base por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema.  
   
 ### <a name="sysdatabases"></a>sys.databases  
  [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) tem 3 colunas novas: `is_auto_create_stats_incremental_on`, `is_query_store_on`, e `resource_pool_id`.  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Aprimoramentos de exibição do sistema para OLTP em Memória  
- Para obter informações sobre aprimoramentos da exibição do sistema para dar suporte a OLTP na memória, consulte [exibições do sistema, procedimentos armazenados, DMVs e tipos de espera para OLTP na memória](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
+ Para obter informações sobre aprimoramentos de exibição do sistema para dar suporte a OLTP na memória, consulte [exibições do sistema, procedimentos armazenados, DMVs e tipos de espera para OLTP na memória](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
    
   
 ##  <a name="Security"></a> Aprimoramentos de segurança  
   
 ### <a name="connect-any-database-permission"></a>Permissão CONNECT ANY DATABASE  
- Uma nova permissão de nível de servidor. Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combinar com **SELECT ALL USER SECURABLES** ou `VIEW SERVER STATE` para permitir que um processo de auditoria exibir todos os dados ou todos os estados de banco de dados na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Uma nova permissão de nível de servidor. Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combine com **SELECT ALL USER SECURABLES** ou `VIEW SERVER STATE` para permitir que um processo de auditoria exibir todos os dados ou todos os estados de banco de dados na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### <a name="impersonate-any-login-permission"></a>Permissão IMPERSONATE ANY LOGIN  
  Uma nova permissão de nível de servidor. Quando concedida, permite que um processo de camada intermediária represente a conta de clientes que se conecta a ela, uma vez que ela se conecta aos bancos de dados. Quando negada, um logon com altos privilégios pode ser impedido de representar outros logons. Por exemplo, um logon com a permissão **CONTROL SERVER** pode ser impedido de representar outros logons.  
@@ -175,7 +175,7 @@ ms.locfileid: "36120637"
 [Implantar um banco de dados do SQL Server para uma máquina Virtual Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) permite a implantação de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados para uma VM do Windows Azure.  
 
 ### <a name="refs"></a>ReFS
-Agora há suporte para a implantação de bancos de dados ReFS.   
+Agora há suporte para a implantação de bancos de dados no ReFS.   
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos com suporte nas edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

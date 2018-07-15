@@ -1,5 +1,5 @@
 ---
-title: Remova as referências a procedimentos armazenados do sistema preteridos | Microsoft Docs
+title: Remover referências a procedimentos armazenados substituídos do sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
 - system stored procedures [SQL Server]
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45f10d9ab7697e84017da43d8767e52be23101bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5a588f8ec25301d3c8a4343e6c7f0d77eebdfe75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187573"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Remover referências a procedimentos armazenados do sistema obsoletos
   O Supervisor de Atualização detectou instruções que fazem referência a procedimentos armazenados do sistema não documentados e a procedimentos armazenados estendidos que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As instruções que fizerem referência a esses objetos falharão. Não use objetos ou APIs do sistema não documentados, pois a funcionalidade pode ser alterada ou removida sem notificação em uma versão futura.  

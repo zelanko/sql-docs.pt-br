@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18461e889e56f647b869d2b60cae49d662786160
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8779496e3e352a59477cf10f12a13011c5c6b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189343"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tarefa 8: Criando uma regra de domínio composto
-  Nesta tarefa, você pode criar uma regra para o **Address Validation** domínio composto. Definir uma regra de domínio cruzado: se **Cidade** é **Los Angeles**, **estado** devem ser **CA** onde **Cidade** e **estado** são dois domínios.  
+  Nesta tarefa, você pode criar uma regra para o **Address Validation** domínio composto. Defina uma regra de domínio cruzado: se **Cidade** é **Los Angeles**, **estado** deve ser **CA** onde **Cidade** e **estado** são dois domínios.  
   
 1.  No painel direito, alterne para o **regras do CD** guia.  
   
 2.  Clique em **adicionar uma nova regra de domínio** na barra de ferramentas.  
   
-3.  Tipo **City-State Rule** para **nome** e pressione **ENTER**.  
+3.  Tipo de **City-State Rule** para **nome** e pressione **ENTER**.  
   
-4.  No **criar uma regra** painel, selecione **City** na lista de domínios e selecione a condição **valor é igual a** e tipo **Los Angeles** para o valor.  
+4.  No **uma regra de compilação** painel, selecione **Cidade** na lista de domínios e selecione a condição **valor é igual a** e digite **Los Angeles** para o valor.  
   
 5.  No **, em seguida,** painel, selecione **estado** na lista de domínios e selecione **valor é igual a**, tipo **CA** para o valor e pressione **Guia**.  
   

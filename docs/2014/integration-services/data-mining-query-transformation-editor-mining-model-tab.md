@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fad00af545c430f5f1b7d9cf58085a2c378c84e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d47d8d95c08c2e625183832eec18a569b4171de0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304086"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de Transformação Consultas de Mineração de Dados (guia Modelo de Mineração)
   Use a guia **Modelo de Mineração** da caixa de diálogo **Editor de Transformação Consultas de Mineração de Dados** para selecionar a estrutura e os modelos de mineração de dados.  
@@ -45,6 +45,6 @@ ms.locfileid: "36009416"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação de consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Editor de transformação de consulta de mineração de dados &#40;guia de consulta&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

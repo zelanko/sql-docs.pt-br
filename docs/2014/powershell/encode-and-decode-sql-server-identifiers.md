@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195352"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar e decodificar identificadores do SQL Server
   Os identificadores delimitados do SQL Server às vezes contêm caracteres sem suporte em caminhos do Windows PowerShell. Esses caracteres podem ser especificados codificando seus valores hexadecimais.  
@@ -34,7 +34,7 @@ ms.locfileid: "36121030"
  O cmdlet **Encode-SqlName** usa um identificador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada. Ele produz uma cadeia de caracteres com todos os caracteres não suportados pela linguagem Windows PowerShell codificada com "%xx". O cmdlet **Decode-SqlName** usa um identificador codificado do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada e retorna o identificador original.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitações e Restrições  
- O `Encode-Sqlname` e `Decode-Sqlname` cmdlets só codificam ou decodificam os caracteres são permitidos nos identificadores delimitados do SQL Server, mas não são suportados em caminhos do PowerShell. Estes são os caracteres codificados pelo **Encode-SqlName** e decodificados pelo **Decode-SqlName**:  
+ O `Encode-Sqlname` e `Decode-Sqlname` cmdlets só codificam ou decodificam os caracteres permitidos nos identificadores delimitados do SQL Server, mas não são suportados em caminhos do PowerShell. Estes são os caracteres codificados pelo **Encode-SqlName** e decodificados pelo **Decode-SqlName**:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  

@@ -19,27 +19,27 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f657dd8c4c908dd39dc46ce4e1322cb5d465f89d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 83178076a7d42bedc0f22502bc423ae4f02e1fe0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303556"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados em SQLXML 4.0
   Esta seção fornece informações sobre como usar esquemas XSD anotados no SQLXML 4.0. Em versões anteriores de SQLXML, uma funcionalidade semelhante era fornecida com os esquemas XDR (Dados XML reduzidos). Esta seção também apresenta informações sobre XDR para aplicativos herdados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Introdução aos esquemas XSD anotados &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+ [Introdução a esquemas XSD anotados &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Fornece uma visão geral de esquemas XSD anotados em SQLXML 4.0.  
   
  [Usando anotações em esquemas XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  Descreve como usar anotações em esquemas XSD em vários cenários e fornece exemplos.  
   
- [Usando esquemas XSD em consultas anotados &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Usando anotados a esquemas XSD em consultas &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  Descreve como usar esquemas XSD anotados em consultas.  
   
  [Convertendo esquemas XDR anotados a esquemas XSD equivalentes &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
@@ -53,12 +53,12 @@ ms.locfileid: "36005863"
   
 -   Esquema XML parte 0: Primer, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML parte 1: Estruturas, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Estruturas, o W3C recomendação (http://www.w3.org/TR/xmlschema-1/)  
   
 -   Esquema XML parte 2: Datatypes, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL (XSLT) de transformações (http://www.w3.org/TR/xslt)  
+-   XSL (de transformações (XSLT)http://www.w3.org/TR/xslt)  
   
   

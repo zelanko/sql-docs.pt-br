@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
 - page breaks [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f261d0fcb2af1ffd6b58e09723167d760e0c93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fe2bf439a3ba9da5d2f486ec93bf63f909f43db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275962"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
   Relatórios grandes apresentam certos desafios de processamento e requerem certas configurações para que sejam executados corretamente. Relatórios grandes não devem ser executados sob demanda, salvo se estiverem configurados para oferecer suporte à paginação.  
@@ -73,8 +73,8 @@ ms.locfileid: "36118828"
  Se você quiser usar entrega de relatório por email, configure a assinatura para incluir um link. Evite enviar o relatório como anexo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Definir propriedades de processamento de relatório](set-report-processing-properties.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](preload-the-cache-report-manager.md)  

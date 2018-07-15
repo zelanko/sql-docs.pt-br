@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 798fa10d608db06da3a45041df25c11047dc7a7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4dc209f985cafe804f81fa54fa68c56655d3e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310736"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Conjunto de linhas DISCOVER_PARTITION_DIMENSION_STAT
   Retorna estatísticas sobre a dimensão associada a uma partição  
@@ -28,7 +28,7 @@ ms.locfileid: "36009026"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_PARTITION_DIMENSION_STAT` linhas contém as seguintes colunas.  
+ O `DISCOVER_PARTITION_DIMENSION_STAT` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

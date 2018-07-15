@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d00a0ecf553798fb37a424a516476cd3eb307d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9124d6807bc4fea19e98fb0f099cd31ba15172bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235336"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server)
   O formato de caractere Unicode é recomendado para transferir em massa dados entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados com caracteres estendidos DBCS. O formato de dados de caractere Unicode permite exportar dados de um servidor usando uma página de código que difere da página de código usada pelo cliente que está executando a operação. Em tais casos, o uso do formato de caractere Unicode tem as seguintes vantagens:  
@@ -36,12 +35,12 @@ ms.locfileid: "36117898"
 > [!IMPORTANT]  
 >  Para trabalhar com um arquivo de dados de caractere Unicode, todos os campos de entrada devem ser cadeias de caracteres de texto Unicode (isto é, sejam cadeias de caracteres Unicode de tamanho fixo ou terminadas por caractere).  
   
- O `sql_variant` dados armazenados em um arquivo de dados de formato de caractere Unicode funciona da mesma maneira que operam em um arquivo de dados de formato de caractere, exceto que os dados são armazenados como `nchar` em vez de `char` dados. Para obter mais informações sobre formato de caractere, consulte [Suporte a agrupamentos e a Unicode](../collations/collation-and-unicode-support.md).  
+ O `sql_variant` dados que são armazenados em um arquivo de dados de formato de caractere Unicode operam da mesma forma que ele opera em um arquivo de dados de formato de caractere, exceto que os dados são armazenados como `nchar` em vez de `char` dados. Para obter mais informações sobre formato de caractere, consulte [Suporte a agrupamentos e a Unicode](../collations/collation-and-unicode-support.md).  
   
  Para usar um campo ou terminador de linha diferente do padrão que é fornecido com o formato de caractere Unicode, consulte [especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Opções de comando para formato de caractere Unicode  
- Você pode importar dados de formato de caractere Unicode para uma tabela usando **bcp**, BULK INSERT ou INSERT... SELECIONE \* DE OPENROWSET(BULK...). Para uma **bcp** comando ou a instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
+ Você pode importar dados de formato de caractere Unicode para uma tabela usando **bcp**, BULK INSERT ou INSERT... SELECIONE \* DE OPENROWSET. Para um **bcp** comando ou a instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
   
  Há suporte ao formato de caractere Unicode nas seguintes opções da linha de comando:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "36117898"
  Os exemplos a seguir demonstram como exportar em massa dados de caractere Unicode usando **bcp** e importar em massa os mesmos dados usando BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
- Os exemplos requerem que uma tabela denominada `myTestUniCharData` tabela ser criada no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados de exemplo sob o `dbo` esquema. Antes de executar os exemplos, é necessário criar essa tabela. Para criar esta tabela, no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , execute:  
+ Os exemplos requerem que uma tabela denominada `myTestUniCharData` seja criada na [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados de exemplo sob a `dbo` esquema. Antes de executar os exemplos, é necessário criar essa tabela. Para criar esta tabela, no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , execute:  
   
 ```  
 USE AdventureWorks2012;  

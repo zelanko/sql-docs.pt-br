@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243396"
 ---
 # <a name="mdschemacubes-rowset"></a>Conjunto de linhas MDSCHEMA_CUBES
   Descreve a estrutura de cubos dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_CUBES` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_CUBES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

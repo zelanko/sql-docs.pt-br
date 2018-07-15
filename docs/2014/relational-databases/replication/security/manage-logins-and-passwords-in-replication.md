@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication]
 - logins [SQL Server replication], managing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server replication], passwords
 ms.assetid: 277759f9-b0da-4524-8abe-0460cdab69ec
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0596321b954754f8ec63da6dbe1121c2c88606ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5321d929fac43c8cce2dd35bfc5e73c529ba622a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282922"
 ---
 # <a name="manage-logins-and-passwords-in-replication"></a>Gerenciar logons e senhas na replicação
   Ao configurar a replicação, especifique os logons e as senhas para agentes de replicação. Depois de configurar a replicação, você pode alterar os logons e as senhas. Para obter mais informações, consulte [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Se você alterar a senha de uma conta usada por um agente de replicação, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e5dcdb4cbe4691b397997f24118e9da5f91ba0e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 85dd4c829a05bd051fcf57f1ea299916080251a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313758"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é um ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece ferramentas para configurar, monitorar e administrar instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -157,7 +157,7 @@ ms.locfileid: "36009555"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Recursos sem suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para objetos OLTP na memória, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não oferece suporte a recursos e operações que também não têm suporte no mecanismo de banco de dados.  
   
- Para obter mais informações sobre suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos, consulte [suporte para recursos do SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Para obter mais informações sobre sem suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos, consulte [suporte para recursos do SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte ao SQL Server para OLTP na memória](sql-server-support-for-in-memory-oltp.md)  

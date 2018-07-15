@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 019f5180dd214c15c1b158dfd9e4c181840156dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b4512a24385a4a24ef2b4bc9834e7a78e80ca89b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264382"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir trechos Transact-SQL com Surround
   Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  

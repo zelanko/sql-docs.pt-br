@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,19 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c7d9f8cfe55a12237e2a2bf30b35ed1a57c5ec2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 31bb87caa5d5b997c3e99478fc3308fc03d4f956
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694337"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357698"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Tipos de dados de integração CLR e agrupamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  No [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], o **CompareInfo** agrupamentos alças do objeto. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] aplicativo usar interfaces de programação (APIs) da cadeia de caracteres de **CompareInfo** propriedade associada a **CultureInfo** objeto do thread atual para executar comparações de cadeia de caracteres. A configuração padrão da **CultureInfo** objeto se baseia o [!INCLUDE[msCoName](../../includes/msconame-md.md)] configuração de localidade do Windows para o computador no qual [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução. Isso determina a semântica de comparação padrão, se não explícita **CultureInfo** for especificado, para comparações de **System. String** valores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não altera explicitamente o **CompareInfo** propriedade para o agrupamento de banco de dados ou servidor. Se necessário, os usuários devem definir apropriada **CompareInfo** propriedade em suas rotinas.  
+  No [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], o **CompareInfo** agrupamentos alças do objeto. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] aplicativo usar interfaces de programação (APIs) da cadeia de caracteres de **CompareInfo** propriedade associada a **CultureInfo** objeto do thread atual para executar comparações de cadeia de caracteres. A configuração padrão do **CultureInfo** objeto se baseia o [!INCLUDE[msCoName](../../includes/msconame-md.md)] configuração de localidade do Windows para o computador no qual [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução. Isso determina a semântica de comparação padrão, se não explícita **CultureInfo** for especificado, para comparações de **System. String** valores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não altera explicitamente o **CompareInfo** propriedade para o agrupamento de banco de dados ou servidor. Se necessário, os usuários devem definir apropriado **CompareInfo** propriedade em suas rotinas.  
   
 ## <a name="parameter-collation"></a>Agrupamento de parâmetros  
- Quando você criar uma rotina do common language runtime (CLR) e um parâmetro de um método CLR associado à rotina é do tipo **SQLString**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria uma instância do parâmetro com o agrupamento padrão do banco de dados que contém a rotina de chamada. Se um parâmetro não é um **SqlType** (por exemplo, **cadeia de caracteres** em vez de **SQLString**), as informações de agrupamento do banco de dados não estão associadas com o parâmetro.  
+ Quando você cria uma rotina do common language runtime (CLR), e um parâmetro de um método CLR associado para a rotina é do tipo **SQLString**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria uma instância do parâmetro com o agrupamento padrão do banco de dados que contém a rotina de chamada. Se um parâmetro não é um **SqlType** (por exemplo, **cadeia de caracteres** vez **SQLString**), as informações de agrupamento do banco de dados não estão associadas com o parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados do SQL Server no .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

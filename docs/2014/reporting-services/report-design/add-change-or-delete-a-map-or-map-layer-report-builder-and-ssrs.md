@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286682"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório, define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  
@@ -45,7 +45,7 @@ ms.locfileid: "36119061"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- As camadas do mapa são desenhadas de baixo para cima para que apareçam no painel Mapa. Na figura anterior, a camada da peça é desenhada primeiro e a camada de polígono é desenhada por último. As camadas desenhadas posteriormente podem ocultar elementos do mapa nas camadas desenhadas antes. Você pode alterar a ordem das camadas usando as teclas de direção na barra de ferramentas do painel Mapa. Para mostrar ou ocultar camadas, alterne o ícone de visibilidade. Você pode alterar a transparência de uma camada no `Visibility` página do **dados da camada** caixa de diálogo de propriedades.  
+ As camadas do mapa são desenhadas de baixo para cima para que apareçam no painel Mapa. Na figura anterior, a camada da peça é desenhada primeiro e a camada de polígono é desenhada por último. As camadas desenhadas posteriormente podem ocultar elementos do mapa nas camadas desenhadas antes. Você pode alterar a ordem das camadas usando as teclas de direção na barra de ferramentas do painel Mapa. Para mostrar ou ocultar camadas, alterne o ícone de visibilidade. Você pode alterar a transparência de uma camada sobre o `Visibility` página do **dados da camada** caixa de diálogo Propriedades.  
   
  A tabela a seguir exibe os ícones da barra de ferramentas do painel **Mapa** .  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36119061"
   
     2.  Em **Conjunto de dados analítico**, clique no nome do conjunto de dados que contém os dados analíticos e os campos de correspondência para criar uma relação entre dados analíticos e espaciais.  
   
-    3.  Clique em **Adicionar**.  
+    3.   Clique em **Adicionar**.  
   
     4.  Digite o nome do campo de correspondência do conjunto de dados espaciais.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36119061"
   
 1.  Selecione **Geral** na caixa de diálogo **Propriedades do Ponto do Mapa** para alterar as opções de rótulo, dica de ferramenta e tipo de marcador dos seguintes elementos do mapa:  
   
-    -   Todos os pontos dinâmicos ou inseridos em uma camada de ponto. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos substituem essas opções. Para substituir as opções para um ponto inserido específico, use o [mapa Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) página.  
+    -   Todos os pontos dinâmicos ou inseridos em uma camada de ponto. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos substituem essas opções. Para substituir as opções para um ponto inserido específico, use o [Map Embedded Point Properties Dialog Box, marcador](../map-embedded-point-properties-dialog-box-marker.md) página.  
   
     -   O ponto central de todos os polígonos dinâmicos ou inseridos em uma camada de polígono. As regras de cores, as regras de tamanho e as regras de tipo de marcador para pontos centrais substituem essas opções. Para substituir as opções de um ponto central específico, use a página [Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador](../map-embedded-point-properties-dialog-box-marker.md).  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36119061"
   
 ## <a name="see-also"></a>Consulte também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;SSRS e construtor de relatórios&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

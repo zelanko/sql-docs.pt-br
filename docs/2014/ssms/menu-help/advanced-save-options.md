@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4af8221510389d65149ba36411f57f986af56202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08670b9b7ec22b7bc1e1c5c21064f65e0f867d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282382"
 ---
 # <a name="advanced-save-options"></a>Opções Avançadas de Salvamento
-  Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar o **opções avançadas de salvar** caixa de diálogo de **arquivo** menu, clique em **salvar** \<nome da consulta >**. SQL como** para Abra o **salvar arquivo como** caixa de diálogo, clique na seta para baixo a **salvar** botão e, em seguida, clique em **salvar com codificação**.  
+  Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar o **opções avançadas de salvamento** caixa de diálogo do **arquivo** menu, clique em **salvar** \<nome da consulta >**. SQL como** para Abra o **salvar arquivo como** caixa de diálogo, clique na seta para baixo o **salve** e, em seguida, clique **salvar com codificação**.  
   
 ## <a name="options"></a>Opções  
  **Codificação**  

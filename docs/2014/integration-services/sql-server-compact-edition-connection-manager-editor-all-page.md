@@ -1,5 +1,5 @@
 ---
-title: SQL Server Compact Editor do Gerenciador de Conexão de edição (página tudo) | Microsoft Docs
+title: Editor do Gerenciador de Conexão de edição (página tudo) do SQL Server Compact | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72da9792c77970802a01aedccda6690ea1be2225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d74007858a1834b4d0aba5538e62824f7cee8c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192106"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (Página Tudo)
   Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

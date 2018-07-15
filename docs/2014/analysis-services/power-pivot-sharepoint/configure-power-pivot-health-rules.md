@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265423"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Regras de integridade do PowerPivot - Configurar
   O PowerPivot para SharePoint inclui regras de integridade do SharePoint que o ajudam a monitorar e solucionar problemas de disponibilidade e configuração do servidor. Regras de integridade que se aplicam ao PowerPivot para SharePoint aparecem na página Revisar definições de regra.  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  Na parte superior da página, selecione o servidor em seu farm do SharePoint que tem uma instância do Analysis Services (na ilustração a seguir, o nome de servidor é AW-SRV033). O**SQL Server Analysis Services** aparecerá na lista de serviços.  
   
-     ![Captura de tela de gerenciar serviços na página servidor](../media/ssas-centraladmin-servicesonserver.gif "captura de tela de gerenciar serviços na página servidor")  
+     ![Captura de tela de gerenciar serviços na página do servidor](../media/ssas-centraladmin-servicesonserver.gif "captura de tela de gerenciar serviços na página do servidor")  
   
 3.  Clique **SQL Server Analysis Services**.  
   
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o número alto de conexões indica que mais servidores devem ser implantados para tratar a carga atual.**  
   
      Espaço insuficiente em disco (o padrão é 5%)  
-     O espaço em disco é usado para armazenar em cache os dados PowerPivot cada vez que o banco de dados é solicitado. Esta regra permite conhecer quando o espaço em disco é insuficiente. Por padrão, esta regra de integridade é disparada quando o espaço em disco é inferior a 5% na unidade de disco onde a pasta de backup está localizada. Para obter mais informações sobre o uso do disco, consulte [Configurar uso de espaço em disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+     O espaço em disco é usado para armazenar em cache os dados PowerPivot cada vez que o banco de dados é solicitado. Esta regra permite conhecer quando o espaço em disco é insuficiente. Por padrão, esta regra de integridade é disparada quando o espaço em disco é inferior a 5% na unidade de disco onde a pasta de backup está localizada. Para obter mais informações sobre o uso do disco, consulte [configurar o uso de espaço em disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
      Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: o espaço em disco é insuficiente na unidade onde os dados PowerPivot estão armazenados em cache.**  
   
@@ -108,11 +108,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  Na página Aplicativos de Serviço, clique em **Aplicativo de Serviço PowerPivot Padrão**.  
   
-     ![Captura de tela da página Gerenciar aplicativo de](../media/ssas-centraladmin-app.gif "captura de tela da página Gerenciar aplicativo de")  
+     ![Captura de tela da página Gerenciar aplicativo](../media/ssas-centraladmin-app.gif "captura de tela da página Gerenciar aplicativo")  
   
 3.  O Painel de Gerenciamento do PowerPivot é exibido. Clique em **Configurar parâmetros do aplicativo de serviço** na lista **Ações** para abrir a página de configurações de aplicativo de serviço.  
   
-     ![Captura de tela de painel, foco na lista de ações](../media/ssas-centraladmin-actionslist.gif "captura de tela de painel, foco na lista de ações")  
+     ![Captura de tela do painel, concentre-se na lista de ações](../media/ssas-centraladmin-actionslist.gif "captura de tela do painel, concentre-se na lista de ações")  
   
 4.  Em Configurações de Regra de Integridade, modifique as seguintes configurações:  
   
@@ -127,7 +127,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Verifique as atualizações para o PowerPivot Management Dashboard.xlsx (o padrão é 5 dias)  
      O arquivo PowerPivot Management Dashboard.xlsx é uma fonte de dados usada por relatórios no Painel de Gerenciamento do PowerPivot. Em uma configuração de servidor padrão, o arquivo .xlsx é atualizado diariamente, usando dados de uso coletados pelo SharePoint e o Serviço do Sistema PowerPivot. No caso de o arquivo não ser atualizado, uma regra de integridade reporta isso como um problema. Por padrão, a regra será disparada se o carimbo de data/hora do arquivo não tiver sido alterado durante 5 dias.  
   
-     Para obter mais informações sobre coleta de dados de uso, consulte [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+     Para obter mais informações sobre a coleta de dados de uso, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
      Este parâmetro de configuração corresponde à definição de regra a seguir na página **Rever problemas e soluções** : **PowerPivot: dados de uso não são atualizados com a frequência esperada.**  
   

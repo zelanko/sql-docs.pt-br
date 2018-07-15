@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
 - diagram, cluster
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8ab399dcc59873cc507e260eec82582a69f8ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177253"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de Cluster (Suplementos de Mineração de Dados)
   Depois de criar um modelo de clustering, você pode importá-lo no Visio usando a **Cluster** forma e, em seguida, continuar a personalizar e aprimorar o layout. O **formas de mineração de dados para Visio** incluem os seguintes controles personalizados para trabalhar com diagramas de mineração de dados:  
   
 -   Controles de renderização para o diagrama de cluster  
   
-     Essas opções fazem parte do **Assistente de Cluster** que é iniciado quando você solta uma forma no espaço de trabalho do Visio.  
+     Essas opções fazem parte dos **Assistente de Cluster** que é iniciado quando você solta uma forma no espaço de trabalho do Visio.  
   
 -   **Layout de mineração de dados** barra de ferramentas  
   
@@ -41,25 +41,25 @@ ms.locfileid: "36120702"
 ## <a name="build-a-cluster-diagram"></a>Criar um diagrama de cluster  
  Este passo a passo demonstra como criar e personalizar um diagrama de clustering no Visio.  
   
- Para acompanhar, você já deverá ter um modelo de clustering disponível. Se você não tiver um modelo, use o [Assistente de Cluster &#40;suplementos de mineração de dados para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) assistente e criar um modelo usando o conjunto de dados de treinamento na pasta de trabalho de exemplo, usando todos os padrões.  
+ Para acompanhar, você já deverá ter um modelo de clustering disponível. Se você não tiver um modelo, use o [Assistente de Cluster &#40;Data Mining Add-ins para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) assistente e criar um modelo usando o conjunto de dados de treinamento na pasta de trabalho de exemplo, usando todos os padrões.  
   
 #### <a name="use-the-cluster-visio-shape-wizard"></a>Use o assistente para Criar Formas Cluster do Visio  
   
-1.  Se você não vir **formas de mineração de dados do Microsoft** no **formas** lista, clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
+1.  Se você não vir **formas de mineração de dados do Microsoft** na **formas** , clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
   
      \<unidade >: \Program files\Microsoft SQL Server 2012 DM Add-Ins  
   
-2.  Arraste o **Cluster** forma até a página.  
+2.  Arraste o **Cluster** forma na página.  
   
-3.  Na página de boas-vinda do **Assistente do Cluster do Visio forma**, clique em **próximo**.  
+3.  Na página de boas-vinda a **Assistente para criar formas Cluster do Visio**, clique em **próxima**.  
   
 4.  No **selecionar uma fonte de dados** página do **Assistente de Cluster**, escolha uma conexão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que contém os modelos de mineração de dados que você deseja visualizar.  
   
-5.  Selecione um modelo de mineração apropriado e, em seguida, clique em **próximo**.  
+5.  Selecione um modelo de mineração apropriado e, em seguida, clique em **próxima**.  
   
-     Para certificar-se de que você escolha um modelo de clustering, examine a descrição no **propriedades** painel.  
+     Para certificar-se de que você escolha um modelo de clustering, examine a descrição na **propriedades** painel.  
   
-6.  Se a conexão for bem-sucedida, na página, **opções para o diagrama de cluster**, decidir qual tipo de diagrama de cluster para incluir em sua apresentação do Visio:  
+6.  Se a conexão for bem-sucedida, na página de **opções para o diagrama de cluster**, você decide que tipo de diagrama de cluster para incluir em sua apresentação do Visio:  
   
      **Mostrar formas de cluster somente**  
      Essa opção cria um diagrama de cluster simples, com cada cluster representado por um retângulo ou outra forma que você escolher  
@@ -67,7 +67,7 @@ ms.locfileid: "36120702"
      **Mostrar clusters com gráfico de características**  
      Essa opção cria o mesmo gráfico que o anterior, mas dentro das formas estão os histogramas que descrevem as características do cluster.  
   
-     ![Exemplo de gráfico de características de cluster no Visio](media/dm13-visio-cluster-samplecharshape.gif "exemplo de gráfico de características de cluster no Visio")  
+     ![Exemplo de gráfico de características do cluster no Visio](media/dm13-visio-cluster-samplecharshape.gif "exemplo de gráfico de características do cluster no Visio")  
   
      **Mostrar clusters com gráfico de discriminação**  
      Essa opção cria o mesmo gráfico que o diagrama de cluster, mas lista as características do cluster atual que o distinguem mais fortemente de outros clusters.  
@@ -105,11 +105,11 @@ ms.locfileid: "36120702"
   
 1.  Arraste o controle deslizante **opções de Cluster** controle, para filtrar as relações mais fracas e simplificar o diagrama.  
   
-2.  Use o Visio **Refazer Layout da página** opção para fazer experiências com diferentes layouts de cluster.  
+2.  Usar o Visio **Refazer Layout da página** opção para fazer experiências com layouts de cluster diferente.  
   
-3.  Use o **conectores** opção o **Design** guia para alterar o estilo de conector para impedir que linhas cruzem os clusters.  
+3.  Use o **conectores** opção a **Design** tab para alterar o estilo de conector para impedir que linhas cruzem os clusters.  
   
-4.  Clique o **Add-Ins** de faixa de opções e, em seguida, exibir uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de mineração de dados:  
+4.  Clique o **Add-Ins** faixa de opções e, em seguida, exiba uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de mineração de dados:  
   
      **Layout**  
      Otimiza a organização dos clusters para caberem na página atual.  
@@ -144,6 +144,6 @@ ms.locfileid: "36120702"
     -   Adicione um gráfico de discriminação do cluster.  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de diagramas de mineração de dados do Visio &#40;suplementos de mineração de dados do SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+ [Solução de problemas de diagramas de mineração de dados do Visio &#40;suplementos de mineração de dados do SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

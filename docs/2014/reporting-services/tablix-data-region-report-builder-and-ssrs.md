@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 861c78b6424878d09dd4afa23fc9248cff14e731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97336e053f4c0a9d2cd36bf381bc16f3fd28d919
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218656"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Região de dados Tablix (Construtor de Relatórios e SSRS)
   A região de dados tablix é um item de relatório de layout generalizado que exibe dados de relatório em células organizadas em linhas e colunas. Os dados do relatório podem ser dados detalhados, já que são recuperados da fonte de dados, ou dados detalhados agregados, organizados em grupos especificados. Cada célula tablix pode conter um item de relatório, como uma caixa de texto ou uma imagem, ou outra região de dados, como uma região, um gráfico ou um medidor tablix. Para adicionar vários itens de relatório a uma célula, adicione primeiro um retângulo para atuar como contêiner. Em seguida, adicione os itens de relatório ao retângulo.  

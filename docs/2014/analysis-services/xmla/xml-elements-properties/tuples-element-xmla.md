@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254588"
 ---
 # <a name="tuples-element-xmla"></a>Elemento Tuples (XMLA)
-  Contém um conjunto de [tupla](tuple-element-xmla.md) objetos para um [eixo](axis-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado pelo tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
+  Contém um conjunto de [tupla](tuple-element-xmla.md) objetos para um [eixo](axis-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado por tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36118729"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Axis](axis-element-xmla.md)|  
-|Elementos filho|[coleção de itens](tuple-element-xmla.md)|  
+|Elementos filho|[Tupla](tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada `Axis` elemento contém um `Tuples` elemento que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um `Tuple` elemento que contém [membro](member-element-xmla.md) elementos de cada hierarquia no eixo.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada `Axis` elemento contém um `Tuples` elemento que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um `Tuple` elemento que contém [membro](member-element-xmla.md) elementos de cada hierarquia no eixo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra a estrutura do `Tuples` elemento quando um cliente especifica *TupleFormat* ou *CustomFormat* para o `AxisFormat` XML para a propriedade de análise (XMLA) Considerando os seguintes membros do eixo:  
+ O exemplo a seguir ilustra a estrutura do `Tuples` elemento quando um cliente especifica *TupleFormat* ou *CustomFormat* para o `AxisFormat` XML para a propriedade de Analysis (XMLA) Considerando os seguintes membros do eixo:  
   
 |||||  
 |-|-|-|-|  

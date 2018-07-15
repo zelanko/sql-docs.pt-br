@@ -1,5 +1,5 @@
 ---
-title: Definir propriedades avançadas (SSAS) | Microsoft Docs
+title: Conjunto de propriedades avançadas (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.setadvancedprop.f1
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eab8973b20cc7f1d19ef5a8a55645648b41ffa08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75add3e481df734bfae774a234aef008ce542aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171567"
 ---
 # <a name="set-advanced-properties-ssas"></a>Definir propriedades avançadas (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar configurações de propriedades adicionais para uma conexão de fonte de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

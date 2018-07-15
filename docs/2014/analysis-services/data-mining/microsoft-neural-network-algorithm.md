@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202046"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural combina cada estado possível do atributo de entrada com cada estado possível do atributo previsível e usa os dados de treinamento para calcular probabilidades. Posteriormente, essas probabilidades podem ser usadas para classificação ou regressão e também para a previsão de um resultado do atributo previsível com base nos atributos de entrada.  
+  Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural combina cada estado possível do atributo de entrada com cada estado possível do atributo previsível e usa os dados de treinamento para calcular probabilidades. Posteriormente, essas probabilidades podem ser usadas para classificação ou regressão e também para a previsão de um resultado do atributo previsível com base nos atributos de entrada.  
   
  Um modelo de mineração desenvolvido com o algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode conter várias redes, dependendo do número de colunas usadas para a previsão de entrada ou usadas apenas para previsão. O número de redes que um modelo de mineração simples contém depende do número de estados que estão contidos nas colunas de entrada e as colunas previsíveis que o modelo de mineração usa.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36120228"
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo rede Neural cria uma rede que é composta de até três camadas de neurônios. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
   
- **Camada de entrada:** os neurônios de entrada definem todos os valores de atributo de entrada para o modelo de mineração de dados e suas probabilidades.  
+ **Camada de entrada:** neurônios de entrada definem todos os valores de atributo de entrada para o modelo de mineração de dados e suas probabilidades.  
   
- **Camada oculta:** neurônios ocultos recebem entradas de neurônios de entrada e fornecem saídas para os neurônios de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o neurônio oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
+ **Camada oculta:** neurônios ocultos recebem entradas de neurônios de entrada e fornecem resultados para os neurônios de saída. A camada oculta é onde as várias probabilidades de entradas são ponderadas. Uma ponderação descreve a relevância ou importância de uma entrada específica para o neurônio oculto. Quanto maior a ponderação atribuída a uma entrada, mais importante será o valor daquela entrada. As ponderações podem ser negativas, o que significa que a entrada pode inibir, em vez de favorecer, um resultado específico.  
   
  **Camada de saída:** neurônios de saída representam valores de atributos previsíveis para o modelo de mineração de dados.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36120228"
   
 ## <a name="see-also"></a>Consulte também  
  [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
- [Conteúdo do modelo de rede Neural modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelo de rede neural](neural-network-model-query-examples.md)   
  [Algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm.md)  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d16c55953bc3988a7de6c9d06929904d6dc0b67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304686"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Coleta de dados de uso do PowerPivot
-  A coleta de dados de uso é um recurso do SharePoint em nível de farm. O PowerPivot para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento PowerPivot que mostram como os dados e serviços PowerPivot são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento PowerPivot. Para obter mais informações sobre como habilitar e configurar a coleta de dados de uso do PowerPivot Consulte eventos [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  A coleta de dados de uso é um recurso do SharePoint em nível de farm. O PowerPivot para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento PowerPivot que mostram como os dados e serviços PowerPivot são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento PowerPivot. Para obter mais informações sobre como habilitar e configurar a coleta de dados de uso para o PowerPivot eventos consultar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- Para obter informações sobre os dados de uso no painel de gerenciamento do PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obter informações sobre o uso de dados no painel de gerenciamento PowerPivot, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Neste tópico:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36009905"
   
  No sistema de coleta de dados de uso, informações de evento inserem o sistema de coleção de uso no servidor de aplicativos ou front-end da Web. Dados de uso se movem pelo sistema em resposta a trabalhos de timer que levam dados a se moverem de arquivos de dados temporários no servidor físico para o repositório persistente em um servidor de banco de dados. O diagrama a seguir ilustra os componentes e processos que movem dados de uso pela coleta de dados e pelo sistema de relatórios.  
   
- **Observação:** Verifique se a coleta de dados de utilização está habilitada. Para verificar, vá para **Monitoramento** na Administração Central do SharePoint. Para obter mais informações, consulte [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+ **Observação:** Verifique se a coleta de dados de utilização está habilitada. Para verificar, vá para **Monitoramento** na Administração Central do SharePoint. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  ![Componentes e processos de coleta de dados de uso. ] (../media/gmni-usagedata.gif "Componentes e processos de coleta de dados de uso.")  
   
@@ -58,21 +58,21 @@ ms.locfileid: "36009905"
   
 |Evento|Description|Configurável|  
 |-----------|-----------------|------------------|  
-|Conexões|Conexões de servidor feitas em nome de um usuário que está consultando dados PowerPivot em uma pasta de trabalho do Excel. Eventos de conexão identificam quem abriu uma conexão com uma pasta de trabalho PowerPivot. Em relatórios, estas informações são usadas para identificar os usuários mais frequentes, as fontes de dados PowerPivot que são acessadas pelos mesmos usuários e tendências em conexões com o passar do tempo.|Você pode habilitar e desabilitar [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
-|Tempos de resposta de consulta|Estatísticas de resposta de consulta com base no tempo que levam para serem concluídas. As estatísticas de resposta de consulta mostram padrões em relação ao tempo que o servidor leva para responder a solicitações de consulta.|Você pode habilitar e desabilitar [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
-|Carregamento de dados|Operações de carregamento de dados pelo [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Eventos de carregamento de dados identificam quais fontes de dados são usadas com mais frequência.|Você pode habilitar e desabilitar [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
-|Descarregamento de dados|Operações de descarregamento de dados através de aplicativos de serviço PowerPivot. Um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] descarregará fontes de dados inativas do PowerPivot se elas não estiverem sendo usadas ou quando o servidor estiver sob pressão de memória ou precisar de mais memória para executar trabalhos de atualização de dados.|Você pode habilitar e desabilitar [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
+|Conexões|Conexões de servidor feitas em nome de um usuário que está consultando dados PowerPivot em uma pasta de trabalho do Excel. Eventos de conexão identificam quem abriu uma conexão com uma pasta de trabalho PowerPivot. Em relatórios, estas informações são usadas para identificar os usuários mais frequentes, as fontes de dados PowerPivot que são acessadas pelos mesmos usuários e tendências em conexões com o passar do tempo.|Você pode habilitar e desabilitar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
+|Tempos de resposta de consulta|Estatísticas de resposta de consulta com base no tempo que levam para serem concluídas. As estatísticas de resposta de consulta mostram padrões em relação ao tempo que o servidor leva para responder a solicitações de consulta.|Você pode habilitar e desabilitar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
+|Carregamento de dados|Operações de carregamento de dados pelo [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Eventos de carregamento de dados identificam quais fontes de dados são usadas com mais frequência.|Você pode habilitar e desabilitar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
+|Descarregamento de dados|Operações de descarregamento de dados através de aplicativos de serviço PowerPivot. Um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] descarregará fontes de dados inativas do PowerPivot se elas não estiverem sendo usadas ou quando o servidor estiver sob pressão de memória ou precisar de mais memória para executar trabalhos de atualização de dados.|Você pode habilitar e desabilitar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Integridade do servidor|Operações de servidor que indicam a integridade do servidor, medidas na utilização da CPU e de memória. Estes dados são históricos. Eles não fornecem informações em tempo real sobre a carga de processamento atual no servidor.|Nenhum. Dados de uso sempre são coletados para este evento.|  
 |Atualização de dados|Operações de atualização de dados iniciadas pelo serviço PowerPivot para atualizações de dados agendadas. O histórico de uso da atualização de dados é coletado em nível de aplicativo para relatórios operacionais e é refletido nas páginas Gerenciar Atualização de Dados para pastas de trabalho individuais.<br /><br /> **Observação:** Para o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] e as implantações do SharePoint 2013, a atualização de dados é gerenciada pelos Serviços do Excel, e não pelo servidor do Analysis Services.|Nenhum. Dados de uso de atualização de dados sempre são coletados quando você habilita a atualização de dados para o aplicativo de serviço PowerPivot.|  
   
 ##  <a name="servicesjobs"></a> Serviços e trabalhos de timer  
- A tabela a seguir descreve os serviços e os armazenamentos de coleta de dados no sistema de coleta de dados de uso. Para obter instruções sobre como substituir os agendamentos de trabalho de timer para forçar uma atualização de dados de dados de uso e integridade do servidor em relatórios do painel de gerenciamento PowerPivot, consulte [atualização de dados do PowerPivot com o SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Os trabalhos de timer serão exibidos na Administração Central do SharePoint. Vá para **Monitoramento**e clique em **Verificar Status do Trabalho**. Clique em **Revisar Definições de Trabalho**.  
+ A tabela a seguir descreve os serviços e os armazenamentos de coleta de dados no sistema de coleta de dados de uso. Para obter instruções sobre como substituir os agendamentos de trabalho de timer para forçar uma atualização de dados dos dados de uso e integridade do servidor em relatórios do painel de gerenciamento PowerPivot, consulte [atualização de dados do PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Os trabalhos de timer serão exibidos na Administração Central do SharePoint. Vá para **Monitoramento**e clique em **Verificar Status do Trabalho**. Clique em **Revisar Definições de Trabalho**.  
   
 |Componente|Cronograma padrão|Description|  
 |---------------|----------------------|-----------------|  
 |Serviço de timer do SharePoint (SPTimerV4)||Esse serviço do Windows é executado localmente em cada computador membro do farm e processa todos os trabalhos de timer definidos em nível de farm.|  
 |Importação de Dados de Uso do Microsoft SharePoint Foundation|A cada 30 minutos no SharePoint 2010. A cada 5 minutos no SharePoint 2013.|Esse trabalho de timer é configurado globalmente no nível do farm. Ele move dados de uso de arquivos de log de uso locais para o banco de dados de coleta de dados de uso central. É possível executar esse trabalho de timer manualmente para forçar uma operação de importação de dados.|  
-|Trabalho de timer de processamento de dados de uso do Microsoft SharePoint Foundation|Diariamente às 3h|**(\*)** Este trabalho de timer começando com o SQL Server 2012 PowerPivot para SharePoint, há suporte para cenários de atualização ou migração em que você ainda possa haver dados de uso antigos nos bancos de dados de uso do SharePoint. A partir do SQL Server 2012 PowerPivot para SharePoint, o banco de dados de uso do SharePoint não é usado para o fluxo de trabalho de coleta de uso do PowerPivot e do painel de gerenciamento. Os trabalhos de timer podem ser executados manualmente para mover todos os dados restantes relacionados ao PowerPivot do banco de dados de uso do SharePoint para os bancos de dados de aplicativo de serviço PowerPivot.<br /><br /> Esse trabalho de timer é configurado globalmente no nível do farm. Ele verifica dados de uso expirados no banco de dados de coleta de dados de uso central (ou seja, qualquer registro com mais de 30 dias). Para servidores do PowerPivot no farm, este trabalho de timer executa uma verificação adicional para dados de uso do PowerPivot. Quando dados de uso do PowerPivot são detectados, o trabalho de timer move os dados para um banco de dados de aplicativo de serviço usando um identificador de aplicativo para localizar o banco de dados correto.<br /><br /> É possível executar esse trabalho de timer manualmente para forçar uma verificação nos dados expirados ou uma importação dos dados de uso do PowerPivot para um banco de dados de aplicativo de serviço PowerPivot.|  
+|Trabalho de timer de processamento de dados de uso do Microsoft SharePoint Foundation|Diariamente às 3h|**(\*)** Começando com o SQL Server 2012 PowerPivot para SharePoint, este trabalho de timer tem suporte para cenários de atualização ou migração em que você pode ter dados de uso antigos ainda nos bancos de dados de uso do SharePoint. A partir do SQL Server 2012 PowerPivot para SharePoint, o banco de dados de uso do SharePoint não é usado para o fluxo de trabalho de coleta de uso do PowerPivot e do painel de gerenciamento. Os trabalhos de timer podem ser executados manualmente para mover todos os dados restantes relacionados ao PowerPivot do banco de dados de uso do SharePoint para os bancos de dados de aplicativo de serviço PowerPivot.<br /><br /> Esse trabalho de timer é configurado globalmente no nível do farm. Ele verifica dados de uso expirados no banco de dados de coleta de dados de uso central (ou seja, qualquer registro com mais de 30 dias). Para servidores do PowerPivot no farm, este trabalho de timer executa uma verificação adicional para dados de uso do PowerPivot. Quando dados de uso do PowerPivot são detectados, o trabalho de timer move os dados para um banco de dados de aplicativo de serviço usando um identificador de aplicativo para localizar o banco de dados correto.<br /><br /> É possível executar esse trabalho de timer manualmente para forçar uma verificação nos dados expirados ou uma importação dos dados de uso do PowerPivot para um banco de dados de aplicativo de serviço PowerPivot.|  
 |Trabalho de Timer do Processamento de Painel de Gerenciamento PowerPivot|Diariamente às 3h|Esse trabalho de timer atualiza a pasta de trabalho PowerPivot interna, que fornece dados administrativos ao Painel de Gerenciamento do PowerPivot. Ele obtém informações atualizadas que são gerenciadas pelo SharePoint, inclusive nomes de servidores, nomes de usuários, nomes de aplicativos e nomes de arquivos que aparecem em relatórios de painel de gerenciamento ou em Web Parts.|  
   
 ##  <a name="reporting"></a> Relatórios sobre dados de uso  
@@ -81,8 +81,8 @@ ms.locfileid: "36009905"
  Para obter mais informações sobre como exibir relatórios, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Painel de gerenciamento PowerPivot e dados de uso](power-pivot-management-dashboard-and-usage-data.md)   
- [Referência de parâmetro de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)   
+ [Referência de definição de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

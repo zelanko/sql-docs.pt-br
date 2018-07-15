@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbe6727f9f3a031e5400dcb260095a518ca69dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1aea3a970763cc47c48176cb0fdd5f14a005258b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314406"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurando o espelhamento de banco de dados (SQL Server)
   Esta seção descreve os pré-requisitos, as recomendações e as etapas para configuração do espelhamento de banco de dados. Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "36009393"
   
 1.  O servidor principal, o servidor espelho e o servidor testemunha, se houver, devem ser hospedadas por instâncias de servidor separadas que devem estar em sistemas host separados. Cada instância de servidor exige um ponto de extremidade de espelhamento de banco de dados. Se você precisar criar um ponto de extremidade de espelhamento de banco de dados, verifique se está acessível a outras instâncias de servidor.  
   
-     A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+     A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Os requisitos de acesso à rede são específicos ao formulário de autenticação, da seguinte maneira:  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36009393"
   
          Para habilitar a autenticação de certificado para espelhamento de banco de dados em uma determinada instância do servidor, o administrador do sistema deve configurar cada instância do servidor para usar certificados nas conexões de saída e de entrada. As conexões de saída devem ser configuradas primeiro. Para obter mais informações, consulte [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-2.  Verifique se existem logons no servidor espelho para todos os usuários do banco de dados. Para obter mais informações, consulte [configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+2.  Verifique se existem logons no servidor espelho para todos os usuários do banco de dados. Para obter mais informações, consulte [configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 3.  Na instância de servidor que hospedará o banco de dados espelho, configure o restante do ambiente que é necessário para o banco de dados espelhado. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36009393"
  [Exemplo: Configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Contém um exemplo de todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a autenticação baseada em certificado.  
   
- [Configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [Configurar contas de logon para espelhamento de banco de dados ou grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Descreve como criar um logon para uma instância de servidor remoto usando uma conta diferente da instância de servidor local.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
@@ -161,7 +160,7 @@ ms.locfileid: "36009393"
 ## <a name="see-also"></a>Consulte também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 8ce5ba972af0b1dda27521dbc5dc58041e386a69
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 864f255556063ea5011e3d3954294edcbdd9cb5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328980"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Testando a precisão com gráficos de comparação de precisão (Tutorial de mineração de dados básico)
   Sobre o **gráfico de precisão de mineração** guia do Designer de mineração de dados, você pode calcular quanto cada um dos seus modelos faz previsões e comparar os resultados de cada modelo diretamente com os resultados dos outros modelos. Esse método de comparação é conhecido como um *gráfico de comparação de precisão*. Normalmente, a precisão da previsão de um modelo de mineração é medida pela comparação de precisão ou pela precisão de classificação. Para este tutorial, só usaremos o gráfico de comparação de precisão.  
@@ -35,7 +35,7 @@ ms.locfileid: "36312554"
   
 #### <a name="to-select-the-data-set"></a>Para selecionar o conjunto de dados  
   
-1.  Alterne para o **gráfico de precisão de mineração** guia no Designer de mineração de dados do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e selecione o **seleção de entrada** guia.  
+1.  Alterne para o **gráfico de precisão de mineração** guia no Designer de mineração de dados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e selecione o **seleção de entrada** guia.  
   
 2.  No **Selecionar conjunto de dados a ser usado para gráfico de precisão** caixa de grupo, selecione **usar casos de teste da estrutura de mineração**. Esses são os dados de teste que você reservou quando criou a estrutura de mineração.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "36312554"
   
 -   Que atributo previsível você deseja medir? Alguns modelos podem ter vários destinos, mas cada gráfico pode medir apenas um resultado de cada vez.  
   
-     Para usar uma coluna como o **nome da coluna previsível** em um gráfico de precisão, as colunas devem ter o tipo de uso de `Predict` ou `Predict Only`. Além disso, o tipo de conteúdo da coluna de destino deve ser `Discrete` ou `Discretized`. Em outras palavras, você não pode medir a precisão em relação a resultados numéricos contínuos que usem o gráfico de comparação de precisão.  
+     Para usar uma coluna como a **nome da coluna previsível** em um gráfico de precisão, as colunas devem ter o tipo de uso `Predict` ou `Predict Only`. Além disso, o tipo de conteúdo da coluna de destino deve ser `Discrete` ou `Discretized`. Em outras palavras, você não pode medir a precisão em relação a resultados numéricos contínuos que usem o gráfico de comparação de precisão.  
   
 -   Você deseja medir a precisão geral do modelo, ou a precisão em prever um valor específico (como [Bike Buyer] = “Yes ")?  
   
 #### <a name="to-generate-the-lift-chart"></a>Para gerar o gráfico de comparação de precisão  
   
-1.  No **seleção de entrada** guia do Designer de mineração de dados, em **selecionar colunas de modelo de mineração previsíveis para exibir no gráfico de comparação**, marque a caixa de seleção **sincronizar colunas de previsão e Valores**.  
+1.  Sobre o **seleção de entrada** guia do Designer de mineração de dados, em **selecionar colunas do modelo de mineração previsíveis para mostrar no gráfico de comparação**, marque a caixa de seleção **sincronizar colunas de previsão e Valores**.  
   
 2.  No **nome da coluna previsível** coluna, verifique **comprador de bicicleta** está selecionada para cada modelo.  
   
-3.  No **Mostrar** coluna, selecione os modelos.  
+3.  No **Mostrar** coluna, selecione cada um dos modelos.  
   
      Por padrão, são selecionados todos os modelos na estrutura de mineração. Você pode optar por não incluir um modelo, mas para este tutorial deixe todos os modelos selecionados.  
   
@@ -74,19 +74,19 @@ ms.locfileid: "36312554"
   
     -   A linha de modelo ideal representa o limite superior de precisão. Ela mostra o benefício máximo possível que você poderia obter se seu modelo sempre previsse com precisão.  
   
-     Em geral, os modelos de mineração criados ficarão entre esses dois extremos. Qualquer melhoria da previsão aleatória é considerada *Levante*.  
+     Em geral, os modelos de mineração criados ficarão entre esses dois extremos. Qualquer melhoria da previsão aleatória é considerada *lift*.  
   
 6.  Use a legenda para localizar as linhas coloridas que representam o Modelo Ideal e o Modelo de Previsão Aleatório.  
   
      Você observará que o `TM_Decision_Tree` modelo fornece a maior comparação de precisão, superando os modelos de Clustering e Naive Bayes.  
   
- Para obter uma explicação detalhada de um gráfico de comparação de precisão similar ao criado nesta lição, consulte [gráfico de comparação de precisão &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md).  
+ Para obter uma explicação detalhada de um gráfico de comparação de precisão similar ao que criou nesta lição, consulte [gráfico de comparação de precisão &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Testando um modelo filtrado &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de comparação de precisão &#40;Analysis Services – mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Lift Chart &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Guia gráfico de comparação de precisão &#40;exibição de gráfico de precisão de mineração&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

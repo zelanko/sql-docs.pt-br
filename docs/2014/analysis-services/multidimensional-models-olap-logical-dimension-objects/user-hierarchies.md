@@ -27,15 +27,15 @@ helpviewer_keywords:
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0ba2aa7e3941803e9afcbf124a8b02647832814a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286144"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
   Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
@@ -85,9 +85,9 @@ ms.locfileid: "36117057"
  O nível Província é populado com membros associados a outros membros no nível PaísRegião e os membros no nível Cidade são associados a seus membros correspondentes no nível Província. Entretanto, como o membro Cidade do Vaticano no nível PaísRegião não possui membros associados no nível Província, os membros devem ser associados do nível Cidade diretamente ao membro Cidade do Vaticano no nível PaísRegião. Devido às alterações, a hierarquia da dimensão está agora imperfeita. O pai de Cidade do Vaticano é a região/país Cidade do Vaticano, que não está imediatamente no nível acima do membro Cidade do Vaticano no nível Cidade. Para obter mais informações, consulte [Hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hierarquias pai-filho  
- As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra o **DimOrganization** tabela principal da dimensão a [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de exemplo.  
+ As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a **DimOrganization** tabela principal da dimensão a [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de exemplo.  
   
- ![Junção referenciada automaticamente na tabela DimOrganization](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "autorreferenciada junção na tabela DimOrganization")  
+ ![Junção referenciada automaticamente na tabela DimOrganization](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "auto-referenciada de junção na tabela DimOrganization")  
   
  Nessa tabela de dimensão, a coluna **ParentOrganizationKey** possui uma relação de chave estrangeira com a coluna da chave primária **OrganizationKey** . Em outras palavras, cada registro dessa tabela pode ser relacionado por meio de uma relação pai-filho com outro registro da tabela. Geralmente, esse tipo de autojunção é usado para representar os dados de uma empresa, como a estrutura de gerenciamento dos funcionários de um departamento.  
   

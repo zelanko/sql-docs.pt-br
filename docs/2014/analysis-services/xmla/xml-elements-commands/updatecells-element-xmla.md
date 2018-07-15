@@ -24,15 +24,15 @@ helpviewer_keywords:
 - UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fd96a8652bb5537cfb4f4f116aa86450a34acbe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05b3b1dae8f409f367a88b696accb77484304b4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219976"
 ---
 # <a name="updatecells-element-xmla"></a>Elemento UpdateCells (XMLA)
   Atualiza células em um cubo habilitado para gravação.  
@@ -61,7 +61,7 @@ ms.locfileid: "36120004"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
-|Elementos filho|[célula](../xml-elements-properties/cell-element-xmla.md)|  
+|Elementos filho|[Célula](../xml-elements-properties/cell-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O comando `UpdateCells` atualiza as células em um cubo que oferece suporte à write-back de célula.  
@@ -70,8 +70,8 @@ ms.locfileid: "36120004"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento drop &#40;XMLA&#41;](drop-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](update-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

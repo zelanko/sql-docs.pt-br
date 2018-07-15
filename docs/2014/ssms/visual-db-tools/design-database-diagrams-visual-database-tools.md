@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255388"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Criar diagramas de banco de dados (Visual Database Tools)
   O Designer de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  
@@ -45,7 +45,7 @@ ms.locfileid: "36119023"
   
  Se você modificou uma tabela e ainda não a salvou, um asterisco (*) aparecerá no final do nome da tabela, indicando que há alterações ainda não salvas. Para obter informações sobre como salvar tabelas e diagramas alterados, consulte [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **Seletor de linhas** Clique no seletor de linhas para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primárias, consulte [primária e restrições de chave estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Seletor de linhas** Clique no seletor de linhas para selecionar uma coluna de banco de dados na tabela. O seletor de linhas exibirá um símbolo de chave caso a coluna conste da chave primária da tabela. Para obter informações sobre chaves primárias, consulte [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
  **Colunas de propriedade** O conjunto de colunas de propriedade é visível em algumas exibições de sua tabela. Você pode exibir uma tabela em qualquer uma das cinco exibições diferentes para poder gerenciar o tamanho e o layout do diagrama.  
   

@@ -1,5 +1,5 @@
 ---
-title: Use HAVING e WHERE cláusulas na mesma consulta (Visual Database Tools) | Microsoft Docs
+title: Usar cláusulas HAVING e onde a mesma consulta (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a5ea47fdcab8682b8777d1e6c36b8463f9f60326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 967467dbda025160a7ceccad5fbc2f3b7935469e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175249"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Usar cláusulas HAVING e WHERE na mesma consulta (Visual Database Tools)
   Em algumas instâncias, talvez você deseje excluir linhas individuais de grupos (usando uma cláusula WHERE) antes de aplicar um critério aos grupos como um todo (usando uma cláusula HAVING).  
@@ -93,7 +93,7 @@ HAVING AVG(price) > 10
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Classificar e agrupar os resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

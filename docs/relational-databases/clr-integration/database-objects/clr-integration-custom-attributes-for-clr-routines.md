@@ -1,12 +1,11 @@
 ---
-title: Atributos personalizados para rotinas CLR | Microsoft Docs
+title: Atributos personalizados para rotinas de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -25,16 +24,16 @@ caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5c496cc6d8e74cf917c964b51da58dba3a6615c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 865d305e5d85fd58ab85148f74cc5159323674bb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697217"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356118"
 ---
-# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Integração de CLR atributos personalizados para rotinas CLR
+# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Atributos personalizados da integração CLR para rotinas de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Os atributos listados podem ser aplicados a rotinas de runtime (CLR) de linguagem comum, tipos definidos pelo usuário e agregações definidas pelo usuário que são registradas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos no **SQLServer** namespace.  
+  Os atributos listados podem ser aplicados para rotinas de tempo de execução (CLR) de linguagem comum, tipos definidos pelo usuário e agregações definidas pelo usuário que são registradas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos na **SQLServer** namespace.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>O atributo SqlUserDefinedAggregate  
  O **SqlUserDefinedAggregate** atributo indica que o método deve ser registrado como uma agregação definida pelo usuário. Todas as agregações definidas pelo usuário devem ser anotadas com esse atributo.  
@@ -57,7 +56,7 @@ ms.locfileid: "35697217"
  Para obter mais informações, consulte [SqlProcedureAttribute](http://go.microsoft.com/fwlink/?LinkId=128021).  
   
 ## <a name="the-sqltrigger-attribute"></a>O atributo SqlTrigger  
- O **SqlTrigger** atributo indica que o método deve ser registrado como um disparador.  
+ O **SqlTrigger** atributo indica que o método deve ser registrado como um gatilho.  
   
  Para obter mais informações, consulte [SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022) e [SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898).  
   
@@ -67,7 +66,7 @@ ms.locfileid: "35697217"
  Para obter mais informações, consulte [SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>O atributo SqlMethod  
- O **SqlMethod** atributo é usado para indicar as propriedades de acesso de determinismo e dados de um método ou uma propriedade em um UDT.  
+ O **SqlMethod** atributo é usado para indicar as propriedades de determinismo e dados de acesso de um método ou uma propriedade em um UDT.  
   
  Para obter mais informações, consulte [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
   

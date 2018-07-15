@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314146"
 ---
 # <a name="package-configurations"></a>Configurações do Pacote
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece configurações de pacote que você pode usar para atualizar os valores das propriedades em tempo de execução.  
@@ -48,7 +48,7 @@ ms.locfileid: "36009398"
   
 -   As configurações tornam os pacotes mais flexíveis. Por exemplo, uma configuração pode atualizar o valor de uma variável usada em uma expressão de propriedade.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte a vários métodos diferentes de armazenamento de configurações do pacote, como arquivos XML, tabelas em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados e variáveis de ambiente e pacote.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a vários métodos diferentes de armazenar configurações de pacote, como arquivos XML, tabelas em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados e variáveis de ambiente e pacote.  
   
  Cada configuração é um par propriedade/valor. O arquivo de configuração XML e os tipos de configuração [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir várias configurações.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36009398"
 ```  
   
 ### <a name="registry-entry"></a>Entrada de Registro  
- Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave de registro que você usa deve ter um valor chamado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
+ Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do registro que você usa deve ter um valor chamado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
   
  Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite `SSISPackages\MyPackage`.  
   

@@ -5,7 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -35,12 +35,12 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22dbbb2a3a8bc4f89682928701b70406ac5db7f8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695027"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353978"
 ---
 # <a name="clr-user-defined-types"></a>Tipos CLR definidos pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ ms.locfileid: "35695027"
   
  O processo de desenvolvimento das UDTs no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nas seguintes etapas:  
   
-1.  **Codifique e compile o assembly que define a UDT.** As UDTs são definidas usando qualquer um dos idiomas com suporte.NET Framework common language runtime (CLR) que produzem código verificável. Isso inclui o Visual C# e o Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura do .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
+1.  **Codifique e compile o assembly que define a UDT.** As UDTs são definidas usando qualquer um dos idiomas com suporte pelo.NET Framework common language runtime (CLR) que produzem código verificável. Isso inclui o Visual C# e o Visual Basic .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura do .NET Framework, e os comportamentos são definidos pelos métodos da classe ou estrutura.  
   
 2.  **Registre o assembly.** As UDTs podem ser implantadas por meio da interface do usuário do Visual Studio em um projeto de banco de dados ou usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, que copia o assembly que contém a classe ou a estrutura para um banco de dados.  
   
 3.  **Crie a UDT no SQL Server.** Uma vez que o assembly está carregado em um banco de dados de host, você usa a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE para criar uma UDT e expor os membros da classe ou da estrutura como membros da UDT. As UDTs só existem no contexto de um único banco de dados e, uma vez registradas, não têm dependências quanto a arquivos externos nos quais foram criados.  
   
     > [!NOTE]  
-    >  Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não havia suporte para UDTs criadas em assemblies do .NET Framework. No entanto, você ainda pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de alias usando **sp_addtype**. A sintaxe de CREATE TYPE pode ser usada para criar tanto tipos de dados definidos nativos definidos pelo usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto UDTs.  
+    >  Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não havia suporte para UDTs criadas em assemblies do .NET Framework. No entanto, você ainda pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de alias, usando **sp_addtype**. A sintaxe de CREATE TYPE pode ser usada para criar tanto tipos de dados definidos nativos definidos pelo usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quanto UDTs.  
   
-4.  **Criar tabelas, variáveis ou parâmetros usando a UDT** começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um tipo definido pelo usuário pode ser usado como a definição de coluna de uma tabela, como uma variável em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes, ou como um argumento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] de função ou armazenado procedimento.  
+4.  **Criar tabelas, variáveis ou parâmetros usando a UDT** começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um tipo definido pelo usuário pode ser usado como definição da coluna de uma tabela, como uma variável em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, ou como um argumento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] de função ou armazenados procedimento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Criando um tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199666"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a ferramenta MDSModelDeploy para criar um pacote. Dependendo dos comandos especificados, o pacote poderá conter:  
@@ -30,7 +30,7 @@ ms.locfileid: "36120814"
   
  Se desejar implantar um pacote que contém apenas objetos de modelo, você poderá usar o assistente de implantação de modelo no aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Para obter mais informações, consulte [Criar um pacote de implantação de modelo usando o assistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Esta versão da ferramenta MDSModelDeploy não é possível usar mais de gigabytes (GB) de memória. Quando você criar ou implantar modelos grandes usando **objetos e dados de modelo** opção, você pode enfrentar erros de "Fluxo era muito longo" ou "memória insuficiente". Para resolver esse problema, use o MDS de preparação para implantar os dados. ou atualize para o MDS 2016 ou posterior, que inclui a versão atualizada da ferramenta MDSModelDeploy.
+> Esta versão da ferramenta MDSModelDeploy não é possível usar mais de gigabytes (GB) de memória. Ao criar ou implantar modelos grandes usando **objetos e dados de modelo** opção, você pode encontrar erros de "Stream era muito longo" ou "memória insuficiente". Para resolver esse problema, para usar o MDS de preparação para implantar os dados; ou atualizar para o MDS 2016 ou posterior, que inclui a versão atualizada da ferramenta MDSModelDeploy.
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
@@ -104,6 +104,6 @@ ms.locfileid: "36120814"
   
 ## <a name="see-also"></a>Consulte também  
  [Opções de implantação de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Implantação de modelos de &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

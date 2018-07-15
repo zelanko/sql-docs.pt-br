@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 880a5a496df597e929be8063323fa833696eabc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220726"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuração avançada de vários sites (modo nativo do SSRS)
   Use esta caixa de diálogo para criar e gerenciar as URLs usadas para acessar um servidor de relatório ou um Gerenciador de Relatórios. A caixa de diálogo **Configuração Avançada de Vários Sites** é usada para criar URLs adicionais, URLs personalizadas que incluem um nome de cabeçalho de host ou para especificar um endereço IP no formato IPv4 ou IPv6.  
@@ -30,7 +30,7 @@ ms.locfileid: "36117809"
   
  A criação de várias URLs será útil se você deseja configurar formas diferentes para acessar um servidor de relatório. Por exemplo, o acesso ao servidor de relatório por uma conexão intranet e extranet normalmente requer a existência de URLs diferentes para cada tipo de conexão.  
   
- Para abrir o **configuração avançada de sites múltiplos** caixa de diálogo, clique em **avançado** no **URL do serviço Web** ou **URL do Gerenciador de relatórios**página o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Depois que a caixa de diálogo **Configuração Avançada de Vários Sites** for aberta, você poderá clicar em **Adicionar** ou **Editar** para definir novas URLs, ou ainda modificar ou excluir URLs existentes.  
+ Para abrir o **configuração avançada de sites múltiplos** caixa de diálogo, clique em **avançado** no **URL do serviço Web** ou o **URL do Report Manager**página de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Depois que a caixa de diálogo **Configuração Avançada de Vários Sites** for aberta, você poderá clicar em **Adicionar** ou **Editar** para definir novas URLs, ou ainda modificar ou excluir URLs existentes.  
   
  Clique em **OK** para salvar as alterações. Se você adicionar ou remover URLs, mas depois fechar a caixa de diálogo sem primeiro clicar em **OK**, suas alterações serão perdidas.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36117809"
   
 -   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de 8 campos de 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn*.  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de 8 campos de 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn:nnnn:nnnn:nnnn*.  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   

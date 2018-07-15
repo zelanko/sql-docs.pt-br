@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f29fae6a9f9284bd35b2779029d7b3f176bcd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302386"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Ajuda de F1 do Visualizador de Perfil de Dados
   Use o Visualizador de Perfil de Dados para exibir a saída da tarefa Criação de Perfil de Dados.  
@@ -58,10 +58,10 @@ ms.locfileid: "36008699"
  Exibe o comprimento máximo de valores nesta coluna.  
   
  **Ignorar Espaços à Esquerda**  
- Indica se este perfil foi computado com um `IgnoreLeadingSpaces` valor True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
+ Exibe se este perfil foi calculado com um `IgnoreLeadingSpaces` valor de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
  **Ignorar Espaços à Direita**  
- Indica se este perfil foi computado com um `IgnoreTrailingSpaces` valor True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
+ Exibe se este perfil foi calculado com um `IgnoreTrailingSpaces` valor de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
  **Contagem de Linhas**  
  Exibe o número de linhas na tabela ou exibição.  

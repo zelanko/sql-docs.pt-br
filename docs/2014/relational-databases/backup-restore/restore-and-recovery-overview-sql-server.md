@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
 - backups [SQL Server], restore scenarios
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b360f5817d74461d41ce47da47afbea8e4095649
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197486"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
   Para recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma falha, um administrador de banco de dados precisa restaurar um conjunto de backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma sequência de restauração logicamente correta e significativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à restauração de dados de backups de um banco de dados inteiro, um arquivo de dados ou uma página de dados, como segue:  
@@ -46,7 +45,7 @@ ms.locfileid: "36120821"
   
      Você pode restaurar bancos de dados específicos por meio do modelo de recuperação completa ou do modelo de recuperação bulk-logged. As restaurações de página podem ser executadas em qualquer banco de dados, seja qual for o número de grupos de arquivos.  
   
- O backup e a restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionam em todos os sistemas operacionais com suporte, sejam eles sistemas de 64 ou 32 bits. Para obter informações sobre os sistemas operacionais com suporte, consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+ O backup e a restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionam em todos os sistemas operacionais com suporte, sejam eles sistemas de 64 ou 32 bits. Para obter informações sobre os sistemas operacionais com suporte, consulte [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
  **Neste tópico:**  
   

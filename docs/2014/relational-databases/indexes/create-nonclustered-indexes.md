@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
 - nonclustered indexes [SQL Server], creating
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c282008daf4adfcd3345417e4c0a8f13f2cec669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c3c0d0c0d21bbc2b6bfc77cac481310af1cb30c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300366"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
   Você pode criar índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice não clusterizado é uma estrutura de índice separada dos dados armazenados em uma tabela que reorganiza um ou mais colunas selecionadas. Índices não clusterizados costumam ser uma forma mais rápida de localizar dados do que a busca na tabela subjacente; as consultas às vezes podem ser totalmente respondidas pelos dados no índice não clusterizado, ou o índice não clusterizado pode apontar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para as linhas na tabela subjacente. Geralmente, os índices não clusterizados são criados para aprimorar o desempenho de consultas utilizadas com frequência, não cobertas pelo índice clusterizado, ou para localizar linhas em uma tabela sem um índice clusterizado (denominado heap). Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada.  

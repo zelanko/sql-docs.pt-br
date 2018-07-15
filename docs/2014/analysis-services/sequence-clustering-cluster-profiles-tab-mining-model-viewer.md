@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323126"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Perfis de Cluster** no **Visualizador MSC** fornece uma exibição codificada por cores das sequências que são incluídas em cada cluster.  
@@ -53,7 +53,7 @@ ms.locfileid: "36010293"
   
  Dois conjuntos de histogramas são exibidos para cada cluster no modelo, cada em uma linha diferente no gráfico:  
   
--   **\<nome do atributo > Samples**: os histogramas nesta linha mostram as sequências de itens que são representativas de cada cluster. Nos termos do DMX, estes são os casos de exemplo para cada cluster.  
+-   **\<nome do atributo > Attribute**: os histogramas nesta linha mostram as sequências de itens que são representativas de cada cluster. Nos termos do DMX, estes são os casos de exemplo para cada cluster.  
   
 -   **\<nome do atributo >**: os histogramas nesta linha descrevem todos os itens contidos no cluster e sua distribuição geral. Clique em um histograma quando **Legenda de Mineração** estiver visível e você puder ver os valores numéricos para cada  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36010293"
  Esta coluna no gráfico é opcional e pode ser exibida ou removida selecionando a opção **Mostrar Legenda** . A coluna **Estados** fornece um guia sobre qual estado é representado por qual cor no histograma de clusters correspondente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Algoritmo msc](data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de mineração de dados](data-mining/data-mining-model-viewers.md)   

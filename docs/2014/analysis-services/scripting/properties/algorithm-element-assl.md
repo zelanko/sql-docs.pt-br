@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86e44cf8069d9ed78a414cad5ac5079f8f2faa22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca7406538a81768e8cab8d0c24142c8105c963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218486"
 ---
 # <a name="algorithm-element-assl"></a>Elemento Algorithm (ASSL)
   Define o algoritmo usado por um [MiningModel](../objects/miningmodel-element-assl.md) elemento.  
@@ -62,9 +62,9 @@ ms.locfileid: "36119203"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor do elemento `Algorithm` é uma cadeia de caracteres que identifica o algoritmo. Por exemplo, a cadeia de caracteres pode ser *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, ou *Microsoft_Clustering.* A cadeia de caracteres identifica os algoritmos fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e personaliza os algoritmos fornecidos pelo usuário. Os valores disponíveis para o `Algorithm` elemento pode ser recuperado da coluna SERVICE_NAME do [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) de linhas de esquema.  
+ O valor do elemento `Algorithm` é uma cadeia de caracteres que identifica o algoritmo. Por exemplo, a cadeia de caracteres pode ser *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, ou *Microsoft_Clustering.* A cadeia de caracteres identifica os algoritmos fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e personaliza os algoritmos fornecidos pelo usuário. Valores disponíveis para o `Algorithm` elemento pode ser recuperado da coluna SERVICE_NAME do [DMSCHEMA_MINING_SERVICES](../../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) linhas de esquema.  
   
- O elemento que corresponde ao pai do `Algorithm` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModel>. Um elemento relacionado bastante próximo ao modelo de objeto AMO é <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
+ O elemento que corresponde ao pai de `Algorithm` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModel>. Um elemento relacionado bastante próximo ao modelo de objeto AMO é <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento AlgorithmParameter &#40;ASSL&#41;](../objects/algorithmparameter-element-assl.md)   

@@ -1,26 +1,25 @@
 ---
-title: O que&#39;novo no integração CLR | Microsoft Docs
+title: O que&#39;novo no CLR Integration | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: reference
+ms.technology: clr
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88796ef0cf870764b50d691b5eacc0205afba390
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 55cb6537db540fb5d916b72cb1b469dc3846f419
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697097"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356208"
 ---
-# <a name="clr-integration---what39s-new"></a>Integração do CLR - o que&#39;novidades
+# <a name="clr-integration---what39s-new"></a>Integração CLR – o que&#39;novo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Estes são os novos recursos da integração CLR no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
   
@@ -28,10 +27,10 @@ ms.locfileid: "35697097"
   
 -   Devido aos rigorosos requisitos de segurança do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os componentes do banco de dados CLR continuarão usando o modelo de segurança de acesso do código definido no CLR versão 2.0.  
   
--   No CLR versão 4, um erro de formato em um **System. TimeSpan** valor irá gerar um **System.FormatExceptions**. Antes da versão 4 do CLR, um erro de formato em um **System. TimeSpan** valor foi ignorado. Aplicativos de banco de dados que dependem do comportamento anterior à versão 4 do CLR devem ser executado com um nível de compatibilidade do banco de dados (**nível de compatibilidade do banco de dados ALTER**) de 100 ou inferior. Para obter mais informações, consulte [< TimeSpan_LegacyFormatMode > elemento](http://go.microsoft.com/fwlink/?LinkId=205109).  
+-   No CLR versão 4, um erro de formato em uma **System. TimeSpan** valor irá gerar um **System.FormatExceptions**. Antes da versão 4 do CLR, um erro de formato em uma **System. TimeSpan** valor foi ignorado. Aplicativos de banco de dados que dependem do comportamento anterior à versão 4 do CLR devem ser executado com um nível de compatibilidade do banco de dados (**nível de compatibilidade de ALTER DATABASE**) de 100 ou inferior. Para obter mais informações, consulte [< TimeSpan_LegacyFormatMode > elemento](http://go.microsoft.com/fwlink/?LinkId=205109).  
   
--   A versão 4 do CLR oferece suporte ao Unicode 5.1. As operações de classificação que envolvem acentos e símbolos serão aprimoradas. Talvez ocorram problemas de compatibilidade se o seu aplicativo se basear no comportamento de classificação herdado. Para habilitar a classificação herdada, o nível de compatibilidade do banco de dados (**nível de compatibilidade do banco de dados ALTER**) deve ser definido como 100 ou inferior. Para oferecer suporte a essa condição, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalará o arquivo sort00001000.dll no diretório do .NET Framework 4 (C:\Windows\Microsoft.NET\Framework\v4.0.30319). Para obter mais informações, consulte [ \<CompatSortNLSVersion > elemento](http://go.microsoft.com/fwlink/?LinkId=205110).  
+-   A versão 4 do CLR oferece suporte ao Unicode 5.1. As operações de classificação que envolvem acentos e símbolos serão aprimoradas. Talvez ocorram problemas de compatibilidade se o seu aplicativo se basear no comportamento de classificação herdado. Para habilitar a classificação herdada, o nível de compatibilidade do banco de dados (**nível de compatibilidade de ALTER DATABASE**) deve ser definido como 100 ou inferior. Para oferecer suporte a essa condição, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalará o arquivo sort00001000.dll no diretório do .NET Framework 4 (C:\Windows\Microsoft.NET\Framework\v4.0.30319). Para obter mais informações, consulte [ \<CompatSortNLSVersion > elemento](http://go.microsoft.com/fwlink/?LinkId=205110).  
   
--   As colunas a seguir foram adicionadas ao [sys.DM clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**, **total_allocated_memory_kb**, e **survived_ memory_kb**.  
+-   As colunas a seguir foram adicionadas ao [DM clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**, **total_allocated_memory_kb**, e **survived_ memory_kb**.  
   
   

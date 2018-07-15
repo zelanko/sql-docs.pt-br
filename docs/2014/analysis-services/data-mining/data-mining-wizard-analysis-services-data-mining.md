@@ -1,5 +1,5 @@
 ---
-title: Assistente de mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs
+title: Assistente de mineração de dados (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288412"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
   O Assistente de Data Mining no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é iniciado toda vez que você adiciona uma nova estrutura de mineração a um projeto de mineração de dados. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
@@ -74,7 +74,7 @@ ms.locfileid: "36118772"
 ### <a name="choosing-an-algorithm"></a>Escolhendo um algoritmo  
  Em seguida, você deve decidir sobre qual algoritmo deve ser usado ao processar seus dados. Esta decisão pode ser difícil de tomar. Cada algoritmo fornecido no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem recursos diferentes e gera resultados diferentes, de modo que você pode experimentar vários modelos diferentes antes de determinar qual é o mais apropriado para seus dados e seu problema comercial. Consulte o tópico a seguir para obter uma explicação das tarefas para as quais cada algoritmo é mais apropriado:  
   
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  Novamente, é possível criar vários modelos usando algoritmos diferentes ou modificar parâmetros para que os algoritmos criem modelos diferentes. Você não está bloqueado em sua escolha de algoritmo, e é prática recomendada criar vários modelos diferentes nos mesmos dados.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36118772"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Para saber mais sobre as decisões que você precisa tomar ao criar um modelo de mineração de dados, consulte os links a seguir:  
   
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36118772"
   
  [Seleção de recursos &#40;mineração de dados&#41;](feature-selection-data-mining.md)  
   
- [Valores ausentes &#40;Analysis Services – mineração de dados&#41;](missing-values-analysis-services-data-mining.md)  
+ [Valores ausentes &#40;Analysis Services - mineração de dados&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Detalhamento em modelos de mineração](drillthrough-on-mining-models.md)  
   

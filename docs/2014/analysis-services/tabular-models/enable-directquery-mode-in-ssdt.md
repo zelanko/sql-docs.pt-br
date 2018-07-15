@@ -1,5 +1,5 @@
 ---
-title: Habilitar o modo de Design de DirectQuery (SSAS Tabular) | Microsoft Docs
+title: Habilitar o modo de Design do DirectQuery (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ba954a8f296200070493625803aad263fa71520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93b95dc39c0efb088003af9d5fb8b68cfce11ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310406"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Habilitar o modo de design de DirectQuery (SSAS tabular)
   Para criar um modelo no modo DirectQuery, primeiro altere o ambiente de tempo de design para que ele ofereça suporte ao usuário do modo DirectQuery. Quando você faz isso, o designer também executa as seguintes ações:  

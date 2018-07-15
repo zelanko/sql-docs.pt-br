@@ -1,5 +1,5 @@
 ---
-title: Propriedades de cubo | Microsoft Docs
+title: Propriedades do cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: beae78f264c9ac0ce3aef5690f4e11e51ef191c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 785bc878c238b1fbba5acbd7ba3bc0525b8d6cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312476"
 ---
 # <a name="cube-properties"></a>Propriedades do cubo
   Os cubos têm várias propriedades que você pode definir para afetar o comportamento de todo o cubo. Essas propriedades são resumidas na tabela a seguir.  
@@ -49,7 +49,7 @@ ms.locfileid: "36009027"
 > [!NOTE]  
 >  Algumas propriedades são definidas automaticamente na criação do cubo e não podem ser alteradas.  
   
- Para obter mais informações sobre como definir propriedades de cubo, consulte [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
+ Para obter mais informações sobre como definir as propriedades do cubo, consulte [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -63,10 +63,10 @@ ms.locfileid: "36009027"
 |`Language`|Especifica o identificador de idioma padrão do cubo.|  
 |`Name`|Especifica o nome amigável do cubo.|  
 |`ProactiveCaching`|Define configurações de cache pró-ativas para o cubo.|  
-|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. Opções são **regular** ou `lazy`.|  
+|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções são **regular** ou `lazy`.|  
 |`ProcessingPriority`|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  
-|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. Opções são **regular** e `lazy`.|  
-|`ScriptErrorHandlingMode`|Determina o tratamento de erros. Opções são `IgnoreNone` ou `IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções são **regular** e `lazy`.|  
+|`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções são `IgnoreNone` ou `IgnoreAll`|  
 |`Source`|Mostra a exibição da fonte de dados usada para o cubo.|  
 |`StorageLocation`|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  
 |`StorageMode`|Especifica o modo de armazenamento para o cubo. Os valores são `MOLAP`, `ROLAP`, ou `HOLAP``.`|  
@@ -76,6 +76,6 @@ ms.locfileid: "36009027"
 >  Para obter mais informações sobre como definir valores para a propriedade ErrorConfiguration ao trabalhar com valores nulos e outros problemas de integridade de dados, consulte [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Consulte também  
- [O cache pró-ativo &#40;partições&#41;](partitions-proactive-caching.md)  
+ [Cache pró-ativo &#40;partições&#41;](partitions-proactive-caching.md)  
   
   

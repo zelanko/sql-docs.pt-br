@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d45ee223def50ee90b078cab7274a30901ac5165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204062"
 ---
 # <a name="notification-events-data-columns"></a>Colunas de dados de eventos de notificação
   Eventos de notificação são eventos que não são causados diretamente por usuários do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, as notificações acontecem por causa de usuários que atualizam tabelas base para cache pró-ativo.  
@@ -40,7 +40,7 @@ ms.locfileid: "36118205"
 |**Nome da coluna**|**Id da coluna**|**Tipo de coluna**|**Descrição da coluna**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|A classe de evento é usada para categorizar eventos.|  
-|EventSubclass|1|1|A subclasse de evento oferece informações adicionais sobre cada classe de evento. Estes são pares de nome de Id da subclasse/subclasse válido:<br /><br /> 0: Início de Cache Proativo<br />1: Final do Cache Proativo<br />2: Flight Recorder Iniciado<br />3: Flight Recorder Parado<br />4: Propriedades de Configuração Atualizadas<br />5: Rastreamento do SQL<br />6: Objeto Criado<br />7: Objeto Excluído<br />8: Objeto Alterado<br />9: Início da Sondagem do Cache Proativo<br />10: Final da Sondagem do Cache Proativo<br />11: Início do Instantâneo do Flight Recorder<br />12: Final do Instantâneo do Flight Recorder<br />13: Cache Proativo: objeto notificável atualizado<br />14: Processamento Lento: iniciar processamento<br />15: Processamento Lento: processamento concluído<br />16: Início do Evento SessionOpened<br />17: Final do Evento SessionOpened<br />18: Início do Evento SessionClosing<br />19: Final do Evento SessionClosing<br />20: Início do Evento CubeOpened<br />21: Final do Evento CubeOpened<br />22: Início do Evento CubeClosing<br />23: Final do Evento CubeClosing<br />24: Anulação da transação solicitada|  
+|EventSubclass|1|1|A subclasse de evento oferece informações adicionais sobre cada classe de evento. A seguir estão os pares de nome de Id da subclasse/subclasse válido:<br /><br /> 0: Início de Cache Proativo<br />1: Final do Cache Proativo<br />2: Flight Recorder Iniciado<br />3: Flight Recorder Parado<br />4: Propriedades de Configuração Atualizadas<br />5: Rastreamento do SQL<br />6: Objeto Criado<br />7: Objeto Excluído<br />8: Objeto Alterado<br />9: Início da Sondagem do Cache Proativo<br />10: Final da Sondagem do Cache Proativo<br />11: Início do Instantâneo do Flight Recorder<br />12: Final do Instantâneo do Flight Recorder<br />13: Cache Proativo: objeto notificável atualizado<br />14: Processamento Lento: iniciar processamento<br />15: Processamento Lento: processamento concluído<br />16: Início do Evento SessionOpened<br />17: Final do Evento SessionOpened<br />18: Início do Evento SessionClosing<br />19: Final do Evento SessionClosing<br />20: Início do Evento CubeOpened<br />21: Final do Evento CubeOpened<br />22: Início do Evento CubeClosing<br />23: Final do Evento CubeClosing<br />24: Anulação da transação solicitada|  
 |CurrentTime|2|5|Contém a hora atual do evento de notificação, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  

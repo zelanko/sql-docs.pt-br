@@ -1,5 +1,5 @@
 ---
-title: Combinações do SharePoint e Reporting Services Server e o suplemento (SQL Server 2014) com suporte | Microsoft Docs
+title: Combinações do SharePoint e do servidor e (SQL Server 2014) do suplemento Reporting Services com suporte | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
 - add-in for sharepoint
@@ -16,13 +16,13 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4aaaa578f438beabd9c9c661eaaf852971545695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49b19aaf7d34b052eac0e53c44814a961d6c4b74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194784"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinações do SharePoint e do servidor e suplemento do Reporting Services com suporte (SQL Server 2014)
   Servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados no modo do SharePoint e integrados com uma implantação do SharePoint. Nem todos os recursos são compatíveis em todas as combinações de servidor de relatório, suplemento Reporting Services para SharePoint e produtos do SharePoint. Este tópico resume as combinações com suporte. No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a integração é um resultado da combinação de:  
@@ -35,7 +35,7 @@ ms.locfileid: "36121443"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; do SharePoint 2010 &#124; SharePoint 2007|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010 &#124; SharePoint 2007|  
   
 ## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinações de componentes do SharePoint e do Reporting Services com suporte  
  A tabela a seguir resume as combinações com suporte do servidor de relatório, o suplemento do Reporting Services para produtos SharePoint e produtos SharePoint. As combinações que não estão listadas na tabela a seguir não têm suporte  
@@ -66,7 +66,7 @@ ms.locfileid: "36121443"
   
 -   O suplemento SQL Server 2008 R2 não é compatível com os servidores de relatório do SQL Server 2012 (ou posterior). O instalador de pré-requisito do SharePoint 2010 instala automaticamente o suplemento SQL Server 2008 R2. Ele deve ser desinstalado antes de instalar versões mais recentes do suplemento. A atualização no local do suplemento não tem suporte.  
   
--   **Atualização:** o SharePoint 2010 com o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado não pode ser atualizado no local para o SharePoint 2013. O SharePoint 2013 exige o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior do suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o servidor de relatório. Para obter mais informações sobre atualização, consulte [atualizar e migrar o Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Atualização:** o SharePoint 2010 com o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado não pode ser atualizado no local para o SharePoint 2013. O SharePoint 2013 exige o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior do suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o servidor de relatório. Para obter mais informações sobre atualização, consulte [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   

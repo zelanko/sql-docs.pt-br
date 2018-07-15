@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -20,13 +20,13 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8af018faa1ed8de9d47cb640e485ce17d5cbe56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285602"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -34,18 +34,18 @@ ms.locfileid: "36117024"
  O gerenciador de conexões de arquivos simples pode acessar apenas um arquivo. Para consultar vários arquivos, utilize um gerenciador de conexões de vários arquivos simples em vez de um gerenciador de conexões de arquivos simples. Para obter mais informações, consulte [Gerenciador de conexões de vários arquivos simples](multiple-flat-files-connection-manager.md).  
   
 ## <a name="column-length"></a>Comprimento da coluna  
- Por padrão, o gerenciador de conexões de arquivos simples define o comprimento das colunas de cadeia de caracteres como 50 caracteres. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** , você pode avaliar dados de exemplo e redimensionar automaticamente o comprimento dessas colunas para evitar truncamento dos dados ou excesso de largura da coluna. Mesmo assim, a menos que você redimensione subsequentemente o comprimento de coluna em uma fonte de arquivo simples ou em uma transformação, o comprimento da coluna da coluna de cadeia de caracteres permanece o mesmo durante o fluxo de dados. Se essas colunas de cadeia de caracteres forem mapeadas para colunas de destino que sejam menores, serão exibidos avisos na interface do usuário. Além disso, durante no tempo de execução, podem ocorrer erros devido ao truncamento de dados. Para evitar erros ou truncamento, você pode redimensionar as colunas para que sejam compatíveis com as colunas de destino no gerenciador de conexões de arquivos simples, na origem do arquivo simples ou na transformação. Para modificar o comprimento das colunas de saída, você define o `Length` propriedade da coluna de saída no **propriedades de entrada e saída** guia o **Editor Avançado** caixa de diálogo.  
+ Por padrão, o gerenciador de conexões de arquivos simples define o comprimento das colunas de cadeia de caracteres como 50 caracteres. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** , você pode avaliar dados de exemplo e redimensionar automaticamente o comprimento dessas colunas para evitar truncamento dos dados ou excesso de largura da coluna. Mesmo assim, a menos que você redimensione subsequentemente o comprimento de coluna em uma fonte de arquivo simples ou em uma transformação, o comprimento da coluna da coluna de cadeia de caracteres permanece o mesmo durante o fluxo de dados. Se essas colunas de cadeia de caracteres forem mapeadas para colunas de destino que sejam menores, serão exibidos avisos na interface do usuário. Além disso, durante no tempo de execução, podem ocorrer erros devido ao truncamento de dados. Para evitar erros ou truncamento, você pode redimensionar as colunas para que sejam compatíveis com as colunas de destino no gerenciador de conexões de arquivos simples, na origem do arquivo simples ou na transformação. Para modificar o comprimento das colunas de saída, você deve definir a `Length` propriedade da coluna de saída na **propriedades de entrada e saída** guia o **Editor Avançado** caixa de diálogo.  
   
  Se você atualizar os comprimentos da coluna no gerenciador de conexões de arquivos simples após adicionar e configurar a fonte de arquivo simples que utiliza o gerenciador de conexões, não será necessário redimensionar manualmente as colunas de saída na origem do arquivo simples. Quando você abre a caixa de diálogo **Origem de Arquivo Simples** , a origem de arquivo simples fornece uma opção para sincronizar os metadados da coluna.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuração do gerenciador de conexões de arquivo simples  
- Quando você adiciona um Gerenciador de conexão de arquivo simples a um pacote, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo simples em tempo de execução, define as propriedades de conexão de arquivo simples e adiciona o Gerenciador de conexão de arquivo simples para o `Connections` coleção do pacote.  
+ Quando você adiciona um Gerenciador de conexão de arquivo simples a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo simples em tempo de execução, define as propriedades de conexão de arquivo simples e adiciona o Gerenciador de conexão de arquivo simples para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `FLATFILE`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FLATFILE`.  
   
  Por padrão, o gerenciador de conexões de arquivos simples sempre verifica se há um delimitador de linha em dados sem aspas e inicia uma nova linha quando um delimitador de linha é localizado. Isso permite que o gerenciador de conexões analise corretamente arquivos com linhas que não têm campos de coluna.  
   
- Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desabilitar esse recurso, definindo a propriedade de Gerenciador de conexão de arquivo simples, **AlwaysCheckForRowDelimiters**, `False`.  
+ Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desativar esse recurso definindo a propriedade de Gerenciador de conexão de arquivo simples, **AlwaysCheckForRowDelimiters**, para `False`.  
   
  Você pode configurar um gerenciador de conexões de arquivos simples dos seguintes modos:  
   

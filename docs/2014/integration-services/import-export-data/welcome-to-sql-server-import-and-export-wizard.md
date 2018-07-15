@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 561a44c449ad9120e595a45cd82c945561b2ab34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bb4c73d28c022b4142b0ddd7417cce97a9b164d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170827"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Bem-vindo ao Assistente de Importação e Exportação do SQL Server
   Use o **Assistente de Importação e Exportação do SQL Server** para copiar e transformar dados entre fontes de dados com suporte e destinos.  

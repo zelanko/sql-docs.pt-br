@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
@@ -16,13 +16,13 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1362919f44915616d244364cee116c8fab376831
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6521a2bcdf080eb4a22c9540d965d0b5829d74fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282592"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
   Você pode desativar os recursos do servidor de relatório que não são usados como parte de uma estratégia de bloqueio para reduzir a superfície de ataque de um servidor de relatório de produção. Na maioria dos casos, você deve executar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente para usar toda a funcionalidade disponível no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No entanto, dependendo de seu modelo de implantação, você pode desabilitar os recursos dos quais não precisa. Por exemplo, você pode habilitar apenas o processamento em segundo plano se todo o processamento de relatórios for configurado como operações agendadas. Da mesma maneira, você pode executar somente o serviço Web Servidor de Relatório se quiser apenas relatórios interativos sob demanda.  
@@ -45,7 +45,7 @@ ms.locfileid: "36118592"
   
 1.  Abra o arquivo `RsReportServer.config` em um editor de texto. Para obter mais informações, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Para ativar o serviço Web do servidor de relatório, defina `IsWebServiceEnabled` para `true`:  
+2.  Para ativar o serviço Web servidor de relatório, defina `IsWebServiceEnabled` para `true`:  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -69,9 +69,9 @@ ms.locfileid: "36118592"
   
 4.  Em **Propriedades da Faceta**:  
   
-    -   Para ativar o serviço Web do servidor de relatório, defina **WebServiceAndHTTPAccessEnabled** para `True`.  
+    -   Para ativar o serviço Web servidor de relatório, defina **WebServiceAndHTTPAccessEnabled** para `True`.  
   
-    -   Para desativar o serviço Web do servidor de relatório, defina **WebServiceAndHTTPAccessEnabled** para `False`.  
+    -   Para desativar o serviço Web servidor de relatório, defina **WebServiceAndHTTPAccessEnabled** para `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

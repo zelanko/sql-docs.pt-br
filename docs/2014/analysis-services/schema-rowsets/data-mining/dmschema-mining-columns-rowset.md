@@ -18,26 +18,26 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232056"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Conjunto de linhas de DMSCHEMA_MINING_COLUMNS
   Descreve as colunas individuais de todos os modelos de mineração de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Este conjunto de linhas é restrito ao catálogo atual.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_COLUMNS` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_COLUMNS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||O nome do catálogo. Preenchido com o nome do banco de dados do qual o modelo é membro.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; ele sempre contém `NULL`.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá `NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||O nome do modelo de mineração. Esta coluna contém o nome do modelo de mineração ao qual uma coluna é associada, e nunca estará vazia.|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||O nome da coluna.|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||O GUID da coluna. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá `NULL`.|  
@@ -49,7 +49,7 @@ ms.locfileid: "36117283"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Um Booliano que indica se a coluna pode conter valores nulos.<br /><br /> Será `FALSE` se a coluna não puder conter valores nulos; caso contrário, será `TRUE`.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||O indicador do tipo de dados da coluna. A lista a seguir mostra exemplos dos tipos de indicadores retornados:<br /><br /> "`TABLE`" retornaria `DBTYPE_HCHAPTER`.<br /><br /> "`TEXT`" retornaria `DBTYPE_WCHAR`.<br /><br /> "`LONG`" retornaria `DBTYPE_I8`.<br /><br /> "`DOUBLE`" retornaria `DBTYPE_R8`.<br /><br /> "`DATE`" retornaria `DBTYPE_DATE`.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||O GUID do tipo de dados da coluna. Esta coluna não é suportada pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá `VT_NULL`.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||O comprimento máximo possível de um valor na coluna. Para colunas de caracteres, de binários ou de bits, será uma das opções a seguir:<br /><br /> -O comprimento máximo da coluna em caracteres, em bytes ou bits, respectivos ao tipo de coluna, se um comprimento for definido. Por exemplo, uma coluna `CHAR(5)` de uma tabela SQL terá o comprimento máximo de 5.<br />-O comprimento máximo do tipo de dados em bits, respectivos ao tipo de coluna, se a coluna não tiver um comprimento definido, em bytes ou caracteres.<br />-Zero (0) se a coluna ou o tipo de dados tem um comprimento máximo definido.<br />-   `NULL` todos os outros tipos de colunas|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||O comprimento máximo possível de um valor na coluna. Para colunas de caracteres, de binários ou de bits, será uma das opções a seguir:<br /><br /> -O comprimento máximo da coluna em bits, respectivo ao tipo de coluna, se um comprimento for definido, em bytes ou caracteres. Por exemplo, uma coluna `CHAR(5)` de uma tabela SQL terá o comprimento máximo de 5.<br />-O comprimento máximo do tipo de dados em bits, respectivo ao tipo de coluna, se a coluna não tiver um comprimento definido, em bytes ou caracteres.<br />-Zero (0) se a coluna ou o tipo de dados tem um comprimento máximo definido.<br />-   `NULL` para todos os outros tipos de colunas|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||O comprimento máximo em octetos (bytes) da coluna, se o tipo da coluna for caractere ou binário. Um valor zero (0) significa que a coluna não tem um comprimento máximo. Esta coluna contém `NULL` para todos os outros tipos de colunas.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||A precisão máxima da coluna se o tipo de dados da coluna for um tipo numérico diferente de `VARNUMERIC`.<br /><br /> Será `NULL` se o tipo de dados da coluna não for numérico ou se for `VARNUMERIC`.<br /><br /> A precisão de colunas com o tipo de dados `DBTYPE_DECIMAL` ou `DBTYPE_NUMERIC` dependerá da definição da coluna.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||O número de dígitos à direita da vírgula decimal se o indicador do tipo da coluna for `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` ou `DBTYPE_VARNUMERIC`. Caso contrário, esta coluna conterá `VT_NULL`.|  
@@ -68,7 +68,7 @@ ms.locfileid: "36117283"
 |`CONTENT_TYPE`|`DBTYPE_WSTR`||Uma descrição do conteúdo da coluna. Esta coluna contém uma das opções a seguir:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[argumentos]`)`"<br />-   "`ORDERED`"<br />-   "`KEY TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"<br />-   `"KEY SEQUENCE`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Uma lista de sinalizadores delimitada por vírgulas. Os sinalizadores definidos são:<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> Os sinalizadores de modelagem específicos do algoritmo também pode ser armazenados nesta coluna.|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Um Booliano que indica se a coluna está relacionada à chave.<br /><br /> Será `TRUE` se esta coluna estiver relacionada à chave. Se a chave for uma única coluna, o campo `RELATED_ATTRIBUTE` opcionalmente poderá conter seu nome de coluna.|  
-|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||O nome da coluna de destino para o qual a coluna atual está relacionado tanto é uma propriedade especial.|  
+|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||O nome da coluna de destino ao qual a coluna atual está relacionada ou é uma propriedade especial.|  
 |`IS_INPUT`|`DBTYPE_BOOL`||Um Booliano que indica se a coluna é uma coluna de entrada.<br /><br /> Será `VARIANT_TRUE` se esta for uma coluna de entrada.|  
 |`IS_PREDICTABLE`|`DBTYPE_BOOL`||Um Booliano que indica se a coluna é previsível.<br /><br /> Será `TRUE` se a coluna for previsível.|  
 |`CONTAINING_COLUMN`|`DBTYPE_WSTR`||O nome da coluna de `TABLE` que contém esta coluna. Essa coluna conterá `NULL` se a coluna não estiver contida em outra.|  

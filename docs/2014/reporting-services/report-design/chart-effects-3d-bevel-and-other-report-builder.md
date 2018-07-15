@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b02a91751697d2b21e58516373bb990626291b64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a57ccf36600ba4a25bd2476af5b2550ab1e8d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306946"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>Efeitos 3D, inclinação e outros em um gráfico (Construtor de Relatórios e SSRS)
   É possível usar efeitos tridimensionais (3D) para fornecer intensidade e adicionar impacto visual ao seu gráfico. Por exemplo, para enfatizar uma fatia específica de um gráfico de pizza destacada, você pode girar e alterar a perspectiva do gráfico de modo que as pessoas observem essa fatia primeiro. Quando efeitos 3D são aplicados ao gráfico, todas as cores de gradiente e estilos de hachurado são desabilitados.  
   
  Os efeitos tridimensionais podem ser aplicados a gráficos individuais, e é possível exibir gráficos bidimensionais e tridimensionais no mesmo relatório.  
   
- Para todos os tipos de gráficos, é possível adicionar efeitos tridimensionais a uma área do gráfico na caixa de diálogo **Propriedades da Área do Gráfico** selecionando **Habilitar 3D**. Para obter mais informações, consulte [adicionar efeitos 3D a um gráfico &#40;construtor de relatórios e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
+ Para todos os tipos de gráficos, é possível adicionar efeitos tridimensionais a uma área do gráfico na caixa de diálogo **Propriedades da Área do Gráfico** selecionando **Habilitar 3D**. Para obter mais informações, consulte [adicionar efeitos 3D a um gráfico de &#40;construtor de relatórios e SSRS&#41;](chart-effects-add-3d-effects-report-builder.md).  
   
  Outra maneira de adicionar impacto visual aos gráficos é adicionar estilos bisel, alto-relevo e textura a gráficos de barras, de colunas, de pizza e de rosca. Para obter mais informações, consulte [Como adicionar bisel, alto-relevo e estilos de textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SynchronizeSecurity element
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc50a9acd38fe394e5ac6b457f72e76669b5ec64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: dee99edf98aec8a9cd3b11add261cd941f9c9a0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330256"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Elemento SynchronizeSecurity (XMLA)
-  Especifica como sincronizar definições de segurança, como funções e permissões, durante um [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Especifica como sincronizar definições de segurança, como funções e permissões, durante um [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36008253"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `Security` elemento determina se as definições de segurança, como funções e permissões, definidas em uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados sejam sincronizadas durante um `Synchronize` comando. Esse elemento também determina se as contas de usuário e os grupos do Windows definidos como membros das definições de segurança estão incluídos como parte do comando `Synchronize`.  
+ O `Security` elemento determina se as definições de segurança, como funções e permissões, definidas em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados são sincronizados durante um `Synchronize` comando. Esse elemento também determina se as contas de usuário e os grupos do Windows definidos como membros das definições de segurança estão incluídos como parte do comando `Synchronize`.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   

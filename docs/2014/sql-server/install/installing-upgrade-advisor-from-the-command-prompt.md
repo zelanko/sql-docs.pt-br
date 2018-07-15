@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], installing
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8433aa58002095568a79013ec398f96f87abd22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83d6e2fce7d4a9f2f5066aa568ecda57fd313efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270262"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Instalando o Supervisor de Atualização do prompt de comando
   Você pode instalar o Supervisor de Atualização usando o Assistente de Instalação ou a partir do prompt de comando. Usando o prompt de comando, você poderá executar instalações autônomas e automatizadas.  
@@ -39,7 +39,7 @@ ms.locfileid: "36117327"
 |Argumento|Description|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Define nível de interface do usuário:<br /><br /> n = nenhuma interface do usuário<br /><br /> b = interface do usuário básica (apenas progresso, nenhum prompt)<br /><br /> r = interface do usuário reduzida (caixa de diálogo ao término da instalação)<br /><br /> f = interface do usuário completa|  
-|/L|Especifica as opções do arquivo de log. Para registrar todas as mensagens para *Nome_do_Arquivo_de_Log*, use **-L\*v * Nome_do_Arquivo_de_Log*. Para registrar somente mensagens de erro, use `-Le` *Nome_do_Arquivo_de_Log*.|  
+|/L|Especifica as opções do arquivo de log. Para todas as mensagens de log *Nome_do_Arquivo_de_Log*, usar **-L\*v * * * Nome_do_Arquivo_de_Log*. Para registrar somente mensagens de erro, use `-Le` *Nome_do_Arquivo_de_Log*.|  
 |ADDLOCAL = ALL&AMP;#124; REMOVER = ALL&AMP;#124;REINSTALL = ALL|Especifica a instalação (ADDLOCAL), remoção (REMOVE) ou reinstalação (REINSTALL) do Supervisor de Atualização.|  
 |UAINSTALLDIR=path|Instala o Supervisor de Atualização no local especificado pelo caminho.|  
   
@@ -73,6 +73,6 @@ Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL
   
 ## <a name="see-also"></a>Consulte também  
  [Instalando o Supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [Pré-requisitos do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
+ [Pré-requisitos do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

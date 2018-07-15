@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventColumn data type
 ms.assetid: c0009f1d-d136-4155-9a1b-7baacda4b552
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4e64defcd407e49b4f8e28d9034a2efeb440924
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f99484bdc41228dee28f6437631e0c05a542d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293316"
 ---
 # <a name="eventcolumn-data-type-assl"></a>Tipo de dados EventColumn (ASSL)
-  Define um tipo de dados primitivo que representa uma coluna de informações a serem capturadas para um [evento](../objects/event-element-assl.md) elemento como parte de um [rastreamento](../objects/trace-element-assl.md) elemento.  
+  Define um tipo de dados primitivo que representa uma coluna de informações a serem capturadas para um [evento](../objects/event-element-assl.md) elemento como parte de uma [rastreamento](../objects/trace-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

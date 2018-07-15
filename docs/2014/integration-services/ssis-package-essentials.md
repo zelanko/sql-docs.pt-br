@@ -1,5 +1,5 @@
 ---
-title: Conceitos básicos de pacote SSIS | Microsoft Docs
+title: Conceitos básicos de pacote do SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1efb7be8739413ff1688888f66313cd792d54684
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34b86dd370850f61a931aa640df7fb9999d2c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225836"
 ---
 # <a name="ssis-package-essentials"></a>Informações essenciais sobre pacotes SSIS
   Um pacote é o objeto que implementa a funcionalidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para extrair, transformar e carregar dados. Crie um pacote usando o Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Você também pode criar um pacote executando o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou o Assistente para Conexões de Projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, [criar pacotes no SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) no Designer SSIS e [Assistente de importação de projeto](../../2014/integration-services/import-project-wizard.md).  

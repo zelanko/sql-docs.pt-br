@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - todos os idiomas-guias de página) | Microsoft Docs
+title: Opções (Editor de texto – todos os idiomas – guias de página) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287852"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>Opções (Editor de texto - todos os idiomas-guias de página)
+# <a name="options-text-editor---all-languages--tabs-page"></a>Opções (Editor de texto – todos os idiomas – guias de página)
   Use esta caixa de diálogo para definir o comportamento de tabulação nos cinco editores no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para exibir essas opções, clique em **Opções** no menu **Ferramentas** . Selecione a pasta **Editor de Texto** , expanda a pasta **Todos os Idiomas** e clique em **Tabulações**.  
   
 ## <a name="tabbing-options-by-editor"></a>Opções de tabulação pelo editor  
@@ -38,7 +38,7 @@ ms.locfileid: "36117235"
  **Nenhuma**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
- **bloco**  
+ **Bloco**  
  Quando essa opção é selecionada, a nova linha criada ao se pressionar ENTER é recuada automaticamente com a mesma distância em que a linha anterior foi recuada.  
   
  **Inteligente**  

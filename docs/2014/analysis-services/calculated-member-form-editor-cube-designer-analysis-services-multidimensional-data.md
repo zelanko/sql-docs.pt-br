@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218366"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Membro Calculado (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Membro Calculado** na guia **Cálculos** do Designer de Cubo para criar ou modificar um membro calculado.  
@@ -69,7 +69,7 @@ ms.locfileid: "36120034"
  Selecione o nome da medida usada para resolver consultas NÃO VAZIAS em MDX para o membro calculado. Se a propriedade **Comportamento Não Vazio** estiver em branco, o membro calculado deverá ser avaliado repetidamente para determinar se um membro está vazio. Se a propriedade **Comportamento Não Vazio** contiver o nome de uma medida, o membro calculado será tratado como vazio se a medida especificada estiver vazia.  
   
 > [!WARNING]  
->  Essa propriedade é preterida. Evite configurá-la. Consulte [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obter detalhes.  
+>  Essa propriedade é preterida. Evite configurá-la. Ver [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obter detalhes.  
   
  **Expressões de cores**  
  Expanda para exibir as opções **Cor de primeiro plano** e **Cor de fundo** .  
@@ -116,10 +116,10 @@ ms.locfileid: "36120034"
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Criar membros calculados](multidimensional-models/create-calculated-members.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos de &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de ferramentas &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de script &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Ferramentas de cálculo &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ferramentas de cálculo de &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor de formulário de conjunto nomeado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor de scripts &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   

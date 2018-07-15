@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5622ca2cdda5a08bdcfdfd486e44b6fcd8fbf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300886"
 ---
 # <a name="dataitem-data-type-assl"></a>Tipos de dados DataItem (ASSL)
   Define um tipo de dados primitivo que representa a característica relacionada a dados de um item de dados, como, por exemplo, uma coluna ou um atributo.  
@@ -65,13 +65,13 @@ ms.locfileid: "36008746"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
-|Elementos filho|[Anotações](../collections/annotations-element-assl.md), [agrupamento](../properties/collation-element-assl.md), [DataSize](../properties/datasize-element-assl.md), [DataType](../properties/datatype-element-assl.md), [formato](../properties/format-element-assl.md), [InvalidXmlCharacters ](../properties/invalidxmlcharacters-element-assl.md), [MimeType](../properties/mimetype-element-assl.md), [NullProcessing](../properties/nullprocessing-element-assl.md), [fonte](../properties/source-element-binding-assl.md), [Trimming](../properties/trimming-element-assl.md)|  
+|Elementos filho|[Anotações](../collections/annotations-element-assl.md), [agrupamento](../properties/collation-element-assl.md), [DataSize](../properties/datasize-element-assl.md), [DataType](../properties/datatype-element-assl.md), [formato](../properties/format-element-assl.md), [InvalidXmlCharacters ](../properties/invalidxmlcharacters-element-assl.md), [MimeType](../properties/mimetype-element-assl.md), [NullProcessing](../properties/nullprocessing-element-assl.md), [origem](../properties/source-element-binding-assl.md), [Trimming](../properties/trimming-element-assl.md)|  
 |Elementos derivados|Consulte a tabela em Comentários.|  
   
 ## <a name="remarks"></a>Remarks  
  O tipo de dados `DataItem` é usado para qualquer item de dado que pode ser ligado, por exemplo, a uma medida, uma chave de atributo e um nome de atributo. Os detalhes que são relevantes e os padrões que se aplicam dependem do uso; por exemplo, nomes de atributos devem ser cadeias de caracteres.  
   
- Uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aceita apenas um determinado conjunto de tipos de dados. O uso de outros tipos de dados resulta em um erro, em vez de uma conversão implícita em um dos tipos válidos.  
+ Uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aceita apenas um determinado conjunto de tipos de dados. O uso de outros tipos de dados resulta em um erro, em vez de uma conversão implícita em um dos tipos válidos.  
   
  A tabela a seguir lista os elementos do tipo `DataItem`.  
   

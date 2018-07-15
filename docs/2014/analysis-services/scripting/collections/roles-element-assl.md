@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Roles element
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8ced51e40e2804054a0c63368622d2df70f81fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6227c72cc4fdd20b8c739bcb6019a83fbaaaa58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295576"
 ---
 # <a name="roles-element-assl"></a>Elemento Roles (ASSL)
   Contém a coleção de elementos [Role](../objects/role-element-assl.md) definidos sob o elemento pai.  

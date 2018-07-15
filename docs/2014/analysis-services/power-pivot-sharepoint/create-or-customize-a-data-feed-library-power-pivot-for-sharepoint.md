@@ -1,5 +1,5 @@
 ---
-title: Criar ou personalizar uma biblioteca de Feed de dados (PowerPivot para SharePoint) | Microsoft Docs
+title: Criar ou personalizar uma biblioteca de feeds de dados (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308496"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (PowerPivot para SharePoint)
   Uma *biblioteca de feed de dados* é uma biblioteca do SharePoint com finalidade especial que permite registrar e compartilhar documentos do serviço de dados Atom (.atomsvc). Esses documentos fornecem feeds de dados XML a pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou outros aplicativos cliente que oferecem suporte ao formato de feed de dados Atom. Uma biblioteca de feeds de dados é diferente de outras bibliotecas do SharePoint porque oferece a capacidade de:  
@@ -44,7 +44,7 @@ ms.locfileid: "36008292"
  [Adicionar o tipo de conteúdo do feed de dados a uma biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Pré-requisitos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração do recurso do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Você deve ser um proprietário do site criar a biblioteca.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36008292"
   
  Um link para a biblioteca de feeds de dados é exibido no painel Início Rápido da navegação do site atual.  
   
- Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [Feeds de dados de uso &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [usar Feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Adicionar o tipo de conteúdo do feed de dados a uma biblioteca  
  Se você não desejar criar uma biblioteca de feeds de dados dedicada, mas ainda quiser criar e gerenciar documentos do serviço de dados de um site do SharePoint, poderá adicionar e configurar manualmente o tipo de conteúdo de documento do serviço de dados para qualquer biblioteca que será usada para compartilhar arquivos de documento do serviço de dados (.atomsvc).  

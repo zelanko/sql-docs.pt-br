@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 417bb9c891d4fec3393f94cf9ccbdda0bf9d4bbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166899"
 ---
 # <a name="create-the-finance-name-policy"></a>Criar a política Nome Financeiro
   Nessa tarefa, você criará um banco de dados chamado Finance e uma condição que exige que todas as tabelas comecem com as letras **fintbl**. Em seguida, você criará uma política e uma categoria de políticas para impor um padrão de nomenclatura para as tabelas no banco de dados Finanças.  
@@ -78,7 +78,7 @@ ms.locfileid: "36120554"
   
 1.  Em Pesquisador de Objetos, expanda **Gerenciamento**, clique com o botão direito do mouse em **Gerenciamento de Política**e clique em **Gerenciar Categorias**.  
   
-2.  No **gerenciar categorias de política** caixa de diálogo **nome**, tipo `Finance` na caixa em branco e desmarque **autorizar assinaturas de banco de dados**. A opção**Autorizar Assinaturas de Banco de Dados** forçará todos os bancos de dados na instância a assinarem as políticas que pertencem a esta categoria de política. Para esta lição, somente o banco de dados Finanças deve assinar a política Nome Financeiro.  
+2.  No **gerenciar categorias de política** caixa de diálogo **nome**, digite `Finance` na caixa em branco e desmarque **autorizar assinaturas de banco de dados**. A opção**Autorizar Assinaturas de Banco de Dados** forçará todos os bancos de dados na instância a assinarem as políticas que pertencem a esta categoria de política. Para esta lição, somente o banco de dados Finanças deve assinar a política Nome Financeiro.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

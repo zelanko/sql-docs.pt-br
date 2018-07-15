@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8c6279f2dd57a490db9db3fdc45aa90733e8555
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb95317ceaac922602d1a6588013b83337466ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246786"
 ---
 # <a name="select-objects-to-transfer"></a>Selecionar objetos a serem transferidos
   Use esta caixa de diálogo para selecionar objetos para transferir de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a outra usando uma tarefa de transferência do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,6 +36,6 @@ ms.locfileid: "36116205"
  [Editor da Tarefa Transferir Logons &#40;Página Logons&#41;](../transfer-logins-task-editor-logins-page.md)   
  [Editor da Tarefa Transferir Objetos do SQL Server &#40;Página Objetos&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)   
  [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [Editor de tarefa de mensagens de erro de transferência &#40;mensagens de página&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+ [Editor de tarefa de mensagens de erro de transferência &#40;página de mensagens&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
   

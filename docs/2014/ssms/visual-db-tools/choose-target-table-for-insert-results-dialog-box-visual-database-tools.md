@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d752d5ad48e7824c7fee6f78955e266a6cfffb3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e382cce39c4301b591c73eb74e0a6159f400662b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189553"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados (Visual Database Tools)
   Permite especificar a tabela à qual serão adicionadas linhas de dados como o resultado de uma consulta INSERT RESULTS. Essa caixa de diálogo é exibida quando você inicia uma consulta INSERT RESULTS.  

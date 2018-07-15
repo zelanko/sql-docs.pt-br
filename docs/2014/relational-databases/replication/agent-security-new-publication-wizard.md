@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.agentsecurity.articles.f1
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 240c9cc6b0d4ddd078bacf1d220a8a4f9535729a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d4c36393e8a34768665fc4d65cf6ef4d12588a72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181973"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Segurança do Agente (Assistente para Nova Publicação)
   A página **Segurança do Agente** permite especificar as contas nas quais os seguintes agentes executam e fazem conexões com computadores em uma topologia de replicação:  

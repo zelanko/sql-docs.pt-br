@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,13 +16,13 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227068"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acessar itens do Servidor de Relatório usando o acesso à URL
   Este tópico descreve como acessar itens de catálogo de diferentes tipos em um banco de dados do servidor de relatório ou em um site do SharePoint usando *rs:Command*=*Value*.  
@@ -69,7 +69,7 @@ ms.locfileid: "36119297"
 </DataSourceDefinition>  
 ```  
   
- A cadeia de conexão é retornada com base na configuração **SecureConnectionLevel** do servidor de relatório. Para obter mais informações sobre o **SecureConnectionLevel** configuração, consulte [usando métodos do serviço Web seguro](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ A cadeia de conexão é retornada com base na configuração **SecureConnectionLevel** do servidor de relatório. Para obter mais informações sobre o **SecureConnectionLevel** , consulte [usando métodos de serviço da Web seguros](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Acessar o conteúdo de uma pasta  
  Para acessar o conteúdo de uma pasta, use o parâmetro *rs:Command*=*GetChildren* . Uma página genérica de navegação em pasta será retornada contendo links para subpastas, relatórios, fontes de dados e recursos na pasta solicitada. Por exemplo:  

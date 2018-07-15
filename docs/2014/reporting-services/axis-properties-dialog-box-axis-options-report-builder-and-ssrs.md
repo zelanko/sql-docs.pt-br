@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do eixo, opções do eixo (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo de propriedades do eixo, opções de eixo (construtor de relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 947b985ef25eec47ec8f064c752c5dad49fdf30b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315446"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Eixo, Opções do Eixo (Construtor de Relatórios e SSRS)
-  Selecione **opções de eixo** no **Horizontal** ou **VerticalAxis propriedades** caixa de diálogo para definir a aparência do eixo do gráfico especificado. Em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o gráfico exibia todos os rótulos no eixo x por padrão. No entanto, no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, o gráfico descarta os rótulos para produzir uma imagem mais limpa no gráfico e evitar colisões de rótulos. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Selecione **opções de eixo** sobre o **Horizontal** ou **propriedades VerticalAxis** caixa de diálogo para definir a aparência do eixo do gráfico especificado. Em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o gráfico exibia todos os rótulos no eixo x por padrão. No entanto, no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, o gráfico descarta os rótulos para produzir uma imagem mais limpa no gráfico e evitar colisões de rótulos. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
  **Habilitar quebras de escala**  
@@ -69,8 +69,8 @@ ms.locfileid: "36008581"
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Plotar dados em um eixo secundário &#40;SSRS e construtor de relatórios&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Plotar dados em um eixo secundário &#40;relatórios e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Adicionar ou remover margens de um gráfico &#40;SSRS e construtor de relatórios&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou remover margens de um gráfico &#40;relatórios e SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

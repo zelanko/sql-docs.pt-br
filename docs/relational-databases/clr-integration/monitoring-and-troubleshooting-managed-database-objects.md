@@ -1,12 +1,11 @@
 ---
-title: Monitoramento e solução de problemas gerenciados objetos de banco de dados | Microsoft Docs
+title: Monitorando e Solucionando problemas gerenciados objetos de banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,19 +16,19 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 895d99a7f693443a11340157be96a68b8d107d16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702757"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355588"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitorando e diagnosticando objetos de banco de dados gerenciado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico fornece informações sobre as ferramentas que podem ser usadas para monitorar e diagnosticar objetos de banco de dados gerenciado e assemblies executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="profiler-trace-events"></a>Eventos de rastreamento do Profiler  
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Rastreamento do SQL e notificações de eventos para monitorar os eventos que ocorrem no Mecanismo de Banco de Dados. Registrando os eventos especificados, o Rastreamento do SQL ajuda a solucionar problemas de desempenho, auditar a atividade de banco de dados, coletar dados de amostra em um ambiente de teste, depurar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados e reunir dados para ferramentas de análise de desempenho. Para obter mais informações, consulte [rastreamento SQL](../../relational-databases/sql-trace/sql-trace.md) e [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Rastreamento do SQL e notificações de eventos para monitorar os eventos que ocorrem no Mecanismo de Banco de Dados. Registrando os eventos especificados, o Rastreamento do SQL ajuda a solucionar problemas de desempenho, auditar a atividade de banco de dados, coletar dados de amostra em um ambiente de teste, depurar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados e reunir dados para ferramentas de análise de desempenho. Para obter mais informações, consulte [rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md) e [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
   
 |Evento|Description|  
 |-----------|-----------------|  

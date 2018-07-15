@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309226"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Salvar relatórios no computador (Construtor de Relatórios)
   No Construtor de Relatórios, você pode salvar definições de relatório no seu computador. No entanto, quando são salvas no computador, outros usuários não podem exibir os relatórios e os relatórios que referenciam fontes de dados compartilhadas ou armazenam itens de relatório, como imagens e sub-relatórios externamente, talvez não sejam executados. É recomendável salvar relatórios em um servidor de relatório ou site do SharePoint.  
@@ -31,7 +31,7 @@ ms.locfileid: "36006277"
     > [!NOTE]  
     >  Se você estiver salvando um relatório de novo, ele será salvo novamente automaticamente em seu local anterior. Use a opção **Salvar como** para alterar o local.  
   
-2.  Opcionalmente, clique em **Desktop**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
+2.  Opcionalmente, clique em **área de trabalho**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
   
 3.  Vá para a pasta no computador local em que você deseja salvar o relatório. Em **Nome**, digite o nome do relatório.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "36006277"
   
 2.  Vá para a pasta no computador local em que você deseja salvar o relatório.  
   
-3.  Em **Nome**, digite o nome do relatório. Opcionalmente, clique em **Desktop**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
+3.  Em **Nome**, digite o nome do relatório. Opcionalmente, clique em **área de trabalho**, **Meus documentos**, ou **meu computador** para salvar o relatório em uma dessas pastas.  
   
 4.  Em **Itens de tipo**, selecione o tipo de item de relatório que você está salvando. O tipo de relatórios é Relatórios (*.rdl).  
   
 ## <a name="see-also"></a>Consulte também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;SSRS e construtor de relatórios&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvando relatórios &#40;construtor de relatórios&#41;](report-builder/saving-reports-report-builder.md)   
  [Exportar um relatório como outro tipo de arquivo &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

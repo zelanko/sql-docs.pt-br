@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1
 helpviewer_keywords:
 - Select Mining Model dialog box
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1f83a7b6b3599bb7665e5ce9970a0b6f73dd7b03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15c4a05bb3347e9457aac81ade72fb95eb0434ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297186"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>Caixa de diálogo Selecionar Modelo de Mineração (Exibição da Previsão do Modelo de Mineração)
   Utilize a caixa de diálogo **Selecionar Modelo de Mineração** para selecionar um modelo de mineração no qual suas previsões serão fundamentadas.  

@@ -3,10 +3,9 @@ title: Visão geral da integração do CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -21,14 +20,14 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e1be655f6f1da49e9c432243e46d34e4d0412ec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f4fb83b806fe03bf1b68e7f9d70beb7ce876f7e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696777"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351338"
 ---
-# <a name="clr-integration---overview"></a>Integração do CLR - visão geral
+# <a name="clr-integration---overview"></a>Integração CLR – visão geral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O CLR (Common Language Runtime) é o centro do Microsoft .NET Framework; ele fornece o ambiente de execução para todo o código do .NET Framework. O código executado no CLR é chamado de código gerenciado. O CLR fornece diversas funções e serviços necessários para a execução de programas, incluindo a compilação JIT (Just-In-Time), alocação e gerenciamento de memória, imposição de segurança de tipos, tratamento de exceções, gerenciamento de threads e segurança.  Consulte o SDK do .NET Framework para obter mais informações.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "35696777"
   
  Uma das vantagens do código gerenciado é a segurança de tipos ou a garantia de que o código acesse apenas os tipos de modos permitidos e bem definidos. Antes da execução do código gerenciado, o CLR verifica se o código é seguro. Por exemplo, o código é verificado para assegurar que nenhuma memória que não tenha sido gravada anteriormente seja lida. O CLR também pode ajudar garantir que o código não manipule a memória não gerenciada.  
   
- A integração CLR oferece a possibilidade de melhorar o desempenho. Para obter informações, consulte [desempenho da integração do CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ A integração CLR oferece a possibilidade de melhorar o desempenho. Para obter informações, consulte [desempenho da integração CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
 >  [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Para obter mais informações, consulte [Segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md). 
@@ -60,7 +59,7 @@ ms.locfileid: "35696777"
  Outro fator que influencia sua decisão de usar o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o código gerenciado é o local onde o código residirá: no computador servidor ou no computador cliente. Tanto o [!INCLUDE[tsql](../../includes/tsql-md.md)] quanto o código gerenciado podem ser executados no servidor. Assim, o código e os dados ficam próximos, o que possibilita o aproveitamento do poder de processamento do servidor. Por outro lado, talvez você queira evitar colocar tarefas que utilizam intensamente o processador no servidor de banco de dados. Atualmente, a maioria dos computadores cliente tem uma capacidade grande, e talvez você queira aproveitar esse poder de processamento colocando a maior quantidade de código possível no cliente. O código gerenciado pode ser executado em um computador cliente, o que não ocorre com o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Escolhendo entre procedimentos armazenados estendidos e o código gerenciado  
- Os procedimentos armazenados estendidos podem ser criados de forma a executar funcionalidades que não são possíveis com os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Porém, os procedimentos armazenados estendidos podem comprometer a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o que não ocorre com o código gerenciado, que é verificado para assegurar que é fortemente tipado. Além disso, o gerenciamento da memória, o agendamento de threads e fibras, e os serviços de sincronização são integrados de forma mais aprofundada entre o código gerenciado do CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com a integração CLR, você tem uma forma mais segura do que os procedimentos armazenados estendidos para gravar os procedimentos armazenados necessários à execução de tarefas que não são possíveis no [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações sobre a integração de CLR e procedimentos armazenados estendidos, consulte [desempenho da integração do CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Os procedimentos armazenados estendidos podem ser criados de forma a executar funcionalidades que não são possíveis com os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Porém, os procedimentos armazenados estendidos podem comprometer a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o que não ocorre com o código gerenciado, que é verificado para assegurar que é fortemente tipado. Além disso, o gerenciamento da memória, o agendamento de threads e fibras, e os serviços de sincronização são integrados de forma mais aprofundada entre o código gerenciado do CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Com a integração CLR, você tem uma forma mais segura do que os procedimentos armazenados estendidos para gravar os procedimentos armazenados necessários à execução de tarefas que não são possíveis no [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações sobre a integração de CLR e procedimentos armazenados estendidos, consulte [desempenho da integração CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instalando o .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   

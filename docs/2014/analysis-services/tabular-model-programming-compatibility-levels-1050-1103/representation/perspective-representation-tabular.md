@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 528e3dd1d5147a2e2f5a4712a79f88ad936cbaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ec7f8349697eb6911c789b73a1a1fc3111363
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252868"
 ---
 # <a name="perspective-representation-tabular"></a>Representação de perspectiva (de tabela)
   Uma perspectiva é um mecanismo para simplificar ou focar o modelo em uma parte menor dele para o aplicativo cliente.  
   
- Consulte [representação de perspectiva (Tabular)](perspective-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de perspectiva.  
+ Ver [perspectiva Representation (Tabular)](perspective-representation-tabular.md) para obter uma explicação detalhada sobre como criar e manipular a representação de perspectiva.  
   
 > [!WARNING]  
 >  Perspectivas não são um mecanismo de segurança; objetos fora da perspectiva ainda podem ser acessados pelo usuário através de outras interfaces.  
@@ -34,7 +34,7 @@ ms.locfileid: "36118970"
  Em termos de objetos AMO, uma representação de perspectiva tem uma relação de mapeamento de um para um com <xref:Microsoft.AnalysisServices.Perspective> e nenhum outro objeto AMO principal é necessário.  
   
 ### <a name="perspective-in-amo"></a>Perspectiva no AMO  
- O trecho de código a seguir mostra como criar uma perspectiva em um modelo de tabela. O elemento chave neste pedaço de código é o perspectiveElements; este objeto é uma representação gráfica de todos os objetos no modelo de tabela que são expostos para o usuário. *perspectiveElements* contém 4 colunas e para este cenário apenas colunas 1, 2 e 3 são relevantes. A Coluna 1 contém o tipo de elemento exibido - elementTypeValue -; a coluna 2 contém o nome completo do elemento--, que provavelmente precisará ser analisado para inserir o elemento na perspectiva; a coluna 3 contém um item de caixa de seleção - checkedElement - que diz se o elemento faz parte da perspectiva ou não.  
+ O trecho de código a seguir mostra como criar uma perspectiva em um modelo de tabela. O elemento chave neste pedaço de código é o perspectiveElements; este objeto é uma representação gráfica de todos os objetos no modelo de tabela que são expostos para o usuário. *perspectiveElements* contém 4 colunas e para esse cenário somente colunas 1, 2 e 3 são relevantes. A Coluna 1 contém o tipo de elemento exibido - elementTypeValue -; a coluna 2 contém o nome completo do elemento--, que provavelmente precisará ser analisado para inserir o elemento na perspectiva; a coluna 3 contém um item de caixa de seleção - checkedElement - que diz se o elemento faz parte da perspectiva ou não.  
   
 ```  
   

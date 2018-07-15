@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2aef7f8d21b65a1b6d454b252bcddda720e1d481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 288ba907435b9600e685be9912095f39889cfa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228276"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Definir Opções de Agregação (Assistente de Otimização com Base no Uso)
   Use a página **Definir Opções de Agregação** para iniciar o processo de design de agregação e especificar limites de armazenamento ou desempenho para as agregações geradas pelo Assistente de Otimização Baseada no Uso.  

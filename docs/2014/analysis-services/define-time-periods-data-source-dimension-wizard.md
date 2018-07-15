@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c20dc34617590c5e4d1ab7134378afb2b7cfb93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b62c3da0e8a92eda40d883a596e862a6c679364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328856"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definir Períodos de Tempo (Fonte de Dados) (Assistente para Dimensões)
   Use a página **Definir Períodos de Tempo** para definir atributos que representam períodos de tempo na dimensão de tempo com colunas na tabela especificada na página **Selecionar o Tipo de Dimensão** .  
@@ -36,7 +36,7 @@ ms.locfileid: "36008073"
 > [!NOTE]  
 >  O tipo de atributo `Date` deve ser usado apenas para colunas com um tipo de dados DateTime.  
   
- **Colunas de tabela de tempo**  
+ **Colunas da tabela de tempo**  
  Lista as colunas nas quais os tipos de atributo correspondentes serão baseados.  
   
  Para alterar, clique na coluna e selecione uma coluna diferente na lista.  

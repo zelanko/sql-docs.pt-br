@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188033"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginação no Reporting Services (Construtor de Relatórios e SSRS)
-  A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. Paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia de acordo com a extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para criar com êxito um relatório de fácil leitura para os usuários que é otimizado para o processador que você planeja usar para entregar o relatório, você precisa entender as regras usadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  A paginação se refere ao número de páginas dentro de um relatório e ao modo como os itens de relatório são organizados nessas páginas. Paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varia de acordo com a extensão de renderização que você usa para exibir e entregar o relatório. Ao executar um relatório no servidor de relatórios, o relatório usa o processador HTML. O HTML segue um conjunto específico de regras de paginação. Por exemplo, se exportar o mesmo relatório para o PDF, o processador do PDF será utilizado e um conjunto de regras diferente será aplicado, portanto, o relatório será paginado de modo diferente. Para desenvolver com êxito um relatório de fácil leitura para seus usuários que é otimizado para o processador que você planeja usar para entregar seu relatório, você precisa entender as regras usadas para controlar a paginação no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Este tópico abrange o impacto do tamanho físico da página e o layout to relatório sobre como os processadores de quebras de página não flexíveis renderizam o relatório. Você pode configurar as propriedades para modificar o tamanho físico da página e as margens, além de dividir o relatório em colunas, usando o painel **Propriedades do Relatório** , o painel **Propriedades** ou a caixa de diálogo **Configurar Página** . Você pode acessar o painel **Propriedades do Relatório** clicando na área azul fora do corpo do relatório. Além disso, pode acessar a caixa de diálogo **Configurar Página** clicando em **Executar** na guia Página Inicial e depois clicar em **Configurar Página** na guia Executar.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36120948"
   
  Você pode usar constantes e expressões simples ou complexas para definir o valor das propriedades Disabled e ResetPageNumber. Contudo, você não pode usar expressões com a propriedade BreakLocation. Para obter mais informações sobre como gravar e usar expressões, consulte [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
- Em seu relatório, você pode escrever expressões que referenciam os nomes da página atual ou os números de página usando o `Globals` coleção. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Em seu relatório, você pode escrever expressões que fazem referência a nomes da página atual ou os números de página usando o `Globals` coleção. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Nomeando guias de planilhas do Excel  
  Estas propriedades são úteis quando você exporta relatórios para pastas de trabalho do Excel. Use a propriedade InitialPage para especificar um nome padrão para o nome da guia da planilha quando você exportar o relatório, e use quebras de páginas e a propriedade PageName para atribuir nomes diferentes a cada planilha. Cada nova página de relatório, definida por uma quebra de página, é exportada para uma planilha diferente nomeada pelo valor da propriedade PageName. Se PageName ficar em branco, mas o relatório tiver um nome de página inicial, todas as planilhas na pasta de trabalho do Excel usarão o mesmo nome, o nome de página inicial.  
@@ -87,6 +87,6 @@ ms.locfileid: "36120948"
  Para obter mais informações sobre como essas propriedades funcionam quando os relatórios são exportados para o Excel, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Layout de página e renderização &#40;SSRS e construtor de relatórios&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Layout de página e renderização &#40;relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

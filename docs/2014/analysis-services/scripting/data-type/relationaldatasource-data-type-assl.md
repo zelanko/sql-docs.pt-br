@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2928f86dd45538cc1507718008113522d02f80a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204126"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>Tipo de dados RelationalDataSource (ASSL)
-  Define um tipo de dados derivado que representa um [DataSource](../objects/datasource-element-assl.md) elemento com base em uma fonte de dados relacional.  
+  Define um tipo de dados derivado que representa uma [fonte de dados](../objects/datasource-element-assl.md) elemento com base em uma fonte de dados relacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36118196"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|Nenhum|  
-|Elementos derivados|[Fonte de dados](../objects/datasource-element-assl.md) ([fontes de dados](../collections/datasources-element-assl.md) coleção de [banco de dados](../objects/database-element-assl.md))|  
+|Elementos derivados|[Fonte de dados](../objects/datasource-element-assl.md) ([DataSources](../collections/datasources-element-assl.md) coleção de [banco de dados](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.RelationalDataSource>.  

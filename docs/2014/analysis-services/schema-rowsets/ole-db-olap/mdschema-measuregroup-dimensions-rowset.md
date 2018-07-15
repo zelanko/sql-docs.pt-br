@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f607b966099f71acee460a5a343c557e2a81857e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae41cad794f31443dfa2fbfc2951f0b611d5766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308446"
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS
   Enumera as dimensões de grupos de medidas.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_MEASUREGROUP_DIMENSIONS` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_MEASUREGROUP_DIMENSIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "36009844"
 |`CUBE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -1 visível<br />-2 não visível<br />-Restrição padrão é um valor de 1.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -Visible 1<br />-2 não visível<br />-Restrição de padrão é um valor de 1.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](ole-db-for-olap-schema-rowsets.md)  

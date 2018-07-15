@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b4ec577596fde0923f1d446ed282db1cd3eb17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177213"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
   A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  
@@ -40,25 +40,25 @@ ms.locfileid: "36120521"
 |**FindString**|O texto a ser pesquisado no relatório. O valor padrão desse parâmetro é uma cadeia de caracteres vazia.|  
 |**GetImage (\*)**|Obtém um ícone específico para a interface de usuário do Visualizador de HTML.|  
 |`HTMLFragment`|Indica se um fragmento de HTML é criado no lugar de um documento HTML completo. Um fragmento de HTML inclui o conteúdo do relatório em um elemento TABLE e omite os elementos HTML e BODY. O valor padrão é `false`. Renderização usando SOAP com o `HTMLFragment` propriedade definida como `true` cria URLs contendo informações de sessão que podem ser usadas para solicitar imagens corretamente. As imagens devem ser recursos carregados no banco de dados do servidor de relatório.|  
-|`ImageConsolidation`|Indica se o gráfico renderizado, mapa, medidor e imagens de medidor serão consolidados em uma única imagem grande. A consolidação de imagens ajuda a melhorar o desempenho do relatório no navegador do cliente quando o relatório contém muitos itens de visualização de dados. O valor padrão é `true` para a maioria dos navegadores modernos.|  
+|`ImageConsolidation`|Indica se o gráfico renderizado, mapa, medidor e imagens de medidor serão consolidados em uma única imagem grande. A consolidação de imagens ajuda a melhorar o desempenho do relatório no navegador do cliente quando o relatório contém muitos itens de visualização de dados. O valor padrão é `true` para navegadores mais modernos.|  
 |**JavaScript**|Indica se JavaScript é compatível com o relatório renderizado. O valor padrão é `true`.|  
-|`LinkTarget`|O destino de hiperlinks no relatório. Você pode destinar uma janela ou quadro fornecendo o nome da janela, como `LinkTarget` = *window_name*, ou você pode destinar uma nova janela usando `LinkTarget`= blank. Outros nomes de destino válidos incluem _self, _parent e _top.|  
+|`LinkTarget`|O destino de hiperlinks no relatório. Você pode direcionar uma janela ou quadro fornecendo o nome da janela, como `LinkTarget` = *window_name*, ou você pode destinar uma nova janela usando `LinkTarget`= blank. Outros nomes de destino válidos incluem _self, _parent e _top.|  
 |**OnlyVisibleStyles(\*)**|Indica se somente os estilos compartilhados são gerados para a página renderizada atualmente.|  
 |`OutlookCompat`|Indica se ocorrerá renderização com metadados extras que melhoram a aparência do relatório no Outlook. Para outras pessoas, o valor padrão é `false`.|  
 |**Parâmetros**|Indica se deve mostrar ou ocultar a área de parâmetros da barra de ferramentas. Se você definir esse parâmetro como um valor de `true`, a área de parâmetros da barra de ferramentas é exibida. O valor padrão desse parâmetro é `true`.|  
-|`PrefixId`|Quando usado com `HTMLFragment`, adiciona o prefixo especificado a todos os `ID` atributos no fragmento HTML que é criado.|  
+|`PrefixId`|Quando usado com `HTMLFragment`, adiciona o prefixo especificado a todos os `ID` atributos no fragmento de HTML que é criado.|  
 |**ReplacementRoot(\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot(\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
 |**Seção**|O número da página do relatório para renderizar. Um valor `0` indica que todas as seções do relatório serão renderizadas. O valor padrão é `1`.|  
 |**StreamRoot (\*)**|O caminho usado para prefixar o valor do atributo **src** do elemento IMG no relatório de HTML retornado pelo servidor de relatório. Por padrão, o servidor de relatório fornece o caminho. Você pode usar essa configuração para especificar um caminho raiz para as imagens em um relatório (por exemplo, **http://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Indica se os estilos e scripts são criados como um fluxo separado em vez de no documento. O valor padrão é `false`.|  
-|`Toolbar`|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é `true`. Se o valor desse parâmetro é `false`, todas as demais opções (exceto o mapa do documento) são ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. No entanto, o `Toolbar` configuração afeta o modo de exibição de relatório de informações de dispositivo ao usar o SOAP `Render` método. Se o valor desse parâmetro é `true` ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório é renderizada. Se o valor for `false`, o relatório HTML inteiro será renderizado como uma única página HTML.|  
-|`UserAgent`|O `user-agent` cadeia de caracteres do navegador que está fazendo a solicitação, que é encontrada na solicitação HTTP.|  
+|`Toolbar`|Indica se deve mostrar ou ocultar a barra de ferramentas. O padrão desse parâmetro é `true`. Se o valor desse parâmetro for `false`, todas as demais opções (exceto o mapa do documento) são ignoradas. Se você omitir esse parâmetro, a barra de ferramentas será exibida automaticamente para renderizar formatos que dão suporte a ele.<br /><br /> A barra de ferramentas do Visualizador de Relatório é renderizada quando você usa o acesso de URL para renderizar um relatório. A barra de ferramentas não é renderizada por meio da API SOAP. No entanto, o `Toolbar` informações do dispositivo configuração afeta a maneira que o relatório é exibido ao usar o SOAP `Render` método. Se o valor desse parâmetro é `true` ao usar o SOAP para renderizar para HTML, somente a primeira seção do relatório é renderizada. Se o valor for `false`, o relatório HTML inteiro será renderizado como uma única página HTML.|  
+|`UserAgent`|O `user-agent` cadeia de caracteres do navegador que está fazendo a solicitação, o que é encontrada na solicitação HTTP.|  
 |**Zoom (\*)**|O valor de zoom do relatório como uma porcentagem de número inteiro ou uma constante de cadeia de caracteres. Os valores de cadeia de caracteres padrão incluem `Page Width` e `Whole Page`. Esse parâmetro é ignorado pelas versões do [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer anteriores ao Internet Explorer 5.0 e por todos os navegadores que não são da[!INCLUDE[msCoName](../includes/msconame-md.md)] . O valor padrão desse parâmetro é `100`.|  
 |**DataVisualizationFitSizing**|Indica comportamento de ajuste de visualização de dados quando dentro de um tablix. Isso inclui gráfico, medidor e mapa.<br /><br /> Os valores possíveis são **Aproximado** e **Exato**.<br /><br /> O valor padrão é **Aproximado**. Se a configuração for removida do arquivo **rsreportserver.config** , o comportamento padrão será **Exato**.<br /><br /> Habilitar **Exato** pode ter impacto de desempenho porque o processamento para determinar o tamanho exato pode levar mais tempo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Passando configurações de informações do dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

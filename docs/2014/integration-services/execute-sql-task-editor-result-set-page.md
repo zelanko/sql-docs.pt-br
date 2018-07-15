@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b80d8052fd4492e0da04a65aa17e55f3e960d238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57a355411ce49b472708890c51e50eec59996dd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269424"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor da Tarefa Executar SQL (página Conjunto de Resultados)
   Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa Executar SQL** para mapear o resultado da instrução SQL para variáveis novas ou já existentes. As opções dessa caixa de diálogo serão desabilitadas se o **ResultSet** na página Geral for definido como **Nenhum**.  
@@ -52,7 +52,7 @@ ms.locfileid: "36119157"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL Editor da tarefa executar &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [SQL Editor da tarefa executar &#40;página mapeamento de parâmetros&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [SQL Editor da tarefa executar &#40;página de mapeamento de parâmetro&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Execute o Editor de tarefa do pacote | Microsoft Docs
+title: Editor da tarefa de pacote executar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271712"
 ---
 # <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
   Use o Editor da tarefa Executar Pacote para configurar a Tarefa Executar Pacote. A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  

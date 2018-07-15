@@ -1,5 +1,5 @@
 ---
-title: Nome de elemento de coluna (DTA) | Microsoft Docs
+title: Nome de elemento para coluna (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88402e29f5a4cc9f92039ec8a474b2507cf037e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8aa08083be9101359645cc015bc4bdd7c735fa3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224596"
 ---
 # <a name="name-element-for-column-dta"></a>Elemento de nome para coluna (DTA)
   Especifica o nome para uma coluna de índice em uma configuração especificada pelo usuário.  
@@ -43,13 +43,13 @@ ms.locfileid: "36119246"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Necessário uma vez para cada `Column` elemento.|  
+|**Ocorrência**|Exigido uma vez para cada `Column` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de coluna para índice &#40;DTA&#41;](column-element-for-index-dta.md)|  
+|**Elemento pai**|[Elemento Column para Index &#40;DTA&#41;](column-element-for-index-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

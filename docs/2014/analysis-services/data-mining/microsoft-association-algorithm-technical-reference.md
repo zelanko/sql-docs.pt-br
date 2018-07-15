@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1179752b5a1870af925463687056f3f767318aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f787b070c72c2cc8c1f071fee9cc6bcdd3d96e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171987"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
   O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma implementação direta do já conhecido algoritmo Apriori.  
@@ -77,7 +77,7 @@ ms.locfileid: "36120037"
  O algoritmo Regras de Associação da [!INCLUDE[msCoName](../../includes/msconame-md.md)] dá suporte a vários parâmetros que afetam o comportamento, o desempenho e a precisão do modelo de mineração resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
- É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) no XMLA. A tabela a seguir descreve cada parâmetro.  
+ É possível alterar os parâmetros de um modelo de mineração a qualquer momento com o uso do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você pode também alterar os parâmetros programaticamente usando o <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> coleção em AMO ou usando o [elemento MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) em XMLA. A tabela a seguir descreve cada parâmetro.  
   
 > [!NOTE]  
 >  Não é possível alterar os parâmetros de um modelo existente usando uma instrução DMX; você deve especificar os parâmetros na instrução DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL ao criar o modelo.  
@@ -166,8 +166,8 @@ ms.locfileid: "36120037"
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de associação da Microsoft](microsoft-association-algorithm.md)   
+ [Algoritmo associação da Microsoft](microsoft-association-algorithm.md)   
  [Exemplos de consulta de modelo de associação](association-model-query-examples.md)   
- [Conteúdo do modelo de associação de modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de associação &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

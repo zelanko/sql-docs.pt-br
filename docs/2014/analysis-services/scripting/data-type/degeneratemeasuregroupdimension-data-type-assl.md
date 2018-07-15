@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a3d778580c344e0251e271415ff729b61520b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321138"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>Tipo de dados DegenerateMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa a relação entre uma dimensão de degeneração (ou seja, uma dimensão de fatos) e um grupo de medidas.  
@@ -60,7 +60,7 @@ ms.locfileid: "36009428"
 |Elementos derivados|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre as dimensões de fato, consulte [relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Para obter mais informações sobre dimensões de fato, consulte [relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  
   

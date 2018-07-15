@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 applies_to:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aece3c6dded9e11296be8fde8718149425cabc90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a4a5de8fea73ee5eddf8c9b5eae8eea996a53629
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290972"
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
   A classe de evento RPC:Completed indica que uma chamada de procedimento remoto foi concluída.  

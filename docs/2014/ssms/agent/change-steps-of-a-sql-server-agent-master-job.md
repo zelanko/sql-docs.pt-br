@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187613"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   Este tópico descreve como realizar alterações às etapas de um trabalho mestre do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "36120936"
   
 5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, em **Selecione uma página**, selecione **Etapas**.  
   
-6.  Clique em **Editar** para abrir a caixa de diálogo **Propriedades da Etapa de Trabalho –***job_step_name*. Para obter mais informações sobre as opções disponíveis na caixa de diálogo, consulte [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página avançada&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Clique em **Editar** para abrir a caixa de diálogo **Propriedades da Etapa de Trabalho –***job_step_name*. Para obter mais informações sobre as opções disponíveis nessa caixa de diálogo, consulte [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página geral&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [propriedades da etapa de trabalho: nova etapa de trabalho &#40;página avançada&#41; ](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Quando terminar, clique em **OK**.  
   

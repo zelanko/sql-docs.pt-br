@@ -1,12 +1,11 @@
 ---
-title: Conceitos de programação integração do comuns Language Runtime (CLR) | Microsoft Docs
+title: Conceitos de programação de integração do Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -19,12 +18,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: df157328c0718a55dae569503e1e5f6bd424131e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703317"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357028"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Conceitos de programação da Integração CLR (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "35703317"
  O namespace Microsoft.SqlServer.Server inclui a funcionalidade principal para programação de CLR no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, o namespace Microsoft.SqlServer.Server é documentado no .NET Framework SDK. Esta documentação não é incluída em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Por padrão, o .NET Framework é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não o .NET Framework SDK. Sem o SDK instalado no computador e incluído na coleção de Manuais Online, os links para o conteúdo do SDK desta seção não funciona. Instale o .NET Framework SDK. Uma vez instalado, adicione o SDK para a coleção de Manuais Online e o sumário seguindo as instruções em [instalar o SDK do .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  Por padrão, o .NET Framework é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não o .NET Framework SDK. Sem o SDK instalado no computador e incluído na coleção de Manuais Online, os links para o conteúdo do SDK desta seção não funciona. Instale o .NET Framework SDK. Uma vez instalado, adicione o SDK à coleta de Manuais Online e ao sumário seguindo as instruções em [instalar o SDK do .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
->  Funcionalidade CLR, como funções de usuário do CLR, são *não* suporte para o banco de dados do SQL Azure.  
+>  Funcionalidade CLR, como funções de usuário do CLR, são *não* com suporte para o banco de dados SQL.  
   
  A tabela a seguir lista os tópicos desta seção.  
   
@@ -72,6 +71,6 @@ ms.locfileid: "35703317"
   
 ## <a name="see-also"></a>Consulte também  
  [Assemblies &#40;mecanismo de banco de dados&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Instalando o .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [Instalar o SDK do .NET Framework](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

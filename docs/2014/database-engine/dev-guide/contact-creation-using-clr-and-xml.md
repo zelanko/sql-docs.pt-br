@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc0921ce6d6c4107df80e84c3623ead2fc209911
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e7e534ec77dce09c99ba9172f6917308e39022c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213766"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Criação de Contact usando CLR e XML
   O exemplo Contact do SQL Server fornece alguns utilitários úteis que formam uma camada de funcionalidade extra no banco de dados de exemplo base AdventureWorks2012. O primeiro utilitário cria registros de contato para vários tipos de pessoas envolvidas no banco de dados AdventureWorks2012. As informações de contato são especificadas por meio de XML e são passadas para um procedimento armazenado baseado no C# ou no VB para criar o XML e colocá-las nas tabelas adequadas no banco de dados.  

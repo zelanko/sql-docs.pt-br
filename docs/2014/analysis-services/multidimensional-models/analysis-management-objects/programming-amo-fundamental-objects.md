@@ -1,5 +1,5 @@
 ---
-title: Programação de objetos fundamentais AMO | Microsoft Docs
+title: Programando objetos AMO fundamentais | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321296"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programando objetos AMO fundamentais
   Os objetos fundamentais são geralmente simples e diretos. Esses objetos são normalmente criados e instanciados e, quando não são mais necessários, o usuário se desconecta deles. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. O único objeto complexo dos objetos fundamentais AMO é o <xref:Microsoft.AnalysisServices.DataSourceView>, que exige detalhes para a criação do modelo abstrato que representa a exibição da fonte de dados.  
@@ -181,7 +181,7 @@ static Database CreateDatabase(Server svr, String DatabaseName)
 ### <a name="processing-a-database"></a>Processando um banco de dados  
  O processamento de um banco de dados, com todos os seus objetos filhos, é muito simples, já que o objeto <xref:Microsoft.AnalysisServices.Database> inclui um método Process.  
   
- O método Process pode incluir parâmetros, mas eles não são obrigatórios. Se nenhum parâmetro for especificado, todos os objetos filhos serão processados com sua opção `ProcessDefault`. Para obter mais informações sobre opções de processamento, consulte <xref:Microsoft.AnalysisServices.Database>.  
+ O método Process pode incluir parâmetros, mas eles não são obrigatórios. Se nenhum parâmetro for especificado, todos os objetos filhos serão processados com sua opção `ProcessDefault`. Para obter mais informações sobre as opções de processamento, consulte <xref:Microsoft.AnalysisServices.Database>.  
   
 1.  O código de exemplo a seguir processa um banco de dados por seu valor padrão.  
   

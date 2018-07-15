@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
 - Toolbox [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e29019df2d10653b69ce03b56d5414310dd6a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d5d8ef26cb4d9717682c47bf6680dd87694bdba1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172037"
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
   Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  

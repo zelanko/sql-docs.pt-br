@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29a9334ebe2f098c805d7093a739ecbf29d18d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190886"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Definir Opções de Agregação (Assistente de Design de Agregação)
   Use a página **Definir Opções de Agregação** para iniciar o processo de design de agregação e especificar limites de armazenamento ou desempenho para as agregações geradas.  

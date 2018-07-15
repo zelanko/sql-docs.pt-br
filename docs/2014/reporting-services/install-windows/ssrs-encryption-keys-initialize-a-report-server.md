@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -20,20 +20,20 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 70953e800019fd91afde599daa060abf3beda581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec18c65310311e51baf5c3d8a2d6939d4cac5f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232586"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Inicializar um servidor de relatório (Gerenciador de configurações do SSRS)
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], um servidor inicializado é aquele que pode criptografar e descriptografar dados em um banco de dados de servidor de relatório. A inicialização é um requisito para a operação do servidor de relatório. A inicialização ocorre quando o serviço Servidor de Relatório é iniciado pela primeira vez. Também ocorre quando você associa o servidor de relatório à implantação existente ou quando recria manualmente as chaves como parte do processo de recuperação. Para obter mais informações sobre como e por que as chaves de criptografia são usadas, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md) e [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Em parte, as chaves de criptografia têm como base as informações de perfil do serviço Servidor de Relatório. Se você alterar a identidade de usuário usada para executar o serviço Servidor de Relatório, deverá atualizar as chaves adequadamente. Se você estiver usando a ferramenta Configuração do Reporting Services para alterar a identidade, essa etapa será tratada para você automaticamente.  
   
- Se a inicialização falhar por algum motivo, o servidor de relatório retornará um `RSReportServerNotActivated` erro em resposta a solicitações do usuário e serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para saber mais, veja a [SSRS: solução de problemas e erros com o Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)no TechNet Wiki.  
+ Se a inicialização falhar por algum motivo, o servidor de relatório retornará um `RSReportServerNotActivated` erro em resposta a solicitações de usuário e de serviço. Nesse caso, poderá ser necessário solucionar o problema da configuração do sistema ou do servidor. Para saber mais, veja a [SSRS: solução de problemas e erros com o Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)no TechNet Wiki.  
   
 ## <a name="overview-of-the-initialization-process"></a>Visão geral do processo de inicialização  
  O processo de inicialização cria e armazena uma chave simétrica usada para criptografia. A chave simétrica é criada pelos Serviços de Criptografia do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e subsequentemente usada pelo serviço Servidor de Relatório para criptografar e descriptografar dados. A própria chave simétrica é criptografada com uma chave assimétrica.  
@@ -69,12 +69,12 @@ ms.locfileid: "36119054"
  Um servidor de relatório será inicializado apenas se houver uma correspondência entre o identificador da instalação e a chave pública. Se a correspondência obtiver êxito, será criada uma chave simétrica que permite criptografia reversível. Se a correspondência falhar, o servidor de relatório será desabilitado, caso no qual poderá ser necessário aplicar uma chave de backup ou excluir os dados criptografados se uma chave de backup não estiver disponível ou não for válida. Para obter mais informações sobre as chaves de criptografia usadas por um servidor de relatório, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  Você também pode usar o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para inicializar um servidor de relatório de forma programática. Para obter mais informações, consulte [acessar o provedor de WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+>  Você também pode usar o provedor WMI (Instrumentação de Gerenciamento do Windows) do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para inicializar um servidor de relatório de forma programática. Para obter mais informações, consulte [acessar o provedor de WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Como confirmar a inicialização de um servidor de relatório  
  Para confirmar a inicialização do servidor de relatório, execute ping no serviço Web Servidor de Relatórios digitando **http://\<servername>/reportserver** na janela de comando. Se ocorrer o erro `RSReportServerNotActivated`, a inicialização falhou.  
   
 ## <a name="see-also"></a>Consulte também  
- [Armazenar dados de servidor de relatório criptografados &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Dados do servidor de relatório criptografado de Store &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

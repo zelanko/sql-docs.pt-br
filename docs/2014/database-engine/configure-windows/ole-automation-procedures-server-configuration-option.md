@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea0784932246de16020ce35ff8ff60c0388eafef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a1f1feb6278c36f09c978f5f8f1ae6dbf9f64e60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205756"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Opção de configuração de servidor Ole Automation Procedures
   Use a opção `Ole Automation Procedures` para especificar se podem ser instanciados objetos de automação OLE dentro de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essa opção também pode ser configurada com o Gerenciamento Baseado em Políticas ou o procedimento armazenado **sp_configure** . Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

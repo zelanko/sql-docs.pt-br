@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262072"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Partes de relatório (Construtor de Relatórios e SSRS)
   Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como *partes de relatório*. Partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório e podem ser reutilizados em outros relatórios. As partes de relatório têm uma extensão de arquivo .rsc.  
@@ -30,7 +30,7 @@ ms.locfileid: "36119371"
   
  A parte de relatório que você adiciona ao relatório mantém uma relação com a instância da parte de relatório no site ou servidor por meio de uma identificação exclusiva. Depois de adicionar partes de relatório de um site ou servidor a um relatório, você pode modificá-los, independentemente de a parte de relatório original estar no site ou servidor. Você pode aceitar atualizações que outros fizeram à parte de relatório no site ou servidor e pode salvar a parte de relatório modificada no site ou servidor, adicionando uma nova parte de relatório ou gravando sobre o original, se você tiver permissões suficientes.  
   
- Para iniciar rapidamente com partes de relatório, veja os vídeos [partes de relatório de 3 de construtor de relatórios no SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) e [como fazer criar relatório partes reutilizáveis com o construtor de relatórios do SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Para começar rapidamente com partes de relatório, veja os vídeos [partes de relatório de 3 de construtor de relatórios no SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) e [como eu faço para: Criar relatório partes reutilizáveis com o construtor de relatórios do SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo de vida de uma parte de relatório  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -102,7 +102,7 @@ ms.locfileid: "36119371"
 ### <a name="what-comes-with-a-report-part"></a>O que vem com uma parte de relatório  
  Quando você adiciona uma parte de relatório a seu relatório, também está adicionando tudo que ele deve ter para funcionar. Por exemplo, qualquer objeto que exiba dados depende de um conjunto de dados: uma consulta e uma conexão com uma fonte de dados. Também pode ter um ou mais parâmetros. Todos os itens dos quais ele depende são suas *dependências*e todos eles, ou ponteiros para eles, serão incluídos com a parte de relatório quando você adicioná-lo ao relatório. O conjunto de dados e os parâmetros são listados no painel de dados do relatório do seu relatório.  
   
- O conjunto de dados para a parte de relatório pode ser inserido na parte de relatório, ou pode ser um conjunto de dados separado e compartilhado para o qual a parte de relatório aponta. Se for inserido na parte de relatório, você talvez possa modificá-lo. Se for um conjunto de dados compartilhado, será um objeto separado para o qual você precisaria de permissões. Para obter mais informações sobre compartilhadas e conjuntos de dados inseridos, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ O conjunto de dados para a parte de relatório pode ser inserido na parte de relatório, ou pode ser um conjunto de dados separado e compartilhado para o qual a parte de relatório aponta. Se for inserido na parte de relatório, você talvez possa modificá-lo. Se for um conjunto de dados compartilhado, será um objeto separado para o qual você precisaria de permissões. Para obter mais informações sobre compartilhada e conjuntos de dados inseridos, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Resolvendo conflitos de nomenclatura  
  Quando você adiciona uma parte de relatório, o Construtor de Relatórios corrige os conflitos de nome. Por exemplo, se você já tiver um Chart1 em seu relatório e adicionar uma parte de relatório chamada Chart1, o Construtor de Relatórios renomeará automaticamente a nova parte de relatório como Chart2. Se você já tiver um Dataset1 em seu relatório e adicionar uma parte de relatório que refere-se a um conjunto de dados diferente que também é chamado Dataset1, o Construtor de Relatórios renomeará o novo conjunto de dados como Dataset2 e atualizará as referências.  
@@ -145,15 +145,15 @@ ms.locfileid: "36119371"
  O funcionamento de partes de relatório é um pouco diferente no Designer de Relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No Designer de Relatórios, a publicação é unidirecional: você pode publicar uma parte de relatório no Designer de Relatórios, mas não pode reutilizar uma parte de relatório existente no Designer de Relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Publicar e republicar partes de relatório &#40;SSRS e construtor de relatórios&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Publicar e republicar partes de relatório &#40;relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Procurar partes de relatório e definir uma pasta padrão &#40;SSRS e construtor de relatórios&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Procurar partes de relatório e definir uma pasta padrão &#40;relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Verificar ou desativar atualizações &#40;SSRS e construtor de relatórios&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [Verificar ou desativar atualizações &#40;relatórios e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Partes de relatório e conjuntos de dados no construtor de relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de partes de relatório &#40;SSRS e construtor de relatórios&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Gerenciando partes de relatório](report-design/managing-report-parts.md)   
  [Partes de relatório do construtor de relatórios 3 no SQL Server 2008 R2 (vídeo)](http://technet.microsoft.com/edge/Video/ff711300)   
  [Como fazer: partes de relatório reutilizáveis criar com o construtor de relatórios do SQL Server (vídeo)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  

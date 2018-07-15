@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308436"
 ---
 # <a name="aggregationfunction-element-assl"></a>Elemento AggregationFunction (ASSL)
   Contém a função de agregação a ser usada para o tipo de conta.  

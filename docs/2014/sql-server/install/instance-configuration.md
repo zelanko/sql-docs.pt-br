@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274322"
 ---
 # <a name="instance-configuration"></a>Configuração da instância
   Use a página **Configuração de Instância** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se uma instância padrão ou uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser criada. Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é ainda não estiver instalada, uma instância padrão será criada, a menos que você especifique uma instância nomeada.  
@@ -65,7 +65,7 @@ ms.locfileid: "36118580"
   
 -   Se você especificar MSSQLServer para o nome de instância, uma instância padrão será criada.  
   
--   Uma instalação do [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] é sempre instalado como uma instância nomeada do 'PowerPivot'. Você não pode especificar um nome de instância diferente para essa função de recurso.  
+-   Uma instalação do [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] sempre é instalada como uma instância nomeada do 'PowerPivot'. Você não pode especificar um nome de instância diferente para essa função de recurso.  
   
 -   Os nomes de instância estão limitados a 16 caracteres.  
   

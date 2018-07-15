@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cec916094b297baa648b743b2c5649ee4fced1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4a28465f0175be0bfc12e5c9d51a267ae6597ec6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236076"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lição 3: Gravar um backup de banco de dados completo no serviço de armazenamento de Blob do Windows Azure
   Esta lição demonstra o uso da instrução tsql para executar um backup completo de banco de dados no serviço de armazenamento de Blob do Windows Azure.  
@@ -27,7 +27,7 @@ ms.locfileid: "36118558"
 ## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Execute um backup completo de banco de dados no serviço de armazenamento de Blob do Windows Azure  
  Para criar um backup de banco de dados completo, execute as seguintes etapas:  
   
-1.  Conecte-se ao [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Conectar-se ao [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  No **Pesquisador de objetos**, conecte-se à instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   

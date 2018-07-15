@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179723"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
-  Você pode usar uma condição de proximidade (NEAR) em um [contém](/sql/t-sql/queries/contains-transact-sql) predicado ou [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) função para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos anterior [condição de proximidade genérica](#Generic_NEAR), que agora é substituída e o [condição de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Você pode usar um termo de proximidade (NEAR) em um [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado ou [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) função para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> O termo de proximidade personalizada  
  A condição de proximidade personalizada introduz os novos recursos a seguir:  
@@ -59,14 +58,14 @@ ms.locfileid: "36118630"
   
  |  
   
- (*search_term* [,... *n* ]) [, < distância_máxima > [, < match_order >]]  
+ (*search_term* [,... *n* ]) [, < maximum_distance > [, < match_order >]]  
   
  }  
   
  )  
   
 > [!NOTE]  
->  Para obter mais informações sobre a sintaxe < custom_proximity_term >, consulte [contém &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
+>  Para obter mais informações sobre a sintaxe < custom_proximity_term >, consulte [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
  Por exemplo, você pode procurar 'John' dentro de duas condições de 'Smith', da seguinte maneira:  
   
@@ -157,10 +156,10 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a> O termo de proximidade genérica substituída  
+##  <a name="Generic_NEAR"></a> A proximidade genérica substituída  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Recomendamos que você use o [condição de proximidade personalizada](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use o [de proximidade personalizada](#Custom_NEAR).  
   
  Um termo de proximidade genérico indica que todos os termos de pesquisa especificados devem ocorrer em um documento para que uma correspondência seja retornada, independentemente do número de termos não relacionados à pesquisa (a *distância*) entre os termos de pesquisa. A sintaxe básica é:  
   
@@ -173,7 +172,7 @@ GO
 -   `CONTAINSTABLE(table_name, column_name, 'fox ~ chicken')`  
   
 > [!NOTE]  
->  Para obter informações sobre a sintaxe < generic_proximity_term >, consulte [contém &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
+>  Para obter informações sobre a sintaxe < generic_proximity_term >, consulte [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
  Para obter mais informações, veja “[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)”, mais adiante neste tópico.  
   

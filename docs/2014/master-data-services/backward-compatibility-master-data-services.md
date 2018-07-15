@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a9ba65161a198858980250a43d723f7018753d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bc6e08c4d2a1858dce11894f957f5eb889a352a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212046"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilidade com versões anteriores (Master Data Services)
   Esta seção descreve as alterações entre as versões do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve alterações no produto que são conhecidas por interromper ou alterar o comportamento de um aplicativo existente que inclua a funcionalidade do Integration Services.  

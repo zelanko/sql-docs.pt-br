@@ -3,26 +3,24 @@ title: Retornar dados de um procedimento armazenado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249686"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
   Há duas formas de retornar conjuntos de resultados ou dados de um procedimento para um programa de chamada: parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as duas abordagens.  
@@ -75,7 +73,7 @@ GO
  Quando você especifica OUTPUT para um parâmetro ao chamar um procedimento e esse parâmetro não é definido com OUTPUT na definição de procedimento, uma mensagem de erro é exibida. Entretanto, é possível executar um procedimento com parâmetros de saída e não especificar OUTPUT ao executar o procedimento. Uma mensagem de erro é exibida, mas não se pode usar valor de saída no programa de chamada.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Usando o tipo de dados de cursor em parâmetros OUTPUT  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] os procedimentos podem usar o `cursor` de tipo de dados somente para parâmetros de saída. Se o `cursor` tipo de dados é especificado para um parâmetro, palavras-chave VARYING e OUTPUT devem ser especificadas para esse parâmetro na definição do procedimento. Um parâmetro pode ser especificado como apenas OUTPUT, mas se a palavra-chave VARYING for especificada na declaração do parâmetro, o tipo de dados deve ser `cursor` e a palavra-chave OUTPUT também deverá ser especificado.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] os procedimentos podem usar o `cursor` de tipo de dados somente para parâmetros de saída. Se o `cursor` tipo de dados é especificado para um parâmetro, palavras-chave VARYING e OUTPUT devem ser especificadas para esse parâmetro na definição do procedimento. Um parâmetro pode ser especificado como apenas OUTPUT, mas se a palavra-chave VARYING for especificada na declaração de parâmetro, o tipo de dados deve ser `cursor` e a palavra-chave OUTPUT também deverá ser especificado.  
   
 > [!NOTE]  
 >  O `cursor` tipo de dados não pode ser associado a variáveis de aplicativo por meio de APIs, como OLE DB, ODBC, ADO e DB-Library do banco de dados. Como parâmetros de saída devem ser associados antes de um aplicativo pode executar um procedimento, os procedimentos com `cursor` parâmetros de saída não podem ser chamados a partir de APIs de banco de dados. Esses procedimentos podem ser chamados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] lotes, procedimentos ou gatilhos somente quando o `cursor` variável de saída é atribuída a um [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variável.  

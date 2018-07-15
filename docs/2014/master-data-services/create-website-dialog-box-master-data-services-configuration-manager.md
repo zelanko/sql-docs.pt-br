@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285402"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Site (Gerenciador de Configuração do Master Data Services)
   Use a caixa de diálogo **Criar Site** para criar um novo site no computador local. Quando você cria um site no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], o site é adicionado ao IIS (Serviços de Informações da Internet) no computador local com um aplicativo raiz configurado como o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Um novo pool de aplicativos também é criado e o aplicativo Web é colocado nesse pool de aplicativos.  
@@ -47,8 +47,8 @@ ms.locfileid: "36119135"
   
 ## <a name="see-also"></a>Consulte também  
  [Página de configuração da Web &#40;Gerenciador de configuração do Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Configurar o site da Web e o banco de dados para Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Requisitos do aplicativo de Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Configurar o site da Web e o banco de dados do Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Requisitos do aplicativo Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

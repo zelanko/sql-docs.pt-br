@@ -20,18 +20,18 @@ helpviewer_keywords:
 - GranularityAttributeID element
 ms.assetid: 90e6c939-71bd-462a-a377-4854cb9d5266
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f8d43d57717b7bae1a90087b83cc44bee6c096b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d29d88dcc7317388e2baab3415509f52299883f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308426"
 ---
 # <a name="granularityattributeid-element-assl"></a>Elemento GranularityAttributeID (ASSL)
-  Contém o identificador (ID) do atributo associado com o pai [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md) tipo de dados.  
+  Contém o identificador (ID) do atributo associado ao pai [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md) tipo de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36009837"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

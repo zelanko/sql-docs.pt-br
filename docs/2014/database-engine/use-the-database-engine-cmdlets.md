@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
 - Encode-Sqlname cmdlet
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 24
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 845b99288bc000d1bf6adf5f48c6ad5d3099c415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267122"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Usar cmdlets do Mecanismo de Banco de Dados
   Os cmdlets Windows PowerShell são comandos de função única que normalmente contêm uma convenção de nomenclatura formada por verbo-substantivo, como **Get-Help** ou **Set-MachineName**. O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell fornece cmdlets específicos para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -65,6 +65,6 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 ## <a name="see-also"></a>Consulte também  
  [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [Visão geral dos Cmdlets do PowerShell para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Visão geral dos Cmdlets do PowerShell para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

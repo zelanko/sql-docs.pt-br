@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3ba1d095dd7aed4090e053368897bd6accc1f6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21db77ad7f226c78f31adaef80162b445129249e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257292"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
@@ -75,7 +75,7 @@ ms.locfileid: "36119163"
   
 -   [Enviar email Editor da tarefa &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Enviar email Editor da tarefa &#40;Enviar página&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Enviar email Editor da tarefa &#40;página de email&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

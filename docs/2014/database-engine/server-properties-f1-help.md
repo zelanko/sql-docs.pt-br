@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ca69a247a4e0b1292dcc4e6d217b7df877c9145f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34921e1f790b03a002510dc17ea07dff16a3bddb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297066"
 ---
 # <a name="server-properties-f1-help"></a>Ajuda F1 das Propriedades do Servidor
   Essa seção contém os tópicos da Ajuda F1 para as páginas **Propriedades do Servidor** no SQL Server Management Studio.  
@@ -30,11 +30,11 @@ ms.locfileid: "36010087"
   
  [Propriedades do servidor &#40;página de configurações de banco de dados&#41;](configure-windows/server-properties-database-settings-page.md)  
   
- [Propriedades do servidor &#40;página geral&#41; -SQL Server Management Studio](../reporting-services/tools/report-server-properties-general-page.md)  
+ [Propriedades do servidor &#40;página geral&#41; – SQL Server Management Studio](../reporting-services/tools/report-server-properties-general-page.md)  
   
  [Propriedades do servidor &#40;página de memória&#41;](configure-windows/server-properties-memory-page.md)  
   
- [Propriedades do servidor &#40;página de configurações diversas de servidor&#41;](configure-windows/server-properties-misc-server-settings-page.md)  
+ [Propriedades do servidor &#40;página de configurações diversas do servidor&#41;](configure-windows/server-properties-misc-server-settings-page.md)  
   
  [Propriedades do servidor &#40;página processadores&#41;](configure-windows/server-properties-processors-page.md)  
   

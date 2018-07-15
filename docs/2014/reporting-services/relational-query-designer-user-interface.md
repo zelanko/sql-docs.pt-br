@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 99cb45aa3f0709fe9d7360938b37133317ea2c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301866"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta relacional
   O Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece um designer de consulta gráfica e um designer de consulta baseado em texto para ajudar a criar uma consulta que especifica os dados a serem recuperados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -129,7 +129,7 @@ ms.locfileid: "36005847"
 -   **Detecção Automática** Alterna o recurso de detecção automática que cria automaticamente relações entre tabelas. Se a detecção automática estiver ativada, o designer de consulta criará relações a partir de chaves estrangeiras nas tabelas; caso contrário, você deverá criar as relações manualmente. Quando você seleciona tabelas no painel **Exibição do banco de dados** , a detecção automática tenta criar relações automaticamente. Se você ativar a detecção automática depois de criar junções manualmente, essas junções serão descartadas.  
   
     > [!IMPORTANT]  
-    >  Ao usar com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] os metadados necessários à criação de junções não são fornecidos e relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
+    >  Ao usar com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] os metadados necessários à criação de junções não são fornecidos e as relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
   
 -   **Adicionar Relação** Adiciona uma relação à lista de **Relações** .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36005847"
   
 -   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de junções, consulte "Fundamentos de JOIN" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com.  
+-   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com...  
   
 -   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
   

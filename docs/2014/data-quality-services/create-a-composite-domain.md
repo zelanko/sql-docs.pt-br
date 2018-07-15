@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a92c8b9f7bc75a0a825e883ada82de72e34aca30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: edf358f8ed321274d8af55accd5dbc4ac4692db2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308526"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
   Este tópico descreve como criar um domínio composto em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em um ou mais domínios únicos que se aplicam a um campo de dados único. Para obter mais informações sobre domínios de composição, consulte [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "36008995"
   
 3.  Selecione **Descoberta da Base de Dados de Conhecimento** como a atividade e clique em **Criar** para criar a nova base de dados de conhecimento ou em **Abrir** para abrir uma base de dados de conhecimento existente.  
   
-4.  Na página **Mapa** , especifique uma conexão com a fonte de dados. Para obter mais informações, consulte [Executar descoberta de Conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  Na página **Mapa** , especifique uma conexão com a fonte de dados. Para obter mais informações, consulte [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  Na tabela **Mapeamentos** , selecione uma coluna de origem na lista suspensa da coluna **Coluna de Origem** de uma linha vazia. Verifique se a coluna de origem contém o domínio composto endereçado por dois domínios únicos existentes. Se não existir nenhum domínio único correspondente, clique no ícone **Criar um Domínio** .  
   

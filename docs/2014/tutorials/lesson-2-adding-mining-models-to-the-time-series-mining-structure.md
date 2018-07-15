@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cee3d839ae7a7bcce62c8a3a1d2f7cb62b1155e2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 368ab5b56fb55e083d5d8c38e34a0bdae98afe7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211986"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de série temporal
-  Nesta lição, você adicionará um novo modelo de mineração à estrutura de mineração que você acabou de criar no [lição 1: Criando um modelo de mineração de série temporal e a estrutura de mineração](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+  Nesta lição, você adicionará um novo modelo de mineração à estrutura de mineração que você acabou de criar na [lição 1: Criando um modelo de mineração de série temporal e a estrutura de mineração](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instrução ALTER MINING STRUCTURE  
  Para adicionar um novo modelo de mineração a uma estrutura de mineração existente, use o [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrução (~/dmx/alter-mining-structure-dmx.md). O código na instrução pode ser dividido nas seguintes partes:  
@@ -79,7 +79,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- Para obter mais informações sobre os parâmetros de algoritmo que você pode ajustar, consulte [Microsoft tempo Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ Para obter mais informações sobre os parâmetros do algoritmo que você pode ajustar, consulte [Microsoft tempo Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
  Você pode especificar que uma coluna no modelo de mineração seja utilizada para previsão usando a seguinte sintaxe:  
   
@@ -99,7 +99,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>Para adicionar um modelo de mineração de série temporal ARIMA  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consulta e uma nova consulta em branco.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consulta e uma nova consulta em branco.  
   
 2.  Copie o exemplo genérico da instrução ALTER MINING STRUCTURE na consulta em branco.  
   

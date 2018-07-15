@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582028"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854258"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Remarks  
- Quando você envia mensagens de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos, disparadores, lotes e assim por diante, usam a instrução RAISERROR, em vez de xp_logevent. xp_logevent não chama um manipulador de mensagens de um cliente ou definir@ERROR. Para gravar mensagens em Visualizador de Eventos do Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a instrução RAISERROR.  
+ Quando você envia mensagens de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos, disparadores, lotes e assim por diante, usem a instrução RAISERROR, em vez de xp_logevent. xp_logevent não chama um manipulador de mensagens de um cliente ou definir@ERROR. Para gravar mensagens em Visualizador de Eventos do Windows e no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a instrução RAISERROR.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa db_owner no banco de dados master ou associação na função de servidor fixa sysadmin.  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  O exemplo a seguir registra a mensagem, com variáveis passadas à mensagem em Visualizador de Eventos do Windows.  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

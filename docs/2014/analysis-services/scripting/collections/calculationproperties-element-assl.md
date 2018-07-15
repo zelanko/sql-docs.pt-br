@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationProperties element
 ms.assetid: dccfe036-0b1b-4877-8bdd-4b128ccb55c9
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a61448c23dc09524cfe586ff4a1ced84d92b1895
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d28f9c0b2c11cd317db723317ebc356d8847aea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200116"
 ---
 # <a name="calculationproperties-element-assl"></a>Elemento CalculationProperties (ASSL)
   Contém a coleção de [CalculationProperty](../objects/calculationproperty-element-assl.md) elementos associados a um [MdxScript](../objects/mdxscript-element-assl.md) elemento.  

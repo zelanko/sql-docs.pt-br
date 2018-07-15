@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,12 +21,12 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f6d19c3647cb38c7174f87c685fb3abb1d4f709
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c60817f8bb736eef6cdbbb6c15636b19876d4421
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696097"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360218"
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "35696097"
 > [!NOTE]  
 >  Para funções com valor de tabela, as colunas do tipo de retorno de tabela não podem incluir colunas de carimbo de hora ou colunas de tipo de dados de cadeia de caracteres não Unicode (como **char**, **varchar**, e **texto**). Não tem suporte para a restrição NOT NULL.  
   
- Para obter mais informações sobre funções com valor de tabela CLR, check-out 'MSSQLTips [funções com valor de tabela de Introdução ao SQL Server CLR!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Para obter mais informações sobre as funções com valor de tabela CLR, fazer check-out de 'MSSQLTips [Introdução ao SQL Server CLR funções com valor de tabela!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Diferenças entre as funções com valor de tabela Transact-SQL e CLR  
  As funções com valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] materializam os resultados chamando a função em uma tabela intermediária. Como elas usam uma tabela intermediária, podem dar suporte a restrições e índices exclusivos nos resultados. Esses recursos podem ser extremamente úteis quando resultados grandes são retornados.  
@@ -45,13 +45,13 @@ ms.locfileid: "35696097"
  Em contrapartida, as funções com valor de tabela do CLR representam uma alternativa de streaming. Não há nenhum requisito de que todo o conjunto de resultados deva ser materializado em uma única tabela. O **IEnumerable** objeto retornado pela função gerenciada é diretamente chamado pelo plano de execução da consulta que chama a função com valor de tabela e os resultados são consumidos de maneira incremental. Este modelo de streaming garante que os resultados possam ser consumidos imediatamente depois que a primeira linha estiver disponível, em vez de aguardar até que toda a tabela seja populada. Ele também será a melhor alternativa, se você tiver uma grande quantidade de linhas retornadas, pois elas não precisam ser totalmente materializadas na memória. Por exemplo, uma função com valor de tabela gerenciada pode ser usada para analisar um arquivo de texto e retornar todas as linhas como uma linha.  
   
 ## <a name="implementing-table-valued-functions"></a>Implementando funções com valor de tabela  
- Implemente as funções com valor de tabela como métodos em uma classe em um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. O código de função com valor de tabela deve implementar o **IEnumerable** interface. O **IEnumerable** interface é definida no .NET Framework. Tipos que representam matrizes e coleções do .NET Framework já implementam a **IEnumerable** interface. Isso facilita a gravação de funções com valor de tabela que convertem uma coleção ou uma matriz em um conjunto de resultados.  
+ Implemente as funções com valor de tabela como métodos em uma classe em um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. O código de função com valor de tabela deve implementar o **IEnumerable** interface. O **IEnumerable** interface é definida no .NET Framework. Tipos que representam matrizes e coleções do .NET Framework já implementam o **IEnumerable** interface. Isso facilita a gravação de funções com valor de tabela que convertem uma coleção ou uma matriz em um conjunto de resultados.  
   
 ## <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
  Os parâmetros com valor de tabela são tipos de tabela definidos pelo usuário, transmitidos em um procedimento ou função e fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem funcionalidade semelhante para matrizes de parâmetros, mas oferecem maior flexibilidade e integração maior com o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os parâmetros com valor de tabela também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um parâmetro com valor de tabela. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre parâmetros com valor de tabela, consulte [Usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parâmetros de saída e funções com valor de tabela  
- As informações podem ser retornadas de funções com valor de tabela que usam parâmetros de saída. O parâmetro correspondente na função com valor de tabela do código de implementação deve usar um parâmetro de passagem por referência como o argumento. Observe que o Visual Basic não suporta parâmetros de saída da mesma maneira que o Visual C#. Você deve especificar o parâmetro por referência e aplicar o \<out () > atributo para representar um parâmetro de saída, como no exemplo a seguir:  
+ As informações podem ser retornadas de funções com valor de tabela que usam parâmetros de saída. O parâmetro correspondente na função com valor de tabela do código de implementação deve usar um parâmetro de passagem por referência como o argumento. Observe que o Visual Basic não suporta parâmetros de saída da mesma maneira que o Visual C#. Você precisa especificar o parâmetro por referência e aplicar o \<out () > atributo para representar um parâmetro de saída, da seguinte maneira:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -60,7 +60,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definindo uma função com valor de tabela no Transact-SQL  
- A sintaxe para definir uma função com valor de tabela do CLR é semelhante ao de um [!INCLUDE[tsql](../../includes/tsql-md.md)] função com valor de tabela, com a adição do **nome externo** cláusula. Por exemplo:  
+ A sintaxe para definir uma função com valor de tabela do CLR é semelhante de um [!INCLUDE[tsql](../../includes/tsql-md.md)] função com valor de tabela, com a adição do **EXTERNAL NAME** cláusula. Por exemplo:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -82,7 +82,7 @@ select * from table t cross apply function(t.column);
   
 -   Geradas de dados externos. Por exemplo, uma função com valor de tabela que lê o log de eventos e o expõe como uma tabela.  
   
- **Observação** uma função com valor de tabela só pode executar acesso a dados por meio de um [!INCLUDE[tsql](../../includes/tsql-md.md)] de consulta no **InitMethod** método e não no **FillRow** método. O **InitMethod** devem ser marcadas com o **SqlFunction.DataAccess.Read** propriedade de atributo se um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta é executada.  
+ **Observação** uma função com valor de tabela só pode executar acesso a dados por meio de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar na **InitMethod** método e não no **FillRow** método. O **InitMethod** deve ser marcado com o **SqlFunction.DataAccess.Read** propriedade de atributo se um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta é executada.  
   
 ## <a name="a-sample-table-valued-function"></a>Um exemplo de função com valor de tabela  
  A função com valor de tabela a seguir retorna informações do log de eventos do sistema. A função adota um único argumento de cadeia de caracteres que contém o nome do log de eventos a ser lido.  
@@ -181,7 +181,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Exemplo: Retornando os resultados de uma consulta do SQL Server  
- O exemplo a seguir mostra uma função com valor de tabela que consulta um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo usa o banco de dados AdventureWorks Light do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obter mais informações sobre o download do AdventureWorks.  
+ O exemplo a seguir mostra uma função com valor de tabela que consulta um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo usa o banco de dados AdventureWorks Light do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Ver [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obter mais informações sobre o download do AdventureWorks.  
   
  Nomeie seu arquivo de código-fonte como FindInvalidEmails.cs ou FindInvalidEmails.vb.  
   

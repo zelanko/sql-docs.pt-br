@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e67b9e015cb452ae6620836abe1112e112bd886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 004d8574573410e92615654a7bb7b608ab444e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248366"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>Assinatura, Histórico de Sincronização (assinatura de mesclagem, SQL Server 2000)
   A guia **Histórico de Sincronização** exibe informações detalhadas do Merge Agent, inclusive status, histórico, mensagens informativas e qualquer mensagem de erro.  

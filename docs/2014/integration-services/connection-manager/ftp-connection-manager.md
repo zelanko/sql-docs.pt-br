@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -17,20 +17,20 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5e96a1a11651106cd0534ec20a3a35b79a9f1e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22fbb63dda4b6e3211a5bb53cfd70e243e6960f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193606"
 ---
 # <a name="ftp-connection-manager"></a>Gerenciador de conexões FTP
   Um gerenciador de conexões de FTP habilita um pacote a conectar-se a um servidor FTP. A tarefa FTP que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usa esse gerenciador de conexões.  
   
  Quando você adiciona um gerenciador de conexões de FTP a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um gerenciador de conexões que pode ser resolvido como  uma conexão FTP em tempo de execução, define as propriedades do gerenciador de conexões e adiciona o gerenciador de conexões à coleção `Connections` do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `FTP`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FTP`.  
   
  Você pode configurar um gerenciador de conexões de FTP adotando um dos procedimentos a seguir:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36121123"
  Para obter informações sobre como configurar um Gerenciador de conexão programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefa de FTP](../control-flow/ftp-task.md)   
+ [Tarefa FTP](../control-flow/ftp-task.md)   
  [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  
   
   

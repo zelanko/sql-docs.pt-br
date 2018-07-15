@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8fdb4d1cf175d88a6437f2efab269b4ecbf2e236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194366"
 ---
 # <a name="autoexists"></a>autoexists
   O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
@@ -66,7 +66,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Note que 0 é usado para designar o eixo da coluna, que é a forma abreviada de eixo (0) – que é o eixo da coluna.  
   
- A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser gravada usando a nova * variante do [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) função.  
+ A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante dos [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) função.  
   
 ```  
 SELECT   
@@ -92,7 +92,7 @@ WHERE (Measures.[Internet Sales Amount],
  Cada uma dessas três consultas anteriores demonstra o efeito do comportamento Autoexists no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="deep-and-shallow-autoexists"></a>Autoexists Deep e Shallow  
- Autoexists pode ser aplicado às expressões como Deep ou Shallow. `Deep Autoexists` significa que todas as expressões serão avaliadas para atender o espaço mais profundo possível após a aplicação das expressões de segmentação de dados, das expressões de subseleção no eixo etc. `Shallow Autoexists` significa que as expressões externas são avaliadas antes da expressão atual e esses resultados são transmitidos à expressão atual. A configuração padrão é deep autoexists.  
+ Autoexists pode ser aplicado às expressões como Deep ou Shallow. `Deep Autoexists` significa que todas as expressões serão avaliadas para atender o espaço mais profundo possível após a aplicação das expressões de segmentação de dados, das expressões de subseleção no eixo etc. `Shallow Autoexists` significa que expressões externas são avaliadas antes da expressão atual e esses resultados são transmitidos à expressão atual. A configuração padrão é deep autoexists.  
   
  O cenário e os exemplos a seguir ajudarão a ilustrar os tipos diferentes de Autoexistss. Nos exemplos a seguir, dois conjuntos serão criados: um como uma expressão calculada e o outro como uma expressão constante.  
   
@@ -312,15 +312,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] Parâmetros na cadeia de conexão; consulte [propriedades com suporte do XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para uso do parâmetro.  
+ Comportamento de Autoexists pode ser modificado usando o AUTOEXISTS = [1 | 2 | 3] parâmetro na cadeia de conexão; ver [propriedades XMLA com suporte &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para o uso do parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espaço de cubo](cube-space.md)   
  [Tuplas](tuples.md)   
  [Trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](visual-totals-and-non-visual-totals.md)   
- [Referência de linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -14,20 +14,20 @@ helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 261414ecd50306f687abcc88963658aec2f124fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206786"
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
   Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
   
- O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto coleção tem um **colunas** propriedade que faz referência a uma coleção de <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
+ O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> do objeto nessa coleção tem um **colunas** que se refere a uma coleção de propriedade <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
   
  Quando você definir uma nova tabela definida pelo usuário através do objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, forneça colunas e uma chave primária com base em uma das colunas.  
   

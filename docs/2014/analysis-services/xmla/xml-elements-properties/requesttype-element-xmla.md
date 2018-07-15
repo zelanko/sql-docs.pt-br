@@ -24,18 +24,18 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b1b2bcc4bf6f97659239a9e53d4adac52d7794a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171187"
 ---
 # <a name="requesttype-element-xmla"></a>Elemento RequestType (XMLA)
-  Determina o tipo de metadados retornado pelo [Discover](../xml-elements-methods-discover.md) método.  
+  Determina o tipo de metadados retornados pela [Discover](../xml-elements-methods-discover.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36120425"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento `RequestType` determina o conjunto de linhas de esquema a partir do qual o método `Discover` retorna dados. Essa enumeração é limitada aos nomes dos conjuntos de linhas de esquema com suporte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [conjuntos de linhas de esquema do Analysis Services](../../schema-rowsets/analysis-services-schema-rowsets.md).  
+ O elemento `RequestType` determina o conjunto de linhas de esquema a partir do qual o método `Discover` retorna dados. Essa enumeração é limitada aos nomes dos conjuntos de linhas de esquema com suporte pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [conjuntos de linhas de esquema do Analysis Services](../../schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  O elemento `RequestType` só enumera nomes de conjunto de linhas de esquema. Ocorre um erro se for usado o conjunto de linhas de esquema GUID.  

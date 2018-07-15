@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252278"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Criar uma exibição de assinatura (Master Data Services)
-  Criar uma exibição de assinatura quando você deseja criar um modo de exibição de seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados para uso por sistemas de assinatura.  
+  Criar uma exibição de assinatura quando você deseja criar uma exibição de seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados para uso por sistemas de assinatura.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -51,7 +51,7 @@ ms.locfileid: "36118921"
     > [!TIP]  
     >  Crie uma exibição de assinatura com base em um sinalizador de versão. Quando você bloqueia uma versão, pode reatribuir o sinalizador a uma versão aberta sem atualizar a exibição de assinatura.  
   
-7.  Selecione o **entidade** ou **hierarquia derivada** opção e, em seguida, selecione da lista correspondente.  
+7.  Selecione o **Entity** ou **hierarquia derivada** opção e, em seguida, selecione da lista correspondente.  
   
 8.  Selecione um formato de exibição de assinatura na lista **Formato** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36118921"
 10. Clique em **Salvar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [Excluir uma exibição de assinatura &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Criar um sinalizador de versão &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   

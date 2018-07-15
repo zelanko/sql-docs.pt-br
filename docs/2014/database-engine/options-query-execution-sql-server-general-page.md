@@ -1,5 +1,5 @@
 ---
-title: Opções (página gerais do servidor SQL de execução da consulta) | Microsoft Docs
+title: Opções (página geral do servidor SQL de execução da consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 809a3a2d681285a0a0f02e6ca9ac18497ae28804
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167147"
 ---
-# <a name="options-query-execution-sql-server-general-page"></a>Opções (página gerais do servidor SQL de execução da consulta)
+# <a name="options-query-execution-sql-server-general-page"></a>Opções (página geral do servidor SQL de execução da consulta)
   Use essa página a fim de especificar as opções para executar consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções de uma consulta atual, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse em uma janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**.  
   
 ## <a name="options"></a>Opções  

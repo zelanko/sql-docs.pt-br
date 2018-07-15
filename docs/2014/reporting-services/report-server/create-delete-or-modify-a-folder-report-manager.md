@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
 - modifying folders
@@ -20,13 +20,13 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8a6971e6746c7e35afdb010435bda10767e7b8f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177263"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  

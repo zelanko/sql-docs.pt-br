@@ -1,5 +1,5 @@
 ---
-title: Criar um painel (exibição de previsão do modelo de mineração) | Microsoft Docs
+title: Criar painel (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316026"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Painel Design (Exibição da Previsão do Modelo de Mineração)
   O painel **Design** contém o Construtor de Consulta de Previsão, que você pode utilizar para criar previsões de mineração de dados. É possível projetar consultas de previsão que usam tabelas de dados de entrada de uma exibição da fonte de dados, gerar previsões em massa ou criar consultas de previsão singleton, que permitem fornecer valores individuais.  
@@ -36,7 +36,7 @@ ms.locfileid: "36009665"
  **Para obter mais informações:** [Consulta de mineração de dados](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opções  
- **Alternar para a exibição de resultados de consulta**  
+ **Alterne para a exibição de resultado de consulta**  
  Clique para mudar entre os painéis **Design**, **Consulta**e **Resultado** . A consulta é executada ao alternar para o painel **Resultado** .  
   
  **Salvar o resultado da consulta**  
@@ -60,7 +60,7 @@ ms.locfileid: "36009665"
  **Excluir tabela**  
  Exclui a tabela selecionada. Esse botão será desabilitado se uma tabela não tiver sido selecionada ou não existir.  
   
- **Selecione a tabela de casos**  
+ **Selecionar tabela de casos**  
  Abre a caixa de diálogo **Selecionar Tabela** . Esse botão só será exibido se uma tabela da caixa não tiver sido selecionada.  
   
  **Selecionar tabela aninhada**  

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300356"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
   A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
- **Caixa de ferramentas** ícones podem ser arrastados e descartados ou copiados e colados em editores de códigos ou exibição superfícies de design em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Caixa de ferramentas** ícones podem ser arrastados e descartados ou copiados e colados em editores de código ou a exibição de superfícies de design dentro do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Usando a Caixa de Ferramentas  
  A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais (**+**) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos (**-**) próximo a seu nome.  

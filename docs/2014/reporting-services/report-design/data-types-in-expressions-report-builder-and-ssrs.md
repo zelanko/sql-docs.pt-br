@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319946"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
   Os tipos de dados representam tipos diferentes de dados de forma que eles possam ser armazenados e processados com eficiência. Tipos de dados comuns incluem texto (também conhecido como cadeias de caracteres) com e sem casas decimais, datas e horas e imagens. Os valores em um relatório devem ser um tipo de dados RDL. Você pode formatar um valor de acordo com sua preferência ao exibi-lo em um relatório. Por exemplo, um campo que representa moeda pode ser armazenado na definição de relatório como um número de ponto flutuante, mas pode ser exibido em uma variedade de formatos, dependendo da propriedade de formato escolhida.  
@@ -122,7 +122,7 @@ ms.locfileid: "36008111"
   
          Se a cadeia `MyDateTime.Value` tiver um deslocamento UTC, a função `DateTime.Parse` primeiro se ajustará para o deslocamento UTC (7 AM - [`+08:00`] para a hora UTC de 11 PM. da noite anterior). A função `DateTime.Parse` então aplicará o deslocamento UTC do servidor de relatórios local e, se necessário, ajustará a hora novamente para o Horário de Verão. Por exemplo, em Redmond, Washington, o deslocamento de horário local ajustado para o Horário de Verão é `[-07:00]`ou 7 horas antes de 11 PM. O resultado é o seguinte valor `DateTime`: `2007-07-06 04:07:07 PM` (6 de julho de 2007 às 4:07 PM).  
   
- Para obter mais informações sobre como converter cadeias de caracteres para `DateTime` tipos de dados, consulte [análise Date and Time Strings](http://go.microsoft.com/fwlink/?LinkId=89703), [formatação de data e hora para uma cultura específica](http://go.microsoft.com/fwlink/?LinkId=89704), e [escolhendo Entre DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) no MSDN.  
+ Para obter mais informações sobre como converter cadeias de caracteres `DateTime` tipos de dados, consulte [Analisando cadeias de data e hora](http://go.microsoft.com/fwlink/?LinkId=89703), [formatando data e hora para uma cultura específica](http://go.microsoft.com/fwlink/?LinkId=89704), e [escolhendo Entre DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) no MSDN.  
   
 -   Adicione um novo campo calculado ao conjunto de dados de relatório que use uma expressão para extrair partes da cadeia. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

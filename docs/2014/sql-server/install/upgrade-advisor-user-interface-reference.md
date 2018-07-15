@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
 - analyzing system [Upgrade Advisor], options
@@ -20,29 +20,29 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, user interface reference
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 78ce2fc9f443e4edbc1d009e455c46e4d2ff808d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 09cc0df077b51e02cc65edc244dfac8c03518fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257732"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Referência da interface de usuário do Supervisor de Atualização
-  Esta seção inclui tópicos de ajuda para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização. Esses tópicos estão disponíveis no Assistente para atualização do Supervisor, pressionando a tecla F1 ou clicando **ajuda** nas páginas do assistente e caixas de diálogo.  
+  Esta seção inclui tópicos de ajuda para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização. Esses tópicos estão disponíveis no Assistente do Supervisor de atualização pressionando a tecla F1 ou clicando **ajudar** nas páginas do assistente e caixas de diálogo.  
   
 |Tópico|Description|  
 |-----------|-----------------|  
 |[Componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md)|Identifique o servidor e o conjunto apropriado de tipos de servidor e componentes para fazer uma análise de atualização.|  
-|[Parâmetros de Conexão](../../../2014/sql-server/install/connection-parameters.md)|Para analisar certos tipos de servidor, como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], você deve selecionar uma instância específica do servidor para análise. Nesta página, digite as informações para habilitar o Supervisor de Atualização para conectar-se à instância do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja analisar.|  
-|[Parâmetros do SQL Server](../../../2014/sql-server/install/sql-server-parameters.md)|Defina os parâmetros para usar na análise do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode determinar quais bancos de dados, arquivos de rastreamento ou arquivos em lotes do SQL serão analisados. Essa etapa não está incluída e todos os elementos dos diálogos relacionados serão desabilitados se você não selecionou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] análise em [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parâmetros do Analysis Services](../../../2014/sql-server/install/analysis-services-parameters.md)|Para analisar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você deve selecionar uma instância específica do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essa etapa não está incluída. Todos os relacionados a elementos de interface do usuário serão desabilitados se você não selecionar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] análise em [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parâmetros do Reporting Services](../../../2014/sql-server/install/reporting-services-parameters.md)|Para analisar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve selecionar uma instância específica do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa etapa não está incluída e todos os elementos de interface do usuário relacionados serão desabilitados se você não selecionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] análise em [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Parâmetros do Integration Services](../../../2014/sql-server/install/integration-services-parameters.md)|Para analisar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], existe a opção de analisar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localizados no computador ou no sistema de arquivos. Essa etapa não está incluída. Todos os relacionados a elementos de interface do usuário serão desabilitados se você não selecionar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] análise em [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
-|[Confirmar configurações do Supervisor de atualização](../../../2014/sql-server/install/confirm-upgrade-advisor-settings.md)|Revise as opções e os parâmetros antes de executar a análise de atualização.|  
-|[Progresso do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-progress.md)|Conforme os componentes são analisados, o progresso geral é indicado na caixa de diálogo de progresso.|  
+|[Parâmetros de conexão](../../../2014/sql-server/install/connection-parameters.md)|Para analisar certos tipos de servidor, como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], você deve selecionar uma instância específica do servidor para análise. Nesta página, digite as informações para habilitar o Supervisor de Atualização para conectar-se à instância do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja analisar.|  
+|[Parâmetros do SQL Server](../../../2014/sql-server/install/sql-server-parameters.md)|Defina os parâmetros para usar na análise do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Você pode determinar quais bancos de dados, arquivos de rastreamento ou arquivos em lotes do SQL serão analisados. Essa etapa não está incluída e todos os elementos dos diálogos relacionados serão desabilitados se você não selecionou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] análise no [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parâmetros do Analysis Services](../../../2014/sql-server/install/analysis-services-parameters.md)|Para analisar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você deve selecionar uma instância específica do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essa etapa não está incluída. Todas as relacionadas a elementos da interface do usuário serão desabilitados se você não selecionar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] análise no [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parâmetros do Reporting Services](../../../2014/sql-server/install/reporting-services-parameters.md)|Para analisar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve selecionar uma instância específica do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa etapa não está incluída e todos os elementos de interface do usuário relacionados serão desabilitados se você não selecionar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] análise no [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Parâmetros do Integration Services](../../../2014/sql-server/install/integration-services-parameters.md)|Para analisar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], existe a opção de analisar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] localizados no computador ou no sistema de arquivos. Essa etapa não está incluída. Todas as relacionadas a elementos da interface do usuário serão desabilitados se você não selecionar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] análise no [componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md).|  
+|[Confirmar configurações do Supervisor de Atualização](../../../2014/sql-server/install/confirm-upgrade-advisor-settings.md)|Revise as opções e os parâmetros antes de executar a análise de atualização.|  
+|[Progresso do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-progress.md)|Conforme os componentes são analisados, o progresso geral é indicado na caixa de diálogo de progresso.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

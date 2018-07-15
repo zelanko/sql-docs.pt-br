@@ -3,10 +3,9 @@ title: Criando Assemblies | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -16,22 +15,22 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8607c326734f998ee536d884a57463765f7b67b2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695337"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353508"
 ---
-# <a name="assemblies---designing"></a>Assemblies - criação
+# <a name="assemblies---designing"></a>Assemblies – criação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
   
 -   Empacotando assemblies  
   
--   Gerenciando a segurança do assembly  
+-   Gerenciando a segurança de assembly  
   
--   Restrições em assemblies  
+-   Restrições de assemblies  
   
 ## <a name="packaging-assemblies"></a>Empacotando assemblies  
  Um assembly pode conter funcionalidade para mais de uma rotina do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo em suas classes e métodos. A maior parte do tempo, faz sentido empacotar a funcionalidade de rotinas que executam funções relacionadas dentro do mesmo assembly, especialmente se essas rotinas compartilharem classes cujos métodos chamam um ao outro. Por exemplo, classes que executam tarefas de gerenciamento de entrada de dados para gatilhos CLR (Common Language Runtime) e procedimentos armazenados CLR podem ser empacotados no mesmo assembly. Isso porque os métodos para essas classes têm maior probabilidade de chamar um ao outro do que aqueles de tarefas menos relacionadas.  
@@ -58,7 +57,7 @@ ms.locfileid: "35695337"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE concede aos assemblies acesso irrestrito aos recursos, dentro e fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Código executado em um assembly UNSAFE pode chamar código não gerenciado.  
   
- Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Somente membros do **sysadmin** função de servidor fixa pode criar assemblies UNSAFE.  
+ Além disso, especificando UNSAFE permite que o código no assembly execute operações consideradas como tipo inseguro pelo verificador CLR. Essas operações podem potencialmente acessar buffers de memória no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma maneira descontrolada. Assemblies UNSAFE também podem potencialmente subverter o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do CLR. Somente permissões UNSAFE devem ser concedidas a assemblies altamente confiáveis por desenvolvedores ou administradores experientes. Somente os membros dos **sysadmin** função de servidor fixa pode criar assemblies UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrições em assemblies  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coloca certas restrições em código gerenciado em assemblies para verificar se eles podem ser executados de uma maneira segura e evolutiva. Isso significa que não são permitidas certas operações que podem comprometer a robustez do servidor em assemblies SAFE e EXTERNAL_ACCESS.  
@@ -87,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>APIs não permitidas do .NET Framework  
- Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API anotada com uma das proibições **HostProtectionAttributes** não pode ser chamado de assemblies SAFE e EXTERNAL_ACCESS.  
+ Qualquer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API é anotado com uma das proibições **HostProtectionAttributes** não pode ser chamado de assemblies SAFE e EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  

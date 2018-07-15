@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver job management [SQL Server]
 - jobs [SQL Server Agent], modifying
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16816ec13f45d356d6d11c3ff1a3019b407d371d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2134acf57d96211a234564acdf49fbca7277818f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208646"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gerenciar trabalhos em toda a empresa
   Se você fizer alterações em definições de trabalho multisservidor fora do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], será preciso postar as alterações na lista de downloads para que os servidores de destino possam baixar novamente o trabalho atualizado. Para garantir que os servidores de destino possuam as definições de trabalho atuais, poste uma instrução INSERT após atualizar o trabalho multisservidor, da seguinte maneira:  

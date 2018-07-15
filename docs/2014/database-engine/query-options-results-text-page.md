@@ -1,5 +1,5 @@
 ---
-title: Opções de consulta (página de texto) de resultados | Microsoft Docs
+title: Resultados (página de texto) das opções de consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205746"
 ---
 # <a name="query-options-results-text-page"></a>Resultados das opções de consulta (página de texto)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As configurações desta página também se aplicam quando **Resultados em Arquivo** é selecionado.  
@@ -35,13 +35,13 @@ ms.locfileid: "36120638"
  **Incluir cabeçalhos de coluna no conjunto de resultados**  
  Desmarque esta caixa de seleção se não quiser cada coluna rotulada com um título de coluna.  
   
- **Rolar à medida que resultados forem recebidos**  
+ **Rolar à medida que os resultados forem recebidos**  
  Marque esta caixa de seleção para manter o foco de exibição nos registros retornados mais recentemente na parte inferior. Desmarque esta caixa de seleção para manter o foco de exibição nas primeiras linhas recebidas.  
   
  **Alinhar valores numéricos à direita**  
  Marque esta caixa de seleção para alinhar valores numéricos à direita da coluna. Isso pode tornar mais fácil a revisão de números com um número fixo de casas decimais.  
   
- **Descartar resultado após a execução da consulta**  
+ **Descartar resultado após a execução de consulta**  
  Libera memória descartando os resultados da consulta depois de serem recebidos pelo monitor.  
   
  **Exibir resultados em uma guia separada**  

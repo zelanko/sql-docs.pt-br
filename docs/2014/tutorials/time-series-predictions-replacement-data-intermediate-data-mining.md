@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d5639aa63affadcdf79acc6029840e7025081245
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267752"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Previsões de série temporal usando dados de substituição (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você criará um novo modelo com base em dados de vendas mundiais. Depois, você criará uma consulta de previsão que aplica o modelo de vendas mundial a uma das regiões individuais.  
@@ -36,7 +36,7 @@ ms.locfileid: "36312464"
 ## <a name="performing-cross-prediction-with-a-time-series-model"></a>Fazendo uma previsão cruzada com um modelo de série temporal  
  O processo de usar dados de uma série para prever tendências em outra série é chamado previsão cruzada. Você pode usar a previsão cruzada em muitos cenários: por exemplo, você poderia decidir que vendas de televisão são uma profeta boa de atividade econômica global, e aplicar um modelo treinou vendas na televisão a dados econômicos gerais.  
   
- No SQL Server Data Mining, executar previsão cruzada usando o parâmetro REPLACE_MODEL_CASES nos argumentos da função, [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ No SQL Server Data Mining, você deve executar previsão cruzada, usando o parâmetro REPLACE_MODEL_CASES nos argumentos para a função [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
  Na próxima tarefa, você aprenderá a usar REPLACE_MODEL_CASES. Você usará os dados de vendas mundiais mesclados para criar um modelo e depois criará uma consulta de previsão que mapeia o modelo geral nos dados de substituição.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "36312464"
   
 #### <a name="to-build-a-mining-structure-and-mining-model-using-the-aggregated-data"></a>Para criar uma estrutura de mineração e um modelo de mineração usando os dados agregados  
   
-1.  Em **Solution Explorer**, clique com botão direito **estruturas de mineração**e, em seguida, selecione **nova estrutura de mineração** para iniciar o Assistente de mineração de dados.  
+1.  Na **Gerenciador de soluções**, clique com botão direito **estruturas de mineração**e, em seguida, selecione **nova estrutura de mineração** para iniciar o Assistente de mineração de dados.  
   
 2.  No Assistente de Mineração de Dados, faça as seguintes seleções:  
   
     -   Algoritmo: Microsoft Time Series  
   
-    -   Use a fonte de dados que você criou anteriormente nesta lição avançada como a origem do modelo. Consulte [avançado previsões de série temporal &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
+    -   Use a fonte de dados que você criou anteriormente nesta lição avançada como a origem do modelo. Ver [avançadas de previsões de série temporal &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
          Exibição de fonte de dados: `AllRegions`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36312464"
   
 #### <a name="to-build-the-prediction-query-and-map-the-replacement-data"></a>Para criar a consulta de previsão e mapear os dados de substituição  
   
-1.  Se o modelo não ainda estiver aberto, clique duas vezes na estrutura Allregios e no Designer de mineração de dados, clique o **previsão do modelo de mineração** guia.  
+1.  Se o modelo não ainda estiver aberto, clique duas vezes na estrutura Allregios e no Designer de mineração de dados, clique o **previsão de modelo de mineração** guia.  
   
 2.  No **modelo de mineração** painel, o modelo AllRegions já deve estar selecionado. Se não for selecionada, clique em **Selecionar modelo**e, em seguida, selecione o modelo, AllRegions.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "36312464"
   
 4.  No **Selecionar tabela** caixa de diálogo, altere os dados de origem para T1000 Pacific Region e, em seguida, clique em **Okey**.  
   
-5.  Clique na linha de junção entre o modelo de mineração e os dados de entrada e selecione **modificar conexões**. Mapeie os dados na exibição da fonte de dados do modelo como segue:  
+5.  Clique com botão direito na linha de junção entre o modelo de mineração e os dados de entrada e selecione **modificar conexões**. Mapeie os dados na exibição da fonte de dados do modelo como segue:  
   
-    1.  Verifique se a coluna ReportingDate do modelo de mineração é mapeada para a coluna ReportingDate nos dados de entrada.  
+    1.  Verifique se a coluna ReportingDate no modelo de mineração é mapeada para a coluna ReportingDate nos dados de entrada.  
   
-    2.  No **modificar mapeamento** caixa de diálogo, na linha da coluna do modelo AvgQty, clique em **coluna da tabela** e, em seguida, selecione T1000 Pacific. Clique em **OK**.  
+    2.  No **modificar mapeamento** caixa de diálogo, na linha para a coluna do modelo AvgQty, clique em **coluna da tabela** e, em seguida, selecione T1000 Pacific. Clique em **OK**.  
   
          Esta etapa mapeia a coluna que você criou no modelo para prever a quantidade média para os dados reais da série T1000 em relação à quantidade de vendas.  
   
-    3.  Não mapeie a coluna região no modelo para qualquer coluna de entrada.  
+    3.  Não mapeie a coluna de região no modelo para qualquer coluna de entrada.  
   
          Como o modelo agregou os dados em todas as séries, não há nenhuma correspondência para os valores de séries como T1000 Pacífico e um erro é gerado quando as consultas de previsão são executadas.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "36312464"
   
      Primeiramente, adicione uma coluna aos resultados gerados em AllRegions do modelo junto com as previsões. Desse modo, você saberá que os resultados foram baseados no modelo geral.  
   
-    1.  Na grade, clique na primeira linha vazia, em **fonte**e, em seguida, selecione o modelo de mineração AllRegions.  
+    1.  Na grade, clique na primeira linha vazia, sob **origem**e, em seguida, selecione o modelo de mineração AllRegions.  
   
-    2.  Para **campo**, selecione região.  
+    2.  Para **campo**, selecione a região.  
   
-    3.  Para **Alias**, tipo **modelo usado**.  
+    3.  Para **Alias**, digite **modelo usado**.  
   
 7.  Em seguida, adicione um rótulo aos resultados para que seja possível ver a que série a previsão se destina.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36312464"
   
     2.  No **campo** coluna, selecione **PredictTimeSeries**.  
   
-    3.  Para **Alias**, tipo **valores previstos**.  
+    3.  Para **Alias**, digite **valores previstos**.  
   
     4.  Arraste o campo AvgQty do **modelo de mineração** painel para o **critérios/argumento** coluna usando a operação de arrastar e soltar.  
   
@@ -162,7 +162,7 @@ AND
  Por exemplo, se você alterar as condições do filtro e os rótulos de coluna substituindo 'Pacífico' por 'América do Norte', obterá previsões para o produto T1000 na América do Norte, com base nos padrões do modelo geral.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Comparando previsões para modelos de previsão &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [Comparando previsões para modelos de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

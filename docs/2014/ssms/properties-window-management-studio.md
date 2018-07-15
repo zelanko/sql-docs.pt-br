@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
 - sorting properties [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee4f17947de0a8570517b72647451d73962de858
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3648372b0c4e507f86321f87a58acac47e114eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224856"
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
   Use essa janela para exibir as propriedades dos elementos selecionados. Você também pode usar a janela Propriedades para exibir o arquivo, o projeto e as propriedades da solução. A janela Propriedades está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  

@@ -5,39 +5,38 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287292"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  
   
- FILESTREAM integra o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com um NTFS no sistema de arquivos armazenando `varbinary(max)` dados de objeto binário grande (BLOB) como arquivos no sistema de arquivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] podem inserir, atualizar, consultar, pesquisar e fazer backup de dados FILESTREAM. As interfaces do sistema de arquivos do Win32 fornecem acesso de streaming aos dados.  
+ FILESTREAM integra o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com um NTFS no sistema de arquivos, armazenando `varbinary(max)` dados de objeto binário grande (BLOB) como arquivos no sistema de arquivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] podem inserir, atualizar, consultar, pesquisar e fazer backup de dados FILESTREAM. As interfaces do sistema de arquivos do Win32 fornecem acesso de streaming aos dados.  
   
  O FILESTREAM usa o cache do sistema NT para armazenar dados de arquivos. Isso ajuda a reduzir qualquer efeito que os dados FILESTREAM possam ter no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . O pool de buffers do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é usado. Portanto essa memória está disponível para processamento de consulta.  
   
- FILESTREAM não é habilitado automaticamente quando você instalar ou atualiza o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve habilitar o FILESTREAM usando o SQL Server Configuration Manager e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para usar o FILESTREAM, você deve criar ou modificar um banco de dados para conter um tipo especial de grupo de arquivos. Em seguida, criar ou modificar uma tabela para que ele contém um `varbinary(max)` coluna com o atributo FILESTREAM. Depois que você concluir essas tarefas, poderá usar [!INCLUDE[tsql](../../includes/tsql-md.md)] e Win32 para gerenciar os dados de FILESTREAM.  
+ FILESTREAM não é habilitado automaticamente quando você instalar ou atualiza o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve habilitar o FILESTREAM usando o SQL Server Configuration Manager e o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para usar o FILESTREAM, você deve criar ou modificar um banco de dados para conter um tipo especial de grupo de arquivos. Em seguida, criar ou modificar uma tabela para que ele contenha um `varbinary(max)` coluna com o atributo FILESTREAM. Depois que você concluir essas tarefas, poderá usar [!INCLUDE[tsql](../../includes/tsql-md.md)] e Win32 para gerenciar os dados de FILESTREAM.  
   
  Para obter mais informações sobre como instalar e usar FILESTREAM, consulte a lista de [Tarefas relacionadas](#reltasks).  
   
 ##  <a name="whentouse"></a> Quando usar FILESTREAM  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BLOBs podem ser padrão `varbinary(max)` dados que armazena os dados em tabelas ou FILESTREAM `varbinary(max)` objetos que armazenam os dados no sistema de arquivos. O tamanho e o uso dos dados determinam se você deve usar armazenamento de banco de dados ou armazenamento de sistema de arquivos. Se as condições a seguir forem verdadeiras, você deve considerar o uso de FILESTREAM:  
+ Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], BLOBs podem ser standard `varbinary(max)` os dados que armazena os dados em tabelas ou FILESTREAM `varbinary(max)` objetos que armazenam os dados no sistema de arquivos. O tamanho e o uso dos dados determinam se você deve usar armazenamento de banco de dados ou armazenamento de sistema de arquivos. Se as condições a seguir forem verdadeiras, você deve considerar o uso de FILESTREAM:  
   
 -   Os objetos que estão sendo armazenados têm, em média, mais de 1 MB.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "36118917"
   
   
 ##  <a name="storage"></a> Armazenamento de FILESTREAM  
- Armazenamento de FILESTREAM é implementado como um `varbinary(max)` coluna na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. O padrão `varbinary(max)` limitação do tamanho dos arquivos de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
+ Armazenamento FILESTREAM é implementado como um `varbinary(max)` coluna na qual os dados são armazenados como BLOBs no sistema de arquivos. Os tamanhos dos BLOBs são limitados apenas pelo tamanho do volume do sistema de arquivos. O padrão `varbinary(max)` limitação de tamanhos de arquivo de 2 GB não se aplica a BLOBs que são armazenados no sistema de arquivos.  
   
  Para especificar que uma coluna deve armazenar dados no sistema de arquivos, especifique o atributo FILESTREAM em uma `varbinary(max)` coluna. Isso faz com que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazene todos os dados dessa coluna no sistema de arquivos, mas não no arquivo do banco de dados.  
   

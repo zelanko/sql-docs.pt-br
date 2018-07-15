@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3ff54718ce6ccc39030292041653ebe734594824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0eb7c54d23e540363c788caa192a0f27ad62d265
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217216"
 ---
 # <a name="log-file-viewer"></a>Visualizador do Arquivo de Log
   O Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é usado para acessar informações sobre erros e eventos capturados em arquivos de log.  

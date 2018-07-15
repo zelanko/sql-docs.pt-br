@@ -1,12 +1,11 @@
 ---
-title: Descartar um Assembly | Microsoft Docs
+title: Descarte de um Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9948122e98c86e6c4ccb310c23b0513679379f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694317"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356918"
 ---
 # <a name="dropping-an-assembly"></a>Descartando um assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funções, procedimentos armazenados ou gatilhos que usam variáveis ou parâmetros da UDT, criadas no banco de dados com a cláusula WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Localizando dependências do UDT  
- Você deve descartar todos os objetos dependentes primeiro e, em seguida, executar a instrução DROP TYPE. O seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta localiza todas as colunas e parâmetros que usam um UDT no **AdventureWorks** banco de dados.  
+ Você deve descartar todos os objetos dependentes primeiro e, em seguida, executar a instrução DROP TYPE. O seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta localiza todas as colunas e parâmetros que usam um UDT na **AdventureWorks** banco de dados.  
   
 ```  
 USE Adventureworks;  
@@ -75,6 +74,6 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [Descartar tipo &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [TIPO de DESCARTE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

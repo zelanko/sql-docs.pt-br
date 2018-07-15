@@ -1,5 +1,5 @@
 ---
-title: Representação de indicador de desempenho (tabela) de chave | Microsoft Docs
+title: Representação de indicador de desempenho (Tabular) da chave | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295406"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Representação de indicador chave de desempenho (de tabela)
   Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemplo de AMO2Tabular  
- Para ter um entendimento sobre como usar o AMO para criar e manipular indicador chave de desempenho representações, consulte o código-fonte do AMO para exemplo de Tabular; Verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
+ Para ter um entendimento sobre como usar o AMO para criar e manipular o indicador chave de desempenho representações, consulte o código-fonte do AMO para tabela amostra; Verifique especificamente o seguinte arquivo de origem: AddKPIs.cs. O exemplo está disponível no Codeplex. Uma nota importante sobre o código: o código é fornecido apenas como um suporte aos conceitos lógicos explicados aqui; ele não deve ser usado em um ambiente de produção, nem para fins que não sejam pedagógicos.  
   
   

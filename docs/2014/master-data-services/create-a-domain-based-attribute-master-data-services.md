@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5323072d5c58fcbe37becd00daacaac6ed3fb161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fd6e0a992dd4f23b6da24ed70cb884025c969537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320446"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Criar um atributo baseado em domínio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo baseado em domínio para popular os valores de um atributo com membros de uma entidade.  
@@ -59,13 +59,13 @@ ms.locfileid: "36009582"
   
     -   Se o atributo for para coleções, no painel **Atributos da coleção** , clique em **Adicionar atributo de coleção**.  
   
-7.  Sobre o **Adicionar atributo** página, selecione o **baseados em domínio** opção.  
+7.  Sobre o **Adicionar atributo** página, selecione o **baseado em domínio** opção.  
   
 8.  Na caixa **Nome** , digite um nome para o atributo. Ele não precisa ser o mesmo nome da entidade que você usa para a origem dos valores de atributo.  
   
 9. Na caixa **Exibir largura em pixels** , digite a largura da coluna de atributo a ser exibida na grade do **Gerenciador** .  
   
-10. Do **entidade** lista, escolha a entidade a ser usada para popular os valores de atributo.  
+10. Dos **entidade** lista, escolha a entidade a ser usado para preencher os valores de atributo.  
   
 11. Opcional. Selecione **Enable change tracking** para acompanhar as alterações feitas em grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

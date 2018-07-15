@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48fc08b2d45ed75c2a57154efbc154cd9b1b0496
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 804b68d36d75741869595232fd09cd67959caa70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204096"
 ---
 # <a name="currenttimemember-element-assl"></a>Elemento CurrentTimeMember (ASSL)
-  Define o membro atual de tempo de dimensão associada com um [Kpi](../objects/kpi-element-assl.md) elemento.  
+  Define o membro atual de um tempo dimensão associada com um [Kpi](../objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36118747"
 ## <a name="remarks"></a>Remarks  
  O valor desse elemento é uma instrução MDX que avalia um único membro em uma dimensão de tempo, usada para recuperar o período de tempo atual ao avaliar o KPI (indicador chave de desempenho).  
   
- O elemento que corresponde ao pai do `CurrentTimeMember` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
+ O elemento que corresponde ao pai de `CurrentTimeMember` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305006"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  
@@ -35,23 +35,23 @@ ms.locfileid: "36006293"
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
  Fornece etapas para iniciar a ferramenta Configuração do Reporting Services.  
   
- [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
+ [Configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  Explica como especificar informações de conta e senha para o serviço Servidor de Relatório.  
   
  [Registrar um nome de entidade de serviço &#40;SPN&#41; para um servidor de relatório](register-a-service-principal-name-spn-for-a-report-server.md)  
  Explica como registrar manualmente um SPN para um servidor de relatório executado em uma conta de usuário de domínio em uma rede que use autenticação Kerberos.  
   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Explica como estabelecer uma ou mais URLs usadas para acessar o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios.  
   
- [Criar um banco de dados do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Criar um banco de dados do servidor de relatório do modo nativo &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Fornece etapas para a criação de um banco de dados do servidor de relatório. Essa etapa é necessária para a implantação de uma instalação do Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configuração avançada ou opcional  
- [Configurar uma implantação de expansão do servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar uma implantação de expansão do servidor de relatório do modo nativo &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Fornece etapas para a configuração de vários servidores de relatório para compartilhar um banco de dados do servidor de relatório.  
   
- [Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Fornece etapas para a configuração de um servidor de relatório para distribuição de email.  
   
  [Configurar um firewall para acesso ao servidor de relatório](configure-a-firewall-for-report-server-access.md)  

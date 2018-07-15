@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exceptions [data mining]
 - data preparation
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data cleaning
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48073f6ce9c1d5836d85cf468b2b9a45256f8163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e87ee3f7bedb9b33b484b195492064cc4f0334
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306496"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Exceções (Suplementos de Mineração de Dados do SQL Server)
   ![Assistente de exceções na faixa de opções mineração de dados](media/dmc-outliers.gif "Assistente de exceções na faixa de opções mineração de dados")  
   
- Um *exceções* significa um valor de dados que é problemático por qualquer um dos seguintes motivos:  
+ Uma *outlier* significa um valor de dados que é problemático por qualquer um dos seguintes motivos:  
   
 -   O valor está fora do intervalo esperado.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36009224"
   
 -   Primeiro, você pode explorar os dados para entender melhor a distribuição dos valores e a relação das exceções para outros dados.  
   
-     Por exemplo, você pode usar o **explorar dados** tarefa para revisar e corrigir os valores. O **remover exceções** assistente também exibe um gráfico, uma linha ou um gráfico de barras, para ajudá-lo a entender a distribuição de todos os valores.  
+     Por exemplo, você pode usar o **explorar dados** tarefa para examinar e corrigir os valores. O **remover exceções** assistente também exibe um gráfico, uma linha ou um gráfico de barras, para ajudá-lo a entender a distribuição de todos os valores.  
   
 -   Em seguida, você pode usar o **exceções** Assistente para remover ou alterar exceções. O método usado depende se os valores são discretos ou contínuos.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36009224"
   
 -   O assistente exibe valores contínuos em um gráfico de barras ou linha. No gráfico de linha, o valor é representado no eixo x e a contagem de valores no eixo y.  
   
-     Você pode controlar se deseja remover ou manter valores nas extremidades baixas e altas do gráfico alterando a **mínimo** e **máximo** valores ou deslizando as barras. À medida que você altera as configurações de valores mínimo e máximo, os dados que serão suprimidos são mostrados pelo sombreamento no grafo.  
+     Você pode controlar se deseja remover ou manter valores nas extremidades baixos e altas do gráfico alterando a **mínimo** e **máximo** valores ou deslizando as barras. À medida que você altera as configurações de valores mínimo e máximo, os dados que serão suprimidos são mostrados pelo sombreamento no grafo.  
   
  Depois que você tiver selecionado com quais exceções trabalhar, informe ao assistente como manipular as exceções. Você pode excluir as linhas que contêm os valores de exceção ou especificar um valor de substituição, como um valor médio, nulo ou outro de sua escolha.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "36009224"
   
 ### <a name="using-the-outlier-wizard"></a>Usando o Assistente de Exceções  
   
-1.  No **mineração de dados** de faixa de opções, clique em **limpar dados**e selecione **exceções**.  
+1.  No **Data Mining** faixa de opções, clique em **limpar dados**e selecione **exceções**.  
   
-2.  No **Selecionar fonte de dados** caixa de diálogo, selecione uma tabela de dados do Excel ou um intervalo de células e clique em **próximo**.  
+2.  No **Selecionar fonte de dados** caixa de diálogo, selecione uma tabela de dados do Excel ou um intervalo de células e clique em **próxima**.  
   
     > [!WARNING]  
     >  Não é possível usar o **exceções** assistente em dados externos, a menos que você copiá-lo para o Excel pela primeira vez.  
   
-3.  No **Selecionar coluna** caixa de diálogo, selecione um **único** coluna.  
+3.  No **Selecionar coluna** caixa de diálogo, selecione uma **único** coluna.  
   
      Clique em **Avançar**.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "36009224"
   
     -   Se a coluna contiver valores discretos, o assistente exibirá um histograma contendo a contagem de cada valor discreto.  
   
-         Supondo que as exceções são valores raros, você pode filtrá-los por alterando o **mínimo** valor.  
+         Supondo que as exceções são valores raros, você pode filtrá-los fora, alterando a **mínimo** valor.  
   
-    -   Se a coluna contiver dados numéricos, você pode clicar no **exibir como discreto** botão ou o **exibir como numérico** botão para alternar entre a exibição dos valores em um gráfico de barras ou linha.  
+    -   Se a coluna contiver dados numéricos, você pode clicar na **exibir como discreto** botão ou o **exibir como numérico** botão para alternar entre a exibição dos valores em um gráfico de barras ou linha.  
   
-5.  No **especificar limites** caixa de diálogo caixa, escolha o intervalo de dados que você deseja manter digitando um valor mínimo e máximo ou arrastando as barras de controle deslizante. Clique em **Avançar**.  
+5.  No **especificar limites** caixa de diálogo, escolha o intervalo de dados que você deseja manter digitando um valor mínimo e máximo ou arrastando as barras de controle deslizante. Clique em **Avançar**.  
   
-6.  No **manipulação de exceção** caixa de diálogo caixa, especifique se deseja que os valores sejam excluídos ou substituídos e clique em **próximo**.  
+6.  No **manipulação de exceção** diálogo caixa, especifique se deseja que os valores sejam excluídos ou substituídos e clique em **próxima**.  
   
-7.  No **Selecionar destino** caixa de diálogo, especifique onde deseja que os novos dados a serem salvas.  
+7.  No **Selecionar destino** caixa de diálogo, especifique onde deseja que os novos dados a serem salvos.  
   
 ### <a name="related-options"></a>Opções relacionadas  
  O assistente fornece as seguintes opções:  

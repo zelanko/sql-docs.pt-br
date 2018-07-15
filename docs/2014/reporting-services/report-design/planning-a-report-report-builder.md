@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 96841d12896ed3bdb414fa1db1825cf5c07ba0cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196816"
 ---
 # <a name="planning-a-report-report-builder"></a>Planejando um relatório (Construtor de Relatórios)
   O Construtor de Relatórios permite que você crie muitos tipos de relatórios. Por exemplo, você pode criar relatórios que mostram dados de vendas resumidos ou detalhados, tendências de marketing e vendas, relatórios operacionais ou painéis. Você também pode criar relatórios que aproveitam texto ricamente formatado, tais como pedidos de vendas, catálogos de produtos ou letras de formulário. Todos esses relatórios são criados usando combinações diferentes dos mesmos blocos de construção básicos no Construtor de Relatórios. Para criar um relatório útil, de fácil compreensão, convém primeiro fazer um planejamento. Antes de começar, considere algumas questões como:  
@@ -57,7 +57,7 @@ ms.locfileid: "36121421"
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor de relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Conceitos de criação de relatório &#40;SSRS e construtor de relatórios&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+ [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
   

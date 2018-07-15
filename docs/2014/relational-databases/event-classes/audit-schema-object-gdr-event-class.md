@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object GDR event class
 ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86ebf39dfe727ab9be8797f3984c9d3160deea12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e51fb621e00fbf0dac46a5f3ed874c85d3daba0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199446"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Classe de evento Audit Schema Object GDR
   A classe de evento **Audit Schema Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de esquema por qualquer usuário no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

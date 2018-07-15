@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.updatetable
 - vdtsql.chm:69643
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c8dbb46237a4ac42b4448ca69feca230607c82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 888cc051f9df04982825c10ebdb83ec614d78389
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257632"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>Caixa de diálogo Atualizar Tabela (Visual Database Tools)
   Essa caixa de diálogo lhe permite especificar a tabela a ser atualizada.  

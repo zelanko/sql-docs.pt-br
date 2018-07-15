@@ -1,1 +1,1 @@
-Serviços de integração do SQL Server 2012 \(SSIS\)
+SQL Server 2012 Integration Services \(SSIS\)

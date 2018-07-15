@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47e0895f71964c1c903bed462a1d0b4f2b118e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eea7b83bcad091b395b82aa39c47a2ab2f9685d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303186"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
   Sempre que você escreve uma consulta de recuperação, você articula as colunas e as linhas que você quer, e onde o processador de consulta deve procurar os dados originais. Tipicamente, esses dados originais consistem em uma tabela ou várias tabelas unidas. Mas os dados originais podem vir de fontes diferentes de tabelas. Na realidade, podem vir de exibições, consultas, sinônimos ou funções definidas pelo usuário que retornam uma tabela.  

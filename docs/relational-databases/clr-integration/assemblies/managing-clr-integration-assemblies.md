@@ -3,10 +3,9 @@ title: Gerenciando Assemblies de integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,24 +18,24 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fba26bd48f94fb76f44c423297e9f2bc0d2f86cb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694187"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350178"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gerenciando assemblies de integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O código gerenciado é compilado e implantado em unidades chamadas de assembly. Um assembly é empacotado como uma DLL ou um arquivo executável (.exe). Um arquivo executável pode ser executado sozinho, mas uma DLL precisa ser hospedada em um aplicativo existente. Os assemblies DLL gerenciados podem ser carregados no e hospedados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você registre o assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE ASSEMBLY, antes que ele seja carregado no processo e usado. Os assemblies também podem ser atualizados de uma versão mais recente usando a instrução ALTER ASSEMBLY ou removidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução DROP ASSEMBLY.  
+  O código gerenciado é compilado e implantado em unidades chamadas de assembly. Um assembly é empacotado como uma DLL ou um arquivo executável (.exe). Um arquivo executável pode ser executado sozinho, mas uma DLL precisa ser hospedada em um aplicativo existente. Assemblies DLL gerenciados podem ser carregados no e hospedados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você registre o assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE ASSEMBLY, antes que ele seja carregado no processo e usado. Os assemblies também podem ser atualizados de uma versão mais recente usando a instrução ALTER ASSEMBLY ou removidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução DROP ASSEMBLY.  
   
- Informações de assembly são armazenadas no **assembly_files** tabela no banco de dados onde o assembly foi instalado. O **assembly_files** tabela contém as seguintes colunas.  
+ Informações de assembly são armazenadas em do **assembly_files** tabela no banco de dados em que o assembly foi instalado. O **assembly_files** tabela contém as colunas a seguir.  
   
 |coluna|Description|  
 |------------|-----------------|  
 |assembly_id|O identificador definido para o assembly. Este número é atribuído a todos os objetos relacionados ao mesmo assembly.|  
 |nome|O nome do objeto.|  
-|file_id|Um número que identifica cada objeto, com o primeiro objeto associado com um determinado **assembly_id** recebendo o valor de 1. Se vários objetos estão associados com o mesmo **assembly_id**, em seguida, cada subsequentes **file_id** valor é incrementado em 1.|  
+|file_id|Um número que identifica cada objeto, com o primeiro objeto associado com um determinado **assembly_id** o valor de 1. Se vários objetos estão associados com o mesmo **assembly_id**, em seguida, cada subsequentes **file_id** valor é incrementado em 1.|  
 |content|A representação hexadecimal do assembly ou arquivo.|  
   
 ## <a name="in-this-section"></a>Nesta seção  

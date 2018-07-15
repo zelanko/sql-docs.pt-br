@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234896"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
   Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. Uma expressão de coluna computada pode usar dados de outras colunas para calcular um valor para a coluna à qual pertence. Você pode especificar uma expressão para uma coluna computada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "36118083"
 4.  Na propriedade filho **(Fórmula)** , insira a expressão para essa coluna na célula de grade à direita. Por exemplo, em uma coluna `SalesTotal` , a fórmula que você insere pode ser `SubTotal+TaxAmt+Freight`, que associa o valor nessas colunas a cada linha na tabela.  
   
     > [!IMPORTANT]  
-    >  Quando uma fórmula combina duas expressões de tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o tipo de dados com menor precedência é convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, o erro "`Error validating the formula for column column_name.`" será retornado. Use a função CAST ou CONVERT para resolver o conflito de tipo de dados. Por exemplo, se uma coluna do tipo `nvarchar` é combinada com uma coluna do tipo `int`, o tipo inteiro deve ser convertido em `nvarchar` conforme mostrado nesta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+    >  Quando uma fórmula combina duas expressões de tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o tipo de dados com menor precedência é convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, o erro "`Error validating the formula for column column_name.`" será retornado. Use a função CAST ou CONVERT para resolver o conflito de tipo de dados. Por exemplo, se uma coluna do tipo `nvarchar` combinada com uma coluna do tipo `int`, o tipo de inteiro deve ser convertido em `nvarchar` conforme mostrado nesta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 5.  Indique se os dados são persistentes escolhendo **Sim** ou **Não** na lista suspensa da propriedade filho **Is Persisted** .  
   

@@ -1,12 +1,11 @@
 ---
-title: Ambiente hospedado do CLR | Microsoft Docs
+title: Ambiente hospedado de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -30,14 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697507"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352808"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração de CLR - ambiente hospedado de CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração CLR – ambiente hospedado de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o CLR (Common Language Runtime) do .NET Framework permite aos programadores usar linguagens como, por exemplo, Visual C#, Visual Basic .NET e Visual C++. Funções, procedimentos armazenados, gatilhos, tipos de dados e agregações estão entre os tipos de lógica corporativa que os programadores podem escrever usando essas linguagens.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "35697507"
  Código de usuário em execução no banco de dados deve seguir regras de autenticação e autorização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao acessar objetos de banco de dados como tabelas e colunas. Além disso, os administradores de bancos de dados devem ter a capacidade de controlar o acesso aos recursos do sistema operacional, como arquivos e acesso à rede, do código de usuário em execução no banco de dados. Isto se torna importante à medida que as linguagens de programação gerenciadas (ao contrário de linguagens de programação não gerenciadas, como o Transact-SQL) fornecem APIs para acessar tais recursos. O sistema deve fornecer um modo seguro para que o código de usuário acesse os recursos da máquina fora do processo do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>Desempenho  
- Código de usuário gerenciado em execução no [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ter desempenho computacional comparável ao mesmo código executado fora do servidor. O acesso ao banco de dados a partir de código do usuário gerenciado não é tão rápido quanto [!INCLUDE[tsql](../../includes/tsql-md.md)] nativo. Para obter mais informações, consulte [desempenho da integração do CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ Código de usuário gerenciado em execução no [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ter desempenho computacional comparável ao mesmo código executado fora do servidor. O acesso ao banco de dados a partir de código do usuário gerenciado não é tão rápido quanto [!INCLUDE[tsql](../../includes/tsql-md.md)] nativo. Para obter mais informações, consulte [desempenho da integração CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>Serviços CLR  
  O CLR fornece vários serviços para ajudar atingir as metas de design da integração do CLR com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -81,7 +80,7 @@ ms.locfileid: "35697507"
  Código fortemente tipado é um código que acessa as estruturas de memória somente de modos bem definidos. Por exemplo, dada uma referência de objeto válida, o código fortemente tipado pode acessar memória em offsets fixos, correspondentes a membros de campo reais. Entretanto, se o código acessar a memória em offsets arbitrários dentro ou fora do intervalo de memória que pertence ao objeto, então ele não será fortemente tipado. Quando os assemblies são carregados no CLR, antes de a MSIL ser compilada usando compilação JIT (just-in-time), o tempo de execução executa uma fase de verificação que examina o código antes de determinar sua segurança de tipos. O código aprovado com êxito nesta verificação é chamado de código fortemente tipado verificável.  
   
 ###### <a name="application-domains"></a>Domínios de aplicativo  
- O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios do aplicativo e segurança da integração CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança da integração CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)  
  O sistema de segurança CLR sistema fornece um modo de controlar quais os tipos de código gerenciado de operações que podem ser executados, atribuindo permissões ao código. As permissões de acesso ao código são atribuídas com base na identidade do código (por exemplo, a assinatura do assembly ou a origem do código).  
@@ -146,7 +145,7 @@ ms.locfileid: "35697507"
   
  Dadas essas considerações, desencorajamos o uso de variáveis estáticas e membros de dados estáticos de classes usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para assemblies SAFE e EXTERNAL_ACCESS, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina os metadados do assembly na ocasião CREATE ASSEMBLY e gerará uma falha na criação desses assemblies se encontrar o uso de membros e variáveis de dados estáticos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também não permite chamadas para as APIs do .NET Framework que são anotadas com o **SharedState**, **sincronização** e **ExternalProcessMgmt** atributos de proteção de host. Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também não permite chamadas para APIs do .NET Framework que são anotadas com a **SharedState**, **sincronização** e **ExternalProcessMgmt** atributos de proteção de host. Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

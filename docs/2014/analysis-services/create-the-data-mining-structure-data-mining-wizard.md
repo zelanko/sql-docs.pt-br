@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241826"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Criar a estrutura de mineração de dados (Assistente de Mineração de Dados)
   Use a página **Criar a Estrutura de Data Mining** para criar uma estrutura de mineração de dados e, opcionalmente, um modelo de mineração associado.  
@@ -47,8 +47,8 @@ ms.locfileid: "36118000"
  Exibe uma descrição do algoritmo selecionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selecione a exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selecionar exibição da fonte de dados &#40;Assistente de mineração de dados&#41;](select-data-source-view-data-mining-wizard.md)   
  [Selecione o método de definição &#40;Assistente de mineração de dados&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

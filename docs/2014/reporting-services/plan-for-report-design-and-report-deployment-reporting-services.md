@@ -1,5 +1,5 @@
 ---
-title: Plano de Design de relatório e implantação de relatório (Reporting Services 2014) | Microsoft Docs
+title: Plano de Design de relatório e a implantação de relatório (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42d95afee84fa57c6ad4cb9562be44820b228814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bd53bceaae8b1a898aecf94cc05818653498904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194846"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planejar a criação e a implantação de relatórios (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios. Use este tópico para aprender a planejar um ambiente de criação de relatórios e servidor de relatório que funcionam em conjunto. Este tópico apresenta uma visão geral do suporte para definição de relatório pelos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Uma definição de relatório é um arquivo XML escrito em RDL ou RDLC. Cada definição de relatório segue uma versão específica de esquema listado no início do arquivo.  
@@ -32,9 +32,9 @@ ms.locfileid: "36119478"
   
 -   [Servidor de relatório e o suporte do esquema RDL](#bkmk_report_server_rdl_schema_support)  
   
--   [Suporte de implantação e criação de relatórios](#bkmk_report_authoring_and_deployment)  
+-   [Criação de relatórios e o suporte à implantação](#bkmk_report_authoring_and_deployment)  
   
--   [Controles do ReportViewer](#bkmk_reportviewer)  
+-   [Controles ReportViewer](#bkmk_reportviewer)  
   
 ##  <a name="bkmk_rdl_schema_versions"></a> Versões de esquema RDL  
  A tabela a seguir lista cada versão de esquema disponível e a abreviação usada no restante deste tópico:  
@@ -121,7 +121,7 @@ ms.locfileid: "36119478"
 -   [Adicionando e configurando controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
- [Relatórios, partes de relatório e as definições de relatório &#40;SSRS e construtor de relatórios&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Relatórios, partes de relatório e definições de relatório &#40;relatórios e SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Ferramentas do Reporting Services](tools/reporting-services-tools.md)   
  [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   

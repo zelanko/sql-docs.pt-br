@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7ee32b1939e4f6752bb644fcd5c54ca288c7bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17cc690bc616cfcdaab294eba5db2338c7d02e62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252300"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Usar uma expressão em um componente de fluxo de dados
   Este procedimento descreve como adicionar uma expressão à transformação Divisão Condicional ou à transformação Coluna derivada. A transformação Divisão Condicional usa expressões para definir as condições que direcionam linhas de dados a uma saída de transformação e a transformação Coluna Derivada usa expressões para definir valores atribuídos a colunas.  
@@ -70,7 +70,7 @@ ms.locfileid: "36117719"
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
- [Transformação de divisão condicional](data-flow/transformations/conditional-split-transformation.md)   
+ [Transformação divisão condicional](data-flow/transformations/conditional-split-transformation.md)   
  [Transformação coluna derivada](data-flow/transformations/derived-column-transformation.md)   
  [Tarefa de Fluxo de Dados](control-flow/data-flow-task.md)   
  [Fluxo de Dados](data-flow/data-flow.md)  

@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 142d31727b94a8a5fcab36495314ac853fa92328
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: bae57aef6469c47f71fadcd28567375ce2156c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241716"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriais para SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] incorpora várias tecnologias e recursos novos.  
@@ -40,7 +40,7 @@ ms.locfileid: "36116261"
 -   Para baixar uma pasta de trabalho [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e relatórios [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usar com tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vá para [Arquivos de Imagem para Modelo de Exemplo HelloWorldPicnic no PowerPivot e no Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] é um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] é um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Para baixar versões do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] de bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , vá para [Bancos de Dados de Exemplo do Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) no CodePlex.  
   

@@ -1,5 +1,5 @@
 ---
-title: Defina os bancos de dados definido pelo agrupamento de usuário correspondem do mestre e bancos de dados modelo | Microsoft Docs
+title: Defina os bancos de dados definido pelo agrupamento de usuário para corresponder do mestre e bancos de dados modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b437463c35face45918e567cbf42d31f63161cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c6cbe79e2af21444e39fb7da7546122cd273ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314576"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo
   Esta regra verifica se os bancos de dados definidos pelo usuário são definidos usando um agrupamento de banco de dados com o mesmo agrupamento para mestre ou modelo.  
@@ -52,9 +52,9 @@ ms.locfileid: "36005697"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Artigo da Base de dados de Conhecimento da Microsoft 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Artigo da Base de Conhecimento Microsoft 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Como: instalar o SQL Server 2008 no Prompt de comando](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Como: instalar o SQL Server 2008 do Prompt de comando](http://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

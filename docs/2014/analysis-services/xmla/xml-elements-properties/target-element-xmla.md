@@ -1,5 +1,5 @@
 ---
-title: Destino do elemento (XMLA) | Microsoft Docs
+title: Elemento (XMLA) de destino | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287860"
 ---
 # <a name="target-element-xmla"></a>Elemento Target (XMLA)
   Representa a partição de destino a ser mesclada durante um [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) comando.  
@@ -67,7 +67,7 @@ ms.locfileid: "36117033"
 |Elementos filho|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O `Target` elemento é uma referência de objeto para uma única partição na qual o conteúdo das partições de origem, especificado pelo [fontes](sources-element-xmla.md) elemento do pai `MergePartitions` elemento, a serem mescladas.  
+ O `Target` elemento é uma referência de objeto para uma única partição na qual o conteúdo das partições de origem, especificado pelo [fontes](sources-element-xmla.md) elemento pai `MergePartitions` elemento, a serem mescladas.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir combina as quatro partições do grupo de medidas Vendas da Internet na partição de destino `Internet_Sales_2004`. O exemplo faz referência ao cubo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] do banco de dados de amostra [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

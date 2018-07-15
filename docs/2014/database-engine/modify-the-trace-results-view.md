@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302756"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
   Este tópico descreve como modificar a exibição dos resultados do rastreamento de uma sessão de Eventos Estendidos no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] executando as tarefas a seguir.  
@@ -121,7 +121,7 @@ ms.locfileid: "36009394"
   
      Se você agrupou colunas, classificar a coluna só classificará os dados dentro do grupo.  
   
-##  <a name="GroupResults"></a> Resultados de grupo  
+##  <a name="GroupResults"></a> Agrupar resultados  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Para agrupar os resultados por uma única coluna  
   
@@ -188,7 +188,7 @@ ms.locfileid: "36009394"
   
 7.  Clique em **OK**.  
   
-##  <a name="Filter"></a> Resultados do filtro  
+##  <a name="Filter"></a> Filtrar resultados  
  Você pode aplicar filtros para refinar os resultados do rastreamento que são exibidos na janela de rastreamento. O filtro de exibição inclui um filtro de hora e um filtro avançado. Use o filtro de hora para filtrar os resultados de rastreamento por carimbo de data/hora de evento e use o filtro avançado para construir condições de filtro usando os campos de eventos e ações. Há uma relação AND lógica entre os filtros Hora e Avançado.  
   
 #### <a name="to-create-a-filter"></a>Para criar um filtro  

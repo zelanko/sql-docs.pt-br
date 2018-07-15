@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 caps.latest.revision: 38
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e7dbac29f2bfa4a61c9d5c6cfe955d1f07a11189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7a8a563b9265fa53e55c8625fd5123aa90cda23b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303636"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Usando cabeçalhos SOAP do Reporting Services
   A comunicação com um método de serviço Web que usa o SOAP segue um formato padrão. Parte desse formato são os dados codificados em um documento XML. O documento XML consiste em um elemento raiz **Envelope** que, por sua vez, consiste em um elemento **Body** obrigatório e um elemento **Header** opcional. O elemento **Body** contém os dados específicos à mensagem. O elemento **Header** opcional pode conter informações adicionais que não estão diretamente relacionadas à mensagem específica. Cada elemento filho do elemento **Header** é chamado de cabeçalho SOAP.  

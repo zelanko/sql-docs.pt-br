@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Text (Unencoded) event class
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 333cf9f07977ece7378740485762e86fab26f0c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb98cabb07407dfb3ab28e926503db2c6a0b967d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180053"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>classe de evento Showplan Text (Unencoded)
   A classe de evento Showplan Text (Sem-Codificação) ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. Essa classe de evento é a mesma que a classe de evento Showplan Text, exceto pelo fato de que as informações do evento são formatadas como uma cadeia de caracteres ao invés de dados binários.  

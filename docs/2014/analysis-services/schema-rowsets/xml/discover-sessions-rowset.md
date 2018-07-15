@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_SESSIONS rowset
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b85e563aacdfe2f520c185a3ddcbd0c4b5dc5453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b9c137aafe16ad999bba5213afaaf92c15e1c35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218106"
 ---
 # <a name="discoversessions-rowset"></a>Conjunto de linhas DISCOVER_SESSIONS
   Oferece uso de recursos e de informações de atividade sobre as sessões atualmente abertas no servidor.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_SESSIONS` linhas contém as seguintes colunas.  
+ O `DISCOVER_SESSIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

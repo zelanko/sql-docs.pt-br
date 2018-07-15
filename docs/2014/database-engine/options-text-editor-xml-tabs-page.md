@@ -1,5 +1,5 @@
 ---
-title: 'Opções (página Editor: XML:Tabs de texto) | Microsoft Docs'
+title: 'Opções (página XML:Tabs: Editor de texto) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb41fb44ad1f820623ab3db96b1bf6108fd580a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324916"
 ---
-# <a name="options-text-editorxmltabs-page"></a>Opções (página Editor: XML:Tabs de texto)
+# <a name="options-text-editorxmltabs-page"></a>Opções (página XML:Tabs: Editor de texto)
   Essa caixa de diálogo permite alterar o comportamento de tabulação do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **XML** e, então, clique em **Tabulações**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
@@ -33,7 +33,7 @@ ms.locfileid: "36008463"
  **Nenhuma**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
- **bloco**  
+ **Bloco**  
  Quando esta opção estiver selecionada, a nova linha criada ao se pressionar ENTER ficará recuada automaticamente com a mesma distância da linha anterior.  
   
  **Inteligente**  

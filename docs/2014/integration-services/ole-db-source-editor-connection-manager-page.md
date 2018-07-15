@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206486"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de Origem OLE DB (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem OLE DB** para selecionar o gerenciador de conexões OLE DB para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -34,7 +34,7 @@ ms.locfileid: "36120381"
 >  Para carregar dados de uma fonte de dados que usa o [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 ou uma versão anterior, use uma origem do Excel. Para obter mais informações, consulte [Editor de Fonte Excel &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  O `CommandTimeout` propriedade da fonte de OLE DB não está disponível na **Editor de origem OLE DB**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](data-flow/ole-db-custom-properties.md).  
+>  O `CommandTimeout` propriedade da origem OLE DB não está disponível na **Editor de origem OLE DB**, mas pode ser definida usando a **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Propriedades personalizadas do OLE DB](data-flow/ole-db-custom-properties.md).  
   
  Para saber mais sobre a origem de OLE DB, consulte [OLE DB Source](data-flow/ole-db-source.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36120381"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem OLE DB &#40;página colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor de origem OLE DB &#40;página de colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Editor de origem OLE DB &#40;página de saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Gerenciador de Conexões OLE DB](connection-manager/ole-db-connection-manager.md)  

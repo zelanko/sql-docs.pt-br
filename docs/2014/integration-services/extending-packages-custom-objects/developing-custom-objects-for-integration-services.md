@@ -17,13 +17,13 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6a051ed9c60fb293bd549e073d3f5e95efd8d46c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9d6e14fd314732f7a4cd1f68773a51d96c8f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201566"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desenvolvendo objetos personalizados para o Integration Services
   Quando os objetos de fluxo de controle e de fluxo de dados incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não atendem completamente a seus requisitos, você pode desenvolver muitos tipos de objetos personalizados, incluindo:  
@@ -115,7 +115,7 @@ ms.locfileid: "36120614"
   
 -   Entrada de blog, [O processo de criação de solução do Visual Studio dá um aviso sobre a dependência indireta no assembly do .NET Framework devido a referências SSIS](http://go.microsoft.com/fwlink/?LinkId=215662), em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de objetos personalizados](persisting-custom-objects.md)   

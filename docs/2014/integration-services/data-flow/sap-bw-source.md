@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324646"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
   A fonte SAP BW é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Assim, a origem do SAP BW extrai dados de um sistema SAP Netweaver BW versão 7 e torna estes dados disponíveis para o fluxo de dados em um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -123,13 +123,13 @@ ms.locfileid: "36005912"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usando o Designer SSIS para configurar a origem  
  Para obter mais informações sobre as propriedades da origem do SAP BW que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor de origem do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [Editor de origem SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor de origem do SAP BW &#40;página colunas&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Editor de origem SAP BW &#40;página de colunas&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Editor de origem do SAP BW &#40;página de saída de erro&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Editor de origem SAP BW &#40;página de saída de erro&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origem do SAP BW &#40;página Avançado&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origem SAP BW &#40;página Avançado&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Quando você estiver configurando a origem do SAP BW, também poderá usar várias caixas de diálogo para pesquisar objetos do SAP Netweaver BW ou visualizar os dados da origem. Para obter mais informações sobre essas caixas de diálogo, clique em um dos seguintes tópicos:  
   

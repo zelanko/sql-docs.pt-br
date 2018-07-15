@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10170"
 - sql12.rtp.rptdesigner.datasetproperties.filters.f1
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5dcb40980612d0198c6407e19bcc0986c06609
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e6bff1d3c5d9a687fd01ccd179c86dddde9a8e1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280232"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros
   Selecione **Filtros** na caixa de diálogo **Propriedades do Conjunto de Dados** para criar filtros para o conjunto de dados.  
@@ -54,6 +54,6 @@ ms.locfileid: "36119463"
   
 ## <a name="see-also"></a>Consulte também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
   
   

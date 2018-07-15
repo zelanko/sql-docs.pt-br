@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
 - date comparisons
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 684da8d68061248556d99dcc06c8c8e9207e65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fa4cb11d4fdbd429cfc01b4dcb3cd43c2a35b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271942"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
@@ -95,7 +95,7 @@ ms.locfileid: "36119241"
  Somente os identificadores de objeto, e não os nomes de objetos, estão sujeitos a comportamentos de maiúsculas e minúsculas descritos na tabela. Se houver uma alteração na maneira como a solução funciona (uma comparação antes e depois – após a instalação do SQL Server 2012 SP2 ou depois), provavelmente será um problema de processamento. Consultas não são afetadas por identificadores de objeto. Para ambas as linguagens de consulta (DAX e MDX), o mecanismo da fórmula usa o nome do objeto (e não o identificador).  
   
 > [!NOTE]  
->  Alterações de código relacionadas a diferenciação de maiúsculas e minúsculas têm sido significativas para alguns aplicativos. Consulte [alterações recentes em recursos do Analysis Services no SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obter mais informações.  
+>  Alterações de código relacionadas a diferenciação de maiúsculas e minúsculas têm sido significativas para alguns aplicativos. Ver [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obter mais informações.  
   
 ##  <a name="bkmk_test"></a> Teste de localidade usando o Excel, o SQL Server Profiler e o SQL Server Management Studio  
  Ao testar as traduções, a conexão deve especificar o LCID da tradução. Conforme documentado em [Get Different Language from SSAS into Excel (Obter idiomas diferentes do SSAS para o Excel)](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), você pode usar o Excel para testar suas traduções.  
@@ -122,7 +122,7 @@ ms.locfileid: "36119241"
   
 -   Execute uma consulta MDX no banco de dados do Adventure Works. Os resultados da consulta devem ser as traduções de francês.  
   
-     ![A consulta MDX com as traduções francesas no SSMS](media/ssas-localetest-ssms.png "consulta MDX com as traduções francesas no SSMS")  
+     ![Consulta MDX com as traduções francesas no SSMS](media/ssas-localetest-ssms.png "consulta MDX com as traduções francesas no SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Escrever consultas MDX em uma solução que contém traduções  
  As traduções fornecem informações de exibição para os nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas os identificadores dos mesmos objetos não são traduzidos. Sempre que possível, use os identificadores e chaves para objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em vez das legendas traduzidas e nomes. Por exemplo, use as chaves de membro em vez dos nomes de membro para instruções e scripts MDX para assegurar a portabilidade para vários idiomas.  

@@ -17,13 +17,13 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e171650a4f3fa04644bf87303cf26caf4eb172dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6327983f42efbf0b8d891495c9048d1ab963d0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306206"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Depurar um script definindo pontos de interrupção em uma tarefa Script e um componente Script
   Este procedimento descreve como definir pontos de interrupção nos scripts que são usados na tarefa Script e componente Script.  
@@ -31,7 +31,7 @@ ms.locfileid: "36005911"
  Depois que você definir pontos de interrupção no script, a caixa de diálogo **Definir Pontos de Interrupção – \<nome do objeto>** listará os pontos de interrupção, junto com os pontos de interrupção inseridos.  
   
 > [!IMPORTANT]  
->  Em determinadas circunstâncias, os pontos de interrupção na tarefa Script e no componente Script são ignorados. Para obter mais informações, consulte o **depurando a tarefa Script** seção [codificando e depurando a tarefa Script](../control-flow/script-task.md) e **depurando o componente Script** seção [codificação e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+>  Em determinadas circunstâncias, os pontos de interrupção na tarefa Script e no componente Script são ignorados. Para obter mais informações, consulte o **depurando a tarefa Script** seção [codificando e depurando a tarefa Script](../control-flow/script-task.md) e o **depurando o componente Script** seção [codificação e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>Para definir um ponto de interrupção em script  
   

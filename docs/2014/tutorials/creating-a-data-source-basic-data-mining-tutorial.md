@@ -1,5 +1,5 @@
 ---
-title: Criar uma fonte de dados (Tutorial de mineração de dados básico) | Microsoft Docs
+title: Criando uma fonte de dados (Tutorial de mineração de dados básico) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,61 +8,61 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: b86c10563ffae3073b92373eec5e07c18c1c0668
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: ca60870200473b80f114e17db2222d18f5219fba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312716"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Criando uma fonte de dados (Tutorial de mineração de dados básico)
   Um *fonte de dados* é uma conexão de dados que é salvo e gerenciado no seu projeto e implantado em seu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. A fonte de dados contém os nomes do servidor e o banco de dados em que a sua fonte de dados reside, além das demais propriedades de conexão necessárias.  
   
 > [!IMPORTANT]  
->  O nome do banco de dados é [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se você ainda não tenha instalado esse banco de dados, consulte o [bancos de dados de exemplo do Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) página.  
+>  O nome do banco de dados é [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se você ainda não instalou esse banco de dados, consulte o [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) página.  
   
 ### <a name="to-create-a-data-source"></a>Para criar uma fonte de dados  
   
-1.  Em **Solution Explorer**, com o botão direito do **fontes de dados** pasta e selecione **nova fonte de dados**.  
+1.  Na **Gerenciador de soluções**, clique com botão direito do **fontes de dados** pasta e selecione **nova fonte de dados**.  
   
-2.  Sobre o **bem-vindo ao Assistente de fonte de dados** , clique em **próximo**.  
+2.  Sobre o **bem-vindo ao Assistente de fonte de dados** , clique em **próxima**.  
   
-3.  No **selecione como definir a conexão** , clique em **novo** para adicionar uma conexão para o [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados.  
+3.  Sobre o **selecione como definir a conexão** , clique em **New** para adicionar uma conexão para o [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados.  
   
 4.  No **provedor** lista **Gerenciador de Conexão**, selecione **Native OLE DB\SQL Server Native Client 11.0**.  
   
-5.  No **nome do servidor** caixa, digite ou selecione o nome do servidor em que você instalou [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+5.  No **nome do servidor** caixa, digite ou selecione o nome do servidor no qual você instalou [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
      Por exemplo, digite **localhost** se o banco de dados estiver hospedado no servidor local.  
   
-6.  No **Log no servidor** grupo, selecione **usar autenticação do Windows**.  
+6.  No **faça logon no servidor** grupo, selecione **usar a autenticação do Windows**.  
   
     > [!IMPORTANT]  
     >  Sempre que possível, os implementadores deverão usar a Autenticação do Windows, já que ela oferece um método de autenticação mais seguro do que a Autenticação do SQL Server. No entanto, a Autenticação do SQL Server é fornecida somente para fins de compatibilidade com versões anteriores. Para obter mais informações sobre métodos de autenticação, consulte [configuração do mecanismo de banco de dados - provisionamento de conta](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-7.  No **selecionar ou digitar um nome de banco de dados** , selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] e, em seguida, clique em **Okey**.  
+7.  No **selecione ou insira um nome de banco de dados** , selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] e, em seguida, clique em **Okey**.  
   
 8.  Clique em **Avançar**.  
   
-9. Sobre o **informações sobre representação** , clique em **usar a conta de serviço**e, em seguida, clique em **próximo**.  
+9. Sobre o **informações sobre representação** , clique em **usar a conta de serviço**e, em seguida, clique em **próxima**.  
   
-     Sobre o **Concluindo o assistente** página, observe que, por padrão, a fonte de dados é chamada de Adventure Works DW 2012.  
+     Sobre o **Concluindo o assistente** página, observe que, por padrão, a fonte de dados é chamada Adventure Works DW 2012.  
   
 10. Clique em **Concluir**.  
   
-     A nova fonte de dados, Adventure Works DW 2012, aparece no **fontes de dados** pasta no Gerenciador de soluções.  
+     A nova fonte de dados, Adventure Works DW 2012, aparece na **fontes de dados** pasta no Gerenciador de soluções.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Exibição da fonte de criação de um tipo de dados &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Criar dados de um exibição da fonte &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Tarefa anterior da lição  
- [Projeto de serviços de criação de uma análise &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Criando uma análise dos serviços de projeto &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   

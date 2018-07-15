@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6643218cd4671c86c8e44b751c5163171fc2b236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff372309d1f9f5c7eda982b4c431c24556c6f073
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225576"
 ---
 # <a name="database-properties-changetracking-page"></a>Propriedades do Banco de Dados (página Controle de Alterações)
   Use essa página para exibir ou modificar configurações de controle de alterações para o banco de dados selecionado. Para obter mais informações sobre as opções disponíveis nessa página, veja [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md).  
