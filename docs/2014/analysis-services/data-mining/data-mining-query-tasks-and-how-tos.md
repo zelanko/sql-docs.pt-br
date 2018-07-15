@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15adaa8227a80d04cbdbdaa379dfccc4f2f03acf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257452"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de Data Mining
   A capacidade de criar consultas será essencial se você for utilizar seus modelos de mineração de dados. Esta seção contém links para exemplos sobre como criar consultas em um modelo de mineração de dados usando as ferramentas fornecidas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se precisar de mais informações sobre a definição de uma consulta de mineração de dados ou sobre os diferentes tipos de consultas que você pode criar, consulte [Consultas de mineração de dados](data-mining-queries.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "36118553"
  Descreve como criar uma consulta no conteúdo do modelo de mineração usando os modelos XMLA do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de linguagem de expressão e consulta &#40;do Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Referência de linguagem de expressão e de consulta &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

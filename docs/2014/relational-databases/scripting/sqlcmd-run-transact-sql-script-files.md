@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff18203f0120210f3443973ed7e44761b84ac8ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4aa1fd4418e4758ca41cce9d3aeba70838a0dce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260402"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Executar arquivos de script Transact-SQL usando sqlcmd
   Você pode usar `sqlcmd` para executar um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script é um arquivo de texto que pode conter uma combinação de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, `sqlcmd` comandos e variáveis de script.  

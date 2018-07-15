@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211886"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
   Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |Cenário|Método de autenticação|  
 |--------------|---------------------------|  
-|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna. Por exemplo, Sistema Local ou SERVIÇO DE REDE.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que está executando o serviço SQL Server em.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
-|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que está executando o serviço SQL Server em.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
+|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna. Por exemplo, Sistema Local ou SERVIÇO DE REDE.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que o serviço do SQL Server está sendo executado.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
+|O SPN faz o mapeamento para a conta de domínio correta, conta virtual, MSA ou conta interna.<br /><br /> Observação: Correto significa que a conta mapeada pelo SPN registrado é a conta que o serviço do SQL Server está sendo executado.|Conexões locais usam NTLM, conexões remotas usam Kerberos.|  
 |O SPN faz o mapeamento para a conta de domínio incorreta, conta virtual, MSA ou conta interna.|A autenticação falha.|  
 |A pesquisa de SPN falha ou não faz o mapeamento para uma conta de domínio correta, conta virtual, MSA ou conta interna ou não é uma conta de domínio correta, conta virtual, MSA ou conta interna.|Conexões locais e remotas usam NTLM.|  
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328426"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte à apresentação da definição de um modelo de tabela em um formato XML chamado CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de Business Intelligence).  
@@ -32,9 +32,9 @@ ms.locfileid: "36007778"
   
  Embora a CSDL seja compatível com a Estrutura de Dados de Entidade, não é necessário compreender o modelo de relação entre entidades nem ter ferramentas especiais para criar um modelo de tabela ou um relatório baseado em um modelo. Você cria modelos usando ferramentas de cliente, como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou uma API, como AMO, e implanta o modelo em um servidor. Os clientes se conectam ao modelo usando um arquivo de definição de modelo, geralmente publicado em uma biblioteca do SharePoint, onde ele pode ser usado por designers e consumidores de relatório. Para obter mais informações, consulte estes links:  
   
--   [Soluções de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+-   [Soluções de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Implantação de solução de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Conexão de modelo semântico de BI do PowerPivot &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
@@ -47,12 +47,12 @@ ms.locfileid: "36007778"
   
  Você não pode modificar estes objetos diretamente, mas deve usar as ferramentas de cliente e APIs (interfaces de programação de aplicativo) fornecidas para trabalhar com modelos de tabela.  
   
- Você pode obter a CSDL para um modelo enviando uma solicitação DISCOVER ao servidor que hospeda o modelo. A solicitação deve ser qualificada especificando o servidor e o modelo e, opcionalmente, uma exibição ou perspectiva. A mensagem retornada é uma cadeia de caracteres XML. Certos elementos dependem da linguagem e retornam valores diferentes de acordo com a linguagem da conexão atual. Para obter mais informações, consulte [linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ Você pode obter a CSDL para um modelo enviando uma solicitação DISCOVER ao servidor que hospeda o modelo. A solicitação deve ser qualificada especificando o servidor e o modelo e, opcionalmente, uma exibição ou perspectiva. A mensagem retornada é uma cadeia de caracteres XML. Certos elementos dependem da linguagem e retornam valores diferentes de acordo com a linguagem da conexão atual. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
   
 ### <a name="csdlbi-versions"></a>Versões da CSDLBI  
  A especificação da CSDL original (da Estrutura de Dados de Entidade) oferece a maioria das entidades e propriedades necessárias para oferecer suporte à modelagem. As anotações de BI oferecem suporte aos requisitos especiais de modelos de tabela, às propriedades de relatório exigidas por clientes como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e aos metadados adicionais exigidos pelos modelos multidimensionais. Esta seção descreve as atualizações em cada versão.  
   
- **CSDLBI 1.0**  
+ **1.0 DA CSDLBI**  
   
  O conjunto inicial de adições ao esquema da CSDL para oferecer suporte a modelos de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continha anotações para suporte à modelagem de dados, aos cálculos personalizados e à apresentação aprimorada:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36007778"
  Para obter informações detalhadas sobre os elementos individuais nas anotações da CSDLBI, consulte [referência técnica para anotações de BI para CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Para obter informações sobre a especificação principal de CSDL, consulte o [especificação v3 de CSDL](https://msdn.microsoft.com/en-us/data/jj652004) no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Noções básicas sobre o modelo de objeto Tabular](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Conceitos da CSDLBI](csdlbi-concepts.md)   
  [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   

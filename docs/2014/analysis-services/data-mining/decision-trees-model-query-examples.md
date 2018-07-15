@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261512"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemplos de consulta de modelo de árvores de decisão
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de árvores de decisão pode fornecer estatísticas sobre o número de casos de cada nível da árvore ou as regras que diferenciam os casos. Como alternativa, uma consulta de previsão mapeia o modelo para novos dados para gerar recomendações, classificações e assim sucessivamente. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  Essa consulta retorna todos os nós de tipo 2, que são os nós superiores de uma árvore que representa um atributo previsível particular.  
   
 > [!NOTE]  
->  A coluna `CHILDREN_CARDINALITY`, devem ser colocados entre colchetes para distingui-lo de que a palavra-chave reservada MDX o mesmo nome.  
+>  A coluna `CHILDREN_CARDINALITY`, devem ser colocados entre colchetes para distingui-lo de que a palavra-chave de reservada MDX de mesmo nome.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,10 +87,10 @@ WHERE NODE_TYPE = 2
   
  O que esses resultados significam para você? Em um modelo de árvores de decisão, a cardinalidade de um nó específico indica quantos filhos imediatos aquele nó contém. A cardinalidade desse nó é 5, o que indica que o modelo dividiu a população alvo de consumidores de bicicleta em 5 subgrupos.  
   
- A consulta relacionada a seguir retorna os filhos desses cinco subgrupos, juntamente com a distribuição dos atributos e valores nos nós filho. Como as estatísticas como suporte, probabilidade e variância são armazenadas na tabela aninhada, `NODE_DISTRIBUTION`, este exemplo usa o `FLATTENED` palavra-chave para a saída de colunas da tabela aninhada.  
+ A consulta relacionada a seguir retorna os filhos desses cinco subgrupos, juntamente com a distribuição dos atributos e valores nos nós filho. Como as estatísticas, como suporte, probabilidade e variância são armazenadas na tabela aninhada, `NODE_DISTRIBUTION`, este exemplo usa o `FLATTENED` palavra-chave para gerar as colunas da tabela aninhada.  
   
 > [!NOTE]  
->  A coluna de tabela aninhada, `SUPPORT`, devem ser colocados entre colchetes para distingui-lo da palavra-chave reservada de mesmo nome.  
+>  A coluna de tabela aninhada, `SUPPORT`, devem ser colocados entre colchetes para distingui-la da palavra-chave reservada de mesmo nome.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Número de Carros = 3|Bike Buyer|0|678|  
 |00000000101|Número de Carros = 3|Bike Buyer|1|473|  
   
- A partir desses resultados, você pode perceber que os clientes que compraram uma bicicleta (`[Bike Buyer]` = 1), 1.067 clientes não tinham 0 carro e 473 clientes tinham 3 carros.  
+ Com base nesses resultados, é possível afirmar que dos clientes que compraram uma bicicleta (`[Bike Buyer]` = 1), 1067 clientes não tinham 0 carros e 473 clientes tinham 3 carros.  
   
 ###  <a name="bkmk_Query3"></a> Exemplo de consulta 3: recuperando subárvores do modelo  
  Suponha que você queira saber mais sobre os clientes que compraram uma bicicleta. É possível exibir detalhes adicionais para qualquer subárvore usando a função [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) na consulta, como mostra o exemplo a seguir. A consulta retorna o cálculo dos compradores de bicicletas recuperando os nós folha (NODE_TYPE = 4) da árvore que contém os clientes acima de 42 anos de idade. A consulta restringe linhas da tabela aninhada para aquelas onde Comprador de Bicicleta = 1.  
@@ -185,7 +185,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Por padrão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna tabelas aninhadas com o nome de coluna, **Expressão**. Você pode alterar esse nome no alias da coluna que é retornada. Se fizer isso, o alias (nesse caso, **Resultados**) será usado no título da coluna e também como valor da tabela aninhada. Você deve expandir a tabela aninhada para verificar os resultados.  
   
- Resultados de exemplo onde comprador de bicicleta = 1:  
+ Resultados de exemplo em que o comprador de bicicleta = 1:  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
@@ -279,6 +279,6 @@ WHERE NODE_TYPE = 25
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Referência técnica do algoritmo de árvores de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Conteúdo do modelo de árvore de decisão de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de árvore de decisão &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

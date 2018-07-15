@@ -1,5 +1,5 @@
 ---
-title: Página cache, compartilhados (Gerenciador de relatórios) | Microsoft Docs
+title: Página cache, Shared Datasets (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247986"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Página Cache, Conjuntos de Dados Compartilhados (Gerenciador de Relatórios)
   Use a página de propriedades Cache para definir as opções de cache para um conjunto de dados compartilhado.  
@@ -53,7 +53,7 @@ ms.locfileid: "36117828"
  **Agenda específica do conjunto de dados**  
  Especifique uma agenda que seja usada somente por este conjunto de dados.  
   
- **agenda compartilhada**  
+ **Agenda compartilhada**  
  Especifique uma agenda que seja compartilhada entre relatórios, assinaturas e outros conjuntos de dados compartilhados.  
   
  **Aplicar**  

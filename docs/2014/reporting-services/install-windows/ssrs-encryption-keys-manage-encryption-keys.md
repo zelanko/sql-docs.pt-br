@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bea136573490ba06fba1ce5f8ca7c7a47a17d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187973"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Configurar e gerenciar chaves de criptografia (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa chaves de criptografia para proteger credenciais e informações de conexão que estão armazenadas em um banco de dados de servidor de relatório. No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o suporte à criptografia é dado por meio de uma combinação de chaves públicas, privadas e simétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do servidor de relatório quando você instala ou configura o servidor de relatório, sendo usada pelo servidor de relatório para criptografar dados confidenciais que estão armazenados no servidor de relatório. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do servidor de relatório, que armazena dados confidenciais em um banco de dados de servidor de relatório.  
@@ -49,22 +49,22 @@ ms.locfileid: "36118834"
 -   Adicionar ou remover uma instância do servidor de relatório de uma implantação de expansão do servidor de relatório em que vários servidores de relatório compartilham um único banco de dados de servidor de relatório e a chave simétrica que fornece criptografia reversível para esse banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Inicializar um servidor de relatório &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
  Explica como as chaves de criptografia são criadas.  
   
  [Fazer backup e restaurar as chaves de criptografia do Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Explica como fazer o backup de chaves de criptografia e restaurá-las para recuperar ou migrar uma instalação de servidor de relatório.  
   
- [Armazenar dados de servidor de relatório criptografados &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Dados do servidor de relatório criptografado de Store &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Descreve criptografia em um servidor de relatório.  
   
- [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [Excluir e recriar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  Explica como é possível substituir uma chave simétrica por uma nova versão e como iniciar do princípio se as chaves simétricas não puderem ser validadas.  
   
- [Adicionar e remover chaves de criptografia para implantação em expansão &#40;SSRS Configuration Manager&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Adicionar e remover chaves de criptografia para implantação escalável &#40;Configuration Manager do SSRS&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explica como adicionar e remover chaves de criptografia para controlar quais servidores de relatório fazem parte de uma implantação de expansão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Armazenar dados de servidor de relatório criptografados &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Dados do servidor de relatório criptografado de Store &#40;Configuration Manager do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0106449b66e1f4c55edd28abfd4e2fab67626080
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dbbe51251adf9a681a817aa5e402a23f3b5dde2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201136"
 ---
 # <a name="multipoint"></a>MultiPoint
-  A `MultiPoint` é uma coleção de zero ou mais pontos. O limite de uma instância `MultiPoint` é vazio.  
+  Um `MultiPoint` é uma coleção de zero ou mais pontos. O limite de uma instância `MultiPoint` é vazio.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `geometry MultiPoint` com SRID 23 e dois pontos: um ponto com as coordenadas (2, 3), um ponto com as coordenadas (7, 8) e um valor Z de 9,5.  

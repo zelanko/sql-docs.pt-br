@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 195ba7dac5e1561805b3e694f28939e12303a182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 12542af785a220858ca151ce1e64a2199436852c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308146"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Configurar opção de configuração de servidor default full-text language
-  Este tópico descreve como configurar o `default full-text language` opção de configuração do servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. O `default full-text language` opção especifica um valor de idioma padrão para índices de texto completo. A análise linguística é realizada em todos os dados que se encontram indexados com texto completo e depende do idioma dos dados. O valor padrão dessa opção é o idioma do servidor. Para uma versão localizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de configuração o `default full-text language` opção para o idioma do servidor caso exista uma correspondência apropriada. Para obter uma versão não localizada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o `default full-text language` opção é inglês.  
+  Este tópico descreve como configurar o `default full-text language` na opção de configuração do servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. O `default full-text language` opção especifica um valor de idioma padrão para índices de texto completo. A análise linguística é realizada em todos os dados que se encontram indexados com texto completo e depende do idioma dos dados. O valor padrão dessa opção é o idioma do servidor. Para obter uma versão localizada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de configuração o `default full-text language` opção para o idioma do servidor caso exista uma correspondência apropriada. Para obter uma versão não localizada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o `default full-text language` opção é o inglês.  
   
  **Neste tópico**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36008251"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   O valor de `default full-text language` opção é usada em um índice de texto completo quando nenhum idioma for especificado para uma coluna por meio da LINGUAGEM **language_term** opção nas instruções CREATE FULLTEXT INDEX ou ALTER FULLTEXT INDEX. Se o idioma de texto completo padrão não tiver suporte ou se o pacote de análise linguística não estiver disponível, a operação CREATE ou ALTER irá falhar e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro informando que o idioma especificado não é válido.  
+-   O valor de `default full-text language` opção é usada em um índice de texto completo se nenhum idioma for especificado para uma coluna por meio da LINGUAGEM **language_term** opção nas instruções CREATE FULLTEXT INDEX ou ALTER FULLTEXT INDEX. Se o idioma de texto completo padrão não tiver suporte ou se o pacote de análise linguística não estiver disponível, a operação CREATE ou ALTER irá falhar e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro informando que o idioma especificado não é válido.  
   
 ###  <a name="Recommendations"></a> Recomendações  
   

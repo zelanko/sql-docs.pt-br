@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d29c76541d87e950c973fd6dc7d57482c6d2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ae25be65e0fdf0cf88bf8dec6cf5c3f59f9c9e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311396"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Um `MultiPolygon` instância é uma coleção de zero ou mais `Polygon` instâncias.  
@@ -41,9 +41,9 @@ ms.locfileid: "36007668"
 ### <a name="accepted-instances"></a>Instâncias aceitas  
  Um `MultiPolygon` instância é aceita uma das seguintes condições é atendida.  
   
--   Ele está vazio `MultiPolygon` instância.  
+-   É vazio `MultiPolygon` instância.  
   
--   Todas as instâncias que englobam a `MultiPolygon` instância são aceitas `Polygon` instâncias. Para obter mais informações sobre aceito `Polygon` instâncias, consulte [polígono](../spatial/polygon.md).  
+-   Todas as instâncias que englobam a `MultiPolygon` instância são aceitas `Polygon` instâncias. Para obter mais informações sobre aceitas `Polygon` instâncias, consulte [polígono](../spatial/polygon.md).  
   
  Os exemplos a seguir mostram as instâncias de `MultiPolygon` aceitas.  
   
@@ -77,7 +77,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` é válido porque os dois `Polygon` instâncias se tocam somente em um ponto tangente. `@g3` não é válido porque os interiores dos dois `Polygon` instâncias se sobrepõem.  
+ `@g2` é válido porque os dois `Polygon` instâncias tocam somente em um ponto tangente. `@g3` não é válido porque os interiores dos dois `Polygon` instâncias se sobrepõem uns aos outros.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a criação de uma instância de `geometry``MultiPolygon` e retorna o WKT (Well-Known Text) do segundo componente.  

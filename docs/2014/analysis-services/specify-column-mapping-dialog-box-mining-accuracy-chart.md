@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.coltotablecolmapping.f1
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 350b0f55f7ae4d445945905984f3e68a34d5c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ed607ca38d0cfda0aee7a3b5d8ebbd683570676
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306526"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Especificar Mapeamento de Coluna (gráfico de precisão de mineração)
   Use a guia **Especificar Mapeamento de Coluna** para selecionar tabelas de uma fonte de dados externa e mapear as colunas para um modelo de mineração de dados. É possível usar os dados externos para testar a precisão de um modelo de mineração e mostrar os resultados no gráfico de precisão.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações: ** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Estrutura de mineração**  
@@ -44,7 +44,7 @@ ms.locfileid: "36008493"
  **Remover tabela**  
  Remove a tabela selecionada. Este botão será desabilitado se nenhuma tabela tiver sido selecionada ou se nenhuma tabela for exibida na lista **Selecionar Tabelas de Entrada** .  
   
- **Selecione a tabela de casos**  
+ **Selecionar tabela de casos**  
  Clique para abrir a caixa de diálogo **Selecionar Tabela** e selecione uma exibição da fonte de dados.  
   
  **Observação** Esse botão só será exibido se uma tabela de casos não tiver sido selecionada. Para habilitar o botão de modo que você possa selecionar uma tabela de casos diferente, limpe a lista selecionando todas as tabelas existentes e clicando em **Remover Tabela**.  

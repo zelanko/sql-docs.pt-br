@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97d8a955b199aeb617171ed29f27271252a9fc4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 184d1838b2f3d6effd37cfbeead410dc2f5299d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310126"
 ---
 # <a name="destination-database-files"></a>Arquivos de banco de dados de destino
   Use a caixa de diálogo **Arquivos do Banco de Dados de Destino** para exibir ou alterar os nomes e locais dos arquivos de banco de dados no servidor de destino ou especificar um local de arquivos na rede para a tarefa Transferir Banco de Dados. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36006667"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Banco de dados do Editor da tarefa transferir &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Banco de dados do Editor da tarefa transferir &#40;página de bancos de dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor da tarefa de banco de dados transferir &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa de banco de dados transferir &#40;página de bancos de dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

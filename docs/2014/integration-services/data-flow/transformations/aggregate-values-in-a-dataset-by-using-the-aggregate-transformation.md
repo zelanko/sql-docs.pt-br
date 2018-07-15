@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180375"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores em um conjunto de dados por meio da transformação Agregação
   Para adicionar e configurar uma transformação de Agregação, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -58,7 +58,7 @@ ms.locfileid: "36119981"
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  
   
-12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluirem uma `Group By` operação, você pode selecionar uma contagem aproximada de valores de chave no agrupamento o **escala de chaves** coluna ou especifique um número exato de valores de chave no agrupamento de **chaves** coluna.  
+12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluirem uma `Group By` operação, você pode selecionar uma contagem aproximada de agrupamento de valores de chave em de **escala de chaves** coluna ou especifique um número exato de agrupamento de valores de chave no **chaves** coluna.  
   
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  

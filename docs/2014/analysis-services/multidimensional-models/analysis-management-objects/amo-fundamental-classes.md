@@ -1,5 +1,5 @@
 ---
-title: As Classes fundamentais AMO | Microsoft Docs
+title: Classes fundamentais AMO | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ee31478a526dad385d9721256beebc4324cadb60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270022"
 ---
 # <a name="amo-fundamental-classes"></a>Classes fundamentais AMO
   As classes fundamentais são o ponto de partida para o trabalho com o AMO (Objetos de Gerenciamento de Análise). Por meio dessas classes você estabelece o ambiente para o resto dos objetos que serão usados em seu aplicativo. As classes fundamentais incluem os seguintes objetos: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
  A ilustração a seguir mostra o relacionamento das classes explicadas neste tópico.  
   
- ![As Classes fundamentais AMO](../../../analysis-services/dev-guide/media/amo-fundamentalclasses.gif "as Classes fundamentais AMO")  
+ ![Classes fundamentais AMO](../../../analysis-services/dev-guide/media/amo-fundamentalclasses.gif "Classes fundamentais AMO")  
   
   
   

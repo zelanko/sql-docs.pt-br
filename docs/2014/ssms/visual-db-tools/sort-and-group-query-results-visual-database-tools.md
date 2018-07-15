@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689754f8b44b21a3d24398e4fa0a695a02a19557
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09a9fe76120023d8cda0ebea8d1e7d366f9e050b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261842"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Classificar e agrupar resultados da consulta (Visual Database Tools)
   Você pode criar um resultado de consulta no qual cada linha de resultado corresponda a um grupo inteiro de linhas dos dados originais.  

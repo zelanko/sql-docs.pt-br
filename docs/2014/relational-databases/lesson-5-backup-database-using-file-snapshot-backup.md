@@ -1,5 +1,5 @@
 ---
-title: 'Lição 6: Migrar um banco de dados de uma fonte de máquina local para um computador de destino no Windows Azure | Microsoft Docs'
+title: 'Lição 6: Migrar um banco de dados de uma fonte de máquina local a uma máquina de destino no Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f6f0ac359d5358994c0a3a5367c676ca2f83969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207056"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Windows Azure
-  Esta lição supõe que você já tem outro SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Windows Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Windows Azure, consulte [provisionar uma máquina Virtual do SQL Server no Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Após o provisionamento de uma máquina virtual do SQL Server no Windows Azure, verifique se é possível conectar-se a uma instância do SQL Server nessa máquina virtual por meio do SQL Server Management Studio em outro computador.  
+  Esta lição supõe que você já tem outro SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Windows Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Windows Azure, consulte [Provisionando uma máquina de Virtual do SQL Server no Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Após o provisionamento de uma máquina virtual do SQL Server no Windows Azure, verifique se é possível conectar-se a uma instância do SQL Server nessa máquina virtual por meio do SQL Server Management Studio em outro computador.  
   
  Esta lição supõe também que você já concluiu as seguintes etapas:  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36118889"
   
 3.  Conecte-se ao computador de destino, que tem o SQL Server CTP2 2014 ou posterior. Para preparar seu computador de destino, é necessário criar uma credencial do SQL Server no computador de destino que aponte para o mesmo contêiner em que você colocou TestDB1. Se você pretende anexar novamente no mesmo computador, não será necessário criar outra credencial.  
   
-4.  Em **Pesquisador de objetos**, clique com botão direito **bancos de dados** e clique em **Attach**.  
+4.  Na **Pesquisador de objetos**, clique com botão direito **bancos de dados** e clique em **Attach**.  
   
-5.  No **anexar bancos de dados** caixa de diálogo, especifique o banco de dados a ser anexado, clique em **adicionar**. No **localizar arquivos de banco de dados** janela da caixa de diálogo:  
+5.  No **anexar bancos de dados** caixa de diálogo, especifique o banco de dados a ser anexado, clique em **Add**. No **localizar arquivos de banco de dados** janela caixa de diálogo:  
   
-     Para o local do arquivo de dados de banco de dados, digite: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     Para o banco de dados local do arquivo de dados, digite: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
   
-     Nome do arquivo, digite: `TestDB1Data.mdf`.  
+     Nome de arquivo, digite: `TestDB1Data.mdf`.  
   
 6.  Clique em **OK**.  
   

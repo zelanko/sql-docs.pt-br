@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b07d4486eb8cfe4c1b1cd63c2774f596df5ee35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: bc4dcf01c8a7d815fde3589c2d964b8a2d8c7c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290812"
 ---
 # <a name="programming-extended-stored-procedures"></a>Programando procedimentos armazenados estendidos
     

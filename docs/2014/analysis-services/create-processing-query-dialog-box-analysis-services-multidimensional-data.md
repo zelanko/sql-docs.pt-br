@@ -1,5 +1,5 @@
 ---
-title: Criar a caixa de diálogo de consulta (Analysis Services - dados multidimensionais) de processamento | Microsoft Docs
+title: Criar caixa de diálogo de consulta (Analysis Services - dados multidimensionais) de processamento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244096"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar Consulta de Processamento (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar Consulta de Processamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta de processamento na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** . Uma consulta de processamento é uma consulta que retorna um conjunto de linhas contendo as alterações feitas em uma tabela associada a um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde a última sondagem na tabela, para atualização incremental do cache MOLAP (OLAP multidimensional) do objeto. O Analysis Services usa outra consulta, referenciada como uma consulta sondagem, para sondar uma tabela associada a um objeto e determinar se a tabela foi alterada. Consultas de processamento não são necessárias ao atualizar o cache MOLAP do objeto completamente.  
@@ -65,7 +65,7 @@ ms.locfileid: "36117543"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**Alterne para o construtor de consultas genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br /><br /> **Painel SQL**<br /><br /> **Painel de resultados**<br /><br /> **Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Alternar para construtor de consultas genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br /><br /> **Painel SQL**<br /><br /> **Painel de resultados**<br /><br /> **Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Alternar para construtor de consultas VDT**|Selecione para exibir todas as opções disponíveis para a exibição Construtor de Consultas VDT (Visual Database Tools).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas Genérico** estiver selecionado.|  
 |**Painel Mostrar/Ocultar Diagrama**|Mostra ou oculta o painel **Diagrama**.<br /><br /> **Observação** essa opção será exibida apenas se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Painel Mostrar/Ocultar Grade**|Mostra ou oculta o painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189893"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página Propriedades Gerais, Relatórios (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os relatórios renomeiem, excluam, movam ou substituam a definição do relatório. Você também pode usar essa página para criar um relatório vinculado. Detalhes sobre quem criou ou modificou o relatório e quando as alterações ocorreram são indicados na parte superior da página.  
@@ -64,7 +64,7 @@ ms.locfileid: "36118601"
   
  A cópia que você abre é idêntica à definição do relatório original inicialmente publicado no servidor de relatórios. Quaisquer propriedades definidas no relatório após sua publicação (como parâmetros e fonte de dados) não se refletem no arquivo que você abre.  
   
- Você pode modificar a definição do relatório e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do relatório para o servidor de relatório como um novo item. As modificações feitas à definição de relatório enquanto ele está aberto em [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o relatório modificado no servidor de relatório.  
+ Você pode modificar a definição do relatório e salvá-lo em um novo arquivo em uma pasta compartilhada e carregar a definição do relatório para o servidor de relatório como um novo item. As modificações feitas à definição de relatório enquanto ele está aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou outro aplicativo) não são salvas diretamente no servidor de relatório. Você deve carregar o arquivo para publicar o relatório modificado no servidor de relatório.  
   
  **Substituir**  
  Clique para substituir a definição do relatório usada no relatório atual por uma diferente de um arquivo .rdl localizado no sistema de arquivos. Se você atualizar uma definição do relatório, deve reajustar as configurações de fonte de dados quando a atualização for concluída.  

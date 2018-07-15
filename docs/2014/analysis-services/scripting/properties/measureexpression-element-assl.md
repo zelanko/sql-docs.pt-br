@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 686bfc84c39c502467089b5957f8320d346e518a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265402"
 ---
 # <a name="measureexpression-element-assl"></a>Elemento MeasureExpression (ASSL)
   Contém a linguagem MDX que define como são obtidos os valores de medida pai.  
@@ -62,7 +62,7 @@ ms.locfileid: "36118420"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `MeasureExpression` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Measure>.  
+ O elemento que corresponde ao pai de `MeasureExpression` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

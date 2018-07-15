@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7760bde2165a351876bb0ac84f26f59b1196bf2e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: acc02a144a507ee90fb311cb44445816097b1c16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204437"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorando o modelo de árvore de decisão (Tutorial de mineração de dados básico)
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)] prevê que colunas influenciam a decisão de compra de uma bicicleta com base nas colunas restantes do conjunto de treinamento.  
@@ -29,7 +29,7 @@ ms.locfileid: "36312874"
 ##  <a name="Decision_Tree_Tab"></a> Guia árvore de decisão  
  Sobre o **árvore de decisão** guia, você pode exibir árvores de decisão para cada atributo previsível no conjunto de dados.  
   
- Nesse caso, o modelo prevê somente uma coluna, comprador de bicicleta, portanto, há apenas uma árvore para exibir. Se houver mais árvores, você pode usar o **árvore** caixa para escolher outra árvore.  
+ Nesse caso, o modelo prevê somente uma coluna, comprador de bicicleta, portanto, há apenas uma única árvore para exibir. Se houver mais árvores, você pode usar o **árvore** caixa para escolher outra árvore.  
   
  Quando você exibir o `TM_Decision_Tree` modelo no Visualizador de árvore de decisão, você pode ver os atributos mais importantes no lado esquerdo do gráfico. “Mais importantes” significa que esses atributos têm a maior influência sobre o resultado. Os atributos mais abaixo na árvore (à direita do gráfico) têm menos influência.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36312874"
   
 3.  Deslize **Mostrar nível** até a quarta barra.  
   
-4.  Alterar o **em segundo plano** valor `1`.  
+4.  Alterar o **plano de fundo** valor `1`.  
   
-     Alterando o **em segundo plano** configuração, você pode ver rapidamente o número de casos em cada nó que tem o valor de destino `1` para [comprador de bicicleta]. Lembre-se de que neste cenário específico, cada caso representa um cliente. O valor `1` indica que o cliente comprou anteriormente uma bicicleta; o valor **0** indica que o cliente não comprou uma bicicleta. Quanto mais escuro for o sombreamento do nó, maior será a porcentagem de casos desse nó com o valor de destino.  
+     Alterando a **plano de fundo** definir, você pode ver rapidamente o número de casos em cada nó que têm o valor de destino `1` para [comprador de bicicleta]. Lembre-se de que neste cenário específico, cada caso representa um cliente. O valor `1` indica que o cliente anteriormente comprou uma bicicleta; o valor **0** indica que o cliente não comprou uma bicicleta. Quanto mais escuro for o sombreamento do nó, maior será a porcentagem de casos desse nó com o valor de destino.  
   
 5.  Coloque o cursor sobre o nó rotulado **todos os**. Uma dica de ferramenta será exibida com as seguintes informações:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36312874"
   
     -   Número de casos com valores ausentes para [Comprador de Bicicleta]  
   
-     Como alternativa, coloque o seu cursor sobre qualquer nó da árvore para ver a condição exigida para alcançar aquele nó a partir do nó anterior. Você também pode exibir essas informações no **legenda de mineração**.  
+     Como alternativa, coloque o seu cursor sobre qualquer nó da árvore para ver a condição exigida para alcançar aquele nó a partir do nó anterior. Você também pode exibir essas informações na **legenda de mineração**.  
   
 6.  Clique no nó para **idade > = 34 e < 41**. O histograma é exibido como uma barra horizontal final no nó e representa a distribuição de clientes nesse intervalo de idade que compraram (rosa) e que não compraram (azul) uma bicicleta anteriormente. O Visualizador nos mostra que os clientes entre os 34 e os 40 anos com um ou nenhum carro têm probabilidade de comprar uma bicicleta. Levando isso um pouco mais adiante, descobrimos que a probabilidade de compra de uma bicicleta aumenta caso o cliente tenha realmente entre 38 e 40 anos.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "36312874"
   
 #### <a name="to-drill-through-to-case-data"></a>Para detalhar os dados de caso  
   
-1.  Um nó e selecione **Detalhar** , em seguida, **colunas do modelo somente**.  
+1.  Um nó com o botão direito e selecione **Detalhar** , em seguida, **colunas do modelo somente**.  
   
      Os detalhes para cada caso de treinamento são exibidos em formato de planilha. Esses detalhes vêm da exibição vTargetMail, selecionada como a tabela de caso durante a criação da estrutura de mineração.  
   
-2.  Um nó e selecione **Detalhar** , em seguida, **colunas do modelo e estrutura**.  
+2.  Um nó com o botão direito e selecione **Detalhar** , em seguida, **colunas do modelo e estrutura**.  
   
      A mesma planilha será exibida com as colunas da estrutura anexadas no final.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36312874"
   
 1.  Clique o `Bike Buyer` nó para identificar suas dependências.  
   
-     O nó do centro para a rede de dependência, `Bike Buyer`, representa o atributo previsível no modelo de mineração. O gráfico destaca todos os nós conectados que têm um efeito sobre o atributo previsível.  
+     O nó central para a rede de dependências, `Bike Buyer`, representa o atributo previsível no modelo de mineração. O gráfico destaca todos os nós conectados que têm um efeito sobre o atributo previsível.  
   
-2.  Ajustar o **todos os Links** controle deslizante para identificar o atributo mais influente.  
+2.  Ajustar a **todos os Links** controle deslizante para identificar o atributo mais influente.  
   
-     Enquanto você arrasta para baixo o controle deslizante, os atributos que têm apenas um efeito menor na coluna [Bike Buyer] são removidos do gráfico. Ao ajustar o controle deslizante, você poderá descobrir que Idade e Região são os principais fatores para prever se alguém é um comprador de bicicletas.  
+     Quando você arrasta para baixo o controle deslizante, atributos que têm apenas um efeito menor na coluna [Bike Buyer] são removidos do gráfico. Ao ajustar o controle deslizante, você poderá descobrir que Idade e Região são os principais fatores para prever se alguém é um comprador de bicicletas.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Consulte estes tópicos para explorar os dados usando outros tipos de modelos.  

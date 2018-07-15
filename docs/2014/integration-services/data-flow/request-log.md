@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f37c7c97863eac901830c7efff3925ab25364688
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c25ed051cfa061cbe402f6da797e360bae97eee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289402"
 ---
 # <a name="request-log"></a>Log de solicitações
   Use a caixa de diálogo **Log de Solicitações** para exibir os eventos que são registrados em log durante a solicitação que é feita no sistema SAP Netweaver BW para dados de exemplo. Essas informações podem ser úteis se você precisar solucionar problemas da configuração da origem do SAP BW.  
@@ -64,7 +64,7 @@ ms.locfileid: "36118400"
  Exibe o texto da mensagem associada ao evento de log.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Editor de origem SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

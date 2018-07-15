@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311456"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gerenciar e monitorar a pesquisa semântica
   Descreve o processo de indexação semântica e as tarefas relacionadas ao gerenciamento e monitoramento dos índices.  
@@ -102,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Como Desabilitar ou reabilitar a indexação semântica  
+##  <a name="HowToDisableIndexing"></a> Como: Desabilitar ou reabilitar a indexação semântica  
  Você pode habilitar ou desabilitar a indexação de texto completo ou semântica usando a cláusula ENABLE/DISABLE com a mesma sintaxe e o comportamento descrito para índices de texto completo. Para obter mais informações, veja [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Quando a indexação semântica é desabilitada e suspensa, as consultas em dados semânticos continuam a funcionar com êxito e retornar dados previamente indexados. Esse comportamento não é consistente com o comportamento da Pesquisa de Texto Completo.  
@@ -138,13 +137,13 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> Problema: Os índices semânticos não são populados  
- **Os índices de texto completo associados estão populados?**  
+ **Os índices de texto completo associados são populados?**  
  Como a indexação semântica é dependente da indexação de texto completo, os índices semânticos são populados apenas quando os índices de texto completo associados são populados.  
   
- **Pesquisa de texto completo e pesquisa semântica estão instaladas e configuradas corretamente são?**  
+ **São a pesquisa de texto completo e pesquisa semântica instaladas e configuradas corretamente?**  
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](install-and-configure-semantic-search.md).  
   
- **O serviço FDHOST não está disponível ou há outra condição que cause a falha de indexação de texto completo?**  
+ **O serviço FDHOST não está disponível ou há outra condição que poderia causar a indexação de texto completo falhar?**  
  Para obter mais informações, veja [Solucionar problemas na indexação de texto completo](troubleshoot-full-text-indexing.md).  
   
   

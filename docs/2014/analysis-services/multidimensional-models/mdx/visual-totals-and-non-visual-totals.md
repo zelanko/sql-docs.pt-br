@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51861e90628621e776b7153b6d23ec0c44a047
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b211305babfee92a85469257795b6124f2ab4b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253028"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totais visuais e totais não visuais
   Totais visuais são totais no final de uma coluna ou linha que somam todos os itens visíveis na coluna ou linha. Esse é o comportamento padrão da maioria das tabelas ao serem exibidas. Porém, ocasionalmente o usuário desejará exibir somente certas colunas em uma tabela, mas manter os totais da linha inteira, inclusive das colunas que não são exibidas. Esses são chamados de `Non Visual Totals`, porque o total provém de valores tanto visíveis como não visíveis.  
@@ -101,12 +101,12 @@ ms.locfileid: "36117766"
  Quando comparados aos resultados anteriores, você poderá observar que a linha [Todos os Revendedores] agora soma os valores exibidos para [Revendedor de Valor Agregado] e [Warehouse], mas a coluna [Todos os Produtos] mostra o valor total para todos os produtos, inclusive aqueles não exibidos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
  [Trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restringindo a consulta com os eixos de consulta e Slicer &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Restringindo a consulta com eixos de consulta e segmentação de dados &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
  [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

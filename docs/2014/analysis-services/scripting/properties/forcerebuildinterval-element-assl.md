@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForceRebuildInterval element
 ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3b05eaf87d17c730186dd1b9c7385f3d323ccf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa11e0fda75e55f5f8d9af5414203c7822cb5eb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249046"
 ---
 # <a name="forcerebuildinterval-element-assl"></a>Elemento ForceRebuildInterval (ASSL)
   Determina a quantidade de tempo, começando quando uma imagem nova MOLAP (OLAP multidimensional) se torna disponível, depois da qual a imagem MOLAP começa incondicionalmente.  
@@ -62,7 +62,7 @@ ms.locfileid: "36117980"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `ForceRebuildInterval` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ O elemento que corresponde ao pai de `ForceRebuildInterval` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

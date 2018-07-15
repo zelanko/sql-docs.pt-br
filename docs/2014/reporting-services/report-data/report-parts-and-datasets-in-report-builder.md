@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1f081c456b1683622cbdeec8b9187325add3fe16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d35860f1e220d3b4dca43e72ffbefb440eb16cdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303727"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
   No Construtor de Relatórios, a maneira mais fácil de incluir dados em um relatório é adicionando partes de relatório da Galeria de Partes de Relatório. As partes de relatório contêm os conjuntos de dados dos quais dependem, conhecidos como *conjuntos de dados dependentes*. Os conjuntos de dados dependentes se baseiam em fontes de dados compartilhadas e podem ser conjuntos de dados inseridos ou compartilhados.  
@@ -66,7 +66,7 @@ ms.locfileid: "36006768"
 ## <a name="see-also"></a>Consulte também  
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
  [Segurança &#40;Construtor de Relatórios&#41;](../report-builder/security-report-builder.md)   
- [Partes de relatório &#40;SSRS e construtor de relatórios&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

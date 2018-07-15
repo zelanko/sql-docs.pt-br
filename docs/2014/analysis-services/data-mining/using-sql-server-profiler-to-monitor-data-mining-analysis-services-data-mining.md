@@ -1,5 +1,5 @@
 ---
-title: Usando o SQL Server Profiler para monitorar a mineração de dados (Analysis Services – mineração de dados) | Microsoft Docs
+title: Usando o SQL Server Profiler para monitorar a mineração de dados (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323396"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usando o SQL Server Profiler para monitorar a mineração de dados (Analysis Services - Mineração de dados)
   Se tiver as permissões necessárias, você poderá usar o SQL Server Profiler para monitorar as atividades de mineração de dados emitidas como solicitações enviadas a uma instância do SQL Server Analysis Services. A atividade de mineração de dados pode incluir o processamento de modelos ou estruturas, consultas de previsão ou consultas de conteúdo ou a criação de novos modelos ou estruturas.  
   
- SQL Server Profiler usa um `trace` para monitorar as solicitações enviadas de vários clientes, incluindo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, serviços Web ou mineração de dados suplementos para Excel, contanto que todas as atividades usam a mesma instância do SQL Server Analysis Services. Você deve criar um rastreamento separado para cada instância do SQL Server Analysis Services que deseja monitorar. Para obter informações gerais sobre rastreamentos e como usar o SQL Server Profiler, consulte [Usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ SQL Server Profiler usa um `trace` para monitorar as solicitações enviadas de vários clientes, incluindo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, serviços da Web ou os Data Mining Add-ins para o Excel, contanto que todas as atividades usam a mesma instância do SQL Server Analysis Services. Você deve criar um rastreamento separado para cada instância do SQL Server Analysis Services que deseja monitorar. Para obter informações gerais sobre rastreamentos e como usar o SQL Server Profiler, consulte [Usar o SQL Server Profiler para monitorar o Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Para obter orientações específicas sobre os tipos de eventos capturados, consulte [Criar rastreamentos do Profiler para reprodução &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   

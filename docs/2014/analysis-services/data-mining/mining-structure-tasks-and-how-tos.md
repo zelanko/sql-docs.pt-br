@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59443b2607ff64106c3a6463ee1467245be5c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b42025f4f99f96885d50c3fc752d8b81f0e26592
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214406"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
   A guia **Estrutura de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém ferramentas que você pode usar para criar, editar e processar uma estrutura de mineração.  

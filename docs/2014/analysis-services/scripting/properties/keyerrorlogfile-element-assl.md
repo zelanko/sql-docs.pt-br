@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLogFile element
 ms.assetid: 1455bb54-03f7-4f25-9d4d-ab75231dd958
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3387498c26e0bf690b2934ea9e1ee99107414c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 067e509f6be5657e1e748738bc6910fed977fd41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323046"
 ---
 # <a name="keyerrorlogfile-element-assl"></a>Elemento KeyErrorLogFile (ASSL)
   Contém o nome do arquivo para registrar erros de processamento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36007326"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `KeyErrorLogFile` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
+ O elemento que corresponde ao pai de `KeyErrorLogFile` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

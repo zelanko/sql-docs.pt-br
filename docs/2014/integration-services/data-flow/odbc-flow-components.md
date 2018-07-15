@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213666"
 ---
 # <a name="odbc-flow-components"></a>Componentes de fluxo ODBC
   Este tópico descreve os conceitos necessários para criar um fluxo de dados ODBC usando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

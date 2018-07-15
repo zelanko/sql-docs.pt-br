@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f015af02fa59397c2bce8e213bd351448122504
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6525ad550d15d8c85437ad00c7829492634b621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327656"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>classe de evento TM: Save Tran Starting
   A classe de evento TM: SaveTran Starting indica que uma solicitação SAVE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  

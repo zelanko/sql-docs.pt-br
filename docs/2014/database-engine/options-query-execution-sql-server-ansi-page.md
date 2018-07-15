@@ -1,5 +1,5 @@
 ---
-title: Opções (página ANSI do servidor SQL de execução da consulta) | Microsoft Docs
+title: Opções (página servidor ANSI SQL de execução da consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d2e08a89e68c15d2d665fd0468610d2324fd800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173357"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>Opções (página ANSI do servidor SQL de execução da consulta)
+# <a name="options-query-execution-sql-server-ansi-page"></a>Opções (página servidor ANSI SQL de execução da consulta)
   Juntas, essas opções SET padrão ANSI (ISO) definem o ambiente de processamento de consulta enquanto durar a consulta do usuário, a execução de um gatilho, ou um procedimento armazenado. Porém, essas opções SET não incluem todas as opções exigidas pelo padrão ISO. Use essa página para especificar que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] irá executar as consultas usando todas ou uma parte das configurações especificadas no padrão ISO. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. Na caixa de diálogo **Opções de Consulta** , em **Execução**, clique em **ANSI**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  

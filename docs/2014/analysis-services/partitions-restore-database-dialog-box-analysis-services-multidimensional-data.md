@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269982"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a página **Partições** da caixa de diálogo **Restaurar Banco de Dados** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar o local de restauração de partições locais e para especificar se deseja restaurar partições remotas e arquivos de backup remotos para uso ao restaurar partições remotas.  
@@ -88,7 +88,7 @@ ms.locfileid: "36117046"
 |**...**|Clique para exibir a caixa de diálogo **Partições Remotas – Configurações Avançadas** e modificar opções avançadas, como a cadeia de conexão da fonte de dados, para restaurar a partição remota. Para obter mais informações sobre a caixa de diálogo **Partições Remotas – Configurações Avançadas**, consulte [Caixa de diálogo Partições Remotas – Configurações Avançadas &#40;Analysis Services – Dados Multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo banco de dados restaurar &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Restaurar a caixa de diálogo banco de dados &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Geral &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

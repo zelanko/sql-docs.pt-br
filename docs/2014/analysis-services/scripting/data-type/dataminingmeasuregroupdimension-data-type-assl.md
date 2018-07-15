@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f25a5e72e185085479be12ea6eddd3cdf890020b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c50bf707f105ba40b023e2f1970dda875b0570b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314596"
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>Tipo de dados DataMiningMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa a relação entre um grupo de medidas e uma dimensão de mineração de dados.  
@@ -58,7 +58,7 @@ ms.locfileid: "36008284"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|[CaseCubeDimensionID](../properties/id-element-assl.md)|  
-|Elementos derivados|Consulte [dimensão](../objects/dimension-element-assl.md) ([dimensões](../collections/dimensions-element-assl.md) coleção de [MeasureGroup](../objects/group-element-assl.md))|  
+|Elementos derivados|Ver [dimensão](../objects/dimension-element-assl.md) ([dimensões](../collections/dimensions-element-assl.md) coleção de [MeasureGroup](../objects/group-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  

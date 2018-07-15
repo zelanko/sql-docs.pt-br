@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307566"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
   A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
@@ -56,7 +56,7 @@ ms.locfileid: "36008465"
   
 -   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de logs de erros estão localizados no caminho a seguir (em que \<*Drive>* representa a unidade na qual você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidade >: SQL de \Program Files\Microsoft Server \ mssql12. \<InstanceName > \mssql\log.**  
+     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName > \mssql\log.**  
   
  Para verificar as configurações de segurança do namespace WMI, você pode usar o snap-in Controle WMI.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36008465"
   
 1.  Abra o snap-in Controle WMI. Para fazer isto, execute um destes procedimentos, dependendo do sistema operacional:  
   
-    -   Clique em **iniciar**, tipo `wmimgmt.msc` no **Iniciar pesquisa** caixa e, em seguida, pressione ENTER.  
+    -   Clique em **iniciar**, digite `wmimgmt.msc` no **Iniciar pesquisa** caixa e, em seguida, pressione ENTER.  
   
-    -   Clique em **iniciar**, clique em **executar**, tipo `wmimgmt.msc`, e pressione ENTER.  
+    -   Clique em **inicie**, clique em **execute**, tipo `wmimgmt.msc`, e pressione ENTER.  
   
 2.  Por padrão, o snap-in Controle WMI gerencia o computador local.  
   

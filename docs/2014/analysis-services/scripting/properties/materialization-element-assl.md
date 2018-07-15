@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08e3607d1cb04f3a4483d43ead544edbbcf42a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf6b3121159a1a98cfac56c91af1920c5b96935b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176403"
 ---
 # <a name="materialization-element-assl"></a>Elemento Materialization (ASSL)
   Indica o tipo de relação entre o grupo de medidas e a dimensão de referência.  
@@ -67,7 +67,7 @@ ms.locfileid: "36118200"
 |*Regular*|A dimensão de referência tem uma relação regular, assim como com dimensões regulares.|  
 |*Indireta*|A dimensão de referência tem uma relação indireta, assim como com dimensões muitos para muitos.|  
   
- O elemento que corresponde ao pai do `Materialization` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+ O elemento que corresponde ao pai de `Materialization` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de dimensão &#40;ASSL&#41;](../objects/dimension-element-assl.md)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655acfd106800927bbec8b2fa8021a3b2ba4be87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a2296ec80dc8c97fef8588b810d5d4179dd5ed7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268502"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Propriedade Enabled (classe ServerNetworkProtocolIpAddress)
   Obtém a propriedade booliana que especifica se um endereço IP está habilitado.  

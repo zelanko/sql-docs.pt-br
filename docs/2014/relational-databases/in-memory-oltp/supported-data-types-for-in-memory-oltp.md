@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195298"
 ---
 # <a name="supported-data-types"></a>Tipos de dados com suporte
   Os tipos de dados a seguir têm **suporte** nas tabelas com otimização de memória e nos procedimentos armazenados compilados de modo nativo:  
@@ -44,14 +44,14 @@ ms.locfileid: "36118662"
 |Tipo de dados|Para obter mais informações|  
 |---------------|--------------------------|  
 |char(n)|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar <sup>1</sup>|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar (n) <sup>1</sup>|[char e varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar <sup>1</sup>|[nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar (n) <sup>1</sup>|[nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup> limitação é 8060 bytes por total de linhas, contando (n) em tipos de comprimento variável.  
   
- Para obter informações sobre agrupamentos suportados, consulte [agrupamentos e páginas de código](../../database-engine/collations-and-code-pages.md).  
+ Para obter informações sobre agrupamentos suportados, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
  **Tipos de dados de data e hora**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36118662"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary <sup>1</sup>|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary (n) <sup>1</sup>|[binary e varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
  <sup>1</sup> limitação é 8060 bytes por total de linhas, contando (n) em tipos de comprimento variável.  
   

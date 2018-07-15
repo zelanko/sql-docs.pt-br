@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281692"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
   Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
@@ -52,7 +52,7 @@ ms.locfileid: "36117925"
   
 -   **Bloquear alterações** – se `True`, a atualização será finalizada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se `False`, a atualização continuará mesmo se forem detectadas alterações. A configuração padrão é `False`.  
   
--   **Reversão em falha** – se `True`, a atualização será incluída em uma transação, e se forem encontrados erros tentará uma reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
+-   **Reversão em caso de falha** – se `True`, a atualização será incluída em uma transação, e se forem encontrados erros será tentada uma reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
   
 -   **Ignorar a validação da política** – se `True`, a política de seleção de servidor DAC não será avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "36117925"
   
 4.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar eventos de atualização de DAC.  
   
-5.  Definir o `DacUpgradeOptions`.  
+5.  Defina o `DacUpgradeOptions`.  
   
 6.  Use o `IncrementalUpgrade` método para atualizar o DAC.  
   

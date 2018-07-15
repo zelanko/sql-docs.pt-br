@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32373127f72dae058a80712cec564af7dffca45e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257372"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navegador KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Navegador de KPI** na guia **KPIs** do Designer de Cubo para exibir e testar os resultados dos KPIs (indicadores chave de desempenho). Os KPIs devem ser implantados primeiro em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] antes da navegação.  
@@ -45,7 +45,7 @@ ms.locfileid: "36116851"
 |Valor|Description|  
 |-----------|-----------------|  
 |**Igual a**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
-|**Não é igual a**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
+|**Não é igual**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**Entrada**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Contém**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265292"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
   Descreve como a coluna associada no pai [MiningStructure](../objects/miningstructure-element-assl.md) é usado.  
@@ -70,7 +70,7 @@ ms.locfileid: "36118422"
 |*Entrada*|A coluna é uma coluna de entrada.|  
 |*Predict*|A coluna é uma coluna de previsão.|  
 |*PredictOnly*|A coluna é somente uma coluna de previsão.|  
-|*Nenhuma*|A coluna não é usada pelo modelo. **Aviso:** quando o valor de uso é "None", Analysis Services não enviará nenhum valor para o servidor por padrão; portanto, o atributo de uso não está incluído na solicitação/resposta.|  
+|*Nenhuma*|A coluna não é usada pelo modelo. **Aviso:** quando o valor de uso for "None", do Analysis Services não envia qualquer valor para o servidor por padrão; portanto, o atributo de uso não está incluído na solicitação/resposta.|  
   
  A enumeração que corresponde aos valores permitidos para `Usage` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   

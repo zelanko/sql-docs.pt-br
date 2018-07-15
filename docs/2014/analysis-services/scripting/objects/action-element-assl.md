@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196006"
 ---
 # <a name="action-element-assl"></a>Elemento Action (ASSL)
   Contém informações sobre uma ação disponível em um [cubo](cube-element-assl.md) elemento ou um [perspectiva](perspective-element-assl.md) elemento.  

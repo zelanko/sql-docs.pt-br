@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
 - sql12.asvs.dimensionwizard.datasourcebrowse.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Browse Data Source View dialog box
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eaed78a7d8a8ec20d7a8c4ef1652f019a27308d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70b89ee36a2a613398cf092cf9e9b25f70386330
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206296"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Procurar Exibição da Fonte de Dados (Analysis Services - Dados Multidimensionais)
   A caixa de diálogo Procurar Exibição da Fonte de Dados exibe um diagrama gráfico simples da exibição da fonte de dados selecionada. Além disso, o nome da exibição da fonte de dados aparece como o título da caixa de diálogo.  

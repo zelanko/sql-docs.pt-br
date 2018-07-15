@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelID element
 ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0ee845e245ea94f04ddb6114000859e3cb04367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5cc241819884cd8307c03d39d2d4daa575454f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267272"
 ---
 # <a name="miningmodelid-element-assl"></a>Elemento MiningModelID (ASSL)
   Associa um modelo de mineração com uma dimensão de mineração de dados.  
@@ -62,7 +62,7 @@ ms.locfileid: "36118527"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `MiningModelID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `MiningModelID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento MiningModel &#40;ASSL&#41;](../objects/miningmodel-element-assl.md)   

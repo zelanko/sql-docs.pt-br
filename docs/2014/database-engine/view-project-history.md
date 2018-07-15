@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287842"
 ---
 # <a name="view-project-history"></a>Exibir histórico de projetos
   O histórico de um projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) inclui uma lista de todas as ações executadas em cada um dos arquivos do projeto, incluindo criação, adição, exclusão e recuperação de arquivos.  
@@ -38,7 +38,7 @@ ms.locfileid: "36118487"
   
 1.  No Gerenciador de Soluções, selecione o projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle de origem** e clique em **Exibir histórico**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte** e clique em **Exibir histórico**.  
   
 3.  No **histórico de** \<projeto > caixa de diálogo caixa, execute uma das seguintes ações:  
   

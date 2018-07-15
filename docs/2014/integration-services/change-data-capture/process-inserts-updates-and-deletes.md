@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 568ccf4eb9ccba4ed768d53cd541a6b50847160f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89e532328541cb515d6b39394f1a3a3ea0665506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292876"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
   No fluxo de dados de um pacote do Integration Services, que executa uma carga incremental de dados de alteração, a segunda tarefa serve para separar inserções, atualizações e exclusões. Em seguida, você pode usar comandos apropriados para aplicá-los ao destino.  
@@ -74,7 +74,7 @@ select
  **Próximo tópico:** [Aplicar as alterações ao destino](apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação de divisão condicional](../data-flow/transformations/conditional-split-transformation.md)   
+ [Transformação divisão condicional](../data-flow/transformations/conditional-split-transformation.md)   
  [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

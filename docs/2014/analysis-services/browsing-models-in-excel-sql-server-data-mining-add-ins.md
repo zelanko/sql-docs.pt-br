@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214356"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Procurando modelos no Excel (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Procurar modelo na faixa de opções mineração de dados](media/dmc-browse.gif "botão Procurar modelo na faixa de opções mineração de dados")  
@@ -36,14 +36,14 @@ ms.locfileid: "36118459"
   
 1.  Clique o **mineração de dados** guia.  
   
-2.  No **uso do modelo de** de grupo, clique em **procurar**.  
+2.  No **uso do modelo** , clique em **procurar**.  
   
-3.  No **Selecionar modelo** caixa de diálogo, escolha um modelo de mineração na lista e clique em **próximo**.  
+3.  No **Selecionar modelo** caixa de diálogo, escolha um modelo de mineração na lista e clique em **próxima**.  
   
 4.  O assistente abre uma **procurar** janela que é apropriada para o tipo de modelo que você selecionou.  
   
 ## <a name="list-of-data-mining-viewers"></a>Lista de visualizadores de mineração de dados  
- Dependendo do algoritmo de mineração de dados que você usou quando criou o modelo, o **procurar** janela parecerá um pouco diferente. Pode incluir gráficos para ajudar a interpretar os resultados, as legendas que contêm detalhes adicionais e os controles para interagir com os dados.  
+ Dependendo do algoritmo de mineração de dados que você usou quando criou o modelo, o **procurar** janela terá uma aparência um pouco diferente. Pode incluir gráficos para ajudar a interpretar os resultados, as legendas que contêm detalhes adicionais e os controles para interagir com os dados.  
   
  Os tópicos a seguir fornecem diretrizes sobre como usar cada visualizador, incluindo dicas sobre a interpretação de gráficos complexos e como alterar, copiar ou trabalhar com os resultados.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "36118459"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibindo modelos de mineração de dados no Visio &#40;suplementos de mineração de dados&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Gerenciar modelos &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)  
+ [Gerenciar modelos de &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   
   

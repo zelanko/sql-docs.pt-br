@@ -1,5 +1,5 @@
 ---
-title: Opções (página Gerenciador de script de objeto do SQL Server) | Microsoft Docs
+title: Opções (página Gerenciador de scripts de objeto do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dfa7eec9ed7f014e9baf09cf4ddcf30cd12901
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170217"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página Gerenciador de script de objeto do SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página Gerenciador de scripts de objeto do SQL Server)
   Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
   
 -   Comandos **Editar** para tabelas de usuário e exibições.  
@@ -36,14 +36,14 @@ ms.locfileid: "36118030"
 -   Esta página também define os padrões da opção de script para o **Assistente para Gerar Scripts do SQL Server**.  
   
 ## <a name="remarks"></a>Remarks  
- O **editar** e **modificar** comandos podem produzir resultados diferentes do **Script \<objeto > como** comando para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O **Script \<objeto > como** comando é projetado para gerar um script para que ele pode ser usado posteriormente para criar objetos.  
+ O **edite** e **modificar** comandos podem produzir resultados diferentes da **Script \<objeto > como** comando para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O **Script \<objeto > como** comando é projetado para gerar um script para que possa ser usado posteriormente para criar objetos.  
   
 ## <a name="options"></a>Opções  
  Especifique opções de script selecionando as configurações disponíveis na lista à direita de cada opção.  
   
 ### <a name="general-scripting-options"></a>Opções gerais de script  
  **Delimitar instruções individuais**  
- Separa instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] individuais usando um separador de lote. Para alterar o separador de lote padrão para o **Editor de Consultas**, selecione **Ferramentas**/**Opções**/**Execução de Consulta**/**SQL Server**/**Geral**/**Separador de lote**. O padrão é Falso. Para obter mais informações, consulte [VÁ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
+ Separa instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] individuais usando um separador de lote. Para alterar o separador de lote padrão para o **Editor de Consultas**, selecione **Ferramentas**/**Opções**/**Execução de Consulta**/**SQL Server**/**Geral**/**Separador de lote**. O padrão é Falso. Para obter mais informações, consulte [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Incluir cabeçalhos descritivos**  
  Adiciona comentários descritivos ao script separando o script em seções para cada objeto. O padrão é True. Para obter mais informações, consulte [comentário &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
@@ -68,7 +68,7 @@ ms.locfileid: "36118030"
  Gera um script para objetos adicionais que são necessários quando o script para o objeto selecionado é executado. O padrão é Falso.  
   
  **Incluir cláusula If NOT EXISTS**  
- Inclui uma instrução para verificar se cada objeto não existe no banco de dados antes de tentar criar o objeto. O padrão é Falso. Para obter mais informações, consulte [IF... ELSE &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) e [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
+ Inclui uma instrução para verificar se cada objeto não existe no banco de dados antes de tentar criar o objeto. O padrão é Falso. Para obter mais informações, consulte [IF... OUTRA &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) e [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Qualificar nomes de objetos do esquema**  
  Qualifica nomes de objeto com o esquema de objeto. O padrão é Falso. Para obter mais informações, consulte [Criar um esquema de banco de dados](../../relational-databases/security/authentication-access/create-a-database-schema.md).  

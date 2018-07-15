@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfcc451a3369a3f15e29381df3d21e7275a90f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90fa167102e9e5a5c8a4ad916bb921205347f1c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284432"
 ---
 # <a name="discoverlocations-rowset"></a>Conjunto de linhas DISCOVER_LOCATIONS
   Retorna informações sobre o conteúdo de um arquivo de backup. Você deve ter permissão para acessar o local do arquivo de backup.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_LOCATIONS` linhas contém as seguintes colunas.  
+ O `DISCOVER_LOCATIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderByAttributeID element
 ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42d8e9246340b72fad871e92bc30008c68ce786a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c336d9c210c9e6fb5ffa44e5f1d37a445e0e5694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235606"
 ---
 # <a name="orderbyattributeid-element-assl"></a>Elemento OrderByAttributeID (ASSL)
   Identifica outro atributo pelo qual ordenar os membros de [dimensão](../data-type/dimensionattribute-data-type-assl.md) atributo.  
@@ -62,9 +62,9 @@ ms.locfileid: "36117742"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `OrderByAttributeID` elemento é usado apenas quando o valor da [OrderBy](orderby-element-assl.md) elemento para o `DimensionAttribute` é definido como *AttributeKey* ou *AttributeName*.  
+ O `OrderByAttributeID` elemento é usado apenas quando o valor da [OrderBy](orderby-element-assl.md) elemento para o `DimensionAttribute` está definido como *AttributeKey* ou *AttributeName*.  
   
- O elemento que corresponde ao pai do `OrderByAttributeID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `OrderByAttributeID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

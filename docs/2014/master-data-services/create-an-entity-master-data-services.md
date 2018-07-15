@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329836"
 ---
 # <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma entidade para conter os membros e seus atributos.  
@@ -55,7 +55,7 @@ ms.locfileid: "36007287"
   
 7.  Opcional. Marque a caixa de seleção **Criar valores de códigos automaticamente** . Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Do **habilitar hierarquias explícitas e coleções** lista, selecione uma das seguintes opções:  
+8.  Dos **habilitar hierarquias explícitas e coleções** lista, selecione uma das seguintes opções:  
   
     -   **Não**. Selecione essa opção se não precisar habilitar a entidade para hierarquias explícitas e coleções. É possível alterar isso mais tarde se necessário.  
   

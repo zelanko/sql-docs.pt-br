@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73ea3ab614ad68e656763d74b2f9d07996a44a38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8b45eb6e49c1341c3af650740c5d0a5d805f5b37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309426"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>Propriedade InstanceName (classe ServerSettingsGeneralFlag)
   Obtém o nome da instância do cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

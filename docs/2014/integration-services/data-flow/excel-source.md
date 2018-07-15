@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199676"
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -55,7 +55,7 @@ ms.locfileid: "36324660"
   
 -   **Fontes de dados**. A fonte de dados em uma pasta de trabalho do Excel pode ser uma planilha de trabalho, à qual o sinal $ deve ser anexado (por exemplo, Planilha1$), ou um intervalo nomeado (por exemplo, MeuIntervalo). Em uma instrução SQL, o nome de uma planilha de trabalho deve ser delimitado (por exemplo, [Planilha1$]) para evitar um erro de sintaxe causado pelo sinal $. O Construtor de Consultas adiciona automaticamente esses delimitadores. Quando você especifica uma planilha de trabalho ou um intervalo, o driver lê o bloco contínuo de células começando com a primeira célula não vazia no canto superior esquerdo da planilha de trabalho ou do intervalo. Dessa forma, você não pode ter linhas vazias nos dados de origem ou uma linha vazia entre o título ou as linhas de cabeçalho e de dados.  
   
--   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação, adicione `IMEX=1` para o valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexão do Excel no **propriedades** janela. Para obter mais informações, consulte [PRB: valores do Excel retornados como NULOS usando DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
+-   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação, adicione `IMEX=1` como o valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexão do Excel na **propriedades** janela. Para obter mais informações, consulte [PRB: valores do Excel retornados como NULOS usando DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
   
 -   **Texto truncado**. Quando o driver determina que uma coluna do Excel contém dados de texto, ele seleciona o tipo de dados (cadeia ou memorando) com base no valor mais longo que ele obtém. Se o driver não descobre nenhum valor maior que 255 caracteres nas linhas que ele verifica, ele trata a coluna como uma coluna de cadeia de 255 caracteres, não como uma coluna de memorando. Assim, valores com mais de 255 caracteres podem estar truncados. Para importar dados de uma coluna de memorando sem que haja truncamento, você deve certificar-se de que essa coluna, em pelo menos uma das linhas de amostra, contenha um valor com mais 255 caracteres ou deve aumentar o número de linhas de amostra pelo driver para incluir esse tipo de linha. Você pode aumentar o número de linhas de amostra aumentando o valor de **TypeGuessRows** na chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para obter mais informações, consulte [PRB: a transferência de dados da fonte Jet 4.0 OLEDB falha com erro](http://support.microsoft.com/kb/281517).  
   
@@ -86,9 +86,9 @@ ms.locfileid: "36324660"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem do Excel** clique em um dos seguintes tópicos:  
   
--   [Editor de origem do Excel &#40;página Gerenciador de Conexão&#41;](../excel-source-editor-connection-manager-page.md)  
+-   [Editor de origem do Excel &#40;página do Gerenciador de Conexão&#41;](../excel-source-editor-connection-manager-page.md)  
   
--   [Editor de origem do Excel &#40;página colunas&#41;](../excel-source-editor-columns-page.md)  
+-   [Editor de origem do Excel &#40;página de colunas&#41;](../excel-source-editor-columns-page.md)  
   
 -   [Editor de origem do Excel &#40;página de saída de erro&#41;](../excel-source-editor-error-output-page.md)  
   
@@ -122,6 +122,6 @@ ms.locfileid: "36324660"
   
 -   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
   
--   Entrada de blog, [usando arquivos XLSX no SSIS](http://go.microsoft.com/fwlink/?LinkId=233704), no site sqlservergeeks.com.  
+-   Entrada de blog [usando arquivos XLSX no SSIS](http://go.microsoft.com/fwlink/?LinkId=233704), no site sqlservergeeks.com.  
   
   

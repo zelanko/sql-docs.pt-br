@@ -15,15 +15,15 @@ helpviewer_keywords:
 - proactive caching [Analysis Services]
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86634be8be55ff48f2eac1a4c4453f7cdd5eddb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9849f5ce2f82b44772a1faf360a530eb712c6dbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224566"
 ---
 # <a name="proactive-caching-dimensions"></a>Cache pró-ativo (dimensões)
   O cache pró-ativo fornece criação automática de cache MOLAP e gerenciamento de objetos OLAP. Os cubos incorporam imediatamente as alterações feitas nos dados no banco de dados, com base em modificações recebidas do banco de dados. O objetivo do cache pró-ativo é oferecer o desempenho do MOLAP tradicional, além de manter a instantaneidade e facilidade de gerenciamento oferecida pelo ROLAP.  

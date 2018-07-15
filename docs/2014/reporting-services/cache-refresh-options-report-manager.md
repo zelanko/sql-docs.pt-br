@@ -1,5 +1,5 @@
 ---
-title: Opções de atualização (Gerenciador de relatórios) de cache | Microsoft Docs
+title: Armazenar em cache as opções de atualização (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282692"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opções de Atualização do Cache (Gerenciador de Relatórios)
   Use a página Opções de Atualização do Cache para criar agendas para pré-carregamento do cache com cópias temporárias de dados para um relatório ou para um conjunto de dados compartilhado. Um plano de atualização inclui uma agenda e a opção para especificar ou substituir valores de parâmetros. Para um conjunto de dados compartilhado, você não pode substituir valores de parâmetros que estão marcados como somente leitura. Você pode criar e usar mais de um plano de atualização como parte da página de opções de atualização.  
@@ -71,7 +71,7 @@ ms.locfileid: "36115860"
   
  Para obter mais informações, consulte [nova agenda: Editar página de agenda &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
- **agenda compartilhada**  
+ **Agenda compartilhada**  
  Selecione essa opção para selecionar uma agenda existente.  
   
  Para obter mais informações, consulte [criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md).  

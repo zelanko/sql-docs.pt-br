@@ -1,5 +1,5 @@
 ---
-title: Personalizar a estrutura e os modelos de mineração | Microsoft Docs
+title: Personalizar modelos de mineração e estrutura | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286352"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar os modelos de mineração e a estrutura
   Depois de selecionar um algoritmo que atende as necessidades do seu negócio, é possível personalizar o modelo de mineração das formas a seguir para melhorar potencialmente os resultados.  
@@ -65,9 +65,9 @@ ms.locfileid: "36116267"
 ### <a name="creating-aliases-for-model-columns"></a>Criando alias em colunas do modelo  
  Quando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criar o modelo de mineração, ele usa os mesmos nomes de colunas que estão na estrutura de mineração. Você pode adicionar um alias a qualquer coluna do modelo de mineração. Isso pode tornar mais fácil entender o conteúdo da coluna ou o uso ou fazer com que o nome fique mais curto para conveniência na criação de consultas. Os aliases também são úteis quando você quer criar uma cópia de uma coluna e nomeá-la com algo descritivo.  
   
- Criar um alias editando a `Name` propriedade da coluna do modelo de mineração. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a usar o nome original como a ID da coluna e o novo valor digitado para `Name` se torna o alias de coluna e aparece na grade em parênteses próximo ao uso da coluna.  
+ Criar um alias editando a `Name` propriedade da coluna de modelo de mineração. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a usar o nome original como a ID da coluna e o novo valor digitado para `Name` se torna o alias de coluna e aparece na grade em parênteses próximo ao uso da coluna.  
   
- ![colunas de modelo de alias em mineração](../media/modelcolumnalias-income.gif "colunas de modelo de aliases de mineração")  
+ ![colunas de modelo de aliases de mineração](../media/modelcolumnalias-income.gif "colunas de modelo de aliases de mineração")  
   
  O gráfico mostra modelos relacionados que têm várias cópias de uma coluna de estrutura de mineração, todas relacionadas a Receita. Cada cópia da coluna de estrutura foi discretizada de um modo diferente. Os modelos no diagrama usam cada um uma coluna diferente da estrutura de mineração; no entanto, para a conveniência na comparação de colunas pelos modelos, a coluna em cada modelo foi renomeada para [**Receita**].  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36116267"
 |STOPPING_TOLERANCE|[Referência técnica do algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Arquitetura física &#40;Analysis Services – mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

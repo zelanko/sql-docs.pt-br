@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b72bfc90936011fc4556fae6021fad89b134c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327836"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lição 4: Criar um banco de dados no Armazenamento do Windows Azure
   Nesta lição, você aprenderá a criar um banco de dados usando o recurso de arquivos de dados do SQL Server no Microsoft Azure. Observe que antes desta lição, você deverá concluir as lições 1, 2 e 3. A lição 3 é uma etapa muito importante, pois você precisa armazenar informações sobre o contêiner de armazenamento do Windows Azure, e seu nome de política e chave de SAS associados no repositório de credenciais do SQL Server antes da lição 4.  
@@ -77,11 +77,11 @@ ms.locfileid: "36006822"
   
 6.  Da mesma forma, para ver o banco de dados recém-criado na conta de armazenamento, conecte-se à conta de armazenamento através do SQL Server Management Studio (SSMS). Para obter informações sobre como se conectar a um Armazenamento do Windows Azure usando o SQL Server Management Studio, siga essas etapas:  
   
-    1.  Primeiro, obtenha as informações da conta de armazenamento. Faça logon no Portal de Gerenciamento. Em seguida, clique em **armazenamento** e escolha a conta de armazenamento. Quando uma conta de armazenamento for selecionada, clique em **gerenciar chaves de acesso** na parte inferior da página. Isso abre uma janela de caixa de diálogo similar:  
+    1.  Primeiro, obtenha as informações da conta de armazenamento. Faça logon no Portal de Gerenciamento. Em seguida, clique em **armazenamento** e escolha sua conta de armazenamento. Quando uma conta de armazenamento for selecionada, clique em **gerenciar chaves de acesso** na parte inferior da página. Isso abre uma janela de caixa de diálogo similar:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copiar o **nome da conta de armazenamento** e **chave de acesso primária** valores para o **conectar ao armazenamento do Windows Azure** janela da caixa de diálogo no SSMS. Em seguida, clique em **conectar**. Isso colocará as informações sobre contêineres da conta de armazenamento no SSMS, conforme mostrado na seguinte captura de tela:  
+    2.  Cópia de **nome da conta de armazenamento** e **chave de acesso primária** valores para o **conectar-se ao armazenamento do Windows Azure** janela da caixa de diálogo no SSMS. Em seguida, clique em **Connect**. Isso colocará as informações sobre contêineres da conta de armazenamento no SSMS, conforme mostrado na seguinte captura de tela:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36006822"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Observação:** se houver alguma referência ativa aos arquivos de dados em um contêiner, qualquer tentativa de excluir o servidor SQL associado credenciais apresentarão falha. Da mesma forma, se já houver uma concessão em um arquivo de banco de dados específico em um blob e você quiser excluí-lo, primeiro você precisa interromper a concessão no blob. Para interromper a concessão, você pode usar [Blob de concessão](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Observação:** se houver alguma referência ativa aos arquivos de dados em um contêiner, qualquer tentativa de excluir o servidor SQL associado credenciais apresentarão falha. Da mesma forma, se já houver uma concessão em um arquivo de banco de dados específico em um blob e você quiser excluí-lo, primeiro você precisa interromper a concessão no blob. Para interromper a concessão, você pode usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Usando esse novo recurso, você pode configurar o SQL Server de modo que qualquer instrução CREATE DATABASE assuma como padrão um banco de dados habilitado para nuvem. Em outras palavras, você pode definir locais de dados e log padrão nas propriedades de instância do SQL Server Management Studio Server para que, a qualquer momento que criar um banco de dados, todos os arquivos de banco de dados (.mdf, .ldf) sejam criados como blobs de página no Armazenamento do Windows Azure.  
   

@@ -1,5 +1,5 @@
 ---
-title: Assistentes de interface do usuário para análise Multidimensional | Microsoft Docs
+title: Assistentes de interface do usuário para a análise Multidimensional | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb8dc6a4d538944bd22ac69bf13d85435dd0dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccdd4a66b4b34cae9295cc553b795f0cda256a53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316066"
 ---
-# <a name="ui-wizards-for-multidimensional-analysis"></a>Assistentes de interface do usuário para análise Multidimensional
+# <a name="ui-wizards-for-multidimensional-analysis"></a>Assistentes de interface do usuário para a análise Multidimensional
 
-Esta seção contém a documentação sobre os assistentes de interface do usuário do usuário para análise multidimensional.
+Esta seção contém documentação sobre os assistentes de (UI) de interface de usuário para a análise multidimensional.
 
 ## <a name="next-steps"></a>Próximas etapas
 

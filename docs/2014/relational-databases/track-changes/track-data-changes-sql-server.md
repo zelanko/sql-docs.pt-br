@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
 - change_tracking_databases
@@ -34,18 +34,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd525b56e4fcd793fbf0d4ae3f63b5670a5d1e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307546"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que suporte change data capture e controle de alterações, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece dois recursos que controlam alterações em dados de bancos de dados: [captura de dados de alterações](#Capture) e [controle de alterações](#Tracking). Esses recursos permitem que os aplicativos determinem as alterações de DML (operações de inserção, atualização e exclusão) que foram feitas em tabelas de usuários em um banco de dados. A captura de dados de alteração e o controle de alterações podem ser habilitados no mesmo banco de dados; nenhuma consideração especial necessária. Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que a alteração de suporte à captura de dados e controle de alterações, consulte [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Benefícios do uso da captura de dados de alterações ou do controle de alterações  
  Um requisito importante para a eficiência de alguns aplicativos é a capacidade de consultar os dados que foram alterados em um banco de dados. Em geral, para determinar alterações de dados, os desenvolvedores de aplicativos devem implementar um método personalizado de controle nos aplicativos usando uma combinação de gatilhos, colunas de carimbo de data/hora e tabelas adicionais. A criação desses aplicativos costumava envolve uma implementação muito trabalhosa, leva a atualizações de esquema e frequentemente acarreta uma sobrecarga de alto desempenho.  
@@ -89,9 +89,9 @@ ms.locfileid: "36008606"
  Esta seção descreve o modelo de segurança da captura de dados de alterações.  
   
  **Configuração e administração**  
- Para habilitar ou desabilitar o change data capture para um banco de dados, o chamador de [sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)deve ser um membro de servidor fixado `sysadmin` função. Habilitando e desabilitando o change data capture no nível de tabela exigem que o chamador de [sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) seja um membro da função sysadmin ou um membro do banco de dados `database db_owner` função.  
+ Para habilitar ou desabilitar a alteração de captura de dados para um banco de dados, o chamador de [sp_cdc_enable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) ou [sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)deve ser um membro do servidor fixo `sysadmin` função. Habilitando e desabilitando o change data capture no nível de tabela exigem que o chamador de [sp_cdc_enable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) e [sp_cdc_disable_table &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) ao ser um membro da função sysadmin ou um membro do banco de dados `database db_owner` função.  
   
- Use os procedimentos armazenados para dar suporte à administração de trabalhos de captura de dados de alteração é restrito aos membros do servidor `sysadmin` função e os membros do `database db_owner` função.  
+ Uso de procedimentos armazenados para dar suporte à administração de trabalhos do change data capture é restrito a membros do servidor `sysadmin` função e os membros de `database db_owner` função.  
   
  **Consultas de metadados e enumeração de alteração**  
  Para obter acesso aos dados de alteração associados a uma instância de captura, o usuário deve ter acesso de seleção a todas as colunas capturadas da tabela de origem associada. Além disso, se uma função de acesso for especificada quando a instância de captura for criada, o chamador também deverá ser um membro da função de acesso especificada. Outras funções gerais de captura de dados de alteração para o acesso aos metadados estarão acessíveis a todos os usuários de banco de dados por meio da função pública, embora o acesso aos metadados retornados será sempre concedido pelo uso do acesso de seleção às tabelas de origem subjacentes e pela associação em qualquer função gating definida.  
@@ -143,7 +143,7 @@ ms.locfileid: "36008606"
   
 -   Se um banco de dados for restaurado para outro servidor, por padrão a captura de dados de alteração será desabilitada, e todos os metadados relacionados serão excluídos.  
   
-     Para manter a captura de dados de alteração, use o `KEEP_CDC` opção ao restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para manter o change data capture, use o `KEEP_CDC` opção ao restaurar o banco de dados. Para obter mais informações sobre essa opção, consulte [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Se um banco de dados for desanexado e anexado ao mesmo servidor ou a outro servidor, a captura de dados de alteração permanecerá habilitada.  
   

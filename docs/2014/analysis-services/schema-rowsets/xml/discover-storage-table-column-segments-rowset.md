@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325016"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
   Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo tabular ou do PowerPivot. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  
@@ -28,12 +28,12 @@ ms.locfileid: "36007350"
  **Aplica-se a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` linhas contém as seguintes colunas.  
+ O `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` linhas contém as colunas a seguir.  
   
 |**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Descrição**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|Sim|Especifica o banco de dados tabular.<br /><br /> O `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` linhas pode ser restringido usando esta coluna. Se ele for omitido, o banco de dados atual será usado.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|Sim|O nome do modelo.<br /><br /> O `DISCOVER_STORAGE_TABLES` linhas pode ser restringido usando esta coluna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Sim|Especifica o banco de dados tabular.<br /><br /> O `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` conjunto de linhas pode ser restrito usando esta coluna. Se ele for omitido, o banco de dados atual será usado.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|Sim|O nome do modelo.<br /><br /> O `DISCOVER_STORAGE_TABLES` conjunto de linhas pode ser restrito usando esta coluna.|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|Sim|O nome do grupo de medidas.|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`|Sim|O nome da partição.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||O nome da dimensão.|  

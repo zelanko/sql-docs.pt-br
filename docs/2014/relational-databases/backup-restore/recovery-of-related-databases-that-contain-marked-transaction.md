@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188603"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
   Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
@@ -58,7 +57,7 @@ ms.locfileid: "36118677"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- O log de transações registra o nome da marca (nome da transação), a descrição, o banco de dados, o usuário, `datetime` informações e o número de sequência de log (LSN). O `datetime` informações são usadas com o nome da marca para identificar exclusivamente a marca.  
+ O log de transações registra o nome da marca (nome de transação), a descrição, o banco de dados, o usuário, `datetime` informações e o número de sequência de log (LSN). O `datetime` informações são usadas com o nome da marca para identificar exclusivamente a marca.  
   
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
@@ -69,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use WITH STOPATMARK = **'*`<mark_name>`*'** cláusula para especificar que o log de eventos que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use WITH STOPATMARK = **'*`<mark_name>`*'** cláusula para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   

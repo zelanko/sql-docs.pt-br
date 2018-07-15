@@ -1,5 +1,5 @@
 ---
-title: Instalar o Reporting Services e serviços da Internet informações-por-lado (modo nativo do SSRS) | Microsoft Docs
+title: Instalar o Reporting Services e da Internet informações Services lado a lado (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274652"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado (Modo Nativo do SSRS)
   Você pode instalar e executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) e o IIS (Serviços de Informações da Internet) no mesmo computador. A versão do IIS utilizada determina os problemas de interoperabilidade a serem resolvidos.  
@@ -47,9 +47,9 @@ ms.locfileid: "36116321"
   
 |Exemplo|Solicitação|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Recebe todas as solicitações enviadas a http://123.234.345.456/reports ou http://\<computername > / reports se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|http://123.234.345.456:80/reports|Recebe todas as solicitações são enviadas ao http://123.234.345.456/reports ou http://\<computername > / reports se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
 |http://+:80/reports|Recebe todas as solicitações enviadas a qualquer endereço IP ou nome do host válido para esse computador desde que a URL contenha o nome do diretório virtual “reports”.|  
-|http://123.234.345.456:80|Recebe qualquer solicitação que especifique http://123.234.345.456 ou http://\<computername > se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
+|http://123.234.345.456:80|Recebe qualquer solicitação que especifica http://123.234.345.456 ou http://\<computername > se um serviço de nome de domínio pode resolver o endereço IP para o nome do host.|  
 |http://+:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Atribuídos**.|  
 |http://*:80|Recebe solicitações que ainda não foram recebidas por outros aplicativos, para todos os pontos de extremidade do aplicativo mapeado como **Todos Não Atribuídos**.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36116321"
   
 -   Um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalada na configuração padrão, onde a reserva de URL também especifica a porta 80 e o aplicativo Gerenciador de relatórios também usa "Reports" para o nome do diretório virtual de instância de servidor de relatório.  
   
- Dada essa configuração, uma solicitação que é enviada para http://\<computername >: 80/reports serão recebidas pelo Gerenciador de relatórios. O aplicativo acessado por meio do diretório virtual Reports no IIS não receberá mais solicitações depois que a instância do servidor de relatório [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalada.  
+ Dada essa configuração, uma solicitação que é enviada para http://\<computername >: 80/relatórios serão recebidos pelo Gerenciador de relatórios. O aplicativo acessado por meio do diretório virtual Reports no IIS não receberá mais solicitações depois que a instância do servidor de relatório [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalada.  
   
  Se você estiver executando implantações lado a lado de versões mais antigas e mais recentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é provável que encontre o problema de roteamento descrito. Isso porque todas as versões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usam “ReportServer” e “Reports” como nomes de diretório virtual para os aplicativos de servidor de relatório e do Gerenciador de Relatórios, aumentando a probabilidade de haver um diretório virtual "reports" e "reportserver" no IIS.  
   
@@ -82,8 +82,8 @@ ms.locfileid: "36116321"
 -   Para instalações configuradas manualmente, adote as convenções de nomenclatura padrão nas URLs configuradas. Se você instalar o [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] como uma instância nomeada, inclua o nome da instância ao criar um diretório virtual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar as URLs de servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Instalar o servidor de relatório de modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

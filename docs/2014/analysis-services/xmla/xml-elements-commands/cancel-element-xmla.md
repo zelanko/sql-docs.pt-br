@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173267"
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
   Cancela um comando em execução no momento uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
@@ -73,10 +73,10 @@ ms.locfileid: "36118433"
   
  Normalmente, o comando `Cancel` é usado para cancelar os comandos que estiverem sendo executados no momento em que a sessão estiver ativa. Neste caso, nenhum dos elementos filho do comando `Cancel` deverão ser especificados. O comando `Cancel` também só pode ser usado pelos administradores para cancelar os comandos que estiverem sendo executados em conexões ou sessões que não estejam na sessão ativa naquele momento. Os membros de uma função com permissões de Administrador de um determinado banco de dados podem cancelar os comandos de conexões e sessões aplicáveis a esse banco de dados, enquanto que os administradores de servidor podem cancelar os comandos de conexões e sessões de uma determinada instância do Analysis Services.  
   
- Para recuperar as informações sobre as conexões e as sessões atuais de uma instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o método `Discover` pode ser executado para solicitar, respectivamente, os conjuntos de linhas de esquema DISCOVER_CONNECTIONS e DISCOVER_SESSIONS. Os membros de uma função com permissões de Administrador de um determinado banco de dados só poderão retornar sessões do banco de dados se especificarem o banco de dados na coluna de restrição SESSION_CURRENT_DATABASE do conjunto de linhas de esquema DISCOVER_SESSIONS. Para obter mais informações sobre o `Discover` método, consulte [método descobrir &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
+ Para recuperar as informações sobre as conexões e as sessões atuais de uma instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], o método `Discover` pode ser executado para solicitar, respectivamente, os conjuntos de linhas de esquema DISCOVER_CONNECTIONS e DISCOVER_SESSIONS. Os membros de uma função com permissões de Administrador de um determinado banco de dados só poderão retornar sessões do banco de dados se especificarem o banco de dados na coluna de restrição SESSION_CURRENT_DATABASE do conjunto de linhas de esquema DISCOVER_SESSIONS. Para obter mais informações sobre o `Discover` método, consulte [método Discover &#40;XMLA&#41;](../xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   
+ [Elemento do lote &#40;XMLA&#41;](batch-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

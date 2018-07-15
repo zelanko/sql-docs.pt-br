@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c81948bfcb6d0c2c523d563e850e9466ae45679a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b16be16730643cc063b39594c8e01f1321b6a983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209426"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor de Origem ODBC (página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem ODBC** para mapear uma coluna de saída em cada coluna externa (origem).  
@@ -51,7 +51,7 @@ ms.locfileid: "36118920"
  Insira um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome inserido é exibido no Designer SSIS.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem ODBC &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Editor de origem ODBC &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor de origem ODBC &#40;página de saída de erro&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

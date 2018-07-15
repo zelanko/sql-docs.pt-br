@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
 - Data Mining Query Advanced Editor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - DMX
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2314c847745ac51d1bc7fb99b7c6f55a3f061af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c2ddae6582355e271488389d6e4005a5d235a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289772"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Consulta (Suplementos de Mineração de Dados do SQL Server)
-  ![Botão de modelo de consulta, faixa de opções mineração de dados](media/dmc-query.gif "botão modelo de consulta, faixa de opções mineração de dados")  
+  ![Botão de modelo de consulta, faixa de opções mineração de dados](media/dmc-query.gif "botão de modelo de consulta, faixa de opções mineração de dados")  
   
  O assistente de **Consulta** o ajuda a interagir com os modelos de mineração de dados existentes para fazer previsões com base nos dados em uma tabela ou intervalo do Excel, ou outra fonte de dados. O processo de aplicar novos dados a um modelo existente para prever tendências é denominado *consulta de previsão*.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "36116685"
   
 4.  Por fim, o assistente também lhe oferecerá a capacidade de escolher uma ou mais previsões e especificar um destino no qual armazenar os resultados.  
   
- A qualquer momento, você poderá clicar em **Avançado** para alternar para o **Editor de Consulta Avançada de Mineração de Dados**, que lhe proporcionará mais controle sobre cada parte da instrução DMX. Para obter mais informações sobre como usar a ferramentas de edição de consulta avançada, consulte [Editor Avançado de consulta de mineração de dados](advanced-data-mining-query-editor.md).  
+ A qualquer momento, você poderá clicar em **Avançado** para alternar para o **Editor de Consulta Avançada de Mineração de Dados**, que lhe proporcionará mais controle sobre cada parte da instrução DMX. Para obter mais informações sobre como usar a ferramentas de edição de consulta avançada, consulte [Editor de consultas de mineração de dados avançados](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Para usar o **consulta** assistente, você deve estar conectado a uma instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Além disso, o servidor deve conter pelo menos um modelo de mineração de dados de um tipo apropriado. Se não houver nenhum modelo de mineração disponível, você poderá criar um desses modelos usando os assistentes fornecidos no Cliente de Mineração de Dados para Excel. Para obter informações sobre como criar um novo modelo de mineração usando um assistente, consulte [criar um modelo de mineração de dados](creating-a-data-mining-model.md).  
+ Para usar o **consulta** do assistente, você deve estar conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Além disso, o servidor deve conter pelo menos um modelo de mineração de dados de um tipo apropriado. Se não houver nenhum modelo de mineração disponível, você poderá criar um desses modelos usando os assistentes fornecidos no Cliente de Mineração de Dados para Excel. Para obter informações sobre como criar um novo modo de mineração usando um assistente, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantando e dimensionando modelos de mineração &#40;dados suplementos de mineração para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [Implantando e dimensionando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
  [Cliente de mineração de dados para Excel &#40;suplementos de mineração de dados do SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
   

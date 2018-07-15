@@ -1,5 +1,5 @@
 ---
-title: Especifique as credenciais no construtor de relatórios | Microsoft Docs
+title: Especificar as credenciais no construtor de relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c5a9c27436bf80887a3f8917b1d4df71896ba2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280322"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar as credenciais no Construtor de Relatórios
   As credenciais autenticam o usuário que está tentando recuperar dados de uma fonte de dados. O proprietário da fonte de dados determina o tipo de credenciais que devem ser usadas. Por exemplo, um administrador de banco de dados pode especificar que o usuário deve fornecer um nome de usuário do Windows e uma senha.  
@@ -75,14 +75,14 @@ ms.locfileid: "36116292"
  Quando você especifica credenciais solicitadas, cada usuário que acessa o relatório deve digitar um nome de usuário e senha para recuperar os dados. Essa opção é recomendada para relatórios que contêm dados confidenciais. As credenciais solicitadas podem ser para uma conta do Windows ou para um logon de banco de dados. Se o servidor de banco de dados não reconhecer as credenciais fornecidas, ou se o usuário especificado não tiver recebido permissão para recuperar os dados, haverá falha na conexão.  
   
 ### <a name="no-credentials"></a>Nenhuma credencial  
- Não são necessárias credenciais para esta fonte de dados. Para executar o relatório no servidor de relatório, a conta de execução autônoma deve estar configurada. Para obter mais informações, consulte [configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Não são necessárias credenciais para esta fonte de dados. Para executar o relatório no servidor de relatório, a conta de execução autônoma deve estar configurada. Para obter mais informações, consulte [configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [dos Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;SSRS e construtor de relatórios&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Inseridos e compartilhados, conexões de dados ou fontes de dados &#40;relatórios e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Caixa de diálogo, as configurações de opções do construtor de relatórios &#40;construtor de relatórios&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;SSRS e construtor de relatórios&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186113"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Populando uma tabela com dados hierárquicos existentes
   Essa tarefa cria uma tabela nova e a popula com os dados da tabela **EmployeeDemo**. Essa tarefa tem as seguintes etapas:  
@@ -117,7 +117,7 @@ ms.locfileid: "36119072"
   
      `10        4         2`  
   
-3.  Popule a tabela **NewOrg** . Use os métodos GetRoot e ToString para concatenar a **Num** valores para o `hierarchyid` Formatar e, em seguida, atualize o **OrgNode** coluna com os valores hierárquicos resultantes:  
+3.  Popule a tabela **NewOrg** . Use os métodos GetRoot e ToString para concatenar os **Num** valores para o `hierarchyid` Formatar e, em seguida, atualize o **OrgNode** coluna com os valores hierárquicos resultantes:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36119072"
   
     ```  
   
-     O **LogicalNode** coluna converte o `hierarchyid` coluna em um formato de texto mais legível que representa a hierarquia. Nas tarefas restantes, você usará o método `ToString()` para mostrar o formato lógico das colunas `hierarchyid`.  
+     O **LogicalNode** coluna converte o `hierarchyid` coluna em um formulário de texto mais legível que representa a hierarquia. Nas tarefas restantes, você usará o método `ToString()` para mostrar o formato lógico das colunas `hierarchyid`.  
   
 5.  Descarte a tabela temporária, que não será mais necessária:  
   

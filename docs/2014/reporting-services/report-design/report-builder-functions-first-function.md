@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 57683bf4fe9f4306eecd8bf170510a4b8bd29bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4b8da17628c94d281168d9956b13a63512167c31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246507"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Função First (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor no escopo fornecido da expressão especificada.  
@@ -49,7 +49,7 @@ First(expression, scope)
   
  O `First` função não pode ser usada em expressões de filtro de grupo com qualquer coisa, exceto o escopo atual (padrão).  
   
- Você também pode usar `First` em um cabeçalho de página para retornar o primeiro valor da `ReportItems` coleção de uma página para produzir cabeçalhos em estilo de dicionário que exibem as entradas e o sobrenome em uma página.  
+ Você também pode usar `First` em um cabeçalho de página para retornar o primeiro valor da `ReportItems` coleção para uma página de modo a produzir cabeçalhos em estilo de dicionário que exibem a primeira e última entradas em uma página.  
   
  O valor de *scope* deve ser uma constante de cadeia de caracteres e não pode ser uma expressão. Para agregações externas ou que não especificam outras agregações, *scope* deve se referir ao escopo atual ou a um escopo contentor. Para agregações de agregações, as agregações aninhadas podem especificar um escopo filho.  
   
@@ -75,9 +75,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 077ccf4ad3793db7bbf067460f42cf8c8e98b427
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271312"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -94,9 +94,9 @@ ms.locfileid: "36324670"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem de OLE DB**, clique em um dos seguintes tópicos:  
   
--   [Editor de origem OLE DB &#40;página Gerenciador de Conexão&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Editor de origem OLE DB &#40;página do Gerenciador de Conexão&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor de origem OLE DB &#40;página colunas&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor de origem OLE DB &#40;página de colunas&#41;](../ole-db-source-editor-columns-page.md)  
   
 -   [Editor de origem OLE DB &#40;página de saída de erro&#41;](../ole-db-source-editor-error-output-page.md)  
   

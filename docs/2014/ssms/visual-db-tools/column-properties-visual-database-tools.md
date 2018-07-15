@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236176"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
   Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
@@ -183,12 +183,12 @@ ms.locfileid: "36115863"
  Mostra se essa coluna é replicada em outro local.  
   
  **É RowGuid**  
- Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna como ROWGUID. Você pode definir esse valor como **Sim** apenas para uma coluna com o tipo de dados `uniqueidentifier`. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+ Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna como ROWGUID. Você pode definir esse valor **Yes** apenas para uma coluna com o tipo de dados `uniqueidentifier`. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
  **Tamanho**  
  Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, um tipo de dados `nchar` pode ter um comprimento de 10 (número de caracteres), mas teria um tamanho de 20 para conjuntos de caracteres Unicode.  
   
 > [!NOTE]  
->  O comprimento de um tipo de dados `varchar(max)` varia para cada linha. sp_help retorna (-1) como o comprimento da `varchar(max)` coluna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] exibe -1 como o tamanho de coluna.  
+>  O comprimento de um tipo de dados `varchar(max)` varia para cada linha. sp_help retorna (-1) como o comprimento de `varchar(max)` coluna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] exibe -1 como o tamanho de coluna.  
   
   

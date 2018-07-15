@@ -1,5 +1,5 @@
 ---
-title: Configurar Distributed Replay | Microsoft Docs
+title: Configurar o Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98385aae3bea4eff6227edc4a99807f4d2625775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c213c892403e4d6bdf527601f5f7482ebb7e2ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189643"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Os detalhes de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, nos clientes e onde a ferramenta de administração estiver instalada. Esses arquivos incluem o seguinte:  

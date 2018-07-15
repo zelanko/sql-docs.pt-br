@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288572"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
   Antes de usar o Gerenciador de Relatórios ou o serviço Web Servidor de Relatório, você deve configurar pelo menos uma URL para cada aplicativo. A configuração das URLs será obrigatória se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo “somente arquivos” (ou seja, selecionando a opção **Instalar, mas não configurar o servidor** na página Opções de Instalação do Servidor de Relatório do Assistente de Instalação). Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, as URLs já estarão configuradas para cada aplicativo. Caso você tenha um servidor de relatório configurado para usar o modo Integrado do SharePoint e atualize a URL do Serviço Web Servidor de Relatórios usando a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], também deverá atualizar a URL na Administração Central do SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "36118061"
   
 -   Configurar propriedades avançadas de URL para definir URLs adicionais.  
   
- Para obter mais informações sobre como as URLs são armazenados e mantidas ou problemas de interoperabilidade, consulte [sobre reservas de URL e registro &#40;SSRS Configuration Manager&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Install Reporting Serviços de informações da Internet e os serviços lado a lado &#40;modo nativo do SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online. Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
+ Para obter mais informações sobre como as URLs são armazenadas e mantidas ou sobre problemas de interoperabilidade, consulte [sobre reservas de URL e registro de &#40;Configuration Manager do SSRS&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Install Reporting Serviços de informações da Internet e os serviços lado a lado &#40;modo nativo do SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online. Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de criar ou modificar uma URL, lembre-se dos seguintes pontos:  
@@ -51,7 +51,7 @@ ms.locfileid: "36118061"
   
 -   Escolha uma hora que tenha baixa atividade de relatório. Toda vez que a reserva de URL for alterada, você pode esperar que os domínios de aplicativo do serviço Web Servidor de Relatório e do Gerenciador de Relatórios sejam reciclados.  
   
--   Para obter uma visão geral da construção de URL e o uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Configurar URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Para uma visão geral da construção de URL e o uso na [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [configurar as URLs do servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar uma URL para serviço Web Servidor de Relatório  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36118061"
   
          Se você tiver várias placas ou se a sua rede der suporte a endereços IPv4 e IPv6, você verá vários endereços IP. Se você selecionar apenas um endereço IP, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório. Normalmente, se você selecionar esse valor, é porque está configurando várias reservas de URL que também especificam endereços IP explícitos ou nomes de host (por exemplo, uma para uma placa de adaptador de rede usada para conexões à intranet e uma segunda usada para conexões à extranet).  
   
-5.  Especifique a porta. Porta 80 é a padrão para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e Windows Server 2008 porque ela pode ser compartilhada com outros aplicativos. Para usar um número de porta personalizado, lembre-se de que sempre deverá especificá-lo na URL usada para acessar o servidor de relatório. Você pode usar as seguintes técnicas para localizar uma porta disponível:  
+5.  Especifique a porta. A porta 80 é o padrão para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e Windows Server 2008 porque ela pode ser compartilhada com outros aplicativos. Para usar um número de porta personalizado, lembre-se de que sempre deverá especificá-lo na URL usada para acessar o servidor de relatório. Você pode usar as seguintes técnicas para localizar uma porta disponível:  
   
     -   Em um prompt de comando, digite o seguinte comando para retornar uma lista de portas TCP que estão sendo usadas:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36118061"
   
 2.  Clique em **URL do Gerenciador de Relatórios**.  
   
-3.  Especifique o diretório virtual. O Gerenciador de Relatórios escuta no mesmo endereço IP e porta que o serviço Web Servidor de Relatório. Se você configurou o Gerenciador de Relatórios para que aponte para um serviço Web Servidor de Relatório diferente, deverá modificar as configurações da URL do Gerenciador de Relatórios no arquivo RSReportServer.config. Para obter instruções, consulte [configurar Gerenciador de relatórios &#40;modo nativo&#41; ](../report-server/configure-web-portal.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+3.  Especifique o diretório virtual. O Gerenciador de Relatórios escuta no mesmo endereço IP e porta que o serviço Web Servidor de Relatório. Se você configurou o Gerenciador de Relatórios para que aponte para um serviço Web Servidor de Relatório diferente, deverá modificar as configurações da URL do Gerenciador de Relatórios no arquivo RSReportServer.config. Para obter instruções, consulte [configurar o Gerenciador de relatórios &#40;modo nativo&#41; ](../report-server/configure-web-portal.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 4.  Se você instalou um certificado SSL, poderá selecioná-lo para requerer que todas as solicitações para o Gerenciador de Relatórios sejam roteadas por HTTPS.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36118061"
   
 1.  Na página **URL do Serviço Web** ou **URL do Gerenciador de Relatórios** , clique em **Avançado**.  
   
-2.  Clique em **Adicionar**.  
+2.   Clique em **Adicionar**.  
   
 3.  Clique em Endereço IP ou Nome de Cabeçalho do Host. Se você especificar um cabeçalho de host, certifique-se de especificar um nome que o serviço DNS possa resolver. Se você estiver especificando um nome de domínio disponível publicamente, inclua a URL inteira, incluindo http://www.  
   

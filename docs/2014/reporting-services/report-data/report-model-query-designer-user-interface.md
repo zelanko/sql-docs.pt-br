@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
 - "10015"
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d01b975eb36f54aa450d4e931740ac319a023e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301746"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
   O Designer de Relatórios fornece dois designers de consulta para ajudá-lo a especificar quais dados de uma fonte de dados do Modelo do Servidor de Relatórios você deseja usar em um relatório. Use o designer de consultas gráficas para explorar e escolher entidades de modelo e campos de entidade. Use o designer de consulta baseado em texto para trabalhar diretamente com uma especificação de linguagem SMDL em formato XML.  
@@ -91,7 +91,7 @@ ms.locfileid: "36008572"
 |![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa o texto da consulta e exibe o conjunto de linhas resultante no painel Resultado.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de Design no relatório Designer do SQL Server Data Tools consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Conexão de modelo de relatório &#40;SSRS&#41;](report-model-connection-ssrs.md)   
  [Arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  

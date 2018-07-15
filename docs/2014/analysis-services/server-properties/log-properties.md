@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295506"
 ---
 # <a name="log-properties"></a>Propriedades do log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "36116674"
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Log de erros  
- Você pode definir essas propriedades no nível da instância de servidor para modificar os valores padrão para a Configuração de Erros que aparece em outras ferramentas e designers. Consulte [configuração de erro para o cubo, partição e processamento de dimensões &#40;SSAS - Multidimensional&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obter mais informações.  
+ Você pode definir essas propriedades no nível da instância de servidor para modificar os valores padrão para a Configuração de Erros que aparece em outras ferramentas e designers. Ver [configuração de erros para cubo, partição e processamento de dimensões &#40;SSAS - Multidimensional&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) e <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obter mais informações.  
   
  **ErrorLog\ErrorLogFileName**  
  Uma propriedade usada como padrão durante a operação de processamento executada pelo servidor.  
@@ -111,20 +111,20 @@ ms.locfileid: "36116674"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica a ação realizada pelo servidor quando um `KeyNotFound` erro ocorre. As respostas válidas para esse erro incluem:  
   
--   `IgnoreError` informa ao servidor para continuar sem registrar em log o erros ou contá-lo até o limite de erros de chave de processamento. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será ser descartado ou agregado ao membro desconhecido, conforme determinado pelo `KeyErrorAction` propriedade.  
+-   `IgnoreError` informa ao servidor para continuar processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será ser descartado ou agregado ao membro desconhecido, conforme determinado pela `KeyErrorAction` propriedade.  
   
 -   `ReportAndContinue` informa ao servidor para registrar em log o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
 -   `ReportAndStop` informa ao servidor para registrar em log o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Especifica a ação executada pelo servidor quando uma chave duplicada é encontrada. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` log o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erro.  
+ Especifica a ação executada pelo servidor quando uma chave duplicada é encontrada. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erros estiver abaixo do limite de erro.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Especifica a ação executada pelo servidor quando uma chave nula tiver sido convertida em Membro Desconhecido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` log o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erro.  
+ Especifica a ação executada pelo servidor quando uma chave nula tiver sido convertida em Membro Desconhecido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erros estiver abaixo do limite de erro.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Especifica a ação realizada pelo servidor quando `NullProcessing` é definido como `Error` para um atributo de dimensão. Um erro é gerado quando um valor nulo não é permitido em um determinado atributo. Esta propriedade de configuração de erro informa a próxima etapa, que é relatar o erro e continuar o processamento até que o limite de erros seja atingido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` log o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erro.  
+ Especifica a ação realizada pelo servidor quando `NullProcessing` é definido como `Error` para um atributo de dimensão. Um erro é gerado quando um valor nulo não é permitido em um determinado atributo. Esta propriedade de configuração de erro informa a próxima etapa, que é relatar o erro e continuar o processamento até que o limite de erros seja atingido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar o erro e continuar o processamento, e `ReportAndStop` log o erro e parar o processamento imediatamente, mesmo se a contagem de erros estiver abaixo do limite de erro.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Uma propriedade usada como padrão durante a operação de processamento executada pelo servidor.  

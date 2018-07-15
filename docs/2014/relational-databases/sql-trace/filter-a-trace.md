@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212826"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
   Os filtros limitam os eventos coletados em um rastreamento. Se não houver um filtro definido, serão retornados todos os eventos das classes de evento selecionadas na saída do rastreamento. Por exemplo, limitar os nomes de usuário do Windows em um rastreamento a usuários específicos restringe os dados de saída apenas a esses usuários.  
@@ -141,7 +141,7 @@ ms.locfileid: "36118868"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> se rastrear eventos do **osql** utilitário ou **sqlcmd** utilitário, sempre acrescente **%** aos filtros na **TextData**  coluna de dados.  
+ <sup>1</sup> se rastrear eventos do **osql** utilitário ou o **sqlcmd** utility, sempre acrescente ** % ** aos filtros no **TextData ** coluna de dados.  
   
  Por precaução em razão da segurança, o Rastreamento do SQL omite do rastreamento, automaticamente, toda informação dos procedimentos armazenados relacionados que afetem senhas. Este mecanismo de segurança não é configurável e está sempre em vigor. Ele impede os usuários que detêm permissões para rastrear toda a atividade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de capturar senhas.  
   

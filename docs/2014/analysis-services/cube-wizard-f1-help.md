@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Wizard
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb555a9db8130b7c02e12e89ba40cdf8b79a0d19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9389b01e0304a84ed3b103ef415d4f046bfc843
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321286"
 ---
 # <a name="cube-wizard-f1-help"></a>Ajuda F1 do Assistente para Cubos
   Use o Assistente para Cubos para criar um cubo para um projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -34,11 +34,11 @@ ms.locfileid: "36007390"
   
 -   [Selecione o método de criação de &#40;Assistente de cubo&#41;](select-creation-method-cube-wizard.md)  
   
--   [Selecione um modo de exibição de fonte de dados &#40;Assistente de cubo&#41;](select-a-data-source-view-cube-wizard.md)  
+-   [Selecione uma exibição da fonte de dados &#40;Assistente de cubo&#41;](select-a-data-source-view-cube-wizard.md)  
   
--   [Selecionar grupo de medidas tabelas &#40;Assistente de cubo&#41;](select-measure-group-tables-cube-wizard.md)  
+-   [Tabelas de selecionar o grupo de medidas &#40;Assistente de cubo&#41;](select-measure-group-tables-cube-wizard.md)  
   
--   [Selecionar medidas &#40;Assistente de cubo&#41;](select-measures-cube-wizard.md)  
+-   [Selecione as medidas &#40;Assistente de cubo&#41;](select-measures-cube-wizard.md)  
   
 -   [Definir novas medidas &#40;Assistente de cubo&#41;](define-new-measures-cube-wizard.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36007390"
   
 -   [Selecionar chaves de dimensão ausentes &#40;Assistente de cubo&#41;](select-missing-dimension-keys-cube-wizard.md)  
   
--   [Concluindo o assistente &#40;Assistente de cubo&#41;](completing-the-wizard-cube-wizard.md)  
+-   [Concluindo o Assistente de &#40;Assistente de cubo&#41;](completing-the-wizard-cube-wizard.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de cubo &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d64a01cf9df6865790b39510ad5c6222d8d6fd87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a51bf291ebdf7904fbce836cfaddb3cceb5e17cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172937"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Apagar uma regra de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma regra de negócio quando não desejar removê-la permanentemente, nem validar dados em relação a ela.  
@@ -43,15 +43,15 @@ ms.locfileid: "36119545"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Do **tipo de membro** , selecione um tipo de membro.  
+5.  Dos **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
-7.  Na grade, na linha da regra de negócio, marque a caixa de seleção no **excluir** coluna. O valor de **Status** coluna é **exclusão pendente**.  
+7.  Na grade, na linha da regra de negócio, selecione a caixa de seleção de **excluir** coluna. O valor de **Status** coluna é **exclusão pendente**.  
   
 8.  Clique em **Publicar regras de negócio**.  
   
-9. Na caixa de diálogo de confirmação, clique em **OK**. O valor de **Status** coluna é **excluídas**.  
+9. Na caixa de diálogo de confirmação, clique em **OK**. O valor de **Status** coluna é **excluídos**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   

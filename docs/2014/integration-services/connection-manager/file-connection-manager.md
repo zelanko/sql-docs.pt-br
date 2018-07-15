@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,19 +20,19 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9f02969042ec839a708045143b748890d25c1de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33e9bb0dbb4030d09be6db95dda2a33245cd7288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252688"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
   Um gerenciador de conexões de Arquivo permite que um pacote faça referência a um arquivo ou pasta existente ou crie um arquivo ou pasta em tempo de execução. Por exemplo, você pode fazer referência a um arquivo do Excel. Alguns componentes em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam as informações nos arquivos para executar seu trabalho. Por exemplo, uma tarefa Executar SQL pode fazer referência a um arquivo que contém as instruções SQL que a tarefa executa. Outros componentes executam operações em arquivos. Por exemplo, a tarefa Sistema de Arquivos pode fazer referência a um arquivo para copiá-lo para um novo local.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Tipos de uso do gerenciador de conexões de arquivos  
- O `FileUsageType` propriedade do Gerenciador de conexão de arquivo Especifica como a conexão de arquivo é usado. O gerenciador de conexões de arquivos pode criar tanto um arquivo quanto uma pasta e utilizar um arquivo ou uma pasta existente.  
+ O `FileUsageType` propriedade do Gerenciador de conexão de arquivos Especifica como a conexão de arquivo é usado. O gerenciador de conexões de arquivos pode criar tanto um arquivo quanto uma pasta e utilizar um arquivo ou uma pasta existente.  
   
  A tabela a seguir lista os valores de `FileUsageType`.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36118186"
  O gerenciador de conexões de arquivos pode fazer referência a apenas um arquivo ou a uma pasta. Para consultar vários arquivos ou pastas, utilize um gerenciador de conexões para vários arquivos em vez de um gerenciador de conexões de arquivos. Para obter mais informações, consulte [Multiple Files Connection Manager](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Configuração do gerenciador de conexões de arquivo  
- Quando você adicionar um Gerenciador de conexão de arquivo a um pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo em tempo de execução, define as propriedades de conexão de arquivo e adiciona a conexão de arquivo para o `Connections` coleção do pacote.  
+ Quando você adiciona um Gerenciador de conexão do arquivo a um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de arquivo em tempo de execução, define as propriedades de conexão de arquivo e adiciona a conexão de arquivo para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `FILE`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `FILE`.  
   
  Você pode configurar um gerenciador de conexões de arquivos dos seguintes modos:  
   

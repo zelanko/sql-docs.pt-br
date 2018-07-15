@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 caps.latest.revision: 59
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8704b41e27a392225989e10876b27b5dbd402f42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 011b4ee289a55f150d7a800a26db2f9f7f954ad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326226"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Assinar um pacote por meio de um certificado digital
   Este tópico descreve como assinar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com um certificado digital. Você pode usar uma assinatura digital, junto com outras configurações, para evitar o carregamento e a execução de um pacote inválido.  
@@ -71,6 +71,6 @@ ms.locfileid: "36007288"
      Embora o pacote tenha sido assinado, é necessário configurar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para verificar a assinatura digital antes de carregar o pacote. Para obter mais informações, consulte [Identificar a origem de pacotes com assinaturas digitais](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de segurança &#40;do Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

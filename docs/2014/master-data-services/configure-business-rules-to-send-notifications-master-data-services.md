@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326126"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure regras de negócios para enviar notificações quando você desejar notificar os usuários sobre alterações de valor de atributo.  
@@ -51,7 +51,7 @@ ms.locfileid: "36008196"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Do **tipo de membro** , selecione um tipo de membro.  
+5.  Dos **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36008196"
   
     -   [Validar membros específicos em relação a regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Validar uma versão em relação a regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Validar uma versão em relação às regras de negócios &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   Configure o protocolo de email da seguinte maneira:  
   

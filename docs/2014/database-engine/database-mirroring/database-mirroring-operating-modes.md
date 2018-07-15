@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176513"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de operação de espelhamento de banco de dados
   Este tópico descreve os modos de operação síncronos e assíncronos de sessões de espelhamento de banco de dados.  
@@ -46,11 +45,11 @@ ms.locfileid: "36119787"
  Witness (testemunha)  
  Para uso apenas com o modo de alta segurança, uma instância opcional do SQL Server que permite ao servidor espelho reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros de failover, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
   
-##  <a name="VisualElement"></a> Banco de dados assíncrono (modo de alto desempenho) do espelhamento  
+##  <a name="VisualElement"></a> Banco de dados assíncrono (modo de alto desempenho) de espelhamento  
  Esta seção descreve como funciona o espelhamento de banco de dados assíncrono, quando é apropriado usar o modo de alto desempenho e como responder se o servidor principal falhar.  
   
 > [!NOTE]  
->  A maioria das edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] só dão suporte ao espelhamento de banco de dados síncrono ("somente segurança completa"). Para obter informações sobre quais edições totalmente dão suporte ao espelhamento de banco de dados, consulte "Alta disponibilidade (AlwaysOn)" em [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  A maioria das edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] só dão suporte ao espelhamento de banco de dados síncrono ("somente segurança completa"). Para obter informações sobre as edições que dão suporte total a espelhamento de banco de dados, consulte "Alta disponibilidade (AlwaysOn)" em [recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Quando a segurança de transação está definida como OFF, a sessão de espelhamento de banco de dados opera de maneira assíncrona. A operação assíncrona dá suporte apenas a um modo de operação — modo de alto desempenho. Esse modo aumenta desempenho às custas de alta disponibilidade. O modo de alto desempenho usa apenas o servidor principal e o servidor espelho. Problemas no servidor espelho nunca causam impacto no servidor principal. Com a perda do servidor principal, o banco de dados espelho fica marcado como DESCONECTADO, mas está disponível em espera passiva.  
   

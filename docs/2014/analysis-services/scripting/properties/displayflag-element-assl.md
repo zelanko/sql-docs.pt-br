@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261452"
 ---
 # <a name="displayflag-element-assl"></a>Elemento DisplayFlag (ASSL)
   Contém uma dica somente leitura que indica se os componentes de interface do usuário devem exibir associado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
@@ -62,11 +62,11 @@ ms.locfileid: "36118419"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento correspondente para o pai do `DisplayFlag` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ O elemento que corresponde ao pai de `DisplayFlag` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Elemento Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Elemento de servidor &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

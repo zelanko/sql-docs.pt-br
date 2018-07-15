@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
 - named sets [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a05b343150cf72a760ba5eb9de24651f0f5db9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f990def60c377ca84b5dde593470634f3927b496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297456"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Criando conjuntos nomeados em MDX (MDX)
   Uma expressão de conjunto pode ser uma declaração longa e complexa e, portanto, difícil de seguir ou entender. Ou ainda, a expressão de conjunto pode ser usada com tanta frequência que sua definição repetidamente passa a ser penosa. Para ajudar a facilitar o trabalho com expressões longas, complexas e geralmente usadas, as expressões MDX permitem que você trabalhe nelas como um *conjunto nomeado*.  
@@ -46,6 +46,6 @@ ms.locfileid: "36008500"
 ## <a name="see-also"></a>Consulte também  
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Instrução CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

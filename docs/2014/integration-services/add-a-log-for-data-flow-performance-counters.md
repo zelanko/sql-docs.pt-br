@@ -1,5 +1,5 @@
 ---
-title: Adicione um Log para contadores de desempenho de fluxo de dados | Microsoft Docs
+title: Adicionar um Log para contadores de desempenho de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Integration Services]
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e659cfb46c514a13e090e244ee56c4bbc7ce8e61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ffdb95c84fb905fee3092f9192f0433ebb96abc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248776"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Adicionar um log para contadores de desempenho de fluxo de dados
   Este procedimento descreve como adicionar um log para os contadores de desempenho fornecidos pelo mecanismo de fluxo de dados.  
@@ -53,7 +53,7 @@ ms.locfileid: "36116636"
   
     -   Selecione **Selecionar contadores na lista** e selecione o contador de desempenho a ser usado.  
   
-9. Clique em **Adicionar**.  
+9.  Clique em **Adicionar**.  
   
 10. Clique em **Fechar**.  
   
