@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcd9e1d81560b5175765c4aa77d1f921a258addd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306486"
 ---
 # <a name="unknownmembername-element-assl"></a>Elemento UnknownMemberName (ASSL)
   Contém a legenda, no idioma padrão da dimensão, para o membro desconhecido da dimensão.  
@@ -64,7 +64,7 @@ ms.locfileid: "36120007"
 ## <a name="remarks"></a>Remarks  
  O valor do elemento `UnknownMemberName` fornece a legenda usada para o membro desconhecido. O ID do membro do membro desconhecido é *Dimension*.UnknownMember, sendo que *Dimension* é o nome exclusivo da dimensão e não pode ser alterado.  
   
- O elemento que corresponde ao pai do `UnknownMemberName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `UnknownMemberName` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

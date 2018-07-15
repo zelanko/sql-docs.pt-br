@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202076"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -94,7 +94,7 @@ ms.locfileid: "36121777"
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras reservadas para MDX](/sql/mdx/mdx-reserved-words)   
- [Traduções &#40;do Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
+ [Traduções &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
  [Conformidade XML for Analysis &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
   
   

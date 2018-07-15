@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f55d446f8816ac140896dfb43b0e163f3f61314
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc5b1eda981bcd19f4f916ddb60dd511264075a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220046"
 ---
 # <a name="dbschemaname-element-assl"></a>Elemento DbSchemaName (ASSL)
   Contém o nome do esquema usado pelo elemento pai na tabela identificada pelo [DbTableName](name-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36011911"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `DbSchemaName` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.TableBinding> e <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Os elementos que correspondem aos pais de `DbSchemaName` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.TableBinding> e <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

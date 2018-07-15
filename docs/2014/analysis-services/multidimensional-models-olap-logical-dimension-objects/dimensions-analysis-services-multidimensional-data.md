@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe683915d9cacfa21bdd5f32533024da7a7ee34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48cba502e905c1f83503ac8955184116971316c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301146"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensões (Analysis Services – Dados Multidimensionais)
-  Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], dimensões são um componente fundamental dos cubos. As dimensões organizam dados com relação a uma área de interesse, como clientes, lojas ou funcionários, para usuários. As dimensões no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contêm atributos que correspondem às colunas nas tabelas de dimensões. Esses atributos aparecem como hierarquias de atributo e podem ser organizados em hierarquias definidas pelo usuário, ou podem ser definidos como hierarquias pai-filho com base em colunas na tabela de dimensões subjacente. As hierarquias são usadas para organizar medidas contidas em um cubo. Os tópicos a seguir fornecem uma visão geral de dimensões, atributos e hierarquias.  
+  Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], as dimensões são um componente fundamental dos cubos. As dimensões organizam dados com relação a uma área de interesse, como clientes, lojas ou funcionários, para usuários. As dimensões no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contêm atributos que correspondem às colunas nas tabelas de dimensões. Esses atributos aparecem como hierarquias de atributo e podem ser organizados em hierarquias definidas pelo usuário, ou podem ser definidos como hierarquias pai-filho com base em colunas na tabela de dimensões subjacente. As hierarquias são usadas para organizar medidas contidas em um cubo. Os tópicos a seguir fornecem uma visão geral de dimensões, atributos e hierarquias.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85c63d69b413239d9bbacc074b1f6f5f0d3b864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a13dcac8fd37e16e90888e904cc6f0ae3587c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310696"
 ---
 # <a name="attributerelationship-element-assl"></a>Elemento AttributeRelationship (ASSL)
   Fornece detalhes sobre a relação entre dois atributos.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
 - Data Transformation Services, support for
@@ -20,16 +20,16 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6a8de4f8b3b3864be9fdcb3884fecd25ab263372
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9a286ce00e5c84082a6ff0d1ac792e73fa7c59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209256"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Integration Services
-  Esta seção descreve as alterações entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve alterações no produto que são conhecidas por interromper ou alterar o comportamento de um aplicativo existente que inclua a funcionalidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Esta seção descreve as alterações entre as versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve alterações no produto que são conhecidas por interromper ou alterar o comportamento de um aplicativo existente que inclua a funcionalidade do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

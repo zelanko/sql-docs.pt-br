@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4969ceb840f6c3d80b4d0854d582e695c109806b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e8ba4b11509b73dfc1b529e89b612549de7308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321316"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Geral (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a página **Geral** da caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar o arquivo de backup e configurações gerais para usar ao restaurar um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "36118228"
  Se o arquivo de backup estiver criptografado, digite a senha usada para criptografar o arquivo de backup.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo banco de dados restaurar &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Restaurar a caixa de diálogo banco de dados &#40;Analysis Services - dados multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Partições &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

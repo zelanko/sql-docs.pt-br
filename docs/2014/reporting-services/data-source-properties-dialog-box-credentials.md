@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 caps.latest.revision: 38
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dc168e280f04f43e917c4230e479bd056237e779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8ef67e673e6ba5fe21180c33c8dd501f1baa0c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280752"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Caixa de diálogo Propriedades da Fonte de Dados, Credenciais
   Selecione **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados** para exibir e modificar as credenciais a fim de estabelecer conexão com a fonte de dados no relatório. As credenciais que você fornecer serão usadas para acessar a fonte de dados e para colocar em cache uma cópia dos dados para a visualização dos relatórios. Para obter mais informações sobre como os dados de visualização são armazenados em cache, consulte [Visualizando relatórios](reports/previewing-reports.md). Para obter mais informações sobre credenciais, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="options"></a>Opções  
- **Usar autenticação do Windows (segurança integrada)**  
+ **Usar a autenticação do Windows (segurança integrada)**  
  Selecione esta opção para usar a Autenticação do Windows.  
   
  **Usar este nome de usuário e senha**  
@@ -40,7 +40,7 @@ ms.locfileid: "36120082"
  **Senha**  
  Digite uma senha para fazer logon na fonte de dados.  
   
- **Solicitar credenciais**  
+ **Pedir credenciais**  
  Selecione esta opção para solicitar as credenciais quando o relatório for executado.  
   
  **Insira a cadeia de caracteres de prompt**  

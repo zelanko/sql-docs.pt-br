@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224816"
 ---
 # <a name="contents-page-report-manager"></a>Página Conteúdo (Gerenciador de Relatórios)
   Use a página Conteúdo para exibir o conteúdo da pasta atual, selecionar os itens a serem exibidos ou navegar para outras pastas. Essa página abre quando você seleciona uma pasta. Ela é também a home page do Gerenciador de Relatórios.  

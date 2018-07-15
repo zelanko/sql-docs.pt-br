@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325106"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece algoritmos de regressão que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
@@ -51,11 +51,11 @@ ms.locfileid: "36120472"
  A empresa planeja, a cada trimestre, atualizar o modelo com dados recentes de vendas bem como as previsões relativas às tendências recentes do modelo. Para corrigir lojas que não efetuam atualizações de dados de vendas de modo preciso ou consistente, eles criarão um modelo de previsão geral e usarão isso para criar previsões para todas as regiões.  
   
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
- Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MST usava um único algoritmo ARTXP. O algoritmo ARTXP foi otimizado para previsões a curto prazo e, portanto, previu o próximo valor provável em uma série. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS usa o algoritmo ARTXP e ARIMA, um segundo algoritmo. O algoritmo ARIMA foi otimizado para previsão a longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
+ Na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MST usava um único algoritmo ARTXP. O algoritmo ARTXP foi otimizado para previsões a curto prazo e, portanto, previu o próximo valor provável em uma série. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series usa tanto o algoritmo ARTXP como um segundo algoritmo ARIMA. O algoritmo ARIMA foi otimizado para previsão a longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
   
  Por padrão, o algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) usa uma combinação de algoritmos quando analisa padrões e realiza previsões. O algoritmo treina dois modelos separados nos mesmos dados: um modelo usa o algoritmo ARTXP e um modelo usa o algoritmo ARIMA. O algoritmo combina os resultados dos dois modelos para produzir a melhor previsão para um número variável de frações de tempo. Como o ARTXP é melhor para previsões de curto prazo, ele é mais ponderado no início de uma série de previsões. No entanto, como as frações de tempo que você está prevendo estão mais adiante no futuro, o ARIMA é mais ponderado.  
   
- Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] padrão, você pode especificar que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso do algoritmo de série temporal uma das seguintes configurações:  
+ Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, você pode especificar que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso de algoritmo de série temporal, uma das seguintes configurações:  
   
 -   Use o ARTXP somente para previsão a curto prazo.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36120472"
   
 -   Use a combinação padrão dos dois algoritmos.  
   
- A partir do [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], você pode personalizar como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series combina os modelos para previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
+ A partir [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], você pode personalizar como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series combina os modelos para previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
   
 -   Somente o ARTXP é usado sempre para efetuar as primeiras previsões.  
   
@@ -157,10 +157,10 @@ ms.locfileid: "36120472"
 -   Dá suporte ao detalhamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Procurar um modelo usando o visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Referência técnica do algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Conteúdo do modelo para modelos de série temporal mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

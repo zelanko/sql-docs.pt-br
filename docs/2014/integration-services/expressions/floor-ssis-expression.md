@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
@@ -16,13 +16,13 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cae43e01a262258fa2fce824797b3d20682c3829
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb7c221ddca8bd07b0e75b616267f8efaaa8427e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199606"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (Expressão SSIS)
   Retorna o maior inteiro que é menor que ou igual a uma expressão numérica.  
@@ -66,7 +66,7 @@ FLOOR(0.00)
  Retorna 0.00  
   
 ## <a name="see-also"></a>Consulte também  
- [CEILING &#40;expressão SSIS&#41;](ceiling-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [CEILING &#40;expressão do SSIS&#41;](ceiling-ssis-expression.md)   
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

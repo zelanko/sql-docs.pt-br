@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosedeployment.f1
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
 caps.latest.revision: 24
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 22d2d57b0f2d7558756588867bc51bcfc4d00415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2295bc04bf82d588a9b9ec08534bd4c60828cda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311236"
 ---
 # <a name="choose-the-deployment-location"></a>Escolher o local de implantação
   Use esta página do Assistente de Relatório para definir o servidor de implantação e a pasta para o projeto de servidor de relatório.  
   
 ## <a name="options"></a>Opções  
- **servidor de relatório**  
+ **Servidor de relatório**  
  Digite a URL do diretório virtual do servidor de relatório, por exemplo, http://localhost/reportserver. Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios. Por padrão, o servidor de relatório é instalado com um diretório virtual chamado reportserver.  
   
  **Pasta de implantação**  

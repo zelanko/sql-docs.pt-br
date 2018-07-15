@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82ef66f332173ad6f0369be32f2bc09b44ef4941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fd74b1e946ba55c2c647368317b6d872189523a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325116"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Perspectiva (guia Perspectivas, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Detalhes da Perspectiva** da guia **Perspectivas** no Designer de Cubo para gerenciar metadados disponíveis para usuários que consultam a perspectiva selecionada.  

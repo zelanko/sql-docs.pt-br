@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades (SSAS) da exibição da fonte de dados | Microsoft Docs
+title: Caixa de diálogo Propriedades do modo de exibição (SSAS) da fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceviewproperties.f1
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dcffe8ea685edcb0d1494f3860e7f7e01e6aaaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25afba8b1e342595fd4777c9122aa474fada8f84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301206"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades da Exibição da Fonte de Dados (SSAS)
   Use a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma exibição de fonte de dados em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** clicando com o botão direito do mouse em uma fonte de dados no **Explorador de Objetos** e selecionando **Propriedades**.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272012"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Principais conceitos em MDX (Analysis Services)
   Antes de usar MDX (Multidimensional Expressions) para consultar dados multidimensionais ou criar expressões MDX em um cubo, é importante entender os conceitos e a terminologia multidimensional.  
@@ -95,13 +95,13 @@ ms.locfileid: "36011009"
   
 |||  
 |-|-|  
-|![Tabela dinâmica com hierarquia balanceada destacada](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tabela dinâmica com hierarquia balanceada destacada")|Uma **hierarquia equilibrada** é uma hierarquia em que o mesmo número de níveis existe entre o nível superior e qualquer membro folha.<br /><br /> Uma **hierarquia natural** é aquela que surge naturalmente dos dados subjacentes. Exemplos comuns são País-Região-Estado, Ano-Mês-Dia ou Categoria-Subcategoria-Modelo, onde cada nível subordinado flui previsivelmente do pai.<br /><br /> Em um modelo multidimensional, a maioria das hierarquias são equilibradas e muitas também são naturais.<br /><br /> Outro relacionados ao termo de modelagem é um `user-defined hierarchy`, geralmente usado em contraste com hierarquias de atributo. Isso significa apenas uma hierarquia criada pelo desenvolvedor de BI, em contraposição a hierarquias de atributo geradas automaticamente pelo Analysis Services ao definir um atributo.|  
+|![Tabela dinâmica com hierarquia balanceada destacada](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "tabela dinâmica com hierarquia balanceada destacada")|Uma **hierarquia equilibrada** é uma hierarquia em que o mesmo número de níveis existe entre o nível superior e qualquer membro folha.<br /><br /> Uma **hierarquia natural** é aquela que surge naturalmente dos dados subjacentes. Exemplos comuns são País-Região-Estado, Ano-Mês-Dia ou Categoria-Subcategoria-Modelo, onde cada nível subordinado flui previsivelmente do pai.<br /><br /> Em um modelo multidimensional, a maioria das hierarquias são equilibradas e muitas também são naturais.<br /><br /> Outro relacionados ao termo de modelagem é uma `user-defined hierarchy`, geralmente usado em contraste com hierarquias de atributo. Isso significa apenas uma hierarquia criada pelo desenvolvedor de BI, em contraposição a hierarquias de atributo geradas automaticamente pelo Analysis Services ao definir um atributo.|  
   
  **Hierarquias desbalanceadas**  
   
 |||  
 |-|-|  
-|![Tabela dinâmica com Hierarquia desbalanceada destacada](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "tabela dinâmica com Hierarquia desbalanceada destacada")|Uma **hierarquia imperfeita** ou **hierarquia desbalanceada** é uma hierarquia em que existem diferentes números de níveis entre o nível superior e os membros folha. Novamente, esta é uma hierarquia criada pelo desenvolvedor de BI, mas neste caso existem lacunas nos dados.<br /><br /> No modelo de exemplo do AdventureWorks, o Território de Vendas demonstra uma hierarquia irregular, pois os Estados Unidos possuem um nível adicional (Regiões) que não existe para os demais países deste exemplo.<br /><br /> Hierarquias irregulares são um desafio para os desenvolvedores de BI se o aplicativo cliente não puder lidar com elas de maneira elegante. No modelo do Analysis Services, você pode criar uma **hierarquia pai-filho** que define explicitamente um relacionamento entre dados de múltiplos níveis, eliminando qualquer ambiguidade quanto a como um nível se relaciona com o próximo. Consulte [hierarquia pai-filho](parent-child-dimension.md) para obter detalhes.|  
+|![Tabela dinâmica com Hierarquia desbalanceada destacada](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "tabela dinâmica com Hierarquia desbalanceada destacada")|Uma **hierarquia imperfeita** ou **hierarquia desbalanceada** é uma hierarquia em que existem diferentes números de níveis entre o nível superior e os membros folha. Novamente, esta é uma hierarquia criada pelo desenvolvedor de BI, mas neste caso existem lacunas nos dados.<br /><br /> No modelo de exemplo do AdventureWorks, o Território de Vendas demonstra uma hierarquia irregular, pois os Estados Unidos possuem um nível adicional (Regiões) que não existe para os demais países deste exemplo.<br /><br /> Hierarquias irregulares são um desafio para os desenvolvedores de BI se o aplicativo cliente não puder lidar com elas de maneira elegante. No modelo do Analysis Services, você pode criar uma **hierarquia pai-filho** que define explicitamente um relacionamento entre dados de múltiplos níveis, eliminando qualquer ambiguidade quanto a como um nível se relaciona com o próximo. Ver [hierarquia pai-filho](parent-child-dimension.md) para obter detalhes.|  
   
 ## <a name="key-attributes"></a>Atributos de chave  
  Os modelos são uma colação de objetos relacionados que contam com chaves e índices para fazer associações. O mesmo vale para os modelos do Analysis Services. Para cada dimensão (lembre-se que é equivalente a uma tabela em um modelo relacional) há um atributo de chave. O **atributo de chave** é usado em relações de chave estrangeira com a tabela de fatos (grupo de medidas). Todos os atributos que não são de chave na dimensão são vinculados (direta ou indiretamente) ao atributo de chave.  
@@ -144,7 +144,7 @@ ms.locfileid: "36011009"
   
 -   [A consulta MDX básica &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
   
--   [O Script básico de MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
+-   [O Script básico MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
 -   [Modelagem multidimensional &#40;Tutorial da Adventure Works&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
@@ -154,9 +154,9 @@ ms.locfileid: "36011009"
  [Autoexists](mdx/autoexists.md)   
  [Trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](mdx/visual-totals-and-non-visual-totals.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
- [Conceitos básicos de script MDX &#40;do Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Referência de linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Conceitos básicos de script MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

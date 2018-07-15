@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbb4a8e9ea832764b16530cb0d63c3b8d28a7bd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 68ecb484c1ee7a6dc43b28c1079326a6cb80ad6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228226"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Tópicos de instrução sobre o gerenciamento de colunas text e image (ODBC)
   O driver ODBC do Microsoft® SQL Server™ dá suporte ao uso de parâmetros de texto e imagem e à recuperação de dados de colunas text, ntext e image nos conjuntos de resultados.  

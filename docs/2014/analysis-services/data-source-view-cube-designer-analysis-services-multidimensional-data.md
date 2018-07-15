@@ -1,5 +1,5 @@
 ---
-title: Modo de exibição (guia estrutura do cubo, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Modo de exibição (guia estrutura do cubo, Designer de cubo) da fonte de dados (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185303"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Exibição da Fonte de Dados** para exibir tabelas e colunas da exibição da fonte de dados associada ao cubo selecionado. Esse painel é usado para criar grupos de medidas e medidas, arrastando colunas do painel **Exibição da Fonte de Dados** para o painel **Medidas** .  
@@ -72,7 +72,7 @@ ms.locfileid: "36013233"
  **Editar exibição da fonte de dados**  
  Exibe o Designer da Exibição da Fonte de Dados associada ao objeto. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Mostrar na exibição da fonte de dados**  
+ **Mostrar exibição de fonte de dados em**  
  Selecione uma das seguintes opções para ativar/desativar a exibição do painel **Exibição da Fonte de Dados** nos seguintes modos:  
   
 -   Diagrama  

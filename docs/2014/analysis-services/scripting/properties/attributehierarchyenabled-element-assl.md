@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3433ad50f1a8d769eec53090087683324f8a9383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250854"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>Elemento AttributeHierarchyEnabled (ASSL)
   Determina se uma hierarquia de atributo está habilitada para o atributo.  
@@ -64,7 +64,7 @@ ms.locfileid: "36011231"
 ## <a name="remarks"></a>Remarks  
  O `AttributeHierarchyEnabled` elemento determina se uma hierarquia de atributo é gerada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para o atributo. Se a hierarquia de atributo não for habilitada, o atributo não poderá ser usado em uma hierarquia definida pelo usuário, nem poderá ser mencionada nas instruções da linguagem MDX.  
   
- Os elementos que correspondem aos pais de `AttributeHierarchyEnabled` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeAttribute> e <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Os elementos que correspondem aos pais de `AttributeHierarchyEnabled` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeAttribute> e <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento AttributeHierarchyVisible &#40;ASSL&#41;](visible-element-assl.md)   

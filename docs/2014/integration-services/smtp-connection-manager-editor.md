@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d2215a062328e08c5c7ebc4f1e59b9ade164053b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c67233452d294a6bc0f6f106a59678827ef17b3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235206"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMTP
   Use a caixa de diálogo **Editor do Gerenciador de Conexões SMTP** para especificar um servidor SMTP.  
@@ -47,7 +47,7 @@ ms.locfileid: "36121973"
 >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
   
 > [!NOTE]  
->  Ao usar o Microsoft Exchange como servidor SMTP, talvez seja necessário definir **usar autenticação do Windows** para `True`. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
+>  Ao usar o Microsoft Exchange como servidor SMTP, talvez você precise definir **usar autenticação do Windows** para `True`. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
   
  **Habilitar SSL (Secure Sockets Layer)**  
  Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  

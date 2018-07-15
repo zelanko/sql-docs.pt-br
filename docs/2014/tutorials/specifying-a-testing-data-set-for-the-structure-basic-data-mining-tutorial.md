@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2023672b21e8ffde191b400329031895d200e1ea
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09822e47f6fb8e1a4b91832a2b47492ae1d8c2b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198366"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificando um conjunto de dados de teste para a estrutura (Tutorial de mineração de dados básico)
   Nas últimas telas do Assistente de Mineração de Dados, você dividirá seus dados entre um conjunto de teste e um conjunto de treinamento. Em seguida, dará um nome à sua estrutura e habilitará o detalhamento do modelo.  
   
 ## <a name="specifying-a-testing-set"></a>Especificando um conjunto de teste  
- A separação dos dados em conjuntos de treinamento e de teste na criação de uma estrutura de mineração possibilita a avaliação fácil da precisão dos modelos de mineração criados posteriormente. Para obter mais informações sobre conjuntos de teste, consulte [treinamento e conjuntos de dados de teste](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
+ A separação dos dados em conjuntos de treinamento e de teste na criação de uma estrutura de mineração possibilita a avaliação fácil da precisão dos modelos de mineração criados posteriormente. Para obter mais informações sobre conjuntos de teste, consulte [conjuntos de dados de teste e treinamento](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### <a name="to-specify-the-testing-set"></a>Para especificar o conjunto de teste  
   
 1.  Sobre o **criar conjunto de testes** página, para **porcentagem de dados de teste**, deixe o valor padrão de `30`.  
   
-2.  Para **número máximo de casos no conjunto de dados de teste**, tipo `1000`.  
+2.  Para **o número máximo de casos no conjunto de dados de teste**, tipo `1000`.  
   
 3.  Clique em **Avançar**.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "36312624"
   
 1.  Sobre o **Concluindo o assistente** página, na **nome da estrutura de mineração**, tipo `Targeted Mailing`.  
   
-2.  Em **nome do modelo de mineração**, tipo `TM_Decision_Tree`.  
+2.  Na **nome do modelo de mineração**, tipo `TM_Decision_Tree`.  
   
-3.  Selecione o **Permitir drill-through** caixa de seleção.  
+3.  Selecione o **permitir detalhamento** caixa de seleção.  
   
-4.  Examine o **visualização** painel. Observe que somente as colunas selecionadas como **chave**, **entrada** ou **previsível** são mostradas. As outras colunas selecionadas (como AddressLine1, por exemplo) não são usadas para a criação do modelo, mas estarão disponíveis na estrutura subjacente e podem ser consultadas após o processamento e a implantação do modelo.  
+4.  Examine os **visualização** painel. Observe que somente as colunas selecionadas, como **chave**, **entrada** ou **previsível** são mostrados. As outras colunas selecionadas (como AddressLine1, por exemplo) não são usadas para a criação do modelo, mas estarão disponíveis na estrutura subjacente e podem ser consultadas após o processamento e a implantação do modelo.  
   
 5.  Clique em **Concluir**.  
   

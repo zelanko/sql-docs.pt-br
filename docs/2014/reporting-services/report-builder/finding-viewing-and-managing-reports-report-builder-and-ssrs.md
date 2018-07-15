@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 720bdfa021568842917385205cbf4bfb711708e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181713"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode procurar pastas em um servidor de relatório ou site do SharePoint para encontrar relatórios, fontes de dados compartilhadas, modelos e outros itens de relatório relacionados e navegar no computador para localizar relatórios locais. Para facilitar a localização de relatórios, o Construtor de Relatórios mantém uma lista de servidores e sites usados recentemente e fornece acesso direto às pastas Área de Trabalho, Meus Documentos e Meu Computador no sistema de arquivos do computador.  
@@ -95,7 +95,7 @@ Barra de ferramentas do relatório
   
 |Opção|Resultado|  
 |------------|------------|  
-|Botão**Atualizar** na janela do navegador|Exibe o relatório armazenado no cache de sessão. Um cache de sessão é criado quando um usuário abre um relatório. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões de navegador para manter uma experiência de exibição consistente enquanto um relatório é aberto.|  
+|Botão**Atualizar** na janela do navegador|Exibe o relatório armazenado no cache de sessão. Um cache de sessão é criado quando um usuário abre um relatório. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões do navegador para manter uma experiência de exibição consistente enquanto um relatório é aberto.|  
 |![Botão Atualizar do navegador na barra de ferramentas de relatório](../media/htmlviewer-refresh.GIF "Botão Atualizar do navegador na barra de ferramentas de relatório")|Quando você clica no botão **Atualizar** na barra de ferramentas do relatório, o servidor de relatório executa novamente a consulta e atualiza os dados de relatório caso o relatório execute sob demanda. Se o relatório for armazenado em cache ou for um instantâneo, **Atualizar** será exibido no relatório armazenado no banco de dados do servidor de relatório.|  
 |Combinação de teclado CTRL+F5|Produz o mesmo resultado que clicar no botão **Atualizar** na barra de ferramentas do relatório.|  
   
@@ -137,7 +137,7 @@ Barra de ferramentas do relatório
 
   
 ##  <a name="AboutUserSessions"></a> Sobre as sessões de usuário  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões de navegador para manter a consistência enquanto exibe relatórios. As sessões se baseiam em conexões do navegador, não em usuários autenticados. Uma sessão nova é criada toda vez que um usuário abre um relatório em uma nova janela de navegador. Assim que uma sessão de navegador é estabelecida, você continua a trabalhar com a versão do relatório que foi aberta quando a sessão começou, mesmo que o relatório seja modificado no servidor de relatório. Por exemplo, se você abrir um relatório às 23 horas e um autor de relatório publicar novamente o mesmo relatório às 23h01, sua sessão conterá a versão que você abriu para a duração da sessão.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa sessões do navegador para manter a consistência enquanto exibe relatórios. As sessões se baseiam em conexões do navegador, não em usuários autenticados. Uma sessão nova é criada toda vez que um usuário abre um relatório em uma nova janela de navegador. Assim que uma sessão de navegador é estabelecida, você continua a trabalhar com a versão do relatório que foi aberta quando a sessão começou, mesmo que o relatório seja modificado no servidor de relatório. Por exemplo, se você abrir um relatório às 23 horas e um autor de relatório publicar novamente o mesmo relatório às 23h01, sua sessão conterá a versão que você abriu para a duração da sessão.  
   
  Se você atualizar um relatório na mesma sessão usando o botão **Atualizar** do navegador, a versão da sessão original do relatório será exibida. Se você atualizar um relatório sob demanda usando o botão **Atualizar** na barra de ferramentas do relatório, o relatório será executado novamente e novos dados, se houver, serão exibidos.  
   
@@ -148,16 +148,16 @@ Barra de ferramentas do relatório
 ##  <a name="InThisSection"></a> Nesta seção  
  Os tópicos a seguir fornecem informações adicionais sobre como exibir e gerenciar relatórios.  
   
- [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;SSRS e construtor de relatórios&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;relatórios e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Descreve como usar o Gerenciador de Relatórios para localizar, exibir e gerenciar seus relatórios,  
   
- [Localizando e exibindo relatórios com um navegador &#40;SSRS e construtor de relatórios&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [Localizando e exibindo relatórios com um navegador &#40;relatórios e SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Descreve como usar uma URL para localizar e exibir um relatório.  
   
- [Procurando relatórios e outros itens &#40;SSRS e construtor de relatórios&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [Procurando relatórios e outros itens de &#40;relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Descreve como usar a funcionalidade de pesquisa no Gerenciador de Relatórios para localizar itens no servidor de relatório.  
   
- [Usando Meus relatórios &#40;SSRS e construtor de relatórios&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [Usando Meus relatórios &#40;relatórios e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  Descreve como usar a pasta Meus Relatórios como um espaço de trabalho pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los.  
   
  [Visualizar relatórios no Construtor de Relatórios](previewing-reports-in-report-builder.md)  

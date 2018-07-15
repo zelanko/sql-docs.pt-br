@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310660fed0cf74f7fef6367bfee4484a76446d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1ee702aad8ef492cb4484590724b04b8d818f4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246286"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Método SetDisable (classe ServerNetworkProtocolIPAddress)
   Desabilita o endereço IP.  
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Um [ServerNetworkProtocolIPAdress classe] servernetworkprotocolipaddress-class.md) que representa um endereço IP para o protocolo de rede em uma instância do objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Um [classe ServerNetworkProtocolIPAdress] servernetworkprotocolipaddress-class.md) que representa um endereço IP para o protocolo de rede em uma instância do objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  

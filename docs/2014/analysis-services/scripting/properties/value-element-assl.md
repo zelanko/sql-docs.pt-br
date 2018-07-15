@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f350c559e78613df5e0a357b8f87dca073e1d248
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201986"
 ---
 # <a name="value-element-assl"></a>Elemento Value (ASSL)
   Contém o valor do elemento pai.  

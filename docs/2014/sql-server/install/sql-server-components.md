@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177113"
 ---
 # <a name="sql-server-components"></a>Componentes do SQL Server
-  Você pode executar o Assistente para análise de Supervisor de atualização em um computador local ou remoto que tenha [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. A primeira etapa da análise de pré-atualização é identificar o computador e os componentes que serão analisados.  
+  Você pode executar o Assistente de análise do Supervisor de atualização em um computador local ou remoto que tenha [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. A primeira etapa da análise de pré-atualização é identificar o computador e os componentes que serão analisados.  
   
 ## <a name="options"></a>Opções  
  **Nome do computador**  
@@ -66,7 +66,7 @@ ms.locfileid: "36119265"
 -   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é detectado se o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for localizado no registro do computador. Entretanto, o Supervisor de Atualização verifica somente os servidores de relatório locais.  
   
  **Componentes**  
- Selecione os componentes que serão analisados. Você pode clicar no **detectar** para selecionar todos os componentes instalados no computador. Uma marca de seleção aparecerá próximo aos componentes que forem detectados como instalados no computador. Você também pode selecionar manualmente os componentes que serão analisados. Basta selecionar ou desmarcar a caixa próxima a cada componente.  
+ Selecione os componentes que serão analisados. Você pode clicar na **detectar** botão para selecionar todos os componentes instalados no computador. Uma marca de seleção aparecerá próximo aos componentes que forem detectados como instalados no computador. Você também pode selecionar manualmente os componentes que serão analisados. Basta selecionar ou desmarcar a caixa próxima a cada componente.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

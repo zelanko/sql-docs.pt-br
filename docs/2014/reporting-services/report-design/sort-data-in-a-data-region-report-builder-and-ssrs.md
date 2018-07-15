@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dd3018910d3285ff833ef6e42ff8421e585669cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7acf39da6b68b353c4c659dd2ac641b1759f3ae4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216616"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Classificar dados em uma região de dados (Construtor de Relatórios e SSRS)
   Para alterar a ordem de classificação dos dados em uma região quando um relatório for executado pela primeira vez, defina a expressão de classificação na região de dados ou no grupo. Por padrão, a expressão de classificação de um grupo é definida automaticamente como o mesmo valor da expressão do grupo.  
@@ -45,7 +45,7 @@ ms.locfileid: "36019057"
   
 3.  Em cada expressão de classificação, siga estas etapas:  
   
-    1.  Clique em **Adicionar**.  
+    1.   Clique em **Adicionar**.  
   
     2.  Digite ou selecione uma expressão pela qual os dados são classificados.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36019057"
   
 4.  Em cada expressão de classificação, siga estas etapas:  
   
-    1.  Clique em **Adicionar**.  
+    1.   Clique em **Adicionar**.  
   
     2.  Digite ou selecione uma expressão pela qual os dados são classificados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36019057"
   
 3.  Em cada expressão de classificação, siga estas etapas:  
   
-    1.  Clique em **Adicionar**.  
+    1.   Clique em **Adicionar**.  
   
     2.  Selecione a expressão correspondente ao campo de agrupamento. É possível verificar a expressão do campo de agrupamento clicando em **Agrupamento**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36019057"
   
 3.  Em cada expressão de classificação, siga estas etapas:  
   
-    1.  Clique em **Adicionar**.  
+    1.   Clique em **Adicionar**.  
   
     2.  Selecione a expressão correspondente ao campo de dados. Na maior parte dos casos, trata-se de um valor agregado como, por exemplo, `=Sum(Fields!Quantity.Value)`.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36019057"
   
 7.  Em cada expressão de classificação, siga estas etapas:  
   
-    1.  Clique em **Adicionar**.  
+    1.   Clique em **Adicionar**.  
   
     2.  Selecione a expressão correspondente ao campo de agrupamento. É possível verificar a expressão do campo de agrupamento clicando em **Agrupamento**.  
   

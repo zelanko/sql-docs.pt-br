@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-synonyms
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e83afab22daea5314947baf3edbf5b786a58f991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8bfd08ba265fb901c6a8225b3df451c7b3617731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284632"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
   Um sinônimo é um objeto de banco de dados que atende aos seguintes propósitos:  
@@ -116,7 +114,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Para obter mais informações sobre funções associadas a esquema, veja [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Obtendo informações sobre sinônimos  
- A exibição do catálogo sys.synonyms contém uma entrada para cada sinônimo em um determinado banco de dados. Essa exibição do catálogo expõe metadados de sinônimos, como o nome do sinônimo e o nome do objeto base. Para obter mais informações sobre o `sys.synonyms` exibição de catálogo, consulte [synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ A exibição do catálogo sys.synonyms contém uma entrada para cada sinônimo em um determinado banco de dados. Essa exibição do catálogo expõe metadados de sinônimos, como o nome do sinônimo e o nome do objeto base. Para obter mais informações sobre o `sys.synonyms` exibição de catálogo, consulte [sys. synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Usando propriedades estendidas é possível adicionar texto descritivo ou instrucional, máscaras de entrada e regras de formatação como propriedades de um sinônimo. Como a propriedade é armazenada em um banco de dados, todos os aplicativos que leem a propriedade podem avaliar o objeto da mesma maneira. Para obter mais informações, veja [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

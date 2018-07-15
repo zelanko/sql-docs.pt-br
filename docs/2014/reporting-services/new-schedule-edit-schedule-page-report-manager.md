@@ -1,5 +1,5 @@
 ---
-title: 'Nova agenda: Editar agenda (Gerenciador de relatórios) da página | Microsoft Docs'
+title: 'Nova agenda: Editar agenda a página (Gerenciador de relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262002"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nova agenda: Editar página de agenda (Gerenciador de relatórios)
   Use a página Nova Agenda / Editar Agenda para criar uma agenda para um relatório. As agendas são usadas com assinaturas para atualizar relatórios armazenados em cache e criar instantâneos como itens autônomos ou em histórico de relatório.  
@@ -82,7 +82,7 @@ ms.locfileid: "36011730"
   
 -   **Hora** define uma agenda que é executada a intervalos de hora em hora. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado.  
   
--   **Dia** define uma agenda que é executada nos dias que você seleciona, em uma hora e minuto específicos. Você pode especificar dias dos seguintes modos: cada \< *dia*>, cada dia da semana e cada \< *número*> dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+-   **Dia** define uma agenda que é executada nos dias que você seleciona, em uma hora e minuto específicos. Você pode especificar dias das seguintes maneiras: cada \< *dia*>, cada dia da semana e cada \< *número*> dias. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
 -   **Semana** define uma agenda que é executada a intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser uma semana completa (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
   

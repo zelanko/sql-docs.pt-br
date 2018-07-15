@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
 - threads [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6a6225c80140d293fb505a5b1206a774b715d6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303026"
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  
@@ -77,7 +77,7 @@ ms.locfileid: "36019703"
 -   `Process` é para trabalhos duração mais longa armazenamento mecanismo, incluindo agregações, indexação e operações de confirmação. O modo de armazenamento ROLAP também usa threads do pool de threads de processamento.  
   
 > [!NOTE]  
->  Embora o Msmdsrv.ini tenha as configurações de pool de threads `VertiPaq` seção, `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` e `ThreadPool` \\ `CPUs` são propositadamente não documentados. Essas propriedades estão no momento inoperantes e são reservadas para uso futuro.  
+>  Embora o msmdsrv. ini tenha as configurações do pool de threads na `VertiPaq` seção, `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` e `ThreadPool` \\ `CPUs` são propositadamente não documentados. Essas propriedades estão no momento inoperantes e são reservadas para uso futuro.  
   
  Para atender solicitações, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode exceder o limite máximo do pool de threads, solicitando threads adicionais se forem necessários para executar o trabalho. No entanto, quando um thread conclui a execução de sua tarefa, se a contagem atual de threads for maior que o limite máximo, o thread será simplesmente finalizado, em vez de retornado para o pool de threads.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36019703"
 |`Query`  \ `StackSizeKB`|INT|Um inteiro de 32 bits assinado que pode ser usado para ajustar a alocação de memória durante a execução do thread.|0|Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
 ##  <a name="bkmk_groupaffinity"></a> Definir GroupAffinity para relacionar threads para processadores em um grupo de processador  
- O `GroupAffinity` é fornecido para fins de ajuste avançado. Você pode usar o `GroupAffinity` propriedade para definir a afinidade entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] thread pools e processadores específicos; no entanto, para a maioria das instalações, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] funciona melhor quando pode usar todos os processadores lógicos disponíveis. Consequentemente, a afinidade de grupo não é especificada por padrão.  
+ O `GroupAffinity` é fornecido para fins de ajuste avançado. Você pode usar o `GroupAffinity` propriedade para definir a afinidade entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] thread pools e processadores específicos; no entanto, para a maioria das instalações, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem o melhor desempenho quando pode usar todos os processadores lógicos disponíveis. Consequentemente, a afinidade de grupo não é especificada por padrão.  
   
  Se os testes de desempenho indicarem uma necessidade de otimização da CPU, você poderá usar uma abordagem de alto nível, como o uso do Gerenciador de Recursos do Windows Server para definir a afinidade entre processadores lógicos e um processo do servidor. Essa abordagem pode ser mais simples de implementar e gerenciar do que definir afinidades personalizadas para pools de threads individuais.  
   
@@ -138,16 +138,16 @@ ms.locfileid: "36019703"
   
  **Máscara de bits para processadores lógicos**  
   
- Você pode ter até 64 processadores lógicos em um único grupo de processador. A máscara de bits é 1 (ou 0) para cada processador lógico no grupo que é usado (ou não) por um pool de threads. Quando você computa a máscara de bits, calcula o valor hexadecimal como o valor para `GroupAffinity`.  
+ Você pode ter até 64 processadores lógicos em um único grupo de processador. A máscara de bits é 1 (ou 0) para cada processador lógico no grupo que é usado (ou não) por um pool de threads. Quando você computa a máscara de bits, em seguida, calcule o valor hexadecimal como o valor para `GroupAffinity`.  
   
  **Vários grupos de processador**  
   
- Os grupos de processador são determinados na inicialização do sistema. `GroupAffinity` aceita valores hexadecimais para cada grupo de processador em uma lista delimitada por vírgulas. Considerando vários grupos de processador (até 10 em sistemas de alta capacidade), você pode ignorar grupos individuais especificando 0x0. Por exemplo, em um sistema com quatro grupos de processador (0, 1, 2, 3), você pode excluir os grupos 0 e 2 inserindo 0x0 para o primeiro e o terceiro valores.  
+ Os grupos de processador são determinados na inicialização do sistema. `GroupAffinity` aceita valores hexadecimais para cada grupo de processador em uma lista delimitada por vírgula. Considerando vários grupos de processador (até 10 em sistemas de alta capacidade), você pode ignorar grupos individuais especificando 0x0. Por exemplo, em um sistema com quatro grupos de processador (0, 1, 2, 3), você pode excluir os grupos 0 e 2 inserindo 0x0 para o primeiro e o terceiro valores.  
   
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
 ### <a name="steps-for-computing-the-processor-affinity-mask"></a>Etapas para computar a máscara de afinidade do processador  
- Você pode definir `GroupAffinity` no msmdsrv.ini ou em páginas de propriedade do servidor no SQL Server Management Studio.  
+ Você pode definir `GroupAffinity` no msmdsrv. ini ou em páginas de propriedade de servidor no SQL Server Management Studio.  
   
 1.  **Determine o número de processadores e grupos de processador**  
   
@@ -173,21 +173,21 @@ ms.locfileid: "36019703"
   
 5.  **Insira o valor hexadecimal na propriedade GroupAffinity**  
   
-     No msmdsrv.ini ou na página de propriedade de servidor no Management Studio, defina `GroupAffinity` para o valor calculado na etapa 4.  
+     No msmdsrv. ini ou na página de propriedade de servidor no Management Studio, defina `GroupAffinity` para o valor calculado na etapa 4.  
   
 > [!IMPORTANT]  
->  Configuração `GroupAffinity` é uma tarefa manual que abrange várias etapas. Ao computar `GroupAffinity`, verifique os cálculos com cuidado. Embora o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retornará um erro se a máscara inteira for inválida, uma combinação de configurações válidas e inválidas faz o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignorar a propriedade. Por exemplo, se a máscara de bits inclui valores adicionais, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignora a configuração, usando todos os processadores no sistema. Não há nenhum erro ou aviso para alertá-lo quando essa ação ocorre, mas você pode verificar o arquivo msmdsrv.log para saber como as afinidades são de fato definidas.  
+>  Definindo `GroupAffinity` é uma tarefa manual que abrange várias etapas. Ao calcular `GroupAffinity`, verifique os cálculos com cuidado. Embora o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retornará um erro se a máscara inteira for inválida, uma combinação de configurações válidas e inválidas faz o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignorar a propriedade. Por exemplo, se a máscara de bits inclui valores adicionais, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignora a configuração, usando todos os processadores no sistema. Não há nenhum erro ou aviso para alertá-lo quando essa ação ocorre, mas você pode verificar o arquivo msmdsrv.log para saber como as afinidades são de fato definidas.  
   
 ##  <a name="bkmk_pernumanode"></a> Definir PerNumaNode para relacionar threads de E/S para processadores em um nó NUMA  
- Para instâncias multidimensionais do Analysis Services, você pode definir `PerNumaNode` no `IOProcess` pool para otimizar ainda mais o agendamento de threads e a execução de thread. Enquanto `GroupAffinity` identifica qual conjunto de processadores lógicos usar para um determinado pool de threads, `PerNumaNode` vai além especificando se deseja criar vários pools de threads, relacionados ainda mais a alguns subconjuntos dos processadores lógicos permitidos.  
+ Para instâncias multidimensionais do Analysis Services, você pode definir `PerNumaNode` sobre o `IOProcess` pool para otimizar ainda mais o thread de agendamento e execução de threads. Enquanto `GroupAffinity` identifique qual conjunto de processadores lógicos usar para um determinado pool de threads, `PerNumaNode` vai além especificando se é necessário criar vários pools de threads, relacionados ainda mais a alguns subconjuntos dos processadores lógicos permitidos.  
   
 > [!NOTE]  
 >  No Windows Server 2012, use o Gerenciador de Tarefas para exibir o número de nós NUMA no computador. No Gerenciador de Tarefas, na guia Desempenho, selecione **CPU** e clique com o botão direito do mouse na área do gráfico para exibir nós NUMA. Como alternativa, [baixe](http://technet.microsoft.com/sysinternals/cc835722.aspx) o utilitário Coreinfo do Windows Sysinternals e execute `coreinfo –n` para retornar nós NUMA e processadores lógicos em cada nó.  
   
- Os valores válidos para `PerNumaNode` são -1, 0, 1, 2, conforme descrito no [referência de propriedades de Pool de threads](#bkmk_propref) neste tópico.  
+ Os valores válidos para `PerNumaNode` são -1, 0, 1, 2, conforme descrito em de [referência de propriedades de Pool de threads](#bkmk_propref) neste tópico.  
   
 ### <a name="default-recommended"></a>Padrão (recomendado)  
- Em sistemas com nós NUMA, recomendamos usar a configuração padrão de PerNumaNode=-1, permitindo que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste o número de pools de threads e a afinidade do thread com base na contagem de nós. Se o sistema tiver menos de 4 nós, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementa os comportamentos descritos por `PerNumaNode`= 0, enquanto `PerNumaNode`= 1 é usado em sistemas com 4 ou mais nós.  
+ Em sistemas com nós NUMA, recomendamos usar a configuração padrão de PerNumaNode=-1, permitindo que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste o número de pools de threads e a afinidade do thread com base na contagem de nós. Se o sistema tiver menos de 4 nós, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementará os comportamentos descritos por `PerNumaNode`= 0, enquanto que `PerNumaNode`= 1 é usado em sistemas com 4 ou mais nós.  
   
 ### <a name="choosing-a-value"></a>Escolhendo um valor  
  Você também pode substituir o padrão para usar outro valor válido.  
@@ -196,13 +196,13 @@ ms.locfileid: "36019703"
   
  Nós NUMA são ignorados. Haverá apenas um pool de threads do IOProcess, e todos os threads nesse pool de threads serão relacionados a todos os processadores lógicos. Por padrão (onde PerNumaNode=-1), essa é a configuração operacional se o computador tiver menos de 4 nós NUMA.  
   
- ![Correspondência entre pool de numa, processador e thread](../media/ssas-threadpool-numaex0.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../media/ssas-threadpool-numaex0.PNG "correspondance de pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=1**  
   
  Os pools de threads do IOProcess são criados para cada nó NUMA. Ter pools de threads separados melhora o acesso coordenado a recursos locais, como o cache local em um nó NUMA.  
   
- ![Correspondência entre pool de numa, processador e thread](../media/ssas-threadpool-numaex1.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../media/ssas-threadpool-numaex1.PNG "correspondance de pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=2**  
   
@@ -210,12 +210,12 @@ ms.locfileid: "36019703"
   
  No exemplo a seguir, em um sistema que tem 4 nós NUMA e 32 processadores lógicos, definir `PerNumaNode` como 2 resultaria em 32 pools de threads do IOProcess. Os threads nos primeiros 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 0, mas com o processador ideal definido como 0, 1, 2, até 7. Os próximos 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 1, mas com o processador ideal definido como 8, 9, 10, até 15 e assim por diante.  
   
- ![Correspondência entre pool de numa, processador e thread](../media/ssas-threadpool-numaex2.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../media/ssas-threadpool-numaex2.PNG "correspondance de pool de Numa, processador e thread")  
   
  Nesse nível de afinidade, o agendador sempre tenta usar primeiro o processador lógico ideal, dentro do nó NUMA preferencial. Se o processador lógico não estiver disponível, o agendador escolherá outro processador dentro do mesmo nó ou dentro do mesmo grupo de processador se nenhum outro thread estiver disponível. Para obter mais informações e exemplos, consulte [Parâmetros de configuração do Analysis Services 2012 (blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
 ###  <a name="bkmk_workdistrib"></a> Distribuição de trabalho entre os threads do IOProcess  
- Conforme você considerar a possibilidade de definir o `PerNumaNode` propriedade, saber como `IOProcess` segmentos são usados pode ajudá-lo a tomar uma decisão mais informada.  
+ Ao considerar se é necessário definir as `PerNumaNode` propriedade, sabendo como `IOProcess` threads são usados pode ajudá-lo a tomar uma decisão mais informada.  
   
  Lembre-se de que `IOProcess` é usado para trabalhos de e/s associados às consultas do mecanismo de armazenamento no mecanismo multidimensional.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "36019703"
   
 -   Para soluções que têm várias partições, mas somente uma é excessivamente verificada, tente definir `PerNumaNode`= 0 para ver se melhora o desempenho.  
   
- Embora as verificações de partição e dimensão use o `IOProcess` pool de threads, dimensão verificações somente usar pool de threads 0. Isso pode levar a uma carga ligeiramente irregular nesse pool de threads, mas o desequilíbrio deve ser temporário, porque as verificações de dimensão tendem a ser muito rápidas e pouco frequentes.  
+ Embora as duas verificações de partição e dimensão uso o `IOProcess` pool de threads, dimensão verificações somente usar pool de threads 0. Isso pode levar a uma carga ligeiramente irregular nesse pool de threads, mas o desequilíbrio deve ser temporário, porque as verificações de dimensão tendem a ser muito rápidas e pouco frequentes.  
   
 > [!NOTE]  
 >  Ao alterar uma propriedade do servidor, lembre-se de que a opção de configuração aplica-se a todos os bancos de dados em execução na instância atual. Escolher as configurações que beneficiam os bancos de dados mais importantes, ou o maior número de bancos de dados. Você não pode definir a afinidade do processador no nível do banco de dados, nem pode definir a afinidade entre partições individuais e processadores específicos.  
@@ -239,13 +239,13 @@ ms.locfileid: "36019703"
  Para obter mais informações sobre arquitetura do trabalho, consulte a seção 2.2 no [Guia de desempenho do SQL Server 2008 Analysis Services](http://www.microsoft.com/download/details.aspx?id=17303).  
   
 ##  <a name="bkmk_related"></a> Propriedades dependentes ou relacionadas  
- Conforme explicado na seção 2.4 do [guia de operações do Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx), se você aumentar o pool de threads de processamento, você deve garantir que o `CoordinatorExecutionMode` configurações, bem como a `CoordinatorQueryMaxThreads` configurações têm valores que permitem que você faça uso completo do tamanho do pool de threads aumentado.  
+ Conforme explicado na seção 2.4 do [guia de operações do Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx), se você aumentar o pool de threads de processamento, assegure-se de que o `CoordinatorExecutionMode` configurações, bem como o `CoordinatorQueryMaxThreads` configurações, têm valores que permitem fazer uso completo do tamanho do pool de threads aumentado.  
   
  O Analysis Services usa um thread coordenador para coletar os dados necessários para concluir uma solicitação de processamento ou consulta. O coordenador primeiro enfileira um trabalho para cada partição que deve ser tocada. Cada um desses trabalhos em seguida continua a enfileirar mais trabalhos, dependendo do número total de segmentos que devem ser verificados na partição.  
   
  O valor padrão para `CoordinatorExecutionMode` é -4, significando um limite de 4 trabalhos em paralelo por núcleo, que restringe o número total de trabalhos do coordenador que podem ser executados em paralelo por uma solicitação de subcubo no mecanismo de armazenamento.  
   
- O valor padrão para `CoordinatorQueryMaxThreads` é 16, o que limita o número de trabalhos do segmento que podem ser executadas em paralelo para cada partição.  
+ O valor padrão para `CoordinatorQueryMaxThreads` é 16, que limita o número de trabalhos do segmento que podem ser executadas em paralelo para cada partição.  
   
 ##  <a name="bkmk_currentsettings"></a> Determinar as configurações do pool de threads atual  
  Em cada inicialização do serviço, a saída do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera as configurações atuais do pool de threads no arquivo msmdsrv.log, inclusive threads mínimo e máximo, máscara de afinidade do processador e a simultaneidade.  
@@ -282,9 +282,9 @@ ms.locfileid: "36019703"
  [Sobre Processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Vários processadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [Grupos de processador](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Alterações de Pool de Thread Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Configurações de análise de configuração Services 2012 (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Suporte a sistemas que têm mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Alterações de Pool de Thread do Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Configurações do Analysis Services 2012 Configuration (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [Suporte a sistemas com mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

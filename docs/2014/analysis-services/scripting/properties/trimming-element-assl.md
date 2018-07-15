@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326536"
 ---
 # <a name="trimming-element-assl"></a>Elemento Trimming (ASSL)
   Especifica como os dados da fonte de dados são cortados.  
@@ -58,7 +58,7 @@ ms.locfileid: "36119798"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elemento pai|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Elemento pai|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
@@ -73,7 +73,7 @@ ms.locfileid: "36119798"
   
  A enumeração que corresponde aos valores permitidos para `Trimming` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trimming>.  
   
- O elemento que corresponde ao pai do `Trimming` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
+ O elemento que corresponde ao pai de `Trimming` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

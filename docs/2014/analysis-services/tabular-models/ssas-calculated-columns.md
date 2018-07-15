@@ -1,5 +1,5 @@
 ---
-title: Calculado colunas (SSAS Tabular) | Microsoft Docs
+title: Colunas (SSAS Tabular) calculadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 152030d73951b08e0b987c5114c5bf8661dc418a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b976a83220a501fde422b6f58fea21631c0d3f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232066"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colunas calculadas (SSAS tabular)
   Colunas calculadas, em modelos tabulares, permitem que você adicione novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  
@@ -90,6 +90,6 @@ ms.locfileid: "36130645"
 ## <a name="see-also"></a>Consulte também  
  [Tabelas e colunas &#40;Tabular do SSAS&#41;](tables-and-columns-ssas-tabular.md)   
  [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
- [Cálculos &#40;Tabular do SSAS&#41;](calculations-ssas-tabular.md)  
+ [Cálculos de &#40;Tabular do SSAS&#41;](calculations-ssas-tabular.md)  
   
   

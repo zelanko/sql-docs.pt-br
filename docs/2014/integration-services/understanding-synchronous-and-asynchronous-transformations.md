@@ -19,13 +19,13 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e943eab4aea643762f2ab9553c800211c5a2d9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8a4fb438fce2ff1e774938a34dfd25be1b483a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302356"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Compreendendo as transformações síncronas e assíncronas
   Para compreender a diferença entre uma transformação síncrona e uma assíncrona no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], é mais fácil começar com a transformação síncrona. Se uma transformação síncrona não satisfizer suas necessidades, seu design poderá exigir uma transformação assíncrona.  
@@ -35,7 +35,7 @@ ms.locfileid: "36020957"
   
  Um exemplo de uma transformação síncrona é a transformação de conversão de dados. Para cada linha de entrada, ela converte o valor na coluna especificada e envia a linha em seu modo. Cada operação de conversão distinta é independente de todas as outras linhas no conjunto de dados.  
   
- Em [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de script e programação, você especifica uma transformação assíncrona consultando a ID de entrada do componente e atribuindo-à `SynchronousInputID` propriedade das saídas do componente. Dessa forma, o mecanismo de fluxo de dados é informado a processar cada linha da entrada e a enviar cada linha automaticamente para as saídas especificadas. Se você quiser que todas as linhas vão para todas as saídas, não precisa escrever código adicional para transmitir os dados. Se você usar a propriedade `ExclusionGroup` para especificar que as linhas devem ir somente para ou outro grupo de saídas, como na transformação Divisão Condicional, você deve chamar o método `DirectRow` para selecionar o destino apropriado para cada linha. Quando você tiver uma saída de erro, deve chamar `DirectErrorRow` para enviar linhas com problemas para a saída de erro em vez da saída padrão.  
+ Na [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] script e programação, você especifica uma transformação assíncrona consultando a ID de entrada de um componente e atribuindo-o para o `SynchronousInputID` propriedade das saídas do componente. Dessa forma, o mecanismo de fluxo de dados é informado a processar cada linha da entrada e a enviar cada linha automaticamente para as saídas especificadas. Se você quiser que todas as linhas vão para todas as saídas, não precisa escrever código adicional para transmitir os dados. Se você usar a propriedade `ExclusionGroup` para especificar que as linhas devem ir somente para ou outro grupo de saídas, como na transformação Divisão Condicional, você deve chamar o método `DirectRow` para selecionar o destino apropriado para cada linha. Quando você tiver uma saída de erro, deve chamar `DirectErrorRow` para enviar linhas com problemas para a saída de erro em vez da saída padrão.  
   
 ## <a name="asynchronous-transformations"></a>Transformações assíncronas  
  Você poder decidir que seu design requer uma transformação assíncrona quando não for possível processar cada linha independentemente de todas as outras linhas. Em outras palavras, você não pode transmitir cada linha no fluxo de dados conforme ela é processada. Em vez disso, deve transmitir os dados de forma assíncrona, ou em um momento diferente da entrada. Por exemplo, os cenários a seguir requerem uma transformação assíncrona:  
@@ -53,7 +53,7 @@ ms.locfileid: "36020957"
   
  Também seria possível criar uma transformação assíncrona que emula uma transformação síncrona copiando cada linha de entrada explicitamente para a saída. Usando essa abordagem, você poderia renomear colunas ou converter tipos ou formatos de dados. No entanto, essa abordagem afeta o desempenho. Você pode obter os mesmos resultados com desempenho melhor usando os componentes internos do Integration Services, como Copiar Coluna ou Conversão de Dados.  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando uma transformação síncrona com o componente Script](data-flow/transformations/script-component.md)   

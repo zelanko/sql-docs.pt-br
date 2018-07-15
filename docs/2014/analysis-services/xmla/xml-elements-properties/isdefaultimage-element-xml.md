@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c4d15ea9048c83b1579b688f6848e48deb1dffe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b5dac54773d432b01045c2b3aceca61c39fdfab0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235706"
 ---
 # <a name="isdefaultimage-element-xml"></a>Elemento IsDefaultImage (XML)
   Indica que é possível obter a imagem padrão para esta entidade navegando esta relação até a outra tabela e buscando o membro que tem o atributo, IsDefaultImage.  

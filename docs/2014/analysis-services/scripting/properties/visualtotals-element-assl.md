@@ -22,15 +22,15 @@ helpviewer_keywords:
 - VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73d5bb9579c078fab44a04d173edc2f606c856a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf4eb3a172571ee7456f0da1cb0df60852132e03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319277"
 ---
 # <a name="visualtotals-element-assl"></a>Elemento VisualTotals (ASSL)
   Contém uma linguagem MDX que determina se os totais visuais são exibidos para os membros desse atributo.  
@@ -62,7 +62,7 @@ ms.locfileid: "36122018"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `VisualTotals` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ O elemento que corresponde ao pai de `VisualTotals` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

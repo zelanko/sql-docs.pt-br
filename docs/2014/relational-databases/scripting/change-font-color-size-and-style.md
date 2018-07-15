@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], fonts
 - modifying fonts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c014a7104c0797a1fbe2a81abd2f180ecace2a1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a4cabfdacf69bb6a980ed697f9ba3e53eddbb78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270802"
 ---
 # <a name="change-font-color-size-and-style"></a>Alterar cor, tamanho e estilo da fonte
   Você pode personalizar o modo em que o texto aparece no Editor, assim como em outros lugares no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

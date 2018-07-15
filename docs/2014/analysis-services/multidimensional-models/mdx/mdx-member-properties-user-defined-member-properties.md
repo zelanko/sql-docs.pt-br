@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321276"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Propriedades do membro definidas pelo usuário (MDX)
-  É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Propriedades do membro definidas pelo usuário não não possível adicionar o `(All)` nível de uma hierarquia ou a própria hierarquia.  
+  É possível adicionar propriedades do membro definidas pelo usuário a um nível nomeado específico de uma dimensão como relações de atributo. Propriedades do membro definidas pelo usuário não podem ser adicionadas para o `(All)` nível de uma hierarquia ou à própria hierarquia.  
   
 ## <a name="creating-user-defined-member-properties"></a>Criando propriedades do membro definidas pelo usuário  
  Propriedades do membro definidas pelo usuário podem ser adicionadas a dimensões ou cubos com base em servidor pela interface de usuário ou programaticamente:  
@@ -41,7 +41,7 @@ ms.locfileid: "36009852"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- O `PROPERTIES` palavra-chave aparece depois da expressão de conjunto da especificação de eixo. Por exemplo, a seguinte consulta MDX a `PROPERTIES` palavra-chave recupera o `List Price` e `Dealer Price` propriedades do membro definidas pelo usuário e é exibida depois que a expressão de conjunto que identifica os produtos vendidos em janeiro:  
+ O `PROPERTIES` palavra-chave aparece depois da expressão de conjunto da especificação de eixo. Por exemplo, a consulta MDX a seguir a `PROPERTIES` palavra-chave recupera a `List Price` e `Dealer Price` propriedades do membro definidas pelo usuário e é exibida depois que a expressão de conjunto que identifica os produtos vendidos em janeiro:  
   
 ```  
 SELECT   

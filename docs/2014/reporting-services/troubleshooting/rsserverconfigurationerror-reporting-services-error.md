@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 49183fb1ff712ee3d0be8cd76d99492fcc9a93d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86394a3e44d1dab34bc451eee19410083bc676e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238196"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erro do Reporting Services
     
@@ -51,7 +51,7 @@ ms.locfileid: "36121215"
 ## <a name="user-action"></a>Ação do usuário  
  Se o erro começar a ocorrer após você ter editado manualmente um arquivo de configuração, remova as alterações e insira o valor anterior, ou restaure uma versão anterior se possuir um backup.  
   
- Para revisar as informações de mensagem de erro adicional que acompanha o `rsServerConfiguration` erro, examine o relatório servidor rastreamento arquivos de log, que estão localizados em \Microsoft SQL Server\MSRS12.\< InstanceName > \reporting. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Para examinar as informações da mensagem de erro adicional que acompanha o `rsServerConfiguration` erro, examine os relatório server rastreamento arquivos de log, estão localizados em \Microsoft SQL Server\MSRS12.\< InstanceName > \reporting. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Somente interno  
   

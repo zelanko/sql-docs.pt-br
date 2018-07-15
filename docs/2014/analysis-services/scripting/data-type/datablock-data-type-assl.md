@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cbd6c1a2723cfc0d9e5b68ff4a484878c82a74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211956"
 ---
 # <a name="datablock-data-type-assl"></a>Tipo de dados DataBlock (ASSL)
   Define um tipo de dados primitivo que representa uma coleção de blocos de dados usado para armazenar o conteúdo binário de um [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) elemento.  
@@ -57,12 +57,12 @@ ms.locfileid: "36012584"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|[Blocos](../collections/blocks-element-assl.md)|  
-|Elementos derivados|[Dados](../objects/data-element-assl.md) elemento [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) tipo ([arquivos](../collections/files-element-assl.md) coleção de [ClrAssembly](assembly-data-type-assl.md) tipo)|  
+|Elementos derivados|[Dados](../objects/data-element-assl.md) elemento de [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) tipo ([arquivos](../collections/files-element-assl.md) coleção de [ClrAssembly](assembly-data-type-assl.md) tipo)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [Elemento de arquivo &#40;ASSL&#41;](../objects/file-element-assl.md)   
- [Bloquear elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Bloquear o elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [Tipos de dados XML de linguagem script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

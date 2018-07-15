@@ -1,5 +1,5 @@
 ---
-title: Gerenciar usuários DQS em SSMS | Microsoft Docs
+title: Gerenciar usuários DQS no SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a6115b9b28b4c27c6b3cddccd1f83ec1aef02ab3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949c86f3a83856a474a388bf94f224d5a6273174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306056"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gerenciar usuários de DQS em SSMS
   Este tópico descreve como criar usuários adicionais na instância do SQL Server usando o SQL Server Management Studio e como concedê-los funções DQS apropriadas do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] no banco de dados DQS_MAIN.  
@@ -31,7 +31,7 @@ ms.locfileid: "36122011"
 ####  <a name="Permissions"></a> Permissões  
  Sua conta de usuário do Windows deve ser membro da função de servidor fixa apropriada (como securityadmin, serveradmin ou sysadmin) para criar um logon do SQL e conceder funções DQS adequadas.  
   
-##  <a name="GrantRoles"></a> Crie um logon SQL e conceder funções DQS  
+##  <a name="GrantRoles"></a> Criar um logon do SQL e conceder funções DQS  
   
 1.  Inicie o Microsoft SQL Server Management Studio.  
   

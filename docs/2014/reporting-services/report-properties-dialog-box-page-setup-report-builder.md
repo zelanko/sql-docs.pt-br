@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9974b741f82d0347fe5a549dfa462bb3f973058d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306886"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página (Construtor de Relatórios)
   Selecione **Configuração de Página** na caixa de diálogo **Propriedades do Relatório**para definir as opções de página para o relatório inteiro.  
@@ -51,7 +51,7 @@ ms.locfileid: "36115374"
  **Top**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **Inferior**  
+ **Parte inferior**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
  **À esquerda**  
@@ -63,7 +63,7 @@ ms.locfileid: "36115374"
 ## <a name="see-also"></a>Consulte também  
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades de relatório código &#40;construtor de relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
+ [Caixa de diálogo Propriedades de relatório de código &#40;construtor de relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
  [Caixa de diálogo Propriedades do relatório referências &#40;construtor de relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   
   

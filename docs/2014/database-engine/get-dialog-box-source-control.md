@@ -1,5 +1,5 @@
 ---
-title: Obter a caixa de diálogo (controle de origem) | Microsoft Docs
+title: Obtém uma caixa de diálogo (controle de origem) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de0c8be0ee4c5aa37e8ce72d2b1499c10ab5adbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193946"
 ---
 # <a name="get-dialog-box-source-control"></a>Caixa de diálogo Obter (Controle de código fonte)
   Recupera uma cópia somente leitura do item selecionado do banco de dados de controle de origem para sua pasta de trabalho ou para outra pasta que você especifique.  
@@ -41,7 +41,7 @@ ms.locfileid: "36116209"
  **Colunas**  
  Identifica colunas a serem exibidas e a ordem na qual elas são exibidas.  
   
- **Exibição simples**  
+ **Modo de exibição simples**  
  Exiba os arquivos que você está recuperando como listas simples na conexão de controle do código de origem.  
   
  **Hora da modificação**  

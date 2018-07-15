@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4295a712f277047c4e205d83c44bbc0ff444db32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 086ed75848ad4b55178e1b64ad41ca052ef024ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272902"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Adicionar uma borda a um relatório (Construtor de Relatórios e SSRS)
   É possível adicionar uma borda a um relatório adicionando bordas aos próprios cabeçalhos, rodapés e corpo do relatório, sem adicionar linhas ou retângulos.  
@@ -34,13 +34,13 @@ ms.locfileid: "36121428"
 1.  Clique com o botão direito do mouse no cabeçalho fora de qualquer item no cabeçalho e clique em **Cabeçalho Propriedades**. Na guia **Borda** , adicione uma borda esquerda, superior e direita com o estilo que você deseja.  
   
     > [!NOTE]  
-    >  Se você não usa cabeçalhos no relatório, você poderá colocar bordas em torno de apenas o corpo do relatório ou você pode adicionar cabeçalhos do **inserir** guia.  
+    >  Se você não usa cabeçalhos no relatório, você poderá colocar bordas em torno de apenas o corpo do relatório ou você pode adicionar cabeçalhos dos **inserir** guia.  
   
 2.  Clique com o botão direito do mouse no corpo fora de qualquer item na superfície de design e clique em **Propriedades do Corpo**. Na guia **Borda** , adicione uma borda esquerda e direita com o estilo que você deseja.  
   
 3.  Clique com o botão direito do mouse no rodapé fora de qualquer item no rodapé e clique em **Propriedades do Rodapé**. Na guia **Borda** , adicione uma borda esquerda, inferior e direita com o estilo que você deseja.  
   
 ## <a name="see-also"></a>Consulte também  
- [Retângulos e linhas &#40;SSRS e construtor de relatórios&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Retângulos e linhas &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

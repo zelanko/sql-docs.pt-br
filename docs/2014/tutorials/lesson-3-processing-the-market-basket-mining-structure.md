@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cc4ea28876fa0b52577f0d78e357a3cb1fe0a9bf
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 0d14fe6f8cbfae7370c0b02626f54758d4159d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297576"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lição 3: Processando a estrutura de mineração do Market Basket
-  Nesta lição, você usará o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução e vAssocSeqLineItems e vAssocSeqOrders do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados de exemplo para processar as estruturas de mineração e mineração modelos criado em [lição 1: Criando a estrutura de mineração da cesta](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lição 2: adicionando modelos de mineração à estrutura de mineração cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  Nesta lição, você aprenderá a usar o [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrução e vAssocSeqLineItems e vAssocSeqOrders do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelos de banco de dados de exemplo para processar as estruturas de mineração e mineração que você criado em [lição 1: Criando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) e [lição 2: adicionando modelos de mineração à estrutura de mineração da cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Quando você processa um modelo de mineração, os dados definidos pela estrutura de mineração são passados por meio do algoritmo de mineração de dados que você escolheu. O algoritmo procura tendências e padrões e, depois, armazena as informações no modelo de mineração. Portanto, o modelo de mineração na verdade não contém os dados de origem, e sim as informações que foram descobertas pelo algoritmo. Para obter mais informações sobre o processamento de modelos de mineração, consulte [considerações e requisitos de processamento &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Ao processar uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lê os dados de origem e compila as estruturas que dão suporte a modelos de mineração. Quando você processa um modelo de mineração, os dados definidos pela estrutura de mineração são passados por meio do algoritmo de mineração de dados que você escolheu. O algoritmo procura tendências e padrões e, depois, armazena as informações no modelo de mineração. Portanto, o modelo de mineração na verdade não contém os dados de origem, e sim as informações que foram descobertas pelo algoritmo. Para obter mais informações sobre como processar modelos de mineração, consulte [considerações e requisitos de processamento de &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Só será necessário reprocessar uma estrutura de mineração se houver alteração em uma coluna de estrutura ou nos dados de origem. Se você adicionar um modelo de mineração a uma estrutura de mineração que já foi processada, será possível usar a instrução `INSERT INTO MINING MODEL` para treinar o novo modelo de mineração nos dados existentes.  
   
@@ -64,7 +64,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- As linhas seguintes do código especificam as colunas definidas pela estrutura de mineração. É preciso listar cada coluna na estrutura de mineração, e cada coluna deve mapear para uma coluna contida nos dados da consulta de origem. Você pode utilizar `SKIP` para ignorar colunas que existem nos dados de origem, mas não existem na estrutura de mineração. Para obter mais informações sobre como usar `SKIP`, consulte [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
+ As linhas seguintes do código especificam as colunas definidas pela estrutura de mineração. É preciso listar cada coluna na estrutura de mineração, e cada coluna deve mapear para uma coluna contida nos dados da consulta de origem. Você pode utilizar `SKIP` para ignorar colunas que existem nos dados de origem, mas não existem na estrutura de mineração. Para obter mais informações sobre como usar `SKIP`, consulte [inserir em &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
   
 ```  
 (  
@@ -98,7 +98,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Para processar a estrutura de mineração utilizando INSERT INTO  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -191,7 +191,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 8.  Na barra de ferramentas, clique o **Execute** botão.  
   
- Após a conclusão da execução da consulta, você pode visualizar os padrões e os conjuntos de itens que foram encontrados, exibir associações ou filtrar por conjunto de itens, probabilidade ou importância. Para exibir essas informações em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique no nome do modelo de dados e, em seguida, clique em **procurar**.  
+ Após a conclusão da execução da consulta, você pode visualizar os padrões e os conjuntos de itens que foram encontrados, exibir associações ou filtrar por conjunto de itens, probabilidade ou importância. Para exibir essas informações no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique no nome do modelo de dados e, em seguida, clique em **procurar**.  
   
  Na próxima lição, você criará várias previsões com base nos modelos de mineração que adicionou à estrutura da cesta básica.  
   

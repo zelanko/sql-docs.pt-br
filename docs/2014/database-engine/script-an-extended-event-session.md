@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71b9918e2f05efcc5a8720dcedeef023392f99ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c199c5e222457deef83a876974d6856ec1a2f047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233736"
 ---
 # <a name="script-an-extended-event-session"></a>Criar script de uma sessão de evento estendido
   Este tópico descreve como criar o script de uma sessão de evento. Você pode exportar, alterar ou remover a sessão de evento, ou remover e criar a sessão de evento para o seguinte:  
   
--   **Nova janela do Editor de consulta**  
+-   **Nova janela do Editor de consultas**  
   
 -   **File**  
   
 -   **Área de transferência**  
   
--   **Trabalho de agente**  
+-   **Trabalho do agente**  
   
 ### <a name="to-script-an-existing-event-session"></a>Para criar o script de uma sessão de evento existente  
   

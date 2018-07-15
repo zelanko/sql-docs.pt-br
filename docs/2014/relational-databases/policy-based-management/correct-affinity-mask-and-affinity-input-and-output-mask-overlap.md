@@ -1,5 +1,5 @@
 ---
-title: Corrigir máscara de afinidade e entrada/saída afinidade sobreposição de máscara | Microsoft Docs
+title: Corrigir máscara de afinidade e entrada de saída de afinidade sobreposição de máscara | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a5cc744eb941d309ff938452fef01a24716a946
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 14dbd2e0f3815e500d5742822f7ca8157408c917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324196"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Corrigir máscara de afinidade e sobreposição de máscara de entrada e saída de afinidade
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Corrigir máscara de afinidade e a sobreposição de máscara de entrada e saída de afinidade
   Esta regra verifica se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possui um ou mais processadores atribuídos para serem usados com as opções de máscara de afinidade e máscara de E/S de afinidade. Em um computador com mais de um processador, as opções de máscara de afinidade e máscara de E/S de afinidade são empregadas para designar quais CPUs o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]utiliza. Ao habilitar uma CPU com a máscara de afinidade e a máscara de E/S de afinidade você poderá reduzir o desempenho forçando o uso excessivo do processador.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

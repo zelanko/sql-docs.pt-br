@@ -1,5 +1,5 @@
 ---
-title: Transferência de logons Editor da tarefa (página logons) | Microsoft Docs
+title: Editor da tarefa logons (página logons) transferir | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 794dbafef58e466a2591b396f101e6cdb68364da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da54f048e74810566aa596b5b900ca5ba1246b57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254578"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor da Tarefa Transferir Logons (página Logons)
   Use a página **Logons** da caixa de diálogo **Editor da Tarefa de Transferir Logons** para especificar as propriedades para copiar um ou mais logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Logons](control-flow/transfer-logins-task.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36013143"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da tarefa logons transferir &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Transferir logons Editor da tarefa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página expressões](expressions/expressions-page.md)   
  [Gerenciador de Conexão do SMO](connection-manager/smo-connection-manager.md)   
  [Senhas fortes](../relational-databases/security/strong-passwords.md)   

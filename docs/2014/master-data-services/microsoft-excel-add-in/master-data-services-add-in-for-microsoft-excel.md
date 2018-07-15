@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273082"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], listas mestres dos dados de referência podem ser distribuídas para qualquer pessoa da sua organização que usa o Excel. A segurança determina quais usuários dos dados podem ver e atualizar.  
@@ -31,7 +31,7 @@ ms.locfileid: "36012928"
  No [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você pode usar o DQS (Data Quality Services) para combinar os dados antes de carregá-los no MDS. Isso ajuda a evitar dados duplicados no MDS.  
   
 > [!IMPORTANT]  
->  Você pode continuar usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versão SP1 do mestre de dados serviços suplemento para Excel depois de atualizar o Master Data Services e serviços de qualidade de dados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versão SP1 do mestre dados serviços de suplemento para Excel [aqui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Você pode continuar usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 versão do mestre de dados serviços de suplemento para Excel depois de atualizar o Master Data Services e Data Quality Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a versão SP1 do mestre dados serviços de suplemento para Excel a partir do [aqui](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Termos  
  No suplemento, você poderá encontrar os termos a seguir.  
@@ -67,13 +67,13 @@ ms.locfileid: "36012928"
   
 -   [Conexões &#40;Suplemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Carregando dados &#40;suplemento do MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Carregamento de dados &#40;suplemento do MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Correspondência de qualidade de dados no Suplemento do MDS para Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [Publicando dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Publicação de dados &#40;suplemento do MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Criar um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   

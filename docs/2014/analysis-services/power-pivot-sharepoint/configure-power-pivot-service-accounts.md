@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8e4bd2d01fb5745e3e9c67c94561789cfbc8759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149947"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar contas de serviço PowerPivot
   Uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] inclui dois serviços que oferecem suporte a operações de servidor. O **SQL Server Analysis Services (PowerPivot)** é um serviço do Windows que fornece processamento de dados PowerPivot e suporte a consultas em um servidor de aplicativos. A conta de logon desse serviço sempre é especificada durante a Instalação do SQL Server, quando você instala o Analysis Services no modo integrado do SharePoint.  
@@ -34,11 +34,11 @@ ms.locfileid: "36117048"
   
  [Atualizar uma senha expirada para instância do SQL Server Analysis Services (PowerPivot)](#bkmk_passwordssas)  
   
- [Atualizar uma senha expirada para o aplicativo de serviço do PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
+ [Atualizar uma senha expirada para o aplicativo de serviço PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
  [Alterar a conta sob a qual cada serviço é executado](#bkmk_newacct)  
   
- [Criar ou alterar o pool de aplicativos para um aplicativo de serviço do PowerPivot](#bkmk_appPool)  
+ [Criar ou alterar o pool de aplicativos para um aplicativo de serviço PowerPivot](#bkmk_appPool)  
   
  [Requisitos e permissões de conta](#requirements)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36117048"
   
 5.  Selecione **Definir senha da conta com novo valor**. Todos os serviços que são executados sob a conta gerenciada usarão as credenciais atualizadas.  
   
-##  <a name="bkmk_passwordapp"></a> Atualizar uma senha expirada para o aplicativo de serviço do PowerPivot  
+##  <a name="bkmk_passwordapp"></a> Atualizar uma senha expirada para o aplicativo de serviço PowerPivot  
   
 1.  Na Administração Central, na seção Segurança, clique em **Configurar contas gerenciadas**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36117048"
   
 6.  Clique em **OK**.  
   
-##  <a name="bkmk_appPool"></a> Criar ou alterar o pool de aplicativos para um aplicativo de serviço do PowerPivot  
+##  <a name="bkmk_appPool"></a> Criar ou alterar o pool de aplicativos para um aplicativo de serviço PowerPivot  
   
 1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36117048"
 |-----------------|-----------------|  
 |Requisito de provisionamento|Essa conta deve ser especificada durante a instalação do SQL Server usando o **Analysis Services - página de configuração** no Assistente de instalação (ou o `ASSVCACCOUNT` parâmetro de instalação em uma instalação de linha de comando).<br /><br /> Você pode modificar o nome de usuário ou a senha usando a Administração Central, o PowerShell ou a Ferramenta de Configuração do PowerPivot. Não há suporte para o uso de outras ferramentas para alterar contas e senhas.|  
 |Requisito da conta de usuário de domínio|Essa conta deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local). A Instalação do SQL Server impõe o requisito de conta de usuário de domínio bloqueando a instalação sempre que uma conta de computador é especificada.|  
-|Requisitos de permissão|Essa conta deve ser um membro do SQLServerMSASUser$\<server > $PowerPivot grupo de segurança e os grupos de segurança WSS_WPG no computador local. Essas permissões devem ser concedidas automaticamente. Para obter mais informações sobre como verificar ou conceder permissões, consulte [conceder a PowerPivot Service conta permissões administrativas manualmente](#updatemanually) neste tópico e [configuração inicial &#40;PowerPivot para SharePoint &#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|Requisitos de permissão|Essa conta deve ser um membro do SQLServerMSASUser$\<server > grupo de segurança de $PowerPivot e os grupos de segurança WSS_WPG no computador local. Essas permissões devem ser concedidas automaticamente. Para obter mais informações sobre como verificar ou conceder permissões, consulte [conceder a PowerPivot Service conta permissões administrativas manualmente](#updatemanually) neste tópico e [configuração inicial &#40;PowerPivot para SharePoint &#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
 |Requisitos de expansão|Se você instalar várias instâncias de servidor do PowerPivot para SharePoint em um farm, todas as instâncias de servidor do Analysis Services deverão ser executadas sob a mesma conta de usuário de domínio. Por exemplo, se você configurar a primeira instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para execução como Contoso\ssas-srv01, todas as instâncias do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] adicionais implantadas posteriormente no mesmo farm também deverão executar como Contoso\ssas-srv01 (ou qualquer que seja a conta atual).<br /><br /> A configuração de todas as instâncias de serviço para execução na mesma conta permite que o serviço Sistema PowerPivot aloque o processamento de consultas ou trabalhos de atualização de dados para qualquer instância de serviço do Analysis Services no farm. Além disso, ela habilita o uso do recurso Conta Gerenciada na Administração Central para instâncias de servidor do Analysis Services. Usando a mesma conta para todas as instâncias do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , você pode alterar a conta ou a senha uma vez, e todas as instâncias de serviço que usam essas credenciais são atualizadas automaticamente.<br /><br /> A Instalação do SQL Server impõe o requisito de mesma conta. Em uma implantação em expansão onde um farm do SharePoint já tem uma instância do PowerPivot para SharePoint instalada, a Instalação bloqueará a nova instalação se a conta do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] especificada for diferente de uma já em uso no farm.|  
   
 #### <a name="powerpivot-service-application-pool"></a>Pool de aplicativos do serviço PowerPivot  
@@ -128,11 +128,11 @@ ms.locfileid: "36117048"
   
 3.  Clique em **Executar Agora**.  
   
- Como último recurso, você pode assegurar as permissões corretas concedendo permissões de administração do sistema do Analysis Services para o aplicativo de serviço PowerPivot e, em seguida, especificamente acrescenta a identidade do aplicativo de serviço SQLServerMSASUser$\< ServerName > grupo de segurança do Windows $PowerPivot. Você deve repetir estas etapas para cada instância do Analysis Services integrada com o farm do SharePoint.  
+ Como último recurso, você pode assegurar as permissões corretas concedendo permissões de administração do sistema do Analysis Services ao aplicativo de serviço PowerPivot e, em seguida, especificamente acrescenta a identidade do aplicativo de serviço SQLServerMSASUser$\< ServerName > grupo de segurança do Windows $PowerPivot. Você deve repetir estas etapas para cada instância do Analysis Services integrada com o farm do SharePoint.  
   
  Você deve ser um administrador local para atualizar grupos de segurança do Windows.  
   
-1.  No SQL Server Management Studio, conecte-se à instância do Analysis Services, \<nome do servidor > \POWERPIVOT.  
+1.  No SQL Server Management Studio, conecte-se à instância do Analysis Services, \<nome do servidor > \powerpivot.  
   
 2.  Clique com o botão direito do mouse no nome do servidor e selecione **Propriedades**.  
   

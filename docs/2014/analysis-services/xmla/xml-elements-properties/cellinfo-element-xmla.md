@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176383"
 ---
 # <a name="cellinfo-element-xmla"></a>Elemento CellInfo (XMLA)
   Representa os metadados de célula contidos pelo pai [OlapInfo](olapinfo-element-xmla.md) elemento.  
@@ -76,7 +76,7 @@ ms.locfileid: "36021216"
   
  As propriedades disponíveis e seus valores podem ser obtidos usando o tipo de solicitação DISCOVER_PROPERTIES com o `Discover` método. Não há nenhum pedido obrigatório para as propriedades listadas no elemento `PropertyList`.  
   
- Um provedor pode especificar valores padrão opcionalmente para propriedades de célula ou membros individuais na seção `AxisInfo` ou `CellInfo`. Os valores padrão podem fornecer um resultado menor se a propriedade sempre ou quase sempre tiver o mesmo valor. Para indicar um valor padrão para uma propriedade, o`Default` elemento pode ser especificado opcionalmente como um elemento filho de um dos elementos de definição de propriedade de célula. Portanto, a ausência de um membro ou propriedade de célula no resultado indica que o padrão declarado é o valor da propriedade de célula.  
+ Um provedor pode especificar valores padrão opcionalmente para propriedades de célula ou membros individuais na seção `AxisInfo` ou `CellInfo`. Os valores padrão podem fornecer um resultado menor se a propriedade sempre ou quase sempre tiver o mesmo valor. Para indicar um valor padrão para uma propriedade, o`Default` elemento pode ser especificado opcionalmente como um elemento filho de um dos elementos de definição de propriedade da célula. Portanto, a ausência de um membro ou propriedade de célula no resultado indica que o padrão declarado é o valor da propriedade de célula.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como as propriedades de célula VALUE, FORMATTED_VALUE e FORMAT_STRING são representadas no elemento `CellInfo`.  

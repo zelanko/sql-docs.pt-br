@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236556"
 ---
 # <a name="optimizing-the-neworg-table"></a>Otimizando a tabela NewOrg
-  O **NewOrd** que você criou na tabela de [popular uma tabela com dados hierárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarefa contém todas as informações de funcionários e representa a estrutura hierárquica usando um `hierarchyid`tipo de dados. Essa tarefa adiciona índices novos para oferecer suporte às pesquisas na coluna `hierarchyid`.  
+  O **NewOrd** que você criou na tabela a [populando uma tabela com dados hierárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarefa contém todas as informações de funcionários e representa a estrutura hierárquica usando um `hierarchyid`tipo de dados. Essa tarefa adiciona índices novos para oferecer suporte às pesquisas na coluna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Índice clusterizado  
  O `hierarchyid` coluna (**OrgNode**) é a chave primária para o **NewOrg** tabela. Quando a tabela foi criada, ela continha um índice clusterizado chamado **PK_NewOrg_OrgNode** para impor a exclusividade da coluna **OrgNode** . Esse índice clusterizado também oferece suporte a uma pesquisa primária detalhada da tabela.  

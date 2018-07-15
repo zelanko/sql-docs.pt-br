@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311246"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Função LookupSet (Construtor de Relatórios e SSRS)
   Retorna o conjunto de valores correspondentes para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -51,7 +51,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  Retorna um `VariantArray`, ou `Nothing` se não houver nenhuma correspondência.  
   
 ## <a name="remarks"></a>Remarks  
- Use `LookupSet` para recuperar um conjunto de valores do conjunto de dados especificado para um par nome/valor onde há uma relação de 1-para-muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar `LookupSet` para recuperar todos os números de telefone associados do cliente de um conjunto de dados que não esteja associado à região de dados.  
+ Use `LookupSet` para recuperar um conjunto de valores do conjunto de dados especificado para um par nome/valor onde há uma relação de 1-para-muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar `LookupSet` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados para o.  
   
  `LookupSet` faz o seguinte:  
   
@@ -63,7 +63,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Retorna o conjunto de valores de expressão resultante.  
   
- Para recuperar um único valor de um conjunto de dados com pares nome/valor de um nome especificado em que existe uma relação um-para-um, use [Função Lookup &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookup-function.md). Para chamar `Lookup` para um conjunto de valores, use [Multilookup função &#40;construtor de relatórios e SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Para recuperar um único valor de um conjunto de dados com pares nome/valor de um nome especificado em que existe uma relação um-para-um, use [Função Lookup &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-lookup-function.md). Para chamar `Lookup` para um conjunto de valores, use [função Multilookup &#40;construtor de relatórios e SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
  As seguintes restrições são aplicadas:  
   
@@ -105,7 +105,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Use o [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] função `Join` criar uma cadeia de caracteres delimitada de um conjunto de objetos. Use vírgula como separador combinar os objetos em uma única linha. Em alguns renderizadores, você pode usar uma alimentação de linha ( [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ) do`vbCrLF`como um separador para listar cada valor em uma nova linha.  
   
- A expressão a seguir, quando ele é usado como a propriedade de valor para uma caixa de texto usa `Join` para criar uma lista.  
+ A expressão a seguir, quando ele é usado como a propriedade Value para uma caixa de texto, usa `Join` para criar uma lista.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,9 +151,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

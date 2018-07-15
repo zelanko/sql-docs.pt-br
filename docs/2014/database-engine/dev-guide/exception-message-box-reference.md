@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ExceptionMessageBox class, samples
 ms.assetid: ff5f79f0-401f-498a-8218-860f5ab46652
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d9eec19532e78829acb4faaa5332196f1a8bd01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0dba289cfca11e75f9deb02c448db1529c7c8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241246"
 ---
 # <a name="exception-message-box-reference"></a>Referência da caixa de mensagem de exceção
   A caixa de mensagem de exceção é implementada pela classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> no assembly Microsoft.ExceptionMessageBox.dll. A pasta de instalação padrão desse assembly é [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. A caixa de mensagem de exceção é documentada na documentação de referência do namespace <xref:Microsoft.SqlServer.MessageBox>. Os exemplos a seguir usam o objeto <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> durante a manipulação da exceção.  

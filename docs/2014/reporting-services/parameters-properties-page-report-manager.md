@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades de parâmetro (Gerenciador de relatórios) | Microsoft Docs
+title: Página de propriedades de parâmetros (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327556"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
   Use página Propriedades de Parâmetro para exibir ou modificar configurações de parâmetro para um relatório com parâmetros.  
@@ -69,7 +69,7 @@ ms.locfileid: "36020866"
   
  Limpe essa caixa de seleção se você quiser executar o relatório no modo autônomo (por exemplo, para gerar o histórico do relatório ou instantâneos de execução de relatório), se quiser usar o mesmo valor de parâmetro para todos os usuários ou se não necessitar de entrada de usuário para o parâmetro.  
   
- **Exibir texto**  
+ **Texto de exibição**  
  Forneça uma cadeia de caracteres de texto que aparece próximo à caixa de texto de parâmetro. Essa cadeia de caracteres fornece um rótulo ou texto descritivo. Não há limite para o comprimento da cadeia de caracteres. Cadeias de caracteres de texto mais longo são encapsuladas no espaço fornecido.  
   
 ## <a name="see-also"></a>Consulte também  

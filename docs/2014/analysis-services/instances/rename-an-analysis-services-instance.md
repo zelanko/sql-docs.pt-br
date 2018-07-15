@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326806"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
   Você pode renomear uma instância existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o **renomear instância** caixa de diálogo.  
@@ -39,7 +39,7 @@ ms.locfileid: "36115734"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Para renomear uma instância do Analysis Services  
   
-1.  Inicie o **Instance Rename** ferramenta, **asinstancerename.exe**, de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Inicie o **renomeação de instância** ferramenta **asinstancerename.exe**, de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Na caixa de diálogo **Renomear Instância** , na lista **Instância a ser renomeada** , selecione a instância que você deseja renomear.  
   

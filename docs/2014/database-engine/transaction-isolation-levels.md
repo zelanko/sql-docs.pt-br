@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329956"
 ---
 # <a name="transaction-isolation-levels"></a>Níveis de isolamento da transação
-  Os seguintes níveis de isolamento têm suporte para transações que acessam tabelas com otimização de memória.  
+  Os níveis de isolamento a seguir têm suporte para transações que acessam tabelas com otimização de memória.  
   
 -   SNAPSHOT  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36131048"
   
  O nível de isolamento da transação pode ser especificado como parte do bloco atômico de um procedimento armazenado originalmente compilado. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). Ao acessar tabelas com otimização de memória do [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, o nível de isolamento pode ser especificado usando as dicas no nível de tabela.  
   
- Você deve especificar o nível de isolamento da transação quando definir um procedimento armazenado compilado nativamente. Você deve especificar o nível de isolamento nas dicas de tabela ao acessar tabelas com otimização de memória de transações do usuário no [!INCLUDE[tsql](../includes/tsql-md.md)]interpretado. Para obter mais informações, consulte [diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Você deve especificar o nível de isolamento da transação quando definir um procedimento armazenado compilado nativamente. Você deve especificar o nível de isolamento nas dicas de tabela ao acessar tabelas com otimização de memória de transações do usuário no [!INCLUDE[tsql](../includes/tsql-md.md)]interpretado. Para obter mais informações, consulte [diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  O nível de isolamento READ COMMITTED tem suporte em tabelas com otimização de memória com transações de confirmação automática. READ COMMITTED é inválido em transações de usuário ou em um bloco atômico. READ COMMITTED não tem suporte com transações de usuário implícitas ou explícitas. Há suporte para o nível de isolamento READ_COMMITTED_SNAPSHOT nas tabelas com otimização de memória com transações de confirmação automática e somente se a consulta não acessar nenhuma tabela baseada em disco. Além disso, as transações que são iniciadas usando o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado com isolamento SNAPSHOT não podem acessar as tabelas com otimização de memória. As transações que usam o [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado, seja com o isolamento REPEATABLE READ ou SERIALIZABLE, devem acessar as tabelas com otimização de memória usando o isolamento SNAPSHOT. Para obter mais informações sobre esse cenário, consulte [transações entre contêineres](cross-container-transactions.md).  
   
@@ -84,8 +84,8 @@ ms.locfileid: "36131048"
  Erro 41325. A transação atual não foi confirmada devido a uma falha de validação serializável.  
   
 ## <a name="see-also"></a>Consulte também  
- [Compreendendo transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Diretrizes para lógica de repetição das transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

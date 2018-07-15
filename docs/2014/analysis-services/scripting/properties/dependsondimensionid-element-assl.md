@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91af48b0b912a290798dead33c82f4bb2729c950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bda178f067cb8bf1a3cfe4bf7341c6916659a65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171397"
 ---
 # <a name="dependsondimensionid-element-assl"></a>Elemento DependsOnDimensionID (ASSL)
   Contém o identificador (ID) de outra dimensão da qual a dimensão pai depende.  
@@ -64,7 +64,7 @@ ms.locfileid: "36121154"
 ## <a name="remarks"></a>Remarks  
  O elemento `DependsOnDimensionID` é usado por uma dimensão dependente para identificar a dimensão da qual depende.  
   
- O elemento que corresponde ao pai do `DependsOnDimensionID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `DependsOnDimensionID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

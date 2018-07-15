@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279552"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar o SQL Server para usar o NUMA de software (SQL Server)
-Processadores modernos têm vários núcleos múltiplos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA. Com processadores contendo 10 ou mais núcleos por soquete, o uso de software (soft-NUMA) do para dividir nós de hardware geralmente aumenta a escalabilidade e desempenho.   
+Processadores modernos têm vários núcleos múltiplos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA. Com processadores contendo 10 ou mais núcleos por soquete, o uso do software NUMA (soft-NUMA) para dividir nós de hardware geralmente aumenta a escalabilidade e desempenho.   
 
 > [!NOTE]
 > O soft-NUMA não dá suporte para processadores incluídos a quente.
   
 ## <a name="automatic-soft-numa"></a>Soft-NUMA automático
 
-Nós soft-NUMA começando com o SQL Server 2014 Service Pack 2, sempre que o servidor do mecanismo de banco de dados detecta mais de 8 processadores físicos na inicialização, são criados automaticamente se o sinalizador de rastreamento 8079 está habilitado como um parâmetro de inicialização. Núcleos de processador Hyper-threaded não são considerados na contagem de processadores físicos. Quando o número de processadores físicos detectada mais de 8 por soquete, o serviço de mecanismo de banco de dados criará nós soft-NUMA idealmente contenham 8 núcleos, mas podem ter de 5 a 9 processadores lógicos por nó. O tamanho do nó de hardware pode limitar-se a uma máscara de afinidade de CPU. O número de nós NUMA nunca excederá o número máximo de nós para o qual há suporte.
+Nós soft-NUMA começando com o SQL Server 2014 Service Pack 2, sempre que o servidor do mecanismo de banco de dados detecta mais de 8 processadores físicos na inicialização, são criados automaticamente se o sinalizador de rastreamento 8079 é habilitado como um parâmetro de inicialização. Núcleos de processador Hyper-threaded não são considerados na contagem de processadores físicos. Quando o número de processadores físicos detectados é maior que 8 por soquete, o serviço de mecanismo de banco de dados criará nós soft-NUMA idealmente contenham 8 núcleos, mas podem descer até 5 ou até 9 processadores lógicos por nó. O tamanho do nó de hardware pode limitar-se a uma máscara de afinidade de CPU. O número de nós NUMA nunca excederá o número máximo de nós para o qual há suporte.
 
-Sem o sinalizador de rastreamento, o soft-NUMA é desabilitada por padrão. Você pode habilitar o de software usando o sinalizador de rastreamento 8079. Alterar o valor dessa configuração requer a efetivação da reinicialização do mecanismo de banco de dados.
+Sem o sinalizador de rastreamento, o soft-NUMA é desabilitada por padrão. Você pode habilitar o soft-NUMA usando o sinalizador de rastreamento 8079. Alterar o valor dessa configuração requer a efetivação da reinicialização do mecanismo de banco de dados.
 
-A figura a seguir mostra o tipo de informações sobre soft-NUMA que serão exibidas no log de erros do SQL Server quando o SQL Server detectar nós de hardware com mais de 8 processadores lógicos e se o sinalizador de rastreamento 8079 estiver habilitado.
+A figura a seguir mostra o tipo de informações sobre soft-NUMA que serão vistos no log de erros do SQL Server quando o SQL Server detectar nós de hardware com mais de 8 processadores lógicos e se o sinalizador de rastreamento 8079 é habilitado.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 

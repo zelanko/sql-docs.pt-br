@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271592"
 ---
 # <a name="relationshiptype-element-assl"></a>Elemento RelationshipType (ASSL)
   Indica se as relações de membro para um [AttributeRelationship](../objects/attributerelationship-element-assl.md) pode ser alterado.  
@@ -69,7 +69,7 @@ ms.locfileid: "36121785"
 |*Rígida*|As relações de membro entre um atributo e um atributo relacionado não podem ser alteradas.|  
 |*Flexível*|As relações de membro entre um atributo e um atributo relacionado podem ser alteradas.|  
   
- Por exemplo, se `ZipCode` não é possível alterar uma `City` para outra, a relação de `ZipCode` para `City` está marcado como *rígida*.  
+ Por exemplo, se `ZipCode` não é possível alterar de uma `City` para outra, a relação de `ZipCode` à `City` está marcada como *rígida*.  
   
  A enumeração que corresponde aos valores permitidos para `RelationshipType` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.RelationshipType>.  
   

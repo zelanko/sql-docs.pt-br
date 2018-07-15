@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261192"
 ---
 # <a name="discovercommandobjects-rowset"></a>Conjunto de linhas DISCOVER_COMMAND_OBJECTS
   Oferece uso de recursos e informações de atividade sobre os objetos em uso pelo comando referenciado.  
@@ -30,7 +30,7 @@ ms.locfileid: "36020368"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_COMMAND_OBJECTS` linhas contém as seguintes colunas.  
+ O `DISCOVER_COMMAND_OBJECTS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

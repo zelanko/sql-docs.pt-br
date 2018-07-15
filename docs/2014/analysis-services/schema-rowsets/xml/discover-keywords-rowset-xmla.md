@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_KEYWORDS rowset
 ms.assetid: 99945e53-3a1b-4d7b-9aff-712977db8b2d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df7fd7c6bf7dbe9ebd0bb9057b5c82dc351afab3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8be22c5132ed85ecb515ccadce20ecd593818a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241546"
 ---
 # <a name="discoverkeywords-rowset-xmla"></a>Conjunto de linhas DISCOVER_KEYWORDS (XMLA)
   Retorna informações sobre palavras-chave reservadas pelo provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA).  
@@ -34,7 +34,7 @@ ms.locfileid: "36010538"
  Se você chamar o [Discover](../../xmla/xml-elements-methods-discover.md) método com o `DISCOVER_KEYWORDS` valor de enumeração no [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, o `Discover` método retorna o `DISCOVER_KEYWORDS` conjunto de linhas.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_KEYWORDS` linhas contém as seguintes colunas.  
+ O `DISCOVER_KEYWORDS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "36010538"
 |`Keyword`|`DBTYPE_WSTR`|Opcional.|  
   
 ## <a name="see-also"></a>Consulte também  
- [XML for Analysis conjuntos de linhas de esquema](xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)   
  [Conjunto de linhas DISCOVER_LITERALS](discover-literals-rowset.md)  
   
   

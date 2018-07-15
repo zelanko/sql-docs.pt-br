@@ -1,5 +1,5 @@
 ---
-title: Energia exibir propriedades de relatório (SSAS Tabular) | Microsoft Docs
+title: Power exibir propriedades de relatório (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9bd81e21929c983b045e7c8268fb5bb3b4686594
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9b290b55eceb8734719c61229967d0c93c160a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330376"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propriedades de relatório de Power View (SSAS tabular)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oferece relatórios ad hoc intuitivos para usuários comerciais, tais como analistas de dados, tomadores de decisões de negócios e operadores de informações. Eles podem criar e interagir facilmente com exibição de dados de modelos tabulares com base em pastas de trabalho PowerPivot publicadas em uma Galeria do PowerPivot ou modelos de tabela criados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e, em seguida, implantados em instâncias do Analysis Services do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] é um aplicativo do Silverlight baseado no navegador, iniciado no SharePoint Server 2010 ou posterior.  

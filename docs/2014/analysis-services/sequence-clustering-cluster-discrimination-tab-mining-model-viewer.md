@@ -1,5 +1,5 @@
 ---
-title: Guia discriminação de Cluster (Visualizador do modelo de mineração) msc | Microsoft Docs
+title: Guia discriminação de Cluster (Visualizador do modelo de mineração) de Clusterização de sequência | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34ae165b87eed53b68ae4e1bd5264f1b500d0f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4debc43286ffb3fe4f87115ed15e9b4c3f74b06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187143"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Guia Discriminação de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia  **Discriminação do Cluster** no **Visualizador de Cluster de Sequência da Microsoft** compara clusters selecionados de um modelo de clustering de sequências.  
@@ -60,7 +60,7 @@ ms.locfileid: "36116005"
 |**Favorece \<cluster 1 >**|Contém uma barra sombreada que indica a força de o atributo e o estado listados em **Variáveis** e **Valor** favorecerem o cluster selecionado em **Cluster 1.**|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

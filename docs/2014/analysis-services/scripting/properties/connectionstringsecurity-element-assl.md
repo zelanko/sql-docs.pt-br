@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fce202b78364b4a3de68a33416922b929521727c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300866"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>Elemento ConnectionStringSecurity (ASSL)
   Especifica se a senha do usuário é tirada da cadeia de conexão de fonte de dados para propósitos de segurança.  

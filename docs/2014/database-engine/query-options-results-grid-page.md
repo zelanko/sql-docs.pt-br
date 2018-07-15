@@ -1,5 +1,5 @@
 ---
-title: Opções de consulta de resultados (página grade) | Microsoft Docs
+title: Resultados (página grade) das opções de consulta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4a06b4ad95b844dd002bf1efbb367b22193d3979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312286"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados das opções de consultas (Página Grade)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade.  

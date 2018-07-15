@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288562"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
   As DMVs (Exibições de Gerenciamento Dinâmico) do Analysis Services são estruturas de consulta que expõem informações sobre as operações do servidor local e a integridade do servidor. A estrutura da consulta é uma interface para conjuntos de linhas de esquema que retornam metadados e informações de monitoramento sobre uma instância do Analysis Services.  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se uma DMV não está disponível para um determinado conjunto de linhas, o servidor retornará o seguinte erro: "o \<conjunto_de_linhas_de_esquema > tipo de solicitação não foi reconhecido pelo servidor". Todos os outros erros apontam para problemas com a sintaxe.  
+>  Se não houver uma DMV disponível para um determinado conjunto de linhas, o servidor retornará o seguinte erro: "o \<conjunto_de_linhas_de_esquema > tipo de solicitação não foi reconhecido pelo servidor". Todos os outros erros apontam para problemas com a sintaxe.  
   
 |Conjunto de linhas|Description|  
 |------------|-----------------|  
@@ -168,7 +168,7 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Novo System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [New System. discover_object_activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas restritos e DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

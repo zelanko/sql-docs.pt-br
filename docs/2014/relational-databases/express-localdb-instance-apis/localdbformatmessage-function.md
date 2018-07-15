@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d2fbc72ef5f3b54e1a9889150ebc27b08520ba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a48c5d0ef42c2109aebeadf77a6e666e4407093f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246796"
 ---
 # <a name="localdbformatmessage-function"></a>Função LocalDBFormatMessage
   Retorna a descrição textual localizada para o erro de LocalDB do SQL Server Express especificado.  

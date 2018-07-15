@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0f8a60c636afb90dd68878b1e989454fb8d327b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d74778a66b1b5b286c26f7366184a2b62da57292
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328546"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Conversões, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use os botões da barra de ferramentas para executar operações comuns na exibição **Conversões** do **Designer de Dimensão**.  

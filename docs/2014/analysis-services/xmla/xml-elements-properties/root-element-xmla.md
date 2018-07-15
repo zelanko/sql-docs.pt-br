@@ -24,15 +24,15 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321076"
 ---
 # <a name="root-element-xmla"></a>Elemento root (XMLA)
   Contém um resultado retornado pelo [Discover](../xml-elements-methods-discover.md) método ou um comando XML for Analysis (XMLA) executado usando o [Execute](../xml-elements-methods-execute.md) método.  
@@ -64,17 +64,17 @@ ms.locfileid: "36117495"
 |Ancestor|Tipo de dados|  
 |--------------|---------------|  
 |[DiscoverResponse](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
-|[ExecuteResponse](../xml-data-types/mddataset-data-type-xmla.md), [linhas](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
+|[ExecuteResponse](../xml-data-types/mddataset-data-type-xmla.md), [conjunto de linhas](../xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../xml-data-types/emptyresult-data-type-xmla.md)|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[resultados](results-element-xmla.md), [de retorno](return-element-xmla.md)|  
+|Elementos pai|[resultados](results-element-xmla.md), [retornar](return-element-xmla.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `root` elemento contém as informações retornadas em um a [DiscoverResponse](../xml-elements-objects-discoverresponse.md) elemento retornado por um único `Discover` chamada de método, ou o [ExecuteResponse](../xml-elements-objects-executeresponse.md) elemento retornado por um único comando XMLA executado por um único `Execute` chamada de método.  
+ O `root` elemento contém as informações retornadas em qualquer um os [DiscoverResponse](../xml-elements-objects-discoverresponse.md) elemento retornado por uma única `Discover` chamada de método, ou nos [ExecuteResponse](../xml-elements-objects-executeresponse.md) elemento retornado por um único comando XMLA executado por um único `Execute` chamada de método.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

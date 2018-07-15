@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188333"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
   No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -143,7 +143,7 @@ ms.locfileid: "36122357"
   
  <sup>1</sup> essas colunas de dados são preenchidas por padrão para todos os eventos.  
   
- <sup>2</sup> para obter mais informações sobre o **ObjectType** coluna de dados, consulte [coluna de evento de rastreamento ObjectType](../event-classes/objecttype-trace-event-column.md).  
+ <sup>2</sup> para obter mais informações sobre a **ObjectType** coluna de dados, consulte [ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md).  
   
 ## <a name="sql-trace-tasks"></a>Tarefas de Rastreamento do SQL  
   

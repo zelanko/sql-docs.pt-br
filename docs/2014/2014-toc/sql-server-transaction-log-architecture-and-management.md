@@ -1,25 +1,24 @@
 ---
-title: Arquitetura de Log de transações do SQL Server e o gerenciamento | Microsoft Docs
+title: Gerenciamento e arquitetura do Log de transações do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301336"
 ---
 # Arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +68,11 @@ ms.locfileid: "36119821"
   
  O log de transações é um arquivo embrulhado. Por exemplo, considere um banco de dados com um arquivo de log físico dividido em quatro arquivos de log virtuais. Quando o banco de dados é criado, o arquivo de log lógico começa no início do arquivo de log físico. Novos registros de log são adicionados no final do log lógico e expandem para o final do log físico. O truncamento de logs libera quaisquer logs virtuais cujos registros apareçam todos na frente do número mínimo de sequência de recuperação do log (MinLSN). O *MinLSN* é o número de sequência de log do registro de log mais antigo que deve estar presente para o êxito de uma reversão de todo o banco de dados. O log de transações no banco de dados de exemplo pareceria semelhante ao apresentado na ilustração a seguir.  
   
- ![Arquivo de log é dividido em quatro arquivos de log virtuais](media/tranlog3.gif "arquivo de Log é dividido em quatro arquivos de log virtuais")  
+ ![Arquivo de log dividido em quatro arquivos de log virtuais](media/tranlog3.gif "arquivo de Log dividido em quatro arquivos de log virtuais")  
   
  Quando o final do log lógico alcança o final do arquivo de log físico, os novos registros de log são adicionados no início do arquivo de log físico.  
   
- ![Registros de log wrap alternativa para o início do arquivo de log](media/tranlog4.gif "registros de Log em torno encapsular para início do arquivo de log")  
+ ![Quebra automática de linha alternativa para o início do arquivo de log de registros de log](media/tranlog4.gif "registros de Log encapsulam em torno para o início do arquivo de log")  
   
  Esse ciclo repete-se indefinidamente, desde que o final do log lógico nunca alcance o início do log lógico. Se os registros de log antigos forem truncados com frequência suficiente para sempre deixar espaço suficiente para todos os registros de log novos criados através do próximo ponto de verificação, o log nunca estará completo. Contudo, se o final do log lógico não alcançar o início do log lógico, ocorrerá uma das duas coisas:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "36119821"
   
  A segunda ilustração mostra como o log aparece depois de ser truncado. Log 1 virtual e log 2 virtual foram liberados para reutilização. O log lógico agora inicia no começo do log 3 virtual. O log 5 virtual ainda está sem-uso e não é parte do log lógico atual.  
   
- ![Arquivo de log é dividido em quatro arquivos de log virtuais](media/tranlog3.gif "arquivo de Log é dividido em quatro arquivos de log virtuais")  
+ ![Arquivo de log dividido em quatro arquivos de log virtuais](media/tranlog3.gif "arquivo de Log dividido em quatro arquivos de log virtuais")  
   
  O truncamento de log ocorre automaticamente após os seguintes eventos, exceto quando atrasado por alguma razão:  
   

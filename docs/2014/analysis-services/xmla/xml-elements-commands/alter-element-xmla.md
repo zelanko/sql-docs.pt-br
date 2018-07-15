@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea2c3ed3105c66b0c0848138acb5941978dd9bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e13819d301af842eb2094d7b6ad3367cde424c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192399"
 ---
 # <a name="alter-element-xmla"></a>Elemento Alter (XMLA)
-  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo [Execute](../xml-elements-methods-execute.md) método para alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelos [Execute](../xml-elements-methods-execute.md) método para alterar objetos em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,8 +69,8 @@ ms.locfileid: "36013192"
 |attribute|Description|  
 |---------------|-----------------|  
 |AllowCreate|(Atributo `Boolean` opcional) Indica se os objetos definidos no comando `Alter` devem ser criados se ainda não existirem.<br /><br /> Se for definido como True, os objetos definidos no elemento `ObjectDefinition` serão criados na instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se ainda não existirem. Em outras palavras, o comando `Alter` é tratado como um comando `Create` se os objetos ainda não existirem na instância.<br /><br /> Se esse atributo for omitido ou definido como `false`, ocorrerá um erro se os objetos ainda não existirem.|  
-|ObjectExpansion|(Atributo `Enum` opcional) Define a extensão da alteração a ser executada pelo método `Execute`.<br /><br /> Se definido como *ObjectProperties*, o `ObjectDefinition` elemento deve conter somente a definição completa do principal objeto a ser alterado, incluindo os objetos menores subordinados. Os objetos grandes subordinados ao objeto a ser alterado permanecem iguais. **Observação:** ao usar o *ObjectProperties* configuração com o [ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md) tipo de dados, o [dados](../../scripting/objects/data-element-assl.md) elemento associado [ ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md) tipos de dados não precisa ser especificado. Se não for especificado, o elemento `ClrAssembly` usará os arquivos existentes. <br /><br /> Se definido como *ExpandFull*, o `ObjectDefinition` elemento deve conter não apenas a definição do objeto a ser alterado, mas também as definições de todos os principais objetos que são descendentes do objeto a ser alterado. **Observação:** o *ExpandFull* configuração não pode ser usada com a [Server](../../scripting/objects/server-element-assl.md) elemento.|  
-|Escopo|(Atributo `Enum` opcional) Define a duração dos objetos definidos no elemento `ObjectDefinition`.<br /><br /> Se definido como *sessão*, os objetos definidos no `ObjectDefinition` elemento existe apenas para a duração da sessão XMLA. **Observação:** ao usar o *sessão* configuração, o `ObjectDefinition` elemento só pode conter [dimensão](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL. <br /><br /> Se este atributo for omitido, os objetos definidos no elemento `ObjectDefinition` persistirão na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|ObjectExpansion|(Atributo `Enum` opcional) Define a extensão da alteração a ser executada pelo método `Execute`.<br /><br /> Se definido como *ObjectProperties*, o `ObjectDefinition` elemento deve conter somente a definição completa do principal objeto a ser alterada, incluindo os objetos menores subordinados. Os objetos grandes subordinados ao objeto a ser alterado permanecem iguais. **Observação:** ao usar o *ObjectProperties* com o [ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md) tipo de dados, o [dados](../../scripting/objects/data-element-assl.md) elemento associado [ ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md) tipos de dados não precisa ser especificado. Se não for especificado, o elemento `ClrAssembly` usará os arquivos existentes. <br /><br /> Se definido como *ExpandFull*, o `ObjectDefinition` elemento deve conter não apenas a definição do objeto a ser alterado, mas também as definições de todos os principais objetos que são descendentes do objeto a ser alterado. **Observação:** as *ExpandFull* configuração não pode ser usada com o [servidor](../../scripting/objects/server-element-assl.md) elemento.|  
+|Escopo|(Atributo `Enum` opcional) Define a duração dos objetos definidos no elemento `ObjectDefinition`.<br /><br /> Se definido como *sessão*, os objetos definidos no `ObjectDefinition` elemento existir somente para a duração da sessão XMLA. **Observação:** ao usar o *sessão* configuração, o `ObjectDefinition` elemento só pode conter [dimensão](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL. <br /><br /> Se este atributo for omitido, os objetos definidos no elemento `ObjectDefinition` persistirão na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Remarks  
  Cada `Alter` comando altera a definição de um objeto principal sob o objeto pai especificado o [ParentObject](../xml-elements-properties/parentobject-element-xmla.md) elemento.  

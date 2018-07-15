@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae8312f2d891483d59fd9e562996b7f4fe0d81d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56243e1f3b0038811cfaf877a3e45d714e2ee817
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292736"
 ---
 # <a name="sqlstmtstarting-event-class"></a>Classe de evento SQL:StmtStarting
   A classe de evento do SQL:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada.  

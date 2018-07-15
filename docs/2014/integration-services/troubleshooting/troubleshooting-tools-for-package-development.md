@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320676"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Solucionando problemas de ferramentas para desenvolvimento de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes enquanto você os estiver desenvolvendo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -45,9 +45,9 @@ ms.locfileid: "36118689"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os recursos adicionais a seguir para ajudar a evitar erros de validação:  
   
--   **Definir todos os pacotes e todas as conexões para trabalhar offline quando as fontes de dados não estiverem disponíveis**. Você pode habilitar **Trabalhar Offline** no menu **SSIS** . Ao contrário de `DelayValidation` propriedade, o **Trabalhar Offline** opção está disponível antes mesmo de você abrir um pacote. Você também pode habilitar a opção **Trabalhar Offline** para acelerar as operações no designer e a desabilitar apenas quando você desejar validar seu pacote.  
+-   **Definir todos os pacotes e todas as conexões para trabalhar offline quando as fontes de dados não estiverem disponíveis**. Você pode habilitar **Trabalhar Offline** no menu **SSIS** . Ao contrário do `DelayValidation` propriedade, o **Trabalhar Offline** opção está disponível antes mesmo de você abre um pacote. Você também pode habilitar a opção **Trabalhar Offline** para acelerar as operações no designer e a desabilitar apenas quando você desejar validar seu pacote.  
   
--   **Configure a propriedade DelayValidation em elementos do pacote que não são válidos até o tempo de execução**. Você pode definir `DelayValidation` como `True` em elementos do pacote cujas configurações não são válidas no tempo de design para evitar erros de validação. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. O `DelayValidation` propriedade pode ser habilitada no nível do pacote, ou o nível das tarefas individuais e contêineres que o pacote inclui. Normalmente, você deve deixar esta propriedade definida como `True` nos mesmos elementos do pacote quando você implantar o pacote, para evitar os mesmos erros de validação em tempo de execução.  
+-   **Configure a propriedade DelayValidation em elementos do pacote que não são válidos até o tempo de execução**. Você pode definir `DelayValidation` como `True` em elementos do pacote cujas configurações não são válidas no tempo de design para evitar erros de validação. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. O `DelayValidation` propriedade pode ser habilitada no nível do pacote ou no nível das tarefas individuais e contêineres que inclui o pacote. Normalmente, você deve deixar essa propriedade definida como `True` nos mesmos elementos do pacote quando você implanta o pacote, para impedir que os mesmos erros de validação em tempo de execução.  
   
      O `DelayValidation` propriedade pode ser definida em uma tarefa de fluxo de dados, mas não em dados individuais componentes de fluxo. Você pode conseguir um efeito semelhante definindo a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dos componentes de fluxo de dados individuais como `false`. No entanto, quando o valor dessa propriedade é `false`, o componente não está ciente das alterações aos metadados de fontes de dados externas.  
   

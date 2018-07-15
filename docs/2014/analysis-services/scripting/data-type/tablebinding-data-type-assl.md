@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220246"
 ---
 # <a name="tablebinding-data-type-assl"></a>Tipo de dados TableBinding (ASSL)
   Define um tipo de dados derivado que representa uma associação a uma tabela.  
@@ -77,11 +77,11 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- A expressão calculada ainda se aplica, até mesmo se a expressão tenha utilizado nomes de tabelas qualificados (por exemplo, Sales.Qty). O mesmo se aplica se, em vez disso, a tabela foram substituída por alguma consulta "SELECT..." A cláusula FROM acima iria se tornar "de SELECT... As Sales."  
+ A expressão calculada ainda se aplica, até mesmo se a expressão tenha utilizado nomes de tabelas qualificados (por exemplo, Sales.Qty). O mesmo se aplica se, em vez disso, as tabelas fossem substituídas pela mesma consulta "SELECT…" A cláusula FROM acima iria se tornar "FROM SELECT ... As Sales."  
   
- Para obter mais informações sobre o `Binding` tipo, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) do tipo `Binding` e a hierarquia de herança de `Binding` tipos, consulte [tipo de dados de associação &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obter mais informações sobre o `Binding` tipo, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) do tipo `Binding` e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.TableBinding>.  
   

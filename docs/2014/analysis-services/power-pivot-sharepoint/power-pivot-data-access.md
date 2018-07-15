@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a1a209c87dc227497aad1808758373b0d98b4d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d00d5ae30f7ed612657e185ed28307cc576bf040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231978"
 ---
 # <a name="powerpivot-data-access"></a>Acesso a dados PowerPivot
   Este tópico descreve os modos nos quais os dados são recuperados de uma pastas de trabalho PowerPivot que é publicada em uma biblioteca do SharePoint.  
@@ -44,7 +44,7 @@ ms.locfileid: "36115121"
  Nem todos os dados de uma pasta de trabalho do PowerPivot são tratados através de PowerPivot para SharePoint. Os Serviços do Excel processam tabelas e dados de células de uma planilha. Apenas Tabelas Dinâmicas, Gráficos Dinâmicos e Segmentações de Dados que vão de encontro aos dados PowerPivot são manipulados pelo PowerPivot para SharePoint.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se ao Analysis Services](../instances/connect-to-analysis-services.md)   
+ [Conectar-se ao Analysis Services](../instances/connect-to-analysis-services.md)   
  [Acesso a dados de modelo de tabela](../tabular-models/tabular-model-data-access.md)  
   
   

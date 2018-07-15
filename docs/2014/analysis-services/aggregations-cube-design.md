@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b6499597cd53c65b58d48a30ded3b9939d8976
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22125797706f54e4235f162f3ee8c282f6aa1f06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172017"
 ---
 # <a name="aggregations-cube-design"></a>Agregações (Design de Cubo)
   Use a guia **Agregações** no Designer de Cubo para criar e modificar designs de agregação.  

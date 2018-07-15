@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,16 +16,16 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306099"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gerenciador de Conexões da Assinatura do Azure
-  O Gerenciador de conexão do Azure HDInsight permite que um pacote do SSIS para se conectar a uma assinatura do Azure usando os valores especificados para as propriedades: ID de assinatura do Azure e certificado de gerenciamento.  
+  O Gerenciador de conexão do Azure HDInsight permite que um pacote do SSIS para se conectar a uma assinatura do Azure usando os valores especificados para as propriedades: ID de assinatura do Azure e o certificado de gerenciamento.  
   
 1.  Na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** mostrada acima, escolha **Assinatura do Azure**e clique em **Adicionar**.  Você deve ver a caixa de diálogo **Editor do Gerenciador de Conexões da Assinatura do Azure** a seguir.  
   

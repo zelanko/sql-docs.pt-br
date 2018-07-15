@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5d42579174d9bad39c5558bc299f4cd1d7785a59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 485c176956e89368f80a64fe746f8e5a7b0dfdf8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269732"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
   Localize informações necessárias a qualquer um — administrador de dados, administrador do Data Quality Services ou administrador do SQL Server — para preparar e executar um projeto de qualidade de dados.  

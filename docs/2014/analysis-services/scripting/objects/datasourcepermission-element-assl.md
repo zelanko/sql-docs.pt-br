@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca326118ce782962b0100c310ddb308af91f21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241356"
 ---
 # <a name="datasourcepermission-element-assl"></a>Elemento DataSourcePermission (ASSL)
-  Define as permissões padrão em uma [DataSource](../data-type/datasource-data-type-assl.md) tipo de dados para um determinado [função](role-element-assl.md) elemento.  
+  Define as permissões padrão em uma [fonte de dados](../data-type/datasource-data-type-assl.md) tipo de dados para um determinado [função](role-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36012986"
  Os objetos `DataSourcePermission` podem existir somente para as funções possuídas pelo banco de dados e somente um objeto `DataSourcePermission` pode existir para qualquer função.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Role &#40;ASSL&#41;](role-element-assl.md)   
+ [Elemento de função &#40;ASSL&#41;](role-element-assl.md)   
  [Objetos &#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Atualização de dados do PowerPivot com o SharePoint 2010 | Microsoft Docs
+title: Atualização de dados do PowerPivot com SharePoint 2010 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2809ee4ed18ce4f1735bbdc2b99ae5490c7e4046
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b92bb0b217ba9d6511bb4b5f26ae68a834bd6935
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312696"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Atualização de dados PowerPivot com SharePoint 2010
   A atualização de dados [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] é uma operação agendada no servidor que consulta fontes de dados externas para atualizar dados [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] inseridos em uma pasta de trabalho do Excel 2010 que é armazenada em uma biblioteca de conteúdo.  
@@ -33,13 +33,13 @@ ms.locfileid: "36019245"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e serviços do Excel do SharePoint Server 2013 usam uma arquitetura diferente para a atualização de dados de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados. A nova arquitetura utiliza os Serviços do Excel como componente primário para carregar modelos de dados PowerPivot. A arquitetura de atualização de dados anterior utilizada baseava-se em um servidor que executava o Serviço do Sistema PowerPivot e o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no modo do SharePoint para carregar modelos de dados. Para obter mais informações, consulte [atualização de dados do PowerPivot com o SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e serviços do Excel do SharePoint Server 2013 usam uma arquitetura diferente para atualização de dados [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de dados. A nova arquitetura utiliza os Serviços do Excel como componente primário para carregar modelos de dados PowerPivot. A arquitetura de atualização de dados anterior utilizada baseava-se em um servidor que executava o Serviço do Sistema PowerPivot e o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no modo do SharePoint para carregar modelos de dados. Para obter mais informações, consulte [atualização de dados do PowerPivot com o SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
   
  **Neste tópico:**  
   
- [Etapa 1: Habilitar o serviço de repositório seguro e gere uma chave mestra](#bkmk_services)  
+ [Etapa 1: Habilitar o serviço de Store seguro e gerar uma chave mestra](#bkmk_services)  
   
- [Etapa 2: Desativar as opções de credencial que não deseja oferecer suporte](#bkmk_creds)  
+ [Etapa 2: Desativar as opções de credenciais que você não deseja dar suporte](#bkmk_creds)  
   
  [Etapa 3: Criar aplicativos de destino para armazenar credenciais usadas na atualização de dados](#bkmk_stored)  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36019245"
   
  [Modificar definições de configuração para atualização de dados](#bkmk_config)  
   
- [Reagendar o trabalho de timer de atualização de dados do PowerPivot](#configTimerJob)  
+ [Reagendar o trabalho de timer de atualização de dados PowerPivot](#configTimerJob)  
   
  [Desabilitar o trabalho de Timer de atualização de dados](#bkmk_disableDR)  
   
  Após a verificação de que o ambiente de servidor e as permissões estão configurados, a atualização de dados estará pronta para uso. Para usar a atualização de dados, um usuário SharePoint cria uma agenda em uma pasta de trabalho PowerPivot que especifica a frequência da atualização de dados. A criação da agenda costuma ser feita pelo proprietário da pasta de trabalho ou pelo autor que publicou o arquivo no SharePoint. Essa pessoa cria e gerencia as agendas de atualização de dados para as pastas de trabalho de sua propriedade. Para obter mais informações, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
-##  <a name="bkmk_services"></a> Etapa 1: Habilitar o serviço de repositório seguro e gere uma chave mestra  
+##  <a name="bkmk_services"></a> Etapa 1: Habilitar o serviço de Store seguro e gerar uma chave mestra  
  A atualização de dados PowerPivot depende do Serviço de Repositório Seguro para fornecer as credenciais usadas para executar trabalhos de atualização de dados e conectar-se a fontes de dados externas que usam credenciais armazenadas.  
   
  Se você instalou o PowerPivot para SharePoint usando a opção Novo Servidor, o Serviço de Repositório Seguro foi configurado para você. Para outros cenários de instalação, crie e configure um aplicativo de serviço e gere uma chave de criptografia mestra para o Serviço de Repositório Seguro.  
@@ -101,18 +101,18 @@ ms.locfileid: "36019245"
   
  O log de auditoria das operações do Serviço de Repositório, que é útil para a solução de problemas, deve ser habilitado antes de estar disponível. Para obter mais informações sobre como habilitar o log, consulte [Configurar o Serviço de Repositório Seguro (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294).  
   
-##  <a name="bkmk_creds"></a> Etapa 2: Desativar as opções de credencial que não deseja oferecer suporte  
+##  <a name="bkmk_creds"></a> Etapa 2: Desativar as opções de credenciais que você não deseja dar suporte  
  A atualização de dados PowerPivot fornece três opções de credenciais em uma agenda de atualização de dados. Quando o proprietário de uma pasta de trabalho agenda a atualização de dados, ele escolhe uma dessas opções, determinando, assim, a conta em que o trabalho de atualização de dados será executado. Como administrador, você pode determinar que opções de credenciais estão disponíveis para proprietários de agendas.  
   
  Você deve ter no mínimo uma opção disponível para que a atualização de dados funcione.  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- A opção 1, **Usar a conta de atualização de dados configurada pelo administrador**, sempre aparece na página de definição de agenda, mas funciona somente se você configurar a conta de atualização de dados autônoma. Para obter mais informações sobre como criar a conta, consulte [configurar a conta autônoma dados PowerPivot atualizar &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+ A opção 1, **Usar a conta de atualização de dados configurada pelo administrador**, sempre aparece na página de definição de agenda, mas funciona somente se você configurar a conta de atualização de dados autônoma. Para obter mais informações sobre como criar a conta, consulte [configurar a conta autônoma PowerPivot Data Refresh &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
  A opção 2, **Conectar usando as seguintes credenciais de usuário do Windows**, sempre aparece na página, mas só funciona quando você habilita a opção **Permitir que os usuários insiram credenciais personalizadas do Windows** na página de configuração de aplicativos de serviço. Essa opção é habilitada por padrão, mas você pode desabilitá-la se as desvantagens de usá-la superarem as vantagens (veja abaixo).  
   
- A opção 3, **Conecte-se usando as credenciais salvas no SSS**, sempre aparece na página, mas funciona somente quando o proprietário de uma agenda fornece um aplicativo de destino válido. Um administrador deve criar esses aplicativos de destino antecipadamente e fornecer o nome do aplicativo para aqueles que criarem agendas de atualização de dados. Para obter mais informações sobre como criar um aplicativo de destino para dados de operações de atualização, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ A opção 3, **Conecte-se usando as credenciais salvas no SSS**, sempre aparece na página, mas funciona somente quando o proprietário de uma agenda fornece um aplicativo de destino válido. Um administrador deve criar esses aplicativos de destino antecipadamente e fornecer o nome do aplicativo para aqueles que criarem agendas de atualização de dados. Para obter mais informações sobre como criar um aplicativo de destino para dados de operações de atualização, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
  **Configurando a opção de credencial 2, "Conectar-se usando as seguintes credenciais de usuário do Windows"**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36019245"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- Esta opção de credencial está habilitada por padrão. Quando essa opção de credencial está habilitada, o Serviço do Sistema PowerPivot gera um aplicativo de destino no Serviço de Repositório Seguro para armazenar o nome de usuário e a senha especificados pelo proprietário da agenda. Um aplicativo de destino gerado é criado usando a convenção de nomenclatura: PowerPivotDataRefresh_\<guid >. Um aplicativo de destino é criado para cada conjunto de credenciais do Windows. Se já houver um aplicativo de destino pertencente ao Serviço do Sistema PowerPivot e ele armazenar o nome de usuário e a senha especificados pela pessoa que definiu a agenda, o Serviço do Sistema PowerPivot usará o aplicativo de destino em vez de criar um novo.  
+ Esta opção de credencial está habilitada por padrão. Quando essa opção de credencial está habilitada, o Serviço do Sistema PowerPivot gera um aplicativo de destino no Serviço de Repositório Seguro para armazenar o nome de usuário e a senha especificados pelo proprietário da agenda. Um aplicativo de destino gerado é criado usando essa convenção de nomenclatura: PowerPivotDataRefresh_\<guid >. Um aplicativo de destino é criado para cada conjunto de credenciais do Windows. Se já houver um aplicativo de destino pertencente ao Serviço do Sistema PowerPivot e ele armazenar o nome de usuário e a senha especificados pela pessoa que definiu a agenda, o Serviço do Sistema PowerPivot usará o aplicativo de destino em vez de criar um novo.  
   
  A principal vantagem de usar essa opção de credencial é a facilidade de uso e simplicidade. O trabalho antecipado é mínimo porque os aplicativos de destino são criados por você. Além disso, a execução da atualização de dados com as credenciais do proprietário da agenda (que muito provavelmente é a pessoa que criou a pasta de trabalho) simplifica o downstream dos requisitos de permissão. Muito provavelmente, esse usuário já tem permissões no banco de dados de destino. Quando a atualização de dados é executada com a identidade de usuário do Windows dessa pessoa, qualquer conexão de dados que especificar ‘usuário atual’ funcionará automaticamente.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36019245"
   
  Conforme dito na seção anterior, é necessário criar aplicativos de destino para poder usar certas opções de credenciais. Especificamente, é necessário criar aplicativos de destino para a conta de atualização de dados autônoma do PowerPivot, além de credenciais armazenadas adicionais que se espera usar em operações de atualização de dados.  
   
- Para obter mais informações sobre como criar aplicativos de destino que contêm credenciais armazenadas, consulte [configurar a conta autônoma dados PowerPivot atualizar &#40;PowerPivot para SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [ Configurar credenciais armazenadas para a atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Para obter mais informações sobre como criar aplicativos de destino que contêm credenciais armazenadas, consulte [configurar a conta autônoma PowerPivot Data Refresh &#40;PowerPivot para SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) e [ Configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="bkmk_scale"></a> Etapa 4: Configurar o servidor para atualização de dados evolutiva  
  Por padrão, cada instalação do PowerPivot para SharePoint oferece suporte a consultas sob demanda e atualizações de dados agendadas.  
@@ -170,7 +170,7 @@ ms.locfileid: "36019245"
   
  Além das permissões do SharePoint, as permissões de banco de dados em fontes de dados externas também devem ser revisadas para verificar se as contas usadas durante a atualização de dados têm direitos de acesso suficientes aos dados. Determinar os requisitos de permissão exige uma avaliação cautelosa de sua parte, pois as permissões que você precisa conceder variam de acordo com a cadeia de conexão da pasta de trabalho e a identidade de usuário sob a qual o trabalho de atualização de dados está em execução.  
   
- **Por que as cadeias de conexão existentes em uma pasta de trabalho PowerPivot são importantes para operações de atualização de dados do PowerPivot**  
+ **Por que as cadeias de caracteres de conexão existentes em uma pasta de trabalho PowerPivot são importantes para operações de atualização de dados do PowerPivot**  
   
  Quando a atualização de dados é executada, o servidor envia uma solicitação de conexão para a fonte de dados externa usando a cadeia de conexão que foi criada quando os dados foram importados inicialmente. O local do servidor, o nome do banco de dados e os parâmetros de autenticação especificados na cadeia de conexão serão reutilizados durante a atualização de dados para acessar as mesmas fontes de dados. A cadeia de conexão e sua construção geral não podem ser modificadas para a atualização de dados. Elas são reutilizadas simplesmente como estão durante a atualização de dados. Em alguns casos, se você usar uma autenticação que não seja do Windows para conectar-se a uma fonte de dados, poderá substituir o nome de usuário e a senha na cadeia de conexão. Mais detalhes sobre isso são fornecidos neste tópico.  
   
@@ -180,15 +180,15 @@ ms.locfileid: "36019245"
   
  Em caso positivo, você deve conceder permissões de leitura a essa conta nas fontes de dados que são acessadas durante a atualização de dados. O motivo pelo qual essa conta precisa de permissões de leitura é porque, em uma pasta de trabalho que usa as opções de autenticação padrão, a conta autônoma será o ‘usuário atual’ durante a atualização de dados. A menos que o proprietário da agenda substitua as credenciais na cadeia de conexão, essa conta precisará de permissões de leitura em qualquer quantidade de fontes de dados que forem ativamente usadas em sua organização.  
   
- **Você está usando a opção de credencial 2: permitir que o proprietário da agenda Insira um nome de usuário do Windows e senha?**  
+ **Você está usando a opção de credencial 2: permitir que o proprietário da agenda Insira um nome de usuário do Windows e uma senha?**  
   
  Normalmente, os usuários que criam pastas de trabalho PowerPivot já possuem permissões suficientes porque eles já importaram os dados inicialmente. Se esses usuários configurarem a atualização de dados subsequentemente para ser executada sob sua própria identidade de usuário do Windows, sua conta de usuário do Windows, que já tem direitos no banco de dados, será usada para recuperar dados durante a atualização de dados. As permissões existentes devem ser suficientes.  
   
- **Você está usando a opção de credencial 3: usando um aplicativo de destino do serviço de repositório seguro para fornecer uma identidade de usuário para executar trabalhos de atualização de dados?**  
+ **Você está usando a opção de credencial 3: usando um aplicativo de destino do serviço de Store de seguro para fornecer uma identidade de usuário para executar trabalhos de atualização de dados?**  
   
  Qualquer conta usada para executar um trabalho de atualização de dados precisa de permissões de leitura, pelos mesmos motivos descritos para a conta de atualização de dados autônoma do PowerPivot.  
   
- **Como verificar as cadeias de conexão para determinar se é possível substituir as credenciais usadas durante a atualização de dados**  
+ **Como verificar as cadeias de caracteres de conexão para determinar se é possível substituir as credenciais usadas durante a atualização de dados**  
   
  Conforme dito anteriormente, você pode substituir um nome de usuário e uma senha diferentes no nível do trabalho de atualização de dados se a conexão estiver usando uma autenticação que não seja do Windows (por exemplo, autenticação do SQL Server). As credenciais que não são do Windows são transmitidas na cadeia de conexão por meio dos parâmetros de ID de usuário e senha. Se sua pasta de trabalho contiver uma cadeia de conexão com esses parâmetros, você poderá especificar opcionalmente um nome de usuário e uma senha diferentes para atualizar os dados dessa fonte de dados.  
   
@@ -212,13 +212,13 @@ ms.locfileid: "36019245"
   
  **Como substituir credenciais na cadeia de conexão**  
   
- A substituição de credenciais é feita por meio da especificação das credenciais da fonte de dados na agenda de atualização de dados. Como administrador, você pode fornecer um aplicativo de destino no Serviço de Repositório Seguro que mapeia as credenciais usadas para acessar dados externos. O proprietário da agenda pode inserir a ID do aplicativo de destino na agenda de atualização de dados definida por ele. Para obter mais informações sobre como criar este aplicativo de destino, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ A substituição de credenciais é feita por meio da especificação das credenciais da fonte de dados na agenda de atualização de dados. Como administrador, você pode fornecer um aplicativo de destino no Serviço de Repositório Seguro que mapeia as credenciais usadas para acessar dados externos. O proprietário da agenda pode inserir a ID do aplicativo de destino na agenda de atualização de dados definida por ele. Para obter mais informações sobre como criar este aplicativo de destino, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
  Opcionalmente, o proprietário da agenda pode digitar um conjunto de credenciais que são usadas para conectar-se a fontes de dados durante a atualização de dados. A ilustração a seguir mostra essa opção de fonte de dados na página de definição da agenda.  
   
  ![SSAS_PowerPivotKJ_DataRefreshDSOptions](media/ssas-powerpivotkj-datarefreshdsoptions.gif "SSAS_PowerPivotKJ_DataRefreshDSOptions")  
   
- **Identificando requisitos de acesso de dados**  
+ **Requisitos de acesso de dados de identificação**  
   
  Conforme dito nas seções anteriores, a conta usada para executar a atualização de dados e conectar-se a fontes de dados externas é geralmente a mesma. Sendo assim, a conta usada para acessar fontes de dados externas é determinada pelo conjunto de opções nessa parte da página da agenda de atualização de dados. Ela pode ser a conta de atualização de dados autônoma do PowerPivot, a conta de um usuário individual do Windows ou a conta armazenada em um aplicativo de destino predefinido.  
   
@@ -236,14 +236,14 @@ ms.locfileid: "36019245"
   
  Quando você criar a agenda, marque a caixa de seleção **Também atualizar o mais rápido possível** para executar a atualização de dados imediatamente. Em seguida, você pode verificar a página do histórico de atualização de dados dessa pasta de trabalho para confirmar se foi executada com êxito. Lembre-se de que o trabalho de timer da Atualização de Dados PowerPivot é executado a cada minuto. Levará no mínimo esse tempo para obter a confirmação de que a atualização de dados foi bem-sucedida.  
   
- Tente todas as opções de credenciais para as quais planeja oferecer suporte. Por exemplo, se você tiver configurado a conta de atualização de dados autônoma do PowerPivot, verifique se a atualização de dados ocorre usando essa opção. Para obter mais informações sobre agendamento e exibindo informações de status, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md) e [histórico de atualização de dados de exibição &#40;PowerPivot para SharePoint &#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
+ Tente todas as opções de credenciais para as quais planeja oferecer suporte. Por exemplo, se você tiver configurado a conta de atualização de dados autônoma do PowerPivot, verifique se a atualização de dados ocorre usando essa opção. Para obter mais informações sobre agendamento e exibindo informações de status, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md) e [histórico de atualização de dados de exibição &#40;o PowerPivot para SharePoint &#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
  Se a atualização de dados falhar, consulte a página [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) no wiki do TechNet para saber quais são as soluções possíveis.  
   
 ##  <a name="bkmk_config"></a> Modificar definições de configuração para atualização de dados  
  Cada aplicativo de serviço PowerPivot tem parâmetros de configuração que afetam as operações de atualização de dados. Esta seção explica como modificar essas definições.  
   
-###  <a name="procIntervals"></a> Defina o 'horário comercial' para determinar o horário de trabalho de processamento  
+###  <a name="procIntervals"></a> Defina o 'horário comercial' para determinar fora do horário de processamento  
  Os usuários do SharePoint que agendam operações de atualização de dados podem especificar uma hora de início antes de "Depois do horário comercial". Isso poderá ser útil se eles desejarem recuperar dados de transações comerciais que foram acumulados durante o dia comercial. Como administrador de farm, você pode especificar o intervalo de horas que melhor defina um dia comercial para sua organização. Se você definir o dia comercial como de 4h às 20h, o processamento da atualização de dados baseada em uma hora de início "Depois do horário comercial" iniciará às 20h01.  
   
  Solicitações de atualização de dados executadas fora do horário comercial são adicionadas à fila na ordem de recebimento. Solicitações individuais são processadas conforme os recursos do servidor se tornam disponíveis.  
@@ -260,7 +260,7 @@ ms.locfileid: "36019245"
   
 5.  Clique em **OK**.  
   
-###  <a name="usagehist"></a> Limite quanto tempo de retenção do histórico de atualização de dados  
+###  <a name="usagehist"></a> Limitar por quanto tempo o histórico de dados é retido  
  O histórico de atualização de dados é um registro detalhado das mensagens de êxito e de falha geradas por operações de atualização de dados ao longo do tempo. As informações do histórico são coletadas e gerenciadas por meio do sistema de coleta de dados de uso no farm. Dessa forma, limites que você define para o histórico de dados de uso também se aplicam ao histórico de atualização de dados. Como os relatórios de atividade de uso reúnem dados de todo o sistema PowerPivot, uma única configuração de histórico é usada para controlar a retenção de dados de controle para o histórico de atualização de dados e todos os outros dados de uso que são coletados e armazenados.  
   
 1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar Aplicativos de Serviço**.  
@@ -279,7 +279,7 @@ ms.locfileid: "36019245"
   
  O armazenamento físico de longo prazo de dados de histórico está no banco de dados do aplicativo do serviço PowerPivot. Para obter mais informações sobre como os dados de uso são coletados e armazenados, consulte [coleta de dados de uso do PowerPivot](power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
-##  <a name="configTimerJob"></a> Reagendar o trabalho de timer de atualização de dados do PowerPivot  
+##  <a name="configTimerJob"></a> Reagendar o trabalho de timer de atualização de dados PowerPivot  
  A atualização de dados agendada é disparada pelo trabalho de timer da Atualização de Dados PowerPivot que examina informações da agenda no banco de dados do aplicativo do serviço PowerPivot em intervalos de um minuto. Quando a atualização de dados está agendada para começar, o trabalho de timer adiciona a solicitação a uma fila de processamento em um servidor PowerPivot disponível.  
   
  Você pode aumentar o período de tempo entre exames como uma técnica de ajuste do desempenho. Você também pode desabilitar o trabalho de timer para interromper temporariamente as operações de atualização de dados ao solucionar problemas.  
@@ -288,7 +288,7 @@ ms.locfileid: "36019245"
   
  Se você aumentar o intervalo de exame para que ele seja executado com pouca frequência (por exemplo, uma vez por dia à meia-noite), todas as operações de atualização de dados que foram agendadas para serem executadas nesse intervalo serão adicionadas à fila de processamento ao mesmo tempo, podendo sobrecarregar o servidor e privar outros aplicativos de recursos do sistema. Dependendo do número de atualizações agendadas, a fila de processamento de operações de atualização de dados poderá aumentar de tal forma que nenhum trabalho poderá ser concluído. As solicitações de atualização de dados que estão no final da fila talvez sejam descartadas se coincidirem com o próximo intervalo de processamento.  
   
- Dependendo do suporte oferecido por seu hardware, você poderá atenuar esse problema especificando que processadores adicionais executem um maior número de trabalhos de atualização de dados em paralelo. Para obter mais informações, consulte [configurar dedicado de atualização de dados ou processamento Query-Only &#40;PowerPivot para SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). Para obter mais informações sobre como as solicitações de atualização de dados são descobertas, adicionadas a uma fila e processadas, consulte [atualização de dados do PowerPivot](power-pivot-sharepoint/power-pivot-data-refresh.md).  
+ Dependendo do suporte oferecido por seu hardware, você poderá atenuar esse problema especificando que processadores adicionais executem um maior número de trabalhos de atualização de dados em paralelo. Para obter mais informações, consulte [configurar dedicado de atualização de dados ou processamento Query-Only &#40;PowerPivot para SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). Para obter mais informações sobre como as solicitações de atualização de dados são descobertas, adicionadas a uma fila e processadas, consulte [atualização de dados PowerPivot](power-pivot-sharepoint/power-pivot-data-refresh.md).  
   
 1.  Na Administração Central, clique em **Monitoramento**.  
   
@@ -309,6 +309,6 @@ ms.locfileid: "36019245"
  [Agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
  [Configurar o processamento de somente consulta ou atualização de dados dedicado &#40;PowerPivot para SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)   
  [Configurar o PowerPivot conta de atualização de dados autônoma &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
- [Configurar credenciais armazenadas para a atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [Configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

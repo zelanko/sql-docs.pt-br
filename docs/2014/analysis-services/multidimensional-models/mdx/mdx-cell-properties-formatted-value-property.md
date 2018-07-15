@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319266"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING em FORMATED_VALUE
   A propriedade FORMATTED_VALUE é criada com base nas interações das propriedades VALUE, FORMAT_STRING e LANGUAGE da célula. Este tópico explica como essas propriedades interagem para criar a propriedade FORMATTED_VALUE.  
@@ -37,7 +37,7 @@ ms.locfileid: "36013454"
  A especificação de localidade a ser aplicada junto com FORMAT_STRING para gerar uma versão localizada de FORMATTED_VALUE  
   
 ## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE construída  
- A propriedade FORMATTED_VALUE é construída com o uso do valor da propriedade VALUE e a aplicação do modelo de formato especificado na propriedade FORMAT_STRING para esse valor. Além disso, sempre que o valor de formatação é uma `named formatting literal` a especificação da propriedade LANGUAGE modifica a saída de FORMAT_STRING para seguir o uso de idioma para a formatação nomeada. Os literais de formatação nomeada são definidos de modo que possam ser localizados. Por exemplo, `"General Date"` é uma especificação que pode ser localizada, em oposição ao seguinte modelo `"YYYY-MM-DD hh:nn:ss",` , que declara que a data deve ser apresentada conforme o definido pelo modelo, independentemente da especificação de idioma.  
+ A propriedade FORMATTED_VALUE é construída com o uso do valor da propriedade VALUE e a aplicação do modelo de formato especificado na propriedade FORMAT_STRING para esse valor. Além disso, sempre que o valor de formatação for um `named formatting literal` a especificação da propriedade LANGUAGE modifica a saída de FORMAT_STRING para seguir o uso do idioma da formatação nomeada. Os literais de formatação nomeada são definidos de modo que possam ser localizados. Por exemplo, `"General Date"` é uma especificação que pode ser localizada, em oposição ao seguinte modelo `"YYYY-MM-DD hh:nn:ss",` , que declara que a data deve ser apresentada conforme o definido pelo modelo, independentemente da especificação de idioma.  
   
  Se houver um conflito entre o modelo FORMAT_STRING e a especificação LANGUAGE, FORMAT_STRING substituirá LANGUAGE. Por exemplo, se FORMAT_STRING="$ #0" e LANGUAGE=1034 (Spain), e VALUE=123.456, D_VALUE="$ 123" em vez de FORMATTED_VALUE="€ 123", o formato esperado estará em Euros, porque o valor do modelo do formato substitui o idioma especificado.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "36013454"
   
 ## <a name="see-also"></a>Consulte também  
  [Conteúdo de FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Usando propriedades de célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Criando e usando valores de propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Usando propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Criando e usando valores da propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

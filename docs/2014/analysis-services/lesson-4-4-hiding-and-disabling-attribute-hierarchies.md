@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0e83f548ebefd90b3bb990629980f95620e30ad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d980e87255d24d754e19d8358b423ba38440d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271952"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultando e desabilitando as hierarquias de atributo
   Por padrão, uma hierarquia de atributo é criada para cada atributo em uma dimensão e cada hierarquia é disponibilizada para o dimensionamento de dados de fatos. Essa hierarquia é composta por um nível "Todos" e um nível de detalhe que contém todos os membros da hierarquia. Como você já aprendeu, é possível organizar atributos em hierarquias definidas pelo usuário para fornecer caminhos de navegação em um cubo. Sob certas circunstâncias, talvez você queira desativar ou ocultar alguns atributos e suas hierarquias. Por exemplo, determinados atributos como um número de previdência social ou números de identificação nacional, taxas de pagamentos, datas de aniversário e informações de logon não são atributos pelos quais os usuários poderão dimensionar as informações do cubo. Em vez disso, geralmente essas informações são exibidas apenas como detalhes de um membro de atributo específico. É possível ocultar essas hierarquias de atributos, deixando os atributos visíveis apenas como propriedades de membro de um determinado atributo. Você também pode criar membros de outros atributos, como nomes de cliente ou CEPs, visíveis somente quando eles são exibidos através de uma hierarquia de usuário em vez de serem exibidos de forma independente através de uma hierarquia de atributo. Uma razão para seguir esse procedimento pode ser o número absoluto de membros distintos na hierarquia de atributo. Por fim, para melhorar o desempenho do processamento, será preciso desativar as hierarquias de atributo que não serão usadas pelos usuários na navegação.  
@@ -81,7 +81,7 @@ ms.locfileid: "36120892"
   
      A imagem a seguir mostra a propriedade **AttributeHierarchyEnabled** definida como False para os atributos selecionados.  
   
-     ![Propriedade AttributeHierarchyEnabled definida como False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "propriedade AttributeHierarchyEnabled definida como False")  
+     ![Propriedade AttributeHierarchyEnabled definida como falsa](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "propriedade AttributeHierarchyEnabled definida como False")  
   
 5.  No menu **Compilar** , clique em **Implantar Tutorial do Analysis Services**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36120892"
   
      A imagem a seguir mostra a propriedade **AttributeHierarchyVisible** definida como False.  
   
-     ![A propriedade AttributeHierarchyVisible definida como False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "propriedade AttributeHierarchyVisible definida como False")  
+     ![A propriedade AttributeHierarchyVisible definida como falsa](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "a propriedade AttributeHierarchyVisible definida como False")  
   
 5.  Arraste o atributo **CEP** do painel **Atributos** para a hierarquia de usuário **Geografia do Cliente** no painel **Hierarquias e Níveis** , imediatamente abaixo do nível **Cidade** .  
   

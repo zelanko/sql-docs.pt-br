@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75cd6c2aeca77d55b4ec66baa3dccb4c77f4a66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321236"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Selecionar Membros (Assistente de Business Intelligence)
   Use a página **Selecionar Membros** para determinar a quais membros o Assistente de Business Intelligence deve aplicar a funcionalidade de conversão de moeda especificada na página **Definir Opções de Conversão de Moeda** .  
@@ -41,7 +41,7 @@ ms.locfileid: "36117266"
 |**Medidas**|Selecione a medida do grupo de medidas de taxa que contém a taxa de câmbio a ser usada ao converter a medida selecionada em **Tipos de Medidas Internas** .|  
   
  **Hierarquia de contas**  
- Selecione para aplicar a funcionalidade de conversão de moeda a um ou mais membros da hierarquia de contas da dimensão de conta incluída no cubo. A hierarquia de contas é a hierarquia dentro da conta da dimensão cuja `Type` está definida como *conta*.  
+ Selecione para aplicar a funcionalidade de conversão de moeda a um ou mais membros da hierarquia de contas da dimensão de conta incluída no cubo. A hierarquia de contas é a hierarquia dentro da conta da dimensão cuja `Type` estiver definida como *conta*.  
   
  Se selecionada, a grade exibirá as opções listadas na tabela a seguir.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36117266"
 |**Medidas**|Selecione a medida do grupo de medidas de taxa que contém a taxa de câmbio a ser usada quando as medidas do membro selecionado em **Membro da Conta** forem convertidas.|  
   
  **Com base no tipo de hierarquia de contas**  
- Selecione para aplicar a funcionalidade de conversão de moeda a todos os membros de atributos na hierarquia de contas cuja `Type` propriedade é definida como um tipo de conta especificado.  
+ Selecione para aplicar a funcionalidade de conversão de moeda a todos os membros de atributos na hierarquia de contas cuja `Type` estiver definida como um tipo de conta especificado.  
   
  Se selecionada, a grade exibirá as opções listadas na tabela a seguir.  
   

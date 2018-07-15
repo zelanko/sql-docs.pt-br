@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224056"
 ---
 # <a name="calculationreference-element-assl"></a>Elemento CalculationReference (ASSL)
   Contém o nome do conjunto nomeado ou da célula calculada mencionado pelo [CalculationProperty](../objects/calculationproperty-element-assl.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36020565"
 ## <a name="remarks"></a>Remarks  
  Se o valor do elemento `CalculationReference` não coincidir com o nome de um conjunto nomeado ou de uma definição de célula calculada existente, o elemento `CalculationReference` será ignorado.  
   
- O elemento que corresponde ao pai do `CalculationReference` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ O elemento que corresponde ao pai de `CalculationReference` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d1172bf238b26c7b18ee08e0c7bc343ce2839f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 097b4fb0183d2731af6a8438c805b568d05f4758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242396"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Propriedade InstanceName (Classe ServerNetworkProtocolIPAddress)
   Obtém o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual o protocolo de rede de servidor está instalado.  

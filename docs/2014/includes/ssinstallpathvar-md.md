@@ -1,1 +1,1 @@
-\<*unidade*\>:\\arquivos de programa\\Microsoft SQL Server\\120\\
+\<*unidade*\>:\\arquivos de programas\\Microsoft SQL Server\\120\\

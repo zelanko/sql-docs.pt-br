@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4c8b956ab0874bc89b23d72953c9268276a29da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f57d3477c2dcede6b168dea569dcdcecf25d8c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304076"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>classe de evento CursorImplicitConversion
   A classe de evento **CursorImplicitConversion** descreve eventos de conversão cursor-implícitos que acontecem em interfaces de programação de aplicativo (APIs) ou cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] . Eventos de conversão cursor-implícitos ocorrem quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] executa uma instrução Transact-SQL que não é suportada por cursores de servidor do tipo solicitado. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro que indica que o tipo de cursor foi alterado.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], transaction logs
 - transaction log backups [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a7c382ef6c3e18a21427e540e6215d96e09b7f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e0a796d00c24f099f6ca96b826eb41e7f0e103e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186593"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
   Este tópico é relevante apenas para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estejam usando modelos de recuperação completa ou bulk-logged. Este tópico descreve o backup do log de transações de um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "36116627"
   
  **Neste tópico:**  
   
--   [Como uma sequência de Backups de Log funciona](#LogBackupSequence)  
+-   [Como funciona uma sequência de Backups de Log](#LogBackupSequence)  
   
 -   [Recomendações](#Recommendations)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "36116627"
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> Como uma sequência de Backups de Log funciona  
+##  <a name="LogBackupSequence"></a> Como funciona uma sequência de Backups de Log  
  A sequência de backups de log de transações *log chain* é independente dos backups de dados. Por exemplo, suponha a sequência de eventos a seguir.  
   
 |Hora|Evento|  

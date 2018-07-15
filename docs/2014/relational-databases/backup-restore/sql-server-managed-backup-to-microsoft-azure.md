@@ -1,29 +1,28 @@
 ---
-title: SQL Server Backup gerenciado para Windows Azure | Microsoft Docs
+title: SQL Server Managed Backup to Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28af03350c7b72292a8af9021efb83634f878b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b7374cd96dac868ae6d3361ee34e18693c340cff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254318"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Backup Gerenciado do SQL Server para Microsoft Azure
   O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerenciar e automatiza os backups do SQL Server no serviço de armazenamento de Blob do Windows Azure. A estratégia de backup usada pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] baseia-se no período de retenção e na carga de trabalho da transação no banco de dados. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.   
-O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habilitado no nível do banco de dados ou da instância para gerenciar todos os bancos de dados na instância do SQL Server. A instância do SQL Server pode estar sendo executada no local ou em ambientes hospedados, como a máquina virtual do Windows Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é recomendado para SQL Server em execução em máquinas virtuais do Windows Azure.  
+O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habilitado no nível do banco de dados ou da instância para gerenciar todos os bancos de dados na instância do SQL Server. A instância do SQL Server pode estar sendo executada no local ou em ambientes hospedados, como a máquina virtual do Windows Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é recomendado para o SQL Server em execução em máquinas virtuais do Windows Azure.  
   
 ## <a name="benefits-of-automating-sql-server-backup-using-includesssmartbackupincludesss-smartbackup-mdmd"></a>Benefícios da automatização do Backup do SQL Server usando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -35,18 +34,18 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
     -   A opção de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e definir o período de retenção no nível do banco de dados permite que você substitua as configurações padrão definidas no nível da instância. Isso permite que você tenha um controle mais granular da capacidade de recuperação de um banco de dados específico.  
   
--   Com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], você não precisa especificar o tipo ou a frequência dos backups de um banco de dados.  Especifique o período de retenção e [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] determina o tipo e a frequência dos backups para um banco de dados armazena os backups no serviço de armazenamento de Blob do Windows Azure. Para obter mais detalhes sobre o conjunto de critérios que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para criar a estratégia de backup, consulte o [componentes e conceitos](#Concepts) neste tópico.  
+-   Com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], você não precisa especificar o tipo ou a frequência dos backups de um banco de dados.  Especifique o período de retenção, e [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] determina o tipo e a frequência dos backups para um banco de dados armazena os backups no serviço de armazenamento de Blob do Windows Azure. Para obter mais detalhes sobre o conjunto de critérios que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] usa para criar a estratégia de backup, consulte a [componentes e conceitos](#Concepts) neste tópico.  
   
 -   Quando configurado para usar a criptografia, você tem a segurança adicional dos dados do backup. Para obter mais informações, consulte [criptografia de Backup](backup-encryption.md)  
   
- Para obter mais detalhes sobre os benefícios de usar o armazenamento de Blob do Windows Azure para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, consulte [SQL Server Backup e restauração com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+ Para obter mais detalhes sobre os benefícios do uso do armazenamento de Blob do Windows Azure para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, consulte [SQL Server Backup e restauração com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ## <a name="terms-and-definitions"></a>Termos e definições  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  Um recurso do SQL Server que automatiza o backup do banco de dados e mantém os backups com base no período de retenção.  
   
  Período de Retenção  
- O período de retenção é usado por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para determinar quais arquivos de backup devem ser mantidos no armazenamento para recuperar um banco de dados para um ponto no tempo dentro do período especificado.  Os valores com suporte estão no intervalo de 1-30 dias.  
+ O período de retenção é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para determinar quais arquivos de backup devem ser mantidos no armazenamento para recuperar um banco de dados para um ponto no tempo dentro do período de tempo especificado.  Os valores com suporte estão no intervalo de 1-30 dias.  
   
  Cadeia de logs  
  Uma sequência contínua de backups de log é denominada cadeia de logs. Uma cadeia de logs começa com um backup completo do banco de dados.  
@@ -55,17 +54,17 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
   
 ###  <a name="Security"></a> Permissões  
- O Transact-SQL é a principal interface usada para configurar e monitorar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Em geral, para executar a configuração de procedimentos armazenados, **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões **sp_delete _ backuphistory** procedimento armazenado é necessário.  Os procedimentos armazenados e as funções usadas para examinar informações normalmente requerem permissões `Execute` no procedimento armazenado e `Select` na função respectivamente.  
+ O Transact-SQL é a principal interface usada para configurar e monitorar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Em geral executar a configuração de procedimentos armazenados **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões em **sp_delete backuphistory** procedimento armazenado é necessário.  Os procedimentos armazenados e as funções usadas para examinar informações normalmente requerem permissões `Execute` no procedimento armazenado e `Select` na função respectivamente.  
   
 ###  <a name="Prereqs"></a> Pré-requisitos  
  **Pré-requisitos:**  
   
- **Serviço de armazenamento do Windows Azure** é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para armazenar os arquivos de backup.    Os conceitos, estrutura e requisitos para a criação de uma conta de armazenamento do Windows Azure é explicado em detalhes no [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) seção o **Backup do SQL Server para URL** tópico.  
+ **Serviço de armazenamento do Windows Azure** é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para armazenar os arquivos de backup.    Os conceitos, estrutura e os requisitos para a criação de uma conta de armazenamento do Windows Azure é explicado em detalhes na [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) seção o **SQL Server Backup to URL** tópico.  
   
- **Credencial do SQL** é usado para armazenar as informações necessárias para autenticar a conta de armazenamento do Windows Azure. O objeto de Credencial do SQL armazena o nome da conta e as informações de chave de acesso. Para obter mais informações, consulte o [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) seção o **Backup do SQL Server para URL** tópico. Para obter instruções sobre como criar uma credencial do SQL para armazenar informações de autenticação de armazenamento do Windows Azure, consulte [lição 2: criar uma credencial do SQL Server](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
+ **Credencial do SQL** é usado para armazenar as informações necessárias para autenticar a conta de armazenamento do Windows Azure. O objeto de Credencial do SQL armazena o nome da conta e as informações de chave de acesso. Para obter mais informações, consulte o [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) seção o **SQL Server Backup to URL** tópico. Para obter instruções sobre como criar uma credencial do SQL para armazenar informações de autenticação de armazenamento do Windows Azure, consulte [lição 2: criar uma credencial do SQL Server](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
-###  <a name="Concepts_Components"></a> Os principais componentes e conceitos  
- O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é um recurso que gerencia as operações de backup. Ele armazena os metadados no **msdb** backups de log do banco de dados e usa trabalhos do sistema para gravar o banco de dados completo e de transação.  
+###  <a name="Concepts_Components"></a> Conceitos e componentes principais  
+ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é um recurso que gerencia as operações de backup. Ele armazena os metadados na **msdb** backups de log do banco de dados e usa trabalhos do sistema para gravar o banco de dados completo e de transação.  
   
 #### <a name="components"></a>Componentes  
  Transact-SQL é a principal interface para interagir com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Os procedimentos armazenados do sistema são usados para habilitar, configurar e monitorar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. As funções do sistema são usadas para recuperar parâmetros de configuração existentes, valores de parâmetro e informações do arquivo de backup. Os eventos estendidos são usados navegar por erros e avisos. Os mecanismos do alerta são habilitados por meio de trabalhos do SQL Agent e do Gerenciamento Baseado em Política do SQL Server. A seguir é mostrada uma lista dos objetos e uma descrição dessa funcionalidade em relação ao [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -77,21 +76,21 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
 |Objeto do Sistema|Description|  
 |**MSDB**|Armazena os metadados, o histórico de backup de todos os backups criados pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Procedimento armazenado do sistema para habilitar e configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para um banco de dados.|  
-|[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procedimento para habilitar e definir as configurações padrão armazenado do sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância do SQL Server.|  
+|[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procedimento para habilitar e configurar as configurações padrão armazenado do sistema [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância do SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Procedimento armazenado do sistema para pausar e retomar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procedimento armazenado do sistema para habilitar e configurar o monitoramento para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Exemplos: habilitação de eventos estendidos, configurações de email para notificações.|  
-|[smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Sistema de procedimento armazenado que é usado para executar um backup ad-hoc para um banco de dados está habilitado para usar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sem interromper a cadeia de log.|  
-|[smart_admin.fn_backup_db_config &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|Função de sistema que retorna atual [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores de status e configuração para um banco de dados, ou para todos os bancos de dados na instância.|  
-|[smart_admin.fn_is_master_switch_on &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|Função do sistema que retorna o status da opção mestra.|  
-|[smart_admin.sp_get_backup_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|Procedimento armazenado do sistema usado para retornar os eventos registrados pelos Eventos Estendidos.|  
+|[smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Sistema de procedimento armazenado que é usado para executar um backup ad hoc para um banco de dados está habilitado para usar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sem interromper a cadeia de log.|  
+|[smart_admin.fn_backup_db_config &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|Função de sistema que retorna atual [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores de status e a configuração para um banco de dados, ou para todos os bancos de dados na instância.|  
+|[fn_is_master_switch_on &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|Função do sistema que retorna o status da opção mestra.|  
+|[sp_get_backup_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|Procedimento armazenado do sistema usado para retornar os eventos registrados pelos Eventos Estendidos.|  
 |[smart_admin.fn_get_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|Função do sistema que retorna os valores atuais de configurações do sistema de backup como configurações de monitoramento e de email para alertas.|  
-|[smart_admin &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|Procedimento armazenado usado para recuperar backups disponíveis para um banco de dados especificado ou para todos os bancos de dados em uma instância.|  
-|[smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|Função do sistema que retorna as configurações atuais do evento estendido.|  
+|[fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|Procedimento armazenado usado para recuperar backups disponíveis para um banco de dados especificado ou para todos os bancos de dados em uma instância.|  
+|[fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|Função do sistema que retorna as configurações atuais do evento estendido.|  
 |[smart_admin.fn_get_health_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql)|A função do sistema que retorna as contagens agregadas dos erros registrados pelos Eventos Estendidos por um período especificado.|  
 |[Monitorar o Backup Gerenciado do SQL Server para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)|Eventos Estendidos para monitoramento, notificação por email dos erros e avisos, gerenciamento baseado em políticas do SQL Server para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
   
 #### <a name="backup-strategy"></a>Estratégia de backup  
- **Estratégia de backup usada por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  
+ **Estratégia de backup usada pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  
   
  O tipo de backups agendados e a frequência de backup são determinados com base na carga de trabalho do banco de dados. As configurações de período de retenção são usadas para determinar o tempo durante o qual o arquivo de backup deverá ser mantido no armazenamento e a capacidade de recuperar o banco de dados para um determinado momento no período de retenção.  
   
@@ -101,7 +100,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
  O arquivo de backup de bancos de dados que não são de disponibilidade são nomeados por meio da seguinte convenção: o nome é criado usando os primeiros 40 caracteres do nome do banco de dados, o GUID do banco de dados sem o ‘-‘ e o carimbo de data/hora. O caractere de sublinhado é inserido entre segmentos como separadores. A extensão de arquivo **.bak** é usada no backup completo e a extensão de arquivo **.log** é usada nos backups de log. Para bancos de dados do Grupo de Disponibilidade, além da convenção de nomenclatura de arquivo descrita acima, o GUID do banco de dados do Grupo de Disponibilidade é adicionado após os 40 caracteres do nome do banco de dados. O valor de GUID do banco de dados do Grupo de Disponibilidade é o valor para o group_database_id em sys.databases.  
   
- **Backup completo do banco de dados:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agente agendará um backup de banco de dados completo, se qualquer um dos seguintes for verdadeiro.  
+ **Backup completo do banco de dados:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agente agendará um backup de banco de dados completo se qualquer uma das seguintes opções for verdadeira.  
   
 -   Um banco de dados é habilitado para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez ou quando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é habilitado com as configurações padrão no nível da instância.  
   
@@ -111,7 +110,7 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
 -   A cadeia de log foi interrompida. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verifica periodicamente se a cadeia de logs está intacta comparando o primeiro e o último LSNs dos arquivos de backup. Se houver uma quebra na cadeia de logs por qualquer motivo, o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agendará um backup completo do banco de dados. O motivo mais comum para quebras da cadeia de log provavelmente é a emissão de um comando de backup com o uso de Transact-SQL ou por meio da tarefa Backup no SQL Server Management Studio.  Outros cenários comuns incluem a exclusão acidental dos arquivos de log de backup ou substituições acidentais de backup.  
   
- **Backup de Log de transações:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agendará um backup de log se qualquer um dos seguintes for verdadeiro:  
+ **Backup de Log de transações:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agendará um backup de log se qualquer uma das seguintes opções for verdadeira:  
   
 -   Não há nenhum histórico de backup de log que possa ser encontrado. Isso geralmente é verdadeiro quando o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é habilitado pela primeira vez.  
   
@@ -163,8 +162,8 @@ O [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pode ser habil
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure do Windows](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
- [Backup do SQL Server para URL](sql-server-backup-to-url.md)   
- [SQL Server Backup gerenciado para Windows Azure: interoperabilidade e coexistência](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [SQL Server Backup to URL](sql-server-backup-to-url.md)   
+ [SQL Server Managed Backup to Windows Azure: interoperabilidade e coexistência](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Solucionando problemas de Backup Gerenciado do SQL Server para Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267152"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Selecionar Método de Criação (Assistente para Dimensões)
   Use a página **Selecionar Método de Criação** para selecionar como criar a dimensão.  
   
- **Para abrir o Assistente de dimensão**  
+ **Para abrir o Assistente para dimensões**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Dimensões** de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique em **Nova Dimensão**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36019932"
   
  Para obter mais informações, consulte [Criar uma dimensão temporal gerando uma tabela de tempo](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md).  
   
- **Gerar uma tabela não seja de tempo na fonte de dados**  
+ **Gerar uma tabela que não seja de tempo na fonte de dados**  
  Crie a dimensão sem uma fonte de dados relacional subjacente e então gere o esquema necessário para a fonte de dados. Esta abordagem é conhecida como modelagem de cima para baixo.  
   
 > [!NOTE]  

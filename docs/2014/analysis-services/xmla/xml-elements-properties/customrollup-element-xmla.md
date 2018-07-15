@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollup element
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 715aca3e7bb35eb082a9e6fecc286aaf30ff3b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5da3f49101d900088e11cbb954aa65dbbf16620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261102"
 ---
 # <a name="customrollup-element-xmla"></a>Elemento CustomRollup (XMLA)
   Contém a fórmula de acúmulo personalizado para um membro de atributo representado pelo pai [atributo](attribute-element-xmla.md) elemento.  
@@ -69,8 +69,8 @@ ms.locfileid: "36121561"
  Para obter mais informações sobre expressões MDX, consulte [expressões &#40;MDX&#41;](/sql/mdx/expressions-mdx).  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

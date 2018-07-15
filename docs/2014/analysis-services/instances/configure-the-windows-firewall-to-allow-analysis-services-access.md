@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 076d8fdde6d26872ba1323b0091b4c5060a9dd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282252"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
   Uma primeira etapa essencial para tornar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] disponível na rede é determinar se você precisa desbloquear portas em um firewall A maioria das instalações exigirão que você crie, pelo menos, uma regra de firewall de entrada que permita conexões com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -63,11 +63,11 @@ ms.locfileid: "36019718"
 ##  <a name="bkmk_checkport"></a> Verificar as configurações de porta e de firewall do Analysis Services  
  Nos sistemas operacionais Microsoft Windows com suporte pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o Windows Firewall fica ativo por padrão e bloqueia conexões remotas. Abra uma porta manualmente no firewall para permitir solicitações de entrada para o Analysis Services. A instalação do SQL Server não executa essa etapa para você.  
   
- As configurações de porta são especificadas no arquivo msmdsrv.ini e na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio. Se `Port` for definido como um inteiro positivo, o serviço está escutando em uma porta fixa. Se `Port` for definido como 0, o serviço está escutando na porta 2383 se for a instância padrão ou em uma porta atribuída dinamicamente se for uma instância nomeada.  
+ As configurações de porta são especificadas no arquivo msmdsrv.ini e na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio. Se `Port` é definido como um inteiro positivo, o serviço está escutando em uma porta fixa. Se `Port` é definido como 0, o serviço está escutando na porta 2383 se for a instância padrão ou em uma porta atribuída dinamicamente se for uma instância nomeada.  
   
  Atribuições de porta dinâmica só são usadas por instâncias nomeadas. O serviço `MSOLAP$InstanceName` determina a porta a ser usada quando inicia. Você pode determinar o número de porta real em uso por uma instância nomeada da seguinte forma:  
   
--   Inicie o Gerenciador de tarefas e, em seguida, clique em **serviços** para obter o PID do `MSOLAP$InstanceName`.  
+-   Inicie o Gerenciador de tarefas e, em seguida, clique em **Services** para obter o PID do `MSOLAP$InstanceName`.  
   
 -   Execute `netstat –ao –p TCP` da linha de comando para exibir as informações de porta TCP para esse PID.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36019718"
   
 2.  Clique com o botão direito do mouse em **Regras de Entrada** e selecione **Nova Regra**.  
   
-3.  Em tipo de regra, clique em `Port` e, em seguida, clique em **próximo**.  
+3.  No tipo de regra, clique em `Port` e, em seguida, clique em **próxima**.  
   
 4.  Em protocolo e portas, selecione **TCP** e, em seguida, digite `2383` na **portas locais específicas**.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36019718"
   
 -   Use as atribuições de porta dinâmica e o serviço SQL Server Browser. Desbloqueie a porta usada pelo serviço SQL Server Browser no Firewall do Windows. Conectar ao servidor neste formato: \<servername >\\< instancename\>.  
   
--   Use uma porta fixa e o serviço SQL Server Browser juntos. Essa abordagem permite que você se conectar usando este formato: \<servername >\\< instancename\>, idêntico à abordagem de atribuição de porta dinâmica, exceto que, nesse caso o servidor escuta em uma porta fixa. Neste cenário, o serviço SQL Server Browser fornece a resolução de nome à instância do Analysis Services que escuta na porta fixa. Para usar esta abordagem, configure o servidor para escutar em uma porta fixa, desbloqueie o acesso a essa porta e desbloqueie o acesso à porta usada pelo serviço SQL Server Browser.  
+-   Use uma porta fixa e o serviço SQL Server Browser juntos. Essa abordagem permite que você se conectar usando este formato: \<servername >\\< instancename\>, idêntico à abordagem de atribuição de porta dinâmica, exceto que, nesse caso, o servidor escuta em uma porta fixa. Neste cenário, o serviço SQL Server Browser fornece a resolução de nome à instância do Analysis Services que escuta na porta fixa. Para usar esta abordagem, configure o servidor para escutar em uma porta fixa, desbloqueie o acesso a essa porta e desbloqueie o acesso à porta usada pelo serviço SQL Server Browser.  
   
  O serviço SQL Server Browser só é usado com instâncias nomeadas, nunca com a instância padrão. O serviço é instalado e habilitado automaticamente sempre que você instala qualquer recurso do SQL Server como uma instância nomeada. Se você optar por uma abordagem que exija o serviço SQL Server Browser, mantenha-o habilitado e iniciado no seu servidor.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36019718"
   
 2.  Para desbloquear o acesso ao serviço SQL Server Browser, clique com o botão direito do mouse em **Regras de Entrada** e selecione **Nova Regra**.  
   
-3.  Em tipo de regra, clique em `Port` e, em seguida, clique em **próximo**.  
+3.  No tipo de regra, clique em `Port` e, em seguida, clique em **próxima**.  
   
 4.  Em protocolo e portas, selecione **TCP** e, em seguida, digite `2382` na **portas locais específicas**.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36019718"
   
 2.  Para desbloquear o acesso ao Analysis Services, clique com o botão direito do mouse em **Regras de Entrada** e selecione **Nova Regra**.  
   
-3.  Em tipo de regra, clique em `Port` e, em seguida, clique em **próximo**.  
+3.  No tipo de regra, clique em `Port` e, em seguida, clique em **próxima**.  
   
 4.  Em Protocolo e Portas, selecione **TCP** e digite a porta fixa em **Portas locais específicas**.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36019718"
   
  Observe que o uso de uma porta fixa alterará a sintaxe de conexão para a instância padrão, exigindo o acréscimo do número de porta ao nome de servidor. Por exemplo, a conexão a uma instância padrão local do Analysis Services que escuta na porta 54321 no SQL Server Management Studio exigiria que você digitasse localhost:54321 como o nome de servidor na caixa de diálogo Conectar ao Servidor no Management Studio.  
   
- Se você estiver usando uma instância nomeada, você pode atribuir uma porta fixa sem alterações sobre como especificar o nome do servidor (especificamente, você pode usar \<nome_do_servidor \ nome_da_instância > para se conectar a uma instância nomeada que escuta em uma porta fixa). Isso só funcionará se o serviço SQL Server Browser estiver em execução e você tiver desbloqueado a porta na qual ele esteja escutando. Serviço SQL Server Browser fornecerá redirecionamento à porta fixa com base em \<nome_do_servidor \ nome_da_instância >. Contanto que você abra portas para o serviço SQL Server Browser e a instância nomeada do Analysis Services que escuta na porta fixa, o serviço SQL Server Browser resolverá a conexão a uma instância nomeada.  
+ Se você estiver usando uma instância nomeada, você pode atribuir uma porta fixa sem alterações sobre como especificar o nome do servidor (especificamente, você pode usar \<nome_do_servidor \ nome_da_instância > para se conectar a uma instância nomeada escuta em uma porta fixa). Isso só funcionará se o serviço SQL Server Browser estiver em execução e você tiver desbloqueado a porta na qual ele esteja escutando. Serviço SQL Server Browser fornecerá redirecionamento à porta fixa com base em \<nome_do_servidor \ nome_da_instância >. Contanto que você abra portas para o serviço SQL Server Browser e a instância nomeada do Analysis Services que escuta na porta fixa, o serviço SQL Server Browser resolverá a conexão a uma instância nomeada.  
   
 1.  Determine uma porta TCP/IP disponível a ser usada.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36019718"
   
 4.  Configure o Firewall do Windows para desbloquear a porta TCP especificada. Ou, se você estiver usando uma porta fixa para uma instância nomeada, desbloqueie a porta TCP especificada para essa instância e a porta TCP 2382 para o serviço SQL Server Browser.  
   
-5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar o Management Studio, conecte-se a uma instância do Analysis Services padrão especificando um nome de servidor neste formato: \<servername >:\<portnumber >. Para uma instância nomeada, especifique o nome do servidor como \<servername >\\< instancename\>.  
+5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar o Management Studio, conecte-se à instância padrão do Analysis Services especificando um nome de servidor neste formato: \<servername >:\<portnumber >. Para uma instância nomeada, especifique o nome do servidor como \<servername >\\< instancename\>.  
   
 ##  <a name="bkmk_cluster"></a> Configuração de porta para um cluster do Analysis Services  
  Um cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre realiza a escuta na porta TCP 2383, independentemente de você ter feito a instalação como uma instância padrão ou nomeada. As atribuições de porta dinâmica não são usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando ele é instalado em um cluster de failover do Windows. Abra a TCP 2383 em todos os nós que estão executando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cluster. Para obter mais informações sobre o clustering do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Como clusterizar o SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  

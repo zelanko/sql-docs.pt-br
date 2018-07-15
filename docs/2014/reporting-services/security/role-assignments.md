@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Reporting Services]
 - roles [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d20737ae25412caa7af4c3aa82966a5b384d7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed057d08c25d1988d4ccf03d1647aa4ef92e4b0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255578"
 ---
 # <a name="role-assignments"></a>Atribuições de função
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], as *atribuições de função* determinam o acesso aos itens armazenados e ao próprio servidor de relatório. Uma atribuição de função tem as seguintes partes:  
@@ -62,13 +62,13 @@ Diagrama de atribuições de função
 ## <a name="predefined-role-assignments"></a>Atribuições de função predefinidas  
  Por padrão, as atribuições de função predefinidas são implementadas de modo a permitir que os administradores locais gerenciem o servidor de relatório. Você deve adicionar mais atribuições de função para conceder acesso a outros usuários.  
   
- Para obter mais informações sobre as atribuições de função predefinida que fornecem segurança padrão, consulte [funções predefinidas](role-definitions-predefined-roles.md).  
+ Para obter mais informações sobre as atribuições de função predefinidas que fornecem segurança padrão, consulte [funções predefinidas](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)   
  [Modificar ou excluir uma atribuição de função &#40;Gerenciador de Relatórios&#41;](role-assignments-modify-or-delete.md)   
- [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;Reporting Services no SharePoint modo integrado&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;modo integrado do Reporting Services no SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Conceder permissões em um servidor de relatório no Modo Nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   

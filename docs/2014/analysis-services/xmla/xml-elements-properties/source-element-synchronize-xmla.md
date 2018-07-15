@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 0a857f91-771f-4c5e-8bf7-4bf17442d4df
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5341a6c993c6053dbe6716dcfcd5155f81a4ae0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8a9389b47418a581c9d711c9cd29b73b6a8e962d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326416"
 ---
 # <a name="source-element-synchronize-xmla"></a>Elemento Source (Synchronize) (XMLA)
-  Representa um banco de dados de origem do qual sincronizar um banco de dados de destino durante uma [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Representa um banco de dados de origem do qual sincronizar um banco de dados de destino durante uma [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36121340"
 |Elementos filho|[ConnectionString](connectionstring-element-xmla.md), [objeto](object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O `Synchronize` comando usa o `Source` elemento para estabelecer uma conexão para e identificar um banco de dados em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] com a qual sincronizar o banco de dados de destino.  
+ O `Synchronize` comando usa o `Source` elemento para estabelecer uma conexão a e identificar um banco de dados em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] com o qual sincronizar o banco de dados de destino.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

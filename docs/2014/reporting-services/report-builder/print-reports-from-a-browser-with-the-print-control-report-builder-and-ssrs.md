@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270332"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS)
   Embora um navegador seja o aplicativo cliente mais usado para exibir um relatório, a funcionalidade de impressão do navegador não é ideal para imprimir relatórios. A funcionalidade de impressão de um navegador foi projetada para imprimir páginas da Web. Normalmente, as páginas impressas em um navegador incluem todos os elementos visuais presentes em uma página da Web, além das informações de cabeçalho e rodapé que identificam a página ou o site. Imprimir em um navegador imprime o conteúdo da janela atual. Em um relatório com várias páginas, o navegador normalmente imprime a primeira ou menos caso a página do relatório exceda as dimensões de uma página impressa.  
   
  Para melhorar a qualidade de impressão dos relatórios exibidos em um navegador e imprimir várias páginas, é possível usar a funcionalidade de impressão de cliente fornecida no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A impressão do lado do cliente fornece uma caixa de diálogo **Imprimir** padrão, que pode ser usada para selecionar uma impressora, especificar páginas e margens e visualizar o relatório antes da impressão. Ela destina-se a ser usada no lugar do comando **Imprimir** no menu **Arquivo** de um navegador. Quando você usa a impressão de cliente, o relatório é impresso como foi criado, sem os elementos adicionais exibidos em impressões de páginas da Web.  
   
- Para usar a impressão do lado do cliente, você precisa instalar um controle ActiveX do [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [habilitar e desabilitar impressão de cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Para usar a impressão do lado do cliente, você precisa instalar um controle ActiveX do [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "36012843"
   
 ## <a name="see-also"></a>Consulte também  
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [Imprimir um relatório &#40;SSRS e construtor de relatórios&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Imprimir um relatório &#40;relatórios e SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

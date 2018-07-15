@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 63ec2510d49f225cc58dde3930d0e3478461ad6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32202ce456a45f34e2a2179c80a806bf0ffbf52c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224546"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Tarefa 1: Criando um Projeto de Qualidade de Dados
   Nesta tarefa, você criará um Projeto de Qualidade de Dados para limpar os dados do fornecedor em um arquivo do Excel de acordo com a base de dados de conhecimento Fornecedores criada anteriormente neste tutorial.  
@@ -30,11 +30,11 @@ ms.locfileid: "36120473"
   
      ![Novo botão de projeto de qualidade de dados na principal página](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "novo botão de projeto de qualidade de dados na principal página")  
   
-2.  Tipo **Limpar lista de fornecedores** para o **nome** do projeto.  
+2.  Tipo de **Limpar lista de fornecedores** para o **nome** do projeto.  
   
-3.  Selecione **fornecedores** para o **usar Base de dados de Conhecimento** campo. Você limpará os dados do fornecedor para entrada de limpeza de acordo com a base de dados de conhecimento Fornecedores criada anteriormente neste tutorial.  
+3.  Selecione **fornecedores** para o **usar a Base de dados de Conhecimento** campo. Você limpará os dados do fornecedor para entrada de limpeza de acordo com a base de dados de conhecimento Fornecedores criada anteriormente neste tutorial.  
   
-4.  Certifique-se de que **limpeza** é selecionado como o **atividade** na parte inferior do painel direito e clique em **próximo**.  
+4.  Certifique-se de que **limpeza** está selecionado como o **atividade** na parte inferior do painel direito e clique em **próxima**.  
   
      ![Nova página do projeto qualidade dados - limpeza selecionada](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "nova página do projeto qualidade dados - limpeza selecionada")  
   

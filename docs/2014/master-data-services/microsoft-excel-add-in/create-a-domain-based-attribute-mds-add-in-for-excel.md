@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0dc03dad5cfd346b76691113988ba126e67ae3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c7a91411531cccb253b42f4c6b075ebb73b5d78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217586"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Criar um atributo baseado em domínio (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem criar um atributo baseado em domínio quando desejarem restringir os valores em uma coluna a um conjunto específico de valores.  
@@ -40,7 +40,7 @@ ms.locfileid: "36122412"
   
 ### <a name="to-perform-this-procedure"></a>Para executar esse procedimento:  
   
-1.  No Excel, carregue a entidade que contém a coluna (atributo) a ser restringida. Para obter mais informações, consulte [carregar dados do MDS para Excel](export-data-to-excel-from-master-data-services.md).  
+1.  No Excel, carregue a entidade que contém a coluna (atributo) a ser restringida. Para obter mais informações, consulte [carregar dados do MDS no Excel](export-data-to-excel-from-master-data-services.md).  
   
 2.  Clique em qualquer célula da coluna que você deseja restringir.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36122412"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   Para adicionar e excluir valores na lista restrita, carregue a entidade na qual o atributo se baseia. Para obter mais informações sobre como carregar entidades, consulte [carregar dados do MDS para Excel](export-data-to-excel-from-master-data-services.md).  
+-   Para adicionar e excluir valores na lista restrita, carregue a entidade na qual o atributo se baseia. Para obter mais informações sobre como carregar entidades, consulte [carregar dados do MDS no Excel](export-data-to-excel-from-master-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos baseados em domínio &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   

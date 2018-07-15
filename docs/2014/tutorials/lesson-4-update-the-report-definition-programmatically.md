@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286492"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lição 4: Atualizar a definição do relatório programaticamente
   Agora que a definição do relatório foi carregada do servidor de relatório e você tem uma referência a ela que usa o campo de relatório, será necessário atualizar essa definição. Para este exemplo, você atualizará a propriedade `Description` do relatório.  
   
 ### <a name="to-update-the-report-definition"></a>Para atualizar a definição do relatório  
   
-1.  Substitua o código para o método UpdateReportDefinition() no arquivo Program.cs (Module1. vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
+1.  Substitua o código para o método UpdateReportDefinition() no arquivo Program.cs (Module1.vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -92,7 +92,7 @@ ms.locfileid: "36121185"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Consulte [lição 5: publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ Na próxima lição, você salvará a definição do relatório atualizada no servidor de relatório. Ver [lição 5: publicar a definição de relatório no servidor de relatório](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

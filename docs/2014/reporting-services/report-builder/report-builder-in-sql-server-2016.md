@@ -1,5 +1,5 @@
 ---
-title: Relatório do construtor no SQL Server 2014 | Microsoft Docs
+title: Construtor de relatórios no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261922"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Construtor de Relatórios no SQL Server 2014
   O Construtor de Relatórios é um ambiente de criação de relatório para usuários comerciais que preferem trabalhar no ambiente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode visualizar os relatórios no Construtor de Relatórios ou publicá-los em um servidor de relatório ou em um servidor de relatório no modo integrado do SharePoint, onde outras pessoas poderão executá-lo.  
@@ -35,13 +35,13 @@ ms.locfileid: "36019301"
   
 ##  <a name="JumpStartReptCreation"></a> Iniciar a criação de relatório  
   
--   **Iniciar suas partes de relatório withreport** criados por outra pessoa da sua equipe. As partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório. Elas podem ser reutilizadas em outros relatórios. Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como partes de relatório.  
+-   **Iniciar suas partes de relatório withreport** criado por outra pessoa em sua equipe. As partes de relatório são itens de relatório que foram publicados separadamente em um servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório. Elas podem ser reutilizadas em outros relatórios. Itens de relatório como tabelas, matrizes, gráficos e imagens podem ser publicados como partes de relatório.  
   
--   **Começar com um conjunto de dados compartilhado** criados por outra pessoa da sua equipe. Os conjuntos de dados compartilhados são consultas baseadas em uma fonte de dados compartilhados salvos em um servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório.  
+-   **Comece com um conjunto de dados compartilhado** criado por outra pessoa em sua equipe. Os conjuntos de dados compartilhados são consultas baseadas em uma fonte de dados compartilhados salvos em um servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório.  
   
 -   **Inicie com o assistente de Tabela, Matriz ou Gráfico**. Escolha uma conexão de fonte de dados, arraste e solte campos para criar uma consulta de conjunto de dados, selecione um layout e um estilo e personalize seu relatório.  
   
--   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Você também pode adicionar um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] plano de fundo lado a lado do Bing map.  
+-   **Inicie com o assistente de Mapa** para criar relatórios que exibam dados agregados em um plano de fundo geográfico ou geométrico. Os dados de mapa podem ser dados espaciais de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um arquivo de forma ESRI (Environmental Systems Research Institute, Inc.). Você também pode adicionar um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] plano de fundo de bloco de mapa do Bing.  
   
 
   
@@ -88,13 +88,13 @@ ms.locfileid: "36019301"
  [Planejando um relatório &#40;construtor de relatórios&#41;](../report-design/planning-a-report-report-builder.md)  
  Fornece informações sobre o que você deve considerar antes de começar a criar seu relatório.  
   
- [Conceitos de criação de relatório &#40;SSRS e construtor de relatórios&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Define os conceitos-chave usados em toda a documentação do Construtor de Relatórios.  
   
  [Exibição de Design de relatório &#40;construtor de relatórios&#41;](report-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design de relatório.  
   
- [Exibição do Design de conjunto de dados compartilhados &#40;construtor de relatórios&#41;](shared-dataset-design-view-report-builder.md)  
+ [Exibição de Design de conjunto de dados compartilhada &#40;construtor de relatórios&#41;](shared-dataset-design-view-report-builder.md)  
  Explica os diferentes painéis e regiões da exibição de design do conjunto de dados compartilhados.  
   
  [Atalhos de teclado &#40;construtor de relatórios&#41;](keyboard-shortcuts-report-builder.md)  

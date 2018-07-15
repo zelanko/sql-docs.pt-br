@@ -1,5 +1,5 @@
 ---
-title: Preencher do exemplo (ferramentas de análise de tabela para Excel) | Microsoft Docs
+title: Preencher com base no exemplo (ferramentas de análise de tabela para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - fill from example
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56c92cd4cdc4cf3306ce0877f3e046c626e6f883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48972682ed3de37bfbffe3156b44f1e0d5b36039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308666"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Preencher com Base no Exemplo (Ferramentas de Análise de Tabela para Excel)
-  ![Botão Preencher do exemplo em ferramentas de análise de tabela](media/tat-fillex.gif "botão Preencher do exemplo em ferramentas de análise de tabela")  
+  ![Botão preencher com base no exemplo nas ferramentas de análise de tabela](media/tat-fillex.gif "botão preencher com base no exemplo nas ferramentas de análise de tabela")  
   
  O **preencher do exemplo** ferramenta o ajuda a criar novas colunas de dados com base nos valores existentes.  
   
- Por exemplo, suponha que seus dados contiverem um **Purchase Amount** coluna, um **Orders Quantity** coluna e um **Premier Customer** coluna se baseia em alguma fórmula usando o outras colunas. Se o **Premier Customer** coluna contém muitas linhas em branco, você pode usar o **Purchase Amount** e **Orders Quantity** colunas como entradas, para inferir valores ausentes. A ferramenta analisa os padrões existentes nos dados junto com os exemplos inseridos, e faz previsões sobre a categoria a ser atribuída a cada cliente.  
+ Por exemplo, suponha que seus dados contiverem uma **Purchase Amount** coluna, um **Orders Quantity** coluna e um **Premier Customer** coluna se baseia em alguma fórmula usando o outras colunas. Se o **Premier Customer** coluna contém muitas linhas em branco, você pode usar o **Purchase Amount** e **Orders Quantity** colunas como entradas, para inferir os valores ausentes. A ferramenta analisa os padrões existentes nos dados junto com os exemplos inseridos, e faz previsões sobre a categoria a ser atribuída a cada cliente.  
   
  Caso você não esteja satisfeito com os resultados, forneça mais exemplos para defini-los.  
   
 ## <a name="using-the-fill-from-example-tool"></a>Usando a ferramenta Preencher com Base no Exemplo  
   
-1.  No **analisar** de faixa de opções, clique em **preencher do exemplo**.  
+1.  No **Analyze** faixa de opções, clique em **preencher do exemplo**.  
   
 2.  A ferramenta escolherá automaticamente uma coluna a ser preenchida com base na análise dos dados e você poderá aceitar ou substituir sua sugestão.  
   
 3.  Crie uma coluna para os novos dados e digite exemplos dos dados que você deseja prever. Verifique se há pelo menos um exemplo de cada valor que você deseja prever. Se você estiver preenchendo dados em uma coluna existente, selecione a coluna com os valores ausentes.  
   
-4.  Opcionalmente, clique em **escolher colunas a serem usadas na análise**. No **seleção de colunas avançada** caixa de diálogo, especifique as colunas que provavelmente serão úteis ao preencher os dados ausentes.  
+4.  Opcionalmente, clique em **escolher colunas a serem usadas na análise**. No **seleção de colunas avançada** caixa de diálogo, especifique as colunas que provavelmente serão úteis durante o preenchimento dos dados ausentes.  
   
      Por exemplo, se, com base na sua experiência, você souber que há um efeito causal entre uma coluna e a coluna com valores ausentes, poderá desmarcar outras colunas para obter resultados melhores.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36130452"
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 quilômetros|80%|  
   
- Isso significa que o valor AB no **StateProvinceCode** coluna prevê uma distância de envio de > 500 quilômetros.  
+ Isso significa que o valor AB na **StateProvinceCode** coluna prevê uma distância de entrega de > 500 quilômetros.  
   
  Em geral, as previsões se baseiam em padrões bem mais complexos do que este exemplo e o relatório pode conter muitas linhas de regras para cada previsão. Os efeitos de todas as regras são combinados para derivar o valor previsto.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36130452"
  Se a coluna de dados original contiver um valor, ele será copiado na nova coluna. No entanto, se a coluna contiver uma célula em branco, a nova coluna terá o valor previsto pelo assistente.  
   
 ## <a name="related-tools-and-information"></a>Ferramentas e informações relacionadas  
- Você também pode usar o [explorar dados](explore-data-sql-server-data-mining-add-ins.md) assistente, disponível no cliente de mineração de dados para o Excel, examine a distribuição de valores em uma coluna do Excel. Para obter mais informações, consulte [Explorando e limpando dados](exploring-and-cleaning-data.md).  
+ Você também pode usar o [explorar dados](explore-data-sql-server-data-mining-add-ins.md) wizard, disponível no cliente de mineração de dados para Excel, para examinar a distribuição dos valores em uma coluna do Excel. Para obter mais informações, consulte [Explorando e limpando dados](exploring-and-cleaning-data.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

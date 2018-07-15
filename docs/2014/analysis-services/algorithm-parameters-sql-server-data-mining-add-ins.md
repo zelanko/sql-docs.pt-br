@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267672"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parâmetros do Algoritmo (Suplementos de Mineração de Dados do SQL Server)
   Quando você executa mineração de dados usando as Ferramentas de Análise de Tabela para Excel, não precisa configurar o algoritmo ou os parâmetros de mineração de dados; cada ferramenta analisa os dados e seleciona automaticamente os parâmetros ideais. No entanto, se desejar modificar o modelo, ou criar um modelo de mineração do zero, o Cliente de Mineração de Dados para Excel oferece várias opções de personalização.  
   
--   Criar um modelo de mineração de dados manualmente, clicando em **avançado** e, em seguida, clicando em **Adicionar modelo à estrutura**.  
+-   Criar um modelo de mineração de dados manualmente, clicando em **Advanced** e, em seguida, clicando em **Adicionar modelo à estrutura**.  
   
 -   Use qualquer um dos assistentes de modelagem no cliente de mineração de dados e, em seguida, clique em **parâmetros** para controlar o comportamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados.  
   
--   Clique em **consulta** para abrir o Assistente de modelo de consulta e, em seguida, clique em **avançado** para abrir o **Editor mineração de dados avançado consulta**. Nesse editor, você pode criar modelos usando modelos DMX.  
+-   Clique em **consulta** para abrir o Assistente de modelo de consulta e, em seguida, clique em **avançado** para abrir o **dados Editor avançada de mineração consulta**. Nesse editor, você pode criar modelos usando modelos DMX.  
   
  Também é possível modificar o comportamento dos modelos de mineração já criados ou você pode filtrar os resultados, definindo parâmetros no visualizador de modelo de mineração.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "36121180"
 |CLUSTER_COUNT|Algoritmo Microsoft Clustering<br /><br /> Microsoft Sequence Clustering Algorithm|Especifica o número aproximado de clusters a serem criados pelo algoritmo. Se o número aproximado de clusters não pode ser criado a partir dos dados, o algoritmo cria o máximo de clusters possível. Quando CLUSTER_COUNT é definido como 0, o algoritmo usa heurísticos para determinar melhor o número de clusters a serem criados.<br /><br /> O padrão é 10.|  
 |CLUSTER_SEED|Algoritmo Microsoft Clustering|Especifica o número de propagação usado apenas para gerar clusters aleatoriamente para o estágio inicial de criação de modelo.<br /><br /> O padrão é 0.|  
 |CLUSTERING_METHOD|Algoritmo Microsoft Clustering|Especifica o método de clustering para o algoritmo a ser usado. Os seguintes métodos de clustering estão disponíveis: EM evolutivo (1), EM não evolutivo (2), K-Means evolutivo (3) e K-Means não evolutivo (4).<br /><br /> O padrão é 1.|  
-|COMPLEXITY_PENALTY|Algoritmo Árvores de Decisão da Microsoft<br /><br /> Algoritmo MTS|Controla o crescimento da árvore de decisão. Um valor baixo aumenta o número de divisões e um valor alto diminui o número de divisões. O valor padrão se baseia no número de atributos de um determinado modelo, conforme descrito na lista a seguir:<br /><br /> Para os atributos 1 a 9, o padrão é 0,5.<br /><br /> Para 10 a 99 atributos, o padrão é 0,9.<br /><br /> Para 100 ou mais atributos, o padrão é 0,99.<br /><br /> Observação: Em modelos de série temporal, este parâmetro se aplica somente a modelos que são criados usando o algoritmo ARTxp ou a modelos combinados.|  
-|FORCED_REGRESSOR|Algoritmo Árvores de Decisão da Microsoft<br /><br /> Algoritmo Regressão Linear da Microsoft|Força o algoritmo a usar as colunas indicadas como regressores, independentemente da sua importância quando calculadas pelo algoritmo.<br /><br /> Observação: Esse parâmetro é usado apenas para árvores de decisão que preveem um atributo contínuo. Por definição, um modelo de regressão linear é um caso especial de árvores de decisão que prevê atributos comuns. No entanto, qualquer modelo de árvore de decisão pode conter um nó que representa uma fórmula de regressão linear.|  
+|COMPLEXITY_PENALTY|Algoritmo Árvores de Decisão da Microsoft<br /><br /> Algoritmo MTS|Controla o crescimento da árvore de decisão. Um valor baixo aumenta o número de divisões e um valor alto diminui o número de divisões. O valor padrão se baseia no número de atributos de um determinado modelo, conforme descrito na lista a seguir:<br /><br /> Para os atributos 1 a 9, o padrão é 0,5.<br /><br /> Para 10 a 99 atributos, o padrão é 0,9.<br /><br /> Para 100 ou mais atributos, o padrão é 0,99.<br /><br /> Observação: Em modelos de série temporal, esse parâmetro se aplica somente a modelos criados usando o algoritmo ARTxp ou a modelos combinados.|  
+|FORCED_REGRESSOR|Algoritmo Árvores de Decisão da Microsoft<br /><br /> Algoritmo Regressão Linear da Microsoft|Força o algoritmo a usar as colunas indicadas como regressores, independentemente da sua importância quando calculadas pelo algoritmo.<br /><br /> Observação: Este parâmetro só é usado para árvores de decisão que estão prevendo um atributo contínuo. Por definição, um modelo de regressão linear é um caso especial de árvores de decisão que prevê atributos comuns. No entanto, qualquer modelo de árvore de decisão pode conter um nó que representa uma fórmula de regressão linear.|  
 |FORECAST_METHOD|Algoritmo MTS|Indica se as previsões devem ser feitas com o uso do algoritmo ARTxp ou ARIMA ou uma combinação de ambos.<br /><br /> O padrão é MIXED.|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|Especifica a proporção dos neurônios ocultos com os neurônios de entrada e saída. A fórmula a seguir determina o número inicial de neurônios na camada oculta:<br /><br /> HIDDEN_NODE_RATIO * SQRT (Total de neurônios de entrada \* Total de neurônios de saída)<br /><br /> O valor padrão é 4.0.|  
 |HISTORIC_MODEL_COUNT|Algoritmo MTS|Especifica o número de modelos de histórico que será criado.<br /><br /> O padrão é 1.|  
@@ -95,7 +95,7 @@ ms.locfileid: "36121180"
 |MAXIMUM_OUTPUT_ATTRIBUTES|Algoritmo Árvores de Decisão da Microsoft<br /><br /> Algoritmo Regressão Linear da Microsoft<br /><br /> Algoritmo Regressão Logística da Microsoft<br /><br /> Algoritmo Microsoft Naïve Bayes<br /><br /> Microsoft Neural Network Algorithm|Define o número de atributos de saída que o algoritmo pode manipular antes de invocar a seleção de recurso. Defina este valor como 0 para desativar a seleção de recursos.<br /><br /> O padrão é 255.|  
 |MAXIMUM_SEQUENCE_STATES|Microsoft Sequence Clustering Algorithm|Especifica o número de máximo de estados que uma sequência pode ter. A definição desse valor com um número maior que 100 pode fazer com que o algoritmo crie um modelo que não fornece informações significativas.<br /><br /> O padrão é 64.|  
 |MAXIMUM_SERIES_VALUE|Algoritmo MTS|Especifica o valor máximo para usar em previsões. Esse parâmetro é usado, juntamente com MINIMUM_SERIES_VALUE, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista para qualquer dia nunca deve exceder o número de produtos no inventário.|  
-|MAXIMUM_STATES|Algoritmo Microsoft Clustering<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Sequence Clustering Algorithm|Especifica o número máximo de estados de atributo para os quais o algoritmo dá suporte. Se o número de estados que um atributo tiver for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e ignorará os demais estados.<br /><br /> O padrão é 100.|  
+|MAXIMUM_STATES|Algoritmo Microsoft Clustering<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Sequence Clustering Algorithm|Especifica o número máximo de estados de atributo para os quais o algoritmo dá suporte. Se o número de estados que um atributo tiver for maior que o número máximo de estados, o algoritmo usa os estados do atributo mais populares e ignorará os demais estados.<br /><br /> O padrão é 100.|  
 |MAXIMUM_SUPPORT|Algoritmo Associação da Microsoft|Especifica o número máximo de casos em que um conjunto de itens pode ter suporte. Se esse valor for menor que 1, o valor representará uma porcentagem do total de casos. Se esse valor for maior do que 1, ele representará o número absoluto de casos que podem conter o conjunto de itens.<br /><br /> O padrão é 1.|  
 |MINIMUM_IMPORTANCE|Algoritmo Associação da Microsoft|Especifica o limite de importância para regras de associação. As regras com menos importância do que esse valor são filtradas.|  
 |MINIMUM_ITEMSET_SIZE|Algoritmo Associação da Microsoft|Especifica o número mínimo de itens permitidos em um conjunto de itens.<br /><br /> O padrão é 1.|  

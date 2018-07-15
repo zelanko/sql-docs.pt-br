@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178093"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionando redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
@@ -52,9 +52,9 @@ ms.locfileid: "36130593"
   
 8.  Na página **Entradas e Saídas** , expanda **Saída 0**, clique em **Colunas de Saída**e clique em **Adicionar Coluna**.  
   
-9. No `Name` propriedade, digite **ErrorDescription** e defina o `DataType` propriedade **cadeia de caracteres Unicode [DT_WSTR]**.  
+9. No `Name` propriedade, digite **ErrorDescription** e defina o `DataType` propriedade a ser **cadeia de caracteres Unicode [DT_WSTR]**.  
   
-10. No **Script** , verifique se que o `LocaleID` está definida como **inglês (Estados Unidos.**  
+10. Sobre o **Script** página, verifique o `LocaleID` estiver definida como **inglês (Estados Unidos.**  
   
 11. Clique em **Editar Script** para abrir o VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método `Input0_ProcessInputRow`, digite ou cole o código a seguir.  
   

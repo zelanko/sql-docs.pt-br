@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6d3eb993b999d17fa4d9c7ac547d30e4489afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd72de564b67b9130f2cf4d8175a190f8d76a302
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300576"
 ---
 # <a name="sap-bw-destination"></a>Destino SAP BW
   O destino SAP BW é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Portanto, o destino do SAP BW carrega dados do fluxo de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um sistema SAP Netweaver BW versão 7.  
@@ -92,13 +92,13 @@ ms.locfileid: "36118722"
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Usando o Designer SSIS para configurar o destino  
  Para obter mais informações sobre as propriedades do destino do SAP BW que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor de destino do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [Editor de destino SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino do SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [Editor de destino SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)  
   
--   [Editor de destino do SAP BW &#40;página de saída de erro&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [Editor de destino SAP BW &#40;página de saída de erro&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino do SAP BW &#40;página Avançado&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino SAP BW &#40;página Avançado&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  Quando você estiver configurando o destino do SAP BW, também poderá usar várias caixas de diálogo para pesquisar ou criar objetos do SAP Netweaver BW. Para obter mais informações sobre essas caixas de diálogo, clique em um dos seguintes tópicos:  
   

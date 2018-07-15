@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b1fc3d4f25bb5aa261179904939a271774de446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f30ccbc909db5197423c680e1e27b4ec55b97b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272072"
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>Tipo de dados MiningStructureColumn (ASSL)
   Define um tipo de dados primitivo abstrato que representa informações sobre uma coluna em uma [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  

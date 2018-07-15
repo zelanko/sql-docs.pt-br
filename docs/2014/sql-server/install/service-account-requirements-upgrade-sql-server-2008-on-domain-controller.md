@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain controllers
 - service accounts
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - local service accounts
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b1143fc205b7afc933369abeed32d9599c7d5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cc2ec39bee7f9a64d75ccf4753220f69693155b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301656"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>Requisitos da conta de serviço para atualização para o SQL Server 2008 em um controlador de domínio
-  O Supervisor de atualização detectou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executado sob uma conta de serviço de rede ou serviço Local um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] controlador de domínio. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado em um controlador de domínio do [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem executar em privilégios de conta de Serviço Local ou Serviço de Rede.  
+  O Supervisor de atualização detectou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução em uma conta de serviço de rede ou serviço Local em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] controlador de domínio. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado em um controlador de domínio do [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem executar em privilégios de conta de Serviço Local ou Serviço de Rede.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

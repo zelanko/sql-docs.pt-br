@@ -1,5 +1,5 @@
 ---
-title: Conta de elemento (ASSL) | Microsoft Docs
+title: Elemento (ASSL) de conta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321158"
 ---
 # <a name="account-element-assl"></a>Elemento Account (ASSL)
   Contém detalhes sobre um tipo de conta dentro de um [banco de dados](database-element-assl.md) elemento.  
@@ -65,7 +65,7 @@ ms.locfileid: "36122031"
 |Elementos filho|[AccountType](../properties/accounttype-element-assl.md), [AggregationFunction](../properties/aggregationfunction-element-assl.md), [Aliases](../collections/aliases-element-assl.md), [anotações](../collections/annotations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Dimensões, cujo [tipo](../properties/type-element-dimension-assl.md) é definido como *contas,* pode ter um atributo que especifica o tipo de conta, como renda, despesa e assim por diante, representado pelos membros da dimensão. O tipo de conta é usado por [medidas](measure-element-assl.md) elementos, cujo [AggregationFunction](../properties/aggregatefunction-element-assl.md) é definido como *ByAccount*, para determinar a função de agregação a ser usado ao os membros da dimensão de agregação. O elemento `Account` representa um único tipo de conta e a função de agregação que deveriam ser usados por tais medidas.  
+ Dimensões, cujo [tipo](../properties/type-element-dimension-assl.md) é definido como *contas,* pode ter um atributo que especifica o tipo de conta, como renda, despesa e assim por diante, representado pelos membros da dimensão. O tipo de conta, em seguida, é usado pelo [medida](measure-element-assl.md) elementos, cujo [AggregationFunction](../properties/aggregatefunction-element-assl.md) é definido como *ByAccount*, para determinar a função de agregação a ser usado ao os membros da dimensão de agregação. O elemento `Account` representa um único tipo de conta e a função de agregação que deveriam ser usados por tais medidas.  
   
  Um tipo de conta deve ser listado se a função de agregação for diferente do padrão usado pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para cada tipo de conta.  
   

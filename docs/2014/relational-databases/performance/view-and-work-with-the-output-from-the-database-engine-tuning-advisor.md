@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167097"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
   Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "36130756"
   
 2.  No menu **Arquivo** , clique em **Resultados da Sessão de Exportação** e salve como um arquivo XML.  
   
-3.  Abra o arquivo XML criado no passo 2 em seu editor de XML ou editor de textos favorito ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Role para baixo até o `Configuration` elemento. Copie e cole o `Configuration` seção do elemento no XML de entrada arquivo modelo após o `TuningOptions` elemento. Salve esse arquivo de entrada XML.  
+3.  Abra o arquivo XML criado no passo 2 em seu editor de XML ou editor de textos favorito ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Role para baixo até a `Configuration` elemento. Copie e cole a `Configuration` seção do elemento em um XML de modelo do arquivo após a entrada a `TuningOptions` elemento. Salve esse arquivo de entrada XML.  
   
 4.  No novo arquivo de entrada XML criado no passo 3, especifique as opções de ajuste desejadas no elemento `TuningOptions`, edite a seção do elemento `Configuration` (adicione ou exclua as estruturas de design físicas conforme apropriado para sua análise), salve o arquivo e valide-o em relação ao esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre como editar esse arquivo XML, consulte [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36130756"
   
 2.  Copie e cole a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) no editor XML ou em um editor de texto. Use este exemplo para criar um arquivo de entrada XML para sua sessão de ajuste. Para obter informações sobre como executar esta tarefa, consulte a seção "Criar arquivos de entrada XML" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
-3.  Editar o `TuningOptions` e `Configuration` elementos no arquivo de entrada XML de exemplo. No `TuningOptions` elemento, especifique quais estruturas de design físicas deseja orientador de otimização do mecanismo de banco de dados a serem considerados durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho, você pode usar com o `TuningOptions` e `Configuration` elementos pai, consulte [referência do arquivo de entrada XML &#40;orientador de otimização do mecanismo de banco de dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Editar o `TuningOptions` e o `Configuration` elementos no arquivo de entrada XML de exemplo. No `TuningOptions` elemento, especifique quais estruturas de design físicas você deseja que o orientador de otimização do mecanismo de banco de dados considere durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho, você pode usar com o `TuningOptions` e o `Configuration` elementos pai, consulte [referência de arquivo de entrada XML &#40;orientador de otimização do mecanismo de banco de dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salve o arquivo de entrada com uma extensão **.xml** .  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36130756"
   
      O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no `Configuration` elemento. Se você deseja executar o orientador de otimização do mecanismo de banco de dados novamente para verificar outra configuração hipotética que é baseada na saída, você pode copiar e colar o `Configuration` conteúdo de elemento do arquivo de saída em um novo ou o arquivo de entrada XML original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
+6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no `Configuration` elemento. Se você quiser executar o orientador de otimização do mecanismo de banco de dados novamente para verificar outra configuração hipotética que é baseada na saída, você pode copiar e colar o `Configuration` conteúdo do elemento do arquivo de saída em um novo ou o arquivo de entrada XML original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
      Depois que o ajuste terminar, use a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados para exibir os relatórios de ajuste ou abra o arquivo de saída XML para exibir o `TuningSummary` e os elementos de `Configuration` para exibir as recomendações do Orientador. Para obter informações sobre como exibir os resultados de sua sessão de ajuste, consulte [Exibir saída de ajuste](#View) anteriormente neste tópico. Note também que o arquivo de saída XML pode conter relatórios de análise do Orientador de Otimização do Mecanismo de Banco de Dados.  
   

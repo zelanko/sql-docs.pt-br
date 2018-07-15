@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 106821212578d341292be4ef5f33bef055d5c1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1263a4037f42b7546e6f248cfd0c4b75bbede8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257582"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Ferramentas de Cálculo (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Ferramentas de Cálculo** da guia **Cálculos** no Designer de Cubo para explorar metadados, funções e modelos disponíveis para uso em cálculos.  
@@ -79,6 +79,6 @@ ms.locfileid: "36121612"
  [Editor de formulário de membro calculado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor de formulário de conjunto nomeado &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Editor de scripts &#40;guia cálculos, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cálculos de &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

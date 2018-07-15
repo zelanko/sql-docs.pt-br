@@ -1,5 +1,5 @@
 ---
-title: Configurar e exibir arquivos de Log do SharePoint e log (PowerPivot para SharePoint) de diagnóstico | Microsoft Docs
+title: Configurar e exibir arquivos de Log do SharePoint e diagnóstico, registro em log (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255838"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar e exibir arquivos de log do SharePoint e log de diagnóstico (PowerPivot para SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mensagens de eventos e operações de servidor são registradas nos arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [configurar coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] operações de servidor, eventos e mensagens são registradas nos arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Neste tópico:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36011563"
   
 4.  Expanda a categoria e selecione categorias individuais.  
   
-     **Solicitação de página do aplicativo** especifica eventos disparados pelo aplicativo de serviço ao localizar um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para carregar uma fonte de dados do PowerPivot e comunicar-se com outros servidores no farm.  
+     **Solicitação de página de aplicativo** especifica eventos disparados pelo aplicativo de serviço ao localizar um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para carregar uma fonte de dados do PowerPivot e comunicar com outros servidores no farm.  
   
      O**Processamento de solicitação** especifica eventos disparados por solicitações de consulta em relação a um banco de dados do PowerPivot que é carregado em um servidor no farm.  
   

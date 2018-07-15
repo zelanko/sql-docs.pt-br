@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f3300a8dd536d0110ca82657e676476b932b482
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bffc0cc328fd775c445c14537092bb7785a64b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250666"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Treinamento do Modelo de Mineração de Dados** para mapear colunas de entrada para colunas na estrutura de mineração.  
@@ -45,6 +45,6 @@ ms.locfileid: "36018938"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de treinamento do modelo de mineração de dados &#40;guia Conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Editor de treinamento do modelo de mineração de dados &#40;guia de Conexão&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

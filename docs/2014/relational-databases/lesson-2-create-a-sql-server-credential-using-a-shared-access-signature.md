@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219246"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lição 3: Criar uma credencial do SQL Server
   Nesta lição, você criará uma credencial para armazenar as informações de segurança usadas para acessar a conta de armazenamento do Windows Azure.  
@@ -29,7 +29,7 @@ ms.locfileid: "36120348"
  Para obter informações gerais sobre credenciais, consulte [credenciais &#40;mecanismo de banco de dados&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Os requisitos para a criação de uma credencial do SQL Server descrita abaixo são específicos para o [arquivos de dados do SQL Server no Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) recurso. Para obter informações sobre como criar credenciais para processos de backup no armazenamento do Azure, consulte [lição 2: criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  Os requisitos para a criação de uma credencial do SQL Server descritos abaixo são específicos para o [arquivos de dados do SQL Server no Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) recurso. Para obter informações sobre como criar credenciais para processos de backup no armazenamento do Azure, consulte [lição 2: criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  Para criar uma Credencial do SQL Server, execute estas etapas:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36120348"
     SELECT * from sys.credentials  
     ```  
   
-     Para obter mais informações sobre Credentials, consulte [Credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) nos Manuais Online do SQL Server.  
+     Para obter mais informações sobre sys. Credentials, consulte [sys. Credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) nos Manuais Online do SQL Server.  
   
  **Próxima lição:**  
   

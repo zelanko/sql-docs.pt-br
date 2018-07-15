@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Criando um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor | Microsoft Docs'
+title: 'Exemplo: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186213"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemplo: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor
   Uma forma comum de usar o Provedor de eventos de WMI é criar alertas do SQL Server Agent que respondem a eventos específicos. O seguinte exemplo apresenta um alerta simples que salva eventos de gráfico de deadlock XML em uma tabela para análise posterior. O SQL Server Agent envia uma solicitação WQL, recebe eventos WMI, e executa um trabalho em resposta ao evento. Observe que, embora vários objetos do Service Broker estejam envolvidos no processamento da mensagem de notificação, o Provedor de eventos de WMI manipula os detalhes da criação e do gerenciamento desses objetos.  
@@ -34,12 +34,12 @@ ms.locfileid: "36115650"
   
  Então, o alerta é criado. Primeiro, o script cria o trabalho que o alerta irá executar, depois adiciona uma etapa de trabalho ao trabalho e direciona o trabalho para a instância atual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Então, o script cria o alerta.  
   
- A etapa de trabalho recupera o **TextData** propriedade da instância de eventos do WMI e insere esse valor no **DeadlockGraph** coluna o **DeadlockEvents** tabela. Observe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte implicitamente a cadeia de caracteres para o formato XML. Como a etapa de trabalho usa o subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)], ela não especifica um proxy.  
+ A etapa de trabalho recupera o **TextData** propriedade da instância de evento do WMI e insere esse valor na **DeadlockGraph** coluna do **DeadlockEvents** tabela. Observe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte implicitamente a cadeia de caracteres para o formato XML. Como a etapa de trabalho usa o subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)], ela não especifica um proxy.  
   
  O alerta executa o trabalho sempre que um evento de rastreamento do grafo deadlock é registrado. Para um alerta de WMI, o SQL Server Agent cria uma consulta de notificação que usa o namespace e a instrução WQL especificados. Para esse alerta, o SQL Server Agent monitora a instância padrão no computador local. A instrução WQL solicita quaisquer eventos `DEADLOCK_GRAPH` na instância padrão. Para alterar a instância que o alerta monitora, substitua o nome de instância para `MSSQLSERVER` no `@wmi_namespace` para o alerta.  
   
 > [!NOTE]  
->  Para o SQL Server Agent receba eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] devem ser habilitadas no **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Para o SQL Server Agent receber eventos de WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser habilitada no **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Testando o exemplo  
- Para ver a execução do trabalho, provoque um deadlock. Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra duas **consulta SQL** guias e conecte ambas consultas à mesma instância. Execute o seguinte script em um das guias de consulta. Este script produz um conjunto de resultados e é encerrado.  
+ Para ver a execução do trabalho, provoque um deadlock. Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra duas **consulta SQL** guias e conecte ambas consultas à mesma instância. Execute o seguinte script em um das guias de consulta. Este script produz um conjunto de resultados e é encerrado.  
   
 ```  
 USE AdventureWorks ;  

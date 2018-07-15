@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279112"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
   Você pode definir índices em colunas computadas contanto que os seguintes requisitos sejam satisfeitos:  
@@ -74,7 +73,7 @@ ms.locfileid: "36010892"
   
 -   Não é uma expressão de tipos de dados `float` ou `real`.  
   
--   Não usar um `float` ou `real` tipo de dados em sua definição. Por exemplo, na instrução a seguir, coluna `y` é `int` e determinística mas não precisa.  
+-   Ele não usa um `float` ou `real` tipo de dados em sua definição. Por exemplo, na instrução a seguir, coluna `y` é `int` e determinística mas não precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,7 +85,7 @@ ms.locfileid: "36010892"
     ```  
   
 > [!NOTE]  
->  Qualquer `float` ou `real` expressão é considerada imprecisa e não pode ser uma chave de um índice; uma `float` ou `real` expressão pode ser usada em uma exibição indexada, mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão ou função definida pelo usuário será considerada imprecisa se contiver qualquer `float` ou `real` expressões. Isso inclui as lógicas (comparações).  
+>  Qualquer `float` ou `real` expressão é considerada imprecisa e não pode ser uma chave de um índice; uma `float` ou `real` expressão pode ser usada em uma exibição indexada, mas não como uma chave. Isso também é verdade para colunas computadas. Qualquer função, expressão ou função definida pelo usuário será considerada imprecisa se contiver uma `float` ou `real` expressões. Isso inclui as lógicas (comparações).  
   
  A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_column_expression* é precisa.  
   
@@ -94,9 +93,9 @@ ms.locfileid: "36010892"
   
 -   O *computed_column_expression* definido para a coluna computada não pode ser avaliada como o `text`, `ntext`, ou `image` tipos de dados.  
   
--   Colunas computadas derivadas de `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` tipos de dados podem ser indexados desde que o tipo de dados de coluna computada seja permitido como uma coluna de chave de índice.  
+-   Colunas computadas derivadas dos `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, e `xml` tipos de dados podem ser indexados, desde que o tipo de dados de coluna computada seja permitido como uma coluna de chave de índice.  
   
--   Colunas computadas derivadas de `image`, `ntext`, e `text` tipos de dados podem ser colunas (incluídas) em um índice não clusterizado como o tipo de dados de coluna computada seja permitido como uma coluna de índice não chave.  
+-   Colunas computadas derivadas dos `image`, `ntext`, e `text` tipos de dados podem ser colunas (incluídas) em um índice não clusterizado, desde que o tipo de dados de coluna computada seja permitido como uma coluna de índice não chave.  
   
  **SET Option Requirements**  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36010892"
      A definição de ANSI_WARNINGS como ON definirá ARITHABORT implicitamente como ON quando o nível de compatibilidade do banco de dados estiver definido como 90 ou mais.  
   
 ##  <a name="BKMK_persisted"></a> Criando índices em colunas computadas persistentes  
- Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] usa esses valores persistentes ao criar um índice na coluna e quando o índice é referenciado em uma consulta. Essa opção permite que você crie um índice em uma coluna computada quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], é determinística e precisa.  
+ Você pode criar um índice em uma coluna computada que está definida com uma expressão determinística, mas imprecisa, se a coluna for marcada como PERSISTED na instrução CREATE TABLE ou ALTER TABLE. Isso significa que o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] usa esses valores persistentes quando ele cria um índice na coluna, e quando o índice é referenciado em uma consulta. Essa opção permite que você crie um índice em uma coluna computada quando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], é determinística e precisa.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

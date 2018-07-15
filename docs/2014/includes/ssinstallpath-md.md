@@ -1,1 +1,1 @@
-C:\\arquivos de programa\\do Microsoft SQL Server\\120\\
+C:\\arquivos de programa\\Microsoft SQL Server\\120\\

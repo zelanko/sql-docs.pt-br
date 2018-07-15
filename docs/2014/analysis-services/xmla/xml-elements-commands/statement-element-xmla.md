@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Statement command
 ms.assetid: bfedc03c-d476-4d55-b5fd-36169f01351a
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1174ab45098eef2d4f735a180cef11d332e2f4d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 72a2b52b8a95233dfa0f889603d74548fb031305
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300806"
 ---
 # <a name="statement-element-xmla"></a>Elemento Statement (XMLA)
-  Contém uma consulta ou instrução a ser enviada usando o `Execute` método para uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contém uma consulta ou instrução a ser enviada usando o `Execute` método a uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   

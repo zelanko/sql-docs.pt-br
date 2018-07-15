@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267262"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (Editor de Texto: página Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
@@ -35,7 +35,7 @@ ms.locfileid: "36020103"
 ## <a name="status-bar-content"></a>Conteúdo da barra de status  
  Especifica as informações que aparecem na barra de status do Editor de Consultas.  
   
- **Exibe o tempo de execução**  
+ **Exibir tempo de execução**  
  Inclui a hora de execução do script. As configurações são as seguintes:  
   
  **Nenhuma**  
@@ -74,7 +74,7 @@ ms.locfileid: "36020103"
  **Top**  
  A barra de status aparece na parte superior do Editor de Consultas.  
   
- **Inferior**  
+ **Parte inferior**  
  A barra de status aparece na parte inferior da janela do Editor de Consultas.  
   
 ## <a name="tab-text"></a>Texto da Guia  
@@ -83,7 +83,7 @@ ms.locfileid: "36020103"
  **Incluir nome do banco de dados**  
  Inclui o nome do banco de dados atual para a conexão. Quando o editor de consultas é aberto pela primeira vez, esse é o banco de dados padrão para o logon. O contexto do banco de dados pode ser alterado posteriormente com a instrução USE do Transact-SQL.  
   
- **Incluir nome de arquivo**  
+ **Incluir nome do arquivo**  
  Inclui o nome do arquivo no qual o script está armazenado.  
   
  **Incluir nome da pasta**  
@@ -96,7 +96,7 @@ ms.locfileid: "36020103"
  Inclui o nome do servidor. Para conexões locais, esse é o nome da instância. Para conexões remotas, esse é o nome do computador remoto e o nome da instância.  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções de &#40;ambiente: fontes e cores de página&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Opções de &#40;ambiente: Fonts and Colors Page&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codificação por cores nos Editores de Consulta](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   
