@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282182"
 ---
 # <a name="cube-space"></a>Espaço de cubo
   Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Observe que o `WITH` palavra-chave é usada com a [CurrentMember (MDX)](/sql/mdx/current-mdx) e [Name (MDX)](/sql/mdx/members-string-mdx) funções para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Observe que o `WITH` palavra-chave é usada com o [CurrentMember (MDX)](/sql/mdx/current-mdx) e [Name (MDX)](/sql/mdx/members-string-mdx) funções para criar um membro calculado para uso na consulta. Para obter mais informações, consulte [A consulta MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  Na consulta anterior, o nome do membro da hierarquia de atributo País que está associado a cada membro da hierarquia de atributo Estado é retornado. O membro País esperado é exibido (porque uma relação de atributo está definida entre os atributos Cidade e País). Porém, se nenhuma relação de atributo estivesse definida entre hierarquias de atributo na mesma dimensão, o membro (All) seria retornado, conforme ilustrado na consulta a seguir.  
   
@@ -133,12 +133,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Contexto de cálculo  
   
 ## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;do Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuplas](tuples.md)   
  [Autoexists](autoexists.md)   
  [Trabalhando com membros, tuplas e conjuntos de &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](visual-totals-and-non-visual-totals.md)   
- [Referência de linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Referência da linguagem MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218926"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  
@@ -48,7 +48,7 @@ ms.locfileid: "36020222"
   
 6.  **Resultados da consulta** Você pode executar a consulta e ver um exemplo do conjunto de resultados. Você deve ter credenciais de tempo de design para executar uma consulta.  
   
-7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar metadados para a coleção de campos do conjunto de dados. Por exemplo, um [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instrução retorna os nomes de coluna para uma tabela de banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
+7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar metadados para a coleção de campos do conjunto de dados. Por exemplo, uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instrução retorna os nomes de coluna para uma tabela de banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
   
  Também é possível incluir dados em um relatório usando conjuntos de dados compartilhados e partes de relatório predefinidos. Esses itens já têm as informações de conexão de dados necessárias. Para obter mais informações, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41; ](report-datasets-ssrs.md) e [partes de relatório &#40;construtor de relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36020222"
   
  Quando o relatório é processado em tempo de execução, o conjunto de resultados real retornado para uma consulta pode ter zero ou mais linhas. Também é possível que as colunas definidas na consulta não sejam encontradas na fonte de dados. Valores nulos da fonte de dados são mapeados para o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] valor `System.DBNull.Value`.  
   
- Para obter mais informações sobre campos de conjunto de dados, consulte [coleção de campos do conjunto de dados &#40;construtor de relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Para obter mais informações sobre os campos do conjunto de dados, consulte [coleção de campos do conjunto de dados &#40;construtor de relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Consulta do conjunto de dados  
  Ao executar uma consulta de conjunto de dados em um designer de consulta no tempo de design, você vê um conjunto de linhas da fonte de dados que mostra dados de exemplo. Em tempo de execução, quando um usuário exibe o relatório, a consulta de conjunto de dados pode produzir valores diferentes porque os dados foram alterados na fonte. Sempre que o relatório é processado, podem aparecer dados novos.  
@@ -209,7 +209,7 @@ ms.locfileid: "36020222"
   
 -   Você exibe os dados de cada conjunto de dados usando uma região de dados separada. Para obter mais informações, consulte [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Você pode vincular mais de uma região de dados ao conjunto de dados e fornecer várias exibições dos mesmos dados. Para obter mais informações, consulte [vinculando várias regiões de dados para o mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Você pode vincular mais de uma região de dados ao conjunto de dados e fornecer várias exibições dos mesmos dados. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 -   É possível usar conjuntos de dados para fornecer uma lista suspensa dos valores disponíveis ou padrão de um parâmetro de relatório. Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -226,6 +226,6 @@ ms.locfileid: "36020222"
 ## <a name="see-also"></a>Consulte também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
   
   

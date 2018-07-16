@@ -18,15 +18,15 @@ helpviewer_keywords:
 - annotated XDR schemas, XML Bulk Load
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba4c9e6506b67802a8a9571df80ff4db7d2b3934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 90f70a03d2da5d0d7c42c1e92163ef0d61a84f4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280732"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interpretação de anotação (SQLXML 4.0)
   Os tópicos desta seção descrevem como o Carregamento em Massa de XML interpreta as anotações no esquema XSD. O comportamento descrito aqui também se aplica às anotações no esquema XDR.  
@@ -35,7 +35,7 @@ ms.locfileid: "36013295"
 >  As informações nesses tópicos descrevem apenas as anotações usadas pelo Carregamento em Massa de XML em seu processamento. Para obter uma lista completa de anotações para o esquema XSD que têm suporte no SQLXML 4.0, consulte [usando anotações em esquemas XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Para obter uma lista de anotações com suporte para esquemas XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [SQL: Relationship e a regra de ordenação de chave &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ [SQL: Relationship e regra de ordenação de chave &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Descreve como a anotação `sql:relationship` é interpretada no Carregamento em Massa de XML.  
   
  [sql:mapped &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  

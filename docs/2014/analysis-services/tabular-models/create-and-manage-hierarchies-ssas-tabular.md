@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293227"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Criar e Gerenciar hierarquias (SSAS tabular)
   As hierarquias podem ser criadas e gerenciadas no designer modelo em Exibição de Diagrama. Par exibir o designer de modelos na Exibição de Diagrama no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Model** , aponte para **Exibição de Modelo**e clique em **Exibição de Diagrama**.  
@@ -98,7 +98,7 @@ ms.locfileid: "36130419"
 -   Ou clique no nível pai da hierarquia e pressione Excluir. Isto também remove todos os níveis filho.  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Hierarquias &#40;Tabular do SSAS&#41;](hierarchies-ssas-tabular.md)   
  [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)  
   

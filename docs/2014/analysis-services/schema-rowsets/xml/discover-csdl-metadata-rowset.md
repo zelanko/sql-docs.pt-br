@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293516"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Conjunto de linhas DISCOVER_CSDL_METADATA
   Retorna informações sobre um modelo de dados (de tabela ou multidimensional) do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], fornecendo a definição do modelo no formato da CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI). A CSDLBI se baseia na CSDL, um esquema XML usado pela Estrutura de Dados de Entidade que é utilizada para comunicação entre um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e o cliente [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . As anotações de BI (Business Intelligence) fornecem metadados adicionais sobre modelos de tabela e os objetos neles. Para obter mais informações sobre modelos de dados de tabela, consulte [CSDLBI &#40;Anotações CSDL para Business Intelligence&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "36019235"
  O identificador de idioma do cliente que emite a solicitação de conjunto de linhas é incluído na cadeia de conexão para o comando e afeta o idioma exibido em várias propriedades que são retornadas como parte do conjunto de linhas.  Para obter informações sobre propriedades e descrição que podem ser afetados pelo identificador de idioma, consulte a seção Comentários.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_CSDL_METADATA` linhas contém as seguintes colunas.  
+ O `DISCOVER_CSDL_METADATA` linhas contém as colunas a seguir.  
   
 |**Nome da coluna**|**Indicador de tipo**|**Restrição**|**Descrição**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "36019235"
 |ADOMDNAME|Csdl|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjuntos de linhas do esquema do Analysis Services](../analysis-services-schema-rowsets.md)   
+ [Conjuntos de linhas de esquema do Analysis Services](../analysis-services-schema-rowsets.md)   
  [Anotações CSDL para Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

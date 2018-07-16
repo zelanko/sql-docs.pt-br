@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 379941cc87f9975bca81ed28ba773fcd9cab9592
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 034d1f252c4eb740c56218c79ddd4fe4638c166b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234736"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir valores disponíveis para um parâmetro de relatório (Construtor de Relatórios e SSRS)
   Depois de criar um parâmetro de relatório, você poderá especificar uma lista de valores disponíveis a ser exibida para o usuário. Uma lista de valores disponíveis limita as escolhas do usuário aos valores válidos para o parâmetro.  
@@ -80,9 +80,9 @@ ms.locfileid: "36019526"
      Quando você visualiza o relatório, a lista suspensa dos valores disponíveis para o parâmetro não aparece mais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterar a ordem de um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Adicionar, alterar ou excluir um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Adicionar parâmetros em cascata a um relatório &#40;SSRS e construtor de relatórios&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Alterar a ordem de um parâmetro de relatório &#40;relatórios e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Adicionar, alterar ou excluir um parâmetro de relatório &#40;relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Adicionar parâmetros em cascata a um relatório &#40;relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir valores padrão de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263342"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer de Modelos Tabulares (SSAS tabular)
   O designer de modelos de tabela faz parte do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]integrado ao Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou posterior, com modelos de tipo de projeto adicionais especificamente para desenvolver soluções profissionais de modelo de tabela.  
@@ -32,7 +32,7 @@ ms.locfileid: "36122484"
   
 -   [Modelos de projeto](#bkmk_proj_temp)  
   
--   [Janelas e Menus](#bkmk_wind_men)  
+-   [Menus e Windows](#bkmk_wind_men)  
   
 -   [Integração do Visual Studio](#bkmk_vsint)  
   

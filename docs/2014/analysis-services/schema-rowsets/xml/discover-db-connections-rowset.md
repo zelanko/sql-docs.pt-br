@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76b078c5b61c685634636f8891f65da722be911e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f22c330fcc1deef1e86f4442ed8524235a3ba5c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295546"
 ---
 # <a name="discoverdbconnections-rowset"></a>Conjunto de linhas DISCOVER_DB_CONNECTIONS
   Oferece uso de recursos e de informações de atividade sobre as conexões abertas no momento do servidor para um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_DB_CONNECTIONS` linhas contém as seguintes colunas.  
+ O `DISCOVER_DB_CONNECTIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

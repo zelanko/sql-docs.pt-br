@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e9e3619eb5f96ff2e64c87855b2bd33063aaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178853"
 ---
 # <a name="algorithmparameter-element-assl"></a>Elemento AlgorithmParameter (ASSL)
   Define um parâmetro para o algoritmo usado por um [MiningModel](miningmodel-element-assl.md) elemento.  
@@ -65,7 +65,7 @@ ms.locfileid: "36020139"
 ## <a name="remarks"></a>Remarks  
  Um `AlgorithmParameter` é um parâmetro para um algoritmo de modelo de mineração. O `AlgorithmParameter` representa este parâmetro como um par de nome/valor. O conjunto de parâmetros aplicáveis que um `AlgorithmParameter` pode representar é dependente de algoritmo. Para obter mais informações sobre parâmetros de algoritmo para um determinado algoritmo, consulte a documentação apropriada para aquele algoritmo.  
   
- Parâmetros de algoritmo disponíveis, incluindo informações de validação e exibição, podem ser recuperados do [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md) de linhas de esquema.  
+ Parâmetros de algoritmo disponíveis, inclusive validação e informações de exibição, podem ser recuperados do [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md) linhas de esquema.  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AlgorithmParameter>.  
   

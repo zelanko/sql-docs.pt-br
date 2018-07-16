@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251318"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
   Para exibir relatórios implantados para um servidor de relatório ou relatórios que existem no sistema de arquivos local, você poderá usar o controle ReportViewer do WebForms para renderizá-los em um aplicativo Web.  
@@ -47,7 +47,7 @@ ms.locfileid: "36019789"
   
  Se desejar exibir um relatório no modo local, selecione a opção **Criar um novo relatório** para iniciar o designer de relatórios ou selecione um relatório que já faz parte do projeto existente. Depois de selecionar um relatório, insira o nome do arquivo de relatório RDLC na propriedade **ReportPath** do controle ReportViewer. Essa propriedade é exibida no nó **LocalReport** do painel **Propriedades**.  
   
- É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as seguintes propriedades do ReportViewer `False` no **propriedades** painel.  
+ É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as propriedades ReportViewer como `False` no **propriedades** painel.  
   
 -   `ShowBackButton`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36019789"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Exibindo relatórios em modo de processamento remoto  
  O exemplo a seguir demonstra como renderizar um relatório implantado em um servidor de relatório. Este exemplo usa o relatório Detalhes do Pedido de Vendas incluído no projeto de relatórios de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para fazer isso, insira a linha a seguir para o `web.config` arquivo:  
+ O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para isso, insira a seguinte linha no `web.config` arquivo:  
   
 ```  
 <!-- Web.config file. -->  

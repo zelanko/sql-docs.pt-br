@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cbd8342f74668ba52ff837336bd9b245480f489f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 236948c23164cd0890e7c4fc4455cbc87227d792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256972"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
   Os bancos de dados e aplicativos de bancos de dados que usam instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] serão mais portáteis de um idioma para outro, ou darão suporte a vários idiomas, se as diretrizes a seguir forem cumpridas.  
@@ -48,7 +48,7 @@ ms.locfileid: "36122852"
   
     -   Os aplicativos que usam outras APIs ou scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedimentos armazenados e gatilhos, devem usar as sequências numéricas de não separadas. Por exemplo, *yyyymmdd* como 19980924.  
   
-    -   Aplicativos que usam outras APIs ou [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, procedimentos armazenados e gatilhos devem usar a instrução CONVERT com um parâmetro de estilo explícito para todas as conversões entre o `time`, `date`, `smalldate`, `datetime`, **datetime2**, e `datetimeoffset` tipos de dados e tipos de dados de cadeia de caracteres. Por exemplo, a instrução a seguir é interpretada da mesma maneira para todas configurações de conexão de formato de data ou de linguagem:  
+    -   Aplicativos que usam outras APIs, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, procedimentos armazenados e gatilhos devem usar a instrução CONVERT com um parâmetro de estilo explícito para todas as conversões entre o `time`, `date`, `smalldate`, `datetime`, **datetime2**, e `datetimeoffset` tipos de dados e tipos de dados de cadeia de caracteres. Por exemplo, a instrução a seguir é interpretada da mesma maneira para todas configurações de conexão de formato de data ou de linguagem:  
   
         ```  
         SELECT *  

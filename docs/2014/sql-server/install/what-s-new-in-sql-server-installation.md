@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
 - SQL Server, what's new
 - SQL Server, installing
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18bfdcd9ae27a984cfc3c8259ffca89d3a5acc8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 41721eea4f1e4b58f5d1e6a1d6ae99bbebc71ff5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255318"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novidades na instalação do SQL Server
-  O Windows Vista não é um sistema operacional com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. O Service Pack 1 permanece como o requisito mínimo para sistemas operacionais [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Para obter mais informações sobre os requisitos de sistema operacional, consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  O Windows Vista não é um sistema operacional com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. O Service Pack 1 permanece como o requisito mínimo para sistemas operacionais [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Para obter mais informações sobre os requisitos de sistema operacional, consulte [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
  A instalação do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] solicitará que você especifique o diretório para salvar o pacote extraído. Se nenhum local for inserido, o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usará como padrão a unidade do sistema do computador. Os arquivos extraídos permanecerão depois que a instalação do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] estiver concluída.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36013250"
   
  A atualização do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tem suporte, mas lado a lado não. Para obter mais informações sobre o suporte de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o mecanismo de banco de dados na edição Standard tem uma capacidade de memória de 128 GB. Em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o mecanismo de banco de dados na edição Standard tinha uma capacidade de 64 GB de memória.  
+ A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o mecanismo de banco de dados na edição Standard tem uma capacidade de memória de 128 GB. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o mecanismo de banco de dados na Standard edition tinha a capacidade de memória de 64 GB.  
   
 ## <a name="see-also"></a>Consulte também  
  [O que há de novo no SQL Server 2014](../what-s-new-in-sql-server-2016.md)   

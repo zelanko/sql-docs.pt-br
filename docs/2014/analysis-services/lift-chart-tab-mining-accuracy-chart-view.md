@@ -1,5 +1,5 @@
 ---
-title: Comparação de precisão guia gráficos (exibição de gráfico de precisão de mineração) | Microsoft Docs
+title: Guia gráficos (exibição de gráfico de precisão de mineração) de comparação de precisão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224646"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Guia do gráfico de comparação de precisão (Exibição de gráfico de precisão de mineração)
   Use o painel **Gráfico de Comparação de Precisão** para exibir um gráfico que compara todos os modelos de mineração selecionados na estrutura de mineração selecionada.  

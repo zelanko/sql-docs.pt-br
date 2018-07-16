@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcbb6ce5b9cda3b17b69558cd60f6030f9e097b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194186"
 ---
 # <a name="readsourcedata-element-assl"></a>Elemento ReadSourceData (ASSL)
-  Determina como nomes exclusivos são gerados para hierarquias que estão contidas dentro do [CubePermission](../objects/cubepermission-element-assl.md).  
+  Determina como nomes exclusivos são gerados para hierarquias que estão contidas dentro de [CubePermission](../objects/cubepermission-element-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36116235"
 |*Permitido*|O acesso é permitido aos dados disponíveis na fase de cálculo 0.|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `ReadSourceData` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubePermission>.  
+ O elemento que corresponde ao pai de `ReadSourceData` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubePermission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

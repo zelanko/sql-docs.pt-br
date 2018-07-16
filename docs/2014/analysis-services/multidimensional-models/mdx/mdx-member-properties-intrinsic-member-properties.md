@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ac41e667c11812243aceeb9f6fd71a8a64fc2cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236026"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriedades intrínsecas do membro (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expõe propriedades intrínsecas em membros de dimensão que você pode incluir em uma consulta para retornar dados ou metadados adicionais para uso em um aplicativo personalizado ou para ajudar na investigação ou na construção do modelo. Se você estiver usando as ferramentas de cliente do SQL Server, poderá exibir propriedades intrínsecas no SQL Server Management Studio (SSMS).  
   
- As propriedades intrínsecas incluem `ID`, `KEY`, `KEYx` e `NAME`, que são propriedades expostas por cada membro, em qualquer nível. Você também pode retornar informações de posição, como `LEVEL_NUMBER` ou `PARENT_UNIQUE_NAME`, entre outros.  
+ As propriedades intrínsecas incluem `ID`, `KEY`, `KEYx` e `NAME`, que são propriedades expostas por cada membro, em qualquer nível. Você também pode retornar informações de posição, tais como `LEVEL_NUMBER` ou `PARENT_UNIQUE_NAME`, entre outros.  
   
  Dependendo de como você cria a consulta e no aplicativo cliente que você está usando para executar consultas, as propriedades do membro podem ou não ser visíveis no conjunto de resultados. Se você estiver usando o SQL Server Management Studio para testar ou executar consultas, poderá clicar duas vezes em um membro no conjunto de resultados para abrir a caixa de diálogo Propriedades do Membro, mostrando os valores para cada propriedade intrínseca do membro.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36019020"
   
 -   Você usa a palavra-chave `PROPERTIES` para consultar as propriedades.  
   
- As seções seguintes descrevem as várias sensíveis ao contexto e não ao contexto membro intrínsecas sensíveis a propriedades disponíveis no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e como usar o `PROPERTIES` palavra-chave com cada tipo de propriedade.  
+ As seções a seguir descrevem as duas sensíveis ao contexto e o contexto de não membro intrínsecas sensíveis propriedades disponíveis no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e como usar o `PROPERTIES` palavra-chave com cada tipo de propriedade.  
   
 ## <a name="context-sensitive-member-properties"></a>Propriedades do membro sensíveis ao contexto  
  Todos os membros de dimensão e membros de nível têm suporte a uma lista de propriedades intrínsecas do membro são sensíveis ao contexto. A tabela a seguir lista essas propriedades sensíveis ao contexto.  
@@ -91,7 +91,7 @@ ms.locfileid: "36019020"
  A tabela a seguir lista as propriedades intrínsecas não sensíveis ao contexto com suporte pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre o `MEMBERS` linhas de esquema, consulte [linhas MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre o `MEMBERS` linhas de esquema, consulte [conjunto de linhas MDSCHEMA_MEMBERS](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
   
 |Propriedade|Description|  
 |--------------|-----------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "36019020"
 |`IS_DATAMEMBER`|Um booliano que indica se o membro é ou não um membro de dados.|  
 |`IS_PLACEHOLDERMEMBER`|Um booliano que indica se o membro é ou não um espaço reservado.|  
 |`KEYx`|A chave para o membro, onde x é o valor ordinal com base em zero da chave. KEY0 está disponível para chaves compostas e não compostas.<br /><br /> Se a chave for não composta, KEY0 será equivalente a `Key`.<br /><br /> Para chaves compostas, KEY0, KEY1, KEY2 e assim por diante, formam coletivamente a chave composta. Você pode fazer referência a cada uma independentemente em uma consulta para retornar essa parte da chave composta. Por exemplo, especificar KEY0 retorna a primeira parte da chave composta, especificar KEY1 retorna a parte seguinte da chave composta e assim por diante.<br /><br /> Observe que `KEYx` pode ser usado no contexto assim como sem contexto. Por esse motivo, ela é exibida em ambas as listas.<br /><br /> Para obter um exemplo de como usar essa propriedade de membro, consulte [Uma notícia simples do MDX: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID` *X*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
+|`LCID` *x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
 |`LEVEL_NUMBER`|A distância do membro para a raiz da hierarquia. O nível raiz é zero.|  
 |`LEVEL_UNIQUE_NAME`|O nome exclusivo do nível ao qual o membro pertence. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
 |`MEMBER_CAPTION`|Um rótulo ou legenda associado ao membro. A legenda serve basicamente para fins de exibição. Se uma legenda não existir, a consulta retorna `MEMBER_NAME`.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36019020"
 |`UNIQUE_NAME`|O nome totalmente qualificado do membro, neste formato: [dimensão].[nível].[key6.]|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>Sintaxe PROPERTIES para propriedades não sensíveis ao contexto  
- Use a seguinte sintaxe para especificar uma propriedade intrínseco, não ao contexto do membro sensíveis usando o `PROPERTIES` palavra-chave:  
+ Use a seguinte sintaxe para especificar uma propriedade intrínseca, não ao contexto do membro confidencial usando o `PROPERTIES` palavra-chave:  
   
  `DIMENSION PROPERTIES Property`  
   
@@ -220,6 +220,6 @@ FROM [Adventure Works]
  [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
  [Usando propriedades do membro &#40;MDX&#41;](mdx-member-properties.md)   
- [Referência de função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Referência da função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

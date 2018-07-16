@@ -1,5 +1,5 @@
 ---
-title: Validação cruzada (Analysis Services – mineração de dados) | Microsoft Docs
+title: A validação cruzada (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236006"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validação cruzada (Analysis Services - Mineração de dados)
   A *validação cruzada* é uma ferramenta padrão para análise e é um importante recurso para ajudar a desenvolver e ajustar os modelos de mineração de dados. Você utiliza a validação cruzada depois de criar uma estrutura de mineração e os modelos de mineração relacionados para assegurar a validade do modelo.  A validação cruzada tem os aplicativos seguintes:  
@@ -64,7 +64,7 @@ ms.locfileid: "36019480"
   
  O exemplo no diagrama ilustrará o uso de dados se forem especificadas três dobras.  
   
- ![Como a validação cruzada Segmente dados](../media/xvoverviewmain.gif "como validação cruzada segmentos de dados")  
+ ![Como dados de segmentos de validação cruzada](../media/xvoverviewmain.gif "como validação cruzada segmentos de dados")  
   
  No cenário do diagrama, a estrutura de mineração contém um conjunto de dados de validação que é utilizado para teste, mas o conjunto de dados de teste não foi incluído para validação cruzada. Como resultado, todos os dados no conjunto de dados de treinamento, 70% dos dados na estrutura de mineração, são utilizados para validação cruzada. O relatório da validação cruzada mostra o número total de casos usados em cada partição.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36019480"
 ### <a name="choosing-models-and-columns-to-validate"></a>Escolher os modelos e colunas para validar  
  Ao usar a guia **Validação Cruzada** no Designer de Mineração de Dados, você deve primeiro selecionar a coluna previsível de uma lista. Normalmente, uma estrutura de mineração pode aceitar muitos modelos de mineração, porém nem todos os modelos usam a mesma coluna previsível. Ao executar a validação cruzada, só podem ser incluídos no relatório os modelos que usam a mesma coluna previsível.  
   
- Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino é uma coluna aninhada ou uma coluna em uma tabela aninhada, você deve digitar o nome da coluna aninhada usando o formato \<nome da tabela aninhada > (key).\< Aninhados coluna >. Se a única coluna usada da tabela aninhada é a coluna de chave, você pode usar \<nome da tabela aninhada > (key).  
+ Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino é uma coluna aninhada, ou uma coluna em uma tabela aninhada, você deve digitar o nome da coluna aninhada usando o formato \<nome da tabela aninhada > (chave).\< Aninhado coluna >. Se a única coluna usada da tabela aninhada é a coluna de chave, você pode usar \<nome da tabela aninhada > (chave).  
   
  Depois que você seleciona o atributo previsível, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automaticamente testa todos os modelos que usam o mesmo atributo previsível. Se o atributo de destino contém valores discretos, após você ter selecionado a coluna previsível é possível informar opcionalmente um estado de destino, isto se existir um valor específico que você deseja prever.  
   
@@ -115,17 +115,17 @@ ms.locfileid: "36019480"
   
  Para a primeira fase, você chama um procedimento armazenado do sistema que cria quantas partições você especificar dentro do conjunto de dados e retorna resultados de exatidão para cada partição. Para cada métrica, o Analysis Services então calcula o desvio médio e o padrão para as partições.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **Gere métrica para o conjunto de dados inteiro**  
   
  Na segunda fase, você chama um conjunto diferente de procedimentos armazenados. Esses procedimentos armazenados não particionam o conjunto de dados, mas geram resultados de exatidão para o conjunto de dados especificado como um todo. Se você já dividiu e processou uma estrutura de mineração, poderá chamar este segundo conjunto de procedimentos armazenados para obter apenas os resultados.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>Definindo os dados de teste  
  Quando você executa os procedimentos armazenados de validação cruzada que calculam a precisão, (SystemGetAccuracyResults or SystemGetClusterAccuracyResults), pode especificar a fonte dos dados que é utilizada para teste, durante a validação cruzada. Essa opção não está disponível na interface de usuário.  
@@ -188,10 +188,10 @@ ms.locfileid: "36019480"
 |Descreve como definir parâmetros de validação cruzada no SQL Server Development Studio.|[Guia validação cruzada &#40;exibição de gráfico de precisão de mineração&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Descreve a métrica que é fornecida através de validação cruzada|[Fórmulas de validação cruzada](cross-validation-formulas.md)|  
 |Explica o formato de relatório de validação cruzada e define as medidas estatísticas fornecidas para cada tipo de modelo.|[Medidas no relatório de validação cruzada](measures-in-the-cross-validation-report.md)|  
-|Lista os procedimentos armazenados para computar estatísticas de validação cruzada.|[Procedimentos armazenados da mineração de dados &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|Lista os procedimentos armazenados para computar estatísticas de validação cruzada.|[Procedimentos armazenados da mineração de dados &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Descreve como criar um conjunto de dados de testes para estruturas de mineração e modelos relacionados.|[Conjuntos de dados de teste e treinamento](training-and-testing-data-sets.md)|  
-|Consulte exemplos de outros tipos de gráfico de exatidão.|[Matriz de classificação &#40;Analysis Services – mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de comparação de precisão &#40;Analysis Services – mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Dispersão &#40;Analysis Services – mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Consulte exemplos de outros tipos de gráfico de exatidão.|[Matriz de classificação &#40;Analysis Services - mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Lift Chart &#40;Analysis Services - mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services - mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersão &#40;Analysis Services - mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Descreve as etapas para criar vários gráficos de exatidão.|[Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Consulte também  

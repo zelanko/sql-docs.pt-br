@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267642"
 ---
 # <a name="mode-element-xmla"></a>Elemento Mode (XMLA)
   Identifica o modo a ser usado pelo pai [bloqueio](../xml-elements-commands/lock-element-xmla.md) elemento durante a criação de um bloqueio em um objeto especificado.  
@@ -68,11 +68,11 @@ ms.locfileid: "36130844"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*CommitShared*|Um bloqueio compartilhado é estabelecido no objeto especificado. Outros bloqueios compartilhados podem ser criados para o mesmo objeto.<br /><br /> Um bloqueio compartilhado impede que as transações que contenham operações de gravação, como um [Execute](../xml-elements-methods-execute.md) chamada do método que executa um [Alter](../xml-elements-commands/alter-element-xmla.md) comando, em um objeto especificado, sejam confirmadas até que o bloqueio compartilhado é removido. Um bloqueio compartilhado não impede que as transações que contenham operações de leitura, como um [Discover](../xml-elements-methods-discover.md) chamada de método ou um `Execute` chamada do método que executa um [instrução](../xml-elements-commands/statement-element-xmla.md) comando sejam confirmadas.|  
+|*CommitShared*|Um bloqueio compartilhado é estabelecido no objeto especificado. Outros bloqueios compartilhados podem ser criados para o mesmo objeto.<br /><br /> Um bloqueio compartilhado impede que as transações que contenham operações de gravação, como um [Execute](../xml-elements-methods-execute.md) chamada de método em execução um [Alter](../xml-elements-commands/alter-element-xmla.md) comando em um objeto especificado, sejam confirmadas até que o bloqueio compartilhado é removido. Um bloqueio compartilhado não impede que as transações que contenham operações de leitura, como um [Discover](../xml-elements-methods-discover.md) chamada de método ou uma `Execute` chamada de método em execução um [instrução](../xml-elements-commands/statement-element-xmla.md) comando sejam confirmadas.|  
 |*CommitExclusive*|Um bloqueio exclusivo é estabelecido no objeto especificado. Outros bloqueios compartilhados ou exclusivos não podem ser criados para o mesmo objeto.<br /><br /> Um bloqueio exclusivo impede que as transações que contenham operações de leitura ou gravação em um objeto especificado sejam confirmadas até a remoção do bloqueio exclusivo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento ID &#40;XMLA&#41;](id-element-xmla.md)   
+ [ID do elemento &#40;XMLA&#41;](id-element-xmla.md)   
  [Elemento do objeto &#40;XMLA&#41;](object-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   

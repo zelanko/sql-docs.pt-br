@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ab904cff026149194c3bd2d242ab448da4be89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235696"
 ---
 # <a name="discoverobjectactivity-rowset"></a>Conjunto de linhas DISCOVER_OBJECT_ACTIVITY
   Oferece uso de recursos por objeto desde o início do serviço.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_OBJECT_ACTIVITY` linhas contém as seguintes colunas.  
+ O `DISCOVER_OBJECT_ACTIVITY` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

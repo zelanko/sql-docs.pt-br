@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 53a7b998564eef0afc0d3f679b5c7cf127c78dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0b328642f0a409bdf6a915f4a6063e34e5e7b2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272432"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
   Use as dicas a seguir para ajudá-lo na criação de seus relatórios.  
@@ -164,6 +164,6 @@ ms.locfileid: "36130509"
 ## <a name="see-also"></a>Consulte também  
  [Construtor de relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+ [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
   

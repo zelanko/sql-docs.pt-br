@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyDisplayFolder element
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8edc310c53df3f81651ec7de66e938ac41c4bb31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8893e107502b2dff47f54c4d8bbd0b0989111608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215856"
 ---
 # <a name="attributehierarchydisplayfolder-element-assl"></a>Elemento AttributeHierarchyDisplayFolder (ASSL)
   Identifica a pasta na qual deve ser exibida a hierarquia de atributo associada.  
@@ -63,7 +63,7 @@ ms.locfileid: "36019937"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `AttributeHierarchyDisplayFolder` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `AttributeHierarchyDisplayFolder` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

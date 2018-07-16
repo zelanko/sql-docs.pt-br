@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e2d4c6255b7b6a91fad1d99c2676bf76fae68385
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 428c8102409a9f927bbb092a24d4809d1abfc0f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294646"
 ---
 # <a name="implementing-merge-functionality"></a>Implementando a funcionalidade MERGE
   Um banco de dados pode precisar executar uma inserção ou uma atualização, dependendo de uma linha específica já existir no banco de dados.  
   
- Sem usar o `MERGE` instrução a seguir é uma abordagem que você pode usar em [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Sem usar o `MERGE` instrução, o seguinte é uma abordagem que você pode usar em [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 ```tsql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  

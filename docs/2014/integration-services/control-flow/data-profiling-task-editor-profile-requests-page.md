@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1a493e342b9637d6e1498e38f9689897d8b65e64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc2c19b0ae0247a8cccbb75f56d943ef277625e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292906"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   Use a página **Solicitações de Perfil** do **Editor da Tarefa Criação de Perfil de Dados** para selecionar e configurar os perfis que deseja computar. Em uma tarefa Criação de Perfil de Dados simples, você pode calcular várias perfis para várias colunas ou combinações de colunas em várias tabelas ou exibições.  
@@ -134,24 +134,24 @@ ms.locfileid: "36019210"
   
  Essas opções variam com base no perfil selecionado. Para obter mais informações sobre as opções para tipos de perfil individual, consulte os seguintes tópicos:  
   
--   [Opções de solicitação do perfil chave de candidato &#40;tarefa criação de perfil de dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil chave de candidato &#40;tarefa de criação de perfil&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa criação de perfil de dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa de criação de perfil&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa criação de perfil de dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa de criação de perfil&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de distribuição do coluna valor &#40;tarefa criação de perfil de dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil de distribuição de valor de coluna &#40;tarefa de criação de perfil&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de distribuição do coluna comprimento &#40;tarefa criação de perfil de dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil de distribuição de comprimento de coluna &#40;tarefa de criação de perfil&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de padrão de coluna &#40;tarefa criação de perfil de dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de padrão de coluna &#40;tarefa de criação de perfil&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil dependência funcional &#40;tarefa criação de perfil de dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil dependência funcional &#40;tarefa de criação de perfil&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de inclusão de valor &#40;tarefa criação de perfil de dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil inclusão de valor &#40;tarefa de criação de perfil&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor da tarefa de criação de perfil dados &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa de criação de perfil &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

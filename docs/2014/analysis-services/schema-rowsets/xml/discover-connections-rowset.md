@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f2165f1c5f8c39d8a2259507824152599473207b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194296"
 ---
 # <a name="discoverconnections-rowset"></a>Conjunto de linhas DISCOVER_CONNECTIONS
   Oferece uso de recursos e de informações de atividade sobre as conexões atualmente abertas no servidor.  
@@ -30,7 +30,7 @@ ms.locfileid: "36020574"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_CONNECTIONS` linhas contém as seguintes colunas.  
+ O `DISCOVER_CONNECTIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrictions|Description|  
 |-----------------|--------------------|------------------|-----------------|  

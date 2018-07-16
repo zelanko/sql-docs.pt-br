@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249746"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
   A janela Design do Conjunto de Dados Compartilhado ajuda a criar uma consulta de conjunto de dados que você pode compartilhar com os outros. A janela permite selecionar uma fonte de dados compartilhada, especificar propriedades para o conjunto de dados compartilhado e criar uma consulta no designer de consulta.  
@@ -37,7 +37,7 @@ ms.locfileid: "36019080"
 > [!NOTE]  
 >  Um conjunto de dados compartilhado deve ser baseado em uma fonte de dados compartilhada. Se a fonte de dados da que você precisa não estiver disponível, você deve criar uma no servidor de relatório. Para obter mais informações, consulte [criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de relatórios&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- Para obter mais informações, consulte [cadeias de caracteres de Conexão no construtor de relatórios, fontes de dados e conexões de dados](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
  Use o botão **Definir Opções** para definir propriedades de conjunto de dados compartilhadas. Entre elas estão as seguintes:  
@@ -61,7 +61,7 @@ ms.locfileid: "36019080"
 ### <a name="query-designer"></a>Designer de Consulta  
  Use a barra de ferramentas do designer de consulta para ajudar criar uma consulta que especifique quais dados serão recuperados da conexão de dados. A barra de ferramentas exibida depende do designer de consulta associado ao tipo de fonte de dados na conexão de dados.  
   
- Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados no [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [Designers de consulta &#40;Report Builder&#41; ](../query-designers-report-builder.md) .  
+ Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados na [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [Designers de consulta &#40;construtor de relatórios&#41; ](../query-designers-report-builder.md) .  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36019080"
   
  Alguns tipos de fonte de dados dão suporte a um designer de consultas baseadas em texto que você pode usar para colar nas consultas que você criou em outras ferramentas, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Cada tipo de fonte de dados possui requisitos específicos para a consulta que funcionará na fonte de dados externa. Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados no [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [fontes de dados suportados pelo Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Cada tipo de fonte de dados possui requisitos específicos para a consulta que funcionará na fonte de dados externa. Para obter mais informações, consulte o tópico que corresponde ao tipo de fonte de dados na [adicionar dados de fontes de dados externas &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) e [dados de fontes com suporte no Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) na documentação do Reporting Services nos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Manuais Online do](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36019080"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](../report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276372"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
   No[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve especificar o servidor de relatório e opcionalmente as pastas para os relatórios e fontes de dados compartilhados, de forma a poder publicar os itens no projeto do Servidor de Relatório para um servidor de relatório. As propriedades e os valores que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] precisa para compilar, visualizar e implantar relatórios são armazenados em configurações de projeto do Servidor de Relatório. Você pode criar vários conjuntos nomeados para essas propriedades de projetos, para que você possa alternar de maneira conveniente entre os conjuntos de propriedades. Cada conjunto de propriedades é uma configuração. Por exemplo, você pode ter uma configuração para publicar relatórios em um servidor de teste e uma configuração diferente para publicar relatórios para um servidor de produção.  
@@ -46,9 +46,9 @@ ms.locfileid: "36122771"
     > [!NOTE]  
     >  Você pode usar várias configurações para alternar rapidamente entre diferentes servidores de relatório ou configurações.  
   
-3.  No **OutputPath** caixa de texto, digite ou cole o caminho em seu sistema de arquivos local para armazenar a definição de relatório usada na verificação da compilação, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
+3.  No **OutputPath** caixa de texto, digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação da compilação, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
   
-4.  No **ErrorLevel** caixa de texto, digite a severidade da compilação problemas que são relatados como erros. Níveis de problemas que ocorrem ao compilar relatórios, fontes de dados ou outros recursos de projeto com severidade menor ou igual ao valor de **ErrorLevel** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
+4.  No **ErrorLevel** caixa de texto, digite a severidade da compilação problemas que são relatados como erros. Os níveis de problemas que ocorrem ao compilar relatórios, fontes de dados ou outros recursos de projeto com severidade menor ou igual ao valor de **ErrorLevel** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
   
      **ErrorLevel** pode ser usado para aumentar ou diminuir a sensibilidade da compilação. Por exemplo, quando um relatório com um mapa é compilado durante a implantação em um servidor de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , um erro é exibido por padrão e ocorre falha na compilação do relatório. Se você abaixar o **ErrorLevel** , o mapa será removido do relatório, um aviso será exibido e a compilação do relatório continuará.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36122771"
   
 6.  Na lista **OverwriteDataSources** , selecione **True** para substituir a fonte de dados compartilhados no servidor cada vez que elas forem publicadas, ou selecione **False** para manter a fonte de dados no servidor.  
   
-7.  No **TargetServerVersion** lista, selecione o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no o servidor identificado pelo **TargetServer URL** propriedade. O valor padrão é **SQL Server 2008 R2**.  
+7.  No **TargetServerVersion** lista, selecione o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no o servidor identificado pela **TargetServer URL** propriedade. O valor padrão é **SQL Server 2008 R2**.  
   
      Use **TargetServerVersion** para personalizar os relatórios criados, colocados no caminho especificado em OutputPath, para a versão do servidor de relatório especificada em **TargetServer URL**.  
   

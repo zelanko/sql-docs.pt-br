@@ -27,13 +27,13 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 42511f1f79510d163c3211b3e0d82cb1ee2635ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0266f6683e354f87edb6423bab638436447fcc5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285642"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Conectando a fontes de dados na tarefa Script
   Gerenciadores de conexões fornecem acesso a fontes de dados que foram configuradas no pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../connection-manager/integration-services-ssis-connections.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36013373"
  É possível usar o método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> da coleção <xref:Microsoft.SqlServer.Dts.Runtime.Connections> retornada pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> para procurar uma conexão existente antes de usá-la no seu código.  
   
 > [!IMPORTANT]  
->  Você não pode chamar o método AcquireConnection de gerenciadores de conexões que retornam objetos não gerenciados, tais como o gerenciador de conexões OLE DB e o Excel, no código gerenciado de uma tarefa Script. No entanto, você pode ler a propriedade ConnectionString desses gerenciadores de conexão e se conectar à fonte de dados diretamente em seu código usando a cadeia de caracteres de conexão com um `OledbConnection` do **OLEDB** namespace.  
+>  Você não pode chamar o método AcquireConnection de gerenciadores de conexões que retornam objetos não gerenciados, tais como o gerenciador de conexões OLE DB e o Excel, no código gerenciado de uma tarefa Script. No entanto, você pode ler a propriedade ConnectionString desses gerenciadores de conexão e conecte-se à fonte de dados diretamente em seu código usando a cadeia de conexão com um `OledbConnection` do **OLEDB** namespace.  
 >   
 >  Se você deve chamar o método AcquireConnection de um gerenciador de conexões que retorna um objeto não gerenciado, use um gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Quando você configura o gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] para usar um provedor OLE DB, ele se conecta usando o Provedor de Dados [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para OLE DB. Nesse caso, o método AcquireConnection retorna um `System.Data.OleDb.OleDbConnection` em vez de um objeto não gerenciado. Para configurar um gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] para usar com uma fonte de dados Excel, selecione o OLE DB Provider for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Jet, especifique um arquivo em Excel e insira `Excel 8.0` (para Excel 97 e mais recente) como valor de **Propriedades Estendidas** na página **Todas** da caixa de diálogo **Gerenciador de Conexões**.  
   
@@ -103,7 +103,7 @@ public class ScriptMain
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../connection-manager/integration-services-ssis-connections.md)   

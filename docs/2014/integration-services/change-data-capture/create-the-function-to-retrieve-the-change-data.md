@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217826"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Escrevendo sua própria função do valor de tabela  
  Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa funções função usa change data capture para mapear o `datetime` valores no log binário de sequência de valores LSN (número) que as tabelas de alteração usam internamente. Esta função também controla diversas condições especiais:  
+ O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa função usa dados captura funções alteração para mapear o `datetime` valores LSN (número) nas tabelas de alteração usam internamente de sequência de valores para o log binário. Esta função também controla diversas condições especiais:  
   
 -   Quando um valor nulo é passado como a hora inicial, essa função usa o valor mais baixo disponível.  
   

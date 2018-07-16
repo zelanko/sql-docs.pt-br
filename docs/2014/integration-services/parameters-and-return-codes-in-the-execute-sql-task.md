@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
 - parameters [Integration Services]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 949fefc6beb432eaee882b3a842279a9531f3fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252328"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parâmetros e códigos de retorno na Tarefa Executar SQL
-  Instruções SQL e procedimentos armazenados frequentemente usam `input` parâmetros, `output` parâmetros e códigos de retorno. No [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], a tarefa Executar SQL tem suporte para os tipos de parâmetros `Input`, `Output` e `ReturnValue`. Você usa o `Input` tipo para parâmetros de entrada, `Output` parâmetros de saída, e `ReturnValue` para códigos de retorno.  
+  Instruções SQL e procedimentos armazenados frequentemente usam `input` parâmetros, `output` parâmetros e códigos de retorno. No [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], a tarefa Executar SQL tem suporte para os tipos de parâmetros `Input`, `Output` e `ReturnValue`. Você usa o `Input` tipo para parâmetros de entrada `Output` para parâmetros de saída e `ReturnValue` para códigos de retorno.  
   
 > [!NOTE]  
 >  Você só poderá usar parâmetros em uma tarefa Executar SQL se o provedor de dados der suporte a eles.  
@@ -46,9 +46,9 @@ ms.locfileid: "36019199"
   
 -   [Obtendo valores de códigos de retorno](#Return_codes)  
   
--   [Configurando parâmetros e códigos de retorno no SQL Editor da tarefa executar](#Configure_parameters_and_return_codes)  
+-   [Configurando parâmetros e códigos de retorno no Execute SQL Editor da tarefa](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a> Usando marcadores e nomes de parâmetro  
+##  <a name="Parameter_names_and_markers"></a> Usar marcadores e nomes de parâmetro  
  Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o tipo de gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] exige que o comando SQL use um marcador de parâmetro no formato **@varParameter**, enquanto que o tipo de conexão OLE DB exige o marcador de parâmetro ponto de interrogação (?).  
   
  Os nomes que você pode usar como nomes de parâmetro nos mapeamentos entre as variáveis e os parâmetros também variam por tipo de gerenciador de conexões. Por exemplo, o tipo de gerenciador de conexão [!INCLUDE[vstecado](../includes/vstecado-md.md)] usa um nome definido pelo usuário com um prefixo @, enquanto o tipo de gerenciador de conexões OLE DB requer que você use o valor numérico de ordinal de base 0 como o nome do parâmetro.  
@@ -86,9 +86,9 @@ ms.locfileid: "36019199"
 ##  <a name="Date_and_time_data_types"></a> Usando parâmetros com tipos de dados de hora e data  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usando parâmetros de data e hora com os gerenciadores de conexões ADO.NET e ADO  
- Ao ler dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos, `time` e `datetimeoffset`, uma tarefa Executar SQL que usa o um [!INCLUDE[vstecado](../includes/vstecado-md.md)] ou Gerenciador de conexão do ADO tem os seguintes requisitos adicionais:  
+ Ao ler dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos `time` e `datetimeoffset`, uma tarefa Executar SQL que usa um [!INCLUDE[vstecado](../includes/vstecado-md.md)] ou Gerenciador de conexão ADO tem os seguintes requisitos adicionais:  
   
--   Para `time` dados, um [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão requer que esses dados sejam armazenados em um parâmetro cujo tipo é `Input` ou `Output`, e cujo tipo de dados é `string`.  
+-   Para `time` dados, uma [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão requer que esses dados sejam armazenados em um parâmetro cujo tipo é `Input` ou `Output`, e cujo tipo de dados é `string`.  
   
 -   Para `datetimeoffset` dados, um [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão requer que esses dados sejam armazenados em um dos seguintes parâmetros:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36019199"
  Para obter mais informações sobre tipos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e como eles são associados a tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Tipos de dados do Integration Services](data-flow/integration-services-data-types.md).  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>Usando parâmetros de data e hora com os gerenciadores de conexões OLE DB  
- Ao usar um Gerenciador de conexão OLE DB, uma tarefa Executar SQL tem requisitos específicos de armazenamento para dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos de dados, `date`, `time`, `datetime`, `datetime2`, e `datetimeoffset`. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
+ Ao usar um Gerenciador de conexão OLE DB, uma tarefa Executar SQL tem requisitos específicos de armazenamento para dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos de dados `date`, `time`, `datetime`, `datetime2`, e `datetimeoffset`. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
   
 -   Um parâmetro de entrada do tipo de dados NVARCHAR.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36019199"
  Se os dados não forem armazenados no parâmetro de entrada ou saída apropriado, o pacote falhará.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>Usando parâmetros de data e hora com gerenciadores de conexões ODBC  
- Ao usar um Gerenciador de conexão ODBC, uma tarefa Executar SQL tem requisitos específicos de armazenamento de dados com um do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos de dados, `date`, `time`, `datetime`, `datetime2`, ou `datetimeoffset`. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
+ Ao usar um Gerenciador de conexão ODBC, uma tarefa Executar SQL tem requisitos específicos de armazenamento para dados com um dos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tipos de dados `date`, `time`, `datetime`, `datetime2`, ou `datetimeoffset`. Você deve armazenar estes dados em um dos tipos de parâmetros seguintes:  
   
 -   Um parâmetro `input` do tipo de dados SQL_WVARCHAR  
   
@@ -170,9 +170,9 @@ ms.locfileid: "36019199"
  Para obter mais informações sobre como usar parâmetros de entrada e saída com procedimentos armazenados Transact-SQL, consulte [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="Return_codes"></a> Obtendo valores de códigos de retorno  
- Um procedimento armazenado pode retornar um valor inteiro chamado código de retorno para indicar o status de execução de um procedimento. Para implementar códigos de retorno na tarefa Executar SQL, você pode usar parâmetros do `ReturnValue` tipo.  
+ Um procedimento armazenado pode retornar um valor inteiro chamado código de retorno para indicar o status de execução de um procedimento. Para implementar códigos de retorno na tarefa Executar SQL, você pode usar parâmetros da `ReturnValue` tipo.  
   
- A tabela a seguir lista, por tipo de conexão, alguns exemplos de comandos EXEC que implementam códigos de retorno. Todos os exemplos usam um parâmetro `input`. As regras de como usar marcadores de parâmetro e nomes de parâmetro são os mesmos para todos os tipos de parâmetro —`Input`, `Output`, e `ReturnValue`.  
+ A tabela a seguir lista, por tipo de conexão, alguns exemplos de comandos EXEC que implementam códigos de retorno. Todos os exemplos usam um parâmetro `input`. As regras para como usar marcadores e nomes de parâmetro são os mesmos para todos os tipos de parâmetro —`Input`, `Output`, e `ReturnValue`.  
   
  Algumas sintaxes não dão suporte a literais de parâmetro. Nesse caso, você deve fornecer o valor dó parâmetro usando uma variável.  
   
@@ -181,16 +181,16 @@ ms.locfileid: "36019199"
 |EXCEL e OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obter mais informações sobre a sintaxe de chamada ODBC, consulte o tópico [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)(Parâmetros de procedimento) na Referência do programador de ODBC na Biblioteca MSDN.|  
 |ADO|Se IsQueryStoreProcedure for definido como `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Se IsQueryStoreProcedure for definido como `True`, `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Conjunto IsQueryStoreProcedure é definido como `True`.<br /><br /> `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Se IsQueryStoreProcedure for definido como `True`.<br /><br /> `myStoredProcedure`|  
   
- Na sintaxe mostrada na tabela anterior, a tarefa Executar SQL usa o tipo de fonte **Entrada Direta** para executar o procedimento armazenado. A tarefa Executar SQL também pode usar o tipo de fonte **Conexão de Arquivo** para executar um procedimento armazenado. Independentemente de se a tarefa Executar SQL usa o **entrada direta** ou **Conexão de arquivo** tipo de fonte, use um parâmetro do `ReturnValue` tipo para implementar o código de retorno. Para obter mais informações sobre como configurar o tipo de fonte da instrução SQL executado pela tarefa Executar SQL, consulte [Editor da Tarefa Executar SQL &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md).  
+ Na sintaxe mostrada na tabela anterior, a tarefa Executar SQL usa o tipo de fonte **Entrada Direta** para executar o procedimento armazenado. A tarefa Executar SQL também pode usar o tipo de fonte **Conexão de Arquivo** para executar um procedimento armazenado. Independentemente se a tarefa Executar SQL usa o **entrada direta** ou **arquivo de Conexão** tipo de fonte, use um parâmetro do `ReturnValue` tipo para implementar o código de retorno. Para obter mais informações sobre como configurar o tipo de fonte da instrução SQL executado pela tarefa Executar SQL, consulte [Editor da Tarefa Executar SQL &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md).  
   
  Para obter mais informações sobre como usar códigos de retorno com procedimentos armazenados Transact-SQL, consulte [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
 ##  <a name="Configure_parameters_and_return_codes"></a> Configurando parâmetros e códigos de retorno na tarefa Executar SQL  
  Para obter mais informações sobre as propriedades de parâmetros e códigos de retorno que podem ser definidas no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)], clique no seguinte tópico:  
   
--   [SQL Editor da tarefa executar &#40;página mapeamento de parâmetros&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
+-   [SQL Editor da tarefa executar &#40;página de mapeamento de parâmetro&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d4030a0936eee85fd32cfc87a4d5b441ef63b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c42a75f2dcb09b88008ea2776d215153ec7c557b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228156"
 ---
 # <a name="trendgraphic-element-assl"></a>Elemento TrendGraphic (ASSL)
-  Contém a representação gráfica recomendada da tendência do [Kpi](../objects/kpi-element-assl.md) elemento.  
+  Contém a representação gráfica recomendada da tendência dos [Kpi](../objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36019221"
 |*Seta padrão*|Seta padrão|  
 |*Seta de status - crescente*|Seta de status|  
 |*Seta de status - decrescente*|Seta de status invertida|  
-|*Rosto feliz*|Aparência|  
+|*Carinha feliz*|Aparência|  
   
- O elemento que corresponde ao pai do `TrendGraphic` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
+ O elemento que corresponde ao pai de `TrendGraphic` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -20,18 +20,18 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54daa43c2ccb4e05691d04c2d9e20baad98b9ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 544536253cd7de2c62dbd54f891f5b72d534d74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294246"
 ---
 # <a name="generalflags-property-sinstance-class"></a>Propriedade GeneralFlags (classe SInstance)
-  Obtém os sinalizadores gerais associados a uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Obtém os sinalizadores gerais associados a uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Um [classe SInstance](sinstance-class.md) objeto que representa uma instância de servidor.  
+ Uma [classe SInstance](sinstance-class.md) objeto que representa uma instância de servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Uma matriz de objetos que representam os sinalizadores gerais com suporte da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

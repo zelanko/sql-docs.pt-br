@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238756"
 ---
 # <a name="polygon"></a>Polygon
-  A `Polygon` é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
+  Um `Polygon` é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
   
 ## <a name="polygon-instances"></a>Instâncias de polígono  
- Um `Polygon` instância pode ser formada de um anel que tem pelo menos três pontos distintos. Um `Polygon` instância também pode estar vazia.  
+ Um `Polygon` instância pode ser formada por um anel que tem pelo menos três pontos distintos. Um `Polygon` instância também pode estar vazia.  
   
  Exterior e todos os anéis interiores de um `Polygon` definem seu limite. O espaço dentro dos anéis define o interior do `Polygon`.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36130730"
   
  Os critérios a seguir são necessários para que um anel seja aceitável.  
   
--   O `LineString` instância deve ser aceita.  
+-   O `LineString` instância deve ser aceitos.  
   
 -   A instância `LineString` deve ter pelo menos quatro pontos.  
   
@@ -85,7 +85,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Os anéis interiores de um `Polygon` podem tocar em si mesmos e outro em tangentes únicos pontos, mas se os anéis interiores de um `Polygon` cruz, a instância não é válida.  
+ Os anéis interiores de um `Polygon` podem tocar em si mesmos e um no outro em tangentes únicos pontos, mas se os anéis interiores de um `Polygon` cross, a instância não é válida.  
   
  O exemplo a seguir mostra um `Polygon` instâncias.  
   
@@ -108,7 +108,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` não é válido porque o anel interno toca o anel exterior em dois locais. `@g2` não é válido porque o segundo anel interno está no interior do primeiro anel interno. `@g3` não é válido porque os dois anéis internos se tocam em vários pontos consecutivos. `@g4` não é válido porque os interiores dos dois anéis internos estão sobrepostos. `@g5` não é válido porque o anel exterior não é o primeiro anel. `@g6` não é válido porque o anel não tem três pontos distintos pelo menos.  
+ `@g1` não é válido porque o anel interno toca o anel exterior em dois locais. `@g2` não é válido porque o segundo anel interno está no interior do primeiro anel interno. `@g3` não é válido porque os dois anéis internos tocam-se em vários pontos sucessivos. `@g4` não é válido porque os interiores dos dois anéis internos estão sobrepostos. `@g5` não é válido porque o anel exterior não é o primeiro anel. `@g6` não é válido porque o anel não tem três pontos distintos pelo menos.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geometry``Polygon` simples com um espaço e SRID 10.  

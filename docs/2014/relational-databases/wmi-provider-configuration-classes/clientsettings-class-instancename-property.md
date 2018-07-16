@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 677e803e0c1515a66d16f4a345a9da92c4cd6e97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 485b302949a6aedd7b60f9d03c128f8a687d2b26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236496"
 ---
 # <a name="instancename-property-clientsettings-class"></a>Propriedade InstanceName (classe ClientSettings)
   Obtém o nome da instância do cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249072"
 ---
 # <a name="type-element-action-assl"></a>Elemento Type (Ação) (ASSL)
-  Contém o tipo do [ação](../objects/action-element-assl.md) elemento.  
+  Contém o tipo dos [ação](../objects/action-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36013188"
 |*URL*|Exibe uma página variável em um navegador de Internet.|  
 |*HTML*|Executa um script HTML em um navegador de Internet.|  
 |*Instrução*|Executa um comando OLE DB.|  
-|*Detalhamento*|Recupera um conjunto de linhas para extração de detalhes.<br /><br /> Esse valor é idêntico ao *linhas* e identifica ações de detalhamento. Ele só pode ser usado em ações cujo [TargetType](targettype-element-assl.md) valor é definido como *células*.|  
+|*Detalhamento*|Recupera um conjunto de linhas para extração de detalhes.<br /><br /> Esse valor é idêntico ao *conjunto de linhas* e identifica ações de detalhamento. Ele só pode ser usado em ações cujo [TargetType](targettype-element-assl.md) valor é definido como *células*.|  
 |*Conjunto de dados*|Recupera um conjunto de dados.|  
 |*Rowset*|Recupera um conjunto de linhas.|  
 |*Linha de comando*|Executa um comando em um prompt de comando.|  
 |*Proprietários*|Executa uma operação usando uma interface diferente das listadas anteriormente nesta tabela.|  
 |*Relatório*|Exibe uma página variável em um navegador de Internet.<br /><br /> Esse valor é idêntico ao *Url* e identifica ações de relatório.|  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Action>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados DrillThroughAction &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

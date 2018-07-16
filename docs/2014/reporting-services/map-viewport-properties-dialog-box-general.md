@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do visor, geral mapa | Microsoft Docs
+title: Mapear a caixa de diálogo de propriedades do visor, geral | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 98b0749983e079249c35d98e2d033b04273e2dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284642"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Caixa de diálogo Propriedades do Visor do Mapa, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades do Visor do Mapa** para alterar o sistema de coordenadas, a projeção e as opções de limite.  
   
 ## <a name="options"></a>Opções  
- **sistema de coordenadas**  
+ **Sistema de coordenadas**  
  Indique o tipo de sistema de coordenadas usado pelos dados do mapa.  
   
 -   **Planar** Escolha esta opção quando os dados do mapa estiverem em coordenadas X e Y, por exemplo, para criar planos.  
@@ -64,7 +64,7 @@ ms.locfileid: "36122791"
  **Opções de limite**  
  Especifique os limites inferiores e superiores das coordenadas para controlar qual parte do mapa aparece no relatório.  
   
- **Mínimo de X**  
+ **X mínimo**  
  Valor de X mais baixo. Disponível somente para **Planar** .  
   
  **X máximo**  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -17,13 +17,13 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d9231800ea1cf583ae554fe10ecc217fa1e9a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c3ca9a6ca7b966ba3af54e096d839314158082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294136"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  
@@ -54,10 +54,10 @@ ms.locfileid: "36013047"
 |**Membros**|Contribuir|Os membros podem criar novos itens e publicar relatórios de itens e modelos usando ferramentas de criação em uma biblioteca do SharePoint.|Adicionar relatórios e outros itens a bibliotecas. Editar propriedades de itens para relatórios e outros documentos. Excluir relatórios e outros itens. Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados. Exibir versões anteriores de um documento, inclusive instantâneos em um histórico de relatórios (exige que o usuário tenha permissão de abrir o relatório para o qual foi criado o histórico de relatórios). Definir parâmetros em relatórios. Definir opções de processamento em um relatório. Gerar modelos de relatórios. Criar relatórios no Construtor de Relatórios. Criar e gerenciar fontes de dados compartilhados. Criar, alterar e excluir assinaturas de propriedade do usuário. Usar agendamentos compartilhados com assinatura. Criar e gerenciar versões de um documento, inclusive o histórico de relatórios. Baixar o arquivo de origem de uma definição de relatório ou de um modelo de relatório. Substituir uma definição de relatório, modelo de relatório, fonte de dados compartilhados ou recursos (preservando propriedades e permissões de itens).|  
 |**Visitantes** e **Visualizadores**|leitura|Os visitantes podem exibir relatórios|Exibir relatórios, inclusive aqueles que usam modelos de relatórios para exploração de dados.|  
   
- Se você não estiver usando os grupos internos e níveis de permissão, inclua permissões específicas para acessar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [definir permissões para operações de servidor de relatório em um aplicativo da Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Se você não estiver usando os grupos internos e níveis de permissão, inclua permissões específicas para acessar recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [definir permissões para operações de servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em itens de servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Conceder permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

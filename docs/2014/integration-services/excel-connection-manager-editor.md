@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9396c9fe0a04dd7cf8c3f8e408ea22e83dc1c3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c7a601344f28f99a31adb9d635c44e9cca85471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287632"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor de Gerenciador de Conexões Excel
   Use a caixa de diálogo **Editor de Gerenciador de Conexões Excel** para adicionar uma conexão a um arquivo da pasta de trabalho novo ou existente do [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "36122885"
  Digite o caminho e nome de arquivo de um arquivo de pasta de trabalho do Excel (.xls) novo ou existente.  
   
 > [!WARNING]  
->  O **Editor de destino do Excel** cria automaticamente o arquivo do Excel quando você seleciona um **Excel Conexão** que aponta para um novo/inexistente de arquivo e, em seguida, clique em **novo** para **Nome da planilha do Excel**.  
+>  O **Editor de destino do Excel** cria automaticamente o arquivo do Excel quando você seleciona um **Conexão de Excel** que aponta para um novo/inexistente de arquivo e, em seguida, clique em **New** para **Nome da planilha Excel**.  
   
  **Procurar**  
  Use a caixa de diálogo **Abrir** para navegar até a pasta na qual o arquivo Excel existe ou onde você deseja criar o novo arquivo.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283622"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
   Contêineres são objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que fornecem estrutura a pacotes e serviços a tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  
@@ -34,7 +34,7 @@ ms.locfileid: "36130816"
   
 -   Repetição de tarefas para cada elemento em uma coleção, como arquivos em uma pasta, esquemas ou objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Por exemplo, um pacote pode executar instruções Transact-SQL que residem em arquivos múltiplos.  
   
--   Repetição de tarefas até que uma expressão especificada é avaliada como `false`. Por exemplo, um pacote pode enviar uma mensagem diferente de email sete vezes, uma vez para cada dia da semana.  
+-   Repita as tarefas até que uma expressão especificada é avaliada como `false`. Por exemplo, um pacote pode enviar uma mensagem diferente de email sete vezes, uma vez para cada dia da semana.  
   
 -   Agrupar tarefas e contêineres que precisam ter êxito ou falhar como uma unidade. Por exemplo, um pacote pode agrupar tarefas que excluem e somam linhas em uma tabela de banco de dados, e então confirmar ou reverter todas as tarefas quando uma apresentar falha.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "36130816"
   
 |Propriedade|Description|  
 |--------------|-----------------|  
-|`DelayValidation`|Um valor booliano que indica se a validação do contêiner foi adiada até o tempo de execução. O valor padrão dessa propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
+|`DelayValidation`|Um valor booliano que indica se a validação do contêiner foi adiada até o tempo de execução. O valor padrão desta propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |`Description`|É a descrição do contêiner. A propriedade contém uma cadeia de caracteres, mas pode estar em branco.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
-|`Disable`|Um valor booliano que indica se o contêiner é executado. O valor padrão dessa propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
-|`DisableEventHandlers`|Um valor booliano que indica se os manipuladores de eventos estão associados à execução do contêiner. O valor padrão dessa propriedade é `False`.|  
-|`FailPackageOnFailure`|Um valor booliano que especifica se o pacote irá falhar se ocorrer um erro no contêiner. O valor padrão dessa propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
-|`FailParentOnFailure`|Um valor booliano que especifica se o contêiner pai irá falhar se ocorrer um erro no contêiner. O valor padrão dessa propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
+|`Disable`|Um valor booliano que indica se o contêiner é executado. O valor padrão desta propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
+|`DisableEventHandlers`|Um valor booliano que indica se os manipuladores de eventos estão associados à execução do contêiner. O valor padrão desta propriedade é `False`.|  
+|`FailPackageOnFailure`|Um valor booliano que especifica se o pacote irá falhar se ocorrer um erro no contêiner. O valor padrão desta propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
+|`FailParentOnFailure`|Um valor booliano que especifica se o contêiner pai irá falhar se ocorrer um erro no contêiner. O valor padrão desta propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
 |`ForcedExecutionValue`|Se `ForceExecutionValue` é definido como `True`, o objeto que contém o valor de execução opcional para o contêiner. O valor padrão dessa propriedade é **0**.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
 |`ForcedExecutionValueType`|O tipo de dados `ForcedExecutionValue`. O valor padrão dessa propriedade é `Int32`.|  
-|`ForceExecutionResult`|Um valor que especifica o resultado forçado da execução do pacote ou contêiner. Os valores são `None`, `Success`, `Failure`, e `Completion`. O valor padrão dessa propriedade é `None`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
+|`ForceExecutionResult`|Um valor que especifica o resultado forçado da execução do pacote ou contêiner. Os valores são `None`, `Success`, `Failure`, e `Completion`. O valor padrão desta propriedade é `None`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |`ForceExecutionValue`|Um valor Booliano que especifica se o valor de execução opcional do contêiner deve ser forçado a conter um valor específico. O valor padrão dessa propriedade é `False`.<br /><br /> Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |`ID`|É o GUID do contêiner que é atribuído quando o pacote é criado. Esta propriedade é somente leitura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
 |`IsolationLevel`|É o nível de isolamento da transação de contêiner. Os valores são `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` e `Snapshot`. O valor padrão dessa propriedade é `Serializable`. Para obter mais informações, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
@@ -87,7 +87,7 @@ ms.locfileid: "36130816"
  Os contêineres incluem fluxos de controle que consistem em executáveis e restrições de precedência e podem usar manipuladores de eventos e variáveis. O contêiner host da tarefa é uma exceção: como o contêiner host da tarefa encapsula uma única tarefa, ele não usa restrições de precedência.  
   
 ### <a name="executables"></a>Executáveis  
- Os executáveis referem-se às tarefas do nível de contêiner e a qualquer contêiner dentro do contêiner. Um executável pode ser uma das tarefas e dos contêineres que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece ou uma tarefa personalizada. Para obter mais informações, consulte [tarefas do Integration Services](integration-services-tasks.md) e [contêineres de serviços de integração](integration-services-containers.md).  
+ Os executáveis referem-se às tarefas do nível de contêiner e a qualquer contêiner dentro do contêiner. Um executável pode ser uma das tarefas e dos contêineres que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece ou uma tarefa personalizada. Para obter mais informações, consulte [tarefas do Integration Services](integration-services-tasks.md) e [contêineres do Integration Services](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Restrições de precedência  
  As restrições de precedência vinculam contêineres e tarefas dentro do mesmo contêiner pai em um fluxo de controle ordenado. Para obter mais informações, consulte [Precedence Constraints](precedence-constraints.md).  

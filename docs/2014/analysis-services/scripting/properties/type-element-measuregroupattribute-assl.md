@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254848"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Elemento Type (MeasureGroupAttribute) (ASSL)
   Contém o tipo de um [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) elemento.  
@@ -67,14 +67,14 @@ ms.locfileid: "36019663"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Regular*|Representa um atributo regular.|  
-|*granularidade*|Representa um atributo de granularidade.|  
+|*Granularidade*|Representa um atributo de granularidade.|  
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Atributos do elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Tipo de dados RegularMeasureGroupDimension &#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   

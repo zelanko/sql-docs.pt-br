@@ -1,5 +1,5 @@
 ---
-title: Meta a atingir cenário (ferramentas de análise de tabela para Excel) | Microsoft Docs
+title: Meta a atingir o cenário (ferramentas de análise de tabela para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - scenario analysis
 - goal seek scenario
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf3d569cdee1bf2e0ea58e8d582f6b2d3829fca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f17c85c7296daaead3b24b4d4002ad9c1be7221
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187293"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Cenário de Metas a Atingir (Ferramentas de Análise de Tabela para Excel)
   ![Botão meta a atingir em ferramentas de análise de tabela](media/tat-goalseek.gif "botão meta a atingir em ferramentas de análise de tabela")  
   
- O **atingir meta** ferramenta de cenário é um complementa a [e se](what-if-scenario-table-analysis-tools-for-excel.md) ferramenta de cenário. O **e se** ferramenta informa o impacto da alteração, enquanto o **atingir meta** ferramenta informa os fatores subjacentes que devem ser alterados para obter o resultado desejado.  
+ O **meta a atingir** ferramenta de cenário é um complementa para o [e se](what-if-scenario-table-analysis-tools-for-excel.md) ferramenta de cenário. O **hipotética** ferramenta informa o impacto da alteração, ao passo que o **meta a atingir** ferramenta informa os fatores subjacentes que devem ser alterados para obter o resultado desejado.  
   
- Por exemplo, digamos que sua meta seja aumentar a satisfação do cliente. Você pode usar **atingir meta** análise para determinar quais fatores teriam mais probabilidade de aumentar a satisfação do cliente e decidir se essas alterações são eficazes.  
+ Por exemplo, digamos que sua meta seja aumentar a satisfação do cliente. Você pode usar **meta a atingir** análise para determinar quais fatores teriam mais prováveis aumentar a satisfação do cliente e decidir se essas alterações são eficazes.  
   
  Quando a ferramenta conclui sua análise, ela cria duas colunas novas na tabela de dados de origem. Essas colunas mostram a *probabilidade* que o resultado pretendido ser alcançado e a alteração recomendada, se houver.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36116253"
   
 1.  Abra uma tabela do Excel.  
   
-2.  Clique em **cenários**e selecione **atingir meta**.  
+2.  Clique em **cenários**e selecione **meta a atingir**.  
   
-3.  No **análise do cenário: meta a atingir** caixa de diálogo, selecione a coluna que contém o valor da lista.  
+3.  No **análise de cenário: meta a atingir** caixa de diálogo, selecione a coluna que contém o destino do valor da lista.  
   
 4.  Especifique o valor que você deseja atingir.  
   
-     Se a meta da coluna contiver valores numéricos contínuos, também será possível especificar uma diminuição ou um aumento desejado no valor. Por exemplo, você pode escolher **vendas** como a coluna e especifique que o destino é um aumento de 120%.  
+     Se a meta da coluna contiver valores numéricos contínuos, também será possível especificar uma diminuição ou um aumento desejado no valor. Por exemplo, você pode escolher **vendas** como a coluna e especificar que o destino é um aumento de 120%.  
   
      Ou, você pode especificar a meta como um intervalo de valores, digitando um limite inferior e um limite superior.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36116253"
   
 7.  Especifique se você deseja fazer previsões para toda a tabela ou apenas para a linha selecionada.  
   
-8.  Se você tiver selecionado o **toda a tabela** opção, a ferramenta adiciona as previsões à tabela de origem em duas novas colunas.  
+8.  Se você tiver selecionado a **toda a tabela** opção, a ferramenta adiciona as previsões à tabela de origem em duas novas colunas.  
   
-9. Se você tiver selecionado a opção **nesta linha**, os resultados da análise são passados para a caixa de diálogo para revisão. A caixa de diálogo permanece aberta para que você possa continuar experimentando valores e metas diferentes.  
+9. Se você tiver selecionado a opção **nesta linha**, os resultados da análise são a saída para a caixa de diálogo para revisão. A caixa de diálogo permanece aberta para que você possa continuar experimentando valores e metas diferentes.  
   
 ### <a name="requirements"></a>Requisitos  
  Essa ferramenta usa o algoritmo Regressão Logística da Microsoft, que pode processar valores numéricos ou discretos.  
@@ -81,15 +81,15 @@ ms.locfileid: "36116253"
   
 -   Cria uma previsão para cada valor especificado.  
   
- Se você testar os cenários de meta a atingir um de cada vez, poderá exibir os resultados interativamente. Isso é o mesmo que criar um *consulta de previsão singleton*.  
+ Se você testar os cenários de meta a atingir um de cada vez, poderá exibir os resultados interativamente. Isso é o mesmo que criar uma *consulta de previsão singleton*.  
   
- A ferramenta reporta no **resultados** painel da caixa de diálogo caixa se ela foi bem-sucedida na localização de um cenário que alcança a meta desejada. Caso uma solução bem-sucedida tenha sido encontrada, a ferramenta também gerará uma recomendação informando sobre a alteração necessária. Por exemplo, o **atingir meta** ferramenta pode informar a que a distância do trabalho deve ser inferior a 5 milhas.  
+ A ferramenta de relatórios no **resultados** painel da caixa de diálogo caixa se tiver sido bem-sucedido na localização de um cenário que alcança a meta desejada. Caso uma solução bem-sucedida tenha sido encontrada, a ferramenta também gerará uma recomendação informando sobre a alteração necessária. Por exemplo, o **meta a atingir** ferramenta pode informar a que a distância do trabalho deve ser inferior a 5 milhas.  
   
  Resultados do exemplo:  
   
  **Meta a atingir de interesse na compra encontrou uma solução.**  
   
- **Correspondência mais próxima obtida alterando 'Distância do trabalho' para ' 2-5 miles'.**  
+ **Correspondência mais próxima obtida por meio da alteração de 'Commute distance' para ' 2-5 miles'.**  
   
  Como esse resultado se baseia em uma linha existente na tabela de dados, isso significa que, para um determinado cliente, se todos os dados referentes ao cliente permanecerem iguais, mas a distância do trabalho do cliente for reduzida para 2-5 miles, ele provavelmente ficará um pouco mais inclinado a comprar uma bicicleta.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "36116253"
 >  O nível de confiança da recomendação e seu êxito são predeterminados pelo algoritmo e não podem ser alterados.  
   
 ## <a name="related-tools"></a>Ferramentas relacionadas  
- O Cliente de Mineração de Dados para Excel, um suplemento separado que fornece mais funções avançadas de mineração de dados, contém assistentes para criação de modelos de mineração de dados que preveem comportamento. Para obter mais informações, consulte [criar um modelo de mineração de dados](creating-a-data-mining-model.md).  
+ O Cliente de Mineração de Dados para Excel, um suplemento separado que fornece mais funções avançadas de mineração de dados, contém assistentes para criação de modelos de mineração de dados que preveem comportamento. Para obter mais informações, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).  
   
- Para obter mais informações sobre o algoritmo usado pelo **atingir meta** cenário ferramenta, consulte o tópico "Microsoft algoritmo de regressão logística" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online.  
+ Para obter mais informações sobre o algoritmo usado pelas **meta a atingir** cenário ferramenta, consulte o tópico "Microsoft algoritmo de regressão logística" na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

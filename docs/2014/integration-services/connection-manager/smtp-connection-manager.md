@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a00a8295904d8fdc5a1ad87c6ac60dbf70ce6fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b05612ac34e4c2e7eb412d59eb9dcf5f28e99c78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213476"
 ---
 # <a name="smtp-connection-manager"></a>Gerenciador de conexões SMTP
   Um gerenciador de conexões SMTP permite que um pacote conecte-se a um servidor SMTP. A tarefa Enviar Email incluída pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa um gerenciador de conexões SMTP.  
@@ -31,7 +31,7 @@ ms.locfileid: "36019628"
  Ao utilizar o Microsoft Exchange como servidor SMTP, você talvez precise configurar o gerenciador de conexões SMTP para utilizar a Autenticação do Windows. Os servidores Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
   
 ## <a name="configuration-the-smtp-connection-manager"></a>Configuração do gerenciador de conexões SMTP  
- Quando você adiciona um Gerenciador de conexão de SMTP para um pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão SMTP em tempo de execução, define a conexão propriedades do Gerenciador e adiciona o Gerenciador de conexão para o `Connections` coleção no pacote. O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `SMTP`.  
+ Quando você adiciona um Gerenciador de conexão SMTP a um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão SMTP em tempo de execução, define propriedades do Gerenciador da conexão e adiciona o Gerenciador de conexão para o `Connections` coleta no pacote. O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `SMTP`.  
   
  Você pode configurar um gerenciador de conexões SMTP das seguintes maneiras:  
   

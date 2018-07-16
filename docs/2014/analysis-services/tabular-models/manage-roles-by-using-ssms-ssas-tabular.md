@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226416"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gerenciar funções usando SSMS (SSAS tabular)
   Você pode criar, editar e gerenciar funções para um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -62,12 +62,12 @@ ms.locfileid: "36019899"
   
 6.  Na janela de configurações de associação, clique em **Adicionar**e, na caixa de diálogo **Selecionar Usuários ou Grupos** , adicione os usuários ou grupos do Windows que você deseja adicionar como membros.  
   
-7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, no **propriedades da função - \<rolename >** na caixa **selecionar uma página**, clique em **filtros de linha**.  
+7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, nos **propriedades da função - \<rolename >** na caixa **selecionar uma página**, clique em **filtros de linha**.  
   
-8.  Na janela de filtros de linha, selecione uma tabela, clique no **filtro DAX** campo e, em seguida, o **filtro DAX - \<tablename >** , digite uma fórmula DAX.  
+8.  Na janela de filtros de linha, selecione uma tabela, clique no **filtro DAX** campo e, em seguida, no **filtro DAX - \<tablename >** , digite uma fórmula DAX.  
   
     > [!NOTE]  
-    >  O filtro DAX - \<tablename > campo não contém um editor de consultas de preenchimento automático ou recurso de Inserir função. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  O filtro DAX - \<tablename > campo não contém um editor de consulta de preenchimento automático ou recurso de Inserir função. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Clique em **OK** para salvar a função.  
   
@@ -79,13 +79,13 @@ ms.locfileid: "36019899"
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
   
-     No **propriedades de função** \<rolename > caixa de diálogo, você pode alterar as permissões, adicionar ou remover membros, e filtros de linha de adicionar/editar.  
+     No **propriedades da função** \<rolename > caixa de diálogo, você pode alterar as permissões, adicionar ou remover membros e adicionar/editar filtros de linha.  
   
 ###  <a name="bkmk_deletet_role"></a> Para excluir uma função  
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja excluir, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
+ [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
   
   

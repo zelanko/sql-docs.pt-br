@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Executando consultas de previsão | Microsoft Docs'
+title: 'Lição 5: Executar consultas de previsão | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 91fd3e41ce0a1055a0f5babe4eb3234bc1ff03bd
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244061"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lição 5: Executando previsão de consultas
-  Nesta lição, você usará o [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) formulário da instrução SELECT para criar dois tipos diferentes de previsões com base na árvore de decisão de modelo criado por você na [ Lição 2: Adicionando modelos de mineração à estrutura de mineração de associação](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Esses tipos de prognóstico estão definidos abaixo.  
+  Nesta lição, você aprenderá a usar o [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) formulário da instrução SELECT para criar dois tipos diferentes de previsões com base na árvore de decisão do modelo criado por você na [ Lição 2: Adicionando modelos de mineração à estrutura de mineração de associação](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Esses tipos de prognóstico estão definidos abaixo.  
   
  Consulta singleton  
  Use uma consulta singleton para fornecer valores ad hoc ao fazer previsões. Por exemplo, você pode determinar se um único cliente tem probabilidade de ser um comprador de bicicleta, passando entradas à consulta, como a distância para o trabalho, o código de área ou o número de filhos do cliente. A consulta singleton retorna um valor que indica a probabilidade de a pessoa comprar uma bicicleta com base nessas entradas.  
@@ -80,7 +80,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>Para criar uma consulta de prognóstico singleton  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -166,7 +166,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- Assim como na consulta singleton, as primeiras duas linhas do código definem as colunas do modelo de mineração que a consulta retorna, assim como o nome do modelo de mineração usado para gerar o prognóstico: A parte superior \<número > instrução Especifica que a consulta retornará apenas o número ou os resultados especificados por \<número >.  
+ Assim como na consulta singleton, as primeiras duas linhas do código definem as colunas do modelo de mineração que a consulta retorna, assim como o nome do modelo de mineração usado para gerar o prognóstico: Parte superior \<número > instrução Especifica que a consulta retornará apenas o número ou os resultados especificados por \<número >.  
   
  As próximas linhas do código definem os dados de origem nos quais os prognóstico se baseiam:  
   
@@ -195,11 +195,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Use ORDER BY em combinação com a parte superior \<número > instrução, para filtrar os resultados são retornados. Por exemplo, neste prognóstico você devolverá os dez principais compradores de bicicleta, ordenados pela probabilidade de maior acerto. Use a sintaxe [DESC|ASC] para controlar a ordem de exibição dos resultados.  
+ Usar ORDER BY em combinação com a parte superior \<número > instrução, para filtrar os resultados que são retornados. Por exemplo, neste prognóstico você devolverá os dez principais compradores de bicicleta, ordenados pela probabilidade de maior acerto. Use a sintaxe [DESC|ASC] para controlar a ordem de exibição dos resultados.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>Para criar uma consulta de prognóstico por lotes  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -341,6 +341,6 @@ ORDER BY <expression> [DESC|ASC]
   
  Este é o último passo no tutorial de Bike Buyer. Você tem um conjunto de modelos de mineração que lhe permite explorar as semelhanças entre seus clientes e prever se os clientes em potencial comprarão uma bicicleta.  
   
- Para aprender a usar DMX em um cenário de cesta de compras, consulte [cesta DMX Tutorial](../../2014/tutorials/market-basket-dmx-tutorial.md).  
+ Para saber como usar DMX em um cenário de cesta de compras, consulte [Tutorial de DMX do Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md).  
   
   

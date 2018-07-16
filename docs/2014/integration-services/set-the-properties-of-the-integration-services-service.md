@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - Integration Services service, properties
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70ff196fbaba6f7b104e242d7c4f74afc48f190a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97c935d3182b4c9bec8733a747e4f6167b7eab21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233406"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Definir as propriedades do serviço do Integration Services
     

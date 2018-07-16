@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253068"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>Elemento ScriptCacheProcessingMode (ASSL)
   Indica se o servidor deve criar o cache de scripts durante ou após o processamento.  
@@ -67,11 +67,11 @@ ms.locfileid: "36130848"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Regular*|O servidor cria o cache de scripts durante o processamento.|  
-|*Lento*|O servidor cria o cache de scripts após o processamento.|  
+|*Lenta*|O servidor cria o cache de scripts após o processamento.|  
   
  A enumeração que corresponde aos valores permitidos para `ScriptCacheProcessingMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>.  
   
- O elemento que corresponde ao pai do `ScriptCacheProcessingMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Cube>.  
+ O elemento que corresponde ao pai de `ScriptCacheProcessingMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Cube>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

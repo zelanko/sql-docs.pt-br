@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server], bulk imports
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d43b95ce6025047f2721f6eb56925478a7cde262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5870c305e74435b6c21fe0a4f872629216203990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242556"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
   Os dados de arquivo que contêm valores de identidade podem ser importados em massa para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente. Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.  
@@ -78,12 +77,12 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Para obter mais informações sobre como criar um arquivo de formato, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Usando bcp e mantendo valores de identidade  
- O exemplo a seguir demonstra como manter valores de identidade ao usar o `bcp` para realizar a importação em massa dos dados. O `bcp` comando usa o arquivo de formato, `myDepartment-f-n-x.Xml`e contém as seguintes opções:  
+ O exemplo a seguir demonstra como manter valores de identidade ao usar o `bcp` para realizar a importação em massa dos dados. O `bcp` comando usa o arquivo de formato `myDepartment-f-n-x.Xml`e contém as seguintes opções:  
   
 |Qualificadores|Description|  
 |----------------|-----------------|  
 |**-E**|Especifica que o valor ou valores de identidade no arquivo de dados serão usados para a coluna de identidade.|  
-|**-T**|Especifica que o `bcp` utilitário conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável.|  
+|**-T**|Especifica que o `bcp` utilitário se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável.|  
   
  No prompt de comando do Windows, digite:  
   

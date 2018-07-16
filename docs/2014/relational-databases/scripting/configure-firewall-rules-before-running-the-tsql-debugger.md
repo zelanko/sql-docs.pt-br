@@ -1,5 +1,5 @@
 ---
-title: Configurar o depurador Transact-SQL | Microsoft Docs
+title: Configurar o depurador do Transact-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262512"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar o Depurador Transact-SQL
   As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "36130733"
   
     2.  Na caixa de diálogo **Tipo de Regra** , selecione **Programa**e clique em **Avançar**.  
   
-    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, sqlservr.exe é instalado em Server \ mssql12 do C:\Program Files\Microsoft SQL. *InstanceName*\MSSQL\Binn, onde *InstanceName* é MSSQLSERVER para a instância padrão e o nome de instância para qualquer instância nomeada.  
+    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, sqlservr.exe é instalado em C:\Program Files\Microsoft SQL Server\MSSQL12. *Nome_da_instância*\MSSQL\Binn, onde *InstanceName* é MSSQLSERVER para a instância padrão e o nome de instância para qualquer instância nomeada.  
   
     4.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36130733"
   
 * A janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve estar conectada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou posterior. Não é possível executar o depurador quando a janela do Editor de Consultas está conectada a uma instância que está no modo de usuário único.
 
-* O servidor precisa se comunicar com o cliente via RPC. A conta sob a qual o serviço está em execução do SQL Server deve ter permissões para o cliente se autenticar.  
+* O servidor precisa se comunicar com o cliente via RPC. A conta sob a qual o serviço está em execução do SQL Server deve ter permissões o cliente de autenticação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)   

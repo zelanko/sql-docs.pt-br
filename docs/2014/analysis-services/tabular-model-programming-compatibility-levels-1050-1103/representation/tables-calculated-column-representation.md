@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0918b315df0b97b3750306b7c4469ef2ddfaa9e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9712182e3416a81edab77d1cb19b50ee5bc4bd07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285832"
 ---
 # <a name="calculated-column-representation-tabular"></a>Representação de coluna calculada (tabela)
   Uma coluna calculada é uma expressão DAX que cria uma nova coluna em uma tabela e os valores obtidos são armazenados na tabela. A expressão de coluna calculada é avaliada toda vez que a tabela é processada.  

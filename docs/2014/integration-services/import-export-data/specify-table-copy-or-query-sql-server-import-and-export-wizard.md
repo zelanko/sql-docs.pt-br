@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 413dd857be0ab913f43bd07f9c2f82d536137dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44d7dfcb5928d0984c0ce34b314fd4d25adcc812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264942"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar cópia ou consulta de tabela (Assistente de Importação e Exportação do SQL Server)
-  Use o **especificar cópia da tabela ou consulta** página para especificar como copiar dados. É possível usar uma interface gráfica para selecionar os objetos existentes do banco de dados que deseja copiar ou usar o Transact-SQL para criar uma consulta mais complexa.  
+  Use o **especificar cópia de tabela ou consulta** página para especificar como copiar dados. É possível usar uma interface gráfica para selecionar os objetos existentes do banco de dados que deseja copiar ou usar o Transact-SQL para criar uma consulta mais complexa.  
   
  Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36012940"
   
 -   System.Data.Odbc  
   
- Para fazer o **copiar dados de uma ou mais tabelas ou exibições** opção disponível para provedores adicionais, terceiros podem adicionar suas próprias seções ProviderDescriptor ao arquivo ProviderDescriptors.xml. Por padrão, esse arquivo está em \< *unidade*>: \Program Files\Microsoft Server\100\DTS\ProviderDescriptors SQL. Para verificar as exigências da seção ProviderDescriptor, consulte o arquivo de esquema ProviderDescriptors.xsd que, por padrão, está localizado na mesma pasta do arquivo ProviderDescriptors.xml.  
+ Para tornar o **copiar dados de uma ou mais tabelas ou exibições** opção disponível para provedores adicionais, terceiros podem adicionar suas próprias seções ProviderDescriptor ao arquivo Providerdescriptors XML. Por padrão, esse arquivo está na \< *unidade*>: \Program Files\Microsoft SQL Server\100\DTS\ProviderDescriptors. Para verificar as exigências da seção ProviderDescriptor, consulte o arquivo de esquema ProviderDescriptors.xsd que, por padrão, está localizado na mesma pasta do arquivo ProviderDescriptors.xml.  
   
  **Gravar uma consulta para especificar os dados a serem transferidos**  
  Construa instruções SQL para recuperar linhas usando o **fornecer uma consulta de origem** caixa de diálogo. Use essa opção para modificar ou restringir os dados de origem durante a operação de cópia. Só as linhas que correspondem aos critérios de seleção podem ser copiados.  

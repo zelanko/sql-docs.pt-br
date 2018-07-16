@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208186"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
   Uma perspectiva pode simplificar a exibição de um cubo para propósitos específicos. Por padrão, os usuários podem ver todos os elementos em um cubo para o qual têm permissões. O quê os usuários visualizam ao exibir um cubo completo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é a perspectiva padrão para o cubo. Uma exibição de todo o cubo pode ser muito complexa para os usuários pesquisarem, principalmente para usuários que precisam apenas interagir com uma pequena parte do cubo para satisfazer seus requisitos de inteligência empresarial e geração de relatórios.  
@@ -174,19 +174,19 @@ ms.locfileid: "36020172"
   
 4.  A análise no Excel avisa para você escolher quais perspectivas devem ser usadas ao procurar o modelo no Excel, conforme mostrado na imagem a seguir.  
   
-     ![Objetos da perspectiva de vendas pela Internet](../../2014/tutorials/media/l9-perspectives-3.gif "objetos para a perspectiva de vendas pela Internet")  
+     ![Objetos para a perspectiva de vendas pela Internet](../../2014/tutorials/media/l9-perspectives-3.gif "objetos para a perspectiva de vendas pela Internet")  
   
 5.  Como alternativa, você pode iniciar o Excel no menu Iniciar do Windows, definir uma conexão com o banco de dados de tutorial do Analysis Services no localhost, e pode escolher uma perspectiva no assistente de Conexão de Dados, como mostrado na imagem a seguir.  
   
      ![Assistente de Conexão de dados no Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistente de Conexão de dados no Excel")  
   
-6.  Selecione `Internet Sales` no **perspectiva** lista e, em seguida, revise as medidas e dimensões no painel de metadados.  
+6.  Selecione `Internet Sales` no **perspectiva** lista e, em seguida, examine as medidas e dimensões no painel de metadados.  
   
      Observe que somente aqueles objetos especificados na perspectiva Vendas pela Internet são exibidos.  
   
 7.  No painel de metadados, expanda **Medidas**.  
   
-     Observe que apenas o `Internet Sales` grupo de medidas é exibido, juntamente com o **MLB pela Internet** e **taxa de vendas pela Internet para todos os produtos** membros calculados.  
+     Observe que somente o `Internet Sales` grupo de medidas é exibido, juntamente com o **MLB pela Internet** e **taxa de vendas pela Internet para todos os produtos** membros calculados.  
   
 8.  No modelo, selecione Excel novamente. Selecione `Sales Summary`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo visibilidade da coluna | Microsoft Docs
+title: Caixa de diálogo de visibilidade de coluna | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
 - "10127"
@@ -16,13 +16,13 @@ ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fb45ec145718ca375d1570a7bab9d33a523f5a18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a63473d706fa25f69910a52b4ab352d631bcc11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268952"
 ---
 # <a name="column-visibility-dialog-box"></a>Caixa de diálogo Visibilidade da Coluna
   Use a caixa de diálogo **Visibilidade da Coluna** para mostrar ou ocultar a coluna selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da coluna.  
@@ -40,7 +40,7 @@ ms.locfileid: "36130916"
  **Mostrar ou ocultar com base em uma expressão**  
  Escolha esta opção para variar a visibilidade inicial usando uma expressão.  
   
- Digite uma expressão que é avaliada como um `Boolean` valor `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (*fx*) para editar a expressão.  
+ Digite uma expressão que é avaliada como uma `Boolean` valor de `True` para ocultar o item e `False` para mostrar o item. Clique no botão Expressão (*fx*) para editar a expressão.  
   
  **Exibição pode ser alternada por este item de relatório**  
  Escolha esta opção para exibir uma imagem de alternância que permite que o usuário mostre ou oculte este item de relatório em um visualizador de relatórios HTML.  
@@ -50,7 +50,7 @@ ms.locfileid: "36130916"
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Imagens &#40;SSRS e construtor de relatórios&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)  
   
   

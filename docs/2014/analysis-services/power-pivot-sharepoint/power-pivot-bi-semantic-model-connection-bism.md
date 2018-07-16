@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253008"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Conexão de modelo semântico de BI (.bism) do PowerPivot
   Uma conexão de modelo semântico de BI (. bism) é uma conexão portátil que conecta o Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reporta a um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de modelo de tabela ou um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  
@@ -33,7 +33,7 @@ ms.locfileid: "36130649"
   
 -   Um banco de dados de modelo de tabela que é executado em uma instância do Analysis Services autônoma em modo de servidor de tabela. Uma implantação de uma instância autônoma do Analysis Services é externa ao farm. O acesso a fontes de dados fora do farm requer permissões adicionais, sobre as quais você pode ler neste tópico: [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
--   Pastas de trabalho PowerPivot salvas no SharePoint. Bancos de dados PowerPivot inseridos em pastas de trabalho do Excel são equivalentes a bancos de dados de modelo de tabela que são executados em um servidor autônomo de modo de tabela do Analysis Services. Se você já usa PowerPivot para Excel e o PowerPivot para SharePoint, você pode definir uma conexão de modelo semântico de BI que aponte para pastas de trabalho PowerPivot em uma biblioteca do SharePoint e compilar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] relatórios usando dados PowerPivot existentes.  Você pode usar pastas de trabalho criadas na versão SQL Server 2008 R2 ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do PowerPivot para Excel.  
+-   Pastas de trabalho PowerPivot salvas no SharePoint. Bancos de dados PowerPivot inseridos em pastas de trabalho do Excel são equivalentes a bancos de dados de modelo de tabela que são executados em um servidor autônomo de modo de tabela do Analysis Services. Se você já usa PowerPivot para Excel e PowerPivot para SharePoint, você pode definir uma conexão de modelo semântico de BI que aponte para pastas de trabalho PowerPivot em uma biblioteca do SharePoint e compilar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] relatórios usando dados PowerPivot existentes.  Você pode usar pastas de trabalho criadas na versão SQL Server 2008 R2 ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do PowerPivot para Excel.  
   
 -   Um modelo de dados multidimensionais em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36130649"
   
  A ilustração a seguir mostra esta sequência de conexão. Ela começa com uma solicitação para a conexão .bism, seguida pelo download das informações de conexão com o cliente e, finalmente, a conexão de salto único com o banco de dados. A conexão é estabelecida usando-se as credenciais do Windows do usuário do Excel que tem permissões de leitura no banco de dados do Analysis Services. Trata-se de um salto único, portanto, mesmo que o Kerberos esteja habilitado, ele não é necessário para esse cenário.  
   
- ![Conexões do Excel para o banco de dados de modelo de tabela](../media/ssas-powerpivotbismconnection-1.gif "conexões do Excel para o banco de dados de modelo de tabela")  
+ ![Conexões do Excel para o banco de dados modelo tabular](../media/ssas-powerpivotbismconnection-1.gif "conexões do Excel ao banco de dados de modelo de tabela")  
   
  **Conectando do Power View a dados de tabela em uma rede**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36130649"
   
  Somente um membro da função de administrador do sistema na instância do Analysis Services tem permissão para estabelecer uma conexão usando o parâmetro `effectiveusername` e representar outro usuário na instância do servidor. Por isso, a conta de execução do serviço compartilhado do Reporting Services deve ter direitos administrativos na instância do Analysis Services.  Instruções sobre como conceder permissões administrativas à conta de serviço são fornecidas neste tópico [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
- A ilustração a seguir mostra uma sequência de conexão que usa a mesma identidade de usuário do Windows para cada conexão. Na última conexão com o Analysis Services, a conexão é estabelecida pela identidade do aplicativo de serviço do Reporting Services, passando a identidade de usuário Windows usando `effectiveusername`.  
+ A ilustração a seguir mostra uma sequência de conexão que usa a mesma identidade de usuário do Windows para cada conexão. Na última conexão com o Analysis Services, a conexão é estabelecida pela identidade do aplicativo de serviço Reporting Services, passando a identidade de usuário Windows usando `effectiveusername`.  
   
  ![Conexão representada para BD tabular](../media/ssas-powerpivotbismconnection-2.gif "conexão representada para BD tabular")  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36130649"
  Neste cenário, todas as conexões ocorrem dentro do mesmo farm, assim não há nenhum requisito para Kerberos ou delegação restrita.  
   
 ##  <a name="bkmk_rel"></a> Tarefas relacionadas  
- [Adicionar um tipo de conteúdo de Conexão de modelo semântico BI a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
+ [Adicionar um tipo de conteúdo de Conexão de modelo semântico BI em uma biblioteca do &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36130649"
  [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Determina o modo de servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determinar o modo de servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Conectar ao Analysis Services](../instances/connect-to-analysis-services.md)  
   
   

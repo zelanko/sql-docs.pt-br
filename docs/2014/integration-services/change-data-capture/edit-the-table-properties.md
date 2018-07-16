@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e63f11c9396107d7ab18743e69ec31c82276fdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3286fd94ceb526d8dda72f12e8fe2b7fdb7631d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295026"
 ---
 # <a name="edit-the-table-properties"></a>Editar as propriedades da tabela
   Use esta caixa de diálogo para editar as colunas específicas da tabela selecionada onde as alterações estão sendo capturadas. Você também pode editar as informações de **Função de Segurança** e **Instância de Captura** .  
@@ -55,7 +55,7 @@ ms.locfileid: "36130818"
  Depois de terminar de inserir as informações nesta caixa de diálogo, clique em **OK** para aceitar as alterações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Fazer alterações nas tabelas selecionadas para capturar alterações](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

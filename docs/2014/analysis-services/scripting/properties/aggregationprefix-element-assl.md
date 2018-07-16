@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293276"
 ---
 # <a name="aggregationprefix-element-assl"></a>Elemento AggregationPrefix (ASSL)
   Define o prefixo comum a ser usado para nomes de agregação no elemento pai associado.  
@@ -62,7 +62,7 @@ ms.locfileid: "36122494"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Prefixos de agregação geram os nomes de agregação em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e também gerar nomes de tabela no banco de dados relacional para agregações armazenadas em uma partição OLAP (ROLAP) relacional.  
+ Prefixos de agregação geram os nomes de agregação em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e também geram os nomes de tabela no banco de dados relacional para agregações armazenadas em uma partição OLAP (ROLAP) relacional.  
   
  Um nome de agregação completamente expandido tem as partes a seguir:  
   

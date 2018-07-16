@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5993cfd66502310035a16325eb2e56bb0c698c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fe88708f5e57b37ad18811d6d7a6d587fa86c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263203"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem SAP BW** para selecionar o gerenciador de conexões SAP BW para a origem de SAP BW. Nesta página, você também seleciona o modo de execução e os parâmetros para extrair os dados do sistema SAP Netweaver BW.  
@@ -87,7 +87,7 @@ ms.locfileid: "36130803"
  Digite o nome do servidor ou endereço IP do host do gateway. Em geral, o nome ou o endereço IP é o mesmo que o servidor de aplicativos do SAP.  
   
  **Serviço do gateway**  
- Digite o nome do serviço de gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
+ Insira o nome do serviço do gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
   
  **ID do Programa**  
  Insira a ID do programa que está associada ao destino RFC.  
@@ -113,7 +113,7 @@ ms.locfileid: "36130803"
  Digite o nome do servidor ou endereço IP do host do gateway. Em geral, o nome ou o endereço IP é o mesmo que o servidor de aplicativos do SAP.  
   
  **Serviço do gateway**  
- Digite o nome do serviço de gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
+ Insira o nome do serviço do gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
   
  **ID do Programa**  
  Insira a ID do programa que está associada ao destino RFC.  
@@ -126,7 +126,7 @@ ms.locfileid: "36130803"
  Insira a ID de solicitação que está associada à extração.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do SAP BW &#40;página colunas&#41;](sap-bw-source-editor-columns-page.md)   
+ [Editor de origem SAP BW &#40;página de colunas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](sap-bw-source-editor-error-output-page.md)   
  [Editor de Origem SAP BW &#40;Página Avançado&#41;](sap-bw-source-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

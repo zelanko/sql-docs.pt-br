@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178863"
 ---
 # <a name="allowdrillthrough-element-assl"></a>Elemento AllowDrillThrough (ASSL)
   Determina se a extração de detalhes é permitida no elemento pai.  
@@ -65,7 +65,7 @@ ms.locfileid: "36013437"
  Os elementos que correspondem aos pais de `AllowDrillThrough` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission> e <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
 ## <a name="drillthrough-on-mining-structures"></a>Detalhamento em estruturas de mineração  
- Em [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode definir `AllowDrillthrough` permissões para estruturas de mineração, bem como modelos de mineração. Quando você atribuir permissões a uma função, qualquer membro dessa função poderá consultar o modelo de mineração de dados e retornar as colunas de estrutura que não foram incluídas no modelo. Por exemplo, você cria um modelo que usa apenas estas colunas: chave do cliente, renda do cliente e compras do cliente. Ao ativar o detalhamento no modelo, os usuários podem retornar informações de outras colunas da estrutura de mineração, como emails ou nomes de cliente.  
+ Na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], você pode definir `AllowDrillthrough` permissões para estruturas de mineração, bem como modelos de mineração. Quando você atribuir permissões a uma função, qualquer membro dessa função poderá consultar o modelo de mineração de dados e retornar as colunas de estrutura que não foram incluídas no modelo. Por exemplo, você cria um modelo que usa apenas estas colunas: chave do cliente, renda do cliente e compras do cliente. Ao ativar o detalhamento no modelo, os usuários podem retornar informações de outras colunas da estrutura de mineração, como emails ou nomes de cliente.  
   
  Portanto, para proteger dados confidenciais, tenha cuidado quando for adicionar colunas à estrutura de mineração. Além disso, só conceda a permissão `AllowDrillthrough` em uma estrutura quando ele for necessária.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36013437"
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [Elemento de função &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

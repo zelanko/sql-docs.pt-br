@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4351b5581ccce3185c7354a29157f7ea9747631d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291342"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
-  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do `sqlservr.exe` executável que é executado como um serviço de sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  
+  Uma instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do `sqlservr.exe` executável que é executado como um serviço de sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  
   
 ## <a name="instances"></a>Instâncias  
  Uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] opera como um serviço que trata toda as solicitações do aplicativo pede trabalhar com os dados em quaisquer bancos de dados gerenciados por essa instância. É o destino das solicitações de conexão (logons) de aplicativos. A conexão será executada em uma conexão de rede se o aplicativo e a instância estiverem em computadores separados. Se o aplicativo e a instância estiverem no mesmo computador, a conexão de SQL Server poderá executar como uma conexão de rede ou uma conexão de memória. Quando uma conexão for concluída, um aplicativo enviará instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] pela conexão para a instância. A instância resolve as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em operações nos dados e objetos nos bancos de dados e, se as permissões exigidas tiverem sido concedidas às credenciais de logon, executará o trabalho. Quaisquer dados recuperados são retornados ao aplicativo, junto com mensagens como erros.  

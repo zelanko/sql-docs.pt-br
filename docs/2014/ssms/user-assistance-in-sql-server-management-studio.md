@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c3da6431e278ff05548b0b93e2847335c4e50b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 80c0a03a6eeaa33977e5152a4b4da24b17abf8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212476"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
   A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] através do menu Ajuda e dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O menu Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] oferece várias rotas diferentes para informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele também fornece acesso à comunidade [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e aos recursos do MSDN Online não disponíveis anteriormente no ambiente de Ajuda. Além disso, o ambiente de Ajuda agora pode ser configurado para ser executado dentro do ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou em uma janela externa associada a um ambiente próprio.  

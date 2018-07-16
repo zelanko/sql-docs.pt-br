@@ -1,5 +1,5 @@
 ---
-title: Cubo de armazenamento (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Armazenamento (Analysis Services - dados multidimensionais) do cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0e586c404575c0e7fe3b8b04641d8dba06b0f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e88e2987bf456a3746b7c50fc986f10f6573ba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295926"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Armazenamento de cubo (Analysis Services – Dados Multidimensional)
   O armazenamento pode incluir apenas os metadados do cubo ou todos os dados de origem da tabela de fatos, como as agregações definidas por dimensões relacionadas ao grupo de medidas. A quantidade de dados armazenados depende do modo de armazenamento selecionado e do número de agregações. A quantidade de dados armazenados afeta diretamente o desempenho de consulta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa diversas técnicas para minimizar o espaço necessário para o armazenamento de dados de cubo e agregações:  
@@ -38,7 +38,7 @@ ms.locfileid: "36130659"
   
 -   O armazenamento não é alocado para células vazias.  
   
- O armazenamento é definido em uma base partição por partição e há pelo menos uma partição para cada grupo de medidas em um cubo. Para obter mais informações, consulte [partições &#40;Analysis Services - dados multidimensionais&#41;](partitions-analysis-services-multidimensional-data.md), [modos de armazenamento de partição e processamento](partitions-partition-storage-modes-and-processing.md), [grupos de medidas e](../multidimensional-models/measures-and-measure-groups.md), e [criar medidas e grupos de medidas em modelos multidimensionais](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
+ O armazenamento é definido em uma base partição por partição e há pelo menos uma partição para cada grupo de medidas em um cubo. Para obter mais informações, consulte [partições &#40;Analysis Services - dados multidimensionais&#41;](partitions-analysis-services-multidimensional-data.md), [modos de armazenamento de partição e processamento](partitions-partition-storage-modes-and-processing.md), [gruposdemedidasemedidas](../multidimensional-models/measures-and-measure-groups.md), e [criar medidas e grupos de medidas em modelos multidimensionais](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 ## <a name="partition-storage"></a>Armazenamento de partição   
  O armazenamento de um grupo de medidas pode ser dividido em várias partições. As partições permitem que você distribua um grupo de medidas em segmentos discretos em um único servidor, ou por vários servidores, e para otimizar o desempenho de armazenamento e a consulta. Cada partição em um grupo de medidas pode ser baseada em uma fonte de dados diferente e armazenada usando diferentes configurações de armazenamento.  
@@ -50,7 +50,7 @@ ms.locfileid: "36130659"
  As partições de um cubo não são visíveis ao usuário. No entanto, a escolha de configurações de armazenamento para partições diferentes pode afetar a instantaneidade dos dados, a quantidade de espaço em disco usado e o desempenho de consulta. As partições podem ser armazenadas em várias instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Isso fornece uma abordagem de cluster do armazenamento do cubo e distribui cargas de trabalho pelos servidores [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [modos de armazenamento de partição e processamento](partitions-partition-storage-modes-and-processing.md), [partições remotas](partitions-remote-partitions.md), e [partições &#40;Analysis Services - dados multidimensionais&#41; ](partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>Grupos de medidas vinculados  
- Isso pode exigir um espaço em disco considerável para armazenar várias cópias de um cubo em instâncias diferentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mas você pode reduzir, consideravelmente, o espaço necessário substituindo as cópias do grupo de medidas por grupos de medidas vinculados. Um grupo de medidas vinculado é baseado em um grupo de medidas em um cubo em outro banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], na mesma instância ou em uma instância diferente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Um grupo de medidas vinculado também pode ser usado com dimensões vinculadas do mesmo cubo de origem. As dimensões vinculadas e os grupos de medidas usam as agregações do cubo de origem e não têm requisitos de armazenamento de dados próprios. Portanto, mantendo os grupos de medidas de origem e dimensões em um banco de dados e criando cubos vinculados e dimensões em cubos em outros bancos de dados, você pode economizar espaço em disco que, de outra maneira, seria usado para armazenamento. Para obter mais informações, consulte [grupos de medidas vinculados](../multidimensional-models/linked-measure-groups.md).  
+ Isso pode exigir um espaço em disco considerável para armazenar várias cópias de um cubo em instâncias diferentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mas você pode reduzir, consideravelmente, o espaço necessário substituindo as cópias do grupo de medidas por grupos de medidas vinculados. Um grupo de medidas vinculado é baseado em um grupo de medidas em um cubo em outro banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], na mesma instância ou em uma instância diferente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Um grupo de medidas vinculado também pode ser usado com dimensões vinculadas do mesmo cubo de origem. As dimensões vinculadas e os grupos de medidas usam as agregações do cubo de origem e não têm requisitos de armazenamento de dados próprios. Portanto, mantendo os grupos de medidas de origem e dimensões em um banco de dados e criando cubos vinculados e dimensões em cubos em outros bancos de dados, você pode economizar espaço em disco que, de outra maneira, seria usado para armazenamento. Para obter mais informações, consulte [grupos de medidas vinculado](../multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Agregações e designs de agregação](aggregations-and-aggregation-designs.md)  

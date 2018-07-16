@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187713"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
@@ -57,7 +57,7 @@ ms.locfileid: "36115366"
   
 -   Assinaturas padrão de propriedade de usuários individuais.  
   
- O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre a pausa temporária do relatório, consulte [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
+ O cancelamento de um trabalho só cancela os processos que estão em execução no servidor de relatório. Como o servidor de relatório não gerencia o processamento de dados que ocorre em outros computadores, cancele manualmente os processamentos de consulta que, consequentemente, ficam órfãos em outros sistemas. Especifique valores de tempo limite de consulta para desligar automaticamente consultas que estão demorando muito a serem executadas. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Para obter mais informações sobre como pausar temporariamente um relatório, consulte [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Em circunstâncias raras, você talvez precise reinicializar o servidor para cancelar um processo. No modo do SharePoint, talvez seja necessário reiniciar o pool de aplicativos hospedando o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Iniciar e parar o serviço Servidor de Relatório](../report-server/start-and-stop-the-report-server-service.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "36115366"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Como cancelar assinaturas ou o processamento de relatórios  
   
-1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se ao servidor de relatório. Para obter instruções, consulte [conectar a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], conecte-se ao servidor de relatório. Para obter instruções, consulte [conectar-se a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Abra a pasta **Trabalhos** .  
   
@@ -91,18 +91,18 @@ ms.locfileid: "36115366"
   
 2.  Localizar `IsNotificationService`.  
   
-3.  Defina-a como `False`.  
+3.  Defina-o como `False`.  
   
 4.  Salve o arquivo.  
   
 5.  No Gerenciador de Relatórios, exclua a assinatura controlada por dados da guia Assinaturas do relatório ou em **Minhas Assinaturas**.  
   
-6.  Depois de excluir a assinatura, no arquivo rsreportserver. config, localize `IsNotificationService` e defina-a como `True`.  
+6.  Depois de excluir a assinatura, no arquivo rsreportserver. config, localize `IsNotificationService` e defina-o como `True`.  
   
 7.  Salve o arquivo.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Definindo configurações de frequência para recuperar o status do trabalho  
- Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. O `RunningRequestsDbCycle` configuração especifica quantas vezes o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. O `RunningRequestsAge` configuração especifica o intervalo no qual um trabalho passa de novo para em execução.  
+ Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. O `RunningRequestsDbCycle` configuração especifica a frequência com que o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. O `RunningRequestsAge` configuração especifica o intervalo no qual um trabalho passa de novo para em execução.  
   
 ##  <a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
  O gerenciamento de trabalhos em uma implantação no modo do SharePoint é realizado por meio da Administração Central do SharePoint, para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

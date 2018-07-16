@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261532"
 ---
 # <a name="adomdnet-client-functionality"></a>Funcionalidade de cliente do ADOMD.NET
   O ADOMD.NET, assim como com outros provedores de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, serve como uma ponte entre um aplicativo e uma fonte de dados. No entanto, ao contrário de outros provedores de dados do .NET Framework, o ADOMD.NET trabalha com dados analíticos. Para isso, o ADOMD.NET dá suporte à funcionalidade que é muito diferente de outros provedores de dados do .NET Framework. O ADOMD.NET não só permite que você recupere dados, como permite a recuperação de metadados e a alteração da estrutura do repositório de dados analíticos:  
@@ -38,7 +38,7 @@ ms.locfileid: "36130652"
   
  Para obter mais informações: [recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md).  
   
- **Alterar a estrutura de dados analíticos**  
+ **Alterar a estrutura dos dados analíticos**  
  O ADOMD.NET também pode ser usado para alterar a estrutura do repositório de dados analíticos. Embora normalmente isso seja feito por meio do modelo de objeto do AMO (Objetos de Gerenciamento de Análise), você pode usar o ADOMD.NET para enviar comandos ASSL (Analysis Services Scripting Language) para criar, alterar ou excluir objetos no servidor.  
   
  Para obter mais informações: [executar comandos em relação a um analíticos fonte de dados](executing-commands-against-an-analytical-data-source.md), [desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [script do Analysis Services Idioma &#40;ASSL&#41; referência](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "36130652"
   
 1.  Primeiro, uma conexão é feita ao banco de dados, usando o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>. Quando você abre a conexão, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> exibe metadados sobre o servidor ao qual se conectou. Em um aplicativo dinâmico, algumas dessas informações são normalmente mostradas ao usuário para que ele possa fazer uma escolha, como que cubo será consultado. A conexão criada durante esta etapa poderá ser reutilizada várias vezes pelo aplicativo, reduzindo a sobrecarga.  
   
-     Para obter mais informações: [estabelecer conexões no ADOMD.NET](connections-in-adomd-net.md)  
+     Para obter mais informações: [Establishing Connections in ADOMD.NET](connections-in-adomd-net.md)  
   
 2.  Depois que uma conexão foi estabelecida, um aplicativo dinâmico consulta o servidor para obter metadados mais específicos. Para um aplicativo estático, o programador sabe com antecedência que objetos serão consultados pelo aplicativo e não precisará recuperar esses metadados. Os metadados recuperados podem ser usados pelo aplicativo e pelo usuário na próxima etapa.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36130652"
   
 3.  Em seguida, o aplicativo executa um comando no servidor. Esse comando pode ser para fins de recuperação de metadados adicionais, para recuperação de dados ou para a modificação da estrutura do banco de dados. Para qualquer uma dessas tarefas, o aplicativo poderia usar uma consulta determinada previamente ou utilizar metadados recém-recuperados para criar consultas adicionais.  
   
-     Para obter mais informações: [recuperar metadados de uma fonte de dados analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md), [executar comandos em relação a um analíticos fonte de dados](executing-commands-against-an-analytical-data-source.md)  
+     Para obter mais informações: [recuperar metadados de uma fonte de dados analíticos](retrieving-metadata-from-an-analytical-data-source.md), [recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md), [executando comandos em relação a um analíticos fonte de dados](executing-commands-against-an-analytical-data-source.md)  
   
 4.  Depois que o comando é enviado ao servidor, o servidor começa a retornar os metadados ou os dados para o cliente. Essas informações podem ser exibida por meio de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> ou de um objeto `System.XmlReader`.  
   

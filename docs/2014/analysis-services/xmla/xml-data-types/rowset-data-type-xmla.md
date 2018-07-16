@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279442"
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo de dados Rowset (XMLA)
-  Define um tipo de dados derivado que representa um [raiz](../xml-elements-properties/root-element-xmla.md) elemento que retorna dados tabulares de um [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  
+  Define um tipo de dados derivado que representa uma [raiz](../xml-elements-properties/root-element-xmla.md) elemento que retorna dados tabulares de um [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  
   
  **Namespace** urn: schemas-microsoft-com: XML-análise: conjunto de linhas  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36130420"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
-|Elementos filho|[Linha](../xml-elements-properties/row-element-xmla.md)|  
+|Elementos filho|[linha](../xml-elements-properties/row-element-xmla.md)|  
 |Elementos derivados|[root](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- XML não permite certos caracteres como elemento e nomes de atributo. Para resolver essa restrição de nomeação, XML for Analysis (XMLA) dá suporte à codificação como definido por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para nomes de colunas que contêm caracteres de nome XML que não são válidos de acordo com a especificação XML 1.0, o XMLA usa os valores hexadecimais correspondentes para codificar caracteres Unicode que não são válidos. Os valores hexadecimais são substituídos por x*HHHH*\_, onde *HHHH* significa o código UCS-2 hexadecimal de quatro dígitos do caractere na ordem primeiro bit mais significativo. Por exemplo, XMLA codifica o nome, "Detalhes da Ordem", como Order_x0020_Details, que substitui o caractere de espaço com o código hexadecimal correspondente.  
+ XML não permite certos caracteres como elemento e nomes de atributo. Para lidar com essa restrição de nomeação, o XML for Analysis (XMLA) dá suporte a codificação como definido por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para nomes de colunas que contêm caracteres de nome XML que não são válidos de acordo com a especificação XML 1.0, XMLA utiliza os valores hexadecimais correspondentes para codificar caracteres Unicode que não são válidos. Os valores hexadecimais são substituídos por x*HHHH*\_, onde *HHHH* significa o código UCS-2 hexadecimal de quatro dígitos do caractere na ordem primeiro bit mais significativo. Por exemplo, XMLA codifica o nome, "Detalhes da Ordem", como Order_x0020_Details, que substitui o caractere de espaço com o código hexadecimal correspondente.  
   
- A codificação pode tornar difícil a transformação de XSL (Extensible Style Language). Para dar suporte a uma rápida pesquisa de real, sem codificação nomes de coluna, adicione o `sql:field`de atributo para o esquema de conjunto de linhas do XML para cada coluna, conforme mostrado no exemplo a seguir:  
+ A codificação pode tornar difícil a transformação de XSL (Extensible Style Language). Para dar suporte a uma pesquisa rápida de real, sem codificação nomes de coluna, adicione o `sql:field`atributo no esquema de conjunto de linhas do XML para cada coluna, conforme mostrado no exemplo a seguir:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

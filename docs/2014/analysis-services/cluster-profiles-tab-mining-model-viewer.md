@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3cf0d0437b8aea93c692e993d3d2e7167cc4a1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267592"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster (Visualizador do Modelo de Mineração)
   Use a guia **Perfis de Cluster** para obter uma exibição global dos clusters que o algoritmo descobriu dentro de um modelo de clustering. A guia exibe cada atributo, junto com a distribuição do atributo em cada cluster.  
@@ -54,7 +54,7 @@ ms.locfileid: "36130878"
  Esta seção contém uma coluna para cada cluster no modelo. Para cada atributo, o histograma mostra a distribuição dos valores no atributo somente para esse cluster. O gráfico também tem uma coluna para **População**, que também usa histogramas para exibir a distribuição de valores para cada atributo, mas para todos os casos no modelo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

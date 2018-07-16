@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286892"
 ---
 # <a name="linestring"></a>LineString
   Um `LineString` é um objeto unidimensional que representa uma sequência de pontos e os segmentos de linha que os conectam.  
@@ -36,7 +36,7 @@ ms.locfileid: "36012862"
   
 -   A Figura 1 é uma instância `LineString` simples, não fechada.  
   
--   Figura 2 é um não simples, não fechada `LineString` instância.  
+-   Figura 2 é não uma simples, não fechada `LineString` instância.  
   
 -   A Figura 3 é uma instância `LineString` fechada, simples e portanto é um anel.  
   
@@ -62,11 +62,11 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ### <a name="valid-instances"></a>Instâncias válidas  
  Para um `LineString` instância seja válida, ela deve atender aos critérios a seguir.  
   
-1.  O `LineString` instância deve ser aceita.  
+1.  O `LineString` instância deve ser aceitos.  
   
 2.  Se uma instância `LineString` não for vazia, ela deverá conter pelo menos dois pontos distintos.  
   
-3.  O `LineString` instância não pode sobrepor um intervalo de dois ou mais pontos consecutivos.  
+3.  O `LineString` instância não pode se sobrepor sobre um intervalo de dois ou mais pontos consecutivos.  
   
  As instâncias `LineString` a seguir são válidas.  
   

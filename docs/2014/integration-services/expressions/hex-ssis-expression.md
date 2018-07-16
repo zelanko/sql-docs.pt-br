@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
 - HEX function
@@ -16,13 +16,13 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9db4903433f6eba83362a510442b0be45d54833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72e5b5982e8128169cfdc2431227d410be409b23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217766"
 ---
 # <a name="hex-ssis-expression"></a>HEX (Expressão SSIS)
   Retorna uma cadeia de caracteres que representa o valor hexadecimal de um inteiro.  
@@ -80,6 +80,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

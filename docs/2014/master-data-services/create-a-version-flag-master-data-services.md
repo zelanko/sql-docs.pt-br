@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cea2d431b213d6b62106fff5c0c15c588e1b115d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8e749d7e0be27ec7ea749073f89f192972a354f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287542"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Criar um sinalizador de versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um sinalizador de versão a ser atribuído a uma versão. O sinalizador pode indicar a versão que os usuários ou sistemas de assinatura devem usar.  
@@ -43,7 +43,7 @@ ms.locfileid: "36130595"
   
 3.  Na página **Gerenciar Sinalizadores de Versão** , no campo **Modelo** , selecione o modelo para o qual você deseja criar um sinalizador.  
   
-4.  Clique em **Adicionar**.  
+4.   Clique em **Adicionar**.  
   
 5.  Na caixa **Nome** , digite um nome.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36130595"
 -   [Atribuir um sinalizador a uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Alterar o nome de um sinalizador de versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

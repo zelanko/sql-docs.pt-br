@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6af0f81a3b356427d4279bfcdcb88f1c7b14ba57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08e54b933094b86c68af60277ff73b701bb5e4f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263442"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selecionar atributos de dimensão (Assistente para Dimensões)
   Use a página **Selecionar Atributos de Dimensão** para selecionar e modificar os atributos para a dimensão a ser criada.  
@@ -29,7 +29,7 @@ ms.locfileid: "36012985"
 > [!NOTE]  
 >  Se você não consegue ler os valores de alguma coluna, maximize a janela do assistente e altere a largura de cada cabeçalho de coluna até que consiga ler os valores.  
   
- **Para abrir o Assistente de dimensão**  
+ **Para abrir o Assistente para dimensões**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Dimensões** de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique em **Nova Dimensão**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36012985"
  **Habilitar navegação**  
  Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar Navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
   
- Na maioria dos casos, o atributo se torna disponível ou não está disponível para navegação definindo o `AttributeHierarchyEnabled` propriedade `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
+ Na maioria dos casos, o atributo se torna disponível ou não está disponível para navegação definindo a `AttributeHierarchyEnabled` propriedade para `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
   
 |Caso|Configurações|  
 |----------|--------------|  

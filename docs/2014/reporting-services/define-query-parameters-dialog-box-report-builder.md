@@ -1,5 +1,5 @@
 ---
-title: Definir a caixa de diálogo parâmetros de consulta (construtor de relatórios) | Microsoft Docs
+title: Definir caixa de diálogo parâmetros de consulta (construtor de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d8d330cf8be9ba0af3ce6898f34416d516f77cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2c0a3eb8add1540ff086b98128433f0df7a99ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212608"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Caixa de diálogo Definir Parâmetros de Consulta (Construtor de Relatórios)
   Use a caixa de diálogo **Definir Parâmetros de Consulta** para especificar valores de parâmetros quando uma consulta é executada em um designer de consulta em tempo de design para visualizar dados de exemplo. Parâmetros de consulta filtram dados na fonte de dados e ajudam a limitar a quantidade de dados processada por um relatório. Esses valores não são salvos na definição do relatório.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8a66c12a8c336e4981065a6d276128f054df20fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: da7229651be1a0bc1ae9801619f5c1c76729cd07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268022"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>Propriedade VirtualDirectoryReportServer (WMI MSReportServer_ConfigurationSetting)
   Retorna o diretório virtual para o aplicativo do servidor de relatório. Somente leitura.  

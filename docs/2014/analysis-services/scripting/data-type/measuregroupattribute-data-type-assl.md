@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261322"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>Tipo de dados MeasureGroupAttribute (ASSL)
   Define um tipo de dados primitivo que representa a relação entre um atributo e um grupo de medidas.  

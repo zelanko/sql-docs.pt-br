@@ -1,5 +1,5 @@
 ---
-title: Célula elemento (MDDataSet) (XMLA) | Microsoft Docs
+title: Célula de elemento (MDDataSet) (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 47d4449fd47cbb3da8e516a593cb8711e2bc2331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269502"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
   Contém informações sobre uma única célula contida por um pai [CellData](celldata-element-xmla.md) elemento.  
@@ -83,7 +83,7 @@ ms.locfileid: "36130638"
  O tipo de dados de um valor de propriedade de célula só é especificado para a propriedade de célula de VALUE. Os tipos de dados de outras propriedades de célula são determinados pela definição de propriedade de célula incluída no elemento `CellInfo`. Um elemento de valor de propriedade de célula poderá ser excluído se o valor padrão tiver sido especificado (incluindo um elemento `Default` para uma propriedade de célula contido no elemento `CellInfo`) para uma propriedade de célula ou se nenhum valor padrão tiver sido especificado e se o valor da propriedade da célula for nulo.  
   
 ## <a name="cell-property-errors"></a>Erros de propriedade de célula  
- Se uma propriedade de célula não pode ser retornada devido a um erro que ocorre na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], como um erro de cálculo que impede que o valor retornado para uma determinada célula, um `Error` elemento substitui o conteúdo da propriedade de célula em questão. O exemplo de XML a seguir descreve um erro de propriedade de célula:  
+ Se uma propriedade de célula não pode ser retornada devido a um erro que ocorre na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], como um erro de cálculo que impede que o valor que está sendo retornado para uma determinada célula, um `Error` elemento substitui o conteúdo da propriedade de célula em questão. O exemplo de XML a seguir descreve um erro de propriedade de célula:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -97,7 +97,7 @@ ms.locfileid: "36130638"
 ```  
   
 ## <a name="calculating-cell-ordinal-values"></a>Calculando valores ordinais de células  
- A referência de eixo para uma célula pode ser calculada com base em um valor de atributo `CellOrdinal`. Conceitualmente, as células são numeradas em um conjunto de dados como se fosse o conjunto de dados um *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal.  
+ A referência de eixo para uma célula pode ser calculada com base em um valor de atributo `CellOrdinal`. Conceitualmente, as células são numeradas em um conjunto de dados como se o conjunto de dados fosse uma *p*-matriz dimensional, onde *p* é o número de eixos. As células são tratadas em ordem linha-principal.  
   
  Suponha que uma consulta solicite quatro medidas em colunas e uma interjunção de quatro estados com quatro quartos de linhas. Seguindo o resultado do conjunto de dados, a propriedade `CellOrdinal` da parte do resultado do conjunto de dados em negrito é o conjunto {9, 10, 11, 13, 14, 15, 17, 18, 19}. Esse é o conjunto, porque as células são numeradas em ordem de linha principal, começando com um `CellOrdinal` de 0 para a célula superior esquerda.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36130638"
   
  Aplicando a fórmula mostrada na figura, o eixo k = 0 tem Uk = 4 membros e o exio k = 1 tem Uk = 8 tuplas. P = 2 é o número total de eixos na consulta. Considerando a célula {Califórnia, T3, Custo da Loja} como S0, a soma inicial é i = 0 a 1. Para i = 0, a tupla ordinal no eixo 0 de {Custo da loja} é 1. Para i = 1, a tupla ordinal de {CA, T3} é 2.  
   
- Para i = 0, Ei = 1, portanto em = 0 a soma é 1 * 1 = 1 e para i = 1, a soma é 2 (tupla ordinal) vezes 4 (o valor de Ei calculado como 1 \* 4), ou 8. A soma de 1 + 8 é então 9, a célula ordinal para essa célula.  
+ Para i = 0, Ei = 1, então, para eu = 0 a soma é 1 * 1 = 1 e para eu = 1, a soma é 2 (tupla ordinal) vezes 4 (o valor de Ei calculado como 1 \* 4), ou 8. A soma de 1 + 8 é então 9, a célula ordinal para essa célula.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo seguinte demonstra a estrutura do elemento `Cell`, incluindo os valores da propriedade VALUE, FORMATTED_VALUE, and FORMAT_STRING para cada célula.  

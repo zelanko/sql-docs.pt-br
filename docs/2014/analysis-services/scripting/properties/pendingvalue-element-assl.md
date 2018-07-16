@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263392"
 ---
 # <a name="pendingvalue-element-assl"></a>Elemento PendingValue (ASSL)
-  Contém somente leitura pendentes valor associado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
+  Contém o pendente somente leitura valor associado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36012365"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Esse elemento contém o valor de `ServerProperty` que será usado na próxima vez que a instância atual do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é iniciado. Esse valor normalmente é recuperado de qualquer lugar onde o valor da propriedade de servidor está armazenado, em um arquivo de inicialização, no registro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ou em outro mecanismo de armazenamento.  
+ Esse elemento contém o valor da `ServerProperty` que será usado na próxima vez que a instância atual do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é iniciado. Esse valor normalmente é recuperado de qualquer lugar onde o valor da propriedade de servidor está armazenado, em um arquivo de inicialização, no registro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ou em outro mecanismo de armazenamento.  
   
- O elemento que corresponde ao pai do `PendingValue` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ O elemento que corresponde ao pai de `PendingValue` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento ServerProperties &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Elemento Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Elemento de servidor &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

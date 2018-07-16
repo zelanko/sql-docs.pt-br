@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 330a1cace96aeb58ed95c61904b626d85cd8f2e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 784da1a407cc70a015213f5ef14504297a229a5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255938"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
   Este exemplo recupera uma ID e um nome de funcionário para cada funcionário. No banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , a employeeID pode ser obtida na coluna BusinessEntityID da tabela Employee. Nomes de funcionários podem ser obtidos da tabela Person. A coluna BusinessEntityID pode ser usada para unir as tabelas.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e32774c7577f357677c149bd3e222498945b9b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e6e09fbd1af47c63d12d5c1b726e6a0ad23cf5b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294126"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Adicionar ou excluir um indicador (Construtor de Relatórios e SSRS)
   Os indicadores são medidores mínimos que transmitem o estado de um único valor de dados em um relance. Para obter mais informações sobre eles, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](indicators-report-builder-and-ssrs.md).  
@@ -30,11 +30,11 @@ ms.locfileid: "36013501"
   
  Você pode atualizar os valores e os estados de indicadores. Para obter mais informações, consulte os tópicos a seguir:  
   
--   [Alterar os ícones de indicador e conjuntos de indicadores &#40;SSRS e construtor de relatórios&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Alterar os ícones de indicador e conjuntos de indicadores &#40;relatórios e SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Definir e configurar unidades de medida &#40;SSRS e construtor de relatórios&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Definir e configurar unidades de medida &#40;relatórios e SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Definir o escopo da sincronização &#40;SSRS e construtor de relatórios&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Definir o escopo da sincronização &#40;relatórios e SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Como um indicador é posicionado dentro do painel de medidores, você precisa selecionar o indicador, em vez do painel, quando deseja configurar o indicador usando a caixa de diálogo **Propriedades de Indicadores** ou o painel **Propriedades** . A imagem a seguir mostra um indicador selecionado em seu painel de medidores.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c9f8d69cd320009562b81c4b33c0cbd3374f1498
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8ecee19e4846d2ccf49c21d90b8ab9815ed63a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282772"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar uma condição de ponto de interrupção
   Uma condição de ponto de interrupção é uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] que é avaliada pelo depurador ao atingir o ponto de interrupção. Se a condição for atendida e qualquer contagem de ocorrências especificada for atingida, o depurador será interrompido ou executará a ação especificada para o ponto de interrupção.  
@@ -43,7 +43,7 @@ ms.locfileid: "36122586"
   
 2.  Na caixa de diálogo **Condição de Ponto de Interrupção** , insira uma expressão Booliana válida na caixa **Condição** .  
   
-3.  Escolha **é verdadeiro** se você deseja interromper quando a expressão é avaliada como `true`, ou escolha **mudou** se você quiser interromper quando o valor da expressão for alterado.  
+3.  Escolher **vale** se quiser interromper quando a expressão é avaliada como `true`, ou escolha **mudou** se você quiser interromper quando o valor da expressão for alterado.  
   
     > [!NOTE]  
     >  O depurador não avalia a expressão Booliana até a primeira vez que o ponto de interrupção é atingido. Se você escolher **Has changed**, o depurador não considerará a primeira avaliação como uma alteração, então o depurador não interromperá na primeira avaliação.  

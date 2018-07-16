@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7aa25d7a3d09fbf3d85b64a43e8caf04759a4336
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238466"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
   Um ponteiro do medidor indica o valor atual do medidor. Por padrão, quando um campo for adicionado, os valores contidos nele serão agregados a um valor mostrado pelo ponteiro do medidor. É possível adicionar vários ponteiros ao medidor para mostrar vários valores na mesma escala, ou adicionar várias escalas e um ponteiro para todas as escalas adicionadas. Depois de adicionar um campo a um medidor, defina os valores mínimo e máximo da escala correspondente para oferecer contexto ao valor do ponteiro. Outra opção é definir os valores mínimo e máximo em um intervalo, que mostra uma área crítica na escala.  
@@ -36,7 +36,7 @@ ms.locfileid: "36012846"
 ##  <a name="HowPointer"></a> Como o ponteiro é conectado a dados  
  Por padrão, quando adicionado, um medidor contém um ponteiro sem campo associado. Isso é conhecido como ponteiro vazio. Ele exibirá zero até que um campo seja adicionado ao painel de dados. Quando você adiciona um campo ao painel de dados, o ponteiro é conectado a esse campo. Caso você exclua um campo do painel de dados, o ponteiro associado a esse campo também será excluído.  
   
- Depois de adicionar os dados, quando clicar com o botão direito do mouse no ponteiro, você obterá as opções **Limpar Valor do Ponteiro** e **Excluir Ponteiro** . A opção **Limpar Valor do Ponteiro** removerá o campo anexado ao medidor, mas o ponteiro continuará aparecendo no medidor. A opção **Excluir Ponteiro** removerá o campo do medidor e excluirá o ponteiro da exibição. Se você adicionar novamente um campo ao medidor, o ponteiro padrão reaparecerá. Quando você define o ponteiro **Hidden** propriedade `True`, o ponteiro não permanece oculto na superfície de design, mas ele está oculto em tempo de execução.  
+ Depois de adicionar os dados, quando clicar com o botão direito do mouse no ponteiro, você obterá as opções **Limpar Valor do Ponteiro** e **Excluir Ponteiro** . A opção **Limpar Valor do Ponteiro** removerá o campo anexado ao medidor, mas o ponteiro continuará aparecendo no medidor. A opção **Excluir Ponteiro** removerá o campo do medidor e excluirá o ponteiro da exibição. Se você adicionar novamente um campo ao medidor, o ponteiro padrão reaparecerá. Quando você define o ponteiro **Hidden** propriedade `True`, o ponteiro não está oculto na superfície de design, mas ele está oculto em tempo de execução.  
   
   
 ##  <a name="DisplayingMultiple"></a> Exibindo vários ponteiros no medidor  
@@ -46,7 +46,7 @@ ms.locfileid: "36012846"
   
   
 ##  <a name="SettingGradients"></a> Definindo as gradações em uma extremidade de agulha  
- Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o `RoundedDark` estilo, onde você pode especificar uma cor de gradiente e o estilo de gradiente.  
+ Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o `RoundedDark` estilo, onde você pode especificar uma cor e estilo de gradiente.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Como definir um intervalo de ajuste  
@@ -61,7 +61,7 @@ ms.locfileid: "36012846"
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formatando intervalos de um medidor &#40;SSRS e construtor de relatórios&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando intervalos de um medidor &#40;relatórios e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a58a85deedb322ce43a5b1d4881e457097abda0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35458ecc9e5c7482365ce53fefd32558d04872ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274992"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar Visualizador de Dados (guia Geral)
   Um visualizador de dados exibe os dados conforme eles migram pelo caminho que conecta dois componentes de fluxo de dados durante uma execução de pacote.  
@@ -41,10 +41,10 @@ ms.locfileid: "36013387"
  Exibe um gráfico de amostras, seguido pela descrição.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar Visualizador de dados &#40;guia gráfico de colunas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [Configurar Visualizador de dados &#40;guia do gráfico de coluna&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar Visualizador de dados &#40;guia de grade&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configurar Visualizador de dados &#40;guia histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Configurar Visualizador de dados &#40;guia gráfico de dispersão&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurar Visualizador de dados &#40;guia de histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Configurar Visualizador de dados &#40;guia de plotagem de dispersão&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
  [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
