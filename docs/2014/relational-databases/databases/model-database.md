@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242876"
 ---
 # <a name="model-database"></a>Banco de dados modelo
   O banco de dados **modelo** é usado como modelo para todos os bancos de dados criados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** é criado toda vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, o banco de dados **modelo** deve sempre existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo o conteúdo do banco de dados **modelo** , incluindo as opções, é copiado para o novo banco de dados. Algumas configurações do **modelo** também são usadas para criar um novo **tempdb** durante a inicialização, de modo que um banco de dados **modelo** sempre deve existir em um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "36013348"
  Se o banco de dados **modelo** for modificado, todos os bancos de dados criados posteriormente herdarão as mudanças. Por exemplo, você poderia definir permissões ou opções de banco de dados, ou adicionar objetos, como tabelas, funções ou procedimentos armazenados. Propriedades de arquivo do banco de dados **modelo** são uma exceção e são ignoradas, exceto o tamanho inicial do arquivo de dados.  
   
 ## <a name="physical-properties-of-model"></a>Propriedades físicas de modelo  
- A tabela a seguir lista os valores iniciais de configuração dos dados do **modelo** e dos arquivos de log. Os tamanhos desses arquivos podem variar ligeiramente das diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A tabela a seguir lista os valores iniciais de configuração dos dados do **modelo** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco para edições diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Arquivo|Nome lógico|Nome físico|Aumento do arquivo|  
 |----------|------------------|-------------------|-----------------|  
@@ -77,12 +77,12 @@ ms.locfileid: "36013348"
 |PARAMETERIZATION|SIMPLE|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
-|RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edição<sup>1</sup>|Sim|  
+|RECOVERY|Depende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sim|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|DISABLE_BROKER|não|  
 |TRUSTWORTHY|OFF|não|  
   
- <sup>1</sup> para verificar o modelo de recuperação atual do banco de dados, consulte [exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> para verificar se o modelo de recuperação atual do banco de dados, consulte [exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

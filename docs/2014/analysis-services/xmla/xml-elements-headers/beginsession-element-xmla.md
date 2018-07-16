@@ -24,15 +24,15 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285822"
 ---
 # <a name="beginsession-element-xmla"></a>Elemento BeginSession (XMLA)
   Usa um cabeçalho SOAP em uma mensagem de solicitação SOAP para iniciar uma nova sessão em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "36012970"
 ## <a name="remarks"></a>Remarks  
  O elemento do cabeçalho `BeginSession` faz parte de uma solicitação SOAP enviada a uma instância de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e inicia explicitamente uma nova sessão na instância. O cabeçalho SOAP retornado pela resposta de SOAP contém um [sessão](session-element-xmla.md) elemento que identifica a nova sessão. Este identificador de nova sessão é armazenado e enviado em solicitações SOAP subsequentes que usam o elemento de cabeçalho `Session`.  
   
- Se o elemento de cabeçalho `BeginSession` não for enviado, uma sessão não será iniciada explicitamente. Se uma sessão não for iniciada explicitamente, as transações não poderão ser gerenciadas naquela sessão. Em outras palavras, você não pode usar o seguinte XML para comandos Analysis (XMLA): [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md). Todos os métodos e comandos XMLA executados em uma sessão iniciada implicitamente são considerados transações atômicas.  
+ Se o elemento de cabeçalho `BeginSession` não for enviado, uma sessão não será iniciada explicitamente. Se uma sessão não for iniciada explicitamente, as transações não poderão ser gerenciadas naquela sessão. Em outras palavras, é possível usar o XML a seguir para comandos Analysis (XMLA): [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), e [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md). Todos os métodos e comandos XMLA executados em uma sessão iniciada implicitamente são considerados transações atômicas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento EndSession &#40;XMLA&#41;](endsession-element-xmla.md)   

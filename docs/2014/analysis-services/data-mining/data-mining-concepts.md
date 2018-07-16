@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212006"
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
   A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.  
@@ -66,7 +66,7 @@ ms.locfileid: "36117297"
   
  O diagrama a seguir descreve as relações entre cada etapa do processo e as tecnologias no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode usar para concluir cada etapa.  
   
- ![Etapas principais no processo de mineração de dados](../media/data-mining-process.gif "etapas principais no processo de mineração de dados")  
+ ![As principais etapas do processo de mineração de dados](../media/data-mining-process.gif "as principais etapas do processo de mineração de dados")  
   
  O processo ilustrado no diagrama é cíclico, ou seja, criar um modelo de mineração de dados é um processo dinâmico e repetitivo. Depois de explorar os dados, você pode descobrir que eles são insuficientes para criar modelos de mineração apropriados e que você terá, portanto, que obter mais dados. Ou você pode criar vários modelos e, depois, perceber que os modelos não respondem adequadamente o problema definido e que você deverá redefinir o problema. Talvez seja necessário atualizar os modelos depois de eles serem implantados, pois haverá mais dados disponíveis. Cada etapa do processo pode precisar ser repetida muitas vezes para criar um bom modelo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36117297"
 ##  <a name="PreparingData"></a> Preparando dados  
  A segunda etapa do processo de mineração de dados, como destacado no diagrama a seguir, é consolidar e limpar os dados identificados na etapa [Definindo o problema](#DefiningTheProblem) .  
   
- ![Segunda etapa de mineração de dados: Preparando dados](../media/dmprocess-preparing.gif "segunda etapa de mineração de dados: Preparando dados")  
+ ![Segunda etapa de mineração de dados: preparação de dados](../media/dmprocess-preparing.gif "segunda etapa de mineração de dados: preparação de dados")  
   
  Os dados podem estar espalhados pela empresa e armazenados em diferentes formatos ou podem conter inconsistência, como entradas ausentes ou incorretas. Por exemplo, os dados podem mostrar que um cliente comprou um produto antes desse produto ser efetivamente colocado a venda no mercado ou que o cliente faz compras regularmente em uma loja localizada a 3.000 quilômetros da casa dele.  
   
@@ -112,12 +112,12 @@ ms.locfileid: "36117297"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- É importante saber que os dados usados na mineração de dados não precisam estar armazenados em um cubo OLAP (processamento analítico online) nem mesmo em um banco de dados relacional, apesar de ambos poderem ser usados como fontes de dados. Você pode conduzir a mineração de dados usando qualquer fonte de dados definida como uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Isso inclui arquivos de texto, pasta de trabalho do Excel e dados de outros provedores externos. Para obter mais informações, consulte [fontes de dados com suporte &#40;multidimensionais do SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ É importante saber que os dados usados na mineração de dados não precisam estar armazenados em um cubo OLAP (processamento analítico online) nem mesmo em um banco de dados relacional, apesar de ambos poderem ser usados como fontes de dados. Você pode conduzir a mineração de dados usando qualquer fonte de dados definida como uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Isso inclui arquivos de texto, pasta de trabalho do Excel e dados de outros provedores externos. Para obter mais informações, consulte [fontes de dados com suporte &#40;Multidimensional do SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
 ##  <a name="ExploringData"></a> Explorando dados  
  A terceira etapa do processo de mineração de dados, como destacado no diagrama a seguir, é explorar os dados preparados.  
   
- ![Terceira etapa de mineração de dados: explorando dados](../media/dmprocess-exploring.gif "terceira etapa de mineração de dados: explorando dados")  
+ ![Terceira etapa de mineração de dados: exploração de dados](../media/dmprocess-exploring.gif "terceira etapa de mineração de dados: exploração de dados")  
   
  Você deve compreender os dados para tomar decisões apropriadas ao criar os modelos de mineração. As técnicas de exploração incluem cálculos dos valores máximos e mínimos, cálculos das médias e dos desvios padrões e análise da distribuição dos dados. Por exemplo, ao analisar os valores máximos, mínimos e médios, você pode determinar que os dados não são representativos para seus clientes ou processos de negócio e que você deve obter mais dados equilibrados ou revisar as suposições que determinam suas expectativas. Os desvios padrão e outros valores de distribuição podem fornecer informações útil sobre a estabilidade e precisão dos resultados. Um desvio padrão muito grande indica que incluir mais dados pode ser útil para melhorar o modelo. Os dados que desviam muito de uma distribuição padrão podem estar distorcidos ou representar uma imagem precisa do problema real, dificultando, porém, o ajuste de um modelo aos dados.  
   

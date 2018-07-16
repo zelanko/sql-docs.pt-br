@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OptimizedState element
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 665d84185ceab6b907a7acdd3bfc9f600baaaf89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 932ef541a0e9613ad46a032be5c218eccd5276ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224066"
 ---
 # <a name="optimizedstate-element-assl"></a>Elemento OptimizedState (ASSL)
   Determina o nível de otimização aplicado à hierarquia.  

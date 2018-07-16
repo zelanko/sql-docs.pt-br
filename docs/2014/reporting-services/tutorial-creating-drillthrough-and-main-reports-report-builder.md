@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200826"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
@@ -33,7 +33,7 @@ ms.locfileid: "36020651"
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  **O relatório de detalhamento, você aprenderá como:**  
   
-1.  [Criar um relatório de matriz de detalhamento e o conjunto de dados do Assistente de tabela ou matriz](#DMatrixAndDataset)  
+1.  [Criar um relatório de matriz de detalhamento e um conjunto de dados do Assistente de tabela ou matriz](#DMatrixAndDataset)  
   
     1.  [Especifique uma Conexão de dados](#DConnection)  
   
@@ -49,15 +49,15 @@ ms.locfileid: "36020651"
   
 3.  [Adicionar colunas para mostrar os valores de vendas em minigráficos](#DSparkline)  
   
-4.  [Adicionar um título de relatório com o nome da categoria de produto](#DReportTitle)  
+4.  [Adicionar título de relatório com o nome da categoria de produto](#DReportTitle)  
   
-5.  [Atualizar propriedades do parâmetro](#DParameter)  
+5.  [Atualizar propriedades de parâmetros](#DParameter)  
   
 6.  [Salvar o relatório em uma biblioteca do SharePoint](#DSave)  
   
  **O relatório principal, você aprenderá como:**  
   
-1.  [Criar o relatório de matriz principal e o conjunto de dados do Assistente de tabela ou matriz](#MMatrixAndDataset)  
+1.  [Criar o relatório de matriz principal e um conjunto de dados do Assistente de tabela ou matriz](#MMatrixAndDataset)  
   
     1.  [Especifique uma Conexão de dados](#MConnection)  
   
@@ -71,17 +71,17 @@ ms.locfileid: "36020651"
   
 2.  [Remover a linha de Total geral](#MGrandTotal)  
   
-3.  [Configurar a ação de caixa de texto para detalhamento](#MDrillthrough)  
+3.  [Configurar ação de caixa de texto para detalhamento](#MDrillthrough)  
   
 4.  [Substituir valores numéricos por indicadores](#MIndicators)  
   
-5.  [Atualizar propriedades do parâmetro](#MParameter)  
+5.  [Atualizar propriedades de parâmetros](#MParameter)  
   
 6.  [Adicionar um título de relatório](#MTitle)  
   
 7.  [Salvar o relatório em uma biblioteca do SharePoint](#MSave)  
   
-8.  [Execute o principal e relatórios detalhados](#MRunReports)  
+8.  [Execute os relatórios principal e detalhamento](#MRunReports)  
   
  Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "36020651"
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique em **iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
-     O **Introdução** caixa de diálogo é aberta. Se não for exibido, do **Report Builder** , clique em **novo**.  
+     O **guia de Introdução** caixa de diálogo é aberta. Se não for exibido, do **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "36020651"
   
 7.  Clique em **Avançar**.  
   
-##  <a name="DLayout"></a> 1c. Organizar dados em grupos  
+##  <a name="DLayout"></a> 1C. Organizar dados em grupos  
  Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -258,7 +258,7 @@ ms.locfileid: "36020651"
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
-1.  Sobre o **escolha um estilo** , no painel Estilos, selecione Ardósia.  
+1.  Sobre o **escolher um estilo** página, no painel Estilos, selecione Ardósia.  
   
 2.  Clique em **Concluir**.  
   
@@ -398,7 +398,7 @@ ms.locfileid: "36020651"
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique em **iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
@@ -539,7 +539,7 @@ ms.locfileid: "36020651"
   
 6.  Clique em **Avançar**.  
   
-##  <a name="MLayout"></a> 1c. Organizar dados em grupos  
+##  <a name="MLayout"></a> 1C. Organizar dados em grupos  
  Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -574,7 +574,7 @@ ms.locfileid: "36020651"
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
-1.  Sobre o **escolha um estilo** , no painel Estilos, selecione Ardósia.  
+1.  Sobre o **escolher um estilo** página, no painel Estilos, selecione Ardósia.  
   
 2.  Clique em **Concluir**.  
   
@@ -742,6 +742,6 @@ ms.locfileid: "36020651"
 5.  Opcionalmente, explore outras categorias de produto clicando nos respectivos nomes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)  
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)  
   
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257302"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  
@@ -90,9 +90,9 @@ ms.locfileid: "36012359"
 ### <a name="relationships"></a>Relações  
  Na estrutura de dados de entidade, as relações são definidas como *associações* entre entidades.  
   
- As associações sempre têm exatamente duas extremidades, cada uma apontando para um campo ou uma coluna em uma tabela. Portanto, várias relações são possíveis entre duas tabelas, se as relações tiverem pontos de extremidade diferentes. Um nome de função é atribuído aos pontos de extremidade da associação e indica como a associação é usada no contexto do modelo de dados. Um exemplo de um nome de função pode ser **ShipTo**, quando aplicado a uma ID de cliente que está relacionada à ID de cliente em uma tabela Orders.  
+ As associações sempre têm exatamente duas extremidades, cada uma apontando para um campo ou uma coluna em uma tabela. Portanto, várias relações são possíveis entre duas tabelas, se as relações tiverem pontos de extremidade diferentes. Um nome de função é atribuído aos pontos de extremidade da associação e indica como a associação é usada no contexto do modelo de dados. Um exemplo de um nome de função pode ser **ShipTo**, quando aplicado a uma ID de cliente que está relacionada à ID de cliente em uma tabela de pedidos.  
   
- A representação CSDLBI do modelo também contém atributos na associação que determinam como as entidades são mapeadas umas às outras em termos do *multiplicidade* da associação. A multiplicidade indica se o atributo ou a coluna no ponto de extremidade de uma relação entre tabelas está em um dos lados de uma relação ou nos vários lados. Não há nenhum valor separado para relações um para um. As anotações da CSDLBI oferecem suporte à multiplicidade 0 (o que significa que a entidade não está associada a nada) ou 0..1 (o que significa uma relação um para um ou um para muitos).  
+ A representação CSDLBI do modelo também contém atributos na associação que determinam como as entidades são mapeadas para as outras em termos do *multiplicidade* da associação. A multiplicidade indica se o atributo ou a coluna no ponto de extremidade de uma relação entre tabelas está em um dos lados de uma relação ou nos vários lados. Não há nenhum valor separado para relações um para um. As anotações da CSDLBI oferecem suporte à multiplicidade 0 (o que significa que a entidade não está associada a nada) ou 0..1 (o que significa uma relação um para um ou um para muitos).  
   
  O exemplo a seguir representa a saída da CSDLBI de uma relação entre as tabelas Date e ProductInventory, na qual as duas tabelas são unidas na coluna DateAlternateKey. Observe que, por padrão, o nome do `AssociationSet` é o nome totalmente qualificado das colunas envolvidas na relação. Porém, você pode alterar esse comportamento ao criar o modelo, para usar um formato de nomenclatura diferente.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36012359"
   
 ```  
   
-### <a name="visualization-and-navigation-properties"></a>Visualização e propriedades de navegação  
+### <a name="visualization-and-navigation-properties"></a>Visualização e as propriedades de navegação  
  Uma parte importante das anotações da CSDLBI são as propriedades para definição da apresentação na camada de relatório e para navegação nas relações entre entidades. Normalmente, ao criar um modelo de dados, você não considera importante controlar como os dados são ordenados ou agrupados, ou qual pode ser o valor padrão, pressupondo que o aplicativo cliente especificará ordenação e outros detalhes da apresentação. No entanto, os modelos de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] foram projetados para integração ao cliente de relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], e incluem propriedades e atributos que oferecem suporte à apresentação de entidades do modelo de dados na superfície de design do relatório.  
   
  As extensões de visualização incluem atributos que especificam a agregação padrão a ser usada com dados numéricos, indicam que um campo de texto aponta para a URL de uma imagem ou especificam o campo usado para classificar o campo atual.  
@@ -128,17 +128,17 @@ ms.locfileid: "36012359"
 ## <a name="additions-to-support-multidimensional-models"></a>Adições para oferecer suporte aos modelos multidimensionais  
  A versão 1.0 das anotações da CSDLBI oferecia suporte apenas a modelos de tabela. Na versão 1.1, foi adicionado suporte para modelos multidimensionais (cubos OLAP) criados usando ferramentas tradicionais de desenvolvimento de BI. Portanto, agora você pode emitir uma solicitação XML para um modelo multidimensional e receber uma definição CSDLBI do modelo, para uso em relatórios.  
   
- **Cubos:** um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de tabela pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
+ **Cubos:** um SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados tabular pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
   
  De qualquer forma, a representação de um cubo é muito semelhante a de um banco de dados modelo de tabela. O nome do cubo e o cubo correspondem ao nome do banco de dados de tabela e ao identificador do banco de dados.  
   
  **Dimensões:** uma dimensão é representada na CSDLBI como uma entidade (tabela) com colunas e propriedades. Observe que mesmo não incluída em uma perspectiva, uma dimensão incluída no modelo será representada na saída da CSDL, marcada como `Hidden`.  
   
- **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspectivas:** um cliente pode solicitar CSDL para perspectivas individuais. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
   
- **Hierarquias:** hierarquias têm suporte e representadas na CSDLBI como um conjunto de níveis.  
+ **Hierarquias:** hierarquias têm suporte e são representadas na CSDLBI como um conjunto de níveis.  
   
- **Membros:** suporte para o membro padrão foi adicionado e valores padrão são automaticamente adicionados à saída da CSDLBI.  
+ **Membros:** o suporte para o membro padrão foi adicionado e valores padrão são automaticamente adicionados à saída da CSDLBI.  
   
  **Membros calculados:** modelos multidimensionais dão suporte a membros calculados para filhos de **todos os** com um único membro real.  
   

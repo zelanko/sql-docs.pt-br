@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253558"
 ---
 # <a name="import-data-ssas-tabular"></a>Importar dados (SSAS tabular)
   Você pode importar dados para o modelo de tabela de uma ampla variedade de origens. Os tópicos nesta seção descrevem como usar o Assistente de Importação de Dados para o qual conectar e selecionar dados a serem importados para um projeto de modelo.  
@@ -42,7 +42,7 @@ ms.locfileid: "36122945"
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Importar de uma fonte de dados relacional &#40;Tabular do SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Descreve como importar dados de fontes de dados relacionais como um banco de dados Microsoft SQL Server, Oracle ou Teradata.|  
+|[Importar de uma fonte de dados relacionais &#40;Tabular do SSAS&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Descreve como importar dados de fontes de dados relacionais como um banco de dados Microsoft SQL Server, Oracle ou Teradata.|  
 |[Importar de uma fonte de dados multidimensionais &#40;Tabular do SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Descreve como importar dados de um cubo multidimensional do SQL Server Analysis Services.|  
 |[Importar de um Feed de dados &#40;Tabular do SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Descreve como importar dados de um feed de dados como um relatório do Microsoft Reporting Services ou conjunto de dados Azure Data Market.|  
 |[Importar de um arquivo de texto &#40;Tabular do SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Descreve como importar dados de uma pasta de trabalho do Microsoft Excel ou arquivo de texto.|  

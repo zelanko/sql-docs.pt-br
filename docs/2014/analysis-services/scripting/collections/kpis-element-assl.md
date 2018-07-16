@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 892e5997802b2d24d23ac9cb7e3be4ecb1b401c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0947535590d2484ac8022a3fa845dc4b85c96d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197772"
 ---
 # <a name="kpis-element-assl"></a>Elemento Kpis (ASSL)
   Contém a coleção de indicadores chave de desempenho ([Kpi](../objects/kpi-element-assl.md) elementos) associado ao elemento pai.  

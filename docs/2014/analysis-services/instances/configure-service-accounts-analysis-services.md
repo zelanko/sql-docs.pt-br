@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
 - logon accounts [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5093e78a7f2505588f5362ee0943b3660fc61be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206536"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
   O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
@@ -42,7 +42,7 @@ ms.locfileid: "36115550"
 ## <a name="logon-account-recommendations"></a>Recomendações de conta de logon  
  Em um cluster de failover, todas as instâncias do Analysis Services devem ser configuradas para usar uma conta de usuário de domínio do Windows. Atribua a mesma conta para todas as instâncias. Consulte [Como realizar cluster no Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) para obter detalhes.  
   
- Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
+ Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * * * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concedendo permissões ao Analysis Services  
  Esta seção explica as permissões exigidas para operações internas e locais do Analysis Services, tais como iniciar o executável, ler o arquivo de configuração e carregar os bancos de dados do diretório de dados. Se você estiver procurando orientação sobre definição de permissões para acesso a dados externos e interoperabilidade com outros serviços e aplicativos, consulte [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks) mais adiante neste tópico.  
@@ -53,7 +53,7 @@ ms.locfileid: "36115550"
   
  Você pode ver esse grupo de segurança nas configurações de segurança local:  
   
--   Execute compmgmt.msc | **Usuários e grupos locais** | **grupos** | `SQLServerMSASUser$`\<nome do servidor >`$MSSQLSERVER` (para uma instância padrão).  
+-   Execute compmgmt. msc | **Usuários e grupos locais** | **grupos** | `SQLServerMSASUser$`\<nome do servidor >`$MSSQLSERVER` (para uma instância padrão).  
   
 -   Clique duas vezes no grupo de segurança para exibir seus membros.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36115550"
 |-|-|  
 |**Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)|Este privilégio está disponível para todos os usuários por padrão por meio do grupo de segurança **Usuários** . Se você bloquear um servidor ao remover um privilégio desse grupo, o Analysis Services pode falhar ao iniciar o serviço, registrando o seguinte o log: "O cliente não possui o privilégio exigido." Quando esse erro ocorre, restaure o privilégio ao Analysis Services, concedendo-o ao grupo de segurança do Analysis Services apropriado.|  
 |**Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)|Este privilégio é usado para solicitar mais memória se um processo tiver recursos insuficientes para concluir a sua execução, sujeito aos limites estabelecidos de memória para a instância.|  
-|**Bloquear páginas na memória** (SeLockMemoryPrivilege)|Este privilégio somente é necessário quando a paginação está totalmente desativada. Por padrão, uma instância de servidor de tabela usa o arquivo de paginação do Windows, mas você pode impedir que ele usar a paginação do Windows ao definir `VertiPaqPagingPolicy` como 0.<br /><br /> `VertiPaqPagingPolicy` como 1 (padrão), instrui a instância de servidor de tabela para usar o arquivo de paginação do Windows. Alocações não são bloqueadas, permitindo que o Windows realize a paginação conforme necessário. Como a paginação está em uso, não é necessário bloquear páginas na memória. Assim, para a configuração padrão (onde `VertiPaqPagingPolicy` = 1), você não precisa conceder a **bloquear páginas na memória** privilégio para uma instância de tabela.<br /><br /> `VertiPaqPagingPolicy` como 0. Se você desligar a paginação para o Analysis Services, as alocações são bloqueadas, assumindo que o privilégio **Bloquear páginas na memória** seja concedido à instância de tabela. Com essa configuração e o privilégio **Bloquear páginas na memória** , o Windows não pode realizar a paginação das alocações de memória feitas no Analysis Services quando o sistema está sob pressão de memória. Analysis Services depende do **bloquear páginas na memória** permissão como a imposição atrás `VertiPaqPagingPolicy` = 0. Observe que não recomendamos desativar a paginação do Windows. Ela aumentará a taxa de erros de falta de memória para operações que poderiam ser bem-sucedidas se a paginação fosse permitida. Consulte [propriedades de memória](../server-properties/memory-properties.md) para obter mais informações sobre `VertiPaqPagingPolicy`.|  
+|**Bloquear páginas na memória** (SeLockMemoryPrivilege)|Este privilégio somente é necessário quando a paginação está totalmente desativada. Por padrão, uma instância de servidor de tabela usa o arquivo de paginação do Windows, mas você pode impedir que ele usar a paginação do Windows, definindo `VertiPaqPagingPolicy` como 0.<br /><br /> `VertiPaqPagingPolicy` como 1 (padrão) instrui a instância de servidor de tabela para usar o arquivo de paginação do Windows. Alocações não são bloqueadas, permitindo que o Windows realize a paginação conforme necessário. Como a paginação está em uso, não é necessário bloquear páginas na memória. Assim, para a configuração padrão (onde `VertiPaqPagingPolicy` = 1), você não precisa conceder a **bloquear páginas na memória** privilégio para uma instância de tabela.<br /><br /> `VertiPaqPagingPolicy` como 0. Se você desligar a paginação para o Analysis Services, as alocações são bloqueadas, assumindo que o privilégio **Bloquear páginas na memória** seja concedido à instância de tabela. Com essa configuração e o privilégio **Bloquear páginas na memória** , o Windows não pode realizar a paginação das alocações de memória feitas no Analysis Services quando o sistema está sob pressão de memória. Analysis Services depende do **bloquear páginas na memória** permissão como a imposição atrás `VertiPaqPagingPolicy` = 0. Observe que não recomendamos desativar a paginação do Windows. Ela aumentará a taxa de erros de falta de memória para operações que poderiam ser bem-sucedidas se a paginação fosse permitida. Ver [propriedades de memória](../server-properties/memory-properties.md) para obter mais informações sobre `VertiPaqPagingPolicy`.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Para exibir ou adicionar privilégios do Windows na conta de serviço  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36115550"
   
  O detentor da permissão sobre arquivos de dados, executáveis de arquivo de programa, arquivos de configuração, arquivos de log e arquivos temporários é um grupo de segurança local criado pela Instalação do SQL Server.  
   
- Há um grupo de segurança criado para cada instância que você instalar. O grupo de segurança é chamado após a instância ─ ou **SQLServerMSASUser$ MSSQLSERVER** para a instância padrão, ou `SQLServerMSASUser$` \<servername >$\<instancename > para uma instância nomeada. A instalação provisiona esse grupo de segurança com as permissões de arquivo necessárias para executar operações de servidor. Se você verificar as permissões de segurança no diretório \MSAS12.MSSQLSERVER\OLAP\BIN, notará que o grupo de segurança (não a conta de serviço ou seu SID por serviço) é o detentor da permissão nesse diretório.  
+ Há um grupo de segurança criado para cada instância que você instalar. O grupo de segurança é chamado após a instância ─ tanto **SQLServerMSASUser$ MSSQLSERVER** para a instância padrão, ou `SQLServerMSASUser$` \<servername >$\<instancename > para uma instância nomeada. A instalação provisiona esse grupo de segurança com as permissões de arquivo necessárias para executar operações de servidor. Se você verificar as permissões de segurança no diretório \MSAS12.MSSQLSERVER\OLAP\BIN, notará que o grupo de segurança (não a conta de serviço ou seu SID por serviço) é o detentor da permissão nesse diretório.  
   
  O grupo de segurança contém apenas um membro: o SID (Identificador de Segurança) por serviço da conta de inicialização da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . A instalação adiciona o SID por serviço ao grupo de segurança local. O uso de um grupo de segurança local, com associação de SID, é uma diferença sutil, mas perceptível, de como a instalação do SQL Server provisiona o Analysis Services, em comparação com o Mecanismo de Banco de Dados.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36115550"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Use **Computer Manager** | **usuários e grupos locais** | **grupos** para inspecionar a associação de SQLServerMSASUser$\<servername >$\<instancename > grupo de segurança.  
+2.  Use **Gerenciador de computador** | **usuários e grupos locais** | **grupos** para inspecionar a associação de SQLServerMSASUser$\<servername >$\<instancename > grupo de segurança.  
   
      O SID do membro deve corresponder ao SID por serviço a partir da etapa 1.  
   

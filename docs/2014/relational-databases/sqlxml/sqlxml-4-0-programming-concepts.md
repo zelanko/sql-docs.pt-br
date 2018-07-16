@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227066"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
   O SQLXML 3.0 foi fornecido como uma versão da Web para oferecer funcionalidade XML do cliente e aprimoramentos adicionais aos recursos existentes, como esquemas XSD anotados, carregamento em massa XML, suporte a serviços Web (SOAP) e diagramas de atualização.  
@@ -47,7 +47,7 @@ ms.locfileid: "36020436"
  [Requisitos para executar exemplos do SQLXML](requirements-for-running-sqlxml-examples.md)  
  Descreve os requisitos para a criação de exemplos de funcionamento dos exemplos de SQLXML fornecidos.  
   
- [Formatação do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Formatação do lado do cliente e servidor &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Fornece informações e comparações da formatação do cliente e do servidor, incluindo o comando XML FOR para a criação de documentos XML.  
   
  [Esquemas XSD anotados em SQLXML 4.0](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  

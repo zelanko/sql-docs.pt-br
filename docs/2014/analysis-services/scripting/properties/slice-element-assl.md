@@ -1,5 +1,5 @@
 ---
-title: Elemento (ASSL) da fatia | Microsoft Docs
+title: Fatiar elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178883"
 ---
 # <a name="slice-element-assl"></a>Elemento Slice (ASSL)
   Contém uma linguagem MDX que define a fatia contida em uma partição.  
@@ -62,9 +62,9 @@ ms.locfileid: "36117510"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento `Slice` contém uma expressão de tupla ou de conjunto MDX que identifica a parte do cubo para a qual a partição armazena informações. A expressão MDX é semelhante do [StrToSet](/sql/mdx/strtoset-mdx) função MDX com a palavra-chave CONSTRAINED, em que a expressão não pode incluir funções MDX ou definidas pelo usuário.  
+ O elemento `Slice` contém uma expressão de tupla ou de conjunto MDX que identifica a parte do cubo para a qual a partição armazena informações. A expressão MDX é semelhante para o [StrToSet](/sql/mdx/strtoset-mdx) função MDX com a palavra-chave CONSTRAINED, na qual a expressão não pode incluir funções MDX ou definidas pelo usuário.  
   
- O elemento que corresponde ao pai do `Slice` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Partition>.  
+ O elemento que corresponde ao pai de `Slice` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.mapping.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4dc63d2aec3ba7eef31560f042ed7d954ac094fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ef3b40128d46617eed7bae707c0bfdae37416c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266612"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor de Destino de Processamento de Partições (Página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de Processamento de Partições** para mapear colunas de entrada para colunas de partições.  
@@ -48,7 +48,7 @@ ms.locfileid: "36012055"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de processamento de partições &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Editor de destino de processamento de partições &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
  [Editor de destino de processamento de partições &#40;página Avançado&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

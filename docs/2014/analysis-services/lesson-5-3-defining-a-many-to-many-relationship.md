@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 89ec38cf3bd3b197c6a58a5d51758ee6c6f29269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189233"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
   Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia de banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.  
@@ -39,7 +39,7 @@ ms.locfileid: "36118753"
   
 1.  Abra o Designer de Exibição da Fonte de Dados para a exibição da fonte de dados do **Adventure Works DW 2012**  
   
-2.  Clique em qualquer lugar no **organizador de diagramas** painel, clique em **novo diagrama**e especifique `Internet Sales Order Reasons` como o nome desse novo diagrama.  
+2.  Clique com botão direito em qualquer lugar na **organizador** painel, clique em **novo diagrama**e especifique `Internet Sales Order Reasons` como o nome desse novo diagrama.  
   
 3.  Arraste a tabela **InternetSales** do painel **Tabelas** para o painel **Diagrama** .  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36118753"
   
 6.  No menu **Formatar** , aponte para **Layout Automático**e, em seguida, clique em **Diagrama**.  
   
-7.  Na janela Propriedades, altere o **FriendlyName** propriedade do **DimSalesReason** tabela `SalesReason`e, em seguida, altere o **FriendlyName** propriedade do **FactInternetSalesReason** tabela `InternetSalesReason`.  
+7.  Na janela Propriedades, altere o **FriendlyName** propriedade do **DimSalesReason** de tabela para `SalesReason`e, em seguida, altere o **FriendlyName** propriedade das **FactInternetSalesReason** tabela `InternetSalesReason`.  
   
 8.  No painel **Tabelas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, clique em **SalesOrderNumber**e examine a propriedade **DataType** desta coluna de dados na janela Propriedades.  
   
      Observe que o tipo de dados da coluna **SalesOrderNumber** é cadeia de caracteres.  
   
-9. Examine os tipos de dados para as outras colunas a `InternetSalesReason` tabela.  
+9. Revise os tipos de dados para as outras colunas a `InternetSalesReason` tabela.  
   
      Observe que os tipos de dados das outras duas colunas nessa tabela são numéricos.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36118753"
   
 2.  Clique com o botão direito do mouse em qualquer lugar do painel **Medidas** e clique em **Novo Grupo de Medidas**. Para obter mais informações, consulte [Criar medidas e grupos de medidas em modelos multidimensionais](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-3.  No **novo grupo de medidas** caixa de diálogo, selecione `InternetSalesReason` no **selecione uma tabela na exibição da fonte de dados** lista e, em seguida, clique em **Okey**.  
+3.  No **novo grupo de medidas** caixa de diálogo, selecione `InternetSalesReason` no **selecione uma tabela da exibição da fonte de dados** lista e, em seguida, clique em **Okey**.  
   
      Observe que o grupo de medidas **Motivo de Vendas pela Internet** agora é exibido no painel **Medidas** .  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36118753"
   
      A imagem a seguir mostra as propriedades da medida **Contagem do Motivo de Vendas pela Internet** .  
   
-     ![Propriedades de medida de contagem de motivo de vendas pela Internet](../../2014/tutorials/media/l5-many-to-many-2.gif "propriedades para a medida de contagem de motivo de vendas pela Internet")  
+     ![Propriedades para a medida de contagem de motivo de vendas pela Internet](../../2014/tutorials/media/l5-many-to-many-2.gif "propriedades para a medida de contagem de motivo de vendas pela Internet")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definindo a dimensão muitos para muitos  
   
@@ -117,9 +117,9 @@ ms.locfileid: "36118753"
   
 11. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-12. No **atributos** painel do Designer de dimensão para o **motivo de vendas** dimensão, selecione **chave do motivo de vendas**e, em seguida, altere o **nome**propriedade na janela Propriedades para `Sales Reason.`  
+12. No **atributos** painel do Designer de dimensão para o **motivo de vendas** dimensão, selecione **motivo de vendas Key**e, em seguida, altere o **nome**propriedade na janela Propriedades para `Sales Reason.`  
   
-13. No **hierarquias** painel do Designer de dimensão, crie um **motivos de vendas** hierarquia de usuário que contém o `Sales Reason Type` nível e o **motivo de vendas** nível, em ordem.  
+13. No **hierarquias** painel do Designer de dimensão, crie um **motivos de vendas** hierarquia de usuário que contém o `Sales Reason Type` nível e o **motivo de vendas** nível em nessa ordem.  
   
 14. Na janela Propriedades, defina `All Sales Reasons` como o valor para o **AllMemberName** propriedade da hierarquia motivos de vendas.  
   
@@ -171,13 +171,13 @@ ms.locfileid: "36118753"
   
      A imagem a seguir mostra os painéis **Filtro** e **Dados** do Designer de Cubo:  
   
-     ![Painéis de filtro e dados do Designer de cubo](../../2014/tutorials/media/l5-many-to-many-5.gif "painéis filtro e dados do Designer de cubo")  
+     ![Painéis filtro e dados do Designer de cubo](../../2014/tutorials/media/l5-many-to-many-5.gif "painéis filtro e dados do Designer de cubo")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo a granularidade da dimensão dentro de um grupo de medidas](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;do Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

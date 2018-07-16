@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3da74688d6a2f65b191788ab9ecd2394bcca8597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295226"
 ---
 # <a name="hash-indexes"></a>Índices de hash
   Os índices são usados como pontos de entrada para tabelas com otimização de memória. A leitura das linhas de uma tabela requer um índice para localizar os dados na memória.  
@@ -44,7 +44,7 @@ ms.locfileid: "36020768"
   
  A estrutura de índice de hash na memória consiste em uma matriz de ponteiros de memória. Cada bucket é mapeado para um deslocamento nesta matriz. Cada bucket na matriz aponta para a primeira linha desse bucket de hash. Cada linha no bucket aponta para a próxima linha, resultando em uma cadeia de linhas para cada bucket de hash, conforme ilustrado na figura a seguir.  
   
- ![A estrutura de índice de hash na memória. ] (../../2014/database-engine/media/hekaton-tables-3.gif "a estrutura de índice de hash na memória.")  
+ ![A estrutura de índice de hash em memória. ] (../../2014/database-engine/media/hekaton-tables-3.gif "a estrutura de índice de hash em memória.")  
   
  A figura tem três buckets com linhas. O segundo bucket na parte superior contém as três linhas vermelhas. O quarto bucket contém uma única linha azul. O bucket inferior contém as duas linhas verdes. Essas versões podem ser diferentes e estarem na mesma linha.  
   

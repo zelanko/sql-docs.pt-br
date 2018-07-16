@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LogFileSize element
 ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c75505e9953d1f3c954885c8238c575011d2438b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b88c531eb40c1b46e9cbbba22d857ab2b05dc8e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237326"
 ---
 # <a name="logfilesize-element-assl"></a>Elemento LogFileSize (ASSL)
   Especifica o tamanho máximo de arquivo de log em megabytes.  
@@ -62,7 +62,7 @@ ms.locfileid: "36011900"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `LogFileSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `LogFileSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreia o elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

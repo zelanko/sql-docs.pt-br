@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Detach command
 ms.assetid: adbc7920-2a4a-4842-9e6f-37006fa19ff8
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e63bad3a6bbedc847307530cfa7a7afcd4138263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4da654dd7b6af196f8ca2ac9c3efeb6e0b23ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217946"
 ---
 # <a name="detach-element"></a>Elemento Detach
   Desanexa um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados da instância do servidor atual.  

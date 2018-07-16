@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287582"
 ---
 # <a name="implementation-of-child-packages"></a>Implementação de pacotes filho
   Quando você implementa balanceamento de carga usando o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os pacotes filho são instalados em outros servidores para aproveitar a CPU disponível ou o tempo do servidor. Para criar e executar os pacotes filho são necessárias as seguintes etapas:  
@@ -71,8 +71,8 @@ ms.locfileid: "36130616"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Entrada de blog, [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
+-   Entrada de blog [SSIS: acessando variáveis em um pacote pai](http://go.microsoft.com/fwlink/?LinkId=257729), em consultingblogs.emc.com.  
   
--   Entrada de blog, [SSIS: você deve executar pacotes filho em processo ou fora de processo?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
+-   Entrada de blog [SSIS: você deve executar pacotes filho em processo ou out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), em consultingblogs.emc.com.  
   
   

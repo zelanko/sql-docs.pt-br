@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e01ec48101913cb79e074a46aa118f11e514600d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8defd95c5c21acd1e6ffa1c6ca9a9546713f51f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295496"
 ---
 # <a name="casecubedimensionid-element-assl"></a>Elemento CaseCubeDimensionID (ASSL)
   Contém o identificador (ID) da dimensão de cubo que relaciona a dimensão de mineração de dados ao grupo de medidas.  
@@ -62,7 +62,7 @@ ms.locfileid: "36130850"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `CaseCubeDimensionID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
+ O elemento que corresponde ao pai de `CaseCubeDimensionID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

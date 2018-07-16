@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf3897fe2466b00c0346590147884696b632b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279502"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selecionar Tabelas e Exibições (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   Use a página **Selecionar Tabelas e Exibições** para selecionar as tabelas ou exibições da fonte de dados que você deseja incluir na exibição da fonte de dados.  
@@ -56,7 +56,7 @@ ms.locfileid: "36019442"
  Adiciona todas as tabelas que estão relacionadas às tabelas listadas em **Objetos incluídos**. Essa opção não adiciona exibições. No entanto ela adiciona tabelas particionadas. Se você selecionar critérios de correspondência de nomes na página **Correspondência de Nomes** do assistente, essa opção também incluirá tabelas relacionadas lógicas de acordo com os critérios selecionados. Tabelas também serão incluídas se estiverem relacionadas a tabelas relacionadas recém-adicionadas e se tiverem uma estrutura idêntica a da tabela original.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;do Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], starting
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a47d55fc6ef0a035dd4298b5e6ad6e94972fb8bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa377c7c9138521073b226213d087d2097b6af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254078"
 ---
 # <a name="start-system-monitor-windows"></a>Iniciar o Monitor do Sistema (Windows)
   Use o Monitor do Sistema para monitorar a utilização de recursos do sistema. Colete e visualize dados de desempenho em tempo real, na forma de contadores, referentes a recursos de servidor, como uso de processador e memória, e a vários recursos do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como bloqueios e transações.  

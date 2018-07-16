@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32d1dd432ea374a7e1d0452ab9ba786b74dbc26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b596dc89e9e5f00f70bee5687d15a1da08071e20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252988"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Cálculo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel da **Barra de Ferramentas** para executar operações comuns na guia **Cálculos** do Designer de Cubo.  

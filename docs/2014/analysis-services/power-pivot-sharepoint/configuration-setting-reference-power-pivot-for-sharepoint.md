@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173557"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Referência de parâmetro de configuração (PowerPivot para SharePoint)
   Este tópico fornece documentação de referência para os parâmetros de configuração usados por aplicativos de serviço PowerPivot em um farm do SharePoint. Se você estiver usando script do PowerShell para configurar um servidor ou se desejar procurar informações para uma configuração específica, as informações deste tópico fornecerão descrições detalhadas.  
@@ -80,8 +80,8 @@ ms.locfileid: "36115534"
 |----------|-------------|------------------|-----------------|  
 |Hora de início|4h00|1 a 12 horas, quando o valor for um inteiro válido dentro desse intervalo.<br /><br /> O tipo é Time.|Define o limite inferior de um intervalo de horário comercial.|  
 |Hora de término|20h00|1 a 12 horas, quando o valor for um inteiro válido dentro desse intervalo.<br /><br /> O tipo é Time.|Define o limite superior de um intervalo de horário comercial.|  
-|Conta autônoma de atualização de dados do PowerPivot.|Nenhum|A ID de um aplicativo de destino|Esta conta é usada para executar trabalhos de atualização de dados em nome de um proprietário de agenda.<br /><br /> A conta autônoma de atualização de dados deve ser definida com antecedência antes de poder ser referenciada na página de configuração do aplicativo de serviço. Para obter mais informações, consulte [configurar a conta autônoma dados PowerPivot atualizar &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
-|Permitir que usuários digitem credenciais do Windows personalizadas|Habilitado|Booliano|Determina se a página de configuração de atualização de dados agendada mostra uma opção que permite que um proprietário de agenda especifique conta de usuário do Windows e senha para executar um trabalho de atualização de dados.<br /><br /> O Serviço de Repositório Seguro deve ser habilitado para que esta opção funcione. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
+|Conta autônoma de atualização de dados do PowerPivot.|Nenhum|A ID de um aplicativo de destino|Esta conta é usada para executar trabalhos de atualização de dados em nome de um proprietário de agenda.<br /><br /> A conta autônoma de atualização de dados deve ser definida com antecedência antes de poder ser referenciada na página de configuração do aplicativo de serviço. Para obter mais informações, consulte [configurar a conta autônoma PowerPivot Data Refresh &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
+|Permitir que usuários digitem credenciais do Windows personalizadas|Habilitado|Booliano|Determina se a página de configuração de atualização de dados agendada mostra uma opção que permite que um proprietário de agenda especifique conta de usuário do Windows e senha para executar um trabalho de atualização de dados.<br /><br /> O Serviço de Repositório Seguro deve ser habilitado para que esta opção funcione. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
 |Comprimento máximo de histórico de processamento|365|1 a 5000 dias|Determina por quanto tempo o histórico de dados será retido no banco de dados de aplicativo de serviço do PowerPivot. Para obter mais informações, consulte [coleta de dados de uso do PowerPivot](power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Coleta de dados de uso  
@@ -98,7 +98,7 @@ ms.locfileid: "36115534"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e configurar um aplicativo de serviço PowerPivot na Administração Central](create-and-configure-power-pivot-service-application-in-ca.md)   
- [Atualização de dados do PowerPivot com o SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Atualização de dados do PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configurar contas de serviço PowerPivot](configure-power-pivot-service-accounts.md)   
  [Painel de Gerenciamento PowerPivot e dados de uso](power-pivot-management-dashboard-and-usage-data.md)  

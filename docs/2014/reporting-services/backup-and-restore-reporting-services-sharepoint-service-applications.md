@@ -1,5 +1,5 @@
 ---
-title: Backup e restauração do Reporting Services aplicativos de serviço do SharePoint | Microsoft Docs
+title: Fazer backup e restaurar aplicativos de serviço SharePoint de serviços de emissão de relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212566"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Aplicativos de serviço Sharepoint de backup e restauração do Reporting Services
   Este tópico descreve como fazer backup de um aplicativo de serviços [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e restaurá-lo usando a Administração Central do SharePoint ou o PowerShell. O tópico contém:  
@@ -41,7 +41,7 @@ ms.locfileid: "36021101"
   
 -   Faça backup das chave de criptografia antes de iniciar o backup do SharePoint. Se você não fizer backup das chave de criptografia, não poderá acessar os dados criptografados, seguindo a restauração do aplicativo de serviço. Você precisará excluir seus dados criptografados.  
   
--   Verifique se seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço está usando autenticação UEA ou do Windows para acesso de banco de dados. Se ele estiver usando uma delas, verifique quais são as credenciais apropriadas para que você possa configurar o aplicativo de serviço após o processo de restauração.  
+-   Verificar se seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço está usando a autenticação UEA ou Windows para acesso ao banco de dados. Se ele estiver usando uma delas, verifique quais são as credenciais apropriadas para que você possa configurar o aplicativo de serviço após o processo de restauração.  
   
 -   Verifique se o log de backup do SharePoint foi criado na mesma pasta do arquivo de backup. O arquivo é geralmente nomeado **spbackup.log**  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36021101"
   
 3.  Selecione o backup de aplicativo de serviço na lista **Componente Superior** e clique **Avançar**.  
   
-4.  Selecione seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo e depois clique em **próximo**.  
+4.  Selecione suas [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo e, em seguida, clique **próxima**.  
   
 5.  Na seção **Nomes e Senhas de Logon** , digite a senha para o nome de logon. A caixa de nome de logon deve ser preenchida com o logon que o aplicativo de serviço estava usando antes do backup.  
   

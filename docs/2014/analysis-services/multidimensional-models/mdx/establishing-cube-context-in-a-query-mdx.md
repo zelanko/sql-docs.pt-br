@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
 - MDX [Analysis Services], cube context
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 972b630aea4ebcc427803e226d27d52f919da4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273442"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Estabelecendo o contexto de cubo em uma consulta (MDX)
   Toda consulta MDX é executada em um contexto de cubo especificado. Esse contexto define os membros que são avaliados pelas expressões da consulta.  
@@ -63,6 +63,6 @@ FROM [Adventure Works]
  Você pode usar a função MDX [LookupCube](/sql/mdx/lookupcube-mdx) para recuperar dados de cubos fora do contexto de cubo. Além disso, funções, como a função [Filter](/sql/mdx/filter-mdx) , estão disponíveis para permitir a restrição temporária do contexto durante a avaliação da consulta.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Vincular grupos de medidas | Microsoft Docs
+title: Grupos de medidas vinculados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251468"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
   Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  
@@ -72,7 +72,7 @@ ms.locfileid: "36020798"
 ## <a name="secure-a-linked-measure"></a>Proteger uma medida vinculada  
  Depois que o vínculo tiver sido definido, o acesso às medidas em um grupo de medidas vinculado será gerenciado da mesma maneira que o acesso aos outros grupos de medidas. Um objeto vinculado aparece ao lado de suas contrapartes não vinculadas no Designer de Função. Para obter mais informações sobre como gerenciar a segurança de um grupo de medidas, consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Para definir ou usar um grupo de medidas vinculado, a conta de serviço do Windows a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância deve pertencer a um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de banco de dados que tenha `ReadDefinition` e `Read` a fonte de direitos de acesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de instância para o cubo e grupo de medidas de origem, ou deve pertencer ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de administradores para a fonte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância.  
+ Para definir ou usar um grupo de medidas vinculado, os Windows conta de serviço para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância deve pertencer a um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de banco de dados que tenha `ReadDefinition` e `Read` direitos na origem de acesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da instância para o fonte de cubo e grupo de medidas ou deve pertencer à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] função de administradores para a fonte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir dimensões vinculadas](define-linked-dimensions.md)  

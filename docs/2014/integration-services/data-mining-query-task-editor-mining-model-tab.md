@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 78d1021d5ac6aa2c4d8452394cd69d298b76cdaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261492"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
   Use a guia **Modelo de Mineração** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para especificar a estrutura e o modelo de mineração a serem usados.  
@@ -59,8 +59,8 @@ ms.locfileid: "36012062"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de tarefa de consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Editor de tarefa de consulta de mineração de dados &#40;guia de saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Editor da tarefa consulta de mineração de dados &#40;guia de consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor da tarefa consulta de mineração de dados &#40;guia de saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Designer de Mineração de dados](../analysis-services/data-mining/data-mining-designer.md)  
   
   

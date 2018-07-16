@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades geral (construtor de relatórios) da fonte de dados | Microsoft Docs
+title: Fonte de dados de caixa de diálogo de propriedades geral (construtor de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288452"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral (Construtor de Relatórios)
   Selecione **Geral** na caixa de diálogo **Propriedades da Fonte de Dados** para selecionar uma fonte de dados compartilhada em um servidor de relatório ou para criar ou modificar as informações de conexão de uma fonte de dados inserida no relatório.  
@@ -68,8 +68,8 @@ ms.locfileid: "36121218"
  Clique para verificar se a conexão da fonte de dados funciona usando as credenciais especificadas. Se não for possível estabelecer a conexão, será necessário verificar suas credenciais e a disponibilidade do servidor. Você pode testar as conexões de fonte de dados para fontes de dados inseridas e compartilhadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;SSRS e construtor de relatórios&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no construtor de relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Caixa de diálogo de propriedades, as credenciais da fonte de dados &#40;construtor de relatórios&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

@@ -1,5 +1,5 @@
 ---
-title: Agregações e Designs de agregação | Microsoft Docs
+title: As agregações e Designs de agregação | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228196"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Agregações e designs de agregação
   Um objeto <xref:Microsoft.AnalysisServices.AggregationDesign> define um conjunto de definições de agregação que podem ser compartilhadas por várias partições.  

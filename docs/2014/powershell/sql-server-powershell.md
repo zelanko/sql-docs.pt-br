@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271132"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] oferece suporte ao Windows PowerShell, que é um shell de geração de script avançado que permite aos administradores e desenvolvedores automatizarem a administração de servidor e a implantação de aplicativo. A linguagem do Windows PowerShell suporta uma lógica mais complexa que os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , fornecendo aos administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a capacidade de criar scripts de administração avançados. Os scripts do Windows PowerShell também podem ser usados para administrar outros produtos de servidor do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Isso fornece aos administradores uma linguagem de criação de scripts comum aos servidores.  
@@ -40,7 +40,7 @@ ms.locfileid: "36130364"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve o mecanismo preferido para executar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] componentes do PowerShell; para abrir uma sessão do PowerShell e carregar o `sqlps` módulo. O módulo `sqlps` carrega o provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, e os assemblies SMO (SQL Server Management Object) usados pelo provedor e cmdlets.|[Importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
+|Descreve o mecanismo preferencial para executar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] componentes do PowerShell; para abrir uma sessão do PowerShell e carregar o `sqlps` módulo. O módulo `sqlps` carrega o provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, e os assemblies SMO (SQL Server Management Object) usados pelo provedor e cmdlets.|[Importar o módulo SQLPS](../database-engine/import-the-sqlps-module.md)|  
 |Descreve como carregar apenas os assemblies SMO sem o provedor ou cmdlets.|[Carregar os assemblies SMO no Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
 |Descreve como executar uma sessão do Windows PowerShell clicando com o botão direito do mouse em um nó no **Pesquisador de Objeto**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] inicia uma sessão do Windows PowerShell, carrega o `sqlps` módulo e define o caminho do provedor do SQL Server para o objeto selecionado.|[Executar o Windows PowerShell no SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
 |Descreve como criar as etapas de trabalho do SQL Server Agent que executam um script do Windows PowerShell. Os trabalhos podem ser agendados para execução em horários específicos ou em resposta a eventos.|[Executar etapas do Windows PowerShell no SQL Server Agent] (run-windows-powershell-steps-in-sql-server-agent.md

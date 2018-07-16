@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296916"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
-  Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, o que é conhecida como um *atualização sem interrupção*, reduz o tempo de inatividade para um único failover. Observe que para sessões em modo de alto desempenho no qual o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
+  Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, o que é conhecida como um *atualização sem interrupção*, reduz o tempo de inatividade para um único failover. Observe que para sessões em modo de alto desempenho em que o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
   
  A atualização sem interrupção é um processo de vários estágios que consiste no seguinte:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36121135"
 1.  Para minimizar o tempo de inatividade, é recomendável o seguinte: inicie a atualização sem interrupção atualizando qualquer parceiro de espelhamento que, no momento, seja o servidor espelho em todas as sessões de espelhamento. Pode ser necessário atualizar várias instâncias do servidor neste momento.  
   
     > [!NOTE]  
-    >  Uma testemunha pode ser atualizada em qualquer ponto do processo de atualização sem interrupção. Por exemplo, se uma instância de servidor é um servidor de espelho na sessão 1 e uma testemunha na sessão 2, você pode atualizar a instância do servidor agora.  
+    >  Uma testemunha pode ser atualizada em qualquer ponto do processo de atualização sem interrupção. Por exemplo, se uma instância de servidor for um servidor de espelho na sessão 1 e uma testemunha na sessão 2, você pode atualizar a instância do servidor agora.  
   
      A instância do servidor a ser atualizada primeiro depende da configuração atual de suas sessões de espelhamento, da seguinte maneira:  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36121135"
   
     -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Alto desempenho (assíncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** .  
   
-    -   Em [!INCLUDE[tsql](../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como OFF.  
+    -   Na [!INCLUDE[tsql](../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como OFF.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Para retornar a testemunha a uma sessão de espelhamento  
   

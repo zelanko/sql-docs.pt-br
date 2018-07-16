@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: df62cff6aa47c37371d6a3ad6f52f120ad3f740b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2c40d27d4dc9310ee54d4211efe88777b8c62f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246726"
 ---
 # <a name="defining-a-dimension"></a>Definindo uma dimensão
   Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dimensão Data.  

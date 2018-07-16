@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260862"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Criar aplicativos clientes para dados FILESTREAM
   Você pode usar Win32 para ler e gravar dados em um FILESTREAM BLOB. As seguintes etapas são exigidas:  
@@ -83,7 +82,7 @@ ms.locfileid: "36121285"
   
 -   Evite instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que atualizam, acrescentam ou precedem dados no BLOB de FILESTREAM. Isso faz com que os dados BLOB sejam colocados no spool no banco de dados tempdb e retornados em um novo arquivo físico.  
   
--   Evite acrescentar atualizações de BLOBs pequenos a um BLOB de FILESTREAM. Cada acréscimo faz com que os arquivos FILESTREAM subjacentes sejam copiados. Se um aplicativo precisar acrescentar BLOBs pequenos, grave os BLOBs em uma `varbinary(max)` coluna e, em seguida, executar uma única operação de gravação no blob de FILESTREAM quando o número de BLOBs atinge um limite predeterminado.  
+-   Evite acrescentar atualizações de BLOBs pequenos a um BLOB de FILESTREAM. Cada acréscimo faz com que os arquivos FILESTREAM subjacentes sejam copiados. Se um aplicativo precisar acrescentar BLOBs pequenos, grave os BLOBs em um `varbinary(max)` coluna e, em seguida, executar uma única operação de gravação no blob de FILESTREAM quando o número de BLOBs atinge um limite predeterminado.  
   
 -   Evite recuperar o comprimento de dados de muitos arquivos de BLOB em um aplicativo. Essa é uma operação demorada porque o tamanho não é armazenado no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se você precisar determinar o tamanho de um arquivo de BLOB, use a função DATALENGTH() do [!INCLUDE[tsql](../../includes/tsql-md.md)] para determinar o tamanho do BLOB se ele estiver fechado. A função DATALENGTH() não abre o arquivo de BLOB para determinar seu tamanho.  
   

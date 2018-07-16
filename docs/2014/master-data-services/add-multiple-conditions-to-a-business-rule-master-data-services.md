@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275172"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], adicione várias condições **AND** ou **OR** a uma regra de negócio quando desejar uma regra mais complexa.  
@@ -48,7 +48,7 @@ ms.locfileid: "36115249"
   
 4.  Na lista **Entidade** , selecione uma entidade.  
   
-5.  Do **tipo de membro** , selecione um tipo de membro.  
+5.  Dos **tipo de membro** , selecione um tipo de membro.  
   
 6.  Na lista **Atributo** , selecione um atributo ou deixe o valor padrão **Todos**.  
   
@@ -58,22 +58,22 @@ ms.locfileid: "36115249"
   
 9. No **componentes** painel, expanda o **operadores lógicos** nó.  
   
-10. Clique em **AND** ou **OR** e arraste-o para o **se** do painel **AND** rótulo.  
+10. Clique em **AND** ou **OR** e arraste-o para o **IF** do painel **AND** rótulo.  
   
 11. No painel **Componentes** , expanda o nó **Condições** .  
   
-12. Clique em uma condição e arraste-o para **se** painel, para o **AND** ou **OR** rótulo da etapa 10.  
+12. Clique em uma condição e arraste-o para **IF** painel, para o **AND** ou **OR** rótulo da etapa 10.  
   
-13. No **atributos** painel, clique em um atributo e arraste-o para o **Editar condição** do painel **atributo Select** rótulo.  
+13. No **atributos** painel, clique em um atributo e arraste-o para o **Editar condição** do painel **Selecionar atributo** rótulo.  
   
 14. No **Editar condição** painel, preencha os campos necessários.  
   
 15. No painel **Editar Condição** , clique em **Salvar item**.  
   
-16. Opcionalmente, para adicionar mais condições, do **componentes** painel, arraste **AND** ou **OR** a qualquer **AND** ou **OR**no **se** painel. Então siga as etapas 13 a 15.  
+16. Opcionalmente, para adicionar mais condições, a partir de **componentes** painel, arraste **AND** ou **OR** a qualquer **AND** ou **OR**no **IF** painel. Então siga as etapas 13 a 15.  
   
     > [!TIP]  
-    >  Para excluir uma condição, clique no nome da condição e, além de **Editar condição** painel, clique em **para excluir o item**.  
+    >  Para excluir uma condição, clique no nome da condição e, além de **Editar condição** painel, clique em **para excluir um item**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   

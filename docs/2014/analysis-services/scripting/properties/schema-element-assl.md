@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200036"
 ---
 # <a name="schema-element-assl"></a>Elemento Schema (ASSL)
   Contém o esquema da exibição da fonte de dados.  
@@ -64,7 +64,7 @@ ms.locfileid: "36021031"
 ## <a name="remarks"></a>Remarks  
  O elemento `Schema` é representado pelo formato da linguagem XSD (XML Schema Definition) de DataSets no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, com algumas extensões para DataSets e outras específicas para esse uso na linguagem de definição de dados (DDL). DataSets define um mapeamento flexível de XSD em um esquema relacional, mas retorna XSD em uma forma mais canônica. Somente essa forma canônica é válida nas fontes de dados.  
   
- O elemento que corresponde ao pai do `Schema` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ O elemento que corresponde ao pai de `Schema` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

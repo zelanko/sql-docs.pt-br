@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228236"
 ---
 # <a name="view-a-list-of-modified-files"></a>Exibir uma lista de arquivos modificados
-  Você pode usar o **check-ins pendentes** vezes de janela para exibir uma lista dos arquivos com check-out na solução atual e, em seguida, fazer check-in desses arquivos com um único botão clique em.  
+  Você pode usar o **check-ins pendentes** janela para exibir constantemente uma lista dos arquivos com check-out na solução atual e, em seguida, fazer check-in desses arquivos com um único botão clique em.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Para exibir uma lista de arquivos modificados  
   
-1.  Sobre o **exibição** menu, clique em **check-ins pendentes**.  
+1.  Sobre o **modo de exibição** menu, clique em **check-ins pendentes**.  
   
-2.  Para verificar os arquivos selecionados, clique em **Check-In**. Como alternativa, você pode encaixar o **check-ins pendentes** janela no lado direito do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente para que você pode verificar os arquivos quando tiver terminado de trabalhar.  
+2.  Para verificar nos arquivos selecionados, clique em **Fazer Check-In**. Como alternativa, você pode encaixar a **check-ins pendentes** janela no lado direito do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente para que você pode verificar os arquivos quando tiver terminado de trabalhar.  
   
      **Fazer Check-in**  
      Faz o check-in na solução.  
@@ -43,7 +43,7 @@ ms.locfileid: "36020088"
      Associa um comentário de texto sem-formatação ao check-in pendente. É criado um comentário e associado a cada versão de um projeto e armazenado no banco de dados de controle de código-fonte.  
   
      **Opções**  
-     Especifica as ações que o controle de origem deve ser executada quando você clicar no **Check-In** botão.  
+     Especifica as ações de controle do código-fonte deve tomar quando você clica o **Fazer Check-In** botão.  
   
     -   **Mantenha todos Check-Out**  
   
@@ -58,14 +58,14 @@ ms.locfileid: "36020088"
      **Exibição de árvore**  
      Exibe a hierarquia da pasta e do arquivo para a solução ou projeto que você está fazendo o check-in.  
   
-     **Exibição simples**  
+     **Modo de exibição simples**  
      Exibe os arquivos dos quais está fazendo check-in como listas simples na conexão de controle do código-fonte.  
   
      **Comparar versões**  
      Abre o Visual SourceSafe **opções de diferença** caixa de diálogo, que compara um arquivo selecionado em seu projeto de ambiente de desenvolvimento para qualquer outro arquivo selecionado e mostra as diferenças, se houver.  
   
      **Desfazer check-out**  
-     Reverte o check-out de todos os itens selecionados no **check-ins pendentes** janela.  
+     Reverte o check-out de todos os itens selecionados na **check-ins pendentes** janela.  
   
      **Nome**  
      Exibe uma lista dos itens disponíveis para fazer check-in. Os itens mostram as caixas de seleção ao seu lado selecionadas. Se você não quiser fazer o check-in em um item específico, desmarque a caixa de seleção próxima a ele.  

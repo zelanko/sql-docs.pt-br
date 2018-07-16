@@ -18,23 +18,23 @@ helpviewer_keywords:
 - DISCOVER_PROPERTIES rowset
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af566467345e29362a7b2fdd2c5bda04a35a6dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc02dd29ee02ad4d1730a6af72c5df3c3fee1c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271832"
 ---
 # <a name="discoverproperties-rowset"></a>Conjunto de linhas DISCOVER_PROPERTIES
   Retorna uma lista de informações e valores sobre o padrão e propriedades específicas do provedor que recebem suporte do provedor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) para a fonte de dados especificada. Propriedades sem-suporte não são listadas no conjunto de resultados retornado.  
   
- Se você chamar o [Discover](../../xmla/xml-elements-methods-discover.md) método com o `DISCOVER_PROPERTIES` valor de enumeração no [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, o `Discover` método retorna o `DISCOVER_PROPERTIES` conjunto de linhas.  
+ Se você chamar o [Discover](../../xmla/xml-elements-methods-discover.md) método com o `DISCOVER_PROPERTIES` valor de enumeração no [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) elemento, o `Discover` método retorna o `DISCOVER_PROPERTIES` conjunto de linhas...  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_PROPERTIES` linhas contém as seguintes colunas.  
+ O `DISCOVER_PROPERTIES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Tipo|Comprimento|Description|  
 |-----------------|----------|------------|-----------------|  

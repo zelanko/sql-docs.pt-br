@@ -1,5 +1,5 @@
 ---
-title: Elemento de grupo de arquivos para índice (DTA) | Microsoft Docs
+title: Elemento FileGroup para o índice (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f1fa6dab61b89954624d6ba546e7ab97479e546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fad6406d6a719ebd33f48a4cd7c0cf7c2c0e7122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244106"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento de grupo de arquivos para índice (DTA)
   Especifica o grupo de arquivos no qual o índice será criado para uma configuração especificada pelo usuário.  
@@ -45,7 +45,7 @@ ms.locfileid: "36130679"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode usar uma vez para cada `Index` elemento. Esse elemento não pode ser usado se o `PartitionScheme` e `PartitionColumn` elementos são especificados para o `Index` elemento.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada `Index` elemento. Esse elemento não pode ser usado se o `PartitionScheme` e `PartitionColumn` elementos são especificados para o `Index` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

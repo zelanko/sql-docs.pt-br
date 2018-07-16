@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200806"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo (Construtor de Relatórios e SSRS)
   Em um relatório, um filtro faz parte de um conjunto de dados, uma região de dados ou um grupo de regiões de dados criado por você para limitar os dados usados no relatório. Os filtros são uma forma de ajudar você a controlar os dados do relatório, caso você não possa alterar a consulta do conjunto de dados; por exemplo, se estiver usando um conjunto de dados compartilhado.  
@@ -60,12 +60,12 @@ ms.locfileid: "36020856"
   
 -   **Operador** Define como comparar as duas partes da equação do filtro.  
   
--   `Value` Define a expressão a ser usado na comparação.  
+-   `Value` Define a expressão a ser usada na comparação.  
   
  As seções a seguir descrevem cada parte da equação de filtro.  
   
 ### <a name="expression"></a>Expression  
- Quando a equação de filtro é avaliada pelo processador de relatórios em tempo de execução, os tipos de dados da expressão e o valor devem ser iguais. O tipo de dados do campo selecionado para **Expressão** é determinado pela extensão de processamento de dados ou pelo provedor de dados usado para recuperar dados da fonte de dados. O tipo de dados da expressão que você inserir para `Value` é determinado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] padrões. As opções do tipo de dados são determinadas pelos tipos de dados suportados para uma definição de relatório. Os valores do banco de dados podem ser convertidos pelo provedor de dados em um tipo CLR.  
+ Quando a equação de filtro é avaliada pelo processador de relatórios em tempo de execução, os tipos de dados da expressão e o valor devem ser iguais. O tipo de dados do campo selecionado para **Expressão** é determinado pela extensão de processamento de dados ou pelo provedor de dados usado para recuperar dados da fonte de dados. O tipo de dados da expressão digitado para `Value` é determinado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] padrões. As opções do tipo de dados são determinadas pelos tipos de dados suportados para uma definição de relatório. Os valores do banco de dados podem ser convertidos pelo provedor de dados em um tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de Dados  
  Para o processador de relatórios comparar os dois valores, os tipos de dados devem ser iguais. A tabela a seguir lista o mapeamento entre os tipos de dados CLR e os tipos de dados de definição de relatórios. Os dados recuperados de uma fonte de dados podem ser convertidos em um tipo de dados diferente até o momento em que os dados são relatados.  
@@ -87,7 +87,7 @@ ms.locfileid: "36020856"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
 |**TopN, BottomN**|Compara a expressão a um valor `Integer`.|  
-|**TopPercent, BottomPercent**|Compara a expressão a um `Integer` ou `Float` valor.|  
+|**TopPercent, BottomPercent**|Compara a expressão com um `Integer` ou `Float` valor.|  
 |**Entre**|Testa se a expressão está entre dois valores, inclusive.|  
 |**Entrada**|Testa se a expressão está contida em um conjunto de valores.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36020856"
  Esse valor também pode incluir uma referência de parâmetro para permitir que um usuário selecione um valor interativamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ece7297-6e2f-47fb-835d-b9e9cce53fe2
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4ce2f81ddb04c088c909e07f6d842f53c35b3974
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48dc33f7bf80aacb757e990987a58c86f932ccb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296016"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Definir um intervalo de ajuste em um medidor (Construtor de Relatórios e SSRS)
-  Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, você talvez queira arredondar o valor exato para cima ou para baixo, para que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30.  
+  Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo para que o ponteiro será ajustado para um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -34,13 +34,13 @@ ms.locfileid: "36019780"
 2.  Abra o painel Propriedades.  
   
     > [!NOTE]  
-    >  Se você não vir o painel Propriedades, clique no **exibição** guia e, em seguida, selecione o **propriedades** caixa de seleção.  
+    >  Se você não vir o painel Propriedades, clique no **modo de exibição** e, em seguida, selecione o **propriedades** caixa de seleção.  
   
-3.  No **ponteiros** propriedade, clique no botão (…). O Editor de Coleção de Ponteiros é aberto.  
+3.  No **ponteiros** propriedade, clique no botão (...). O Editor de Coleção de Ponteiros é aberto.  
   
-4.  Definir o **SnappingEnabled** propriedade `True`.  
+4.  Defina as **SnappingEnabled** propriedade `True`.  
   
-5.  Definir o **SnappingInterval** para um valor que representa o intervalo de ajuste. O ponteiro será ajustado para o múltiplo de arredondamento mais próximo do valor especificado.  
+5.  Defina as **SnappingInterval** para um valor que representa o intervalo de ajuste. O ponteiro será ajustado para o múltiplo de arredondamento mais próximo do valor especificado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

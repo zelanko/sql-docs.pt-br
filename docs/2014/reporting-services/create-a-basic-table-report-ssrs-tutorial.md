@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196806"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Criando um relatório de tabela básico (Tutorial do SSRS)
-  Este tutorial foi desenvolvido para ajudá-lo a criar um relatório de tabela básico com base no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de relatórios do banco de dados. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  
+  Este tutorial é projetado para ajudá-lo a criar um relatório de tabela básico com base no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de relatórios do banco de dados. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  
   
 > [!NOTE]  
 >  Para concluir este tutorial, você deve estar executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo nativo. Se você estiver executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo integrado do SharePoint, as etapas que usam URLs de servidor de relatório não funcionarão. Para obter mais informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modos, consulte [servidor de relatório do Reporting Services](reporting-services-report-server.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "36020877"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mecanismo de banco de dados.  
   
--   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Para obter mais informações, consulte [Adventure Works para SQL Server 2012 (Adventure Works para SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Para obter mais informações sobre o suporte para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados de exemplo e código de exemplo para [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consulte [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) no site da CodePlex.  
+-   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Para obter mais informações, consulte [Adventure Works para SQL Server 2012 (Adventure Works para SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Para obter mais informações sobre o suporte para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados de exemplo e código de exemplo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consulte [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) no site da CodePlex.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36020877"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- Você também deve ter permissões somente leitura para recuperar dados de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Você também deve ter permissões somente leitura para recuperar dados do [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ## <a name="tasks"></a>Tarefas  
  [Lição 1: Criando um projeto do servidor de relatório &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "36020877"
  [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Ao revisar tutoriais, recomendamos que você adicione **próximo** e **anterior** botões na barra de ferramentas do Visualizador de documento. Para obter mais informações, consulte:  
+>  Ao revisar tutoriais, recomendamos que você adicione **próxima** e **Previous** botões na barra de ferramentas do Visualizador de documento. Para obter mais informações, consulte:  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutoriais do Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

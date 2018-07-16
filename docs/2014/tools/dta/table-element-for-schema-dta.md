@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 44df363381b2811b422f29671fe4902c1dd7c23e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f58288d90c1a3158f4757856b51b7374ee07f167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187753"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
   Especifica a tabela para ajuste.  
@@ -56,7 +56,7 @@ ms.locfileid: "36116263"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento de esquema para o banco de dados &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**Elementos filho**|[Nome de elemento de tabela &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**Elementos filho**|[Nomeie o elemento para a tabela &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Se você não especificar um elemento `Table`, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá que todas as tabelas no banco de dados especificado podem ser ajustadas.  

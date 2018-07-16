@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1c8ad78723a1325ac6e21365b3e00e43f2d36d55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291022"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fornecer uma consulta de origem (Assistente de Importação e Exportação do SQL Server)
   Use o **fornecer uma consulta de origem** página digitar a instrução SQL que irá gerar os dados a serem copiadas da fonte de dados para o destino.  
@@ -32,7 +32,7 @@ ms.locfileid: "36019839"
   
 ## <a name="options"></a>Opções  
  **Instrução SQL**  
- Digite uma instrução de consulta para recuperar linhas selecionadas de dados do banco de dados de origem. Por exemplo, a seguinte instrução de consulta recupera o **SalesPersonID**, **SalesQuota**, e **SalesYTD** de AdventureWorks do banco de dados para vendedores cuja Porcentagem de comissão for superior a 1,5 por cento.  
+ Digite uma instrução de consulta para recuperar linhas selecionadas de dados do banco de dados de origem. Por exemplo, a seguinte instrução de consulta recupera o **SalesPersonID**, **SalesQuota**, e **SalesYTD** de AdventureWorks do banco de dados para vendedores cujo percentual de comissão for superior a 1,5 por cento.  
   
 ```  
 SELECT SalesPersonID, SalesQuota, SalesYTD  

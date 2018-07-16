@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28573e955ff50d32a19ef003c23fc8c68f21e0f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b695be014eb0576373513fd8f1d176a50b74adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187584"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar linhas no painel de Resultados (Visual Database Tools)
   Em muitos casos, você pode editar os dados no [Painel de Resultados](visual-database-tools.md). Para obter mais informações sobre como alterar dados, consulte [Regras para atualizar resultados &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) e [Trabalhar com dados no painel de resultados &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md).  

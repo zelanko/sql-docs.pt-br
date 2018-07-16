@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190906"
 ---
 # <a name="logfileappend-element-assl"></a>Elemento LogFileAppend (ASSL)
-  Determina se o [rastreamento](../objects/trace-element-assl.md) elemento anexa sua saída de log ao arquivo de log existente ou substituí-lo.  
+  Determina se o [rastreamento](../objects/trace-element-assl.md) elemento anexa sua saída de log ao arquivo de log existente, ou o substitui.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36116678"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `LogFileAppend` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `LogFileAppend` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreia o elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

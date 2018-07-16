@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253948"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Assinar e verificar a política Nome Financeiro
   Nesta tarefa, você configurará o banco de dados Finanças para assinar a categoria de políticas Finanças. Então, você testará a política Nome de Finanças.  
@@ -28,7 +28,7 @@ ms.locfileid: "36013543"
   
 1.  No Pesquisador de objetos, expanda **bancos de dados**, clique com botão direito `Finance`, aponte para **políticas**e, em seguida, clique em **categorias**.  
   
-2.  Selecione o **assinado** caixa de seleção para o `Finance` categoria.  
+2.  Selecione o **inscrito** caixa de seleção para o `Finance` categoria.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

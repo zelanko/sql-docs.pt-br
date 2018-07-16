@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233756"
 ---
 # <a name="partitionid-element-assl"></a>Elemento PartitionID (ASSL)
   Associa um [partição](../objects/partition-element-assl.md) elemento com um elemento pai, associação ou associação fora de linha.  
@@ -60,7 +60,7 @@ ms.locfileid: "36019429"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre associações e associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações e associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

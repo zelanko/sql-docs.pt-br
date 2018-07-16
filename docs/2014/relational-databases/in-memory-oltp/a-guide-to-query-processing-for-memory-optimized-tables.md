@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177823"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
   O OLTP na memória incorpora as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este artigo fornece uma visão geral do processamento de consulta para tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -83,7 +83,7 @@ Plano de consulta para a junção de tabelas com base em disco.
   
 -   Os dados da tabela Order são recuperados usando o índice não clusterizado na coluna CustomerID. Esse índice contém a coluna CustomerID, que é usada para a junção, e a coluna de chave primária OrderID, que é retornada ao usuário. O retorno de colunas adicionais da tabela Order exigiria pesquisas no índice clusterizado da tabela Order.  
   
--   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O `Merge Join` operador aproveita o fato de que ambos os índices são classificados na coluna de junção CustomerID.  
+-   O operador lógico `Inner Join` é implementado pelo operador físico `Merge Join`. Os outros tipos de junção física são `Nested Loops` e `Hash Join`. O `Merge Join` operador tira proveito do fato de que ambos os índices são classificados na coluna de junção CustomerID.  
   
  Considere uma ligeira variação nessa consulta, que retorna todas as linhas da tabela Order, não apenas OrderID:  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![Plano de consulta para uma junção hash de tabelas baseadas em disco.](../../database-engine/media/hekaton-query-plan-2.gif "Plano de consulta para uma junção hash de tabelas baseadas em disco.")  
 Plano de consulta para uma junção hash de tabelas com base em disco.  
   
- Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O `Hash Match` operador físico agora é usado para o `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto uma `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o `Hash Match` operador também no exemplo anterior, mas concluiu que o `Merge Join` operador forneceu melhor desempenho.  
+ Nessa consulta, as linhas da tabela Order são recuperadas usando o índice clusterizado. O `Hash Match` operador físico agora é usado para o `Inner Join`. O índice clusterizado em Order não é classificado em CustomerID e, portanto, um `Merge Join` exigiria um operador de classificação, o que afetaria o desempenho. Observe o custo relativo do operador `Hash Match` (75%) comparado com o custo do operador `Merge Join` no exemplo anterior (46%). O otimizador consideraria o `Hash Match` operador também no exemplo anterior, mas concluiu que o `Merge Join` operador forneceu melhor desempenho.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Processamento de consulta para tabelas baseadas em disco  
  O diagrama a seguir descreve o fluxo de processamento de consulta no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para consultas ad hoc:  
@@ -209,7 +209,7 @@ Compilação original dos procedimentos armazenados.
   
  O processo é descrito como:  
   
-1.  O usuário emite uma `CREATE PROCEDURE` instrução [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  O usuário emite uma `CREATE PROCEDURE` instrução para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  O analisador e o algebrista criam o fluxo de processamento para o procedimento, bem como as árvores de consulta para as consultas [!INCLUDE[tsql](../../../includes/tsql-md.md)] no procedimento armazenado.  
   
@@ -230,7 +230,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   
-     Se a instrução foi preparada, por exemplo, usando `sp_prep_exec`, o analisador não precisará extrair os parâmetros em tempo de execução e o nome do procedimento.  
+     Se a instrução tiver sido preparada, por exemplo, usando `sp_prep_exec`, o analisador não precisará extrair os parâmetros em tempo de execução e o nome do procedimento.  
   
 3.  O tempo de execução do OLTP na memória localiza o ponto de entrada da DLL do procedimento armazenado.  
   
@@ -240,7 +240,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  Os procedimentos armazenados [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado são compilados na primeira execução, em oposição aos procedimentos armazenados compilados nativamente, que são compilados no momento da criação. Quando os procedimentos armazenados interpretados são compilados na invocação, os valores dos parâmetros fornecidos para essa invocação são usados pelo otimizador durante a geração do plano de execução. Esse uso de parâmetros durante a compilação é chamado de detecção de parâmetro.  
   
- A detecção de parâmetro não é usada para compilar os procedimentos armazenados compilados nativamente. Todos os parâmetros para o procedimento armazenado são considerados como tendo valores UNKNOWN. Como são interpretados os procedimentos armazenados, procedimentos armazenados compilados nativamente também suporte a `OPTIMIZE FOR` dica. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
+ A detecção de parâmetro não é usada para compilar os procedimentos armazenados compilados nativamente. Todos os parâmetros para o procedimento armazenado são considerados como tendo valores UNKNOWN. Como são procedimentos armazenados interpretados, procedimentos armazenados compilados nativamente também suporte a `OPTIMIZE FOR` dica. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperando um plano de execução de consulta para procedimentos armazenados compilados de forma nativa  
  O plano de execução de consulta para um procedimento armazenado compilado nativamente pode ser recuperado usando o **Plano de Execução Estimado** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou usando a opção SHOWPLAN_XML no [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por exemplo:  

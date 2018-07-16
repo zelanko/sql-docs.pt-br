@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98fd253da693a23ccbda57c605edb9f59dcc1540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7db15f7dcf8e963e9df38dbda0dd05aa208b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291412"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selecionar Fonte de Dados (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   Use a página **Selecionar uma Fonte de Dados** para selecionar uma fonte de dados para a exibição da fonte de dados.  
@@ -42,8 +42,8 @@ ms.locfileid: "36115297"
  Abre a caixa de diálogo Assistente para Fonte de Dados na qual é possível criar uma nova fonte de dados que será adicionada ao projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;do Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Ajuda F1 do Assistente de fonte de dados &#40;do Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Ajuda F1 do Assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

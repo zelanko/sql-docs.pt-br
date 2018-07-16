@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298336"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Práticas recomendadas para chamar procedimentos armazenados compilados nativamente
   Estes são os procedimentos armazenados compilados nativamente:  
@@ -54,7 +54,7 @@ ms.locfileid: "36119519"
   
  Da mesma forma, você pode detectar o uso de tipos incompatíveis através do mesmo XEvent `hekaton_slow_parameter_passing`, com `reason=parameter_conversion`.  
   
- Como você precisará implementar uma lógica de repetição ao usar tabelas com otimização de memória (em vários cenários) e precisará respeitar determinadas limitações de recurso, talvez queira criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por wrapper. Para obter um exemplo, consulte [diretrizes para lógica de repetição para transações em tabelas com otimização de memória](memory-optimized-tables.md).  
+ Como você precisará implementar uma lógica de repetição ao usar tabelas com otimização de memória (em vários cenários) e precisará respeitar determinadas limitações de recurso, talvez queira criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por wrapper. Por exemplo, consulte [Guidelines for Retry Logic para transações em tabelas com otimização de memória](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  

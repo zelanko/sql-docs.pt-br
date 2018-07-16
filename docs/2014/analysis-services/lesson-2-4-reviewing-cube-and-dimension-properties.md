@@ -1,5 +1,5 @@
 ---
-title: Revisando as propriedades de dimensão e cubo | Microsoft Docs
+title: Revisando propriedades de dimensão e cubo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241736"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisando as propriedades de dimensão e cubo
   Depois que você definir um cubo, você pode revisar os resultados usando o Designer de Cubos. Na tarefa a seguir, você revisará a estrutura do cubo no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "36020808"
   
 4.  No painel **Dimensões** da guia **Estrutura do Cubo** , expanda **Cliente**e depois clique em **Editar Cliente** para abrir a dimensão no Designer de Dimensão.  
   
-     O Designer de Dimensão contém as seguintes guias: **Estrutura da Dimensão**, **Relações de Atributo**, **Traduções**e **Navegador**. Observe que a guia **Estrutura da Dimensão** inclui três painéis: **Atributos**, **Hierarquias**e **Exibição da Fonte de Dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [Create User-Defined hierarquias](multidimensional-models/user-defined-hierarchies-create.md).  
+     O Designer de Dimensão contém as seguintes guias: **Estrutura da Dimensão**, **Relações de Atributo**, **Traduções**e **Navegador**. Observe que a guia **Estrutura da Dimensão** inclui três painéis: **Atributos**, **Hierarquias**e **Exibição da Fonte de Dados**. Os atributos da dimensão são exibidos no painel **Atributos** . Para obter mais informações, consulte [referência de propriedades de atributo de dimensão](multidimensional-models/dimension-attribute-properties-reference.md), [hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Para mudar para o Designer de Cubo, clique com o botão direito do mouse no cubo do **Tutorial do Analysis Services** do nó **Cubos** do Gerenciador de Soluções e clique em **Designer de Exibição**.  
   

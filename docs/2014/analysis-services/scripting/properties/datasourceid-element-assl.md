@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69cdda7c02c2bea92f1fb631b955e223427f3b85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86a5e07518097e01509f24f2969580dec7ba0c34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263582"
 ---
 # <a name="datasourceid-element-assl"></a>Elemento DataSourceID (ASSL)
-  Identifica o [DataSource](../objects/datasource-element-assl.md) associado ao elemento pai do elemento.  
+  Identifica o [fonte de dados](../objects/datasource-element-assl.md) associado ao elemento pai do elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36116454"
  Os elementos que correspondem aos pais de `DataSourceID` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, <xref:Microsoft.AnalysisServices.DimensionBinding>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding>, <xref:Microsoft.AnalysisServices.QueryBinding>, <xref:Microsoft.AnalysisServices.DataSourceView> e <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento ID &#40;ASSL&#41;](id-element-assl.md)   
+ [ID do elemento &#40;ASSL&#41;](id-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

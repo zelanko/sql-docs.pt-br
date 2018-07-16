@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274842"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Configurando e habilitando configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
@@ -45,7 +45,7 @@ ms.locfileid: "36020063"
   
 8.  Na página **Coleção** do **Editor do Loop Foreach**, clique em **Expressões**e clique no botão de reticências **(…)**.  
   
-9. No **Editor de expressões de propriedade**, clique no **propriedade** e selecione `Directory`.  
+9. No **Editor de expressões de propriedade**, clique no **propriedade** relacionar e selecionar `Directory`.  
   
 10. Na caixa **Expressão** , clique no botão de reticências **(…)**.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "36020063"
     > <Configuration ConfiguredType="Property"  
     > Path="\Package.Variables[User::varFolderName]. Propriedades [valor]"ValueType ="String"\>  
     >  \<ConfiguredValue >\</ConfiguredValue >  
-    > \</ Configuração >.  
+    > \</ Configuration >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para criar e popular uma nova pasta de dados de exemplo  
   
-1.  No Windows Explorer, no nível raiz da unidade (por exemplo, c\\), crie uma nova pasta chamada `New Sample Data`.  
+1.  No Windows Explorer, no nível raiz da unidade (por exemplo, c:\\), crie uma nova pasta chamada `New Sample Data`.  
   
 2.  Localize os arquivos de exemplo no computador e copie três dos arquivos da pasta.  
   

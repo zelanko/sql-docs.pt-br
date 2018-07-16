@@ -18,15 +18,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f140fc79d1b93c419e64d564efec68d29821f2d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293518"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensões habilitadas para gravação
     

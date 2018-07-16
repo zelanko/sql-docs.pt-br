@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288382"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propriedades Opções de Processamento (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Processamento para definir as propriedades de execução do relatório selecionado. Essas opções determinam quando ocorre processamento de dados para o relatório. Você pode definir essas opções para recuperar dados de relatório nos horários de pouca atividade. Se você tiver um relatório que é acessado frequentemente, pode armazenar temporariamente cópias de cache nele para eliminar tempo de espera, se vários usuários estiverem acessando o mesmo relatório com diferença de minutos.  
@@ -52,7 +52,7 @@ ms.locfileid: "36020186"
   
  Você também pode usar uma agenda para expiração de um relatório em cache usando uma frequência diferente de minutos. Por exemplo, para que um relatório em cache expire no fim do dia, você pode escolher uma hora específica à noite na qual a cópia expira.  
   
- **Renderizar este relatório em um instantâneo de relatório**  
+ **Renderizar este relatório em um instantâneo de execução de relatório**  
  Use essa opção para recuperar um relatório que foi armazenado como instantâneo no momento do agendamento. Quando você escolhe esta opção, pode agendar o processamento de dados para ocorrer em um período de pouca atividade. Diferentemente de cópias em cache criadas quando um usuário abre o relatório, um instantâneo é criado e subsequentemente atualizado em uma agenda. Instantâneos não expiram; eles permanecem em serviço até serem substituídos por versões mais novas.  
   
  Instantâneos gerados como resultado de configurações de execução de relatório têm as mesmas características dos instantâneos de histórico de relatórios. A diferença é que só há um instantâneo de execução de relatório e potencialmente muitos instantâneos de histórico de relatórios. Instantâneos de histórico de relatório são acessados da página de Histórico do relatório, que armazena muitas instâncias de um relatório existentes em diferentes momentos. Em contraste, os usuários acessam instantâneos de execução de relatório de pastas do mesmo modo que acessam relatórios em tempo real. No caso de instantâneos de execução de relatórios, não existe nenhuma dica visual para indicar aos usuários que o relatório é um instantâneo.  
@@ -65,7 +65,7 @@ ms.locfileid: "36020186"
  Esse valor se aplica ao processamento de relatório em um servidor de relatório. Ele não define tempo limite para o processamento de dados no servidor de banco de dados que fornece os dados para o seu relatório. No entanto, o valor especificado deve ser suficiente para concluir o processamento dos dados e do relatório. A contagem do processamento de relatórios começa quando o relatório é selecionado e termina quando o relatório é aberto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatório](report-server/set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatórios](report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

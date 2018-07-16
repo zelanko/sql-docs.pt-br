@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ecaf972c701175d388ab71fa61d94de1c6f2cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299016"
 ---
 # <a name="logfilerollover-element-assl"></a>Elemento LogFileRollover (ASSL)
-  Especifica se o registro de [rastreamento](../objects/trace-element-assl.md) saída deve passar para um novo arquivo ou deve parar quando o arquivo de log máximo tamanho especificado em [LogFileSize](logfilesize-element-assl.md) for atingido.  
+  Especifica se o registro de [rastreamento](../objects/trace-element-assl.md) saída deve captar um novo arquivo ou deve parar quando o arquivo de log máximo tamanho especificado em [LogFileSize](logfilesize-element-assl.md) for atingido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36007584"
 ## <a name="remarks"></a>Remarks  
  Se o valor do elemento `LogFileRollover` for definido como True, um novo arquivo será iniciado quando o tamanho do arquivo de log excede o valor especificado no elemento `LogFileSize` do elemento pai `Trace`; caso contrário, o registro para.  
   
- O elemento que corresponde ao pai do `LogFileRollover` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `LogFileRollover` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreia o elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

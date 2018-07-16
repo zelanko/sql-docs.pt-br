@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster security policy
 ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c545910e455d77cf17e944138a6edc902565c656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 071114e6a263a1bd956a6a8b2e240920070f8a9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185823"
 ---
 # <a name="cluster-security-policy"></a>Política de Segurança de Cluster
   Use a página Política de Segurança de Cluster para configurar a política de segurança para sua instância de cluster de failover.  

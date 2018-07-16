@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35584d33afac7a2a8f74abd013288a974cade512
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22aba36efffe3b4e15d358e6077bb6b58e7aa328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273582"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarefa 9: Criando uma hierarquia derivada usando o Master Data Manager
   Nesta tarefa, você criará uma hierarquia derivada usando o Master Data Manager. Essa hierarquia é derivada de relações de atributo baseado em domínio entre o **Supplier** e **estado** entidades.  
@@ -30,7 +30,7 @@ ms.locfileid: "36130453"
   
 2.  Clique em **Administração do Sistema** na seção **Tarefas Administrativas** .  
   
-3.  Passe o mouse sobre **gerenciar** na barra de menus, clique em **hierarquias derivadas**.  
+3.  Passe o mouse sobre **Manage** na barra de menus e clique **hierarquias derivadas**.  
   
      ![Menu gerenciar - hierarquias derivadas selecionada](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-01.jpg "Menu gerenciar - hierarquias derivadas selecionada")  
   
@@ -38,21 +38,21 @@ ms.locfileid: "36130453"
   
      ![Botão Adicionar hierarquia derivada](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-02.jpg "botão Adicionar hierarquia derivada")  
   
-5.  Tipo **SuppliersInState** para o **nome da hierarquia derivada**.  
+5.  Tipo de **SuppliersInState** para o **nome da hierarquia derivada**.  
   
 6.  Clique em **salvar** na barra de ferramentas.  
   
-     ![Salvar derivado hierarquia botão](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "salvar derivado de botão de hierarquia")  
+     ![Salvar derivada botão de hierarquia](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "salvar derivada botão de hierarquia")  
   
-7.  Arraste **Supplier** de **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**.  
+7.  Arraste **Supplier** partir **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**.  
   
      ![Entidades e hierarquias para o nível atual disponíveis](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "entidades e hierarquias para o nível atual disponíveis")  
   
-8.  Arraste **estado** de **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**. A tela deve ter **níveis atuais** conforme mostrado na figura a seguir.  
+8.  Arraste **estado** partir **níveis disponíveis: SuppliersInState** para **níveis atuais: SuppliersInState**. A tela deve ter **níveis atuais** conforme mostrado na imagem a seguir.  
   
      ![Visualização da hierarquia derivada e níveis atuais](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "níveis atuais e visualização de hierarquia derivada")  
   
-9. No **visualização** janela, expanda **NY {New York}** e você deverá ver um fornecedor nesse estado, conforme mostrado na imagem anterior.  
+9. No **versão prévia** janela, expanda **NY {New York}** e você deverá ver um fornecedor nesse estado, conforme mostrado na imagem anterior.  
   
 10. Alterne para a página principal do **Master Data Manager** clicando **SQL Server 2012 Master Data Services** na parte superior da página.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36130453"
   
      ![Hierarquias derivadas: Menu SuppliersInState](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-06.jpg "hierarquias derivadas: Menu SuppliersInState")  
   
-13. Clique em qualquer **estado** nó o **exibição de árvore** e você verá os fornecedores desse estado no painel direito.  
+13. Clique em qualquer **estado** nó na **exibição de árvore** e você verá os fornecedores desse estado no painel à direita.  
   
-     ![Hierarquia no Pesquisador de objetos derivada](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "hierarquia no Pesquisador de objetos derivada")  
+     ![Hierarquia no Gerenciador de derivada](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "derivado da hierarquia no Gerenciador")  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Lição 5: Automatizando a limpeza e a correspondência usando o SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
