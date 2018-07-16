@@ -24,15 +24,15 @@ helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 644e08e68ef38338d5b93c5abc7afe211c04c935
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319216"
 ---
 # <a name="file-element-xmla"></a>Elemento File (XMLA)
   Identifica um arquivo a ser usado pelo pai [Backup](../xml-elements-commands/backup-element-xmla.md) ou [restaurar](../xml-elements-commands/restore-element-xmla.md) comando, ou pelo pai [local](location-element-xmla.md) elemento.  
@@ -66,11 +66,11 @@ ms.locfileid: "36118728"
 ## <a name="remarks"></a>Remarks  
  O elemento `File` contém um nome de arquivo UNC e o elemento pai determina o uso do elemento `File`.  
   
- Para comandos `Backup`, o elemento `File` determina o nome do arquivo de backup criado pelo comando `Backup`. Se um caminho não for especificado como parte do nome do arquivo, o caminho especificado no `BackupDir` propriedade de configuração para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é usado. Se o arquivo especificado já existir, ocorrerá um erro, a não ser que o elemento `AllowOverwrite` do comando pai `Backup` seja definido como `True`.  
+ Para comandos `Backup`, o elemento `File` determina o nome do arquivo de backup criado pelo comando `Backup`. Se um caminho não for especificado como parte do nome do arquivo, o caminho especificado na `BackupDir` propriedade de configuração para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é usado. Se o arquivo especificado já existir, ocorrerá um erro, a não ser que o elemento `AllowOverwrite` do comando pai `Backup` seja definido como `True`.  
   
  Para comandos `Restore`, o elemento `File` determina o nome do arquivo de backup a ser restaurado pelo comando `Restore`.  
   
- Para elementos `Location`, o elemento `File` descreve um arquivo de backup remoto para uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contém partições remotas. Para obter mais informações sobre backup e restaurando partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para elementos `Location`, o elemento `File` descreve um arquivo de backup remoto para uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contém partições remotas. Para obter mais informações sobre como fazer backup e restaurar partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento AllowOverwrite &#40;XMLA&#41;](allowoverwrite-element-xmla.md)   

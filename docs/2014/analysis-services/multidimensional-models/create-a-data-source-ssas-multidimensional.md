@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310846"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
   Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36130456"
 >  Por padrão, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não salva senhas com a cadeia de conexão. Se a senha não for salva, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pedirá que você a digite sempre que necessário. Se você escolheu salvar a senha, a senha será armazenada em formato criptografado na cadeia de conexão de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa informações de senha para fontes de dados usando a chave de criptografia do banco de dados que contém a fonte de dados. Com as informações da conexão criptografadas, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para alterar a conta de serviço ou a senha do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou não será possível recuperar as informações criptografadas. Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definindo informações de representação para objetos de mineração de dados  
- As consultas de mineração de dados podem ser executadas no contexto da conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas também podem ser executadas no contexto do usuário que está enviando a consulta ou no contexto de um usuário especificado. O contexto no qual uma consulta é executada pode afetar seus resultados. Para mineração de dados `OPENQUERY` digite operações, convém que a consulta de mineração de dados para executar no contexto do usuário atual ou no contexto de um usuário especificado (independentemente do usuário executando a consulta) em vez de no contexto da conta de serviço. Isso possibilita a execução da consulta com credenciais de segurança limitadas. Para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represente o usuário atual ou um usuário especificado, selecione a opção **Usar um nome de usuário e uma senha específicos** ou **Usar as credenciais do usuário atual** .  
+ As consultas de mineração de dados podem ser executadas no contexto da conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas também podem ser executadas no contexto do usuário que está enviando a consulta ou no contexto de um usuário especificado. O contexto no qual uma consulta é executada pode afetar seus resultados. Para mineração de dados `OPENQUERY` digite operações, convém que a consulta de mineração de dados para executar no contexto do usuário atual ou no contexto de um usuário especificado (independentemente do usuário que executa a consulta) em vez de no contexto da conta de serviço. Isso possibilita a execução da consulta com credenciais de segurança limitadas. Para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represente o usuário atual ou um usuário especificado, selecione a opção **Usar um nome de usuário e uma senha específicos** ou **Usar as credenciais do usuário atual** .  
   
 ##  <a name="bkmk_steps"></a> Criar uma fonte de dados usando o Assistente para Fontes de Dados  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36130456"
   
      O provedor padrão de uma nova conexão é o provedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ele é usado para estabelecer a conexão com uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando OLE DB. Para conexões com um banco de dados relacional do SQL Server, com frequência, é mais rápido usar o Native OLE DB\SQL Server Native Client 11.0 do que usar provedores alternativos.  
   
-     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais suportados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [fontes de dados com suporte &#40;multidimensionais do SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais com suporte pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [fontes de dados com suporte &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Insira as informações solicitadas pelo provedor selecionado para se conectar à fonte de dados subjacente. Se o provedor **OLE DB Nativo\SQL Server Native Client** estiver selecionado, insira as seguintes informações:  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36130456"
  Você pode criar mais de um objeto de fonte de dados para dar suporte a conexões com fontes de dados adicionais. Cada fonte de dados deve ter colunas que podem ser usadas para criar relações.  
   
 > [!NOTE]  
->  Se várias fontes de dados são definidas e os dados são consultados de várias fontes em uma única consulta, por exemplo, para uma dimensão em floco de neve neve, você deve definir uma fonte de dados que oferece suporte a consultas remotas usando `OpenRowset`. Normalmente, será uma fonte de dados do Microsoft SQL Server.  
+>  Se várias fontes de dados definidas e os dados são consultados de várias fontes em uma única consulta, por exemplo, para uma dimensão em floco de neve, você deve definir uma fonte de dados que dá suporte a consultas remotas usando `OpenRowset`. Normalmente, será uma fonte de dados do Microsoft SQL Server.  
   
  Os requisitos para usar várias fontes de dados incluem o seguinte:  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36130456"
 5.  Localize e selecione a tabela que você adicionou. Clique com o botão direito do mouse na tabela e selecione **Nova Relação**. Escolha as colunas de origem e destino que contêm dados de correspondência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  
   
   

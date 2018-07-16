@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320406"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte à compactação de linha e página para tabelas e índices rowstore e dá suporte a columnstore e a compactação de arquivamento columnstore para tabelas e índices columnstore.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à compactação de linha e página para tabelas e índices rowstore e dá suporte a columnstore e compactação de arquivamento columnstore para tabelas e índices columnstore.  
   
  Para tabelas e índices rowstore, use o recurso de compactação de dados para ajudar a reduzir o tamanho do banco de dados. Além de economizar espaço, a compactação de dados pode ajudar a aprimorar o desempenho de cargas de trabalho intensivas de E/S, pois os dados são armazenados em menos páginas e as consultas precisam ler menos páginas do disco. No entanto, recursos extras de CPU são necessários no servidor de banco de dados para compactar e descompactar os dados, enquanto os dados são trocados com o aplicativo. Você pode configurar a compactação de linha e página nos seguintes objetos de banco de dados:  
   

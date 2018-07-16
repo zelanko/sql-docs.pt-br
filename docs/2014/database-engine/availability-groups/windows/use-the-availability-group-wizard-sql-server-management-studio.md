@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
 - sql12.swb.newavgroupwiz.f1
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 41
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 79cdbd700e1eda482b02902a23de66eb92652fdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300896"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
-  Este tópico descreve como usar o Assistente de novo grupo de disponibilidade (em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) para criar e configurar um grupo de disponibilidade do AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
+  Este tópico descreve como usar o Assistente de novo grupo de disponibilidade (no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) para criar e configurar um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
   
 > [!NOTE]  
 >  Para obter uma introdução aos grupos de disponibilidade, consulte [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
@@ -120,7 +119,7 @@ ms.locfileid: "36117041"
     |Tab|Descrição breve|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.|  
-    |**Pontos de extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente. **Observação:** se qualquer instância de servidor é executado sob uma conta de usuário de domínio não, você precisa fazer uma alteração manual na instância de servidor antes de continuar com o assistente. Para obter mais informações, consulte [Pré-requisitos](#PrerequisitesRestrictions)anteriormente neste tópico.|  
+    |**Pontos de extremidade**|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente. **Observação:** se qualquer instância de servidor for executado sob uma conta de usuário de fora do domínio, você precisará fazer uma alteração manual na instância de servidor antes de continuar no assistente. Para obter mais informações, consulte [Pré-requisitos](#PrerequisitesRestrictions)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
     |**Ouvinte**|Use esta guia para criar um ouvinte de grupo de disponibilidade. Por padrão, o assistente não cria um ouvinte.|  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36117041"
   
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
--   [Criar um banco de dados do ponto de extremidade de espelhamento para grupos de disponibilidade do AlwaysOn &#40;do SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Criar um ponto de extremidade de espelhamento para grupos de disponibilidade AlwaysOn do banco de dados &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -192,15 +191,15 @@ ms.locfileid: "36117041"
   
  **Para solucionar problemas de configuração de grupos de disponibilidade AlwaysOn**  
   
--   [Solucionar problemas de configuração de grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;excluído](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;excluído](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Solucionar problemas de uma falha na operação adicionar arquivo &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Solucionar problemas de uma operação de adição de arquivos com falha &#40;grupos de disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   
-     [Aprendizado do AlwaysON - HADRON série: Bancos de dados habilitados do uso do Pool de trabalho para HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Worker Pool uso habilitados para HADRON bancos de dados](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Blogs da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn Team Blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -222,7 +221,7 @@ ms.locfileid: "36117041"
   
 ## <a name="see-also"></a>Consulte também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

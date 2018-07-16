@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
 - "10125"
@@ -24,15 +24,15 @@ f1_keywords:
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3fcfbe65dae6aaba100eadc122ed0f820f6ac714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328884"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -131,7 +131,7 @@ ms.locfileid: "36121431"
  Para obter mais informações, consulte [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Inserir uma imagem em um relatório &#40;SSRS e construtor de relatórios&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Retângulos e linhas &#40;SSRS e construtor de relatórios&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Inserir uma imagem em um relatório &#40;relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Retângulos e linhas &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

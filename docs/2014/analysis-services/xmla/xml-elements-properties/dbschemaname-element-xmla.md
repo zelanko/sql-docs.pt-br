@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fde4fe223ae667d1fdc90c51b3df9be7ce37207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ca44d9130da56f8e1dc181e3d0de5a6cff808feb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323266"
 ---
 # <a name="dbschemaname-element-xmla"></a>Elemento DbSchemaName (XMLA)
   Contém o nome do esquema usado pelo elemento pai [TableNotification](tablenotification-element-xmla.md) na tabela identificada pelo elemento pai [DbTableName](name-element-xmla.md) .  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b81387a3eb85ca695ffd9860e09a9bf2c696ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319456"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Medidas** para manipular grupos de medidas e membros na guia **Estrutura do Cubo** do Designer de Cubo.  

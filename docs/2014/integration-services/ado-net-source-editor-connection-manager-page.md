@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ef6c300f4954d776dc3ca6bbb5a0504c56b0c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83204d50049976aa70f3b35a6223abeb6ab07881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322696"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de origem ADO NET (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ADO NET** para selecionar o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -74,7 +74,7 @@ ms.locfileid: "36020534"
  Use a caixa de diálogo **Abrir** para localizar o arquivo com contém o texto da consulta SQL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do ADO NET &#40;página colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor de origem do ADO NET &#40;página de colunas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Editor de origem do ADO NET &#40;página de saída de erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)  
   

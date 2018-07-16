@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataSourcePermissions element
 ms.assetid: 6e1cfbec-65b9-4942-a628-f7f7c891e35f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 774b06c14bfbd5d7c90c4b2f07d3ff4c40bd746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42f330e28ac9a8bd349660550cee84df075121f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321172"
 ---
 # <a name="datasourcepermissions-element-assl"></a>Elemento DataSourcePermissions (ASSL)
   Contém a coleção de [DataSourcePermission](../objects/datasourcepermission-element-assl.md) elementos associados a um [DataSource](../data-type/datasource-data-type-assl.md) tipo de dados.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit DBCC event class
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 628be6dabb96f1e305b8199ac2f4f3fc3edea890
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1bf8851e6d4e55a59f6003c2a64840e6a429cee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311956"
 ---
 # <a name="audit-dbcc-event-class"></a>Classe de evento Audit DBCC
   A classe de evento **Audit DBCC** ocorre sempre que um comando DBCC é emitido.  

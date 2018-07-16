@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e722f2884b0137b261f8442021199f4cc1cb0ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6bb76e6e17562ae1ed16acba6a63f17d665ca05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318046"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Visualizando relatórios no Construtor de Relatórios
   Durante a criação de um relatório, é útil visualizar o relatório frequentemente para verificar se o relatório exibe o que você deseja. Para visualizar o relatório, clique em **Executar**. O relatório é renderizado no modo de visualização.  
@@ -80,7 +80,7 @@ ms.locfileid: "36117114"
  Se um sub-relatório usado por seu relatório for alterado depois que sua sessão de edição for criada, o relatório não será renderizado na visualização. Para visualizar o relatório com êxito, salve-o ou clique em **Atualizar** para obter dados atualizados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](../report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

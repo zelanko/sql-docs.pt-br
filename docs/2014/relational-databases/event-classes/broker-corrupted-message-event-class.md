@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22d863ee7fe3fb0ed5fd8f025ceff692f92448df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b4585e093505e684efc694e450e5e37ceca168b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292766"
 ---
 # <a name="brokercorrupted-message-event-class"></a>classe de evento Broker:Corrupted Message
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Broker:Corrupted Message** quando o Service Broker recebe uma mensagem corrompida.  

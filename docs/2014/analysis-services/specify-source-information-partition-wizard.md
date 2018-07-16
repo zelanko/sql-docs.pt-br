@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310446"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar Informações sobre a Origem (Assistente para Partições)
   Use a página **Especificar Informações sobre a Origem** para selecionar o grupo de medidas no qual criar a partição e também a exibição da fonte de dados e as tabelas de filtro da partição.  
@@ -30,7 +30,7 @@ ms.locfileid: "36122916"
 >  Se você especificar uma tabela em **Tabelas Disponíveis** que seja usada por outra partição, deverá fornecer uma consulta na página **Restringir Linhas** ou arriscar duplicação de dados no cubo.  
   
 ## <a name="options"></a>Opções  
- **grupo de medidas**  
+ **Grupo de medidas**  
  Selecione um grupo de medidas para esta partição.  
   
  **Look in**  

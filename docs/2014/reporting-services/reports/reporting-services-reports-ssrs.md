@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306996"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
   Os relatórios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são definições de relatório baseadas em XML que incluem elementos de dados e layout de relatório. Em um sistema de arquivos cliente, as definições de relatório têm a extensão de arquivo .rdl. Depois que um relatório é publicado, ele se torna um item de relatório armazenada no servidor de relatório ou no site do SharePoint. Relatórios são uma parte da plataforma de relatório baseada em servidor fornecida pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -87,7 +87,7 @@ ms.locfileid: "36118833"
   
         -   [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Gráficos &#40;SSRS e construtor de relatórios&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Gráficos de &#40;relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36118833"
   
     -   **Personalize o layout e os dados.** Elabore o layout do relatório. Uma definição de relatório tem um corpo de relatório, fontes de dados, conjuntos de dados, regiões de dados, caixas de texto, linhas e imagens. Retângulos são usados como contêineres para layout e elementos visuais. Personalize cada região de dados gravando expressões para controlar filtro, grupo, classificação, formato e exibição dos dados. Adicione nomes de relatório, locais e outras informações de identificação que ajudam a gerenciar dúzias ou centenas de relatórios. Adicione elementos visuais e contêineres para organizar os elementos de layout na página. Para obter mais informações, consulte os tópicos a seguir:  
   
-        -   [Filtrar, agrupar e classificar dados &#40;SSRS e construtor de relatórios&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36118833"
   
         -   [Imagens, caixas de texto, retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Layout de página e renderização &#40;SSRS e construtor de relatórios&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Layout de página e renderização &#40;relatórios e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configure recursos de interatividade.** Adicione recursos de interatividade para os leitores dos seus relatórios. Por exemplo, adicione botões de classificação ou itens de alternância de exibição das consultas. Para obter mais informações, consulte [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36118833"
 ##  <a name="bkmk_SecureReportsSummary"></a> Relatórios seguros  
  Para proteger um relatório:  
   
--   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Por padrão, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, a segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Por padrão, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, a segurança integrada e atribuição de função para ajudar a controlar o acesso a relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Criar notificações com base em dados de relatório  
  Você pode criar alertas de dados para relatórios publicados em um site do SharePoint. Os alertas de dados são baseados em feeds de dados de regiões de dados no relatório. Por padrão, as regiões de dados são nomeadas automaticamente. Os autores de relatório podem facilitar a criação de alertas de dados em seus relatórios nomeando regiões de dados com base no propósito de negócios. Ao criar um alerta de dados, você é notificado por email quando os dados atendem às condições especificadas. Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Criar um alerta de dados no Designer de Alertas de Dados](../create-a-data-alert-in-data-alert-designer.md) e [Alertas de dados do Reporting Services](../reporting-services-data-alerts.md).  

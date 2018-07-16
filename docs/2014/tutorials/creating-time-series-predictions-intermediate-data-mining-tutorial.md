@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 999dcdec7c6a30617c9c9e04512da26ddebfdcc3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310826"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Criando previsões de série temporal (Tutorial de mineração de dados intermediário)
   Nas tarefas anteriores desta lição, você criou um modelo de série temporal e explorou os resultados. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sempre cria um conjunto de cinco (5) previsões para um modelo de série temporal e a exibe os valores previstos como parte do gráfico de previsão. No entanto, também é possível criar previsões criando-se consultas de previsão DMX.  
@@ -35,27 +35,27 @@ ms.locfileid: "36312944"
   
 1.  No **previsão do modelo de mineração** guia do Designer de mineração de dados, no **modelo de mineração** , clique em **Selecionar modelo**.  
   
-2.  No **Selecionar modelo de mineração** caixa de diálogo, expanda a estrutura previsão, selecione o **previsão** de modelo na lista e, em seguida, clique em **Okey**.  
+2.  No **Selecionar modelo de mineração** caixa de diálogo, expanda a estrutura previsão, selecione o **Forecasting** de modelo na lista e, em seguida, clique em **Okey**.  
   
-3.  Ignorar o **Selecionar tabela (s) de entrada** caixa.  
+3.  Ignorar a **Selecionar tabela (s) de entrada** caixa.  
   
     > [!NOTE]  
     >  Para um modelo de série temporal, você não precisa especificar uma entrada separada, a menos que esteja fazendo previsão cruzada.  
   
-4.  No **fonte** coluna na grade de **previsão do modelo de mineração** guia, clique na célula da primeira linha vazia e, em seguida, selecione **modelo de mineração previsão**.  
+4.  No **fonte** coluna, na grade a **previsão do modelo de mineração** guia, clique na célula na primeira linha vazia e, em seguida, selecione **modelo de mineração previsão**.  
   
 5.  No **campo** coluna, selecione **região modelo**.  
   
      Essa ação adiciona o identificador da série à consulta de previsão para indicar a combinação de modelo e região a que a previsão se aplica.  
   
-6.  Clique na próxima linha vazia no **fonte** coluna e, em seguida, selecione **função de previsão**.  
+6.  Clique na próxima linha vazia na **fonte** coluna e, em seguida, selecione **função de previsão**.  
   
 7.  No **campo** coluna, selecione **PredictTimeSeries**.  
   
     > [!NOTE]  
     >  Também é possível usar a função `Predict` com modelos de série temporal. No entanto, por padrão, a função Prever cria somente uma previsão para cada série. Portanto, para especificar várias etapas de previsão, você deve usar o **PredictTimeSeries** função.  
   
-8.  No **modelo de mineração** painel, selecione a coluna de modelo de mineração, **quantidade.** Arraste valor até o **critérios/argumentos** caixa para o **PredictTimeSeries** função que você adicionou anteriormente.  
+8.  No **modelo de mineração** painel, selecione a coluna do modelo de mineração, **quantidade.** Arraste valor até o **critérios/argumentos** caixa para o **PredictTimeSeries** função que você adicionou anteriormente.  
   
 9. Clique o **critérios/argumentos** caixa e, em seguida, digite uma vírgula, seguida por **5**, após o nome do campo.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36312944"
   
 10. No **Alias** coluna, digite `PredictAmount`.  
   
-11. Clique na próxima linha vazia no **fonte** coluna e, em seguida, selecione **função de previsão** novamente.  
+11. Clique na próxima linha vazia na **fonte** coluna e, em seguida, selecione **função de previsão** novamente.  
   
 12. No **campo** coluna, selecione **PredictTimeSeries**.  
   
-13. No **modelo de mineração** painel, selecione a coluna quantidade e, em seguida, arraste-a até o **critérios/argumentos** caixa para a segunda **PredictTimeSeries** função.  
+13. No **modelo de mineração** painel, selecione a coluna quantidade e, em seguida, arraste-o para o **critérios/argumento** caixa para a segunda **PredictTimeSeries** função.  
   
 14. Clique o **critérios/argumentos** caixa e, em seguida, digite uma vírgula, seguida por **5**, após o nome do campo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36312944"
   
 15. No **Alias** coluna, digite `PredictQuantity`.  
   
-16. Clique em **alternar para a exibição de resultados de consulta**.  
+16. Clique em **alternar para a exibição de resultado de consulta**.  
   
      Os resultados da consulta serão exibidos em formato tabular.  
   
@@ -91,41 +91,41 @@ ms.locfileid: "36312944"
   
 |$TIME|Valor|  
 |-----------|------------|  
-|25/7/2008|99978.00|  
-|25/8/2008|145575.07|  
-|25/9/2008|116835.19|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
 |25/10/2008|116537.38|  
-|25/11/2008|107760.55|  
+|11/25/2008|107760.55|  
   
  **M200 Europa PredictQuantity**  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
-|25/7/2008|52|  
-|25/8/2008|67|  
-|25/9/2008|58|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
 |25/10/2008|57|  
-|25/11/2008|54|  
+|11/25/2008|54|  
   
  **M200 América do Norte - PredictAmount**  
   
 |$TIME|Valor|  
 |-----------|------------|  
-|25/7/2008|348533.93|  
-|25/8/2008|340097.98|  
-|25/9/2008|257986.19|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
 |25/10/2008|374658.24|  
-|25/11/2008|379241.44|  
+|11/25/2008|379241.44|  
   
  **M200 América do Norte - PredictQuantity**  
   
 |$TIME|Quantidade|  
 |-----------|--------------|  
-|25/7/2008|272|  
-|25/8/2008|152|  
-|25/9/2008|250|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
 |25/10/2008|181|  
-|25/11/2008|290|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  As datas que são usadas no banco de dados de exemplo foram alteradas para esta versão. Se você estiver usando uma versão anterior dos dados de exemplo, poderá ver resultados diferentes.  
@@ -166,15 +166,15 @@ ms.locfileid: "36312944"
   
     ```  
   
-4.  Clique em **alternar para a exibição de resultados de consulta**.  
+4.  Clique em **alternar para a exibição de resultado de consulta**.  
   
 #### <a name="to-export-prediction-query-results"></a>Para exportar resultados da consulta de previsão  
   
-1.  Clique em **salvar resultados de consulta**.  
+1.  Clique em **salvar resultados da consulta**.  
   
-2.  No **Salvar resultado mineração de dados consulta** caixa de diálogo para **fonte de dados**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Também será possível criar uma fonte de dados se você quiser salvar os dados em um banco de dados relacional diferente.  
+2.  No **salvar dados de mineração de resultado da consulta** caixa de diálogo, para **fonte de dados**, selecione [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Também será possível criar uma fonte de dados se você quiser salvar os dados em um banco de dados relacional diferente.  
   
-3.  No **nome de tabela** coluna, digite um novo temporário tabela nome, como **previsões de teste**.  
+3.  No **nome da tabela** coluna, digite um novo temporário nome, da tabela, como **previsões de teste**.  
   
 4.  Clique em **Salvar**.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36312944"
  As tarefas restantes deste tutorial são opcionais e descrevem previsões de série temporal avançadas. Se você decidir ir adiante, aprenderá a adicionar novos dados ao seu modelo e criar previsões na série estendida. Você também aprenderá a executar a previsão cruzada, usando a tendência no modelo, mas substituindo os dados por uma nova série de dados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Advanced previsões de série temporal &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
+ [Advanced previsões de série temporal &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de consulta de modelos de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  

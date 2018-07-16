@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLServer 107 error
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a0404af3870592ad6e03c4264695551480e1a7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f8f4ab62d893334cfab9020a7cf301e7b7761f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275782"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Serviço Servidor de Relatório do Windows (MSSQLServer) 107
     
@@ -54,7 +54,7 @@ ms.locfileid: "36120941"
 ## <a name="internal-only"></a>Somente interno  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configurar a conta de serviço do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Iniciar e parar o serviço Servidor de Relatório](../report-server/start-and-stop-the-report-server-service.md)  
   

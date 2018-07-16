@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.dts.f1
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7ba0339d5bed873ef321bd83a3ee247e5523247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3619e2ef17720dd15e0f6aeccef2ec484331a966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306161"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Novo registro ou editar registro de servidor (guia Geral) (SSIS)
   Use esta guia para especificar opções ao registrar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifyprocessingandstorage.f1
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e86bb343a13cd17cca7fa561445c2105725c4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eae2e7c380b7b0de69047079edac87d273f07d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286052"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Locais de Processamento e Armazenamento (Assistente para Partições)
   Use a página **Locais de Processamento e Armazenamento** para especificar a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo que contém a partição, bem como a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que armazena os dados da partição. É possível definir uma partição como uma partição remota especificando uma instância remota do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou um local de armazenamento diferente do local de armazenamento padrão. Para obter mais informações sobre partições remotas, consulte [Partições remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  

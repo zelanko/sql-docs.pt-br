@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
 - extended events [SQL Server], system_health session
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 900e69f59fb019ec64541c9a53e71758fc4a1b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: yualan
+ms.author: alayu
+manager: craigg
+ms.openlocfilehash: cf223a6b352b8e1f2b9dd2e1d241214a1859a2e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327576"
 ---
 # <a name="use-the-systemhealth-session"></a>Usar a sessão de system_health
   A sessão system_health é uma sessão de Eventos Estendidos, incluída por padrão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa sessão é iniciada automaticamente quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciado e executa sem qualquer efeito notável de desempenho. A sessão coleta dados do sistema que você pode usar para ajudar a solucionar problemas de desempenho no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Portanto, é recomendável não interromper ou excluir a sessão.  
@@ -69,12 +69,12 @@ ON (xe.address = xet.event_session_address)
 WHERE xe.name = 'system_health'  
 ```  
   
- Para visualizar os dados de sessão do arquivo de evento, use a interface de usuário de eventos estendidos disponível no Management Studio. Consulte [exibir dados de sessão de evento](../../database-engine/view-event-session-data.md) para obter mais informações.  
+ Para visualizar os dados de sessão do arquivo de evento, use a interface de usuário de eventos estendidos disponível no Management Studio. Ver [exibir dados de sessão de evento](../../database-engine/view-event-session-data.md) para obter mais informações.  
   
 ## <a name="restoring-the-systemhealth-session"></a>Restaurando a sessão de system_health  
  Se você excluir a sessão de system_health, poderá restaurá-la por meio da execução do arquivo **u_tables.sql** no Editor de Consultas. Esse arquivo está localizado na pasta seguinte, onde C: representa a unidade onde você instalou os arquivos de programa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
- Server \ mssql12 SQL de Programas\Microsoft C:\Program. \< *instanceid*> \MSSQL\Install  
+ Server\MSSQL12 SQL do C:\Program Files\Microsoft. \< *instanceid*> \MSSQL\Install  
   
  Lembre-se de que, depois de restaurar a sessão, você deve iniciá-la com a instrução ALTER EVENT SESSION ou usando o nó **Eventos Estendidos** no Pesquisador de Objetos. Caso contrário, a sessão será iniciada automaticamente na próxima vez que você reiniciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279742"
 ---
 # <a name="attributebinding-data-type-assl"></a>Tipo de dados AttributeBinding (ASSL)
   Define um tipo de dados derivado que representa uma associação para um [atributo](../objects/attribute-element-assl.md) elemento.  
@@ -62,9 +62,9 @@ ms.locfileid: "36011235"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter informações adicionais sobre o `Binding` tipo de dados, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) derivados de `Binding` tipo de dados, consulte [associação de tipo de dados &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Para obter mais informações sobre o `Binding` tipo de dados, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) derivados da `Binding` tipo de dados, consulte [tipo de associação de dados &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AttributeBinding>.  
   

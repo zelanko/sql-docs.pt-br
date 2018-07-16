@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e78882c9-b14e-4044-848e-ea7fddd3b75d
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 987b35a09670908e5604693c2b42b4a014d5eda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2071ae26b20ee39b47115e4ada1695878631fc84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316946"
 ---
 # <a name="relationships-element-assl"></a>Elemento Relationships (ASSL)
   Contém a coleção de relações para a dimensão associada.  

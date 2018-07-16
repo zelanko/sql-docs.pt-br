@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiuser environments [Visual Database Tools]
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd8447788095eebfbacf66e88c9b15e6f4e03a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c16bb74d3b6f1b77b7cc96bc7585feb2df084ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317366"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permissões e Visual Database Tools (Visual Database Tools)
   As permissões, que permitem aos usuários acesso aos objetos de fonte de dados, são concedidas na fonte de dados, não no Visual Database Tools. As permissões de acesso concedidas em objetos de fonte de dados são controladas pela política de segurança da instalação. Se você não tiver permissão para acessar certos objetos de banco de dados, entre em contato com seu administrador de banco de dados.  

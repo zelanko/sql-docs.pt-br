@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3e5a3ffe184513bce9f331f5d905a0587897e64a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2868591cbb80cfb39eaaa81d6cbe75d2bda08c6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294216"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte para o [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) permite solicitar opcionalmente que o resultado de uma consulta FOR XML seja retornado como `xml` tipo de dados especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, você pode especificar um XQuery em relação a ela, atribuir o resultado a uma `xml` variável de tipo ou gravar [consultas FOR XML aninhadas](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte para o [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) lhe permite solicitar opcionalmente que o resultado de uma consulta FOR XML seja retornado como `xml` tipo de dados, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, você pode especificar uma consulta XQuery em relação a ela, atribuir o resultado a um `xml` variável de tipo, ou escrever [consultas FOR XML aninhadas](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna dados XML de tipo de dados de instância para o cliente como resultado das diferentes construções pelo servidor como consultas FOR XML que usam a diretiva TYPE ou onde o `xml` tipo de dados é usado para retornar valores de dados de instância XML de saída e de colunas de tabela do SQL parâmetros. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML. Observe que FOR XML de nível superior sem a diretiva TYPE não pode ser usado com cursores.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna dados XML de tipo de dados da instância para o cliente como resultado das diferentes construções pelo servidor como consultas FOR XML que usam a diretiva TYPE ou onde o `xml` tipo de dados é usado para retornar valores de dados de instância XML de saída e de colunas da tabela SQL parâmetros. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML. Observe que FOR XML de nível superior sem a diretiva TYPE não pode ser usado com cursores.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir ilustram o uso da diretiva TYPE com consultas FOR XML.  
@@ -54,7 +54,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Atribuindo resultados de consultas FOR XML a uma variável de tipo xml  
- No exemplo a seguir, um resultado de FOR XML é atribuído a um `xml` variável de tipo `@x`. A consulta recupera informações de contato, como o `BusinessEntityID`, `FirstName`, `LastName`, adicionais e números de telefone do `AdditionalContactInfo` coluna `xml``TYPE`. Como a cláusula `FOR XML` especifica a diretiva `TYPE`, o XML é retornado como o tipo `xml` e é atribuído a uma variável.  
+ No exemplo a seguir, um resultado de FOR XML é atribuído a um `xml` variável de tipo `@x`. A consulta recupera informações de contato, como o `BusinessEntityID`, `FirstName`, `LastName`, adicionais e números de telefone do `AdditionalContactInfo` coluna de `xml``TYPE`. Como a cláusula `FOR XML` especifica a diretiva `TYPE`, o XML é retornado como o tipo `xml` e é atribuído a uma variável.  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,9 +75,9 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Consultando resultados de uma consulta FOR XML  
- As consultas FOR XML retornam XML. Portanto, você pode aplicar `xml` digite métodos, como `query()` e `value()`, ao resultado XML retornado por consultas FOR XML.  
+ As consultas FOR XML retornam XML. Portanto, você pode aplicar `xml` tipo de métodos, como `query()` e `value()`, ao resultado XML retornado por consultas FOR XML.  
   
- Na consulta a seguir, o `query()` método o `xml` tipo de dados é usado para consultar o resultado da `FOR XML` consulta. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+ Na consulta a seguir, o `query()` método da `xml` tipo de dados é usado para consultar o resultado do `FOR XML` consulta. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
 ```  
 USE AdventureWorks2012;  
@@ -91,7 +91,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- Interna `SELECT … FOR XML` consulta retorna um `xml` tipo de resultado para o qual externa `SELECT` se aplica a `query()` método para o `xml` tipo. Observe a diretiva `TYPE` especificada.  
+ Interno `SELECT … FOR XML` consulta retorna um `xml` tipo de resultado para o qual externo `SELECT` aplica-se a `query()` método para o `xml` tipo. Observe a diretiva `TYPE` especificada.  
   
  Este é o resultado:  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293466"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
   Contém o tipo do atributo.  
@@ -91,7 +91,7 @@ ms.locfileid: "36120225"
 |*Empresa*|O atributo representa uma empresa.|  
 |*Continente*|O atributo representa um continente.|  
 |*País*|O atributo representa um país ou uma região.|  
-|*Região*|O atributo representa uma região.|  
+|*Município*|O atributo representa uma região.|  
 |*CurrencyDestination*|O atributo representa a moeda de destino ou um câmbio da moeda.|  
 |*CurrencyISOcode*|O atributo representa o código ISO de uma moeda.|  
 |*CurrencName*|O atributo representa o nome de uma moeda.|  
@@ -104,9 +104,9 @@ ms.locfileid: "36120225"
 |*DateDuration*|O atributo representa uma duração.|  
 |*DateEnded*|O atributo representa uma data de término.|  
 |*DateModified*|O atributo representa uma data de modificação.|  
-|*Propriedade DateStart*|O atributo representa uma data de início.|  
+|*DateStart*|O atributo representa uma data de início.|  
 |*DayOfHalfYears*|O atributo representa o ordinal de dia de um semestre.|  
-|*DayOfMonth*|O atributo representa o ordinal de dia de um mês.|  
+|*Dia do mês*|O atributo representa o ordinal de dia de um mês.|  
 |*DayOfQuarter*|O atributo representa o ordinal de dia de um trimestre.|  
 |*DayOfTrimester*|O atributo representa o ordinal de dia de um quadrimestre.|  
 |*DayOfWeek*|O atributo representa o ordinal de dia de uma semana.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36120225"
 |*FiscalDayOfYear*|O atributo representa o ordinal de dia de um ano em um calendário fiscal.|  
 |*FiscalHalfYears*|O atributo representa semestres em um calendário fiscal.|  
 |*FiscalHalfYearsOfYear*|O atributo representa o ordinal de semestre de um ano em um calendário fiscal.|  
-|*Mês*|O atributo representa meses em um calendário fiscal.|  
+|*Mês fiscal*|O atributo representa meses em um calendário fiscal.|  
 |*FiscalMonthOfHalfYears*|O atributo representa o ordinal de mês de um semestre em um calendário fiscal.|  
 |*FiscalMonthOfQuarter*|O atributo representa o ordinal de mês de um trimestre em um calendário fiscal.|  
 |*FiscalMonthOfTrimester*|O atributo representa o ordinal de mês de um quadrimestre em um calendário fiscal.|  
@@ -274,7 +274,7 @@ ms.locfileid: "36120225"
 |*Seconds (segundos) (segundos)*|O atributo representa segundos.|  
 |*Sequência*|O atributo representa um atributo de sequência.|  
 |*ShortCaption*|O atributo representa uma legenda curta.|  
-|*StateOrProvince*|O atributo representa um estado.|  
+|*Código postal*|O atributo representa um estado.|  
 |*TenDayOfHalfYears*|O atributo representa o ordinal de período de dez dias de um semestre.|  
 |*TenDayOfQuarter*|O atributo representa o ordinal de período de dez dias de um trimestre.|  
 |*TenDayOfTrimester*|O atributo representa o ordinal de período de dez dias de um quadrimestre.|  
@@ -300,10 +300,10 @@ ms.locfileid: "36120225"
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos de elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Atributos do elemento &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [Elemento de dimensão &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   

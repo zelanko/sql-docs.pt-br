@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f15ca3035759717de251f6d300ace3182430ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304296"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectivas (SSAS tabular)
   As perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo.  
@@ -51,7 +51,7 @@ ms.locfileid: "36122728"
 |[Criar e gerenciar perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)|Descreve como criar e gerenciar perspectivas usando a caixa de diálogo Perspectivas no designer de modelo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
+ [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
  [Hierarquias &#40;Tabular do SSAS&#41;](hierarchies-ssas-tabular.md)  
   
   

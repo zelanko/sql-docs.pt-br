@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bd5da35233834eb0f57482e7f7faef11f977debe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282762"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é implementado com um único serviço que contém um serviço Web do Servidor de Relatório, um Gerenciador de Relatórios e um aplicativo de processamento em segundo plano usado para processamento agendado de relatórios e entrega de assinaturas. Este tópico explica como uma conta de serviço é configurada inicialmente e como modificar a conta ou a senha usando a ferramenta Configuração do Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configuração inicial  
- A conta de serviço do Servidor de Relatório é definida durante a Instalação. Você pode executar o serviço em uma conta de usuário de domínio ou uma conta interna, como `NetworkService` conta. Não há nenhuma conta padrão; conta que você especificar o [configuração do servidor — contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) página do Assistente de instalação se torna a conta inicial do serviço do servidor de relatório.  
+ A conta de serviço do Servidor de Relatório é definida durante a Instalação. Você pode executar o serviço sob uma conta de usuário de domínio ou uma conta interna, como `NetworkService` conta. Não há nenhuma conta padrão; qualquer conta que você especificar o [configuração do servidor — contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) página do Assistente de instalação se torna a conta inicial do serviço servidor de relatório.  
   
 > [!IMPORTANT]  
 >  Embora o serviço Web do servidor de relatório e Gerenciador de relatórios sejam [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicativos, eles não são executados sob o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] conta. A única arquitetura de serviço executa ambos os aplicativos ASP.NET na mesma identidade de processo do Servidor de Relatório. Essa é uma alteração importante de versões anteriores em que tanto o serviço Web Servidor de Relatórios quanto o Gerenciador de Relatórios eram executados na identidade do processo de trabalho do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] especificada no IIS.  
@@ -46,7 +46,7 @@ ms.locfileid: "36011742"
     > [!NOTE]  
     >  Se o servidor de relatório fizer parte da implantação em expansão, somente o servidor de relatório que você está atualizando será afetado. As chaves de criptografia para outros servidores de relatório na implantação não são afetadas pela alteração da conta de serviço.  
   
- Para obter instruções sobre como configurar a conta, consulte [configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
+ Para obter instruções sobre como definir a conta, consulte [configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
 ## <a name="choosing-an-account"></a>Escolhendo uma conta  
  Você pode configurar o serviço Servidor de Relatório para ser executado em qualquer um destes tipos de conta:  
@@ -59,7 +59,7 @@ ms.locfileid: "36011742"
   
 -   LocalService  
   
- Não há nenhum tipo de conta que possa ser considerado o melhor. Cada conta tem vantagens e desvantagens que devem ser consideradas. Se você estiver implantando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um servidor de produção, as práticas recomendadas sugerem que você configure o serviço para ser executado em uma conta de usuário de domínio para que você pode evitar danos extensivos caso uma conta compartilhada seja comprometida por um usuário mal-intencionado. Isso também facilita a auditoria das atividades de logon dessa conta. Uma compensação usando uma conta de usuário do Windows é que, se você estiver implantando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma rede que usa a autenticação Kerberos, você deve registrar o serviço com a conta de usuário. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
+ Não há nenhum tipo de conta que possa ser considerado o melhor. Cada conta tem vantagens e desvantagens que devem ser consideradas. Se você estiver implantando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um servidor de produção, as práticas recomendadas sugerem que você configure o serviço seja executado em uma conta de usuário de domínio para que você pode evitar danos extensivos caso uma conta compartilhada seja comprometida por um usuário mal-intencionado. Isso também facilita a auditoria das atividades de logon dessa conta. Uma desvantagem usando uma conta de usuário do Windows é que, se você estiver implantando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em uma rede que usa autenticação Kerberos, você deve registrar o serviço com a conta de usuário. Para obter mais informações, consulte [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
  Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opção para sua implantação.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36011742"
   
 2.  Clique com botão direito **SQL Server Reporting Services**, selecione **propriedades**.  
   
-3.  Clique em **logon**e digite a nova senha.  
+3.  Clique em **fazer logon**e digite a nova senha.  
   
 4.  Depois de atualizar a senha, inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e atualize a senha na página Conta de Serviço. Essa etapa adicional é necessária para atualizar as informações da conta que são armazenadas internamente pelo servidor de relatório.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36011742"
   
  Depois de redefinir as informações de acesso ao banco de dados, você deve reiniciar o serviço [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] para garantir que a conexão antiga não seja mais usada.  
   
-1.  Em **ferramentas administrativas**, clique em **Administração Central do SharePoint 2010**.  
+1.  Na **ferramentas administrativas**, clique em **Administração Central do SharePoint 2010**.  
   
 2.  Clique em **gerenciamento de aplicativos**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36011742"
   
 6.  Para reiniciar o serviço, clique em **operações**.  
   
-7.  Na topologia e serviços, clique em **serviços no servidor**.  
+7.  Na topologia e serviços, clique em **os serviços no servidor**.  
   
 8.  Para o aplicativo Web do Windows SharePoint Services, clique em **parar**.  
   
@@ -117,9 +117,9 @@ ms.locfileid: "36011742"
 >  Os produtos e tecnologias do SharePoint exigem contas de domínio para a configuração de serviço, como o modo do SharePoint do Reporting Services.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Conta de serviço &#40;modo nativo do SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)   
- [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar as URLs de servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

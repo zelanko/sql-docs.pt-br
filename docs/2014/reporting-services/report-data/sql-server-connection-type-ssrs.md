@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 178ca5746ee5c7936d8a2cab6c4d0d08ad227364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8f87139ed82025b35173465f346709e384a858c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299766"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>O tipo de conexão do SQL Server (SSRS)
   Para incluir dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use esse tipo de fonte de dados para se conectar e para recuperar dados de uma versão atual e de versões anteriores de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,7 +54,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na [documentação do Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) em msdn.microsoft.com.  
   
- Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -134,7 +134,7 @@ WHERE EmployeeID = (@EmpID)
   
 -   Por padrão, cada parâmetro de relatório é do tipo de dados **Texto**. Se os dados subjacentes forem de outro tipo de dados, será necessário alterar o tipo de dados de parâmetro.  
   
--   Se você selecionar a opção para parâmetros de vários valores, você deverá alterar manualmente a consulta para testar se os valores são parte de um conjunto, usando o `IN` operador, por exemplo, `WHERE EmployeeID IN (@EmpID)`.  
+-   Se você selecionar a opção para parâmetros com vários valores, você deve alterar manualmente a consulta para testar se os valores fazem parte de um conjunto, usando o `IN` operador, por exemplo, `WHERE EmployeeID IN (@EmpID)`.  
   
  Para obter mais informações, consulte [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -149,7 +149,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;SSRS e construtor de relatórios&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -159,7 +159,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> Seções relacionadas  
  Estas seções da documentação especificam informações conceituais detalhadas sobre os dados do relatório e informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

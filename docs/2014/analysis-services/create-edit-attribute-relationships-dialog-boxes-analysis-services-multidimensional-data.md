@@ -1,5 +1,5 @@
 ---
-title: Criar relação de atributo e Editar atributo caixas de diálogo (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Criar relação de atributo e editar caixas de diálogo (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 460c38c498d4827973c6ba8cc08aaab17541eff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3215615dd979714d0ec6c133818eb689d085324b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315016"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Criar Relação de Atributo** para definir novas relações de atributo e a caixa de diálogo **Editar Relação de Atributo** para alterar uma relação de atributo. Para obter mais informações, consulte [Definir Relações de Atributos](multidimensional-models/attribute-relationships-define.md).  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MdxMissingMemberMode element
 ms.assetid: aca6130b-5fb8-4fa1-af8b-8e1ef361926f
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feba98157b8e3f6048e0513d7f8b11bb165ca45c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bf066a836d329096d36366b3d4a5f2835957fc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319406"
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>Elemento MdxMissingMemberMode (ASSL)
   Determina como são tratados membros ausentes para linguagens MDX.  
@@ -68,7 +68,7 @@ ms.locfileid: "36120006"
 |*Erro*|Um erro surgirá se membros ausentes forem encontrados.|  
 |*Default*|São ignorados membros ausentes.|  
   
- O elemento que corresponde ao pai do `MdxMissingMemberMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `MdxMissingMemberMode` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões multidimensionais &#40;MDX&#41; referência](/sql/mdx/multidimensional-expressions-mdx-reference)   

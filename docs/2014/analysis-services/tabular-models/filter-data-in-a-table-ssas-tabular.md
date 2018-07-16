@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
 - sql12.asvs.bidtoolset.autofiltermenu.f1
 - sql12.asvs.bidtoolset.notallitemsshowing.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d58f376d4d7fde1ccd38eab1a1662fb7ad2605cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5232c34c8fdb8a76d24a623103d30863e7e9c21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306406"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar dados em uma tabela (SSAS tabular)
   Ao importar dados, é possível aplicar filtros para controlar as linhas que são carregadas em uma tabela. Depois de importar os dados, não é possível excluir linhas individuais. No entanto, você pode aplicar filtros personalizados para controlar a exibição das linhas. As linhas que não atenderem aos critérios de filtragem serão ocultadas. Você pode basear um filtro em uma ou mais colunas. Os filtros são aditivos, ou seja, cada filtro adicional se baseia no filtro atual e reduz ainda mais o subconjunto de dados.  
@@ -58,6 +58,6 @@ ms.locfileid: "36116222"
 ## <a name="see-also"></a>Consulte também  
  [Filtrar e classificar dados &#40;Tabular do SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)   
- [Funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
+ [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)  
   
   

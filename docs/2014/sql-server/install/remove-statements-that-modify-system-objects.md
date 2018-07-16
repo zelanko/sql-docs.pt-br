@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
 - system catalogs [SQL Server]
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c77525957fa679659a67bfa41f28090e028a7a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca644a822673e4d373048fc0d3a95eb0cd6fdf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297808"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Remover instruções que modificam objetos do sistema
   O Supervisor de Atualização detectou instruções que atualizam o catálogo do sistema. Atualizações diretas no catálogo do sistema não são permitidas. Modifique seus scripts SQL para usar APIs oficiais e documentadas.  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributeAllMemberTranslation element
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a93f67722e16034d256f4af16c582ef986b4b521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d70f1420c0324cf1f1a2b3bb06fb68394268071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314686"
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>Elemento AttributeAllMemberTranslation (ASSL)
-  Contém uma tradução para a legenda do `All` membro de um [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento.  
+  Contém uma tradução para a legenda do `All` membro de uma [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

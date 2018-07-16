@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, backup and restore
 - backing up packages [Integration Services]
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0effe7b8c6b18967d9d783f082614b9f039066d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aab0068df8906640acb5b8282f1b80d5e966c2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322586"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Backup e restauração de pacotes (serviço SSIS)
     
 > [!IMPORTANT]  
 >  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes podem ser salvos no sistema de arquivos ou msdb, um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados do sistema. Os pacotes salvos no msdb podem ter backup e serem restaurados usando recursos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes podem ser salvos no sistema de arquivos ou no msdb, um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados do sistema. Os pacotes salvos no msdb podem ter backup e serem restaurados usando recursos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Para obter mais informações sobre como fazer backups e restauração do banco de dados msdb, clique em um dos seguintes tópicos:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36118165"
   
 -   [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o **dtutil** utilitário (DBUTIL), que você pode usar para gerenciar pacotes de prompt de comando. Para obter mais informações, consulte [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o **dtutil** utilitário (dtutil), que você pode usar para gerenciar os pacotes de prompt de comando. Para obter mais informações, consulte [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>Arquivos de configuração  
  Qualquer arquivo de configuração incluído nos pacotes é armazenado no sistema de arquivos. Esses arquivos não são salvos ao fazer o backup do banco de dados msdb; portanto, você deve verificar se o backup é realizado regularmente em todos os arquivos de configuração como parte de seu plano para proteger os pacotes salvos no msdb. Para incluir as configurações no backup do banco de dados msdb, você deve considerar o uso do tipo de configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , em vez das configurações baseadas em arquivos.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296646"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
   Siga estas etapas para estimar a quantidade de espaço necessária para armazenar um índice não clusterizado:  
@@ -121,7 +121,7 @@ ms.locfileid: "36122640"
     >  Você pode ampliar um índice não clusterizado incluindo colunas não chave, além das colunas de chave de índice. Essas colunas adicionais só são armazenadas no nível folha do índice não clusterizado. Para obter mais informações, consulte [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Você pode combinar `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colunas que causam a largura total da tabela definida exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela. Isso também se aplica a linhas de folha de índice não clusterizado que têm colunas incluídas.  
+    >  Você pode combinar `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colunas que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela. Isso também se aplica a linhas de folha de índice não clusterizado que têm colunas incluídas.  
   
      Se o índice não clusterizado não tiver nenhuma coluna incluída, use os valores da Etapa 1, incluindo qualquer modificação determinada na etapa 1.3:  
   

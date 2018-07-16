@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301706"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxe de reserva de URL (Gerenciador de Configurações do SSRS)
   Este tópico descreve as partes da cadeia de caracteres da URL para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. A cadeia de caracteres da URL armazenada internamente tem uma estrutura diferente de uma URL digitada na barra de Endereço de uma janela do navegador. A cadeia de caracteres de reserva de URL aparece na janela Resultados da ferramenta Configuração do Reporting Services quando você configura uma URL e no arquivo RSReportServer.config. Poderá ser útil saber como a cadeia de caracteres da URL é definida se você estiver solucionando problemas de reserva de URL ou consultando HTTP.SYS para exibir as reservas de URL internas que estão definidas em seu servidor.  
@@ -43,7 +43,7 @@ ms.locfileid: "36117614"
 |VirtualDirectory|ReportServer *[_InstanceName]*<br /><br /> Reports *[_InstanceName]*<br /><br /> \<custom>|Especifica o nome do aplicativo. Esse valor é uma cadeia de caracteres. Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa ReportServer e Reports como os nomes de aplicativos para o serviço Web Servidor de Relatórios e Gerenciador de Relatórios. Você pode usar nomes diferentes se preferir.<br /><br /> Esse valor é necessário. Ele identifica o aplicativo.<br /><br /> Especifique apenas um diretório virtual para cada instância de aplicativo. Para criar várias URLs para o mesmo aplicativo na mesma instância, crie várias versões de `UrlString`. Para criar nomes de diretórios virtuais exclusivos para várias instâncias de aplicativo, considere a inclusão do nome da instância no nome do diretório virtual, usando o caractere sublinhado (_) para anexar o nome da instância. *InstanceName* é opcional, mas recomendado se você tiver várias instâncias no mesmo computador. Para obter mais informações sobre como definir reservas de URL para instâncias nomeadas, consulte [Reservas de URL para implantações do Servidor de Relatório com várias instâncias &#40;Gerenciador de Configurações do SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> O valor do diretório virtual não diferencia maiúsculas de minúsculas. Você pode usar qualquer cadeia de caracteres, desde que não inclua caracteres separadores de URL ou codificação de URL.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar as URLs de servidor de relatório &#40;Configuration Manager do SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280402"
 ---
 # <a name="amo-olap-classes"></a>Classes OLAP AMO
   As classes OLAP AMO (Objetos de Gerenciamento de Análise) ajudam você a criar, a modificar, a excluir e a processar cubos, dimensões e objetos relacionados como KPIs (Indicadores Chave de Desempenho), ações e cache.  
   
- Para obter mais informações sobre como configurar o ambiente de programação AMO, como estabelecer uma conexão com um servidor, acessar um banco de dados ou definindo dados de fontes e modos de exibição de fonte de dados, consulte [as Classes fundamentais AMO](amo-fundamental-classes.md).  
+ Para obter mais informações sobre como configurar o ambiente de programação AMO, como estabelecer uma conexão com um servidor, acessar um banco de dados ou definindo dados de fontes e modos de exibição de fonte de dados, consulte [Classes fundamentais AMO](amo-fundamental-classes.md).  
   
  Este tópico contém as seguintes seções:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36121607"
 ###  <a name="Action"></a> Objetos de ação  
  Um objeto <xref:Microsoft.AnalysisServices.Action> é criado ao ser adicionado à coleção de ações do cubo, seguido pela atualização do objeto de <xref:Microsoft.AnalysisServices.Cube> no servidor por meio do método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
- Para remover um <xref:Microsoft.AnalysisServices.Action> do objeto, ele deve ser removido da coleção e o cubo pai deve ser atualizado.  
+ Para remover um <xref:Microsoft.AnalysisServices.Action> do objeto, ele deverá ser removido da coleção e o cubo pai deve ser atualizado.  
   
  Um cubo deve ser atualizado e processado antes que a ação possa ser usada a partir do cliente.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36121607"
 ###  <a name="KPI"></a> Objetos KPI  
  Um objeto <xref:Microsoft.AnalysisServices.Kpi> é criado ao ser adicionado à coleção de KPIs do cubo, seguido pela atualização do objeto de <xref:Microsoft.AnalysisServices.Cube> no servidor por meio do método Update. O método Update do cubo pode incluir o parâmetro UpdateOptions.ExpandFull, que garante que todos os objetos do cubo modificados sejam atualizados no servidor por meio dessa ação de atualização.  
   
- Para remover um <xref:Microsoft.AnalysisServices.Kpi> do objeto, ele deve ser removido da coleção, em seguida, e o cubo pai deve ser atualizado.  
+ Para remover um <xref:Microsoft.AnalysisServices.Kpi> do objeto, ele deverá ser removido da coleção, em seguida, e o cubo pai deve ser atualizado.  
   
  Um cubo deve ser atualizado e processado antes que o KPI possa ser usado.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36121607"
  <xref:Microsoft.AnalysisServices>   
  [Introdução às Classes AMO](amo-classes-introduction.md)   
  [Programando objetos OLAP AMO básicos](programming-amo-olap-basic-objects.md)   
- [Objetos de programação AMO OLAP avançados](programming-amo-olap-advanced-objects.md)   
+ [Objetos OLAP AMO de programação avançados](programming-amo-olap-advanced-objects.md)   
  [Arquitetura lógica &#40; Analysis Services - dados multidimensionais &#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

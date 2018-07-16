@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], checkouts
 - checkouts [SQL Server Management Studio]
 - checking out files
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0540aade3a2e05a6b74a5a16ef9b9ddcfdb6d3f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320706"
 ---
 # <a name="manage-checkouts"></a>Gerenciar check-outs
   Depois que um arquivo é adicionado ao controle do código-fonte, faça check-out do arquivo antes de você fazer modificações nele. Ao fazer o check-out de um arquivo com controle do código-fonte, o provedor de controle do código-fonte cria uma cópia da versão mais recente em seu disco local e remove o atributo somente leitura do arquivo. Em algumas circunstâncias, você pode precisar editar um arquivo sem fazer check-out do mesmo. Para obter mais informações sobre como editar um arquivo sem fazer check-out do arquivo, consulte [editar arquivos de Checked-In](../../2014/database-engine/edit-checked-in-files.md).  
   
- Você pode usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fazer check-out de arquivos manualmente ou automaticamente. Você check-out de arquivos manualmente, abra a solução que contém os arquivos de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente e, em seguida, clicando no **Check-Out** comando. Você também pode fazer check-out dos arquivos automaticamente se configurar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para essa finalidade.  
+ Você pode usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fazer check-out de arquivos manualmente ou automaticamente. Check-out de arquivos manualmente abrindo a solução que contém os arquivos na [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente e, em seguida, clicando em de **Check-Out** comando. Você também pode fazer check-out dos arquivos automaticamente se configurar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para essa finalidade.  
   
  Dependendo das opções definidas pelo administrador do provedor de controle de código-fonte, você também pode fazer check-out dos arquivos em modo exclusivo ou compartilhado. Quando você fizer o check-out de um arquivo exclusivamente, somente você poderá modificá-lo, nenhum outro usuário poderá fazer o check-out do arquivo até você terminar. Quando você fizer o check-out em um arquivo no modo compartilhado, qualquer número de usuários poderá fazer check-out do mesmo arquivo. Cada vez que um usuário faz check-in de um arquivo, o provedor de controle do código-fonte tenta mesclar o arquivo com a versão mais recente disponível no servidor. Caso haja conflito entre a versão de check-in e a mais recente, o provedor de controle do código-fonte solicitará que o usuário resolva os conflitos.  
   

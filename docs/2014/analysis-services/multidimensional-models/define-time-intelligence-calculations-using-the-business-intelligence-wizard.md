@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295976"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence
   O aprimoramento de inteligência de tempo é um aprimoramento de cubo que adiciona cálculos de tempo (ou exibições de tempo) a uma hierarquia selecionada. Esse aprimoramento oferece suporte às seguintes categorias de cálculos:  
@@ -45,14 +45,14 @@ ms.locfileid: "36120458"
   
 -   Comparações de período paralelas.  
   
- Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade `Type` está definida como `Time`.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade `Type`. O `Type` propriedade da dimensão e seus atributos será definida corretamente se você usar o Assistente para dimensões para criar a dimensão de tempo.  
+ Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade `Type` está definida como `Time`.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade `Type`. O `Type` propriedade da dimensão e seus atributos será configurada corretamente se você usar o Assistente para dimensões para criar a dimensão de tempo.  
   
  Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você verá as alterações que serão feitas ao banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicionar a inteligência de tempo selecionada.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Selecionando uma hierarquia de tempo  
  Na página **Escolher Cálculos e Hierarquia de Destino** , selecione a hierarquia de tempo à qual será aplicado o aprimoramento de tempo. Você pode aplicar o aprimoramento de tempo somente a uma hierarquia sempre que executar o Assistente de Business Intelligence. Para aplicar o aprimoramento a mais de uma hierarquia de tempo, execute o assistente novamente.  
   
- Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis** , selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem os níveis na hierarquia e de `Type` configuração de propriedade para o atributo para cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
+ Depois de selecionar uma hierarquia de tempo, na lista **Cálculos de tempo disponíveis** , selecione os cálculos que se aplicam à hierarquia. Os cálculos listados dependem dos níveis na hierarquia e o `Type` configuração de propriedade para o atributo para cada nível. Por exemplo, uma hierarquia Anos aceita Desde o Início do Ano e Crescimento Ano a Ano, mas não a hierarquia Trimestres.  
   
 > [!NOTE]  
 >  O arquivo de modelo Timeintelligence.xml define os cálculos de tempo listados em **Cálculos de tempo disponíveis**. Se os cálculos listados não satisfizerem suas necessidades, você pode alterar os cálculos existentes ou adicionar novos cálculos ao arquivo Timeintelligence.xml.  

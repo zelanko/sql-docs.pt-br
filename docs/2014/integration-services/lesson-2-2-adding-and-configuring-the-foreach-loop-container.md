@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311996"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: adicionando e configurando o contêiner Loop Foreach
   Nessa tarefa, você adicionará a capacidade de executar loop através de uma pasta de arquivos simples e aplicará a mesma transformação Fluxo de Dados usada na Lição 1 para cada um desses arquivos simples. Você faz isto adicionando e configurando um contêiner Loop Foreach ao fluxo de controle.  
@@ -47,9 +47,9 @@ ms.locfileid: "36121305"
   
 3.  Clique com o botão direito do mouse no **Contêiner Loop Foreach** recém-adicionado e selecione **Editar**.  
   
-4.  No **Editor de Loop Foreach** caixa de diálogo de **geral** página, para **nome**, digite `Foreach File in Folder`. Clique em **OK**.  
+4.  No **Editor de Loop Foreach** caixa de diálogo a **gerais** página, para **nome**, digite `Foreach File in Folder`. Clique em **OK**.  
   
-5.  O contêiner Foreach Loop, clique **propriedades**e na janela Propriedades, verifique se o `LocaleID` está definida como **inglês (Estados Unidos)**.  
+5.  O contêiner Foreach Loop com o botão direito, clique em **propriedades**e na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Para configurar o enumerador para o contêiner Loop Foreach  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36121305"
   
 2.  Na página **Mapeamentos de Variáveis**, na coluna **Variável**, clique na célula vazia e selecione **\<Nova Variável…>**.  
   
-3.  No **Adicionar variável** caixa de diálogo para **nome**, tipo `varFileName`.  
+3.  No **Adicionar variável** caixa de diálogo, para **nome**, tipo `varFileName`.  
   
     > [!IMPORTANT]  
     >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
@@ -90,7 +90,7 @@ ms.locfileid: "36121305"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>Para adicionar a tarefa de fluxo de dados ao loop  
   
--   Arraste o **extrair dados de moeda de exemplo** tarefa de fluxo de dados para o contêiner de Foreach Loop agora renomeado `Foreach File in Folder`.  
+-   Arraste o **extrair dados de moeda de exemplo** tarefa de fluxo de dados para o contêiner Foreach Loop agora renomeado `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Próxima tarefa da lição  
  [Etapa 3: Modificando o Gerenciador de Conexões de Arquivo Simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  

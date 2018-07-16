@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c57ebc36fa8a8145ee1212341e74d07c8d1b1522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9dcefb5daa67613fd64f277271f4ffa4d35d9738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314506"
 ---
 # <a name="server-properties-connections-page"></a>Propriedades do servidor (página Conexões)
   Use esta página para exibir ou modificar suas opções de conexão.  
@@ -75,7 +75,7 @@ ms.locfileid: "36130620"
  Exiba os valores que estão sendo executados para as opções neste painel. Esses valores são somente leitura.  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções de &#40;consultar execução: SQL Server: página Avançado&#41;](../options-query-execution-sql-server-advanced-page.md)   
+ [Opções de &#40;consulta de execução: SQL Server: página Avançado&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

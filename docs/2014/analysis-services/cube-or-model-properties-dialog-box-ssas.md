@@ -1,5 +1,5 @@
 ---
-title: Cubo ou modelo de caixa de diálogo de propriedades (SSAS) | Microsoft Docs
+title: De cubo ou modelo de caixa de diálogo de propriedades (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90efe4a053104491b24e290641205d85628c3689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317458"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades do Cubo ou Modelo (SSAS)
   Use a caixa de diálogo **Propriedades do Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de um banco de dados de cubo ou modelo. Você pode exibir a caixa de diálogo clicando com o botão direito do mouse em um cubo ou em modelo no **Pesquisador de Objetos** e selecionando **Propriedades**.  
@@ -30,9 +30,9 @@ ms.locfileid: "36119013"
   
 -   [Editor de formulário de ação de relatório &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
--   [Configuração de erro para o cubo, partição e processamento de dimensão &#40;SSAS - Multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+-   [Configuração de erros para cubo, partição e processamento da dimensão &#40;SSAS - Multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
--   [O cache pró-ativo &#40;caixa de diálogo Propriedades da partição&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
+-   [Cache pró-ativo &#40;caixa de diálogo Propriedades de partição&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
 ## <a name="options"></a>Opções  
   

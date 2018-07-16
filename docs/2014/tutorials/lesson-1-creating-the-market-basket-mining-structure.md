@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2201afdb7226267e44686b76edb22e77b11dd199
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323606"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lição 1: Criando a estrutura de mineração do Market Basket 
   Nesta lição, você criará uma estrutura de mineração que permite prever quais produtos [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] um cliente tende a adquirir ao mesmo tempo. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- A estrutura de mineração de associação que você criará nesta lição oferece suporte à adição de modelos de mineração com base no [algoritmo associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Em lições posteriores, você usará os modelos de mineração para prever o tipo de produtos que um cliente tente a comprar ao mesmo tempo, que é chamado de análise de cesta básica. Por exemplo, você pode achar que os clientes tendem a comprar mountain bikes, pneus de bicicleta e capacetes ao mesmo tempo.  
+ A estrutura de mineração de associação que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Em lições posteriores, você usará os modelos de mineração para prever o tipo de produtos que um cliente tente a comprar ao mesmo tempo, que é chamado de análise de cesta básica. Por exemplo, você pode achar que os clientes tendem a comprar mountain bikes, pneus de bicicleta e capacetes ao mesmo tempo.  
   
  Nesta lição, a estrutura de mineração é definida usando as tabelas aninhadas. As tabelas aninhadas são usadas porque o domínio de dados que será definido pela estrutura está em duas tabelas de origem diferentes. Para obter mais informações sobre tabelas aninhadas, consulte [tabelas aninhadas &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
@@ -102,9 +102,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  No **conectar ao servidor** caixa de diálogo para **tipo de servidor**, selecione **Analysis Services**. Em **nome do servidor**, tipo `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
+2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
   
-3.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+3.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -179,7 +179,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 -   No Editor de consultas, na barra de ferramentas, clique em **Execute**.  
   
-     O status da consulta é exibido no **mensagens** guia na parte inferior do Editor de consultas após a instrução conclui a execução. As mensagens devem exibir:  
+     O status da consulta é exibido na **mensagens** guia na parte inferior do Editor de consultas após a instrução termina a execução. As mensagens devem exibir:  
   
     ```  
     Executing the query   

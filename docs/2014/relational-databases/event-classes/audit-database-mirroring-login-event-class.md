@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2fb7c6b3fe5444fe9d0cdd7bd618c10a3b349fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a91244c7e4ef93c9a5e34b7edb74eeb94bf75370
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288972"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe de evento Audit Database Mirroring Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Database Mirroring Login** para relatar mensagens de auditoria relacionadas a segurança de transporte de espelhamento de banco de dados.  

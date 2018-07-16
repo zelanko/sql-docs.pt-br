@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -16,13 +16,13 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6d66fc292fe1af7f20e55eee6b8d1fdf9e6151a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282602"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>Definir permissões para itens de servidor de relatório em um site do SharePoint (Reporting Services no modo integrado do SharePoint)
   Se as configurações de segurança padrão não fornecerem o nível de acesso desejado, você poderá criar novos níveis de permissão para fornecer acesso a itens ou operações específicos do servidor de relatório. As configurações de segurança personalizadas podem ser úteis se você quiser restringir o acesso a um determinado relatório.  
@@ -79,7 +79,7 @@ ms.locfileid: "36011304"
  [Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Referência de permissão de lista de itens do servidor de relatório e sites do SharePoint](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Site do SharePoint e a referência à permissão de listas para itens do servidor de relatório](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Conceder permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

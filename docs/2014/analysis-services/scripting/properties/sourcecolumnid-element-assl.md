@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281772"
 ---
 # <a name="sourcecolumnid-element-assl"></a>Elemento SourceColumnID (ASSL)
   Contém o identificador (ID) da coluna de estrutura de mineração de origem no ancestral [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -62,9 +62,9 @@ ms.locfileid: "36011821"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `SourceColumnID` elemento corresponde ao identificador de uma coluna de estrutura de mineração no [colunas](../collections/columns-element-assl.md) coleção do pai `MiningStructure`.  
+ O valor da `SourceColumnID` elemento corresponde ao identificador de uma coluna de estrutura de mineração em de [colunas](../collections/columns-element-assl.md) coleção do pai `MiningStructure`.  
   
- O elemento que corresponde ao pai do `SourceColumnID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
+ O elemento que corresponde ao pai de `SourceColumnID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningModelColumn>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

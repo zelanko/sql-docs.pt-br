@@ -18,32 +18,32 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314766"
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de linhas MDSCHEMA_KPIS
   Descreve os KPIs (indicadores chave de desempenho) dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_KPIS` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_KPIS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||O banco de dados de origem.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Sem suporte.|  
 |`CUBE_NAME`|`DBTYPE_WSTR`||O cubo pai para o KPI.|  
-|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||O grupo de medidas associado para o KPI.<br /><br /> Você pode usar esta coluna para determinar a dimensionalidade do KPI. Se "**\<nulo >**", o KPI será dimensionado por todos os grupos de medidas.<br /><br /> O valor padrão é "**\<nulo >**".|  
+|`MEASUREGROUP_NAME`|`DBTYPE_WSTR`||O grupo de medidas associado para o KPI.<br /><br /> Você pode usar esta coluna para determinar a dimensionalidade do KPI. Se "**\<nula >**", o KPI será dimensionado por todos os grupos de medidas.<br /><br /> O valor padrão é "**\<nula >**".|  
 |`KPI_NAME`|`DBTYPE_WSTR`||O nome do KPI.|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||Um rótulo ou uma legenda associada ao KPI. Usado principalmente para fins de exibição. Se não houver uma legenda, `KPI_NAME` será retornado.|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||Uma descrição legível do KPI.|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição, use um ponto e vírgula (;) para separar as pastas.|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição, use um ponto e vírgula (;) para separar as pastas.|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||O nome exclusivo do membro na dimensão de medidas para o Valor do KPI.|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||O nome exclusivo do membro na dimensão de medidas para a Meta do KPI.<br /><br /> Retornará `NULL` se não houver uma Meta definida.|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||O nome exclusivo do membro na dimensão de medidas para o Status do KPI.<br /><br /> Retornará `NULL` se não houver um Status definido.|  

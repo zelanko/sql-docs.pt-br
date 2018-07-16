@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf2b45a6cc6b7963a894bea8316f5080676fef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 755d401f304b04e675f343911ef127050552b789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288022"
 ---
 # <a name="iskey-element-assl"></a>Elemento IsKey (ASSL)
   Indica se a coluna fornece a chave para o caso em uma [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36121793"
 ## <a name="remarks"></a>Remarks  
  Uma ou mais colunas podem ser designadas como colunas de chave para cada nível de uma estrutura de tabela aninhada.  
   
- O elemento que corresponde ao pai do `IsKey` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ O elemento que corresponde ao pai de `IsKey` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

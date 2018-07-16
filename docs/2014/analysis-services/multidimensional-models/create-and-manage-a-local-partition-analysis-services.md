@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321266"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
   Você pode criar mais partições para um grupo de medidas para melhorar o desempenho do processamento. Ter várias partições permite a você alocar dados de fatos em diversos arquivos de dados físicos correspondentes em servidores locais e remotos. No Analysis Services, as partições podem ser processadas de forma independente e em paralelo, permitindo maior controle sobre o processamento de cargas de trabalho no servidor.  
@@ -59,7 +59,7 @@ ms.locfileid: "36130869"
   
 3.  Na coluna Origem, clique no botão Procurar (. .) para abrir a caixa de diálogo Origem da Partição.  
   
-     ![Coluna de origem no painel partição](../media/ssas-partitionsource.png "coluna de origem no painel de partição")  
+     ![Coluna de origem no painel de partição](../media/ssas-partitionsource.png "coluna de origem no painel de partição")  
   
 4.  No Tipo de Associação, selecione **Associação de Consulta**. A consulta SQL que seleciona os dados aparece automaticamente.  
   

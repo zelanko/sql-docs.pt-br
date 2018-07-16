@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndatasource.f1
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f33af08d91f2c8e739c9295daed0ae47563ede51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e77906d12c334f9e10ac6a2c26b9c90a2efc8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293517"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectar com uma fonte de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a criar uma nova conexão com várias fontes de dados, como bancos de dados relacionais, feeds de dados e arquivos. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

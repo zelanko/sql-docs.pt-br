@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295996"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
-  *Seleção de recursos* é um termo geralmente usado na mineração de dados para descrever as ferramentas e técnicas disponíveis para reduzir entradas a um tamanho gerenciável para processamento e análise. Seleção de recursos implica não apenas *redução de cardinalidade*, que significa impor um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também a opção de atributos, significando que o analista ou a ferramenta de modelagem ativamente seleciona ou descarta atributos com base em sua utilidade para análise.  
+  *Seleção de recursos* é um termo geralmente usado em mineração de dados para descrever as ferramentas e técnicas disponíveis para reduzir entradas a um tamanho gerenciável para processamento e análise. Seleção de recursos implica não só *redução de cardinalidade*, o que significa impor um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também a escolha de atributos, que significa que que o analista ou a ferramenta de modelagem ativamente seleciona ou descarta atributos com base em sua utilidade para análise.  
   
  A capacidade para aplicar seleção de recursos é crítica para análise efetiva, porque os conjuntos de dados frequentemente contêm muito mais informações do que é necessário para criar o modelo. Por exemplo, um conjunto de dados pode conter 500 colunas que descrevem as características de clientes, mas se os dados em algumas das colunas forem muito esparsos, você ganharia um benefício muito pequeno por acrescentá-los ao modelo. Se você mantiver colunas desnecessárias quando criar o modelo, precisará de mais CPU e memória durante o processo de treinamento e de mais espaço de armazenamento para o modelo completo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36012403"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Seleção de recursos na mineração de dados do Analysis Services  
  Normalmente, a seleção de recursos é executada automaticamente no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], e cada algoritmo tem um conjunto de técnicas padrão para a aplicação de forma inteligente redução de recursos. A seleção de recursos sempre é feita antes do treinamento do modelo, para que os atributos de um conjunto de dados com maior probabilidade de uso no modelo sejam escolhidos de forma automática. Porém, você também pode definir manualmente parâmetros para influenciar o comportamento de seleção de recursos.  
   
- Em geral, ela funciona calculando uma pontuação para cada atributo e, em seguida, selecionando apenas os atributos com a pontuação mais alta. Também é possível ajustar o limiar para os pontos mais altos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para calcular estas pontuações e o método exato que é aplicado em qualquer modelo depende destes fatores:  
+ Em geral, ela funciona calculando uma pontuação para cada atributo e, em seguida, selecionando apenas os atributos com a pontuação mais alta. Também é possível ajustar o limiar para os pontos mais altos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece vários métodos para calcular estas pontuações e o método exato aplicado em qualquer modelo depende destes fatores:  
   
 -   O algoritmo usado em seu modelo  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36012403"
  A seção a seguir descreve cada método de seleção de recursos.  
   
 #### <a name="interestingness-score"></a>Pontuação de interesse  
- Um recurso será interessante se ele transmitir alguma informação útil. Como a definição do que é útil varia dependendo do cenário, a indústria de mineração de dados desenvolveu várias formas de medir *interesse*. Por exemplo, *novidade* podem ser interessantes na detecção de exceções, mas a capacidade de diferenciar itens intimamente relacionados, ou *peso Discriminatório*, seria mais interessante para classificação.  
+ Um recurso será interessante se ele transmitir alguma informação útil. Como a definição do que é útil varia dependendo do cenário, a indústria de mineração de dados desenvolveu várias formas de medir *interesse*. Por exemplo, *novidade* pode ser interessante na detecção de exceções, mas a capacidade de diferenciar itens intimamente relacionados, ou *peso Discriminatório*, seria mais interessante para classificação.  
   
- A medida de interesse que é usado no SQL Server Analysis Services é *baseado em entropia*, o que significa que os atributos com distribuições aleatórias têm maior entropia e menor ganho de informações; portanto, esses atributos são menos interessantes. A entropia de qualquer atributo em particular é comparada à entropia de todos os outros atributos, como segue:  
+ A medida de interesse usada no SQL Server Analysis Services está *baseado em entropia*, o que significa que os atributos com distribuições aleatórias têm maior entropia e menor ganho de informações; portanto, esses atributos são menos interessante. A entropia de qualquer atributo em particular é comparada à entropia de todos os outros atributos, como segue:  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   

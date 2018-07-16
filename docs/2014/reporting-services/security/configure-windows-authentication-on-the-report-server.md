@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325716"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  
@@ -31,14 +31,14 @@ ms.locfileid: "36121847"
   
  Os requisitos adicionais a seguir também devem ser satisfeitos:  
   
--   Os arquivos rseportserver. config devem ter `AuthenticationType` definida como `RSWindowsNegotiate`, `RSWindowsKerberos`, ou `RSWindowsNTLM`. Por padrão, o arquivo RSReportServer.config incluirá a definição `RSWindowsNegotiate` se a conta de serviço do Servidor de Relatórios for NetworkService ou LocalSystem; caso contrário, a definição `RSWindowsNTLM` será utilizada. Você pode adicionar `RSWindowsKerberos` se tiver aplicativos que usam somente a autenticação Kerberos.  
+-   Os arquivos rseportserver. config devem ter `AuthenticationType` definido como `RSWindowsNegotiate`, `RSWindowsKerberos`, ou `RSWindowsNTLM`. Por padrão, o arquivo RSReportServer.config incluirá a definição `RSWindowsNegotiate` se a conta de serviço do Servidor de Relatórios for NetworkService ou LocalSystem; caso contrário, a definição `RSWindowsNTLM` será utilizada. Você pode adicionar `RSWindowsKerberos` se tiver aplicativos que usam somente a autenticação Kerberos.  
   
     > [!IMPORTANT]  
-    >  Usando `RSWindowsNegotiate` resultará em um erro de autenticação Kerberos se você configurou o serviço do servidor de relatório para ser executado em uma conta de usuário de domínio e não registrado um nome Principal de serviço (SPN) para a conta. Para obter mais informações, consulte [Como resolver erros da autenticação Kerberos ao se conectar a um servidor de relatório](#proxyfirewallRSWindowsNegotiate) neste tópico.  
+    >  Usando `RSWindowsNegotiate` resultará em um erro de autenticação Kerberos se você configurou o serviço do servidor de relatório para ser executado em uma conta de usuário de domínio e um nome Principal de serviço (SPN) para a conta não tiver sido registrado. Para obter mais informações, consulte [Como resolver erros da autenticação Kerberos ao se conectar a um servidor de relatório](#proxyfirewallRSWindowsNegotiate) neste tópico.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve ser configurado para a Autenticação do Windows. Por padrão, os arquivos Web. config para o serviço Web do servidor de relatório e Gerenciador de relatórios incluem o \<modo de autenticação = "Windows" > configuração. Se você alterar essa configuração para \<authentication mode="Forms">, a Autenticação do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] falhará.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve ser configurado para a Autenticação do Windows. Por padrão, os arquivos Web. config para o serviço Web do servidor de relatório e Gerenciador de relatórios incluem a \<modo de autenticação = "Windows" > configuração. Se você alterar essa configuração para \<authentication mode="Forms">, a Autenticação do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] falhará.  
   
--   Arquivos Web. config para o serviço Web do servidor de relatório e Gerenciador de relatórios deve ter \<representar identidade = "true" / >.  
+-   Arquivos de Web. config para o serviço Web servidor de relatório e Gerenciador de relatórios devem ter \<identity impersonate = "true" / >.  
   
 -   O aplicativo cliente ou navegador deve dar suporte à segurança integrada do Windows.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36121847"
           </AuthenticationTypes>  
     ```  
   
-4.  Cole-o sobre entradas existentes para <`Authentication`>.  
+4.  Cole-a nas entradas existentes para <`Authentication`>.  
   
      Observe que você não pode usar `Custom` com os tipos `RSWindows`.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36121847"
   
  Você pode detectar o erro se tiver habilitado o log de Kerberos. Outro sintoma do erro é a solicitação das credenciais várias vezes e a exibição de uma janela vazia do navegador.  
   
- Você pode confirmar que você encontrou um erro de autenticação do Kerberos removendo < `RSWindowsNegotiate` / > do arquivo de configuração e tentar novamente a conexão.  
+ Você pode confirmar que você está encontrando um erro de autenticação Kerberos removendo < `RSWindowsNegotiate` / > do seu arquivo de configuração e tentar novamente a conexão.  
   
  Depois que você confirmar o problema, poderá solucioná-lo dos seguintes modos:  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36121847"
   
 -   Altere a conta de serviço para ser executada em uma conta interna, como Serviço de Rede. As contas internas mapeiam o SPN HTTP ao SPN do host, o qual é definido quando um computador se une à sua rede. Para obter mais informações, consulte [Configurar uma conta de serviço &#40; 	Gerenciador de Configurações do SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
--   Use NTLM. O NTLM geralmente funciona quando a autenticação Kerberos falha. Para usar o NTLM, remova `RSWindowsNegotiate` de rsreportserver. config arquivo e verifique se somente `RSWindowsNTLM` for especificado. Se você optar por essa abordagem, poderá continuar usando uma conta de usuário de domínio para o serviço Servidor de Relatório, mesmo que não haja um SPN definido.  
+-   Use NTLM. O NTLM geralmente funciona quando a autenticação Kerberos falha. Para usar NTLM, remova `RSWindowsNegotiate` de rsreportserver. config de arquivos e verifique se somente `RSWindowsNTLM` for especificado. Se você optar por essa abordagem, poderá continuar usando uma conta de usuário de domínio para o serviço Servidor de Relatório, mesmo que não haja um SPN definido.  
   
 #### <a name="logging-information"></a>Registrando informações  
  Há várias fontes de registros de informações que podem ajudar a resolver problemas relacionados ao Kerberos.  

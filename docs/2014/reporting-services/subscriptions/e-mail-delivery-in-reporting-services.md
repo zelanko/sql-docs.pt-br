@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303536"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de email que fornece um modo de enviar um relatório por email a usuários individuais ou a grupos. A extensão de entrega de email é configurada pela ferramenta Gerenciador de Configurações do Reporting Services e pela edição dos arquivos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "36120939"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; do SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
 ## <a name="e-mail-delivery-options"></a>Opções de entrega de email  
  A entrega de email do servidor de relatório pode entregar emails das seguintes maneiras:  
@@ -75,17 +75,17 @@ ms.locfileid: "36120939"
   
  Para obter informações sobre como configurar um servidor de relatório de modo nativo, consulte o seguinte:  
   
--   [Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Configurações - Gerenciador de configurações de email &#40;modo nativo do SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configurações de email – Configuration Manager &#40;modo nativo do SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
   
--   [Configure o email para o do aplicativo de serviço Reporting Services &#40;do SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurar o email para um relatório dos serviços de aplicativo de serviço &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Assinaturas controladas por dados](data-driven-subscriptions.md)   
  [Atribuições de função](../security/role-assignments.md)  
   

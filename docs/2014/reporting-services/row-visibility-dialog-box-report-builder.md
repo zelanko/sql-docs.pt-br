@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1ed0f9298810713038d722a7b2e28c9982f63ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dd8f40b00db99496d43199183ca34e95ca7dfc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328816"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Caixa de diálogo Visibilidade da Linha (Construtor de Relatórios)
   Use a caixa de diálogo **Visibilidade da Linha** para mostrar ou ocultar a linha selecionada quando o relatório for executado pela primeira vez ou para usar outro item de relatório para alternar a visibilidade da linha.  
@@ -39,7 +39,7 @@ ms.locfileid: "36130499"
  **Mostrar ou ocultar com base em uma expressão**  
  Escolha esta opção para variar a visibilidade inicial usando uma expressão.  
   
- Digite uma expressão que é avaliada como um `Boolean` valor `True` para ocultar o item e `False` para mostrar o item. Clique no botão **Expressão** (*fx*) para editar a expressão.  
+ Digite uma expressão que é avaliada como uma `Boolean` valor de `True` para ocultar o item e `False` para mostrar o item. Clique no botão **Expressão** (*fx*) para editar a expressão.  
   
  **Exibição pode ser alternada por este item de relatório**  
  Escolha essa opção para exibir uma imagem de alternância que permite que o usuário mostre ou oculte a linha em um visualizador de relatórios HTML.  
@@ -49,7 +49,7 @@ ms.locfileid: "36130499"
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Imagens &#40;SSRS e construtor de relatórios&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Imagens &#40;relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

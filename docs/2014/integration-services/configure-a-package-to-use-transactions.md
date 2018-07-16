@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8637409c0248506de68fa6615dcd6b9edbf7a5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306136"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurar um pacote para usar transações
   Quando você configura um pacote para usar transações, há duas opções:  
@@ -33,9 +33,9 @@ ms.locfileid: "36130390"
  Os procedimentos a seguir descrevem como configurar ambas as opções.  
   
 ## <a name="configuring-a-single-transaction"></a>Configurando uma única transação  
- Nesta opção, o pacote propriamente dito inicia uma única transação. Configurar o pacote para iniciar a transação, definindo a propriedade TransactionOption do pacote a ser `Required`.  
+ Nesta opção, o pacote propriamente dito inicia uma única transação. Configurar o pacote para iniciar a transação, definindo a propriedade TransactionOption do pacote a `Required`.  
   
- Em seguida, inscreva as tarefas e os contêineres específicos desta única transação. Para inscrever uma tarefa ou contêiner em uma transação, você definir a propriedade TransactionOption de tarefa ou contêiner para `Supported`.  
+ Em seguida, inscreva as tarefas e os contêineres específicos desta única transação. Para inscrever uma tarefa ou contêiner em uma transação, defina a propriedade TransactionOption da tarefa ou contêiner para `Supported`.  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>Para configurar um pacote para usar uma única transação  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36130390"
 8.  Repita as etapas 6 e 7 para cada tarefa e contêiner que você deseja inscrever na transação.  
   
 ## <a name="configuring-multiple-transactions"></a>Configurando várias transações  
- Nesta opção, o próprio pacote dá suporte a transações, mas não inicia uma transação. Configurar o pacote para dar suporte a transações, definindo a propriedade TransactionOption do pacote a ser `Supported`.  
+ Nesta opção, o próprio pacote dá suporte a transações, mas não inicia uma transação. Configurar o pacote para dar suporte a transações, definindo a propriedade TransactionOption do pacote a `Supported`.  
   
- Em seguida, configure as tarefas e os contêineres desejados do pacote para iniciar ou participar de transações. Para configurar uma tarefa ou contêiner para iniciar uma transação, você definir a propriedade TransactionOption de tarefa ou contêiner para `Required`.  
+ Em seguida, configure as tarefas e os contêineres desejados do pacote para iniciar ou participar de transações. Para configurar uma tarefa ou contêiner para iniciar uma transação, você definir a propriedade TransactionOption da tarefa ou contêiner para `Required`.  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>Configurar um pacote para usar várias transações  
   

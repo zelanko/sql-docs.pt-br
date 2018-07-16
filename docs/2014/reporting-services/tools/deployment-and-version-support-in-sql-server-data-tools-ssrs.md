@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d52ae21eb9313bbb58d04305c9dd79eb41551290
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313222"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oferece suporte aos seguintes cenários:  
@@ -72,7 +72,7 @@ ms.locfileid: "36118822"
 |Projeto do Servidor de Relatório<br /><br /> ou em<br /><br /> Projeto do Assistente do Servidor de Relatórios|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Esquema 2005 RDL|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório||  
 |Projeto do Servidor de Relatório|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Esquema 2003 RDL|Sem suporte||  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Designer de relatórios RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Esquema 2005 RDL|Sem suporte|Não há suporte para o esquema 2008 RDL.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Controles de Visualizador|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Não há suporte para o 2008 RDL no modo local|N/A|Pode exibir relatórios 2008 RDL no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o servidor de relatório no modo de servidor.|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Controles do Visualizador|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Não há suporte para o 2008 RDL no modo local|N/A|Pode exibir relatórios 2008 RDL no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório no modo de servidor.|  
   
  Para obter mais informações sobre como abrir relatórios em uma versão anterior do esquema de definição de relatório, consulte [atualizar relatórios](../install-windows/upgrade-reports.md). Para obter mais informações sobre esquemas de definição de relatório específicos, consulte [Especificação de linguagem RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
   

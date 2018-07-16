@@ -1,5 +1,5 @@
 ---
-title: Entendendo DAX em modelos de tabela (SSAS Tabular) | Microsoft Docs
+title: Noções básicas sobre DAX em modelos tabulares (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1788cadfe3f84798c7143e069fc40a0acb75883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291432"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Entendendo DAX em modelos de tabela (SSAS tabular)
   DAX é a linguagem de fórmula usada para criar cálculos personalizados no [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para pastas de trabalho do Microsoft Excel e projetos de modelo de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As fórmulas DAX incluem funções, operadores e valores para executar cálculos avançados em dados em tabelas e colunas.  
@@ -222,13 +222,13 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   As funções do DAX incluem uma variedade de funções de *inteligência de tempo* . Estas funções permitem definir ou selecionar intervalos de datas e executar cálculos dinâmicos com base nestas datas ou intervalos. Por exemplo, você pode comparar somas em períodos paralelos.  
   
 ### <a name="date-and-time-functions"></a>Funções de data e hora  
- As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam no `datetime` tipos de dados usados pelo Microsoft SQL Server. Para obter mais informações, consulte [funções de data e hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam os `datetime` tipos de dados usados pelo Microsoft SQL Server. Para obter mais informações, consulte [funções de data e hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Funções de filtro  
  As funções de filtro em DAX retornam tipos de dados específicos, pesquisar valores em tabelas relacionadas e filtrar pelos valores relacionados. As funções de pesquisa funcionam com tabelas e relações, assim como um banco de dados. As funções de filtragem permitem manipular o contexto de dados para criar cálculos dinâmicos. Para obter mais informações, consulte [funções de filtro &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
   
 ### <a name="information-functions"></a>Funções informativas  
- Uma função informativa verifica a célula ou linha fornecida como um argumento e indica se o valor corresponde ao tipo esperado. Por exemplo, a função ISERROR retorna TRUE quando o valor referenciado contém um erro. Para obter mais informações, consulte [funções informativas &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx).  
+ Uma função informativa verifica a célula ou linha fornecida como um argumento e indica se o valor corresponde ao tipo esperado. Por exemplo, a função ISERROR retorna TRUE quando o valor referenciado contém um erro. Para obter mais informações, consulte [funções de informações &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx).  
   
 ### <a name="logical-functions"></a>Funções lógicas  
  As funções lógicas agem sobre uma expressão para retornar informações sobre os valores da expressão. Por exemplo, a função TRUE permite saber se uma expressão que você está avaliando retorna um valor TRUE. Para obter mais informações, consulte [funções lógicas &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx).  
@@ -318,11 +318,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Em modelos de tabela, há muitos modos de criar contexto de filtro. Dentro do contexto de clientes que podem consumir o modelo, como relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , os usuários podem criar filtros dinamicamente adicionando segmentações de dados ou filtros de relatório nos cabeçalhos de linha e coluna. Você também pode especificar expressões de filtro diretamente dentro da fórmula, para especificar valores relacionados, para filtrar tabelas que são usadas como entradas ou para obter contexto dinamicamente para os valores que são usados em cálculos. Você também pode desmarcar completa ou seletivamente os filtros em colunas específicas. Isto é muito útil ao criar fórmulas que calculam totais principais.  
   
- Para obter mais informações sobre como criar filtros dentro de fórmulas, consulte o [função de filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
+ Para obter mais informações sobre como criar filtros dentro de fórmulas, consulte a [função de filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx).  
   
- Para obter um exemplo de como os filtros podem ser limpos para criar totais gerais, consulte o [função ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
+ Para obter um exemplo de como os filtros são limpos para criar totais gerais, consulte a [função ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx).  
   
- Para obter exemplos de como limpar e aplicar filtros dentro de fórmulas, consulte o [função ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
+ Para obter exemplos de como limpar e aplicar filtros dentro de fórmulas, consulte a [função ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx).  
   
 ####  <a name="bkmk_determine_context"></a> Determinando o contexto em fórmulas  
  Quando você cria uma fórmula do DAX, a fórmula é testada primeiro para sintaxe válida e para ter certeza de que os nomes das colunas e tabelas incluídos na fórmula podem ser localizados no contexto atual. Se qualquer coluna ou tabela especificada pela fórmula não puder ser localizada, um erro será retornado.  
@@ -335,15 +335,15 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>Exemplos de contexto em fórmulas  
   
-1.  O [função RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) função expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
+1.  O [função RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
   
 2.  O [função de filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) função permite que você especifique as linhas a serem incluídas no contexto atual. Os exemplos neste tópico também ilustram como inserir filtros em outras funções que executam agregações.  
   
 3.  O [função ALL](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx) define o contexto dentro de uma fórmula. Você pode usá-la para anular filtros aplicados como resultado do contexto de consulta.  
   
-4.  O [função ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) função permite que você remova todos os filtros, exceto o que você especificar. Os dois tópicos incluem exemplos que orientam você durante a criação de fórmulas e a compreensão dos contextos complexos.  
+4.  O [função ALLEXCEPT](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx) permite remover todos os filtros, exceto um especificado por você. Os dois tópicos incluem exemplos que orientam você durante a criação de fórmulas e a compreensão dos contextos complexos.  
   
-5.  O [função EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) e [função EARLIEST](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) permitem percorrer em loop as tabelas ao executar cálculos, enquanto referencia um valor de um loop interno. Se você estiver familiarizado com o conceito de recursão e com loops internos e externos, apreciará o poder proporcionado pelas funções EARLIER e EARLIEST. Se você não for experiente com esses conceitos, siga as etapas no exemplo atentamente para ver como os contextos internos e externos são usados ao fazer cálculos.  
+5.  O [função EARLIER](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx) e [função EARLIEST](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx) permitem executar loop pelas tabelas executam cálculos, enquanto referenciam um valor de um loop interno. Se você estiver familiarizado com o conceito de recursão e com loops internos e externos, apreciará o poder proporcionado pelas funções EARLIER e EARLIEST. Se você não for experiente com esses conceitos, siga as etapas no exemplo atentamente para ver como os contextos internos e externos são usados ao fazer cálculos.  
   
 ##  <a name="bkmk_RelModel"></a> Fórmulas e o modelo de tabela  
  O designer de modelo, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], é uma área na qual é possível trabalhar com várias tabelas de dados e conectar as tabelas em um modelo de tabela. Dentro deste modelo, as tabelas são unidas por relações em colunas com valores comuns (chaves). O modelo de tabela permite vincular valores a colunas em outras tabelas e cria mais cálculos interessantes. Da mesma maneira que em um banco de dados relacional, você pode conectar muitos níveis de tabelas relacionadas e usar colunas de qualquer tabela nos resultados.  
@@ -428,7 +428,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Expressões de análise de dados &#40;DAX&#41; referência](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
  [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
  [Colunas calculadas &#40;Tabular do SSAS&#41;](ssas-calculated-columns.md)   
- [Funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
+ [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
  [KPIs &#40;Tabular do SSAS&#41;](kpis-ssas-tabular.md)   
  [Fontes de dados com suporte &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
   

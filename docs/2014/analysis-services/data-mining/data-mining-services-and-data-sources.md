@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297466"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
   A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "36117542"
 -   Gerenciamento de recursos do servidor  
   
 ### <a name="xmla-listener"></a>Ouvinte XMLA  
- O componente ouvinte XMLA processa todas as comunicações de XMLA entre o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e seus clientes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` configuração no arquivo msmdsrv.ini pode ser usada para especificar uma porta na qual um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância escuta. Um valor 0 nesse arquivo indica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve na porta padrão. A menos que especificado de outro modo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa as seguintes portas TCP padrão:  
+ O componente ouvinte XMLA processa todas as comunicações de XMLA entre o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e seus clientes. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` definição de configuração no arquivo msmdsrv. ini pode ser usada para especificar uma porta na qual um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta da instância. Um valor 0 nesse arquivo indica que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ouve na porta padrão. A menos que especificado de outro modo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa as seguintes portas TCP padrão:  
   
 |Porta|Description|  
 |----------|-----------------|  
@@ -74,14 +74,14 @@ ms.locfileid: "36117542"
 ## <a name="configuring-permissions-and-server-properties"></a>Configurando permissões e propriedades do servidor  
  A mineração de dados exige permissões adicionais em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A maioria das propriedades de mineração de dados pode ser definida usando a [Caixa de diálogo Propriedades do Analysis Services &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- Para obter mais informações sobre as propriedades que você pode configurar, consulte [configurar propriedades de servidor do Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
+ Para obter mais informações sobre as propriedades que você pode configurar, consulte [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
   
  As seguintes propriedades de servidor são de relevância específica para a mineração de dados:  
   
 -   `AllowAdHocOpenRowsetQueries` Controla o acesso ad hoc a provedores OLE DB, que são carregados diretamente no espaço de memória do servidor.  
   
     > [!IMPORTANT]  
-    >  Para melhorar a segurança, é recomendável definir esta propriedade como `false`. O valor padrão é `false`. No entanto, mesmo se essa propriedade é definida como `false`, os usuários podem continuar a criar consultas singleton e usar OPENQUERY em fontes de dados permitidos.  
+    >  Para melhorar a segurança, é recomendável definir esta propriedade como `false`. O valor padrão é `false`. No entanto, ainda que esta propriedade é definida como `false`, os usuários podem continuar criando consultas singleton e usar OPENQUERY em fontes de dados permitidas.  
   
 -   **AllowedProvidersInOpenRowset** Especificará o provedor se ad hoc acesso estiver habilitado. Para especificar vários provedores, digite uma lista de ProgIDs separados por vírgula.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36117542"
  Também é possível definir propriedades que permitem ajustar o servidor e controlar a segurança para uso de cliente. Para obter mais informações, consulte [Propriedades do Recurso](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o suporte para algoritmos de plug-in nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre o suporte para algoritmos de plug-in pelas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acesso programático a objetos de mineração de dados  
  Você pode usar os seguintes modelos de objeto para criar uma conexão com um banco de dados do Analysis Services e trabalhar com objetos de mineração de dados:  
@@ -128,7 +128,7 @@ ms.locfileid: "36117542"
   
 ## <a name="see-also"></a>Consulte também  
  [Arquitetura física &#40;Analysis Services - dados multidimensionais&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitetura física &#40;Analysis Services – mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [Arquitetura física &#40;Analysis Services - mineração de dados&#41;](physical-architecture-analysis-services-data-mining.md)   
  [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314726"
 ---
 # <a name="access-element-assl"></a>Elemento Access (ASSL)
   Indica o nível de acesso concedido a um [CellPermission](../objects/cellpermission-element-assl.md) elemento.  
@@ -73,7 +73,7 @@ ms.locfileid: "36118423"
  A enumeração que corresponde aos valores permitidos para `Access` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CellPermissionAccess>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [Elemento de função &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  
   
   

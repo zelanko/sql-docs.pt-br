@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5dec237a3fadfa3eb4bdac49b5df54428a5ed9fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6e529c7ebba36bc7fb9c482492ba22c05aff4ce5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323646"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios e SSRS)
   É possível adicionar texto, imagens, linhas, retângulos e bordas estáticas aos cabeçalhos ou rodapés das páginas. Você poderá colocar expressões e imagens associadas a dados em uma caixa de texto, se desejar a variável ou os dados computados em um cabeçalho ou rodapé.  
@@ -67,6 +67,6 @@ ms.locfileid: "36118059"
 >  Ao remover um cabeçalho ou rodapé de página, você o exclui do relatório. Quaisquer itens adicionados anteriormente ao cabeçalho ou rodapé de página não voltarão a ser exibidos, se você adicionar o cabeçalho ou rodapé novamente mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;SSRS e construtor de relatórios&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

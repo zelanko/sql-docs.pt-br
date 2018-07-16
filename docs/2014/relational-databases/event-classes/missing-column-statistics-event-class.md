@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22881bba08acce97caac7bbad7a322af0f899cfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9c4cdf1a3918bdf7e222d22b6e2cd9629caddc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298496"
 ---
 # <a name="missing-column-statistics-event-class"></a>Classe de evento Missing Column Statistics
   A classe de evento Missing Column Statistics indica que as estatísticas de coluna que podiam ter sido úteis para o otimizador, não estão disponíveis.  

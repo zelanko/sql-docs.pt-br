@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c4f2ae1acfdc15bd8ca2882a7d5acbff88acf965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311306"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Partes de relatório no Designer de Relatórios (SSRS)
   No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios.  
@@ -70,7 +70,7 @@ ms.locfileid: "36118054"
   
 -   Listas  
   
- Se você estiver publicando uma parte de relatório que exibe dados, como uma tabela, matriz ou gráfico, poderá baseá-la em um conjunto de dados compartilhado. Caso contrário, quando você publicar a parte de relatório, o conjunto de dados do qual ela depende será salvo como um conjunto de dados inserido. Conjuntos de dados inseridos podem ser baseados em fontes de dados inseridas, mas as credenciais não são armazenadas nas fontes de dados inseridas. Portanto, se sua parte de relatório depender de um conjunto de dados inserido que usa uma fonte de dados inserida, qualquer um que reutilizar essa parte de relatório precisará fornecer as credenciais para a fonte de dados inserida. Para evitar isso, baseie seus conjuntos de dados inseridos e compartilhados em fontes de dados compartilhadas com credenciais armazenadas. Para obter mais informações, consulte [partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md) no [documentação do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
+ Se você estiver publicando uma parte de relatório que exibe dados, como uma tabela, matriz ou gráfico, poderá baseá-la em um conjunto de dados compartilhado. Caso contrário, quando você publicar a parte de relatório, o conjunto de dados do qual ela depende será salvo como um conjunto de dados inserido. Conjuntos de dados inseridos podem ser baseados em fontes de dados inseridas, mas as credenciais não são armazenadas nas fontes de dados inseridas. Portanto, se sua parte de relatório depender de um conjunto de dados inserido que usa uma fonte de dados inserida, qualquer um que reutilizar essa parte de relatório precisará fornecer as credenciais para a fonte de dados inserida. Para evitar isso, baseie seus conjuntos de dados inseridos e compartilhados em fontes de dados compartilhadas com credenciais armazenadas. Para obter mais informações, consulte [partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md) na [documentação do construtor de relatórios](http://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com.  
   
  A publicação de uma parte de relatório no Designer de Relatórios é um processo de duas etapas:  
   

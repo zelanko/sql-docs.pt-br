@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c4eb36f93faba7f32352de41d5c6fde4e0dac2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 328d37a9d010388c0cb8d0e7e9d251601e35f949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302706"
 ---
 # <a name="discoverenumerators-rowset"></a>Conjunto de linhas DISCOVER_ENUMERATORS
   Retorna uma lista de nomes, tipos de dados e valores de enumeração dos enumeradores que recebem suporte do provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) para uma fonte de dados específica. O provedor do XMLA publica todas as constantes de enumeração que reconhece.  
@@ -36,7 +36,7 @@ ms.locfileid: "36120444"
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  Para cada enumerador, há vários elementos, um para cada valor da enumeração. O conjunto de linhas que representa cada enumerador é plano e o nome do enumerador pode ser repetido para elementos que pertencem à mesma enumeração.  
   
- O `DISCOVER_ENUMERATORS` linhas contém as seguintes colunas.  
+ O `DISCOVER_ENUMERATORS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

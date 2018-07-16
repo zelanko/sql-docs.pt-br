@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da4d8cc46e141fb404ee0f63876178f41464b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94dd1cc0e96e11eb24e1d7f09665960485f758df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323696"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
   Os relatórios personalizados podem ser executados no contexto de um nó selecionado do Pesquisador de objetos se eles referenciarem os parâmetros de relatório desse nó. Isso permite que um relatório personalizado use o contexto atual, por exemplo, o banco de dados atual, ou um banco de dados ou objeto de servidor  

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Definindo avançado propriedades de dimensão e atributo | Microsoft Docs'
+title: 'Lição 4: Definindo avançado de propriedades de dimensão e atributo | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 853ce6e8fbbc559e690c46fda0ae1d7db02d2eb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dd26e1f755f655dd5757c35c3232ce34981da6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279802"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Definindo propriedades de dimensão e atributo avançadas
   Nesta lição, você aprenderá como usar algumas propriedades avançadas de atributos, hierarquias de atributo e propriedades de dimensão.  

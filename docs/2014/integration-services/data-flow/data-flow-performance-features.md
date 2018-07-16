@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287653"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
@@ -76,15 +76,15 @@ ms.locfileid: "36120622"
  Não aumente o tamanho do buffer para o ponto em que a paginação para o disco começa a acontecer. A paginação para o disco impede mais o desempenho do que o tamanho do buffer não otimizado. Para determinar se a paginação está ocorrendo, monitore o contador de desempenho "Buffers em spool" no snap-in Desempenho do MMC (Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurar o pacote para execução paralela  
- A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para dar suporte a execução paralela de diferentes tarefas no pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: `MaxConcurrentExecutables` e `EngineThreads`.  
+ A execução paralela melhora desempenho em computadores com vários processadores lógicos ou físicos. Para dar suporte à execução paralela de diferentes tarefas no pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa duas propriedades: `MaxConcurrentExecutables` e `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Propriedade MaxConcurrentExcecutables  
  O `MaxConcurrentExecutables` é uma propriedade do próprio pacote. Esta propriedade define quantas tarefas podem ser executadas simultaneamente. O valor padrão é -1, que significa o número de processadores físicos ou lógicos mais 2.  
   
- Para compreender como esta propriedade trabalha, considere um pacote de exemplo que tenha três tarefas Fluxo de Dados. Se você definir `MaxConcurrentExecutables` como 3, todas as tarefas de fluxo de dados três podem executar simultaneamente. Entretanto, assuma que cada tarefa Fluxo de Dados tenha 10 árvores de execução de origem para destino. Se você definir `MaxConcurrentExecutables` como 3, não será possível garantir que a execução das árvores dentro de cada Fluxo de Dados será executada na forma paralela.  
+ Para compreender como esta propriedade trabalha, considere um pacote de exemplo que tenha três tarefas Fluxo de Dados. Se você definir `MaxConcurrentExecutables` para 3, todas as tarefas de fluxo de dados três podem executar simultaneamente. Entretanto, assuma que cada tarefa Fluxo de Dados tenha 10 árvores de execução de origem para destino. Se você definir `MaxConcurrentExecutables` como 3, não será possível garantir que a execução das árvores dentro de cada Fluxo de Dados será executada na forma paralela.  
   
 #### <a name="the-enginethreads-property"></a>Propriedade EngineThreads  
- A propriedade `EngineThreads` é uma propriedade de cada tarefa Fluxo de Dados. Esta propriedade define quantos threads o mecanismo de fluxo de dados poderá criar e executar na forma paralela. O `EngineThreads` a propriedade se aplica igualmente a ambos os threads de origem que o mecanismo de fluxo de dados cria para origens e os threads de trabalho que o mecanismo cria para transformações e destinos. Portanto, definir `EngineThreads` como 10 significa que o mecanismo pode criar até dez threads de origem e até dez threads de trabalho.  
+ A propriedade `EngineThreads` é uma propriedade de cada tarefa Fluxo de Dados. Esta propriedade define quantos threads o mecanismo de fluxo de dados poderá criar e executar na forma paralela. O `EngineThreads` propriedade se aplica igualmente a ambos os threads de origem que o mecanismo de fluxo de dados cria para origens e os threads de trabalho que o mecanismo cria para transformações e destinos. Portanto, definir `EngineThreads` como 10 significa que o mecanismo pode criar até dez threads de origem e até dez threads de trabalho.  
   
  Para compreender como esta propriedade trabalha, considere o pacote de exemplo com três tarefas Fluxo de Dados. Cada tarefa Fluxo de Dados contém dez árvores de execução de origem para destino. Se você definir EngineThreads como 10 em cada tarefa Fluxo de Dados, todas as 30 árvores de execução poderão ser executadas simultaneamente.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36120622"
   
  Algumas vezes os dados de origem já foram classificados antes de serem usados por um componente do downstream. Essa pré-classificação pode ocorrer quando a consulta SELECT usar uma cláusula ORDER BY ou quando os dados forem inseridos na origem na ordem classificada. Para os dados de origem pré-classificados, é possível mencionar uma dica de que a classificação dos dados é viável, evitando, assim, o uso de uma transformação Classificar para atender aos requisitos de classificação de determinadas transformações de downstream. (Por exemplo, as transformações Mesclar e Mesclar Junção exigem entradas classificadas.) Para fornecer uma dica de que os dados são classificados, execute as seguintes tarefas:  
   
--   Definir o `IsSorted` propriedade na saída de um componente de fluxo de dados upstream como `True`.  
+-   Defina as `IsSorted` propriedade na saída de um componente de fluxo de dados upstream como `True`.  
   
 -   Especifique as colunas de chave de classificação nas quais os dados serão classificados.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36120622"
  Nesta seção, use as sugestões para melhorar o desempenho das transformações Agregação, Pesquisa Difusa, Agrupamento Difuso, Pesquisa, Mesclar Junção e Dimensão de Alteração Lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformação Agregação  
- A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que são esperados como resultado de uma **Agrupar por** operação, defina o `Keys` e `KeysScale` propriedades, respectivamente. Se você souber o número exato ou aproximado de valores distintos que são esperados como resultado de uma **contagem distinta** operação, defina o `CountDistinctKeys` e `CountDistinctScale` propriedades, respectivamente.  
+ A transformação Agregação inclui as propriedades `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Essas propriedades melhoram o desempenho permitindo que transformação pré-aloque a quantidade de memória necessária para os dados armazenados em cache pela transformação. Se você souber o número exato ou aproximado de grupos que são esperados como resultado de uma **Group by** operação, defina as `Keys` e `KeysScale` propriedades, respectivamente. Se você souber o número exato ou aproximado de valores distintos que são esperados como resultado de uma **contagem distinta** operação, defina as `CountDistinctKeys` e `CountDistinctScale` propriedades, respectivamente.  
   
  Se tiver criado várias agregações em um fluxo de dados, considere a criação de várias agregações que usam uma transformação Agregação em vez de criar várias transformações. Esse procedimento melhora o desempenho quando uma agregação for um subconjunto de outra agregação porque a transformação pode otimizar o armazenamento interno e analisar os dados de entrada apenas uma vez. Por exemplo, se uma agregação usa uma cláusula GROUP BY e uma agregação AVG, combiná-las em uma transformação pode melhorar o desempenho. Entretanto, executar várias agregações dentro de uma transformação Agregação serializa as operações de agregação e pode não melhorar o desempenho quando várias agregações devem ser computadas de forma independente.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36120622"
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
   
 #### <a name="merge-join-transformation"></a>Transformação Junção de Mesclagem  
- Você não precisa configurar o valor da `MaxBuffersPerInput` propriedade porque a Microsoft fez alterações que reduzem o risco de que a transformação junção de mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
+ Você não precisa configurar o valor da `MaxBuffersPerInput` propriedade porque a Microsoft fez alterações que reduzem o risco que a transformação junção de mesclagem consumir memória excessiva. Esse problema algumas vezes ocorria quando as várias entradas da Junção de Mesclagem geravam dados a taxas irregulares.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta  
  O Assistente para Dimensão Alteração Lenta e a transformação Dimensão Alteração Lenta são ferramentas de uso geral que atendem às necessidades da maioria dos usuários. Entretanto, o fluxo de dados gerado pelo assistente não é otimizado para o desempenho.  
@@ -201,7 +201,7 @@ ms.locfileid: "36120622"
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacote](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Ferramentas de solução de problemas de execução de pacote](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

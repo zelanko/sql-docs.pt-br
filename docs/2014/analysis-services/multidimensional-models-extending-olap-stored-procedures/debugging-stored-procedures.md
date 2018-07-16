@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec2c67e30caf18f3e11b1391dc0a4bb67028c083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d14f4b68aa3a4cf76cad1c49c1d37a6be9c70f7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282012"
 ---
 # <a name="debugging-stored-procedures"></a>Depurando procedimentos armazenados
   Os procedimentos armazenados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são, na verdade, bibliotecas CLR ou COM (normalmente DLLs) escritas em C# (ou em outra linguagem CLR ou COM). Portanto, depurar um procedimento armazenado é bem parecido com depurar outro aplicativo no ambiente de depuração do Visual Studio. Você depura procedimentos armazenados no ambiente de desenvolvimento do Visual Studio usando funções de depuração integradas. Elas permitem que você pare nas localizações do procedimento, verifique a memória e os valores do Registro, altere variáveis, observe o tráfego de mensagens e analise como o código funciona.  
@@ -42,13 +42,13 @@ ms.locfileid: "36122266"
   
 6.  No Visual Studio, anexe ao processo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Msmdsrv.exe).  
   
-    1.  Do **depurar** menu, escolha **toProcess anexar**.  
+    1.  Dos **Debug** menu, escolha **anexar toProcess**.  
   
     2.  No **anexar toProcess** caixa de diálogo, selecione **Mostrar processos de todos os usuários**.  
   
-    3.  No **processos disponíveis** lista, o **processo** coluna, clique em **Msmdsrv.exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
+    3.  No **processos disponíveis** listar, as **processo** coluna, clique em **Msmdsrv.exe**. Se houver mais que uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no servidor, será necessário identificar o processo pelo ID da instância que você deseja usar.  
   
-    4.  No **anexar a** texto caixa, certifique-se de que o tipo de programa apropriado está selecionado. Para uma DLL CLR, clique em **selecione**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **gerenciado**, em seguida, clique em **Okey**. Para uma DLL COM, clique em **selecione**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **nativo**, em seguida, clique em **Okey**.  
+    4.  No **anexar a** texto caixa, certifique-se de que o tipo de programa apropriado é selecionado. Para uma DLL CLR, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **gerenciado**, em seguida, clique em **Okey**. Para uma DLL de COM, clique em **selecionar**, em seguida, clique em **depurar esses tipos de código**, em seguida, clique em **nativo**, em seguida, clique em **Okey**.  
   
     5.  Clique em **anexar**.  
   

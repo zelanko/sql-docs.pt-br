@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26926b8259475687bc0e48babf39ff41a2827068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd21eb41730ad1d214361bee779fef375b8c75ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284602"
 ---
 # <a name="arguments-dialog-box"></a>caixa de diálogo Argumentos
   A caixa de diálogo **Argumentos** especifica argumentos novos ou existentes para uma ferramenta. Essa caixa de diálogo é exibida quando você inicia uma ferramenta externa que tem a opção **Solicitar argumentos** selecionada na caixa de diálogo **Ferramentas Externas** .  

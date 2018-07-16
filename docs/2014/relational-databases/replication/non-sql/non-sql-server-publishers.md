@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
 - non-SQL Server Publishers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], Oracle
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1151a7c84dfaa346fb208d74614dd742c1683879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fbb2694932b20c38bee4bc7b3978abfab1472b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299906"
 ---
 # <a name="non-sql-server-publishers"></a>editores não SQL Server
   Publicar dados de origens que não são do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite consolidar dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode assinar um instantâneo ou dados transacionais publicados de um banco de dados Oracle. Para obter mais informações sobre a publicação do Oracle, consulte [Oracle Publishing Overview](oracle-publishing-overview.md) (Visão geral de publicação do Oracle).  

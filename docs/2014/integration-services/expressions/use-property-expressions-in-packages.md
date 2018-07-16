@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289372"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
   Uma expressão de propriedade é uma expressão atribuída a uma propriedade para ativar uma atualização dinâmica da propriedade no tempo de execução. Por exemplo, uma expressão de propriedade pode atualizar a linha Para se uma tarefa Enviar Email usar a inserção de emails que já estão armazenados em uma variável.  
@@ -56,10 +56,10 @@ ms.locfileid: "36010486"
   
  Uma propriedade pode usar só uma expressão de propriedade e uma expressão de propriedade só pode ser aplicada a uma propriedade. Entretanto, você pode construir várias expressões de propriedade idênticas e atribuí-las a diferentes propriedades.  
   
- Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define o `LoggingMode` propriedade, que usa um valor da `DTSLoggingMode` enumeração, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis `Enabled`, `Disabled`, ou `UseParentSetting`. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](enumerated-constants-in-property-expressions.md).  
+ Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a `LoggingMode` propriedade, que usa um valor da `DTSLoggingMode` enumeração, a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis `Enabled`, `Disabled`, ou `UseParentSetting`. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface de Usuário da Expressão de Propriedade  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Fornece um conjunto de ferramentas para criação e gerenciamento de expressões de propriedade.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Fornece um conjunto de ferramentas para criar e gerenciar as expressões de propriedade.  
   
 -   A página **Expressões** , localizada nos editores personalizados para tarefas, o contêiner do Loop For e os contêineres Foreach. A página **Expressões** permite editar as expressões e exibir uma lista de expressões de propriedade que usados por uma tarefa, por um Loop Foreach ou por um Loop For.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36010486"
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Usando as expressões de propriedade no Loop Foreach  
  Geralmente é útil implementar uma expressão de propriedade para definir o valor da propriedade `ConnectionString` dos gerenciadores de conexões que são usados dentro do contêiner Loop Foreach. Depois que o enumerador mapeia seu valor atual para uma variável em cada iteração do loop, a expressão de propriedade pode usar o valor dessa variável para atualizar o valor da `ConnectionString` propriedade dinamicamente.  
   
- Se você quiser usar as expressões de propriedade com a propriedade `ConnectionString` dos gerenciadores de conexões Arquivo, Vários Arquivos, Arquivos Simples e Vários Arquivos Simples usados pelo Loop Foreach, é preciso considerar algumas informações. Um pacote pode ser configurado para executar vários arquivos executáveis simultaneamente definindo a propriedade `MaxConcurrentExecutables` como um valor maior que 1 ou com o valor -1. Um valor definido como -1 permite o número máximo de arquivos executáveis sendo executados simultaneamente para igualar o número de processadores mais dois. Para evitar consequências negativas da execução paralela de executáveis, o valor de `MaxConcurrentExecutables` deveria ser definido como 1. Se `MaxConcurrentExecutables` não está definido como 1, o valor de `ConnectionString` propriedade não pode ser garantida e os resultados serão imprevisíveis.  
+ Se você quiser usar as expressões de propriedade com a propriedade `ConnectionString` dos gerenciadores de conexões Arquivo, Vários Arquivos, Arquivos Simples e Vários Arquivos Simples usados pelo Loop Foreach, é preciso considerar algumas informações. Um pacote pode ser configurado para executar vários arquivos executáveis simultaneamente definindo a propriedade `MaxConcurrentExecutables` como um valor maior que 1 ou com o valor -1. Um valor definido como -1 permite o número máximo de arquivos executáveis sendo executados simultaneamente para igualar o número de processadores mais dois. Para evitar consequências negativas da execução paralela de executáveis, o valor de `MaxConcurrentExecutables` deveria ser definido como 1. Se `MaxConcurrentExecutables` não está definido como 1, o valor da `ConnectionString` propriedade não pode ser garantida e os resultados serão imprevisíveis.  
   
  Por exemplo, considere um Loop Foreach que enumera arquivos em uma pasta, recupera os nomes de arquivo e usa uma tarefa Executar SQL para inserir cada nome de arquivos em uma tabela. Se `MaxConcurrentExecutables` não for definido como 1, poderão ocorrer conflitos de gravação se duas instâncias da tarefa Executar SQL tentarem gravar dados na tabela ao mesmo tempo.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36010486"
  As expressões de exemplo a seguir mostram como usar as variáveis de sistema, operadores, funções e literais de cadeia de caracteres em expressões de propriedade.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expressão de Propriedade para a Propriedade LoggingMode de um Pacote  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o inteiro equivalente do membro de enumerador LoggingMode `Enabled`, e o valor 2 é o inteiro equivalente do membro `Disabled`. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o inteiro equivalente do membro do enumerador LoggingMode `Enabled`, e o valor 2 é o inteiro equivalente do membro `Disabled`. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

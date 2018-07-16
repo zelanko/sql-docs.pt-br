@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277072"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
   Este tópico inclui práticas recomendadas e dicas de solução de problemas para backup e restaurações do SQL Server no serviço de Blob do Windows Azure.  
@@ -45,20 +44,20 @@ ms.locfileid: "36012289"
   
 ## <a name="handling-large-files"></a>Tratando arquivos grandes  
   
--   A operação de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa vários threads para otimizar a transferência de dados para os serviços de armazenamento de Blob do Windows Azure.  No entanto, o desempenho depende de vários fatores, como largura de banda do ISV e tamanho do banco de dados. Se você pretende fazer backup de bancos de dados ou grupos de arquivos grandes em um banco de dados do SQL Server no local, é recomendável que você teste a taxa de transferência primeiro. [Do armazenamento do Windows Azure SLA](http://go.microsoft.com/fwlink/?LinkId=271619) ter tempos de processamento máximos para blobs que você pode levar em consideração.  
+-   A operação de backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa vários threads para otimizar a transferência de dados para os serviços de armazenamento de Blob do Windows Azure.  No entanto, o desempenho depende de vários fatores, como largura de banda do ISV e tamanho do banco de dados. Se você pretende fazer backup de bancos de dados ou grupos de arquivos grandes em um banco de dados do SQL Server no local, é recomendável que você teste a taxa de transferência primeiro. [Do armazenamento do Windows Azure SLA](http://go.microsoft.com/fwlink/?LinkId=271619) têm tempos de processamento máximos para blobs que você pode levar em consideração.  
   
 -   O uso da opção `WITH COMPRESSION`, como recomendado na seção **Gerenciando o backup**, é muito importante ao fazer backup de arquivos grandes.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Solução de problemas de backup para ou restauração de URL  
  Estas são algumas maneiras rápidas de solucionar problemas de erros ao fazer backup ou restauração do serviço de armazenamento de Blob do Windows Azure.  
   
- Para evitar erros devido às opções sem suporte ou limitações, examine a lista de limitações e suporte para obter informações de comandos BACKUP e restauração no [SQL Server Backup e restauração com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) artigo.  
+ Para evitar erros devido às opções sem suporte ou limitações, examine a lista de limitações e suporte para obter informações de comandos BACKUP e restauração na [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) artigo.  
   
  **Erros de autenticação:**  
   
 -   WITH CREDENTIAL é uma nova opção, necessário para fazer backup ou restauração no serviço de armazenamento de Blob do Windows Azure. As falhas relacionadas à credencial podem ser as seguintes:  
   
-     A credencial especificada no `BACKUP` ou `RESTORE` comando não existe. Para evitar esse problema, inclua instruções T-SQL para criar a credencial caso não exista nenhuma na instrução de backup. Este é um exemplo que você pode usar:  
+     A credencial especificada na `BACKUP` ou `RESTORE` comando não existe. Para evitar esse problema, inclua instruções T-SQL para criar a credencial caso não exista nenhuma na instrução de backup. Este é um exemplo que você pode usar:  
   
     ```  
     IF NOT EXISTS  
@@ -98,7 +97,7 @@ ms.locfileid: "36012289"
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
     -   Ocorreu a **SqlException 3284. Gravidade: 16 Estado: 5**  
-        **Marca de arquivo de mensagem no dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' não está alinhado. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
+        **Mensagem de marca de arquivo no dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '65536' parece um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36012289"
   
      BACKUP DATABASE está sendo encerrado de forma anormal.  
   
--   Backupiorequest: falha de gravação no dispositivo de backup http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
+-   Backupiorequest: Reportioerror: Falha na gravação no dispositivo de backup http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
   
  Se você ativar o log detalhado usando o sinalizador de rastreamento 3051, também poderá ver a seguinte mensagem nos logs:  
   
@@ -155,10 +154,10 @@ ms.locfileid: "36012289"
   
     ```  
   
-2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o SQL Server estiver instalado na unidade C do computador, coloque o arquivo de configuração aqui: *Server \ mssql12 do C:\Program Files\Microsoft SQL.\< InstanceName > \MSSQL\Binn*.  
+2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o SQL Server está instalado na unidade C do computador, coloque o arquivo de configuração aqui: *C:\Program Files\Microsoft SQL Server\MSSQL12.\< InstanceName > \MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Solucionando problemas de Backup Gerenciado do SQL Server para Windows Azure  
- Como o backup gerenciado do SQL Server é criado com base no Backup para URL, as dicas de solução de problemas descritas nas seções anteriores aplicam-se a bancos de dados ou instâncias que usam o Backup Gerenciado do SQL Server.  Informações sobre como solucionar problemas de SQL Server Managed Backup to Windows Azure são descritas em detalhes em [Solucionando problemas de SQL Server Managed Backup para o Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
+ Como o backup gerenciado do SQL Server é criado com base no Backup para URL, as dicas de solução de problemas descritas nas seções anteriores aplicam-se a bancos de dados ou instâncias que usam o Backup Gerenciado do SQL Server.  Informações sobre como solucionar problemas de SQL Server Managed Backup to Windows Azure são descritas detalhadamente no [de solução de problemas SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Restaurar de backups armazenados no Microsoft Azure](restoring-from-backups-stored-in-microsoft-azure.md)  

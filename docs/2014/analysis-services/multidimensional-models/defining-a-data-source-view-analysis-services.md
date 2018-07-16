@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308546"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
   Uma exibição de fonte de dados, contém o modelo lógico do esquema usado pelos objetos do banco de dados multidimensionais do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — ou seja, cubos, dimensões e estruturas de mineração de dados. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
@@ -111,7 +111,7 @@ ms.locfileid: "36122507"
 ##  <a name="bkmk_secondaryDS"></a> Adicionar uma fonte de dados secundária  
  Ao definir uma exibição da fonte de dados que contenha tabelas, exibições ou colunas extraídas de diversas fontes de dados, a primeira fonte de dados a partir da qual você adiciona objetos é designada como fonte de dados principal (não é possível alterar a fonte de dados principal após sua definição). Depois de definir a exibição da fonte de dados com base nos objetos de uma única fonte de dados, você poderá adicionar objetos de outras fontes de dados.  
   
- Se um processamento OLAP ou uma consulta de mineração de dados exige que dados de várias fontes de dados em uma única consulta, a fonte de dados primária deve dar suporte a consultas remotas usando `OpenRowset`. Normalmente, será uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, se você criar uma dimensão OLAP que contenha atributos associados a colunas de várias fontes de dados, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construirá uma consulta `OpenRowset` para preencher essa dimensão durante o processamento. No entanto, se um objeto OLAP pode ser preenchido ou um de mineração de dados consulta resolvido a partir de uma única fonte de dados, então um `OpenRowset` consulta não será construída. Em determinadas situações, pode ser possível definir relações de atributo entre os atributos para eliminar a necessidade de uma consulta `OpenRowset`. Para obter mais informações sobre relações de atributo, consulte [Relações de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) e [Define Relações de atributo](attribute-relationships-define.md).  
+ Se um processamento OLAP ou uma consulta de mineração de dados requer dados de várias fontes de dados em uma única consulta, a fonte de dados primária deve dar suporte a consultas remotas usando `OpenRowset`. Normalmente, será uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, se você criar uma dimensão OLAP que contenha atributos associados a colunas de várias fontes de dados, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] construirá uma consulta `OpenRowset` para preencher essa dimensão durante o processamento. No entanto, se um objeto OLAP pode ser preenchido ou um de mineração de dados consulta resolvido a partir de uma única fonte de dados, então um `OpenRowset` consulta não será construída. Em determinadas situações, pode ser possível definir relações de atributo entre os atributos para eliminar a necessidade de uma consulta `OpenRowset`. Para obter mais informações sobre relações de atributo, consulte [Relações de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) e [Define Relações de atributo](attribute-relationships-define.md).  
   
  Para adicionar tabelas e colunas de uma segunda fonte de dados, você clica duas vezes no DSV no Gerenciador de Soluções para abri-lo no Designer de exibição da fonte de dados e, em seguida, use a caixa de diálogo Adicionar/Remover Tabelas para incluir objetos de outras fontes de dados que são definidas em seu projeto. Para obter mais informações, consulte [Como adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
@@ -135,14 +135,14 @@ ms.locfileid: "36122507"
 >  Depois de concluir o Assistente de Exibição da Fonte de Dados, você pode adicionar ou remover relações no painel de esquemas do Designer de Exibição da Fonte de Dados. Para obter mais informações, consulte [Definir relações lógicas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionando ou removendo tabelas ou exibições em dados de uma exibição da fonte &#40;do Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Definir chaves primárias lógicas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Definir cálculos nomeados em uma exibição da fonte de dados &#40;do Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Definir consultas nomeadas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;do Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;do Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Explorar dados em uma exibição da fonte de dados &#40;do Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
- [Excluir uma exibição da fonte de dados &#40;do Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
- [Atualizar o esquema em uma exibição da fonte de dados &#40;do Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Adicionando ou removendo tabelas ou exibições em dados de uma exibição da fonte &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [Definir chaves primárias lógicas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Explorar dados em uma exibição da fonte de dados &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [Excluir uma exibição da fonte de dados &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
+ [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

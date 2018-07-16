@@ -1,5 +1,5 @@
 ---
-title: Conecte-se ao servidor (página de propriedades de Conexão) Integration Services | Microsoft Docs
+title: Conectar-se ao servidor (página de propriedades de Conexão) Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodts.connectionproperties.f1
 - sql12.ssiseditserverregistration.connectionproperties.f1
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ebd26cf1f71b31aaf38f494cda5b64a1c5cf131
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297076"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Conectar ao Servidor (página Propriedades da Conexão) Integration Services
   Use esta guia para exibir ou especificar opções ao se conectar com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou ao registrar o [!INCLUDE[ssIS](../includes/ssis-md.md)] nos **Servidores Registrados**. **Conectar** e **Opções** são exibidas apenas nessa caixa de diálogo durante a conexão. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssIS](../includes/ssis-md.md)].  

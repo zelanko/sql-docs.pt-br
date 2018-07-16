@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323186"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos
   Nas versões anteriores, os membros calculados não eram permitidos em subseleções ou subcubos. No entanto, desde o SQL Server 2008, eles são permitidos e habilitados por uma propriedade de conexão. Além disso, um novo comportamento para membros calculados, em subseleções e subcubos, foi introduzido no SQL Server 2008 R2.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos  
- O `SubQueries` propriedade de cadeia de caracteres de conexão no <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROPMSMDSUBQUERIES` propriedade [propriedades com suporte do XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) define o comportamento ou a permissão de membros calculados ou calculados define em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
+ O `SubQueries` propriedade de cadeia de caracteres de conexão no <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou o `DBPROPMSMDSUBQUERIES` propriedade na [propriedades XMLA com suporte &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) define o comportamento ou a permissão de membros calculados ou calculados define em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
   
  A propriedade SubQueries permite os seguintes valores.  
   

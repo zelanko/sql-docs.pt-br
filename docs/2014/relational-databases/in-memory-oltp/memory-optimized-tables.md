@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 77b0bb18dde4c6f6bc8a1ff22bf3fda11b6f414f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276542"
 ---
 # <a name="memory-optimized-tables"></a>Tabelas com otimização de memória
   O OLTP na memória do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda a aumentar o desempenho de aplicativos OLTP por meio de acesso a dados com otimização de memória eficiente, compilação nativa de lógica de negócios e algoritmos livres de bloqueio e trava. O recurso OLTP na memória inclui tipos de tabela e tabelas com otimização de memória, bem como compilação nativa de procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] para acesso eficiente a essas tabelas.  

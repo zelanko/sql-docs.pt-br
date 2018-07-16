@@ -15,15 +15,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 287110485742ac9f8cce945d9fdb3864cfa69c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ccd35eb05019c606e794323fbd12bea60771e9be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319976"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrando o Reporting Services por meio do acesso à URL
   Com o acesso de URL, você acessa relatórios por uma URL do servidor de relatório. Uma solicitação de URL permite que você acesse um servidor de relatório específico bem como relatórios, recursos e outros itens no banco de dados do servidor de relatório. Você também pode personalizar a exibição de relatório e a experiência de navegação por seus usuários. A cadeia de caracteres da consulta do URL contém configurações de informações de dispositivo, como também parâmetros de relatório destinados a seu relatório e à saída de renderização escolhida. A forma que o servidor de relatório trata das solicitações de URL dependerá dos parâmetros, prefixos de parâmetro e tipo de item que você está acessando por meio da URL.  

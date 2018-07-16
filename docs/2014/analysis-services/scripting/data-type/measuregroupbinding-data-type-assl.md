@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12c54f8a61d75afd7689f19b2936bb6aefa3b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324906"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>Tipo de dados MeasureGroupBinding (ASSL)
   Define um tipo de dados derivado que representa uma associação a um [MeasureGroup](../objects/group-element-assl.md) elemento.  
@@ -67,9 +67,9 @@ ms.locfileid: "36122489"
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter informações adicionais sobre o `Binding` tipo, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) do tipo de associação e a hierarquia de herança de `Binding` tipos, consulte [tipo de dados de associação &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Para obter mais informações sobre o `Binding` tipo, incluindo as tabelas de objetos do Analysis Services Scripting Language (ASSL) do tipo de associação e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- Para obter uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.MeasureGroupBinding>.  
   

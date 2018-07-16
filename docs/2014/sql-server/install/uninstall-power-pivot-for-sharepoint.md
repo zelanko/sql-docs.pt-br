@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bbdcc586e92a1ddd4470759a4b44f0f86e420dde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b45767cde324af3309178182085615ced5153f60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321756"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Desinstalar o PowerPivot para SharePoint
   Desinstalar uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma operação de várias etapas que inclui a preparação para desinstalação, a remoção de recursos e soluções do farm e a remoção de arquivos de programas e configurações de registro.  
@@ -156,9 +156,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  Na Administração Central, em **Gerenciar serviços no servidor**, conecte-se ao servidor do qual você desinstalou o PowerPivot para SharePoint.  
   
-2.  -   Se você desinstalou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, verifique **o serviço de sistema do SQL Server PowerPivot** não aparecem mais na lista.  
+2.  -   Se você desinstalou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013, verifique **serviço de sistema do SQL Server PowerPivot** não aparecem mais na lista.  
   
-    -   Se você desinstalou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, verifique **SQL Server Analysis Services** e **o serviço de sistema do SQL Server PowerPivot** não aparecem mais na lista.  
+    -   Se você desinstalou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, verifique **SQL Server Analysis Services** e **serviço de sistema do SQL Server PowerPivot** não aparecem mais na lista.  
   
 3.  Depois de desinstalar o último servidor PowerPivot para SharePoint no farm, faça o seguinte:  
   
@@ -192,7 +192,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Não instale o provedor OLE DB do Analysis Services. O SharePoint instala o provedor OLE DB como pré-requisito para as pastas de trabalho do Excel que se conectam a bancos de dados do Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala uma versão mais recente, mas essa versão é compatível com versões anteriores para você deixar o sistema encarregado de evitar problemas com conexão de dados mais tarde.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar ou desinstalar o PowerPivot para SharePoint suplemento &#40;do SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Ferramentas de Configuração do PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
 - Report Builder 1.0, configuring access
@@ -17,13 +17,13 @@ ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 76c13b3c73879e40be793d622ca0918bce39edca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e715595ae4ed8394fc4e30c2819af140eb8e3681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328878"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
   O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para o modo nativo ou o modo de integração no SharePoint.  
@@ -48,13 +48,13 @@ ms.locfileid: "36120725"
  O Construtor de Relatórios sempre é executado no modo de confiança total; você não pode configurá-lo para ser executado em confiança parcial. Nas versões anteriores, era possível executar o Construtor de Relatórios em confiança parcial, mas essa opção não é suportada no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores.  
   
 ## <a name="enabling-and-disabling-report-builder"></a>Habilitando e desabilitando o Construtor de Relatórios  
- O Construtor de Relatórios é habilitado por padrão. Os administradores do servidor de relatório tem a opção de desabilitar o recurso do construtor de relatórios, definindo a propriedade de sistema do servidor de relatório `EnableReportDesignClientDownload` para `false`. A definição dessa propriedade desabilitará os downloads do Construtor de Relatórios para esse servidor de relatório.  
+ O Construtor de Relatórios é habilitado por padrão. Os administradores de servidor de relatório tem a opção de desabilitar o recurso do construtor de relatórios, definindo a propriedade de sistema do servidor de relatório `EnableReportDesignClientDownload` para `false`. A definição dessa propriedade desabilitará os downloads do Construtor de Relatórios para esse servidor de relatório.  
   
  Para definir propriedades de sistema do servidor de relatório, você pode usar o Management Studio ou script:  
   
 -   Para usar o Management Studio, conecte-se ao servidor de relatório e use a página Propriedades Avançadas do Servidor para definir `EnableReportDesignClientDownload` como `false`. Para obter mais informações sobre como abrir essa página, consulte [Definir as propriedades do servidor de relatório &#40;Management Studio&#41;](../tools/set-report-server-properties-management-studio.md).  
   
--   Para ver um exemplo de script que define uma propriedade de servidor de relatório, consulte [tarefas administrativas e implantação de Script](../tools/script-deployment-and-administrative-tasks.md).  
+-   Para ver um exemplo de script que define uma propriedade de servidor de relatório, consulte [implantação de Script e tarefas administrativas](../tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Atribuições de função que concedem o acesso ao Construtor de Relatórios em um servidor de relatório no modo nativo  
  Em um servidor de relatório no modo nativo, crie atribuições de função de usuário que incluem tarefas para usar o Construtor de Relatórios. Você deve ser Gerenciador de Conteúdo e Administrador de Sistema para criar ou modificar definições de função e atribuições de função em itens e no nível de site.  
@@ -146,7 +146,7 @@ ms.locfileid: "36120725"
 ## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>Permissões que concedem acesso ao Construtor de Relatórios em um servidor de relatório no modo integrado do SharePoint  
  Em um servidor de relatório no modo integrado do SharePoint, o acesso ao Construtor de Relatórios é concedido aos usuários do SharePoint que têm os níveis de permissão Colaboração ou Controle Total.  
   
- Se você usar níveis de permissão personalizados, inclua Adicionar Itens e Editar Itens no nível de permissão. Para obter mais informações sobre o acesso do construtor de relatórios por níveis de permissão internos, consulte [usar segurança interna no Windows SharePoint Services para itens do servidor de relatório](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md). Para obter mais informações sobre requisitos de permissão para níveis de permissão personalizados, consulte [definir permissões para operações de servidor de relatório em um aplicativo da Web do SharePoint](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
+ Se você usar níveis de permissão personalizados, inclua Adicionar Itens e Editar Itens no nível de permissão. Para obter mais informações sobre o acesso do construtor de relatórios por meio de níveis de permissão internos, consulte [usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md). Para obter mais informações sobre os requisitos de permissão para níveis de permissão personalizados, consulte [definir permissões para operações de servidor de relatório em um aplicativo Web do SharePoint](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## <a name="authentication-considerations-and-credential-reuse"></a>Considerações de autenticação e reutilização de credenciais  
  O Construtor de Relatórios usa a tecnologia ClickOnce para fazer download e instalar seus arquivos de aplicativo em um computador cliente. A tecnologia ClickOnce foi desenvolvida para a implantação unidirecional de aplicativos que coloca arquivos de programa em um computador cliente e executa o aplicativo como um processo separado com a identidade do usuário padrão. Como o Construtor de Relatórios deve se conectar novamente com o servidor de relatório para obter arquivos de aplicativo e dados do servidor de relatório, é importante entender como o ClickOnce define o contexto de segurança e faz solicitações para computadores remotos em cenários diferentes:  
@@ -168,7 +168,7 @@ ms.locfileid: "36120725"
   
 ## <a name="see-also"></a>Consulte também  
  [Autenticação com o servidor de relatório](../security/authentication-with-the-report-server.md)   
- [Planejamento para o Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar o construtor de relatórios &#40;construtor de relatórios&#41;](../report-builder/start-report-builder.md)   
  [O Gerenciador de relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Conectar-se a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   

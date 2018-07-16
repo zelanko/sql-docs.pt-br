@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322286"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
@@ -86,7 +86,7 @@ ms.locfileid: "36120808"
   
 3.  Especifique o nome de DAC em uma variável.  
   
-4.  Use o `GetDatabaseChanges()` método para recuperar um `ChangeResults` objeto e redirecione o objeto para um arquivo de texto para gerar um relatório simples de novos, excluídos e alterados objetos.  
+4.  Use o `GetDatabaseChanges()` método para recuperar um `ChangeResults` objeto e redirecione o objeto para um arquivo de texto para gerar um relatório simples de novos, excluídos e objetos alterados.  
   
 ### <a name="view-database-changes-example-powershell"></a>Exibir exemplo de alterações do banco de dados (PowerShell)  
  **Exibir exemplo de alterações do banco de dados (PowerShell)**  
@@ -133,7 +133,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  Especifique o nome de DAC em uma variável.  
   
-5.  Use o `GetIncrementalUpgradeScript()` método para obter uma lista das instruções Transact-SQL que uma atualização executará e, redirecione a lista para um arquivo de texto.  
+5.  Use o `GetIncrementalUpgradeScript()` método para obter uma lista das instruções Transact-SQL de uma atualização executaria e redirecione a lista para um arquivo de texto.  
   
 6.  Feche o fluxo de arquivos usado para ler o arquivo de pacote de DAC.  
   

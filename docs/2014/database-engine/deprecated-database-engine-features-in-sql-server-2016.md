@@ -1,5 +1,5 @@
 ---
-title: Recursos do mecanismo de banco de dados no SQL Server 2014 preteridos | Microsoft Docs
+title: Preterido recursos do mecanismo de banco de dados no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326396"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -117,9 +117,9 @@ ms.locfileid: "36119211"
 |Segurança|Algoritmos de criptografia RC4 e DESX|Usar outro algoritmo, como AES.|Algoritmo DESX|238|  
 |Opções Set|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Opções de configuração de servidor|opção c2 audit<br /><br /> opção default trace enabled|[Opção de configuração de servidor com conformidade de critérios comuns habilitada](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventos estendidos](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` propriedade|`Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Classe<br /><br /> Nenhum|Nenhum|Nenhum|  
+|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Propriedade|`Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` classe<br /><br /> Nenhum|Nenhum|Nenhum|  
 |SQL Server Agent|Notificação**net send** <br /><br /> Notificação por pager<br /><br /> Subsistema do ActiveX|Notificação por email<br /><br /> Notificação por email<br /><br /> Comando ou scripts do PowerShell|Nenhum|Nenhum|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integração com o Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integração de controle de código-fonte [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Nenhum.|Nenhum|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integração com o Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integração de controle do código-fonte em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Nenhum.|Nenhum|  
 |Procedimentos armazenados do sistema|sp_db_increased_partitions|Nenhum. O suporte ao aumento de partições está disponível, por padrão, no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
 |Tabelas do sistema|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Exibições de compatibilidade. Para obter mais informações, veja [Exibições de compatibilidade &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql).<br /><br /> **\*\* Importante \*\*** As exibições de compatibilidade não expõem metadados para os recursos introduzidos no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. É recomendável atualizar seus aplicativos para usar exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo e&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> Nenhum<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Tabelas do sistema|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|Nenhum|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  

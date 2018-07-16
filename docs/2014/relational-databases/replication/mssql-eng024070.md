@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 583603105c6c5ce4a7c24dc09ef50b56ccf77173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305406"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +39,7 @@ ms.locfileid: "36118912"
 ## <a name="explanation"></a>Explicação  
  Este é um erro geral que pode ocorrer independentemente do uso de replicação. Para um servidor em uma topologia de replicação, geralmente o erro ocorre porque a conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é alterada usando o Gerenciador de Controle de Serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows em vez do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Ao tentar executar um trabalho de agente após alterar a conta de serviço, pode ocorrer falha no trabalho com uma mensagem de erro semelhante à seguinte:  
   
- "Executado como usuário: \<UserAccount >. Subsistema de instantâneo de replicação-: agente \<Nome_do_agente > falha. Executado como usuário: \<UserAccount >. O cliente não possui o privilégio exigido. A etapa falhou. `[SQLSTATE 42000] (Error 14151)`. A etapa falhou."  
+ "Executado como usuário: \<Conta_de_usuário >. Subsistema de instantâneos de replicação de replicação: agente \<AgentName > falhou. Executado como usuário: \<Conta_de_usuário >. O cliente não possui o privilégio exigido. A etapa falhou. `[SQLSTATE 42000] (Error 14151)`. A etapa falhou."  
   
  Esse problema ocorre porque o Gerenciador de Controle de Serviços do Windows não é capaz de conceder as permissões solicitadas para a nova conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

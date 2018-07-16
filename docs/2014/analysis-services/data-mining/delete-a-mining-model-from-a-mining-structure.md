@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], mining models
 - deleting mining models
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], deleting
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c9aea1e3f6bc05891544a1435704707021293f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5d2a4500de682ecf9d0745c472d793ac4848235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319436"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Excluir um modelo de mineração de uma estrutura de mineração
   Você pode excluir modelos de mineração usando o Designer de Mineração de Dados, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou instruções DMX.  
@@ -51,7 +51,7 @@ ms.locfileid: "36121376"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>Excluir um modelo de mineração usando DMX  
   
--   [MODELO DE MINERAÇÃO DROP &AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [MODELO DE MINERAÇÃO DA LISTA &AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)  

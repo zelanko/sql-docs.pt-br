@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91794c83736042672026f5a0fe35ead15dd112eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318906"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  
@@ -75,10 +75,10 @@ ms.locfileid: "36121508"
  Entrada de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de transformação pesquisa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de transformação de pesquisa &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Editor de transformação pesquisa &#40;página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor de transformação pesquisa &#40;página de saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Editor de transformação de pesquisa &#40;página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformação de pesquisa &#40;página de saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Transformação Pesquisa Difusa](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

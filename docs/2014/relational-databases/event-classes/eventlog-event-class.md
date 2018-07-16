@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75e5834923ca173bdda8f1011245a4adb3428fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1ebc86cca5e9c0f42e158f38f494ff462c3ee700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316506"
 ---
 # <a name="eventlog-event-class"></a>classe de evento EventLog
   A classe de evento EventLogevent indica que foram registrados eventos no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  

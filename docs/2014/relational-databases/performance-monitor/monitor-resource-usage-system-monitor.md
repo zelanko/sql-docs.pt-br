@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
 - System Monitor [SQL Server], about Windows System Monitor
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e5ccbba359fb0cdae995b0e127305adef51dcdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c8d6303f45c2aa5856c5398703d83a17767da1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327596"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
   Se estiver executando o sistema operacional Microsoft Windows Server, use a ferramenta gráfica Monitor do Sistema para avaliar o desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível visualizar objetos, contadores de desempenho e o comportamento de outros objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como processadores, memória, cache, threads e processos. Cada um desses objetos possui um conjunto de contadores associado para medir o uso de dispositivos, o comprimento de filas, demoras e outros indicadores da taxa de transferência e do congestionamento interno.  
@@ -90,6 +90,6 @@ ms.locfileid: "36118107"
 |Descreve como criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido.|[Criar um alerta de banco de dados do SQL Server](create-a-sql-server-database-alert.md)|  
 |Descreve como criar gráficos, alertas, logs e relatórios para monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Criar gráficos, alertas, logs e relatórios](create-charts-alerts-logs-and-reports.md)|  
 |Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usar objetos do SQL Server](use-sql-server-objects.md)|  
-|Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[XTP &#40;OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)|  
+|Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)|  
   
   

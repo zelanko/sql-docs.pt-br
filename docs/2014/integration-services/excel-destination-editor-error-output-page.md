@@ -1,5 +1,5 @@
 ---
-title: Editor de destino do Excel (página saída de erro) | Microsoft Docs
+title: Editor de destinos do Excel (página saída de erro) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1c61d0ea9ed41bf238aa1cfdc05cb7c7615b657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2199a6f6524e403139dba85c63519773cdceb1e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324636"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de Destino do Excel (página Saída de Erro)
   Use a página **Avançado** da caixa de diálogo **Editor de Destinos do Excel** para especificar opções de tratamento de erro.  
@@ -56,7 +56,7 @@ ms.locfileid: "36020530"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino do Excel &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Editor de destino do Excel &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Editor de destino do Excel &#40;página mapeamentos&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
   

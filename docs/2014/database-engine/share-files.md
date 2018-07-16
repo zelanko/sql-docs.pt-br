@@ -1,5 +1,5 @@
 ---
-title: Compartilhar arquivos | Microsoft Docs
+title: Compartilhamento de arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308072"
 ---
 # <a name="share-files"></a>Compartilhar arquivos
   Você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para compartilhar itens em projetos de controle do código-fonte. Quando você compartilha um item, as alterações feitas nele são refletidas em todos os projetos em que ele é compartilhado.  
@@ -38,9 +38,9 @@ ms.locfileid: "36118939"
   
 1.  No Gerenciador de Soluções, selecione a pasta ou o projeto em que você deseja colocar os arquivos compartilhados.  
   
-2.  Sobre o **arquivo** , aponte para **controle de origem**e, em seguida, clique em **compartilhamento**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **compartilhamento**.  
   
-3.  No **compartilhar com** caixa de diálogo, navegue pela lista de diretório para o item que você deseja compartilhar e clique nesse item.  
+3.  No **compartilhar com** caixa de diálogo Procurar a lista de diretórios para o item que você deseja compartilhar e clique nesse item.  
   
 4.  Clique em **compartilhamento**.  
   

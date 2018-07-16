@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - base-10 logarithms
 - LOG function
@@ -16,13 +16,13 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cdc291116cc767924bef22196075cb230521d6d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8d53a1a4c67e4447fd64d47c609e2a0f244e75c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300506"
 ---
 # <a name="log-ssis-expression"></a>LOG (Expressão SSIS)
   Retorna o logaritmo de base 10 de uma expressão numérica.  
@@ -66,8 +66,8 @@ LOG(@Length)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [EXP &#40;expressão SSIS&#41;](exp-ssis-expression.md)   
+ [EXP &#40;expressão do SSIS&#41;](exp-ssis-expression.md)   
  [LN &#40;Expressão SSIS&#41;](ln-ssis-expression.md)   
- [Funções &#40;expressão SSIS&#41;](functions-ssis-expression.md)  
+ [Funções &#40;expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

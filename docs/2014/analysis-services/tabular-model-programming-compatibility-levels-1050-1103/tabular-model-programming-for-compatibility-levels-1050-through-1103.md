@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 785e4818d635d41dc27eea8fc63b62cf63e0ff92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0725d20308e750fe6b4fc9d2ceb6a8068747b68a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300856"
 ---
 # <a name="tabular-model-programming"></a>Programação de modelo tabular
   Os modelos tabulares usam construções relacionais para modelar os dados do Analysis Services usados aplicativos analíticos e de relatório. Esses modelos são executados em uma instância do Analysis Services que é configurada para o modo tabular, usando um mecanismo analítico na memória para armazenamento e análises rápidas de tabelas que agregam e calculam dados conforme necessário.  
@@ -40,6 +40,6 @@ ms.locfileid: "36118434"
   
 ## <a name="see-also"></a>Consulte também  
  [Modelagem de tabela &#40;Tabular do SSAS&#41;](../tabular-models/tabular-models-ssas.md)   
- [Designer de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

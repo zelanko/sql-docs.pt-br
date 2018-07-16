@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320746"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
   A tarefa de Fluxo de Dados encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, permitindo que o usuário transforme, limpe e modifique os dados à medida que são movidos. A adição de uma tarefa de Fluxo de Dados em um pacote de fluxo de controle permite que o pacote extraia, transforme e carregue dados.  
@@ -53,9 +53,9 @@ ms.locfileid: "36118931"
 |Entrada de log|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica que a tarefa de Fluxo de Dados alterou o tamanho do buffer. A entrada de log descreve os motivos da mudança de tamanho e relaciona o novo tamanho do buffer temporário.|  
-|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, que é definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePostEndOfRowset`|Indica que um componente recebeu o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
 |`OnPipelinePostPrimeOutput`|Indica que o componente completou sua última chamada para o `PrimeOutput` método. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas. Se o componente for uma fonte, essa entrada de log significa que o componente tem linhas de processamento concluídas.|  
-|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, que é definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
+|`OnPipelinePreEndOfRowset`|Indica que um componente está prestes a receber o sinal de final do conjunto de linhas, definido pela última chamada do `ProcessInput` método. Uma entrada é gravada para cada componente no fluxo de dados que processa a entrada. A entrada contém o nome do componente.|  
 |`OnPipelinePrePrimeOutput`|Indica que o componente está prestes a receber sua chamada a partir do método `PrimeOutput`. Dependendo do fluxo de dados, várias entradas de log podem ser gravadas.|  
 |`OnPipelineRowsSent`|Informa o número de linhas fornecido a uma entrada de componente por uma chamada para o método `ProcessInput`. A entrada de log inclui o nome do componente.|  
 |`PipelineBufferLeak`|Fornece informações sobre qualquer componente que manteve buffers ativos depois que o gerenciador de buffers for desativado. Se um buffer ainda estiver ativo, os recursos de buffers não foram liberados e pode haver perdas de memória. A entrada de log fornece o nome do componente e a ID do buffer.|  
@@ -94,9 +94,9 @@ ms.locfileid: "36118931"
   
 |coluna|Description|Valor|  
 |------------|-----------------|-----------|  
-|**PathID**|O valor a partir de `ID` propriedade do caminho entre a origem de OLE DB e a transformação classificação.|1185|  
-|**PathName**|O valor a partir de `Name` propriedade do caminho.|Saída da origem OLE DB|  
-|**ComponentID**|O valor de `ID` propriedade da transformação classificar.|1180|  
+|**PathID**|O valor da `ID` propriedade do caminho entre a origem de OLE DB e a transformação classificação.|1185|  
+|**PathName**|O valor da `Name` propriedade do caminho.|Saída da origem OLE DB|  
+|**ComponentID**|O valor da `ID` propriedade da transformação classificar.|1180|  
 |**ComponentName**|O valor da propriedade `Name` da transformação Classificação.|Sort|  
 |**InputID**|O valor da propriedade `ID` da entrada para a transformação Classificação.|1181|  
 |**InputName**|O valor da propriedade `Name` da entrada para a transformação Classificação.|Classificar entrada|  

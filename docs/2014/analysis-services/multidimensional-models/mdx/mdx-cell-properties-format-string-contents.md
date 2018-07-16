@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293586"
 ---
 # <a name="formatstring-contents-mdx"></a>Conteúdo de FORMAT_STRING (MDX)
-  O `FORMAT_STRING` formatos de propriedade de célula a `VALUE` propriedade de célula, o valor para a criação de `FORMATTED_VALUE` propriedade de célula. O `FORMAT_STRING` propriedade de célula lida com a cadeia de caracteres e numéricos valores brutos, aplicando uma expressão de formato em relação ao valor para retornar um valor formatado para o `FORMATTED_VALUE` propriedade de célula. As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
+  O `FORMAT_STRING` formatos de propriedade de célula a `VALUE` propriedade de célula, criando o valor para o `FORMATTED_VALUE` propriedade de célula. O `FORMAT_STRING` manipula de propriedade de célula numéricos e cadeia de caracteres de valores, aplicando uma expressão de formato ao valor para retornar um valor formatado para o `FORMATTED_VALUE` propriedade de célula. As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
   
 ## <a name="string-values"></a>Valores de cadeia de caracteres  
  Uma expressão de formato para cadeias de caracteres pode ter uma seção ou duas seções separadas por ponto-e-vírgula (;).  
@@ -154,8 +154,8 @@ ms.locfileid: "36122051"
   
 ## <a name="see-also"></a>Consulte também  
  [LANGUAGE e FORMAT_STRING em FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
- [Usando propriedades de célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Criando e usando valores de propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;do Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Usando propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Criando e usando valores da propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

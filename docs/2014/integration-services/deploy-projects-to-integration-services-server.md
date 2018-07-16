@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316886"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -74,7 +74,7 @@ ms.locfileid: "36118392"
   
      -ou-  
   
-     Em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nó no Pesquisador de objetos e localize a pasta de projetos para o projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
+     Na [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** nó no Pesquisador de objetos e localize a pasta de projetos para o projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
   
      -ou-  
   

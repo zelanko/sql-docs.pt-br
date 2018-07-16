@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -21,13 +21,13 @@ ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 60c6e0833fb2e8a8c20ca1dca6f3fe8bb43bed9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309456"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
   Este tópico contém instruções passo a passo sobre como migrar uma das seguintes versões com suporte de uma implantação de modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para uma nova instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -80,7 +80,7 @@ ms.locfileid: "36122116"
   
  Há restrições nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospedam o banco de dados do servidor de relatório. Revise o tópico a seguir se você estiver reutilizando um banco de dados do servidor de relatório criado em uma instalação anterior.  
   
--   [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Criar um banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Nome fixo do banco de dados  
  Você não pode renomear o banco de dados de servidor de relatório. A identidade do banco de dados é registrada em procedimentos armazenados do servidor de relatório quando o banco de dados é criado. A renomeação dos bancos de dados primário ou temporário do servidor de relatório ocasiona erros quando os procedimentos são executados, invalidando a instalação do servidor de relatório.  
@@ -114,7 +114,7 @@ ms.locfileid: "36122116"
   
 -   Se você usar folhas de estilos em cascata personalizadas no ambiente de relatório, elas não serão migradas. Você deverá movê-las manualmente após a migração.  
   
- Para obter mais informações sobre as alterações em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte a documentação do Supervisor de atualização e [What's New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
+ Para obter mais informações sobre as alterações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte a documentação do Supervisor de atualização e [o que há de novo &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
 ##  <a name="bkmk_backup"></a> Arquivos e dados para backup  
  Antes de instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], faça backup de todos os arquivos da instalação atual.  
@@ -144,7 +144,7 @@ ms.locfileid: "36122116"
   
  Clique em um destes links para exibir instruções sobre como instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
--   [Instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+-   [Instalar o SQL Server 2014 do Assistente de instalação &#40;programa de instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
 -   [Instalar o SQL Server 2014 do Prompt de Comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
@@ -238,12 +238,12 @@ ms.locfileid: "36122116"
   
 |Personalização|Informações|  
 |-------------------|-----------------|  
-|Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [configurações - Gerenciador de configurações de email &#40;modo nativo do SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [configurações de email – Configuration Manager &#40;modo nativo do SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Configurações de informações de dispositivo|[Personalizar parâmetros de extensão de renderização em RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
 |Gerenciador de Relatórios em uma instância remota|[Configurar o Gerenciador de relatórios &#40;modo nativo&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança  
- No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do Registro instalados com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>. Este grupo ocupa o lugar de dois grupos de serviço do Windows em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você tem ACLs personalizadas associadas a qualquer uma da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos do Windows, você precisará aplicar essas ACLs para o novo grupo para a nova instância do servidor de relatório no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do Registro instalados com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>. Este grupo ocupa o lugar dos dois grupos de serviço do Windows no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você tem ACLs personalizadas associadas a qualquer um dos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos do Windows, você precisará aplicar essas ACLs para o novo grupo para sua nova instância do servidor de relatório no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_verify"></a> Verificar a implantação  
   

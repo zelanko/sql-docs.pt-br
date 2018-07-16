@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9b3ee40399f6fa3507e27e3d6cb98b63627dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53633e4f963b9d816487721b79388b8236281010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297056"
 ---
 # <a name="odbc-source"></a>Origem ODBC
   A origem ODBC extrai dados de um banco de dados com suporte do ODBC usando uma tabela de banco de dados, uma exibição ou uma instrução SQL.  
@@ -74,9 +74,9 @@ ms.locfileid: "36122438"
   
  Para obter mais informações, consulte um dos tópicos a seguir.  
   
--   [Editor de origem ODBC &#40;página Gerenciador de Conexão&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Editor de origem ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [Editor de origem ODBC &#40;página colunas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de origem ODBC &#40;página de colunas&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [Editor de origem ODBC &#40;página de saída de erro&#41;](../odbc-source-editor-error-output-page.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "36122438"
   
 -   [Editor de origem ODBC &#40;página de saída de erro&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [Editor de origem ODBC &#40;página colunas&#41;](../odbc-source-editor-columns-page.md)  
+-   [Editor de origem ODBC &#40;página de colunas&#41;](../odbc-source-editor-columns-page.md)  
   
--   [Editor de origem ODBC &#40;página Gerenciador de Conexão&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [Editor de origem ODBC &#40;página do Gerenciador de Conexão&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [Extrair dados por meio da origem ODBC](odbc-source.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Página Propriedades gerais, compartilhados (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades gerais, Shared Datasets (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290302"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página Propriedades Gerais, conjuntos de dados compartilhados (Gerenciador de Relatórios)
   Use a página Conjunto de dados Compartilhado para exibir e gerenciar propriedades para um item de conjunto de dados compartilhado.  
@@ -72,8 +72,8 @@ ms.locfileid: "36120746"
  [Página de conteúdo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opções de atualização de cache &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [Página cache, compartilhados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [Página cache, conjuntos de dados de compartilhados &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)   
- [Conjuntos de dados compartilhado em cache &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

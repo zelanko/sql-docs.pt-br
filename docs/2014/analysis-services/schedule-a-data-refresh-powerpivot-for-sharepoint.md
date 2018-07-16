@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325146"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Agendar uma atualização de dados (PowerPivot para SharePoint)
   Você pode agendar a atualização de dados para obter atualizações automáticas para dados PowerPivot dentro de uma pasta de trabalho do Excel publicada em um site do SharePoint.  
@@ -110,7 +110,7 @@ ms.locfileid: "36130445"
   
     3.  Escolha **Conecte-se usando as credenciais salvas no Serviço de Repositório Seguro** se souber a ID de um aplicativo de destino que contém as credenciais previamente armazenados que você deseja usar.  
   
-     Para obter mais informações sobre essas opções, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurar o PowerPivot conta autônoma de dados de atualização &#40;O PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     Para obter mais informações sobre essas opções, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [configurar o PowerPivot conta autônoma de dados de atualização &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 9. Em Fontes de Dados, marque a caixa de seleção **Todas as fontes de dados** se desejar que a atualização de dados consulte novamente todas as fontes de dados originais.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36130445"
   
     -   A fonte de dados deve estar disponível no momento em que ocorre a atualização de dados e no local indicado. Se a fonte de dados original estiver em uma unidade de disco local da pessoa que criou a pasta de trabalho, você deverá excluir essa fonte de dados da operação de atualização de dados ou encontrar uma forma de publicar essa fonte de dados em um local acessível por uma conexão de rede. Se você transferir uma fonte de dados para um local de rede, abra a pasta de trabalho no [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] e atualize as informações de conexão da fonte de dados. Isso é necessário para restabelecer as informações de conexão que são armazenadas na pasta de trabalho PowerPivot.  
   
-    -   A fonte de dados precisa ser acessada usando as informações de credenciais que foram inseridas na pasta de trabalho PowerPivot ou que foram especificadas na agenda. As informações de credenciais inseridas são armazenadas na pasta de trabalho PowerPivot quando você importa dados usando o PowerPivot para Excel. Informações de credenciais inseridas são frequentemente SSPI=IntegratedSecurity ou SSPI=TrustedConnection, o que significa o uso das credenciais do usuário atual para conexão à fonte de dados. Se você desejar anular as informações de credenciais em sua agenda de atualização de dados, poderá especificar credenciais armazenadas, predefinidas. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+    -   A fonte de dados precisa ser acessada usando as informações de credenciais que foram inseridas na pasta de trabalho PowerPivot ou que foram especificadas na agenda. As informações de credenciais inseridas são armazenadas na pasta de trabalho PowerPivot quando você importa dados usando o PowerPivot para Excel. Informações de credenciais inseridas são frequentemente SSPI=IntegratedSecurity ou SSPI=TrustedConnection, o que significa o uso das credenciais do usuário atual para conexão à fonte de dados. Se você desejar anular as informações de credenciais em sua agenda de atualização de dados, poderá especificar credenciais armazenadas, predefinidas. Para obter mais informações, consulte [configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
     -   A atualização de dados deve ter êxito para todas as fontes de dados especificadas. Caso contrário, os dados atualizados serão descartados e você ficará com a última versão salva da pasta de trabalho. Exclua qualquer fonte de dados duvidosa.  
   
@@ -163,8 +163,8 @@ ms.locfileid: "36130445"
 >  Os administradores do SharePoint podem ajudá-lo a solucionar problemas de atualização de dados exibindo os relatórios de atualização de dados consolidados no Painel de Gerenciamento do PowerPivot na Administração Central. Para obter mais informações, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atualização de dados do PowerPivot com o SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Atualização de dados do PowerPivot com SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Exibir histórico de atualização de dados &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
- [Configurar credenciais armazenadas para a atualização de dados do PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [Configurar credenciais armazenadas para atualização de dados do PowerPivot do &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

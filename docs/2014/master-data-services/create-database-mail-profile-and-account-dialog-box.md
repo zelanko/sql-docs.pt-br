@@ -1,5 +1,5 @@
 ---
-title: Criar perfil do Database Mail e a caixa de diálogo de conta (Gerenciador de configuração do Master Data Services) | Microsoft Docs
+title: Criar perfil do Database Mail e a caixa de diálogo da conta (Gerenciador de configuração do Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289122"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar perfil e conta do Database Mail (Gerenciador de Configuração do Master Data Services)
   Use a caixa de diálogo **Criar Perfil e Conta do Database Mail** para criar um perfil e uma conta do Database Mail para o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Este perfil será usado para notificar usuários e grupos através de email quando falhar a validação de regras de negócio.  
@@ -44,7 +44,7 @@ ms.locfileid: "36121096"
 |**Endereço de email**|Digite o nome do endereço de email da conta. Este é o endereço de email por meio do qual o email é enviado e deve estar no formato *email_name*@*domain_name*. Um exemplo de endereço de email é sales@contoso.com.|  
 |**Nome para exibição**|Configuração opcional. Digite o nome que será exibido nas mensagens de email enviadas por essa conta. Um nome para exibição de exemplo é Grupo de Vendas da Contoso.|  
 |**Endereço de email de resposta**|Configuração opcional. Digite o endereço de email a ser usado em respostas a mensagens de email enviadas desta conta. Um exemplo de endereço de email de resposta é admin@contoso.com.|  
-|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. É um formato de servidor SMTP de exemplo `smtp.` *< Nome_da_Empresa >*`.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
+|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. É um formato de servidor SMTP de exemplo `smtp.` *< company_name >*`.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
 |**Número da porta**|Digite o número da porta do servidor SMTP para a conta. A porta SMTP padrão é 25.|  
 |**Esse servidor requer uma conexão segura (SSL)**|Criptografa a comunicação usando o protocolo SSL (Secure Sockets Layer).|  
   

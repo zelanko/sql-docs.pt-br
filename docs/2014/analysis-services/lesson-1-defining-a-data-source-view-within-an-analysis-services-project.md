@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Definir uma exibição da fonte de dados dentro de um Analysis Services projeto | Microsoft Docs'
+title: 'Lição 1: Definir uma exibição da fonte de dados dentro de uma análise de projeto de serviços | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303086"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lição 1: Definindo uma exibição da fonte de dados em um Projeto do Analysis Services
   O projeto de um aplicativo de inteligência empresarial no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicia com a criação de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Dentro desse projeto, você define todos os elementos da sua solução, começando com uma exibição da fonte de dados.  
@@ -45,7 +45,7 @@ ms.locfileid: "36118550"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [Fontes de dados suportadas &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Cenário do Tutorial do Analysis Services](analysis-services-tutorial-scenario.md)   
  [Modelagem multidimensional &#40;Tutorial da Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  

@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280012"
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de linhas MDSCHEMA_MEMBERS
   Descreve os membros dentro de um banco de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_MEMBERS` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_MEMBERS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "36121595"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|Opcional.|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|Opcional.|  
-|`TREE_OP`|`DBTYPE_I4`|(Opcional) Só se aplica a um único membro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) retorna todos os ancestrais.<br />-   `MDTREEOP_CHILDREN` (`0x01`) retorna somente os filhos imediatos.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) Retorna membros no mesmo nível.<br />-   `MDTREEOP_PARENT` (`0x04`) retorna somente o pai imediato.<br />-   `MDTREEOP_SELF` (`0x08`) retorna ele mesmo na lista de linhas retornadas.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) retorna todos os descendentes.|  
+|`TREE_OP`|`DBTYPE_I4`|(Opcional) Só se aplica a um único membro:<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) retorna todos os ancestrais.<br />-   `MDTREEOP_CHILDREN` (`0x01`) retorna somente os filhos imediatos.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) retorna os membros no mesmo nível.<br />-   `MDTREEOP_PARENT` (`0x04`) retorna somente o pai imediato.<br />-   `MDTREEOP_SELF` (`0x08`) retorna ele próprio na lista de linhas retornadas.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) retorna todos os descendentes.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Um bitmap com um dos seguintes valores válidos:<br /><br /> -CUBO DE 1<br />-DIMENSÃO DE 2<br /><br /> A restrição padrão tem valor 1.|  
   
 ## <a name="see-also"></a>Consulte também  

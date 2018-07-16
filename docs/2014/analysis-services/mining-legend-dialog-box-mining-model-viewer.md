@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
 helpviewer_keywords:
 - Mining Legend dialog box
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eca2bab6a052919229d1c3eee46e779ea99c14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a2fd0221f238d8b022482a7a0c3fe2b214c771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306606"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Caixa de diálogo Legenda de mineração (Visualizador do modelo de mineração)
   Use a caixa de diálogo **Legenda de Mineração** para obter mais informações detalhadas sobre o nó ou item selecionado em um visualizador do modelo de mineração.  
@@ -57,7 +57,7 @@ ms.locfileid: "36121369"
  [Procurar um modelo usando a Exibição de Árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 744cfd4600c58d0c5f9508243e2635d108f7fd73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d8c4cc67ad7a3719db277840e4ca535a373e8b44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287012"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Exibir valores de porcentagem em um gráfico de pizza (Construtor de Relatórios e SSRS)
   Por padrão, as categorias são mostradas na legenda para identificar cada valor. Se você rotulou o gráfico de pizza usando rótulos de categorias, poderá desejar mostrar porcentagens na legenda.  
@@ -35,7 +35,7 @@ ms.locfileid: "36120073"
   
 3.  Na superfície de design, clique com o botão direito do mouse nos rótulos e selecione **Propriedades do Rótulo de Série**. A caixa de diálogo **Propriedades do Rótulo de Série** é exibida.  
   
-4.  Tipo `#PERCENT` para o **Rotular dados** opção.  
+4.  Tipo de `#PERCENT` para o **Rotular dados** opção.  
   
 5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, digite "#PERCENT{P*n*}" em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite "#PERCENT{P0}".  
   
@@ -43,12 +43,12 @@ ms.locfileid: "36120073"
   
 1.  Na superfície de design, clique com o botão direito do mouse no gráfico de pizza e selecione **Propriedades da Série**. A caixa de diálogo **Propriedades da Série** é exibida.  
   
-2.  Em **legenda**, tipo `#PERCENT` para o **texto da legenda personalizada** propriedade.  
+2.  Na **legenda**, digite `#PERCENT` para o **texto da legenda personalizada** propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)   
- [Formatando a legenda em um gráfico &#40;SSRS e construtor de relatórios&#41;](chart-legend-formatting-report-builder.md)   
- [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;SSRS e construtor de relatórios&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Coletar fatias pequenas em um gráfico de pizza &#40;SSRS e construtor de relatórios&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Formatando a legenda em um gráfico &#40;relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Coletar fatias pequenas em um gráfico de pizza &#40;relatórios e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

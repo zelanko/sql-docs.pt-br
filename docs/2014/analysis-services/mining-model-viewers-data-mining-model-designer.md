@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293626"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizadores do Modelo de Mineração (Designer do Modelo de Mineração de Dados)
   Use a guia **Visualizador do Modelo de Mineração** para explorar os modelos de mineração contidos em uma estrutura de mineração.  
@@ -73,7 +73,7 @@ ms.locfileid: "36120224"
   
     -   [Guia características do cluster &#40;Visualizador do modelo de mineração&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Guia distinção de cluster &#40;Visualizador do modelo de mineração&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Guia discriminação de cluster &#40;Visualizador do modelo de mineração&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
   
     -   [Caixa de diálogo legenda de mineração &#40;Visualizador do modelo de mineração&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36120224"
   
     -   [Guia características do atributo &#40;Visualizador do modelo de mineração&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Guia distinção de atributo &#40;Visualizador do modelo de mineração&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
+    -   [Guia discriminação de atributo &#40;Visualizador do modelo de mineração&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm  
   
@@ -121,21 +121,21 @@ ms.locfileid: "36120224"
   
     -   [Rede neural &#40;Visualizador do modelo de mineração&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [Caixa de diálogo de nó localizar &#40;Visualizador do modelo de mineração&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [Localize a caixa de diálogo do nó &#40;Visualizador do modelo de mineração&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm  
   
 -   [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [Guia diagrama de Cluster msc &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Guia diagrama de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
     -   [Guia Perfis de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [Guia características do Cluster msc &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [Guia características do Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Guia discriminação de Cluster msc &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Guia discriminação de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [Guia transição de Cluster msc &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
+    -   [Guia transição de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS  
   
@@ -148,8 +148,8 @@ ms.locfileid: "36120224"
     -   [Caixa de diálogo legenda de mineração &#40;Visualizador do modelo de mineração&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibição de modelos de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
- [Modo de exibição de estrutura de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Exibição de modelos de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
   

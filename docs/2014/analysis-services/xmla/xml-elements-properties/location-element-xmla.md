@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295386"
 ---
 # <a name="location-element-xmla"></a>Elemento Location (XMLA)
   Contém informações sobre um servidor remoto para o pai [Backup](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), ou [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
@@ -81,7 +81,7 @@ ms.locfileid: "36120873"
 |Ancestral ou pai|Elemento filho|  
 |------------------------|-------------------|  
 |[Backup](id-element-xmla.md), [arquivo](file-element-xmla.md)|  
-|[Restaurar](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [arquivo](file-element-xmla.md), [pastas](folders-element-xmla.md)|  
+|[Restaure](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [arquivo](file-element-xmla.md), [pastas](folders-element-xmla.md)|  
 |[Sincronizar](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [pastas](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
@@ -91,7 +91,7 @@ ms.locfileid: "36120873"
   
  Para comandos `Synchronize`, o elemento  `Location` descreve uma fonte de dados a ser usada pela instância de destino ou uma instância remota definida na instância de origem que deve ser sincronizada com a instância de destino, dependendo do valor do elemento `DataSourceType` para o comando pai `Synchronize`.  
   
- Para obter mais informações sobre como fazer backup e restaurar instâncias remotas, consulte [fazendo backup e restaurando objetos (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obter mais informações sobre backup e restaurar instâncias remotas, consulte [fazendo backup e restaurando objetos (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento BackupRemotePartitions &#40;XMLA&#41;](backupremotepartitions-element-xmla.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '% (modulo operator)'
 - remainder of division operation
@@ -17,13 +17,13 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b1399f6e7d9ef975be8006da36cb64a001ab9a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3a6261b63b77410cef156b3e968b7af8e6f35c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310086"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (Expressão SSIS)
   Fornece o resto inteiro após dividir a primeira expressão numérica pela segunda.  
@@ -79,7 +79,7 @@ SalesQuota % 12
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

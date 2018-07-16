@@ -1,5 +1,5 @@
 ---
-title: Gráfico de comparação de precisão (Analysis Services – mineração de dados) | Microsoft Docs
+title: Gráfico de comparação de precisão (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301246"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
-  Um **gráfico de comparação de precisão** graficamente representa a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória e mede a alteração em termos de um *Levante* pontuação. Ao comparar as pontuação de comparação para várias partes de seu conjunto de dados e para modelos diferentes, você pode determinar qual modelo é melhor, e qual percentual dos casos no conjunto de dados seria beneficiado de aplicar as previsões do modelo.  
+  Um **gráfico de ganho** representa graficamente a melhoria que um modelo de mineração fornece quando comparado contra uma suposição aleatória, e mede a alteração em termos de um *comparação de precisão* pontuação. Ao comparar as pontuação de comparação para várias partes de seu conjunto de dados e para modelos diferentes, você pode determinar qual modelo é melhor, e qual percentual dos casos no conjunto de dados seria beneficiado de aplicar as previsões do modelo.  
   
  Com um gráfico de comparação de precisão, você pode comparar a exatidão de previsões para vários modelos que têm o mesmo atributo previsível. Você também pode avaliar a exatidão de previsão para um único resultado (um único valor do atributo previsível), ou para todos os resultados (todos os valores do atributo especificado).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36120695"
   
  Este gráfico contém vários modelos baseados nos mesmos dados. Um destes modelos foi personalizado para clientes de destino específicos. Você pode personalizar um modelo adicionando filtros nos dados usados para treinar o modo. Este filtro restringe os casos usados tanto no treinamento quanto na avaliação a clientes com menos de 30 anos de idade. Observe que um efeito de filtrar é que o modelo básico e o modelo filtrado usam conjuntos de dados diferentes e, portanto, o número de casos usados para avaliação no gráfico de comparação de precisão também é diferente. Este é um ponto importante a ser lembrado na interpretação dos resultados da previsão e de outras estatísticas.  
   
- ![gráfico de comparação de precisão mostrando dois modelos](../media/newliftchart-tm30-30.gif "gráfico de comparação de precisão mostrando dois modelos")  
+ ![comparação de precisão mostrando dois modelos de gráfico](../media/newliftchart-tm30-30.gif "mostrando dois modelos de gráfico de comparação de precisão")  
   
  O eixo x do gráfico representa a porcentagem do conjunto de dados de teste usada para comparar as previsões. O eixo y do gráfico representa a porcentagem de valores previstos.  
   

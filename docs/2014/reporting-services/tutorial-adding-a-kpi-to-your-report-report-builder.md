@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 516b61e080c92bd6dc0579b93b829e891068c826
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276162"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
   O KPI (indicador chave de desempenho) é um valor mensurável que tem importância comercial. Este tutorial ensina a incluir um KPI em um relatório. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado usando-se cores e indicadores.  
@@ -37,7 +37,7 @@ ms.locfileid: "36120727"
   
 2.  [Organizar dados, escolher Layout e estilo de Assistente de tabela ou matriz](#CompleteWizard)  
   
-3.  [Usar cores de plano de fundo para exibir um KPI](#BackgroundColors)  
+3.  [Usar cores do plano de fundo para exibir um KPI](#BackgroundColors)  
   
 4.  [Exibir um KPI usando um medidor](#Gauge)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36120727"
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Table"></a> 1. Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz  
- Do **Introdução** caixa de diálogo, escolha uma fonte de dados compartilhada, criar um conjunto de dados inserido e exibir os dados em uma tabela.  
+ Dos **guia de Introdução** caixa de diálogo, escolha uma fonte de dados, criar um conjunto de dados inserido e exibe os dados em uma tabela.  
   
 > [!NOTE]  
 >  Neste tutorial, a consulta contém os valores de dados para que não precise de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
@@ -68,7 +68,7 @@ ms.locfileid: "36120727"
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, no botão Construtor de relatórios, clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, no botão Construtor de relatórios, clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "36120727"
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>Para exibir o estado atual de um KPI usando cores de plano de fundo  
   
-1.  Na tabela, clique duas células para baixo do `[Sum(Sales)]` célula (linha de subtotal que exibe as vendas de uma subcategoria) e depois clique em **propriedades da caixa de texto**.  
+1.  Na tabela, clique com botão direito duas células para baixo do `[Sum(Sales)]` célula (linha de subtotal que exibe as vendas de uma subcategoria) e depois clique em **propriedades da caixa de texto**.  
   
-2.  No **preencher**, clique no **fx** lado a **cor de preenchimento** opção e digite a seguinte expressão no **definir expressão para: BackgroundColor** campo:  
+2.  No **preencher**, clique no **fx** lado de **cor de preenchimento** opção e digite a seguinte expressão no **definir expressão para: BackgroundColor** campo:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -194,13 +194,13 @@ ms.locfileid: "36120727"
   
 1.  Alterne para o modo Design.  
   
-2.  Na tabela, clique no manipulador de coluna da célula que você alterou no procedimento anterior, aponte para **Inserir coluna**e, em seguida, clique em **direita**. Uma nova coluna é adicionada à tabela.  
+2.  Na tabela, clique com botão direito no manipulador de coluna da célula que você alterou no procedimento anterior, aponte para **Inserir coluna**e, em seguida, clique em **direita**. Uma nova coluna é adicionada à tabela.  
   
-3.  Tipo **KPI** no título da coluna.  
+3.  Tipo de **KPI** no título da coluna.  
   
-4.  No **inserir** guia o **regiões de dados** de grupo, clique em **medidor**e, em seguida, clique na superfície de design fora da tabela. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
+4.  No **inserir** guia, o **regiões de dados** , clique em **medidor**e, em seguida, clique na superfície de design fora da tabela. A caixa de diálogo **Selecionar Tipo de Medidor** é exibida.  
   
-5.  Clique em **Linear**. O primeiro tipo de medidor linear, **Horizontal**, está selecionado.  
+5.  Clique em **Linear**. O primeiro tipo de medidor linear **Horizontal**, está selecionada.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -208,19 +208,19 @@ ms.locfileid: "36120727"
   
 7.  No painel Dados do Relatório, arraste Sales para o indicador. Quando você arrasta Sales pelo indicador, o painel Dados do Medidor é aberto.  
   
-8.  Solte Sales no **valores** lista.  
+8.  Solte Sales na **valores** lista.  
   
      Quando você solta o campo no medidor, o campo é agregado através da função Sum interna.  
   
-9. O ponteiro do medidor de mouse e clique em **propriedades do ponteiro**.  
+9. Clique com botão direito do ponteiro no medidor e clique em **propriedades do ponteiro**.  
   
-10. Em **tipo de ponteiro**, selecione **barra**. Isso altera o ponteiro de um marcador para uma barra que será mais visível quando o medidor for adicionado à tabela.  
+10. Na **tipo de ponteiro**, selecione **barra**. Isso altera o ponteiro de um marcador para uma barra que será mais visível quando o medidor for adicionado à tabela.  
   
-11. Clique em **preenchimento do ponteiro**. Em **cor secundária** escolher **amarelo**. O padrão de preenchimento de gradiente mudará de branco para amarelo.  
+11. Clique em **preenchimento do ponteiro**. Na **cor secundária** escolher **amarelo**. O padrão de preenchimento de gradiente mudará de branco para amarelo.  
   
 12. Clique com o botão direito do mouse na escala do medidor e clique em **Propriedades da Escala**.  
   
-13. Definir o **máximo** opção como 25000.  
+13. Defina as **máximo** opção como 25000.  
   
     > [!NOTE]  
     >  Em vez de uma constante como 25.000, é possível usar uma expressão para calcular dinamicamente o valor da opção **Máximo** . A expressão usaria a agregação do recurso de agregação e semelhante à expressão `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -242,7 +242,7 @@ ms.locfileid: "36120727"
   
     3.  No **Pins da escala** categoria, expanda o **MaximumPin** nó.  
   
-    4.  Definir o **habilitar** propriedade `True`. Um pin é exibido depois do valor de máximo na escala.  
+    4.  Defina a **habilitar** propriedade `True`. Um pin é exibido depois do valor de máximo na escala.  
   
     5.  Definir **BorderColor** para `Lime`.  
   
@@ -255,17 +255,17 @@ ms.locfileid: "36120727"
   
 1.  Alterne para o modo Design.  
   
-2.  Na tabela, clique no manipulador de coluna da célula que você alterou no procedimento anterior, aponte para **Inserir coluna**e, em seguida, clique em **direita**. Uma nova coluna é adicionada à tabela.  
+2.  Na tabela, clique com botão direito no manipulador de coluna da célula que você alterou no procedimento anterior, aponte para **Inserir coluna**e, em seguida, clique em **direita**. Uma nova coluna é adicionada à tabela.  
   
-3.  Tipo **KPI** no título da coluna.  
+3.  Tipo de **KPI** no título da coluna.  
   
 4.  Clique na célula do subtotal da subcategoria.  
   
-5.  No **inserir** guia o **regiões de dados** de grupo, clique duas vezes **indicador.**  
+5.  No **inserir** guia, o **regiões de dados** agrupar, clique duas vezes em **indicador.**  
   
      A caixa de diálogo **Selecionar Tipo de Indicador** será aberta.  
   
-6.  Clique em **formas**. O primeiro tipo de forma, **3 semáforos (não Coroados),** está selecionado.  
+6.  Clique em **formas**. O primeiro tipo de forma **3 semáforos (não Coroados),** está selecionado.  
   
      Você usará esse indicador no tutorial.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "36120727"
   
 9. Clique em **valores e estados**.  
   
-10. Na lista suspensa de valores, selecione **[SUM (Sales)]**, mas não alterar outras opções.  
+10. Na lista suspensa de valores, selecione **[SUM (Sales)]**, mas não altere nenhuma outra opção.  
   
      Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1**, o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização** .  
   
@@ -294,9 +294,9 @@ ms.locfileid: "36120727"
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Tipo **KPI de vendas do produto**e, em seguida, clique fora da caixa de texto.  
+2.  Tipo de **KPI de vendas do produto**e, em seguida, clique fora da caixa de texto.  
   
-3.  Opcionalmente, clique na caixa de texto que contém **KPI de vendas do produto**, clique em **propriedades da caixa de texto**e, em seguida, na guia fonte, selecione os estilos de fontes diferentes, tamanhos e cores.  
+3.  Opcionalmente, clique com botão direito a caixa de texto que contém **KPI de vendas do produto**, clique em **propriedades da caixa de texto**e, em seguida, na guia fonte, selecione os estilos de fontes diferentes, tamanhos e cores.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -336,7 +336,7 @@ ms.locfileid: "36120727"
  Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obter mais informações, consulte medidores (construtor de relatórios) [indicadores &#40;construtor de relatórios e SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

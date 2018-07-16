@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 252c4623149c4a96ccab9ded6ff76788e436d544
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bbe57da905e12d644de39eff98216bd2d0f1218
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282214"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Designer de consulta MDX do Analysis Services (SSAS)
   O designer de consulta MDX (Multidimensional Expression) do Analysis Services fornece uma interface do usuário gráfica para ajudar a criar consultas MDX para uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere os dados que você deseja usar.  
@@ -78,7 +78,7 @@ ms.locfileid: "36120694"
 |![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado sempre que é feita uma alteração. Os resultados são mostrados no painel Dados.|  
 |![Botão Mostrar Agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações")|Mostra agregações no painel Dados.|  
-|![Excluir](media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
+|![Exclua](media/rsqdicon-delete.gif "excluir")|Exclui da consulta a coluna selecionada no painel Dados.|  
 |![Ícone da caixa de diálogo Parâmetros de Consulta](media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Parâmetros de Consulta** . Quando você especifica os valores para um parâmetro de consulta, um parâmetro com o mesmo nome é automaticamente criado.|  
 |![Botão Preparar Consulta](media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|  
 |![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  

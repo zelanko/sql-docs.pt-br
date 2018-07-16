@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319246"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Criar uma dimensão usando uma tabela existente
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão por meio de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
@@ -57,12 +57,12 @@ ms.locfileid: "36020371"
 ## <a name="selecting-dimension-attributes"></a>Selecionando atributos de dimensão  
  Depois de selecionar as tabelas de dimensão, use a página **Selecionar Atributos de Dimensão** para selecionar os atributos que você quer incluir na dimensão por meio destas tabelas. Todas as colunas subjacentes de todas essas tabelas estão disponíveis como atributos potenciais de dimensão. O atributo de chave de dimensão deve ser selecionado e habilitado para procura.  
   
- Por padrão, o assistente define o tipo de um atributo como `Regular`. Entretanto, convém mapear atributos específicos para um tipo de atributo diferente que melhor represente os dados. Por exemplo, a tabela dbo.DimAccount do banco de dados de exemplo [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contém uma coluna AccountCodeAlternateKey que fornece o número da conta. Em vez de definir o tipo `Regular` para esse atributo, convém mapear o atributo para o `Account Number` tipo.  
+ Por padrão, o assistente define o tipo de um atributo como `Regular`. Entretanto, convém mapear atributos específicos para um tipo de atributo diferente que melhor represente os dados. Por exemplo, a tabela dbo.DimAccount do banco de dados de exemplo [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contém uma coluna AccountCodeAlternateKey que fornece o número da conta. Em vez de definir o tipo para `Regular` para esse atributo, convém mapear o atributo para o `Account Number` tipo.  
   
 > [!NOTE]  
 >  Se o tipo de dimensão e os tipos de atributo padrão não forem definidos quando você criar a dimensão, use o Assistente de Business Intelligence para definir estes valores depois que criar a dimensão. Para obter mais informações, consulte [Adicionar inteligência de dimensão a uma dimensão](bi-wizard-add-dimension-intelligence-to-a-dimension.md) ou (para uma dimensão do tipo Contas) [Adicionar inteligência de conta a uma dimensão](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- O assistente define o tipo de dimensão automaticamente com base nos tipos de atributo especificados. Os tipos de atributo especificados no assistente definem o `Type` propriedade para os atributos. As configurações de propriedade `Type` para a dimensão e seus atributos fornecem informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, eles `Type` as configurações de propriedade somente fornecem orientação para aplicativos cliente e são opcionais. Em outros casos, como para contas, tempo ou moeda dimensões, eles `Type` as configurações de propriedade determinam um comportamento específico baseado em servidor e podem ser necessárias para implementar alguns comportamentos de cubo.  
+ O assistente define o tipo de dimensão automaticamente com base nos tipos de atributo especificados. Os tipos de atributo especificados no assistente definem a `Type` propriedade para os atributos. As configurações de propriedade `Type` para a dimensão e seus atributos fornecem informações sobre o conteúdo de uma dimensão para aplicativos cliente e servidor. Em alguns casos, eles `Type` as configurações de propriedade somente fornecem orientação para aplicativos cliente e são opcionais. Em outros casos, como para contas, tempo ou moeda dimensões, eles `Type` configurações de propriedade determinam um comportamento específico baseado em servidor e podem ser necessárias para implementar alguns comportamentos de cubo.  
   
  Para obter mais informações sobre tipos de dimensões e atributos, consulte [Tipos de dimensão](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)e [Configurar tipos de atributo](attribute-properties-configure-attribute-types.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36020371"
  Na página **Concluindo o Assistente** , você conclui o assistente digitando um nome para a nova dimensão e revisando a estrutura da dimensão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar uma dimensão ao gerar uma tabela não seja de tempo na fonte de dados](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](create-a-time-dimension-by-generating-a-time-table.md)   
  [Referência de propriedades de atributo de dimensão](dimension-attribute-properties-reference.md)   
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](create-a-time-dimension-by-generating-a-time-table.md)   

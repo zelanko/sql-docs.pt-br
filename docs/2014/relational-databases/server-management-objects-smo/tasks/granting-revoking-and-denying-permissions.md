@@ -17,15 +17,15 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdf6703e67b9c9c53c4b266154ea8a6cb0ed65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321806"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concedendo, revogando e negando permissões
   O objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> é usado para atribuir um conjunto de permissões ou uma permissão de servidor individual ao objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para permissões em nível de servidor, o usuário autorizado se refere a um logon. Logons autenticados pelo Windows são listados como nomes de usuários do Windows. Quando essa amostra de código é executada, ela revoga a permissão do usuário autorizado e verifica se ela foi removida com o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -33,7 +33,7 @@ ms.locfileid: "36121879"
  Permissões do banco de dados e permissões do objeto de banco de dados podem ser atribuídas similarmente usando os objetos <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> e <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Concedendo permissões de servidor no Visual Basic  
  Este exemplo de código concede as permissões Criar Ponto de Extremidade e Alterar Qualquer Ponto de Extremidade ao logon especificado e, em seguida, enumera e exibe as permissões. Uma das permissões é revogada e, depois, as permissões são enumeradas novamente. Esse exemplo supõe que o logon especificado já tem as permissões especificadas.  

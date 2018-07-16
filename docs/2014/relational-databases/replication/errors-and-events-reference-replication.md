@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], errors
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35cc66580581505b1735a917f1ae28e198d5f6d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 323894920d2fa7592ad410f37fc959981e9174da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318456"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referência de erros e eventos (replicação)
   Esta seção da documentação contém informações sobre causa e resolução de diversos erros relacionados à replicação.  

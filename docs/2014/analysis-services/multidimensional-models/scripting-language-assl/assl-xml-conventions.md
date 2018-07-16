@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279892"
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
   A ASSL (Analysis Services Scripting Language) representa a hierarquia de objetos como um conjunto de tipos de elementos, cada um definindo os elementos filhos que podem conter.  
@@ -43,7 +43,7 @@ ms.locfileid: "36122043"
   
 -   Todos os objetos e as propriedades são representadas como elementos, com exceção de atributos XML padrão como 'xml:lang'.  
   
--   Nomes de elementos e valores de enumeração seguem a convenção de nomenclatura do Microsoft .NET Framework de Pascal sem sublinhados maiusculas e minúsculas.  
+-   Nomes de elementos e valores de enumeração seguem a convenção de nomenclatura do Microsoft .NET Framework do Pascal casing sem sublinhados.  
   
 -   Os valores de maiúsculas e minúsculas é preservado. Os valores para enumerações também apresentam diferenciação de maiúsculas e minúsculas.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36122043"
   
 -   O espaço em branco interno é preservado.  
   
- As propriedades `Name` e `ID` têm limitações especiais de caracteres válidos em elementos de cadeia de caracteres. Para obter informações adicionais sobre `Name` e `ID` convenções, consulte [objetos e características de objeto ASSL](assl-objects-and-object-characteristics.md).  
+ As propriedades `Name` e `ID` têm limitações especiais de caracteres válidos em elementos de cadeia de caracteres. Para obter mais informações sobre `Name` e `ID` convenções, consulte [objetos e características de objeto ASSL](assl-objects-and-object-characteristics.md).  
   
  `DateTime`  
  Um `DateTime` estrutura do .NET Framework. Um valor `DateTime` não pode ser NULL. A data mais antiga suportada pelo tipo de dados `DataTime` é 1º de janeiro de 1601, disponível a programadores como `DateTime.MinValue`. A data mais antiga suportada indica que um valor `DateTime` está ausente.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Translation data type
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5896ca8c96ce645a0782f17508392b5d0b7d7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96c0f9a1ea7d6e3a081230c43fc95d785b1cf449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300876"
 ---
 # <a name="translation-data-type-assl"></a>Tipo de dados Translation (ASSL)
   Define um tipo de dados primitivo que representa uma tradução localizada.  

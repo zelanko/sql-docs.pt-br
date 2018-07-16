@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 20
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29b5dbd44e02515cc2bdab7445bacb0e61d1dcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291392"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)
   Use o Assistente para Adicionar Réplica ao Grupo de Disponibilidade para ajudá-lo a adicionar uma nova réplica secundária a um grupo de disponibilidade AlwaysOn existente.  
@@ -35,7 +34,7 @@ ms.locfileid: "36011215"
 
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
- Se você nunca adicionou uma réplica de disponibilidade para um grupo de disponibilidade, consulte as seções "grupos de disponibilidade e réplicas" e "Instâncias de servidor" [pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;Do SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Se você nunca adicionou uma réplica de disponibilidade para um grupo de disponibilidade, consulte "Instâncias de servidor" e "grupos de disponibilidade e réplicas" seções [pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Pré-requisitos  
   
@@ -79,14 +78,14 @@ ms.locfileid: "36011215"
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade que está sendo adicionado à réplica secundária e selecione **Adicionar Réplica** . Isso inicia o Assistente para Adicionar Réplica ao Grupo de Disponibilidade.  
   
-4.  Na página **Conectar a Réplicas Secundárias Existentes** , conecte-se a cada réplica secundária do grupo de disponibilidade. Para obter mais informações, consulte [conectar-se à página réplicas secundárias existentes &#40;Assistente para adicionar réplica e o Assistente para adição de bancos de dados&#41;](connect-to-existing-secondary-replicas-page.md).  
+4.  Na página **Conectar a Réplicas Secundárias Existentes** , conecte-se a cada réplica secundária do grupo de disponibilidade. Para obter mais informações, consulte [conectar-se à página réplicas secundárias existentes &#40;Assistente para adicionar réplica e o Assistente de adição de bancos de dados&#41;](connect-to-existing-secondary-replicas-page.md).  
   
 5.  Na página **Especificar Réplicas** , especifique e configure uma ou mais novas réplicas secundárias para o grupo de disponibilidade. Essa página contém três guias. A tabela a seguir apresenta essas guias. Para obter mais informações, veja [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Tab|Descrição breve|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma nova réplica secundária.|  
-    |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente. **Observação:** se qualquer instância de servidor é executado sob uma conta de usuário de domínio não, você precisa fazer uma alteração manual na instância de servidor antes de continuar com o assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
+    |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente. **Observação:** se qualquer instância de servidor for executado sob uma conta de usuário de fora do domínio, você precisará fazer uma alteração manual na instância de servidor antes de continuar no assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo, se você deseja modificar a configuração atual, e para especificar suas prioridades de backup para as réplicas de disponibilidade individuais.|  
   
 6.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
@@ -134,8 +133,8 @@ ms.locfileid: "36011215"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
 - actions [Analysis Services], about actions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5828886d047c6b8fcec0d511a8d1ddbd94bbae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319446"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
   As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
@@ -42,7 +42,7 @@ ms.locfileid: "36118439"
   
  O destino é o local real no cubo onde a ação deve acontecer. O destino é composto de um tipo de destino e um objeto de destino. O tipo de destino representa o tipo de objeto, no cubo, onde a ação será habilitada. Tipo de destino pode ser membros de nível, células, hierarquia, membros de hierarquia ou outros. O objeto de destino for um objeto específico do tipo de destino, se o tipo de destino for hierarquia, então o objeto de destino será qualquer uma das hierarquias definidas no cubo.  
   
- A condição é uma `Boolean` expressão MDX que é avaliada no evento da ação. Se a condição for avaliada como `true`, em seguida, a ação é executada. Caso contrário, a ação não será executada.  
+ A condição é um `Boolean` expressão MDX que é avaliada no evento da ação. Se a condição for avaliada como `true`, em seguida, a ação é executada. Caso contrário, a ação não será executada.  
   
  O tipo é a forma de ação a ser executada. <xref:Microsoft.AnalysisServices.Action> é uma classe abstrata, portanto, a ser usada se precisar usar uma das classes derivadas. Dois tipos de ações são predefinidos: análise e relatório. Elas têm classes derivadas correspondentes: <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Outras ações são abrangidas na classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

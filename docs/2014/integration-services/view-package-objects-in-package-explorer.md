@@ -1,5 +1,5 @@
 ---
-title: Exibir objetos de pacote no Explorador de pacotes | Microsoft Docs
+title: Exibir objetos de pacote no Gerenciador de pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [Integration Services]
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e29dc956bdec9cfea78824032bd8ed631c09159f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e152dba1cb813362e2655b7b96e64d42f158600f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328126"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>Exibir objetos de pacote no Explorador de Pacotes
   Este procedimento descreve como exibir os objetos dentro de um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usando o Explorador de Pacotes.  

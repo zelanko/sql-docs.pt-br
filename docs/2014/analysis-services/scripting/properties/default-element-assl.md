@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Default element
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e63263397420c1350ea8a0eef681e158b101637a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9003b574d2fd38e39eff0dc9e32ea3015d0fa99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304176"
 ---
 # <a name="default-element-assl"></a>Elemento Default (ASSL)
-  Determina se o [DrillThroughAction](../data-type/action-data-type-assl.md) é a ação de detalhamento do padrão.  
+  Determina se o [DrillThroughAction](../data-type/action-data-type-assl.md) é a ação de detalhamento padrão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36116692"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `Default` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
+ O elemento que corresponde ao pai de `Default` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DrillThroughAction>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

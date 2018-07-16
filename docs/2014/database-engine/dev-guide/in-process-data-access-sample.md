@@ -1,5 +1,5 @@
 ---
-title: Exemplo de acesso de dados em processo | Microsoft Docs
+title: Exemplo acesso aos dados em processo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285792"
 ---
 # <a name="in-process-data-access-sample"></a>Exemplo de acesso a dados em processo
   O exemplo `InProcessDataAccess` contém diversas funções simples que demonstram vários recursos do provedor de acesso a dados em processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR.  
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) testa o exemplo exercitando a procedimentos armazenados e a função definidos neste exemplo.  
+ O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) testa o exemplo exercitando a procedimentos armazenados e a função definida neste exemplo.  
   
 ```  
 USE AdventureWorks;  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39aaf8c972070b717f4b50bf42d4fe587a509d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a518189d9ee14da620689cd3ebaff8b4982d590f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312036"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
   O destino do SQL Server conecta-se a um banco de dados local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e efetua carregamentos de dados em massa em tabelas e modos de exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é possível usar o destino do SQL Server em pacotes que acessam um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor remoto. Em vez disso, os pacotes devem usar o destino OLE DB. Para obter mais informações, consulte [OLE DB Destination](ole-db-destination.md).  
@@ -95,11 +95,11 @@ ms.locfileid: "36120190"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino do SQL Server**, clique em um dos seguintes tópicos:  
   
--   [Editor de destino SQL &#40;página Gerenciador de Conexão&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Editor de destinos SQL &#40;página do Gerenciador de Conexão&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino SQL &#40;página mapeamentos&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Editor de destinos SQL &#40;página mapeamentos&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor de destino SQL &#40;página Avançado&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor de destinos SQL &#40;página Avançado&#41;](../sql-destination-editor-advanced-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
