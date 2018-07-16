@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285412"
 ---
 # <a name="use-variables-in-packages"></a>Usar variáveis em pacotes
   Variáveis são adições úteis e flexíveis aos pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]; elas podem fornecer comunicação entre objetos no pacote e entre pacotes pai e filho. As variáveis também podem ser usadas em expressões e scripts.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Variáveis definidas pelo usuário e pelo sistema  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fornece variáveis do sistema e suporta variáveis definidas pelo usuário. Ao criar um novo pacote, adicione um contêiner ou uma tarefa a um pacote ou crie um manipulador de eventos, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui um conjunto de variáveis do sistema para o contêiner. Variáveis do sistema contêm informações úteis sobre um pacote, contêiner, tarefa ou manipulador de eventos. Por exemplo, no tempo de execução a variável do sistema **Nome do computador** contém o nome do computador no qual o pacote está sendo executado e **Hora Inicial** a hora que a execução do pacote começou. As variáveis de sistema são somente leitura. Para obter mais informações, consulte [Variáveis de sistema](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Fornece variáveis do sistema e dá suporte a variáveis definidas pelo usuário. Ao criar um novo pacote, adicione um contêiner ou uma tarefa a um pacote ou crie um manipulador de eventos, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui um conjunto de variáveis do sistema para o contêiner. Variáveis do sistema contêm informações úteis sobre um pacote, contêiner, tarefa ou manipulador de eventos. Por exemplo, no tempo de execução a variável do sistema **Nome do computador** contém o nome do computador no qual o pacote está sendo executado e **Hora Inicial** a hora que a execução do pacote começou. As variáveis de sistema são somente leitura. Para obter mais informações, consulte [Variáveis de sistema](system-variables.md).  
   
  É possível criar variáveis definidas pelo usuário e usá-las em pacotes. Variáveis definidas pelo usuário podem ser usadas de diversas formas no [!INCLUDE[ssIS](../includes/ssis-md.md)]: em scripts; nas expressões usadas pelas restrições de precedência, no contêiner Loop For, na transformação Coluna Derivada e na transformação Divisão Condicional; e nas expressões de propriedade que atualizam os valores da propriedade.  
   

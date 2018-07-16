@@ -1,13 +1,11 @@
 ---
-title: Ambiente hospedado do CLR | Microsoft Docs
+title: Ambiente hospedado de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,15 +27,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06301efa5022c5ed686a4db97951c62bc85daf35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009168"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354688"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente hospedado de CLR
   O CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework é um ambiente que executa várias linguagens de programação modernas, incluindo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. O CLR tem memória com coleta de lixo, threading preemptivo, serviços de metadados (reflexão de tipo), capacidade de verificação de código e segurança de acesso ao código. Ele usa metadados para localizar e carregar classes, distribuir as instâncias na memória, resolver invocações de métodos, gerar código nativo, impor a segurança e definir limites de contexto em tempo de execução.  
@@ -71,7 +69,7 @@ ms.locfileid: "36009168"
  Código de usuário em execução no banco de dados deve seguir regras de autenticação e autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao acessar objetos de banco de dados como tabelas e colunas. Além disso, os administradores de bancos de dados devem ter a capacidade de controlar o acesso aos recursos do sistema operacional, como arquivos e acesso à rede, do código de usuário em execução no banco de dados. Isto se torna importante à medida que as linguagens de programação gerenciadas (ao contrário de linguagens de programação não gerenciadas, como o Transact-SQL) fornecem APIs para acessar tais recursos. O sistema deve fornecer um modo seguro para que o código de usuário acesse os recursos da máquina fora do processo do [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Para obter mais informações, consulte [CLR Integration Security](security/clr-integration-security.md).  
   
 ###### <a name="performance"></a>Desempenho  
- Código de usuário gerenciado em execução no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve ter desempenho computacional comparável ao mesmo código executado fora do servidor. O acesso ao banco de dados a partir de código do usuário gerenciado não é tão rápido quanto [!INCLUDE[tsql](../../../includes/tsql-md.md)] nativo. Para obter mais informações, consulte [desempenho da integração do CLR](clr-integration-architecture-performance.md).  
+ Código de usuário gerenciado em execução no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve ter desempenho computacional comparável ao mesmo código executado fora do servidor. O acesso ao banco de dados a partir de código do usuário gerenciado não é tão rápido quanto [!INCLUDE[tsql](../../../includes/tsql-md.md)] nativo. Para obter mais informações, consulte [desempenho da integração CLR](clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>Serviços CLR  
  O CLR fornece vários serviços para ajudar atingir as metas de design da integração do CLR com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -80,7 +78,7 @@ ms.locfileid: "36009168"
  Código fortemente tipado é um código que acessa as estruturas de memória somente de modos bem definidos. Por exemplo, dada uma referência de objeto válida, o código fortemente tipado pode acessar memória em offsets fixos, correspondentes a membros de campo reais. Entretanto, se o código acessar a memória em offsets arbitrários dentro ou fora do intervalo de memória que pertence ao objeto, então ele não será fortemente tipado. Quando os assemblies são carregados no CLR, antes de a MSIL ser compilada usando compilação JIT (just-in-time), o tempo de execução executa uma fase de verificação que examina o código antes de determinar sua segurança de tipos. O código aprovado com êxito nesta verificação é chamado de código fortemente tipado verificável.  
   
 ###### <a name="application-domains"></a>Domínios de aplicativo  
- O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios do aplicativo e segurança da integração CLR](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md).  
+ O CLR dá suporte à noção de domínios de aplicativo como zonas de execução dentro de um processo de host, onde assemblies de código gerenciado podem ser carregados e executados. O limite do domínio do aplicativo fornece isolamento entre assemblies. Os assemblies são isolados em termos de visibilidade de variáveis estáticas e membros de dados e de capacidade para chamar código dinamicamente. Domínios de aplicativo também são o mecanismo para carregar e descarregar código. O código só pode ser descarregado da memória através do descarregamento do domínio de aplicativo. Para obter mais informações, consulte [domínios de aplicativo e segurança da integração CLR](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md).  
   
 ###### <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)  
  O sistema de segurança CLR sistema fornece um modo de controlar quais os tipos de código gerenciado de operações que podem ser executados, atribuindo permissões ao código. As permissões de acesso ao código são atribuídas com base na identidade do código (por exemplo, a assinatura do assembly ou a origem do código).  

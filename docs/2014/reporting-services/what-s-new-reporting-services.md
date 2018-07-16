@@ -1,5 +1,5 @@
 ---
-title: O que&#39;s novo (Reporting Services) | Microsoft Docs
+title: O que&#39;s novos (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Reporting Services]
 - Reporting Services, what's new
@@ -18,15 +18,15 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 caps.latest.revision: 143
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84cd5432d9f4b9808a5a16521410902129b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d25e63c996c0b5d80bfcf44b22e219906328a2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323636"
 ---
-# <a name="what39s-new-reporting-services"></a>O que&#39;s novo (Reporting Services)
+# <a name="what39s-new-reporting-services"></a>O que&#39;s novos (Reporting Services)
   
   
 ||  
@@ -35,7 +35,7 @@ ms.locfileid: "36011293"
   
  Para obter informações sobre outros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] produtos e tecnologias, consulte [o que há de novo no SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- Para obter mais informações sobre alterações relacionadas ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, consulte [Novidades no Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ Para obter mais informações sobre alterações relacionadas ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, consulte [o que há de novo no Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Compatibilidade com versões anteriores do Reporting Services](reporting-services-backward-compatibility.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280472"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
-  Para resumir dados em um formato visual, use a região de dados do gráfico. Os gráficos permitem apresentar grandes volumes de informações agregadas em um relance. É importante preparar e entender cuidadosamente os dados antes de criar um gráfico, pois isso ajuda a projetar os gráficos de maneira rápida e eficiente. Para obter mais informações, consulte [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para começar a usar logo um gráfico, consulte a barra, coluna, Minigráfico e tutoriais do gráfico de pizza em [tutoriais &#40;Report Builder&#41; ](../report-builder-tutorials.md) ou barras e tutoriais do gráfico de pizza em [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Para resumir dados em um formato visual, use a região de dados do gráfico. Os gráficos permitem apresentar grandes volumes de informações agregadas em um relance. É importante preparar e entender cuidadosamente os dados antes de criar um gráfico, pois isso ajuda a projetar os gráficos de maneira rápida e eficiente. Para obter mais informações, consulte [Adicionar um gráfico a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para começar a usar logo um gráfico, consulte a barra, coluna, Minigráfico e tutoriais de gráfico de pizza [tutoriais &#40;construtor de relatórios&#41; ](../report-builder-tutorials.md) ou a barra e os tutoriais de gráfico de pizza na [tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  A ilustração a seguir mostra muitos dos diferentes elementos usados no gráfico.  
   
@@ -121,38 +121,38 @@ ms.locfileid: "36011306"
   
   
 ##  <a name="InThisSection"></a> Nesta seção  
- [Adicionar um gráfico a um relatório &#40;SSRS e construtor de relatórios&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar um gráfico a um relatório &#40;relatórios e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Descreve as primeiras etapas para adicionar um gráfico ao relatório.  
   
- [Tipos de gráfico &#40;SSRS e construtor de relatórios&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipos de gráfico &#40;relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  Descreve todos os tipos e subtipos de gráficos disponíveis no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], incluindo considerações e práticas recomendadas para uso de vários tipos de gráficos.  
   
- [Formatando um gráfico &#40;SSRS e construtor de relatórios&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formatando um gráfico &#40;relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Use formatação para melhorar a aparência global e realçar pontos de dados importantes de seu gráfico.  
   
- [Pontos de dados em gráficos vazios e nulos &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)  
+ [Pontos de dados em gráficos vazios e nulos &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)  
  Descreve considerações ao trabalhar com gráficos baseados em campos com valores vazios ou nulos.  
   
- [Exibindo uma série com vários intervalos de dados em um gráfico &#40;SSRS e construtor de relatórios&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Exibindo uma série com vários intervalos de dados em um gráfico &#40;relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  Descreve como adicionar quebras de escala a uma série que contém mais de um intervalo de dados.  
   
- [Várias séries em um gráfico &#40;SSRS e construtor de relatórios&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [Várias séries em um gráfico &#40;relatórios e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  Descreve vários métodos de como mostrar várias séries no mesmo gráfico, incluindo como combinar tipos de gráfico, como usar o eixo secundário, como especificar diferentes tipos de gráfico e como usar várias áreas do gráfico.  
   
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;SSRS e construtor de relatórios&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  Forneça exibições de dados diferentes do mesmo conjunto de dados de relatório.  
   
- [Adicionar ou excluir um grupo em um gráfico &#40;SSRS e construtor de relatórios&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em um gráfico &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  Descreve a adição de grupos e grupos aninhados para um gráfico.  
   
- [Adicionar uma média móvel a um gráfico &#40;SSRS e construtor de relatórios&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar uma média móvel a um gráfico &#40;relatórios e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  Descreve o uso da fórmula Média Móvel para calcular a média dos dados em sua série.  
   
- [Solucionar problemas de gráficos &#40;SSRS e construtor de relatórios&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Solucionar problemas de gráficos &#40;relatórios e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Descreve dicas para trabalhar com gráficos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Imagens, caixas de texto, retângulos e linhas &#40;SSRS e construtor de relatórios&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Imagens, caixas de texto, retângulos e linhas de &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Tutorial: Adicionar um gráfico de colunas ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

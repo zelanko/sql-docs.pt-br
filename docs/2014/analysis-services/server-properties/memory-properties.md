@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286372"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades de memória do servidor listadas na tabela a seguir. Para obter orientações sobre a configuração dessas propriedades, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -51,7 +51,7 @@ ms.locfileid: "36011229"
  Observe que `TotalMemoryLimit` deve ser sempre menor que `HardMemoryLimit`  
   
  `HardMemoryLimit`  
- Especifica um limite de memória depois do qual a instância finaliza sessões de usuário ativas agressivamente para reduzir o uso da memória. Todas as sessões terminadas receberão um erro sobre terem sido canceladas por pressão de memória. O valor padrão, zero (0), significa que o `HardMemoryLimit` será definida como um valor entre `TotalMemoryLimit` e a memória física total do sistema; se a memória física do sistema é maior que o espaço de endereço virtual do endereço de processo e virtual espaço será usado para calcular `HardMemoryLimit`.  
+ Especifica um limite de memória depois do qual a instância finaliza sessões de usuário ativas agressivamente para reduzir o uso da memória. Todas as sessões terminadas receberão um erro sobre terem sido canceladas por pressão de memória. O valor padrão, zero (0), significa que o `HardMemoryLimit` será definido como um valor entre `TotalMemoryLimit` e a memória física total do sistema; se a memória física do sistema é maior que o espaço de endereço virtual do endereço do processo, em seguida, virtual espaço será usado em vez disso, para calcular `HardMemoryLimit`.  
   
  `VirtualMemoryLimit`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -63,9 +63,9 @@ ms.locfileid: "36011229"
   
  **1** é o padrão. Esta propriedade habilita a paginação no disco usando o arquivo de paginação do sistema operacional (pagefile.sys).  
   
- Quando `VertiPaqPagingPolicy` é definido como 1, o processamento apresenta menor probabilidade de falhar devido a restrições de memória, pois o servidor tentará paginar para o disco usando o método que você especificou. A definição da propriedade `VertiPaqPagingPolicy` não garante que erros de memória nunca ocorrerão. Erros de falta de memória ainda podem ocorrer sob as seguintes condições:  
+ Quando `VertiPaqPagingPolicy` é definido como 1, o processamento apresenta menor probabilidade de falhar devido às restrições de memória, pois o servidor tentará paginar para o disco usando o método que você especificou. A definição da propriedade `VertiPaqPagingPolicy` não garante que erros de memória nunca ocorrerão. Erros de falta de memória ainda podem ocorrer sob as seguintes condições:  
   
--   Não há bastante memória para todos os dicionários. Durante o processamento, o Analysis Services bloqueia os dicionários para cada coluna na memória e todos eles juntos não podem ter mais do que o valor especificado para `VertiPaqMemoryLimit`.  
+-   Não há bastante memória para todos os dicionários. Durante o processamento, o Analysis Services bloqueia os dicionários para cada coluna na memória, e todos eles juntos não podem ser maior que o valor especificado para `VertiPaqMemoryLimit`.  
   
 -   Não há espaço de endereço virtual insuficiente para acomodar o processo.  
   

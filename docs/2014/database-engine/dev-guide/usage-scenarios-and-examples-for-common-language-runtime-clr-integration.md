@@ -1,5 +1,5 @@
 ---
-title: Cenários de uso e exemplos de integração Common Language Runtime (CLR) | Microsoft Docs
+title: Cenários de uso e exemplos para integração Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - managed code [SQL Server], samples
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ead4b8976a05e2f27ed4e3f5f44e5de57abfe806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2f3ecd38a359da8fa7a3042821742493a82073f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326496"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Cenários de uso e exemplos para a integração de CLR (Common Language Runtime)
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui aplicativos de exemplo, exemplos de pacote e vários exemplos de codificação que você pode usar para conhecer os recursos de programação da integração CLR (common language runtime).  
   
- Para projetos do Visual Studio completos implementam esses exemplos e materiais adicionais, visite [Microsoft SQL Server Community Projects & Samples CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Para projetos completos do Visual Studio implementando esses exemplos e materiais adicionais, visite [Microsoft SQL Server Community Projects & Samples CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Nome|Description|  
 |----------|-----------------|  

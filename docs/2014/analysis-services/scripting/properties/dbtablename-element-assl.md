@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DbTableName element
 ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d167ccdd39d00e3071281d87cad0bf133237f5f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84c0b6ecb600a21eec059b2d1ddc7184c1c46e14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297376"
 ---
 # <a name="dbtablename-element-assl"></a>Elemento DbTableName (ASSL)
   Contém o nome da tabela à qual o elemento pai está associado.  
@@ -62,7 +62,7 @@ ms.locfileid: "36118199"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `DbTableName` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.TableBinding> e <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Os elementos que correspondem aos pais de `DbTableName` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.TableBinding> e <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

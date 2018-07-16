@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b3e3a4c91d998e0ba0459577f1e0b469ec7f78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319366"
 ---
 # <a name="mdschemaactions-rowset"></a>Conjunto de linhas MDSCHEMA_ACTIONS
   Descreve as ações que podem estar disponíveis ao aplicativo cliente.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_ACTIONS` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_ACTIONS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -43,11 +43,11 @@ ms.locfileid: "36120016"
 |`ACTION_TYPE`|`DBTYPE_I4`||Um bitmap que é usado para especificar o método de disparo da ação. O arquivo Msmd.h define as seguintes constantes do valor de bit para esse bitmap:<br /><br /> -   `MDACTION_TYPE_URL` (`0x01`)<br />-   `MDACTION_TYPE_HTML` (`0x02`)<br />-   `MDACTION_TYPE_STATEMENT` (`0x04`)<br />-   `MDACTION_TYPE_DATASET` (`0x08`)<br />-   `MDACTION_TYPE_ROWSET` (`0x10`)<br />-   `MDACTION_TYPE_COMMANDLINE` (`0x20`)<br />-   `MDACTION_TYPE_PROPRIETARY` (`0x40`)<br />-   `MDACTION_TYPE_REPORT` (`0x80`)<br />-   `MDACTION_TYPE_DRILLTHROUGH` (`0x100`)|  
 |`COORDINATE`|`DBTYPE_WSTR`||Uma expressão da linguagem MDX (Multidimensional Expressions) que especifica um objeto ou uma coordenada no espaço multidimensional no qual a ação é executada. É responsabilidade do aplicativo cliente fornecer o valor desta coluna de restrição.<br /><br /> O `CORDINATE` deve ser resolvido para o objeto especificado em `COORDINATE_TYPE`.|  
 |`COORDINATE_TYPE`|`DBTYPE_I4`||Um bitmap que especifica como a coluna de restrição `COORDINATE` é interpretada. O arquivo Msmd.h define as seguintes constantes do valor de bit para esse bitmap:<br /><br /> -   `MDACTION_COORDINATE_CUBE` (`1`)<br />-   `MDACTION_COORDINATE_DIMENSION` (`2`)<br />     refere-se às hierarquias de dimensões.<br />-   `MDACTION_COORDINATE_LEVEL` (`3`)<br />-   `MDACTION_COORDINATE_MEMBER` (`4`)<br />-   `MDACTION_COORDINATE_SET` (`5`)<br />-   `MDACTION_COORDINATE_CELL` (`6`)|  
-|`ACTION_CAPTION`|`DBTYPE_WSTR`||O nome da ação se nenhuma legenda tiver sido especificada e nenhuma conversão tiver sido especificada no DDL.<br /><br /> Quando há especificação de uma legenda ou de conversões, e `CaptionIsMDX` é false, ocorre uma das seguintes cadeias de caracteres:<br /><br /> -A tradução para o idioma apropriado.<br />-A legenda especificada se nenhuma conversão foi encontrado para o idioma especificado.<br />-O nome da ação se nenhuma conversão foi encontrado e a legenda não foi especificado no DDL.<br /><br /> Se uma legenda ou conversão tiver sido especificada, e `CaptionIsMDX` for true, a cadeia de caracteres resultante da descoberta da conversão apropriada para o idioma especificado ou a conversão especificada na legenda DDL, e o cálculo da fórmula para criar a cadeia de caracteres.<br /><br /> Se a ação tiver sido especificada em MDX Script, não haverá conversões e a legenda sempre será tratada como uma expressão MDX.|  
+|`ACTION_CAPTION`|`DBTYPE_WSTR`||O nome da ação se nenhuma legenda tiver sido especificada e nenhuma conversão tiver sido especificada no DDL.<br /><br /> Quando há especificação de uma legenda ou de conversões, e `CaptionIsMDX` é false, ocorre uma das seguintes cadeias de caracteres:<br /><br /> -A tradução para o idioma apropriado.<br />-A legenda especificada se nenhuma conversão for localizada para o idioma especificado.<br />-O nome da ação se nenhuma conversão tiver sido encontrado e a legenda não foi especificada no DDL.<br /><br /> Se uma legenda ou conversão tiver sido especificada, e `CaptionIsMDX` for true, a cadeia de caracteres resultante da descoberta da conversão apropriada para o idioma especificado ou a conversão especificada na legenda DDL, e o cálculo da fórmula para criar a cadeia de caracteres.<br /><br /> Se a ação tiver sido especificada em MDX Script, não haverá conversões e a legenda sempre será tratada como uma expressão MDX.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||Uma descrição amigável da ação.|  
 |`CONTENT`|`DBTYPE_WSTR`||A expressão ou conteúdo da ação a ser executada.|  
 |`APPLICATION`|`DBTYPE_WSTR`||O nome do aplicativo a ser usado para executar a ação.|  
-|`INVOCATION`|`DBTYPE_I4`||Informações sobre como a ação deve ser invocada:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) indica uma ação normal usada durante as operações normais. Este é o valor padrão desta coluna.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) indica que a ação deve ser executada quando o cubo é aberto pela primeira vez.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) indica que a ação é executada como parte de uma operação em lote ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tarefa.<br /><br /> Estes valores de enumeração são definidos no arquivo, Msmd.h.|  
+|`INVOCATION`|`DBTYPE_I4`||Informações sobre como a ação deve ser invocada:<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) indica uma ação normal usada durante as operações normais. Este é o valor padrão desta coluna.<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) indica que a ação deve ser realizada quando o cubo é aberto pela primeira vez.<br />-   `MDACTION_INVOCATION_BATCH` (`4`) indica que a ação é executada como parte de uma operação em lote ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tarefa.<br /><br /> Estes valores de enumeração são definidos no arquivo, Msmd.h.|  
   
  O conjunto de linhas é classificado em `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `ACTION_NAME`.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [SQL Server], file comparisons
 - comparing files
 - file comparisons [SQL Server]
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6005aae06c5d6272238b97329318918134c4aa7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d65cce1e96cbf3bb8ec8e6d428074c89424c8636
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314466"
 ---
 # <a name="compare-files"></a>Comparar arquivos
   Você pode comparar arquivos para determinar como um arquivo progrediu até chegar a seu estado atual. Por exemplo, se você detectar um defeito em uma compilação do projeto de código depois de fazer check-in de uma versão de arquivo de origem em particular, poderá comparar a versão atual do arquivo com uma versão anterior. Isso o ajuda a definir o código que introduziu o problema.  
@@ -34,7 +34,7 @@ ms.locfileid: "36118959"
   
 1.  No Gerenciador de Soluções, selecione um projeto ou um dos arquivos do projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle de origem**e clique em **comparar**.  
+2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e clique em **comparar**.  
   
 3.  No **opções de diferença** caixa de diálogo, selecione as opções apropriadas e, em seguida, clique em **relatório**.  
   

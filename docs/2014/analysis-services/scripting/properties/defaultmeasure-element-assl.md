@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72585d3d1bbce32fd3af4bedbf60e660f8b197f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6650ad99a21a4c2628e94e483c4cd2947d240bc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314636"
 ---
 # <a name="defaultmeasure-element-assl"></a>Elemento DefaultMeasure (ASSL)
   Contém uma expressão MDX (Multidimensional Expressions) que define a medida padrão para um [cubo](../objects/cube-element-assl.md) ou [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36010987"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `DefaultMeasure` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.Perspective>.  
+ Os elementos que correspondem aos pais de `DefaultMeasure` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.Cube> e <xref:Microsoft.AnalysisServices.Perspective>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

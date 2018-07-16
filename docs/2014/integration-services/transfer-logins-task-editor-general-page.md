@@ -1,5 +1,5 @@
 ---
-title: Transferência de logons Editor da tarefa (página geral) | Microsoft Docs
+title: Transferir o Editor da tarefa logons (página geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.general.f1
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef184aff503e5fe7a77a683f49d8b2818e06aff3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 304a619981f696a27acabd6f841295b8bdd9808f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298636"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor da Tarefa Transferir Logons (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Transferir Logons** para nomear e descrever a tarefa Transferir Logons. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Logons](control-flow/transfer-logins-task.md).  

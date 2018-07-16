@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295946"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lição 9: Criar perspectivas
   Nesta lição, você criará uma perspectiva de Vendas pela Internet. Uma perspectiva define um subconjunto exibível de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo. Quando um usuário se conecta a um modelo usando uma perspectiva, ele vê apenas os objetos de modelo (tabelas, colunas, medidas e KPIs) como campos definidos nessa perspectiva.  
@@ -45,7 +45,7 @@ ms.locfileid: "36120020"
   
 3.  Para renomear a perspectiva, clique duas vezes o **nova perspectiva 1** título de coluna e digite `Internet Sales`.  
   
-4.  Em **campos**, selecione as tabelas a seguir **data**, **geografia**, **produto**, **categoria de produto**, **Subcategoria de produto**, e `Internet Sales`.  
+4.  Na **campos**, selecione as tabelas a seguir **data**, **Geography**, **produto**, **categoria de produto**, **Subcategoria de produto**, e `Internet Sales`.  
   
      Observe que você excluiu a tabela Cliente e todas as suas colunas desta perspectiva. Posteriormente, na Lição 12, você usará o recurso Analisar no Excel para testar esta perspectiva. A Lista de Campos da Tabela Dinâmica do Excel incluirá cada tabela exceto a tabela Cliente.  
   

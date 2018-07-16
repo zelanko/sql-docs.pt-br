@@ -1,5 +1,5 @@
 ---
-title: Executar um diagrama de atualização usando o ADO (SQLXML 4.0) | Microsoft Docs
+title: Executando um diagrama de atualização usando o ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319966"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
   Este aplicativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic usa o ADO para estabelecer uma conexão com uma instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e executar um diagrama de atualização. O diagrama de atualização atualiza o sobrenome de um funcionário específico. Este exemplo usa o banco de dados AdventureWorks de exemplo.  
@@ -39,7 +39,7 @@ ms.locfileid: "36118848"
   
 -   O diagrama de atualização é copiado para o fluxo de comando (**strmIn**).  
   
--   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Fluxo**) receber qualquer retornou dados.  
+-   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Stream**) receber qualquer dados retornados.  
   
 -   Por fim, o comando (diagrama de atualização) é executado.  
   
@@ -187,7 +187,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passando parâmetros  
- Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, o **ContactID** e **MiddleName** valores são transmitidos como entrada com parâmetros para o diagrama de atualização.  
+ Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, o **ContactID** e **MiddleName** valores são passados como entrada com parâmetros para o diagrama de atualização.  
   
 ```vb  
 Private Sub Form_Load()  

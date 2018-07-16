@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.missingdimkeyselection.f1
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec86cc73c1d5dcb884e1a44089e18a3424beda29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0122c2a12ab03990eb0e358e1cc72b8227f2ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314756"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>Selecionar Chaves de Dimensão Ausentes (Assistente para Cubos)
   Use a página **Selecionar Chaves de Dimensão Ausentes** para selecionar colunas de chave a serem usadas quando uma nova dimensão não tiver chave definida para sua tabela primária.  

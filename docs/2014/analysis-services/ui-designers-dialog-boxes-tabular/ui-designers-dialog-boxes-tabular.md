@@ -1,5 +1,5 @@
 ---
-title: Interface do usuário Designers e caixas de diálogo para análise de tabela | Microsoft Docs
+title: Designers de interface do usuário e caixas de diálogo de análise de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: Minewiskan
+ms.topic: conceptual
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 31e3f28958c69883710e13f966d90efabaef1c60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3195a765ba6419db679a8e7928ffa3a49112a939
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308476"
 ---
-# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Interface do usuário Designers e caixas de diálogo para análise de tabela
+# <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>Designers de interface do usuário e caixas de diálogo de análise de tabela
 
-Esta seção contém a documentação sobre os designers de interface de usuário e caixas de diálogo para análise de tabela.
+Esta seção contém documentação sobre designers de (UI) de interface de usuário e caixas de diálogo para análise de tabela.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
 - data mining algorithms
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ea33a6ee29965202189fd4149c243df3d1d91df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288532"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de mineração de dados (Suplementos de mineração de dados do SQL Server)
   Os Suplementos de Mineração de Dados para Office oferecem suporte à criação de modelos analíticos usando os algoritmos de mineração de dados a seguir. Todos os algoritmos são baseados nos métodos de aprendizado automatizado conhecido e foram implementados pelo Microsoft Research.  
@@ -53,7 +53,7 @@ ms.locfileid: "36119813"
 ## <a name="advanced-options"></a>Opções Avançadas  
  Quando usa o Cliente de Mineração de Dados para Excel, você tem a opção de criar seus próprios modelos e estruturas de mineração de dados, ou de ajustar os parâmetros dos algoritmos.  
   
- [Parâmetros de algoritmo &#40;suplementos de mineração de dados do SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Parâmetros do algoritmo &#40;suplementos de mineração de dados do SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  Há duas maneiras de personalizar seus modelos usando essas opções avançadas:  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36119813"
   
 ## <a name="see-also"></a>Consulte também  
  [Consulta &#40;suplementos de mineração de dados do SQL Server&#41;](query-sql-server-data-mining-add-ins.md)   
- [Advanced modelagem &#40;dados suplementos de mineração para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [Avançadas de modelagem &#40;Data Mining Add-ins para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

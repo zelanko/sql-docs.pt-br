@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0cc42c5853e34ed4b1525cde528aa349f67ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302776"
 ---
 # <a name="lastupdate-element-assl"></a>Elemento LastUpdate (ASSL)
-  Contém somente leitura carimbo de hora que indica a última vez em que o associado [banco de dados](../objects/database-element-assl.md) ou qualquer um dos principais objetos que contém o banco de dados foi alterado.  
+  Contém somente leitura carimbo de hora que indica a última vez em que o associado [banco de dados](../objects/database-element-assl.md) ou qualquer objeto principal que contém o banco de dados foi alterado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

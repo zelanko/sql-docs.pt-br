@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284742"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Adicionar dados a um relatório (Construtor de Relatórios e SSRS)
   Para adicionar dados a um relatório, você cria conjuntos de dados. Cada conjunto de dados representa o conjunto de resultados gerado pela execução de um comando de consulta em uma fonte dados. As colunas do conjunto de resultados são a coleção de campos. As linhas do conjunto de resultados são os dados. O conjunto de resultados não contêm os dados reais. Um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.  
@@ -69,7 +69,7 @@ ms.locfileid: "36115157"
   
 -   [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Gráficos &#40;SSRS e construtor de relatórios&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Gráficos de &#40;relatórios e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "36115157"
   
 -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Partes de relatório &#40;SSRS e construtor de relatórios&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrar, agrupar e classificar dados &#40;SSRS e construtor de relatórios&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -100,30 +100,30 @@ ms.locfileid: "36115157"
   
  No designer de consulta, você pode executar a consulta para exibir dados de exemplo e validar a sintaxe do comando de consulta. Os nomes de coluna no conjunto de resultados tornam-se os nomes de campo que você vê no painel Dados do Relatório. O conjunto de resultados deve ser um único conjunto de linhas e colunas em que o mesmo número de valores existe para cada linha de dados. Não há suporte para vários conjuntos de resultados a partir de uma única consulta. Não há suporte para hierarquias imperfeitas, que não têm um número constante de colunas e podem gerar um número diferente de valores de dados para cada linha.  
   
- Para executar uma consulta, é necessário ter credenciais de tempo de design. Para obter mais informações, consulte [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md) e [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Para executar uma consulta, é necessário ter credenciais de tempo de design. Para obter mais informações, consulte [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md) e [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  A comunicação entre uma extensão de dados e a fonte de dados externa é gerenciada pelos provedores de dados. O suporte para sintaxe do comando de consulta, parâmetros de consulta e tipos de dados para obter valores no conjunto de resultados é determinado por cada provedor de dados. Para obter mais informações, consulte o tópico para o tipo específico de extensão de dados e [Designers de Consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;SSRS e construtor de relatórios&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Criar uma consulta no Designer de consulta relacional &#40;SSRS e construtor de relatórios&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Compilar uma consulta no Designer de consulta relacional &#40;relatórios e SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Mostrar conjuntos de dados ocultos para obter valores de parâmetro para dados multidimensionais &#40;SSRS e construtor de relatórios&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Mostrar conjuntos de dados ocultos para valores de parâmetro para dados multidimensionais &#40;relatórios e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Adicionar um filtro a um conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Definir uma mensagem Nenhum dado para uma região de dados &#40;SSRS e construtor de relatórios&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Definir uma mensagem Nenhum dado para uma região de dados &#40;relatórios e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associar um parâmetro de consulta com um parâmetro de relatório &#40;SSRS e construtor de relatórios&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Associar um parâmetro de consulta com um parâmetro de relatório &#40;relatórios e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definir parâmetros no Designer de consulta MDX do Analysis Services &#40;SSRS e construtor de relatórios&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definir parâmetros no Designer de consulta MDX do Analysis Services &#40;relatórios e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
@@ -142,6 +142,6 @@ ms.locfileid: "36115157"
   
 ## <a name="see-also"></a>Consulte também  
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
- [Conceitos de criação de relatório &#40;SSRS e construtor de relatórios&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos de criação de relatório &#40;relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

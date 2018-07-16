@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Drop element
 ms.assetid: a5d21db3-743a-4958-b16d-b6816a5ee787
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64f6fd75c3c5032c035ca4af6b9950a0de1e6ddc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8b77be1023fdc7145a367c200efb1e653e767b7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326486"
 ---
 # <a name="drop-element-xmla"></a>Elemento Drop (XMLA)
   Exclui membros de atributo de uma dimensão.  
@@ -71,8 +71,8 @@ ms.locfileid: "36122240"
  Para obter mais informações sobre a exclusão de membros, consulte [inserindo, atualizando e descartando membros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Insert &#40;XMLA&#41;](insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](update-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

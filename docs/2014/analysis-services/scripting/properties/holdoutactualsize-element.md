@@ -18,15 +18,15 @@ helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe781b9e3381a97d9ad75440dac40e281881419f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297276"
 ---
 # <a name="holdoutactualsize-element"></a>Elemento HoldoutActualSize
   Indica o tamanho real, após o processamento da partição de exibição que contém o conjunto de teste de um [MiningStructure](../objects/miningstructure-element-assl.md) elemento. As situações restantes no conjunto de dados serão utilizadas para treinamento. Esta propriedade é somente leitura.  
@@ -58,9 +58,9 @@ ms.locfileid: "36020567"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor de `HoldoutActualSize` depende dos dados de origem e os valores para [HoldoutMaxCases](holdoutmaxcases-element.md), [HoldoutMaxPercent](holdoutmaxpercent-element.md), e [HoldoutSeed](holdoutseed-element.md). Portanto, o valor do `HoldoutActualSize` não estará disponível até que o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] processe a estrutura de mineração.  
+ O valor para `HoldoutActualSize` depende dos dados de origem e os valores para [HoldoutMaxCases](holdoutmaxcases-element.md), [HoldoutMaxPercent](holdoutmaxpercent-element.md), e [HoldoutSeed](holdoutseed-element.md). Portanto, o valor do `HoldoutActualSize` não estará disponível até que o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] processe a estrutura de mineração.  
   
- O elemento que corresponde ao pai do `HoldoutActualSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningStructure>.  
+ O elemento que corresponde ao pai de `HoldoutActualSize` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 > [!NOTE]  
 >  No [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não oferecia suporte ao uso de partições de validação em uma estrutura de mineração. Portanto, as instruções de Linguagem de Script (ASSL) do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que contenham um dos parâmetros de exibição, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed` ou `HoldoutActualSize` não poderão ser utilizadas no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Se você utilizar um destes parâmetros de validação em uma instrução ASSL em [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retornará um erro.  

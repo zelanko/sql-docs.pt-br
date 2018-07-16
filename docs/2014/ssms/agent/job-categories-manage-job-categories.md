@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categories.f1
 helpviewer_keywords:
 - Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 996593dc8d6a74b3a328dc61af0359c01e3dac60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299586"
 ---
-# <a name="job-categories-manage-job-categories"></a>Categorias de trabalho: Gerencie as categorias de trabalho
+# <a name="job-categories-manage-job-categories"></a>Categorias de trabalho: Gerenciar categorias de trabalho
   Use a caixa de diálogo **Categorias de Trabalho** para adicionar ou excluir categorias de trabalho. Categorias de trabalho internas não podem ser excluídas.  
   
 ## <a name="options"></a>Opções  

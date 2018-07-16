@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313287"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em um plano de fundo geográfico, você pode acrescentar um mapa a seu relatório. O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -92,7 +92,7 @@ ms.locfileid: "36019797"
   
      No conjunto de resultados que você vê no designer de consulta, cada linha de dados espaciais é tratada como uma unidade e armazenada em um único elemento de mapa. Por exemplo, se houver vários pontos definidos em uma linha no conjunto de resultados, as propriedades de vídeo se aplicarão a todos os pontos naquele elemento de mapa.  
   
--   **Locais personalizados que você cria.** Você pode acrescentar locais manualmente como pontos incorporados a uma camada de ponto incorporada. Para obter mais informações, consulte [adicionar locais de personalizado a um mapa &#40;construtor de relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Locais personalizados que você cria.** Você pode acrescentar locais manualmente como pontos incorporados a uma camada de ponto incorporada. Para obter mais informações, consulte [adicionar locais personalizados a um mapa &#40;construtor de relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Dados espaciais no modo Design  
  No modo Design, o processador de relatório exibe dados espaciais de exemplo para ajudá-lo a criar a camada do mapa. Os dados exibidos dependem da disponibilidade dos dados espaciais:  
@@ -254,29 +254,29 @@ ms.locfileid: "36019797"
 ##  <a name="HowTo"></a> Tópicos de instruções  
  Esta seção lista procedimentos que mostram para você, passo a passo, como trabalhar com mapas e camadas do mapa em seus relatórios.  
   
--   [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;SSRS e construtor de relatórios&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Alterar legendas de mapa, escala de cores e regras associadas &#40;SSRS e construtor de relatórios&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Adicionar locais personalizados a um mapa &#40;SSRS e construtor de relatórios&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Adicionar locais personalizados a um mapa &#40;relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> Nesta seção  
- [Planejar um relatório de mapa &#40;SSRS e construtor de relatórios&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Planejar um relatório de mapa &#40;relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizar os dados e a exibição de um mapa ou camada do mapa &#40;SSRS e construtor de relatórios&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizar os dados e a exibição de um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;SSRS e construtor de relatórios&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Adicionar, alterar ou excluir um mapa ou camada do mapa &#40;relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Alterar legendas de mapa, escala de cores e regras associadas &#40;SSRS e construtor de relatórios&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Alterar legendas de mapa, escala de cores e regras associadas &#40;relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Adicionar locais personalizados a um mapa &#40;SSRS e construtor de relatórios&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Adicionar locais personalizados a um mapa &#40;relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;SSRS e construtor de relatórios&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

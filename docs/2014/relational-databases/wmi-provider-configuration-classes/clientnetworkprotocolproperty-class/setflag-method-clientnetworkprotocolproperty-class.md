@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetFlag method
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b295a208ee37c6f3ef36c5bff12707fbc5dc035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1030fe856642a6628ecde44db50567dcd0c31a9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331386"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (classe ClientNetworkProtocolProperty)
   Define o sinalizador da propriedade atual referenciado pelo [PropertyIdx Property (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  

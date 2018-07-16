@@ -1,5 +1,5 @@
 ---
-title: Conceder acesso personalizado aos dados da célula (Analysis Services) | Microsoft Docs
+title: Conceder acesso personalizado a dados da célula (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
@@ -20,28 +20,28 @@ helpviewer_keywords:
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 979209ce262ee26efbe1e4c575243d29e4a1dc56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317106"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Conceder acesso personalizado a dados de célula (Analysis Services)
   A segurança da célula é usada para permitir ou negar acesso a dados de medida de um cubo. A ilustração a seguir mostra uma combinação de medidas permitidas e negadas em uma Tabela Dinâmica quando conectada por um usuário cuja função permite acessar apenas algumas medidas. Neste exemplo, **Valor de Vendas do Revendedor** e **Custo Total do Produto do Revendedor** são as únicas medidas disponíveis por meio dessa função. Todas as outras medidas são negadas implicitamente (as etapas usadas para obter esse resultado são fornecidas abaixo, na seção Permitir acesso a medidas específicas).  
   
  ![Tabela dinâmica mostrando células permitidas e negadas](../media/ssas-permscellsallowed.png "tabela dinâmica mostrando células permitidas e negadas")  
   
- As permissões de célula aplicam-se a dados dentro da célula e não aos seus metadados. Note como a célula ainda está visível nos resultados de uma consulta, exibindo um valor `#N/A` em vez do valor real da célula. O `#N/A` valor aparecerá na célula, a menos que o aplicativo cliente converte o valor ou outro valor for especificado, definindo a propriedade de valor de célula protegidos na cadeia de conexão.  
+ As permissões de célula aplicam-se a dados dentro da célula e não aos seus metadados. Note como a célula ainda está visível nos resultados de uma consulta, exibindo um valor `#N/A` em vez do valor real da célula. O `#N/A` valor aparecerá na célula, a menos que o aplicativo cliente converta o valor ou outro valor seja especificado definindo a propriedade Secured Cell Value na cadeia de conexão.  
   
  Para ocultar a célula totalmente, limite os membros visíveis – dimensões, atributos de dimensão e membros do atributo de dimensão. Para obter mais informações, consulte [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  Como administrador, você pode especificar se os membros da função têm permissões de leitura, contingente de leitura ou de leitura/gravação nas células de um cubo. Colocar permissões em uma célula é o nível mais baixo de segurança permitido, por isso, antes de aplicar permissões neste nível, é importante considerar alguns fatos:  
   
--   A segurança no nível da célula não pode expandir os direitos que foram restritos em um nível superior. Um exemplo: se uma função negar acesso aos dados de dimensão, a segurança no nível da célula não poderá substituir o conjunto negado. Outro exemplo: considere uma função com `Read` permissão em um cubo e **leitura/gravação** permissão em uma célula, a permissão de dados da célula não será **leitura/gravação**; ela será `Read`.  
+-   A segurança no nível da célula não pode expandir os direitos que foram restritos em um nível superior. Um exemplo: se uma função negar acesso aos dados de dimensão, a segurança no nível da célula não poderá substituir o conjunto negado. Outro exemplo: considere uma função com `Read` permissão em um cubo e **leitura/gravação** permissão em uma célula ─ a permissão de dados da célula não será **leitura/gravação**; ela será `Read`.  
   
 -   As permissões personalizadas muitas vezes precisam ser coordenadas entre os membros de dimensão e as células dentro da mesma função. Por exemplo, imagine que você queira negar o acesso a várias medidas relacionadas a desconto para diferentes combinações de revendedores. Considerando **Revendedores** como os dados da dimensão e **Valor de Desconto** como uma medida, você precisará combinar dentro das mesmas permissões de função na medida (usando as instruções deste tópico) e nos membros da dimensão. Consulte [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes sobre como definir as permissões da dimensão.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36021047"
 ## <a name="allow-access-to-specific-measures"></a>Permitir acesso a medidas específicas  
  Você pode usar a segurança da célula para escolher explicitamente quais medidas estão disponíveis. Depois de identificar especificamente quais membros são permitidos, todas as outras medidas se tornam indisponíveis. Talvez esse seja o cenário mais simples para implantar por meio de script MDX, como mostram as etapas a seguir.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). Associação já deve ser especificada e a função deve ter `Read` acesso ao cubo. Consulte [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], escolha um banco de dados, abra a pasta **Funções** e clique em uma função de banco de dados (ou crie uma nova função de banco de dados). Associação já deve estar especificada e a função deve ter `Read` acesso ao cubo. Consulte [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
   
 2.  Em **Dados da Célula**, marque a seleção do cubo para ter certeza de ter escolhido o correto e selecione **Habilitar permissões de leitura**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36021047"
      Essa expressão identifica explicitamente quais medidas são visíveis aos usuários. Nenhuma outra medida estará disponível para usuários que se conectarem com essa função. Observe que [CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) define o contexto e é seguido da medida permitida. O efeito dessa expressão, se o membro atual incluir o **Valor de Vendas do Revendedor** ou o **Custo Total do Produto do Revendedor**, será mostrar o valor. Caso contrário, negar o acesso. A expressão tem várias partes, com cada uma delas entre parênteses. O operador `OR` é usado para especificar várias medidas.  
   
 ## <a name="deny-access-to-specific-measures"></a>Negar acesso a medidas específicas  
- A expressão MDX a seguir, também especificada em **Criar Função** | **Dados da Célula** | **Permitir leitura do conteúdo do cubo**, tem o efeito oposto, tornando certas medidas indisponíveis. Neste exemplo, **valor de desconto** e **percentual de desconto** ficaram indisponíveis ao usar o `NOT` e `AND` operadores. Todas as outras medidas estarão disponíveis para usuários que se conectarem por meio dessa função.  
+ A expressão MDX a seguir, também especificada em **Criar Função** | **Dados da Célula** | **Permitir leitura do conteúdo do cubo**, tem o efeito oposto, tornando certas medidas indisponíveis. Neste exemplo, **valor de desconto** e **percentual de desconto** ficam indisponíveis usando os `NOT` e `AND` operadores. Todas as outras medidas estarão disponíveis para usuários que se conectarem por meio dessa função.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -102,10 +102,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor MDX &#40;Analysis Services - dados multidimensionais&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [O Script básico de MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Conceder permissões de processo &#40;do Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [Conceder permissões em uma dimensão &#40;do Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [Conceder acesso personalizado a dados de dimensão &#40;do Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder permissões de cubo ou modelo &#40;do Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [O Script básico MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [Conceder permissões em uma dimensão &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

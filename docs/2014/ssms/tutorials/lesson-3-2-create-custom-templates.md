@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321696"
 ---
 # <a name="create-custom-templates"></a>Criar modelos personalizados
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é fornecido com modelos para várias tarefas comuns, mas o poder real dos modelos está na capacidade de criar um modelo personalizado para um script complexo que deve ser criado com frequência. Nesta prática, você criará um script simples com poucos parâmetros, mas modelos também são úteis para scripts longos e repetitivos.  
@@ -71,7 +70,7 @@ ms.locfileid: "36120929"
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   
-11. Edite o script de modelo (o script na etapa 7), substituindo o nome do produto folha com o parâmetro ***< * product_name**, `nvarchar(50)`, **nome*> * * *, em quatro locais.  
+11. Edite o script de modelo (o script na etapa 7), substituindo o nome de produto folha pelo parâmetro ***< * product_name**, `nvarchar(50)`, **nome*> * * *, em quatro lugares.  
   
     > [!NOTE]  
     >  Parâmetros requerem três elementos: o nome do parâmetro que você deseja substituir, o tipo de dados do parâmetro e um valor padrão do parâmetro.  
@@ -107,7 +106,7 @@ ms.locfileid: "36120929"
   
 3.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**.  
   
-4.  No **Substituir parâmetros de modelo** caixa de diálogo, para o `product_name` valor, digite **FreeWheel** (substituindo o conteúdo padrão) e, em seguida, clique em **Okey** para fechar o **Substituir parâmetros de modelo** caixa de diálogo caixa e modificar o script no Editor de consultas.  
+4.  No **Substituir parâmetros do modelo** caixa de diálogo, para o `product_name` de valor, digite **FreeWheel** (substituindo o conteúdo padrão) e, em seguida, clique em **Okey** para fechar o **Substituir parâmetros do modelo** caixa de diálogo caixa e modificar o script no Editor de consultas.  
   
 5.  Pressione F5 para executar a consulta, criando o procedimento.  
   

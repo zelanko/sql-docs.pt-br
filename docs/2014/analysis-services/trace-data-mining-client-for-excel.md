@@ -1,5 +1,5 @@
 ---
-title: Rastrear (cliente de mineração de dados para Excel) | Microsoft Docs
+title: Rastreamento (cliente de mineração de dados para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracer
 - connections
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a62e3116fc9ba6bf3423faaf92b5374514174e42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee0268eb960aab09029774b6ad26ccccd3d352e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326516"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Rastrear (Cliente de Mineração de Dados para Excel)
   ![Botão de rastreamento](media/misc-trace.gif "botão de rastreamento")  
   
- O **rastreamento** caixa de diálogo ajuda a monitorar as instruções que são enviadas à instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está usando para mineração de dados. Depois de criar uma conexão a uma instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas as interações entre o cliente e o servidor estão conectadas a **rastreamento** painel, incluindo instruções que criam estruturas, adicionam modelos de mineração e fazem previsões, bem como algumas mensagens retornadas do servidor.  
+ O **rastreadoras** caixa de diálogo ajuda a monitorar as instruções que são enviadas à instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está usando para mineração de dados. Depois de criar uma conexão a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas as interações entre o cliente e o servidor estiverem conectadas a **rastreamento** painel, incluindo instruções que criam estruturas, adicionam modelos de mineração e fazem previsões, bem como algumas mensagens retornadas do servidor.  
   
  Dependendo da ação solicitada, a instrução talvez seja uma consulta de definição de dados DMX ou uma consulta de manipulação de dados, um pacote ASSL do Analysis Services ou uma chamada a um procedimento armazenado do Analysis Services. No entanto, os resultados numéricos e os valores de dados reais não são mostrados.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36011823"
 ## <a name="understanding-statements-in-the-tracer"></a>Compreendendo as instruções no rastreamento  
  DMX é uma linguagem que você pode usar para criar e trabalhar com modelos de mineração de dados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. É possível usar DMX para criar a estrutura de novos modelos de mineração de dados, treinar esses modelos e pesquisar, gerenciar e fazer previsões sobre eles. A extensão DMX é composta de instruções DLL (linguagem de definição de dados), instruções DML (linguagem de manipulação de dados), funções e operadores.  
   
- Uma análise completa das instruções DMX e sua sintaxe está além do escopo deste tópico. No entanto, você pode usar as informações no painel **Rastreamento** para obter detalhes sobre o comportamento de uma instrução DMX. Os Suplementos de Mineração de Dados para Excel também podem ajudá-lo a criar instruções DMX complexas e a interagir com um servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [consulta &#40;suplementos de mineração de dados do SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+ Uma análise completa das instruções DMX e sua sintaxe está além do escopo deste tópico. No entanto, você pode usar as informações no painel **Rastreamento** para obter detalhes sobre o comportamento de uma instrução DMX. Os Suplementos de Mineração de Dados para Excel também podem ajudá-lo a criar instruções DMX complexas e a interagir com um servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter mais informações, consulte [consulta &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Muitas instruções DMX são parametrizadas. Para tipos simples, os valores dos parâmetros são listados na instrução. Entretanto, para tipos complexos, apenas o tipo do parâmetro é listado.  

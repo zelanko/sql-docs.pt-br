@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309316"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
   Relatórios e itens de relatório que você publica em um servidor de relatório são armazenados em pastas. Você pode mover itens para uma pasta diferente e as referências a esses itens são mantidas automaticamente pelo servidor de relatório. Antes de excluir um item, verifique se outros itens dependem dele.  
@@ -45,7 +45,7 @@ ms.locfileid: "36120281"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Para mover um item de dentro da página Conteúdo  
   
-1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]. / relatório-manager-ssrs-nativo-mode.md).  
+1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja mover.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36120281"
  Como alternativa, navegue até o objeto que você deseja mover, clique em **Propriedades**e clique em **Mover** na parte superior da página.  
   
 ## <a name="delete-an-item"></a>Excluir um item  
- Antes de excluir um item, determine se ele é usado por outros itens. Por exemplo, se você excluir uma fonte de dados compartilhada, relatórios e modelos que usam essa fonte de dados não serão mais executados. Se um relatório for excluído, as assinaturas e o histórico de relatórios associados também são excluídos. Para localizar itens dependentes para um item, consulte [página de itens dependentes &#40;Gerenciador de relatórios&#41;]. / dependente-itens-página-relatório-manager.md).  
+ Antes de excluir um item, determine se ele é usado por outros itens. Por exemplo, se você excluir uma fonte de dados compartilhada, relatórios e modelos que usam essa fonte de dados não serão mais executados. Se um relatório for excluído, as assinaturas e o histórico de relatórios associados também são excluídos. Para localizar itens dependentes para um item, consulte [página itens dependentes &#40;Gerenciador de relatórios&#41;]... / dependente-itens-página-relatório-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Para excluir um relatório ou item  
   
-1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]. / relatório-manager-ssrs-nativo-mode.md).  
+1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md).  
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** e localize o item que você deseja excluir.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36120281"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Página de conteúdo &#40;Gerenciador de relatórios&#41;]. / conteúdo-página relatório manager.md)   
+ [Página de conteúdo &#40;Gerenciador de relatórios&#41;]... / conteúdo-página de relatório manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

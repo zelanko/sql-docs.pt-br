@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328576"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definindo propriedades de atributo pai em uma hierarquia pai-filho
   Uma hierarquia pai-filho é uma hierarquia em uma dimensão que se baseia em duas colunas de tabela. Juntas, essas colunas definem as relações hierárquicas entre os membros da dimensão. A primeira coluna, chamada *coluna de chave de membro*, identifica cada membro da dimensão. A outra coluna, chamada *coluna pai*, identifica o pai de cada membro da dimensão. A propriedade **NamingTemplate** de um atributo pai determina o nome de cada nível na hierarquia pai-filho e a propriedade **MembersWithData** determina se os dados dos membros pai deverão ser exibidos.  
@@ -61,7 +61,7 @@ ms.locfileid: "36021046"
   
      A imagem a seguir mostra a hierarquia de Employees expandida.  
   
-10. ![Tabela dinâmica mostrando a hierarquia de funcionários](../../2014/tutorials/media/l4-employee-1.gif "tabela dinâmica mostrando a hierarquia de funcionários")  
+10. ![Tabela dinâmica que mostra a hierarquia funcionários](../../2014/tutorials/media/l4-employee-1.gif "tabela dinâmica que mostra a hierarquia funcionários")  
   
      Observe que as vendas de cada gerente no Nível 03 também são exibidas no Nível 04. Isso é porque cada gerente também é funcionário de outro gerente. Na próxima tarefa, você ocultará os valores das vendas.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36021046"
   
      A imagem a seguir mostra as alterações na caixa de diálogo **Modelo de Nomeação de Nível** .  
   
-     ![Caixa de diálogo nível do modelo de nomeação](../../2014/tutorials/media/l4-namingtemplate.gif "caixa de diálogo do modelo de nomeação de nível")  
+     ![Caixa de diálogo modelo de nomeação de nível](../../2014/tutorials/media/l4-namingtemplate.gif "caixa de diálogo do modelo de nomeação de nível")  
   
 5.  Clique em **OK**.  
   

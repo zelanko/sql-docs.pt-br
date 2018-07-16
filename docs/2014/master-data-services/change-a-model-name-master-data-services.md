@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc049820c419dd2b5dd3fbcd165522ef80193d2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58f66ff01adba7661897b93076d7867bab73dcff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324416"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Alterar um nome de modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um modelo.  
@@ -44,7 +44,7 @@ ms.locfileid: "36006866"
     > [!NOTE]  
     >  Não é possível alterar o nome do modelo Metadata.  
   
-4.  Clique em **modelo selecionado editar**.  
+4.  Clique em **edição de modelo selecionado**.  
   
 5.  No **nome do modelo** , digite o nome atualizado do modelo.  
   

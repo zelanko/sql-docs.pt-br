@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,13 +21,13 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321916"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
@@ -81,7 +81,7 @@ ms.locfileid: "36122331"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>Como usar a conta de processamento autônomo de relatórios.  
  Para recuperar arquivos de imagem, o servidor de relatório usa automaticamente a conta e nenhuma ação específica é necessária de sua parte. Para usar a conta a fim de conectar-se a fontes de dados externas que forneçam dados para relatórios, você deve especificar uma opção **Tipo de Credencial** na página de propriedades da fonte de dados do relatório ou compartilhada:  
   
--   No Gerenciador de relatórios ou em um site do SharePoint, selecione o **não são necessárias credenciais** opção.  
+-   No Gerenciador de relatórios ou em um site do SharePoint, selecione a **não são necessárias credenciais** opção.  
   
  A conta de processamento autônomo de relatórios é usada principalmente para conectar-se a servidores externos, não como um logon para servidores de banco de dados. Para usar as credenciais de conta para fazer logon em um banco de dados, especifique as credenciais na cadeia de caracteres de conexão. Você poderá especificar **Integrated Security=SSPI** se o servidor de banco de dados der suporte à segurança integrada do Windows e se a conta usada para o processamento autônomo de relatórios tiver permissão para ler o banco de dados. Caso contrário, digite o nome do usuário e a senha na cadeia de conexão, onde ela aparecerá em texto não criptografado para qualquer usuário com permissão para editar propriedades da conexão da fonte de dados.  
   
@@ -108,6 +108,6 @@ ms.locfileid: "36122331"
  As informações da conta serão removidas do arquivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ [Gerenciador de configuração do Reporting Services &#40;/DEL&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

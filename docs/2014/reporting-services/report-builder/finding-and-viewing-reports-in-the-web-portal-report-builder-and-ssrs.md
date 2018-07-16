@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fca55f69bcd97e0b3ac2199383cf28c0ad327313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313186"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Gerenciador de Relatórios (Construtor de Relatórios e SSRS)
   O Gerenciador de Relatórios é uma ferramenta com base na Web que inclui recursos para exibir e gerenciar relatórios. Faz parte de uma instalação do servidor de relatórios. Para abrir o Gerenciador de Relatórios, digite uma URL do Gerenciador de Relatórios em uma janela do navegador. Para obter informações sobre requisitos de navegador, consulte [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Para obter mais informações sobre como uma URL do Gerenciador de Relatórios deve ser configurada no servidor de relatório, contate o administrador de sistema. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](../report-server/configure-web-portal.md).  
   
- As permissões que administrador do sistema define no servidor de relatório determinam o que você pode ver quando usa o Gerenciador de Relatórios. São concedidas permissões por uma atribuição de função. Para localizar e exibir relatórios, sua atribuição de função deve incluir a tarefa Exibir Relatórios. Para localizar um relatório em um servidor de relatórios, procure-o por nome ou descrição ou procure as pastas do servidor de relatórios. Você só pode pesquisar ou procurar por relatórios que foram publicados ou carregados no servidor de relatórios. Para obter mais informações sobre como procurar um relatório, consulte [procurando relatórios e outros itens &#40;construtor de relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ As permissões que administrador do sistema define no servidor de relatório determinam o que você pode ver quando usa o Gerenciador de Relatórios. São concedidas permissões por uma atribuição de função. Para localizar e exibir relatórios, sua atribuição de função deve incluir a tarefa Exibir Relatórios. Para localizar um relatório em um servidor de relatórios, procure-o por nome ou descrição ou procure as pastas do servidor de relatórios. Você só pode pesquisar ou procurar por relatórios que foram publicados ou carregados no servidor de relatórios. Para obter mais informações sobre como procurar um relatório, consulte [pesquisando relatórios e outros itens de &#40;construtor de relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,7 +48,7 @@ Faixa de Opções do Gerenciador de Relatórios
   
  Nem todos os relatórios visíveis na hierarquia de pasta estão imediatamente acessíveis. Alguns relatórios podem solicitar seu nome de usuário e sua senha para determinar se você pode acessar a fonte de dados do relatório. Para obter mais informações sobre como abrir relatórios no Gerenciador de Relatórios, consulte [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md).  
   
- Você pode navegar até um relatório e abri-lo diretamente do servidor de relatório do Construtor de Relatórios. Para obter mais informações, consulte [procurando relatórios e outros itens &#40;construtor de relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ Você pode navegar até um relatório e abri-lo diretamente do servidor de relatório do Construtor de Relatórios. Para obter mais informações, consulte [pesquisando relatórios e outros itens de &#40;construtor de relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
 ## <a name="to-search-for-a-items"></a>Para pesquisar itens  
   
@@ -59,7 +59,7 @@ Faixa de Opções do Gerenciador de Relatórios
 -   Para procurar um texto específico em um relatório, use a barra de ferramentas na parte superior do relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Procurando relatórios e outros itens &#40;SSRS e construtor de relatórios&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Procurando relatórios e outros itens de &#40;relatórios e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

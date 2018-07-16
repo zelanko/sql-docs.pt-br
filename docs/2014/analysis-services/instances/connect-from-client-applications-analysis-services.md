@@ -1,5 +1,5 @@
 ---
-title: Conecte-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
+title: Conectar-se de aplicativos de cliente (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314906"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectar-se de aplicativos cliente (Analysis Services)
   Se você é novato no Analysis Services, use as informações deste tópico para se conectar a uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando ferramentas e aplicativos comuns. Este tópico também explica como se conectar em identidades de usuário diferentes para fins de teste.  
@@ -38,7 +38,7 @@ ms.locfileid: "36020591"
   
 -   [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorizar o acesso a objetos e operações &#40;do Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorizar o acesso a objetos e operações de &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Conectar usando o SQL Server Management Studio (SSMS)  
  Conecte-se ao Analysis Services no SSMS para gerenciar interativamente instâncias de servidor e bancos de dados. Você também pode executar consultas XMLA ou MDX para executar tarefas administrativas ou recuperar dados. Diferente de outras ferramentas e aplicativos que somente carregam bancos de dados quando uma consulta é enviada, o SSMS carrega todos os bancos de dados quando você se conecta ao servidor, supondo que você tem permissão para exibir o banco de dados. Isso significa que, se você tiver vários bancos de dados de tabela no servidor, todos serão carregados na memória do sistema quando você se conectar usando o SSMS.  
@@ -59,7 +59,7 @@ ms.locfileid: "36020591"
   
 3.  A autenticação é sempre a autenticação do Windows e a identidade do usuário é sempre o usuário do Windows que está se conectando através do Management Studio.  
   
-     Para que a conexão seja bem-sucedida, você deve ter permissão para acessar o servidor ou um banco de dados no servidor. A maioria das tarefas que você deseja executar no Management Studio requer permissões administrativas. Verifique se a conta à qual está se conectando é um membro da função de administrador de servidor. Para obter mais informações, consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+     Para que a conexão seja bem-sucedida, você deve ter permissão para acessar o servidor ou um banco de dados no servidor. A maioria das tarefas que você deseja executar no Management Studio requer permissões administrativas. Verifique se a conta à qual está se conectando é um membro da função de administrador de servidor. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 4.  Clique em **Propriedades da Conexão** para especificar um banco de dados específico, definir os valores de tempo limite ou as opções de criptografia. As informações de conexão opcionais incluem as propriedades de conexão usadas somente para a conexão atual.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36020591"
   
 1.  Inicie o **SQL Server Profiler** na instância do Analysis Services e, em seguida, inicie um novo rastreamento.  
   
-2.  Em seleção de eventos, verifique se `Audit Login` e `Audit Logout` são verificadas na seção auditoria de segurança.  
+2.  Em seleção de eventos, verifique `Audit Login` e `Audit Logout` são verificadas na seção auditoria de segurança.  
   
 3.  Conecte-se ao Analysis Services por meio de um serviço de aplicativo (como o SharePoint ou o Reporting Services) em um computador cliente remoto. O evento Logon da Auditoria mostrará a identidade do usuário que está se conectando ao Analysis Services.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36020591"
  [Resolvendo problemas comuns de conectividade nos cenários de conectividade do SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Este documento não é recente, mas as informações e as metodologias ainda se aplicam.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se ao Analysis Services](connect-to-analysis-services.md)   
+ [Conectar-se ao Analysis Services](connect-to-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
  [Representação &#40;Tabular do SSAS&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Criar uma fonte de dados &#40;Multidimensional do SSAS&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  

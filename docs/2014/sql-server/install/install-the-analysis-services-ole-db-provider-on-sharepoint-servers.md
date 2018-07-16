@@ -1,5 +1,5 @@
 ---
-title: Instalar o provedor do Analysis Services OLE DB em servidores do SharePoint | Microsoft Docs
+title: Instalar o Analysis Services OLE DB Provider em servidores do SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bf2e525b059e328cefb388efcd481c26fc4f0330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8403b4a4d65f81ccc5b43e50f69d58efb71508ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292276"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Instalar o provedor OLE DB do Analysis Services em SharePoint Servers
   O Provedor OLE DB da Microsoft para Analysis Services (MSOLAP) é uma interface que os aplicativos cliente usam para interagir com dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Em um ambiente do SharePoint que inclui o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], o provedor administra solicitações de conexões para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36115355"
     >  Esses cenários não são mutuamente exclusivos. Hospedar várias versões de pasta de trabalho em um farm que inclui servidores de aplicativos que executam Serviços do Excel sem uma instância do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] requer que você instale versões mais antigas e mais novas do provedor de dados em cada computador com os Serviços do Excel.  
   
   
-##  <a name="bkmk_vers"></a> Versões do provedor OLE DB com suporte a acesso a dados PowerPivot  
+##  <a name="bkmk_vers"></a> Versões do provedor OLE DB que dão suporte a acesso a dados PowerPivot  
  Um farm do SharePoint pode incluir várias versões do provedor OLE DB do Analysis Services, incluindo versões mais antigas que não têm suporte para o acesso a dados PowerPivot.  
   
  Por padrão, o SharePoint 2010 instala a versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do provedor. Embora seja identificada como MSOLAP.4 (mesmo número de versão usado no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), essa versão não funciona para o acesso a dados PowerPivot. Para que as conexões sejam bem-sucedidas, você deve ter a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do provedor.  
@@ -77,7 +77,7 @@ ms.locfileid: "36115355"
   
      Não selecione nenhum outro recurso.  
   
-6.  Clique em **próximo** para concluir o assistente e, em seguida, clique em **instalar** para executar a instalação.  
+6.  Clique em **próxima** para concluir o assistente e, em seguida, clique em **instalar** para executar a instalação.  
   
 7.  Repita as etapas anteriores se você tiver outros servidores executando Serviços do Excel, sem uma instalação do PowerPivot para SharePoint no mesmo servidor.  
   
@@ -105,13 +105,13 @@ ms.locfileid: "36115355"
   
 3.  Clique em **Detalhes**.  
   
-4.  Exiba as informações de versão do arquivo. A versão deve incluir 11.00. \<buildnumber >.  
+4.  Exiba as informações de versão do arquivo. A versão deve incluir 11.00.<BuildNumber&gt. \<número_da_compilação >.  
   
 5.  Na pasta Windows\assembly, verifique se Microsoft.AnalysisServices.Xmla.dll, versão 11.0.0.0 está listado.  
   
   
-##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a> Use o PowerPivot para o pacote de instalação do SharePoint (spPowerPivot.msi) para instalar o SQL Server 2012 OLE DB Provider  
- Instalar o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] provedor OLE DB em e o servidor de serviços do Excel usando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] pacote de instalação **(spPowerPivot.msi)**.  
+##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a> Use o PowerPivot para o pacote de instalação do SharePoint (sppowerpivot. msi) para instalar o SQL Server 2012 OLE DB Provider  
+ Instalar o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB Provider em e servidor de serviços do Excel usando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] pacote de instalação **(sppowerpivot. msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36115355"
   
 3.  Consulte a seção "Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2012 SP1". Baixe o arquivo e inicie a instalação.  
   
-4.  Sobre o **seleção de recursos** página, selecione **Analysis Services OLE DB Provider para SQL Server**. Desmarque os outros componentes e conclua a instalação. Para obter mais informações sobre o spPowerPivot.msi, consulte [instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  Sobre o **seleção de recursos** página, selecione **Analysis Services OLE DB Provider for SQL Server**. Desmarque os outros componentes e conclua a instalação. Para obter mais informações sobre o sppowerpivot. msi, consulte [instalar ou desinstalar o PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 5.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36115355"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Etapa 1: baixar e instalar a biblioteca de cliente  
   
-1.  Sobre o [página SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=159570), localizar o Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2008 R2.  
+1.  Sobre o [página do SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=159570), localizar o Microsoft Analysis Services OLE DB Provider para Microsoft SQL Server 2008 R2.  
   
 2.  Baixe o Pacote x64 do programa de instalação `SQLServer2008_ASOLEDB10.msi`. Embora o nome do arquivo contenha SQLServer2008, é o arquivo correto para a versão do SQL Server 2008 R2 do provedor.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "36115355"
   
 #### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Etapa 2: registrar o arquivo Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Use o utilitário regasm.exe para registrar o arquivo. Se você não executou regasm.exe antes, adicione sua pasta pai, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, para a variável de caminho do sistema.  
+1.  Use o utilitário regasm.exe para registrar o arquivo. Se você não executou regasm.exe antes, adicione sua pasta pai, c:\windows\microsoft.net\framework64\v4.0.30319>Aspnet_regiis.exe\\, para a variável de caminho do sistema.  
   
 2.  Abra um prompt de comando com permissões de administrador.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36115355"
   
      Vá para `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Clique com botão direito **msolap100.dll** e selecione **propriedades**. Clique em **Detalhes**.  
   
-     Exiba as informações de versão do arquivo. A versão deve incluir 10.50. \<buildnumber >.  
+     Exiba as informações de versão do arquivo. A versão deve incluir 10.50. \<número_da_compilação >.  
   
   
 ## <a name="see-also"></a>Consulte também  

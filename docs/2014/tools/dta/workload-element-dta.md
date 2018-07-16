@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315006"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
   Especifica a carga de trabalho a ser usada em uma sessão de ajuste.  
@@ -44,7 +44,7 @@ ms.locfileid: "36019474"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Necessário uma vez para cada `DTAInput` elemento.|  
+|**Ocorrência**|Exigido uma vez para cada `DTAInput` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36019474"
 ## <a name="remarks"></a>Remarks  
  A carga de trabalho é um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um ou mais bancos de dados a serem ajustados. O Orientador de Otimização do Mecanismo de Banco de Dados pode usar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , arquivos de rastreamento e tabelas de rastreamento como cargas de trabalho.  
   
- Se você especificar uma carga de trabalho em arquivo de entrada XML e uma carga de trabalho na linha de comando com a ferramenta **dta** , a carga de trabalho especificada na linha de comando será usada para ajuste. Todas as opções de ajuste especificadas na linha de comando substituem as que foram especificadas no arquivo de entrada XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se uma configuração for digitada no `Configuration` elemento do arquivo de entrada XML e o `EvaluateConfiguration` elemento também é especificado como uma das opções de ajuste, as opções de ajustes especificadas no arquivo de entrada XML substituirão as opções de ajuste inseridas no a linha de comando.  
+ Se você especificar uma carga de trabalho em arquivo de entrada XML e uma carga de trabalho na linha de comando com a ferramenta **dta** , a carga de trabalho especificada na linha de comando será usada para ajuste. Todas as opções de ajuste especificadas na linha de comando substituem as que foram especificadas no arquivo de entrada XML. A única exceção será se uma configuração especificada pelo usuário for digitada dentro do modo de avaliação no arquivo de entrada XML. Por exemplo, se uma configuração for digitada na `Configuration` elemento do arquivo de entrada XML e o `EvaluateConfiguration` elemento também for especificado como uma das opções de ajuste, as opções de ajuste especificadas no arquivo de entrada XML substituirão as opções de ajuste inseridas no a linha de comando.  
   
  É preciso especificar uma carga de trabalho para cada sessão de ajuste.  
   

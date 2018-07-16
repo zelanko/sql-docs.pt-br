@@ -1,5 +1,5 @@
 ---
-title: Diretrizes para níveis de isolamento de transação com tabelas com otimização de memória | Microsoft Docs
+title: Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f21b7340b4c2d0cc3457cf0a2169d0a7fe17b311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d4c515d6eb3c86143e1344b342b8ee29a781358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320718"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória
   Em vários cenários, você deve especificar o nível de isolamento da transação. O isolamento da transação para tabelas com otimização de memória difere das tabelas baseadas em disco.  
@@ -95,7 +95,7 @@ COMMIT
   
      Alguns aplicativos podem assumir que os leitores sempre esperarão a confirmação dos gravadores, especialmente se houver alguma sincronização entre as duas transações na camada de aplicativos.  
   
-     **Diretriz:** aplicativos não podem se basear no comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, essa lógica pode ser implementada na camada de aplicativo ou na camada de banco de dados, por meio de [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Diretriz:** aplicativos não podem confiar no comportamento de bloqueio. Se um aplicativo precisar de sincronização entre transações simultâneas, tal lógica pode ser implementada na camada de aplicativo ou na camada de banco de dados, por meio [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Em transações que usam o isolamento READ COMMITTED, cada instrução considera a versão mais recente das linhas no banco de dados. Portanto, as instruções subsequentes veem as alterações no estado do banco de dados.  
   
@@ -127,15 +127,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Dicas de bloqueio de tabela  
- Dicas de bloqueio ([dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e XLOCK podem ser usados com tabelas baseadas em disco tenha [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] levar mais bloqueios do que são necessários para o nível de isolamento especificado.  
+ Dicas de bloqueio ([dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e XLOCK podem ser usadas com tabelas baseadas em disco para ter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] levar mais bloqueios do que são necessários para o nível de isolamento especificado.  
   
  As tabelas com otimização de memória não usam bloqueios. Os níveis de isolamento superiores, como REPEATABLE READ e SERIALIZABLE, podem ser usados para declarar as garantias desejadas.  
   
  Não há suporte para as dicas de bloqueio. Em vez disso, declare as garantias exigidas através dos níveis de isolamento de transação. (NOLOCK tem suporte porque o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não usa bloqueios em tabelas com otimização de memória. Observe que, em contraste com tabelas baseadas em disco, NOLOCK não implica o comportamento READ UNCOMMITTED para tabelas com otimização de memória.)  
   
 ## <a name="see-also"></a>Consulte também  
- [Compreendendo transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Diretrizes para lógica de repetição para transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Diretrizes para lógica de repetição das transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Níveis de isolamento da transação](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297436"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
   Você pode usar o Assistente de Mineração de Dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
@@ -84,7 +84,7 @@ ms.locfileid: "36011262"
   
         -   Se quiser incluir a coluna como um dos atributos previsíveis do modelo, selecione **Prever**.  
   
-        -   Qualquer item que você incluir na estrutura, mas não especifica como uma entrada ou atributo previsível é adicionado à estrutura com o sinalizador `Ignore`; isso significa que os dados são processados quando você cria o modelo, mas não é usado na análise e só está disponível para recuperação de desastres illthrough. Isso pode ser útil se você deseja incluir detalhes tais como nomes de clientes, mas não deseja usá-los na análise.  
+        -   Qualquer item incluído na estrutura, mas não especificar como uma entrada ou atributo previsível é adicionado à estrutura com o sinalizador `Ignore`; isso significa que os dados são processados quando você cria o modelo, mas não é usado na análise e está disponível somente para recuperação de desastre illthrough. Isso pode ser útil se você deseja incluir detalhes tais como nomes de clientes, mas não deseja usá-los na análise.  
   
      Clique em **Concluir** para fechar a parte do assistente que trabalha com tabelas aninhadas. Você pode repetir o processo para adicionar varias colunas aninhadas.  
   

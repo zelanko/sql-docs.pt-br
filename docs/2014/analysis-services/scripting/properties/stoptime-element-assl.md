@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StopTime element
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8de76230ef19e04d921c93ce54d368e55424c230
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0a646cf736afbf78b656a2e891b6dafbcfead5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302666"
 ---
 # <a name="stoptime-element-assl"></a>Elemento StopTime (ASSL)
   Especifica a data e hora em que um [rastreamento](../objects/trace-element-assl.md) elemento deve ser interrompida.  
@@ -61,7 +61,7 @@ ms.locfileid: "36116675"
 |Elemento pai|[Rastreamento](../objects/trace-element-assl.md)|  
 |Elementos filho|Nenhum|  
   
- O elemento que corresponde ao pai do `StopTime` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
+ O elemento que corresponde ao pai de `StopTime` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreia o elemento &#40;ASSL&#41;](../collections/traces-element-assl.md)   

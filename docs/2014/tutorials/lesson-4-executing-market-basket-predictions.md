@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7f5ba3de919c8d38287e09061d399a331870f89a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: eb490ee36b9b1a3aff3d0477451d9534309b347a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303106"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lição 4: Executando previsões de Market Basket
-  Nesta lição, você usará o DMX `SELECT` instrução para criar previsões com base na associação de modelos criados em [lição 2: adicionando modelos de mineração à estrutura de mineração cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Uma consulta de previsão é criada usando a instrução `SELECT` do DMX e adicionando uma cláusula `PREDICTION JOIN`. Para obter mais informações sobre a sintaxe de uma junção de previsão, consulte [SELECT FROM &#60;modelo&#62; junção de previsão &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  Nesta lição, você aprenderá a usar o DMX `SELECT` instrução para criar previsões com base na associação de modelos criada na [lição 2: adicionando modelos de mineração à estrutura de mineração da cesta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Uma consulta de previsão é criada usando a instrução `SELECT` do DMX e adicionando uma cláusula `PREDICTION JOIN`. Para obter mais informações sobre a sintaxe de uma junção de previsão, consulte [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  O **SELECT FROM \<modelo > PREDICTION JOIN** forma do `SELECT` instrução contém três partes:  
   
@@ -76,13 +76,13 @@ SELECT <select list> FROM [<mining model>]
   
 -   Crie uma consulta que prevê quais outros itens de um cliente provavelmente comprará, com base nos itens já existentes no carrinho de compras. Você irá criar esta consulta usando o modelo de mineração com o padrão *MINIMUM_PROBABILITY*.  
   
--   Criar uma consulta que prevê quais os outros itens que um cliente provavelmente comprará, com base nos itens já existentes em seu carrinho de compras. Esta consulta baseia-se em um modelo diferente, na qual *MINIMUM_PROBABILITY* foi definido como 0,01. Como o valor padrão para *MINIMUM_PROBABILITY* em modelos de associação é 0,3, a consulta neste modelo deve retornar mais itens que a consulta no modelo padrão.  
+-   Criar uma consulta que prevê quais os outros itens que um cliente provavelmente comprará, com base nos itens já existentes em seu carrinho de compras. Esta consulta baseia-se em um modelo diferente, na qual *MINIMUM_PROBABILITY* foi definida como 0,01. Como o valor padrão para *MINIMUM_PROBABILITY* em modelos de associação é 0,3, a consulta neste modelo deve retornar mais itens que a consulta no modelo padrão.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-the-default-minimumprobability"></a>Criar uma previsão usando um modelo com o padrão MINIMUM_PROBABILITY  
   
 #### <a name="to-create-an-association-query"></a>Para criar uma consulta de associação  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consulta.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consultas.  
   
 2.  Copie o exemplo genérico da instrução `PREDICTION JOIN` na consulta em branco.  
   
@@ -98,7 +98,7 @@ SELECT <select list> FROM [<mining model>]
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
     ```  
   
-     Você pode apenas incluir o nome da coluna [Products], mas usando o [prever &#40;DMX&#41; ](/sql/dmx/predict-dmx) função, você pode limitar o número de produtos que são retornados pelo algoritmo para três. Também poderá usar `INCLUDE_STATISTICS` que retorna o suporte e a probabilidade, além de permitir ajustar a probabilidade para cada produto. Essas estatísticas ajudam a definir a taxa de exatidão da previsão.  
+     Você poderia apenas incluir o nome da coluna [Products], mas usando o [Predict &#40;DMX&#41; ](/sql/dmx/predict-dmx) função, você pode limitar o número de produtos que são retornados pelo algoritmo para três. Também poderá usar `INCLUDE_STATISTICS` que retorna o suporte e a probabilidade, além de permitir ajustar a probabilidade para cada produto. Essas estatísticas ajudam a definir a taxa de exatidão da previsão.  
   
 4.  Substitua o seguinte:  
   
@@ -156,7 +156,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>Para criar uma consulta de associação  
   
-1.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consulta.  
+1.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o Editor de consultas.  
   
 2.  Copie o exemplo genérico da instrução `PREDICTION JOIN` na consulta em branco.  
   
@@ -224,7 +224,7 @@ SELECT <select list> FROM [<mining model>]
   
      A consulta retorna uma tabela que contém três produtos: tubo de pneu para mountain bike, garrafa de água e kit para montanhismo. A tabela lista esses produtos em ordem de probabilidade. O produto que aparece no topo da tabela é o produto que provavelmente será incluído no mesmo carrinho de compras juntamente com os três produtos especificados na consulta. Os produtos restantes são provavelmente os próximos que serão incluídos no carrinho de compras. A tabela também contém estatísticas que descrevem a precisão da previsão.  
   
-     Você pode ver os resultados desta consulta que o valor da *MINIMUM_PROBABILITY* parâmetro afeta os resultados retornados pela consulta.  
+     Você pode ver os resultados dessa consulta que o valor da *MINIMUM_PROBABILITY* parâmetro afeta os resultados retornados pela consulta.  
   
  Esta é a última etapa no tutorial da cesta básica. Agora você tem um conjunto de modelos que pode ser usado para prever os produtos que os clientes podem comprar ao mesmo tempo.  
   

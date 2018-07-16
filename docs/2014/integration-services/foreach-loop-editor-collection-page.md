@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318876"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de Loop Foreach (página Coleção)
   Use a página **Coleção** da caixa de diálogo **Editor de Loop Foreach** para especificar o tipo de enumerador e configurá-lo.  
@@ -165,7 +165,7 @@ ms.locfileid: "36118727"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador NodeList Foreach  
  Use o enumerador NodeList Foreach para enumerar o conjunto de nós XML resultante da aplicação de uma expressão XPath a um arquivo XML. Por exemplo, se o Loop Foreach incluir uma tarefa Script, você poderá usar o enumerador NodeList Foreach para passar um valor que atende aos critérios da expressão XPath do arquivo XML para a tarefa Script.  
   
- A expressão XPath que se aplica ao arquivo XML é a operação XPath externa, armazenada na propriedade OuterXPathString. Se o tipo de enumeração XPath for definido como `ElementCollection`, o enumerador Foreach NodeList poderá aplicar uma expressão XPath interna, armazenada na propriedade InnerXPathString, para uma coleção de elementos.  
+ A expressão XPath que se aplica ao arquivo XML é a operação XPath externa, armazenada na propriedade OuterXPathString. Se o tipo de enumeração XPath for definido como `ElementCollection`, o enumerador Foreach NodeList poderá aplicar uma expressão XPath interna, armazenada na propriedade InnerXPathString, a uma coleção de elementos.  
   
  Para saber mais sobre como trabalhar com documentos e dados XML, consulte "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" na Biblioteca MSDN.  
   
@@ -277,14 +277,14 @@ ms.locfileid: "36118727"
   
  **Intervalo de tempo de Blob de/para o filtro**  
  Especifique um filtro de intervalo de tempo. Arquivos modificados após **TimeRangeFrom** e antes de **TimeRangeTo** serão enumerados.  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerador = enumerador de arquivo Foreach ADLS  
-O **enumerador de arquivo ADLS** permite que um pacote do SSIS enumerar arquivos em ADLS com filtros. A barra (`/`)-prefixado caminho completo de arquivos enumerados pode ser armazenado em uma variável e usado em tarefas dentro do contêiner do Loop Foreach.
+### <a name="enumerator--foreach-adls-file-enumerator"></a>Enumerador = enumerador de arquivos ADLS Foreach  
+O **enumerador de arquivos ADLS** permite que um pacote do SSIS enumerar arquivos em ADLS com filtros. A barra "/" (`/`)-prefixado caminho completo de arquivos enumerados pode ser armazenado em uma variável e usado em tarefas dentro do contêiner Loop Foreach.
   
 **AzureDataLakeConnection**  
 Especifica um gerenciador de conexões do Azure Data Lake ou cria um novo que se refere a uma conta do ADLS.   
   
 **AzureDataLakeDirectory**  
-Especifica o diretório ADLS para pesquisar.
+Especifica o diretório do ADLS para pesquisar.
   
 **FileNamePattern**  
 Especifica um filtro de nome de arquivo. Somente os arquivos cujo nome corresponde ao padrão especificado serão enumerados. Curingas `*` e `?` são compatíveis. 
@@ -301,7 +301,7 @@ Especifica se deve-se pesquisar recursivamente dentro do diretório especificado
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de Loop foreach &#40;página geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de Loop foreach &#40;página mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Editor de Loop foreach &#40;página de mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Página expressões](expressions/expressions-page.md)   
  [Contêiner do Loop For](control-flow/for-loop-container.md)  
   

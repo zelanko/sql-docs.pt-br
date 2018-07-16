@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006848"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354868"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Atualizando colunas UDT com DataAdapters
   UDTs (tipos definidos pelo usuário) são suportados usando um `System.Data.DataSet` e um `System.Data.SqlClient.SqlDataAdapter` para recuperar e modificar dados.  
   
 ## <a name="populating-a-dataset"></a>Populando um conjunto de dados  
- Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha um **pontos** tabela definida com a seguinte estrutura e alguns dados de exemplo. O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções criam os **pontos** tabela e insira algumas linhas.  
+ Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha um **pontos** tabela definida com a seguinte estrutura e alguns dados de exemplo. O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções criam as **pontos** de tabela e inserir algumas linhas.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- O seguinte fragmento de código ADO.NET recupera uma cadeia de caracteres de conexão válida, cria um novo `SqlDataAdapter`e preenche uma `System.Data.DataTable` com as linhas de dados a **pontos** tabela.  
+ O seguinte fragmento de código do ADO.NET recupera uma cadeia de caracteres de conexão válida, cria um novo `SqlDataAdapter`e preenche uma `System.Data.DataTable` com as linhas de dados das **pontos** tabela.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  

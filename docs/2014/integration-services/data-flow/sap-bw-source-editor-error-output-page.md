@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c03b77cf021e387544cfc3a235bcd5e933fd2681
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9406ca3d37cbfa8749a039cdf78bb7020467da5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280202"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Editor de Origem de SAP BW (página Saída de Erro)
   Use a página **Saída de Erro** do **Editor de Origem SAP BW** , para selecionar opções de tratamento de erro e definir propriedades em colunas de saída de erros.  
@@ -67,8 +67,8 @@ ms.locfileid: "36121121"
  Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Editor de origem do SAP BW &#40;página colunas&#41;](sap-bw-source-editor-columns-page.md)   
+ [Editor de origem SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Editor de origem SAP BW &#40;página de colunas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de Origem SAP BW &#40;Página Avançado&#41;](sap-bw-source-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

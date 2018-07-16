@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], modifying connections
 - SPP [SQL Server]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - RPC [SQL Server]
 ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0167af6c11abb12e8aa38a52a77707b81aecbe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b2b8e2d6ead66108b76d03bbfc020d9345afcd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296006"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Modificar conexões que usam protocolos de rede Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX
   O Supervisor de Atualização detectou protocolos de conectividade cliente/servidor para os quais não há suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Os aplicativos cliente que usam protocolo de rede Banyan VINES SPP, Multiprotocol, AppleTalk ou NWLink IPX/SPX devem conectar-se usando um protocolo para o qual há suporte.  
@@ -45,7 +45,7 @@ ms.locfileid: "36010613"
 ## <a name="corrective-action"></a>Ação corretiva  
  Altere as configurações dos aplicativos cliente para que usem um protocolo para o qual há suporte ao conectar-se com o servidor. Se você tiver uma instalação de alias que use protocolos sem-suporte, esse alias deve ser modificado para que use protocolos para os quais há suporte.  
   
- Se sua conexão de aplicativo de cadeia de caracteres especificamente usa ou carrega um desses protocolos, pela rede ou especificando = DBMSRPCN para RPC, NETWORK = DBMSADSN para Appletalk ou NETWORK = DBMSVINN para a propriedade Banyan VINES, ou usando um prefixo explícito como "spx: *servidor \ instância*"para SPX," bv:*servidor*"para Banyan VINES," adsp:*servidor*"para AppleTalk, ou" rpc:*server*"para vários protocolos, em seguida, você deve modificar seu aplicativo para usar um dos protocolos com suporte.  
+ Se sua conexão de aplicativo de cadeia de caracteres especificamente usa ou carrega um desses protocolos, por qualquer rede especificando = DBMSRPCN para RPC, NETWORK = DBMSADSN para Appletalk ou NETWORK = DBMSVINN para a propriedade Banyan VINES, ou usando um prefixo explícito como "spx: *servidor \ instância*"para SPX," bv:*server*"para Banyan VINES," adsp:*servidor*"para AppleTalk, ou" rpc:*server*"para vários protocolos, em seguida, você deve modificar seu aplicativo para usar um dos protocolos com suporte.  
   
  Para obter mais informações, consulte ‘Escolhendo um protocolo de rede’ nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

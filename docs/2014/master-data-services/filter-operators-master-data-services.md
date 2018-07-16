@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 19c3f81b41ceb6752482a9c784f3234c9b65591d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9bf8765f1b64a908e9a799823d5272a7c29300da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314166"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
   Ao filtrar uma lista de membros, os seguintes operadores estão disponíveis.  

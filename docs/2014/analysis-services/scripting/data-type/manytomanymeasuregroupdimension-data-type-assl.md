@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14233f2e39771174b4d1b15acdeafb76bc76f32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96a6df09c6474994a38930fa07c0a7b5f73cfd61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308416"
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>Tipo de dados ManyToManyMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa a relação entre uma dimensão muitos para muitos e um grupo de medidas.  

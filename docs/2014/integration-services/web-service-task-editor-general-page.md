@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331856"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  
@@ -48,7 +48,7 @@ ms.locfileid: "36006630"
   
 -   Selecione esse arquivo vazio para a opção **Arquivo WSDL** .  
   
--   Defina o valor de **OverwriteWSDLFile** para `True` para habilitar o arquivo vazio seja substituído pelo arquivo WSDL.  
+-   Defina o valor de **OverwriteWSDLFile** para `True` para habilitar o arquivo vazio seja substituído pelo arquivo WSDL real.  
   
 -   Clique em **Baixar WSDL** para baixar o arquivo WSDL real e substituir o arquivo vazio.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36006630"
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa serviço da Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor da tarefa serviço da Web &#40;de saída de página&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor da tarefa serviço da Web &#40;página de saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

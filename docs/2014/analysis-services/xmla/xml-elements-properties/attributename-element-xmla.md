@@ -24,15 +24,15 @@ helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1251de0a3f81a0b3a25d44de5bfbe2e41fa0f90a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306138"
 ---
 # <a name="attributename-element-xmla"></a>Elemento AttributeName (XMLA)
   Contém o nome de um atributo representado pelo pai [atributo](attribute-element-xmla.md) elemento.  
@@ -67,9 +67,9 @@ ms.locfileid: "36020559"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento drop &#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
- [Onde elemento &#40;XMLA&#41;](where-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Em que elemento de &#40;XMLA&#41;](where-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

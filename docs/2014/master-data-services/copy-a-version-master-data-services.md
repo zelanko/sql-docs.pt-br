@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70e234c4cf13e21df0ba05ccfaf1c33ea9e9a330
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 823a054f2bd7dd72e665e739bdd32dcc2d66bb6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307956"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copie uma versão do modelo para criar uma nova versão dele.  
@@ -52,6 +52,6 @@ ms.locfileid: "36019829"
 -   [Alterar um nome de versão &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [Versões de &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

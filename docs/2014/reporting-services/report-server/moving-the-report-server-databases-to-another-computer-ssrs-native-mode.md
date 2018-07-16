@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319817"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
   É possível mover os bancos de dados do servidor de relatório usados em uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para uma instância que está em outro computador. Os bancos de dados reportserver e reportservertempdb devem ser movidos ou copiados juntos. Uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer os dois bancos de dados; o banco de dados reportservertempdb deve ser relacionado por nome ao banco de dados reportserver primário que está sendo movido.  
@@ -62,7 +62,7 @@ ms.locfileid: "36116299"
   
 8.  Clique em **Adicionar** para selecionar os arquivos .mdf e .ldf do banco de dados do servidor de relatórios que deseja anexar. Repita esta etapa para o banco de dados temporário do servidor de relatório.  
   
-9. Após anexar os bancos de dados, verifique o `RSExecRole` é uma função de banco de dados no banco de dados de servidor de relatório e do banco de dados temporário. `RSExecRole` deve ter select, insert, update, delete e permissões de referência nas tabelas de banco de dados do servidor de relatório e permissões de execução nos procedimentos armazenados. Para mais informações, veja [Criar o RSExecRole](../security/create-the-rsexecrole.md).  
+9. Após anexar os bancos de dados, verifique o `RSExecRole` é uma função de banco de dados no banco de dados de servidor de relatório e banco de dados temporário. `RSExecRole` deve ter select, insert, update, delete e permissões de referência nas tabelas de banco de dados do servidor de relatório e executar permissões nos procedimentos armazenados. Para mais informações, veja [Criar o RSExecRole](../security/create-the-rsexecrole.md).  
   
 10. Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e abra uma conexão com o servidor de relatório.  
   
@@ -218,16 +218,16 @@ GO
 7.  Clique em **Avançar** e em **Concluir**.  
   
 > [!NOTE]  
->  Um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalação requer que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instância inclui o `RSExecRole` função. A criação de funções, o registro de logon e as atribuições de função ocorrem quando a conexão do banco de dados do servidor de relatório é definida por meio da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você usar abordagens alternativas (especificamente, se usar o utilitário de prompt de comando rsconfig.exe) para configurar a conexão, o servidor de relatório não estará em um estado de funcionamento. Talvez seja necessário gravar o código WMI para disponibilizar o servidor de relatório. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a instalação requer que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instância incluem o `RSExecRole` função. A criação de funções, o registro de logon e as atribuições de função ocorrem quando a conexão do banco de dados do servidor de relatório é definida por meio da ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você usar abordagens alternativas (especificamente, se usar o utilitário de prompt de comando rsconfig.exe) para configurar a conexão, o servidor de relatório não estará em um estado de funcionamento. Talvez seja necessário gravar o código WMI para disponibilizar o servidor de relatório. Para obter mais informações, consulte [Acessar o provedor WMI do Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar o RSExecRole](../security/create-the-rsexecrole.md)   
  [Iniciar e parar o serviço do servidor de relatório](start-and-stop-the-report-server-service.md)   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)  
   
   

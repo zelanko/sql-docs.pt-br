@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo colunas excluir | Microsoft Docs
+title: Excluir a caixa de diálogo colunas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10139"
 - sql12.rtp.rptdesigner.deletecolumns.f1
@@ -18,13 +18,13 @@ ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4fe5ad2c79bc1a2b7226a4b5408eb58d4b06546b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80011c1e73366da9562a522534b5cee5f75a4efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318006"
 ---
 # <a name="delete-columns-dialog-box"></a>Caixa de diálogo Excluir Colunas
   Use a caixa de diálogo **Excluir Colunas** para excluir colunas de uma tabela, matriz ou região de dados de lista. Para colunas associadas a grupos, também é possível excluir a definição do grupo.  

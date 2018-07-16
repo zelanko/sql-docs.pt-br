@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b802cd26f4baff165fab030f94889d09b1450070
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb3f05d4d77c5683b764485125709968b2cafbd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296976"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Guia de instruções do Serviço Change Data Capture para Oracle da Attunity
   Esta seção descreve como realizar as tarefas no Console de Configuração do Serviço CDC.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1009e5bd7f87c666b4ddf4f207d6e954b714429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 51702ccf74913990df5c258b2cee5ff548961d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327446"
 ---
 # <a name="smo-namespaces"></a>Namespaces do SMO
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) tem vários namespaces. Os diversos namespaces representam áreas de funcionalidades diferentes no SMO.  

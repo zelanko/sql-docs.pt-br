@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0243e0050111c0bc478f17403f3014fc619d9a43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c4183d90d07a54cf009daec59ca29ca802f2bf67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295426"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Elemento ProtocolCapabilities (XMLA)
-  Usa o cabeçalho SOAP em uma mensagem de solicitação SOAP para identificar os recursos de protocolo entre uma instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e um aplicativo cliente.  
+  Usa o cabeçalho SOAP em uma mensagem de solicitação SOAP para identificar os recursos de protocolo entre uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e um aplicativo cliente.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36009833"
   
 3.  Se a instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiver o mesmo recurso de protocolo que foi solicitado, a instância enviará uma resposta SOAP que inclui o mesmo elemento `ProtocolCapabilities` enviado na solicitação SOAP e o protocolo terá sido negociado com êxito. Caso contrário, os recursos de protocolo não serão negociadas com êxito e a instância retornará uma falha SOAP.  
   
- Após a negociação bem-sucedida dos recursos de protocolo, quanto tempo o aplicativo cliente e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o uso de instância um protocolo específico depende se a sessão é explícita ou implícita:  
+ Após a negociação bem-sucedida dos recursos de protocolo, quanto tempo o aplicativo cliente e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] um protocolo específico de uso de instância depende se a sessão é explícita ou implícita:  
   
--   Uma sessão explícita é aquela que foi criada usando o [BeginSession](session-element-xmla.md) elemento de cabeçalho. Para uma sessão explícita, o protocolo negociado é usado até que o aplicativo de cliente envia uma nova `ProtocolCapabilities` elemento ou a sessão será encerrada.  
+-   Uma sessão explícita é aquela criada usando o [BeginSession](session-element-xmla.md) elemento de cabeçalho. Para uma sessão explícita, o protocolo negociado é usado até que o aplicativo cliente envia uma nova `ProtocolCapabilities` elemento ou o término da sessão.  
   
 -   Uma sessão implícita é aquela que foi criada por uma instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e não foi explicitamente especificada pelo aplicativo cliente no momento do envio da solicitação SOAP. Em uma sessão implícita, o protocolo negociado só é usado até que a solicitação SOAP seja concluída.  
   

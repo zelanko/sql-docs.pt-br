@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0c0d24c6e74aa88e2ea27582214345ac40671d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323086"
 ---
 # <a name="serverproperties-element-assl"></a>Elemento ServerProperties (ASSL)
   Contém a coleção de [ServerProperty](../objects/serverproperty-element-assl.md) elementos associados a um [Server](../objects/server-element-assl.md) elemento.  

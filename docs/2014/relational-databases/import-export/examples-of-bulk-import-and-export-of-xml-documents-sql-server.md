@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303926"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
     
@@ -43,18 +42,18 @@ ms.locfileid: "36118348"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Para obter mais informações, consulte [importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importação em massa dados usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;Do SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Para obter mais informações, consulte [importar e exportar em massa dados usando o utilitário bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;Do SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos são:  
   
--   A. [Importar dados XML como um fluxo de bytes binários em MASSA](#binary_byte_stream)  
+-   A. [IMPORTAÇÃO de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
   
--   B. [Importar dados XML em uma linha existente em massa](#existing_row)  
+-   B. [Importação de dados XML em uma linha existente](#existing_row)  
   
 -   C. [Importação em massa dados XML de um arquivo que contém um DTD](#file_contains_dtd)  
   
--   D. [Especificar o terminador de campo explicitamente usando um arquivo de formato](#field_terminator_in_format_file)  
+-   D. [Especificação do terminador de campo explicitamente usando um arquivo de formato](#field_terminator_in_format_file)  
   
 -   E. [Exportar dados XML em massa](#bulk_export_xml_data)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36118348"
  Ao importar dados XML em massa de um arquivo que contém uma declaração de codificação que você deseja aplicar, especifique a opção SINGLE_BLOB na cláusula OPENROWSET (BULK...). A opção SINGLE_BLOB assegura que o analisador XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa os dados de acordo com o esquema de codificação especificado na declaração XML.  
   
 #### <a name="sample-table"></a>Tabela de exemplo  
- Para testar um exemplo, você deve criar a tabela de exemplo `T`.  
+ Para testar o exemplo A, você deve criar a tabela de exemplo `T`.  
   
 ```  
 USE tempdb  

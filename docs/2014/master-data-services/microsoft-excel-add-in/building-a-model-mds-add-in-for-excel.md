@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba6915e8d5e39af32279fbaca208c97fd076d337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd4544aefe0f8a5b474b073ef4279f50c4d8a434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320286"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilando um modelo (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem executar um subconjunto das funções administrativas disponíveis no aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -62,16 +62,16 @@ ms.locfileid: "36019390"
   
 -   [Regras de negócio &#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
   
--   [Exportando dados &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
+-   [Exportação de dados &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
 -   [Hierarquias &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
   
 -   [Coleções &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
--   [Versões &#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [Versões de &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
--   [Implantando modelos &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
+-   [Implantação de modelos de &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   
   

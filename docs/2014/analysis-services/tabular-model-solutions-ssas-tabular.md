@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f79d0822026b1638898b2bbc5007c964433a449c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b9157911050be20e3eafee4817eb46c9a8c0424
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289532"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluções de modelo tabular (SSAS tabular)
   Os tópicos nesta seção fornecem informações sobre como criar modelos de tabela usando o designer de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Designer de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
+ [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
   
  [Banco de dados do espaço de trabalho &#40;Tabular do SSAS&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "36021019"
   
  [Tabelas e colunas &#40;Tabular do SSAS&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
- [Relações &#40;Tabular do SSAS&#41;](tabular-models/relationships-ssas-tabular.md)  
+ [Relações de &#40;Tabular do SSAS&#41;](tabular-models/relationships-ssas-tabular.md)  
   
- [Cálculos &#40;Tabular do SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos de &#40;Tabular do SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
   
  [Medidas &#40;Tabular do SSAS&#41;](tabular-models/measures-ssas-tabular.md)  
   
@@ -55,10 +55,10 @@ ms.locfileid: "36021019"
   
  [Perspectivas &#40;Tabular do SSAS&#41;](tabular-models/perspectives-ssas-tabular.md)  
   
- [Funções &#40;Tabular do SSAS&#41;](tabular-models/roles-ssas-tabular.md)  
+ [As funções &#40;Tabular do SSAS&#41;](tabular-models/roles-ssas-tabular.md)  
   
  [Analisar no Excel &#40;Tabular do SSAS&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Implantação de solução de modelo tabular &#40;Tabular do SSAS&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

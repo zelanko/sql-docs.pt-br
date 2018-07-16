@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b88abeefbaa07500ce42aa580443dda8b47414e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 26fdd565b567f2b6cefa9fda11f8f4a610f2d401
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327026"
 ---
 # <a name="database-engine-upgrade-issues"></a>Problemas de atualização do Mecanismo de Banco de Dados
   Os tópicos desta seção descrevem problemas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que podem afetar sua atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses tópicos descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  
@@ -32,6 +32,6 @@ ms.locfileid: "36115592"
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Problemas de atualização de replicação](../../../2014/sql-server/install/replication-upgrade-issues.md)   
  [Problemas de atualização do SQL Server Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   
- [Problemas de atualização de pesquisa de texto completo](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
+ [Problemas de atualização da Pesquisa de Texto Completo](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
   

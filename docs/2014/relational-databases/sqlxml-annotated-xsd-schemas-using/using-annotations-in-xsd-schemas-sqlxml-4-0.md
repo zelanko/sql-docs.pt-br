@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321946"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Usando anotações em esquemas XSD (SQLXML 4.0)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, a linguagem de esquema XSD dá suporte a anotações de forma semelhante às anotações introduzidas na linguagem de esquema XDR (XML-Data Reduced). Há anotações adicionais introduzidas no XSD para as quais não há suporte no XDR.  
@@ -47,7 +47,7 @@ ms.locfileid: "36116095"
  [Anotações XSD &#40;SQLXML 4.0&#41;](xsd-annotations-sqlxml-4-0.md)  
  Lista as anotações que podem ser usadas com esquemas XSD, suas descrições e as anotações equivalentes para XDR.  
   
- [Mapeamento de padrão de atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mapeamento padrão dos atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
  Explica o mapeamento padrão e fornece exemplos de tarefas relacionados a ele.  
   
  [Mapeamento explícito de atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
@@ -62,19 +62,19 @@ ms.locfileid: "36116095"
  [Criando elementos constantes usando sql: constante é &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  Descreve e fornece exemplos da anotação `sql:is-constant`.  
   
- [Excluindo elementos de esquema do documento XML resultante usando sql: mapeado &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ [Excluindo elementos de esquema do documento XML resultante usando sql: mapeada &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
  Descreve e fornece exemplos da anotação `sql:mapped`.  
   
  [Filtrando valores usando SQL: limit-campo e SQL: limit-valor &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Descreve e fornece exemplos das anotações `sql:limit-field` e `sql:limit-value`.  
   
- [Identificando colunas de chave usando SQL: Key-campos &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ [Identificando colunas de chave usando SQL: Key-campos de &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  Descreve e fornece exemplos da anotação `sql:key-fields`.  
   
- [Especificar um destino Namespace usando o atributo targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
- Descreve e fornece exemplos do **targetNamespace** atributo.  
+ [Especificando um destino Namespace usando o atributo targetNamespace &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ Descreve e fornece exemplos de como o **targetNamespace** atributo.  
   
- [Criando válido ID, IDREF e IDREFS tipo atributos usando SQL: prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ [Criando válido de ID, IDREF e IDREFS tipo atributos usando SQL: prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  Descreve e fornece exemplos da anotação `sql:prefix`.  
   
  [Coerções de tipo de dados e a anotação SQL: DataType &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "36116095"
  [Criando seções CDATA usando SQL: Use-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Descreve e fornece exemplos da anotação `sql:use-data`.  
   
- [Solicitando referências URL a dados BLOB usando sql: encode &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ [Solicitando referências URL a dados BLOB usando sql: codificar &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
  Descreve e fornece exemplos da anotação `sql:encode`.  
   
  [Recuperando dados não consumidos usando SQL: overflow-campo &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  

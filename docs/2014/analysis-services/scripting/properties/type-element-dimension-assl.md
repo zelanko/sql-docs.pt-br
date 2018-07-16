@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 582d5b2052f2681630c5f0cd86facacd5e7cfc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283942"
 ---
 # <a name="type-element-dimension-assl"></a>Elemento Type (Dimension) (ASSL)
   Fornece informações sobre o conteúdo da dimensão.  
@@ -69,11 +69,11 @@ ms.locfileid: "36011224"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Regular*|A dimensão é uma dimensão regular.|  
-|*Hora*|A dimensão é uma dimensão de tempo. **Observação:** esse valor indica que a dimensão oferece suporte a funcionalidades específicas de dimensões de tempo.|  
+|*Hora*|A dimensão é uma dimensão de tempo. **Observação:** esse valor indica que a dimensão oferece suporte a funcionalidades específicas para dimensões de tempo.|  
 |*Geografia*|A dimensão contém atributos geográficos.|  
 |*Organização*|A dimensão contém atributos organizacionais.|  
 |*BillOfMaterials*|A dimensão contém uma conta de atributos de materiais.|  
-|*Contas*|A dimensão contém atributos relacionados à conta. **Observação:** esse valor indica que a dimensão oferece suporte a funcionalidades específicas de dimensões de conta.|  
+|*Contas*|A dimensão contém atributos relacionados à conta. **Observação:** esse valor indica que a dimensão oferece suporte a funcionalidades específicas para dimensões de conta.|  
 |*Clientes*|A dimensão contém atributos relacionados ao cliente.|  
 |*Produtos*|A dimensão contém atributos relacionados ao produto.|  
 |*Cenário*|A dimensão contém atributos relacionados ao cenário.|  
@@ -86,7 +86,7 @@ ms.locfileid: "36011224"
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionType>.  
   
- O elemento que corresponde ao pai do `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

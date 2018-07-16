@@ -1,5 +1,5 @@
 ---
-title: Adicionar modelos de mineração a uma estrutura (Analysis Services – mineração de dados) | Microsoft Docs
+title: Adicionar modelos de mineração a uma estrutura (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5252db242cba7fb9a1f3bca54289cdb7b3ee8870
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0813b466184123fea433ccf3467fdf14b5f58740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330916"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Adicionar modelos de mineração a uma estrutura (Analysis Services - Mineração de dados)
   Uma estrutura de mineração é destinada a dar suporte a diversos modelos de mineração. Portanto, após a finalização do assistente, você poderá abrir a estrutura e adicionar novos modelos de mineração. Cada vez que você cria um modelo, pode usar um algoritmo diferente, alterar os parâmetros ou aplicar filtros para usar com um subconjunto diferente dos dados.  
@@ -62,7 +62,7 @@ ms.locfileid: "36008813"
  Para algumas colunas, talvez seja necessário especificar o *conteúdo da coluna*também. Na mineração de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a propriedade Tipo de Conteúdo de cada coluna de dados informa como o algoritmo deve processar os dados da coluna. Por exemplo, se seus dados tiverem uma coluna Receita, você deve especificar que a coluna contém números contínuos definindo o tipo de conteúdo como Contínuo. No entanto, também é possível especificar que os números da coluna Receita sejam agrupados em blocos definindo o tipo de conteúdo como Diferenciado e, opcionalmente, especificando o número exato de blocos. Você pode criar modelos que manipulam colunas de modos diferentes; por exemplo, é possível criar um modelo que agrupa clientes em três faixas etárias e outro modelo que agrupa clientes em 10 faixas etárias.  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)   
  [Propriedades do modelo de mineração](mining-model-properties.md)   
  [Colunas do modelo de mineração](mining-model-columns.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2796fb23a51d0da71e4314cdbeaab70a13332d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314527"
 ---
 # <a name="relationships-ssas-tabular"></a>Relações (SSAS tabular)
   Em modelos tabulares, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
@@ -116,7 +116,7 @@ ms.locfileid: "36013436"
 ### <a name="single-active-relationship-between-tables"></a>Relação ativa única entre tabelas  
  Várias relações podem resultar em dependências ambíguas entre as tabelas. Para criar cálculos exatos, você precisa de um único caminho de uma tabela para a próxima. Por isso, pode haver apenas uma relação ativa entre cada par de tabelas. Por exemplo, no AdventureWorks DW 2012, a tabela, DimDate, contém uma coluna, DateKey, que está relacionada a três colunas diferentes da tabela FactInternetSales: OrderDate, DueDate e ShipDate. Se você tentar importar essas tabelas, a primeira relação será criada com êxito, mas você receberá o seguinte erro em relações sucessivas que envolvam a mesma coluna:  
   
- \* Relação: tabela [column 1] -> tabela [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
+ \* Relação: table [column 1] -> table [column 2] - Status: error - motivo: não é possível criar uma relação entre tabelas \<tabela 1 > e \<a tabela 2 >. Só pode existir uma relação direta ou indireta entre duas tabelas.  
   
  Se tiver duas tabelas e várias relações entre elas, você precisará importar várias cópias da tabela que contém a coluna de pesquisa e criar uma relação entre cada par de tabelas.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36013436"
 |Tópico|Description|  
 |-----------|-----------------|  
 |[Criar uma relação entre duas tabelas &#40;Tabular do SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Descreve como criar uma relação manualmente entre duas tabelas.|  
-|[Excluir relações &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)|Descreve como excluir uma relação e as ramificações de excluir relações.|  
+|[Excluir relações de &#40;Tabular do SSAS&#41;](relationships-ssas-tabular.md)|Descreve como excluir uma relação e as ramificações de excluir relações.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas e colunas &#40;Tabular do SSAS&#41;](tables-and-columns-ssas-tabular.md)   

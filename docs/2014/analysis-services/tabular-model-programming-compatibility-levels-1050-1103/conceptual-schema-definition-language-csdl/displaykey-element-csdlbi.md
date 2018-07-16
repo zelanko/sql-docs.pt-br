@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 907bb04d59225180fad91b63971d578181c6663d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: adcf9e8b2b87e0302158bbbf5652d8c32277170f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297146"
 ---
 # <a name="displaykey-element-csdlbi"></a>Elemento DisplayKey (CSDLBI)
   O elemento DisplayKey contém uma lista dos elementos a seguir que juntos constituem um identificador forte. O DisplayKey é encontrado apenas como um filho do elemento EntityType. Ele pode fazer referência a colunas ou extremidades de função.  
@@ -78,7 +78,7 @@ ms.locfileid: "36019440"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o modelo de objeto de tabela](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Noções básicas sobre o modelo de objeto Tabular](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Conceitos da CSDLBI](../csdlbi-concepts.md)  
   
   

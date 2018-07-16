@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300476"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
   Use a caixa de diálogo **Editor de Transformação Mesclar Junção** para especificar o tipo de junção, as colunas de junção e as colunas de saída para mesclar duas entradas combinadas por uma junção.  
@@ -53,9 +53,9 @@ ms.locfileid: "36116922"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Classificar dados para transformações de junção de mesclagem e de mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Estender um conjunto de dados usando a transformação mesclar junção](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformação de mesclagem](data-flow/transformations/merge-transformation.md)   
+ [Classificar dados para as transformações mesclagem e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Estender um conjunto de dados por meio da transformação junção de mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Transformação mesclar](data-flow/transformations/merge-transformation.md)   
  [Transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
   
   

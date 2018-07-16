@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 254cc2f7bccd634a283412d4b2acbf75f1c0cd84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: baf89a41a42a1ea84e37d103890c3c8ea1ed22db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274552"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
   Este tópico descreve como criar relações de chaves estrangeiras no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você cria uma relação entre duas tabelas quando deseja associar linhas de uma tabela com linhas de outra.  
@@ -34,7 +34,7 @@ ms.locfileid: "36120323"
   
      [Segurança](#Security)  
   
--   **Para criar relações de chaves estrangeiras usando:**  
+-   **Para criar relações de chave estrangeira usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323616"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Referência técnica do algoritmo MTS
   O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclui dois algoritmos separados para análise de série temporal:  
@@ -71,7 +71,7 @@ ms.locfileid: "36021052"
   
  O algoritmo Microsoft Time Series opera considerando valores em uma série de dados e tentando ajustar os dados a um padrão. Se a série de dados ainda não for estática, o algoritmo aplicará uma ordem de diferença. Quanto maior a ordem de diferença, mais estática a série temporal tenderá a ser.  
   
- Por exemplo, se você tiver a série temporal (z1, z2,..., zn) e executar cálculos usando uma ordem de diferença, você obtém uma nova série (y1, y2,..., yn-1), onde *yi = zi + 1-zi*. Quando a ordem de diferença é 2, o algoritmo gera outra série (x1, x2,... xn-2), com base nas y séries derivadas da primeira equação de ordem. A quantidade correta de diferenciação depende dos dados. Uma única ordem de diferenciação é mais comum em modelos que apresentam uma tendência constante; uma segunda ordem de diferenciação pode indicar uma tendência que varia com o tempo.  
+ Por exemplo, se você tem a série temporal (z1, z2,..., zn) e executar cálculos usando uma ordem de diferença, você obtém uma nova série (y1, y2,..., yn-1), onde *yi = zi + 1-zi*. Quando a ordem de diferença é 2, o algoritmo gera outra série (x1, x2,..., xn-2), com base nas y séries derivadas da primeira equação de ordem. A quantidade correta de diferenciação depende dos dados. Uma única ordem de diferenciação é mais comum em modelos que apresentam uma tendência constante; uma segunda ordem de diferenciação pode indicar uma tendência que varia com o tempo.  
   
  Por padrão, a ordem de diferenciação usada nos algoritmos Microsoft Time Series é -1; isso significa que o algoritmo detectará automaticamente o melhor valor da ordem de diferenciação. Em geral, o melhor valor é 1 (quando é necessária uma diferenciação), mas em certos casos, o algoritmo aumentará esse valor para no máximo 2.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36021052"
   
 -   Defina o *FORECAST_METHOD* como ARIMA se você desejar melhorar a previsão a longo prazo.  
   
- Em [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], você também pode personalizar como [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mescla a combinação dos algoritmos ARIMA e ARTXP. É possível controlar o ponto inicial da mescla e a taxa de alteração definindo o parâmetro *PREDICTION_SMOOTHING* :  
+ Na [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], você também pode personalizar como [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mescla a combinação dos algoritmos ARIMA e ARTXP. É possível controlar o ponto inicial da mescla e a taxa de alteração definindo o parâmetro *PREDICTION_SMOOTHING* :  
   
 -   Se você definir *PREDICTION_SMOOTHING* como 0, o modelo usará apenas ARTXP.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36021052"
 |*MAXIMUM_SERIES_VALUE*|Especifica o valor máximo para usar em previsões. Esse parâmetro é usado, juntamente com *MINIMUM_SERIES_VALUE*, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista para qualquer dia nunca deve exceder o número de produtos no inventário.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Especifica o valor mínimo que pode ser previsto. Esse parâmetro é usado, juntamente com *MAXIMUM_SERIES_VALUE*, para restringir as previsões a algum intervalo esperado. Por exemplo, você pode especificar que a quantidade de vendas prevista nunca deve ser um número negativo.<br /><br /> Observação: esse parâmetro está disponível apenas em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Especifica o número mínimo de intervalos de tempo necessário para gerar uma divisão em cada árvore de série temporal. O padrão é 10.|  
-|*MISSING_VALUE_SUBSTITUTION*|Especifica como falhas em dados do histórico são resolvidas. Por padrão, não são permitidas falhas nos dados. Se seus dados contêm várias séries, as séries também não podem ter extremidades desbalanceadas. Isso quer dizer que todas as séries devem ter os mesmos pontos de início e de extremidade. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também usa o valor desse parâmetro para preencher as falhas em novos dados quando você realiza uma `PREDICTION JOIN` no modelo de série temporal. A tabela a seguir lista os possíveis valores para esse parâmetro:<br /><br /> Nenhum: padrão. Substitui valores ausentes por valores plotados ao longo da curva do modelo treinado.<br /><br /> Anterior: Repete o valor de fração de tempo anterior.<br /><br /> Média: Usa uma média móvel de frações de tempo usada no treinamento.<br /><br /> Constante numérica: usa o número especificado para substituir todos os valores ausentes.|  
+|*MISSING_VALUE_SUBSTITUTION*|Especifica como falhas em dados do histórico são resolvidas. Por padrão, não são permitidas falhas nos dados. Se seus dados contêm várias séries, as séries também não podem ter extremidades desbalanceadas. Isso quer dizer que todas as séries devem ter os mesmos pontos de início e de extremidade. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também usa o valor desse parâmetro para preencher as falhas em novos dados quando você realiza uma `PREDICTION JOIN` no modelo de série temporal. A tabela a seguir lista os possíveis valores para esse parâmetro:<br /><br /> NONE: padrão. Substitui valores ausentes por valores plotados ao longo da curva do modelo treinado.<br /><br /> Anterior: Repete o valor do intervalo de tempo anterior.<br /><br /> Média: Usa uma média móvel de frações de tempo usada no treinamento.<br /><br /> Constante numérica: usa o número especificado para substituir todos os valores ausentes.|  
 |*PERIODICITY_HINT*|Fornece uma dica para o algoritmo sobre a periodicidade dos dados. Por exemplo, se as vendas variam de acordo com o ano e a unidade de medida da série são meses, a periodicidade é 12. O parâmetro assume o formato de {n [, n]}, em que n é qualquer número positivo.<br /><br /> O n nos colchetes [] é opcional e pode ser repetido sempre que necessário. Por exemplo, para criar várias dicas de periodicidade para dados fornecidos mensalmente, você pode inserir {12, 3, 1} para detectar parâmetros para o ano, trimestre e mês. Entretanto, a periodicidade tem um efeito mais visível na qualidade do modelo. Se a dica que você dá diferir da periodicidade atual, seus resultados poderão ser afetados adversamente.<br /><br /> O padrão é {1}.<br /><br /> Observação: As chaves são necessárias. Além disso, esse parâmetro tem um tipo de dados de cadeia de caracteres. Com isso, se você digitar esse parâmetro como parte de uma instrução DMX (Data Mining Extensions), deve colocar o número e as chaves entre aspas.|  
 |*PREDICTION_SMOOTHING*|Especifica como o modelo deveria ser mesclado para otimizar a previsão. Esse parâmetro está disponível em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode digitar qualquer valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] e 1 ou pode usar um dos seguintes valores:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Especifica que a previsão usa somente ARTXP. A previsão é otimizada para poucos casos.<br /><br /> 0,5: (padrão) Especifica que ambos os algoritmos devem ser usados para a previsão e os resultados mesclados.<br /><br /> 1: Especifica que a previsão usa somente ARIMA. A previsão é otimizada para vários casos.<br /><br /> <br /><br /> Observação: Use o *FORECAST_METHOD* parâmetro para controlar o treinamento.|  
   
@@ -173,6 +173,6 @@ ms.locfileid: "36021052"
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo MTS](microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Conteúdo do modelo para modelos de série temporal mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
