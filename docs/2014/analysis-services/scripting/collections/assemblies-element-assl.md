@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 777a1125d36f0d874ef85645c688ececffc2c869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314806"
 ---
 # <a name="assemblies-element-assl"></a>Elemento Assemblies (ASSL)
-  Contém a coleção de [Assembly](../objects/assembly-element-assl.md) elementos associados a um [servidor](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
+  Contém a coleção de [Assembly](../objects/assembly-element-assl.md) elementos associados a um [Server](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36010299"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Database](../objects/database-element-assl.md), [Server](../objects/server-element-assl.md)|  
-|Elementos filho|[assembly](../objects/assembly-element-assl.md)|  
+|Elementos filho|[Assembly](../objects/assembly-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AssemblyCollection>.  

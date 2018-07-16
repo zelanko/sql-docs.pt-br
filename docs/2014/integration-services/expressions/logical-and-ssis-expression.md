@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
 - AND, logical AND
@@ -17,13 +17,13 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f6cdb28a48a69ee1702b19918b9326ac861eb29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0185c28d970a1698a4159daefbbca9338b2a66cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302256"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND lógico) (Expressão SSIS)
   Executa uma operação AND lógica. A expressão será avaliada como TRUE se todas as condições forem TRUE.  
@@ -68,8 +68,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [& &#40;AND bit a bit&#41; &#40;expressão SSIS&#41;](bitwise-and-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [& &#40;AND bit a bit&#41; &#40;expressão do SSIS&#41;](bitwise-and-ssis-expression.md)   
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

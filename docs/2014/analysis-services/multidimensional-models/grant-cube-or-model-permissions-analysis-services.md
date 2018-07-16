@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306556"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
   Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  
@@ -38,7 +38,7 @@ ms.locfileid: "36120891"
  Para preservar as definições de função por implantações de solução sucessivas, uma prática recomendada é definir as funções no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] como parte integrante do modelo e ter um administrador de banco de dados para atribuir associações de função no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] após o banco de dados ser publicado. No entanto, você pode usar uma ou outra ferramenta para ambas as tarefas. Para simplificar o exercício, usaremos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tanto para definição e quanto para associação de função.  
   
 > [!NOTE]  
->  Apenas administradores de servidor ou de banco de dados com permissões de Controle Total podem implantar um cubo em um servidor a partir de arquivos de origem ou criar funções e atribuir membros. Consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) para obter detalhes sobre essas permissões níveis.  
+>  Apenas administradores de servidor ou de banco de dados com permissões de Controle Total podem implantar um cubo em um servidor a partir de arquivos de origem ou criar funções e atribuir membros. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40;do Analysis Services&#41; ](grant-database-permissions-analysis-services.md) para obter detalhes sobre essas permissões níveis.  
   
 #### <a name="step-1-create-the-role"></a>Etapa 1: Criar a função  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36120891"
   
 ## <a name="see-also"></a>Consulte também  
  [Metodologias de autenticação com suporte no Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;do Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder permissões em um objeto de fonte de dados &#40;do Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Conceder permissões em estruturas de mineração de dados e modelos de &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

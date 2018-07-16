@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b3a780db49bc34d0060a33f934ea7169cae3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f9fac39f0b11bdc2bbf14b054bfe8947bf767906
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309286"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Adicionar estilos de inclinação, relevo e textura a um gráfico (Construtor de Relatórios e SSRS)
   Ao usar determinados tipos de gráficos, você pode especificar um efeito de desenho para aumentar o impacto visual do seu gráfico. Esses efeitos de desenho só são aplicados à série de seu gráfico. Eles não têm nenhum efeito sobre qualquer outro elemento do gráfico.  
@@ -64,9 +64,9 @@ ms.locfileid: "36006978"
  ![Gráfico de barras com efeito de desenho LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Gráfico de barras com efeito de desenho LightToDark")  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de barras &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de barras &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Gráficos de colunas &#40;Construtor de Relatórios e SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Formatando um gráfico &#40;SSRS e construtor de relatórios&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [Formatando um gráfico &#40;relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

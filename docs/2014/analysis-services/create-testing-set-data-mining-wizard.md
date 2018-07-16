@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326876"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Criar Conjunto de Testes (Assistente de Mineração de Dados)
   Use a página **Criar Conjunto de Testes** para especificar a quantidade de dados que precisa ser usada para treinamento e a quantidade que precisa ser reservada para uso como um conjunto de testes. Separando os dados em um conjunto de treinamento e outro de teste ao criar uma estrutura de mineração, você facilita a avaliação da precisão dos modelos de mineração que criar depois.  
@@ -30,7 +30,7 @@ ms.locfileid: "36117761"
   
  Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera uma semente numérica usada para iniciar o particionamento. Essa semente é baseada no nome da estrutura de mineração. Para garantir que a partição permaneça igual mesmo que o nome da estrutura de mineração seja alterada, você pode especificar um valor para a semente, definindo a propriedade HoldoutSeed da estrutura de mineração. Se você alterar a semente de validação, deverá reprocessar a estrutura.  
   
- Se você desejar alterar a quantidade de dados de treinamento ou teste, você pode modificar o `HoldoutMaxCases` e `HoldoutMaxPercent` propriedades na estrutura de mineração de dados usando o **propriedades** janela. Porém, depois de alterar, você deve reprocessar a estrutura de mineração e todos os modelos de mineração associados. As seguintes limitações também se aplicam:  
+ Se posteriormente você desejar alterar a quantidade de dados de treinamento ou teste, você pode modificar os `HoldoutMaxCases` e `HoldoutMaxPercent` propriedades na estrutura de mineração de dados usando o **propriedades** janela. Porém, depois de alterar, você deve reprocessar a estrutura de mineração e todos os modelos de mineração associados. As seguintes limitações também se aplicam:  
   
 -   O particionamento de uma estrutura de mineração de dados só tem suporte quando a estrutura de mineração de dados é armazenada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não dão suporte a cache de informações de partição para estruturas de mineração.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36117761"
  O padrão é NULO. Isso significa não há nenhum limite.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sugerir colunas relacionadas &#40;Assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
  [Especificar conteúdo e o tipo de dados da coluna &#40;Assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  

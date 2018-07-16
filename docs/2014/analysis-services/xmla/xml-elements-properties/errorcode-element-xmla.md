@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ErrorCode element
 ms.assetid: da187661-b15e-4b95-8b49-7820ebcced40
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 11fc0f86d4088cca908414156feb205b64736002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 454c1503463d4a6fb0a32cf31013b6d89d433edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326576"
 ---
 # <a name="errorcode-element-xmla"></a>Elemento ErrorCode (XMLA)
   Contém o código de retorno numérico do pai [erro](error-element-xmla.md) elemento.  

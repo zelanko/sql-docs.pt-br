@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DeniedSet element
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20a915d24291ec01fe619abf8fa259099c71c810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c63ced94ae8779e57fa8e9aebf84642fd4e468f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312396"
 ---
 # <a name="deniedset-element-assl"></a>Elemento DeniedSet (ASSL)
   Contém uma expressão de conjunto que define a lista de permissões negadas no atributo associado.  
@@ -62,7 +62,7 @@ ms.locfileid: "36120009"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `DeniedSet` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ O elemento que corresponde ao pai de `DeniedSet` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

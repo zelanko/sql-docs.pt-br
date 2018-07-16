@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b270dc2485be2c5c9a9fd2b491db8a9278cce43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9293859eeef13f497c79989a546d527d5fb317a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305976"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar o tamanho de um índice clusterizado
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um índice clusterizado:  
@@ -87,7 +87,7 @@ ms.locfileid: "36011409"
      Os bytes adicionados a ***Max_Var_Size*** são para acompanhar cada coluna de variáveis. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  Você pode combinar `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colunas que causam a largura total da tabela definida exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  Você pode combinar `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colunas que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna `varchar`, `varbinary` ou `sql_variant` e de 4.000 bytes para colunas `nvarchar`. Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
      Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
   

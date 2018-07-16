@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
 - verifying report execution
@@ -21,13 +21,13 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ed7df4dc1c9bb9af8aa48a8b53506ebeab767ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be05b7ef8ffde732d6bdd85fb17be6aa25683134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319846"
 ---
 # <a name="verifying-a-report-run"></a>Verificando uma execução de relatório
   Para visualizar informações sobre o status de processamento do relatório, você pode usar os arquivos de log ou consultar as informações sobre status exibidas com o relatório no Gerenciador de Relatórios.  
@@ -50,7 +50,7 @@ ms.locfileid: "36010347"
   
 ## <a name="see-also"></a>Consulte também  
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Definir propriedades de processamento de relatório](set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   
   

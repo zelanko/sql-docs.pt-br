@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322216"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lição 3: Configurando a distribuição
   Nesta lição você configurará a distribuição no Publicador e definirá as permissões necessárias nos bancos de dados de publicação e distribuição. Se você já tiver configurado o Distribuidor, antes de começar a lição será necessário desabilitar primeiramente a publicação e a distribuição. Não faça isto se for preciso manter uma topologia de replicação existente.  
@@ -39,7 +39,7 @@ ms.locfileid: "36012030"
   
      O Assistente para Configuração de Distribuição é iniciado.  
   
-3.  Sobre o **distribuidor** página, selecione **'***\<ServerName >***' atuará como seu próprio distribuidor; SQL Server criará um banco de dados e log**e, em seguida, clique em **próximo**.  
+3.  Sobre o **distribuidor** página, selecione **'***\<ServerName >***' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e de log**e, em seguida, clique em **próxima**.  
   
 4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Avançar**.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36012030"
   
 3.  Na página **Mapeamento de Usuário** , na lista **Usuários mapeados para este logon** , selecione os bancos de dados de **distribuição** e de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-     No **associação à função de banco de dados** lista select de `db_owner` função para o logon para ambos os bancos de dados.  
+     No **associação de função de banco de dados** lista select a `db_owner` função para o logon para ambos os bancos de dados.  
   
 4.  Clique em **OK** para criar o logon.  
   
-5.  Repita as Etapas 1a 4 para criar um logon para a conta repl_logreader local. Esse logon também deve ser mapeado para os usuários que são membros do `db_owner` função de banco de dados fixa no **distribuição** e **AdventureWorks** bancos de dados.  
+5.  Repita as Etapas 1a 4 para criar um logon para a conta repl_logreader local. Esse logon também deve ser mapeado para os usuários que são membros do `db_owner` função de banco de dados fixa na **distribuição** e **AdventureWorks** bancos de dados.  
   
-6.  Repita as Etapas 1a 4 para criar um logon para a conta repl_distribution local. Esse logon deve ser mapeado para um usuário que seja membro do `db_owner` função de banco de dados fixa no **distribuição** banco de dados.  
+6.  Repita as Etapas 1a 4 para criar um logon para a conta repl_distribution local. Esse logon deve ser mapeado para um usuário que seja membro do `db_owner` função de banco de dados fixa na **distribuição** banco de dados.  
   
 7.  Repita as etapas 1a 4 para criar um logon para a conta repl_merge local. Esse logon deve ter mapeamentos de usuário nos bancos de dados **distribuição** e **AdventureWorks** .  
   

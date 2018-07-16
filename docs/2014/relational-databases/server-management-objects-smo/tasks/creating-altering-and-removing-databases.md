@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc53250e518b58e8f30c01da9c38bf68a0fd37a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a23c44b3260f3ce4e8dbe018ba1a24598cb5e59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36007464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318066"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Criando, alterando e removendo bancos de dados
   No SMO, um banco de dados é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
@@ -33,7 +33,7 @@ ms.locfileid: "36007464"
  Não é necessário criar um objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para modificá-lo ou removê-lo. O banco de dados pode ser referenciado usando uma coleção.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Criando, alterando e removendo um banco de dados no Visual Basic  
  Este exemplo de código cria um novo banco de dados. Arquivos e grupos de arquivos são criados automaticamente para o banco de dados.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321256"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -29,17 +29,17 @@ ms.locfileid: "36006735"
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   
--   [Ícones na Galeria PowerPivot](#icons)  
+-   [Ícones na Galeria do PowerPivot](#icons)  
   
--   [Salvar uma pasta de trabalho do Excel na Galeria do PowerPivot](#add)  
+-   [Salvar uma pasta de trabalho do Excel na Galeria PowerPivot](#add)  
   
 -   [Criar novos relatórios ou pastas de trabalho com base em uma pasta de trabalho PowerPivot publicada](#newdocs)  
   
 -   [Abrir uma pasta de trabalho ou relatório no modo de página inteira](#view)  
   
--   [Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria PowerPivot](#newdr)  
+-   [Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria do PowerPivot](#newdr)  
   
--   [Excluir uma pasta de trabalho ou relatório na Galeria PowerPivot](#delete)  
+-   [Excluir uma pasta de trabalho ou relatório na Galeria do PowerPivot](#delete)  
   
 -   [Atualizar uma imagem em miniatura](#image)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36006735"
   
  Para obter uma lista completa dos pré-requisitos, consulte [criar e personalizar a Galeria PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
-##  <a name="icons"></a> Ícones na Galeria PowerPivot  
+##  <a name="icons"></a> Ícones na Galeria do PowerPivot  
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.  
   
 |Ícone|Description|  
@@ -68,7 +68,7 @@ ms.locfileid: "36006735"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|O ícone de conteúdo indisponível é exibido quando o documento carregado não pode ser renderizado na Galeria PowerPivot. Os tipos de documento suportados incluem pastas de trabalho PowerPivot e relatórios criados no Construtor de Relatórios do Reporting Services do SQL Server 2008 R2.<br /><br /> Esse ícone também aparecerá se você reciclar um documento da Lixeira.<br /><br /> Se você estiver obtendo esse ícone para um documento que apresentou previamente uma imagem de visualização válida, você poderá atualizar a imagem editando uma propriedade de documento e salvando suas alterações.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|O ícone de conteúdo bloqueado é exibido quando as imagens em miniatura são desabilitadas propositalmente para esse documento. A Galeria PowerPivot não gera imagens em miniatura para pastas de trabalho do Excel que contêm dados PowerPivot, ou para pastas de trabalho PowerPivot ou relatórios do Reporting Services que não atendem aos requisitos de geração de instantâneos. Para obter mais informações, consulte a seção Pré-requisitos neste tópico.|  
   
-##  <a name="add"></a> Salvar uma pasta de trabalho do Excel na Galeria do PowerPivot  
+##  <a name="add"></a> Salvar uma pasta de trabalho do Excel na Galeria PowerPivot  
  É possível publicar pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na biblioteca usando todas as técnicas de compartilhamento fornecidas pelo Excel 2010. Por exemplo, no Excel 2010, é possível usar a opção Salvar Como para especificar um caminho total ou parcial do SharePoint para uma biblioteca.  
   
 1.  Salve o arquivo.  
@@ -122,14 +122,14 @@ ms.locfileid: "36006735"
   
  Um método alternativo para exibir a pasta de trabalho em um navegador é abri-lo no Excel em uma estação de trabalho cliente. Você deve ter o Excel 2013 ou Excel 2010 e o suplemento [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] para exibir o arquivo. Você pode usar o Excel 2007 para abrir o arquivo, mas não pode usá-lo para dinamizar os dados. Por isso, o Excel 2013 ou Excel 2010 são recomendados para exibição e criação de dados PowerPivot. Se você não tiver os aplicativos necessários, use um navegador para exibir a pasta de trabalho do SharePoint.  
   
-##  <a name="newdr"></a> Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria PowerPivot  
+##  <a name="newdr"></a> Agendar atualização de dados para pastas de trabalho PowerPivot na Galeria do PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em uma pasta de trabalho do Excel publicada podem ser atualizados em intervalos agendados.  
   
 |||  
 |-|-|  
 |![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Clique no botão Gerenciar Atualização de Dados para criar ou exibir uma agenda que recupera dados atualizados de fontes de dados conectadas. Para obter instruções sobre como criar uma agenda, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Excluir uma pasta de trabalho ou relatório na Galeria PowerPivot  
+##  <a name="delete"></a> Excluir uma pasta de trabalho ou relatório na Galeria do PowerPivot  
  Para excluir um documento da biblioteca, primeiro alterne para a exibição Todos os Documentos.  
   
 1.  Em um site do SharePoint, abra a Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

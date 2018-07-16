@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 53bacee483c3c36075cefcc789a8262b683e5370
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325316"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lição 1: Criando a estrutura de mineração de Comprador de Bicicleta
   Nesta lição, você criará uma estrutura de mineração que permite prever se um cliente potencial da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] irá adquirir uma bicicleta. Se você estiver familiarizado com estruturas de mineração e seus papéis na mineração de dados, consulte [estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- A estrutura de mineração de comprador de bicicleta que você criará nesta lição oferece suporte à adição de modelos de mineração com base no [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo de árvores de decisão Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Em lições posteriores, você usará os modelos de mineração de clustering para explorar as várias maneiras nas quais os clientes podem ser agrupados e usará os modelos de mineração da árvore de decisão para prever se um cliente potencial comprará ou não uma bicicleta.  
+ A estrutura de mineração de comprador de bicicleta que você criará nesta lição oferece suporte à adição de modelos de mineração com base nas [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algoritmo de árvores de decisão Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Em lições posteriores, você usará os modelos de mineração de clustering para explorar as várias maneiras nas quais os clientes podem ser agrupados e usará os modelos de mineração da árvore de decisão para prever se um cliente potencial comprará ou não uma bicicleta.  
   
 ## <a name="create-mining-structure-statement"></a>Instrução CREATE MINING STRUCTURE  
  Para criar uma estrutura de mineração, use o [criar estrutura de MINERAÇÃO &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) instrução. O código na instrução pode ser dividido nas seguintes partes:  
@@ -70,11 +70,11 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- Você pode usar a função DISCRETIZE dentro \<colunas da estrutura de mineração > para diferenciar as colunas contínuas usando a seguinte sintaxe:  
+ Você pode usar a função DISCRETIZE dentro \<colunas da estrutura de mineração > para diferenciar as colunas contínuas usando a sintaxe a seguir:  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- Para obter mais informações sobre como diferenciar colunas, consulte [os métodos de diferenciação &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Para obter mais informações sobre os tipos de colunas de estrutura que você pode definir de mineração, consulte [colunas de estrutura de mineração](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Para obter mais informações sobre como diferenciar colunas, consulte [métodos de discretização &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). Para obter mais informações sobre os tipos de colunas de estrutura que você pode definir de mineração, consulte [colunas de estrutura de mineração](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
  A última linha do código define uma partição opcional na estrutura de mineração:  
   
@@ -100,9 +100,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  No **conectar ao servidor** caixa de diálogo para **tipo de servidor**, selecione **Analysis Services**. Em **nome do servidor**, tipo `LocalHost`, ou digite o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
+2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou digite o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
   
-3.  Em **Pesquisador de objetos**, com o botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o **Editor de consultas**e uma nova consulta em branco.  
+3.  No **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX** para abrir o **Editor de consultas**e uma nova consulta em branco.  
   
 ## <a name="altering-the-query"></a>Alterando a consulta  
  A próxima etapa é modificar a instrução CREATE MINING STRUCTURE descrita acima para criar a estrutura de mineração de Comprador de Bicicleta.  
@@ -206,7 +206,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  No Editor de consultas, na barra de ferramentas, clique em **Execute**.  
   
-     O status da consulta é exibido no **mensagens** guia na parte inferior do Editor de consultas após a instrução conclui a execução. As mensagens devem exibir:  
+     O status da consulta é exibido na **mensagens** guia na parte inferior do Editor de consultas após a instrução termina a execução. As mensagens devem exibir:  
   
     ```  
     Executing the query   

@@ -1,5 +1,5 @@
 ---
-title: Fonte do elemento (medida) (ASSL) | Microsoft Docs
+title: Elemento (Measure) (ASSL) de origem | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed41316f62469268d86a89d0c0a5e59f07c8f726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323206"
 ---
 # <a name="source-element-measure-assl"></a>Elemento Source (Measure) (ASSL)
-  Contém os detalhes da fonte que contém o valor de [medidas](../objects/measure-element-assl.md) elemento.  
+  Contém os detalhes da origem que contém o valor de [medida](../objects/measure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36010294"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Comprimento e tipo de dados|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor padrão|Nenhum|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36010294"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `Source` do `DataItem`, que serve como o `Source` do `Measure`, por sua vez pode ser do tipo [RowBinding](../data-type/binding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [MeasureBinding ](../data-type/measurebinding-data-type-assl.md), ou [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md).  
+ O `Source` do `DataItem`, que serve como o `Source` da `Measure`, por sua vez pode ser do tipo [RowBinding](../data-type/binding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [MeasureBinding ](../data-type/measurebinding-data-type-assl.md), ou [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md).  
   
- Para obter informações adicionais sobre o `DataItem` tipo, incluindo uma tabela de objetos ASSL e as propriedades do `DataItem` de tipo, consulte [o tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos ASSL e as propriedades do `DataItem` de tipo, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- O elemento correspondente para o pai do `Source` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Measure>.  
+ O elemento que corresponde ao pai de `Source` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

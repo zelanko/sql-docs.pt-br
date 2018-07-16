@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d6c91330e87cd978edc32102f7af925ff5afae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ec1e85409711164eae449bb7c246ef5a291eb132
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311266"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicando uma transformação XSL (classes gerenciadas SQLXML)
   Neste exemplo, uma consulta SQL é executada no banco de dados AdventureWorks. A transformação XSL é aplicada ao resultado da consulta para gerar uma tabela de duas colunas com os nomes e sobrenomes dos funcionários.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327066"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Gerenciador de relatórios (modo nativo do SSRS)
   O Gerenciador de Relatórios é uma ferramenta de gerenciamento e acesso a relatório com base na Web que é usada para administrar uma única instância de servidor de relatório a partir de um local remoto em uma conexão HTTP. Você também pode usar o Gerenciador de Relatórios para seu visualizador de relatório e recursos de navegação. Neste tópico:  
   
 -   [O que é o Gerenciador de relatórios?](#bkmk_whatis_report_manager)  
   
--   [Iniciar e usar o Gerenciador de relatórios](#bkmk_start_report_manager)  
+-   [Início e Use o Gerenciador de relatórios](#bkmk_start_report_manager)  
   
 -   [Descrições dos ícones](#bkmk_icon_descriptions)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36120298"
   
 -   Configurar propriedades de execução de relatório, histórico de relatórios e parâmetros de relatório.  
   
--   Criar modelos de relatório que se conectar e recuperam dados de um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados ou de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonte de dados relacional.  
+-   Criar modelos de relatório que se conectam a e recuperam dados de um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados ou de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonte de dados relacional.  
   
 -   Definir a segurança do item de modelo para permitir acesso a entidades específicas no modelo ou mapear entidades para relatórios de clickthrough predefinidos que você cria com antecedência.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36120298"
   
  Se você estiver usando o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou o Windows Server 2008, configure o Gerenciador de Relatórios para administração local. Para obter instruções, veja [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="bkmk_start_report_manager"></a> Iniciar e usar o Gerenciador de relatórios  
+##  <a name="bkmk_start_report_manager"></a> Início e Use o Gerenciador de relatórios  
  O Gerenciador de Relatórios é um aplicativo Web que você abre digitando a URL do Gerenciador de Relatórios na barra de endereços de uma janela de navegador. Ao iniciar o Gerenciador de Relatórios, as páginas, links e opções exibidas variam com base nas permissões que você possui do servidor de relatório. Para executar uma tarefa, você deve estar atribuído a uma função que inclua a tarefa. Um usuário que é atribuído a uma função que possui permissões totais tem acesso ao conjunto completo de menus e páginas de aplicativo disponíveis para gerenciar um servidor de relatório. Um usuário atribuído a uma função que possui permissões totais para exibir e executar relatórios vê apenas os menus e páginas que oferecem suporte a essas atividades. Cada usuário pode ter diferentes atribuições de função para diferentes servidores de relatório ou mesmo para diversos relatórios e pastas armazenados em um único servidor de relatório.  
   
  Para saber mais sobre funções, confira [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md).  
@@ -102,7 +102,7 @@ ms.locfileid: "36120298"
  É possível personalizar o Gerenciador de Relatórios de maneiras muito limitadas. Por exemplo, você pode modificar o título do aplicativo na página Configurações de Site. Se você for um desenvolvedor Web, poderá modificar as folhas de estilo que contêm as informações de estilo usadas pelo Gerenciador de Relatórios. Como o Gerenciador de Relatórios não foi criado especificamente para aceitar personalização, é necessário testar extensivamente qualquer modificação que você faça. Se você achar que o Gerenciador de Relatórios não atende às suas necessidades, poderá desenvolver um visualizador de relatórios personalizado ou configurar Web Parts do SharePoint para localizar e exibir relatórios em um site do SharePoint. Para obter mais informações, consulte [Configurar o Gerenciador de Relatórios &#40;Modo Nativo&#41;](report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_icon_descriptions"></a> Descrições dos ícones  
- A tabela a seguir descreve os ícones usados no Gerenciador de Relatórios. Para obter mais informações sobre os ícones que aparecem na barra de ferramentas de relatório, consulte [Visualizador de HTML e a barra de ferramentas relatório](html-viewer-and-the-report-toolbar.md).  
+ A tabela a seguir descreve os ícones usados no Gerenciador de Relatórios. Para obter mais informações sobre os ícones que aparecem na barra de ferramentas de relatório, consulte [Visualizador de HTML e a barra de ferramentas de relatório](html-viewer-and-the-report-toolbar.md).  
   
 |Ícone|Description|Ação|  
 |----------|-----------------|------------|  
@@ -110,15 +110,15 @@ ms.locfileid: "36120298"
 |![Ícone de modelo](media/model-icon.gif "Ícone de modelo")|Modelo de relatório|Clique no ícone do modelo de relatório para abrir páginas de propriedades do modelo.|  
 |![Ícone Relatório vinculado](media/hlp-16linked.gif "Ícone Relatório vinculado")|Relatório vinculado|Clique no ícone do relatório ou nome para abrir o relatório vinculado. O relatório é aberto em uma janela separada.|  
 |![Ícone Pasta](media/hlp-16folder.gif "Ícone Pasta")|Pasta|Clique no nome ou no ícone da pasta para abrir a pasta.|  
-|![Ícone de assinatura](media/hlp-16subscription.gif "ícone de assinatura")|Assinatura|Clique em um ícone ou descrição de assinatura para editar uma assinatura.|  
+|![Ícone de assinatura](media/hlp-16subscription.gif "ícone da assinatura")|Assinatura|Clique em um ícone ou descrição de assinatura para editar uma assinatura.|  
 |![Ícone de assinatura controlada por dados](media/hlp-16subscriptiondd.gif "ícone de assinatura controlada por dados")|Assinatura controlada por dados|Clique em um ícone ou descrição de assinatura controlada por dados para editar uma assinatura.|  
 |![Ícone Recurso genérico](media/hlp-16file.gif "Ícone Recurso genérico")|Recurso|Clique no nome ou no ícone do recurso para abrir o recurso. O recurso é aberto em uma janela separada.|  
 |![Ícone Fonte de dados compartilhada](media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")|Item de fonte de dados compartilhada|Clique em um ícone de fonte de dados compartilhada para abrir a página de propriedades, lista de relatório e lista de assinatura da fonte de dados.|  
 |![Ícone da página de propriedade](media/hlp-16prop.gif "ícone da página de propriedade")|Página Propriedades|Clique no ícone de propriedade para acessar páginas adicionais e definir propriedades e segurança.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planejamento para o Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+ [Configurar uma URL &#40;Configuration Manager do SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Planning for Reporting Services e o suporte a navegador Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Construtor de relatórios &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Ferramentas do Reporting Services](tools/reporting-services-tools.md)   
  [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   

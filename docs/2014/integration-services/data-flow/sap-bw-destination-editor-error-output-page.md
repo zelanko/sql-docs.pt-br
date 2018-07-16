@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65e3a1254c03d76be77319cf2b1ff677e72f80c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5636675827c5dd6751994b163cc20029023bf604
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316836"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor de Destino de SAP BW (página Saída de Erro)
   Use a página **Saída de Erro** do **Editor de Destino SAP BW** para especificar opções de tratamento de erro.  
@@ -64,8 +64,8 @@ ms.locfileid: "36006885"
  Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de destino do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [Editor de destino do SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Editor de destino SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de destino SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Editor de Destino SAP BW &#40;Página Avançado&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

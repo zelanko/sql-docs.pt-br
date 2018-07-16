@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
 - publishing [SQL Server replication], disabling
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b1cb0af2c8082ba7ba649c6d6f21b53d9b96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ec2381b96818d038c7e40b71a4e56b1c4d415af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313486"
 ---
 # <a name="disable-publishing-and-distribution"></a>Desabilitar publicação e distribuição
   Este tópico descreve como desabilitar a publicação e a distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
@@ -114,9 +114,9 @@ ms.locfileid: "36010875"
   
 4.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 3.  
   
-5.  (Opcional) Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto e para verificar se o Publicador existe. Se esse método retornar `false`, o nome do publicador definido na etapa 4 estava incorreto ou o publicador não é usado pelo distribuidor.  
+5.  (Opcional) Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do objeto e para verificar se o Publicador existe. Se esse método retornar `false`, o nome do publicador definido na etapa 4 estava incorreto ou o publicador não está sendo usado por este distribuidor.  
   
-6.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passe um valor de `true` para *forçar* se o publicador e o distribuidor estejam em servidores diferentes, e quando o publicador deve ser desinstalado no distribuidor sem verificar primeiro se não existem mais publicações do Publicador.  
+6.  Chame o método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passe um valor de `true` para *forçar* se o publicador e o distribuidor estejam em servidores diferentes, e quando o publicador deve ser desinstalado no distribuidor sem verificar primeiro se não existem mais publicações no Publicador.  
   
 7.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 3.  
   

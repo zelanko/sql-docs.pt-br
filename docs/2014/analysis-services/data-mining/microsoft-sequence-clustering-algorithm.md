@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c5a8a0b921ed59f40206a05326f4f4025c2bc6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306576"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo msc é um algoritmo de análise de sequência fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode usar esse algoritmo para explorar dados que contém os eventos que podem ser vinculados de acordo com caminhos ou *sequências*. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering é um algoritmo de análise de sequência fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode usar esse algoritmo para explorar os dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
   
 -   Clique nos caminhos que são criados quando os usuários navegam em um site.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36119425"
  Sob vários aspectos, esse algoritmo é semelhante ao algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. No entanto, em vez de localizar clusters de casos que contêm atributos semelhantes, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering localiza clusters de casos que contêm caminhos semelhantes em uma sequência.  
   
 ## <a name="example"></a>Exemplo  
- O [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] site coleta informações sobre as páginas visitadas pelos usuários e a ordem na qual as páginas são acessadas. Como a empresa oferece a funcionalidade de encomendas online, os clientes devem fazer logon no site. Dessa maneira, a empresa obtém informações de clique relativas a cada perfil de cliente. Usando o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering nesses dados, a empresa pode localizar grupos, ou clusters, de clientes que têm padrões ou sequências de clique semelhantes. A empresa então poderá usar esses clusters para analisar como os usuários navegam pelo site, identificar quais páginas estão mais intrinsecamente relacionadas à venda de um determinado produto e prever que páginas terão maiores probabilidades de acesso nas próximas visitas.  
+ O [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] site coleta informações sobre quais páginas visitadas pelos usuários do site e a ordem na qual as páginas são acessadas. Como a empresa oferece a funcionalidade de encomendas online, os clientes devem fazer logon no site. Dessa maneira, a empresa obtém informações de clique relativas a cada perfil de cliente. Usando o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering nesses dados, a empresa pode localizar grupos, ou clusters, de clientes que têm padrões ou sequências de clique semelhantes. A empresa então poderá usar esses clusters para analisar como os usuários navegam pelo site, identificar quais páginas estão mais intrinsecamente relacionadas à venda de um determinado produto e prever que páginas terão maiores probabilidades de acesso nas próximas visitas.  
   
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering é um algoritmo híbrido que combina técnicas de clustering com a análise de cadeia Markov para identificar clusters e suas sequências. Uma das marcas registradas do algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering é que ele usa dados de sequência. Esses dados normalmente representam uma série de eventos ou transições entre estados em um conjunto de dados, como uma série de compras de produtos ou cliques de um usuário específico. O algoritmo examina todas as probabilidades de transição e avalia as diferenças, ou distâncias, entre todas as sequências possíveis no conjunto de dados para determinar quais são as melhores sequências a usar como entradas para clustering. Depois que o algoritmo cria a lista de sequências candidatas, ele usa as informações das sequências como entrada para o método EM de clustering.  
@@ -81,8 +81,8 @@ ms.locfileid: "36119425"
 -   Dá suporte ao uso de modelos de mineração OLAP e à criação de dimensões de mineração de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referência técnica do algoritmo msc](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referência técnica do algoritmo de Clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de Clustering de sequência](clustering-model-query-examples.md)   
  [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

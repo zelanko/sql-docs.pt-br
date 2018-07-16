@@ -1,13 +1,11 @@
 ---
-title: Introdução à integração CLR | Microsoft Docs
+title: Introdução à integração de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010266"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349800"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
   Este tópico fornece uma visão geral dos namespaces e bibliotecas necessários para compilar objetos de banco de dados usando o [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integração com o .NET Framework common language runtime (CLR). O tópico também mostra como escrever, compilar e executar um procedimento armazenado CLR simples escrito no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  Esses comandos iniciam o compilador do Visual C# ou do Visual Basic que usa a opção /target para especificar a compilação de uma DLL da biblioteca.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Carregando e executando o procedimento armazenado "Hello World" no SQL Server  
- Depois que o procedimento de exemplo foi compilada com êxito, você pode testá-lo no [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] e crie uma nova consulta, conectando-se a um banco de dados de teste correspondente (por exemplo, dados de exemplo AdventureWorks).  
+ Depois que o procedimento de exemplo foi compilado com êxito, você pode testá-la no [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] e criar uma nova consulta, se conectar a um banco de dados de teste adequado (por exemplo, dados de exemplo AdventureWorks).  
   
  A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O código CLR pode ser habilitado usando o **sp_configure** procedimento armazenado do sistema. Para obter mais informações, consulte [Enabling CLR Integration](../clr-integration-enabling.md).  
   
@@ -181,8 +179,8 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
- [Extensões específicas do SQL Server no processo para o ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
- [Depuração de objetos de banco de dados CLR](../debugging-clr-database-objects.md)   
+ [Extensões específicas do SQL Server em processo para o ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Depurando objetos de banco de dados CLR](../debugging-clr-database-objects.md)   
  [Segurança da integração CLR](../security/clr-integration-security.md)  
   
   

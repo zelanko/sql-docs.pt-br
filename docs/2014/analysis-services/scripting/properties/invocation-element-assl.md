@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bd9d04f677049a932e3f974c22d7e2fb7cb8aade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62f6b15f8aa8426930fdc3572bbd37bfb033afd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312236"
 ---
 # <a name="invocation-element-assl"></a>Elemento Invocation (ASSL)
-  Especifica como um [ação](../objects/action-element-assl.md) deve ser chamado.  
+  Especifica como uma [ação](../objects/action-element-assl.md) deve ser invocado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

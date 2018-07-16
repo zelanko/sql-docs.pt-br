@@ -24,18 +24,18 @@ helpviewer_keywords:
 - PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4b49ad0cf03ce331a00a7eefc9f1302176d89e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6b3fdd7f6d59ef6a2523bada292dfb2b8f17a4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323036"
 ---
 # <a name="propertylist-element-xmla"></a>Elemento PropertyList (XMLA)
-  Contém uma coleção de XML para propriedades de análise (XMLA) usadas pelo [Discover](../xml-elements-methods-discover.md) e [Execute](../xml-elements-methods-execute.md) métodos.  
+  Contém uma coleção de XML para as propriedades do Analysis (XMLA) usada pelo [Discover](../xml-elements-methods-discover.md) e [Execute](../xml-elements-methods-execute.md) métodos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36006705"
   
  As propriedades disponíveis e seus valores podem ser obtidos usando o tipo de solicitação DISCOVER_PROPERTIES com o `Discover` método. Não há nenhum pedido obrigatório para as propriedades listadas no elemento `PropertyList`.  
   
- Para obter mais informações sobre as propriedades XMLA suportadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [propriedades com suporte do XMLA &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ Para obter mais informações sobre as propriedades XMLA com suporte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [propriedades XMLA com suporte &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
 ## <a name="example"></a>Exemplo  
   

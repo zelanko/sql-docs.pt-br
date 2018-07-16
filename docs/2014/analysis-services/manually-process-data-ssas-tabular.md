@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edfb5ab290d6a5756e88f23497a4ea88c14db5d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304606"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Processando os dados manualmente (SSAS tabular)
   Este tópico descreve como processar manualmente dados de espaço de trabalho no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "36122941"
  Clique para interromper a operação de processo. Essa opção será útil se a operação estiver demorando muito ou se houver muitos erros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Processar dados &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
+ [Processar dados de &#40;Tabular do SSAS&#41;](process-data-ssas-tabular.md)   
  [Solucionar problemas de dados de processo &#40;Tabular do SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

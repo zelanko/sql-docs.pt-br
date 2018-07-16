@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,20 +20,20 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322736"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
   Um gerenciador de conexões de Vários Arquivos Simples permite que um pacote acesse dados em vários arquivos simples. Por exemplo, uma fonte de Arquivo Simples pode usar um gerenciador de conexões de Vários Arquivos Simples quando a tarefa Fluxo de Dados está dentro de um contêiner de loop, como o contêiner Loop For. Em cada loop do contêiner, a fonte de Arquivo Simples carrega dados do nome de arquivo seguinte fornecido pelo gerenciador de conexões de Vários Arquivos Simples.  
   
- Quando você adicionar um Gerenciador de conexão de vários arquivos simples a um pacote, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de vários arquivos simples em tempo de execução, define as propriedades no Gerenciador de conexão de vários arquivos simples, e Adiciona o Gerenciador de conexão de vários arquivos simples para o `Connections` coleção do pacote.  
+ Quando você adiciona um Gerenciador de conexão de vários arquivos simples a um pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão de vários arquivos simples no tempo de execução, define as propriedades no Gerenciador de conexão de vários arquivos simples, e Adiciona o Gerenciador de conexão de vários arquivos simples para o `Connections` coleção do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `MULTIFLATFILE`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `MULTIFLATFILE`.  
   
  Você pode configurar o gerenciador de conexões de Vários Arquivos Simples da seguinte maneira:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36011443"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos usando curingas. Por exemplo, a unidade de todos os arquivos de texto em C, o valor de referência de `ConnectionString` propriedade pode ser definida como c:\\*. txt.  
+ Você também pode especificar vários arquivos usando curingas. Por exemplo, a unidade de todos os arquivos de texto em C, o valor de referência a `ConnectionString` propriedade pode ser definida como c:\\*. txt.  
   
  Se um gerenciador de conexões de Vários Arquivos Simples se referir a vários arquivos, todos os arquivos deverão ter o mesmo formato.  
   
- Por padrão, o gerenciador de conexões de Vários Arquivos Simples define o comprimento de colunas de cadeia de caracteres em 50 caracteres. Na caixa de diálogo do **Editor de Gerenciador de Conexões de Vários Arquivos Simples** , você pode avaliar dados de amostra e redimensionar automaticamente o comprimento dessas colunas para evitar truncamento de dados ou excesso de largura de coluna. A menos que você redimensione o comprimento de coluna na fonte de Arquivo Simples ou na transformação, o comprimento da coluna permanecerá o mesmo ao longo do fluxo de dados. Se essas colunas mapearem para colunas de destino mais estreitas, serão exibidos avisos na interface do usuário, e poderão ocorrer erros no tempo de execução, devido a truncamento de dados. Você pode redimensionar as colunas para que sejam compatíveis com as colunas de destino no gerenciador de conexões de Vários Arquivo, na fonte de Arquivo Simples ou em uma transformação. Para modificar o comprimento das colunas de saída, você define o `Length` propriedade da coluna de saída no **propriedades de entrada e saída** guia o **Editor Avançado** caixa de diálogo.  
+ Por padrão, o gerenciador de conexões de Vários Arquivos Simples define o comprimento de colunas de cadeia de caracteres em 50 caracteres. Na caixa de diálogo do **Editor de Gerenciador de Conexões de Vários Arquivos Simples** , você pode avaliar dados de amostra e redimensionar automaticamente o comprimento dessas colunas para evitar truncamento de dados ou excesso de largura de coluna. A menos que você redimensione o comprimento de coluna na fonte de Arquivo Simples ou na transformação, o comprimento da coluna permanecerá o mesmo ao longo do fluxo de dados. Se essas colunas mapearem para colunas de destino mais estreitas, serão exibidos avisos na interface do usuário, e poderão ocorrer erros no tempo de execução, devido a truncamento de dados. Você pode redimensionar as colunas para que sejam compatíveis com as colunas de destino no gerenciador de conexões de Vários Arquivo, na fonte de Arquivo Simples ou em uma transformação. Para modificar o comprimento das colunas de saída, você deve definir a `Length` propriedade da coluna de saída na **propriedades de entrada e saída** guia o **Editor Avançado** caixa de diálogo.  
   
  Se você atualizar os comprimentos de coluna no gerenciador de conexões de Vários Arquivos Simples depois de adicionar e configurar a fonte de Arquivo Simples que usa o gerenciador de conexões, não será necessário redimensionar as colunas de saída manualmente na fonte de Arquivo Simples. Quando você abre a caixa de diálogo **Origem de Arquivo Simples** , a origem de arquivo simples fornece uma opção para sincronizar os metadados da coluna.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36011443"
   
 -   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página de colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
 -   [Editor do Gerenciador de Conexão vários arquivos simples &#40;página Avançado&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
