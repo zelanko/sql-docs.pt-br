@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - forecasting [data mining]
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7718c83d56b1ab9351ebb59205c04e0dd779ca75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d23900aac442e72e89daea72fc0c2e07df9bd934
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224626"
 ---
 # <a name="browsing-a-forecasting-model"></a>Procurando um modelo de previsão
-  Quando você abre um modelo de previsão usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de modelo de série de tempo no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar tendências, comparar séries, criar previsões e obter informações sobre o modelo e os dados subjacentes.  
+  Quando você abre um modelo de previsão usando **navegue**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de modelo de série de tempo no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar tendências, comparar séries, criar previsões e obter informações sobre o modelo e os dados subjacentes.  
   
 ##  <a name="bkmk_Top"></a> Explorar o modelo  
- O **procurar** visualizador para modelos de previsão fornece uma exibição de gráfico que mostra as tendências ao longo do tempo e permite criar previsões e uma exibição de modelo, que representa a série de tempo como uma árvore de decisão ou uma árvore de regressão.  
+ O **procurar** visualizador para modelos de previsão fornece uma exibição de gráfico, que mostra as tendências ao longo do tempo e permite criar previsões e uma exibição de modelo, que representa a série de tempo como uma árvore de decisão ou uma árvore de regressão.  
   
 -   [Modo de exibição de gráfico](#bkmk_charts)  
   
 -   [Exibição de modelo](#bkmk_Model)  
   
- Para fazer experiências com um modelo de previsão, você pode usar os dados de exemplo na guia previsão da pasta de trabalho de dados de exemplo e criar um modelo de série de tempo usando o [Assistente de previsão &#40;suplementos de mineração de dados para Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) no  **Mineração de dados** faixa de opções, ou [previsão &#40;ferramentas de análise de tabela para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) no **analisar** faixa de opções.  
+ Para fazer experiências com um modelo de previsão, você pode usar os dados de exemplo na guia previsão da pasta de trabalho de dados de exemplo e criar um modelo de série temporal usando o [Assistente de previsão &#40;Data Mining Add-ins para Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) em que o  **Data Mining** faixa de opções, ou [previsão &#40;ferramentas de análise de tabela para Excel&#41; ](forecast-table-analysis-tools-for-excel.md) no **analisar** faixa de opções.  
   
 ###  <a name="bkmk_charts"></a> Gráfico  
  O **gráfico** guia exibe a tendência da série de dados ao longo do tempo, junto com os valores previstos. O eixo vertical do gráfico representa os valores da série e o eixo horizontal representa o tempo.  
@@ -50,17 +50,17 @@ ms.locfileid: "36118013"
   
      Use as caixas de seleção para selecionar a previsão apenas para América do Norte e apenas para Valor de vendas.  
   
-2.  Clique em **etapas de previsão** e digite um novo valor para controlar a quantidade de tempo futuras valores que você deseja ver no gráfico.  
+2.  Clique em **etapas de previsão** e digite um novo valor para controlar a hora futura quantos valores você deseja ver no gráfico.  
   
      O padrão é 5.  
   
-3.  Clique em qualquer ponto na linha, histórica ou futura, para ver os valores exatos para esse ponto no tempo, exibidos no **legenda de mineração**.  
+3.  Clique em qualquer ponto na linha, histórica ou futura, para ver os valores exatos para esse ponto no tempo, exibidos na **legenda de mineração**.  
   
 4.  O gráfico exibe dados históricos e futuros. Observe a linha pontilhada, com um plano de fundo sombreado. Esses valores são as previsões futuras, com base no modelo.  
   
      Os dados históricos (usados para criar o modelo) são mostrados no lado esquerdo do gráfico.  
   
-5.  Selecione o **Mostrar previsões históricas** opção para entender a estabilidade da série temporal.  
+5.  Selecione o **Mostrar previsões históricas** opção para ter uma noção a estabilidade da série temporal.  
   
      ![previsões para uma única série no modelo](media/dm13-forecast-chart-singleseries.gif "previsões para uma única série no modelo")  
   
@@ -99,17 +99,17 @@ ms.locfileid: "36118013"
   
 ##### <a name="explore-the-forecasting-model-as-a-tree"></a>Explorar o modelo de previsão como uma árvore  
   
-1.  Clique o **árvore** suspensa lista e escolha um modelo para exibir.  
+1.  Clique o **árvore** lista suspensa lista e escolha um modelo para exibir.  
   
      Uma árvore separada ou nó de regressão é exibido para cada atributo previsível. Por exemplo, se seus dados contiverem vendas para Europa, América do Norte e Pacífico, haverá três modelos diferentes, um para cada série de dados.  
   
-2.  Arraste o **Mostrar nível** controle deslizante para filtrar níveis inferiores da árvore e concentrar nas divisões mais importantes.  
+2.  Arraste o **Mostrar nível** controle deslizante para filtrar níveis inferiores da árvore e se concentrar em divisões mais importantes.  
   
-3.  Clique em cada nó para exibir algumas estatísticas descritivas no **legenda de mineração**.  
+3.  Clique em cada nó para exibir algumas estatísticas descritivas na **legenda de mineração**.  
   
      Quando você coloca o cursor do mouse sobre um nó, uma Dica de Ferramenta também exibe as mesmas estatísticas, bem como a fórmula completa que descreve esse nó.  
   
-4.  Se você quiser copiar as informações a **legenda de mineração**, com o botão direito do **legenda de mineração**, selecione **cópia**e clique dentro de sua planilha do Excel. O **copiar para Excel** opção copia o gráfico, não as estatísticas.  
+4.  Se você quiser copiar as informações na **legenda de mineração**, clique com botão direito do **legenda de mineração**, selecione **cópia**e clique dentro de sua planilha do Excel. O **copiar para Excel** opção copia o gráfico, não as estatísticas.  
   
  [Explorar o modelo](#bkmk_Top)  
   

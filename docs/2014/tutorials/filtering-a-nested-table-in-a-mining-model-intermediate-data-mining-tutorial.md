@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 9b11971c6e6005c7e1d65a1728e8b8aac818b41c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d39ec6f60a9d281f6e1a76f26da585b555066dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273792"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrando uma tabela aninhada em um modelo de mineração (tutorial de mineração de dados intermediário)
   Após criar e explorar o modelo, você decide que deseja enfatizar um subconjunto dos dados do cliente. Por exemplo, talvez você queira analisar apenas as cestas que contêm um determinado item ou os dados demográficos de clientes que não compraram nada em um certo período.  
@@ -33,11 +33,11 @@ ms.locfileid: "36312314"
   
 #### <a name="to-create-and-modify-a-copy-of-the-association-model"></a>Para criar e modificar uma cópia do modelo de Associação  
   
-1.  No **modelos de mineração** guia de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], com o botão direito do `Association` de modelo e selecione **novo modelo de mineração**.  
+1.  No **modelos de mineração** guia de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique com botão direito a `Association` de modelo e, em seguida, selecione **novo modelo de mineração**.  
   
-2.  Para **nome do modelo**, tipo `Association Filtered`. Para **nome do algoritmo**, selecione **Microsoft Association Rules**. Clique em **OK**.  
+2.  Para **nome do modelo**, tipo `Association Filtered`. Para **nome do algoritmo**, selecione **regras de associação da Microsoft**. Clique em **OK**.  
   
-3.  Na coluna para o modelo associação filtrada, clique na linha IncomeGroup e altere o valor de **ignorar** para **entrada**.  
+3.  Na coluna para o modelo associação filtrada, clique na linha IncomeGroup e altere o valor de **Ignore** à **entrada**.  
   
  Em seguida, você criará um filtro na tabela de casos no novo modelo de associação. O filtro passará ao modelo apenas os clientes na região de destino ou com o nível de renda de destino. Depois, você adicionará um segundo conjunto de condições de filtro para especificar se o modelo usa apenas clientes cujas cestas de compras continham pelo menos um item.  
   
@@ -65,15 +65,15 @@ ms.locfileid: "36312314"
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate'`  
   
-9. Clique na próxima linha na grade, deixando o operador como o padrão, **AND**.  
+9. Clique na próxima linha na grade, deixando o operador como o padrão **AND**.  
   
-10. Para **operador**, deixe o valor padrão, **contém**. Clique o **valor** caixa de texto.  
+10. Para **operador**, deixe o valor padrão, **Contains**. Clique o **valor** caixa de texto.  
   
-11. No **filtro** caixa de diálogo, na primeira linha em **coluna da estrutura de mineração**, selecione `Model`.  
+11. No **filtro** caixa de diálogo, na primeira linha sob **coluna da estrutura de mineração**, selecione `Model`.  
   
 12. Para **operador**, selecione **IS NOT NULL**. Deixe o **valor** caixa de texto em branco. Clique em **OK**.  
   
-     A condição de filtro no **expressão** caixa de texto do **filtro de modelo** caixa de diálogo é automaticamente atualizada para incluir a nova condição na tabela aninhada. A expressão completa é a seguinte:  
+     A condição de filtro na **expressão** caixa de texto da **filtro de modelos** caixa de diálogo é automaticamente atualizada para incluir a nova condição na tabela aninhada. A expressão completa é a seguinte:  
   
      `[IncomeGroup] = 'High' OR [IncomeGroup] = 'Moderate' AND EXISTS SELECT * FROM [vAssocSeqLineItems] WHERE [Model] <> NULL).`  
   
@@ -81,17 +81,17 @@ ms.locfileid: "36312314"
   
 #### <a name="to-enable-drillthrough-and-to-process-the-filtered-model"></a>Para habilitar a busca detalhada e processar o modelo filtrado  
   
-1.  No **modelos de mineração** guia, clique com botão direito do `Association Filtered` de modelo e selecione **propriedades**.  
+1.  No **modelos de mineração** guia, clique com botão direito do `Association Filtered` do modelo e, em seguida, selecione **propriedades**.  
   
-2.  Alterar o **AllowDrillThrough** propriedade **True**.  
+2.  Alterar o **AllowDrillThrough** propriedade **verdadeiro**.  
   
-3.  Clique com botão direito do `Association Filtered` modelo de mineração e selecione **modelo de processo**.  
+3.  Clique com botão direito do `Association Filtered` modelo de mineração e, em seguida, selecione **modelo de processo**.  
   
-4.  Clique em **Sim** na mensagem de erro para implantar o novo modelo para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados.  
+4.  Clique em **Yes** na mensagem de erro para implantar o novo modelo para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados.  
   
 5.  No **processar estrutura de mineração** caixa de diálogo, clique em **executar**.  
   
-6.  Quando o processamento for concluído, clique em **fechar** para sair do **progresso do processo** caixa de diálogo e clique em **fechar** novamente para sair do **processar estrutura de mineração**  caixa de diálogo.  
+6.  Quando o processamento for concluído, clique em **fechar** para sair do **progresso do processo** caixa de diálogo e clique em **fechar** novamente para sair o **processar estrutura de mineração**  caixa de diálogo.  
   
  Para verificar, use o visualizador da Árvore de Conteúdo Genérico da Microsoft e examine o valor de NODE_SUPPORT em que o modelo filtrado contém menos casos do que o original.  
   
@@ -105,16 +105,16 @@ ms.locfileid: "36312314"
   
  Esta instrução significa que você está restringindo os clientes da tabela de casos a apenas aqueles que compraram uma garrafa de água. No entanto, como o número de atributos da tabela aninhada é potencialmente ilimitado, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não fornece a lista dos possíveis valores a serem selecionados. Em vez disso, você deve digitar o valor exato.  
   
- Você pode clicar em **Editar consulta** para alterar manualmente a expressão de filtro. No entanto, se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
+ Você pode clicar em **Editar consulta** alterar manualmente a expressão de filtro. No entanto, se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
   
 > [!WARNING]  
 >  Você não pode usar o operador LIKE em um filtro de tabela aninhada.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Prevendo associações &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
+ [Prevendo associações &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Sintaxe de filtro e exemplos de modelo &#40;Analysis Services – mineração de dados&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtros para modelos de mineração &#40;Analysis Services – mineração de dados&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Sintaxe de filtro e exemplos de modelo &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202646"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
   Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, bem como variáveis e campos calculados.  
   
- Você pode usar o designer de consulta em Designer de Relatórios para criar a consulta. Para este tutorial, você criará uma consulta que recupera informações do pedido de vendas a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** banco de dados.  
+ Você pode usar o designer de consulta em Designer de Relatórios para criar a consulta. Para este tutorial, você criará uma consulta que recupera informações de pedido de vendas a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** banco de dados.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir uma consulta Transact-SQL a fim de obter dados de relatório  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36013498"
   
 3.  Clique em **Usar um conjunto de dados inserido em meu relatório**.  
   
-4.  Verifique se o nome da fonte de dados, AdventureWorks2012, está no **fonte de dados** caixa de texto e que o **o tipo de consulta** é **texto**.  
+4.  Verifique se o nome da fonte de dados, AdventureWorks2012, está no **fonte de dados** caixa de texto e que o **tipo de consulta** está **texto**.  
   
 5.  Digite, ou copie e cole, a consulta Transact-SQL a seguir na caixa **Consulta** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36013498"
  Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Consulte [Lição 4: Adicionando uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas de Design no relatório Designer do SQL Server Data Tools consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [O tipo de conexão do SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tutorial: Gravando instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

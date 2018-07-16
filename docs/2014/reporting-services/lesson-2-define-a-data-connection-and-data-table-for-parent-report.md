@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b1fec86adc14a786d781e74f023829d81aaaf825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 395ef1f5189678892433de01f47dd04d08e1d1df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270322"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
   Depois que você criar um novo projeto de site usando o modelo de site ASP.NET para o Visual C #, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório pai. Neste tutorial, a conexão de dados é com o banco de dados AdventureWorks2008. Você também tem a opção de se conectar ao banco de dados AdventureWorks2012.  
@@ -28,7 +28,7 @@ ms.locfileid: "36130512"
   
 1.  No menu **Site** , selecione **Adicionar Novo Item**.  
   
-2.  No **Adicionar Novo Item** caixa de diálogo, selecione **DataSet** e clique em **adicionar**. Quando solicitado deve adicionar o item a **App_Code** pasta clicando **Sim**.  
+2.  No **Adicionar Novo Item** caixa de diálogo, selecione **DataSet** e clique em **adicionar**. Quando solicitado você deve adicionar o item para o **App_Code** pasta clicando **Sim**.  
   
      Isso adicionará um novo arquivo XSD **DataSet1.xsd** ao projeto e abrirá o Designer de Conjunto de Dados.  
   
@@ -40,31 +40,31 @@ ms.locfileid: "36130512"
   
 6.  Na caixa de diálogo **Adicionar Conexão** , realize as seguintes etapas:  
   
-    1.  No **nome do servidor** , digite o servidor onde o **AdventureWorks2008** banco de dados está localizado.  
+    1.  No **nome do servidor** , digite o servidor em que o **AdventureWorks2008** banco de dados está localizado.  
   
          A instância padrão do SQL Server Express é **(local)\sqlexpress**.  
   
     2.  Na seção **Fazer logon no servidor** , selecione a opção que lhe fornece acesso aos dados. **Usar Autenticação do Windows** é o padrão.  
   
-    3.  Do **selecionar ou digitar um nome de banco de dados** lista suspensa, clique em **AdventureWorks2008**.  
+    3.  Dos **selecione ou insira um nome de banco de dados** lista suspensa, clique em **AdventureWorks2008**.  
   
     4.  Clique em **OK**e em **Avançar**.  
   
 7.  Se você tiver selecionado **Usar Autenticação do SQL Server** na Etapa 6 (b), selecione a opção que especificará se os dados confidenciais serão incluídos na cadeia de caracteres ou defina as informações no código do aplicativo.  
   
-8.  Sobre o **salvar a cadeia de Conexão no arquivo de configuração do aplicativo** página, digite o nome da cadeia de caracteres de conexão ou aceite o padrão **AdventureWorks2008ConnectionString**. Clique em **Avançar**.  
+8.  Sobre o **salvar a cadeia de Conexão no arquivo de configuração de aplicativo** página, digite o nome da cadeia de caracteres de conexão ou aceite o padrão **AdventureWorks2008ConnectionString**. Clique em **Avançar**.  
   
-9. Sobre o **escolher um tipo de comando** página, selecione **usar instruções SQL**e, em seguida, clique em **próximo**.  
+9. Sobre o **escolher um tipo de comando** página, selecione **usar instruções SQL**e, em seguida, clique em **próxima**.  
   
-10. No **insira uma instrução SQL** página, digite a seguinte consulta Transact-SQL para recuperar dados do **AdventureWorks2008** banco de dados e, em seguida, clique em **próximo**.  
+10. No **insira uma instrução SQL** página, insira a seguinte consulta Transact-SQL para recuperar dados do **AdventureWorks2008** banco de dados e, em seguida, clique em **próxima**.  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     Você também pode criar a consulta clicando em **construtor de consultas**e, em seguida, verifique se a consulta clicando em **executar consulta**. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como instalar o **AdventureWorks2008** versão do AdventureWorks, consulte [passo a passo: Instalando o banco de dados AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Você também pode criar a consulta clicando **construtor de consultas**e, em seguida, verifique se a consulta clicando em **executar consulta**. Se a consulta não retornar os dados esperados, talvez você esteja usando uma versão anterior do AdventureWorks. Para obter mais informações sobre como instalar o **AdventureWorks2008** versão da AdventureWorks, consulte [passo a passo: Instalando o banco de dados AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
-11. Sobre o **escolha métodos para gerar** página, certifique-se de desmarcar **criar métodos para enviar atualizações diretamente para o banco de dados (GenerateDBDirectMethods)** e, em seguida, clique em **concluir**.  
+11. Sobre o **escolha métodos para gerar** página, certifique-se de desmarcar **crie métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)** e, em seguida, clique em **concluir**.  
   
     > [!WARNING]  
     >  Verifique se desmarcou Criar  
@@ -73,7 +73,7 @@ ms.locfileid: "36130512"
   
 12. Salve o arquivo.  
   
-13. Para visualizar os dados, clique em **visualizar dados** no **dados** menu e clique **visualização**.  
+13. Para visualizar os dados, clique em **visualizar dados** sobre o **dados** menu e, em seguida, clique **visualização**.  
   
 ## <a name="next-task"></a>Próxima tarefa  
  Você criou uma conexão de dados e uma tabela de dados para o relatório pai. Em seguida, você criará o relatório pai usando o Assistente de Relatório.  

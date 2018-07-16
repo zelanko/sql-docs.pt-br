@@ -1,5 +1,5 @@
 ---
-title: Implantar das ferramentas de dados do SQL Server (SSAS Tabular) | Microsoft Docs
+title: Implantar do SQL Server Data Tools (SSAS Tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b6193c57df6e6fa75f55b27402793fec20ca5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1498798cedeab8dacfe923754b02ba394937aff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265314"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implantar das Ferramentas de Dados do SQL Server (SSAS tabular)
   Use as tarefas neste tópico para implantar uma solução de modelo de tabela, usando o comando Implantar do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "36120426"
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto e, em seguida, clique em **Propriedades**.  
   
-2.  No  **\<nome do projeto > propriedades** caixa de diálogo, na **opções de implantação**, especifique as configurações de propriedade se diferentes das configurações padrão.  
+2.  No  **\<nome do projeto > propriedades** caixa de diálogo, no **opções de implantação**, especifique as configurações de propriedade se elas forem diferentes das configurações padrão.  
   
     > [!NOTE]  
     >  Para modelos em modo armazenado em cache, o **Modo de Consulta** é sempre **Na Memória**.  
@@ -58,7 +58,7 @@ ms.locfileid: "36120426"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implantar uma solução de modelo tabular  
   
--   Em [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no **criar** menu, clique em **implantar \<nome do projeto >**.  
+-   No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]diante a **Build** menu, clique em **implantar \<nome do projeto >**.  
   
      A caixa de diálogo **Implantação** aparecerá e indicará o status da implantação de metadados e o processamento (a menos que a propriedade Opção de Processamento esteja configurada como Não Processar) de cada tabela incluída no modelo. Depois que o processo de implantação for concluído, use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectar à instância do Analysis Services e verificar se o novo objeto de banco de dados modelo foi criado ou use um aplicativo de relatório cliente para conectar-se ao modelo implantado.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36120426"
  Clique para interromper a operação de implantação. Essa opção será útil se a operação de implantação estiver demorando muito ou se houver muitos erros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantação de solução de modelo tabular &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurar propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)  
+ [Implantação de solução de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Configurar as propriedades de implantação e modelagem de dados padrão &#40;Tabular do SSAS&#41;](properties-ssas-tabular.md)  
   
   

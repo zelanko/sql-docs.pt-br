@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 71b1e580ddb4e56a267fcfaf792858ed3566f2d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205036"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões (Construtor de Relatórios e SSRS)
   Expressões costumam ser usadas em relatórios para controlar o conteúdo e a aparência do relatório. As expressões são escritas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e podem usar funções internas, código personalizado, variáveis de relatório/grupo e variáveis definidas pelo usuário. As expressões começam com um sinal de igual (=). Para obter mais informações sobre o editor de expressões e os tipos de referências que podem ser incluídos, consulte [Uso de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -58,19 +58,19 @@ ms.locfileid: "36130549"
   
  Para obter exemplos de expressões para usos específicos, consulte os tópicos seguintes:  
   
--   [Exemplos de expressões de grupo &#40;SSRS e construtor de relatórios&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de equações de filtro &#40;SSRS e construtor de relatórios&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Usadas em filtros &#40;SSRS e construtor de relatórios&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+-   [Filtros geralmente usados &#40;relatórios e SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Relatório e referências de coleções de variáveis de grupo &#40;SSRS e construtor de relatórios&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [Referências de coleções de variáveis de grupo e de relatório &#40;relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  Para obter mais informações sobre expressões simples e complexas, em que você pode usar expressões e os tipos de referências que pode incluir em uma expressão, consulte tópicos em [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md). Para obter mais informações sobre o contexto em que as expressões são avaliadas para calcular agregações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Para aprender como gravar expressões que usam muitas das funções e dos operadores também empregados por exemplos de expressões neste tópico, mas no contexto da gravação de um relatório, consulte [Tutorial: introdução às expressões](../tutorial-introducing-expressions.md).  
   
- O editor de expressão inclui uma exibição hierárquica de funções internas. Quando você seleciona a função, um exemplo de código aparece no painel Valores. Para obter mais informações, consulte o [caixa de diálogo expressão](../expression-dialog-box.md) ou [caixa de diálogo expressão &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md).  
+ O editor de expressão inclui uma exibição hierárquica de funções internas. Quando você seleciona a função, um exemplo de código aparece no painel Valores. Para obter mais informações, consulte o [caixa de diálogo expressão](../expression-dialog-box.md) ou [caixa de diálogo expressão &#40;relatórios&#41;](../expression-dialog-box-report-builder.md).  
   
  Se estiver usando o Designer de Consulta do Modelo de Relatório para criar uma consulta do conjunto de dados que usa um modelo de relatório como uma fonte de dados, você usará fórmulas, e não expressões. Essas fórmulas ajudam a especificar os dados de relatório usando cálculos personalizados integrados na consulta que especifica os dados a serem retornados da fonte de dados do modelo de relatório. Para obter mais informações, consulte [Fórmulas em consultas de modelo de relatório &#40;Construtor de Relatórios e SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36130549"
     = Round(1.3)  
     ```  
   
-     Você também pode escrever uma expressão para arredondar um valor para um vários que você especificar, semelhante de `MRound` função no Excel. Multiplique o valor por um fator que cria um inteiro, arredonde o número e divida pelo mesmo fator. Por exemplo, para arredondar 1,3 para o múltiplo mais próximo de 0,2 (1,4), use a seguinte expressão.  
+     Você também pode escrever uma expressão para arredondar um valor para um múltiplo especificado, semelhante ao `MRound` função no Excel. Multiplique o valor por um fator que cria um inteiro, arredonde o número e divida pelo mesmo fator. Por exemplo, para arredondar 1,3 para o múltiplo mais próximo de 0,2 (1,4), use a seguinte expressão.  
   
     ```  
     = Round(1.3*5)/5  
@@ -141,7 +141,7 @@ ms.locfileid: "36130549"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   A função `CDate` converte o valor em uma data. O `Now` função retorna um valor de data que contém a data atual e a hora de acordo com seu sistema. `DateDiff` retorna um valor Longo especificando o número de intervalos de hora entre dois valores de Data.  
+-   A função `CDate` converte o valor em uma data. O `Now` função retorna um valor date contendo a data atual e a hora de acordo com seu sistema. `DateDiff` retorna um valor Longo especificando o número de intervalos de hora entre dois valores de Data.  
   
      O exemplo a seguir exibe a data de início do ano atual  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36130549"
   
     ```  
   
--   O `DateSerial` função retorna um valor de data que representa um ano especificado, mês e dia, com informações de tempo definido para meia-noite. O exemplo a seguir exibe a data de término do mês anterior com base no mês atual.  
+-   O `DateSerial` função retorna um valor Date representando um ano, mês e dia, com as informações de hora definidas para meia-noite. O exemplo a seguir exibe a data de término do mês anterior com base no mês atual.  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -199,9 +199,9 @@ ms.locfileid: "36130549"
     =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
     ```  
   
-     Se a caixa de texto contiver apenas uma data ou um número, você deve usar a propriedade de formato da caixa de texto para aplicar formatação em vez do `Format` função dentro da caixa de texto.  
+     Se a caixa de texto contiver apenas uma data ou número, você deve usar a propriedade de formato da caixa de texto para aplicar a formatação em vez do `Format` função dentro da caixa de texto.  
   
--   O `Right`, `Len`, e `InStr` funções são úteis para retornar uma subcadeia de caracteres, por exemplo, cortar *domínio*\\*username* para o nome de usuário. A expressão a seguir retorna a parte da cadeia de caracteres à direita de um caractere de barra invertida (\\) de um parâmetro denominado *User*:  
+-   O `Right`, `Len`, e `InStr` funções são úteis para retornar uma subcadeia de caracteres, por exemplo, cortar *domínio*\\*nome de usuário* para apenas o nome de usuário. A expressão a seguir retorna a parte da cadeia de caracteres à direita de um caractere de barra invertida (\\) de um parâmetro denominado *User*:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -226,7 +226,7 @@ ms.locfileid: "36130549"
   
     ```  
   
--   O `Regex` funções do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> são úteis para alterar o formato de existentes cadeias de caracteres, por exemplo, um número de telefone de formatação. A expressão a seguir usa o `Replace` função para alterar o formato de um número de telefone de dez dígitos em um campo de "*nnn*-*nnn*-*nnnn* "para" (*nnn*) *nnn*-*nnnn*":  
+-   O `Regex` funções do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> são úteis para alterar o formato de cadeias de caracteres existentes, por exemplo, um número de telefone de formatação. A expressão a seguir usa o `Replace` função para alterar o formato de um número de telefone de dez dígitos em um campo de "*nnn*-*nnn*-*nnnn* "para" (*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -274,7 +274,7 @@ ms.locfileid: "36130549"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   Usar vários `IIF` funções (também conhecido como "IIFs aninhadas") para retornar um dos três valores, dependendo do valor de `PctComplete`. A expressão a seguir pode ser colocada na cor de preenchimento de uma caixa de texto para alterar a cor de plano de fundo, dependendo do valor na caixa de texto.  
+-   Use várias `IIF` funções (também conhecido como "IIFs aninhadas") para retornar um dos três valores, dependendo do valor de `PctComplete`. A expressão a seguir pode ser colocada na cor de preenchimento de uma caixa de texto para alterar a cor de plano de fundo, dependendo do valor na caixa de texto.  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -282,7 +282,7 @@ ms.locfileid: "36130549"
   
      Valores maiores ou iguais a 10 são exibidos com um plano de fundo verde, entre 1 e 9 são exibidos com um plano de fundo azul e menores do que 1 são exibidos com um plano de fundo vermelho.  
   
--   Uma maneira diferente de obter a mesma funcionalidade usa o `Switch` função. A função `Switch` é útil quando você tem três ou mais condições a serem testadas. A função `Switch` retorna o valor associado à primeira expressão em uma série avaliada como verdadeira:  
+-   Uma maneira diferente de obter a mesma funcionalidade usa a `Switch` função. A função `Switch` é útil quando você tem três ou mais condições a serem testadas. A função `Switch` retorna o valor associado à primeira expressão em uma série avaliada como verdadeira:  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -296,13 +296,13 @@ ms.locfileid: "36130549"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Testar o valor da `PhoneNumber` campo e valor de retorno "não" se ele for `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); caso contrário, retornará o valor do número de telefone. Esta expressão pode ser usada para controlar o valor de uma caixa de texto em um item de relatório.  
+-   Testar o valor da `PhoneNumber` do campo e retorne "Sem valor" se ele estiver `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); caso contrário, retornará o valor do número de telefone. Esta expressão pode ser usada para controlar o valor de uma caixa de texto em um item de relatório.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   Testar o valor da `Department` campo e retornar um nome de sub-relatório ou um `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Esta expressão pode ser usada para sub-relatórios detalhados condicional.  
+-   Testar o valor da `Department` do campo e retornar o nome de um sub-relatório ou um `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Esta expressão pode ser usada para sub-relatórios detalhados condicional.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -456,7 +456,7 @@ ms.locfileid: "36130549"
     =IIF(CountRows()>12,false,true)  
     ```  
   
--   A expressão a seguir, quando definida no `Hidden` propriedade de uma coluna, mostrará a coluna apenas se o campo existir no conjunto de dados de relatório depois que os dados são recuperados da fonte de dados:  
+-   A expressão a seguir, quando definida no `Hidden` propriedade de uma coluna, mostrará a coluna apenas se o campo existir no conjunto de dados do relatório depois que os dados são recuperados da fonte de dados:  
   
     ```  
     =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -545,10 +545,10 @@ ms.locfileid: "36130549"
      Isso ajuda a evitar exceções em tempo de execução. Agora você pode usar uma expressão como `=IIF(Me.Value < 0, "red", "black")` na propriedade `Color` da caixa de texto para exibição condicional do texto, dependendo se os valores são maiores que ou menores que 0.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de equações de filtro &#40;SSRS e construtor de relatórios&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Usadas em filtros &#40;SSRS e construtor de relatórios&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+ [Filtros geralmente usados &#40;relatórios e SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
   

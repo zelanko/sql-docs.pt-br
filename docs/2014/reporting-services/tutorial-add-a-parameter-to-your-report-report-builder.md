@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238229"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
   Adicione um parâmetro ao relatório para permitir que os usuários filtrem dados do relatório na fonte de dados ou no relatório. Os parâmetros de relatório são criados automaticamente para cada parâmetro de consulta incluído em uma consulta de conjunto de dados. O tipo de dados do parâmetro determina como ele aparece na barra de ferramentas de exibição de relatório.  
@@ -39,15 +39,15 @@ ms.locfileid: "36118294"
   
     1.  [Adicionar um conjunto de dados para fornecer valores disponíveis e nomes para exibição](#AddDataset)  
   
-    2.  [Especifique os valores disponíveis para criar uma lista suspensa de valores](#AvailableValues)  
+    2.  [Especificar os valores disponíveis para criar uma lista suspensa de valores](#AvailableValues)  
   
     3.  [Especificar valores padrão para que o relatório seja executado automaticamente](#DefaultValues)  
   
-    4.  [Pesquisar um valor em um conjunto de dados que tem pares nome/valor](#NameValue)  
+    4.  [Procurar um valor de um conjunto de dados com pares nome/valor](#NameValue)  
   
 5.  [Exibir o valor do parâmetro selecionado no relatório](#Expression)  
   
-6.  [Use o parâmetro de relatório em um filtro](#Filter)  
+6.  [Usar o parâmetro de relatório em um filtro](#Filter)  
   
 7.  [Altere o parâmetro de relatório para aceitar vários valores](#Multivalued)  
   
@@ -73,12 +73,12 @@ ms.locfileid: "36118294"
   
 #### <a name="to-create-a-new-matrix-report"></a>Para criar um novo relatório de matriz  
   
-1.  Clique em **iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Relatório** está selecionado.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "36118294"
   
 4.  Clique em **Avançar**.  
   
-5.  No **escolher um Layout** página em **opções**, verifique **Mostrar subtotais e totais gerais** está selecionado.  
+5.  No **escolher um Layout** página, em **opções**, verifique **Mostrar subtotais e totais gerais** está selecionado.  
   
      Quando você executar o relatório, a última coluna mostrará a quantidade total de cada subcategoria para todos os repositórios, e a última linha mostrará a quantidade total para todas as subcategorias de cada repositório.  
   
 6.  Clique em **Avançar**.  
   
-7.  Sobre o **escolha um estilo** , no painel Estilos, selecione um estilo.  
+7.  Sobre o **escolher um estilo** página, no painel Estilos, selecione um estilo.  
   
 8.  Clique em **Concluir**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36118294"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     O `WHERE` cláusula limita os dados recuperados ao identificador de repositório que é especificado pelo parâmetro de consulta *@StoreID*.  
+     O `WHERE` cláusula limita os dados recuperados ao identificador de loja especificado pelo parâmetro de consulta *@StoreID*.  
   
 4.  Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). A caixa de diálogo **Definir Parâmetros de Consulta** é aberta e solicita um valor para o parâmetro de consulta *@StoreID*.  
   
@@ -190,16 +190,16 @@ ms.locfileid: "36118294"
   
 8.  No painel Dados do Relatório, expanda a pasta **Parâmetros** .  
   
- Observe que agora há um parâmetro de relatório chamado *@StoreID*. Por padrão, o parâmetro tem tipo de dados **texto**. Como o identificador de repositório é um inteiro, você precisará alterar o tipo de dados para Inteiro no próximo procedimento.  
+ Observe que agora há um parâmetro de relatório denominado *@StoreID*. Por padrão, o parâmetro tem tipo de dados **texto**. Como o identificador de repositório é um inteiro, você precisará alterar o tipo de dados para Inteiro no próximo procedimento.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Alterar o tipo de dados padrão e outras propriedades de um parâmetro de relatório  
  Depois de criar um parâmetro, você pode ajustar os valores padrão de propriedades.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para alterar o tipo de dados padrão de um parâmetro de relatório  
   
-1.  No painel de dados do relatório sob o **parâmetros** nó, com o botão direito *@StoreID*e, em seguida, clique em **propriedades de parâmetro**.  
+1.  No painel de dados do relatório na **parâmetros** nó, clique com botão direito *@StoreID*e, em seguida, clique em **propriedades do parâmetro**.  
   
-2.  No Prompt, digite **identificador do repositório?** Este texto aparece na barra de ferramentas do visualizador de relatórios quando você executa o relatório.  
+2.  No Prompt, digite **identificador Store?** Este texto aparece na barra de ferramentas do visualizador de relatórios quando você executa o relatório.  
   
 3.  Em **Tipo de dados**, na lista suspensa, selecione **Inteiro**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "36118294"
   
 4.  Selecione o **usar um conjunto de dados inserido em meu relatório** opção.  
   
-5.  Em **fonte de dados**, na lista suspensa, escolha a fonte de dados que você criou no primeiro procedimento.  
+5.  Na **fonte de dados**, na lista suspensa, escolha a fonte de dados que você criou no primeiro procedimento.  
   
 6.  Em **Tipo de consulta**, verifique se **Texto** está selecionado.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36118294"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para fornecer valores disponíveis para um parâmetro a partir de um conjunto de dados  
   
-1.  No painel de dados do relatório, clique o parâmetro *@StoreID*e, em seguida, clique em **propriedades de parâmetro**.  
+1.  No painel de dados do relatório, clique com botão direito o parâmetro *@StoreID*e, em seguida, clique em **as propriedades de parâmetro**.  
   
 2.  Clique em **Valores Disponíveis**e em **Obter valores de uma consulta**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36118294"
   
 6.  Clique em **Geral**.  
   
-7.  No Prompt, digite **nome do repositório?**  
+7.  No Prompt, digite **nome Store?**  
   
      O usuário selecionará agora em uma lista de nomes de repositório, em vez de identificadores de repositório. Observe que o tipo de dados de parâmetro permanece **Inteiro** porque o parâmetro se baseia no identificador de loja, não no nome de loja.  
   
@@ -266,9 +266,9 @@ ms.locfileid: "36118294"
   
 9. Visualize o relatório.  
   
-     Na barra de ferramentas do Visualizador de relatório, a caixa de texto de parâmetro agora é uma lista suspensa que exibe  **\<selecione um valor >**.  
+     Na barra de ferramentas do Visualizador de relatórios, a caixa de texto de parâmetro agora é uma lista suspensa que exibe  **\<selecione um valor >**.  
   
-10. Na lista suspensa, selecione o repositório de catálogos Contoso e, em seguida, clique em **Exibir relatório**.  
+10. Na lista suspensa, selecione Contoso catálogo Store e, em seguida, clique em **Exibir relatório**.  
   
  O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
@@ -307,7 +307,7 @@ ms.locfileid: "36118294"
   
 6.  Visualize o relatório.  
   
- Para *@StoreID*, o Visualizador de relatórios exibe o valor "Repositório de catálogos Contoso". Este é o nome de exibição para identificador de repositório **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
+ Para *@StoreID*, o Visualizador de relatórios exibe o valor "Store de catálogos Contoso". Esse é o nome de exibição para o identificador de repositório **200**. O relatório exibe a quantidade vendida de Acessórios, Filmadoras e Câmeras Digitais SLR para o identificador de repositório **200**.  
   
 ##  <a name="NameValue"></a> 4d. Pesquisar um valor em um conjunto de dados com pares de nome/valor  
  Um conjunto de dados pode conter o identificador e o campo de nome correspondente. Quando você só tiver um identificador, poderá pesquisar o nome correspondente em um conjunto de dados criado por você, incluindo pares de nome/valor.  
@@ -330,7 +330,7 @@ ms.locfileid: "36118294"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     O cabeçalho de coluna do repositório contém o texto de exibição de uma expressão complexa:  **< \<Expr >>**.  
+     O cabeçalho de coluna de repositórios contém o texto exibido para uma expressão complexa:  **< \<Expr >>**.  
   
 8.  Visualize o relatório.  
   
@@ -349,7 +349,7 @@ ms.locfileid: "36118294"
   
 4.  Para exibir o rótulo de parâmetro, clique na caixa de texto até aparecer o cursor de inserção depois da expressão existente, digite um espaço e arraste outra cópia do parâmetro do painel de dados do relatório para a caixa de texto. A caixa de texto exibe `[@StoreID] [@StoreID]`.  
   
-5.  A primeira expressão de mouse e clique em **expressão**. A caixa de diálogo **Expressão** é aberta. Substitua o texto `Value` por `Label`.  
+5.  A primeira expressão com o botão direito e clique em **expressão**. A caixa de diálogo **Expressão** é aberta. Substitua o texto `Value` por `Label`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36118294"
   
 4.  Em **Expressão**, na lista suspensa, selecione o campo de conjunto de dados StoreID. O tipo de dados exibe **Inteiro**. Quando o valor da expressão for um campo de conjunto de dados, o tipo de dados será definido automaticamente.  
   
-5.  Em **operador**, verifique `equals` (=) está selecionado.  
+5.  Na **operador**, verifique `equals` (=) está selecionado.  
   
 6.  Em **Valor**, digite `[@StoreID]`. `[@StoreID]` é a sintaxe de expressão simples que representa `=Parameters!StoreID.Value`.  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36118294"
   
 5.  No painel Dados do Relatório, expanda a pasta **Conjuntos de Dados** , clique com o botão direito do mouse em **DataSet1**e clique em **Consulta**.  
   
-6.  Alterar `equals` (=) para `IN` no [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` cláusula na última linha na consulta:  
+6.  Alteração `equals` (=) para `IN` na [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` cláusula na última linha na consulta:  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -449,7 +449,7 @@ ms.locfileid: "36118294"
   
 3.  Em **Prompt**, digite Mostrar seleções?  
   
-4.  Em **tipo de dados**, na lista suspensa, clique em **booliano**.  
+4.  Na **tipo de dados**, na lista suspensa, clique em **booliano**.  
   
 5.  Clique em **Valores Padrão**.  
   
@@ -479,7 +479,7 @@ ms.locfileid: "36118294"
   
      A caixa de texto que exibe as escolhas de parâmetro não aparece.  
   
-8.  Na barra de ferramentas do Visualizador de relatórios, ao lado de **mostrar seleções**, clique em `True`.  
+8.  Na barra de ferramentas do Visualizador de relatórios, ao lado **mostrar seleções**, clique em `True`.  
   
 9. Visualize o relatório.  
   
@@ -515,7 +515,7 @@ ms.locfileid: "36118294"
  Isso conclui o passo a passo da adição de um parâmetro ao seu relatório. Para saber mais sobre parâmetros, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

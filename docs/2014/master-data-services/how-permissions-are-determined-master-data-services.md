@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324396"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Como as permissões são determinadas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a maneira mais simples de configurar a segurança é atribuir permissões de objeto modelo a um grupo do qual o usuário é membro.  
@@ -50,7 +50,7 @@ ms.locfileid: "36011779"
   
 -   Qualquer objeto em um nível mais alto recebe acesso de navegação. Para obter mais informações sobre o acesso de navegação, consulte [acesso de navegação &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- Neste exemplo, **somente leitura** permissão é atribuída a uma entidade e essa permissão é herdada por seu atributo que está em um nível inferior na estrutura do modelo. O modelo fornece acesso de navegação a essa entidade e seu atributo. A outra entidade no modelo não tem nenhuma permissão explícita atribuída e não herda nenhuma permissão, portanto, é negada implicitamente.  
+ Neste exemplo, **somente leitura** permissão é atribuída a uma entidade e essa permissão é herdada por seu atributo, que está em um nível inferior na estrutura do modelo. O modelo fornece acesso de navegação a essa entidade e seu atributo. A outra entidade no modelo não tem nenhuma permissão explícita atribuída e não herda nenhuma permissão, portanto, é negada implicitamente.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   

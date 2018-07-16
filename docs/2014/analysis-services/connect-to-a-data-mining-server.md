@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 - getting started
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41d478d518ffb4dcf111542dc0eda26573ba0129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9da9f806f69cee612c4bb99e4a3b89e190c1730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206316"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Conectar a um servidor de mineração de dados
-  ![Botão conexões](media/misc-connection.gif "botão conexões")  
+  ![Botão de conexões](media/misc-connection.gif "botão conexões")  
   
- Clique o **Conexão** botão para selecionar uma conexão existente ou criar uma nova conexão a uma instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Clique o **Conexão** botão para selecionar uma conexão existente ou criar uma nova conexão a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- **Por que preciso para conectar a um servidor?**  
+ **Por que precisa para se conectar a um servidor?**  
   
  Quando você cria uma conexão, isso lhe permite usar os algoritmos de mineração de dados fornecidos pelo servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e aproveitar o processamento otimizado do servidor.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36012160"
   
 1.  Clique o **Conexão** botão.  
   
-2.  No **conexões do Analysis Services** caixa de diálogo, clique em **novo**.  
+2.  No **conexões do Analysis Services** caixa de diálogo, clique em **New**.  
   
 3.  No **conectar ao Analysis Services** caixa de diálogo, digite um nome de servidor.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36012160"
   
  Se o texto na parte inferior do botão diz **nenhuma Conexão**, isso significa que você não tiver criado uma conexão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados ou que a conexão falhou. Você pode continuar trabalhando com os dados no Excel pelo Access ou outras origens, mas para criar um modelo de mineração de dados ou executar uma consulta de previsão, é necessário ter uma conexão ativa.  
   
- **Suponha que não tem permissão para usar o servidor?**  
+ **Suponha que eu não tenho permissão para usar o servidor?**  
   
- Se você não tiver permissões suficientes para armazenar os modelos de mineração no servidor, ou se quiser fazer experiências com a mineração de dados sem salvar o trabalho, poderá usar as Ferramentas de Análise de Tabela, que criam estruturas de dados temporárias e modelos temporários. Você ainda precisa ser capaz de armazenar modelos temporários no servidor. Peça ao administrador para habilitar o uso de *modelos de mineração de sessão* no servidor.  
+ Se você não tiver permissões suficientes para armazenar os modelos de mineração no servidor, ou se quiser fazer experiências com a mineração de dados sem salvar o trabalho, poderá usar as Ferramentas de Análise de Tabela, que criam estruturas de dados temporárias e modelos temporários. Você ainda precisa ser capaz de armazenar modelos temporários no servidor. Solicite ao administrador para habilitar o uso de *modelos de mineração de sessão* no servidor.  
   
  Se você quiser garantir que os modelos sejam salvos, poderá desabilitar a opção para usar modelos temporários, ou usar os assistentes no Cliente de Mineração de Dados. Esses assistentes armazenam todos os modelos no servidor. Você precisará ter acesso administrativo ao banco de dados onde os modelos são armazenados; então, é recomendável solicitar ao administrador que crie um banco de dados especialmente para a criação de modelos de mineração com os suplementos.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36012160"
   
  O [rastreamento &#40;cliente de mineração de dados para Excel&#41; ](trace-data-mining-client-for-excel.md) ferramenta cria um log de todas as atividades entre os suplementos e o servidor especificado.  
   
- Para habilitar o monitoramento de modelos de sessão, selecione o **usar modelos de sessão** opção o **rastreamento** caixa de diálogo.  
+ Para habilitar o monitoramento de modelos de sessão, selecione a **usar modelos de sessão** opção a **rastreamento** caixa de diálogo.  
   
  O rastreamento permite que você exiba os comandos DMX e XMLA gerados durante a criação de modelos e estruturas. Também é possível exibir as consultas enviadas pelo cliente para gerar resultados e relatórios no Excel.  
   
@@ -98,12 +98,12 @@ ms.locfileid: "36012160"
   
  Quando você concluir um assistente no Cliente de Mineração de Dados para Excel, modelos serão salvos no servidor por padrão, mas na página final de cada assistente existe a opção de usar um modelo temporário. Se você selecionar essa opção, a estrutura e o modelo de mineração de dados que criar serão armazenados em um arquivo temporário. Você poderá procurar, gerenciar e modificar a estrutura e o modelo, desde que o Excel permaneça aberto. Porém, depois que você fechar o Excel, a estrutura e os modelos relacionados serão excluídos.  
   
- Você pode criar explicitamente uma estrutura ou modelo temporário usando o **Editor mineração de dados avançado consulta** e selecionando um dos modelos DMX. Adicione a cláusula `USE SESSION MODELS` para especificar que os objetos sejam temporários.   
+ Você pode também criar explicitamente uma estrutura ou modelo temporário usando o **dados Editor avançada de mineração consulta** e selecionando um dos modelos DMX. Adicione a cláusula `USE SESSION MODELS` para especificar que os objetos sejam temporários.   
   
 ### <a name="creating-backups-of-mining-models-and-structures"></a>Criando backups de modelos e estruturas de mineração  
- Para criar um backup de um modelo ou estrutura, você pode exportá-lo usando [gerenciar modelos &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md), no cliente de mineração de dados para Excel.  
+ Para criar um backup de um modelo ou estrutura, você pode exportá-lo usando [gerenciar modelos &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md), no cliente de mineração de dados para Excel.  
   
- Se você criou um modelo de mineração temporário, tipicamente ele terá um nome difícil de compreender, como Table5_593679_TS_62446. No entanto, você pode usar o [rastreamento &#40;cliente de mineração de dados para Excel&#41; ](trace-data-mining-client-for-excel.md) ferramenta para descobrir os nomes de estruturas e modelos que foram criados pelas ferramentas de análise de tabela temporários e, em seguida, fazer backup deles usando  **Gerenciar modelos**.  
+ Se você criou um modelo de mineração temporário, tipicamente ele terá um nome difícil de compreender, como Table5_593679_TS_62446. No entanto, você pode usar o [rastreamento &#40;cliente de mineração de dados para Excel&#41; ](trace-data-mining-client-for-excel.md) ferramenta para descobrir os nomes das estruturas temporárias e modelos que foram criados pelas ferramentas de análise de tabela e, em seguida, fazer backup deles usando  **Gerenciar modelos**.  
   
 ##### <a name="identify-and-export-a-temporary-model"></a>Identifique e exporte um modelo temporário  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36012160"
 4.  Clique em Exportar este modelo de mineração para gerar um arquivo de script em um local especificado por você.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
- [Utilitário de configuração do servidor &#40;dados suplementos de mineração para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Conectar-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
+ [Utilitário de configuração do servidor &#40;Data Mining Add-ins para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
   

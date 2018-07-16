@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268162"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de matriz básico com base em dados de vendas de exemplo. A matriz tem grupos de linhas e de colunas aninhados e um grupo de colunas adjacente. Você também aprenderá a formatar colunas e a girar texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
@@ -31,9 +31,9 @@ ms.locfileid: "36121426"
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um relatório de matriz e o conjunto de dados de novo Assistente de tabela ou matriz](#CreateMatrix)  
+1.  [Criar um relatório de matriz e um conjunto de dados de novo Assistente de tabela ou matriz](#CreateMatrix)  
   
-2.  [Organizar dados e escolher Layout e estilo de novo Assistente de tabela ou matriz](#Groups)  
+2.  [Organizar dados e escolha o Layout e estilo no novo Assistente de tabela ou matriz](#Groups)  
   
 3.  [Formatar dados](#FormatData)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36121426"
   
 ### <a name="other-optional-step"></a>Outra etapa opcional  
   
-1.  [Girar texto caixa 270 graus](#RotateTextBox)  
+1.  [Girar texto caixa em 270 graus](#RotateTextBox)  
   
  Tempo estimado para concluir este tutorial: 20 minutos.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36121426"
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateMatrix"></a> 1. Criar um relatório de matriz e um conjunto de dados no Assistente de Nova Tabela ou Matriz  
- Do **Introdução** caixa de diálogo Construtor de relatórios, escolha uma fonte de dados compartilhada, crie um conjunto de dados inserido e, em seguida, exiba os dados em uma matriz.  
+ Dos **guia de Introdução** caixa de diálogo Construtor de relatórios, escolha uma fonte de dados, criar um conjunto de dados inserido e, em seguida, exiba os dados em uma matriz.  
   
 > [!NOTE]  
 >  Neste tutorial, como já contém os valores de dados, a consulta não precisa de uma fonte de dados externa. Isso torna a consulta bastante longa. Em um ambiente empresarial, uma consulta não conteria os dados. Isso é apenas para fins de aprendizado.  
@@ -67,7 +67,7 @@ ms.locfileid: "36121426"
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
     > [!NOTE]  
-    >  A caixa de diálogo **Guia de Introdução** deve ser exibida. Se não tiver, no botão Construtor de relatórios, clique em **novo**.  
+    >  A caixa de diálogo **Guia de Introdução** deve ser exibida. Caso contrário, no botão Construtor de relatórios, clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36121426"
   
 5.  Clique em **Avançar**.  
   
-6.  Sobre o **escolha uma conexão com uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sobre o **escolher uma conexão a uma fonte de dados** página, selecione uma fonte de dados existente ou navegue até o servidor de relatório e, em seguida, selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter mais informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;construtor de relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Clique em **Avançar**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36121426"
   
 3.  Arraste Subcategory até **Grupos de colunas**.  
   
-4.  Arraste produto até **grupos de colunas** e coloque-o abaixo de Subcategory.  
+4.  Arraste Product até **grupos de colunas** e coloque-o abaixo de Subcategory.  
   
      A ordem na qual os campos são listados em **grupos de colunas** define a hierarquia de grupo.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36121426"
   
 11. Clique em **Avançar**.  
   
-12. Na página Escolha um estilo, no painel Estilos, selecione **Tablet**.  
+12. Na página Escolha um estilo, no painel Estilos, selecione **Slate**.  
   
 13. Clique em **Concluir**.  
   
@@ -180,11 +180,11 @@ ms.locfileid: "36121426"
   
 3.  Na guia **Início** , no grupo **Número** , clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
-     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** no **números** de grupo e, em seguida, clique em **valores de exemplo**.  
+     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** na **números** agrupar e, em seguida, clique em **valores de exemplo**.  
   
 4.  Clique na célula que contém `[SalesDate]`.  
   
-5.  No **número** grupo na lista suspensa, selecione **data**.  
+5.  No **número** grupo, na lista suspensa, selecione **data**.  
   
      A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
@@ -274,13 +274,13 @@ ms.locfileid: "36121426"
   
 3.  Pressione a tecla Ctrl e, em seguida, selecione as quatro células de canto.  
   
-4.  Clique em células e, em seguida, clique em **mesclar células**.  
+4.  As células com o botão direito e, em seguida, clique em **mesclar células**.  
   
-5.  Clique na célula de canto e, em seguida, clique em **propriedades da caixa de texto**.  
+5.  Clique com botão direito na célula de canto e, em seguida, clique em **propriedades da caixa de texto**.  
   
 6.  Clique na guia **Preenchimento** .  
   
-7.  Clique no (***fx***) botão para **cor de preenchimento**.  
+7.  Clique o (***fx***) botão **cor de preenchimento**.  
   
 8.  Copie e cole a expressão a seguir na caixa de expressão.  
   
@@ -303,9 +303,9 @@ ms.locfileid: "36121426"
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Clique na caixa de texto na parte superior do corpo do relatório que contém **clique para adicionar título**e, em seguida, pressione a tecla Delete.  
+2.  Clique na caixa de texto na parte superior do corpo do relatório que contém **clique para adicionar título**, em seguida, pressione a tecla Delete.  
   
-3.  Sobre o **inserir** guia da faixa de opções, clique em **cabeçalho** e, em seguida, clique em **Adicionar cabeçalho**.  
+3.  Sobre o **inserir** guia de faixa de opções, clique em **cabeçalho** e, em seguida, clique em **Adicionar cabeçalho**.  
   
      Um cabeçalho é adicionado à parte superior do corpo do relatório.  
   
@@ -313,14 +313,14 @@ ms.locfileid: "36121426"
   
 5.  Na caixa de texto, digite **Vendas por Região, Subcategoria e Dia**.  
   
-6.  Selecione o texto que você digitou, com o botão direito e clique **propriedades de texto**.  
+6.  Selecione o texto que você digitou, clique com botão direito e depois clique em **propriedades de texto**.  
   
     > [!NOTE]  
     >  Para formatar caracteres simultaneamente, eles devem ser contíguos.  
   
 7.  No **propriedades de texto** caixa de diálogo, clique em **fonte**.  
   
-8.  No **fonte** lista, selecione **Times New Roman**; na **tamanho** selecione **24 pt**, na **cor** selecione  **Bordô**e em **estilo** selecione **itálico**.  
+8.  No **Font** lista, selecione **Times New Roman**; na **tamanho** selecione **24 pt**, na **cor** selecione  **Bordô**e, na **estilo** selecionar **itálico**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -383,10 +383,10 @@ ms.locfileid: "36121426"
  O nome de território é escrito verticalmente, de baixo para cima. A altura do grupo de linhas Territory varia de acordo com o tamanho do nome do território.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mais informações sobre matrizes, consulte [tabelas, matrizes e listas &#40;construtor de relatórios e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Áreas da região de dados Tablix &#40;relatório construtor e o SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [colunas, linhas e células da região de dados Tablix &#40;construtor de relatórios&#41; e SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mais informações sobre matrizes, consulte [tabelas, matrizes e listas de &#40;construtor de relatórios e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrizes &#40;construtor de relatórios e SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Áreas da região de dados Tablix &#40;relatórios e SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), e [células da região de dados Tablix, linhas e colunas &#40;construtor de relatórios&#41; e o SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

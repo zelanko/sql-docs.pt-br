@@ -16,21 +16,21 @@ helpviewer_keywords:
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 382fd81302cfccb378ef6c1a52cf996857cd2dcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b03009502d72fdff5eb27f4cd97165cf0eee451
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292306"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
   Uma consulta de linguagem XPath pode ser especificada como parte de uma URL ou em um modelo. O esquema de mapeamento determina a estrutura desse fragmento resultante, e os valores são recuperados no banco de dados. Conceitualmente, esse processo é semelhante a criar exibições que usem a instrução CREATE VIEW e escrever consultas SQL com base nelas.  
   
 > [!NOTE]  
->  Para entender as consultas XPath no SQLXML 4.0, é necessário estar familiarizado com as exibições XML e os conceitos relacionados, como modelos e esquemas de mapeamento. Para obter mais informações, consulte [Introdução a esquemas de XSD anotado &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)e o padrão XPath definido pelo World Wide Web Consortium (W3C).  
+>  Para entender as consultas XPath no SQLXML 4.0, é necessário estar familiarizado com as exibições XML e os conceitos relacionados, como modelos e esquemas de mapeamento. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)e o padrão XPath definido pelo World Wide Web Consortium (W3C).  
   
  Um documento XML consiste em nós como, por exemplo, de elemento, de atributo, de texto etc. Por exemplo, considere este documento XML:  
   
@@ -50,11 +50,11 @@ ms.locfileid: "36019107"
 </root>  
 ```  
   
- Neste documento,  **\<cliente >** é um nó de elemento, **cid** é um nó de atributo e **"Importante"** é um nó de texto.  
+ Neste documento  **\<cliente >** é um nó de elemento **cid** é um nó de atributo, e **"Important"** é um nó de texto.  
   
- XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar todos os  **\<ordem >** nós com o **data** valordeatributo **"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
+ XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de  **\<cliente >** nós, XPath podem selecionar tudo  **\<ordem >** nós com o **data** valor de atributo **"14/7/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
   
- XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação XPath do W3C, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4.0 implementa um subconjunto da especificação W3C XPath, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Estas são as principais diferenças entre a implementação da XPath do W3C e a implementação do SQLXML 4.0.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36019107"
   
      O SQLXML 4.0 não oferece suporte à consulta raiz (/). Todas as consultas XPath devem começar em de nível superior  **\<ElementType >** no esquema.  
   
--   **Relatório de erros**  
+-   **Relatando erros**  
   
      A especificação XPath do W3C não define nenhuma condição de erro. As consultas XPath que deixam de selecionar algum nó retornam um conjunto de nós vazio. No SQLXML 4.0, uma consulta pode retornar muitos tipos de mensagens de erro.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36019107"
   
      O SQLXML 4.0 tem limitações na implementação dos tipos de dados XPath `string`, `number` e `boolean`. Para obter mais informações, consulte [tipos de dados XPath &#40;SQLXML 4.0&#41;](xpath-data-types-sqlxml-4-0.md).  
   
--   **Consultas de produto cruzado**  
+-   **Consultas entre produtos**  
   
      O SQLXML 4.0 não oferece suporte a consultas XPath de vários produtos como, por exemplo, `Customers[Order/@OrderDate=Order/@ShipDate]`. Essa consulta seleciona todos os clientes com um pedido qualquer em que OrderDate é igual a ShipDate de qualquer pedido.  
   

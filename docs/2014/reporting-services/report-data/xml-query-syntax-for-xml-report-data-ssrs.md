@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - data processing extensions [Reporting Services], data sources
@@ -18,16 +18,16 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c23e5ef8859f3d0cdf1d0a88dc4bf98b883c64d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7697f6bf230b3d37b145e56f6827895b44daa5c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226996"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
-  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, você deve criar a consulta de conjunto de dados, incluindo um XML `Query` ou um caminho de elemento. Um XML `Query` começa com um  **\<consulta >** marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  
+  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, criar a consulta de conjunto de dados, incluindo um XML `Query` ou um caminho de elemento. Um XML `Query` começa com um  **\<consulta >** de marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  É possível criar uma fonte de dados XML para os seguintes tipos de dados XML:  
   
@@ -39,14 +39,14 @@ ms.locfileid: "36121640"
   
  Como especificar uma `Query` XML ou um caminho de elemento no tipo de dados XML.  
   
- Para um documento XML, o XML `Query` é opcional. Se ela for incluída, poderá conter um `ElementPath` XML opcional. O valor do `ElementPath` XML usa a sintaxe de caminho de elemento. Inclua o XML `Query` e XML `ElementPath` para processar namespaces corretamente quando for necessária, os dados XML da fonte de dados.  
+ Para um documento XML, o XML `Query` é opcional. Se ela for incluída, poderá conter um `ElementPath` XML opcional. O valor do `ElementPath` XML usa a sintaxe de caminho de elemento. Inclua o XML `Query` e XML `ElementPath` para processar namespaces corretamente quando ela é necessária para os dados XML da fonte de dados.  
   
  Para um ponto de extremidade de serviço Web apontado por uma URL de cadeia de conexão, a `Query` XML define o método de serviço Web, a ação SOAP ou ambos. O provedor de dados XML cria uma solicitação de serviço Web que recupera dados XML a serem usados no relatório.  
   
 > [!NOTE]  
 >  Quando um namespace de serviço Web inclui um caractere de barra (`/)`, inclua o método de serviço Web e a ação SOAP de modo que a extensão de processamento de dados XML possa derivar o namespace corretamente.  
   
- Para um documento XML inserido, o XML `Query` define os dados XML inseridos usar, inclui espaços para nome opcionais e contém um XML opcional `ElementPath`...  
+ Para um documento XML inserido, o XML `Query` define os dados XML inseridos a usar, inclui espaços para nome opcionais e contém um XML opcional `ElementPath`...  
   
 ## <a name="specifying-query-parameters-for-xml-data"></a>Especificando parâmetros de consulta para dados XML  
  É possível especificar parâmetros de consulta para documentos XML.  
@@ -60,14 +60,14 @@ ms.locfileid: "36121640"
   
 |Fonte de dados XML|Exemplo de consulta|  
 |---------------------|-------------------|  
-|Dados XML de serviço Web do método de listchildren indica.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Dados XML do serviço Web do método de ListChildren.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Dados XML de serviço Web do SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |Documento XML ou dados XML inseridos que usam namespaces.<br /><br /> Elemento de consulta que especifica namespaces para um caminho de elemento.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML inserido.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML que usa padrão.|*Nenhuma consulta*.<br /><br /> O caminho de elemento deriva do próprio documento XML e independe do namespace.|  
   
 > [!NOTE]  
->  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como http://localhost/reportserver/reportservice2006.asmx. O <xref:ReportService2006.ReportingService2006.ListChildren%2A> método aceita dois parâmetros: `Item` e `Recursive`. Definir o valor padrão para `Item` para `/` e `Recursive` para `1`.  
+>  O primeiro exemplo de serviço Web lista o conteúdo do servidor de relatório que usa o método <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Para executar essa consulta, é necessário criar uma nova fonte de dados e definir a cadeia de conexão como http://localhost/reportserver/reportservice2006.asmx. O <xref:ReportService2006.ReportingService2006.ListChildren%2A> método utiliza dois parâmetros: `Item` e `Recursive`. Defina o valor padrão para `Item` à `/` e `Recursive` para `1`.  
   
 ## <a name="specifying-namespaces"></a>Especificando namespaces  
  Use o XML `Query` elemento para especificar os namespaces que são usados nos dados XML da fonte de dados. A seguinte consulta XML usa o namespace `sales`. Os nós XML `ElementPath` para `sales:LineItems` e `sales:LineItem` usam o namespace `sales`.  
@@ -91,7 +91,7 @@ ms.locfileid: "36121640"
   
 |Elemento de consulta XML|Campos resultantes no conjunto de dados|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Valor r: http://schemas.microsoft.com/...<br /><br /> Valor b: http://schemas.microsoft.com/...<br /><br /> Valor c: http://schemas.microsoft.com/...|  
+|\<Query/>|Valor a: http://schemas.microsoft.com/...<br /><br /> Valor b: http://schemas.microsoft.com/...<br /><br /> Valor c: http://schemas.microsoft.com/...|  
 |\<xmldp:Query xmlns:xmldp = "http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns = "http://schemas.microsoft.com/..." ><br /><br /> \<xmldp:ElementPath > raiz {}/ns:Element2 / nó\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  

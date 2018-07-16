@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249506"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
   Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  
@@ -119,9 +119,9 @@ ms.locfileid: "36012199"
 ### <a name="what-can-not-be-represented-fully"></a>O que não pode ser totalmente representado  
  O que é retornado do banco de dados para o painel Resultados é em grande parte controlado pelo provedor da fonte de dados em uso. O painel Resultados não pode traduzir sempre os dados de todos os sistemas de gerenciamento de banco de dados. A seguir, alguns casos onde isso ocorre.  
   
--   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, são representados por  *\<dados binários >* ou *nulo*.  
+-   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, eles são representados por  *\<dados binários >* ou *nulo*.  
   
--   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se os dados são de um tipo de dados com maior precisão, os dados poderão ficar truncados ou poderão ser representados por  *\<não é possível ler dados >*.  
+-   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se dados forem de um tipo de dados com maior precisão, os dados poderão ficar truncados ou poderão ser representados por  *\<não é possível ler dados >*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

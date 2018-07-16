@@ -1,5 +1,5 @@
 ---
-title: Filtros para modelos de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Filtros para modelos de mineração (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312706"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
   A filtragem de modelos com base em dados ajuda na criação de modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  
@@ -47,14 +47,14 @@ ms.locfileid: "36012191"
   
 -   Usando a guia **Modelos de Mineração** no Designer de Mineração de Dados para criar condições com a ajuda das caixas de diálogo do editor de filtros.  
   
--   Digitar uma expressão de filtro diretamente para o `Filter` propriedade do modelo de mineração.  
+-   Digitando uma expressão de filtro diretamente para o `Filter` propriedade do modelo de mineração.  
   
 -   Definindo condições de filtro em um modelo de forma programática usando AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Criando filtros de modelo usando o Designer de Mineração de Dados  
  Você filtra um modelo no Designer de Mineração de Dados alterando a propriedade `Filter` do modelo de mineração. É possível digitar uma expressão de filtro diretamente no painel **Propriedades** ou abrir uma caixa de diálogo de filtros para criar condições.  
   
- Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode vincular várias condições usando `AND` / `OR` operadores. Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar `greater than` e `less than` operadores. Porém, para valores discretos, você pode usar apenas os operadores `= (equal to)`, `!= (not equal to)`e `is null`.  
+ Há duas caixas de diálogo de filtro. A primeira permite criar condições aplicadas à tabela de casos. Se a fonte de dados contiver várias tabelas, primeiro você escolherá uma tabela e, em seguida, selecionará uma coluna e especificará os operadores e as condições que se aplicam àquela coluna. Você pode unir várias condições usando `AND` / `OR` operadores. Os operadores disponíveis para definir os valores dependem se a coluna contém valores discretos ou contínuos. Por exemplo, com valores contínuos, você pode usar `greater than` e `less than` operadores. Porém, para valores discretos, você pode usar apenas os operadores `= (equal to)`, `!= (not equal to)`e `is null`.  
   
 > [!NOTE]  
 >  O `LIKE` não há suporte para a palavra-chave. Para incluir vários atributos discretos, é preciso criar várias condições separadas e vinculá-las usando o operador `OR`.  
@@ -66,7 +66,7 @@ ms.locfileid: "36012191"
   
  Por exemplo, se a tabela de casos estiver relacionada a clientes e a tabela aninhada mostrar os produtos que um cliente comprou, você poderá criar um filtro para os clientes que compraram determinados itens usando a seguinte sintaxe no filtro de tabela aninhada: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
   
- Você também pode filtrar a existência de um determinado valor na tabela aninhada usando o `EXISTS` ou `NOT EXISTS` palavras-chave e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
+ Você também pode filtrar a existência de um valor específico na tabela aninhada, usando o `EXISTS` ou `NOT EXISTS` palavras-chave e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
   
  Você pode combinar condições na tabela de casos com as condições da tabela aninhada. Por exemplo, a sintaxe a seguir inclui uma condição na tabela de casos (`Age > 30` ), uma subconsulta na tabela aninhada (`EXISTS (SELECT * FROM Products)`) e várias condições na tabela aninhada (`WHERE ProductName=’Milk’  AND Quantity>2`) ).  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36012191"
  Para obter informações sobre como usar filtros de modelo quando você estiver testando um modelo de mineração, consulte [Escolher um tipo de gráfico de precisão e definir opções de gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Sintaxe de filtro e exemplos de modelo &#40;Analysis Services – mineração de dados&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Sintaxe de filtro e exemplos de modelo &#40;Analysis Services - mineração de dados&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

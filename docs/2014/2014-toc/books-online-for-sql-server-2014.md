@@ -2,6 +2,7 @@
 title: Manuais Online do SQL Server 2014 | Microsoft Docs
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
+ms.technology: release-landing
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -17,22 +18,21 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92236bc057996a66ca12484e03154d91a1bbbd58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232522"
 ---
 # Manuais online do SQL Server 2014
-  Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contêm as descrições de tarefa e documentação de referência que descreve como executar o trabalho de inteligência de negócios e gerenciamento de dados usando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contém as descrições de tarefa e a documentação de referência que descreve como executar o trabalho de inteligência de negócios e gerenciamento de dados usando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Experimente:**  
- ![Máquina Virtual pequena do Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para girar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já está instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
+ ![Máquina Virtual pequena do Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## Tecnologias do SQL Server  
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclui várias tecnologias de gerenciamento de dados e análise. Clique nos links na tabela a seguir para localizar o recurso, a tarefa e a documentação de referência para cada tecnologia.  
@@ -50,7 +50,7 @@ ms.locfileid: "36121614"
 ## Informações do SQL Server na Web  
  A [!INCLUDE[msCoName](../includes/msconame-md.md)] publica informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em vários sites.  
   
- **Sites da Web do SQL Server**  
+ **Sites do SQL Server**  
   
 -   [SQL Server no Microsoft.com](http://go.microsoft.com/fwlink/?linkid=8504)  
   
@@ -60,9 +60,9 @@ ms.locfileid: "36121614"
   
 -   [SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Centro de desenvolvedores de plataforma de dados](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Centro de desenvolvedores da plataforma de dados](http://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [Centro de desenvolvimento XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## Consulte também  
  [Ajuda do SQL Server Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

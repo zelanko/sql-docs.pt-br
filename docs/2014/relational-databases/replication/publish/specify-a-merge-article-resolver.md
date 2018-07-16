@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fab64e66ea1a38131c4edf7e14f4ea7fb1a0fd62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5899d62f5d9293a21c875a2ae9de5016a2efb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280982"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar um resolvedor de artigo de mesclagem
   Este tópico descreve como especificar um resolvedor de artigo de mesclagem no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ ms.locfileid: "36011763"
   
 2.  Para determinar se o resolvedor desejado já está registrado, execute o [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) no Publicador em qualquer banco de dados. Isso exibe uma descrição do resolvedor personalizado bem como do identificador de classe (CLSID) para cada resolvedor baseado em COM registrado no Distribuidor ou informações sobre o assembly gerenciado para cada manipulador de lógica de negócios registrado no Distribuidor.  
   
-3.  Se o resolvedor personalizado desejado ainda não está registrado, execute o [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) no Distribuidor. Especifique um nome para o resolvedor para **@article_resolver**; para um manipulador de lógica de negócios, este é o nome amigável para o assembly. Para os resolvedores baseados em, especifique o CLSID da DLL para **@resolver_clsid**e para um manipulador de lógica de negócios, especifique um valor de `true` para **@is_dotnet_assembly**, o nome do assembly para **@dotnet_assembly_name**e o nome totalmente qualificado da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name**.  
+3.  Se o resolvedor personalizado desejado ainda não está registrado, execute o [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) no Distribuidor. Especifique um nome para o resolvedor para **@article_resolver**; para um manipulador de lógica de negócios, este é o nome amigável para o assembly. Para os resolvedores baseados em COM, especifique o CLSID da DLL para **@resolver_clsid**e para um manipulador de lógica de negócios, especifique um valor de `true` para **@is_dotnet_assembly**, o nome do assembly para o **@dotnet_assembly_name**e o nome totalmente qualificado da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  Se um assembly de manipuladores de lógica de negócios não estiver implantado no mesmo diretório que o executável Merge Agent, no mesmo diretório que o aplicativo que inicia de maneira síncrona o Merge Agent ou no GAC (cache de assembly global), você deverá especificar o caminho completo com o nome do assembly para **@dotnet_assembly_name**.  

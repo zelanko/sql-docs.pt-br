@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 006e1124bf1e7c249422a384597b20c5c98bd991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8f258200f4ffc9a7c95aaac32a932aea9be0a975
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321835"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemplo: Construindo irmãos com o modo EXPLICIT
   Assuma que você quer construir XML que forneça informações de pedidos de vendas. Observe que os elementos <`SalesPerson`> e <`OrderDetail`> são irmãos. Cada Pedido tem um elemento <`OrderHeader`>, um elemento <`SalesPerson`> e um ou mais elementos <`OrderDetail`>.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200356"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lição 13: Analisar no Excel
   Nesta lição, você usará o recurso Analisar no Excel no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para abrir o Microsoft Excel, criar automaticamente uma conexão de fonte de dados com o espaço de trabalho modelo e adicionar automaticamente uma Tabela Dinâmica à planilha. O recurso Analisar no Excel foi criado para fornecer um modo rápido e fácil de testar a eficácia do design de modelos antes da sua implantação. Você não executará análises de dados nesta lição. Esta lição visa familiarizar você, o autor modelo, com as ferramentas a serem usadas para testar seu design modelo. Diferente do uso do recurso Analisar no Excel, que se destina a autores do modelo, os usuários finais usarão aplicativos de relatórios cliente como o Excel ou o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para conectar e procurar dados modelo implantados.  
@@ -42,7 +42,7 @@ ms.locfileid: "36013228"
   
      O Excel será aberto com uma nova pasta de trabalho. Uma conexão da fonte de dados é criada usando a conta de usuário atual e a perspectiva Padrão é usada para definir campos visíveis. Uma Tabela Dinâmica é adicionada automaticamente à planilha.  
   
-3.  No Excel, no **lista de campos da tabela dinâmica**, observe o **data** e **vendas pela Internet** as medidas são exibidas, bem como o **cliente**,  **Data**, **geografia**, **produto**, **categoria de produto**, **subcategoria de produto**e **Vendas pela Internet** tabelas com todas as suas respectivas colunas aparecem.  
+3.  No Excel, nos **lista de campos da tabela dinâmica**, observe o **data** e **vendas pela Internet** as medidas são exibidas, bem como o **cliente**,  **Data**, **geografia**, **produto**, **categoria de produto**, **subcategoria de produto**e **Vendas pela Internet** tabelas com todas as suas respectivas colunas são exibidas.  
   
 4.  Feche o Excel sem salvar a pasta de trabalho.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e09f7b68748aa40620196b0402ce81521591781a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310466"
 ---
 # <a name="cross-container-transactions"></a>Transações entre contêineres
   As transações entre contêineres são as transações de usuário implícitas ou explícitas que incluem chamadas para procedimentos armazenados compilados nativamente ou para operações em tabelas com otimização de memória.  
@@ -69,7 +69,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Semântica de isolamento para operações individuais  
  Uma transação serializável T é executada em isolamento completo. É como se todas as outras transações tivessem sido confirmadas antes de T ter sido iniciada, ou elas foram iniciadas depois de T ter sido confirmada. Isso se torna mais complexo quando operações diferentes em uma transação têm diferentes níveis de isolamento.  
   
- A semântica geral dos níveis de isolamento de transação em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], junto com as implicações sobre bloqueio, é explicado em [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ A semântica geral dos níveis de isolamento de transação em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], juntamente com as implicações sobre bloqueio, é explicado na [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Para transações entre contêineres em que operações diferentes podem ter níveis de isolamento diferentes, você precisa entender a semântica de isolamento das operações de leitura individual. As operações de gravação sempre são isoladas. As gravações em transações diferentes não podem se afetar.  
   
@@ -86,7 +86,7 @@ commit
  A estabilidade garante que o sistema forneça à transação T informações sobre a leitura de dados.  
  A estabilidade se refere ao fato de as leituras de transação serem ou não repetidas. Isto é, se as leituras fossem repetidas, elas retornariam as mesmas linhas e versões de linha?  
   
- Determinadas garantias se referem à hora de término lógica da transação. De modo geral, a hora de término lógica é a hora em que a transação foi confirmada no banco de dados. Se as tabelas com otimização de memória são acessadas pela transação, a hora de término lógica, tecnicamente, é o início da fase de validação. (Para obter mais informações, consulte a discussão de tempo de vida da transação em [transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Determinadas garantias se referem à hora de término lógica da transação. De modo geral, a hora de término lógica é a hora em que a transação foi confirmada no banco de dados. Se as tabelas com otimização de memória são acessadas pela transação, a hora de término lógica, tecnicamente, é o início da fase de validação. (Para obter mais informações, consulte a discussão de tempo de vida de transação na [transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Independentemente do nível de isolamento, uma transação (T) sempre vê suas próprias atualizações:  
   
@@ -103,7 +103,7 @@ commit
  A leitura de dados tem garantia de confirmação e estabilização até a hora de término lógica da transação.  
   
  SERIALIZABLE  
- Todas as garantias de REPEATABLE READ mais impedimento de fantasma e consistência transacional em relação a todas as operações de leitura serializáveis executadas por T. fantasma impedimento significa que a operação de verificação pode retornar apenas linhas adicionais que foram escritas por T, mas nenhum linhas que foram gravadas por outras transações.  
+ Todas as garantias de REPEATABLE READ além de impedimento de fantasma e consistência transacional em relação a todas as operações de leitura serializáveis executadas por T. fantasma impedimento significa que a operação de verificação pode retornar apenas linhas adicionais que foram escritas por T, mas nenhum linhas que foram gravadas por outras transações.  
   
  Considere a seguinte transação:  
   
@@ -139,7 +139,7 @@ commit
   
  O lado baseado em disco de uma determinada transação T atingirá um determinado nível de isolamento X se uma das seguintes condições for atendida:  
   
--   Ela inicia em X. Ou seja, o padrão da sessão era X, seja porque você executou `SET TRANSACTION ISOLATION LEVEL`, ou é o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] padrão.  
+-   Ele inicia em X. Ou seja, o padrão da sessão era X, seja porque você executou `SET TRANSACTION ISOLATION LEVEL`, ou é o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] padrão.  
   
 -   Durante a transação, o nível de isolamento padrão foi alterado para X usando `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -187,11 +187,11 @@ commit
   
  As transações somente leitura entre contêineres no modo de confirmação automática são simplesmente revertidas no fim da transação. Nenhuma validação é executada.  
   
- As transações somente leitura entre contêineres explícitas ou implícitas executarão a validação no momento da confirmação se a transação acessar tabelas com otimização de memória no isolamento REPEATABLE READ ou SERIALIZABLE. Para obter detalhes sobre a validação de consulte a seção sobre detecção de conflito, validação e verificações de dependência de confirmação em [transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ As transações somente leitura entre contêineres explícitas ou implícitas executarão a validação no momento da confirmação se a transação acessar tabelas com otimização de memória no isolamento REPEATABLE READ ou SERIALIZABLE. Para obter detalhes sobre a validação de consulte a seção sobre detecção de conflito, validação, e verificações de dependência de confirmação em [transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Compreendendo transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Diretrizes para lógica de repetição das transações em tabelas com otimização de memória](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

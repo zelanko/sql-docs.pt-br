@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227406"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "36116932"
 |Instâncias do contador de Recursos Preteridos do SQL Server|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir pelo `SELECT column_list FROM`  *\< nome_da_função >*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'@' e nomes que começam com '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Um identificador que começa com @ ou @@ foi encontrado. Não use @, @@ ou nomes que comecem com @@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'`tape`' foi encontrado. Use sp_addumpdevice'`disk`' em vez disso. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
@@ -165,7 +165,7 @@ ms.locfileid: "36116932"
 |sp_configure 'set working set size'|A opção set working set size de sp_configure foi encontrada. Não é mais possível configurar working set size. Não use. Ocorre uma vez por consulta.|  
 |sp_control_dbmasterkey_password|O procedimento armazenado sp_control_dbmasterkey_password não verifica se uma chave mestra existe. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, deverá existir uma chave mestra e a senha usada no procedimento armazenado sp_control_dbmasterkey_password deverá ser a mesma senha usada para criptografar a chave mestra do banco de dados.|  
 |sp_create_removable|O procedimento sp_create_removable foi encontrado. Em vez disso, use CREATE DATABASE. Ocorre uma vez por consulta.|  
-|sp_db_vardecimal_storage_format|O uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
+|sp_db_vardecimal_storage_format|Uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
 |sp_dbcmptlevel|O procedimento sp_dbcmptlevel foi encontrado. Em vez disso, use ALTER DATABASE … SET COMPATIBILITY_LEVEL. Ocorre uma vez por consulta.|  
 |sp_dbfixedrolepermission|O procedimento sp_dbfixedrolepermission foi encontrado. Não use. Ocorre uma vez por consulta.|  
 |sp_dboption|O procedimento sp_dboption foi encontrado. Em vez disso, use ALTER DATABASE e DATABASEPROPERTYEX. Ocorre uma vez por compilação.|  
@@ -183,7 +183,7 @@ ms.locfileid: "36116932"
 |sp_droprole|O procedimento sp_droprole foi encontrado. Em vez disso, use DROP ROLE. Ocorre uma vez por consulta.|  
 |sp_droptype|O procedimento sp_droptype foi encontrado. Em vez disso, use DROP TYPE.|  
 |sp_dropuser|O procedimento sp_dropuser foi encontrado. Em vez disso, use DROP USER. Ocorre uma vez por consulta.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|O uso de `vardecimal` o formato de armazenamento foi encontrado. Use compactação de dados e sp_estimate_data_compression_savings em vez disso.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Uso de `vardecimal` o formato de armazenamento foi encontrado. Use compactação de dados e sp_estimate_data_compression_savings em vez disso.|  
 |sp_fulltext_catalog|O procedimento sp_fulltext_catalog foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT CATALOG. Ocorre uma vez por compilação.|  
 |sp_fulltext_column|O procedimento sp_fulltext_column foi encontrado. Em vez disso, use ALTER FULLTEXT INDEX. Ocorre uma vez por compilação.|  
 |sp_fulltext_database|O procedimento sp_fulltext_database foi encontrado. Em vez disso, use ALTER DATABASE. Ocorre uma vez por compilação.|  
@@ -255,11 +255,11 @@ ms.locfileid: "36116932"
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
 |TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
 |TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
-|timestamp|Número total de vezes preterido `timestamp` foi encontrado o tipo de dados em uma instrução DDL. Use o `rowversion` em vez disso, o tipo de dados.|  
+|timestamp|Número total de vezes preteridas `timestamp` foi encontrado o tipo de dados em uma instrução DDL. Use o `rowversion` em vez disso, o tipo de dados.|  
 |UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para usar o `varchar(max)` tipo de dados e removido `text`, `ntext`, e `image` sintaxe de tipo de dados. Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
-|Formato de armazenamento vardecimal|O uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
+|Formato de armazenamento vardecimal|Uso de `vardecimal` o formato de armazenamento foi encontrado. Em vez disso, use a compactação de dados.|  
 |XMLDATA|A sintaxe FOR XML foi encontrada. Use a geração de XSD para os modos RAW e AUTO. Não há nenhuma substituição para o modo explícito. Ocorre uma vez por compilação.|  
 |XP_API|Uma instrução de procedimento armazenado estendido foi encontrada. Não use.|  
 |xp_grantlogin|O procedimento xp_grantlogin foi encontrado. Em vez disso, use CREATE LOGIN. Ocorre uma vez por compilação.|  
@@ -272,7 +272,7 @@ ms.locfileid: "36116932"
  [Classe de evento Deprecation Announcement](../event-classes/deprecation-announcement-event-class.md)   
  [Classe de evento Deprecation Final Support](../event-classes/deprecation-final-support-event-class.md)   
  [Funcionalidade do mecanismo de banco de dados descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Recursos de pesquisa de texto completo no SQL Server 2014 descontinuados](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+ [Pesquisa de texto completo recursos descontinuados no SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Usar objetos do SQL Server](use-sql-server-objects.md)  
   
   

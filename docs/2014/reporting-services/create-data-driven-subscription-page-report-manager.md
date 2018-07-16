@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223216"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
   Use a página Criar Assinatura Controlada por Dados para criar ou modificar uma assinatura que consulta um banco de dados de assinante para informações de assinatura cada vez que a assinatura é executada. Assinaturas controladas por dados usam resultados de consulta para determinar os destinatários da assinatura, as configurações de entrega e os valores de parâmetro do relatório. Em tempo de execução, o servidor de relatórioss executa uma consulta para obter valores usados nas configurações da assinatura. Você pode usar a página Criar Assinatura Controlada por Dados para definir a consulta e atribuir valores de consulta às configurações de assinatura. Os valores e as opções especificadas para uma assinatura controlada por dados são divididos entre várias páginas, semelhantes a um assistente. Há sete páginas ao todo.  
@@ -51,7 +51,7 @@ ms.locfileid: "36121875"
  **Descrição**  
  Forneça uma descrição para a assinatura. A descrição aparece em listas de assinatura em **Minhas Assinaturas** e na guia **Assinaturas** do relatório.  
   
- **Especificar como os destinatários devem ser notificados**  
+ **Especificar como os destinatários serão notificados**  
  Selecione a extensão de entrega a ser usada para distribuir o relatório. Somente uma extensão de entrega pode ser usada para cada assinatura. As seguintes opções estão disponíveis:  
   
 -   Selecione **Compartilhamento de Arquivo do Servidor de Relatório** para entregar os relatórios a um compartilhamento de arquivos. O relatório será entregue como um arquivo estático, desconectado do servidor de relatório. Para obter mais informações, consulte [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "36121875"
   
 -   Selecione **Provedor de Entrega Nulo** para entregar relatórios ao banco de dados do servidor de relatório. Essa opção cria instantâneos de relatório. Escolha essa opção quando quiser carregar antecipadamente o servidor de relatório com instantâneos de relatório com parâmetros ou específico de usuário em um agendamento específico. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Especifique uma fonte de dados que contém informações sobre o destinatário**  
+ **Especifique uma fonte de dados que contém informações de destinatário**  
  Especifique como a conexão da fonte de dados é definida. Você poderá escolher uma fonte de dados compartilhada se tiver uma com as informações de conexão necessárias. Você também pode especificar informações de conexão diretamente nessa assinatura.  
   
  A fonte de dados fornece dados do assinante. Esses dados podem consistir em nomes de funcionário, IDs de funcionário, endereços de email e preferência para formatação de exportação (como HTML ou PDF). Se você estiver usando a extensão de entrega de email do servidor de relatórios, a fonte de dados deve conter endereços de email.  
@@ -113,7 +113,7 @@ ms.locfileid: "36121875"
  Especifica um nome de arquivo para o relatório. A extensão de entrega do arquivo entrega um relatório como um arquivo de aplicativo estático a uma pasta compartilhada. Na maioria dos casos, você deve usar um valor do banco de dados para criar o nome do arquivo. Dependendo da definição do modo de gravação, o uso de um valor estático pode fazer com que cada nova entrega substitua a entrega anterior.  
   
  **Caminho**  
- Especifique uma pasta compartilhada que é acessível em uma conexão de rede. Para verificar se a pasta é acessível, clique em **executar** no menu Iniciar e insira o caminho da pasta neste formato: \\ \\< NomeDoComputador\>\\< sharedfoldername\>.  
+ Especifique uma pasta compartilhada que é acessível em uma conexão de rede. Para verificar se a pasta é acessível, clique em **executados** no menu Iniciar e insira o caminho da pasta neste formato: \\ \\< NomeDoComputador\>\\< nomedapastacompartilhada\>.  
   
  **Formato de renderização**  
  Especifique o formato de saída do arquivo. O servidor de relatório pode gravar o arquivo em formatos de aplicativo das extensões de renderização instaladas no servidor de relatório.  
@@ -155,7 +155,7 @@ ms.locfileid: "36121875"
  Defina uma agenda que executa de hora em hora.  
   
  **Diário**  
- Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias dos seguintes modos: cada  *\<dia >*, cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+ Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: cada  *\<dia >*, cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
  **Semanal**  
  Define uma agenda que executa em intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser em semanas completas (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
@@ -177,7 +177,7 @@ ms.locfileid: "36121875"
  [Assinaturas controladas por dados](subscriptions/data-driven-subscriptions.md)   
  [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

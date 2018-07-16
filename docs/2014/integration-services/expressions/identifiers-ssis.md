@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295046"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -116,9 +116,9 @@ ms.locfileid: "36117022"
 > [!IMPORTANT]  
 >  Você deve colocar entre colchetes a combinação de namespace e nome de variável qualificado para que o avaliador de expressão reconheça a variável.  
   
- Se o valor de **contagem** no **usuário** namespace é 10 e o valor de **contagem** na **MyNamespace** é 2, a expressão será avaliada como `true` porque o avaliador de expressão reconhece duas variáveis diferentes.  
+ Se o valor de **contagem** na **usuário** namespace for 10 e o valor de **contagem** na **MyNamespace** é 2, a expressão será avaliada como `true` porque o avaliador de expressão reconhece duas variáveis diferentes.  
   
- Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir pretendia comparar os valores (10 e 2) para separar duas **contagem** variáveis, mas a expressão é avaliada como `false` porque o avaliador de expressão usa a mesma instância do  **Contagem de** variável duas vezes.  
+ Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir pretendia comparar os valores (10 e 2) para dois separado **contagem** variáveis, mas a expressão é avaliada como `false` porque o avaliador de expressão usa a mesma instância das  **Contagem de** variável duas vezes.  
   
 ```  
 @Count > @Count  

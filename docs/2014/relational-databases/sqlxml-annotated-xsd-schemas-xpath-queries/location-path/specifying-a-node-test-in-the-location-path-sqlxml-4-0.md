@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca3eff7a8d915588d632dc12ff94e42d946d8aad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8f383e8c1a8fbf16d10d4f8633d1e05a385cd74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307576"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificando um teste de nó no caminho do local (SQLXML 4.0)
   Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todo eixo (`child`, `parent`, `attribute` ou `self`) tem um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é  **\<atributo >**. Para o `parent`, `child`, e `self` eixos, o tipo de nó principal é  **\<elemento >**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36006551"
 ## <a name="node-test-example-1"></a>Teste de nó: Exemplo 1  
  O caminho do local `child::Customer` seleciona  **\<cliente >** elementos filhos do nó de contexto.  
   
- Neste exemplo, `child` é o eixo e `Customer` é o teste de nó. O tipo de nó principal para o `child` eixo é  **\<elemento >**. Portanto, o teste de nó será TRUE se o  **\<cliente >** nó é um  **\<elemento >** nó. Se o nó de contexto não tiver nenhuma  **\<cliente >** filhos, um conjunto de nós vazio será retornado.  
+ Neste exemplo, `child` é o eixo e `Customer` é o teste de nó. O tipo de nó principal para o `child` eixo é  **\<elemento >**. Portanto, o teste de nó será TRUE se o  **\<cliente >** nó for um  **\<elemento >** nó. Se o nó de contexto não tiver nenhuma  **\<cliente >** filhos, um conjunto de nós vazio será retornado.  
   
 ## <a name="node-test-example-2"></a>Teste de nó: exemplo 2  
  O caminho do local `attribute::CustomerID` seleciona o **CustomerID** atributo do nó de contexto.  
@@ -44,7 +44,7 @@ ms.locfileid: "36006551"
  No exemplo, `attribute` é o eixo e `CustomerID` é o teste de nó. O tipo de nó principal do `attribute` eixo é  **\<atributo >**. Portanto, o teste de nó será TRUE se **CustomerID** é um  **\<atributo >** nó. Se o nó de contexto não tiver nenhuma **CustomerID**, um conjunto de nós vazio será retornado.  
   
 > [!NOTE]  
->  Nessa implementação do XPath, se uma etapa de local refere-se a uma  **\<elemento >** ou um  **\<atributo >** tipo que não está declarado no esquema, será gerado um erro. Isto é diferente da implementação de XPath em MSXML, que retorna um conjunto de nós vazio.  
+>  Nessa implementação de XPath, se uma etapa de local se refere a um  **\<elemento >** ou uma  **\<atributo >** tipo que não está declarado no esquema, um erro será gerado. Isto é diferente da implementação de XPath em MSXML, que retorna um conjunto de nós vazio.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintaxe abreviada para os eixos  
  A sintaxe abreviada a seguir para o caminho de local tem suporte:  

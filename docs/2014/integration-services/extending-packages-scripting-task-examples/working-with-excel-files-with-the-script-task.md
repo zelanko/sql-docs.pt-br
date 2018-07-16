@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192116"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece o gerenciador de conexões do Excel, a origem do Excel e o destino do Excel para trabalhar com dados armazenados em planilhas no formato de arquivo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. As técnicas descritas neste tópico utilizam a tarefa Script para obter informações sobre bancos de dados (arquivos de pasta de trabalho) e tabelas (planilhas e intervalos nomeados) do Excel disponíveis. Esses exemplos podem ser facilmente modificados para funcionar com quaisquer das outras fontes de dados com base em arquivo suportadas pelo Provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -84,7 +84,7 @@ ms.locfileid: "36020291"
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Adicionar uma tarefa Script nova ao pacote e altere seu nome para `ExcelFileExists`.  
+1.  Adicione uma tarefa Script nova ao pacote e altere seu nome para `ExcelFileExists`.  
   
 2.  No **Editor da Tarefa Script**, na guia **Script**, clique em **ReadOnlyVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36020291"
   
          -ou-  
   
-    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o `ExcelFile` variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, na **selecionar variáveis** caixa de diálogo, selecione o `ExcelFile` variável.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36020291"
   
          -ou-  
   
-    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o `ExcelFileExists` variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, na **selecionar variáveis** caixa de diálogo, selecione o `ExcelFileExists` variável.  
   
 4.  Clique em **Editar Script** para abrir o editor de scripts.  
   
@@ -154,15 +154,15 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Adicionar uma tarefa Script nova ao pacote e altere seu nome para `ExcelTableExists`.  
+1.  Adicione uma tarefa Script nova ao pacote e altere seu nome para `ExcelTableExists`.  
   
 2.  No **Editor da Tarefa Script**, na guia **Script**, clique em **ReadOnlyVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
-    -   Tipo `ExcelTable` e `ExcelFile` separados por vírgulas`.`  
+    -   Tipo de `ExcelTable` e `ExcelFile` separados por vírgulas`.`  
   
          -ou-  
   
-    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o `ExcelTable` e `ExcelFile` variáveis.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, na **selecionar variáveis** caixa de diálogo, selecione o `ExcelTable` e `ExcelFile` variáveis.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -170,7 +170,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, no **selecionar variáveis** caixa de diálogo, selecione o `ExcelTableExists` variável.  
+    -   Clique no botão de reticências (**...** ) botão próximo ao campo de propriedade e, na **selecionar variáveis** caixa de diálogo, selecione o `ExcelTableExists` variável.  
   
 4.  Clique em **Editar Script** para abrir o editor de scripts.  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
 2.  Abra o **Editor da Tarefa Script**, na guia **Script**, clique em **ReadOnlyVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
-    -   Tipo de `ExcelFolder`  
+    -   Tipo `ExcelFolder`  
   
          -ou-  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238356"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
   Membros calculados são membros de uma dimensão ou um grupo de medidas definidos com base em uma combinação de dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado que possa calcular a soma de duas medidas físicas no cubo. As definições de um membro calculado são armazenadas em cubos, mas seus valores são calculados no momento da consulta.  
@@ -91,7 +91,7 @@ ms.locfileid: "36121805"
   
 12. Na barra de ferramentas do **cálculos** , clique em **exibição de formulário**, verifique `[Total Sales Amount]` está selecionado no **organizador de Script** painel e clique  **Novo membro calculado**.  
   
-13. Alterar o nome desse novo membro calculado para `[Total Product Cost]`e, em seguida, crie a seguinte expressão no **expressão** caixa:  
+13. Altere o nome do novo membro calculado para `[Total Product Cost]`, em seguida, crie a seguinte expressão na **expressão** caixa:  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -105,7 +105,7 @@ ms.locfileid: "36121805"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>Definindo cálculos de margem de lucro bruto  
   
-1.  Verifique `[Total Product Cost]` está selecionado no **organizador de Script** painel e clique **novo membro calculado** na barra de ferramentas do **cálculos** guia.  
+1.  Verifique `[Total Product Cost]` está selecionado na **organizador de Script** painel e clique **novo membro calculado** na barra de ferramentas do **cálculos** guia.  
   
 2.  No **nome** , altere o nome dessa nova medida calculada para `[Internet GPM]`.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36121805"
   
 16. Na barra de ferramentas da guia **Cálculos** , clique em **Exibição de Script** e verifique os três cálculos que foram adicionados ao script de cálculo.  
   
-17. Adicione uma nova linha no script de cálculo imediatamente antes do `[Internet GPM]` cálculo e, em seguida, adicione o seguinte texto ao script em sua própria linha:  
+17. Adicione uma nova linha ao script de cálculo imediatamente antes o `[Internet GPM]` cálculo e, em seguida, adicione o seguinte texto ao script em sua própria linha:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -175,7 +175,7 @@ ms.locfileid: "36121805"
   
      Se você clicar no membro calculado final no painel **Organizador de Script** antes de clicar em **Novo Membro Calculado** , o novo membro calculado será inserido no final do script. Os scripts são executados na ordem em que aparecem no painel **Organizador de Script** .  
   
-3.  Alterar o nome desse novo membro calculado para `[Internet Sales Ratio to All Products]`.  
+3.  Altere o nome do novo membro calculado para `[Internet Sales Ratio to All Products]`.  
   
 4.  Na caixa **Expressão** , digite o seguinte:  
   
@@ -198,7 +198,7 @@ ms.locfileid: "36121805"
   
 7.  Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-8.  Alterar o nome desse membro calculado para `[Reseller Sales Ratio to All Products]`.  
+8.  Altere o nome do membro calculado para `[Reseller Sales Ratio to All Products]`.  
   
 9. Na caixa **Expressão** , digite o seguinte:  
   
@@ -219,7 +219,7 @@ ms.locfileid: "36121805"
   
 12. Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
-13. Alterar o nome desse membro calculado para `[Total Sales Ratio to All Products]`.  
+13. Altere o nome do membro calculado para `[Total Sales Ratio to All Products]`.  
   
 14. Na caixa **Expressão** , digite o seguinte:  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36121805"
   
 17. Na barra de ferramentas da guia **Cálculos** , clique em **Exibição de Script**e verifique os três cálculos que foram adicionados ao script de cálculo.  
   
-18. Adicione uma nova linha no script de cálculo imediatamente antes do `[Internet Sales Ratio to All Products]` cálculo e, em seguida, adicione o seguinte texto ao script em sua própria linha:  
+18. Adicione uma nova linha ao script de cálculo imediatamente antes o `[Internet Sales Ratio to All Products]` cálculo e, em seguida, adicione o seguinte texto ao script em sua própria linha:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -276,7 +276,7 @@ ms.locfileid: "36121805"
   
      Observe que a margem de lucro bruto das vendas do revendedor é significativamente mais baixa que as vendas pela Internet, conforme mostrado na imagem a seguir.  
   
-     ![Painel dados mostrando as vendas de revendedor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "painel dados mostrando as vendas do revendedor")  
+     ![Painel dados mostrando as vendas do revendedor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "painel dados mostrando as vendas do revendedor")  
   
 9. Adicione as medidas **Taxa de Vendas Total para Todos os Produtos**, **Taxa de Vendas pela Internet para Todos os Produtos**e **Taxa de Vendas do Revendedor para Todos os Produtos** à área de Valores.  
   

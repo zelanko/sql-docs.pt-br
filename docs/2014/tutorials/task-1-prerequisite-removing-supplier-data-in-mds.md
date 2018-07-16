@@ -10,23 +10,23 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1189c064ec1a55da1c77837d1533855266ed4274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171997"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarefa 1 (pré-requisito): Removendo os dados do fornecedor no MDS
   Nesta tarefa, você removerá os dados do fornecedor armazenados no MDS. Você carregou os dados manualmente usando **Suplemento MDS do Excel** na lição anterior. O pacote SSIS que será criado nesta lição carregará automaticamente os dados no MDS para você. Consequentemente, antes de testar o pacote SSIS, será necessário remover os dados do fornecedor do MDS, remover da hierarquia derivada, remover entidades de fornecedor e estado e criar a entidade do fornecedor sem dados.  
   
-1.  Iniciar **Master Data Manager** navegando até **http://localhost/MDS** ou o site e o aplicativo que você especificou quando configurar o MDS. Se você tiver mantido o **Master Data Manager** aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para alternar para a **home page**.  
+1.  Inicie **Master Data Manager** navegando até **http://localhost/MDS** ou o site e o aplicativo que você especificou ao configurar o MDS. Se você tiver mantido o **Master Data Manager** aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para alternar para a **home page**.  
   
 2.  Clique em **Administração do Sistema** na seção **Tarefas Administrativas** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36130674"
   
     2.  Na caixa de diálogo Adicionar nova Conexão, digite **servidor MDS Local** para **descrição** e **http://localhost/MDS** para **endereço do servidor MDS**, e clique em **Okey** para fechar a caixa de diálogo.  
   
-15. Em **gerenciar conexões** caixa de diálogo, selecione **servidor MDS Local** (http://localhost/MDS), clique em **teste** para testar a conexão. Clique em **OK** na caixa de mensagem.  
+15. Na **gerenciar conexões** caixa de diálogo, selecione **servidor MDS Local** (http://localhost/MDS), clique em **testar** para testar a conexão. Clique em **OK** na caixa de mensagem.  
   
 16. Clique em **Conectar** para estabelecer uma conexão com o servidor MDS.  
   

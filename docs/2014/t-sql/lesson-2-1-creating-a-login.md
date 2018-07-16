@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312766"
 ---
 # <a name="creating-a-login"></a>criando um logon
   Para acessar o [!INCLUDE[ssDE](../includes/ssde-md.md)], os usuários precisam de um logon. O logon pode representar a identidade do usuário como conta do Windows ou como membro de um grupo do Windows, ou o logon pode ser um logon do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que exista apenas no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sempre que possível, você deverá usar a Autenticação do Windows.  
@@ -30,7 +30,7 @@ ms.locfileid: "36011035"
   
 ### <a name="to-create-a-new-windows-account"></a>Para criar uma nova conta do Windows  
   
-1.  Clique em **iniciar**, clique em **executar**, no **abrir** , digite `%SystemRoot%\system32\compmgmt.msc /s`e, em seguida, clique em **Okey** para abrir o programa de gerenciamento do computador.  
+1.  Clique em **inicie**, clique em **execute**, no **abrir** , digite `%SystemRoot%\system32\compmgmt.msc /s`e, em seguida, clique em **Okey** para abrir o programa de gerenciamento do computador.  
   
 2.  Em **Ferramentas do Sistema**, expanda **Usuários e Grupos Locais**, clique com o botão direito do mouse em **Usuários**e clique em **Novo Usuário**.  
   

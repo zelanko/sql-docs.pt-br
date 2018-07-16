@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9b2d768289a89646566f1eacd37132223bf7a3e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4619f13251e7b514234e5cd71201f16f0819a2a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308236"
 ---
 # <a name="cube-element-olapinfo-xmla"></a>Elemento Cube (OlapInfo) (XMLA)
   Contém informações sobre um cubo para o pai [CubeInfo](cubeinfo-element-xmla.md) elemento.  

@@ -20,18 +20,18 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225166"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificando predicados com valor booliano em consultas XPath (SQLXML 4.0)
-  Os exemplos a seguir mostram como os predicados com valor booliano são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para obter exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Os exemplos a seguir mostram como os predicados com valor booliano são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36117396"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (BooleanValuedPredicatesA.xml) e o salve no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36117396"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar predicados sucessivos e aninhados  
- A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os a  **\<cliente >** elementos filho do nó de contexto que tem um **SalesPersonID** atributo com um valor 277 e um **TerritoryID**atributo com um valor de 3:  
+ A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os as  **\<cliente >** elementos filho do nó de contexto que têm ambos um **SalesPersonID** atributo com um valor 277 e um **TerritoryID**atributo com um valor de 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- A consulta retorna o  **\<cliente >** elementos que satisfazem as condições especificadas nos predicados.  
+ A consulta retorna os  **\<cliente >** elementos que satisfazem as condições especificadas nos predicados.  
   
  Um atalho para o `attribute` eixo (@) podem ser especificados e porque o `child` eixo é o padrão, ele pode ser omitido da consulta:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36117396"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- A consulta XPath a seguir ilustra o uso de predicados aninhados. A consulta retorna todos os  **\<cliente >** elementos filho do nó de contexto que incluem  **\<ordem >** elementos filho com pelo menos um  **\<Ordem >** elemento que tem um **SalesPersonID** valor de 2 do atributo.  
+ A consulta XPath a seguir ilustra o uso de predicados aninhados. A consulta retorna todos os  **\<cliente >** elementos filho do nó de contexto que incluem  **\<ordem >** elementos filho com pelo menos um  **\<Ordem >** elemento que tem um **SalesPersonID** atributo valor de 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -116,7 +116,7 @@ ms.locfileid: "36117396"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (nestedSuccessive.xml) e o salve no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36117396"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Especificar um predicado de nível superior  
- A consulta a seguir retorna o  **\<cliente >** nós de elemento filho do nó de contexto que têm  **\<ordem >** filhos do elemento. A consulta testa o caminho de local como o predicado de nível superior:  
+ A seguinte consulta retorna o  **\<cliente >** nós de elemento filho do nó de contexto que têm  **\<Order >** filhos do elemento. A consulta testa o caminho de local como o predicado de nível superior:  
   
 ```  
 /child::Customer[child::Order]  
@@ -185,7 +185,7 @@ ms.locfileid: "36117396"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (TopLevelPredicate.xml) e o salve no diretório em que SampleSchema1.xml foi salvo.  
   

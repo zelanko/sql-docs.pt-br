@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a58b048255bd0f079f6fc8d22d4666a3f4ced29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289522"
 ---
 # <a name="fontname-element-assl"></a>Elemento FontName (ASSL)
-  Descreve características de exibição relacionadas à fonte de [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [medidas](../objects/measure-element-assl.md) elemento pai.  
+  Descreve características de exibição relacionadas à fonte de [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [medida](../objects/measure-element-assl.md) elemento pai.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36117726"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `FontName` propriedade contém uma expressão MDX (Multidimensional Expressions) e se aplica a `CalculationProperty` elementos que têm um [CalculationType](calculationtype-element-assl.md) de *membro* ou *células* .  
+ O `FontName` propriedade contém uma expressão MDX (Multidimensional Expressions) e aplica-se ao `CalculationProperty` elementos que têm um [CalculationType](calculationtype-element-assl.md) dos *membro* ou *células* .  
   
- Os elementos que correspondem aos pais de `FontName` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
+ Os elementos que correspondem aos pais de `FontName` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

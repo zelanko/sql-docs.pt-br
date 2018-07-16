@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286362"
 ---
 # <a name="browsing-a-neural-network-model"></a>Procurando um modelo de rede neural
   Quando você abre uma rede neural ou modelo de regressão logística usando **Procurar**, o modelo é exibido em um visualizador interativo, semelhante ao visualizador de modelo da rede neural no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar correlações e obter informações sobre os padrões no modelo e os dados subjacentes.  
@@ -64,7 +64,7 @@ ms.locfileid: "36120232"
   
      Para Renda, a coluna foi subdividida em agrupamentos como 78,4-154,06 (para o intervalo de renda mais alto).  
   
-     ![classificação para ver como as variáveis foram compartimentadas](media/dm13-nn-bucketing-variables.gif "classificação para ver como as variáveis foram compartimentadas")  
+     ![classificação para exibir como as variáveis foram compartimentadas](media/dm13-nn-bucketing-variables.gif "classificação para exibir como as variáveis foram compartimentadas")  
   
      Se você quiser agrupamentos diferentes, deverá usar a ferramenta [Rotular novamente &#40;Suplementos de Mineração de Dados do SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md) ou funções do Excel, para criar novas categorias de renda antes de criar o modelo.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36120232"
   
 1.  Suponha que você queira definir como destino um grupo específico e ver os fatores que mais influenciam a compra nesse grupo.  
   
-     No **entrada** painel, clique no  **\<todos os >** célula em **atributo**e selecione **idade**.  
+     No **entrada** painel, clique no  **\<todos os >** célula sob **atributo**e selecione **idade**.  
   
      Para **Valor**, selecione a categoria de idade mais nova.  
   

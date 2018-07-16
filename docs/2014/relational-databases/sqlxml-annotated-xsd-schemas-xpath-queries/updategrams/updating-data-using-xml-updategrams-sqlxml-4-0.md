@@ -1,5 +1,5 @@
 ---
-title: Atualizando dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs
+title: Atualização de dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9afe66f664bf5e1e750ddef529bd9001d776ef82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251738"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
-  Quando você atualizar os dados existentes, você deve especificar ambos os  **\<antes >** e  **\<depois >** blocos. Os elementos especificados no  **\<antes >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados no  **\<antes >** bloco para identificar os registros existentes no banco de dados. Os elementos correspondentes no  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
+  Quando você atualiza os dados existentes, você deve especificar ambos os  **\<antes de >** e  **\<depois >** blocos. Os elementos especificados na  **\<antes de >** e  **\<depois >** blocos descrevem a alteração desejada. O diagrama usa o elemento (s) que é especificados na  **\<antes de >** bloco para identificar os registros existentes no banco de dados. O elemento (s) correspondente na  **\<depois >** bloco indicam como os registros devem aparecer depois de executar a operação de atualização. Com essas informações, o diagrama de atualização cria uma instrução SQL que corresponde a  **\<depois >** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
   
  Este é o formato do diagrama de atualização para uma operação de atualização:  
   
@@ -59,21 +59,21 @@ ms.locfileid: "36116113"
 ```  
   
  `<updg:before>`  
- Os elementos de  **\<antes >** bloco identificam os registros existentes nas tabelas de banco de dados.  
+ Os elementos na  **\<antes de >** bloco identificam os registros existentes nas tabelas de banco de dados.  
   
  `<updg:after>`  
- Os elementos no  **\<depois >** bloco descrevem como os registros especificados no  **\<antes >** bloco deve aparecer depois que as atualizações são aplicadas.  
+ Os elementos na  **\<depois >** bloco descrevem como os registros especificados no  **\<antes >** bloco deve se parecer após as atualizações são aplicadas.  
   
- O atributo `mapping-schema` identifica o esquema de mapeamento a ser usado pelo diagrama de atualização. Se o diagrama Especifica um esquema de mapeamento, os nomes de elementos e atributos especificados no  **\<antes >** e  **\<depois >** blocos devem corresponder aos nomes no esquema. O esquema de mapeamento mapeia esses nomes de elemento ou atributo para os nomes de tabela de banco de dados e de coluna.  
+ O atributo `mapping-schema` identifica o esquema de mapeamento a ser usado pelo diagrama de atualização. Se o diagrama Especifica um esquema de mapeamento, os nomes de elementos e atributos especificados nos  **\<antes de >** e  **\<depois >** blocos devem corresponder aos nomes no esquema. O esquema de mapeamento mapeia esses nomes de elemento ou atributo para os nomes de tabela de banco de dados e de coluna.  
   
- Se um diagrama de atualização não especificar um esquema, o diagrama usará mapeamento padrão. No mapeamento padrão, o  **\<ElementName >** especificado no diagrama de atualização mapeará para a tabela de banco de dados e o mapa de atributos ou elementos filho para as colunas de banco de dados.  
+ Se um diagrama de atualização não especificar um esquema, o diagrama usará mapeamento padrão. No mapeamento padrão, o  **\<ElementName >** especificado no diagrama de atualização mapeará para a tabela de banco de dados e o mapa de elementos ou atributos filho para as colunas de banco de dados.  
   
- Um elemento de  **\<antes >** bloco deve corresponder com apenas uma linha de tabela no banco de dados. Se o elemento corresponde a várias linhas de tabela ou não corresponde a nenhuma linha de tabela, o diagrama de atualização retornará um erro e cancelará todo o  **\<sincronização >** bloco.  
+ Um elemento de  **\<antes de >** bloco deve corresponder com apenas uma linha de tabela no banco de dados. Se o elemento corresponde a várias linhas da tabela ou não corresponde a nenhuma linha de tabela, o diagrama de atualização retornará um erro e cancelará todo o  **\<sincronização >** bloco.  
   
- Um diagrama de atualização pode incluir vários  **\<sincronização >** blocos. Cada  **\<sincronização >** bloco é tratado como uma transação. Cada  **\<sincronização >** bloco pode ter vários  **\<antes >** e  **\<depois >** blocos. Por exemplo, se você estiver atualizando dois dos registros existentes, você pode especificar dois  **\<antes >** e  **\<depois >** pares, uma para cada registro sendo atualizado.  
+ Um diagrama de atualização pode incluir vários  **\<sincronização >** blocos. Cada  **\<sincronização >** bloco é tratado como uma transação. Cada  **\<sincronização >** bloco pode ter vários  **\<antes >** e  **\<depois >** blocos. Por exemplo, se você estiver atualizando dois dos registros existentes, você pode especificar dois  **\<antes de >** e  **\<depois >** pares, um para cada registro que está sendo atualizado.  
   
 ## <a name="using-the-updgid-attribute"></a>Usando o atributo updg:id  
- Quando forem especificados vários elementos no  **\<antes >** e  **\<depois >** blocos, use o `updg:id` atributo para marcar linhas no  **\<antes >** e  **\<depois >** blocos. A lógica de processamento usa essas informações para determinar qual registro no  **\<antes >** bloquear combina com qual registro no  **\<depois >** bloco.  
+ Quando forem especificados vários elementos na  **\<antes de >** e  **\<depois >** blocos, use o `updg:id` atributo para marcar linhas no  **\<antes de >** e  **\<depois >** blocos. A lógica de processamento usa essas informações para determinar qual registro na  **\<antes de >** bloquear combina com qual registro no  **\<depois >** bloco.  
   
  O atributo `updg:id` não será necessário (embora recomendado) se alguma das seguintes situações existir:  
   
@@ -81,13 +81,13 @@ ms.locfileid: "36116113"
   
 -   Há um ou mais valor específico fornecido para o campo chave no diagrama de atualização.  
   
- Se é o caso, o diagrama usa as colunas de chave que são especificadas no `sql:key-fields` emparelhar os elementos no  **\<antes >** e  **\<depois >** blocos.  
+ Se for o caso, tanto o diagrama usa as colunas de chave são especificadas no `sql:key-fields` para emparelhar os elementos a  **\<antes de >** e  **\<depois >** blocos.  
   
  Se o esquema de mapeamento não identificar as colunas de chave (usando `sql:key-fields`) ou se o diagrama de atualização estiver atualizando um valor da coluna de chave, você deverá especificar `updg:id`.  
   
- Os registros que são identificados no  **\<antes >** e  **\<depois >** blocos não precisam estar na mesma ordem. O `updg:id` atributo força a associação entre os elementos que são especificados no  **\<antes >** e  **\<depois >** blocos.  
+ Os registros que são identificados na  **\<antes de >** e  **\<depois >** blocos é preciso estar na mesma ordem. O `updg:id` atributo força a associação entre os elementos que são especificados na  **\<antes de >** e  **\<depois >** blocos.  
   
- Se você especificar um elemento o  **\<antes >** bloco e somente um elemento correspondente no  **\<depois >** bloquear, usando `updg:id` não é necessário. Porém, é recomendado que você especifique `updg:id` de qualquer maneira para evitar ambiguidade.  
+ Se você especificar um elemento na  **\<antes de >** bloco e apenas um elemento correspondente no  **\<depois >** bloquear, usando `updg:id` não é necessário. Porém, é recomendado que você especifique `updg:id` de qualquer maneira para evitar ambiguidade.  
   
 ## <a name="examples"></a>Exemplos  
  Antes de você usar os exemplos do diagrama de atualização, observe o seguinte:  
@@ -112,9 +112,9 @@ ms.locfileid: "36116113"
 </ROOT>  
 ```  
   
- O registro descrito no  **\<antes >** bloco representa o registro atual no banco de dados. O diagrama usa todos os valores de coluna especificados no  **\<antes >** bloco para procurar o registro. Este diagrama de atualização, o  **\<antes >** block fornece apenas a coluna ContactID; portanto, o diagrama usa apenas o valor para procurar o registro. Se você fosse acrescentar o valor LastName a esse bloco, o diagrama de atualização usaria os valores ContactID e LastName para pesquisar.  
+ O registro descrito na  **\<antes de >** bloco representa o registro atual no banco de dados. O diagrama usa todos os valores de coluna especificados na  **\<antes de >** bloco para procurar o registro. Este diagrama de atualização, o  **\<antes de >** block fornece apenas a coluna ContactID; portanto, o diagrama de atualização usa apenas o valor para procurar o registro. Se você fosse acrescentar o valor LastName a esse bloco, o diagrama de atualização usaria os valores ContactID e LastName para pesquisar.  
   
- Este diagrama de atualização, o  **\<depois >** block fornece apenas o valor da coluna LastName porque este é o único valor que está sendo alterado.  
+ Este diagrama de atualização, o  **\<depois >** block fornece apenas o valor da coluna LastName porque esse é o único valor que está sendo alterado.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36116113"
   
 -   Insere um novo turno denominado "Fim da Manhã" que inicia às 10h00.  
   
- No diagrama, o `updg:id` atributo cria associações entre elementos no  **\<antes >** e  **\<depois >** blocos.  
+ No diagrama de atualização, o `updg:id` atributo cria associações entre os elementos em de  **\<antes de >** e  **\<depois >** blocos.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -150,7 +150,7 @@ ms.locfileid: "36116113"
 </ROOT>  
 ```  
   
- Observe como o `updg:id` atributo combina a primeira instância do \<HumanResources > elemento no  **\<antes >** bloco com a segunda instância do \< HumanResources. SHIFT > elemento o  **\<depois >** bloco.  
+ Observe como o `updg:id` atributo combina a primeira instância do \<HumanResources. SHIFT > elemento na  **\<antes >** bloco com a segunda instância da \< HumanResources. SHIFT > elemento na  **\<depois >** bloco.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -160,13 +160,13 @@ ms.locfileid: "36116113"
   
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Especificando vários \<antes > e \<depois > blocos  
- Para evitar ambiguidade, você pode escrever o diagrama de atualização no exemplo B usando vários  **\<antes >** e  **\<depois >** pares de blocos. Especificando  **\<antes >** e  **\<depois >** pares é uma maneira de especificar várias atualizações com um mínimo de confusão. Além disso, se cada do  **\<antes >** e  **\<depois >** blocos especifique no máximo um elemento, você não precisa usar o `updg:id` atributo.  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Especificando vários \<antes de > e \<depois > blocos  
+ Para evitar ambiguidade, você pode escrever o diagrama de atualização do exemplo B por meio de várias  **\<antes de >** e  **\<depois >** pares de blocos. Especificando  **\<antes de >** e  **\<depois >** pares é uma maneira de especificar várias atualizações com um mínimo de confusão. Além disso, se cada do  **\<antes de >** e  **\<depois >** blocos especificam no máximo um elemento, você não precisa usar o `updg:id` atributo.  
   
 > [!NOTE]  
->  Para formar um par, o  **\<depois >** marca deve seguir imediatamente correspondente  **\<antes >** marca.  
+>  Para formar um par, o  **\<depois >** marca deve vir logo após correspondente  **\<antes >** marca.  
   
- No diagrama a seguir, a primeira  **\<antes >** e  **\<depois >** par atualiza o nome do turno para o turno do dia. O segundo par insere um novo registro de turno.  
+ No diagrama a seguir, a primeira  **\<antes de >** e  **\<depois >** par atualiza o nome do turno para o turno do dia. O segundo par insere um novo registro de turno.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -202,9 +202,9 @@ ms.locfileid: "36116113"
   
  No diagrama a seguir, a primeira  **\<sincronização >** bloco atualiza um registro na tabela Sales. Customer. Por causa da simplicidade, o diagrama de atualização especifica só os valores de coluna exigidos; o valor de identidade (CustomerID) e o valor que está sendo atualizado (SalesPersonID).  
   
- A segunda  **\<sincronização >** bloco adiciona dois registros à tabela Sales. SalesOrderHeader. Para esta tabela, SalesOrderID é uma coluna do IDENTITY. Portanto, o diagrama não especifica o valor de SalesOrderID em cada uma da \<Sales. SalesOrderHeader > elementos.  
+ A segunda  **\<sincronização >** bloco adiciona dois registros à tabela Sales. SalesOrderHeader. Para esta tabela, SalesOrderID é uma coluna do IDENTITY. Portanto, o diagrama de atualização não especifica o valor de SalesOrderID em cada uma da \<Sales. SalesOrderHeader > elementos.  
   
- Especificando vários  **\<sincronização >** blocos é útil porque se o segundo  **\<sincronização >** bloco (uma transação) Falha ao adicionar registros à tabela Sales. SalesOrderHeader, o primeiro  **\<sincronização >** bloco ainda poderá atualizar o registro do cliente na tabela Sales. Customer.  
+ Especificando vários  **\<sincronização >** blocos é útil porque se a segunda  **\<sincronização >** bloco (uma transação) não adicionar registros à tabela Sales. SalesOrderHeader, o primeira  **\<sincronização >** bloco ainda poderá atualizar o registro do cliente na tabela Sales. Customer.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -268,7 +268,7 @@ ms.locfileid: "36116113"
   
  Os elementos e atributos especificados no diagrama de atualização referem-se aos elementos e atributos no esquema de mapeamento.  
   
- O seguinte esquema de mapeamento XSD tem  **\<cliente >**,  **\<ordem >**, e  **\<OD >** elementos que mapeiam para o Tabelas Sales. Customer, Sales. SalesOrderHeader e SalesOrderDetail no banco de dados.  
+ Tem o seguinte esquema de mapeamento XSD  **\<cliente >**,  **\<Order >**, e  **\<OD >** elementos que mapeiam para o Tabelas Sales. Customer, Sales. SalesOrderHeader e SalesOrderDetail no banco de dados.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -321,7 +321,7 @@ ms.locfileid: "36116113"
 </xsd:schema>  
 ```  
   
- Este esquema de mapeamento (UpdategramMappingSchema.xml) é especificado no diagrama de atualização a seguir. O diagrama de atualização adiciona um item de detalhe de ordem na tabela Sales.SalesOrderDetail para uma ordem específica. O diagrama de atualização inclui elementos aninhados: um  **\<OD >** elemento aninhado dentro de um  **\<ordem >** elemento. A relação de chave primária/chave estrangeira entre estes dois elementos é especificada no esquema de mapeamento.  
+ Este esquema de mapeamento (UpdategramMappingSchema.xml) é especificado no diagrama de atualização a seguir. O diagrama de atualização adiciona um item de detalhe de ordem na tabela Sales.SalesOrderDetail para uma ordem específica. O diagrama de atualização inclui elementos aninhados: uma  **\<OD >** elemento aninhado dentro de uma  **\<Order >** elemento. A relação de chave primária/chave estrangeira entre estes dois elementos é especificada no esquema de mapeamento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -362,7 +362,7 @@ ms.locfileid: "36116113"
   
  Como um aluno pode se matricular em vários cursos e um curso pode ter muitos alunos, a terceira tabela, Enrollment, é necessária para representar esta relação M:N.  
   
- O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o  **\<Student >**,  **\<curso >**, e  **\<registro >** elementos. O **IDREFS** atributos no esquema de mapeamento especificam a relação entre esses elementos. O **StudentIDList** atributo no  **\<curso >** elemento é um **IDREFS** atributo de tipo que se refere à coluna StudentID na tabela de registro. Da mesma forma, o **EnrolledIn** atributo no  **\<Student >** elemento é um **IDREFS** atributo de tipo que se refere à coluna CourseID na inscrição tabela.  
+ O esquema de mapeamento XSD a seguir fornece uma exibição XML das tabelas usando o  **\<Student >**,  **\<curso >**, e  **\<registro >** elementos. O **IDREFS** atributos no esquema de mapeamento especificam a relação entre esses elementos. O **StudentIDList** atributo as  **\<curso >** elemento é um **IDREFS** atributo de tipo que se refere à coluna StudentID na tabela Enrollment. Da mesma forma, o **EnrolledIn** atributo as  **\<aluno >** elemento é um **IDREFS** atributo de tipo que se refere à coluna CourseID na inscrição tabela.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

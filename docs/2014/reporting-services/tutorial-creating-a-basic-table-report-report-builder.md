@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186053"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
@@ -29,7 +29,7 @@ ms.locfileid: "36020861"
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um novo relatório do guia de Introdução](#CreateTable)  
+1.  [Criar um novo relatório em Introdução](#CreateTable)  
   
     1.  [Especifique uma Conexão de dados no Assistente de tabela](#DataConnection)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36020861"
   
     3.  [Organizar dados em grupos no Assistente de tabela](#Groups)  
   
-    4.  [Adicionar linhas de Subtotal e de Total no Assistente de tabela](#Subtotals)  
+    4.  [Adicionar linhas de subtotais e totais no Assistente de tabela](#Subtotals)  
   
     5.  [Escolha um estilo no Assistente de tabela](#Style)  
   
@@ -59,16 +59,16 @@ ms.locfileid: "36020861"
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateTable"></a> 1. Criar um Novo Relatório em Introdução  
- Criar um relatório de tabela de **Introdução** caixa de diálogo. Há dois modos: design de relatório e design de conjunto de dados compartilhado. No modo design de relatório, especifique dados no painel de Dados do Relatório e o layout do relatório na superfície de design. No modo design de conjunto de dados compartilhado, crie consultas de conjunto de dados para compartilhar com outras pessoas. Neste tutorial, você usará o modo design de relatório.  
+ Criar um relatório de tabela do **guia de Introdução** caixa de diálogo. Há dois modos: design de relatório e design de conjunto de dados compartilhado. No modo design de relatório, especifique dados no painel de Dados do Relatório e o layout do relatório na superfície de design. No modo design de conjunto de dados compartilhado, crie consultas de conjunto de dados para compartilhar com outras pessoas. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     O **Introdução** caixa de diálogo é aberta.  
+     O **guia de Introdução** caixa de diálogo é aberta.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36020861"
   
 2.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
-3.  Em **nome**, tipo **vendas de produtos** um nome para a fonte de dados.  
+3.  Na **nome**, digite **vendas do produto** um nome para a fonte de dados.  
   
 4.  Em **Selecionar um tipo de conexão**, verifique se a opção **Microsoft SQL Server** está selecionada.  
   
-5.  Em **cadeia de caracteres de Conexão**, digite o texto a seguir, onde  *\<servername >* é o nome de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  Na **cadeia de caracteres de Conexão**, digite o texto a seguir, onde  *\<servername >* é o nome de uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -167,7 +167,7 @@ ms.locfileid: "36020861"
   
 4.  Clique em **Avançar**.  
   
-##  <a name="Groups"></a> 1c. Organizar Dados em Grupos no Assistente de Tabela  
+##  <a name="Groups"></a> 1C. Organizar Dados em Grupos no Assistente de Tabela  
  Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com linhas e colunas que exibem dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -224,7 +224,7 @@ ms.locfileid: "36020861"
   
 #### <a name="to-specify-a-table-style"></a>Para especificar um estilo de tabela  
   
-1.  Sobre o **escolha um estilo** , no painel Estilos, selecione Ocean.  
+1.  Sobre o **escolher um estilo** página, no painel Estilos, selecione Ocean.  
   
      O painel Visualizar exibirá um exemplo da tabela com esse estilo.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "36020861"
   
 3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda** . As células são alteradas para mostrar a moeda formatada.  
   
-     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** no **números** de grupo e, em seguida, clique em **valores de exemplo**.  
+     Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**$12,345.00**]. Se você não vir um valor de moeda de exemplo, clique em **estilos de espaço reservado** na **números** agrupar e, em seguida, clique em **valores de exemplo**.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36020861"
   
 2.  Clique na célula que contém `[SalesDate]`.  
   
-3.  Na faixa de opções, no **início** guia o **número** grupo na lista suspensa, selecione **data**.  
+3.  Na faixa de opções, no **Home** guia, o **número** grupo, na lista suspensa, selecione **data**.  
   
      A célula exibe a data de exemplo **[1/31/2000]**. Se uma data de exemplo não estiver visível, clique em **Estilos de Espaço Reservado** no grupo **Números** e clique em **Valores de Exemplo**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "36020861"
   
 2.  Clique na célula que contém `[SalesDate]`.  
   
-3.  No **início** guia o **número** de grupo, clique no iniciador de caixa de diálogo.  
+3.  Sobre o **Home** guia da **número** de grupo, clique no iniciador de caixa de diálogo.  
   
      O iniciador é a pequena seta no canto direito do grupo. A caixa de diálogo **Propriedades da Caixa de Texto** é aberta.  
   
@@ -370,7 +370,7 @@ ms.locfileid: "36020861"
   
 2.  Clique em qualquer ponto fora do relatório.  
   
-3.  . No painel Propriedades, localize a propriedade InitialPageName e o tipo **vendas de produtos em Excel**.  
+3.  . No painel Propriedades, localize a propriedade InitialPageName e digite **vendas de produtos em Excel**.  
   
     > [!NOTE]  
     >  Se o painel Propriedades não estiver visível, clique na guia Exibir na faixa de opções e, em seguida, clique em **propriedades**.  
@@ -383,17 +383,17 @@ ms.locfileid: "36020861"
   
      A caixa de diálogo **Salvar como** é aberta.  
   
-3.  Navegue até o **documentos** pasta.  
+3.  Navegue até a **documentos** pasta.  
   
-4.  No **nome de arquivo** caixa de texto, digite **vendas de produtos em Excel**.  
+4.  No **nome do arquivo** caixa de texto, digite **vendas de produtos em Excel**.  
   
-5.  Verifique se o tipo de arquivo é **pasta de trabalho do Excel**.  
+5.  Verifique se o tipo de arquivo está **pasta de trabalho do Excel**.  
   
 6.  Clique em **Salvar**.  
   
 #### <a name="to-view-the-report-in-excel"></a>Para exibir o relatório no Excel  
   
-1.  Abra o **documentos** pasta e clique duas vezes em **em Excel.xlsx de vendas do produto**.  
+1.  Abra o **documentos** pasta e clique duas vezes em **xlsx de vendas do produto**.  
   
 2.  Verifique se o nome da guia de pasta de trabalho é **Vendas de Produtos em Excel**.  
   
@@ -401,7 +401,7 @@ ms.locfileid: "36020861"
  Isso conclui o passo a passo sobre como criar um relatório de tabela básico. Para obter mais informações sobre tabelas, consulte [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

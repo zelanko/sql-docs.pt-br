@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
 - unsupported features [SQL Server]
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81ceffcd3009906b41316a7a9778a0b38ded7b29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218036"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -59,27 +59,27 @@ ms.locfileid: "36020101"
   
 |Categoria|Recurso descontinuado|Substituição|  
 |--------------|--------------------------|-----------------|  
-|Backup e restauração|**BACKUP {banco de dados &#124; LOG} WITH PASSWORD** e **BACKUP {banco de dados &#124; LOG} WITH MEDIAPASSWORD** foram descontinuados. **RESTORE {DATABASE &#124; LOG} com [MEDIA] PASSWORD**continua a ser substituído.|Nenhum|  
-|Backup e restauração|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... COM RESTRICTED_USER**|  
+|Backup e restauração|**BACKUP {banco de dados &#124; LOG} WITH PASSWORD** e **BACKUP {banco de dados &#124; LOG} WITH MEDIAPASSWORD** são descontinuados. **RESTAURAR {banco de dados &#124; LOG} com [MEDIA] PASSWORD**continua sendo preterido.|Nenhum|  
+|Backup e restauração|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTAURAR {BANCO DE DADOS &AMP;#124; LOG}...... COM RESTRICTED_USER**|  
 |Nível de Compatibilidade|nível de compatibilidade 80|Os bancos de dados devem ser definidos com o nível de compatibilidade de pelo menos 90.|  
 |Opções de configuração|`sp_configure 'user instance timeout'` e `'user instances enabled'`|Use o recurso de banco de dados local. Para obter mais informações, consulte [utilitário SqlLocalDB](../tools/sqllocaldb-utility.md)|  
 |Protocolos de conexão|O suporte para o protocolo VIA é descontinuado.|Em vez disso, use TCP.|  
 |Objetos de banco de dados|Cláusula `WITH APPEND` em gatilhos|Recrie o gatilho inteiro.|  
 |Opções de banco de dados|`sp_dboption`|`ALTER DATABASE`|  
-|Email|SQL Mail|Use o Database Mail. Para obter mais informações, consulte [Database Mail](../relational-databases/database-mail/database-mail.md) e [Use Database Mail em vez de SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Email|SQL Mail|Use o Database Mail. Para obter mais informações, consulte [Database Mail](../relational-databases/database-mail/database-mail.md) e [usar o Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Gerenciamento de memória|AWE (Address Windowing Extensions) de 32 bits e suporte de inclusão de memória a quente de 32 bits.|Use um sistema operacional de 64 bits.|  
 |Metadados|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programação|SQL-DMO (SQL Server Distributed Management Objects)|SQL Server Management Objects (SMO)|  
 |Dicas de consulta|Dica de `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Servidores remotos|A capacidade de os usuários criarem novos servidores remotos usando `sp_addserver` foi descontinuada. `sp_addserver` com a opção 'local' permanece disponível. Os servidores remotos preservados durante a atualização ou criados pela replicação podem ser usados.|Substitua servidores remotos usando servidores vinculados.|  
 |Segurança|`sp_dropalias`|Substitua aliases por uma combinação de contas de usuário e funções de banco de dados. Use `sp_dropalias` para remover aliases em bancos de dados atualizados.|  
-|Segurança|O parâmetro version do **PWDCOMPARE** que representa um valor de um logon anterior ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 foi descontinuado.|Nenhum|  
-|Programação do Service Broker no SMO|O **Broker. brokerpriority** classe não implementa o **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
+|Segurança|O parâmetro de versão do **PWDCOMPARE** que representa um valor de um logon anterior ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 foi descontinuado.|Nenhum|  
+|Programação do Service Broker no SMO|O **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** classe não implementa o **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
 |Opções Set|`SET DISABLE_DEF_CNST_CHK`|Nenhum.|  
 |Tabelas do sistema|sys.database_principal_aliases|Use funções em vez de aliases.|  
-|Transact-SQL|`RAISERROR` no formato `RAISERROR integer 'string'` foi descontinuado.|Reescreva a instrução usando atual **RAISERROR (…)**  sintaxe.|  
+|Transact-SQL|`RAISERROR` no formato `RAISERROR integer 'string'` foi descontinuado.|Reescreva a instrução usando atual **RAISERROR(...)**  sintaxe.|  
 |sintaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
-|sintaxe Transact-SQL|O uso de **\* =** e **=\***|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [de (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|sintaxe Transact-SQL|Uso de **\* =** e **=\***|Use a sintaxe de junção ANSI. Para obter mais informações, consulte [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Substituído pelo evento database_file_size_change, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Alterações de XEvent adicionais**  

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11abfb4949bdd7917066ed785dd1014efc026e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304116"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], há dois tipos de administradores: administradores de modelo e o administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administradores de modelo  
- Em [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem **atualização** permissão atribuída ao objeto de modelo de nível superior no **objetos de modelo** permissões na guia e nenhum outro.  
+ Na [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem **Update** permissão atribuída ao objeto de modelo de nível superior no **objetos de modelo** guia e nenhuma outra receber permissões.  
   
 -   Se o usuário tiver acesso à área funcional **Gerenciador** , ele poderá adicionar, excluir e atualizar todos os dados mestre nessa área.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36011416"
   
 -   Tem acesso automaticamente a todas as áreas funcionais.  
   
--   Pode adicionar, excluir e atualizar todos os dados mestres para todos os modelos de **Explorer** área funcional.  
+-   Pode adicionar, excluir e atualizar todos os dados mestres para todos os modelos na **Explorer** área funcional.  
   
  Você pode alterar o usuário designado como administrador do sistema. Para obter mais informações, consulte [alterar a conta de administrador do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
@@ -54,8 +54,8 @@ ms.locfileid: "36011416"
   
 |Tipo de administrador|Description|  
 |------------------------|-----------------|  
-|Administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente **atualização** permissão a todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> Em Mdm. tbluser, o valor de **ID** coluna é **1**.|  
-|Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm **atualização** permissão atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Em Mdm. tbluser, o valor de **ID** coluna não é **1**.|  
+|Administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente **atualização** permissão a todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> Em tbluser, o valor de **ID** coluna é **1**.|  
+|Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm **atualização** permissão atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Em tbluser, o valor de **ID** coluna não é **1**.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   

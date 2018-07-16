@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175168"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
   Neste tutorial, você pode praticar a formatação de texto de várias maneiras. Depois de configurar o relatório em branco com a fonte de dados e o conjunto de dados, é possível escolher e selecionar as etapas que você deseja explorar.  
@@ -35,7 +35,7 @@ ms.locfileid: "36130699"
 ##  <a name="BackToTop"></a> O que você aprenderá  
   
 ### <a name="set-up-the-report"></a>Configurar o relatório  
- 1. [Criar um relatório em branco com dados de um conjunto de dados e de origem](#CreateReport)  
+ 1. [Criar um relatório em branco com um dado de origem e o conjunto de dados](#CreateReport)  
   
  2. [Adicionar um campo à superfície de Design do relatório (incorretamente, em seguida, corretamente)](#AddField)  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36130699"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a> Criar um relatório em branco com dados de um conjunto de dados e de origem  
+##  <a name="CreateReport"></a> Criar um relatório em branco com um dado de origem e o conjunto de dados  
   
 #### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
-1.  Clique em **iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
     > [!NOTE]  
     >  A caixa de diálogo **Guia de Introdução** deve ser exibida. Se ela não for exibida, usando o botão do Construtor de Relatórios, clique em **Novo**.  
@@ -200,13 +200,13 @@ ms.locfileid: "36130699"
   
 1.  Sobre o **inserir** menu, clique em **tabela**e, em seguida, clique em **Assistente de tabela**.  
   
-2.  No **escolher um conjunto de dados** página do Assistente de nova tabela ou matriz, clique em **escolher um conjunto de dados existente neste relatório ou um conjunto de dados compartilhado**e clique em **TextDataset (neste relatório)** e, em seguida, clique em **próximo**.  
+2.  Sobre o **escolher um conjunto de dados** página do Assistente de nova tabela ou matriz, clique em **escolha um conjunto de dados existente neste relatório ou um conjunto de dados compartilhado**e clique em **TextDataset (neste relatório)** e, em seguida, clique em **próxima**.  
   
-3.  No **organizar campos** página, arraste o **território**, **LinkText**, e **produto** campos **degruposdelinhas**, arraste o **vendas** campo **valores**e, em seguida, clique em **próximo**.  
+3.  Sobre o **organizar campos** página, arraste o **território**, **LinkText**, e **produto** campos para **degruposdelinhas**, arraste a **Sales** campo **valores**e, em seguida, clique em **próximo**.  
   
-4.  No **escolha o layout** página, desmarque o **expandir/recolher grupos** para que você pode ver toda tabela e, em seguida, clique em **próximo**.  
+4.  Sobre o **escolher o layout** página, desmarque a **expandir/recolher grupos** caixa de seleção para que você pode ver toda a tabela e, em seguida, clique em **próxima**.  
   
-5.  Sobre o **escolher um estilo de** , clique em **Tablet**e, em seguida, clique em **concluir**.  
+5.  Sobre o **escolha um estilo** , clique em **Slate**e, em seguida, clique em **concluir**.  
   
 6.  Arraste a tabela para que ela esteja abaixo do bloco de título.  
   
@@ -218,9 +218,9 @@ ms.locfileid: "36130699"
   
 9. Clique na caixa de texto que contém `[LinkText]`e clique em **dividir células**.  
   
-10. Selecione a célula vazia abaixo o `[LinkText]` da célula e, em seguida, mantenha a tecla SHIFT pressionada e selecione as duas células à direita: o **Total** na célula a **produto** coluna e o `[Sum(Sales)]` célula a  **Vendas** coluna.  
+10. Selecione a célula vazia abaixo a `[LinkText]` de célula e, em seguida, mantenha pressionada a tecla SHIFT e selecione as duas células à direita: a **Total** célula a **produto** coluna e o `[Sum(Sales)]` célula em que o  **Vendas** coluna.  
   
-11. Com essas três células selecionadas, clique em uma das células e clique em **Excluir linha**.  
+11. Com essas três células selecionadas, clique em um às células e clique em **Excluir linha**.  
   
 12. Clique em **Executar**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "36130699"
   
 7.  Selecione `[LinkText]`.  
   
-8.  No **fonte** seção o **início** , clique no **Underline** botão e, em seguida, clique na seta suspensa ao lado a **cor** botão, e clique em **azul**.  
+8.  No **fonte** seção o **Home** , clique no **sublinhado** botão e, em seguida, clique na seta suspensa ao lado a **cor** botão, e clique em **azul**.  
   
 9. Clique em **Executar**.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "36130699"
   
 6.  Na caixa de listagem, clique em **Rotate270**.  
   
-7.  No **início** guia o **parágrafo** seção, clique no **intermediária** e **Center** botões para localizar o texto no centro da célula vertical e horizontalmente.  
+7.  No **Home** guia o **parágrafo** seção, clique no **intermediária** e **Center** botões para localizar o texto no centro da célula vertical e horizontalmente.  
   
 8.  Clique em Executar (**!**).  
   
@@ -309,7 +309,7 @@ ms.locfileid: "36130699"
   
 5.  Clique com o botão direito do mouse em todo o texto selecionado e clique em **Propriedades do Texto**.  
   
-6.  Sobre o **geral** página em **tipo de marcação**, clique em **HTML - interpretar marcas HTML como estilos**.  
+6.  Sobre o **gerais** página, em **tipo de marcação**, clique em **HTML - interpretar marcas HTML como estilos**.  
   
 7.  Clique em **OK**.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36130699"
   
 3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda** .  
   
-4.  (Opcional) No **início** guia o **número** de grupo, clique no **estilos de espaço reservado** botão e clique em **valores de exemplo** para ver como os números serão ser formatado.  
+4.  (Opcional) No **Home** guia o **número** , clique no **estilos de espaço reservado** botão e clique em **valores de exemplo** para ver como os números serão ser formatado.  
   
 5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
@@ -367,10 +367,10 @@ ms.locfileid: "36130699"
 4.  Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Há muitas maneiras de formatar texto no construtor de relatórios [Tutorial: Criando um relatório de forma livre &#40;Report Builder&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
+ Há muitas maneiras de formatar texto no construtor de relatórios [Tutorial: Criando um relatório de forma livre &#40;construtor de relatórios&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

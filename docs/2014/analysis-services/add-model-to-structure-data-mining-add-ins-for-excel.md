@@ -1,5 +1,5 @@
 ---
-title: Adicionar modelo à estrutura (mineração de dados suplementos para Excel) | Microsoft Docs
+title: Adicionar modelo à estrutura (Data Mining Add-ins para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,45 +8,45 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e13b75081b4c4cd31a4a3de393b480e713c9d909
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71016faaac6126328e1565ef7644fcf0bdf74376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241756"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Adicionar modelo à estrutura (Suplementos de Mineração de Dados para Excel)
-  ![Adicionar modelo de botão de estrutura de](media/dmc-addmodel.gif "Adicionar modelo de botão de estrutura")  
+  ![Adicionar modelo de botão de estrutura](media/dmc-addmodel.gif "Add Model ao botão de estrutura")  
   
- Quando você clica em **Adicionar modelo à estrutura**, iniciado um assistente que ajuda você a cria um novo modelo de mineração para usar com uma estrutura de mineração existente. Essa opção é útil porque permite comparar modelos baseados nos mesmos dados, ou criar modelos personalizados.  
+ Quando você clica em **Adicionar modelo à estrutura**, é iniciado um assistente que ajuda você a cria um novo modelo de mineração para usar com uma estrutura de mineração existente. Essa opção é útil porque permite comparar modelos baseados nos mesmos dados, ou criar modelos personalizados.  
   
- Se a instância do Analysis Services ainda não contiver os dados necessários, use o [criar estrutura de mineração &#40;suplementos de mineração de dados do SQL Server&#41; ](create-mining-structure-sql-server-data-mining-add-ins.md) Assistente para configurar uma estrutura de mineração. Ou você poderá iniciar um dos assistentes de modelagem e adicionar um novo modelo à estrutura criada pelo assistente.  
+ Se a instância do Analysis Services ainda não contiver dados que você precisa, use o [criar estrutura de mineração &#40;SQL Server Data Mining Add-ins&#41; ](create-mining-structure-sql-server-data-mining-add-ins.md) Assistente para configurar uma estrutura de mineração. Ou você poderá iniciar um dos assistentes de modelagem e adicionar um novo modelo à estrutura criada pelo assistente.  
   
- Para criar modelos avançados usando algoritmos sem suporte dos assistentes, crie uma estrutura de mineração e, em seguida, adicione um modelo usando o **Editor de consulta avançada de mineração de dados**.  
+ Para criar modelos avançados usando algoritmos que não tem suportados dos assistentes, crie uma estrutura de mineração e, em seguida, adicione um modelo usando o **Editor de consulta avançada de mineração de dados**.  
   
 ## <a name="add-a-new-model-to-an-existing-structure"></a>Adicionar um modelo novo a uma estrutura existente  
   
-1.  Sobre o **mineração de dados** de faixa de opções, clique na seta sob **avançado**e, em seguida, selecione **Adicionar modelo à estrutura**.  
+1.  Sobre o **Data Mining** faixa de opções, clique na seta sob **avançado**e, em seguida, selecione **Adicionar modelo à estrutura**.  
   
-2.  No **selecionar estrutura** caixa de diálogo caixa, escolha a estrutura que contém os dados que você deseja usar e, em seguida, clique em **próximo**.  
+2.  No **selecionar estrutura** diálogo caixa, escolha a estrutura que contém os dados que você deseja usar e, em seguida, clique em **próxima**.  
   
-     **Dica**: se você não tiver certeza de qual estrutura de mineração contém os dados necessários, use o **modelo de documento** Assistente para exibir as colunas e as estatísticas básicas sobre os dados.  
+     **Dica**: se você não tiver certeza de qual estrutura de mineração contém os dados necessários, use o **modelo de documento** Assistente para exibir as colunas e estatísticas básicas sobre os dados.  
   
      Se você não conseguir encontrar uma estrutura de mineração, verifique a conexão que está usando no momento. Talvez você precise abrir uma conexão com um servidor diferente.  
   
-3.  No **Selecionar algoritmo de mineração** caixa de diálogo caixa, escolha um algoritmo de mineração para usar no novo modelo de mineração.  
+3.  No **Selecionar algoritmo de mineração** caixa de diálogo, escolha um algoritmo de mineração usar no novo modelo de mineração.  
   
      Observe que a caixa de diálogo fornece muito mais opções do que aparecem nos assistentes. Você pode criar um modelo usando qualquer algoritmo com suporte do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], desde que seus dados sejam compatíveis.  
   
-4.  É recomendável que você clicar também o **parâmetros** para abrir o **parâmetros de algoritmo** caixa de diálogo caixa e personalizar os parâmetros do algoritmo. Essa opção é a maneira mais fácil de criar modelos de mineração personalizados.  
+4.  É recomendável que você clique também o **parâmetros** para abrir o **parâmetros de algoritmo** caixa de diálogo caixa e personalizar os parâmetros no algoritmo. Essa opção é a maneira mais fácil de criar modelos de mineração personalizados.  
   
 5.  Clique em **Avançar**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36115327"
   
     -   **Prever apenas**. Indica que os dados não devem ser usados como uma entrada para o modelo.  
   
-    -   **Key**. Cada modelo exige pelo menos uma chave. Dependendo do tipo de modelo, você também terá a opção de chaves especiais adicionais, como o **SequenceKey** ou **TimeKey**.  
+    -   **Key**. Cada modelo exige pelo menos uma chave. Dependendo do tipo de modelo, você pode também ter a opção de chaves especiais adicionais, como o **SequenceKey** ou **TimeKey**.  
   
     -   **Não use**. Indica que os dados não devem ser usados no modelo, mesmo se presentes na estrutura.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36115327"
   
      Se as colunas na estrutura não são aplicáveis ao novo algoritmo, você pode ignorá-las selecionando **não use**.  
   
-8.  No **definir sinalizadores de modelo da coluna** caixa de diálogo, revise ou definir os sinalizadores de modelagem, se houver.  
+8.  No **definir sinalizadores de modelo da coluna** caixa de diálogo, revise ou conjunto de sinalizadores de modelagem, se houver.  
   
      Os sinalizadores de modelagem permitem controlar a maneira como nulos são tratados, entre outras coisas. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](data-mining/modeling-flags-data-mining.md).  
   
@@ -92,9 +92,9 @@ ms.locfileid: "36115327"
   
 |Opção|Comentários|  
 |------------|--------------|  
-|**Selecionar estrutura ou modelo** caixa de diálogo|Escolha uma estrutura de mineração existente para usar como a base para criar um novo modelo.  A estrutura que você escolhe deve estar localizada na conexão atual. Se não estiver, altere as conexões usando o [conectar-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) ferramenta.|  
-|**Selecione o algoritmo de mineração** caixa de diálogo|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não conseguir ver algoritmos, verifique se está conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|**Parâmetros de algoritmo** caixa de diálogo|Nessas configurações, você pode personalizar cada algoritmo usando parâmetros específicos ao método analítico. Você também pode definir uma semente para garantir que os resultados do modelo possam ser reproduzidos nas passagens de treinamento.<br /><br /> Para obter mais informações, consulte [parâmetros de algoritmo &#40;suplementos de mineração de dados do SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
+|**Selecionar estrutura ou modelo** caixa de diálogo|Escolha uma estrutura de mineração existente para usar como a base para criar um novo modelo.  A estrutura que você escolhe deve estar localizada na conexão atual. Se não estiver, altere as conexões usando o [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) ferramenta.|  
+|**Selecione o algoritmo de mineração de** caixa de diálogo|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não conseguir ver algoritmos, verifique se está conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Parâmetros do algoritmo** caixa de diálogo|Nessas configurações, você pode personalizar cada algoritmo usando parâmetros específicos ao método analítico. Você também pode definir uma semente para garantir que os resultados do modelo possam ser reproduzidos nas passagens de treinamento.<br /><br /> Para obter mais informações, consulte [parâmetros de algoritmo &#40;SQL Server Data Mining Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Definir sinalizadores de modelo da coluna** caixa de diálogo|Os sinalizadores de modelagem podem melhorar seu modelo especificando como os dados ausentes devem ser tratados. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> Definindo o uso de coluna  
@@ -117,9 +117,9 @@ ms.locfileid: "36115327"
      Alguns tipos de análise exigem que os dados sejam estruturados com cuidado, de acordo com regras exclusivas. Os exemplos são modelos de previsão e modelos de associação. Você pode facilmente adicionar novos modelos do mesmo tipo, talvez com personalizações, mas os dados talvez não funcionem com outros algoritmos.  
   
 ### <a name="requirements"></a>Requisitos  
- Para criar modelos de mineração de dados, você deve ter uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como criar ou alterar uma conexão, consulte [conectar-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Para criar modelos de mineração de dados, você deve ter uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter mais informações sobre como criar ou alterar uma conexão, consulte [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
- Caso você não consiga visualizar a estrutura de mineração de dados desejada, talvez ela tenha sido salva em outra instância ou em outro banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter informações sobre como mudar para uma conexão de mineração de dados diferentes, consulte [conectar a um servidor de mineração de dados](connect-to-a-data-mining-server.md).  
+ Caso você não consiga visualizar a estrutura de mineração de dados desejada, talvez ela tenha sido salva em outra instância ou em outro banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter informações sobre como mudar para uma conexão de mineração de dados diferentes, consulte [conectar-se a um servidor de mineração de dados](connect-to-a-data-mining-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)   

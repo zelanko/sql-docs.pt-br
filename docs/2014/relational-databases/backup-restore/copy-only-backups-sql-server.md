@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e382d3b0bad1a5c43d6fc745280e302c9422ef0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248876"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
   Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
@@ -56,14 +55,14 @@ ms.locfileid: "36019605"
   
 -   Para um backup completo somente cópia:  
   
-     Banco de dados de BACKUP *database_name* para \<backup_device*>* ... WITH COPY_ONLY …  
+     Banco de dados de BACKUP *database_name* TO \<dispositivo_de_backup*>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  COPY_ONLY não tem nenhum efeito quando é especificado com a opção DIFFERENTIAL.  
   
 -   Para um backup de log somente cópia:  
   
-     BACKUP LOG *database_name* para *\<* backup_device*>* ... WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* backup_device*>* ... WITH COPY_ONLY …  
   
 ###  <a name="PowerShellProcedure"></a> Usando o PowerShell  
   

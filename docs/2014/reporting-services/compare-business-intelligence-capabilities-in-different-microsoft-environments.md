@@ -1,5 +1,5 @@
 ---
-title: Comparar recursos de Business Intelligence em diferentes ambientes Microsoft | Microsoft Docs
+title: Compare os recursos de Business Intelligence em diferentes ambientes Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188083"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar recursos de Business Intelligence em diferentes ambientes Microsoft
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence pode ser implantado em vários ambientes diferentes incluindo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o SharePoint Server, SharePoint Online e Power BI para Office 365. Este tópico compara os componentes e recursos compatíveis em cada ambiente.  
@@ -41,13 +41,13 @@ ms.locfileid: "36120318"
 |Exportar painel interativo do Power View para apresentação do PowerPoint|Sim|não|não|  
 |Criação de painel no navegador|Sim|não|não|  
 |Monitoramento de uso|Sim|não|Sim|  
-|Segurança de baseada em linha aproveite [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubos|Sim|não|não|  
+|Linha de aproveitamento de segurança de baseada em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubos|Sim|não|não|  
   
- **<sup>1</sup>**[compreender a função de administradores de dados no gerenciamento de dados](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [vídeo: administração de dados e gerenciamento de informações de BI de energia](https://www.youtube.com/watch?v=8dHOj68ts7c).    
+ **<sup>1</sup>**[Noções básicas sobre a função de administradores de dados no gerenciamento de dados](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) e [vídeo: administração de dados e gerenciamento de informações de BI do Power](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
- **<sup>2</sup>**[power BI Q & r: otimizam uma pasta de trabalho do Power BI (modelagem em nuvem)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
+ **<sup>2</sup>**[p e r do power BI: otimizar uma pasta de trabalho do Power BI (modelagem em nuvem)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
   
- **<sup>3</sup>**[Introdução aos novos recursos de previsão no Power View para o Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
+ **<sup>3</sup>**[apresentando novos recursos de previsão no Power View para o Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Exibir e procurar dados, relatórios e painéis de BI  
   

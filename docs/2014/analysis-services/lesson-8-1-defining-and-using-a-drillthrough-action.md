@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263722"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
   Os dados de fato de dimensionamento em uma dimensão de fatos sem filtrar corretamente os dados que a consulta retorna podem causar lentidão no desempenho da consulta. Para evitar esse problema, defina uma ação de detalhamento que restrinja o número total de linhas que serão retornadas. Esse processo melhorará significativamente o desempenho da consulta.  
@@ -108,9 +108,9 @@ ms.locfileid: "36122740"
   
     -   ShipDateKey  
   
-6.  Alteração o **nome** propriedade para o **Order Date Key** atributo `Order Date` , em seguida, clique no botão Procurar para o **coluna nome** propriedade e o **Nome de coluna** caixa de diálogo, selecione **data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Alterar o **nome** propriedade para o **Order Date Key** atributo para `Order Date` , clique no botão Procurar para o **coluna nome** propriedade e o **Coluna de nome** caixa de diálogo, selecione **data** como a tabela de origem e SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Alterar o **nome** propriedade para o **Due Date Key** atributo `Due Date`e, em seguida, usando o mesmo método de **Order Date Key** atributo, altere o  **Coluna de nome** propriedade deste atributo para **simpledate (WChar)**.  
+7.  Alterar o **nome** propriedade para o **Due Date Key** atributo `Due Date`e, em seguida, usando o mesmo método que o **Order Date Key** de atributo, altere o  **Coluna de nome** propriedade para esse atributo para **simpledate (WChar)**.  
   
 8.  Alterar o **nome** propriedade para o **Ship Date Key** atributo `Ship Date`e, em seguida, altere o **coluna nome** propriedade deste atributo para  **Simpledate (WChar)**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b1991dc8af140ee21089f9bd4096923d8e84742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219426"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
   Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)ou [resource](resource-database.md) , ou para modificar o agrupamento em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -109,8 +109,8 @@ ms.locfileid: "36116173"
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos do Windows ou contas individuais para adicionar ao `sysadmin` função de servidor fixa. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta `sa` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de segurança \* \***  o `sa` conta é bem conhecida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta e geralmente é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para a `sa` logon.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \* \***  alterar o agrupamento de nível de servidor não altera o agrupamento de bancos de dados de usuário existente. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta `sa` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **\*\* Observação de segurança \* \***  o `sa` conta é um conhecido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta e geralmente é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o `sa` logon.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Especifica um novo agrupamento no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, o agrupamento atual do servidor é usado.<br /><br /> **\*\* Importante \* \***  alterando o agrupamento de nível de servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão o novo agrupamento.<br /><br /> Para obter mais informações, veja [Definir ou alterar o agrupamento do servidor](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Quando a Instalação tiver concluído a recriação dos bancos de dados do sistema, ela retornará ao prompt de comando sem mensagens. Examine o arquivo de log Summary.txt para verificar se o processo foi concluído com êxito. Esse arquivo está localizado em C:\Arquivos de Programas\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -151,10 +151,10 @@ ms.locfileid: "36116173"
 6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
   
 ##  <a name="CreateMSDB"></a> Criar um novo banco de dados msdb  
- Se o `msdb` banco de dados estiver danificado e você não tiver um backup do `msdb` banco de dados, você pode criar um novo `msdb` usando o **instmsdb** script.  
+ Se o `msdb` banco de dados está danificado e você não tiver um backup do `msdb` banco de dados, você pode criar uma nova `msdb` usando o **instmsdb** script.  
   
 > [!WARNING]  
->  Recriando o `msdb` banco de dados usando o **instmsdb** script eliminará todas as informações armazenadas em `msdb` como trabalhos, alerta, operadores, planos de manutenção, histórico de backup, as configurações de gerenciamento baseado em políticas , Banco de dados de email, Data Warehouse de desempenho, etc.  
+>  Recriar a `msdb` banco de dados usando o **instmsdb** script eliminará todas as informações armazenadas no `msdb` , como trabalhos, alerta, operadores, planos de manutenção, histórico de backup, as configurações de gerenciamento baseado em políticas , Banco de dados de email, Data Warehouse de desempenho, etc.  
   
 1.  Pare todos os serviços que estejam se conectando ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], inclusive o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], e todos os aplicativos que estejam usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um repositório de dados.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36116173"
   
 8.  Aplique novamente pacotes de serviços ou o hotfix instalado na instância.  
   
-9. Recrie o conteúdo de usuário armazenado no `msdb` banco de dados, como trabalhos, alerta, etc.  
+9. Recrie o conteúdo de usuário armazenada em do `msdb` banco de dados, como trabalhos, alerta etc.  
   
 10. Backup de `msdb` banco de dados.  
   

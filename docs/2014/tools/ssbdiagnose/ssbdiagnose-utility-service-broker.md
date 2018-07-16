@@ -1,5 +1,5 @@
 ---
-title: Utilitário ssbdiagnose (Service Broker) | Microsoft Docs
+title: ssbdiagnose (Service Broker) do utilitário | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172327"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
   O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
@@ -189,19 +189,19 @@ WHERE database_id = DB_ID();
   
  Identificadores de conversa são retornados aos aplicativos pelo *@dialog_handle* parâmetro do **BEGIN DIALOG** instrução e o `conversation_handle` conjunto de coluna no resultado de uma **RECEIVE**  instrução.  
   
- Identificadores de conversa são relatados no `conversation_handle` coluna o **transmission_queue** e **conversation_endpoints** exibições do catálogo.  
+ Identificadores de conversa são relatados na `conversation_handle` coluna do **transmission_queue** e **sys. conversation_endpoints** exibições do catálogo.  
   
  *conversation_group_id*  
  O identificador exclusivo que identifica um grupo de conversa.  
   
- Identificadores de grupo de conversa são retornados aos aplicativos pelo *@conversation_group_id* parâmetro o **GET CONVERSATION GROUP** instrução e o `conversation_group_id` coluna no conjunto de resultados de uma **RECEIVE** instrução.  
+ Identificadores de grupo conversa são retornados aos aplicativos pelo *@conversation_group_id* parâmetro do **GET CONVERSATION GROUP** instrução e o `conversation_group_id` coluna no conjunto de resultados de uma **RECEIVE** instrução.  
   
- Identificadores de grupo conversa são relatados no `conversation_group_id` colunas do **conversation_groups** e **conversation_endpoints** exibições do catálogo.  
+ Identificadores de grupo conversa são relatados na `conversation_group_id` colunas do **sys. conversation_groups** e **sys. conversation_endpoints** exibições do catálogo.  
   
  *conversation_id*  
  O identificador exclusivo que identifica uma conversa. As IDs de conversa são iguais para os pontos de extremidade iniciador e de destino de uma conversa.  
   
- Identificadores de conversa são relatados no `conversation_id` coluna o **conversation_endpoints** exibição do catálogo.  
+ Identificadores de conversa são relatados na `conversation_id` coluna do **sys. conversation_endpoints** exibição do catálogo.  
   
  **-TIMEOUT** *timeout_interval*  
  Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de tempo de execução será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de tempo de execução antes de o intervalo**-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322676"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -53,10 +53,10 @@ ms.locfileid: "36010489"
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de `MarkInitialLoadStart` para a tarefa Controle CDC.|  
-|ILEND (Initial Load Ended)|Este é o estado quando o pacote de carga inicial é terminado com êxito, após o `MarkInitialLoadEnd` chamada de operação para a tarefa controle CDC.|  
+|ILEND (Initial Load Ended)|Este é o estado quando o pacote da carga inicial termina com êxito, depois que o `MarkInitialLoadEnd` chamada de operação para a tarefa controle CDC.|  
 |ILUPDATE (Initial Load Update)|Este é o estado nas execuções do pacote de atualização trickle feed depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isso é após o `GetProcessingRange` chamada de operação para a tarefa controle CDC.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
 |TFEND (Trickle-Feed Update Ended)|Este é o estado esperado para execuções regulares de CDC. Ele indica que a execução anterior foi concluída com êxito e que uma nova execução com um novo intervalo de processamento pode ser iniciada.|  
-|TFSTART|Esse é o estado em uma execução não inicial do pacote trickle feed de atualização, após o `GetProcessingRange` chamada de operação para a tarefa controle CDC.<br /><br /> Isso indica que uma execução CDC regular foi iniciada, mas ainda não foi concluído ou ainda não foi concluída, corretamente (`MarkProcessedRange`).|  
+|TFSTART|Este é o estado em uma execução não inicial do pacote trickle feed de atualização, após o `GetProcessingRange` chamada de operação para a tarefa controle CDC.<br /><br /> Isso indica que uma execução CDC regular é iniciada, mas não foi concluída ou ainda não foi concluída, corretamente (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Este é o estado em um `GetProcessingRange` que ocorre depois de TFSTART. Isto indica que a execução anterior não foi concluída com êxito.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
 |ERROR|O grupo de CDC está em um estado de ERROR.|  
   

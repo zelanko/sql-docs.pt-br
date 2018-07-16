@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
 - XML [SQL Server], typed
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 009ba26aa2ab0d12b6577d447f42e722f398e857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 81971c9b0fb1c6ebcdf4f90650dc5af3da558e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215056"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
   Este tópico descreve como gerar instâncias XML.  
@@ -44,7 +44,7 @@ ms.locfileid: "36020431"
 -   Usando carregamento em massa.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Instâncias de cadeia de caracteres de conversão de tipos e binárias  
- Você pode analisar qualquer um do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de cadeia de caracteres, como [**n**] [**var**]**char**, **texto de [n]**,  **varbinary**, e **imagem**, para o `xml` de tipo de dados convertendo (CAST) ou convertendo (CONVERT) a cadeia de caracteres para o `xml` tipo de dados. XML sem-tipo é verificado para confirmar se está bem formado. Se houver um esquema associado a `xml` tipo, validação também será executado. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).  
+ Você pode analisar qualquer um dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de cadeia de caracteres como [**n**] [**var**]**char**, **texto de [n]**,  **varbinary**, e **imagem**, para o `xml` tipo de dados, convertendo (CAST) ou convertendo (CONVERT) a cadeia de caracteres para o `xml` tipo de dados. XML sem-tipo é verificado para confirmar se está bem formado. Se não houver um esquema associado a `xml` tipo, validação também é executado. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).  
   
  Documentos de XML podem ser codificados com diferentes codificações (por exemplo, UTF-8, UTF-16, Windows-1252). O seguinte descreve as regras de como os tipos de origem de cadeia de caracteres e binários interagem com a codificação do documento XML e como o analisador se comporta.  
   
@@ -98,7 +98,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  Se o parâmetro *style* não for usado ou seu valor estiver definido como 0, espaço em branco insignificante não será preservado para a conversão da instância DT xml. Para obter mais informações sobre como usar o operador CONVERT e seu parâmetro *style* ao converter dados de cadeia de caracteres em instâncias DT xml, consulte [CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml com tipo e atribuí-lo a uma coluna  
- O exemplo a seguir converte uma variável de cadeia de caracteres que contém um fragmento XML para o `xml` tipo de dados e, em seguida, armazena no `xml` coluna de tipo:  
+ O exemplo a seguir converte uma variável de cadeia de caracteres que contém um fragmento XML para o `xml` tipo de dados e, em seguida, armazena-o no `xml` coluna de tipo:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -113,7 +113,7 @@ SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- Você pode explicitamente cast a cadeia de caracteres para o `xml` tipo:  
+ Você pode explicitamente cast () a cadeia de caracteres para o `xml` tipo:  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -126,7 +126,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml com tipo e atribuí-la a uma variável  
- No exemplo a seguir, uma cadeia de caracteres é convertida em `xml` digite e atribuído a uma variável do `xml` tipo de dados:  
+ No exemplo a seguir, uma cadeia de caracteres é convertida `xml` de tipo e atribuído a uma variável do `xml` tipo de dados:  
   
 ```  
 declare @x xml  
@@ -148,7 +148,7 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- A instrução SELECT retorna um fragmento XML textual que, em seguida, é analisado durante a atribuição de `xml` variável de tipo de dados.  
+ A instrução SELECT retorna um fragmento XML textual que, em seguida, é analisado durante a atribuição para o `xml` variável de tipo de dados.  
   
  Você também pode usar o [diretiva TYPE](type-directive-in-for-xml-queries.md) na cláusula FOR XML que retorna um FOR XML diretamente como resultado da consulta `xml` tipo:  
   
@@ -184,7 +184,7 @@ go
  Para obter mais informações sobre FOR XML, consulte [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que isso `xml` informações de tipo de dados enviados em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que isso `xml` informações de tipo de dados ser enviados em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
   
 ## <a name="using-constant-assignments"></a>Usando atribuições de constantes  
  Uma constante de cadeia de caracteres pode ser usada onde uma instância das `xml` tipo de dados é esperado. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:  
@@ -198,7 +198,7 @@ SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'
   
  O exemplo anterior converte implicitamente a cadeia de caracteres para o `xml` tipo de dados e atribui a um `xml` variável de tipo.  
   
- O exemplo a seguir insere uma cadeia de caracteres constante em uma `xml` coluna de tipo:  
+ O exemplo a seguir insere uma cadeia de caracteres constante em um `xml` coluna de tipo:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -209,7 +209,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  Para XML com tipo, o XML é validado em relação ao esquema especificado. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="using-bulk-load"></a>Usando carregamento em massa  
- A funcionalidade [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) aprimorada permite carregar documentos XML em massa no banco de dados. Você pode carregar instâncias XML em massa de arquivos para o `xml` colunas de tipo no banco de dados. Para obter exemplos de funcionamento, consulte [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Para obter mais informações sobre carregamento de documentos XML, consulte [Carregar dados XML](load-xml-data.md).  
+ A funcionalidade [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) aprimorada permite carregar documentos XML em massa no banco de dados. Você pode carregar instâncias XML em massa de arquivos no `xml` colunas de tipo no banco de dados. Para obter exemplos de funcionamento, consulte [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Para obter mais informações sobre carregamento de documentos XML, consulte [Carregar dados XML](load-xml-data.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
