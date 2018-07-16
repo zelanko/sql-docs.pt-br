@@ -1,5 +1,5 @@
 ---
-title: Ajuda de F1 de Assistente para modo de exibição de fonte dados (Analysis Services) | Microsoft Docs
+title: Ajuda de F1 de Assistente para exibição de fonte dados (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269822"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Ajuda F1 do Assistente de Exibição da Fonte de Dados (Analysis Services)
   Use o Assistente de Exibição da Fonte de Dados para criar uma exibição da fonte de dados para uso nos seguintes projetos de business intelligence do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
@@ -52,7 +52,7 @@ ms.locfileid: "36120698"
   
 -   [Selecionar tabelas e exibições &#40;Assistente de exibição da fonte de dados&#41; &#40;do Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [Concluindo o assistente &#40;Assistente de exibição da fonte de dados&#41; &#40;do Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [Concluindo o Assistente de &#40;Assistente de exibição da fonte de dados&#41; &#40;do Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  

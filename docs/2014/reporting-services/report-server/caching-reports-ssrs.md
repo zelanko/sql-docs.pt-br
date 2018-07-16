@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206546"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
   Um servidor de relatório pode armazenar em cache uma cópia de um relatório processado e devolvê-la quando um usuário abrir o relatório. Para o usuário, a única evidência disponível indicativa de que o relatório é uma cópia armazenada em cache são os dados de data e hora de processamento do relatório. Se a data ou a hora não for atual e o relatório não for um instantâneo, ele terá sido recuperado do cache.  
@@ -66,7 +66,7 @@ ms.locfileid: "36122799"
   
  Armazenar um relatório em cache é especialmente útil se você deseja armazenar em cache múltiplas instâncias de um relatório parametrizado, em que diferentes valores de parâmetro são usados para produzir diferentes instâncias de relatório. Observe que você só pode especificar parâmetros com base em consultas no relatório.  
   
- Ao especificar uma agenda ou criar uma assinatura controlada por dados, você agenda a frequência de entrega desses relatórios ao cache. Para que cópias novas sejam entregues ao cache, as cópias antigas devem ter expirado. Portanto, as propriedades de Execução do relatório devem ser configuradas para incluir as configurações de expiração de cache. A configuração de expiração deve ser consistente com a agenda de assinatura definida. Por exemplo, se você criar uma assinatura que é executada todas as noites, o cache também deverá expirar todas as noites antes do tempo de execução da assinatura. Se as propriedades de Execução não incluírem momentos de expiração, novas entregas serão desconsideradas. Para obter mais informações sobre planos de atualização de cache, consulte [agendas](../subscriptions/schedules.md). Para obter mais informações sobre as propriedades de configuração, consulte [definir propriedades de processamento de relatório](set-report-processing-properties.md). Para obter mais informações sobre como usar assinaturas controladas por dados, consulte [assinaturas controladas por dados](../subscriptions/data-driven-subscriptions.md).  
+ Ao especificar uma agenda ou criar uma assinatura controlada por dados, você agenda a frequência de entrega desses relatórios ao cache. Para que cópias novas sejam entregues ao cache, as cópias antigas devem ter expirado. Portanto, as propriedades de Execução do relatório devem ser configuradas para incluir as configurações de expiração de cache. A configuração de expiração deve ser consistente com a agenda de assinatura definida. Por exemplo, se você criar uma assinatura que é executada todas as noites, o cache também deverá expirar todas as noites antes do tempo de execução da assinatura. Se as propriedades de Execução não incluírem momentos de expiração, novas entregas serão desconsideradas. Para obter mais informações sobre planos de atualização de cache, consulte [agendas](../subscriptions/schedules.md). Para obter mais informações sobre como definir propriedades, consulte [definir propriedades de processamento de relatório](set-report-processing-properties.md). Para obter mais informações sobre como usar assinaturas controladas por dados, consulte [assinaturas controladas por dados](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Condições que causam a expiração de cache  
  Um relatório armazenado em cache é invalidado em resposta aos seguintes eventos: a definição do relatório é modificada, os parâmetros do relatório são modificados, as credenciais de fonte de dados mudam ou as opções de execução do relatório mudam. Se você excluir um relatório armazenado em cache, a versão armazenada também será excluída.  
@@ -74,8 +74,8 @@ ms.locfileid: "36122799"
  Se um relatório não puder ser processado a partir de uma instância armazenada em cache por qualquer motivo (por exemplo, se os valores de parâmetro que um usuário especifica forem diferentes daqueles usados para produzir o relatório armazenado em cache), o servidor de relatório executará novamente o relatório.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;Reporting Services no SharePoint modo integrado&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Definir propriedades de processamento de relatório](set-report-processing-properties.md)   
+ [Definir opções de processamento &#40;modo integrado do Reporting Services no SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
  [Conceitos do Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](preload-the-cache-report-manager.md)   
  [Agendas](../subscriptions/schedules.md)   

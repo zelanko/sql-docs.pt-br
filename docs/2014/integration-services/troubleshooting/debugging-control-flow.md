@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,25 +20,25 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170975"
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas do fluxo de controle em um [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pacote.  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas de fluxo de controle em um [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pacote.  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oferece suporte a pontos de interrupção em contêineres e tarefas.  
+-   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] dá suporte a pontos de interrupção em contêineres e tarefas.  
   
 -   O Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] fornece relatórios de progresso em tempo de execução.  
   
 -   O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] fornece janelas de depuração.  
   
 ## <a name="breakpoints"></a>Pontos de interrupção  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O designer fornece o **definir pontos de interrupção** caixa de diálogo, na qual você pode definir pontos de interrupção ao habilitar as condições de interrupção e especificando o número de vezes que um ponto de interrupção pode ocorrer antes da execução do pacote está suspenso. Os pontos de interrupção podem ser habilitados no nível do pacote ou no nível do componente individual. Se as condições da interrupção estiverem habilitadas no nível da tarefa ou contêiner, o ícone do ponto de interrupção aparecerá próximo à tarefa ou contêiner sobre a superfície de design da guia **Fluxo de Controle** . Se as condições de interrupção estiverem habilitadas no pacote, o ícone de ponto de interrupção aparecerá no rótulo da guia **Fluxo de Controle** .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O designer fornece o **definir pontos de interrupção** caixa de diálogo, na qual você pode definir pontos de interrupção ao habilitar as condições de interrupção e especificando o número de vezes que um ponto de interrupção pode ocorrer antes da execução do pacote seja anulada. Os pontos de interrupção podem ser habilitados no nível do pacote ou no nível do componente individual. Se as condições da interrupção estiverem habilitadas no nível da tarefa ou contêiner, o ícone do ponto de interrupção aparecerá próximo à tarefa ou contêiner sobre a superfície de design da guia **Fluxo de Controle** . Se as condições de interrupção estiverem habilitadas no pacote, o ícone de ponto de interrupção aparecerá no rótulo da guia **Fluxo de Controle** .  
   
  Quando um ponto de interrupção é atingido, o ícone de ponto de interrupção muda para ajudá-lo a identificar a fonte do ponto de interrupção. Você pode adicionar, excluir e alterar pontos de interrupção quando o pacote estiver executando.  
   
@@ -46,16 +46,16 @@ ms.locfileid: "36011166"
   
 |Condição de interrupção|Description|  
 |---------------------|-----------------|  
-|Quando a tarefa ou contêiner recebe o `OnPreExecute` evento.|Chamado quando uma tarefa está prestes a ser executada. Este evento é criado por uma tarefa ou contêiner imediatamente antes da sua execução.|  
-|Quando a tarefa ou contêiner recebe o `OnPostExecute` evento.|Chamado imediatamente após a execução lógica do término da tarefa. Este evento é criado por uma tarefa ou contêiner imediatamente após sua execução.|  
-|Quando a tarefa ou contêiner recebe o `OnError` evento.|Chamado por uma tarefa ou contêiner quando ocorre um erro.|  
-|Quando a tarefa ou contêiner recebe o `OnWarning` evento.|Chamado quando a tarefa está em um estado que não justifica um erro, mas autoriza uma advertência.|  
-|Quando a tarefa ou contêiner recebe o `OnInformation` evento.|Chamado quando a tarefa é exigida a fornecer informações.|  
-|Quando a tarefa ou contêiner recebe o `OnTaskFailed` evento.|Chamado pelo host de tarefa quando ele falha.|  
-|Quando a tarefa ou contêiner recebe o `OnProgress` evento.|Chamado para atualizar o progresso da execução de tarefa.|  
-|Quando a tarefa ou contêiner recebe o `OnQueryCancel` evento.|Chamado a qualquer momento do processamento da tarefa quando você pode cancelar execução.|  
-|Quando a tarefa ou contêiner recebe o `OnVariableValueChanged` evento.|Chamado pelo tempo de execução [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando o valor de uma variável muda. RaiseChangeEvent da variável deve ser definido como `true` para gerar este evento.<br /><br /> **\*\* Aviso \*\*** A variável associada a esse ponto de interrupção deve ser definida no escopo de **contêiner** . Se a variável for definida ao escopo de pacote, o ponto de interrupção não será atingido.|  
-|Quando a tarefa ou contêiner recebe o `OnCustomEvent` evento.|Chamado por tarefas para gerar eventos personalizados definidos por tarefa.|  
+|Quando a tarefa ou contêiner recebe o `OnPreExecute` eventos.|Chamado quando uma tarefa está prestes a ser executada. Este evento é criado por uma tarefa ou contêiner imediatamente antes da sua execução.|  
+|Quando a tarefa ou contêiner recebe o `OnPostExecute` eventos.|Chamado imediatamente após a execução lógica do término da tarefa. Este evento é criado por uma tarefa ou contêiner imediatamente após sua execução.|  
+|Quando a tarefa ou contêiner recebe o `OnError` eventos.|Chamado por uma tarefa ou contêiner quando ocorre um erro.|  
+|Quando a tarefa ou contêiner recebe o `OnWarning` eventos.|Chamado quando a tarefa está em um estado que não justifica um erro, mas autoriza uma advertência.|  
+|Quando a tarefa ou contêiner recebe o `OnInformation` eventos.|Chamado quando a tarefa é exigida a fornecer informações.|  
+|Quando a tarefa ou contêiner recebe o `OnTaskFailed` eventos.|Chamado pelo host de tarefa quando ele falha.|  
+|Quando a tarefa ou contêiner recebe o `OnProgress` eventos.|Chamado para atualizar o progresso da execução de tarefa.|  
+|Quando a tarefa ou contêiner recebe o `OnQueryCancel` eventos.|Chamado a qualquer momento do processamento da tarefa quando você pode cancelar execução.|  
+|Quando a tarefa ou contêiner recebe o `OnVariableValueChanged` eventos.|Chamado pelo tempo de execução [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] quando o valor de uma variável muda. O RaiseChangeEvent da variável deve ser definido como `true` para gerar este evento.<br /><br /> **\*\* Aviso \*\*** A variável associada a esse ponto de interrupção deve ser definida no escopo de **contêiner** . Se a variável for definida ao escopo de pacote, o ponto de interrupção não será atingido.|  
+|Quando a tarefa ou contêiner recebe o `OnCustomEvent` eventos.|Chamado por tarefas para gerar eventos personalizados definidos por tarefa.|  
   
  Além das condições dos pontos de interrupção disponíveis a todas as tarefas e contêineres, algumas tarefas e contêineres incluem condições especiais de interrupção para definir os pontos de interrupção. Por exemplo, você pode habilitar uma condição de interrupção no contêiner Loop For que defina um ponto de interrupção que suspenda a execução no início de cada iteração do loop.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36011166"
 -   [Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Relatório de progresso  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer inclui dois tipos de relatórios de progresso: codificação de cores na superfície de design do **fluxo de controle** guia e mensagens de progresso no **andamento** guia.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] O designer inclui dois tipos de relatórios de progresso: codificação de cores na superfície de design da **fluxo de controle** guia e mensagens de progresso na **progresso** guia.  
   
  Quando você executa um pacote, o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] descreve o progresso da execução exibindo cada tarefa ou contêiner usando uma cor que indica o seu status. Você pode identificar pela cor se o elemento está esperando para ser executado, está em execução, terminou com sucesso ou terminou sem-sucesso. Depois que você parar a execução de pacote, a codificação de cor desaparece.  
   

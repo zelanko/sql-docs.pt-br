@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271022"
 ---
 # <a name="replicate-identity-columns"></a>Replicar colunas de identidade
   Quando se atribui uma propriedade IDENTITY a uma coluna, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gera automaticamente números sequenciais para novas linhas inseridas na tabela que contém a coluna de identidade. Para obter mais informações, consulte [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Como as colunas de identidade podem ser incluídas como parte da chave primária, é importante evitar valores duplicados nas colunas de identidade. Para que colunas de identidade sejam usadas em uma topologia de replicação que tenha atualizações em mais de um nó, cada nó da topologia de replicação precisará usar um intervalo diferente de valores de identidade, de modo que não ocorram duplicatas.  
@@ -55,7 +55,7 @@ ms.locfileid: "36121252"
 ## <a name="assigning-identity-ranges"></a>Atribuindo intervalos de identidade  
  A replicação de mesclagem e a replicação transacional usam diferentes métodos para a atribuição de intervalos. Esses métodos são descritos nesta seção.  
   
- Há dois tipos de intervalos a serem considerados quando se replicam colunas de identidade: os intervalos atribuídos ao Publicador e Assinantes, e o intervalo do tipo de dados na coluna. A tabela a seguir mostra os intervalos disponíveis para os tipos de dados usados normalmente em colunas de identidade. O intervalo é usado em todos os nós de uma topologia. Por exemplo, se você usar `smallint` começando em 1 com um incremento de 1, o número máximo de inserções é 32.767 para o publicador e todos os assinantes. O número real de inserções depende da existência de lacunas nos valores usados e da utilização de um valor limite. Para obter mais informações sobre limites, consulte as seções a seguir, "Replicação de mesclagem" e "Replicação transacional com assinaturas de atualização enfileirada".  
+ Há dois tipos de intervalos a serem considerados quando se replicam colunas de identidade: os intervalos atribuídos ao Publicador e Assinantes, e o intervalo do tipo de dados na coluna. A tabela a seguir mostra os intervalos disponíveis para os tipos de dados usados normalmente em colunas de identidade. O intervalo é usado em todos os nós de uma topologia. Por exemplo, se você usar `smallint` começando em 1 com um incremento de 1, é o número máximo de inserções de 32.767 para o publicador e todos os assinantes. O número real de inserções depende da existência de lacunas nos valores usados e da utilização de um valor limite. Para obter mais informações sobre limites, consulte as seções a seguir, "Replicação de mesclagem" e "Replicação transacional com assinaturas de atualização enfileirada".  
   
  Se o Publicador esgotar seu intervalo de identidade após uma inserção, ele poderá atribuir um novo intervalo se a inserção tiver sido realizada por um membro de uma função de banco de dados fixa **db_owner** . Se a inserção tiver sido realizada por um usuário que não estava nessa função, o Agente de Leitor de Log, o Agente de Mesclagem ou um usuário que é membro da função **db_owner** deverá executar [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Para publicações transacionais, o Agente de Leitor de Log deverá estar em execução para alocar automaticamente um novo intervalo (o padrão é que o agente seja executado continuamente).  
   

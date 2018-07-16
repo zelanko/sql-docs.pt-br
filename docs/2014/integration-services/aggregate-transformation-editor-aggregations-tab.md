@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221846"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
   Use a guia **Agregações** da caixa de diálogo **Editor de Transformação Agregação** para especificar colunas para agregação e propriedades de agregação. Você pode aplicar diversas agregações. Esta transformação não gera uma saída de erro.  
@@ -84,7 +84,7 @@ ms.locfileid: "36130400"
  Se você escolher **Agrupar por**, use as caixas de seleção para controlar como a transformação executa a comparação. Para obter mais informações sobre as opções de comparação de cadeias de caracteres, consulte [Comparing String Data](data-flow/comparing-string-data.md)(Comparando dados de cadeia de caracteres).  
   
  **Count Distinct Scale**  
- Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se ambos os `CountDistinctScale` e **CountDistinctKeys** forem especificados, **CountDistinctKeys** terá precedência.  
+ Especifique, opcionalmente, o número aproximado de valores de distinção que a agregação pode gravar. Por padrão, o valor desta opção é **Não Especificado**. Se os dois `CountDistinctScale` e **CountDistinctKeys** forem especificados, **CountDistinctKeys** terá precedência.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "36130400"
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
   
  **Count Distinct Keys**  
- Especifique, opcionalmente, o número exato de valores de distinção que a agregação pode gravar. Se ambos os `CountDistinctScale` e **CountDistinctKeys** forem especificados, **CountDistinctKeys** terá precedência.  
+ Especifique, opcionalmente, o número exato de valores de distinção que a agregação pode gravar. Se os dois `CountDistinctScale` e **CountDistinctKeys** forem especificados, **CountDistinctKeys** terá precedência.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

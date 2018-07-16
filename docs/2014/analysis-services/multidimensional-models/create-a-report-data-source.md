@@ -1,5 +1,5 @@
 ---
-title: Criar uma fonte de dados do relatório | Microsoft Docs
+title: Criar uma fonte de dados de relatório | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a769e1fe3f5049b7e59f45ad81ef0e8cd708356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fae3254d7b5019408838bb14ed09082c15e49ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261342"
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
   Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
@@ -46,7 +46,7 @@ ms.locfileid: "36120017"
 2.  Clique em **Novo Documento** > **Fonte de Dados de Relatório**.  
   
     > [!NOTE]  
-    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, consulte [Adicionar relatório servidor tipos de conteúdo em uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Na página **Propriedades da Fonte de Dados** , em **Nome**, digite um nome para o arquivo .rsds de conexão.  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
 - sql12.swb.managepartition.selectoutput.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58fb07069d831020fac201e9a63b12f316105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197556"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
   Use o **Assistente para Gerenciar Partição** para gerenciar e modificar as tabelas particionadas existentes por meio da troca de partição ou pela implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  
@@ -41,7 +40,7 @@ ms.locfileid: "36013332"
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o banco de dados, clique com o botão direito do mouse na tabela em que você deseja criar partições, aponte para **Armazenamento**e clique em **Gerenciar Partição**.  
   
-     `Note` Se **gerenciar partição** está disponível, você pode ter selecionado uma tabela que não contém partições. Clique em **Criar Partição** no submenu **Armazenamento** e use o **Assistente para Criar Partição** para criar partições na tabela.  
+     `Note` Se **gerenciar partição** está disponível, você talvez tenha selecionado uma tabela que não contém partições. Clique em **Criar Partição** no submenu **Armazenamento** e use o **Assistente para Criar Partição** para criar partições na tabela.  
   
  Para obter mais informações sobre índices particionados, veja [Tabelas e índices particionados](partitioned-tables-and-indexes.md).  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249036"
 ---
 # <a name="attributepermissions-element-assl"></a>Elemento AttributePermissions (ASSL)
   Contém a coleção de permissões de atributo de um indivíduo [função](../objects/role-element-assl.md) elemento em uma dimensão específica de um [cubo](../objects/cube-element-assl.md) elemento.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238476"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
   Você pode permitir que um usuário expanda ou recolha interativamente itens de relatório ou expanda ou recolha linhas e colunas associadas a um grupo para uma tabela ou matriz. Para permitir que os usuários expandam ou recolham um item, defina as propriedades de visibilidade do item. A definição de trabalhos de visibilidade em um visualizador de relatórios HTML às vezes é chamada de uma ação de *detalhamento* .  
@@ -48,7 +48,7 @@ ms.locfileid: "36122096"
     > [!NOTE]  
     >  Se o painel Propriedades não for exibido, clique em **Exibir** na Faixa de opções e clique em **Propriedades**.  
   
-4.  Em `Hidden`, escolha uma das opções a seguir para definir a visibilidade desse item de relatório na primeira vez em que você executa um relatório:  
+4.  No `Hidden`, escolha uma das opções a seguir para definir a visibilidade desse item de relatório na primeira vez que você executar um relatório:  
   
     -   Selecione `False` para exibir o item de relatório.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36122096"
      ![Executando um relatório com uma tabela de expansão](../media/expandcollapse-runreport-reporttable.png "Executando um relatório com uma tabela de expansão")  
   
 ## <a name="see-also"></a>Consulte também  
- [Ação de busca detalhada &#40;SSRS e construtor de relatórios&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Ação de busca detalhada &#40;relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Ocultar um item &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

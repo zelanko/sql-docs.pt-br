@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248586"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
   Um caminho conecta dois componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente. Um caminho tem uma origem e um destino. Por exemplo, se um caminho conectar uma origem OLE DB e uma transformação Classificação, a origem OLE DB será a origem do caminho e a transformação Classificação será o destino do caminho. A origem é o componente onde o caminho inicia, e o destino é o componente onde o caminho termina.  
@@ -47,7 +47,7 @@ ms.locfileid: "36012535"
   
 -   [Editor de caminho de fluxo de dados &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de caminho de fluxo de dados &#40;página metadados&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Editor de caminho de fluxo de dados &#40;página de metadados&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [Editor de caminho de fluxo de dados &#40;página visualizadores de dados&#41;](../data-flow-path-editor-data-viewers-page.md)  
   

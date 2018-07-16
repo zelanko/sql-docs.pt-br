@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181553"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usando o controle RSClientPrint em aplicativos personalizados
   O controle ActiveX [!INCLUDE[msCoName](../../../includes/msconame-md.md)], **RSPrintClient**, fornece impressão do lado do cliente para relatórios exibidos no Visualizador de HTML. Ele fornece uma caixa de diálogo **Imprimir** para que um usuário possa iniciar um trabalho de impressão, visualizar um relatório, especificar páginas a serem impressas e alterar as margens. Durante uma operação de impressão do lado cliente, o servidor de relatório renderiza o relatório na extensão de renderização Image (EMF) e usa os recursos de impressão do sistema operacional para criar o trabalho de impressão e para enviá-lo para uma impressora.  
@@ -78,7 +78,7 @@ ms.locfileid: "36122027"
 |MarginBottom|Double|RW|configuração de relatório|Obtém ou define a margem inferior. O valor padrão, caso não seja definido pelo desenvolvedor ou especificado no relatório, é 12,2 milímetros.|  
 |PageWidth|Double|RW|configuração de relatório|Obtém ou define a largura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, será 215,9 milímetros.|  
 |PageHeight|Double|RW|configuração de relatório|Obtém ou define a altura da página. O valor padrão, caso não seja definido pelo desenvolvedor ou pela definição de relatório, é 279,4 milímetros.|  
-|Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digita `3`, o valor será medido em milímetros, se o idioma seja o francês ou em polegadas se o idioma for inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Cultura|Int32|RW|Localidade do navegador|Especifica o LCID (identificador de localidade). Este valor determina a unidade de medida para a entrada de usuário. Por exemplo, se um usuário digita `3`, o valor será medido em milímetros caso o idioma for o francês ou em polegadas se o idioma é inglês (Estados Unidos). Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|Cadeia de caracteres|RW|Cultura do cliente|Especifica localização da cadeia de caracteres da caixa de diálogo. O texto da caixa de diálogo Imprimir está localizado para estes idiomas: chinês simplificado, chinês tradicional, inglês, francês, alemão, italiano, japonês, coreano e espanhol. Os valores válidos incluem: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Booliano|RW|Falso|Especifica se o controle emite um comando GET para o servidor de relatório para iniciar uma conexão de impressão fora de sessão.|  
   

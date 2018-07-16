@@ -16,21 +16,21 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9562c7aab750f4114ef59c1a7c17f44c8e3b05e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220282"
 ---
 # <a name="amo-security-classes"></a>Classes de segurança AMO
   
  A ilustração a seguir mostra o relacionamento das classes explicadas neste tópico.  
   
- ![Classes de segurança em AMO abordados neste tópico](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "classes de segurança em AMO abordados neste tópico")  
+ ![Este tópico abrange as classes de segurança em AMO](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "classes de segurança em AMO abordados neste tópico")  
   
 ##  <a name="RolesMembers"></a> Objetos role e RoleMember  
  Um objeto <xref:Microsoft.AnalysisServices.Role> é criado ao ser adicionado à coleção de funções do banco de dados e pela atualização do objeto <xref:Microsoft.AnalysisServices.Role> para o servidor por meio do método Update. Um objeto <xref:Microsoft.AnalysisServices.Role> deve ser atualizado antes de ser usado.  

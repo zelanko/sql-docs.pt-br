@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214006"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>Conjunto de linhas DISCOVER_XML_METADATA
   Retorna um documento XML que descreve um objeto solicitado. O conjunto de linhas que sempre é retornado consiste em uma linha e em uma coluna.  
@@ -73,7 +73,7 @@ ms.locfileid: "36121365"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Opcional.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Opcional.|  
   
- A restrição, `ObjectExpansion`, está disponível para cada objeto principal de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Normalmente, o cliente usa as restrições para descrever os objetos OLAP para os quais o DDL deve ser retornada e usa a restrição `ObjectExpansion` para definir o grau de expansão no DDL retornado. A tabela a seguir indica se o valor de enumeração é permitido para [Alter elemento &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
+ A restrição `ObjectExpansion`, está disponível para todos os principais objetos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Normalmente, o cliente usa as restrições para descrever os objetos OLAP para os quais o DDL deve ser retornada e usa a restrição `ObjectExpansion` para definir o grau de expansão no DDL retornado. A tabela a seguir indica se o valor de enumeração é permitido para [alterar o elemento &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) comandos.  
   
 |Valor de enumeração|Description|  
 |-----------------------|-----------------|  

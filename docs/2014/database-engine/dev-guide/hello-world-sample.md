@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269922"
 ---
 # <a name="hello-world-sample"></a>Exemplo Hello World
   O exemplo Hello World demonstra as operações básicas envolvidas na criação, na implantação e no teste de um procedimento armazenado com base na integração CLR (common language runtime). Esse exemplo também demonstra como retornar dados por meio de um registro, que é dinamicamente construído pelo procedimento armazenado e retornado ao chamador.  

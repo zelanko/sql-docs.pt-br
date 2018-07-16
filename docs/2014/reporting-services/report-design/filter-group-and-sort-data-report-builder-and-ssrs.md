@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256345"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar e classificar dados (Construtor de Relatórios e SSRS)
   Em um relatório, as expressões são usadas para ajudar a controlar, organizar e classificar dados de relatório. Por padrão, quando você cria conjuntos de dados e cria o layout de relatório, as propriedades de itens de relatório são definidas automaticamente como expressões baseadas nos campos de conjuntos de dados, parâmetros e outros itens que aparecem no painel de dados do relatório. Também é possível adicionar um botão de classificação interativo a uma tabela ou célula de matriz para permitir que um usuário altere a ordem de classificação de linha interativamente para grupos ou linhas em grupos.  
@@ -45,11 +45,11 @@ ms.locfileid: "36122105"
   
  Para obter mais informações e exemplos, consulte os seguintes tópicos:  
   
--   [Exemplos de expressões de grupo &#40;SSRS e construtor de relatórios&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de equações de filtro &#40;SSRS e construtor de relatórios&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+-   [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
 -   [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36122105"
   
  O nome de grupo identifica um escopo de expressão. Você pode especificar o nome de um grupo como um escopo no qual calcular agregações, organizar dados hierarquicamente e alternar a exibição para nós filho de nós pai em um relatório detalhado, mostrar exibições diferentes dos mesmos dados em várias regiões de dados e visualizar dados resumidos em uma tabela, matriz, gráfico, medidor ou mapa. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Para agrupar em vários campos de conjunto de dados, adicione cada campo ao conjunto de expressões de grupo. Você também pode escrever suas próprias expressões de grupo em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Por exemplo, você pode agrupar por um intervalo de valores ou usar um parâmetro de relatório para permitir que os usuários selecionem como agrupar os dados em uma região de dados. Para obter mais informações, consulte [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Para agrupar em vários campos de conjunto de dados, adicione cada campo ao conjunto de expressões de grupo. Você também pode escrever suas próprias expressões de grupo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Por exemplo, você pode agrupar por um intervalo de valores ou usar um parâmetro de relatório para permitir que os usuários selecionem como agrupar os dados em uma região de dados. Para obter mais informações, consulte [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Para a apresentação do relatório, você pode adicionar quebras de página antes ou depois de cada grupo, ou de cada instância de um grupo, para reduzir a quantidade de dados em cada página e ajudar a gerenciar o desempenho da renderização do relatório. Para obter mais informações, consulte [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36122105"
  Para obter mais informações, consulte [relatório e referências de coleções de variáveis de grupo &#40;construtor de relatórios e SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) e [escopo das expressões para totais, agregações e coleções internas &#40;relatório Construtor e o SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Grupos e escopo em regiões de dados  
- Para fornecer várias exibições de dados do mesmo conjunto de dados, é possível especificar as mesmas expressões de grupo para cada região de dados. Por exemplo, é possível exibir dados categorizados em uma tabela para mostrar todos os dados detalhados e em um gráfico de pizza para mostrar agregações e ajudar a visualizar cada categoria em relação ao conjunto de dados inteiro. Para obter mais informações, consulte [vinculando várias regiões de dados para o mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Para fornecer várias exibições de dados do mesmo conjunto de dados, é possível especificar as mesmas expressões de grupo para cada região de dados. Por exemplo, é possível exibir dados categorizados em uma tabela para mostrar todos os dados detalhados e em um gráfico de pizza para mostrar agregações e ajudar a visualizar cada categoria em relação ao conjunto de dados inteiro. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto de dados &#40;construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Quando você aninha uma região de dados em uma célula de uma tabela, matriz ou lista, automaticamente está definindo o escopo dos dados como as associações de grupo internas da célula. Por exemplo, suponha que você adicione um gráfico a uma célula que está tanto no grupo de linhas quanto no grupo de colunas. O escopo dos dados disponíveis do gráfico é a instância de grupo de linhas internas e de colunas internas em tempo de execução. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36122105"
 ### <a name="sorting-data-in-a-dataset-query"></a>Classificando dados em uma consulta de conjunto de dados  
  Inclua a ordem de classificação na consulta de conjunto de dados para pré-classificar os dados antes que eles sejam recuperados para um relatório. Com a classificação de dados na consulta, o trabalho de classificação é feito pela fonte de dados em vez de pelo processador de relatório.  
   
- Para uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de fonte de dados você pode adicionar uma cláusula ORDER BY à consulta de conjunto de dados. Por exemplo, a seguinte consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] classifica as colunas Sales e Region por Sales em ordem decrescente na tabela SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obter mais informações, consulte "Classificando linhas com ORDER BY" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Para um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados de tipo, você pode adicionar uma cláusula ORDER BY à consulta de conjunto de dados. Por exemplo, a seguinte consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] classifica as colunas Sales e Region por Sales em ordem decrescente na tabela SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obter mais informações, consulte "Classificando linhas com ORDER BY" nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Nem todas as fontes de dados dão suporte à capacidade de especificar a ordem de classificação na consulta.  
@@ -175,43 +175,43 @@ FROM Production.Product
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#BackToTop)  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;SSRS e construtor de relatórios&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [Exibir cabeçalhos e rodapés com um grupo &#40;SSRS e construtor de relatórios&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Exibir cabeçalhos e rodapés com um grupo de &#40;relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Adicionar classificação interativa a uma tabela ou matriz &#40;SSRS e construtor de relatórios&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Adicionar classificação interativa a uma tabela ou matriz &#40;relatórios e SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Definir uma mensagem Nenhum dado para uma região de dados &#40;SSRS e construtor de relatórios&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Definir uma mensagem Nenhum dado para uma região de dados &#40;relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Criar um grupo de hierarquia recursiva &#40;SSRS e construtor de relatórios&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Criar um grupo de hierarquia recursiva &#40;relatórios e SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [Adicionar ou excluir um grupo em uma região de dados &#40;SSRS e construtor de relatórios&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em uma região de dados &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [Exibir cabeçalhos e rodapés com um grupo &#40;SSRS e construtor de relatórios&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [Exibir cabeçalhos e rodapés com um grupo de &#40;relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [Adicionar ou excluir um grupo em um gráfico &#40;SSRS e construtor de relatórios&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar ou excluir um grupo em um gráfico &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [Adicionar um Total a um grupo ou região de dados Tablix &#40;SSRS e construtor de relatórios&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [Adicionar um Total a um grupo ou região de dados Tablix &#40;relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> Nesta seção  
- [Exemplos de expressões de grupo &#40;SSRS e construtor de relatórios&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [Exemplos de equações de filtro &#40;SSRS e construtor de relatórios&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Adicionar filtros de conjunto de dados, filtros de região de dados e filtros de grupo &#40;SSRS e construtor de relatórios&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Adicionar filtros de conjunto de dados, filtros de região de dados e de grupo &#40;relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Seções relacionadas  
- [Noções básicas sobre grupos &#40;SSRS e construtor de relatórios&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Noções básicas sobre grupos &#40;relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [Criando grupos de hierarquia recursiva &#40;SSRS e construtor de relatórios&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Criando grupos de hierarquia recursiva &#40;relatórios e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Relatório e referências de coleções de variáveis de grupo &#40;SSRS e construtor de relatórios&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Referências de coleções de variáveis de grupo e de relatório &#40;relatórios e SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Exibindo uma série com vários intervalos de dados em um gráfico &#40;SSRS e construtor de relatórios&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [Exibindo uma série com vários intervalos de dados em um gráfico &#40;relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;SSRS e construtor de relatórios&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Medidores &#40;SSRS e construtor de relatórios&#41;](gauges-report-builder-and-ssrs.md)   
+ [Medidores &#40;relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

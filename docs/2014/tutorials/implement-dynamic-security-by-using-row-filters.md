@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257592"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar a segurança dinâmica usando filtros de linha
   Nesta lição suplementar, você criará uma função adicional que implementa a segurança dinâmica. A segurança dinâmica oferece segurança em nível de linha com base no nome de usuário ou na id de logon do usuário conectado no momento. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "36122078"
   
      Se a opção Colar estiver acinzentada, clique em qualquer coluna de qualquer tabela na janela do designer de modelos, clique no menu **Editar** e em **Colar**.  
   
-7.  No **visualização de colagem** na caixa **nome de tabela**, tipo `Employee Security`.  
+7.  No **visualização de colagem** na caixa **nome da tabela**, tipo `Employee Security`.  
   
 8.  Em **Dados a serem colados**, verifique se os dados incluem todos os dados de usuário e cabeçalhos da planilha Funcionário de Exemplo.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36122078"
   
      Uma nova função com a permissão Nenhum é adicionada à lista.  
   
-3.  Clique na nova função e, em seguida, no **nome** coluna, renomeie a função para `Sales Employees by Territory`.  
+3.  Clique na nova função e, em seguida, na **nome** coluna, renomeie a função para `Sales Employees by Territory`.  
   
 4.  Na coluna **Permissões** , clique na lista suspensa e selecione a permissão **Leitura** .  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218836"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Caixa de diálogo Opções do Construtor de Relatórios, Configurações (Construtor de Relatórios)
-  Clique o **Report Builder** botão e, em seguida, clique em **opções** para definir opções para mostrar os arquivos e conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  
+  Clique o **construtor de relatórios** botão e, em seguida, clique em **opções** para definir opções para mostrar arquivos e conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Usar este servidor de relatório ou site do SharePoint por padrão**  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transferring data
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc0b4f2e79564bbdc6ceaabb088cdb070636a3d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70224f60f7bd6da21b757cdff265749c9ac35979
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186133"
 ---
 # <a name="transferring-data"></a>Transferindo dados
   A classe <xref:Microsoft.SqlServer.Management.Smo.Transfer> é uma classe de utilitário que fornece ferramentas para transferir objetos e dados.  

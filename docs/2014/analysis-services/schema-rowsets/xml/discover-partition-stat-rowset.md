@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98db8d43f86cc9acaf612da8180498d22e01d037
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6711aa9d7a98fa635694cc76e98cc89507d524ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197806"
 ---
 # <a name="discoverpartitionstat-rowset"></a>Conjunto de linhas DISCOVER_PARTITION_STAT
   Retorna estatísticas sobre agregações em uma partição específica.  
@@ -28,7 +28,7 @@ ms.locfileid: "36122263"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_PARTITION_STAT` linhas contém as seguintes colunas.  
+ O `DISCOVER_PARTITION_STAT` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

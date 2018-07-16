@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224846"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
   O PowerPivot para SharePoint é um servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no modo SharePoint. O PowerPivot para SharePoint fornece hospedagem de servidor de dados PowerPivot em um farm do SharePoint. Os dados PowerPivot são um modelo de dados analíticos que você cria usando um dos seguintes:  
@@ -66,7 +66,7 @@ ms.locfileid: "36013202"
   
  [Autenticação e autorização PowerPivot](power-pivot-authentication-and-authorization.md)  
   
- [Configurar regras de integridade do PowerPivot-](configure-power-pivot-health-rules.md)  
+ [Regras de integridade do PowerPivot - configurar](configure-power-pivot-health-rules.md)  
   
  [Painel de Gerenciamento PowerPivot e dados de uso](power-pivot-management-dashboard-and-usage-data.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36013202"
  [Topologias de licença de exemplo e custos para autoatendimento de Business Intelligence do SQL Server 2014](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Planejamento e implantação](http://go.microsoft.com/fwlink/?linkID=220972)   
+ [Implantação e planejamento do PowerPivot](http://go.microsoft.com/fwlink/?linkID=220972)   
  [Recuperação de desastres para PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1696734810b1b3fd4ceccb624139358cea0dcaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e8c12ad683e46838a88359170ea970f20c02828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231516"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de Transformação Agrupamento Difuso (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Agrupamento Difuso** para especificar colunas de entrada e saída, definir limites de similaridade e definir delimitadores.  
   
 > [!NOTE]  
->  O `Exhaustive` e `MaxMemoryUsage` propriedades da transformação agrupamento difuso não estão disponíveis no **Editor de transformação agrupamento difuso**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre essas propriedades, consulte a seção Transformação Agrupamento Difuso em [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  O `Exhaustive` e o `MaxMemoryUsage` propriedades da transformação agrupamento difuso não estão disponíveis na **Editor de transformação agrupamento difuso**, mas pode ser definida usando o **Editor Avançado**. Para obter mais informações sobre essas propriedades, consulte a seção Transformação Agrupamento Difuso em [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para saber mais sobre a transformação Agrupamento Difuso, consulte [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   

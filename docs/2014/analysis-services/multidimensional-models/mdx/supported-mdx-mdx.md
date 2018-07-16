@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191147"
 ---
 # <a name="supported-mdx-mdx"></a>Suporte para MDX (MDX)
   As instruções e funções a seguir são suportadas em scripts MDX:  
@@ -57,11 +57,11 @@ ms.locfileid: "36122933"
  [Isso &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  A linguagem MDX oferece suporte a atribuição das seguintes propriedades de célula: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX também oferece suporte a atribuição de `NON_EMPTY_BEHAVIOR` propriedade o [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instrução.  
+>  A linguagem MDX oferece suporte a atribuição das seguintes propriedades de célula: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). MDX também dá suporte à atribuição para o `NON_EMPTY_BEHAVIOR` propriedade do [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) instrução.  
   
  [Instrução SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
 ## <a name="see-also"></a>Consulte também  
- [O Script básico de MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+ [O Script básico MDX &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
   
   

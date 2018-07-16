@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198206"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Guia de seleção de entrada (exibição de gráfico de precisão de mineração)
   Use a guia **Seleção de Entrada** do designer **Gráfico de Precisão de Mineração** para especificar a fonte dos dados que são usados para testar o modelo e criar o gráfico de precisão.  
   
- **Para obter mais informações:**  [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações: ** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Sincronizar Colunas**  **e Valores de Previsão**  
@@ -75,6 +75,6 @@ ms.locfileid: "36122048"
  [Teste e validação de tarefas e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Aplicar um filtro a um modelo de mineração](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtros para modelos de mineração &#40;Analysis Services – mineração de dados&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de mineração &#40;Analysis Services - mineração de dados&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

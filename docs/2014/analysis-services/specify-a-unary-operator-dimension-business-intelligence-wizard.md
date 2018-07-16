@@ -1,5 +1,5 @@
 ---
-title: Especifique um operador unário (dimensão) (Assistente de Business Intelligence) | Microsoft Docs
+title: Especificar um operador unário (dimensão) (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.selectdimension.f1
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef0b73ffc4251f27a00a345b73084580569f99ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e24e411680a99fc8f47536c138245bdd289ff438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269762"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>Especificar um Operador Unário (Dimensão) (Assistente de Business Intelligence)
   Use a página **Especificar Operador Unário** para selecionar uma dimensão que tenha um atributo pai definido e à qual o Assistente de Business Intelligence aplicará operadores unários. Para obter mais informações sobre os atributos pai, consulte [Atributos e hierarquias de atributos](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

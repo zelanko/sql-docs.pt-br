@@ -1,5 +1,5 @@
 ---
-title: Use as funções de agregação | Microsoft Docs
+title: Usar funções de agregação | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257542"
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
   Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é `Sum`. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
@@ -54,7 +54,7 @@ ms.locfileid: "36122268"
 |`Max`|Semiaditiva|Recupera o valor mais alto de todos os membros filho.|  
 |`DistinctCount`|Não aditiva|Recupera a contagem de todos os membros filho exclusivos. Para obter mais detalhes, consulte [Sobre medidas de contagem distintas](use-aggregate-functions.md#bkmk_distinct) na próxima seção.|  
 |`None`|Não aditiva|Nenhuma agregação é executada e todos os valores de membros folha e não folha de uma dimensão são fornecidos diretamente da tabela de fatos para o grupo de medidas que contém a medida. Se não for possível ler um valor da tabela de fatos para um membro, o valor desse membro será definido como nulo.|  
-|`ByAccount`|Semiaditiva|Calcula a agregação de acordo com a função de agregação atribuída ao tipo de conta de um membro em uma dimensão de conta. Se nenhuma dimensão do tipo de conta existe no grupo de medidas, tratados como o `None` função de agregação.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiaditiva|Calcula a agregação de acordo com a função de agregação atribuída ao tipo de conta de um membro em uma dimensão de conta. Se nenhuma dimensão do tipo de conta existe no grupo de medidas, tratado como o `None` função de agregação.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiaditiva|Calcula a média de valores de todos os membros filho não vazios.|  
 |`FirstChild`|Semiaditiva|Recupera o valor do primeiro membro filho.|  
 |`LastChild`|Semiaditiva|Recupera o valor do último membro filho.|  
@@ -72,7 +72,7 @@ ms.locfileid: "36122268"
   
 ## <a name="see-also"></a>Consulte também  
  [Medidas e grupos de medidas](measures-and-measure-groups.md)   
- [Referência de função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Referência da função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Definir um comportamento semiaditivo](define-semiadditive-behavior.md)  
   
   

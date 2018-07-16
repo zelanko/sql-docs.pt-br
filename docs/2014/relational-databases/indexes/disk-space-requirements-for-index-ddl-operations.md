@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - index disk space [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d8cd697dd202ee3ba72598c6915488ea052bee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c072db7fc8fc282c53ff177a63bdfa0e1f208105
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248536"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
   O espaço em disco é uma consideração importante ao criar, recriar ou cancelar índices. Um espaço em disco inadequado pode degradar o desempenho ou até mesmo provocar falha na operação de índice. Este tópico fornece informações gerais que poderão lhe ajudar a determinar a quantidade de espaço em disco necessária para operações DDL (Linguagem de Definição de Dados) de índice.  

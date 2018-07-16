@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving registered server or server group
 - Registered Servers [SQL Server], server groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4727f6d6bb0dac403510536f1231bef075c2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2472a88caaf08616a12bb0b4fb54458c141115c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189613"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Mover um servidor registrado ou um grupo de Servidores Registrados (SQL Server Management Studio)
   Este tópico descreve como organizar os servidores em Servidores Registrados movendo um servidor registrado ou grupos de servidores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Grupos de Servidores podem conter servidores registrados ou outros grupos de servidores. Tanto os servidores como os grupos de servidores podem ser movidos de um grupo de servidores para outro.  

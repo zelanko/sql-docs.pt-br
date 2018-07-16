@@ -1,5 +1,5 @@
 ---
-title: O que&#39;novo no construtor de relatórios do SQL Server 2014 | Microsoft Docs
+title: O que&#39;novo no construtor de relatórios para SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf08740110d2b7517a692e0c7a7f53351767d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224896"
 ---
-# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>O que&#39;novo no construtor de relatórios do SQL Server 2014
+# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>O que&#39;novo no construtor de relatórios para SQL Server 2014
   O [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] apresenta vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Para obter informações sobre os recursos nesta versão para outros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] produtos e tecnologias, consulte [o que há de novo no SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "36122550"
   
  Para obter mais informações, consulte [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-##  <a name="WordRenderer"></a> Renderizador do Word para o Microsoft Word 2007-2010 e o Microsoft Word 2003  
+##  <a name="WordRenderer"></a> Renderizador do Word para Microsoft Word 2007-2010 e Microsoft Word 2003  
  A extensão de renderização do Word do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], nova no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] renderiza um relatório como um documento do Word compatível com [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010, bem como com [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. O formato é o Office Open XML e a extensão de arquivo dos arquivos é docx.  
   
  Além de disponibilizar os recursos que são novos no Word 2007-2010 para relatórios exportados, os arquivos *.docx de relatórios exportados tendem a ser menores. Os relatórios exportados usando o renderizador do Word são geralmente significativamente menores que os mesmos relatórios exportados usando o renderizador do Word 2003.  

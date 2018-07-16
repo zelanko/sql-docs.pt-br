@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96bd9cddc0821887982f26485f38be8370fba9c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8ecb71fc2a9dce37bf3797da0326c16d5965afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232396"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Alterar a cor, o tamanho e o estilo da fonte em diagramas (Visual Database Tools)
   Você pode personalizar o modo em que o texto aparece em diagramas de banco de dados alterando a cor, a fonte, o tamanho e estilo da fonte. As mudanças são aplicadas aos diagramas novos e aos diagramas existentes quando eles são modificados.  

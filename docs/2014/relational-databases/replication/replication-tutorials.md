@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217356"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
   A replicação engloba tutoriais que são utilizados para ensinar a configurar e a executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "36012232"
  Nos tutoriais de replicação, "Publicador" refere-se ao servidor que contém os dados de origem sendo replicados, e "Assinante" refere-se ao servidor de destino. O Publicador e o Assinante podem compartilhar a mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas isso não é um requisito. Para obter mais informações, consulte [Visão geral do modelo de publicação do Replication](publish/replication-publishing-model-overview.md).  
   
 > [!NOTE]  
->  A maioria das tarefas mostradas nos tutoriais podem ser executadas de forma programática. Para obter mais informações, consulte [guia do desenvolvedor &#40;replicação&#41;](concepts/replication-developer-documentation.md).  
+>  A maioria das tarefas mostradas nos tutoriais podem ser executadas de forma programática. Para obter mais informações, consulte [guia do desenvolvedor do &#40;replicação&#41;](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Tutoriais de Replicação  
  [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md)  

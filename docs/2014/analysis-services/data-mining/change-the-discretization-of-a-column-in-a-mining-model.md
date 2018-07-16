@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202166"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Alterar a diferenciação de uma coluna em um modelo de mineração
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretiza automaticamente valores, ou seja, compartimentaliza dados na coluna numérica em determinados cenários. Por exemplo, se seus dados contêm dados numéricos contínuos e você cria um modelo de árvore de decisão, cada coluna de dados contínuos é compartimentalizada automaticamente, dependendo da distribuição dos dados. Para controlar o modo como os dados são diferenciados, altere as propriedades na coluna da estrutura de mineração que controla como os dados são usados no modelo.  
@@ -43,14 +43,14 @@ ms.locfileid: "36012394"
   
 ### <a name="to-change-the-discretization-method"></a>Para alterar o método de diferenciação  
   
-1.  No **propriedades de mineração** janela, clique na caixa de texto ao lado **conteúdo**e selecione `Discretized` na lista suspensa.  
+1.  No **propriedades de mineração** , clique na caixa de texto ao lado **conteúdo**e selecione `Discretized` na lista suspensa.  
   
      A janela <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> agora estão habilitadas.  
   
-2.  No **propriedades** janela, clique na caixa de texto ao lado <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e selecione um dos seguintes valores: `Automatic`, `EqualAreas`, ou `Cluster`.  
+2.  No **propriedades** , clique na caixa de texto ao lado <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> e selecione um dos seguintes valores: `Automatic`, `EqualAreas`, ou `Cluster`.  
   
     > [!NOTE]  
-    >  Se o uso da coluna é definido como `Ignore`, o **propriedades** janela para a coluna está em branco.  
+    >  Se o uso da coluna for definido como `Ignore`, o **propriedades** janela para a coluna está em branco.  
   
      O novo valor entrará em vigor quando você selecionar um elemento diferente no designer.  
   

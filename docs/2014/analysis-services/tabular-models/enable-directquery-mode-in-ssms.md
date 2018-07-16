@@ -1,5 +1,5 @@
 ---
-title: Configure o acesso do DirectQuery para um banco de dados de modelo de tabela ou na memória | Microsoft Docs
+title: Configure o acesso do DirectQuery para um banco de dados do modelo de tabela ou na memória | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c91dd8529fa6ddfb111ebb87cb84d87a55d3a709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee6b2f55d1b630b489f65e16a39cb602d5fd5a6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243436"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configure o Acesso Na Memória ou DirectQuery para um banco de dados modelo de tabela
   Este tópico descreve como alterar as propriedades de conexão de um modelo de tabela que já foi implantado, para habilitar o uso do modelo no modo Consulta Direta.  
@@ -27,7 +27,7 @@ ms.locfileid: "36120661"
  Para obter mais informações sobre essas propriedades e configuração para os cenários mais comuns, consulte [cenários de implantação do DirectQuery &#40;SSAS de tabela&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Requisitos  
- Habilitar o uso do modo Consulta Direta em um modelo de tabela é um processo de várias etapas. Você deve:  
+ Habilitar o uso do modo Consulta Direta em um modelo de tabela é um processo de várias etapas. Faça o seguinte:  
   
 1.  Verificar se o modelo não tem recursos que podem causar erros de validação no modo Consulta Direta.  
   

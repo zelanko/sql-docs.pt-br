@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220846"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referências a código personalizado e assemblies em expressões no Designer de Relatórios (SSRS)
   É possível adicionar referências ao código personalizado inserido em um relatório ou aos assemblies personalizados criados e salvos em seu computador e implantá-los no servidor de relatório. Use o código inserido para constantes personalizadas, funções complexas ou funções usadas várias vezes em um mesmo relatório. Use assemblies de código personalizado para manter o código em um único local e compartilhá-lo para uso em vários relatórios. O código personalizado pode incluir novas constantes, variáveis, funções ou sub-rotinas personalizadas. É possível incluir referências somente leitura em coleções internas, como a coleção de Parâmetros. No entanto, não é possível passar conjuntos de valores de dados do relatório para funções personalizadas. Especificamente, não há suporte para agregações personalizadas.  
@@ -71,13 +71,13 @@ ms.locfileid: "36122794"
 ##  <a name="Embedded"></a> Incluindo código inserido  
  Para adicionar código inserido a um relatório, use a guia Código da caixa de diálogo **Propriedades do Relatório** . O bloco de código criado pode conter vários métodos. Os métodos no código inserido devem ser gravados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e devem ser baseados em instância. O processador de relatório adiciona referências automaticamente para os namespaces System.Convert e System.Math. Use a página **Referências** da caixa de diálogo **Propriedades do Relatório** para adicionar referências adicionais do assembly. Para obter mais informações, consulte [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Os métodos no código inserido são disponibilizados por meio de um membro do `Code` definido globalmente. Você os acessa consultando o `Code` membro e o nome do método. O exemplo a seguir chama o método `ToUSD`, que converte o valor de `StandardCost` campo para um valor em dólar:  
+ Os métodos no código inserido são disponibilizados por meio de um membro do `Code` definido globalmente. Você os acessa consultando o `Code` membro e o nome do método. O exemplo a seguir chama o método `ToUSD`, que converte o valor no `StandardCost` campo para um valor em dólar:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Para fazer referência a coleções internas em seu código personalizado, incluir uma referência para o interno `Report` objeto:  
+ Para fazer referência a coleções internas em seu código personalizado, inclua uma referência a interno `Report` objeto:  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -164,7 +164,7 @@ End Function
  Como o conteúdo das coleções *Fields* e *ReportItems* pode ser alterado dinamicamente em tempo de execução, você não deverá retê-las durante as chamadas no assembly personalizado (por exemplo, em uma variável de membro). A mesma recomendação geralmente se aplica a todas as coleções internas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicione código para um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
+ [Adicione o código a um relatório &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
  [Usando Assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   

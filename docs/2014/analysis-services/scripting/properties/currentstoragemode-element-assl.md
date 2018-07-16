@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233816"
 ---
 # <a name="currentstoragemode-element-assl"></a>Elemento CurrentStorageMode (ASSL)
   Determina o modo de armazenamento atual para o elemento pai.  

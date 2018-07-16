@@ -17,21 +17,21 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241616"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
-  Você pode usar o [assinar](../xmla/xml-elements-commands/subscribe-element-xmla.md) do XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O comando `Subscribe` retorna os resultados de um rastreamento como um conjunto de linhas.  
+  Você pode usar o [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O comando `Subscribe` retorna os resultados de um rastreamento como um conjunto de linhas.  
   
 ## <a name="specifying-a-trace"></a>Especificando um rastreamento  
- O [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propriedade o `Subscribe` comando deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se a propriedade `Object` não for especificada, ou se o identificador do rastreamento não for especificado na propriedade `Object`, o comando `Subscribe` vai monitorar o rastreamento padrão de sessão para a sessão explícita especificada no cabeçalho SOAP do comando.  
+ O [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propriedade da `Subscribe` comando deve conter uma referência de objeto para um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se a propriedade `Object` não for especificada, ou se o identificador do rastreamento não for especificado na propriedade `Object`, o comando `Subscribe` vai monitorar o rastreamento padrão de sessão para a sessão explícita especificada no cabeçalho SOAP do comando.  
   
 ## <a name="returning-results"></a>Retornando resultados  
  O comando `Subscribe` retorna um conjunto de linhas que contém os eventos de rastreamento capturados pelo rastreamento especificado. O `Subscribe` comando retorna os resultados do rastreamento até que o comando é cancelado, o [Cancelar](../xmla/xml-elements-commands/cancel-element-xmla.md) comando.  

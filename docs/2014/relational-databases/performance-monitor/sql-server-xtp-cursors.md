@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b404b5d425fe6116087821a4c51e1f5dd552dd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5eab11a0ee57a8545a2d19f8a7472392635e690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206976"
 ---
 # <a name="xtp-cursors"></a>Cursores de XTP
   O objeto de desempenho Cursores de XTP contém os contadores relacionados aos cursores do mecanismo de XTP interno. Os cursores são os blocos de construção de baixo nível que o mecanismo de XTP usa para processar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] . Como tal, você normalmente não tem controle direto sobre eles.  
   
- Esta tabela descreve o **cursores XTP** contadores.  
+ Esta tabela descreve os **cursores XTP** contadores.  
   
 |Contador|Description|  
 |-------------|-----------------|  
@@ -42,6 +42,6 @@ ms.locfileid: "36130958"
 |**Linhas excluídas por tentativa tocadas/s**|O número de linhas expirando tocadas por cursores (em média), por segundo. Uma linha está expirando quando a transação que a excluiu ainda está ativa (ou seja, ainda não foi confirmada nem anulada).|  
   
 ## <a name="see-also"></a>Consulte também  
- [XTP &#40;OLTP na memória&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;OLTP in-memory&#41; contadores de desempenho](../../integration-services/performance/performance-counters.md)  
   
   

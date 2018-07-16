@@ -24,15 +24,15 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223986"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
   Contém uma única linha de dados para um [raiz](root-element-xmla.md) elemento que contém dados tabulares retornados por uma [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  
@@ -60,7 +60,7 @@ ms.locfileid: "36011458"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[raiz](root-element-xmla.md) (usando o [linhas](../xml-data-types/rowset-data-type-xmla.md) tipo de dados)|  
+|Elementos pai|[raiz](root-element-xmla.md) (usando o [conjunto de linhas](../xml-data-types/rowset-data-type-xmla.md) tipo de dados)|  
 |Elementos filho|Um ou mais elementos de coluna.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -99,7 +99,7 @@ ms.locfileid: "36011458"
 </row>  
 ```  
   
- Para obter mais informações sobre nomes de coluna e informações de esquema para dados de tabela, consulte [tipo de dados do conjunto de linhas &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md).  
+ Para obter mais informações sobre nomenclatura de coluna e informações de esquema para dados tabulares, consulte [tipo de dados do conjunto de linhas &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

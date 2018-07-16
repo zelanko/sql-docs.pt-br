@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f7429dd799a1081bd1a03e985a8772b04498129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232496"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Lista de verificação de preparação para mineração de dados
   Embora os suplementos de mineração de dados tornem as experiências com modelos algo fácil e divertido, quando você precisar obter resultados repetíveis e acionáveis, deverá aguardar um tempo suficiente para formular requisitos empresariais básicos e para obter e preparar dados. Esta seção fornece uma lista de verificação para ajudá-lo a planejar sua investigação e descreve os problemas comuns.  
@@ -38,7 +38,7 @@ ms.locfileid: "36122286"
   
 -   Você pode mapear novos dados de entrada para os resultados esperados?  
   
- **Eu sei o significado, tipos de dados e a distribuição dos dados de entrada.**  
+ **Eu sei o significado, tipos de dados e distribuição dos dados de entrada.**  
  Dedique algum tempo para explorar e entender os dados de origem. É importante que as pessoas que examinam o modelo entendam o tipo de dados de entrada que foi usado e saibam como interpretar os tipos de dados e a variabilidade, bem como o equilíbrio e a qualidade.  
   
 -   Qual é a quantidade de dados que você tem? Há dados suficientes para modelar?  
@@ -74,7 +74,7 @@ ms.locfileid: "36122286"
   
 -   Se você combinou conjuntos de dados, verificou se há várias colunas que representam os mesmos dados?  
   
- **Eu sei onde os dados de origem estão armazenados, de onde vieram e como são processados. O processo pode facilmente ser repetido se necessário.**  
+ **Eu sei onde os dados de origem estão armazenados, de onde vieram e como são processados. O processo pode ser repetido com facilidade, se necessário.**  
  Os conjuntos de dados únicos são bons para experiências, mas, se você quiser mover o modelo para produção, vai querer planejar como o processo de limpeza pode ser aplicado aos dados operacionais. Além disso, se você tiver dados operacionais, precisará saber como eles podem ter sido alterados antes de você os obter; precisará certamente saber como eles foram arredondados ou resumidos.  
   
 -   Você deseja ser capaz de repetir a experiência?  
@@ -85,14 +85,14 @@ ms.locfileid: "36122286"
   
 -   Sua estrutura de processamento de dados também pode aplicar algoritmos de aprendizagem de máquina, executar testes e visualizar os resultados?  
   
- **Nós concordamos a granularidade desejada das previsões e nossos dados foram modificados para produzir essas unidades.**  
+ **Nós concordamos com a granularidade desejada das previsões e nossos dados foram modificados para produzir essas unidades.**  
  Decida sobre a granularidade dos resultados desejados antes de preparar dados. Por exemplo, você deseja as previsões de vendas por dia ou por trimestre? Você deverá considerar estruturas de dados diferentes para os mesmos dados, para tratar níveis diferentes de resumo.  
   
 -   Qual é a unidade de medida ou unidade de tempo atual?  
   
      Qual unidade você deseja usar nos resultados?  
   
--   É possível definir uma unidade básica (por exemplo, dia / hora / min / instrução de chamada) para todos os dados de entrada?  
+-   É possível definir uma unidade básica (por exemplo, dia / hora / min / chamada de instrução) para todos os dados de entrada?  
   
      Você deseja fazer rollup para unidades maiores?  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36122286"
   
 -   Você decidiu usar uma semente para o modelo?  
   
- **Podemos ter conhecimento do domínio para validar os resultados ou ter acesso aos especialistas no assunto que podem aconselhar.**  
+ **Podemos ter o conhecimento de domínio para validar os resultados ou ter acesso a especialistas no assunto que podem aconselhar.**  
  Reserve um tempo para validar as variáveis, o modelo e os resultados. Obtenha a ajuda de especialistas para avaliar as interações e os resultados. No entanto, não deixe suposições substituírem a evidência. Esteja aberto a novas e inesperadas descobertas.  
   
 -   O conhecimento de domínio está disponível para ajudar a filtrar dados e reduzir o ruído de entrada?  

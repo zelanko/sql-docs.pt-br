@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba3c4911b8590e0f0deb1c6ad9564aa17e366eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eea7cee81892b7ffb5ce35d747c54b413ceb1d62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252618"
 ---
 # <a name="look-up-rfc-destination"></a>Pesquisar destino RFC
   Use a caixa de diálogo **Pesquisar Destino RFC** para pesquisar um Destino RFC definido no sistema SAP Netweaver BW. Quando a lista de Destino RFC disponível é exibida, selecione o destino que você quer e o componente preencherá as opções associadas com os valores necessários.  
@@ -49,14 +49,14 @@ ms.locfileid: "36012063"
  Exiba o nome do servidor ou endereço IP do host do gateway. Em geral, o nome ou o endereço IP é o mesmo que o servidor de aplicativos do SAP.  
   
  **Serviço de gateway**  
- Exiba o nome do serviço de gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
+ Exiba o nome do serviço do gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
   
  **ID do Programa**  
  Exiba a ID do programa que está associada ao destino RFC.  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Editor de destino do SAP BW &#40;página Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Editor de origem SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Editor de destino SAP BW &#40;página do Gerenciador de Conexão&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 19e7673c63d7e305d706efb910222f8ba0da7215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247726"
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
-  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelo `Execute` método para criar objetos em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
+  Contém elementos do Analysis Services Scripting Language (ASSL) usados pelos `Execute` método para criar objetos em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36119792"
 |attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Opcional `Boolean` atributo. Se definido como True, os objetos definidos no elemento `ObjectDefinition` podem substituir existindo objetos na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se esse atributo for omitido ou definido como False, a presença de um objeto existente gerará um erro.|  
-|Escopo|Opcional `Enum` atributo. Define a duração de objetos definida no elemento `ObjectDefinition`. Se este atributo for omitido, os objetos definidos no elemento `ObjectDefinition` persistirão na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Os seguintes valores estão disponíveis:<br /><br /> -   *sessão*<br />     Os objetos definidos no elemento `ObjectDefinition` só existem para a duração da sessão XMLA (XML for Analysis). **Observação:** ao usar o *sessão* configuração, o `ObjectDefinition` elemento só pode conter [dimensão](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL.|  
+|Escopo|Opcional `Enum` atributo. Define a duração de objetos definida no elemento `ObjectDefinition`. Se este atributo for omitido, os objetos definidos no elemento `ObjectDefinition` persistirão na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Os seguintes valores estão disponíveis:<br /><br /> -   *Sessão*<br />     Os objetos definidos no elemento `ObjectDefinition` só existem para a duração da sessão XMLA (XML for Analysis). **Observação:** ao usar o *sessão* configuração, o `ObjectDefinition` elemento só pode conter [dimensão](../../scripting/objects/dimension-element-assl.md), [cubo](../../scripting/objects/cube-element-assl.md), ou [MiningModel ](../../scripting/objects/miningmodel-element-assl.md) Elementos ASSL.|  
   
 ## <a name="remarks"></a>Remarks  
  Cada operação `Create` cria um objeto principal sob um pai fornecido pelo elemento `ParentObject`. Se o objeto pai for omitido, será considerada a instância de destino [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Isso gerará um erro se o pai de um objeto principal não for a instância de destino.  

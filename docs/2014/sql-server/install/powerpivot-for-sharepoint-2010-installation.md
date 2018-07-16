@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26f7d5188f5c119bcd4fd114e955638f22b9efd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db5a6400ee6191c6be328857ea44365238adcab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232516"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Instalação do PowerPivot para SharePoint 2010
   O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma coleção de componentes de servidor que fornece processamento de consultas e controle de gerenciamento em pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que você publica no SharePoint. Os serviços incluem o mecanismo Analysis Services e o Serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -29,9 +29,9 @@ ms.locfileid: "36130906"
 >   
 >  -   A seção "SQL Server 2012 SP1" de [visão geral do SQL Server Servicing Installation](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estende os serviços do Excel, emparelhando seu recurso de processamento de dados de grande escala com os serviços de processamento de dados fornecidos pelo Excel.  
+ O Analysis Services oferece processamento do lado de servidor para pastas de trabalho do Excel que contêm dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. O Serviço do Sistema do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] trabalha com o Analysis Services, adicionando integração do SharePoint, balanceamento de carga e gerenciamento de conexão. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estende os serviços do Excel aproveitando seus recursos de processamento de dados de grande escala com os serviços de renderização fornecidos pelo Excel.  
   
- Para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]mídia de instalação.  
+ Para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]mídia de instalação.  
   
  Para obter instruções sobre cenários de implantação avançada, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) e [lista de verificação de implantação: expansão adicionando servidores do PowerPivot para um Farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36130906"
   
  [Reparar o PowerPivot para SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   
- [Configuração de inicial &#40;PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [Iniciais de configuração &#40;PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Administração e configuração de servidor do PowerPivot na Administração Central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  

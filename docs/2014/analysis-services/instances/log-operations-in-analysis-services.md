@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228366"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
   Uma instância do Analysis Services registrará notificações do servidor, erros e avisos no arquivo msmdsrv.log, um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](http://support.microsoft.com/kb/2965035).  
@@ -50,7 +50,7 @@ ms.locfileid: "36121806"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
 |Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|não|  
-|SQLDmp\<guid >. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|não|  
+|Arquivos SQLDmp\<guid > mdmp|Falhas e exceções|Solução de problemas detalhada|não|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36121806"
   
  Esse arquivo de log é esvaziado em cada reinicialização do serviço. Em versões anteriores, os administradores às vezes reiniciavam o serviço com o único propósito de eliminar o arquivo de log antes que ele crescesse excessivamente a ponto de se tornar inutilizável. Isso não é mais necessário. As definições de configuração, apresentadas no SQL Server 2012 SP2 e versões posteriores, oferecem controle sobre o tamanho do arquivo de log e seu histórico:  
   
--   O `MaxFileSizeMB` especifica o tamanho máximo do arquivo de log em megabytes. O padrão é 256. Um valor de substituição válido deve ser um inteiro positivo. Quando `MaxFileSizeMB` é atingido, o Analysis Services renomeia o arquivo atual como um arquivo do msmdsrv {carimbo de hora atual}. log e inicia um novo arquivo msmdsrv.log.  
+-   O `MaxFileSizeMB` especifica o tamanho máximo do arquivo de log em megabytes. O padrão é 256. Um valor de substituição válido deve ser um inteiro positivo. Quando `MaxFileSizeMB` é atingido, Analysis Services renomeia o arquivo atual como um arquivo do msmdsrv {carimbo de hora atual}. log e inicia um novo arquivo msmdsrv log.  
   
 -   `MaxNumberFiles` Especifica a retenção de arquivos de log antigos. O padrão é 0 (desabilitado). Você pode alterá-lo como um inteiro positivo para manter as versões do arquivo de log. Quando `MaxNumberFiles` é atingido, o Analysis Services exclui o arquivo com o carimbo de hora mais antigo em seu nome.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36121806"
   
  Salvo orientação em contrário pelo Suporte da Microsoft, a maioria dos administradores usam as configurações padrão. Este artigo mais antigo da Base de Dados de Conhecimento ainda é usado para fornecer instruções sobre como configurar arquivos de despejo: [Como configurar o Analysis Services para gerar arquivos de despejo de memória](http://support.microsoft.com/kb/919711).  
   
- A configuração mais probabilidade de ser modificada é a `CreateAndSendCrashReports` usada para determinar se um arquivo de despejo de memória será gerado.  
+ A definição mais prováveis de serem modificadas de configuração é o `CreateAndSendCrashReports` usada para determinar se um arquivo de despejo de memória será gerado.  
   
 |Valor|Description|  
 |-----------|-----------------|  

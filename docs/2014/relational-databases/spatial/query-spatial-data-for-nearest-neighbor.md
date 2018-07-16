@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227128"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
   Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- A consulta não tem um `WHERE` cláusula usa `STDistance()` em um formulário especificado na seção de sintaxe para a consulta não pode usar um índice espacial.  
+ A consulta não tem um `WHERE` cláusula que usa `STDistance()` em uma forma especificada na seção de sintaxe, portanto, a consulta não é possível usar um índice espacial.  
   
 ## <a name="see-also"></a>Consulte também  
  [Dados espaciais &#40;SQL Server&#41;](spatial-data-sql-server.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200056"
 ---
 # <a name="defaultscript-element-assl"></a>Elemento DefaultScript (ASSL)
   Identifica o padrão [MdxScript](../objects/mdxscript-element-assl.md) elemento o [MdxScripts](../collections/mdxscripts-element-assl.md) coleção.  
@@ -64,7 +64,7 @@ ms.locfileid: "36130643"
 ## <a name="remarks"></a>Remarks  
  A definição do valor de `DefaultScript` to `True` para um script define o valor de `DefaultScript` como `False` para todos os outros elementos `MdxScript` na coleção `MdxScripts`.  
   
- O elemento que corresponde ao pai do `DefaultScript` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MdxScript>.  
+ O elemento que corresponde ao pai de `DefaultScript` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9643b3d6094c2f0b3815668fc466d73e76f259f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5f0b813b20c91159b74a82d403ce21a473c85802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215246"
 ---
 # <a name="delete-a-model-master-data-services"></a>Excluir um modelo (Master Data Services)
   Exclua um modelo para removê-lo juntamente com todos os seus dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "36121960"
   
 3.  Sobre o **manutenção de modelo** , selecione a linha do modelo que você deseja excluir.  
   
-4.  Clique em **modelo selecionado Delete**.  
+4.  Clique em **modelo selecionado Excluir**.  
   
 5.  Na caixa de diálogo de confirmação, clique em **OK**.  
   

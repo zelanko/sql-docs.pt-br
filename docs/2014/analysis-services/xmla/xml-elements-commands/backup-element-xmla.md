@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bd1f2317c28acd2e6037520334168491ec0bbcbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215646"
 ---
 # <a name="backup-element-xmla"></a>Elemento de backup (XMLA)
   Faz backup de um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados para um arquivo de backup.  
@@ -81,9 +81,9 @@ ms.locfileid: "36130834"
 |OLAP híbrido (HOLAP)|Agregações e metadados|  
 |OLAP relacional (ROLAP)|Metadados|  
   
- Durante uma `Backup` de comando, um bloqueio compartilhado é colocado no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no `Object` elemento. Libera o bloqueio compartilhado após o `Backup` comando foi concluído.  
+ Durante um `Backup` de comando, um bloqueio compartilhado é colocado na [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no `Object` elemento. O bloqueio compartilhado libera após o `Backup` comando foi concluído.  
   
- Vários `Backup` comandos podem ser executados em paralelo, se os comandos forem incluídos no [paralela](../xml-elements-properties/parallel-element-xmla.md) coleção de um [lote](batch-element-xmla.md) comando. A coleção `Parallel` permite que um banco de dados tenha backup feito em vários arquivos de backup ao mesmo tempo.  
+ Vários `Backup` comandos podem ser executados em paralelo, se os comandos forem incluídos na [paralela](../xml-elements-properties/parallel-element-xmla.md) coleção de uma [lote](batch-element-xmla.md) comando. A coleção `Parallel` permite que um banco de dados tenha backup feito em vários arquivos de backup ao mesmo tempo.  
   
  Para obter mais informações sobre backup e restaurando bancos de dados, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36130834"
 >  Para cada arquivo de backup, o usuário que executar o comando de backup deve ter permissão para gravar no local de backup especificado de cada arquivo. Além disso, o usuário deve ter uma das seguintes funções: membro de uma função de servidor para a instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou membro de uma função de banco de dados com permissões de Controle total (Administrador) no banco de dados cujo backup será feito.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Restore &#40;XMLA&#41;](restore-element-xmla.md)   
+ [Restaurar o elemento &#40;XMLA&#41;](restore-element-xmla.md)   
  [Elemento Synchronize &#40;XMLA&#41;](synchronize-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200286"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administração e configuração de servidor do PowerPivot na Administração Central
   A administração de servidor e a configuração do PowerPivot são realizadas por administradores de aplicativo de serviço do SharePoint, usando a Administração Central do SharePoint.  
@@ -65,13 +65,13 @@ ms.locfileid: "36122044"
 |[Conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na Administração Central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Opcional|Explica como modificar associações de serviço.|  
 |[Criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Opcional|Explica como adicionar a Galeria PowerPivot como um local confiável.|  
 |[Configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Opcional|O log de eventos está configurado por padrão. Você pode usar essas etapas para modificar as configurações padrão.|  
-|[Configurar regras de integridade do PowerPivot-](configure-power-pivot-health-rules.md)|Opcional|As regras de integridade do servidor são configuradas por padrão. Você pode usar essas etapas para modificar algumas das configurações padrão.|  
+|[Regras de integridade do PowerPivot - configurar](configure-power-pivot-health-rules.md)|Opcional|As regras de integridade do servidor são configuradas por padrão. Você pode usar essas etapas para modificar algumas das configurações padrão.|  
 |[Criar e personalizar uma galeria do PowerPivot](create-and-customize-power-pivot-gallery.md)|Opcional|Para instalações que você está configurando manualmente, este procedimento explica como criar uma biblioteca da Galeria PowerPivot que mostra miniaturas de imagem das pastas de trabalho PowerPivot que ela contém.|  
-|[Adicionar um tipo de conteúdo de Conexão de modelo semântico BI a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Opcional|Explica como estender uma biblioteca de documentos para dar suporte à criação de arquivos de conexão de modelo semântico de BI.|  
+|[Adicionar um tipo de conteúdo de Conexão de modelo semântico BI em uma biblioteca do &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Opcional|Explica como estender uma biblioteca de documentos para dar suporte à criação de arquivos de conexão de modelo semântico de BI.|  
   
 ## <a name="see-also"></a>Consulte também  
  [PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Referência de parâmetro de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Referência de definição de configuração &#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Recuperação de desastres para PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

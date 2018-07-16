@@ -1,5 +1,5 @@
 ---
-title: Nome de elemento de esquema (DTA) | Microsoft Docs
+title: Nome de elemento para esquema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a4fe5bd390ab3e2a0ad1416f7fce67458c1aeff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 535318641619abe8cc77c72bd9554b653bb1c717
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216286"
 ---
 # <a name="name-element-for-schema-dta"></a>Elemento nome para esquema (DTA)
   Contém o nome do esquema.  

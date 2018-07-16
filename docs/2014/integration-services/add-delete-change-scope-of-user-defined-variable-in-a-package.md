@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213596"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote
   Estes procedimentos descrevem como adicionar, excluir e alterar o escopo de uma variável definida pelo usuário em um pacote usando a janela **Variáveis**.  
   
  Para obter mais informações sobre escopo variável, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece variáveis do sistema que disponibilizar as informações do sistema em tempo de execução e podem ser usadas em contêineres como pacotes e manipuladores de eventos. Você não pode excluir as variáveis de sistema.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] também fornece variáveis do sistema que disponibilizam informações do sistema em tempo de execução e podem ser usadas em contêineres como pacotes e manipuladores de eventos. Você não pode excluir as variáveis de sistema.  
   
 ### <a name="to-add-a-variable"></a>Para adicionar uma variável  
   

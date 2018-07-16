@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204036"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Uma consulta com o SQL Server Browser será necessária se a cadeia de conexão especificar o nome da instância nomeada, e não a porta.  
   
- Para especificar o endereço IP e a porta, o `Server` atributo leva o seguinte formato, `Server=` *< endereço_IP >*`,`*\<porta >*, por exemplo:  
+ Para especificar o endereço IP e porta, o `Server` atributo assume o formato `Server=` *< endereço_IP >*`,`*\<porta >*, por exemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Essa cadeia de caracterse omite informações de autenticação.  
   
 > [!IMPORTANT]  
->  Agrupamento do prefixo de protocolo com o `Server` atributo (`Server=tcp:`*\<servername >*) é incompatível com o **rede** de atributos e especificar o protocolo no ambos os lugares provavelmente resultará em erro. Portanto, é recomendável que uma cadeia de caracteres de conexão especifique o protocolo usando o **rede** de atributos e especificar apenas o nome do servidor no `Server` atributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
+>  Agrupamento do prefixo de protocolo com o `Server` atributo (`Server=tcp:`*\<servername >*) é incompatível com o **rede** de atributos e especificar o protocolo no ambos os lugares provavelmente resultará em erro. Portanto, é recomendável que uma cadeia de caracteres de conexão Especifica o protocolo usando o **rede** do atributo e especifique somente o nome do servidor na `Server` atributo (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Atributo de parceiro de failover  
  Além do nome do parceiro inicial, o cliente pode especificar também o nome do parceiro de failover, que deve identificar a instância do servidor espelho atual. O parceiro de failover é especificado por uma das palavras-chave para o atributo do parceiro de failover. A palavra-chave desse atributo depende da API em uso. A tabela a seguir lista estas palavras-chave:  
@@ -141,7 +140,7 @@ Server=123.34.45.56,4724;
 >  Quando só o nome do parceiro inicial é fornecido, os desenvolvedores de aplicativos não precisam tomar nenhuma ação ou gravar nenhum código, exceto sobre como se reconectar.  
   
 > [!NOTE]  
->  Os desenvolvedores de aplicativos de código gerenciado fornecem o nome do parceiro de failover no `ConnectionString` do `SqlConnection` objeto. Para obter informações sobre como usar essa cadeia de conexão, consulte “Suporte ao espelhamento de banco de dados no Provedor de Dados .NET Framework para SQL Server" na documentação ADO.NET que é parte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
+>  Os desenvolvedores de aplicativos de código gerenciado fornecem o nome do parceiro de failover na `ConnectionString` do `SqlConnection` objeto. Para obter informações sobre como usar essa cadeia de conexão, consulte “Suporte ao espelhamento de banco de dados no Provedor de Dados .NET Framework para SQL Server" na documentação ADO.NET que é parte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
 #### <a name="example-connection-string"></a>Cadeia de conexão de exemplo  
  Por exemplo, para fazer a conexão explícita com o banco de dados **AdventureWorks** usando o TCP/IP em Partner_A ou Partner_B, um aplicativo cliente que utiliza o driver ODBC pode fornecer a seguinte cadeia de conexão:  

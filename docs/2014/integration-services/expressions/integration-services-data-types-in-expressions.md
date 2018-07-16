@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237136"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
   O avaliador de expressão usa tipos de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Quando dados são inseridos pela primeira vez em um fluxo de dados em um pacote [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , o mecanismo de fluxo de dados converte todos os dados de coluna para um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , e os dados da coluna que uma expressão usa já têm um tipo de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . As expressões usadas nas transformações Divisão Condicional e Coluna Derivada podem fazer referência a colunas porque elas fazem parte de um fluxo de dados que inclui dados de coluna.  
@@ -36,7 +36,7 @@ ms.locfileid: "36119571"
  Além disso, expressões podem incluir literais de cadeia de caracteres, Boolianos e numéricos. Para obter mais informações sobre como converter literais numéricos para tipos de dados do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte [Literais &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Conversão implícita de dados  
- Uma conversão implícita de um tipo de dados ocorre quando o avaliador de expressão converte automaticamente os dados de um tipo de dados para outro. Por exemplo, se um `smallint` é comparado com um `int`, o `smallint` é convertido implicitamente em `int` antes da execução da comparação.  
+ Uma conversão implícita de um tipo de dados ocorre quando o avaliador de expressão converte automaticamente os dados de um tipo de dados para outro. Por exemplo, se um `smallint` é comparado com um `int`, o `smallint` é convertido implicitamente em `int` antes da comparação é executada.  
   
  O avaliador de expressão não pode executar conversão de dados implícita quando os argumentos e operandos tiverem tipos de dados incompatíveis. Além disso, o avaliador de expressão não pode converter nenhum valor implicitamente para um Booliano. Em vez disso, os argumentos e operandos devem ser convertidos explicitamente usando o operador cast. Para obter mais informações, consulte [Cast &#40;Expressão do SSIS&#41;](cast-ssis-expression.md).  
   
@@ -57,17 +57,17 @@ ms.locfileid: "36119571"
   
  Para obter mais informações, consulte os tópicos a seguir:  
   
--   [= = &#40;Igual&#41; &#40;expressão SSIS&#41;](equal-ssis-expression.md)  
+-   [= = &#40;Igual&#41; &#40;expressão do SSIS&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Maior&#41; &#40;expressão SSIS&#41;](greater-than-ssis-expression.md)  
+-   [&#62;&#40;Maior que&#41; &#40;expressão do SSIS&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Menor&#41; &#40;expressão SSIS&#41;](less-than-ssis-expression.md)  
+-   [&#60;&#40;Menor que&#41; &#40;expressão do SSIS&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Maior que ou igual a&#41; &#40;expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Maior que ou igual a&#41; &#40;expressão do SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Menor ou igual a&#41; &#40;expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;Menor que ou igual a&#41; &#40;expressão do SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Uma função que usa um único argumento retorna um resultado com o mesmo tipo de dados que o argumento, com as seguintes exceções:  
   

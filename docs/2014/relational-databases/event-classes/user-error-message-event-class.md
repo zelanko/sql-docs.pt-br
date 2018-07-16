@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe0ce79236df71a14e914b0de004bf27d8aacf92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ddc5834ba3db783740b2325816d392dfd2a949a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170877"
 ---
 # <a name="user-error-message-event-class"></a>classe de evento User Error Message
   A classe de evento User Error Message exibe a mensagem de erro como é vista pelo usuário no caso de um erro ou exceção. O texto da mensagem de erro se aparece no campo TextData.  

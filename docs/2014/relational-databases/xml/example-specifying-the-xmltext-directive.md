@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d53197ef75615141a2f25f326e3dcdd0f0d0ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a00e44cc43f59b4b158f0b780c3bd14b944d3a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270352"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
-  Este exemplo ilustra como os dados na coluna de estouro são resolvidos usando o `XMLTEXT` diretiva em uma `SELECT` instrução usando o modo EXPLICIT.  
+  Este exemplo ilustra como os dados na coluna de estouro são resolvidos usando o `XMLTEXT` diretiva em um `SELECT` instrução usando o modo EXPLICIT.  
   
  Considere a tabela `Person` . Esta tabela tem uma coluna `Overflow` que armazena a parte não consumida do documento XML.  
   

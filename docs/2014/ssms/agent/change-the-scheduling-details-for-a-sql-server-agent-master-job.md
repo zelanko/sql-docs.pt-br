@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dc41b403419ee3b1eb6734e5fa658dc7950fd6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d5654908f9decdf0ead70a2b4182fe43129511a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262062"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Alterar os detalhes do agendamento para um trabalho mestre do SQL Server Agent
   Este tópico descreve como alterar os detalhes do agendamento para uma definição de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "36011722"
   
 4.  Clique com o botão direito do mouse no trabalho cujo agendamento você quer editar e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, em **Selecione uma página**, selecione **Agendamentos**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: novo trabalho &#40;página agendas&#41;](job-properties-new-job-schedules-page.md).  
+5.  Na caixa de diálogo **Propriedades do Trabalho –***job_name*, em **Selecione uma página**, selecione **Agendamentos**. Para obter mais informações sobre as opções disponíveis nessa página, consulte [propriedades do trabalho: novo trabalho de &#40;página agendas&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Quando terminar, clique em **OK**.  
   

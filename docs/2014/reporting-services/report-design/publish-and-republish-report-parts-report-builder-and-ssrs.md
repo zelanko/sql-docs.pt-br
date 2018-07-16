@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220786"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar e republicar partes de relatório (Construtor de Relatórios e SSRS)
   Você pode publicar uma parte de relatório com configurações padrão em um local padrão ou pode editar os metadados de parte do relatório, como nome e descrição e salvá-lo em outro lugar no servidor de relatório. Também será possível salvá-lo em um site do SharePoint integrado com um servidor de relatório se você tiver as permissões corretas.  
@@ -61,10 +61,10 @@ ms.locfileid: "36019054"
 >  Se você publicá-la como uma nova parte de relatório, ela terá uma nova ID exclusiva. Ela não receberá mais atualizações se a parte de relatório original for alterada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Partes de relatório &#40;SSRS e construtor de relatórios&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de partes de relatório &#40;SSRS e construtor de relatórios&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Verificar ou desativar atualizações &#40;SSRS e construtor de relatórios&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Procurar partes de relatório e definir uma pasta padrão &#40;SSRS e construtor de relatórios&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Verificar ou desativar atualizações &#40;relatórios e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Procurar partes de relatório e definir uma pasta padrão &#40;relatórios e SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

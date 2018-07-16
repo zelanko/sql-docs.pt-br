@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247386"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar ou parar um PowerPivot para SharePoint Server
-  Serviço de sistema PowerPivot e uma [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância operam juntos no mesmo servidor de aplicativo local para dar suporte a solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
+  Serviço de sistema PowerPivot e uma [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância funcionam em conjunto no mesmo servidor de aplicativos local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
   
  Este tópico contém as seguintes seções:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36011901"
   
  Você não pode iniciar ou parar todos os serviços físicos simultaneamente pelo farm. Você deve selecionar cada servidor e depois iniciar ou parar um serviço específico.  
   
- Você não pode iniciar, pausar ou parar um Serviço de Sistema do PowerPivot para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [conectar um aplicativo de serviço PowerPivot a um aplicativo da Web do SharePoint na Administração Central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
+ Você não pode iniciar, pausar ou parar um Serviço de Sistema do PowerPivot para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [conectar um aplicativo de serviço do PowerPivot a um aplicativo Web do SharePoint na Administração Central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 1.  Na Administração Central, em **Configurações do Sistema**, clique em **Gerenciar serviços no servidor**.  
   

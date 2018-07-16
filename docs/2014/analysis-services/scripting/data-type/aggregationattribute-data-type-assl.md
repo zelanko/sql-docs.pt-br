@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 388bd739938a7b756157659ce34c0a215710a034
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243416"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Tipo de dados AggregationAttribute (ASSL)
   Define um tipo de dados primitivo que representa a associação entre um [agregação](../objects/aggregation-element-assl.md) elemento e um atributo.  

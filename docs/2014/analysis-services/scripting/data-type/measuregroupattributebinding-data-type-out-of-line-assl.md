@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bb43dfc9dc6cb0ac578c36a24b470d444630d01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218206"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>Tipo de dados MeasureGroupAttributeBinding (fora de linha) (ASSL)
   Define um tipo de dados derivado que representa a associação fora de linha para um atributo em uma dimensão incluída em um grupo de medidas.  
@@ -60,10 +60,10 @@ ms.locfileid: "36121155"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|[CubeID](../properties/id-element-assl.md), [DatabaseID](../../xmla/xml-elements-properties/id-element-xmla.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [GranularityAttributeID](../properties/attributeid-element-assl.md), [fonte](../properties/source-element-binding-assl.md)|  
-|Elementos derivados|[Associação](../../xmla/xml-elements-properties/binding-element-xmla.md) ([associações](../collections/attributes-element-assl.md) coleção do XML for Analysis (XMLA) [lote](../../xmla/xml-elements-commands/batch-element-xmla.md) e [processo](../../xmla/xml-elements-commands/process-element-xmla.md) comandos)|  
+|Elementos derivados|[Associando](../../xmla/xml-elements-properties/binding-element-xmla.md) ([associações](../collections/attributes-element-assl.md) coleção de XML for Analysis (XMLA) [lote](../../xmla/xml-elements-commands/batch-element-xmla.md) e [processo](../../xmla/xml-elements-commands/process-element-xmla.md) comandos)|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de dados XML de linguagem script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

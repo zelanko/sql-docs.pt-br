@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo para modelos de série temporal de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Mining Model Content para modelos de série temporal (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214616"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
   Todos os modelos de mineração usam a mesma estrutura para armazenar conteúdo. Essa estrutura é definida de acordo com o conjunto de linhas de esquema do conteúdo da mineração de dados. Entretanto, em uma estrutura padrão, os nós que contêm informações são organizados de formas diferentes para representar vários tipos de árvores. Este tópico descreve como os nós são organizados e o que cada nó significa para os modelos de mineração que têm como base o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Para obter uma explicação sobre o conteúdo geral do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- Pode ser muito útil pesquisar os conteúdos de um modelo de série temporal ao revisar este tópico. Você criará um modelo de série temporal ao concluir o tutorial Mineração de dados básica. O modelo criado nesse tutorial é do tipo misto que treina dados usando algoritmos ARIMA e ARTXP. Para obter mais informações, consulte [criando uma estrutura de previsão e modelo &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Para obter informações sobre como exibir o conteúdo de um modelo de mineração, consulte [Visualizadores do Modelo de Data Mining](data-mining-model-viewers.md).  
+ Pode ser muito útil pesquisar os conteúdos de um modelo de série temporal ao revisar este tópico. Você criará um modelo de série temporal ao concluir o tutorial Mineração de dados básica. O modelo criado nesse tutorial é do tipo misto que treina dados usando algoritmos ARIMA e ARTXP. Para obter mais informações, consulte [criando uma estrutura de previsão e modelo &#40;Tutorial intermediário de mineração de dados&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Para obter informações sobre como exibir o conteúdo de um modelo de mineração, consulte [Visualizadores do Modelo de Data Mining](data-mining-model-viewers.md).  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>Entendendo a estrutura de um modelo de série temporal  
  Um modelo de série temporal tem um nó pai único que representa o modelo e seus metadados. Embaixo do nó pai, há uma ou duas árvores de série temporal dependendo do algoritmo usado para criar o modelo.  
@@ -61,7 +61,7 @@ ms.locfileid: "36130898"
   
  Se o nó não tiver nenhum filho, significa que nenhuma condição significativa, que justificaria a divisão dos casos em outros subgrupos, foi encontrada. A ramificação termina neste ponto e o nó é chamado de *nó folha*. O nó folha contém atributos, coeficientes e valores que são os blocos de construção da fórmula ARTXP.  
   
- Algumas ramificações podem ter divisões adicionais, semelhante a um modelo de árvore de decisão. Por exemplo, a ramificação da árvore que representa vendas para a região da Europa divide-se em duas ramificações. Uma divisão ocorre quando há condição que gera diferença significativa entre os dois grupos. O nó pai indica o nome do atributo que causou a divisão, como [Amount], e quantos casos existem no nó pai. Os nós folha fornecem mais detalhes: o valor do atributo, como [vendas] > 10,000 vs. [vendas] \< 10.000), o número de casos que aceitam cada condição e a fórmula ARTXP.  
+ Algumas ramificações podem ter divisões adicionais, semelhante a um modelo de árvore de decisão. Por exemplo, a ramificação da árvore que representa vendas para a região da Europa divide-se em duas ramificações. Uma divisão ocorre quando há condição que gera diferença significativa entre os dois grupos. O nó pai indica o nome do atributo que causou a divisão, como [Amount], e quantos casos existem no nó pai. Os nós folha fornecem mais detalhes: o valor do atributo, como [vendas] > gt;10,000 vs. [Sales] \< 10.000), o número de casos que aceitam cada condição e a fórmula ARTXP.  
   
 > [!NOTE]  
 >  Caso queira exibir as fórmulas, poderá encontrar a fórmula de regressão completa no nível do nó folha, mas não em um nó intermediário ou no nó raiz.  
@@ -263,7 +263,7 @@ ms.locfileid: "36130898"
   
  Quantity = 21.322  
   
- -0.293 * quantidade (R250 Norte América,-7) + 0.069 \* quantidade (R250 Europe,-1) + 0.023 \*  
+ -0,293 * quantidade (R250 Norte América,-7) + 0.069 \* quantidade (R250 Europe,-1) + 0.023 \*  
   
  Quantity(R250 Europe,-3) -0.142 * Quantity(R750 Europe,-8)  
   
@@ -388,9 +388,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Equação ARIMA:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) de origem: 56.8888888888889  
+ ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889 de interceptação  
   
- Esta equação é o formato ARIMA completo que inclui os valores dos coeficientes e a interceptação. O formato curto para esta equação seria {1,0,7}, onde 1 indica o período como uma contagem de intervalos de tempo, 0 indica a ordem de diferença de termo e 7 indica o número de coeficientes.  
+ Esta equação é o formato ARIMA completo que inclui os valores dos coeficientes e a interceptação. O formato curto porque esta equação seria {1,0,7}, onde 1 indica o período como uma contagem de intervalos de tempo, 0 indica a ordem de diferença de termo e 7 indica o número de coeficientes.  
   
 > [!NOTE]  
 >  Uma constante é calculada pelo Analysis Services para computar a variância, mas a própria constante não é exibida na interface do usuário. Porém, você pode exibir a variância para qualquer ponto da série como uma função desta constante; basta selecionar **Exibir Desvios** na exibição **Gráfico** . A dica de ferramenta para cada série de dados mostra a variação para um ponto previsto específico.  
@@ -400,7 +400,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Um modelo ARIMA para uma série de dados contém a equação periódica básica em quatro formatos diferentes; você escolhe o formato de acordo com o aplicativo.  
   
- **NODE_CAPTION:** exibe a equação em forma abreviada. O formato reduzido indica quantas estruturas periódicas são representas e quantos coeficientes elas têm. Por exemplo, se o formato curto da equação for {4,0,6}, o nó representará uma estrutura periódica com 6 coeficientes. Se o formato reduzido for algo como {2,0,8} x {1,0,0}(4), o nó contém duas estruturas periódicas.  
+ **NODE_CAPTION:** exibe a equação em forma abreviada. O formato reduzido indica quantas estruturas periódicas são representas e quantos coeficientes elas têm. Por exemplo, se o formato curto da equação for {4,0,6}, o nó representará uma estrutura periódica com 6 coeficientes. Se o formato curto é algo como {2,0,8} x {1,0,0}(4), o nó conterá duas estruturas periódicas.  
   
  **NODE DESCRIPTION:** exibe o formato completo da equação, que também é o formato da equação que aparece na **Legenda de Mineração**. O formato completo da equação é parecido com o reduzido, exceto pelo fato de os valores reais dos coeficientes serem exibidos em vez de contabilizados.  
   
@@ -422,7 +422,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (Regressão automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
 |30 (Média de movimentação ARIMA)|Valor em t<br /><br /> Valor em t-1<br /><br /> …<br /><br /> Valor em t-n|7|  
   
- O valor da *ordem de média de movimentação* indica o número de médias de movimentação em uma série. Em geral, a média móvel é calculada n-1 vezes se há termos n em uma série, mas o número pode ser reduzido para facilitar o cálculo.  
+ O valor da *ordem de média de movimentação* indica o número de médias de movimentação em uma série. Em geral, a média de movimentação é calculada de n-1 vezes se há termos n em uma série, mas o número pode ser reduzido para facilitar o cálculo.  
   
  O valor da *ordem regressiva automática* indica o número de séries de regressão automática.  
   
@@ -445,7 +445,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Pode ser difícil recuperar informações de uma árvore ARTXP, pois as informações para cada divisão estão em um local diferente na árvore. Portanto, com o modelo ARTXP, você deve reunir todas as partes e depois processá-las para reconstituir a fórmula inteira. É mais fácil recuperar uma equação de um modelo ARIMA porque a fórmula foi disponibilizada ao longo da árvore. Para obter informações sobre como criar uma consulta para recuperar essas informações, consulte [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo MTS](microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
  [Referência técnica do algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)  

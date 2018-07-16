@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a35eed078cf0b9317c7621f40ea3aaf51a836a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a0272f84e3203b5fba89fb80947d065da2013ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188093"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Adicionar uma média móvel a um gráfico (Construtor de Relatórios e SSRS)
   Uma média móvel é uma média dos dados na série, calculada em um período de tempo definido. A média móvel pode ser mostrada no gráfico para identificar tendências significativas.  
@@ -47,6 +47,6 @@ ms.locfileid: "36019075"
 ## <a name="see-also"></a>Consulte também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Adicionar pontos vazios ao gráfico &#40;SSRS e construtor de relatórios&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [Adicionar pontos vazios ao gráfico &#40;relatórios e SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   

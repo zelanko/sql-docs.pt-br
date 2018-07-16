@@ -1,5 +1,5 @@
 ---
-title: Elemento de linguagem (XMLA) | Microsoft Docs
+title: Elemento Language (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Language element
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea8c37369c45d35a8fe3c7366c2d5293e0c48a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d247e81c19c3394ac46274ba775c1695741e00ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205846"
 ---
 # <a name="language-element-xmla"></a>Elemento Language (XMLA)
   Contém o identificador de localidade (LCID) para o pai [tradução](translation-element-xmla.md) elemento.  
@@ -67,9 +67,9 @@ ms.locfileid: "36012352"
  O elemento `Language` especifica o LCID usado pelo elemento pai `Translation` para atribuir o elemento `Name` do elemento pai `Translation` a um membro de atributo, para o idioma especificado, durante um comando `Insert` ou `Update`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Nome de elemento &#40;XMLA&#41;](name-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Nomeie o elemento &#40;XMLA&#41;](name-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

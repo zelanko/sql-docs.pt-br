@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.measureselection.f1
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a757eb6101ec44fc989f016d4cdf45878662f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d1fdd20f88a3bb0e823db534b9f18e28535dd37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197936"
 ---
 # <a name="select-measures-cube-wizard"></a>Selecionar Medidas (Assistente para Cubos)
   Use a página **Selecionar Medidas** para selecionar os grupos de medidas e medidas a serem criados.  

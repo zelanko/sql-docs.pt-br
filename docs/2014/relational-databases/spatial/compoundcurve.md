@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4943247f5364991efe937ca56759c09ed5617e32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172297"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Uma `CompoundCurve` é uma coleção de zero ou mais instâncias `CircularString` ou `LineString` contínuas dos tipos geometry ou geography.  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais nesta versão, incluindo o `CompoundCurve` subtipo, baixe o white paper, [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais nesta versão, incluindo o `CompoundCurve` subtipo, baixe o white paper [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Pode ser criada uma instância `CompoundCurve` vazia, mas para que `CompoundCurve` seja válida, ela deve atender aos seguintes critérios:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36121654"
   
 2.  A sequência de `CircularString` ou `LineString` instâncias devem ser contínuas.  
   
- Se um `CompoundCurve` contém uma sequência de várias `CircularString` e `LineString` instâncias, o ponto de extremidade final para cada instância, exceto a última instância deve ser o ponto de extremidade inicial da próxima instância na sequência. Isso significa que, se o ponto final de uma instância anterior na sequência for (4 3 7 2), o ponto inicial da próxima instância na sequência deverá ser (4 3 7 2). Observe que os valores Z (elevação) e M (medida) do ponto também devem ser iguais. Se houver uma diferença nos dois pontos, será lançada uma `System.FormatException` . Pontos em um `CircularString` não precisam ter um valor Z ou M. Se não forem fornecidos valores Z ou M para o ponto final da instância anterior, o ponto inicial da próxima instância não poderá incluir valores Z ou M. Se o ponto final da sequência anterior for (4 3), o ponto inicial da próxima sequência deverá ser (4 3); ele não poderá ser (4 3 7 2). Todos os pontos em um `CompoundCurve` instância deve ter nenhum valor Z ou o mesmo valor Z.  
+ Se um `CompoundCurve` contém uma sequência de várias `CircularString` e `LineString` instâncias, o ponto de extremidade final para cada instância, exceto a última instância deve ser o ponto de extremidade inicial da próxima instância na sequência. Isso significa que, se o ponto final de uma instância anterior na sequência for (4 3 7 2), o ponto inicial da próxima instância na sequência deverá ser (4 3 7 2). Observe que os valores Z (elevação) e M (medida) do ponto também devem ser iguais. Se houver uma diferença nos dois pontos, será lançada uma `System.FormatException` . Pontos em um `CircularString` não é necessário ter um valor Z ou M. Se não forem fornecidos valores Z ou M para o ponto final da instância anterior, o ponto inicial da próxima instância não poderá incluir valores Z ou M. Se o ponto final da sequência anterior for (4 3), o ponto inicial da próxima sequência deverá ser (4 3); ele não poderá ser (4 3 7 2). Todos os pontos em um `CompoundCurve` instância deve ter nenhum valor Z ou o mesmo valor Z.  
   
 ## <a name="compoundcurve-instances"></a>Instâncias CompoundCurve  
  A ilustração a seguir mostra uma `CompoundCurve` tipos.  
@@ -83,7 +83,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ```  
   
- `@g3` é válido porque a instância `CircularString` é válida. Para obter mais informações sobre a validade do `CircularString` da instância, consulte [CircularString](circularstring.md).  
+ `@g3` é válido porque a instância `CircularString` é válida. Para obter mais informações sobre a validade dos `CircularString` da instância, consulte [CircularString](circularstring.md).  
   
  O exemplo a seguir mostra instâncias `CompoundCurve` que não são válidas.  
   
@@ -94,7 +94,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. `@g2` não é válido porque a instância de `LineString` não é válida. `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre válido `CircularString` e `LineString` instâncias, consulte [CircularString](circularstring.md) e [LineString](linestring.md).  
+ `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. `@g2` não é válido porque a instância de `LineString` não é válida. `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre válida `CircularString` e `LineString` instâncias, consulte [CircularString](circularstring.md) e [LineString](linestring.md).  
   
 ## <a name="examples"></a>Exemplos  
   

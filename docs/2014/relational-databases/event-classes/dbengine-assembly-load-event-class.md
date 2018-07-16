@@ -1,5 +1,5 @@
 ---
-title: Classe de evento de carregamento do assembly | Microsoft Docs
+title: Classe de evento assembly Load | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09089787cf369b18c54f9e0c4afabc5d22bed61d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c242f305b5a51458b1f18c52af9a82b3a378bee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227426"
 ---
 # <a name="assembly-load-event-class"></a>Classe de evento Assembly Load
-  Consulte [assembly-carga-classe de evento](../../database-engine/assembly-load-event-class.md).  
+  Ver [assembly-carga-classe de evento](../../database-engine/assembly-load-event-class.md).  

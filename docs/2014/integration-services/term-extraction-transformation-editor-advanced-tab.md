@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68564959b7ec1c4065f99ba1bd4f911ca1d258e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf19c170dc90f71eb959b1cd28f03a1df3e79846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193416"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de Transformação Extração de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação de Extração de Termos** para especificar propriedades de extração, como frequência, comprimento e se devem ser extraídas palavras ou frases.  
@@ -60,8 +60,8 @@ ms.locfileid: "36019611"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformação extração de termos &#40;guia extração de termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor de transformação extração de termos &#40;guia exclusão&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Editor de transformação extração de termo &#40;guia de extração de termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Editor de transformação extração de termo &#40;guia de exclusão&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  
   
   

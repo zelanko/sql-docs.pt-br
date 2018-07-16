@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 257777c40c829921680b8fce333bd6e44f6f57fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267562"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recuperando dados usando o XmlReader
   A classe `XmlReader`, parte do namespace `System.Xml` da Biblioteca de Classes do Microsoft .NET Framework, é similar à classe <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, uma vez que a classe `XmlReader` também oferece acesso aos dados rápido, sem-cache e somente para encaminhamento. Se não houver necessidade de uma exibição analítica em memória dos dados usando o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, o objeto `XmlReader` será perfeito para a recuperação de dados XML, especialmente para grandes quantidades de dados. Como o `XmlReader` cria fluxos de dados, o `XmlReader` não precisa recuperar e armazenar em cache todos os dados antes de exibi-los ao chamador, como seria o caso se um objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> fosse usado para converter a resposta do XML for Analysis para uma representação do modelo de objeto analítico.  
@@ -53,7 +53,7 @@ ms.locfileid: "36011013"
   
 ## <a name="see-also"></a>Consulte também  
  [Recuperando dados de uma fonte de dados analíticos](retrieving-data-from-an-analytical-data-source.md)   
- [Recuperando dados usando o conjunto de células](retrieving-data-using-the-cellset.md)   
+ [Recuperando dados usando CellSet](retrieving-data-using-the-cellset.md)   
  [Recuperando dados usando o AdomdDataReader](retrieving-data-using-the-adomddatareader.md)  
   
   

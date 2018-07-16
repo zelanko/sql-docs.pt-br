@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 288130652e609b65a4bbdaae8dea1f2647771aad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f315644a829f543a88bdb135dcf25d4d8b5b15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201976"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectar a um arquivo simples (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a se conectar a um arquivo simples (.txt), um arquivo separado por tabulações (.tab) ou um arquivo separado por vírgulas (.csv). Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

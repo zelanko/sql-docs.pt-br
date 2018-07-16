@@ -8,17 +8,17 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f166a5203ef417fd7db8aefc48a1938f5e2b9c32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889879ff35b5ac67b0e89ff82a34c57f3496a77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186540"
 ---
 # <a name="errors-and-events-replication"></a>Erros e eventos (replicação)
-  Para obter informações sobre causas e resoluções para um número de erros relacionados à replicação, consulte [referência de erros e eventos (replicação)](../errors-and-events-reference-replication.md).  
+  Para informações de causa e resolução para um número de erros relacionados à replicação, consulte [referência de erros e eventos (replicação)](../errors-and-events-reference-replication.md).  
   

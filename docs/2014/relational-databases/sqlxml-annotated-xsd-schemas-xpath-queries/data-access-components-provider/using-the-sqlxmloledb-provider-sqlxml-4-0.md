@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37cfc512f02bef664756bf6d46574479112b7efa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0ece4bb65c8517f50193f4340ab55cb87df4be5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221076"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
   Os tópicos desta seção fornecem aplicativos de exemplo de ADO que ilustram o uso de propriedades específicas do provedor SQLXMLOLEDB.  
@@ -46,7 +46,7 @@ ms.locfileid: "36122805"
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Executando consultas SQL &#40;provedor SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
- Ilustra o uso das propriedades ClientSideXML e xml raiz para executar consultas SQL.  
+ Ilustra o uso das propriedades raiz ClientSideXML e xml para executar consultas SQL.  
   
  [Executando modelos que contêm consultas SQL &#40;provedor SQLXMLOLEDB&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  Ilustra o uso da propriedade ClientSideXML.  

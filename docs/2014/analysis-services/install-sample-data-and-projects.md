@@ -1,5 +1,5 @@
 ---
-title: Instalar dados de exemplo e projetos do Analysis Services Multidimensional Modeling Tutorial | Microsoft Docs
+title: Instalar dados de exemplo e projetos para o Tutorial de modelagem Multidimensional do Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218266"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
   Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Etapa 1: Instalar o software do SQL Server  
- As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+ As lições neste tutorial presumem que você tenha o seguinte software instalado. Todos os softwares a seguir são instalados usando a mídia de instalação do SQL Server. Para a simplicidade de implantação, você pode instalar todos os recursos em um único computador. Para instalar estes recursos, execute a Instalação do SQL Server e selecione-os na página Seleção de Recursos. Para obter mais informações, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Mecanismo de Banco de Dados  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36019012"
   
 4.  Clique com o botão direito do mouse em Bancos de dados e clique em **Anexar**.  
   
-5.  Clique em **Adicionar**.  
+5.   Clique em **Adicionar**.  
   
 6.  Selecione o arquivo de banco de dados **AdventureWorksDW2012_Data.mdf** e clique em **OK**. Se o arquivo não estiver listado, verifique a pasta C:\Arquivos de Programas\MSSQL12.MSSQLSERVER\MSSQL\Data para ver se ele está lá.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36019012"
  Você agora está pronto para usar o tutorial. Para obter mais informações sobre como começar, consulte [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalar o SQL Server 2014 do Assistente de instalação &#40;instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Instalar o SQL Server 2014 do Assistente de instalação &#40;programa de instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

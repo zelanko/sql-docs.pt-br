@@ -1,5 +1,5 @@
 ---
-title: Elemento Miningstructures (ASSL) | Microsoft Docs
+title: Elemento MiningStructure (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5298c78f1902ee9a8fb1ed12ecf066092a02d938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed39aafbe937c637abd7a6ec67fbd7343b62b116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271822"
 ---
 # <a name="miningstructure-element-assl"></a>Elemento MiningStructures (ASSL)
   Define a estrutura para um conjunto de modelos de mineração.  
@@ -79,7 +79,7 @@ ms.locfileid: "36121358"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[MiningStructures](../collections/miningstructures-element-assl.md)|  
-|Elementos filho|[Anotações](../collections/annotations-element-assl.md), [CacheMode](../properties/cachemode-element-assl.md), [agrupamento](../properties/collation-element-assl.md), [colunas](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrição ](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../properties/holdoutseed-element.md),<br /><br /> [ID](../properties/id-element-assl.md), [idioma](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModels](../collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md), [nome](../properties/name-element-assl.md), [fonte](../properties/source-element-binding-assl.md), [estado](../properties/state-element-assl.md), [traduções](../collections/translations-element-assl.md)|  
+|Elementos filho|[Anotações](../collections/annotations-element-assl.md), [CacheMode](../properties/cachemode-element-assl.md), [agrupamento](../properties/collation-element-assl.md), [colunas](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrição ](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../properties/holdoutseed-element.md),<br /><br /> [ID](../properties/id-element-assl.md), [linguagem](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModels](../collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md), [nome](../properties/name-element-assl.md), [fonte](../properties/source-element-binding-assl.md), [estado](../properties/state-element-assl.md), [traduções](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  A estrutura de mineração define as colunas e as associações. Depois de definir uma estrutura de mineração, você pode usar aquela estrutura para definir muitos modelos de mineração. A estrutura de mineração e cada modelo de mineração que contém, pode ser processada independentemente.  
@@ -88,7 +88,7 @@ ms.locfileid: "36121358"
 >  Foram introduzidas as propriedades holdout, `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed` e `HoldoutActualSize`, no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Elas permitem que você defina uma partição em uma estrutura de mineração que atua como o conjunto de testes para todos os modelos de mineração que estão associados com a estrutura. O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] não oferece suporte a essas propriedades. Então, se você tentar usar estas propriedades em uma instância do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retornará um erro.  
   
 ## <a name="drillthrough-to-structure-columns"></a>Detalhamento para colunas de estrutura  
- Em [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], foi adicionado um novo elemento de permissão para o [elemento MiningStructurePermissions &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) coleção. Se você adicionar `AllowDrillthrough` permissão para ambos os [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) e [MiningModelPermission](miningmodelpermission-element-assl.md) coleções, o detalhamento está habilitado do modelo de mineração à estrutura, de forma que os membros de uma função que tenha `AllowDrillthrough` permissões no modelo podem consultar o modelo de mineração de dados e retornar colunas de estrutura que não foram incluídas no modelo.  
+ Na [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], um elemento de permissão novo foi adicionado para o [elemento MiningStructurePermissions &#40;ASSL&#41; ](../collections/miningstructurepermissions-element-assl.md) coleção. Se você adicionar `AllowDrillthrough` permissão para ambos os [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) e [MiningModelPermission](miningmodelpermission-element-assl.md) coleções, o detalhamento está habilitado do modelo de mineração à estrutura, de forma que os membros de uma função que tenha `AllowDrillthrough` permissões no modelo podem consultar o modelo de mineração de dados e retornar colunas de estrutura que não foram incluídas no modelo.  
   
  Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações confidenciais e conceder permissão `AllowDrillthrough` em uma estrutura de mineração somente quando for necessário. Para obter mais informações, consulte [elemento AllowDrillThrough &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md).  
   

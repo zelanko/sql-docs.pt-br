@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c74a4177be994d890a5cc30bdf85f5778b6c008e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f76b2e3cbb713a99e3e6d531e0afcad4572b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197076"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Propriedade ProtocolName (Classe ServerNetworkProtocolIPAddress)
   Obtém o nome do protocolo de rede do servidor que referencia o endereço IP.  

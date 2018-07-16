@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59819655763d017ebe549b7325aa920960000fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263752"
 ---
 # <a name="custom-reports-in-management-studio"></a>Relatórios personalizados no Management Studio
   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], muitos nós do Pesquisador de Objetos exibem um conjunto de relatórios padrão criados pela [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Esses relatórios resumem as informações de servidor que costumam ser solicitadas. Começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, os administradores podem executar relatórios personalizados que foram criados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -75,11 +75,11 @@ ms.locfileid: "36120927"
 >  Qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida pode ser inserida em um relatório e executada dele. Quando um relatório é executado utilizando-se uma conta de usuário com altos privilégios, qualquer uma dessas instruções inseridas pode ser executada sem desafio.  
   
 ## <a name="report-samples"></a>Exemplos de relatório  
- [Exemplos de relatórios](http://go.microsoft.com/fwlink/?LinkId=81792), incluindo os relatórios padrão criados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)], estão disponíveis para download. Esses exemplos podem ser modificados com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Exemplos de relatórios](http://go.microsoft.com/fwlink/?LinkId=81792), inclusive relatórios padrão criados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)], estão disponíveis para download. Esses exemplos podem ser modificados com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar um relatório personalizado ao Management Studio](add-a-custom-report-to-management-studio.md)   
- [Supressão de avisos de execução de relatório personalizado](unsuppress-run-custom-report-warnings.md)   
+ [Cancelar Supressão da execução de relatório personalizado avisos](unsuppress-run-custom-report-warnings.md)   
  [Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

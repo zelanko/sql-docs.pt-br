@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171157"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtendo assistência do SQL Server
   Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -68,7 +68,7 @@ ms.locfileid: "36130600"
   
  É possível acessar os Manuais Online das seguintes formas:  
   
--   Uma cópia dos Manuais Online do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é publicada na Biblioteca MSDN e na Biblioteca do TechNet na Internet. Os tópicos nessas cópias dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem comentários da comunidade, como informações adicionais e exemplos de código de outros clientes. Você pode exibir a cópia da biblioteca do MSDN no [Manuais Online do SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Uma cópia dos Manuais Online do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é publicada na Biblioteca MSDN e na Biblioteca do TechNet na Internet. Os tópicos nessas cópias dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem comentários da comunidade, como informações adicionais e exemplos de código de outros clientes. Você pode exibir a cópia da biblioteca MSDN na [Manuais Online do SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
   
 -   Você pode usar o Gerenciador da Biblioteca de Ajuda para instalar Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador local. Para obter mais informações, consulte [adicionar ou remover a documentação de produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36130600"
 |Recurso|Público|  
 |--------------|--------------|  
 |[SQL Server Developer Center](http://msdn.microsoft.com/sqlserver/)|Desenvolvedores que estão criando bancos de dados, sistemas de relatórios e soluções de business intelligence do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e estão habilitando seus aplicativos e sites para usar esses sistemas.|  
-|[Centro de desenvolvimento XML](http://go.microsoft.com/fwlink/?LinkId=42458)|Criadores de site e desenvolvedores de aplicativos cujos sites e aplicativos utilizam XML para armazenamento e manipulação de dados.|  
+|[XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)|Criadores de site e desenvolvedores de aplicativos cujos sites e aplicativos utilizam XML para armazenamento e manipulação de dados.|  
 |[Site do TechNet do SQL Server](http://technet.microsoft.com/sqlserver/dn135309)|Administradores e operadores que planejam, implantam, administram e oferecem suporte a sistemas que usam o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Informações online adicionais  
@@ -95,9 +95,9 @@ ms.locfileid: "36130600"
 |[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Fornece informações de pré-venda sobre como avaliar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um armazenamento de dados e ferramenta de business intelligence.|  
 |[Base de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?LinkId=42461)|Fornece um repositório pesquisável de artigos sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- Os produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] têm um ciclo de vida de suporte que define por quanto tempo o suporte está disponível para cada versão. O suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] mantém uma página que define o ciclo de vida do suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)]. A página contém links para outras páginas que especificam a disponibilidade de suporte para produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações, consulte [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
+ Os produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] têm um ciclo de vida de suporte que define por quanto tempo o suporte está disponível para cada versão. O suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] mantém uma página que define o ciclo de vida do suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)]. A página contém links para outras páginas que especificam a disponibilidade de suporte para produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações, consulte [ciclo de vida de suporte Microsoft](http://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Consulte também  
- [Use a documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Use a documentação do produto para SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

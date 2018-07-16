@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e6092c624d6fbbac57411d3e6d2e1c65c437a7d6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251178"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Criando um modelo de mineração de série temporal e uma estrutura de mineração
   Nesta lição, você criará um modelo de mineração que permite prever valores com o passar do tempo, com base em dados históricos. Quando você criar o modelo, a estrutura subjacente será gerada automaticamente e poderá ser usada como a base para outros modelos de mineração.  
@@ -27,7 +27,7 @@ ms.locfileid: "36312304"
  Esta lição supõe que você já conhece modelos de previsão e os requisitos do algoritmo MTS. Para obter mais informações, consulte [Algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## <a name="create-mining-model-statement"></a>Instrução CREATE MINING MODEL  
- Para criar um modelo de mineração diretamente e gerar automaticamente a estrutura de mineração subjacente, use o [criar modelo de MINERAÇÃO &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) instrução. O código na instrução pode ser dividido nas seguintes partes:  
+ Para criar um modelo de mineração diretamente e gerar automaticamente a estrutura de mineração subjacente, você deve usar o [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) instrução. O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Nomeando o modelo  
   
@@ -85,9 +85,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  No **conectar ao servidor** caixa de diálogo para **tipo de servidor**, selecione **Analysis Services**. Em **nome do servidor**, tipo `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
+2.  No **conectar ao servidor** caixa de diálogo, para **tipo de servidor**, selecione **Analysis Services**. Na **nome do servidor**, digite `LocalHost`, ou o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você deseja se conectar para esta lição. Clique em **Conectar**.  
   
-3.  Em **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
+3.  Na **Pesquisador de objetos**, clique com botão direito a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], aponte para **nova consulta**e, em seguida, clique em **DMX**.  
   
      O Editor de Consultas é exibido com uma consulta nova em branco.  
   
@@ -187,7 +187,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 -   No Editor de consultas, na barra de ferramentas, clique em **Execute**.  
   
-     O status da consulta é exibido no **mensagens** guia na parte inferior do Editor de consultas após a instrução conclui a execução. As mensagens devem exibir:  
+     O status da consulta é exibido na **mensagens** guia na parte inferior do Editor de consultas após a instrução termina a execução. As mensagens devem exibir:  
   
     ```  
     Executing the query   
@@ -202,7 +202,7 @@ CREATE MINING MODEL [Mining Model Name]
  [Lição 2: Adicionando modelos de mineração à estrutura de mineração de série temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo para modelos de série temporal mineração &#40;Analysis Services – mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Mining Model Content para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
  [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

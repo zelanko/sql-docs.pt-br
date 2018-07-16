@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243136"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Diretrizes para lógica de repetição das transações em tabelas com otimização de memória
   Há condições de erro que ocorrem com transações que acessam tabelas com otimização de memória.  
@@ -75,7 +75,7 @@ ms.locfileid: "36012073"
   
 -   O aplicativo cliente tem uma lógica de repetição para outros códigos de erro, como 1205, que você pode estender.  
   
--   Os conflitos são raros, e é importante reduzir a latência completa usando a execução preparada. Para obter mais informações sobre como executar nativamente compilados procedimentos armazenados diretamente, consulte [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Os conflitos são raros, e é importante reduzir a latência completa usando a execução preparada. Para obter mais informações sobre como executar nativamente compilados diretamente a procedimentos armazenados, consulte [procedimentos armazenados compilados nativamente](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  O exemplo a seguir mostra uma lógica de repetição em um procedimento armazenado interpretado [!INCLUDE[tsql](../includes/tsql-md.md)], que contém uma chamada para um procedimento armazenado compilado nativamente ou para uma transação entre contêineres.  
   
@@ -130,7 +130,7 @@ END
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Compreendendo transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Noções básicas sobre transações em tabelas com otimização de memória](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Transações em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   

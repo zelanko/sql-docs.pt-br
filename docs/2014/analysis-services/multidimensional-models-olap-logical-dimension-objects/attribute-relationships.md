@@ -26,18 +26,18 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2eb8155b2515a04191eeeccadcc3c21843f19e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b3d4667703aa76870ccc9ff5684597ee52a34f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187253"
 ---
 # <a name="attribute-relationships"></a>Relações de Atributo
-  Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atributos dentro de uma dimensão sempre são relacionados direta ou indiretamente ao atributo de chave. Quando você define uma dimensão com base em um esquema em estrela, onde todos os atributos de dimensão são derivados da mesma tabela relacional, uma relação de atributo é automaticamente definida entre o atributo de chave e cada atributo não chave da dimensão. Quando você define uma dimensão com base em um esquema de floco de neve, onde todos os atributos de dimensão derivam de várias tabelas relacionadas, uma relação de atributo é automaticamente definida da seguinte maneira:  
+  Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], atributos dentro de uma dimensão sempre estão relacionados diretamente ou indiretamente ao atributo de chave. Quando você define uma dimensão com base em um esquema em estrela, onde todos os atributos de dimensão são derivados da mesma tabela relacional, uma relação de atributo é automaticamente definida entre o atributo de chave e cada atributo não chave da dimensão. Quando você define uma dimensão com base em um esquema de floco de neve, onde todos os atributos de dimensão derivam de várias tabelas relacionadas, uma relação de atributo é automaticamente definida da seguinte maneira:  
   
 -   Entre o atributo de chave e cada atributo não chave vinculado às colunas na tabela de dimensões principal.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36019239"
   
 -   O atributo Cidade como uma relação com o atributo Cliente.  
   
- Para navegar pelos dados no cubo, você também pode criar uma hierarquia definida pelo usuário que não representa uma hierarquia natural nos dados (o que é chamado um *ad-hoc* ou *reporting* hierarquia). Por exemplo, você pode criar uma hierarquia definida pelo usuário com base em `{Age, Gender}`. Os usuários não percebem diferenças em como duas hierarquias se comportam, apesar dos benefícios da hierarquia natural quanto às estruturas de agregação e indexação — ocultas do usuário — das relações naturais nos dados de origem.  
+ Para navegar por dados no cubo, você também pode criar uma hierarquia definida pelo usuário que não representa uma hierarquia natural nos dados (que é chamado um *ad-hoc* ou *reporting* hierarquia). Por exemplo, você pode criar uma hierarquia definida pelo usuário com base em `{Age, Gender}`. Os usuários não percebem diferenças em como duas hierarquias se comportam, apesar dos benefícios da hierarquia natural quanto às estruturas de agregação e indexação — ocultas do usuário — das relações naturais nos dados de origem.  
   
  A propriedade `SourceAttribute` de um nível determina qual atributo é usado para descrever o nível. A propriedade `KeyColumns` no atributo especifica a coluna na exibição da fonte de dados que fornece os membros. A propriedade `NameColumn` no atributo pode especificar um nome de coluna diferente para os membros.  
   
- Para definir um nível em uma hierarquia definida pelo usuário usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o **Designer de dimensão** permite que você selecione um atributo de dimensão, uma coluna em uma tabela de dimensões ou uma coluna de uma tabela relacionada incluída na exibição da fonte de dados para o cubo. Para obter mais informações sobre como criar hierarquias definidas pelo usuário, consulte [Create User-Defined hierarquias](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Para definir um nível em uma hierarquia definida pelo usuário usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o **Designer de dimensão** permite que você selecione um atributo de dimensão, uma coluna em uma tabela de dimensões ou uma coluna de uma tabela relacionada incluída na exibição da fonte de dados para o cubo. Para obter mais informações sobre como criar hierarquias definidas pelo usuário, consulte [hierarquias definidas pelo usuário](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  No Analysis Services, uma suposição é normalmente feita sobre o conteúdo dos membros. Os membros folha não têm nenhum descendente e contêm dados derivados de fontes de dados subjacentes. Os membros não folha têm descendentes e contêm dados derivados de agregações executadas em membros filhos. Em níveis de agregação, os membros são com base em agregações de níveis subordinados. Portanto, quando a propriedade `IsAggregatable` estiver configurada como `False` no atributo de origem de um nível, nenhum atributo agregável poderá ser adicionado como nível acima dele.  
   

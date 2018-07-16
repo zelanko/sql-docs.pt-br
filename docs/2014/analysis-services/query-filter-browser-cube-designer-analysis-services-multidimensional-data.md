@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250968"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta e filtro (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Esta área da guia **Navegador** do Designer de Cubo contém uma área de consultas e filtros para ajudar a escolher dados do cubo para usar ao navegar ou em consultas. Você pode adicionar quantos objetos cubo desejar e então exibir os resultados na área de dados ou exportar os resultados para um relatório usando Analisar no Excel para visualizar como os dados seriam exibidos pelos usuários finais.  
@@ -44,7 +44,7 @@ ms.locfileid: "36012383"
 |Valor|Description|  
 |-----------|-----------------|  
 |**Igual a**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
-|**Não é igual a**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
+|**Não é igual**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**Entrada**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Contém**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  
@@ -62,8 +62,8 @@ ms.locfileid: "36012383"
 ## <a name="see-also"></a>Consulte também  
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Navegador &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analisar no Excel &#40;guia navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadados &#40;guia navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Barra de ferramentas &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analisar no Excel &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadados &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

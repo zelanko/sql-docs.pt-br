@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10134"
 - sql12.rtp.rptdesigner.textproperties.general.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f8135c0f0526efe1db46011e22491e96db39777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238526"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
   Quando você pensa em uma caixa de texto, provavelmente imagina uma caixa autônoma que contém texto em uma superfície como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. No Construtor de Relatórios, algumas caixas de texto são assim, e podem exibir texto literal para títulos, descrições e rótulos ou texto dinâmico baseado em expressões. Mas todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas do seu relatório.  
@@ -57,19 +57,19 @@ ms.locfileid: "36011728"
   
  A orientação é definida na caixa de texto e se aplica a todo o texto da caixa. Você não pode especificar uma orientação diferente para partes da caixa de texto.  
   
- Introdução rápida sobre como alterar a orientação do texto, consulte a seção sobre como girar texto no [Tutorial: Formatar texto &#40;Report Builder&#41;](../tutorial-format-text-report-builder.md). Para obter mais informações, consulte [definir orientação da caixa de texto &#40;construtor de relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para começar rapidamente com a alteração da orientação do texto, consulte a seção sobre como girar texto na [Tutorial: Formatar texto &#40;construtor de relatórios&#41;](../tutorial-format-text-report-builder.md). Para obter mais informações, consulte [definir orientação da caixa de texto &#40;construtor de relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
- [Adicionar, mover ou excluir uma caixa de texto &#40;SSRS e construtor de relatórios&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [Adicionar, mover ou excluir uma caixa de texto &#40;relatórios e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [Formatar texto em uma caixa de texto &#40;SSRS e construtor de relatórios&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Formatar texto em uma caixa de texto &#40;relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Definir a orientação da caixa de texto &#40;SSRS e construtor de relatórios&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Definir a orientação da caixa de texto &#40;relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;SSRS e construtor de relatórios&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando texto e espaços reservados &#40;SSRS e construtor de relatórios&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formatando números e datas &#40;SSRS e construtor de relatórios&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Formatando texto e espaços reservados &#40;relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

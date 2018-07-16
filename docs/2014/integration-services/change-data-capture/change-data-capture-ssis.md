@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,13 +16,13 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263232"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.  
@@ -33,7 +33,7 @@ ms.locfileid: "36120621"
  O recurso de captura de dados de alteração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] captura atividades de inserção, atualização e exclusão aplicadas a tabelas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , disponibilizando os detalhes das alterações em um formato relacional facilmente consumível. As tabelas de alteração usadas pelo Change Data Capture contêm colunas que refletem a estrutura de coluna da tabela de origem controlada, junto com os metadados necessários para entender as mudanças ocorridas, linha por linha.  
   
 > [!NOTE]  
->  O Change data capture não está disponível em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Change data capture não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Como o Change Data Capture funciona no Integration Services  
  Um pacote do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pode coletar com facilidade os dados de alteração nos bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para executar cargas incrementais eficientes em um data warehouse. No entanto, antes de usar o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] para carregar dados de alteração, um administrador deve habilitar a captura de dados de alteração no banco de dados e nas tabelas em que deseja capturar alterações. Para obter mais informações sobre como configurar a captura de dados de alteração em um banco de dados, consulte [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "36120621"
   
      Para determinar se os dados estão prontos, comece com um contêiner Loop For para atrasar a execução, se necessário, até que os dados de alteração do intervalo selecionado estejam prontos. Dentro do contêiner de loop, use uma tarefa Executar SQL para consultar as tabelas de mapeamento de tempo mantidas pela captura de dados de alteração. Em seguida, use uma tarefa Script que chame o método `Thread.Sleep` ou outra tarefa Executar SQL com uma instrução `WAITFOR` para retardar a execução do pacote temporariamente, se necessário. Opcionalmente, use outra tarefa Script para registrar uma condição de erro ou um tempo limite.  
   
-     **Para obter mais informações:**[determinar se a alteração de dados está pronto  ](determine-whether-the-change-data-is-ready.md)  
+     **Para obter mais informações:**[determinar se a alteração de dados estão prontos  ](determine-whether-the-change-data-is-ready.md)  
   
 -   Prepare a cadeia de caracteres de consulta que será usada para consultar os dados de alteração.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36120621"
   
      Para dividir as alterações, use uma transformação de Divisão Condicional para direcionar as inserções, atualizações e exclusões para saídas diferentes para o processamento apropriado.  
   
-     **Para obter mais informações:**[processo inserções, atualizações e exclusões  ](process-inserts-updates-and-deletes.md)  
+     **Para obter mais informações:**[processar inserções, atualizações e exclusões  ](process-inserts-updates-and-deletes.md)  
   
 -   Aplique as inserções, exclusões e atualizações ao destino.  
   

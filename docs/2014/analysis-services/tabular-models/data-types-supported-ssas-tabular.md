@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237626"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de dados com suporte (SSAS tabular)
   Este artigo descreve os tipos de dados que podem ser usados em modelos tabulares e discute a conversão implícita de tipos de dados quando dados são calculados ou usados em uma fórmula DAX (Data Analysis Expressions).  
@@ -50,9 +50,9 @@ ms.locfileid: "36122030"
 |CURRENCY|CURRENCY|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
 |N/A|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
- <sup>1</sup> fórmulas DAX não dão suporte a tipos de dados que são menores do que aqueles listados na tabela.  
+ <sup>1</sup> fórmulas DAX não dão suporte para tipos de dados que são menores do que aqueles listados na tabela.  
   
- <sup>2</sup> se você tentar importar dados que tenham valores numéricos muito grandes, a importação pode falhar com o seguinte erro:  
+ <sup>2</sup> se você tentar importar dados que tenham valores numéricos muito grandes, pode haver falha na importação com o seguinte erro:  
   
  Erro de banco de dados na memória: O '\<nome da coluna >' coluna do '\<nome da tabela >' tabela contém um valor de ' 1.7976931348623157e + 308', que não é suportado. A operação foi cancelada.  
   

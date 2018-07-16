@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232606"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configurações de Site (Gerenciador de Relatórios)
   Use a página Configurações de Site para alterar o título do aplicativo, definir padrões do servidor para limites de histórico do relatório e valores de tempo limite de processamento de relatório, gerenciar atribuições de funções de nível de sistema e agendamentos compartilhados. Você deve ter permissões de Gerenciador de Conteúdo e de Administrador de Sistema para exibir essa página.  
@@ -36,7 +36,7 @@ ms.locfileid: "36120720"
   
 2.  Na parte superior da página, clique em **Configurações de Site**. Esse procedimento abre a página Propriedades Gerais do site.  
   
-     **Observação:** se você não vir o **configurações de Site** opção no menu, você não tem as permissões necessárias, para obter mais informações, consulte a seção "configurações do site" [configurar um servidor de relatório de modo nativo para Administração local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Observação:** se você não vir o **configurações do Site** opção no menu, você não tem as permissões necessárias, para obter mais informações, consulte a seção "configurações do site" de [configurar um servidor de relatório do modo nativo para Administração local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -59,7 +59,7 @@ ms.locfileid: "36120720"
   
  **Servidor de relatório do modo nativo:** em uma instalação de modo nativo, a URL padrão terá o formato http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- Modo integrado do SharePoint: A URL padrão terá o formato http://\<*Site_do_sharepoint*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.Application. "  
+ Modo integrado do SharePoint: A URL padrão terá o formato http://\<*Site_do_sharepoint*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **Aplicar**  
  Clique para salvar as alterações no servidor de relatórios.  

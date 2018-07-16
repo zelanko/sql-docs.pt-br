@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea29de67ee3e94089c63d5310e38a050be614ce3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82e9df54c797b965409020056faac334a0d60709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202516"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar o Distributed Replay (instalação)
   Instale os recursos do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay com o Assistente de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ao planejar onde instalar os recursos, considere o seguinte:  

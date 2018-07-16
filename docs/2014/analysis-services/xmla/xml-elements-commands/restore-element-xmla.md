@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275652"
 ---
 # <a name="restore-element-xmla"></a>Elemento Restore (XMLA)
-  Restaura um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados de um arquivo de backup.  
+  Restaura uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados de um arquivo de backup.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36121776"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
-|Elementos filho|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../xml-elements-properties/name-element-xmla.md), [DatabaseID](../xml-elements-properties/id-element-xmla.md), [arquivo](../xml-elements-properties/file-element-xmla.md), [locais](../xml-elements-properties/locations-element-xmla.md), [senha](../xml-elements-properties/password-element-xmla.md), [Segurança](../xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
+|Elementos filho|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../xml-elements-properties/name-element-xmla.md), [DatabaseID](../xml-elements-properties/id-element-xmla.md), [arquivo](../xml-elements-properties/file-element-xmla.md), [locais](../xml-elements-properties/locations-element-xmla.md), [senha](../xml-elements-properties/password-element-xmla.md), [Security](../xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O `Restore` comando restaura um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no `DatabaseName` elemento de um arquivo de backup e, opcionalmente, restaura partições remotas de arquivos de backup remotos.  
@@ -81,7 +81,7 @@ ms.locfileid: "36121776"
 |OLAP híbrido (HOLAP)|Agregações e metadados|  
 |OLAP relacional (ROLAP)|Metadados|  
   
- Durante uma `Restore` de comando, um bloqueio exclusivo é colocado no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no `DatabaseName` elemento. O bloqueio é liberado após o `Restore` comando foi concluído.  
+ Durante um `Restore` de comando, um bloqueio exclusivo é colocado na [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no `DatabaseName` elemento. O bloqueio seja liberado após o `Restore` comando foi concluído.  
   
  Para obter mais informações sobre backup e restaurando bancos de dados, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
@@ -93,8 +93,8 @@ ms.locfileid: "36121776"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de backup &#40;XMLA&#41;](backup-element-xmla.md)   
- [Elemento de lote &#40;XMLA&#41;](batch-element-xmla.md)   
- [Paralelo elemento &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
+ [Elemento do lote &#40;XMLA&#41;](batch-element-xmla.md)   
+ [Elemento em paralelo &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Elemento Synchronize &#40;XMLA&#41;](synchronize-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](xml-elements-commands.md)  
   

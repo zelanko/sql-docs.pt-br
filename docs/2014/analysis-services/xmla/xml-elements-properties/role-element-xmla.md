@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b851ad5-cc46-4a2e-8873-d8556faca809
 caps.latest.revision: 5
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bc1b3e4733625334e284946338beaaa7f65e7f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4a2c2495a29481be7463e347677c1f74ffd23860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265213"
 ---
 # <a name="role-element--xmla"></a>Elemento Role (XMLA)
-  Identifica uma extremidade de uma relação um-para-muitos a ser usada pelo pai [RelationshipEnd](../../scripting/data-type/relationshipend-data-type-assl.md).  
+  Identifica uma extremidade de uma relação um-para-muitos a ser usado pelo pai [RelationshipEnd](../../scripting/data-type/relationshipend-data-type-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

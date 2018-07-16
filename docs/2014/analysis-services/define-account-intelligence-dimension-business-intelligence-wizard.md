@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectdimension.f1
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 27e33821094b1499646aec42262b9a3b0b27c10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4acb73063603e367d0443e709c875be0871382d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211896"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Definir Inteligência de Conta (Dimensão) (Assistente de Business Intelligence)
   Use esta página para selecionar a dimensão à qual será aplicada inteligência de conta, incluindo configurações de tipos de atributo e dimensão, definição de medidas semiaditivas e outros recursos.  

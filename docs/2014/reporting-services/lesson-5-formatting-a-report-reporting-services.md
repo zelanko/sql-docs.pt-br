@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227069"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.  
@@ -81,7 +81,7 @@ ms.locfileid: "36121858"
   
 1.  Clique na tabela de forma que os identificadores de coluna e linha sejam exibidos acima e ao lado da tabela.  
   
-     ![Design, tabela com linha de cabeçalho e linha de detalhes](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "de Design, tabela com linha de cabeçalho e linha de detalhes")  
+     ![Design, tabela com linha de cabeçalho e de linha de detalhe](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, tabela com linha de cabeçalho e de linha de detalhes")  
   
      As barras em cinza ao longo da parte superior e ao lado da tabela são os identificadores de coluna e de linha.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36121858"
  Você formatou cabeçalhos de coluna e valores de data e moeda com êxito. Agora você adicionará agrupamento e totais ao relatório. Consulte a [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Formatando números e datas &#40;SSRS e construtor de relatórios&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formatando números e datas &#40;relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

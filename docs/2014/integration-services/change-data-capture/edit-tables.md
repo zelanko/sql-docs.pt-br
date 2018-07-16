@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e3d3fdde44b1dba2c467f25b6f338ae8b6b15ece
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8acfb019245566b5fe0285ff7415725f1bda40b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223725"
 ---
 # <a name="edit-tables"></a>Editar tabelas
   Use a guia **Tables** para fazer alterações às tabelas e colunas selecionadas do banco de dados de origem Oracle. Esta guia tem os seguintes elementos:  
@@ -48,7 +48,7 @@ ms.locfileid: "36120843"
  Selecione uma tabela da lista e clique em **Remover** para remover a tabela da instância CDC.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Como editar as propriedades da instância CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Selecionar tabelas e colunas Oracle](select-oracle-tables-and-columns.md)  
   
   

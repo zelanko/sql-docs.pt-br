@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c00a5798cffb73a862aa3d7e8b636b25c2cf3c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ec9a10af6160682df84e112d7ab1fb5a07d787
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251268"
 ---
 # <a name="reporting-services-configuration-files"></a>Arquivos de configuração do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena informações de componente no registro e em arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Os arquivos de configuração contêm uma combinação de valores somente para uso interno e de valores definidos pelo usuário. Os valores definidos pelo usuário são especificados na instalação, com as ferramentas de configuração, os utilitários de linha de comando e a edição manual de arquivos de configuração.  
@@ -32,7 +32,7 @@ ms.locfileid: "36122101"
  A modificação dos arquivos de configuração só é necessária se você estiver adicionando ou definindo configurações avançadas. As configurações são especificadas como elementos ou atributos XML. Se você entender de XML e arquivos de configuração, use um editor de texto ou de código para modificar configurações definidas pelo usuário. Para obter mais informações sobre como modificar um arquivo de configuração ou para saber mais sobre como o servidor de relatório lê configurações novas e atualizadas, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
->  Em versões anteriores, o Gerenciador de Relatórios tinha seu próprio arquivo de configuração chamado RSWebApplication.config. Esse arquivo está agora obsoleto. Se você tiver atualizado a partir de uma instalação anterior, o arquivo não será excluído, mas o servidor de relatório não lerá nenhuma configuração contida nele. Se o arquivo existir em seu computador, exclua-o. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, todas as configurações do Gerenciador de Relatórios são armazenadas e lidas no arquivo RSReportServer.config. Para revisar uma lista dos quais configurações foram excluídas ou movidas, consulte [alterações recentes no SQL Server Reporting Services no SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+>  Em versões anteriores, o Gerenciador de Relatórios tinha seu próprio arquivo de configuração chamado RSWebApplication.config. Esse arquivo está agora obsoleto. Se você tiver atualizado a partir de uma instalação anterior, o arquivo não será excluído, mas o servidor de relatório não lerá nenhuma configuração contida nele. Se o arquivo existir em seu computador, exclua-o. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, todas as configurações do Gerenciador de Relatórios são armazenadas e lidas no arquivo RSReportServer.config. Para examinar uma lista dos quais configurações foram excluídas ou movidas, consulte [alterações significativas no SQL Server Reporting Services no SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  Neste tópico:  
   

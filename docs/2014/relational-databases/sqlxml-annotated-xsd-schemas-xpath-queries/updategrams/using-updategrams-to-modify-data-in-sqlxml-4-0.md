@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d085fdb34388071019001dd2fbf445903052bdf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f838dd23a17e2fc4555b8f9dc69e185fc8caefeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221056"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Usando diagramas de atualização para modificar dados no SQLXML 4.0
   Você pode modificar (Inserir, atualizar ou excluir) um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um existente documento XML usando um diagrama de atualização ou o OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] função.  
@@ -57,13 +57,13 @@ ms.locfileid: "36012441"
  [Excluindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Descreve e fornece exemplos de uso de diagramas de atualização para excluir dados.  
   
- [Atualizando dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Atualização de dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Descreve e fornece exemplos de uso de diagramas de atualização para modificar os dados existentes.  
   
  [Passando parâmetros para diagramas de atualização &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Descreve e fornece exemplos de passagem de parâmetros para diagramas de atualização.  
   
- [Tratamento de problemas de simultaneidade de banco de dados em diagramas de atualização &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Tratamento de problemas de simultaneidade em diagramas de atualização de banco de dados &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Descreve os vários níveis de proteção possíveis para tratar assuntos de simultaneidade em diagramas de atualização e fornece exemplos.  
   
  [Aplicativos de exemplo de diagrama de atualização &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  

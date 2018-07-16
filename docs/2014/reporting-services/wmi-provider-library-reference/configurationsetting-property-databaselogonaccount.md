@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonAccount
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 75a929c87f963f102535c7fbe015a4bb49e6278f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b94a45ed2c528972fffb79d2f8f51ad9bcba56d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185743"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta de logon que o servidor de relatório usa para se conectar ao banco de dados do servidor de relatório. Somente leitura.  
@@ -49,9 +49,9 @@ public string DatabaseLogonAccount;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Os valores válidos para essa propriedade variam dependendo do valor da [DatabaseLogonType](configurationsetting-property-databaselogontype.md) propriedade.  
+ Os valores válidos para essa propriedade variará dependendo do valor da [DatabaseLogonType](configurationsetting-property-databaselogontype.md) propriedade.  
   
- Essa propriedade será ignorada se o [DatabaseLogonType](configurationsetting-property-databaselogontype.md) está definida como `2 (Service)`.  
+ Essa propriedade será ignorada se a [DatabaseLogonType](configurationsetting-property-databaselogontype.md) estiver definida como `2 (Service)`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

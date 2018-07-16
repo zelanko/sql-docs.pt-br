@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 699cdbdc63eea794397e23076345cf082a042601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bb9ae4163f139af76b1e746267a9d60c70d026f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220324"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Processando opções e configurações (Analysis Services)
   Ao processar objetos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode selecionar uma opção de processamento para controlar o tipo de processamento que ocorre para cada objeto. Os tipos de processamento variam de um objeto para outro e por alterações ocorridas no objeto desde que ele foi processado pela última vez. Se você habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para selecionar automaticamente um método de processamento, ele usará o método que retornar o objeto a um estado inteiramente processado no menor tempo.  
@@ -38,7 +38,7 @@ ms.locfileid: "36130653"
  As configurações de processamento permitem controlar os objetos que são processados e os métodos usados para processar esses objetos. Algumas configurações de processamento são usadas principalmente para trabalhos de processamento em lotes. Para obter mais informações sobre processamento em lote, consulte [Processamento em lote &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 > [!NOTE]  
->  Esse tópico aplica-se a soluções multidimensionais e de mineração de dados. Para obter informações sobre soluções de tabela, consulte [processar banco de dados, tabela ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md).  
+>  Esse tópico aplica-se a soluções multidimensionais e de mineração de dados. Para obter informações sobre as soluções tabulares, consulte [processar banco de dados, tabela ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md).  
   
 ## <a name="processing-options"></a>Opções de processamento  
  A tabela a seguir descreve os métodos de processamento disponíveis no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e identifica os objetos compatíveis com cada método.  
@@ -49,7 +49,7 @@ ms.locfileid: "36130653"
 |**Processar Completo**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Processa um objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e todos os objetos associados. Quando o comando Processar Completo é executado em um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta todos os dados do objeto e, em seguida, processa o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural foi feita em um objeto, por exemplo, ao adicionar, excluir ou renomear uma hierarquia de atributo.|  
 |**Processar Limpeza**|Cubos, bancos de dados, dimensões, cubos, grupos de medidas, modelos de mineração, estruturas de mineração e partições.|Descarta os dados no objeto especificado e em qualquer objeto constituinte de nível inferior. Depois de serem descartados, os dados não são recarregados.|  
 |**Processar dados**|Dimensões, cubos, grupos de medidas e partições.|Processa apenas os dados sem criar agregações ou índices. Se houver dados nas partições, eles serão descartados antes de a partição ser populada novamente com dados de origem.|  
-|**Processar adição**|Dimensões, grupos de medidas e partições.<br /><br /> Observação: O processo de adicionar não está disponível para processamento de dimensão no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mas você pode escrever script XMLA para executar esta ação.|Para dimensões, adiciona novos membros e atualiza legendas de atributo de dimensão e descrições.<br /><br /> Para grupos de medidas e partições, adiciona processos e dados de fatos recém-disponibilizados apenas às partições pertinentes.|  
+|**Processar adição**|Dimensões, grupos de medidas e partições.<br /><br /> Observação: O processo de adicionar não está disponível para processamento de dimensão no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mas você pode escrever o script XMLA para executar esta ação.|Para dimensões, adiciona novos membros e atualiza legendas de atributo de dimensão e descrições.<br /><br /> Para grupos de medidas e partições, adiciona processos e dados de fatos recém-disponibilizados apenas às partições pertinentes.|  
 |**Processar Atualização**|Dimensões|Força uma releitura dos dados e uma atualização dos atributos de dimensão. Agregações flexíveis e índices em partições relacionadas serão descartados.|  
 |**Processar Índice**|Cubos, dimensões, grupos de medidas e partições|Cria ou recria índices e agregações para todas as partições processadas. Para objetos não processados, esta opção gera um erro.<br /><br /> O processamento com esta opção será necessário se você desativar Processamento Lento.|  
 |**Processar Estrutura**|Cubos e estruturas de mineração|Se o cubo não estiver processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processará, se necessário, todas as dimensões do cubo. Depois disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará apenas definições de cubo. Se esta opção for aplicada a uma estrutura de mineração, essa estrutura será populada com dados de origem. Diferente da opção Processar Completo, essa opção não itera o processamento para os modelos de mineração propriamente ditos.|  

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ebd0e9a8-5fe5-4b15-9a44-2f131a13c186
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 782f14bf2ec91a3c7ea700010a793ee847f21696
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a0a2166bb0131c7987db8a528b9fcca69329033
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245166"
 ---
 # <a name="sql-server-native-client-errors"></a>Erros do SQL Server Native Client
   Esta seção contém o tópico que descreve um erro que pode ocorrer quando você instala o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250546"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Maior que) (Expressão SSIS)
   Executa uma comparação para determinar se a primeira expressão é maior que a segunda. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  
@@ -104,11 +104,11 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [&#60;&#40;Menor&#41; &#40;expressão SSIS&#41;](less-than-ssis-expression.md)   
+ [&#60;&#40;Menor que&#41; &#40;expressão do SSIS&#41;](less-than-ssis-expression.md)   
  [&#62;= &#40;Maior ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= &#40;Menor ou igual a&#41; &#40;Expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)   
- [= = &#40;Igual&#41; &#40;expressão SSIS&#41;](equal-ssis-expression.md)   
- [Precedência do operador e capacidade de associação](operator-precedence-and-associativity.md)   
- [Operadores &#40;expressão SSIS&#41;](operators-ssis-expression.md)  
+ [= = &#40;Igual&#41; &#40;expressão do SSIS&#41;](equal-ssis-expression.md)   
+ [Associatividade e precedência de operador](operator-precedence-and-associativity.md)   
+ [Operadores &#40;expressão do SSIS&#41;](operators-ssis-expression.md)  
   
   

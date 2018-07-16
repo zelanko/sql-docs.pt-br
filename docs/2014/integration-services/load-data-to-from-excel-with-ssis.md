@@ -1,11 +1,11 @@
 ---
 title: Importar do Excel ou exportar para o Excel com o SSIS | Microsoft Docs
-description: Saiba como importar ou exportar dados do Excel com o SQL Server Integration Services (SSIS), junto com os pré-requisitos, problemas conhecidos e limitações.
+description: Saiba como importar ou exportar dados do Excel com o SSIS (SQL Server Integration Services), junto com pré-requisitos, problemas conhecidos e limitações.
 ms.date: 04/10/2018
-ms.prod: sql
+ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
+ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d028e3aa679e91ca15f3a738f948b127517c112f
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197526"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
 - modifying jobs
 - SQL Server Agent jobs, modifying
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: caceadb3d1cc35bc9adb7a1ac97d03dadad76934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 72c4a103243707fa77216b62e9fb8fd3d067307b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268192"
 ---
 # <a name="modify-a-job"></a>Modify a Job
   Este tópico descreve como alterar as propriedades do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a categorias de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
@@ -72,21 +72,21 @@ ms.locfileid: "36121625"
   
 3.  Na janela de consulta, use os procedimentos armazenados do sistema a seguir para modificar um trabalho.  
   
-    -   Executar [sp_update_job &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) para alterar os atributos de um trabalho.  
+    -   Execute [sp_update_job &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) para alterar os atributos de um trabalho.  
   
-    -   Executar [sp_update_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) para alterar os detalhes do agendamento de uma definição de trabalho.  
+    -   Execute [sp_update_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) para alterar os detalhes do agendamento de uma definição de trabalho.  
   
-    -   Executar [sp_add_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) para adicionar novas etapas de trabalho.  
+    -   Execute [sp_add_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) para adicionar novas etapas de trabalho.  
   
-    -   Executar [sp_update_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) para alterar etapas de trabalho preexistentes.  
+    -   Execute [sp_update_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) para alterar etapas de trabalho preexistentes.  
   
-    -   Executar [sp_delete_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) para remover uma etapa de trabalho de um trabalho.  
+    -   Execute [sp_delete_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) para remover uma etapa de trabalho de um trabalho.  
   
     -   Procedimentos armazenados adicionais para modificar qualquer trabalho mestre do SQL Server Agent:  
   
-        -   Executar [sp_delete_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) para excluir um servidor atualmente associado a um trabalho.  
+        -   Execute [sp_delete_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) para excluir um servidor atualmente associado a um trabalho.  
   
-        -   Executar [sp_add_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) para associar um servidor com o trabalho atual.  
+        -   Execute [sp_add_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) para associar um servidor com o trabalho atual.  
   
 ##  <a name="SMO"></a> Usando o SQL Server Management Objects  
  **Para modificar um trabalho**  

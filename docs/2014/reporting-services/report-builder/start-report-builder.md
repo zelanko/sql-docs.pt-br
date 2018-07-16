@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
 - launching Report Builder
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb09858869f76fd32a1e05151eef48870f96f68a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c2802b0ed89de430e892baacdd8ec3dfce8485c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227006"
 ---
 # <a name="start-report-builder-report-builder"></a>Iniciar o Construtor de Relatórios (Construtor de Relatórios)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] inclui autônomo e [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versões do construtor de relatórios. A versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] pode ser usada com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no modo nativo ou no modo integrado do SharePoint.  
@@ -36,7 +36,7 @@ ms.locfileid: "36120745"
   
  Você também pode usar a versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] do Construtor de Relatórios para criar relatórios em uma pasta de trabalho do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] que foi publicada no SharePoint. Para obter mais informações sobre como usar o construtor de relatórios com [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], consulte [criar um relatório do Reporting Services com dados PowerPivot](http://go.microsoft.com/fwlink/?LinkId=185238) em technet.microsoft.com.  
   
- Para iniciar o construtor de relatórios autônomo no **iniciar** menu em seu computador local, você ou um administrador deve instalar o construtor de relatórios diretamente no seu computador antes da ferramenta está disponível para uso. A versão autônoma não é instalada quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; é necessário baixá-la e instalá-la separadamente. Para baixar o construtor de relatórios, consulte [construtor de relatórios do Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Para iniciar o construtor de relatórios autônomo na **iniciar** menu em seu computador local, você ou um administrador deve instalar o construtor de relatórios diretamente no seu computador antes da ferramenta está disponível para uso. A versão autônoma não é instalada quando você instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; é necessário baixá-la e instalá-la separadamente. Para baixar o construtor de relatórios, consulte [construtor de relatórios do Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Para iniciar o Construtor de Relatórios ClickOnce a partir do Gerenciador de Relatórios  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36120745"
   
      O Construtor de Relatórios é aberto e você pode criar ou abrir um relatório no servidor de relatório.  
   
-     **Observação** se o **novo documento** menu não lista o **construtor de relatórios**, **modelo do construtor de relatórios**, e **defontededadosdorelatório** opções, seus tipos de conteúdo precisam ser adicionados à biblioteca do SharePoint. Para obter mais informações, consulte [Adicionar relatório servidor tipos de conteúdo em uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) em MSDN.microsoft.com.  
+     **Observação** se o **novo documento** menu não lista as **construtor de relatórios**, **modelo do construtor de relatórios**, e **defontededadosdorelatório** opções, seus tipos de conteúdo precisarão ser adicionados à biblioteca do SharePoint. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Manuais Online](http://go.microsoft.com/fwlink/?LinkId=154888) em MSDN.microsoft.com.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>Para iniciar o Construtor de Relatórios autônomo no menu Iniciar  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36120745"
   
 4.  Para abrir um relatório existente armazenado em seu computador local ou em um servidor de relatórios, clique no ícone do SQL Server no canto superior esquerdo e clique em Abrir.  
   
-     Se você não vir o servidor de relatório na lista de servidores existentes, feche o **abrir relatório** caixa de diálogo e clique **conectar** na parte inferior do construtor de relatórios para se conectar ao servidor.  
+     Se você não vir o servidor de relatório na lista de servidores existentes, feche o **abrir relatório** caixa de diálogo e clique **Connect** na parte inferior do construtor de relatórios para se conectar ao servidor.  
   
 ## <a name="see-also"></a>Consulte também  
  [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)  

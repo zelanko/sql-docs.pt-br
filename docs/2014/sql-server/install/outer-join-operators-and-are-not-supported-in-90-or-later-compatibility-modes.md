@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - =* join
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - joins [SQL Server]
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47a58b60ecd303b893e001663134d9b510bbabfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 579565320855694166f57039402e3fbef14183d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255438"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Operadores de junção externa *= e =* não têm suporte no modo de compatibilidade 90 ou posterior
   O Supervisor de atualização detectou o uso de operadores de junção externa * = e =\*. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50b8ca15207eaa89726ed2abe90bb8d862b2f266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ecc113b3ed38461a277996497f73bca7cd83a4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267232"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Esses pontos de extremidade são `datetime` valores e serão armazenados em variáveis de pacote para uso posteriormente no pacote.  
@@ -49,26 +49,26 @@ ms.locfileid: "36012065"
  Ao se calcular os pontos de extremidade em um pacote mestre que executa vários pacotes filho, é possível usar as configurações de Variável de Pacote Pai para passar os valores destas variáveis para cada pacote filho. Para obter mais informações, consulte [Tarefa Executar Pacote](../control-flow/execute-package-task.md) e [Usar os valores de variáveis e parâmetros em um pacote filho](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Calcule um Ponto Inicial e um Ponto Final para Dados de Alteração  
- Depois de definir as variáveis do pacote para os pontos de extremidade do intervalo, é possível calcular os valores reais para esses pontos de extremidade e mapear esses valores para as variáveis correspondentes. Devido a esses pontos de extremidade serem valores `datetime`, deve-se usar funções que podem calcular ou trabalhar com valores `datetime`. Ambos os [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão e Transact-SQL têm funções que trabalham com `datetime` valores:  
+ Depois de definir as variáveis do pacote para os pontos de extremidade do intervalo, é possível calcular os valores reais para esses pontos de extremidade e mapear esses valores para as variáveis correspondentes. Devido a esses pontos de extremidade serem valores `datetime`, deve-se usar funções que podem calcular ou trabalhar com valores `datetime`. Os dois os [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão e Transact-SQL têm funções que funcionam com `datetime` valores:  
   
- Funções no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão que funcionam com `datetime` valores  
- -   [DATEADD &#40;expressão SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
+ Funções na [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão que funcionam com `datetime` valores  
+ -   [DATEADD &#40;expressão do SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF &#40;expressão SSIS&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;expressão do SSIS&#41;](../expressions/datediff-ssis-expression.md)  
   
--   [DATEPART &#40;expressão SSIS&#41;](../expressions/datepart-ssis-expression.md)  
+-   [DATEPART &#40;expressão do SSIS&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [DIA &#40;expressão SSIS&#41;](../expressions/day-ssis-expression.md)  
+-   [DIA &#40;expressão do SSIS&#41;](../expressions/day-ssis-expression.md)  
   
--   [GETDATE &#40;expressão SSIS&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE &#40;expressão do SSIS&#41;](../expressions/getdate-ssis-expression.md)  
   
--   [GETUTCDATE &#40;expressão SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
+-   [GETUTCDATE &#40;expressão do SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [MÊS &#40;expressão SSIS&#41;](../expressions/month-ssis-expression.md)  
+-   [MÊS &#40;expressão do SSIS&#41;](../expressions/month-ssis-expression.md)  
   
--   [ANO &#40;expressão SSIS&#41;](../expressions/year-ssis-expression.md)  
+-   [ANO &#40;expressão do SSIS&#41;](../expressions/year-ssis-expression.md)  
   
- Funções em Transact-SQL que trabalham com `datetime` valores  
+ Funções no Transact-SQL que funcionam com `datetime` valores  
  [Tipos de dados e funções de data e hora&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Antes de usar uma destas funções `datetime` para calcular os pontos de extremidade, deve-se determinar se o intervalo é fixo e se ocorre regularmente. Normalmente, você quer aplicar alterações que aconteceram em tabelas fonte para tabelas destino em um período regular. Por exemplo, você poderia querer aplicar essas alterações de hora em hora, diariamente, ou semanalmente.  

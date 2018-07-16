@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 269a2b5d29bce201d72ee6b42730e4cb42d61b78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6fcb58365df623bd3a6c0fbc418f5284a0ea149a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232596"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Método GetCurrentCertificate (classe ServerSettings)
   Obtém o certificado de segurança atual.  

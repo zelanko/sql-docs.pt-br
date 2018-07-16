@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208056"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>Tipo de dados PerspectiveHierarchy (ASSL)
   Define um tipo de dados primitivo que representa informações sobre uma hierarquia em uma [PerspectiveDimension](dimension-data-type-assl.md) elemento.  

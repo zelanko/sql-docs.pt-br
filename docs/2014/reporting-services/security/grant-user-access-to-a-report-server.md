@@ -1,5 +1,5 @@
 ---
-title: Conceder acesso ao usuário para um servidor de relatório (Gerenciador de relatórios) | Microsoft Docs
+title: Acesso do usuário de conceder a um servidor de relatório (Gerenciador de relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256138"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder acesso ao usuário a um servidor de relatório (Gerenciador de Relatórios)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a segurança baseada em função para conceder acesso de usuário a um servidor de relatório. Em uma nova instalação do servidor de relatório, somente os usuários que são membros do grupo Administradores local têm permissões no conteúdo e nas operações do servidor de relatório. Para disponibilizar o servidor de relatório a outros usuários, é necessário criar atribuições de função que mapeiem contas de usuário ou grupo para uma função predefinida que especifica uma coleção de tarefas.  
@@ -61,7 +61,7 @@ ms.locfileid: "36122324"
   
 4.  Clique em **Atribuição de Nova Função**.  
   
-5.  Em **nome do grupo ou usuário**, insira um usuário de domínio do Windows ou grupo a conta neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+5.  Na **nome de usuário ou grupo**, insira um usuário de domínio do Windows ou grupo a conta neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
   
 6.  Selecione uma função de sistema e clique em **OK**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36122324"
     > [!NOTE]  
     >  Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança. Em seguida, clique em **Atribuição de Nova Função**.  
   
-5.  Em **nome do grupo ou usuário**, insira um usuário de domínio do Windows ou grupo a conta neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
+5.  Na **nome de usuário ou grupo**, insira um usuário de domínio do Windows ou grupo a conta neste formato: \<domínio >\\< conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
   
 6.  Selecione uma ou mais definições de função que descrevam como o usuário ou grupo deve acessar o item e, em seguida, clique em **OK**.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "36122324"
   
 ## <a name="see-also"></a>Consulte também  
  (criar-e-gerenciar-função-assignments.md)   
- [Nova atribuição de função: Editar página de atribuição de função &#40;Gerenciador de relatórios&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Página de propriedades de segurança, itens &#40;Gerenciador de relatórios&#41;](../security-properties-page-items-report-manager.md)   
+ [Nova atribuição de função: Editar página atribuição de função &#40;Gerenciador de relatórios&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Página de propriedades de segurança, os itens &#40;Gerenciador de relatórios&#41;](../security-properties-page-items-report-manager.md)   
  [Atribuições de função](role-assignments.md)   
  [Definições de função](role-definitions.md)  
   

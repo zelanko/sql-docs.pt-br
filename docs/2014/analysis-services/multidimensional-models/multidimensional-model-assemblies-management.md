@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243486"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e extensões DMX (extensões DMX) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |Configuração de permissões|Description|  
 |------------------------|-----------------|  
 |`Safe`|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade `PermissionSet`.|  
-|`ExternalAccess`|Fornece o mesmo acesso que o `Safe` configuração, com a capacidade adicional para acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
+|`ExternalAccess`|Fornece o mesmo acesso que o `Safe` definir, com a habilidade adicional para acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
 |`Unsafe`|Não fornece restrições. Nenhuma garantia de segurança ou confiabilidade pode ser criada para o código gerenciado executado sob essa permissão definida. Qualquer permissão, mesmo uma permissão personalizada incluída pelo administrador, é concedida ao código executado nesse nível de confiança.|  
   
  Quando o CLR é hospedado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a permissão com base em fila verifica interrupções no limite com o código nativo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Qualquer código gerenciado em assemblies [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre entra em uma das três categorias de permissão listadas anteriormente.  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  As rotinas de assembly COM (ou não gerenciadas) não oferecem suporte ao modelo de segurança CLR.  
   
 ### <a name="impersonation"></a>Representação  
- Sempre que o código gerenciado acessa qualquer recurso fora do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segue as regras associadas à configuração da propriedade `ImpersonationMode` do assembly para certificar-se de que o acesso ocorre em um contexto de segurança apropriado do Windows. Como assemblies usando o `Safe` configuração de permissão não pode acessar recursos fora [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], essas regras são aplicáveis apenas aos assemblies usando o `ExternalAccess` e `Unsafe` as configurações de permissão.  
+ Sempre que o código gerenciado acessa qualquer recurso fora do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segue as regras associadas à configuração da propriedade `ImpersonationMode` do assembly para certificar-se de que o acesso ocorre em um contexto de segurança apropriado do Windows. Porque assemblies usando o `Safe` configuração de permissão não pode acessar recursos fora [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], essas regras são aplicáveis apenas aos assemblies usando o `ExternalAccess` e `Unsafe` as configurações de permissão.  
   
 -   Se o contexto de execução atual corresponder ao logon autenticado do Windows e for o mesmo que o contexto do chamador original (ou seja, sem EXECUTE AS no meio), o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] representará o logon autenticado do Windows antes de acessar o recurso.  
   
 -   Se houver um EXECUTE AS intermediário que altere o contexto do chamador original, a tentativa de acessar o recurso externo falhará.  
   
- O `ImpersonationMode` propriedade pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de logon de rede do usuário atual. Se o `ImpersonateAnonymous` configuração é usada, o contexto de execução é corresponde à conta de usuário de logon do Windows IUSER _*servername* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
+ O `ImpersonationMode` propriedade pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de logon de rede do usuário atual. Se o `ImpersonateAnonymous` for usada, o contexto de execução será correspondente à conta de usuário de logon do Windows IUSER _*servername* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
   
 ### <a name="application-domains"></a>Domínios de aplicativo  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -117,7 +117,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Você não deve confiar na localização dos assemblies no mesmo domínio do aplicativo, pois o limite do domínio de aplicativo e dos assemblies que vão para cada domínio são definidos pela implementação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurações de segurança para procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Configuração de segurança para procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definindo procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd99d3824420db11fd3af6c7cc25d2e68594ebd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a9047ae20bbf14a2dc72f3d5019706195c6dbca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243026"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ajuda F1 do Assistente de Atualização de Pacotes SSIS
-  Use o Assistente de atualização de pacote do SSIS para atualizar [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] pacotes e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] pacotes para o formato de pacote para a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Use o Assistente de atualização de pacotes do SSIS para atualizar [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] pacotes e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] pacotes para o formato de pacote para a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Para executar o Assistente de Atualização de Pacotes SSIS**  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36119975"
   
 -   [Selecionar local de destino &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-destination-location-ssis-package-upgrade-wizard.md)  
   
--   [Selecione as opções de gerenciamento de pacote &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-package-management-options-ssis-package-upgrade-wizard.md)  
+-   [Selecionar opções de gerenciamento de pacote &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-package-management-options-ssis-package-upgrade-wizard.md)  
   
--   [Selecione pacotes &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-packages-ssis-package-upgrade-wizard.md)  
+-   [Selecione pacotes de &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-packages-ssis-package-upgrade-wizard.md)  
   
 -   [Conclua o assistente &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/complete-the-wizard-ssis-package-upgrade-wizard.md)  
   

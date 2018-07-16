@@ -1,5 +1,5 @@
 ---
-title: Atributo diagrama de relação (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Atributo do diagrama de relação (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208116"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagrama de Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel situado imediatamente abaixo da barra de ferramentas na guia **Relações de Atributo** para exibir o diagrama de relação de atributo e para criar, modificar e excluir relações de atributo.  

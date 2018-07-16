@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269352"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
@@ -133,7 +133,7 @@ ms.locfileid: "36121307"
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a `smtp.` *< sua_empresa >*`.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante ao `smtp.` *< sua_empresa >*`.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  

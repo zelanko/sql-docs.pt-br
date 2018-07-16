@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, parameters
 ms.assetid: e9a55dab-7c4e-4e09-97da-9f3a108e22c9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 062fe20ee7b7ea7571b2c4b1390008e23d8e5d7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2adf8535d05574de5b41f81b1e3a694918ba25c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189623"
 ---
 # <a name="reporting-services-parameters"></a>Parâmetros do Reporting Services
   Para analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve especificar uma instância de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fornecem informações sobre como se conectar a essa instância.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35f67b1f60acd8fd65132f1d6fe71bff2d52c724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ae477a34a296ade90fb50dde0a600cf81ac18a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213262"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor de Origem do OData (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Origem do OData** para selecionar o gerenciador de conexões do OData para a origem do OData. Essa página também permite que você especifique uma coleção ou um caminho de recurso e qualquer opção de consulta para indicar quais dados precisam ser recuperados da origem do OData. Para obter mais informações sobre origem do OData, consulte [OData Source](data-flow/odata-source.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "36122428"
  Digite um caminho de recurso. Por exemplo: Funcionários  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de origem OData &#40;página colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Editor de origem OData &#40;página de colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Editor de origem OData &#40;página de saída de erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
   

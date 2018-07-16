@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189593"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão logística
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões com os novos dados.  
@@ -129,7 +129,7 @@ NATURAL PREDICTION JOIN
   
  Resultados do exemplo:  
   
- **Prevê o nível de serviço**: 0.102601830123659  
+ **Prevista de nível de serviço**: 0.102601830123659  
   
  **Resultados**  
   
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  Na guia **Estrutura de Mineração** , clique com o botão direito do mouse na coluna Nível de Serviço e selecione **Propriedades**.  
   
-7.  Alterar o `Content` propriedade **contínuo** para **Discretized**. Alterar o `DiscretizationMethod` propriedade **Clusters**. Para BucketCount de Dados Discretos, digite **3**.  
+7.  Alterar o `Content` propriedade de **contínuo** à **Discretized**. Alterar o `DiscretizationMethod` propriedade para **Clusters**. Para BucketCount de Dados Discretos, digite **3**.  
   
     > [!NOTE]  
     >  Esses parâmetros são usados apenas para ilustrar o processo e não geram necessariamente um modelo válido.  
@@ -213,9 +213,9 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Algoritmo de regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Algoritmo Regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Referência técnica do algoritmo de regressão logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Conteúdo do modelo de regressão logística modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Lição 5: Criar a rede Neural e modelos de regressão logística &#40;intermediário de Tutorial de mineração de dados&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Mining Model Content para modelos de regressão logística &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Lição 5: Criando a rede Neural e modelos de regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

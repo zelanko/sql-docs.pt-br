@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260982"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
@@ -36,7 +36,7 @@ ms.locfileid: "36122648"
   
 -   Evite repetir a agregação de valores. Por exemplo, um pacote que computa muitas agregações, como médias e somas, usando uma tarefa de Fluxo de Dados separada para realizar cada agregação, pode ser reiniciado após computar uma falha de agregação e somente essa agregação será computada novamente.  
   
- Se um pacote for configurado para usar pontos de verificação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capturará o ponto de reinicialização no arquivo de ponto de verificação. O tipo de contêiner que falha e a implementação de recursos como transações afetam o ponto de reinicialização registrado no arquivo de ponto de verificação. Os valores atuais das variáveis também são capturados no arquivo de ponto de verificação. No entanto, os valores das variáveis que têm o `Object` tipo de dados não são salvas em arquivos de ponto de verificação.  
+ Se um pacote for configurado para usar pontos de verificação, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capturará o ponto de reinicialização no arquivo de ponto de verificação. O tipo de contêiner que falha e a implementação de recursos como transações afetam o ponto de reinicialização registrado no arquivo de ponto de verificação. Os valores atuais das variáveis também são capturados no arquivo de ponto de verificação. No entanto, os valores das variáveis que têm o `Object` tipo de dados não são salvos em arquivos de ponto de verificação.  
   
 ## <a name="defining-restart-points"></a>Definindo os pontos de reinicialização  
  O contêiner host da tarefa que encapsula uma única tarefa é a menor unidade atômica de trabalho que pode ser reiniciada. O contêiner Loop Foreach e um contêiner transacionado também são tratados como unidades atômicas de trabalho.  
@@ -63,7 +63,7 @@ ms.locfileid: "36122648"
 |CheckpointUsage|Especifica se pontos de verificação são usados.|  
 |SaveCheckpoints|Indica se o pacote salva os pontos de verificação. Esta propriedade deve ser definida como Verdadeiro para reinicializar um pacote a partir de um ponto de falha.|  
   
- Além disso, você deve definir a propriedade FailPackageOnFailure como `true` para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
+ Além disso, você deve definir a propriedade FailPackageOnFailure `true` para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
   
  É possível usar a propriedade ForceExecutionResult para testar o uso de pontos de verificação em um pacote. Ao definir ForceExecutionResult de uma tarefa ou contêiner como Falha, você pode imitar uma falha em tempo real. Ao executar novamente o pacote, a tarefa e os contêineres que falharam serão executados de novo.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36122648"
 |`IfExists`|Especifica que o arquivo de ponto de verificação é usado, se existir. Se o arquivo de ponto de verificação existir, o pacote reiniciará a partir do ponto da falha de execução anterior; caso contrário, será executado desde o início do fluxo de trabalho do pacote.|  
   
 > [!NOTE]  
->  O **/CheckPointing em** opção do dtexec é equivalente à configuração de `SaveCheckpoints` propriedade do pacote a ser `True`e o `CheckpointUsage` propriedade como sempre. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
+>  O **/CheckPointing na** opção de dtexec equivale a definir o `SaveCheckpoints` propriedade do pacote a ser `True`e o `CheckpointUsage` propriedade como Always. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Protegendo arquivos de ponto de verificação  
  A proteção em nível de pacote não inclui proteção a arquivos de ponto de verificação; você deve proteger esses arquivos separadamente. Dados de ponto de verificação podem ser armazenados somente no sistema arquivos e você deve usar uma ACL (lista de controle de acesso) do sistema operacional para proteger o local ou a pasta onde armazena o arquivo. É importante proteger os arquivos de ponto de verificação, pois eles contém informações sobre o estado do pacote, incluindo os valores atuais de variáveis. Por exemplo, uma variável pode conter um conjunto de registros com muitas linhas de dados particulares como números de telefone. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../access-to-files-used-by-packages.md).  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e662f4db0a812253a8113779347457871ce1d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187273"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Caixa de diálogo Configurações do Gráfico de Ganho (Exibição do Gráfico de Precisão de Mineração)
   Utilize a caixa de diálogo **Configurações do Gráfico de Ganho** para configurar parâmetros para gerar um gráfico de ganho. Para obter mais informações sobre gráficos de ganho, consulte [Gráfico de comparação de precisão &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
 - Foreach Loop containers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223717"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Adicionar enumeração a um fluxo de controle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Foreach Loop Container](control-flow/foreach-loop-container.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36012543"
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Agrupa ou desagrupa componentes](group-or-ungroup-components.md)   
+ [Agrupar ou desagrupar componentes](group-or-ungroup-components.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)   
  [Adicionar iteração a um fluxo de controle](add-iteration-to-a-control-flow.md)   
  [Fluxo de Controle](control-flow/control-flow.md)  

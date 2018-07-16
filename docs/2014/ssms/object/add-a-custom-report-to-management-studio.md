@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 018d1dd25b8b7d593582d47038c90464ece09abd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c66643e7a6f442207c87f531d1e01f9cd07af816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261852"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
   Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é salvo como um arquivo .rdl e, em seguida, adicionar esse arquivo rdl ao [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como um relatório personalizado. [!INCLUDE[ssRS](../../includes/ssrs-md.md)] pode criar um ampla variedade de relatórios sofisticados. Para criar um relatório com o uso desse tópico, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] deve estar instalado no computador. Não é necessário instalar o [!INCLUDE[ssRS](../../includes/ssrs-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um relatório personalizado com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "36011720"
 ## <a name="see-also"></a>Consulte também  
  [Relatórios personalizados no Management Studio](custom-reports-in-management-studio.md)   
  [Usar relatórios personalizados com propriedades de nó do Gerenciador de objeto](use-custom-reports-with-object-explorer-node-properties.md)   
- [Supressão de avisos de execução de relatório personalizado](unsuppress-run-custom-report-warnings.md)   
+ [Cancelar Supressão da execução de relatório personalizado avisos](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

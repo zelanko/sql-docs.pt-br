@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174947"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
   O mapa do documento fornece um conjunto de links de navegação aos itens de relatório em um relatório renderizado. Ao exibir um relatório que inclui um mapa do documento, um painel lateral separado é exibido ao lado do relatório. Um usuário pode clicar nos links do mapa do documento para ir para a página de relatório que exibe esse item. Seções e grupos de relatórios são organizados em uma hierarquia de links. Clicar nos itens do mapa do documento atualiza o relatório e exibe a área do relatório que corresponde ao item no mapa do documento.  
@@ -52,7 +52,7 @@ ms.locfileid: "36121857"
     > [!NOTE]  
     >  Para selecionar uma região de dados tablix, clique em uma célula para exibir as alças de linha e coluna e, em seguida, clique na alça de canto.  
   
-2.  No painel Propriedades, digite o texto que você deseja exibir no mapa do documento no `DocumentMapLabel` propriedade, ou insira uma expressão que é avaliada como um rótulo. Por exemplo, digite **Gráfico de Vendas**.  
+2.  No painel Propriedades, digite o texto que você deseja que apareça no mapa do documento no `DocumentMapLabel` propriedade, ou insira uma expressão que é avaliada como um rótulo. Por exemplo, digite **Gráfico de Vendas**.  
   
     > [!NOTE]  
     >  Se você não vir o painel Propriedades, na guia **Exibir** , no grupo **Mostrar/Ocultar** , clique em **Propriedades**.  
@@ -123,6 +123,6 @@ ms.locfileid: "36121857"
  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;SSRS e construtor de relatórios&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Localizando e exibindo relatórios no Gerenciador de relatórios &#40;relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

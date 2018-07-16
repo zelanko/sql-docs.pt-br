@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 651dc0424c492efefa7828ae327f9bdcf837ed77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223996"
 ---
 # <a name="dbstoragelocation-element"></a>Elemento DbStorageLocation
   Especifica a pasta na qual o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cria e gerencia todos os dados de banco de dados e arquivos de metadados.  

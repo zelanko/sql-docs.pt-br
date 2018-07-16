@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granularity attribute
 - relationships [Analysis Services], regular relationships
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62820860d8479776abc232f9355367cc35da1966
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf4b0f179c0c4ba0990b8fe61b2cd2a7584f058
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211926"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>Definir uma relação regular e as propriedades da relação regular
   Quando você definir uma nova dimensão de cubo e um novo grupo de medidas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tentará detectar se existe uma relação regular e, em seguida, definirá o uso da dimensão como `Regular`. É possível exibir ou editar uma relação de dimensão regular na guia **Uso da Dimensão** do Designer de Cubo.  

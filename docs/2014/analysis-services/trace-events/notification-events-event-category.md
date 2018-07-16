@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event classes [Analysis Services], notification events
 - Notification Events event category
 - notification events [Analysis Services]
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af2129758875613dd2c0ef1529e558b181135c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef05fef22ba173e80b2044087f2a4ce2e61625da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255268"
 ---
 # <a name="notification-events-event-category"></a>categoria Notification Events
   A categoria Notification Events tem as classes de evento descritas na tabela a seguir.  

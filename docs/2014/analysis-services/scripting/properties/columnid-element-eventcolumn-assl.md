@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ColumnID element
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71e51ec736b10a6d72621efb2a9b094882ed8057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82cc6d67aa0c1533b9779b93468fdf8845272cde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245596"
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>Elemento ColumnID (EventColumn) (ASSL)
   Contém o identificador (ID) da coluna de informações a serem capturadas para um evento como parte de um [rastreamento](../objects/trace-element-assl.md) elemento.  
@@ -60,7 +60,7 @@ ms.locfileid: "36121788"
 |Elementos filho|Nenhum.|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `ColumnID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TraceColumn>.  
+ O elemento que corresponde ao pai de `ColumnID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TraceColumn>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Columns &#40;ASSL&#41;](../collections/columns-element-assl.md)   

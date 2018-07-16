@@ -16,15 +16,15 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], removing
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 249d54aba50465d7732595d2c8e3c90a2de0225f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b216e2c711b2a51b0e43438f804902185a9c098c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253448"
 ---
 # <a name="removing-a-delivery-extension"></a>Removendo uma extensão de entrega
   Para remover uma extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], basta remover o elemento **Extension** da extensão de entrega do arquivo de configuração. Depois que as informações de configuração forem removidas, a extensão de entrega não estará mais disponível para o servidor de relatório.  

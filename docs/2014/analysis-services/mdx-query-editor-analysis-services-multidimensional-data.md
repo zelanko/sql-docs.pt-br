@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX Query Editor
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff0c288919bed3a6e1c13c9a7cb98bc7adbb949c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3fa81db8ca9f6a9ebd490724bf003a81d87c7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275863"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor de Consultas MDX (Analysis Services - Dados Multidimensionais)
   Use o Editor de Consultas MDX para criar e executar instruções e scripts escritos na linguagem MDX (Multidimensional Expressions).  
@@ -60,12 +60,12 @@ ms.locfileid: "36120460"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Janela editor de consultas**|Digite as instruções e scripts MDX a serem executadas pelo Editor de Consultas MDX.<br /><br /> O menu de contexto do editor de consultas fornece as seguintes opções:<br /><br /> **Recortar**: copia a seleção atual na área de transferência e remove a seleção da janela do editor de consulta.<br /><br /> **Copiar**: copia a seleção atual para a área de transferência.<br /><br /> **Colar**: Cola o conteúdo da área de transferência para a seleção atual.<br /><br /> **Conectar**: abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar**: desconecta o editor de consulta de um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Desconectar todas as consultas**: desconecta todos os editores de consulta abertos.<br /><br /> **Alterar Conexão**: abre a **conectar ao servidor** caixa de diálogo para estabelecer uma conexão para outro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Abrir servidor no Pesquisador de objetos**: abre a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância à qual o editor de consultas atual está conectado em **Pesquisador de objetos**.<br /><br /> **Executar**: Execute o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no editor de consultas atual.<br /><br /> **Janela propriedades**: exibe o **propriedades** janela no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para a janela de consulta atual.<br /><br /> **Opções de consulta**: exibe o **opções de consulta** caixa de diálogo.|  
+|**Janela editor de consultas**|Digite as instruções e scripts MDX a serem executadas pelo Editor de Consultas MDX.<br /><br /> O menu de contexto do editor de consultas fornece as seguintes opções:<br /><br /> **Recortar**: copia a seleção atual na área de transferência e remove a seleção da janela do editor de consulta.<br /><br /> **Copiar**: copia a seleção atual para a área de transferência.<br /><br /> **Colar**: Cola o conteúdo da área de transferência para a seleção atual.<br /><br /> **Conectar**: abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconecte**: desconecta o editor de consulta atual de um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Desconectar todas as consultas**: desconecta todos os editores de consulta abertos.<br /><br /> **Alterar Conexão**: abre o **conectar ao servidor** caixa de diálogo para estabelecer uma conexão para outro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Abrir servidor no Pesquisador de objetos**: abre o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância à qual o editor de consultas atual está conectado no **Pesquisador de objetos**.<br /><br /> **Executar**: executar o código selecionado ou, se nenhum código for selecionado, executa todo o código no editor de consultas atual.<br /><br /> **Janela propriedades**: exibe a **Properties** janela no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para a janela de consulta atual.<br /><br /> **Opções de consulta**: exibe a **opções de consulta** caixa de diálogo.|  
 |**Janela metadados**|Exibe metadados para o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conectado no momento.|  
 |**Cube**|Selecione um cubo no banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conectado no momento para exibir os metadados associados ao cubo na guia **Metadados** .|  
 |**Metadados**|Exibe os metadados do cubo selecionado em **Cubo**, incluindo grupos de medidas e medidas, indicadores chave de desempenho, dimensões, hierarquias, níveis, membros e propriedades de membros. Para recuperar a chave completamente qualificada de um objeto, proceda de uma das seguintes maneiras:<br /><br /> Arraste o objeto da guia **Metadados** para o painel de consulta.<br /><br /> Clique com o botão direito do mouse no objeto e selecione **Copiar**e clique com o botão direito do mouse no painel de consulta e selecione **Colar**.|  
 |**Funções**|Exibe os metadados de funções MDX disponíveis para o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], conforme recuperados do conjunto de linhas do esquema MDSCHEMA_FUNCTIONS. Para recuperar a sintaxe de uma função, proceda de uma das seguintes maneiras:<br /><br /> Arraste o objeto da guia **Funções** para o painel de consulta.<br /><br /> Clique com o botão direito do mouse na função e selecione **Copiar**e clique com o botão direito do mouse no painel de consulta e selecione **Colar**.|  
-|**Janela resultados**|Exibe os resultados de uma instrução ou script MDX em uma grade.|  
+|**Janela de resultados**|Exibe os resultados de uma instrução ou script MDX em uma grade.|  
 |**Janela mensagens**|Exibe informações sobre como uma instrução ou um script MDX foi executado. Por exemplo, esta janela exibe todos os erros encontrados durante a execução ou o número de células recuperados depois da execução.|  
   
   
