@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], recovery-only
 - recovery-only scenario [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - recovery [SQL Server], without restoring data
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cab7313b1cdde219b6015b0e15bb372b873206c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 921a44f1006f891b3d8662fca2fe376246605c90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225506"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar um banco de dados sem restaurar dados (Transact-SQL)
   Normalmente, todos os dados em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são restaurados antes de o banco de dados ser recuperado. Porém, uma operação de restauração pode recuperar um banco de dados sem de fato restaurar um backup; por exemplo, ao recuperar um arquivo somente leitura que seja consistente com o banco de dados. Isso é chamado de uma *restauração somente recuperação*. Quando dados offline já são consistentes com o banco de dados e só precisam ser disponibilizados, uma operação de restauração somente recuperação conclui a recuperação do banco de dados e coloca os dados online.  

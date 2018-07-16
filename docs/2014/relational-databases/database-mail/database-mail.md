@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b013bb201730117c824d4f2e792557b35c8bec3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 40f485a3e75e02c47e1e0c15e1ab47650040b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285362"
 ---
 # <a name="database-mail"></a>Database Mail
   Database Mail é uma solução empresarial para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  

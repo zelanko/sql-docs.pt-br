@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose], diagnosticinformation element
 - diagnosticinformation element
 - ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0e7bf7140b5340e90517d65cf76fbeccf46ebc34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 410d6378f37046779faeccf4635868f26ef96621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269962"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Elemento DiagnosticInformation (ssbdiagnose)
   O elemento **DiagnosticInformation** contém todos os elementos que reportam as informações de diagnóstico encontradas pelo utilitário. **DiagnosticInformation** é o elemento raiz de um arquivo de saída XML **ssbdiagnostic** .  

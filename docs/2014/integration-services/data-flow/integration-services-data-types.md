@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265321"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
   Quando dados entram em um fluxo de dados em um pacote, a fonte que extrai esses dados converte-os em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Dados numéricos são atribuídos a um tipo de dados numéricos, dados de cadeia são atribuídos a um tipo de dados de caractere e datas são atribuídas a um tipo de dados de data. Outros dados, como GUIDs e BLOBs, também são atribuídos aos tipos de dados apropriados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se dados tiverem um tipo de dados que não pode ser convertido em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ocorrerá um erro.  
@@ -66,7 +66,7 @@ ms.locfileid: "36019884"
 |DT_WSTR|Uma cadeia de caracteres Unicode com terminação nula com um comprimento máximo de 4000 caracteres. (Se um valor de coluna contiver terminadores nulos adicionais, a cadeia será truncada na ocorrência do primeiro nulo.)|  
 |DT_IMAGE|Um valor binário com um tamanho máximo de 2<sup>31</sup>-1 (2.147.483.647) bytes. para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |DT_NTEXT|Uma cadeia de caracteres Unicode com um comprimento máximo de 2<sup>30</sup> - 1 (1.073.741.823) caracteres.|  
-|DT_TEXT|Um [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS cadeia de caracteres com um comprimento máximo de 2<sup>31</sup>-1 (2.147.483.647) caracteres.|  
+|DT_TEXT|Uma [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS de cadeia de caracteres com um comprimento máximo de 2 caracteres<sup>31</sup>-1 (2.147.483.647) caracteres.|  
   
 ## <a name="conversion-of-data-types"></a>Conversão de tipos de dados  
  Se os dados em uma coluna não exigirem a largura total alocada pelo tipo de dados de origem, talvez você queira alterar o tipo de dados da coluna. Tornar cada linha de dados mais estreita possível ajuda você a otimizar o desempenho ao transferir dados porque quanto mais estreita a linha, mais rápido os dados são transferidos da origem para o destino.  

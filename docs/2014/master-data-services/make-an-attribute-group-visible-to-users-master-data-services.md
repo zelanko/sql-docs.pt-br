@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223638"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Tornar um grupo de atributos visível para os usuários (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], torne um grupo de atributos visível para usuários ou grupos quando você desejar que os usuários tenham guias acima da grade na área funcional do **Explorer** .  
@@ -39,7 +39,7 @@ ms.locfileid: "36115239"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição do modelo de** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
+2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
   
 3.  Na lista **Modelo** , selecione um modelo.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36115239"
   
 6.  Clique no sinal de adição para expandir o grupo que você deseja tornar visível.  
   
-7.  Clique em **usuários** ou **grupos**, dependendo se você estiver fazendo o grupo visível para um usuário ou grupo.  
+7.  Clique em **os usuários** ou **grupos**, dependendo se você está tornando o grupo visível para um usuário ou grupo.  
   
 8.  Clique em **Editar item selecionado**.  
   
-9. Clique em usuários ou grupos a **disponível** caixa e clique no **adicionar** seta. Para adicionar tudo, clique na seta **Adicionar Tudo** .  
+9. Clique em usuários ou grupos na **disponível** caixa e clique no **Add** seta. Para adicionar tudo, clique na seta **Adicionar Tudo** .  
   
 10. Clique em **Salvar**.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0333a544f1e907de5fa86b290fa6d88f1edb7c01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: dea720120f13f1546af8a1ab9bdd572badabb350
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292116"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Várias séries em um gráfico (Construtor de Relatórios e SSRS)
   Quando várias séries estiverem presentes em um gráfico, determine a melhor maneira de compará-las. É possível usar um gráfico empilhado para mostrar proporções relativas de cada série. Se estiver comparando só duas séries que compartilham um eixo de categoria (x) comum, use o eixo secundário. Isso é útil ao mostrar duas séries relacionadas de dados, por exemplo, preço e volume ou renda e imposto. Se o gráfico ficar ilegível, considere a possibilidade de usar várias áreas do gráfico para criar mais separação visual entre cada série.  
@@ -60,6 +60,6 @@ ms.locfileid: "36019984"
 ## <a name="see-also"></a>Consulte também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Exibindo uma série com vários intervalos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Tipos de gráfico &#40;SSRS e construtor de relatórios&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Tipos de gráfico &#40;relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

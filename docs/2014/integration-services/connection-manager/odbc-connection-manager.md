@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -18,20 +18,20 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9453dc6e402fce60e1f4f440d84f882e513abea7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e0b8bb7a7a2b32f2566a725842919f0260c3f78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267132"
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC
   Um gerenciador de conexões ODBC permite que um pacote se conecte com vários sistemas de gerenciamento de banco de dados que usam a especificação ODBC (Conectividade Aberta de Banco de Dados).  
   
  Quando você adiciona uma conexão ODBC para um pacote e definir propriedades do Gerenciador da conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador e adiciona o Gerenciador de conexão para o `Connections` coleção do pacote. No tempo de execução, o gerenciador de conexões é resolvido como uma conexão física ODBC.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `ODBC`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `ODBC`.  
   
  Você pode configurar um gerenciador de conexões ODBC das seguintes formas:  
   

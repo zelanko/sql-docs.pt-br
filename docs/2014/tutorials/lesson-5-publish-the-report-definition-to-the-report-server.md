@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7fa1c983ae58fd56450e6182499b105b68a322f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206236"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lição 5: Publicar a definição de relatório no servidor de relatório
   A última etapa para atualizar a definição de relatório é publicá-la novamente no servidor de relatório.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Para publicar o relatório no catálogo de relatório  
   
-1.  Substitua o código para o `PublishReportDefinition()` método no arquivo Program.cs (Module1. vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
+1.  Substitua o código para o `PublishReportDefinition()` método no arquivo Program.cs (Module1.vb para [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) com o código a seguir:  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -81,7 +81,7 @@ ms.locfileid: "36115556"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você irá compilar e executar o `SampleRDLSchema` aplicativo. Consulte [lição 6: executar o aplicativo de esquema RDL &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Na próxima lição, você compilará e executará o `SampleRDLSchema` aplicativo. Ver [lição 6: executar o aplicativo de esquema RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

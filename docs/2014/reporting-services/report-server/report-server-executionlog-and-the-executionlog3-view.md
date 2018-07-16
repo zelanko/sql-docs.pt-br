@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255688"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log de execução do servidor de relatório e a exibição ExecutionLog3
   O log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados.|  
 |TimeProcessing|Número de milissegundos gastos no processamento do relatório.|  
 |TimeRendering|Número de milissegundos gastos na renderização do relatório.|  
-|Origem|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Ao vivo**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **AdHoc** : indica um relatório gerado dinamicamente com base do modelo relatório detalhado ou um construtor de relatórios que é visualizado em um cliente utilizando o servidor de relatório para o processamento.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
+|Origem|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Ao vivo**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, conjunto de dados de consultas não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Ad hoc** : indica um relatório gerado dinamicamente modelo com base em relatório detalhado ou um construtor de relatórios que é visualizado em um cliente utilizando o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento em uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
@@ -228,11 +228,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  O exemplo a seguir descreve algumas das propriedades que você verá no campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1 = o SQL Server 2005, 2 = o novo mecanismo de processamento sob demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = o novo mecanismo de processamento sob demanda. Se a maioria de seus relatórios ainda estiver mostrando o valor 1, você poderá investigar como reprojetá-los para que utilizem o mecanismo de processamento sob demanda mais novo e eficiente.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: O número de milissegundos gasto na execução de operações de escala relacionadas no mecanismo de processamento. O valor 0 indica que nenhuma hora adicional foi gasta em operações de escala; indica também que a solicitação não estava sob pressão de memória.  
+-   **ScalabilityTime**: O número de milissegundos gastos na execução de operações de escala relacionadas no mecanismo de processamento. O valor 0 indica que nenhuma hora adicional foi gasta em operações de escala; indica também que a solicitação não estava sob pressão de memória.  
   
     ```  
     <ScalabilityTime>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**o valor é em milissegundos. Esses dados podem ser usados para diagnosticar problemas de desempenho. A hora necessária para recuperar imagens de um servidor Web externo pode tornar lenta a execução de relatório geral. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages**o valor está em milissegundos. Esses dados podem ser usados para diagnosticar problemas de desempenho. A hora necessária para recuperar imagens de um servidor Web externo pode tornar lenta a execução de relatório geral. Adicionado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  

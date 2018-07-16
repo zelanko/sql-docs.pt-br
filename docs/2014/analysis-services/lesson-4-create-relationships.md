@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204496"
 ---
 # <a name="lesson-5-create-relationships"></a>Lição 5: Criar relações
   Nesta lição, você aprenderá a verificar as relações que foram criadas automaticamente quando os dados foram importados e adicionará novas relações entre tabelas diferentes. Uma relação é uma conexão criada entre duas tabelas que estabelece como os dados dessas tabelas devem ser correlacionados. Por exemplo, as tabelas Product e Product Subcategory têm uma relação baseada no fato de que cada produto pertence a uma subcategoria. Para obter mais informações, consulte [Relações &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -52,8 +52,8 @@ ms.locfileid: "36116481"
     |Ativa|Table|Tabela de Pesquisa Relacionada|  
     |------------|-----------|--------------------------|  
     |Sim|**Cliente [Geography Id]**|**Geografia [Geography Id]**|  
-    |Sim|**Produto [Id de subcategoria de produto]**|**Subcategoria de produto [Id de subcategoria de produto]**|  
-    |Sim|**Subcategoria de produto [Id de categoria de produto]**|**Categoria de produto [Id de categoria de produto]**|  
+    |Sim|**Produto [Id de subcategoria do produto]**|**Subcategoria do produto [Id de subcategoria do produto]**|  
+    |Sim|**Subcategoria do produto [Id de categoria do produto]**|**Categoria de produto [Id de categoria do produto]**|  
     |Sim|**Vendas pela Internet [Id do cliente]**|**Cliente [Id do cliente]**|  
     |Sim|**Vendas pela Internet [Id do produto]**|**Produto [Id do produto]**|  
   

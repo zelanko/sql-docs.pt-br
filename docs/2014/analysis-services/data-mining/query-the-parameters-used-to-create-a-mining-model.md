@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de91c7f924fbd6d83d3a7b74cbc5bd5e5b8f880d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee19f34f99c51bd1747718e5d34fd6ab12fe3e49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288342"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Consultar os parâmetros usados para criar um modelo de mineração
   A composição de um modelo de mineração é afetada não apenas pelos casos de treinamento, mas também pelos parâmetros que foram definidos quando o modelo foi criado. Portanto, talvez seja útil recuperar as configurações de parâmetro de um modelo existente para compreender melhor o comportamento do modelo. A recuperação de parâmetros também é útil na documentação de uma versão específica desse modelo.  
@@ -71,7 +71,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais e tarefas de consulta de mineração de dados](data-mining-query-tasks-and-how-tos.md)   
+ [Tarefas e tarefas de consulta de mineração de dados](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267242"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Referência do Assistente de Importação de Tabela (SSAS)
   Esta seção fornece Ajuda sobre o **Assistente de Importação de Tabela**. Ele permite importar dados de várias fontes. Para acessar o assistente do designer de modelo, no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -34,35 +34,35 @@ ms.locfileid: "36020129"
   
 -   [Escolher como importar os dados &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
   
--   [Conecte-se a um relatório ou Feed de dados &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
+-   [Conectar-se a um relatório ou Feed de dados &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
   
 -   [Conectar a uma fonte de dados &#40;SSAS&#41;](connect-to-a-data-source-ssas.md)  
   
--   [Conecte-se ao banco de dados DB2 &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
+-   [Conectar um banco de dados do DB2 &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
   
 -   [Conectar a um arquivo simples &#40;SSAS&#41;](connect-to-a-flat-file-ssas.md)  
   
--   [Conecte-se a um banco de dados do Microsoft Access &#40;SSAS&#41;](connect-to-a-microsoft-access-database-ssas.md)  
+-   [Conectar um banco de dados do Microsoft Access &#40;SSAS&#41;](connect-to-a-microsoft-access-database-ssas.md)  
   
 -   [Conectar a um arquivo do Microsoft Excel &#40;SSAS&#41;](connect-to-a-microsoft-excel-file-ssas.md)  
   
--   [Conecte-se a um banco de dados SQL do Azure &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
+-   [Conectar um banco de dados SQL do Azure &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
   
--   [Conecte-se a um banco de dados do Microsoft SQL Server &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
+-   [Se conectar a um banco de dados do Microsoft SQL Server &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
   
--   [Conectar a um Microsoft SQL Server Parallel Data Warehouse &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
+-   [Conectar-se a um Microsoft SQL Server Parallel Data Warehouse &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
   
--   [Conecte-se ao Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
+-   [Conectar-se ao Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
--   [Conecte-se a um banco de dados Informix &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
+-   [Conectar um banco de dados Informix &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
   
--   [Conecte-se ao banco de dados Oracle &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
+-   [Conectar um banco de dados Oracle &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
   
--   [Conecte-se ao banco de dados Sybase &#40;SSAS&#41;](connect-to-a-sybase-database-ssas.md)  
+-   [Conectar um banco de dados do Sybase &#40;SSAS&#41;](connect-to-a-sybase-database-ssas.md)  
   
--   [Conecte-se ao banco de dados Teradata &#40;SSAS&#41;](connect-to-a-teradata-database-ssas.md)  
+-   [Conectar um banco de dados do Teradata &#40;SSAS&#41;](connect-to-a-teradata-database-ssas.md)  
   
--   [As credenciais da fonte de dados &#40;SSAS&#41;](data-source-credentials-ssas.md)  
+-   [Credenciais da fonte de dados &#40;SSAS&#41;](data-source-credentials-ssas.md)  
   
 -   [Detalhes &#40;SSAS&#41;](details-ssas.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36020129"
   
 -   [Especifique uma cadeia de caracteres de conexão &#40;SSAS&#41;](specify-a-connection-string-ssas.md)  
   
--   [Especificar uma consulta SQL ou MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
+-   [Especifique uma consulta SQL ou MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Importar dados &#40;Tabular do SSAS&#41;](import-data-ssas-tabular.md)  

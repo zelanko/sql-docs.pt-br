@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176453"
 ---
 # <a name="cellpermissions-element-assl"></a>Elemento CellPermissions (ASSL)
   Contém a coleção de permissões para células no associado [cubo](../objects/cube-element-assl.md) elemento.  

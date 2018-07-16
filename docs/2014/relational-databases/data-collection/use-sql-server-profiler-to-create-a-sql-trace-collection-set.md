@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260852"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL (SQL Server Management Studio)
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , você pode explorar as funcionalidades de rastreamento do lado do servidor do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico. Há duas partes nesse processo:  
@@ -76,7 +76,7 @@ ms.locfileid: "36020518"
   
     1.  Na lista de filtros, clique em **Duração**.  
   
-    2.  Na janela do operador booliano, expanda o **maior que ou igual** nó, digite `80` como o valor e clique **Okey**.  
+    2.  Na janela do operador booliano, expanda o **maior que ou igual** nó, digite `80` como o valor e, em seguida, clique **Okey**.  
   
 9. Clique em **Executar** para iniciar o rastreamento.  
   

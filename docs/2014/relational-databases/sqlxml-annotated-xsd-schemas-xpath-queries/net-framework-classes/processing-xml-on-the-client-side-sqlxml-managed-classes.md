@@ -1,5 +1,5 @@
 ---
-title: Processamento de XML no lado do cliente (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Processando XML no lado do cliente (Classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2625832716861a5ed2e6819c661245f1ea16ae7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 242e06d72b7a1773235e51c7211b2526af6d4608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201096"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Processando XML no cliente (classes gerenciadas SQLXML)
   Este exemplo ilustra o uso da propriedade ClientSideXml. O aplicativo executa um procedimento armazenado no servidor. O resultado do procedimento armazenado (um conjunto de linhas de duas colunas) é processado no cliente para gerar um documento XML.  
   
- GetContacts o seguinte procedimento armazenado retorna **FirstName** e **LastName** de funcionários na tabela Person. Contact no banco de dados AdventureWorks.  
+ GetContacts o seguinte procedimento armazenado retorna **FirstName** e **Sobrenome** dos funcionários na tabela Person. Contact no banco de dados AdventureWorks.  
   
 ```  
 USE AdventureWorks  

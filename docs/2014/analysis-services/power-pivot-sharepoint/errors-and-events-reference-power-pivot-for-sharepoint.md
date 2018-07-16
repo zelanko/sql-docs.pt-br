@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d49047a6332b11c61ed51e2953e3c91fbaaaaed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0eeb235e4edc3cbf4b99657e9997aef65525ae76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218236"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>Referência de erros e eventos (PowerPivot para SharePoint)
   Esta seção fornece informações sobre erros e eventos do PowerPivot para SharePoint. Os erros desta seção são identificados pelo texto da mensagem de erro que aparece em um log ou janela de erro.  

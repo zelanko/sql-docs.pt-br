@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295486"
 ---
 # <a name="miningstructurepermission-element-assl"></a>Elemento MiningStructurePermission (ASSL)
-  Define as permissões que os membros de um [função](role-element-assl.md) elemento ter um indivíduo [MiningStructure](miningstructure-element-assl.md) elemento.  
+  Define as permissões que os membros de um [função](role-element-assl.md) elemento ter em um indivíduo [MiningStructure](miningstructure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36020355"
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
- Em [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a permissão `AllowDrillthrough` foi estendido para aplicar a uma estrutura de mineração. Ao atribuir essa permissão a uma função, qualquer usuário que for um membro dessa função poderá consultar diretamente a estrutura de mineração usando a seguinte sintaxe:  
+ Na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a permissão `AllowDrillthrough` foi estendido para aplicar a uma estrutura de mineração. Ao atribuir essa permissão a uma função, qualquer usuário que for um membro dessa função poderá consultar diretamente a estrutura de mineração usando a seguinte sintaxe:  
   
 ```  
 SELECT <structure column list> FROM <structure>.CASES  

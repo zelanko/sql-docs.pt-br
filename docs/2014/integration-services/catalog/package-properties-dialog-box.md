@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
@@ -16,13 +16,13 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e98b169091b40ff24926ffef55f3687275b007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a85a05d5a0b18701ed9b8a480ef0bb7c05e873d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304206"
 ---
 # <a name="package-properties-dialog-box"></a>Caixa de diálogo Propriedades do Pacote
   Use a caixa de diálogo **Propriedades do Pacote** para exibir propriedades de pacotes individuais armazenados no servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -61,7 +61,7 @@ ms.locfileid: "36010942"
  Lista a ID do pacote.  
   
  **Entry Point**  
- O valor de `True` indica que o pacote é iniciado diretamente. O valor de `False` indica que o pacote foi iniciado por outro pacote usando a tarefa executar pacote. O valor padrão é `True`.  
+ O valor de `True` indica que o pacote é iniciado diretamente. O valor de `False` indica que o pacote é iniciado por outro pacote usando a tarefa executar pacote. O valor padrão é `True`.  
   
  Defina essa propriedade no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para o pacote pai e os pacotes filho clicando com o botão direito do mouse no pacote em Gerenciador de Soluções e clicando em **Pacote de Ponto de Entrada**.  
   

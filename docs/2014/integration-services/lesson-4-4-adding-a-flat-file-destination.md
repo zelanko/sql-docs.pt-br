@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285467"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionando um destino de arquivo simples
   A saída de erro da transformação Pesquisa de Códigos de Moeda redireciona para a transformação Script todas as linhas de dados que falharam na operação de pesquisa. Para aprimorar as informações sobre os erros que ocorreram, a transformação Script executa um script que adquire a descrição de erros.  
@@ -40,11 +40,11 @@ ms.locfileid: "36021183"
   
 6.  Na caixa de diálogo **Formato de Arquivo Simples** , verifique se **Delimitado** está selecionado e depois clique em **OK**.  
   
-7.  No **Editor do Gerenciador de Conexão de arquivo simples**, no **nome do Gerenciador de Conexão** caixa tipo `Error Data`.  
+7.  No **Editor do Gerenciador de Conexão de arquivo simples**, no **nome do Gerenciador de Conexão** caixa, digite `Error Data`.  
   
 8.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , clique em **Procurar**e localize a pasta em que o arquivo será armazenado.  
   
-9. No **abrir** caixa de diálogo para **nome de arquivo**, tipo `ErrorOutput.txt`e, em seguida, clique em **abrir**.  
+9. No **aberto** caixa de diálogo, para **nome do arquivo**, tipo `ErrorOutput.txt`e, em seguida, clique em **abrir**.  
   
 10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , verifique se a caixa **Localidade** contém Inglês (Estados Unidos) e **Página de código** contém 1252 (ANSI – Latim I).  
   

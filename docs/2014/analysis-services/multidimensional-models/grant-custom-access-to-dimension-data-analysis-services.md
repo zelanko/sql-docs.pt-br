@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215966"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
   Após habilitar o acesso de leitura a um cubo, você pode definir permissões adicionais que permitem ou negam explicitamente o acesso a membros de dimensão (incluindo as medidas contidas na dimensão de medidas que contém todas as medidas usadas em um cubo). Por exemplo, considerando várias categorias de revendedores, você pode querer definir as permissões para excluir dados de um tipo de negócio específico. A ilustração a seguir mostra o antes e o depois da negação de acesso ao tipo de negócio Depósito na dimensão do Revendedor.  
@@ -72,10 +72,10 @@ ms.locfileid: "36116476"
   
      Como alternativa, você pode **Cancelar seleção de todos os membros** para revogar o acesso geral e, em seguida, escolher os membros que receberão a permissão. Nas futuras operações de processamento, os novos membros não serão visíveis até que você edite manualmente a segurança dos dados de dimensão para permitir o acesso a eles.  
   
-5.  Opcionalmente, clique em **avançado** para habilitar `Visual Totals` para essa hierarquia de atributo. Essa opção recalcula as agregações com base nos membros disponíveis por meio da função.  
+5.  Opcionalmente, clique em **Advanced** para habilitar `Visual Totals` para essa hierarquia de atributo. Essa opção recalcula as agregações com base nos membros disponíveis por meio da função.  
   
     > [!NOTE]  
-    >  Ao aplicar permissões que cortam membros de dimensão, os totais agregados não são recalculados automaticamente. Suponha que o `All` membro de uma hierarquia de atributo retorna uma contagem de 200 antes das permissões são aplicadas. Após a aplicação de permissões que negam o acesso a alguns membros, `All` ainda retorna 200, embora os valores de membros visíveis para o usuário sejam muito menores. Para evitar confundir os consumidores de seu cubo, você pode configurar o `All` membro ser apenas os membros aos quais membros da função de agregação, em vez de agregar todos os membros da hierarquia de atributo. Para invocar esse comportamento, você pode habilitar `Visual Totals` no **avançado** guia ao configurar a segurança de dimensão. Uma vez habilitada, a agregação é calculada na hora da consulta, em vez de recuperada de agregações pré-calculadas. Isso pode ter um efeito significativo no desempenho da consulta, portanto, use-a somente quando necessário.  
+    >  Ao aplicar permissões que cortam membros de dimensão, os totais agregados não são recalculados automaticamente. Suponha que o `All` membro de uma hierarquia de atributo retorne uma contagem de 200 antes das permissões são aplicadas. Após a aplicação de permissões que negam o acesso a alguns membros, `All` ainda retorna 200, embora os valores do membro visíveis para o usuário sejam muito menores. Para evitar confundir os consumidores de seu cubo, você pode configurar o `All` membro ser agregação apenas os membros aos quais os membros da função, em vez de agregar todos os membros da hierarquia de atributo. Para invocar esse comportamento, você pode habilitar `Visual Totals` sobre o **Advanced** guia ao configurar a segurança de dimensão. Uma vez habilitada, a agregação é calculada na hora da consulta, em vez de recuperada de agregações pré-calculadas. Isso pode ter um efeito significativo no desempenho da consulta, portanto, use-a somente quando necessário.  
   
 ## <a name="hiding-measures"></a>Ocultar medidas  
  No [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), foi explicado que ocultar completamente todos os aspectos visuais de uma medida, e não apenas os seus dados de célula, requer permissões dos membros de dimensão. Esta seção explica como negar o acesso aos metadados do objeto de uma medida.  
@@ -101,7 +101,7 @@ ms.locfileid: "36116476"
  Criar um AllowedSet gera um efeito dominó quando o atributo participa de uma hierarquia de vários níveis. Por exemplo, suponha que uma função permita o acesso ao estado de Washington (imagine um cenário em que a função está concedendo permissões para a divisão de vendas do estado de Washington de uma empresa). Para as pessoas que se conectam por meio dessa função, as consultas que incluem ancestrais (Estados Unidos) ou descendentes (Seattle e Redmond) só verão os membros em uma cadeia incluindo o estado de Washington. Como os outros estados não são explicitamente permitidos, o efeito será o mesmo que se eles fossem negados.  
   
 > [!NOTE]  
->  Se você definir um conjunto vazio ({}) de membros de atributo, nenhum membro do atributo ficará visível à função de banco de dados. A ausência de um conjunto permitido não é interpretada como um conjunto vazio.  
+>  Se você definir um conjunto vazio ({}) dos membros de atributo, nenhum membro do atributo ficará visível à função de banco de dados. A ausência de um conjunto permitido não é interpretada como um conjunto vazio.  
   
  **Conjunto de membros negado**  
  A propriedade DeniedSet pode determinar nenhum membro, todos os membros (padrão) ou alguns membros de atributo. Quando o conjunto negado contiver apenas um conjunto específico de membros de atributo, a função de banco de dados tem o acesso negado apenas a esses membros específicos, bem como a descendentes se o atributo estiver em uma hierarquia de vários níveis. Considere o exemplo da divisão de vendas do estado de Washington. Se Washington for colocado em DeniedSet, as pessoas que se conectam por meio desse papel verão todos os outros estados, exceto Washington e seus atributos descendentes.  
@@ -124,15 +124,15 @@ ms.locfileid: "36116476"
   
  Porém, ter a propriedade VisualTotals desabilitada poderá criar um problema de segurança se um usuário puder usar os valores de célula agregada para deduzir valores para membros de atributo para os quais a função de banco de dados do usuário não tem acesso. Por exemplo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa os valores para três membros de atributo calcularem um valor de célula agregada. A função de banco de dados tem acesso para exibir dois desses três membros de atributo. Usando o valor de célula agregada, um membro dessa função de banco de dados poderia deduzir o valor para o terceiro membro de atributo.  
   
- Definir a propriedade VisualTotals como `True` pode eliminar esse risco. Ao habilitar a propriedade VisualTotals, uma função de banco de dados pode exibir apenas totais agregados de membros de dimensão para os quais a função tem permissão.  
+ Definindo a propriedade VisualTotals como `True` pode eliminar esse risco. Ao habilitar a propriedade VisualTotals, uma função de banco de dados pode exibir apenas totais agregados de membros de dimensão para os quais a função tem permissão.  
   
  **Verificar**  
  Clique para testar a sintaxe MDX definida nesta página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceder permissões de cubo ou modelo &#40;do Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado aos dados da célula &#40;do Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Conceder permissões em estruturas de mineração de dados e modelos de &#40;do Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder permissões em um objeto de fonte de dados &#40;do Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Conceder permissões de cubo ou modelo de &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder acesso personalizado a dados da célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder permissões em estruturas de mineração de dados e modelos de &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permissões em um objeto de fonte de dados &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobsrc.f1
 - sql11.dts.designer.afpblobsrc.f1
@@ -16,13 +16,13 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4424c845984250c68c355e0059a3311e8fce050e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c56623c56110f0b7637d096fa31ad0f83212606a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254448"
 ---
 # <a name="azure-blob-source"></a>Fonte de Blobs do Azure
  O componente de **Fonte de Blobs do Azure** permite que um pacote SSIS leia dados de um blob do Azure. Os formatos de arquivo com suporte são: CSV e AVRO. Para ver o editor da Fonte de Blobs do Azure, arraste e solte **Fonte de Blobs do Azure** no designer de fluxo de dados e clique duas vezes nele para abrir o editor.  

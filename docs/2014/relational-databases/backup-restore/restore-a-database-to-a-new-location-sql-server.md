@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e3f9f8ad10a31fa7af4b6a517c0c36fcc817494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215556"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar um banco de dados em um novo local (SQL Server)
   Este tópico descreve como restaurar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um novo local e, opcionalmente, renomear o banco de dados, no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode mover um banco de dados para um novo caminho ou criar uma cópia de um banco de dados na mesma instância do servidor ou em uma instância de servidor diferente.  
@@ -45,7 +44,7 @@ ms.locfileid: "36115472"
   
      [Segurança](#Security)  
   
--   **Para restaurar um banco de dados para um novo local e, opcionalmente, renomear o banco de dados, usando:**  
+-   **Restaurar um banco de dados para um novo local e, opcionalmente, renomear o banco de dados, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36115472"
   
      Para obter mais informações, consulte "Especificando um conjunto de backup", em [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
-     Mover **'*`logical_file_name_in_backup`*'** para **'*`operating_system_file_name`*'** [ `,`... *n* ]  
+     Mover **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`... *n* ]  
      Especifica que o arquivo de log ou de dados especificado pelo *logical_file_name_in_backup* deve ser restaurado no local especificado pelo *operating_system_file_name*. Especifique uma instrução MOVE para cada arquivo lógico que você deseja restaurar do conjunto de backup para um novo local.  
   
     |Opção|Description|  

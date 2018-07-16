@@ -28,13 +28,13 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88abd34a83bb784a3653da42ec52cbcce672278d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 393c4c4ffb5882b982f3a696c1fa4e625ff5b1ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269402"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
   O componente Script estende as capacidades de fluxo de dados dos pacotes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] com o código personalizado escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que é compilado e executado no tempo de execução do pacote. O componente Script simplifica o desenvolvimento de uma origem de fluxo de dados personalizada, transformação ou destino quando as origens, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não atendem totalmente aos seus requisitos. Após a configuração do componente com as entradas e saídas esperadas, ele grava todo o código de infraestrutura necessário, permitindo que você se concentre exclusivamente no código que é exigido para seu processamento personalizado.  
@@ -75,7 +75,7 @@ ms.locfileid: "36019844"
  [Exemplos de componentes de Script adicionais](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Esses exemplos simples explicam e demonstram alguns possíveis usos para o componente Script.  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para os mais recentes downloads, artigos, exemplos e vídeos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para os downloads mais recentes, artigos, exemplos e vídeos da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como soluções selecionadas pela comunidade, visite o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] página no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Componente Script](../../data-flow/transformations/script-component.md)   

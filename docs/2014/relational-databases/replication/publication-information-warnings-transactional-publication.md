@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.warningsandagents.tran.f1
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8831ab58730f4fd30d1085e1403c56652cd2c764
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2744e4481963a5e37d14f95f9c5b01b2bd4784ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175853"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação transacional, SQL Server 2005 e versões posteriores)
   A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  

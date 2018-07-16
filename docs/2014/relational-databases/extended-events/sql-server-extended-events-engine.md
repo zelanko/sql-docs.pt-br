@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0190080708236987c1b29e67e7a969c4f6a46caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9f94e3dd032156e11a59239eeccc93ab359fa211
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170737"
 ---
 # <a name="sql-server-extended-events-engine"></a>Mecanismo de eventos estendidos do SQL Server
   O mecanismo de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma coleção de serviços e objetos que:  

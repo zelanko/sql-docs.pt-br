@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 033b602d712d4ec6e0caf136b1228cd82b552e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14e1742f83496b2976466d152cdd7aab39f76346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289362"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
-  Use o **configurar o destino de arquivo simples** página para especificar opções de formatação do arquivo simples de destino e para visualizar os resultados antes de continuar.  
+  Use o **configurar destino arquivo simples** página para especificar opções de formatação para o arquivo simples de destino e visualizar os resultados antes de continuar.  
   
  Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36020287"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**{CR}{LF}**|As colunas são delimitadas por um retorno de carro-linha combinação de alimentação.|  
+|**{CR}{LF}**|As colunas são delimitadas por um retorno de carro – linha combinação de alimentação.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
 |**{LF}**|As colunas são delimitadas por uma alimentação de linha.|  
 |**Ponto-e-vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
@@ -63,7 +63,7 @@ ms.locfileid: "36020287"
 |**Barra vertical {&#124;}**|As colunas são delimitadas por uma barra vertical.|  
   
  **Visualização**  
- Exibir no **visualizar dados** caixa de diálogo Opções de resultados de formatação selecionadas para arquivo simples de destino.  
+ Exibir na **visualizar dados** caixa de diálogo Opções de resultados de formatação selecionadas para o arquivo simples de destino.  
   
  **Editar transformação**  
  Excluir linhas, acrescentar linhas e configurar colunas no arquivo de destino usando o **mapeamentos de coluna** caixa de diálogo.  

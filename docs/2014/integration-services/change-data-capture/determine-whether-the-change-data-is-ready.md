@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0fab127f224ba313e37e0bde49a0677514bb203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63014b261a38078a209fc6fb08585b7aa1b7182b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233860"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a segunda tarefa serve para garantir que os dados de alteração para o intervalo selecionado estejam prontos. Esta etapa é necessária, pois o processo de captura assíncrono pode ainda não ter processado todas as alterações até o ponto de extremidade selecionado.  
@@ -203,7 +203,7 @@ ms.locfileid: "36020985"
         > [!NOTE]  
         >  O método `Thread.Sleep` espera um argumento especificado em milissegundos.  
   
-7.  Deixe a linha padrão de código que retorna `DtsExecResult.Success` da execução do script.  
+7.  Deixe a linha de código que retorna padrão `DtsExecResult.Success` da execução do script.  
   
 8.  Feche o ambiente de desenvolvimento de script e o **Editor da Tarefa Script**.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36020985"
   
 6.  No **Editor da Tarefa Script**, na página **Script** , clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   
-7.  No procedimento principal, digite o código para registrar um erro ao chamar o `Dts.Log` método, ou para gerar um evento chamando um dos métodos do `Dts.Events` interface. Informe o pacote do erro retornando `Dts.TaskResult = Dts.Results.Failure`.  
+7.  No procedimento principal, digite o código para registrar em log um erro ao chamar o `Dts.Log` método, ou para acionar um evento chamando um dos métodos do `Dts.Events` interface. Informe o pacote do erro retornando `Dts.TaskResult = Dts.Results.Failure`.  
   
      A seguinte amostra mostra como gravar uma mensagem no log. Para obter mais informações, consulte [Registrando a tarefa Script](../extending-packages-scripting/task/logging-in-the-script-task.md), [Gerando eventos na tarefa Script](../extending-packages-scripting/task/raising-events-in-the-script-task.md)e [Retornando resultados da tarefa Script](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273742"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
   No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para modo de confirmação síncrona ou modo de confirmação assíncrona.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela).  
@@ -66,7 +65,7 @@ ms.locfileid: "36115509"
   
  Uma réplica secundária de confirmação assíncrona tenta acompanhar os registros de log recebidos da réplica primária. Mas bancos de dados secundários de confirmação assíncrona sempre permanecem não sincronizados e têm a tendência de ficarem desatualizados em relação aos bancos de dados primários correspondentes. Normalmente, é pequeno o intervalo entre um banco de dados secundário de confirmação assíncrona e o banco de dados primário correspondente. Mas o intervalo poderá ficar significativo se o servidor que hospeda a réplica secundária estiver sobrecarregado ou se a rede estiver lenta.  
   
- A única forma de failover com suporte no modo de confirmação assíncrona é o failover forçado (com possível perda de dados). Forçar o failover é o último recurso, que deve ser usado apenas em situações nas quais a réplica primária atual permanecerá indisponível por um período estendido e a disponibilidade imediata dos bancos de dados primários é mais crítica que o risco da possível perda de dados. O destino do failover deve ser uma réplica cuja função esteja no estado SECONDARY ou RESOLVING. As transições de destino do failover para a função primária e as cópias dos bancos de dados se tornam o banco de dados primário. Qualquer banco de dados secundário restante, junto com os bancos de dados primários antigos, quando ficam disponíveis, é suspenso manualmente até você os retome individualmente. No modo de confirmação assíncrona, qualquer log de transação que a réplica primária original ainda não tenha enviado para a réplica secundária antiga é perdida. Isso significa que alguns ou todos os novos bancos de dados primários podem estar sem as transações confirmadas recentemente. Para obter mais informações sobre failover como forçado e sobre as práticas recomendadas para utilizá-lo, consulte [Failover e modos de Failover &#40;grupos de disponibilidade do AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ A única forma de failover com suporte no modo de confirmação assíncrona é o failover forçado (com possível perda de dados). Forçar o failover é o último recurso, que deve ser usado apenas em situações nas quais a réplica primária atual permanecerá indisponível por um período estendido e a disponibilidade imediata dos bancos de dados primários é mais crítica que o risco da possível perda de dados. O destino do failover deve ser uma réplica cuja função esteja no estado SECONDARY ou RESOLVING. As transições de destino do failover para a função primária e as cópias dos bancos de dados se tornam o banco de dados primário. Qualquer banco de dados secundário restante, junto com os bancos de dados primários antigos, quando ficam disponíveis, é suspenso manualmente até você os retome individualmente. No modo de confirmação assíncrona, qualquer log de transação que a réplica primária original ainda não tenha enviado para a réplica secundária antiga é perdida. Isso significa que alguns ou todos os novos bancos de dados primários podem estar sem as transações confirmadas recentemente. Para obter mais informações sobre o failover forçado como e as práticas recomendadas para utilizá-lo, consulte [Failover e modos de Failover &#40;grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  No modo de disponibilidade de confirmação síncrona (*modo de confirmação síncrona*), depois de ingressar em um grupo de disponibilidade, cada banco de dados secundário fica em dia com o banco de dados primário correspondente e entra no estado SYNCHRONIZED. O banco de dados secundário permanece SYNCHRONIZED contanto que a sincronização de dados continue. Isso garante que todas as transações confirmadas em um banco de dados primário determinado também foram confirmadas no banco de dados secundário correspondente. Quando cada banco de dados secundário de uma determinada réplica secundária for sincronizado, o estado de integridade de sincronização da réplica secundária como um todo será HEALTHY.  
@@ -78,7 +77,7 @@ ms.locfileid: "36115509"
 -   Um atraso de rede ou problema pequeno de computador causa um tempo limite da sessão entre a réplica secundária e réplica primária.  
   
     > [!NOTE]  
-    >  Para obter informações sobre a propriedade de tempo da sessão de réplicas de disponibilidade, consulte [visão geral dos grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+    >  Para obter informações sobre a propriedade de tempo da sessão de réplicas de disponibilidade, consulte [visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 -   Você suspende um banco de dados secundário na réplica secundária. A réplica secundária para de ser sincronizada e seu estado da integridade de sincronização é marcado como NOT_HEALTHY. A réplica secundária não pode se tornar íntegra novamente até que o banco de dados secundário suspenso seja retomado e ressincronizado ou removido do grupo de disponibilidade.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36115509"
 ###  <a name="SyncCommitWithAuto"></a> Modo de confirmação síncrona com failover automático  
  O failover automático fornece alta disponibilidade, assegurando que o banco de dados seja rapidamente disponibilizado novamente após a perda da réplica primária. Para configurar um grupo de disponibilidade para failover automático, você precisará definir a réplica primária atual e uma secundária de destino para modo de confirmação síncrona com failover automático.  
   
- Além disso, para que um failover automático seja possível em um determinado momento, esta réplica secundária deverá ser sincronizada com a réplica primária (quer dizer, os bancos de dados secundários são todos sincronizados) e o cluster WSFC (Windows Server Failover Clustering) deverá ter quorum. Se a réplica primária ficar indisponível nessas condições, ocorrerá um failover automático. A réplica secundária alterna para a função da réplica primária e oferece seu banco de dados como banco de dados primário. Para obter mais informações, consulte a seção "Failover automático" o [Failover e modos de Failover &#40;grupos de disponibilidade do AlwaysOn&#41; ](failover-and-failover-modes-always-on-availability-groups.md) tópico.  
+ Além disso, para que um failover automático seja possível em um determinado momento, esta réplica secundária deverá ser sincronizada com a réplica primária (quer dizer, os bancos de dados secundários são todos sincronizados) e o cluster WSFC (Windows Server Failover Clustering) deverá ter quorum. Se a réplica primária ficar indisponível nessas condições, ocorrerá um failover automático. A réplica secundária alterna para a função da réplica primária e oferece seu banco de dados como banco de dados primário. Para obter mais informações, consulte a seção "Failover automático" de [Failover e modos de Failover &#40;grupos de disponibilidade AlwaysOn&#41; ](failover-and-failover-modes-always-on-availability-groups.md) tópico.  
   
 > [!NOTE]  
 >  Para obter informações sobre o quórum WSFC e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Configuração de modos de quórum WSFC e votação &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
@@ -158,7 +157,7 @@ ms.locfileid: "36115509"
 -   [Blog da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn Team Blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Failover e modos de Failover &#40;grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

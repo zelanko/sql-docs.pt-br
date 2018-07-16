@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 555a9eb950a2dcd70935964a8a6f3237f8abb76d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 240cc38426534deaca2c5475edbe99cfb5bbbbad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243466"
 ---
 # <a name="session-events-data-columns"></a>Colunas de dados de eventos de sessão
   A categoria Session Events tem a seguinte classe de evento:  

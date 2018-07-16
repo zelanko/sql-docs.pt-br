@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b08dce6f232bb08fd1d5f41bc1976aaa410331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c5fa2bc40982450ac67b82d39db8ee1f6a129604
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323736"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lição 6: adicionar um controle ReportViewer ao aplicativo
   Depois que você criar o relatório filho usando o Assistente de Relatório, a próxima etapa será adicionar um controle ReportViewer ao aplicativo de site.  

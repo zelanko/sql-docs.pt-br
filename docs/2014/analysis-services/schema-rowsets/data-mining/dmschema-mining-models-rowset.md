@@ -18,28 +18,28 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208026"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_MODELS
   Enumera os modelos de mineração de dados no catálogo atual. O conjunto de linhas `DMSCHEMA_MINING_MODELS` inclui informações como os nomes de modelos, a data de processamento e o algoritmo de mineração associados a cada modelo de mineração.  
   
- para obter informações sobre a ferramenta de configuração e recursos adicionais. O `DMSCHEMA_MINING_MODELS` de linhas de esquema é muito semelhante do [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) de linhas de esquema e podem ser usados da mesma maneira.  
+ para obter informações sobre a ferramenta de configuração e recursos adicionais. O `DMSCHEMA_MINING_MODELS` de linhas de esquema é muito semelhante de [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) linhas de esquema e pode ser usado da mesma maneira.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_MODELS` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_MODELS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||O nome do catálogo. Preenchido com o nome do banco de dados do qual o modelo é membro.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; ele sempre contém `NULL`.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||O nome do esquema não qualificado. Esta coluna não é suportada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; sempre conterá `NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||O nome do modelo de mineração. Esta coluna contém o nome do modelo de mineração e nunca está vazia.|  
 |`MODEL_TYPE`|`DBTYPE_WSTR`||O tipo de modelo.|  
 |`MODEL_GUID`|`DBTYPE_GUID`||O GUID do modelo.|  

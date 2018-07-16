@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254538"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Etapa 2: adicionando e configurando um gerenciador de conexões de arquivo simples
   Nesta tarefa, você adiciona um gerenciador de conexões de Arquivos Simples ao pacote que acabou de criar. Um gerenciador de conexões de Arquivos Simples habilita um pacote para extrair dados de um arquivo simples. Com o gerenciador de conexões de Arquivos Simples, você pode especificar o nome e o local do arquivo, a localidade e a página de códigos e o formato do arquivo, incluindo os delimitadores de coluna, a serem aplicados quando o pacote extrai os dados do arquivo simples. Além disso, é possível especificar manualmente o tipo de dados das colunas individuais ou usar a caixa de diálogo **Sugerir Tipos de Coluna** para mapear automaticamente as colunas de dados extraídos para os tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -66,13 +66,13 @@ ms.locfileid: "36115479"
   
 2.  No painel de propriedade, faça as seguintes alterações:  
   
-    -   Alterar o **coluna 0** nome de propriedade para `AverageRate`.  
+    -   Alterar o **coluna 0** nome da propriedade a ser `AverageRate`.  
   
-    -   Alterar o **coluna 1** nome de propriedade para `CurrencyID`.  
+    -   Alterar o **coluna 1** nome da propriedade a ser `CurrencyID`.  
   
-    -   Alterar o **coluna 2** nome de propriedade para `CurrencyDate`.  
+    -   Alterar o **coluna 2** nome da propriedade a ser `CurrencyDate`.  
   
-    -   Alterar o **coluna 3** nome de propriedade para `EndOfDayRate`.  
+    -   Alterar o **coluna 3** nome da propriedade a ser `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Por padrão, as quatro colunas são definidas inicialmente como um tipo de dados de cadeia de caracteres [DT_STR] com uma `OutputColumnWidth` de 50.  
@@ -94,11 +94,11 @@ ms.locfileid: "36115479"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     O tipo de dados sugerido para o `CurrencyID` coluna é incompatível com o tipo de dados do campo na tabela de destino. Porque o tipo de dados `DimCurrency.CurrencyAlternateKey` é nchar (3), `CurrencyID` deve ser alterado de cadeia de caracteres [DT_STR] para cadeia de caracteres [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; portanto, `CurrencyDate` deve ser alterado da data [DT_Date] para a data de banco de dados [DT_DBDATE].  
+     O tipo de dados sugerido para o `CurrencyID` coluna é incompatível com o tipo de dados do campo na tabela de destino. Porque o tipo de dados `DimCurrency.CurrencyAlternateKey` é nchar (3), `CurrencyID` deve ser alterado de cadeia de caracteres [DT_STR] para cadeia de caracteres [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; portanto, `CurrencyDate` precisa ser alterado da data [DT_Date] para a data do banco de dados [DT_DBDATE].  
   
-2.  Na lista, selecione a coluna CurrencyID e no painel Propriedades, altere o tipo de dados da coluna `CurrencyID` de cadeia de caracteres [DT_STR] para Unicode da cadeia de caracteres [DT_WSTR].  
+2.  Na lista, selecione a coluna CurrencyID e no painel de propriedade, altere o tipo de dados da coluna `CurrencyID` de cadeia de caracteres [DT_STR] para Unicode da cadeia de caracteres [DT_WSTR].  
   
-3.  No painel Propriedades, altere o tipo de dados da coluna `CurrencyDate` da data [DT_DATE] para a data de banco de dados [DT_DBDATE].  
+3.  No painel de propriedade, altere o tipo de dados da coluna `CurrencyDate` da data [DT_DATE] para a data do banco de dados [DT_DBDATE].  
   
 4.  Clique em **OK**.  
   

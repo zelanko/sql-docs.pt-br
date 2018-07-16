@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267192"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar propriedades de comportamento de tabela para relatórios de Power View (SSAS tabular)
   Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.  
@@ -109,7 +109,7 @@ ms.locfileid: "36115134"
   
  Para alterar o comportamento de agrupamento padrão, defina as propriedades **Identificador de Linha** e **Manter Linhas Exclusivas** . Em **Manter Linhas Exclusivas**, escolha a coluna Sobrenome para que este valor seja repetido para uma linha, mesmo que já apareça em uma linha diferente. Depois de alterar as propriedades e republicar a pasta de trabalho, você pode criar o mesmo relatório, só que, desta vez, verá os dois clientes chamados **Davi Barros**, com a **Renda Anual** corretamente alocada para cada um.  
   
- ![Linha contendo duplicatas baseadas na ID de linha de dados](../media/ssas-jonyang.gif "linha contendo duplicatas baseadas na ID de linha de dados")  
+ ![Linha contendo duplicatas baseadas na ID da linha de dados](../media/ssas-jonyang.gif "linha contendo duplicatas baseadas na ID da linha de dados")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>O layout de matriz está cheio demais  
  Quando você apresenta uma tabela de detalhes em uma matriz, o agrupamento padrão fornece um valor resumido para cada coluna. Dependendo de seus objetivos, podem ser mais resumos do que você deseja. Para alterar este comportamento, defina **Identificador de Linha**. Nenhuma propriedade adicional precisa ser definida; apenas definir o identificador de linha é suficiente para alterar o agrupamento de forma que os resumos sejam calculados para cada linha com base em seu identificador de linha exclusivo.  
@@ -131,11 +131,11 @@ ms.locfileid: "36115134"
   
  **Antes: agrupamento padrão com base em campos em um gráfico**  
   
- ![Gráfico baseado em agrupamento no nível de campo padrão](../media/ssas-rptprop-chartfieldgroup.gif "gráfico com base no agrupamento no nível de campo padrão")  
+ ![Gráfico baseado em agrupamento no nível de campo padrão](../media/ssas-rptprop-chartfieldgroup.gif "gráfico baseado em agrupamento no nível de campo padrão")  
   
  **Depois: agrupamento em identificador de linha (o identificador de linha torna-se o eixo)**  
   
- ![Gráfico com base no agrupamento de ID de linha](../media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de ID de linha")  
+ ![Gráfico com base no agrupamento de identificação de linhas](../media/ssas-rptprop-chartrowid.gif "gráfico com base no agrupamento de identificação de linha")  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Depois de avaliar as tabelas em seu modelo e definir as propriedades de comportamento da tabela nelas contendo linhas de detalhes que sempre devem aparecer como itens individuais, você poderá otimizar ainda mais o modelo por meio de propriedades ou configurações adicionais.  

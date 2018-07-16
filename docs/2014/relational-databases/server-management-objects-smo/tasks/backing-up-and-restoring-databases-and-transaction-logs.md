@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a020f5bfe13086aab602d0bcd136d63175cb8bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b5b5a885ef12294f1d8b755ba72873ffe70e2eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217006"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Fazendo backup e restaurando bancos de dados e logs de transações
   No SMO, as classes <xref:Microsoft.SqlServer.Management.Smo.Backup> e <xref:Microsoft.SqlServer.Management.Smo.Restore> são classes de utilitário que fornecem as ferramentas para a execução de tarefas específicas de backup e restauração. Um <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa uma tarefa de backup específica que é necessária em vez de um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto na instância do servidor.  
@@ -39,7 +39,7 @@ ms.locfileid: "36116561"
  Assim como o objeto <xref:Microsoft.SqlServer.Management.Smo.Backup>, o objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> não precisa ser criado através de um método `Create` pois ele não representa objetos na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> é um conjunto de propriedades e métodos usados para restaurar um banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Fazendo backup de bancos de dados e de logs de transações no Visual Basic  
  Este exemplo de código mostra como fazer backup de um banco de dados existente em um arquivo e como restaurá-lo.  

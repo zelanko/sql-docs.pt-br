@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260552"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
   Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. As anotações `sql:limit-field` e `sql:limit-value` são usadas para identificar a coluna de banco de dados que contém os valores limitadores e especificar um valor limitador específico a ser usado para filtrar os dados retornados.  
@@ -58,7 +58,7 @@ ms.locfileid: "36020223"
   
  Um cliente pode ter um endereço para cobrança e/ou um endereço para entrega. Os valores da coluna AddressType são Shipping e Billing.  
   
- Este é o esquema de mapeamento no qual o **ShipTo** atributo de esquema é mapeado para a coluna StreetAddress na relação Addresses. Os valores retornados para esse atributo são limitados somente aos endereços para entrega especificando as anotações `sql:limit-field` e `sql:limit-value`. Da mesma forma, o **BillTo** atributo de esquema retorna somente o endereço para cobrança de um cliente.  
+ Este é o esquema de mapeamento no qual o **ShipTo** atributo de esquema é mapeado para a coluna StreetAddress na relação Addresses. Os valores retornados para esse atributo são limitados somente aos endereços para entrega especificando as anotações `sql:limit-field` e `sql:limit-value`. Da mesma forma, o **BillTo** atributo de esquema retorna somente o endereço de cobrança de um cliente.  
   
  Este é o esquema:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36020223"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Criar duas tabelas de **tempdb** banco de dados:  
+1.  Crie duas tabelas na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  
@@ -175,7 +175,7 @@ ms.locfileid: "36020223"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Este é o esquema de mapeamento no qual o **OrderID** atributo os detalhes do pedido é mapeado para a coluna OrderID na relação de pedidos. Os valores que são retornados para esse atributo são limitados somente àqueles que têm um valor de 2.0000000 e-001 (0.2) conforme especificado para o **desconto** de atributo usando o `sql:limit-field` e `sql:limit-value` anotações.  
+ Este é o esquema de mapeamento no qual o **OrderID** atributo os detalhes do pedido é mapeado para a coluna OrderID na relação de pedidos. Os valores que são retornados para esse atributo são limitados somente àqueles que têm um valor de 2.0000000e-001 (0.2) conforme especificado para o **desconto** de atributo usando o `sql:limit-field` e `sql:limit-value` anotações.  
   
  Este é o esquema:  
   
@@ -221,7 +221,7 @@ ms.locfileid: "36020223"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Criar duas tabelas de **tempdb** banco de dados:  
+1.  Crie duas tabelas na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  
@@ -313,6 +313,6 @@ ms.locfileid: "36020223"
  [float e real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar e nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Usando esquemas XSD em consultas anotados &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Usando anotados a esquemas XSD em consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

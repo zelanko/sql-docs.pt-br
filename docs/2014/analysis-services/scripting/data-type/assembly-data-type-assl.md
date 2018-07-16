@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233824"
 ---
 # <a name="assembly-data-type-assl"></a>Tipo de dados Assembly (ASSL)
-  Define um tipo de dados primitivo abstrato que representa um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou uma biblioteca de vínculo dinâmico (DLL) COM associado com um [servidor](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
+  Define um tipo de dados primitivo abstrato que representa uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly ou uma biblioteca de vínculo dinâmico (DLL) COM associado com um [Server](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
   
 > [!IMPORTANT]  
 >  Os assemblies COM podem representar um risco à segurança. Devido a esse risco e outras considerações, os assemblies COM foram preteridos no [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. Talvez não haja suporte para assemblies COM em versões futuras.  
@@ -72,7 +72,7 @@ ms.locfileid: "36115725"
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Server &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Elemento de servidor &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Elemento de banco de dados &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Tipos de dados XML de linguagem script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

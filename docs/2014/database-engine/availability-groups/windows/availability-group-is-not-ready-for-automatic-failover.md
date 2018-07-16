@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.agp3autofailover.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 caps.latest.revision: 10
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: b06939bd2c4581ee224f1cdbe00a41062036b572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ae37f80dc131fc15a396ff74c94406161accd1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250988"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>O grupo de disponibilidade não está pronto para o failover automático
     
@@ -55,7 +54,7 @@ ms.locfileid: "36115972"
 -   Use a política para verificar se os dados estão em estado de sincronização e se o destino de failover automático é SYNCHRONIZED, e depois resolva o problema na réplica de disponibilidade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

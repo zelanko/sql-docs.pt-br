@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.MA.f1
 helpviewer_keywords:
 - Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a8e8617f64068e62f5cc8dc90e85a9020546d6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e8593023d1ff8ed332bbd3480a56f8c15b366e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191676"
 ---
 # <a name="merge-agent-security"></a>Segurança do Merge Agent
   A caixa de diálogo **Segurança do Merge Agent** permite especificar a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o Merge Agent é executado. O Merge Agent é executado no Distribuidor para assinaturas push e no Assinante para assinaturas pull. A conta do Windows é também referida como *conta do processo*, porque o processo do agente é executado nessa conta. Opções adicionais disponíveis na caixa de diálogo dependem de como você a acessa:  

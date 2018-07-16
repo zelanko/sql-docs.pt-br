@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - full-text catalogs [SQL Server], database mirroring
 - catalogs [SQL Server], database mirroring
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0807ba4c0d8a23d15be4dab7745f5abbebd3aea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 183bd285e570a1fc41e2714770697cae013b21f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237236"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Espelhamento de banco de dados e catálogos de texto completo (SQL Server)
   Para espelhar um banco de dados que possui um catálogo de texto completo, use o backup como sempre para criar um backup de banco de dados completo do banco de dados principal e então restaure o backup para copiar o banco de dados no servidor espelho. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  

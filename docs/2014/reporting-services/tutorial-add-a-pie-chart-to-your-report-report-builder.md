@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236236"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
   Gráficos de pizza e gráficos de rosca exibem dados como uma proporção do todo. Os gráficos de pizza são os mais usados para fazer comparações entre grupos. Gráficos de pizza e de rosca, além dos gráficos de pirâmide e funil, constituem um grupo de gráficos conhecidos como gráficos de forma. Os gráficos de forma não têm nenhum eixo. Quando um campo numérico é solto em um gráfico de forma, o gráfico calcula a porcentagem de cada valor com relação ao total.  
@@ -33,11 +33,11 @@ ms.locfileid: "36019977"
 ##  <a name="BackToTop"></a> O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
-1.  [Criar um gráfico de pizza no Assistente de gráfico](#Chart)  
+1.  [Criar um gráfico de pizza do Assistente de gráfico](#Chart)  
   
 2.  [Escolha o tipo de gráfico](#ChartType)  
   
-3.  [Exibir as porcentagens em cada fatia do gráfico](#Percentages)  
+3.  [Exibir as porcentagens em cada fatia](#Percentages)  
   
 4.  [Combinar pequenas fatias em uma fatia](#CombineSlices)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36019977"
   
 #### <a name="to-add-a-pie-chart"></a>Para adicionar um gráfico de pizza  
   
-1.  Sobre o **escolher um tipo de gráfico** , clique em **pizza**e, em seguida, clique em **próximo**. A página **Organizar campos de gráfico** será aberta.  
+1.  Sobre o **escolher um tipo de gráfico** , clique em **pizza**e, em seguida, clique em **próxima**. A página **Organizar campos de gráfico** será aberta.  
   
      Na página **Organizar campos de gráfico** , arraste o campo Produto até o painel **Categorias** . Esse painel define o número de fatias do gráfico de pizza. Neste exemplo, haverá oito fatias, uma para cada produto.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36019977"
   
 3.  Clique em **Avançar**.  
   
-4.  Sobre o **escolha um estilo** , no painel Estilos, selecione um estilo.  
+4.  Sobre o **escolher um estilo** página, no painel Estilos, selecione um estilo.  
   
      Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda. Quando você selecionar um estilo, o painel Visualizar exibirá um exemplo do gráfico com esse estilo.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36019977"
   
 2.  Clique com o botão direito do mouse no gráfico de pizza e clique em **Mostrar Rótulos de Dados**. Os rótulos de dados são exibidos no gráfico.  
   
-3.  Clique um rótulo e, em seguida, clique em **propriedades do rótulo de série**.  
+3.  Um rótulo com o botão direito e, em seguida, clique em **propriedades do rótulo de série**.  
   
 4.  Em dados do rótulo, na caixa suspensa, selecione **#PERCENT**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36019977"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  No **exibição** guia o **Mostrar/ocultar** grupo, selecione **propriedades**.  
+2.  Sobre o **modo de exibição** guia da **Mostrar/ocultar** grupo, selecione **propriedades**.  
   
 3.  Na superfície de design, clique em qualquer fatia do gráfico de pizza. As propriedades da série são exibidas no painel Propriedades.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36019977"
   
 7.  Verifique se a propriedade **CollectedThresholdUsePercent** está definida como **True**.  
   
-8.  Na faixa de opções, no **início** , clique em **executar** para visualizar o relatório.  
+8.  Na faixa de opções, sobre o **página inicial** , clique em **executar** para visualizar o relatório.  
   
  Na legenda, a categoria "Outro" agora existe. A nova fatia da pizza combina todas as fatias que estavam abaixo de 5% em uma fatia que representa 6% da pizza inteira.  
   
@@ -183,16 +183,16 @@ ms.locfileid: "36019977"
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  Se o painel Propriedades não estiver já aberto, no **exibição** guia, selecione **propriedades**.  
+2.  Se o painel Propriedades não estiver aberto, na **modo de exibição** guia, selecione **propriedades**.  
   
 3.  Clique duas vezes no próprio gráfico de pizza. As propriedades da série do gráfico de pizza são mostradas no painel Propriedades.  
   
 4.  No painel Propriedades, expanda o nó **CustomAttributes** .  
   
-5.  Definir o **PieDrawingStyle** para **SoftEdge**.  
+5.  Defina as **PieDrawingStyle** à **SoftEdge**.  
   
     > [!NOTE]  
-    >  Efeitos de desenho e efeitos tridimensionais são opções exclusivas. Se um gráfico tiver efeitos tridimensionais aplicados, **PieDrawingStyle** não está disponível no painel Propriedades.  
+    >  Efeitos de desenho e efeitos tridimensionais são opções exclusivas. Se um gráfico tiver aplicados, de efeitos tridimensionais **PieDrawingStyle** não está disponível no painel de propriedades.  
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36019977"
   
      **Como um Percentual do Total de Vendas**  
   
-3.  Selecione **vendas de câmeras e filmadoras**e clique no **negrito** botão do **fonte** seção o **início** guia da faixa de opções.  
+3.  Selecione **vendas de câmeras e filmadoras**e clique no **negrito** botão da **fonte** seção o **início** guia da faixa de opções.  
   
-4.  Selecione **como uma porcentagem do Total de vendas**e no **fonte** seção o **início** guia, defina o tamanho da fonte como **10**.  
+4.  Selecione **como uma porcentagem do Total de vendas**e, na **fonte** seção o **página inicial** guia, defina o tamanho da fonte como **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título para acomodar as duas linhas de texto.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36019977"
  Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

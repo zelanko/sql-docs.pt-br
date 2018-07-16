@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
 - restoring databases [SQL Server], moving
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd67993b78c936b5749c7c8f77a4a4e51bfdd2f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: be770b24a45302a835583725527e9cf8ae9efa9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294866"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Restaurar arquivos para um novo local (SQL Server)
   Este tópico descreve como restaurar arquivos para um novo local no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

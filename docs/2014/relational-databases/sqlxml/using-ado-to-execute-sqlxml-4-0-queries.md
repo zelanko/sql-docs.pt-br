@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a53e88a28a7be770b1bc6541f9118ca64e3fc7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201186"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Usando o ADO para executar consultas do SQLXML 4.0
   Nas versões anteriores do SQLXML, o suporte à execução de consultas baseadas em HTTP era oferecido por meio de diretórios virtuais IIS SQLXML e do filtro ISAPI SQLXML. No SQLXML 4.0, esses componentes foram removidos já que uma funcionalidade semelhante é fornecida com os XML Web Services nativos introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -104,7 +104,7 @@ ms.locfileid: "36115873"
   
      Atualize qualquer outro valor se mencionado nas instruções específicas do exemplo que você está tentando recriar localmente em seu computador.  
   
-3.  Salve o arquivo e feche-o.  
+3.  Salve o arquivo e fechá-lo.  
   
 4.  Verifique se você criou outros arquivos, como modelos ou esquemas XML que são parte do exemplo que você está tentando recriar localmente em seu computador. Esses arquivos deveriam estar localizados no mesmo diretório onde você salvou o arquivo de script de teste (Sqlxml4test.vbs).  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36115873"
   
 1.  Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado, da seguinte maneira:  
   
-    1.  Do **iniciar** , aponte para **configurações**e, em seguida, clique em **painel de controle**.  
+    1.  Dos **inicie** , aponte para **configurações**e, em seguida, clique em **painel de controle**.  
   
     2.  No painel de controle, abra **adicionar ou remover programas**  
   
-    3.  Na lista de programas atualmente instalados, verifique se **Microsoft SQL Server Native Client** aparece na lista.  
+    3.  Na lista de programas instalados, verifique **Microsoft SQL Server Native Client** aparece na lista.  
   
         > [!NOTE]  
         >  Se você precisar instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [instalar o SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  

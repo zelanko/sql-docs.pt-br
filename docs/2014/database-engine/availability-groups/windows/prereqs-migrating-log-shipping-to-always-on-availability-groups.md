@@ -1,28 +1,27 @@
 ---
-title: Pré-requisitos para migrar de envio de logs para grupos de disponibilidade do AlwaysOn (SQL Server) | Microsoft Docs
+title: Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 21
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: e01e7b373318e64370cc48ff79002c130bd0838a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178363"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn (SQL Server)
   Esse tópico descreve os pré-requisitos para converter um banco de dados primário para envio de logs junto com um ou mais de seus bancos de dados secundários para um banco de dados primário AlwaysOn e bancos de dados secundários.  
@@ -75,7 +74,7 @@ ms.locfileid: "36115717"
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Envio de logs**  
   
--   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Atualizar o envio de logs para o SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Remover envio de log &#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "36115717"
   
 -   **Whitepapers:**  
   
-     [Guia de migração: Migrando para grupos de disponibilidade do AlwaysOn de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](http://msdn.microsoft.com/library/jj635217)  
+     [Guia de migração: Migrando para grupos de disponibilidade AlwaysOn de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](http://msdn.microsoft.com/library/jj635217)  
   
      [White papers da Microsoft para SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36115717"
   
 ## <a name="see-also"></a>Consulte também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

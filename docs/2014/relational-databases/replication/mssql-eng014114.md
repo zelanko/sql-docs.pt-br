@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014114 error
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8560be4d90999f90bc76650842fca66596414683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1730e47e153191a77813b0ad6bab1cde187c739b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288832"
 ---
 # <a name="mssqleng014114"></a>MSSQL_ENG014114
     

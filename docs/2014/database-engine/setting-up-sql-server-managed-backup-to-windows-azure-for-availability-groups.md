@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8a367b7835b08c9a5b2b7226b8f3e4d127235487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ca66e49fb768e3742155c77f4f922299b38c5f4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193566"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>Configurando o Backup Gerenciado do SQL Server para Windows Azure para Grupos de Disponibilidade
   Este tópico é um tutorial sobre como configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para bancos de dados que fazem parte dos Grupos de Disponibilidade AlwaysOn.  
@@ -34,25 +33,25 @@ ms.locfileid: "36117957"
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>Configurando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para bancos de dados de disponibilidade.  
  **Permissões:**  
   
--   Requer a participação no **db_backupoperator** função, do banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões **sp_delete_backuphistory**procedimento armazenado.  
+-   Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e `EXECUTE` permissões em **sp_delete_backuphistory**procedimento armazenado.  
   
 -   Requer permissões **SELECT** na função **smart_admin.fn_get_current_xevent_settings**.  
   
--   Requer `EXECUTE` permissões a **smart_admin.sp_get_backup_diagnostics** procedimento armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
+-   Requer `EXECUTE` permissões de **sp_get_backup_diagnostics** procedimento armazenado. Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
   
--   Requer `EXECUTE` permissões a `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch` procedimentos armazenados.  
+-   Requer `EXECUTE` permissões de `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch` procedimentos armazenados.  
   
  Estas são as etapas básicas para configurar um Grupo de disponibilidade AlwaysOn com o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Um tutorial passo a passo detalhado será descrito mais adiante neste tópico.  
   
-1.  Depois que você criar Grupo de Disponibilidade, configure a réplica de backup preferencial. Essa configuração para o Grupo de Disponibilidade também é usada pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar qual réplica deve ser usada para o backup. Para obter instruções passo a passo sobre como configurar a preferência de backup, consulte [Configurar Backup em réplicas de disponibilidade &#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  Se você estiver criando um novo grupo de disponibilidade do AlwaysOn, consulte [Introdução aos grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md).  
+1.  Depois que você criar Grupo de Disponibilidade, configure a réplica de backup preferencial. Essa configuração para o Grupo de Disponibilidade também é usada pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar qual réplica deve ser usada para o backup. Para obter instruções passo a passo sobre como configurar a preferência de backup, consulte [Configurar Backup em réplicas de disponibilidade &#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  Se você estiver criando um novo grupo de disponibilidade AlwaysOn, consulte [Introdução aos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md).  
   
-2.  Configure o acesso de conexão somente leitura às réplicas secundárias. Para instruções passo a passo sobre como configurar o acesso somente leitura, consulte [configurar o acesso de somente leitura em uma réplica de disponibilidade &#40;do SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+2.  Configure o acesso de conexão somente leitura às réplicas secundárias. Para instruções passo a passo sobre como configurar o acesso somente leitura, consulte [configurar o acesso de somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 3.  Especifique a réplica de Backup. A configuração de réplica de backup preferencial é usada pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar o banco de dados a ser usado para agendar backups.  Para determinar se a réplica atual é a réplica de backup preferencial, use o [sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41; ](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) função.  
   
-4.  Em cada réplica, execute [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuração para o banco de dados usando o **admin.sp_set_db_backup inteligente** procedimento armazenado.  
+4.  Em cada réplica, execute [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuração do banco de dados usando o **inteligente admin.sp_set_db_backup** procedimento armazenado.  
   
-     **[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comportamento após um failover:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] continuarão a funcionar e manter cópias de backup e recuperação após um evento de failover. Nenhuma ação específica é necessária depois de um failover.  
+     **[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comportamento após um failover:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] continuarão funcionando e mantendo cópias de backup e capacidade de recuperação após um evento de failover. Nenhuma ação específica é necessária depois de um failover.  
   
 #### <a name="considerations-and-requirements"></a>Considerações e requisitos:  
  Configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para os bancos de dados que participam do Grupo de Disponibilidade AlwaysOn exige considerações e requisitos específicos. Esta é uma lista de considerações e requisitos:  
@@ -80,9 +79,9 @@ ms.locfileid: "36117957"
   
 4.  **Determinar o período de retenção:** Determine o período de retenção que você deseja para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30. O período de retenção determina o tempo de recuperação do banco de dados.  
   
-5.  **Criar uma certificado ou chave assimétrica a ser usado para criptografia durante:** criar o certificado no primeiro nó Node1 e, em seguida, exportá-lo para um arquivo usando [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... No Nó 2, crie um certificado usando o arquivo exportado do Nó 1. Para obter mais informações sobre como criar um certificado de um arquivo, consulte o exemplo em [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
+5.  **Criar uma certificado ou chave assimétrica para usar para a criptografia durante o:** criar o certificado no primeiro nó Node1 e, em seguida, exportá-lo em um arquivo usando [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... No Nó 2, crie um certificado usando o arquivo exportado do Nó 1. Para obter mais informações sobre como criar um certificado de um arquivo, consulte o exemplo na [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql).  
   
-6.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB no Node1:** iniciar o SQL Server Management Studio e conecte-se à instância no Node1 onde o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
+6.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB no Node1:** inicie o SQL Server Management Studio e conecte-se à instância no Node1 onde o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
   
     ```  
     Use msdb;  
@@ -99,9 +98,9 @@ ms.locfileid: "36117957"
   
     ```  
   
-     Para obter mais informações sobre como criar um certificado para criptografia, consulte o **criar um certificado de Backup** etapa [criar um Backup criptografado](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
+     Para obter mais informações sobre como criar um certificado para criptografia, consulte a **criar um certificado de Backup** entrar [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-7.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB no Node2:** iniciar o SQL Server Management Studio e conecte-se à instância no Node2 onde o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
+7.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB no Node2:** inicie o SQL Server Management Studio e conecte-se à instância no Node2 onde o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
   
     ```  
     Use msdb;  
@@ -120,13 +119,13 @@ ms.locfileid: "36117957"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está habilitado no banco de dados que você especificou. Podem ser necessários até 15 minutos para que as operações de backup no banco de dados comecem a ser executadas. O backup ocorrerá na réplica de backup preferencial.  
   
-8.  **Examine a configuração padrão de evento estendido:** revisar a configuração de evento estendido executando a seguinte instrução transact-SQL na réplica [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está usando para agendar os backups. Em geral, essa é a configuração da réplica de backup preferencial para um Grupo de Disponibilidade ao qual o banco de dados pertence.  
+8.  **Examine a configuração padrão de evento estendido:** analise a configuração de evento estendido executando a seguinte instrução transact-SQL na réplica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está usando para agendar os backups. Em geral, essa é a configuração da réplica de backup preferencial para um Grupo de Disponibilidade ao qual o banco de dados pertence.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas esses canais incluem eventos informativos e de depuração que usa o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para detectar problemas e resolvê-los. Para obter mais informações, consulte [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Você verá que os eventos de canal Admin, Operacional e Analítico estão habilitados por padrão e não podem ser desabilitados. Isso deve ser suficiente para monitorar os eventos que requerem intervenção manual.  Você pode habilitar os eventos de depuração, mas esses canais incluem eventos informativos e de depuração que usa o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para detectar problemas e resolvê-los. Para obter mais informações, consulte [Monitor de SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 9. **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention.  Para receber essas notificações, você deve habilitar a execução do procedimento armazenado que cria um Trabalho do SQL Server Agent. As etapas a seguir descrevem o processo para habilitar e configurar notificações por email:  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36117957"
   
         ```  
   
-         Para obter mais informações e um exemplo de script completo consulte [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+         Para obter mais informações e um script de exemplo completo, consulte [Monitor de SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 10. **Exibir arquivos de backup na conta de armazenamento do Microsoft Azure:** Conecte-se à conta de armazenamento do SQL Server Management Studio ou do Portal de Gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de habilitar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
@@ -194,10 +193,10 @@ ms.locfileid: "36117957"
   
     ```  
   
- As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema **smart_admin.sp_set_db_backup** e fornecer os novos valores. Para obter mais informações, consulte [SQL Server Managed Backup to Windows Azure - configurações de retenção e armazenamento](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema **smart_admin.sp_set_db_backup** e fornecer os novos valores. Para obter mais informações, consulte [SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="considerations-when-removing-a-database-from-alwayson-availability-group-configuration"></a>Considerações ao remover um banco de dados de configuração do Grupo de Disponibilidade AlwaysOn  
- Se um banco de dados é removido da configuração do grupo de disponibilidade do AlwaysOn e agora é um banco de dados autônomo, é recomendável fazer backup usando [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql). Quando você cria um backup de banco de dados dessa maneira, ele estabelece uma nova cadeia de backup, e o arquivo será colocado no contêiner específico da instância, e não no contêiner de disponibilidade do contêiner em que os backups foram armazenados quando o banco de dados fazia parte do Grupo de Disponibilidade.  
+ Se um banco de dados é removido da configuração do grupo de disponibilidade AlwaysOn e agora é um banco de dados autônomo, é recomendável fazer backup usando [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql). Quando você cria um backup de banco de dados dessa maneira, ele estabelece uma nova cadeia de backup, e o arquivo será colocado no contêiner específico da instância, e não no contêiner de disponibilidade do contêiner em que os backups foram armazenados quando o banco de dados fazia parte do Grupo de Disponibilidade.  
   
 > [!WARNING]  
 >  A capacidade de recuperação do banco de dados nesse cenário, desde os backups anteriores até a alteração do status do Grupo de Disponibilidade, não é garantida.  

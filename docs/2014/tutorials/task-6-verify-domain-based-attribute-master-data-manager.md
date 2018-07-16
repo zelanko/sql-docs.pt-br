@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191296"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarefa 6: Verificar se o atributo baseado em domínio foi criado usando o Master Data Manager
   Nesta tarefa, verifique se a entidade **State** foi criada no **MDS** e o atributo **State** da entidade **Supplier** é um atributo baseado em domínio que depende da entidade **State** usando o **Master Data Manager**.  

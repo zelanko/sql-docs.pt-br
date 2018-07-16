@@ -3,28 +3,26 @@ title: Exibir a definição de um procedimento armazenado| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
 - definition of stored procedure
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3b63ca5ff5b5373ea56c0df355c519d23054d07f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09737f1b9764680e67dbb0bbefb2d0ec86df71e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288402"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Exibir a definição de um procedimento armazenado
     
@@ -100,7 +98,7 @@ ms.locfileid: "36020211"
   
 2.  Na barra de ferramentas, clique em **Nova Consulta**.  
   
-3.  Na janela de consulta, insira as instruções a seguir que usam o `sys.sql_modules` exibição do catálogo. Altere os nomes do banco de dados e do procedimento armazenado para fazer referência ao banco de dados e ao procedimento armazenado que você quer.  
+3.  Na janela de consulta, insira as seguintes instruções que usam o `sys.sql_modules` exibição do catálogo. Altere os nomes do banco de dados e do procedimento armazenado para fazer referência ao banco de dados e ao procedimento armazenado que você quer.  
   
     ```  
     USE AdventureWorks2012;  

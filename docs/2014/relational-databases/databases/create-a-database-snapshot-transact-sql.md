@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95c50d2f0859b6da42788d53493c1d49f7900a13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97b460cf5508c1b95c9d9acedd02d68e5e0acd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191936"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
   A única maneira de criar um instantâneo do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não dá suporte à criação de instantâneos de banco de dados.  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Criando um instantâneo no banco de dados Vendas  
- Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales` . Este banco de dados foi criado no exemplo, "Criando um banco de dados com grupos de arquivos" no [criar banco de dados &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ Este exemplo cria um instantâneo do banco de dados, `sales_snapshot1200`, no banco de dados `Sales` . Este banco de dados foi criado no exemplo, "Criando um banco de dados com grupos de arquivos," em [criar banco de dados &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

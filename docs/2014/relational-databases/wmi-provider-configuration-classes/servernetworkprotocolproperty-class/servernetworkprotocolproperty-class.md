@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ServerNetworkProtocolProperty class
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23ea90f40ca4bf3721dc4a80a59e7c276c3b77ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7554cdae2dd8c7c6276f51feb75d9fb6edb0511b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260382"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Classe ServerNetworkProtocolProperty
   O [classe ServerNetworkProtocolProperty] servernetworkprotocolproperty-class.md) representa as propriedades de um protocolo de rede do servidor.  
   
- Com servernetworkprotocolproperty a [classe ServerNetworkProtocolProperty]-class.md), você pode executar as seguintes tarefas:  
+ Com servernetworkprotocolproperty o [classe ServerNetworkProtocolProperty]-class.md), você pode executar as seguintes tarefas:  
   
 -   Verificar o protocolo ao qual a propriedade atual pertence.  
   

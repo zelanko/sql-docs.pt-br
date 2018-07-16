@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db45c51e597f739a443027e2e3390656d0820710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c1e087cb853e6517c0977b2db33c31312631c1ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195426"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Alterar o tipo de atributo (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os administradores podem alterar o tipo de atributo quando o tipo de dados ou número de caracteres permitido está incorreto.  
@@ -40,7 +40,7 @@ ms.locfileid: "36118134"
   
 ### <a name="to-change-the-attribute-type"></a>Para alterar o tipo de atributo  
   
-1.  No Excel, carregue a entidade que contém a coluna (atributo) a ser alterada. Para obter mais informações, consulte [carregar dados do MDS para Excel](export-data-to-excel-from-master-data-services.md).  
+1.  No Excel, carregue a entidade que contém a coluna (atributo) a ser alterada. Para obter mais informações, consulte [carregar dados do MDS no Excel](export-data-to-excel-from-master-data-services.md).  
   
 2.  Clique em qualquer célula da coluna que você deseja alterar.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36118134"
   
 -   Você deve atualizar as regras de negócio para apontar para o atributo alterado porque a lógica pode não ser a mesma considerando o novo tipo de dados do atributo. Será necessário editar cada regra afetada e, em seguida, retrabalhar as expressões para apontar para remover as referências do atributo substituído (_old) para apontar para o atributo atualizado.  
   
--   Você deve abrir qualquer exibições de assinatura na seleção gerenciamento de integração, selecione a linha da exibição, abri-lo para edição clicando no ícone de lápis e, em seguida, clique no **salvar disco** ícone para atualizar a definição da exibição. Nenhuma outra alteração é necessária para regenerar a sintaxe da exibição.  
+-   Você deve abrir todas as exibições de assinatura na seleção de gerenciamento de integração, selecione a linha da exibição, abri-lo para edição clicando no ícone de lápis e, em seguida, clique no **salvar disco** ícone para atualizar a definição da exibição. Nenhuma outra alteração é necessária para regenerar a sintaxe da exibição.  
   
 -   As tabelas de preparo que incluem o atributo terão uma coluna de atributo substituído adicionada a ele, o que significa que o código de preparação será afetado. Para livrar-se do atributo substituído, você poderá excluí-lo depois de atualizar as regras de negócio e as exibições de assinatura.  
   

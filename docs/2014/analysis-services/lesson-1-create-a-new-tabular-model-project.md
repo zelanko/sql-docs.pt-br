@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226626"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
   Nesta lição, você criará um novo projeto de modelo de tabela em branco no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Quando seu novo projeto é criado, você pode começar a adicionar dados usando o Assistente de Importação de Tabela. Além de criar um novo projeto, esta lição inclui também uma introdução breve ao ambiente de criação de modelo de tabela em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Para saber mais sobre os diferentes tipos de projetos de modelo de tabela, consulte [Projetos de modelo de tabela &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação do modelo de tabela, consulte [Designer de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-designer-ssas-tabular.md).  
+ Para saber mais sobre os diferentes tipos de projetos de modelo de tabela, consulte [Projetos de modelo de tabela &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Para saber mais sobre o ambiente de criação de modelos tabulares, consulte [Designer de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Tempo estimado para concluir esta lição: **10 minutos**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36116029"
   
 2.  No **novo projeto** caixa de diálogo **modelos instalados**, clique em **Business Intelligence**, em seguida, clique em **Analysis Services**, e em seguida, clique em **projeto Tabular do Analysis Services**.  
   
-3.  Em **nome**, tipo `AW Internet Sales Tabular Model`, em seguida, especifique um local para os arquivos de projeto.  
+3.  Na **nome**, digite `AW Internet Sales Tabular Model`, em seguida, especifique um local para os arquivos de projeto.  
   
      Por padrão, o **Nome da Solução** será igual ao nome do projeto; no entanto, você poderá digitar outro nome de solução.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36116029"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Compreendendo o ambiente de criação do modelo de tabela de ferramentas de dados do SQL Server  
  Agora que você criou um novo projeto de modelo tabular, vamos dedicar um tempo para explorar o ambiente de criação de modelo tabular no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou posterior).  
   
- Depois que seu projeto for criado, ele será aberto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Um modelo vazio será exibido no designer de modelos e o arquivo **Model.bim** estará selecionado na janela **Gerenciador de Soluções** . Quando você adiciona dados, tabelas e colunas aparecerão no designer. Se você não vir o designer (a janela vazia com a guia Model.bim), em **Solution Explorer**, em `AW Internet Sales Tabular Model`, clique duas vezes o **Model.bim** arquivo.  
+ Depois que seu projeto for criado, ele será aberto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Um modelo vazio será exibido no designer de modelos e o arquivo **Model.bim** estará selecionado na janela **Gerenciador de Soluções** . Quando você adiciona dados, tabelas e colunas aparecerão no designer. Se você não vir o designer (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em `AW Internet Sales Tabular Model`, clique duas vezes o **Model. BIM** arquivo.  
   
- Você pode exibir as propriedades básicas de projeto na janela **Propriedades** . Em **Solution Explorer**, clique em `AW Internet Sales Tabular Model`. Observe que, na janela **Propriedades** , em **Arquivo de Projeto**, você verá **Modelo de Tabela de Vendas pela Internet do AW.smproj**. Esse é o nome do arquivo de projeto e, em **Pasta do Projeto**, você verá o local do arquivo do projeto.  
+ Você pode exibir as propriedades básicas de projeto na janela **Propriedades** . Na **Gerenciador de soluções**, clique em `AW Internet Sales Tabular Model`. Observe que, na janela **Propriedades** , em **Arquivo de Projeto**, você verá **Modelo de Tabela de Vendas pela Internet do AW.smproj**. Esse é o nome do arquivo de projeto e, em **Pasta do Projeto**, você verá o local do arquivo do projeto.  
   
- Em **Solution Explorer**, com o botão direito do `AW Internet Sales Tabular Model` do projeto e, em seguida, clique em **propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades de projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
+ No **Gerenciador de soluções**, clique com botão direito do `AW Internet Sales Tabular Model` de projeto e, em seguida, clique em **propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades de projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
   
  Agora, vamos analisar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Essa propriedade especifica se o modelo será implantado ou não no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.  
   

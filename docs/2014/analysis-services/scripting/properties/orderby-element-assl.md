@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18fa2af79937c7f927413f0e601b6969bbfeb3bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2151ac4cdcaa095d663682c936158557c1fea2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291312"
 ---
 # <a name="orderby-element-assl"></a>Elemento OrderBy (ASSL)
   Descreve como ordenar os membros contidos no atributo.  
@@ -68,7 +68,7 @@ ms.locfileid: "36020144"
 |-----------|-----------------|  
 |*Nome*|Ordene pelo nome de membro.|  
 |*Chave*|Ordene pela chave de membro.|  
-|*AttributeKey*|Ordenar por chave de membro do atributo especificado no [OrderByAttributeID](id-element-assl.md) elemento `DimensionAttribute`.|  
+|*AttributeKey*|Ordene pela chave de membro do atributo especificado na [OrderByAttributeID](id-element-assl.md) elemento de `DimensionAttribute`.|  
 |*AttributeName*|Ordene pelo nome de membro do atributo especificado no elemento `OrderByAttributeID` de `DimensionAttribute`.|  
   
  A enumeração que corresponde aos valores permitidos para `OrderBy` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.OrderBy>.  

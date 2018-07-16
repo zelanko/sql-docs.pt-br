@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246887"
 ---
 # <a name="the-memory-optimized-filegroup"></a>O grupo de arquivos com otimização de memória
   Para criar tabelas com otimização de memória, você deve primeiro criar um grupo de arquivos com otimização de memória. O grupo de arquivos com otimização de memória retém um ou mais contêineres. Cada contêiner contém arquivos de dados ou arquivos delta, ou então ambos.  
@@ -61,7 +61,7 @@ ms.locfileid: "36020037"
   
  Em um contêiner múltiplo, cenário com várias unidades, os arquivos de dados e delta são alocados em rodízio nos contêineres. O primeiro arquivo de dados é alocado no primeiro contêiner e o arquivo delta é alocado no próximo contêiner, repetindo o padrão de alocação. Este esquema de alocação distribui os dados e os arquivos delta uniformemente entre os contêineres se você possui um arquivo ímpar de unidades, cada um mapeado para um contêiner. Contudo, se você possuir um número par de unidades, cada um mapeado para um contêiner, isso poderá resultar no armazenamento desequilibrado dos dados para unidades ímpares e arquivos deltas mapeados para unidades pares. Para obter um fluxo equilibrado de ES na recuperação, considere posicionar pares de arquivos de dados e delta nos mesmos eixos/armazenamentos descritos no exemplo abaixo.  
   
- **Exemplo:** considere um grupo de arquivos com otimização de memória com dois contêineres: o contêiner 1 na unidade X e o contêiner 2 nas unidades Y. Desde que a alocação de arquivos delta e de dados é feita no modo round robin, contêiner 1 terá apenas os arquivos de dados e o contêiner 2 terá apenas os arquivos delta, que levará ao desequilíbrio para armazenamento, bem como operações de entrada/saída por segundo, como arquivos de dados são significativamente maiores do que os arquivos delta. Para distribuir dados e arquivos delta uniformemente entre unidades X e Y, crie quatro contêineres em vez de dois e mapeie os primeiros dois contêineres para a unidade X e os dois contêineres para a unidade Y. Com a alocação de rodízio, os dados primeiro e o primeiro arquivo delta serão alocados no contêiner-1 e contêiner-2 respectivamente que são mapeados para a unidade X. Da mesma forma, o próximo arquivo de dados e delta será alocado no contêiner-3 e contêiner-4, que são mapeados para a unidade Y. Isso permite a distribuição de dados e arquivos delta entre as duas unidades uniformemente.  
+ **Exemplo:** considere um grupo de arquivos com otimização de memória com dois contêineres: o contêiner 1 na unidade X e o contêiner 2 nas unidades Y. Uma vez que a alocação de arquivos delta e de dados é feita no estilo round-robin, contêiner 1 terá apenas os arquivos de dados e contêiner 2 terá apenas arquivos delta, que levará ao desequilíbrio do armazenamento, bem como operações de entrada/saída por segundo, como arquivos de dados são significativamente maiores que os arquivos delta. Para distribuir arquivos de dados e delta uniformemente entre unidades X e Y, crie quatro contêineres em vez de dois e mapeie os primeiros dois contêineres para a unidade X e os próximos dois contêineres para a unidade Y. Com alocação round-robin, os dados primeiro e o primeiro arquivo delta serão alocados no contêiner-1 e contêiner-2 respectivamente que são mapeados para a unidade X. Da mesma forma, o próximo arquivo de dados e delta será alocado no contêiner-3 e contêiner-4, que são mapeados para a unidade Y. Isso permite distribuir os arquivos de dados e delta uniformemente entre as duas unidades.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)  

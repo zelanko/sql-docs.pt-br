@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
@@ -16,16 +16,16 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6a00014c901eab5a1ec2254ccb2bd04b609f7232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255548"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
-  O arquivo RSReportDesigner.config armazena configurações sobre as extensões de renderização e processamento de dados disponíveis no Designer de Relatórios. Informações de extensão de processamento de dados são armazenadas no `Data` elemento. Informações de extensão de renderização são armazenadas no elemento `Render`. O elemento `Designer` enumera os construtores de consulta usados no Designer de Relatórios.  
+  O arquivo RSReportDesigner.config armazena configurações sobre as extensões de renderização e processamento de dados disponíveis no Designer de Relatórios. Informações de extensão de processamento de dados são armazenadas em do `Data` elemento. Informações de extensão de renderização são armazenadas no elemento `Render`. O elemento `Designer` enumera os construtores de consulta usados no Designer de Relatórios.  
   
  O Designer de Relatórios usa funcionalidade de servidor de relatório inserida para uma visualização prévia dos relatórios. Configurações relacionadas a servidor podem ser especificadas para oferecer suporte a processamento do lado do servidor local para operações de visualização prévia. Para obter mais informações sobre definições de configuração do servidor de relatório, consulte [arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md).  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36020858"
 |`SessionTimeoutMinutes`|Especifica o período para o qual um cookie de sessão é válido. O padrão é 3 minutos.|  
 |`PolicyLevel`|Especifica o arquivo de configuração de política de segurança. O valor válido é Rspreviewpolicy.config. Para obter mais informações, consulte [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Quando definido como `True`, o Designer de relatórios armazena dados em um arquivo de cache no computador local. Os valores válidos são `True` (padrão) e `False`. Para obter mais informações, consulte [Visualizando relatórios](../reports/previewing-reports.md).|  
-|`Render`|Enumera as extensões de renderização disponíveis ao Designer de Relatórios para propósitos de visualização prévia. O conjunto de extensões de renderização usado para a visualização prévia deve ser idêntico ao instalado com o servidor de relatório.<br /><br /> `Name` Especifica a extensão de renderização. Se você estiver invocando uma extensão de renderização por código, use este valor para chamar uma extensão específica.<br /><br /> `Type` Especifica o nome de classe totalmente qualificado da classe de extensão, mais o nome da biblioteca, separados por vírgula.<br /><br /> `Visible` especifica se o nome será exibido em qualquer interface de usuário. Esse valor pode ser `True` (padrão) ou `False`. Se `True`, é exibido em interfaces de usuário.|  
-|`Data`|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica a extensão de processamento de dados.<br /><br /> `Type` Especifica o nome de classe totalmente qualificado da classe de extensão, mais o nome da biblioteca, separados por vírgula.|  
+|`Render`|Enumera as extensões de renderização disponíveis ao Designer de Relatórios para propósitos de visualização prévia. O conjunto de extensões de renderização usado para a visualização prévia deve ser idêntico ao instalado com o servidor de relatório.<br /><br /> `Name` Especifica a extensão de renderização. Se você estiver invocando uma extensão de renderização por código, use este valor para chamar uma extensão específica.<br /><br /> `Type` Especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separados por vírgula.<br /><br /> `Visible` especifica se o nome será exibido em qualquer interface de usuário. Esse valor pode ser `True` (padrão) ou `False`. Se `True`, é exibido em interfaces de usuário.|  
+|`Data`|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica a extensão de processamento de dados.<br /><br /> `Type` Especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separados por vírgula.|  
 |`Designer`|Enumera os construtores de consulta disponíveis para o Designer de Relatórios. Construtores de consulta fornecem uma interface de usuário para construir consultas que recuperam dados usados em relatórios. Construtores de consulta podem variar de acordo com extensões de processamento de dados diferentes. Por padrão, o Reporting Services fornece uma interface de usuário de ferramenta de dados visuais para todas as extensões de processamento de dados incluídas no produto. Entretanto, se você estiver construindo ou usando extensões de processamento de dados de terceiros, outras interfaces de construtor de consulta poderão ser aplicáveis.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Especifica o período para esperar pelo serviço de processamento de visualização para começar antes de mostrar uma mensagem de erro. O padrão é 15 segundos.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)   
- [Ferramentas de Design no relatório Designer do SQL Server Data Tools consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
+ [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
   
   

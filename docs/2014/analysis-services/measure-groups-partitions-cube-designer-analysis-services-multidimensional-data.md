@@ -1,5 +1,5 @@
 ---
-title: Grupos de medidas (guia partições, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: (Guia partições, Designer de cubo) de grupos de medidas (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 205b5260d67421cffe8b05abb4c27243d1dc8386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a372e8418692c0db98332b7fa67d8563265d1de4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249436"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de Medidas (guia Partições, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Grupos de Medidas** na guia **Partições** do Designer de Cubo para gerenciar as partições associadas a cada grupo de medidas do cubo.  
@@ -73,7 +73,7 @@ ms.locfileid: "36020578"
 |**Agregações de design**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Configurações de armazenamento**|Clique para exibir a caixa de diálogo **Configurações de Armazenamento** e especificar o modo de armazenamento, o cache pró-ativo e configurações de notificação para a partição selecionada.|  
 |**Configurações de write-back**|Clique para exibir a caixa de diálogo **Habilitar/Desabilitar Write-back** e especificar configurações de write-back para o grupo de medidas que contém a partição selecionada.|  
-|**Otimização baseada em uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
+|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar a partição selecionada.|  
 |**Copiar**|Esta opção está desabilitada.|  
 |**Colar**|Esta opção está desabilitada.|  

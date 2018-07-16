@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265412"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
@@ -38,7 +38,7 @@ ms.locfileid: "36020577"
  Na página **Definir Comportamento Semiaditivo** do assistente, selecione como definir o aspecto semiaditivo selecionando uma destas opções:  
   
  **Desativar comportamento semiaditivo**  
- Remove o comportamento semiaditivo de um cubo no qual ele foi previamente definido. Essa seleção redefinirá uma medida para `SUM` se ele estiver definido para qualquer um dos seguintes tipos de função de agregação:  
+ Remove o comportamento semiaditivo de um cubo no qual ele foi previamente definido. Essa seleção redefinirá uma medida para `SUM` se ele for definido como qualquer um dos seguintes tipos de função de agregação:  
   
 -   Por Conta  
   

@@ -1,5 +1,5 @@
 ---
-title: Página de seleção de conjunto de dados (Gerenciador de relatórios) compartilhada | Microsoft Docs
+title: Página de seleção de conjunto de dados (Gerenciador de relatórios) compartilhadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 24535c8bbc232852dd4706d32ac8b3910447a97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c364c6d7d72860f031f81d33fe5bca39305f9f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330816"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página Seleção de Conjunto de Dados Compartilhado (Gerenciador de Relatórios)
   Use a página Seleção de Conjunto de Dados Compartilhado para revisar e modificar os conjuntos de dados compartilhados que estão associados a um relatório.  

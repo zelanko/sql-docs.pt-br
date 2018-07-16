@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -20,13 +20,13 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f4f4e80a193b1a9cb2f492bf2deab88af1d0f47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234496"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint
   Para um servidor de relatório executado no modo integrado do SharePoint, as configurações de segurança no site do SharePoint determinam como exibir e gerenciar os relatórios, modelos de relatório e fontes de dados compartilhadas. Se você estiver usando os grupos, níveis de permissão e atribuições de permissão do SharePoint padrão, será possível trabalhar com relatórios e outros documentos usando as configurações de segurança atuais.  
@@ -85,7 +85,7 @@ ms.locfileid: "36115645"
   
 |Tarefa|Permissão|  
 |----------|----------------|  
-|Iniciar o Construtor de Relatórios.|Não há permissões explicitamente usadas para controlar o acesso ao uso do Construtor de Relatórios. O Construtor de Relatórios estará disponível se a integração com o servidor de relatórios estiver configurada e se você tiver permissão para adicionar itens a uma biblioteca. Para iniciar o Construtor de Relatórios no menu **Novo** da biblioteca, você deverá registrar o tipo de conteúdo do Construtor de Relatórios. Para obter mais informações, consulte [Adicionar relatório servidor tipos de conteúdo em uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Iniciar o Construtor de Relatórios.|Não há permissões explicitamente usadas para controlar o acesso ao uso do Construtor de Relatórios. O Construtor de Relatórios estará disponível se a integração com o servidor de relatórios estiver configurada e se você tiver permissão para adicionar itens a uma biblioteca. Para iniciar o Construtor de Relatórios no menu **Novo** da biblioteca, você deverá registrar o tipo de conteúdo do Construtor de Relatórios. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Carregar um modelo ou uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que conterá os arquivos.|  
 |Exibir um modelo ou uma fonte de dados compartilhados dependente.|**Exibir Itens** para a biblioteca que contém os arquivos.<br /><br /> Se o modelo contiver configurações de segurança de item de modelo, o usuário também deverá ter a permissão **Enumerar Permissões** para o modelo.|  
 |Gerar um modelo com base em uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém o arquivo de fonte de dados compartilhada (.rsds) usado para a criação do modelo.|  
@@ -124,7 +124,7 @@ ms.locfileid: "36115645"
   
 |Tarefas|Permissão|  
 |-----------|----------------|  
-|Criar uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém a fonte de dados compartilhada. Você pode criar novas fontes de dados compartilhadas no menu Novo em uma biblioteca. Para isso, você deverá registrar o tipo de conteúdo da Fonte de Dados de Relatório na biblioteca. Para obter mais informações, consulte [Adicionar relatório servidor tipos de conteúdo em uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Criar uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém a fonte de dados compartilhada. Você pode criar novas fontes de dados compartilhadas no menu Novo em uma biblioteca. Para isso, você deverá registrar o tipo de conteúdo da Fonte de Dados de Relatório na biblioteca. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Editar uma fonte de dados compartilhados.|**Editar Itens** na biblioteca que contém a fonte de dados compartilhada ou na própria fonte de dados compartilhada.|  
 |Excluir uma fonte de dados compartilhados.|**Excluir Itens** na biblioteca que contém a fonte de dados compartilhada ou na própria fonte de dados compartilhada.|  
 |Usar uma fonte de dados compartilhados (.rsds) com um relatório.|**Editar Itens** no relatório ou na biblioteca que contém o relatório. A seleção de uma fonte de dados compartilhados é parte da definição de propriedades de fonte de dados de um relatório.|  
@@ -136,9 +136,9 @@ ms.locfileid: "36115645"
 >  Não há permissões para editar modelos de relatório. Embora seja possível gerar ou excluir modelos de relatórios, não é possível editá-los em um site do SharePoint. A edição de modelos de relatório requer o Designer de Modelos, uma ferramenta de criação de clientes que não é afetada por permissões definidas no SharePoint.  
   
 ## <a name="see-also"></a>Consulte também  
- [Concedendo permissões em itens de servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar funções e tarefas no Reporting Services com permissões e grupos do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Concedendo permissões em itens de servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concedendo permissões em itens do servidor de relatório em um Site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

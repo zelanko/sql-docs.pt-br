@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e6c4a62d85fcf8caad2cb9edd403a9ec6dbb038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 881cad1038e2f583c9e4462c8928f880c47d03e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215166"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ServerNetworkProtocol)
   Obtém o nome para exibição do protocolo de rede do servidor.  

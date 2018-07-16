@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181658"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implantando uma extensão de renderização
   Depois de escrever e compilar a extensão de renderização de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para uma biblioteca do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  
@@ -69,7 +69,7 @@ ms.locfileid: "36116881"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     O valor de **Name** é o nome exclusivo da extensão de renderização. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da implementação do <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida pelo nome do assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de renderização ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como o Gerenciador de relatório, adicione um **visível** de atributo para o `Extension` elemento e defina-a como `false`.  
+     O valor de **Name** é o nome exclusivo da extensão de renderização. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da implementação do <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida pelo nome do assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de renderização ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como o Gerenciador de relatórios, adicione uma **Visible** atributo para o `Extension` elemento e defina-o como `false`.  
   
 ## <a name="verifying-the-deployment"></a>Verificando a implantação  
  Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de tipos de exportação disponíveis para um relatório.  

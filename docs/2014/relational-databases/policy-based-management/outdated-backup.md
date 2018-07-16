@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 702d49974dc77aad02b9cf79a1ebeff2ed03dc25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 045400c76e2926660a55906ec8a417f0633ef1d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225226"
 ---
 # <a name="outdated-backup"></a>Backup desatualizado
   Esta regra verifica se um banco de dados possui backups recentes. Programar backups regulares é importante para proteger os bancos de dados contra perda de dados de muitas falhas diferentes. A frequência apropriada para fazer backup de dados depende do modelo de recuperação do banco de dados, dos requisitos do negócio sobre uma possível perda de dados e da frequência em que o banco de dados é atualizado. Em um banco de dados atualizado frequentemente, a exposição à perda de trabalho aumenta rapidamente entre backups.  

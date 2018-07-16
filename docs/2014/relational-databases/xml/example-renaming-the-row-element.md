@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6349d5ee4a250748b49eb8ddb3768644802a6da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f339d18e2653897cbc956bb605e60ebf8154dc40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244756"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: renomeando o elemento &lt;row&gt;
   Para cada linha no conjunto de resultados, o modo RAW gera um elemento `<row>`. Opcionalmente, é possível especificar outro nome para esse elemento especificando um argumento opcional para o modo RAW, conforme mostrado nesta consulta. A consulta retorna um elemento <`ProductModel`> para cada linha do conjunto de dados.  

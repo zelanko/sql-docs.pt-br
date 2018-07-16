@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do modelo para modelos Naive Bayes de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Mining Model Content para modelos Naive Bayes (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216116"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos Naive Bayes (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração específico para modelos que usam o algoritmo Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -289,10 +289,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  No modelo Naive Bayes, não pode haver atributos contínuos. Portanto, todos os dados numéricos são representados como discretos (VALUE_TYPE = 4) ou diferenciados (VALUE_TYPE = 5).  
   
- Um `Missing` valor (VALUE_TYPE = 1) é adicionado a todos os atributos de entrada e saído para representar valores potenciais que não estavam presentes nos dados de treinamento. Você deve ter cuidado para distinguir "missing" como uma cadeia de caracteres e o padrão `Missing` valor. Para obter mais informações, consulte [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Um `Missing` valor (VALUE_TYPE = 1) é adicionado a cada atributo de entrada e saído para representar valores potenciais que não estavam presentes nos dados de treinamento. Você deve ter cuidado para distinguir "missing" como uma cadeia de caracteres e o padrão `Missing` valor. Para obter mais informações, consulte [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração de dados](data-mining-model-viewers.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Referência técnica do algoritmo Naive Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)  

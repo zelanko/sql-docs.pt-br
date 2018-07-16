@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
 - backups [SQL Server], database
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02df79818f8cd100202487e9241e1387e91727de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4f38f25c58b52b4535e0a91831d1d3de48ccff82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217486"
 ---
 # <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
   Um backup completo de banco de dados faz o backup de todo o banco de dados. Isso inclui parte do log de transações de modo que o banco de dados completo possa ser recuperado depois que um backup completo de banco de dados for restaurado. Backups completos de banco de dados representam o banco de dados no momento em que o backup foi concluído.  

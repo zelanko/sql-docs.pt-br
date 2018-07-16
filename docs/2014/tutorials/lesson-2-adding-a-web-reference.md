@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 caps.latest.revision: 29
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ff574cf6ab00b4b368a7d372957b2348757ad0f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275622"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Adicionando uma referência da Web
   Descoberta de serviço Web é o processo pelo qual um cliente localiza um serviço Web e obtém a descrição desse serviço. O processo de descoberta de serviço Web no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] envolve questionar um site que segue um algoritmo predeterminado. O objetivo do processo é localizar a descrição do serviço, que é um documento XML que usa linguagem WSDL.  
@@ -30,19 +30,19 @@ ms.locfileid: "36115332"
   
 ### <a name="to-add-a-web-reference"></a>Para adicionar uma referência da Web  
   
-1.  Sobre o **projeto** menu, clique em **adicionar referência de serviço**.  
+1.  Sobre o **Project** menu, clique em **Add Service Reference**.  
   
 2.  No **adicionar referência de serviço** caixa de diálogo, clique em **avançado**.  
   
-3.  No **configurações de referência de serviço** caixa de diálogo, clique em **adicionar referência Web**.  
+3.  No **configurações de referência de serviço** caixa de diálogo, clique em **Add Web Reference**.  
   
-4.  No **URL** caixa do **adicionar referência Web** caixa de diálogo, digite a URL para obter a descrição do serviço Web servidor de relatório, como http://localhost/reportserver/reportservice2010.asmx. Em seguida, clique no **vá** botão para recuperar informações sobre o serviço da Web.  
+4.  No **URL** caixa da **Add Web Reference** caixa de diálogo, digite a URL para obter a descrição do serviço Web servidor de relatório, como http://localhost/reportserver/reportservice2010.asmx. Em seguida, clique o **vá** botão para recuperar informações sobre o serviço Web.  
   
      \- ou –  
   
-     Se o serviço Web do servidor de relatório não existir no computador local, clique o **serviços Web no computador local** link no painel do navegador. Em seguida, clique no link do serviço Web ReportService2010 na lista fornecida.  
+     Se o serviço Web servidor de relatórios existir no computador local, clique o **serviços Web no computador local** link no painel do navegador. Em seguida, clique no link do serviço Web ReportService2010 na lista fornecida.  
   
-5.  No **nome da referência Web** caixa, renomeie a referência Web como ReportService2010, que é o namespace que você usará para essa referência da Web.  
+5.  No **nome da referência Web** caixa, renomeie a referência Web como ReportService2010, que é o namespace que você usará para esta referência Web.  
   
 6.  Clique em **adicionar referência** para adicionar uma referência Web para o serviço Web de destino.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "36115332"
   
 7.  No menu projeto, clique em **adicionar referência**.  
   
-8.  No **adicionar referência** na caixa de **.NET** guia, selecione **System.Web.Services**, em seguida, clique em **Okey**.  
+8.  No **adicionar referência** na caixa a **.NET** guia, selecione **System**, em seguida, clique em **Okey**.  
   
  Para obter mais informações, consulte [Acessando a API SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço Web do Servidor de Relatório](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Lição 3: Acessando o serviço Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
- [Acessando o serviço Web de servidor de relatório usando o Visual Basic ou Visual C#&#35; &#40;Tutorial do SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Acessando o serviço de Web do servidor de relatório usando o Visual Basic ou Visual C&#35; &#40;Tutorial do SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

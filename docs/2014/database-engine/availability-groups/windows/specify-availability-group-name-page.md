@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.specifyagname.f1
 - sql12.swb.newagwizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 1ef803d5ee1fb81b6ec6fffd0b4c5c529a9310d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3a502b778acb187aa8d894a462ebc06876f195ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202056"
 ---
 # <a name="specify-availability-group-name-page-new-availability-group-wizardadd-database-wizard"></a>Página Especificar Nome do Grupo de Disponibilidade (Assistente de Novo Grupo de Disponibilidade/Assistente para Adicionar Banco de Dados)
   Este tópico descreve as opções da página **Especificar nome de grupo de disponibilidade**. Este tópico é usado pelo [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e pelo [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -38,6 +37,6 @@ ms.locfileid: "36115120"
 -   [Usar o Assistente para Adicionar Banco de Dados ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

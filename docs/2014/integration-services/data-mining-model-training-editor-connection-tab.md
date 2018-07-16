@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6210a482587b4bccbd9352536c08200818c9c0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 604012c4fa0db262ab862eb56627d794e57eaa7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197416"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Treinamento do Modelo de Mineração de Dados** para selecionar um modelo de mineração para treinar.  

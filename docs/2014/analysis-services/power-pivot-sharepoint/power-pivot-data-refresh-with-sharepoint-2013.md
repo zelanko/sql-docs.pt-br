@@ -1,5 +1,5 @@
 ---
-title: Atualização de dados do PowerPivot com o SharePoint 2013 | Microsoft Docs
+title: Atualização de dados PowerPivot com o SharePoint 2013 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280772"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Atualização de dados PowerPivot com SharePoint 2013
   O design para atualização de modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint 2013 utiliza Serviços do Excel como o principal componente para carregar e atualizar modelos de dados em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada no modo SharePoint. O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado externamente ao farm do SharePoint.  
   
- Arquitetura de atualização de dados anterior baseava-se exclusivamente no serviço de sistema do PowerPivot para carregar e atualizar modelos de dados em um modo SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] era executada localmente no servidor de aplicativos do PowerPivot. A nova arquitetura também apresenta um novo método para manter informações de agendamento como metadados de item da pasta de trabalho na biblioteca de documentos. A arquitetura dos Serviços do Excel do SharePoint 2013 oferece suporte para a **atualização de dados interativa** e para a **atualização de dados agendada**.  
+ Arquitetura de atualização de dados anterior baseava-se exclusivamente no serviço de sistema do PowerPivot para carregar e atualizar modelos de dados em um modo do SharePoint [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. A instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] era executada localmente no servidor de aplicativos do PowerPivot. A nova arquitetura também apresenta um novo método para manter informações de agendamento como metadados de item da pasta de trabalho na biblioteca de documentos. A arquitetura dos Serviços do Excel do SharePoint 2013 oferece suporte para a **atualização de dados interativa** e para a **atualização de dados agendada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -167,10 +167,10 @@ ms.locfileid: "36020373"
   
     -   Salvar a pasta de trabalho no banco de dados de conteúdo novamente.  
   
- ![gerenciar o menu de contexto de atualização de dados](../media/as-manage-datarefresh-sharepoint2013.gif "gerenciar o menu de contexto de atualização de dados")  
+ ![gerenciar o menu de contexto de atualização de dados](../media/as-manage-datarefresh-sharepoint2013.gif "gerenciar do menu de contexto de atualização de dados")  
   
 > [!TIP]  
->  Para obter informações sobre como atualizar pastas de trabalho do SharePoint online, consulte [atualizar pastas de trabalho com modelos PowerPivot inseridos do SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
+>  Para obter informações sobre como atualizar pastas de trabalho do SharePoint online, consulte [pastas de trabalho de atualização de Excel com modelos PowerPivot inseridos do SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
   
 ##  <a name="bkmk_refresh_architecture"></a> Arquitetura de atualização no SharePoint 2013  
  A ilustração a seguir resume a arquitetura de atualização de dados no SharePoint 2013 e no SQL Server 2012 SP1.  
@@ -229,7 +229,7 @@ ms.locfileid: "36020373"
   
 4.  Na caixa de diálogo **Propriedades de conexão** , clique em **Definição**e no botão **Configurações de Autenticação…** .  
   
- ![configurações de autenticação de serviços do Excel](../media/as-authentication-settings-4-ecs-in-excel2013.gif "configurações de autenticação de serviços do excel")  
+ ![configurações de autenticação de serviços do Excel](../media/as-authentication-settings-4-ecs-in-excel2013.gif "as configurações de autenticação de serviços do excel")  
   
  Para obter mais informações sobre autenticação de atualização de dados e uso de credenciais, consulte a postagem de blog [Atualizando dados PowerPivot no SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
@@ -239,7 +239,7 @@ ms.locfileid: "36020373"
  [Serviços do Excel no SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
 ## <a name="see-also"></a>Consulte também  
- [Atualizar pastas de trabalho e atualização de dados agendada &#40;do SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [Atualizar pastas de trabalho e atualização de dados agendada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [Instalação do PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

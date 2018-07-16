@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c4e815c2bdf5ad0f3c3eaa2bceaed03b09bc77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284232"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
   Uma consulta singleton será útil se você quiser criar uma previsão para um único caso. Para obter mais informações sobre as consultas singleton, veja [Consultas de mineração de dados](data-mining-queries.md).  

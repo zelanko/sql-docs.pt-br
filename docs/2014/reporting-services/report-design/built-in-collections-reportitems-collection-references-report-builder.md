@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80d5e835700a6ac411c035856ff7c10b49e0c79b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264462"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Referências de coleções ReportItems (Construtor de Relatórios e SSRS)
-  A coleção interna de `ReportItems` é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. O `ReportItems` coleção inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo do relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. Você pode usar o `ReportItems` coleção interna para produzir cabeçalhos de página do estilo de dicionário que mostram o primeiro e o último item em cada página.  
+  A coleção interna de `ReportItems` é o conjunto de caixas de texto de itens de relatório, como linhas de uma região de dados ou caixas de texto na superfície de design de relatório. O `ReportItems` coleção inclui caixas de texto que estão no escopo atual de um cabeçalho de página, rodapé de página ou corpo do relatório. Essa coleção é determinada em tempo de execução pelo processador de relatório e pelo renderizador de relatório. O escopo atual é alterado conforme o processador de relatório combina dados de relatório e os elementos de layout do item de relatório sucessivamente conforme o usuário exibe páginas de um relatório. Você pode usar o `ReportItems` coleção interna para produzir cabeçalhos de página do estilo de dicionário que mostram o primeiro e último item em cada página.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "36019978"
   
      `=ReportItems!Textbox1.Value`  
   
--   Esta expressão, colocada em um `ReportItem` propriedade de cor, caixa de texto exibe o texto em preto quando o valor é > 0; caso contrário, o valor é exibido em vermelho:  
+-   Esta expressão, colocada em um `ReportItem` propriedade Color, da caixa de texto exibe o texto em preto quando o valor é > 0; caso contrário, o valor é exibido em vermelho:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36019978"
  Por exemplo, uma caixa de texto em uma linha que está em um grupo pai não deve conter uma expressão que faça referência ao nome de uma caixa de texto em uma linha do grupo filho. Essa expressão não é resolvida como um valor no relatório porque a caixa de texto da linha filho está fora do escopo. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleções internas em expressões &#40;SSRS e construtor de relatórios&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Coleções internas em expressões &#40;relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;SSRS e construtor de relatórios&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

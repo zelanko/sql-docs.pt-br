@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310806"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir Comportamento Semiaditivo (Assistente de Business Intelligence)
   Use a página **Definir Comportamento Semiaditivo** para habilitar ou desabilitar comportamento semiaditivo em medidas. O comportamento semiaditivo determina como medidas que são contidas por um cubo são agregadas sobre uma dimensão de tempo.  
@@ -33,8 +33,8 @@ ms.locfileid: "36010574"
  **Desativar comportamento semiaditivo**  
  Desabilita comportamento semiaditivo em todas as medidas contidas pelo cubo.  
   
- **O assistente detectou a \<nome da dimensão > dimensão de conta que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
- Habilita comportamento semiaditivo para dimensões de conta que contêm membros semiaditivos. Esta opção define a função de agregação de todas as medidas em grupos de medidas que fazem referência à dimensão de conta para `ByAccount`.  
+ **O assistente detectou a \<nome da dimensão > dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ Habilita comportamento semiaditivo para dimensões de conta que contêm membros semiaditivos. Selecionar esta opção define a função de agregação de todas as medidas em grupos de medidas que faz referência à dimensão de conta para `ByAccount`.  
   
  Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WriteEnabled element
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f78be490a8d171dbdbbf6fddbd9ffb1d4289f050
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 900aa5be98245eeaef4b40cb9e8492182604499d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243616"
 ---
 # <a name="writeenabled-element-assl"></a>Elemento WriteEnabled (ASSL)
   Indica se write-backs de dimensão estão disponíveis (sujeito a permissões de segurança).  
@@ -62,7 +62,7 @@ ms.locfileid: "36020353"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `WriteEnabled` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
+ O elemento que corresponde ao pai de `WriteEnabled` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

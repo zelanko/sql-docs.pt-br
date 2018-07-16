@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bde345380c4fbf8531a74005d307d0b319183760
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 03edb5eb94194afecb4974604101b1ebaae26be8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204876"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix exibe dados de um conjunto de dados. É possível exibir todos os dados recuperados do conjunto de dados ou criar filtros para exibir apenas um subconjunto dos dados. Você também pode adicionar expressões condicionais para preencher valores nulos ou modificar a consulta de um conjunto de dados para incluir colunas que identificam a ordem de classificação de uma coluna existente.  
@@ -28,7 +28,7 @@ ms.locfileid: "36115852"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="working-with-nulls-and-blanks-in-field-values"></a>Trabalhando com nulos e espaços em branco em valores de campo  
- Entre os dados da coleção de campos em um conjunto de dados estão todos os valores recuperados da fonte de dados em tempo de execução, inclusive valores nulos e espaços em branco. Valores nulos e espaços em branco costumam ser indistinguíveis. Na maioria dos casos, trata-se do comportamento desejado. Por exemplo, funções de agregação numéricas como [soma](report-builder-functions-sum-function.md) e [Avg](report-builder-functions-avg-function.md) ignoram valores nulos. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Entre os dados da coleção de campos em um conjunto de dados estão todos os valores recuperados da fonte de dados em tempo de execução, inclusive valores nulos e espaços em branco. Valores nulos e espaços em branco costumam ser indistinguíveis. Na maioria dos casos, trata-se do comportamento desejado. Por exemplo, como funções de agregação numéricas [soma](report-builder-functions-sum-function.md) e [Avg](report-builder-functions-avg-function.md) ignoram valores nulos. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
  Caso você queira tratar valores nulos de maneira diferente, é possível usar expressões condicionais ou o código personalizado para substituir um valor personalizado do valor nulo. Por exemplo, a seguinte expressão substitui o texto `Null` independentemente de onde o valor nulo ocorra no campo `[Size]`.  
   
@@ -61,6 +61,6 @@ FROM Production.Product p
 ## <a name="see-also"></a>Consulte também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Filtrar, agrupar e classificar dados &#40;SSRS e construtor de relatórios&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrar, agrupar e classificar dados &#40;relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

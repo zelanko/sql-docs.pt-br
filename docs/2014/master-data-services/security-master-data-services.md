@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287562"
 ---
 # <a name="security-master-data-services"></a>Segurança (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a segurança para garantir que os usuários tenham acesso aos dados mestre específicos necessários para fazer seus trabalhos e para impedir que acessem dados que não devem estar disponíveis para eles.  
@@ -44,7 +44,7 @@ ms.locfileid: "36020278"
   
 -   [Permissões de objeto modelo](../../2014/master-data-services/model-object-permissions-master-data-services.md), que determinam os atributos de um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses atributos.  
   
--   Opcionalmente, [permissões de membro de hierarquia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinam os membros de um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses membros.  
+-   Opcionalmente, [permissões de membro de hierarquia](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md), que determinam os membros que um usuário pode acessar e o tipo de acesso (leitura ou atualização) que o usuário tem para esses membros.  
   
  Quando você atribui permissões a atributos e membros, as permissões se cruzam e as regras determinam qual permissão tem precedência. Para obter mais informações, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).  
   
@@ -68,16 +68,16 @@ ms.locfileid: "36020278"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar um usuário que permissão total para um modelo.|[Criar um administrador de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
-|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
+|Adicionar um grupo do Active Directory ao [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Essa é a primeira etapa ao dar uma permissão de grupo para acessar dados no aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Adicionar um grupo de &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
 |Atribuir permissão a uma área funcional do aplicativo Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Atribuir permissões de área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |Atribuir permissão a valores de atributos por meio da atribuição de permissão a objetos modelo.|[Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Atribuir permissão a valores de membros por meio da atribuição de permissão a nós da hierarquia.|[Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Os administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
+ [Os administradores de &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
  [Usuários e grupos &#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)   
  [Permissões de área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
- [Permissões de objeto modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de membro de hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   

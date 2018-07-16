@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254108"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
   Usando cláusulas FOR XML com consultas SQL, é possível recuperar e até converter resultados de consultas como dados XML. Essa funcionalidade permite fazer o seguinte quando os resultados da consulta FOR XML podem ser usados no código do aplicativo XML:  
@@ -39,7 +39,7 @@ ms.locfileid: "36020884"
  Este tópico fornece exemplos que demonstram essas aproximações.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recuperando dados FOR XML com ilhas de dados ADO e XML  
- O ADO `Stream` objeto ou outros objetos que dão suporte a COM `IStream` interface, como as páginas ASP (ASP) `Request` e `Response` objetos, pode ser usado para conter os resultados quando você estiver trabalhando com consultas FOR XML.  
+ O ADO `Stream` objeto ou outros objetos que dão suporte a COM `IStream` interface, como Active Server Pages (ASP) `Request` e `Response` objetos, pode ser usado para conter os resultados quando você estiver trabalhando com consultas FOR XML.  
   
  Por exemplo, o código ASP a seguir mostra os resultados da consulta um `xml` coluna tipo de dados, dados demográficos, na tabela Sales. Store do banco de dados de exemplo AdventureWorks. Especificamente, a consulta procura o valor da instância dessa coluna da linha em que o CustomerID é igual a 3.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "36020884"
   
  Neste exemplo, as seguintes APIs gerenciadas do Microsoft .NET Framework são usadas para executar o retorno e a renderização dos resultados de consultas FOR XML:  
   
-1.  `SqlConnection` é usado para abrir uma conexão para o SQL Server, com base no conteúdo de uma variável de cadeia de caracteres de conexão especificada, strConn.  
+1.  `SqlConnection` é usado para abrir uma conexão ao SQL Server, com base no conteúdo de uma variável de cadeia de caracteres de conexão especificada, strConn.  
   
 2.  Em seguida, o `SqlDataAdapter` é usado como o adaptador de dados e usa a conexão SQL e a cadeia de caracteres de uma consulta SQL especificada para executar a consulta FOR XML.  
   
-3.  Após a consulta ser executada, o `SqlDataAdapter.Fill` método é chamado e passado a uma instância de um `DataSet,` MyDataSet, para preencher o conjunto de dados com a saída da consulta FOR XML.  
+3.  Depois que a consulta foi executada, o `SqlDataAdapter.Fill` método é chamado e passado a uma instância de um `DataSet,` mydataset, é para preencher o conjunto de dados com a saída da consulta FOR XML.  
   
 4.  O `DataSet.GetXml` método é chamado para retornar os resultados da consulta como uma cadeia de caracteres que pode ser exibida na página HTML gerada pelo servidor.  
   
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` permite solicitar que o resultado de uma consulta FOR XML seja retornado como tipo de dados `xml` tipo de dados, em vez de string ou image digitado dados, especificando o [diretiva TYPE](type-directive-in-for-xml-queries.md). Quando a diretiva TYPE é usada em consultas FOR XML, ela fornece acesso programático aos resultados de FOR XML de maneira semelhante à mostrada em [Usar dados XML em aplicativos](use-xml-data-in-applications.md).  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` permite solicitar que o resultado de uma consulta FOR XML seja retornado como tipo de dados `xml` tipo de dados, em vez de string ou image tipadas dados, especificando o [diretiva TYPE](type-directive-in-for-xml-queries.md). Quando a diretiva TYPE é usada em consultas FOR XML, ela fornece acesso programático aos resultados de FOR XML de maneira semelhante à mostrada em [Usar dados XML em aplicativos](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

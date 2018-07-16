@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bcb6bf3cad014aaef933f5295f86f8925fc5e2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 88da0d60f74483dc48cdcb470589a98192a2bd3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251808"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
-  Obtém o nome para exibição do protocolo de rede de cliente especificado pelo [configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx).  
+  Obtém o nome de exibição do protocolo de rede de cliente especificado pelo [configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,6 +51,6 @@ object
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurando protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

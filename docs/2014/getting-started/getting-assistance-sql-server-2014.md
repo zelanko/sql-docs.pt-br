@@ -6,20 +6,20 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5697ee9de8311c591bd71a87e8f3361a28b2de04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 44dfb789b8caa90413106655aefb635d0ba7c3db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223656"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtendo assistência (SQL Server 2014)
   Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

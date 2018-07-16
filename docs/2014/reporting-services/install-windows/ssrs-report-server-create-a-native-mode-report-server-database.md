@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198816"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
   O Modo Nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenamento interno. O banco de dados é necessário e é usado para armazenar relatórios publicados, modelos, fontes de dados compartilhadas, dados de sessão, recursos e metadados do servidor.  
@@ -36,7 +36,7 @@ ms.locfileid: "36115643"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Quando criar ou configurar os bancos de dados do servidor de relatório  
  Você deve criar e configurar o banco de dados do servidor de relatório se instalou o servidor de relatório no modo somente arquivos.  
   
- Se você instalou [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão para o modo nativo, o banco de dados do servidor de relatório foi criado e configurado automaticamente quando a instância do servidor de relatório foi instalada. É possível usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir ou modificar as configurações que a Instalação configurou para você.  
+ Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão para o modo nativo, o banco de dados do servidor de relatório foi criado e configurado automaticamente quando a instância do servidor de relatório foi instalada. É possível usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir ou modificar as configurações que a Instalação configurou para você.  
   
 ##  <a name="rsdbrequirements"></a> Antes de iniciar  
  Criar ou configurar um banco de dados de servidor de relatório é um processo de várias etapas. Antes de criar o banco de dados do servidor de relatório, considere como você deseja especificar os seguintes itens:  
@@ -119,10 +119,10 @@ ms.locfileid: "36115643"
   
 7.  Revise as informações na página Resumo para verificar se as configurações estão corretas e clique em **Avançar**.  
   
-8.  Verifique a conexão clicando em uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, consulte [verificar uma instalação do Reporting Services](verify-a-reporting-services-installation.md) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+8.  Verifique a conexão clicando em uma URL na página URL do Servidor de Relatório ou na página URL do Gerenciador de Relatórios. As URLs devem estar definidas para que esse teste funcione. Se a conexão do banco de dados do servidor de relatório for válida, você verá a hierarquia de pastas do servidor de relatório ou o Gerenciador de Relatórios em uma janela do navegador. Para obter mais informações, consulte [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
  [Gerenciar um servidor de relatório do Reporting Services modo nativo](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

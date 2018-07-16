@@ -1,5 +1,5 @@
 ---
-title: Linhas de DBSCHEMA_COLUMNS | Microsoft Docs
+title: Conjunto de linhas DBSCHEMA_COLUMNS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267572"
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de linhas de DBSCHEMA_COLUMNS
   Oferece informações de coluna por todas as colunas que atendem aos critérios de restrição fornecidos.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DBSCHEMA_COLUMNS` linhas contém as seguintes colunas.  
+ O `DBSCHEMA_COLUMNS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

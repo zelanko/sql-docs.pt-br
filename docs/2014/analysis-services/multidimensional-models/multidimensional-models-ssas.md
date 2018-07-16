@@ -1,5 +1,5 @@
 ---
-title: Multidimensional Modeling (SSAS) | Microsoft Docs
+title: Multidimensional (SSAS) de modelagem | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171667"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelagem multidimensional (SSAS)
   Uma solução multidimensional do Analysis Services usa estruturas de cubo para analisar dados comerciais em várias dimensões. O modo multidimensional é o modo de servidor padrão do Analysis Services. Ele inclui um mecanismo de consulta e de cálculo para dados OLAP, com modos de armazenamento MOLAP, ROLAP e HOLAP para equilibrar o desempenho com requisitos de dados escalonáveis. O mecanismo OLAP do Analysis Services é um servidor OLAP líder da indústria que funciona bem com um intervalo amplo de ferramentas de BI. A maioria das implantações do Analysis Services são instaladas como servidores OLAP clássicos.  
@@ -36,7 +36,7 @@ ms.locfileid: "36117271"
   
  [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
- [Funções e permissões &#40;do Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [Funções e permissões &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
  [Power View para modelos multidimensionais](power-view-for-multidimensional-models.md)  
   

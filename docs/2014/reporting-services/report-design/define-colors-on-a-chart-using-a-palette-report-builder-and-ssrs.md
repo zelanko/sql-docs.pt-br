@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77564d3f8d13242af8b457ef96eb80ca14ff2780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 306f73588ed837771bbb5852d9107e44c28f1f0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276062"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definir cores em um gráfico usando uma paleta (Construtor de Relatórios e SSRS)
   Você pode alterar a paleta de cores para um gráfico, selecionando uma paleta predefinida ou definindo uma paleta personalizada. Paletas personalizadas são específicas para relatórios.  

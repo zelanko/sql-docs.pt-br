@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fdcc309eca07c8fc29fa80934e6929054a59b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f154e0eb7666fd4c8534e701f42a521b4fb70ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222526"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Método SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Ativa e desativa o Servidor de Relatório do Windows e os serviços Web.  
@@ -47,7 +47,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parâmetros  
  *EnableWindowsService*  
- Um `Boolean` valor que indica o estado do serviço do Windows. Um valor de `true` inicia o Report Server Windows service; um valor de `false` interrompe o serviço do Windows.  
+ Um `Boolean` valor que indica o estado do serviço Windows. Um valor de `true` inicia o Windows do servidor de relatório do serviço; um valor de `false` interrompe o serviço do Windows.  
   
  *EnableWebService*  
  Um `Boolean` valor que indica o estado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serviço Web. Um valor `true` inicia o serviço Web Servidor de Relatórios; um valor `false` interrompe o serviço Web.  

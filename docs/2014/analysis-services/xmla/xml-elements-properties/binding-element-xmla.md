@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe6f67a91ac410596601ffd2d5e440a0de727d0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec223f5a56ea32388a3485f39db0bbbc494fda85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203963"
 ---
 # <a name="binding-element-xmla"></a>Elemento Binding (XMLA)
   Define uma associação fora de linha para um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objeto, como um atributo em uma dimensão, para o [associações](bindings-element-xmla.md) coleção de um [lote](../xml-elements-commands/batch-element-xmla.md) ou [ Processo](../xml-elements-commands/process-element-xmla.md) comando.  
@@ -66,9 +66,9 @@ ms.locfileid: "36117036"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos `Binding` definem associações fora de linha, diferentes da fonte de dados e das exibições da fonte de dados, para objetos a serem processados por um comando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Batch` ou `Process`. Para obter mais informações sobre o processamento de objetos, consulte [processar objetos &#40;XMLA&#41;](../xml-elements-objects.md).  
+ Os elementos `Binding` definem associações fora de linha, diferentes da fonte de dados e das exibições da fonte de dados, para objetos a serem processados por um comando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Batch` ou `Process`. Para obter mais informações sobre processamento de objetos, consulte [processamento de objetos do &#40;XMLA&#41;](../xml-elements-objects.md).  
   
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

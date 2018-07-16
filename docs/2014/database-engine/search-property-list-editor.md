@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231526"
 ---
 # <a name="search-property-list-editor"></a>Editor da Lista de Propriedades de Pesquisa
   Use esta caixa de diálogo para adicionar ou excluir propriedades em uma lista de propriedades de pesquisa.  
@@ -33,7 +32,7 @@ ms.locfileid: "36115700"
  **Nome da propriedade**  
  Especifique o nome a ser usado para identificar a propriedade em consultas de texto completo. Um nome de propriedade pode conter espaços internos. O tamanho máximo do **Nome da Propriedade** é de 256 caracteres. Esse nome pode ser um nome amigável, como "Autor" ou "Endereço Residencial" ou pode ser o nome canônico do Windows da propriedade, como `System.Author` ou `System.Contact.HomeAddress`. O**Nome da Propriedade** deve identificar a propriedade exclusivamente dentro do conjunto de propriedades.  
   
- Os desenvolvedores usam o nome da propriedade para identificar a propriedade no [contém](/sql/t-sql/queries/contains-transact-sql) predicado. Portanto, ao adicionar uma propriedade, é importante especificar um valor que represente significativamente a propriedade.  
+ Os desenvolvedores usam o nome da propriedade para identificar a propriedade na [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado. Portanto, ao adicionar uma propriedade, é importante especificar um valor que represente significativamente a propriedade.  
   
  **GUID do conjunto de propriedade**  
  Especifique o identificador do conjunto de propriedades ao qual a propriedade pertence. Esse é um GUID (identificador global exclusivo). Um conjunto de propriedades é um grupo de propriedades logicamente relacionadas. Para obter informações sobre como obter esse valor, consulte “Comentários”, posteriormente neste tópico.  
@@ -57,7 +56,7 @@ ms.locfileid: "36115700"
 -   [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Permissões  
- Consulte [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ Ver [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Consulte também  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

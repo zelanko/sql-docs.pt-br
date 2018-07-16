@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e0fbe3edd6e7d15a108186c11cd207fe02473eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010463"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354958"
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
   Os tópicos desta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
   
- Assemblies são arquivos DLL usados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR Common language runtime (), em vez de usar [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Assemblies são arquivos DLL usados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] runtime de linguagem comum (CLR), em vez de usar [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Um assembly no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é um objeto que faz referência a um módulo de aplicativo gerenciado (arquivo .dll) criado em CLR do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Um assembly contém metadados de classe e código gerenciado. Carregar um assembly para uma instância do SQL Server é a primeira etapa da criação de qualquer um dos objetos de banco de dados a seguir:  
   

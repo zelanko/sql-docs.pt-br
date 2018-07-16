@@ -1,5 +1,5 @@
 ---
-title: Referência técnica do algoritmo msc | Microsoft Docs
+title: Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242006"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
   O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
@@ -103,7 +103,7 @@ ms.locfileid: "36020813"
  O padrão é 64.  
   
  MAXIMUM_STATES  
- Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de estados para um atributo não sequencial for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e tratará os demais estados `Missing`.  
+ Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de estados de um atributo não sequencial for maior que o número máximo de estados, o algoritmo usa os estados mais populares do atributo e tratará os estados restantes como `Missing`.  
   
  O padrão é 100.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36020813"
   
 ## <a name="remarks"></a>Remarks  
   
--   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte a previsão de sequência, consulte [recursos compatíveis com as edições do SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC não dá suporte ao uso de PMML para criar modelos de mineração.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "36020813"
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo msc](microsoft-sequence-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de Clustering de sequência](clustering-model-query-examples.md)   
- [Conteúdo do modelo para modelos de Clustering de sequência de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Mining Model Content para modelos de Clustering de sequência &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

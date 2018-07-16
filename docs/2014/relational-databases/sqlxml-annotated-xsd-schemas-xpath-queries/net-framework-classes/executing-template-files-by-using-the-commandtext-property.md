@@ -18,18 +18,18 @@ helpviewer_keywords:
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a935c42d72f0dc26bc329cb0f4c8649097a317f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b74755c73982bb4ed0380209b34278e68b2309e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227116"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Executando os arquivos de modelo usando a propriedade CommandText
-  Este exemplo ilustra como arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.TemplateFile.  
+  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como o valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.TemplateFile.  
   
  O aplicativo de exemplo executa este modelo:  
   

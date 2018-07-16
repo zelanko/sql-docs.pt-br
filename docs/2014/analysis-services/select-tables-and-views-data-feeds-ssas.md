@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviewsdf.f1
 ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 199e225e6a3a4b63c704606418fae021b1ba3e9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0864ee8b70f104abb02e7064d3f011495f193c3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208096"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Selecionar tabelas e exibições (feeds de dados) (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a selecionar as tabelas e exibições das quais você deseja importar dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -31,7 +31,7 @@ ms.locfileid: "36117049"
  Para fontes de dados que usam a autenticação do Windows, as credenciais do usuário atual são usadas para buscar as tabelas e exibições na caixa de diálogo Selecionar Tabelas e Exibições. Para outras fontes de dados, as credenciais fornecidas na cadeia de conexão são usadas para buscar os dados.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **URL de feed de dados**  
+ **URL do feed de dados**  
  Exibe a URL do feed de dados que você selecionou.  
   
  **Tabelas e exibições**  

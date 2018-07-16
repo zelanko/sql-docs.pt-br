@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276502"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   A Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa uma rede *multicamadas Perceptron* , também denominada *rede Regra-Delta com Algoritmo Backpropagation*, composta de até três camadas de neurônios ou *perceptrons*. Essas camadas são uma camada de entrada, uma camada opcional oculta e uma camada de saída.  
@@ -206,7 +206,7 @@ ms.locfileid: "36115564"
   
 ## <a name="see-also"></a>Consulte também  
  [Algoritmo rede Neural da Microsoft](microsoft-neural-network-algorithm.md)   
- [Conteúdo do modelo de rede Neural modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Mining Model Content para modelos de rede Neural &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemplos de consulta de modelos de rede neural](neural-network-model-query-examples.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 78e98d23998ccc49e005c92fafab8fda118f6d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c709be85fcd21340e9d1254c7bfc14103509d643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212866"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>Chaves simétricas em bancos de dados do sistema
   Esta regra verifica as chaves simétricas criadas pelo usuário nos bancos de dados mestre, msdb, modelo e tempdb.  

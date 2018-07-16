@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36005833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330946"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Executando o Supervisor de Atualização (Prompt de Comando)
   Use o **UpgradeAdvisorWizardCmd** utilitário para executar o Supervisor de atualização do prompt de comando. Você pode escolher receber os resultados no formato XML ou em um arquivo CSV (valores separados por vírgula).  
@@ -47,7 +47,7 @@ where <server_info> is any combination of the following:
  Exibe a sintaxe do comando.  
   
  **-ConfigFile** *nome de arquivo*  
- É o nome do caminho e o nome de um arquivo XML que contém as configurações a serem usadas quando você executa o **UpgradeAdvisorWizardCmd** utilitário.  
+ É o nome de caminho e o nome do arquivo de um arquivo XML que contém as configurações a serem usadas quando você executa o **UpgradeAdvisorWizardCmd** utilitário.  
   
  *< server_info >*  
  Especifica qual computador e instância serão analisadas. Use essas opções se você não estiver usando um arquivo de configuração.  
@@ -57,13 +57,13 @@ where <server_info> is any combination of the following:
  **-Servidor** *nome_do_servidor*  
  Especifica o nome do computador que será analisado. Esse computador pode ser o computador local, que é o valor padrão, ou um computador remoto.  
   
- **-Instância** *nome_da_instância*  
+ **-Instância** *instance_name*  
  Especifica o nome da instância que será analisada. Não há valor padrão. Se você não especificar esse parâmetro, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MSSQLSERVER. Para uma instância nomeada, use o nome da instância.  
   
- **-ASInstance***AS_instance_name*   
+ **-ASInstance***AS_instance_name  *  
  Especifica o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService. Para uma instância nomeada, use o nome da instância.  
   
- **-RSInstance***RS_instance_name*   
+ **-RSInstance***RS_instance_name  *  
  Especifica o nome da instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é ReportServer. Para uma instância nomeada, use o nome da instância.  
   
  **-SqlUser** *login_id*  
@@ -73,10 +73,10 @@ where <server_info> is any combination of the following:
  Se você usar o **- SqlUser** argumento, use esse argumento para especificar a senha para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.  
   
  **-CSV**  
- Especifica que os resultados serão fornecidos como valores separados por vírgula em um arquivo .csv, além dos resultados em XML padrão. Os resultados são gravados para a pasta\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Advisor\110\Reports Atualizar pasta.  
+ Especifica que os resultados serão fornecidos como valores separados por vírgula em um arquivo .csv, além dos resultados em XML padrão. Resultados são gravados em Meus documentos\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pasta Upgrade Advisor\110\Reports.  
   
 ## <a name="return-values"></a>Valores de retorno  
- A tabela a seguir mostra os valores que **UpgradeAdvisorWizardCmd** retorna.  
+ A tabela a seguir mostra os valores **UpgradeAdvisorWizardCmd** retorna.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -140,12 +140,12 @@ where <server_info> is any combination of the following:
 |`BatchFile`|Especifica um arquivo em lote que será analisado. Podem ser vários.|Obrigatório uma vez ou mais se o elemento `BatchFiles` estiver presente. Não há valor padrão.|  
 |`BatchSeparator`|Especifica o separador de lote usado em seus arquivos em lotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Opcional uma vez por `SQLServer` elemento. O valor padrão é GO.|  
 |`AnalysisServices`|Contém configurações de análise do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, os bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não serão analisados.|  
-|`ASInstance`|Especifica o nome de uma instância de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Necessário uma vez por `AnalysisServices` elemento. Não há valor padrão.|  
+|`ASInstance`|Especifica o nome de uma instância de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obrigatório uma vez por `AnalysisServices` elemento. Não há valor padrão.|  
 |`Databases` para o elemento `Analysis Services`|Contém uma lista dos bancos de dados que serão analisados.|Opcional uma vez por `AnalysisServices` elemento. Se esse elemento não estiver presente, serão analisados todos os bancos de dados na instância.|  
 |`Database` para o elemento `AnalysisServices`|Especifica o nome do banco de dados que será analisado.|Obrigatório uma vez ou mais se o elemento `Databases` estiver presente. Se um elemento `Database` contiver o valor "*", serão analisados todos os bancos de dados na instância. Não há valor padrão.|  
 |`ReportingServices`|Especifica que a análise será executada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será analisado.|  
-|`RSInstance`|Especifica o nome de uma instância de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Necessário uma vez por `ReportingServices` elemento. Não há valor padrão.|  
-|`IntegrationServices`|Contém as configurações de análise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não será analisado.|  
+|`RSInstance`|Especifica o nome de uma instância de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obrigatório uma vez por `ReportingServices` elemento. Não há valor padrão.|  
+|`IntegrationServices`|Contém configurações de análise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não será analisado.|  
 |`PackagePath`|Especifica o caminho de um conjunto de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez por `IntegrationServices` elemento. Se esse elemento não estiver presente, a análise ocorrerá na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nenhum pacote armazenado externamente será analisado. Não há valor padrão.|  
   
 ## <a name="examples"></a>Exemplos  

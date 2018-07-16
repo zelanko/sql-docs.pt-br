@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266302"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
@@ -51,21 +50,21 @@ ms.locfileid: "36115668"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou chave assimétrica deve ser instalado no `master` banco de dados do servidor de destino, para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
+-   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou chave assimétrica deve ser instalado na `master` banco de dados do servidor de destino, para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
 -   Você deve reter cópias do arquivo de certificado e do arquivo de chave privada para poder recuperar o certificado. A senha da chave privada não precisa ser igual à senha da chave mestra do banco de dados.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena os arquivos criados aqui em **Server \ mssql12 do C:\Program Files\Microsoft SQL. MSSQLSERVER\MSSQL\DATA** por padrão. Os nomes e locais dos seus arquivos poderão ser diferentes.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena os arquivos criados aqui em **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** por padrão. Os nomes e locais dos seus arquivos poderão ser diferentes.  
   
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
   
--   Requer `CONTROL DATABASE` permissão a `master` banco de dados para criar a chave mestra de banco de dados.  
+-   Requer `CONTROL DATABASE` permissão no `master` banco de dados para criar a chave mestra de banco de dados.  
   
--   Requer `CREATE CERTIFICATE` permissão a `master` banco de dados para criar o certificado que protege a DEK.  
+-   Requer `CREATE CERTIFICATE` permissão no `master` banco de dados para criar o certificado que protege a DEK.  
   
--   Requer `CONTROL DATABASE` no banco de dados criptografado e `VIEW DEFINITION` permissão no certificado ou chave assimétrica que é usada para criptografar a chave de criptografia do banco de dados.  
+-   Requer `CONTROL DATABASE` permissão no banco de dados criptografado e `VIEW DEFINITION` permissão no certificado ou chave assimétrica que é usada para criptografar a chave de criptografia de banco de dados.  
   
 ##  <a name="SSMSProcedure"></a> Para criar um banco de dados protegido por criptografia de dados transparente  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280422"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -41,7 +41,7 @@ ms.locfileid: "36020531"
   
 -   Enumerador de Arquivo Foreach para enumerar arquivos em uma pasta. O enumerador pode desviar subpastas. Por exemplo, você pode ler todos os arquivos que têm extensão de nome de arquivo * .log na pasta e respectivas subpastas do Windows.  
   
--   Enumerador Foreach de Variável para enumerar o objeto enumerável que uma variável especificada contém. O objeto enumerável pode ser uma matriz, uma ADO.NET `DataTable`, um [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enumerador e assim por diante. Por exemplo, você pode enumerar os valores de uma matriz que contém o nome de servidores.  
+-   Enumerador Foreach de Variável para enumerar o objeto enumerável que uma variável especificada contém. O objeto enumerável pode ser uma matriz, o ADO.NET `DataTable`, um [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enumerador e assim por diante. Por exemplo, você pode enumerar os valores de uma matriz que contém o nome de servidores.  
   
 -   Enumerador de Item Foreach para enumerar itens que são coleções. Por exemplo, você pode enumerar os nomes de executáveis e diretórios em funcionamento utilizados por uma tarefa Executar Processo.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36020531"
   
 -   Enumerador de Blob do Azure Foreach para enumerar blobs em um contêiner de blob em um Armazenamento do Azure.  
   
--   Enumerador de arquivo do ADLS de foreach para enumerar arquivos em um diretório ADLS.
+-   Enumerador de arquivo do ADLS foreach para enumerar arquivos em um diretório do ADLS.
   
  O diagrama a seguir mostra um contêiner Loop Foreach que tem uma tarefa Sistema de Arquivos. O loop Foreach usa o enumerador de Arquivo Foreach e a tarefa Sistema de Arquivos é configurada para copiar um arquivo. Se a pasta que o enumerador especifica contiver quatro arquivos, o loop repetirá quatro vezes e copiará quatro arquivos.  
   
  ![Um contêiner de Loop Foreach que enumera uma pasta](../media/ssis-foreachloop.gif "Um contêiner de Loop Foreach que enumera uma pasta")  
   
- Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor de coleção do enumerador de arquivo Foreach é mapeado para uma variável chamada `MyFile` e a variável é usada na expressão de propriedade para a propriedade de entidade de uma tarefa enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
+ Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor de coleção do enumerador de arquivo Foreach é mapeado para uma variável chamada `MyFile` e a variável é usada na expressão de propriedade para a propriedade Subject de uma tarefa enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
   
  Variáveis mapeadas para o valor de coleção do enumerador também podem ser usadas em expressões e scripts.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36020531"
 |Nodelist Foreach|Especifique a origem do documento XML e configure a operação XPath.|  
 |SMO Foreach|Especifique a conexão com um banco de dados e os objetos SMO a serem enumerados.|  
 |Blob do Azure Foreach|Especifica o contêiner de BLOBs do Azure que contém blobs a serem enumerados.|  
-|Arquivo ADLS Foreach|Especifique o diretório ADLS que contém os arquivos a serem enumerados, juntamente com alguns filtros.|
+|Arquivo ADLS Foreach|Especifique o diretório do ADLS que contém os arquivos a serem enumerados, juntamente com alguns filtros.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Expressões de propriedade em contêineres Loop Foreach  
  É possível configurar pacotes para executar simultaneamente vários executáveis. Essa configuração deve ser usada com cautela quando o pacote incluir um contêiner Loop Foreach que implementa expressões de propriedade.  

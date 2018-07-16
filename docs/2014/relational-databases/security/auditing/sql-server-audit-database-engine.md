@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238776"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
   A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
@@ -65,7 +64,7 @@ ms.locfileid: "36019803"
 > [!IMPORTANT]  
 >  Qualquer usuário autenticado pode fazer a leitura ou gravação no log de eventos de Aplicativo do Windows. O log de eventos de Aplicativo requer menos permissões que o log de eventos de Segurança do Windows e é menos seguro.  
   
- Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Em [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, você pode definir mais granular **aplicativo gerado** política da linha de comando usando o programa de política de auditoria (`AuditPol.exe)`. Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](http://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
+ Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Na [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou o Windows Server 2008, você pode definir mais granular **aplicativo gerado** diretiva da linha de comando usando o programa de política de auditoria (`AuditPol.exe)`. Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](http://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
   
  Quando você está salvando informações de auditoria em um arquivo, para ajudar a impedir falsificação, você pode restringir o acesso ao local do arquivo das seguintes maneiras:  
   
@@ -130,7 +129,7 @@ ms.locfileid: "36019803"
 -   Para destinos de log de eventos do Windows, a política de segurança no computador em que se encontra o servidor espelho deve permitir o acesso de conta de serviço ao log de eventos de aplicativo ou de segurança.  
   
 ### <a name="auditing-administrators"></a>Administradores de auditoria  
- Membros de `sysadmin` função fixa de servidor são identificadas como o **dbo** em cada banco de dados. Para auditar as ações dos administradores, audite as ações do usuário **dbo** .  
+ Os membros a `sysadmin` função de servidor fixa são identificados como o **dbo** usuário em cada banco de dados. Para auditar as ações dos administradores, audite as ações do usuário **dbo** .  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Criando e gerenciando auditorias com o Transact-SQL  
  É possível usar instruções DDL, funções e exibições de gerenciamento dinâmico e exibições do catálogo para implementar todos os aspectos da Auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

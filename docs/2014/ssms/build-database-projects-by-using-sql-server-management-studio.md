@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], database projects
 - database projects [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f27e236af3bb9cbf29ed88a952a8c5f0a3d0b3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c2b874ae3c21ec5779c37a37e638ba7dbff4beec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189669"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Construir projetos de banco de dados usando o SQL Server Management Studio
   Um projeto de script de banco de dados é um conjunto organizado de scripts, informações de conexão e modelos que são todos associados a um banco de dados ou a uma parte de um banco de dados. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar e criar bancos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no contexto de um projeto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclui os designers, editores, guias e assistentes para ajudar os usuários a desenvolver, implantar e manter bancos de dados.  
@@ -69,7 +69,7 @@ ms.locfileid: "36117325"
   
 ## <a name="see-also"></a>Consulte também  
  [Usar o SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
- [Editores de texto e de consulta &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
+ [Consulta e editores de texto &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Soluções &#40;SQL Server Management Studio&#41;](solution/solutions-sql-server-management-studio.md)  
   
   

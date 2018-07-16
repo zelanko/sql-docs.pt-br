@@ -1,5 +1,5 @@
 ---
-title: Editor de destino do arquivo (página mapeamentos) simples | Microsoft Docs
+title: Editor de destino (página mapeamentos) do arquivo simples | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d7c94ee04df34919f40a0369d60592fe975b6bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213406"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de Destino de Arquivo Simples (Página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de Arquivo Simples** para mapear colunas de entrada para colunas de destino.  
@@ -45,6 +45,6 @@ ms.locfileid: "36020740"
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino do arquivo simples &#40;página Gerenciador de Conexão&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [Editor de destino de arquivo simples &#40;página do Gerenciador de Conexão&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

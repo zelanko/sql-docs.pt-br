@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263222"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
-  Contém um conjunto de tuplas utilizado para representar um único eixo em um conjunto de dados multidimensional contido por um [eixos](axes-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado pelo tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
+  Contém um conjunto de tuplas utilizado para representar um único eixo em um conjunto de dados multidimensional contido por um [eixos](axes-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado por tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36020094"
  O conteúdo do elemento `Axis` varia dependendo do valor da propriedade XMLA `AxisFormat` utilizada pelo método `Execute`.  
   
 ## <a name="tupleformat"></a>TupleFormat  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada elemento `Axis` contém um elemento `Tuples` que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um elemento `Tuple` que contém elementos `Member` de toda hierarquia no eixo.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada elemento `Axis` contém um elemento `Tuples` que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um elemento `Tuple` que contém elementos `Member` de toda hierarquia no eixo.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *ClusterFormat*, os membros em cada eixo são divididos em clusters nos quais cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada elemento `Axis` consiste em um ou mais elementos `CrossProduct`. Cada elemento `CrossProduct` contém um elemento `Members` para cada hierarquia no eixo.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *ClusterFormat*, os membros em cada eixo são divididos em clusters em que cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada elemento `Axis` consiste em um ou mais elementos `CrossProduct`. Cada elemento `CrossProduct` contém um elemento `Members` para cada hierarquia no eixo.  
   
 ## <a name="customformat"></a>CustomFormat  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *CustomFormat*, o valor será tratado o mesmo que o *TupleFormat* valor por uma instância do Analysis Services.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *CustomFormat*, o valor será tratado o mesmo que o *TupleFormat* valor por uma instância do Analysis Services.  
   
 ## <a name="examples"></a>Exemplos  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249736"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
   Este tutorial foi desenvolvido para ajudá-lo a aprender sobre os recursos de mapa que você pode usar para exibir dados de relatório em comparação com um plano de fundo geográfico.  
@@ -35,25 +35,25 @@ ms.locfileid: "36019993"
   
 1.  [Criar um mapa com uma camada de polígono do Assistente de mapa](#Map)  
   
-2.  [Adicionar uma camada de ponto do mapa para exibir locais de loja](#PointLayer)  
+2.  [Adicionar uma camada de ponto do mapa para locais de Store de exibição](#PointLayer)  
   
 3.  [Adicionar uma camada de linha do mapa para exibir uma rota](#LineLayer)  
   
-4.  [Adicionar um plano de fundo de peças do Bing Maps](#TileLayer)  
+4.  [Adicionar um plano de fundo do Bing Maps](#TileLayer)  
   
 5.  [Tornar uma camada transparente](#Transparent)  
   
 6.  [Variar as cores de municípios com base em vendas](#Vary)  
   
-    1.  [Criar uma relação entre dados espaciais e analíticos](#Relationship)  
+    1.  [Crie uma relação entre dados espaciais e analíticos](#Relationship)  
   
-    2.  [Especificar regras de cores para polígonos](#ColorRules)  
+    2.  [Especifique regras de cores para polígonos](#ColorRules)  
   
     3.  [Formatar os dados na escala de cores como moeda](#ColorScale)  
   
     4.  [Criar uma nova legenda](#NewLegend)  
   
-    5.  [Associar regras de cores e legenda](#Associate)  
+    5.  [Regras de cores e legenda associada](#Associate)  
   
     6.  [Limpar cores dos municípios sem dados](#NoData)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36019993"
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para adicionar um mapa com o assistente de mapa em um novo relatório  
   
-1.  Clique em **iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**e, em seguida, clique em **construtor de relatórios**.  
+1.  Clique em **inicie**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **construtor de relatórios**e, em seguida, clique em **construtor de relatórios**.  
   
      A caixa de diálogo Guia de Introdução é exibida.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36019993"
   
      O conjunto de dados de relatório chamado DataSet1 é criado para você. Após a conclusão do assistente, você poderá usar os Dados do Relatório para exibir sua coleção de campos.  
   
-11. No **escolha dados espaciais e opções de exibição de mapa** , verifique se que o **campo espacial** é `SpatialLocation` e que o **tipo de camada** é **ponto**. Aceite os outros padrões nesta página.  
+11. Sobre o **escolha dados espaciais e opções de exibição de mapa** página, verifique o **campo espacial** é `SpatialLocation` e que o **tipo de camada** é **ponto**. Aceite os outros padrões nesta página.  
   
      A exibição do mapa mostra círculos que marcam o local de cada loja.  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36019993"
   
  A escala de cores exibe cinco cores: vermelho, laranja, amarelo, verde-amarelado e verde. Cada cor representa um intervalo de vendas que é calculado automaticamente com base nas vendas por município.  
   
-###  <a name="ColorScale"></a> 6c. Formatar os dados na escala de cores como moeda  
+###  <a name="ColorScale"></a> 6 de c. Formatar os dados na escala de cores como moeda  
  Por padrão, os dados têm um formato geral. Você pode aplicar formatos personalizados.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Para definir o formato da escala de cores  
@@ -456,7 +456,7 @@ ms.locfileid: "36019993"
   
 5.  Em **Opções de legenda**, na lista suspensa, selecione Legend2. A opção de texto da legenda aparece. Por padrão, texto de legenda é formatado com uma cadeia de formato geral do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Os 0 em N0 não especifica nenhum dígito decimal.  
   
-6.  Em **texto de legenda**, use o seguinte formato para especificar a moeda sem dígitos decimais: `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  Na **texto de legenda**, use o seguinte formato para especificar a moeda sem dígitos decimais: `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -584,12 +584,12 @@ ms.locfileid: "36019993"
 ## <a name="next-steps"></a>Próximas etapas  
  Isso conclui o passo a passo da adição de um mapa ao seu relatório.  
   
- Para obter mais informações, consulte [mapas &#40;construtor de relatórios e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [Cartographic Adjustment of Spatial Data para SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) em blogs.msdn.com.  
+ Para obter mais informações, consulte [Maps &#40;construtor de relatórios e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e a entrada de blog [Cartographic Adjustment of Spatial Data para o SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) em blogs.msdn.com.  
   
- Para mais tutoriais, consulte [tutoriais &#40;Report Builder&#41;](report-builder-tutorials.md).  
+ Para obter mais tutoriais, consulte [tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](report-builder-tutorials.md)   
  [Construtor de relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  

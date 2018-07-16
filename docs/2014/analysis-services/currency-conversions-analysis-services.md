@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289818"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversões de moeda (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Somente multidimensional  
@@ -83,7 +83,7 @@ ms.locfileid: "36020817"
   
 -   O `Type` propriedade do atributo de chave para a dimensão é definida como CurrencyName.  
   
--   O `Type` propriedade de um atributo na dimensão é definida como CurrencyDestination e a coluna associada ao atributo contém os identificadores de moeda que representam as moedas de relatório para a conversão de moeda.  
+-   O `Type` propriedade de um atributo na dimensão é definida como CurrencyDestination e a coluna vinculada ao atributo contém os identificadores de moeda que representam as moedas de relatório para a conversão de moeda.  
   
 ## <a name="defining-currency-conversions"></a>Definindo conversões de moeda  
  Você pode usar o Assistente de Business Intelligence para definir a funcionalidade de conversão de moeda de um cubo ou pode definir manualmente as conversões de moeda usando scripts MDX.  

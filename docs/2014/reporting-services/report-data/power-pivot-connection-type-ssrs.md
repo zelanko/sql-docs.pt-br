@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234746"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexão PowerPivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho PowerPivot publicada em uma Galeria PowerPivot do SharePoint.  
@@ -38,7 +38,7 @@ ms.locfileid: "36020629"
  A cadeia de caracteres de conexão é a URL para a pasta de trabalho PowerPivot publicada no SharePoint na Galeria PowerPivot ou em outra biblioteca, por exemplo, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
   
 ## <a name="credentials"></a>Credenciais  
- Especifique as credenciais que você precisa para acessar a pasta de trabalho PowerPivot e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
+ Especifique as credenciais que você precisa para acessar a pasta de trabalho PowerPivot e o site do SharePoint, por exemplo, Autenticação do Windows (Segurança Integrada). Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar as credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
 ## <a name="queries"></a>Consultas  
  Depois de conectar-se à fonte de dados PowerPivot, use a consulta gráfica MDX para criar uma consulta por meio de procura e seleção nas estruturas de dados subjacentes. Depois de criar uma consulta, execute-a para ver os dados de exemplo no painel de resultados.  

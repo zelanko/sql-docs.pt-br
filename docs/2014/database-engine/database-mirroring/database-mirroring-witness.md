@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218116"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
   Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve possuir uma terceira instância de servidor, conhecida como *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
@@ -55,7 +54,7 @@ ms.locfileid: "36020758"
 ##  <a name="SwHwRecommendations"></a> Recomendações de software e hardware  
  A localização da testemunha em um computador separado dos parceiros é altamente recomendável. Os parceiros de espelhamento de banco de dados só têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Enterprise edition. As testemunhas, em contrapartida, também têm suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Exceto durante uma atualização de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as instâncias de servidor em uma sessão de espelhamento devem todas estar executando a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, uma testemunha do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tem suporte quando você está atualizando de uma configuração de espelhamento do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , mas não pode ser adicionada a uma configuração de espelhamento do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] existente, nova ou posterior.  
   
- Uma testemunha pode ser executada em qualquer sistema de computador confiável que forneça suporte a quaisquer edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, é recomendável que toda instância de servidor usada como testemunha atenda à configuração mínima exigida para a versão Standard do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada. Para obter mais informações sobre esses requisitos, consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Uma testemunha pode ser executada em qualquer sistema de computador confiável que forneça suporte a quaisquer edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Porém, é recomendável que toda instância de servidor usada como testemunha atenda à configuração mínima exigida para a versão Standard do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo executada. Para obter mais informações sobre esses requisitos, consulte [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ##  <a name="InAutoFo"></a> Função da testemunha no failover automático  
  Ao longo de uma sessão de espelhamento de banco de dados, todas as instâncias de servidor monitoram seus status de conexão. Se os parceiros forem desconectados uns dos outros, confiarão na testemunha para assegurar que apenas um deles esteja atendendo ao banco de dados atualmente. Se um servidor espelho sincronizado perder sua conexão com o servidor principal, mas continuar conectado à testemunha, o servidor espelho entrará em contato com a testemunha para determinar se a testemunha perdeu sua conexão com o servidor principal:  

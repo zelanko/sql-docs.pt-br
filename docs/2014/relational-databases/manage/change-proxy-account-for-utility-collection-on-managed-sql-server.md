@@ -1,5 +1,5 @@
 ---
-title: Alterar a conta de Proxy para a coleta do utilitário definida em uma instância gerenciada do SQL Server (utilitário do SQL Server) | Microsoft Docs
+title: Alterar a conta Proxy para a coleta do utilitário definida em uma instância gerenciada do SQL Server (utilitário do SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c1d91d38c029e27eb70d30a80da497f5489b136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d41abfdc155288e8140f0a69911829d33a891223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248396"
 ---
 # <a name="change-the-proxy-account-for-the-utility-collection-set-on-a-managed-instance-of-sql-server-sql-server-utility"></a>Alterar a conta proxy para o conjunto de coleta do utilitário em uma instância gerenciada do SQL Server (Utilitário do SQL Server)
   Este tópico descreve como alterar a conta proxy para o Conjunto de Coleta do Utilitário em uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

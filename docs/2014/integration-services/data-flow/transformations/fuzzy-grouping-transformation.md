@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209376"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
   A transformação Agrupamento Difuso executa tarefas de limpeza de dados identificando linhas de dados que provavelmente sejam duplicatas e selecionando uma linha canônica de dados a ser usada na padronização dos dados.  
@@ -73,7 +73,7 @@ ms.locfileid: "36115489"
  Essa transformação tem uma entrada e uma saída. Não dá suporte a uma saída de erro.  
   
 ## <a name="row-comparison"></a>Comparação de linhas  
- Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade Exhaustive como `true`, a transformação comparará todas as linhas na entrada para todas as outras linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive `true` somente durante o desenvolvimento de pacote.  
+ Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade Exhaustive como `true`, a transformação comparará todas as linhas na entrada para todas as outras linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive como `true` somente durante o desenvolvimento de pacote.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
  No tempo de execução, a transformação Agrupamento Difuso cria objetos temporários, como tabelas e índices, potencialmente de tamanho significante, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que a transformação seja conectada. O tamanho das tabelas e índices é proporcional ao número de linhas na entrada de transformação e o número de tokens criados pela transformação Agrupamento Difuso.  
@@ -87,7 +87,7 @@ ms.locfileid: "36115489"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agrupamento Difuso** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação agrupamento difuso &#40;guia Gerenciador de Conexão&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor de transformação agrupamento difuso &#40;guia do Gerenciador de Conexão&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
 -   [Editor de transformação agrupamento difuso &#40;guia colunas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   

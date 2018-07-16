@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
 - number capacity specifications [SQL Server]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b85f0d59501aea5ef8a77daadd6f74796a82b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296036"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
@@ -48,21 +48,21 @@ ms.locfileid: "36020198"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objeto|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tamanho máximo/números [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Tamanho do lote<br /><br /> Observação: O tamanho do pacote de rede é o tamanho dos pacotes de protocolo TDS de dados de tabela usado para comunicação entre aplicativos e o relacional [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Tamanho do lote<br /><br /> Observação: O tamanho do pacote de rede é o tamanho de pacotes tabular data stream (TDS) usados para comunicação entre aplicativos e relacionais [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
 |Bytes por coluna de cadeia de caracteres curta|8,000|8,000|  
 |Bytes por GROUP BY, ORDER BY|8,060|8,060|  
 |Bytes por chave de índice<br /><br /> Observação: O número máximo de bytes em qualquer chave de índice não pode exceder 900 no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode definir uma chave usando colunas de comprimento variável cujos tamanhos máximos somem mais de 900, desde que nenhuma linha jamais seja inserida com mais de 900 bytes de dados nessas colunas. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar o tamanho máximo de chave de índice de 900 bytes.|900|900|  
 |Bytes por chave estrangeira|900|900|  
 |Bytes por chave primária|900|900|  
 |Bytes por linha<br /><br /> Observação:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte ao armazenamento de estouro de linha, o que permite que colunas de comprimento variável sejam enviadas por push para fora da linha. Somente uma raiz de 24 bytes é armazenada no registro principal para colunas de comprimento variável empurradas para fora da linha; por isso, o limite efetivo de linha é maior que nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte o tópico "Dados de estouro de linha que excedem 8 KB" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|8,060|8,060|  
-|Bytes por linha em tabelas com otimização de memória<br /><br /> Observação:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLTP na memória não oferece suporte a armazenamento de estouro de linha. As colunas de comprimento variável não são retiradas da linha. Isso limita a largura máxima de colunas de comprimento variável que você pode especificar em uma tabela com otimização de memória para o tamanho máximo da linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|Sem suporte|8,060|  
+|Bytes por linha em tabelas com otimização de memória<br /><br /> Observação:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLTP na memória não oferece suporte ao armazenamento de estouro de linha. As colunas de comprimento variável não são retiradas da linha. Isso limita a largura máxima de colunas de comprimento variável que você pode especificar em uma tabela com otimização de memória para o tamanho máximo da linha. Para obter mais informações, consulte [Tamanho da tabela e da linha em tabelas com otimização de memória](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|Sem suporte|8,060|  
 |Bytes em texto de fonte de um procedimento armazenado|Menor que o tamanho do lote ou 250 MB|Menor que o tamanho do lote ou 250 MB|  
 |Bytes por coluna `varchar(max)`, `varbinary(max)`, `xml`, `text` ou `image`|2^31-1|2^31-1|  
 |Caracteres por coluna `ntext` ou `nvarchar(max)`|2^30-1|2^30-1|  
 |Índices clusterizados por tabela|1|1|  
 |Colunas em GROUP BY, ORDER BY|Limitado somente pelo número de bytes|Limitado somente pelo número de bytes|  
 |Colunas ou expressões em uma instrução GROUP BY WITH CUBE ou WITH ROLLUP|10|10|  
-|Colunas por chave de índice<br /><br /> Observação: Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela de usuário é limitada a 15 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 16 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
+|Colunas por chave de índice<br /><br /> Observação: Se a tabela contiver um ou mais índices XML, a chave de clustering da tabela do usuário é limitada a 15 colunas porque a coluna XML é adicionada à chave de clustering do índice XML primário. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você pode incluir colunas não chave em um índice não clusterizado para evitar a limitação de um máximo de 16 colunas de chave. Para obter mais informações, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
 |Colunas por chave estrangeira|16|16|  
 |Colunas por chave primária|16|16|  
 |Colunas por tabela não larga|1,024|1,024|  
@@ -81,11 +81,11 @@ ms.locfileid: "36020198"
 |Arquivo delta por arquivo de dados para dados com otimização de memória|Sem suporte|1|  
 |Referências de tabela de chave estrangeira por tabela<br /><br /> Observação: Embora uma tabela pode conter um número ilimitado de restrições FOREIGN KEY, o máximo recomendado é 253. Dependendo da configuração do hardware que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a especificação de restrições FOREIGN KEY adicionais pode ser cara para processamento pelo otimizador de consulta.|253|253|  
 |Comprimento de identificador (em caracteres)|128|128|  
-|Instâncias por computador|50 instâncias em um servidor autônomo para todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 25 instâncias em um failover de cluster ao usar um disco de cluster compartilhado como a opção de armazenamento de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compartilhamentos de arquivos oferece suporte a 50 instâncias em um failover de cluster se você escolher SMB como a opção de armazenamento para a instalação de cluster Para obter mais informações, consulte [requisitos de Hardware e Software para instalar o SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instâncias em um servidor autônomo.<br /><br /> 25 instâncias em um cluster de failover ao usar um disco de cluster compartilhado como a opção de armazenamento para sua instalação de cluster. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dará suporte a 50 instâncias de um cluster de failover se você escolher compartilhamentos de arquivos SMB como a opção de armazenamento para seu cluster de failover.|  
+|Instâncias por computador|50 instâncias em um servidor autônomo para todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 25 instâncias em um failover de cluster ao usar um disco de cluster compartilhado como a opção armazenada, instalação de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a 50 instâncias em um failover de cluster se você escolher SMB a compartilhamentos de arquivos como a opção de armazenamento para sua instalação de cluster Para obter mais informações, consulte [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instâncias em um servidor autônomo.<br /><br /> 25 instâncias em um cluster de failover ao usar um disco de cluster compartilhado como a opção de armazenamento para sua instalação de cluster. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dará suporte a 50 instâncias de um cluster de failover se você escolher compartilhamentos de arquivos SMB como a opção de armazenamento para seu cluster de failover.|  
 |Índices por tabela com otimização de memória|Sem suporte|8|  
-|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: O tamanho do pacote de rede é o tamanho dos pacotes de protocolo TDS de dados de tabela usado para comunicação entre aplicativos e o relacional [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
+|Comprimento de uma cadeia de caracteres que contém instruções SQL (tamanho do lote)<br /><br /> Observação: O tamanho do pacote de rede é o tamanho de pacotes tabular data stream (TDS) usados para comunicação entre aplicativos e relacionais [!INCLUDE[ssDE](../includes/ssde-md.md)]. O tamanho de pacote padrão é 4 KB e é controlado pela opção de configuração tamanho do pacote de rede.|65.536 * Tamanho do pacote de rede|65.536 * Tamanho do pacote de rede|  
 |Bloqueios por conexão|Máximo de bloqueios por servidor|Máximo de bloqueios por servidor|  
-|Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Observação: Esse valor é para alocação de bloqueio estática. Os bloqueios dinâmicos são limitados somente por memória.|Até 2.147.483.647|Limitado somente por memória|  
+|Bloqueios por instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Observação: Esse valor é para alocação de bloqueio estático. Os bloqueios dinâmicos são limitados somente por memória.|Até 2.147.483.647|Limitado somente por memória|  
 |Níveis aninhados de procedimento armazenado<br /><br /> Observação: Se um procedimento armazenado acessar mais de 64 ou mais de 2 bancos de dados em intercalação, você receberá um erro.|32|32|  
 |Subconsultas aninhadas|32|32|  
 |Níveis aninhados de gatilho|32|32|  
@@ -97,7 +97,7 @@ ms.locfileid: "36020198"
 |REFERENCES por tabela|253|253|  
 |Linhas por tabela|Limitado pelo armazenamento disponível|Limitado pelo armazenamento disponível|  
 |Tabelas por banco de dados<br /><br /> Observação: Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|Limitado pelo número de objetos em um banco de dados|Limitado pelo número de objetos em um banco de dados|  
-|Partições por tabela ou índice particionado|1,000<br /><br /> **\*\* Importante \* \***  criando uma tabela ou índice com mais de 1.000 partições é possível em um sistema de 32 bits, mas não tem suporte.|15,000|  
+|Partições por tabela ou índice particionado|1,000<br /><br /> **\*\* Importante \* \* ** criando uma tabela ou índice com mais de 1.000 partições é possível em um sistema de 32 bits, mas não tem suporte.|15,000|  
 |Estatísticas em colunas não indexadas|30,000|30,000|  
 |Tabelas por instrução SELECT|Limitado apenas pelos recursos disponíveis|Limitado apenas pelos recursos disponíveis|  
 |Gatilhos por tabela<br /><br /> Observação: Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|Limitado pelo número de objetos em um banco de dados|Limitado pelo número de objetos em um banco de dados|  
@@ -120,7 +120,7 @@ ms.locfileid: "36020198"
 |Arquivos de log por banco de dados|1|1|  
 |Volumes por computador|3|3|  
   
- * O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suporte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitário pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ponto de controle do utilitário não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ * O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitário pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ponto de controle do utilitário não está disponível em todas as edições de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicativo da camada de dados  
  A tabela a seguir especifica os tamanhos e números máximos de vários objetos que foram testados nos DACs (aplicativos da camada de dados) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

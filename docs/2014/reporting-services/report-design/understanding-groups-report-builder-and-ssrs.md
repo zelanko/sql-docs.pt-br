@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ccf39ac0ed4a45f7163d5be6b45ad7201bce47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8d4695edc8d87c9462ea0cc94aa538e0108fd2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284622"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Compreendendo grupos (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, um grupo é um conjunto nomeado de dados do conjunto de dados de relatório associado a uma região de dados. Basicamente, um grupo organiza uma exibição de um conjunto de dados de relatório. Todos os grupos de uma região de dados especificam exibições diferentes do mesmo conjunto de dados de relatório.  
@@ -103,10 +103,10 @@ ms.locfileid: "36019514"
  As células de uma linha ou coluna de uma região de dados tablix podem pertencer a vários grupos de linhas e de colunas. Quando você define uma expressão na caixa de texto de uma célula que usa uma função de agregação (por exemplo, `=Sum(Fields!FieldName.Value`), o escopo do grupo padrão de uma célula é o grupo filho mais interno ao qual ele pertence. Quando uma célula pertence a grupos de linhas e de colunas, o escopo é ambos os grupos internos. Também é possível escrever expressões que calculam subtotais de agregação cujo escopo é um grupo relativo a outro conjunto de dados. Por exemplo, você pode calcular a porcentagem de um grupo em relação ao grupo de colunas ou a todos os dados da região de dados (como `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Para obter mais informações, consulte [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar ou excluir um grupo em uma região de dados &#40;SSRS e construtor de relatórios&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Adicionar ou excluir um grupo em uma região de dados &#40;relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Ação de busca detalhada &#40;SSRS e construtor de relatórios&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Ação de busca detalhada &#40;relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

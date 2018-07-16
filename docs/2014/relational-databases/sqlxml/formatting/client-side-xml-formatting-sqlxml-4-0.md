@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ff61967896d2a32f257235a2dca7b92306945c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c02ee420f5ccb676e4cb7708d1550755e4a2c241
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266282"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do cliente (SQLXML 4.0)
   Este tópico fornece informações sobre formatação de XML do lado do cliente. A formatação do lado do cliente refere-se à formatação de XML na camada intermediária.  
@@ -51,7 +51,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- O servidor executa a consulta e retorna um conjunto de linhas (que contém o nome e LastNamecolumns) para o cliente. A camada intermediária aplica as informações de FOR XML ao conjunto de linhas e retorna a formatação XML ao cliente.  
+ O servidor executa a consulta e retorna um conjunto de linhas (que contém o FirstName e LastNamecolumns) para o cliente. A camada intermediária aplica as informações de FOR XML ao conjunto de linhas e retorna a formatação XML ao cliente.  
   
  De maneira similar, quando você executa uma consulta XPath, o servidor retorna o conjunto de linhas ao cliente e a transformação FOR XML EXPLICIT é aplicada ao conjunto de linhas no cliente, gerando a formatação XML desejada.  
   
@@ -93,7 +93,7 @@ AS
 </ROOT>  
 ```  
   
- Porque o **client-side-xml** atributo é definido como 1 (true) no modelo, o procedimento armazenado é executado no servidor e o conjunto de linhas de duas colunas que é retornado pelo servidor é transformado em XML na camada intermediária e retornado ao o cliente. (Somente um resultado parcial é mostrado aqui.)  
+ Porque o **client-side-xml** atributo é definido como 1 (verdadeiro) no modelo, o procedimento armazenado é executado no servidor e o conjunto de linhas de duas colunas que é retornado pelo servidor é transformado em XML na camada intermediária e retornado ao o cliente. (Somente um resultado parcial é mostrado aqui.)  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -122,15 +122,15 @@ AS
      Você pode especificar a formatação do lado do cliente definindo essa propriedade das classes gerenciadas SQLXML como true.  
   
 ## <a name="enhanced-xml-template-support"></a>Suporte de modelo XML avançado  
- Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorado com a adição do **client-side-xml** atributo. Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo do modelo é idêntico em funcionalidade à propriedade ClientSideXML específicas do provedor SQLXMLOLEDB.  
+ Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorada com a adição da **client-side-xml** atributo. Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade à propriedade ClientSideXML específicas do provedor SQLXMLOLEDB.  
   
 > [!NOTE]  
->  Se você executar um modelo XML em um aplicativo ADO que esteja usando o provedor SQLXMLOLEDB e especificar tanto o **client-side-xml** atributo no modelo e o propriedade ClientSideXML, o valor especificado no provedor de modelo terá precedência.  
+>  Se você executa um modelo XML em um aplicativo ADO que esteja usando o provedor SQLXMLOLEDB e especificar tanto a **client-side-xml** atributo no modelo e o provedor de propriedade ClientSideXML, o valor especificado no modelo terá precedência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura de formatação de XML do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
- [PARA XML &#40;do SQL Server&#41;](../../xml/for-xml-sql-server.md)   
- [Para obter considerações de segurança XML &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Arquitetura de formatação de XML do lado do cliente e servidor &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
+ [PARA XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)   
+ [Para considerações de segurança XML &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [XML Data Type Support in SQLXML 4.0](../xml-data-type-support-in-sqlxml-4-0.md)   
  [Classes gerenciadas SQLXML](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Formatação XML do lado do cliente vs. Formatação XML do lado do servidor &#40;SQLXML 4.0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   

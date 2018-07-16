@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264822"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
   Este tópico descreve como criar um novo alias de tipo de dados definido pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

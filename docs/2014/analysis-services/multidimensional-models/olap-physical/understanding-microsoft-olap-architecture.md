@@ -14,20 +14,20 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21a217d19773290f4dac706781e5555a8969732d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4a8f3506cb7b132d9ecdefc9f6609cf6e68c134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234216"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Entendendo a arquitetura Microsoft OLAP
   Use estes tópicos para compreender os bancos de dados multidimensionais do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e como planejar a implementação dos bancos de dados multidimensionais em sua solução de Business Intelligence.  
   
- ![Ícone de pasta do arquivo pequeno](../../../integration-services/media/filefolder-small.gif "arquivo pequeno ícone da pasta") **arquitetura lógica**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **arquitetura lógica**  
  [Objetos de servidor &#40;Analysis Services - dados multidimensionais&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
  [Objetos de dimensão &#40;Analysis Services - dados multidimensionais&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -36,24 +36,24 @@ ms.locfileid: "36021039"
   
  [Mais…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
- ![Ícone de pasta do arquivo pequeno](../../../integration-services/media/filefolder-small.gif "arquivo pequeno ícone da pasta") **arquitetura física**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **arquitetura física**  
  [Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)  
   
  [Cubos locais &#40;Analysis Services - dados multidimensionais&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
  [Mais…](understanding-microsoft-olap-physical-architecture.md)  
   
- ![Ícone de pasta do arquivo pequeno](../../../integration-services/media/filefolder-small.gif "arquivo pequeno ícone da pasta") **arquitetura de programação**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **arquitetura de programação**  
  [Desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
  [Desenvolvimento com o Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Desenvolvendo com ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
   
- ![Ícone de pasta do arquivo pequeno](../../../integration-services/media/filefolder-small.gif "arquivo pequeno ícone da pasta") **considerações internacionais**  
+ ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **considerações internacionais**  
  [Cenários de globalização para Analysis Services multidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência técnica &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
+ [Referência técnica do &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
   
   

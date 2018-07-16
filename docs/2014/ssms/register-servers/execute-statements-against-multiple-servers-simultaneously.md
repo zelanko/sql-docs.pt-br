@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
 - executing queries against multiple servers
 - queries [SQL Server], multiserver
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91c0819053860f6ea825890fdafedf05b9041d95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9880f71d735cfa0c750d56e3dbf6530f0ec1617
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194822"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
   Este tópico descreve como consultar vários servidores ao mesmo tempo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], criando um grupo de servidores locais ou um Servidor de Gerenciamento Central e um ou mais grupos de servidor, e um ou mais servidores registrados dentro dos grupos e, em seguida, consultar o grupo completo. Os resultados retornados pela consulta podem ser combinados em um único painel de resultados ou em painéis de resultados separados. O conjunto de resultados pode incluir colunas adicionais para o nome de servidor e o login que é usado pela consulta em cada servidor. Os servidores de gerenciamento centrais e os servidores registrados subordinados podem ser registrados somente com o uso da Autenticação do Windows. Os servidores em grupos de servidores locais podem ser registrados usando Autenticação do Windows ou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

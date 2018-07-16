@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236356"
 ---
 # <a name="create-xml-indexes"></a>Criar índices XML
   Este tópico descreve como criar índices XML primários e secundários.  
@@ -48,9 +48,9 @@ ms.locfileid: "36019534"
   
 -   Nomes de índice XML primário têm as mesmas restrições que nomes de exibição.  
   
- Você não pode criar um índice XML em um `xml` tipo de coluna em uma exibição em um **tabela** com valor de variável com `xml` colunas de tipo ou `xml` variáveis de tipo.  
+ Você não pode criar um índice XML em um `xml` tipo de coluna em uma exibição em um **tabela** com valor de variável com `xml` colunas de tipo ou `xml` variáveis do tipo.  
   
--   Para alterar um `xml` XML com tipo de coluna de tipo de não tipado para, ou vice-versa, usando a opção de ALTER TABLE ALTER COLUMN, nenhum índice XML na coluna deve existir. Se existir um índice, ele deve ser descartado antes da tentativa de alterar o tipo de coluna.  
+-   Para alterar um `xml` coluna de tipo de sem-tipo para XML com tipo ou vice-versa, usando a opção de ALTER TABLE ALTER COLUMN, nenhum índice XML na coluna deve existir. Se existir um índice, ele deve ser descartado antes da tentativa de alterar o tipo de coluna.  
   
 -   A opção ARITHABORT deve ser definida como ON quando um índice XML é criado. Para consultar, inserir, excluir ou atualizar valores na coluna XML usando métodos de tipo de dados XML, a mesma opção deve ser definida na conexão. Caso contrário, haverá falha nos métodos de tipo de dados XML.  
   

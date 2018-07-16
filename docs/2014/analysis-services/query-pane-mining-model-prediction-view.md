@@ -1,5 +1,5 @@
 ---
-title: Consulte o painel (exibição de previsão do modelo de mineração) | Microsoft Docs
+title: Consultar o painel (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0f0105796bd4a4903a12dbad0b87b76919ce8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211776"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Painel Consulta (Exibição da Previsão do Modelo de Mineração)
   O painel **Consulta** exibe as instruções DMX (extensões DMX) criadas pelo Construtor de Consultas de Previsão. Você pode modificar as instruções e, depois, clicar no botão **Alternar para a exibição de resultado da consulta** para retornar os resultados. Se você retornar à exibição de **Design** , quaisquer alterações efetuadas na instrução serão perdidas.  
@@ -29,7 +29,7 @@ ms.locfileid: "36020795"
  **Para obter mais informações:** [Instruções de manipulação de dados DMX &#40;extensões DMX&#41;](/sql/dmx/dmx-statements-data-manipulation), [Criar uma consulta DMX no SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opções  
- **Alternar para a exibição de resultados de consulta**  
+ **Alterne para a exibição de resultado de consulta**  
  Clique para mudar entre os painéis **Design**, **Consulta**e **Resultado** . A consulta é executada ao alternar para o painel **Resultado** .  
   
  **Salvar o resultado da consulta**  

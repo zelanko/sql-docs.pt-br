@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d73770ada2435e0849df9b4604081580ef0c623f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f1a2d072a648d58d77b41cf94b7bd9bc55c8482b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265348"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
   Você pode tirar proveito de um banco de dados espelho que você está mantendo para fins de disponibilidade para descarregar relatórios. Para usar um banco de dados espelho para relatórios, você pode criar um instantâneo do banco de dados no banco de dados espelho e direcionar as solicitações de conexão de clientes para o instantâneo mais recente. Um instantâneo do banco de dados é um instantâneo consistente de transações, estático e somente leitura de seu banco de dados de origem tal como ele estava no momento da criação do instantâneo. Para criar um instantâneo do banco de dados em um banco de dados espelho, o banco de dados precisa estar no estado de espelhamento sincronizado.  
