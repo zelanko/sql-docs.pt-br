@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c05adbacf540cdbf45862aa10ea131f4754ed8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e8447240b1abb74a63244f37535a7a3e7dc47987
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177073"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Renomear consultas (Visual Database Tools)
   Você pode renomear qualquer consulta que não esteja aberta atualmente para edição. O procedimento a seguir presume que a consulta que você deseja renomear está fechada.  
@@ -36,7 +36,7 @@ ms.locfileid: "36011038"
 3.  Digite um novo nome para a consulta. Em seguida, pressione Enter.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de consultas e modos de exibição de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Tópicos explicativos de consultas e exibições de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

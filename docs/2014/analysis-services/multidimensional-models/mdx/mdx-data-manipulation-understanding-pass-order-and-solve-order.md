@@ -1,5 +1,5 @@
 ---
-title: Entendendo a ordem de passagem e resolução Order (MDX) | Microsoft Docs
+title: Noções básicas sobre a ordem de passagem e resolver Order (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196526"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Entendendo a ordem de passagem e a ordem de resolução (MDX)
   Quando um cubo é calculado como resultado de um script MDX, ele pode passar por várias fases de cálculo dependendo do uso de diversos recursos relacionados ao cálculo. Cada uma dessas fases é chamada de fase de cálculo.  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  A diferença entre os conjuntos de resultados da primeira e da segunda consultas é proveniente da diferença no posicionamento do membro calculado. Na primeira consulta, o membro calculado faz parte do eixo ROWS e não no eixo COLUMNS mostrado na segunda consulta. A diferença de posicionamento passa a ser importante na próxima consulta, que combina os dois membros calculados em uma única consulta MDX.  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Consulta 3 – Combinação dos cálculos de Diferença anual e Receita líquida  
- Nessa consulta final, a combinação dos exemplos anteriores em uma única consulta MDX, a ordem de resolução passa a ser importante devido aos cálculos nas colunas e nas linhas. Para certificar-se de que os cálculos são feitos na sequência correta, definir a sequência em que os cálculos são feitos usando o `SOLVE_ORDER` palavra-chave.  
+ Nessa consulta final, a combinação dos exemplos anteriores em uma única consulta MDX, a ordem de resolução passa a ser importante devido aos cálculos nas colunas e nas linhas. Para garantir que os cálculos são feitos na sequência correta, defina a sequência em que os cálculos são feitos usando o `SOLVE_ORDER` palavra-chave.  
   
- A palavra-chave `SOLVE_ORDER` especifica a ordem de resolução de membros calculados em uma consulta MDX ou em um comando `CREATE MEMBER`. Os valores inteiros usados com o `SOLVE_ORDER` palavra-chave são relativos, não precisa iniciar em zero e não precisa ser consecutivas. O valor simplesmente orienta o MDX a calcular um membro com base nos valores derivados do cálculo dos membros com um valor mais alto. Se um membro calculado for definido sem o `SOLVE_ORDER` palavra-chave, o valor padrão desse membro calculado será zero.  
+ A palavra-chave `SOLVE_ORDER` especifica a ordem de resolução de membros calculados em uma consulta MDX ou em um comando `CREATE MEMBER`. Os valores inteiros usados com o `SOLVE_ORDER` palavra-chave são relativos, fazer começam em zero e não precisam ser consecutivos. O valor simplesmente orienta o MDX a calcular um membro com base nos valores derivados do cálculo dos membros com um valor mais alto. Se um membro calculado for definido sem o `SOLVE_ORDER` palavra-chave, o valor padrão desse membro calculado será zero.  
   
  Por exemplo, se você combinar os cálculos usados nos dois primeiros exemplos de consulta, os dois membros calculados, `Year Difference` e `Profit Margin`, encontram-se em uma intersecção em uma única célula do conjunto de dados do resultado da consulta MDX de exemplo. A única maneira de determinar como o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avaliará essa célula é pela ordem de resolução. As fórmulas usadas para construir essa célula produzirão resultados diferentes de acordo com a ordem de resolução dos dois membros calculados.  
   
@@ -220,6 +220,6 @@ FROM [Adventure Works]
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipulando dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulação de dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

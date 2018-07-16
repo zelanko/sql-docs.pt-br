@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194888"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos. Os exemplos incluem valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens, dados espaciais e endereços de email. Na superfície de design, os campos aparecem como expressões em itens de relatório, como caixas de texto, tabelas e gráficos.  
@@ -80,7 +80,7 @@ ms.locfileid: "36118067"
 ##  <a name="DataTypes"></a> Tipos de dados de campo  
  Quando você cria um conjunto de dados, os tipos de dados dos campos na fonte de dados podem não ser exatamente os tipos de dados usados em um relatório. Os tipos de dados podem passar por uma ou mais camadas de mapeamento. A extensão de processamento de dados ou o provedor de dados pode mapear tipos de dados da fonte de dados para tipos de dados da linguagem CLR. Os tipos de dados retornados pelas extensões de processamento de dados são mapeados para um subconjunto de tipos de dados CLR (common language runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Na fonte de dados, os dados são armazenados em tipos de dados que têm o suporte da fonte de dados. Por exemplo, os dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados deve ser um com suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados como `nvarchar` ou `datetime`. Quando você recupera dados de uma fonte de dados, os dados passam por uma extensão de processamento ou um provedor de dados associado ao tipo da fonte de dados. Dependendo da extensão de processamento de dados, os dados podem ser convertidos de tipos de dados usados pela fonte de dados em tipos de dados suportados pela extensão de processamento de dados. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa tipos de dados com suporte pelo CLR (Common Language Runtime) instalado com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O provedor de dados mapeia todas as colunas do conjunto de resultados do tipo de dados nativo para um tipo de dados CLR do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Na fonte de dados, os dados são armazenados em tipos de dados que têm o suporte da fonte de dados. Por exemplo, os dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados deve ser um com suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tais como tipos de dados `nvarchar` ou `datetime`. Quando você recupera dados de uma fonte de dados, os dados passam por uma extensão de processamento ou um provedor de dados associado ao tipo da fonte de dados. Dependendo da extensão de processamento de dados, os dados podem ser convertidos de tipos de dados usados pela fonte de dados em tipos de dados suportados pela extensão de processamento de dados. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa tipos de dados com suporte pelo CLR (Common Language Runtime) instalado com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. O provedor de dados mapeia todas as colunas do conjunto de resultados do tipo de dados nativo para um tipo de dados CLR do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  A cada estágio, os dados são representados pelos tipos de dados descritos na lista a seguir:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36118067"
   
 -   **Provedor de dados ou extensão de processamento de dados** Os tipos de dados para os quais há suporte na versão do provedor de dados da extensão de processamento de dados que você seleciona ao se conectar com a fonte de dados. Os provedores de dados baseados no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usam tipos de dados para os quais o CLR oferece suporte. Para obter mais informações sobre tipos de dados do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consulte [Mapeamentos de tipos de dados (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) e [Trabalhando com tipos base](http://go.microsoft.com/fwlink/?LinkId=112177) no MSDN.  
   
-     Por exemplo, tipos de dados típicos suportados pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluem `Int32` e `String`. Datas e horas do calendário são suportados pela estrutura `DateTime`. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduziu suporte para o `DateTimeOffset` estrutura para datas com um deslocamento de fuso horário.  
+     Por exemplo, tipos de dados típico de suporte a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] incluem `Int32` e `String`. Datas e horas do calendário são suportados pela estrutura `DateTime`. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 introduziu suporte à `DateTimeOffset` estrutura para datas com deslocamento de fuso horário.  
   
     > [!NOTE]  
     >  O servidor de relatório usa os provedores de dados instalados e configurados no servidor de relatório. Clientes de criação de relatório em modo de Visualização usam as extensões de processamento de dados instaladas e configuradas na máquina cliente. Você deve testar o relatório no ambiente do cliente de relatório e do servidor de relatório.  
@@ -118,7 +118,7 @@ ms.locfileid: "36118067"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades do conjunto de dados, campos &#40;construtor de relatórios&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [Caixa de diálogo de propriedades do conjunto de dados, os campos &#40;construtor de relatórios&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
  [Partes de relatório e conjuntos de dados no construtor de relatórios](report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

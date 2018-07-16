@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Principal Management event class
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27b3399889e7d97ac0fec35187d84c4d4e737eaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b10ddece7d37ce0ff447b31a6ca5a1f3b76b7a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176103"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Classe de evento Audit Server Principal Management
   A classe de evento **Audit Server Principal Management** ocorre quando entidades do servidor são criadas, alteradas ou descartadas.  

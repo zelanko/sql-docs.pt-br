@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 180a570d7b466a33c0c057066d88b1bd28d00d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205646"
 ---
 # <a name="translations-element-xmla"></a>Elemento Translations (XMLA)
   Contém uma coleção de elementos [Translation](translation-element-xmla.md) usados para identificar as chaves de membro do membro de atributo representado pelo elemento pai [Attribute](attribute-element-xmla.md) .  
@@ -68,8 +68,8 @@ ms.locfileid: "36118967"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

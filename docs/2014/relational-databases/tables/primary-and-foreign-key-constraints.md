@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268812"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
   Chave primárias e estrangeiras são dois tipos de restrições que podem ser usadas para impor integridade de dados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -82,7 +82,7 @@ ms.locfileid: "36011749"
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro e a ação de exclusão ou atualização na linha da tabela pai é revertida.  
   
  CASCADE  
- As linhas correspondentes são atualizadas ou excluídas na tabela de referência quando essa linha é atualizada ou excluída na tabela pai. CASCADE não pode ser especificada se uma `timestamp` coluna faz parte da chave estrangeira ou da chave referenciada. ON DELETE CASCADE não poderá ser especificada para a tabela que tenha um gatilho INSTEAD OF DELETE. ON UPDATE CASCADE não poderá ser especificada para tabelas que tenham um gatilho INSTEAD OF UPDATE.  
+ As linhas correspondentes são atualizadas ou excluídas na tabela de referência quando essa linha é atualizada ou excluída na tabela pai. CASCADE não poderá ser especificada se uma `timestamp` coluna faz parte de chave estrangeira ou a chave referenciada. ON DELETE CASCADE não poderá ser especificada para a tabela que tenha um gatilho INSTEAD OF DELETE. ON UPDATE CASCADE não poderá ser especificada para tabelas que tenham um gatilho INSTEAD OF UPDATE.  
   
  SET NULL  
  Todos os valores que compõem a chave estrangeira são definidos como NULL quando a linha correspondente da tabela pai é atualizada ou excluída. Para que essa restrição seja executada, as colunas de chave estrangeira devem ser anuláveis. Não poderá ser especificada para tabelas que tenham gatilhos INSTEAD OF UPDATE.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b5c6062d07c10b171da7b3bc534836ddfe7752b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167717"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar propriedades do projeto do Analysis Services (SSDT)
   No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido com certas propriedades padrão que afetam a construção e a implantação do projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "36011006"
 |Construir / Deployment Server Edition|A versão usada para desenvolver os projetos.|Especifica a versão do servidor no qual os projetos serão finalmente implantados.|  
 |Construir / Saídas|/bin|O caminho relativo para a saída do processo de construção do projeto.|  
 |Construir / Remover Senhas|True|Especifica se as senhas conhecidas serão removidas das cadeias de conexão que são gravadas no diretório de saída do processo de construção. As senhas são removidas para aumentar a segurança. Se as senhas forem removidas, será necessário fornecê-las quando o projeto implantado for processado para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] acesse a fonte de dados.|  
-|Depuração / Objeto Inicial|\<Objeto ativo >|Determina o objeto que será iniciado quando você começar a depuração.|  
+|Depuração / Objeto Inicial|\<Objeto atualmente ativo >|Determina o objeto que será iniciado quando você começar a depuração.|  
 |Implantação / Modo de Implantação|Implantar Apenas Alterações|Por padrão, apenas as alterações feitas nos objetos do projeto são implantadas (desde que nenhuma outra alteração tenha sido feita nos objetos diretamente de fora do projeto). Você também pode optar pela implantação de todos os objetos durante cada implantação. Para um melhor desempenho, use Implantar Apenas Alterações.|  
 |Implantação / Opção de Processamento|Padrão|Por padrão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determinará o tipo de processamento exigido quando as alterações a objetos forem implantadas. Geralmente, resulta em tempo menor de implantação. No entanto, você também pode optar pelo processamento completo ou por não fazer o processamento a cada implantação.|  
 |Implantação / Implantação Transacional|Falso|Por padrão, a implantação de objetos alterados ou de todos eles não é transacional com o processamento desses objetos implantados. A implantação pode ser bem-sucedida e persistir mesmo em caso de falha do processamento. Você pode alterar esse padrão para incorporar a implantação e o processando em uma única transação.|  

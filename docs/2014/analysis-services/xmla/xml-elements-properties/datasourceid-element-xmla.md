@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231816"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
   Identifica uma fonte de dados usada por um [local](location-element-xmla.md) elemento durante uma [Backup](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md), ou [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
@@ -66,7 +66,7 @@ ms.locfileid: "36115510"
 ## <a name="remarks"></a>Remarks  
  O elemento `DataSourceID` contém o nome da fonte de dados na instância de origem que identifica a instância remota na qual deve ser feito o backup, restauração e sincronização das informações da partição remota.  
   
- Para obter mais informações sobre backup e restaurando partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obter mais informações sobre como fazer backup e restaurar partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento ConnectionString &#40;XMLA&#41;](connectionstring-element-xmla.md)   

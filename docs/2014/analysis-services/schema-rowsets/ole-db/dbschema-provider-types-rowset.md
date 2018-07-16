@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250946"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Conjunto de linhas DBSCHEMA_PROVIDER_TYPES
   Identifica os tipos de dados (base) suportados pelo provedor de dados.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DBSCHEMA_PROVIDER_TYPES` linhas contém as seguintes colunas.  
+ O `DBSCHEMA_PROVIDER_TYPES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "36119802"
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||Os parâmetros de criação especificados pelo consumidor ao criar uma coluna deste tipo de dados. Por exemplo, o tipo de dados de SQL, `DECIMAL,` requer uma precisão e uma escala. Nesse caso, os parâmetros de criação devem ser a cadeia de caracteres "precisão, escala". Em um comando de texto, para criar uma coluna `DECIMAL` com uma precisão de 10 e uma escala de 2, o valor da coluna `TYPE_NAME` seria `DECIMAL()` e a especificação de tipo completa seria `DECIMAL(10,2)`.<br /><br /> Os parâmetros de criação aparecem como uma lista de valores separados por vírgulas, na ordem em que eles serão fornecidos e sem parênteses. Se um parâmetro de criação for comprimento, comprimento máximo, precisão, escala, semente ou incremento, use "comprimento", "comprimento máximo", "precisão", "escala", "semente" e "incremento", respectivamente. Se o parâmetro de criação for algum outro valor, o provedor determinará que texto será usado para descrever o parâmetro de criação.<br /><br /> Quando o tipo de dados requer parâmetros de criação, "()" costuma aparecer no nome de tipo. Isso indica a posição na qual os parâmetros de criação devem ser inseridos. Quando o nome de tipo não inclui "()", os parâmetros de criação estar entre parênteses e anexados ao nome de tipo de dados.|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Um Booliano que indica se o tipo de dados permite valores nulos.<br /><br /> `VARIANT_TRUE` indica que o tipo de dados permite valores nulos.<br /><br /> `VARIANT_FALSE` indica que o tipo de dados não é anulável.<br /><br /> `NULL` indica que é desconhecido se o tipo de dados permite valores nulos.|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||Um Booliano que indica se o tipo de dados é um tipo de caracteres e se diferencia maiúsculas de minúsculas.<br /><br /> `VARIANT_TRUE` indica que o tipo de dados é um tipo de caracteres e que diferencia maiúsculas de minúsculas.<br /><br /> `VARIANT_FALSE` indica que o tipo de dados não é um tipo de caracteres ou que não diferencia maiúsculas de minúsculas.|  
-|`SEARCHABLE`|`DBTYPE_UI4`||Um inteiro que indica como o tipo de dados poderá ser usado em pesquisas se o provedor der suporte ao `ICommandText`; caso contrário, `NULL`.<br /><br /> Esta coluna pode ter os seguintes valores:<br /><br /> -   `DB_UNSEARCHABLE` indica que o tipo de dados não pode ser usado em um `WHERE` cláusula.<br />-   `DB_LIKE_ONLY` indica que o tipo de dados pode ser usado em uma `WHERE` cláusula apenas com o `LIKE` predicado.<br />-   `DB_ALL_EXCEPT_LIKE` indica que o tipo de dados pode ser usado em uma `WHERE` cláusula com todos os operadores de comparação exceto `LIKE`.<br />-   `DB_SEARCHABLE` indica que o tipo de dados pode ser usado em um `WHERE` cláusula com qualquer operador de comparação.|  
+|`SEARCHABLE`|`DBTYPE_UI4`||Um inteiro que indica como o tipo de dados poderá ser usado em pesquisas se o provedor der suporte ao `ICommandText`; caso contrário, `NULL`.<br /><br /> Esta coluna pode ter os seguintes valores:<br /><br /> -   `DB_UNSEARCHABLE` indica que o tipo de dados não pode ser usado em um `WHERE` cláusula.<br />-   `DB_LIKE_ONLY` indica que o tipo de dados pode ser usado em uma `WHERE` cláusula apenas com o `LIKE` predicado.<br />-   `DB_ALL_EXCEPT_LIKE` indica que o tipo de dados pode ser usado em uma `WHERE` cláusula com todos os operadores de comparação, exceto `LIKE`.<br />-   `DB_SEARCHABLE` indica que o tipo de dados pode ser usado em um `WHERE` cláusula com qualquer operador de comparação.|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||Um Booliano que indica se o tipo de dados é não assinado.<br /><br /> `VARIANT_TRUE` indica que o tipo de dados é não assinado.<br /><br /> `VARIANT_FALSE` indica que o tipo de dados é assinado.<br /><br /> `NULL` indica que isso não é aplicável ao tipo de dados.|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||Um Booliano que indica se o tipo de dados tem uma precisão e uma escala fixas.<br /><br /> `VARIANT_TRUE` indica que o tipo de dados tem uma precisão e uma escala fixas.<br /><br /> `VARIANT_FALSE` indica que o tipo de dados não tem uma precisão e uma escala fixas.|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||Um Booliano que indica se o tipo de dados é incrementado automaticamente.<br /><br /> `VARIANT_TRUE` indica que valores deste tipo podem ser incrementados automaticamente.<br /><br /> `VARIANT_FALSE` indica que valores deste tipo não podem ser incrementados automaticamente.<br /><br /> Se esse valor for `VARIANT_TRUE`, para determinar se uma coluna desse tipo sempre será incrementada automaticamente, verifique a propriedade da coluna `DBPROP_COL_AUTOINCREMENT` do provedor. Se a propriedade de `DBPROP_COL_AUTOINCREMENT` for de leitura/gravação, para determinar se uma coluna desse tipo será incrementada automaticamente, verifique a configuração da propriedade de `DBPROP_COL_AUTOINCREMENT`. Se `DBPROP_COL_AUTOINCREMENT` for uma propriedade somente leitura, todas as colunas ou nenhuma coluna desse tipo será incrementada automaticamente.|  

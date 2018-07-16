@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235596"
 ---
 # <a name="hello-world-ready-sample"></a>Exemplo pronto do Hello World
   O exemplo Hello World Ready demonstra as operações básicas envolvidas na criação, implantação e teste de um procedimento armazenado simples e pronto para uso, baseado na integração CLR (common language runtime). Um componente pronto para uso pode ser facilmente localizado em diferentes idiomas para diferentes mercados do mundo, sem alterar o código-fonte do componente. Este exemplo também demonstra como retornar dados por meio de um parâmetro de saída e de um registro, que é construído dinamicamente pelo procedimento armazenado e retornado ao cliente. Esse exemplo é quase idêntico ao Exemplo Hello World, com a exceção de que é muito mais fácil e mais seguro localizar este aplicativo. Para alterar textos localizados é necessário o seguinte:  
@@ -83,7 +83,7 @@ ms.locfileid: "36010744"
   
 4.  Em c:\MySample, crie o arquivo `messages.resx` e copie o código de exemplo no arquivo.  
   
-5.  Em c:\MySample, crie o arquivo `messages.de.resx` salvando o arquivo `messages.resx` como `messages.de.resx` depois de alterar a linha  
+5.  No c:\mysample., crie o arquivo `messages.de.resx` salvando o arquivo `messages.resx` como `messages.de.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36010744"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  Em c:\MySample, crie o arquivo `messages.es.resx` salvando o arquivo `messages.resx` como `messages.es.resx` depois de alterar a linha  
+6.  No c:\mysample., crie o arquivo `messages.es.resx` salvando o arquivo `messages.resx` como `messages.es.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36010744"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  Em c:\MySample, crie o arquivo `messages.fr.resx` salvando o arquivo `messages.resx` como `messages.fr.resx` depois de alterar a linha  
+7.  No c:\mysample., crie o arquivo `messages.fr.resx` salvando o arquivo `messages.resx` como `messages.fr.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36010744"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  Em c:\MySample, crie o arquivo `messages.fr-FR.resx` salvando o arquivo `messages.resx` como `messages.fr-FR.resx` depois de alterar a linha  
+8.  No c:\mysample., crie o arquivo `messages.fr-FR.resx` salvando o arquivo `messages.resx` como `messages.fr-FR.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36010744"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. Em c:\MySample, crie o arquivo `messages.it.resx` salvando o arquivo `messages.resx` como `messages.it.resx` depois de alterar a linha  
+9. No c:\mysample., crie o arquivo `messages.it.resx` salvando o arquivo `messages.resx` como `messages.it.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36010744"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. Em c:\MySample, crie o arquivo `messages.ja.resx` salvando o arquivo `messages.resx` como `messages.ja.resx` depois de alterar a linha  
+10. No c:\mysample., crie o arquivo `messages.ja.resx` salvando o arquivo `messages.resx` como `messages.ja.resx` depois de alterar a linha  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   

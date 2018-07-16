@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6bb00e29b5edc039d33a345addc596f18669f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2f8c96a114557bcef8252f2c21b70c9a50dbfb94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216646"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
-  Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como o designer de modelos, determinar o que é exibido nos relatórios de clickthrough, definindo o `DefaultDetailAttribute` e `DefaultAggregateAttribute` propriedades que você atribui a uma entidade no modelo de relatório.  
+  Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como o designer de modelo, determina o que é exibido em relatórios de clickthrough, definindo o `DefaultDetailAttribute` e `DefaultAggregateAttribute` propriedades que você atribui a uma entidade no modelo de relatório.  
   
 > [!NOTE]  
 >  Relatórios de Clickthrough não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Caso você não tenha certeza sobre qual edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sua organização está usando, contate o administrador do banco de dados.  

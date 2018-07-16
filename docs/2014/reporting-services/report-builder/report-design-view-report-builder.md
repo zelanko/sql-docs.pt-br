@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244376"
 ---
 # <a name="report-design-view-report-builder"></a>Exibição do design de relatório (Construtor de Relatórios)
   A janela do Construtor de Relatórios foi criada para ajudá-lo a organizar facilmente seus recursos de relatório e criar rapidamente os relatórios de que você precisa. A superfície de design fica no centro da janela, com a Faixa de Opções acima e os painéis Dados do Relatório, Agrupamento e Propriedades, além da Galeria de Partes de Relatório, à esquerda, abaixo e à direita. A superfície de design é o local em que você adiciona e organiza seus itens de relatório. A Faixa de Opções organiza itens de menu tradicionais em categorias que você pode localizar e usar facilmente. Os painéis ajudam a adicionar, selecionar e organizar os recursos de relatório e alteram as propriedades de item de relatório.  
@@ -50,7 +50,7 @@ ms.locfileid: "36010843"
 ### <a name="insert-tab"></a>Guia Inserir  
  A guia Inserir é uma coleção de comandos geralmente usados para adicionar itens de relatório ao relatório. Na guia Inserir, você pode usar assistentes para adicionar uma tabela, matriz gráfico ou mapa. Também é possível adicionar esses itens sem usar um assistente e adicionar outros itens de relatório como minigráficos, indicadores, caixas de texto, imagens, linhas, retângulos, sub-relatórios e cabeçalhos e rodapés do relatório.  
   
- Clicando em **partes de relatório** Inserir guia abre a Galeria de partes de relatório. Você pode pesquisar partes de relatório salvas em um servidor de relatório. Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Clicando em **partes de relatório** Inserir guia é aberta a Galeria de partes de relatório. Você pode pesquisar partes de relatório salvas em um servidor de relatório. Para obter mais informações, consulte [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Após a inserção de um item, o Construtor de Relatórios alterna automaticamente para a guia Página Inicial.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36010843"
  A guia Exibir é uma coleção de comandos que controlam o que é exibido dentro da janela do Construtor de Relatórios. Você pode alterar as opções de exibição para a régua e os painéis Agrupamento, Dados de Relatório e Propriedades.  
   
 ### <a name="run-tab"></a>Guia Executar  
- Quando você clica em **executar** na guia página inicial, você deve executar uma visualização do relatório no Visualizador de HTML e consulte a guia execução, em vez da guia página inicial.  
+ Quando você clica em **executar** na guia página inicial, você deve executar uma visualização do relatório no Visualizador de HTML e você vir a guia execução, em vez da guia página inicial.  
   
  A guia Executar contém uma coleção de comandos que você pode usar após a renderização do relatório. É possível imprimir o relatório, navegar nas páginas do relatório, exportá-lo para outro formato de arquivo, exibir o mapa do documento ou os parâmetros (caso o relatório tenha) e localizar itens dentro do relatório. Para obter mais informações, consulte [visualizando o relatório no modo de execução](#RunMode).  
   
- Para retornar à exibição de design de relatório no **executar** , clique em **Design**.  
+ Para retornar ao modo de design de relatório na **executados** , clique em **Design**.  
   
   
 ##  <a name="RptDesignSurface"></a> A superfície de design do relatório  
@@ -74,7 +74,7 @@ ms.locfileid: "36010843"
   
 -   As propriedades do cabeçalho e do rodapé, como a borda e a cor de preenchimento, ao clicar com o botão direito do mouse na área branca da superfície de design na área do cabeçalho ou do rodapé, fora de qualquer item de relatório, e ao clicar em **Propriedades do Cabeçalho** ou **Propriedades do Rodapé**.  
   
--   As propriedades do relatório, como configuração de página, clicando duas vezes na área azul ao redor da superfície de design e clicando em **propriedades do relatório**.  
+-   As propriedades do próprio relatório, como a configuração de página, clicando duas vezes na área azul ao redor da superfície de design e clicando em **propriedades do relatório**.  
   
 -   As propriedades dos itens de relatório, ao clicar com o botão direito do mouse nelas e ao clicar em **Propriedades**.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "36010843"
   
  Para obter mais informações sobre itens no painel de dados do relatório, consulte os seguintes tópicos:  
   
--   [Referências globais internas e referências de usuários &#40;SSRS e construtor de relatórios&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Referências globais internas e referências de usuários &#40;relatórios e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Imagens &#40;SSRS e construtor de relatórios&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Imagens &#40;relatórios e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -165,7 +165,7 @@ ms.locfileid: "36010843"
   
   
 ##  <a name="RunMode"></a> Visualizando o relatório no modo de execução  
- Na exibição de design do relatório, você não está trabalhando com os dados reais, mas com uma representação dos dados indicados pelo nome do campo ou da expressão. Para ver os dados reais exibidos no contexto do relatório criado, você pode executar o relatório para visualizar os dados do banco de dados subjacente exibidos no layout do relatório. Alternar entre os modos de design e de execução do relatório permite ajustar seu design e ver os resultados imediatamente. Para visualizar o relatório, clique em **executar** no **exibições** grupo na faixa de opções.  
+ Na exibição de design do relatório, você não está trabalhando com os dados reais, mas com uma representação dos dados indicados pelo nome do campo ou da expressão. Para ver os dados reais exibidos no contexto do relatório criado, você pode executar o relatório para visualizar os dados do banco de dados subjacente exibidos no layout do relatório. Alternar entre os modos de design e de execução do relatório permite ajustar seu design e ver os resultados imediatamente. Para visualizar o relatório, clique em **executados** na **modos de exibição** grupo na faixa de opções.  
   
  Quando você clica em **Execução**, o Construtor de Relatórios conecta-se às fontes de dados de relatório, armazena em cache os dados do computador, combina os dados e o layout e renderiza o relatório no Visualizador de HTML. O relatório pode ser executado com a frequência desejada durante a fase de criação. Quando estiver satisfeito, você poderá salvá-lo no servidor de relatório onde outras pessoas, com as permissões apropriadas, podem exibi-lo.  
   

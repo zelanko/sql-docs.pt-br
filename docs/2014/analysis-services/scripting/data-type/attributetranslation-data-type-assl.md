@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeTranslation data type
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e7f5fe2157b407cae3909666329537f85a8b7e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e846e1cdec16388a96f7e0043aa5b0d49235be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267652"
 ---
 # <a name="attributetranslation-data-type-assl"></a>Tipo de dados AttributeTranslation (ASSL)
   Define um tipo de dados derivado que representa uma tradução associada a um [atributo](../objects/attribute-element-assl.md) elemento  
@@ -59,7 +59,7 @@ ms.locfileid: "36010991"
 |------------------|-------------|  
 |Elementos pai|Nenhum|  
 |Elementos filho|[CaptionColumn](../objects/column-element-assl.md), [MembersWithDataCaption](../properties/caption-element-assl.md)|  
-|Elementos derivados|Consulte [tradução](../objects/translation-element-assl.md) ([traduções](../collections/translations-element-assl.md) coleção de [DimensionAttribute](dimensionattribute-data-type-assl.md) ou [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
+|Elementos derivados|Ver [tradução](../objects/translation-element-assl.md) ([traduções](../collections/translations-element-assl.md) coleção de [DimensionAttribute](dimensionattribute-data-type-assl.md) ou [ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AttributeTranslation>.  

@@ -1,5 +1,5 @@
 ---
-title: Remoto processamento (Analysis Services) | Microsoft Docs
+title: Remoto de processamento (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274142"
 ---
 # <a name="remote-processing-analysis-services"></a>Processamento remoto (Analysis Services)
   Você pode executar processamento em um controle remoto agendado ou autônomo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância, em que a solicitação de processamento origina-se de um computador, mas é executada em outro computador na mesma rede.  
@@ -97,8 +97,8 @@ ms.locfileid: "36121169"
 ## <a name="see-also"></a>Consulte também  
  [Componentes do SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
  [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [O processamento em lotes &#40;do Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [O processamento em lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
- [Processando objetos &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [Processamento de objetos &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
   
   

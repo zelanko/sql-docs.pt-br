@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
 - query time-outs [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9066dbbc02149913959c9c1e16ee044f5f3b7a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4794c4a2b6c9207cb48573bb481499fa402f3b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214566"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Definindo valores de tempo limite para processamento de relatório e conjuntos de dados compartilhados (SSRS)
   Você pode especificar valores de tempo limite para definir limites para o uso dos recursos do sistema. O servidor de relatório dá suporte a dois valores de tempo limite:  
@@ -59,7 +59,7 @@ ms.locfileid: "36122777"
 >  Você pode definir `RunningRequestsDbCycle` no arquivo RSReportServer.config para alterar a frequência de avaliação dos trabalhos em execução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir opções de processamento &#40;Reporting Services no SharePoint modo integrado&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Definir opções de processamento &#40;modo integrado do Reporting Services no SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Gerenciar um processo em execução](../subscriptions/manage-a-running-process.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)  

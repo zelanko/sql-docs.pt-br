@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264192"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
@@ -75,10 +75,10 @@ ms.locfileid: "36118259"
  Especifique o nome de arquivo e extensão do relatório como deseja que apareça na biblioteca de destino. Se você não especificar uma extensão de arquivo, o servidor de relatório criará uma com base no formato de saída do relatório. Esse valor é necessário. O nome de arquivo não deve incluir os seguintes caracteres: : \ / * ? " \< > | # { } %  
   
  Title  
- Especifica um opcional `Title` propriedade do relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
+ Especifica um recurso opcional `Title` propriedade para o relatório na biblioteca de destino. Essa é uma propriedade padrão para todos os itens armazenados em uma biblioteca. Os usuários podem especificar se mostram ou ocultam essa propriedade ao exibir conteúdos de biblioteca em um site do SharePoint.  
   
  Caminho  
- Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: http://mySharePointWeb/MySite/MyDocLib, onde "http://mySharePointWeb" indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint onde o relatório será entregue.  
+ Especifica uma URL completamente qualificada para a biblioteca do SharePoint, inclusive o aplicativo Web e o site do SharePoint. Por exemplo: http://mySharePointWeb/MySite/MyDocLib; onde "http://mySharePointWeb" indica o aplicativo Web, "MySite" é o site do SharePoint, e "MyDocLib" é a biblioteca do SharePoint em que o relatório será entregue.  
   
  Você não pode especificar uma página, um site nem uma lista. O contêiner de destino deve ser uma biblioteca no mesmo site ou farm.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36118259"
  Especifica se um arquivo com o mesmo nome e extensão é substituído por uma versão mais recente quando a assinatura é processada. Escolha **Substituir** se quiser substituir um arquivo existente por uma versão mais recente. Escolha **Nenhum** se não quiser que a assinatura substitua um arquivo. Nesse caso, não ocorrerá entrega se um arquivo existir com o nome e extensão de destino. Escolha **Incrementação automática** se quiser adicionar versões sucessivas do mesmo arquivo anexando um número ao final do nome do arquivo.  
   
  Autocopy  
- Se você estiver usando o recurso Autocopy para copiar automaticamente a última versão de um arquivo para vários locais, o arquivo será copiado se **Substituir** estiver habilitado. Se você usou **Autoincrement** ou **nenhum**, a entrega falhará e o `rsDeliveryError` erro ocorrerá.  
+ Se você estiver usando o recurso Autocopy para copiar automaticamente a última versão de um arquivo para vários locais, o arquivo será copiado se **Substituir** estiver habilitado. Se você usou **Autoincrement** ou **None**, a entrega falhará e o `rsDeliveryError` erro ocorrerá.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e gerenciar assinaturas de servidores de relatório do modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Assinaturas e entrega de &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

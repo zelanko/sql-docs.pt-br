@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f431abab7f69c957b64d83f2f06c7675c566b2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236166"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Navegador** do Designer de Cubo para explorar dimensões, medidas e KPIs em um cubo. No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], o Navegador do Cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] foi integrado com o Designer de Consulta MDX e fornece interfaces gráficas do usuário para ajudar a criar consultas MDX, filtrar e fatiar cubos, além de fazer buscas detalhadas em hierarquias.  
@@ -34,7 +34,7 @@ ms.locfileid: "36115137"
   
  ![Designer de Consultas MDX do Analysis Services, modo de exibição de design](media/rsqd-dsawas-mdx-designmode.gif "Designer de Consultas MDX do Analysis Services, modo de exibição de design")  
   
- Enquanto você estiver trabalhando no modo de design gráfico, se o **AutoExecutar** (![executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")) botão de alternância na barra de ferramentas estiver selecionado, o **Navegador** executa uma consulta cada vez que você solta um objeto de metadados no painel de dados. Você também pode executar manualmente a consulta usando o **executar consulta** (![executar a consulta](media/rsqdicon-run.gif "executar a consulta")) na barra de ferramentas.  
+ Enquanto você estiver trabalhando no modo de design gráfico, se o **auto-executar** (![executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")) botão de alternância na barra de ferramentas estiver selecionado, o **Navegador** executa uma consulta cada vez que você solta um objeto de metadados no painel de dados. Você também pode executar manualmente a consulta usando o **executar consulta** (![execute a consulta](media/rsqdicon-run.gif "execute a consulta")) na barra de ferramentas.  
   
  Para alterar o designer de consultas gráficas para o modo **Consulta** e trabalhar com o texto das instruções MDX, clique no botão **Modo Design** na barra de ferramentas.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36115137"
   
  O painel **Metadados** exibe as guias para **Metadados** e **Funções**. Na guia **Metadados** , você pode arrastar as dimensões, hierarquias, KPIs e medidas para a área de design de consulta. Na guia **Funções** , você pode arrastar as funções para a área de design de consulta. Quando você executar a consulta, a área de design de consulta exibirá os resultados da consulta MDX. Você também pode clicar em **Analisar no Excel** na **Barra de Ferramentas** para exportar os dados para o Microsoft Office Excel e exibir os resultados da mesma maneira como os usuários fariam, em uma Tabela Dinâmica. As seções a seguir descrevem a barra de ferramentas e todos os painéis para cada modo do **Navegador** com mais detalhes.  
   
- Observe que, enquanto você estiver trabalhando no modo de texto, o **AutoExecutar** (![executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")) botão de alternância na barra de ferramentas não está disponível. No entanto, você pode executar manualmente consultas usando o **executar consulta** (![executar a consulta](media/rsqdicon-run.gif "executar a consulta")) na barra de ferramentas.  
+ Observe que, enquanto você estiver trabalhando no modo de texto, o **auto-executar** (![executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "executar a consulta automaticamente")) botão de alternância na barra de ferramentas não está disponível. No entanto, você pode executar consultas manualmente usando o **executar consulta** (![execute a consulta](media/rsqdicon-run.gif "execute a consulta")) na barra de ferramentas.  
   
 ## <a name="sections"></a>Seções  
  **Barra de Ferramentas**  
@@ -62,7 +62,7 @@ ms.locfileid: "36115137"
  **Metadados**  
  Use o painel **Metadados** para exibir objetos contidos pelo cubo, fazer buscas detalhadas em hierarquias, e explorar e usar medidas. Depois de ter selecionado e para exibir os dados associados a eles no painel **Relatório**. Para obter mais informações sobre esse painel, consulte [Metadados &#40;Guia Navegador, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Filtro e consulta**  
+ **Filtros e consultas**  
  Use esta área da superfície de design para criar consultas MDX, arrastando e soltando objetos do painel **Metadados** e especificando critérios de filtro na dimensão ou no cubo de origem. Para obter mais informações, consulte [Consultar e filtrar &#40;Guia Navegador, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Consulte também  

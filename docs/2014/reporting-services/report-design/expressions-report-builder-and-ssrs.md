@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268582"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
-  As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatório quando você executar o relatório.  
+  As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatório quando você executa o relatório.  
   
- Ao contrário de aplicativos, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, em que você trabalha diretamente com dados em uma planilha em um relatório, você trabalha com expressões que são espaços reservados para dados. Para ver os dados reais das expressões avaliadas, visualize o relatório. Quando você executa o relatório, o processador de relatório avalia cada expressão pois combina dados de relatório e elementos de layout de relatório, tais como tabelas e gráficos.  
+ Ao contrário de aplicativos, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, onde você trabalha diretamente com dados em uma planilha, em um relatório, você trabalha com expressões que são espaços reservados para os dados. Para ver os dados reais das expressões avaliadas, visualize o relatório. Quando você executa o relatório, o processador de relatório avalia cada expressão pois combina dados de relatório e elementos de layout de relatório, tais como tabelas e gráficos.  
   
  À medida que você cria um relatório, muitas expressões para itens de relatório são definidas. Por exemplo, quando você arrasta um campo do painel de dados para uma célula da tabela na superfície de design de relatório, o valor da caixa de texto é definido como uma expressão simples para o campo. Na figura a seguir, o painel Dados do Relatório exibe os campos do conjunto de dados ID, Name, SalesTerritory, Code e Sales. Três campos foram adicionados à tabela: [Name], [Code] e [Sales]. A notação [Name] na superfície de design representa a expressão subjacente `=Fields!Name.Value`.  
   
@@ -36,15 +36,15 @@ ms.locfileid: "36121217"
   
  Para obter mais informações e exemplos, consulte os seguintes tópicos:  
   
--   [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de equações de filtro &#40;SSRS e construtor de relatórios&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de equações de filtro &#40;relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Exemplos de expressões de grupo &#40;SSRS e construtor de relatórios&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Exemplos de expressões de grupo &#40;relatórios e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
--   [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+-   [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
   
 -   [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
@@ -133,11 +133,11 @@ ms.locfileid: "36121217"
 ##  <a name="Section"></a> Nesta seção  
  [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Expressão usa relatórios de &#40;SSRS e construtor de relatórios&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Usos de expressões em relatórios &#40;relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Escopo das expressões para totais, agregações e coleções internas &#40;SSRS e construtor de relatórios&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Escopo das expressões para totais, agregações e coleções internas &#40;relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Referência de expressão &#40;SSRS e construtor de relatórios&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [Referência de expressões &#40;relatórios e SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   

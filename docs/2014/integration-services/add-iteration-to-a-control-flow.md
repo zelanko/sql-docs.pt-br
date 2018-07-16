@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273412"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Adicionar iteração a um fluxo de controle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner Loop For, um elemento de fluxo de controle que torna simples a inclusão de um looping que repete condicionalmente um fluxo de controle em um pacote. Para obter mais informações, consulte [Contêiner Loop For](control-flow/for-loop-container.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36011445"
   
  As expressões podem incluir variáveis. A vantagem de usar variáveis é que elas podem ser atualizadas no tempo de execução, tornando os pacotes mais flexíveis e fáceis de gerenciar. O comprimento máximo de uma expressão é de 4000 caracteres.  
   
- Quando você especifica uma variável em uma expressão, deve introduzir o nome da variável com o sinal de arroba (@). Por exemplo, para uma variável chamada `Counter`, digite @Counter na expressão que usa o contêiner Loop For. Se você incluir a propriedade namespace na variável, deverá incluir a variável e namespace entre colchetes. Por exemplo, para um `Counter` variável o `MyNamespace` namespace, tipo [@MyNamespace::Counter].  
+ Quando você especifica uma variável em uma expressão, deve introduzir o nome da variável com o sinal de arroba (@). Por exemplo, para uma variável nomeada `Counter`, insira @Counter na expressão que usa o contêiner Loop For. Se você incluir a propriedade namespace na variável, deverá incluir a variável e namespace entre colchetes. Por exemplo, para um `Counter` variável o `MyNamespace` namespace, tipo [@MyNamespace::Counter].  
   
  As variáveis que o contêiner Loop For usa devem ser definidas no escopo do contêiner Loop For ou no escopo de qualquer contêiner que seja o maior na hierarquia de contêiner do pacote. Por exemplo, um contêiner Loop For pode usar variáveis definidas em seu escopo e também variáveis definidas no escopo do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36011445"
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Agrupa ou desagrupa componentes](group-or-ungroup-components.md)   
+ [Agrupar ou desagrupar componentes](group-or-ungroup-components.md)   
  [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Adicionar enumeração a um fluxo de controle](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
  [Fluxo de Controle](control-flow/control-flow.md)  

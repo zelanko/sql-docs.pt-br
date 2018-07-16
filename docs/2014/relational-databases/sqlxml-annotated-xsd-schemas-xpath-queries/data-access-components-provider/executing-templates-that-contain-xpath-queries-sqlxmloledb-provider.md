@@ -20,28 +20,28 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202826"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Executando modelos que contêm consultas XPath (provedor SQLXMLOLEDB)
   Este exemplo mostra como usar as propriedades específicas do Provedor SQLXMLOLEDB a seguir:  
   
 -   ClientSideXML  
   
--   Caminho de base  
+-   Caminho base  
   
 -   Esquema de mapeamento  
   
- Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado no esquema de mapeamento XSD (MySchema.xml) que está descrito nos [executar consultas de XPath &#40;provedor SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado no esquema de mapeamento XSD (MySchema. xml) que é descrito em [executar consultas de XPath &#40;provedor SQLXMLOLEDB&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- A propriedade de esquema de mapeamento fornece o esquema de mapeamento XSD no qual a consulta XPath é executada. A propriedade do caminho de Base fornece o caminho de arquivo para o esquema de mapeamento.  
+ A propriedade de esquema de mapeamento fornece o esquema de mapeamento XSD com relação à qual a consulta XPath é executada. A propriedade de caminho de Base fornece o caminho do arquivo para o esquema de mapeamento.  
   
  A propriedade ClientSideXML é definida como True. Assim, o documento XML é gerado no cliente.  
   

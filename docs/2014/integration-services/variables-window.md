@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a20f733fd9a6fb2ca3c6e00eb4d1e84b7cb654
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162847"
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
@@ -68,7 +68,7 @@ ms.locfileid: "36118140"
  Exiba o valor da variável. Você pode atualizar o valor da variável para as variáveis definidas pelo usuário. Este valor pode ser literal ou uma expressão e pode ser uma cadeia de caracteres com várias linhas. Para atribuir uma expressão à variável, clique no botão de reticências ao lado da coluna **Expressão** na janela **Variáveis** .  
   
  `Namespace`  
- Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas no **usuário** namespace, mas você pode alterar o nome do namespace no `Namespace` campo. Para exibir esta coluna, clique em **Opções de Grade**.  
+ Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas na **usuário** namespace, mas você pode alterar o nome do namespace no `Namespace` campo. Para exibir esta coluna, clique em **Opções de Grade**.  
   
  **Elevar Evento de Alteração**  
  Indique se precisa gerar um evento `OnVariableValueChanged` quando o valor é alterado. Você pode atualizar o valor para as variáveis do sistema e as definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  

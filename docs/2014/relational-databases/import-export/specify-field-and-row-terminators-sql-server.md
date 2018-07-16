@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197206"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
   Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
@@ -46,9 +45,9 @@ ms.locfileid: "36122907"
 |Qualquer caractere imprimível (caracteres de controle não são imprimíveis, exceto nulo, tabulação, nova linha e retorno de carro)|(*, A, t, l, etc.)|  
 |Cadeia de caracteres de até 10 caracteres imprimíveis, incluindo alguns ou todos os terminadores listados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t—\n e assim por diante)|  
   
- <sup>1</sup> apenas o t, n, r, 0 e '\0' caracteres trabalhar com o caractere de escape de barra invertida para produzir um caractere de controle.  
+ <sup>1</sup> apenas o t, n, r, os caracteres de 0 e '\0' funcionam com o caractere de escape de barra invertida para produzir um caractere de controle.  
   
- <sup>2</sup> , embora o caractere de controle nulo (\0) não é visível quando impresso, é um caractere distinto no arquivo de dados. Isso significa que usar o caractere de controle nulo como um terminador de campo ou de linha é diferente de não ter nenhum terminador de campo ou de linha.  
+ <sup>2</sup> mesmo que o caractere de controle nulo (\0) não é visível quando impresso, é um caractere distinto no arquivo de dados. Isso significa que usar o caractere de controle nulo como um terminador de campo ou de linha é diferente de não ter nenhum terminador de campo ou de linha.  
   
 > [!IMPORTANT]  
 >  Se um caractere terminador ocorrer dentro dos dados, ele será interpretado como um terminador, não como dados, e os dados depois daquele caractere serão interpretados como sendo parte do próximo campo ou registro. Portanto, escolha seus terminadores cuidadosamente para ter certeza de que eles nunca aparecerão em seus dados. Por exemplo, um terminador de campo de alternativo baixo não seria uma boa escolha para um terminador de campo se os dados contiverem esse alternativo baixo.  
@@ -60,7 +59,7 @@ ms.locfileid: "36122907"
 >  Quando você usa **bcp** de forma interativa e especifica \n (nova linha) como terminador de linha, o **bcp** automaticamente o prefixa com um caractere \r (retorno de carro), o que resulta em um terminador de linha \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Especificando terminadores para exportação em massa  
- Quando você exporta em massa `char` ou `nchar` dados e quer usar um terminador não padrão, você deve especificar o terminador para a **bcp** comando. Você pode especificar terminadores em qualquer uma das seguintes formas:  
+ Quando você exporta em massa `char` ou `nchar` dados e quer usar um terminador não padrão, você deve especificar o terminador para o **bcp** comando. Você pode especificar terminadores em qualquer uma das seguintes formas:  
   
 -   Com um arquivo de formato que especifica o terminador campo por campo.  
   

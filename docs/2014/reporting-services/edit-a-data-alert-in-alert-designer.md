@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -18,13 +18,13 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f5c9314b2dca029341c4ea503e6417a5e9c2507d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8b11052241d66086eb9206978a65527e0df9a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251698"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Editar um alerta de dados no Designer de Alertas
   Você abre a definição de alerta de dados que deseja editar no Gerenciador de Alertas de Dados. Apenas o usuário que criou a definição de alerta pode editá-la. Para obter mais informações sobre como abrir o Gerenciador de Alertas de Dados, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "36120518"
   
      A definição de alerta é aberta no Designer de Alertas de Dados.  
   
-2.  Atualize as regras, as configurações de agenda e as configurações de email. Para obter mais informações, consulte [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md) e [criar um alerta de dados no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md).  
+2.  Atualize as regras, as configurações de agenda e as configurações de email. Para obter mais informações, consulte [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md) e [criar um alerta no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Você não pode escolher um feed de dados diferente. Para usar um feed de dados diferente, você deve criar uma nova definição de alerta de dados.  
@@ -52,7 +52,7 @@ ms.locfileid: "36120518"
     >  Se o relatório tiver sido alterado e os feeds de dados gerados no relatório tiverem sido alterados, a definição de alerta talvez não seja mais válida. Isso ocorre quando uma coluna referenciada pela definição de alerta nas regras é excluída do relatório ou altera o tipo de dados, ou quando o relatório é excluído ou movido. Você pode abrir uma definição de alerta que não é válida, mas só pode salvá-la novamente depois que ela estiver válida com base na versão atual do feed de dados de relatório do qual ela depende. Para saber mais sobre como os feeds de dados são gerados com base em relatórios, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de alertas de dados para os administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
   
   

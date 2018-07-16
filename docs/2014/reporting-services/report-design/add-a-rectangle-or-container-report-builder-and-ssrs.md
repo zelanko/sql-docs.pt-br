@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d1cac8525b9343cc2719cd38d278f55b89839bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 474fcf999291f9b26c242a8e1685431bd58297f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255768"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Adicionar um retângulo ou um contêiner (Construtor de Relatórios e SSRS)
   Adicione um retângulo a seu relatório quando quiser que um elemento gráfico separe áreas do relatório, enfatize áreas de um relatório ou forneça um plano de fundo para um ou mais itens de relatório. Os retângulos também são usados como contêineres para ajudar a controlar a maneira como as regiões de dados são renderizadas em um relatório. Você pode personalizar a aparência de um retângulo editando suas propriedades, como plano de fundo e cores da borda. Para obter mais informações sobre como usar um retângulo como um contêiner, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) e [Exibir os mesmos dados em uma matriz e um gráfico &#40;Construtor de Relatórios&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
@@ -54,10 +54,10 @@ ms.locfileid: "36115368"
 2.  Clique na seta próxima ao botão **Borda** para determinar quais lados do retângulo devem ser alterados.  
   
     > [!NOTE]  
-    >  Se você definir o estilo de linha como **duplo** e a largura da linha é 1 1/2 pt ou mais estreita, a linha talvez não pareça dupla quando você executa o relatório no construtor de relatórios, Designer de relatórios ou Gerenciador de relatórios. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
+    >  Se você definir o estilo de linha como **duplas** e a largura da linha é 1 1/2 pt ou mais estreita, a linha talvez não pareça dupla quando você executa o relatório no construtor de relatórios, Designer de relatórios ou Gerenciador de relatórios. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Consulte também  
- [Retângulos e linhas &#40;SSRS e construtor de relatórios&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Retângulos e linhas &#40;relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

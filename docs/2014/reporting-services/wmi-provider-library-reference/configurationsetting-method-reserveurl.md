@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cd5ef5a1e4a29b70d742e858a30ab9912cce6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166067"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Método ReserveURL (WMI MSReportServer_ConfigurationSetting)
   Adiciona uma reserva de URL para um determinado aplicativo.  

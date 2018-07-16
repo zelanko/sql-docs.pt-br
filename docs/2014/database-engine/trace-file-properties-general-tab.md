@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.general.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e6ccb06efda3f6ddd3f8997a95094568adb8196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e7a5fca7092cff71a7ec0995421d0fdf6685b2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263352"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propriedades do Arquivo de Rastreamento (guia Geral)
   Use a guia **Geral** da caixa de diálogo **Propriedades do Arquivo de Rastreamento** para exibir as propriedades de um arquivo de rastreamento.  

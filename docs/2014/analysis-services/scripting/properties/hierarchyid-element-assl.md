@@ -22,18 +22,18 @@ helpviewer_keywords:
 - HierarchyID element
 ms.assetid: 6effe47d-e598-41f8-993a-b2bce49fd7dd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96fd95f6853f5edd7f7eaa5d6aa9627cc322a1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c10b01b17c8ceb6cb3e550d07fe78d6469526fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220006"
 ---
 # <a name="hierarchyid-element-assl"></a>Elemento HierarchyID (ASSL)
-  Contém o identificador (ID) para um [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), ou [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) elemento.  
+  Contém o identificador (ID) de um [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), ou [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36011463"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Os elementos que correspondem aos pais de `HierarchyID` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeHierarchy> e <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
+ Os elementos que correspondem aos pais de `HierarchyID` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CubeHierarchy> e <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

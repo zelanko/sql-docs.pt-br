@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyErrorAction element
 ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41ebffd86a67ef474180e09770b4e8c0cdef3f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119cf38dc30683c4d1c4fc7edc67c77c8f01e4f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173519"
 ---
 # <a name="keyerroraction-element-assl"></a>Elemento KeyErrorAction (ASSL)
-  Especifica a ação para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quando ocorre um erro em uma chave.  
+  Especifica a ação para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] a ser executada quando ocorre um erro em uma chave.  
   
 ## <a name="syntax"></a>Sintaxe  
   

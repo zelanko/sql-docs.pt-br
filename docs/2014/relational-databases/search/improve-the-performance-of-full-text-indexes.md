@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212766"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
   O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU, e pela arquitetura do computador.  
   
-##  <a name="causes"></a> Causas comuns de problemas de desempenho  
+##  <a name="causes"></a> Causas comuns dos problemas de desempenho  
  A principal causa da diminuição do desempenho da indexação de texto completo são os limites em termos de recursos de hardware:  
   
 -   Se o uso da CPU pelo processo de host do daemon de filtro (fdhost.exe) ou o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está próximo de 100%, a CPU é o gargalo.  
@@ -62,19 +61,19 @@ ms.locfileid: "36121473"
 ##  <a name="tuning"></a> Ajustando o desempenho de índices de texto completo  
  Para maximizar o desempenho de seus índices de texto completo, implemente as seguintes práticas recomendadas:  
   
--   Para usar todos os processadores ou núcleos, no máximo, defina [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' para o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Para usar todos os processadores ou núcleos ao máximo, defina [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' para o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Verifique se a tabela base tem um índice clusterizado. Use um tipo de dados integer para a primeira coluna do índice clusterizado. Evite usar GUIDs na primeira coluna do índice clusterizado. Uma população de vários intervalos em um índice clusterizado pode gerar a maior velocidade de população. É recomendável que a coluna que funciona como chave de texto completo tenha um tipo de dados integer.  
   
 -   Atualize as estatísticas da tabela base usando a instrução [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) . E, o mais importante, atualize as estatísticas no índice clusterizado ou na chave de texto completo para uma população completa. Isso ajuda uma população de vários intervalos a gerar boas partições na tabela.  
   
--   Crie um índice secundário em uma `timestamp` coluna, se você deseja melhorar o desempenho da população incremental.  
+-   Crie um índice secundário em um `timestamp` coluna se você quiser melhorar o desempenho da população incremental.  
   
 -   Antes de executar uma população completa em um computador com várias CPUs, é recomendável limitar o tamanho do pool de buffers temporariamente definindo o valor de `max server memory` para deixar memória suficiente para o processo do fdhost.exe e para uso do sistema operacional. Para obter mais informações, consulte "Estimando os requisitos de memória da memória compartilhada de saída do processo do host do daemon de filtro (fdhost.exe)", posteriormente neste tópico.  
   
   
   
-##  <a name="full"></a> Solucionando problemas de desempenho de populações completas  
+##  <a name="full"></a> O desempenho das populações completas de solução de problemas  
  Para diagnosticar problemas de desempenho, examine os logs de rastreamento de texto completo. Para obter informações sobre os logs de rastreamento, consulte [popular índices de texto completo](../indexes/indexes.md).  
   
  É recomendável seguir a ordem de solução de problemas especificada abaixo se o desempenho das populações completas não for satisfatório.  
@@ -83,7 +82,7 @@ ms.locfileid: "36121473"
  Durante uma população de texto completo, é possível que o fdhost.exe ou o sqlservr.exe fique com pouca memória não tenha memória suficiente. Se o log de rastreamento de texto completo mostrar que fdhost.exe está sendo reiniciado com frequência ou que o código de erro 8007008 está sendo retornado, isso indica que um desses processos está sendo executado sem memória. Se fdhost.exe estiver gerando despejos, principalmente em computadores grandes com várias CPUs, talvez ele esteja ficando com memória insuficiente.  
   
 > [!NOTE]  
->  Para obter informações sobre buffers de memória usados por um rastreamento de texto completo, consulte [fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
+>  Para obter informações sobre buffers de memória usados por um rastreamento de texto completo, consulte [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  As causas possíveis são as seguintes:  
   
@@ -130,18 +129,18 @@ ms.locfileid: "36121473"
 > [!IMPORTANT]  
 >  Para obter informações essenciais sobre as fórmulas, consulte <sup>1</sup>, <sup>2</sup>, e <sup>3</sup>, abaixo.  
   
-|Plataforma|Estimando as necessidades de memória de fdhost.exe em MB —*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor —*M*<sup>2</sup>|  
+|Plataforma|Estimando os requisitos de memória fdhost.exe em MB —*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor —*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= mínimo (** *T* **,** 2000 **) –*`F`*–** 500|  
 |x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup> se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2*, e assim por diante. Em seguida, calcule *M* como *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> se houver várias populações completas em andamento, calcule os requisitos de memória de fdhost.exe de cada uma separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como *T***–** sigma **(***F*i**)**.  
   
  <sup>2</sup> 500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
   
- <sup>3</sup> . *ism_size* é presumido como 8 MB para x64 plataformas.  
+ <sup>3</sup> .* ism_size* é presumido como 8 MB para x64 plataformas.  
   
- **Exemplo: Estimando as necessidades de memória do fdhost.exe**  
+ **Exemplo: Estimando os requisitos de memória de fdhost.exe**  
   
  Este exemplo é para um computador AMD64 com 8 GB de RAM e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe —*F*. O número de intervalos de rastreamento é `8`.  
   
@@ -164,7 +163,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **Para definir a máxima do servidor opção de configuração de memória**  
+ **Para definir a máxima do servidor a opção de configuração de memória**  
   
 -   [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -202,12 +201,12 @@ GO
   
   
   
-##  <a name="filters"></a> Solucionando problemas de desempenho de indexação lento devido a filtros  
+##  <a name="filters"></a> Solução de problemas de desempenho de indexação lento devido a filtros  
  Ao popular um índice de texto completo, o Mecanismo de Texto Completo usa dois tipos de filtros: multithread (vários threads) e single-thread (thread único). Alguns documentos, como os documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, são filtrados com um filtro multithread. Outros documentos, como documentos em PDF (Adobe Acrobat Portable Document Format), são filtrados com um filtro de thread único.  
   
  Por razões de segurança, os filtros são carregados por processos de host do daemon de filtro. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded. Quando um documento que usa um filtro multithread contém um documento incorporado que usa um filtro de thread único, o Mecanismo de Texto Completo inicia um processo de thread único para o documento incorporado. Por exemplo, ao encontrar um documento do Word que contém um documento em PDF, o Mecanismo de Texto Completo usa o processo multithread para o conteúdo do Word e inicia um processo de thread único para o conteúdo do PDF. Um filtro de thread único pode não funcionar bem neste ambiente e pode desestabilizar o processo de filtragem. Em determinadas circunstâncias em que o processo de incorporação é comum, a desestabilização pode causar o travamento do processo de filtragem. Quando isso ocorrer, o Mecanismo de Texto Completo refaz a rota do documento que falhou (por exemplo, um documento do Word que contém um conteúdo em PDF incorporado) para o processo de filtragem em thread único. Se isso acontecer com frequência, ocorrerá uma degradação de desempenho do processo de indexação de texto completo.  
   
- Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como filtro de thread único, você precisa definir o **ThreadingModel** o valor do registro para o filtro `Apartment Threaded`. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
+ Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como filtro de thread único, você precisa definir a **ThreadingModel** o valor do registro para o filtro como `Apartment Threaded`. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
   
   
   

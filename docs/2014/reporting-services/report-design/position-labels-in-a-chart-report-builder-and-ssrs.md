@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261992"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Posicionar rótulos em um gráfico (Construtor de Relatórios e SSRS)
   Como cada tipo de gráfico tem uma forma diferente, os rótulos de ponto de dados são colocados em um local ideal de forma que não interfiram no gráfico. A posição padrão dos rótulos varia com o tipo de gráfico:  
@@ -82,7 +82,7 @@ ms.locfileid: "36121422"
   
 6.  Selecione um valor para a propriedade BarLabelStyle.  
   
- Quando a barra de estilo do rótulo é definido como `Outside`, os rótulos serão colocados fora da barra, contanto que caibam na área do gráfico. Se o rótulo não puder ser colocado fora da barra, mas dentro da área de gráfico, o rótulo será colocado dentro da barra na posição mais próxima do final da barra.  
+ Se a barra de estilo do rótulo é definido como `Outside`, os rótulos serão colocados fora da barra, contanto que ele esteja na área do gráfico. Se o rótulo não puder ser colocado fora da barra, mas dentro da área de gráfico, o rótulo será colocado dentro da barra na posição mais próxima do final da barra.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Para alterar a posição dos rótulos de pontos em um gráfico de Área, Coluna, Linha ou Dispersão  
   
@@ -99,11 +99,11 @@ ms.locfileid: "36121422"
 6.  Selecione um valor para a propriedade Position.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráficos de pizza &#40;SSRS e construtor de relatórios&#41;](charts-report-builder-and-ssrs.md)   
- [Gráficos de barras &#40;SSRS e construtor de relatórios&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Gráficos de pizza &#40;relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Gráficos de barras &#40;relatórios e SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;SSRS e construtor de relatórios&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Rótulos de ponto de dados de exibição fora de um gráfico de pizza &#40;relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Formatando pontos de dados em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

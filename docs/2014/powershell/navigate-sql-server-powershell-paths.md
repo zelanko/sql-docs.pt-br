@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242756"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
   O provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell expõe o conjunto de objetos em uma instância do SQL Server em uma estrutura semelhante a um caminho de arquivo. Você pode usar cmdlets do Windows PowerShell para navegar até o caminho do provedor e criar unidades personalizadas para encurtar o caminho que você tem que digitar.  
@@ -118,9 +118,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Criar uma unidade personalizada  
  **Criar e usar uma unidade personalizada**  
   
-1.  Use `New-PSDrive` para definir uma unidade personalizada. Use o `Root` parâmetro para especificar o caminho que é representado pelo nome de unidade personalizada.  
+1.  Use `New-PSDrive` para definir uma unidade personalizada. Use o `Root` parâmetro para especificar o caminho que é representado por um nome de unidade personalizada.  
   
-2.  Referência de nome de unidade personalizada em cmdlets de navegação do caminho como `Set-Location`.  
+2.  O nome de unidade personalizada em cmdlets de navegação do caminho de referência, como `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Exemplo de unidade personalizada (PowerShell)  
  Este exemplo cria uma unidade virtual chamada AWDB que é mapeada para o nó de uma cópia implantada do banco de dados de exemplo AdventureWorks2012. A unidade virtual é usada para navegar até uma tabela no banco de dados.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CubeName element
 ms.assetid: c5c0546e-b9b2-4813-82a9-b028628b88dc
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27427c84100f04b173c958ad2fe8cbb50368fec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b5b5f75ef00172fb64f4818a7c741bb81d2880e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250806"
 ---
 # <a name="cubename-element-xmla"></a>Elemento CubeName (XMLA)
   Contém o nome do cubo representado pelo pai [cubo](cube-element-olapinfo-xmla.md) elemento.  

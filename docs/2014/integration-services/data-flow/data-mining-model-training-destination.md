@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27cea5c0c206774508eacd9b38431e9314400a65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bb23745ab0858cb598fd668d5f066f0e247d817
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171007"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36115694"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Treinamento de Modelo de Mineração de Dados** , clique em um dos seguintes tópicos:  
   
--   [Editor de treinamento do modelo de mineração de dados &#40;guia Conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Editor de treinamento do modelo de mineração de dados &#40;guia de Conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
 -   [Editor de treinamento do modelo de mineração de dados &#40;guia colunas&#41;](../data-mining-model-training-editor-columns-tab.md)  
   

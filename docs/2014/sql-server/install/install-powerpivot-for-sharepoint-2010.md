@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c77fa146f7703fb67cf0d1ad5c9aa0c042737976
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b187ec488716200c53021afb0c6da42cba291c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161817"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Instale o PowerPivot para SharePoint 2010
   O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é uma coleção de serviços de camada intermediária e backend que fornece acesso a dados PowerPivot em um farm do SharePoint 2010. Se sua organização usa o aplicativo cliente, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010, para criar pastas de trabalho contendo dados analíticos, você precisa ter o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para acessar esses dados em um ambiente de servidor. Este tópico orienta você pelo processo básico de instalação e vincula a tópicos adicionais para ajudar a configurar o PowerPivot.  
@@ -30,7 +30,7 @@ ms.locfileid: "36121202"
   
  
   
- Para obter instruções sobre como instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo servidor, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ Para obter instruções sobre como instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo servidor, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36121202"
   
 6.  O nome da instância do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve estar disponível. Você não pode ter uma instância nomeada existente do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no computador em que está instalando o PowerPivot para SharePoint.  
   
-7.  A instância do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] não pode fazer parte de um cluster de failover do SQL Server. Use os recursos de alta disponibilidade do produto do SharePoint. Por exemplo, os Serviços do Excel gerenciam o balanceamento de carga dos servidores PowerPivot para SharePoint. Para obter mais informações, consulte [modelo de dados de gerenciar os serviços do Excel (SharePoint Server 2013) de configurações](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+7.  A instância do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] não pode fazer parte de um cluster de failover do SQL Server. Use os recursos de alta disponibilidade do produto do SharePoint. Por exemplo, os Serviços do Excel gerenciam o balanceamento de carga dos servidores PowerPivot para SharePoint. Para obter mais informações, consulte [as configurações (SharePoint Server 2013) do modelo de dados de gerenciar os serviços do Excel](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-8.  Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm existente, deverá ter um ou mais aplicativos Web SharePoint configurados para a autenticação de modo clássico. O acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] só funcionará se o aplicativo Web oferecer suporte à autenticação de modo clássica. Para obter mais informações sobre requisitos do modo clássico, consulte [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
+8.  Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em um farm existente, deverá ter um ou mais aplicativos Web SharePoint configurados para a autenticação de modo clássico. O acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] só funcionará se o aplicativo Web oferecer suporte à autenticação de modo clássica. Para obter mais informações sobre os requisitos de modo clássico, consulte [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
   
 9. Analise os tópicos adicionais a seguir para entender os requisitos de sistema e de versão:  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36121202"
   
 8.  Na página **Função de Instalação** , selecione **SQL Server PowerPivot para SharePoint**.  
   
-9. Opcionalmente, você pode acrescentar uma instância do Mecanismo de banco de dados a sua instalação. Você pode fazer isso se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar os bancos de dados de configuração e conteúdo do farm. Se você adicionar o Mecanismo de Banco de Dados, ele será instalado como uma instância nomeada do PowerPivot. Sempre que você precisa especificar uma conexão com esta instância (por exemplo, no assistente configuração farm se você estiver usando o Assistente para configurar o farm), insira o nome do banco de dados neste formato: <`servername`> \PowerPivot.  
+9. Opcionalmente, você pode acrescentar uma instância do Mecanismo de banco de dados a sua instalação. Você pode fazer isso se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar os bancos de dados de configuração e conteúdo do farm. Se você adicionar o Mecanismo de Banco de Dados, ele será instalado como uma instância nomeada do PowerPivot. Sempre que você precisa especificar uma conexão a essa instância (por exemplo, no farm configuration wizard se você estiver usando o Assistente para configurar o farm), insira o nome do banco de dados neste formato: <`servername`> \powerpivot.  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36121202"
 21. Clique em **Instalar**.  
   
 > [!TIP]  
->  Se você precisar problemas ao fazer a instalação do SQL Server, consulte [exibir e ler arquivos de Log do SQL Server Setup](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+>  Se você precisar de problemas de acertar a instalação do SQL Server, consulte [exibir e ler arquivos de Log do SQL Server Setup](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ##  <a name="bkmk_config"></a> Etapa 2: Configurar o servidor  
   
@@ -132,9 +132,9 @@ ms.locfileid: "36121202"
   
 -   [Configuração do PowerPivot usando o Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
- **Conectando-se à instância do mecanismo de banco de dados.** Quando você instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do SQL Server dá a opção de adicionar uma instância do Mecanismo de Banco de Dados a sua instalação. Você poderá ter adicionado uma instância do Mecanismo de Banco de Dados à sua instalação se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar os bancos de dados de configuração e conteúdo do farm. Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Sempre que você precisa especificar uma conexão com esta instância (por exemplo, no assistente configuração farm se você estiver usando o Assistente para configurar o farm), lembre-se de inserir o nome do banco de dados neste formato: <`servername`> \PowerPivot.  
+ **Conectar-se à instância do mecanismo de banco de dados.** Quando você instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do SQL Server dá a opção de adicionar uma instância do Mecanismo de Banco de Dados a sua instalação. Você poderá ter adicionado uma instância do Mecanismo de Banco de Dados à sua instalação se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar os bancos de dados de configuração e conteúdo do farm. Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Sempre que você precisa especificar uma conexão a essa instância (por exemplo, no farm configuration wizard se você estiver usando o Assistente para configurar o farm), lembre-se de inserir o nome do banco de dados neste formato: <`servername`> \powerpivot.  
   
-##  <a name="bkmk_redist"></a> Etapa 3: Provedores de instalação do OLE DB do Analysis Services em servidores de aplicativos de serviços do Excel  
+##  <a name="bkmk_redist"></a> Etapa 3: Install Analysis serviços provedores OLE DB em servidores de aplicativos de serviços do Excel  
  As etapas de instalação adicionais serão necessárias se você executar os Serviços de Cálculo do Excel e o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em servidores de aplicativo separados. Nos servidores de aplicativo que executam os Serviços de Cálculo do Excel, instale a versão apropriada do provedor OLE DB do Analysis Services (MSOLAP).  
   
 -   A versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do MSOLAP é incluída na Instalação do SQL Server, portanto, instalar explicitamente a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do MSOLAP só será necessária se o servidor de aplicativo não for um servidor de aplicativo do PowerPivot.  
@@ -144,10 +144,10 @@ ms.locfileid: "36121202"
   
 -   Para que o servidor de aplicativos ofereça suporte às pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mais antigas, você precisa instalar a versão SQL Server 2008 R2 do MSOLAP.  
   
- Para obter mais informações sobre como instalar o provedor, incluindo as etapas de verificação, consulte [instalar o Analysis Services OLE DB Provider em SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ Para obter mais informações sobre como instalar o provedor, incluindo as etapas de verificação, consulte [instalar o Analysis Services OLE DB Provider em servidores SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
 ##  <a name="bkmk_verify"></a> Etapa 4: Verificar a instalação  
- Nesta última etapa, você verificará que o SharePoint 2010 e o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estão funcionando completamente. Para obter instruções, consulte [verificar um PowerPivot para SharePoint](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
+ Nesta última etapa, você verificará que o SharePoint 2010 e o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estão funcionando completamente. Para obter instruções, consulte [Verify a PowerPivot for SharePoint Installation](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

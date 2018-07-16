@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249176"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
   O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
@@ -56,7 +56,7 @@ ms.locfileid: "36115735"
   
  **Etapa 1: Administração de servidor**  
   
- Primeiro, decida quem terá direitos de administrador no nível do servidor. Durante a instalação, é preciso ter o administrador local que instala o SQL Server para especificar uma ou mais contas do Windows como administrador do servidor do Analysis Services. Os administradores do servidor têm todas as permissões possíveis em um servidor, inclusive a permissão para exibir, modificar e excluir qualquer objeto no servidor ou exibir os dados associados. Após a instalação ser concluída, o administrador do servidor pode adicionar ou remover contas para alterar a associação da função. Consulte [conceder permissões de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter detalhes sobre esse nível de permissão.  
+ Primeiro, decida quem terá direitos de administrador no nível do servidor. Durante a instalação, é preciso ter o administrador local que instala o SQL Server para especificar uma ou mais contas do Windows como administrador do servidor do Analysis Services. Os administradores do servidor têm todas as permissões possíveis em um servidor, inclusive a permissão para exibir, modificar e excluir qualquer objeto no servidor ou exibir os dados associados. Após a instalação ser concluída, o administrador do servidor pode adicionar ou remover contas para alterar a associação da função. Ver [conceder permissões de administrador do servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obter detalhes sobre esse nível de permissão.  
   
  **Etapa 2: Administração de banco de dados**  
   
@@ -95,8 +95,8 @@ ms.locfileid: "36115735"
  Usar uma abordagem como essa minimiza a variação para definições de função e associação de função no modelo, além de fornecer visibilidade das atribuições de função que tornam as permissões do cubo mais fáceis de implantar e manter.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceder permissões de administrador de servidor &#40;do Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Funções e permissões &#40;do Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [Conceder permissões de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Funções e permissões &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Metodologias de autenticação com suporte no Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

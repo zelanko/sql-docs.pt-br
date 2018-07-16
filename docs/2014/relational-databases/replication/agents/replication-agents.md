@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ac3b9ce0f6b5961a8d6829b8f01dbeb23cda9497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c8c7c1f0d0e7044e39d24c6acb9f7abfbc1f3e90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205356"
 ---
 # <a name="replication-agents"></a>Agentes de replicação
   A replicação usa muitos programas autônomos, chamados agentes, para efetuar as tarefas associadas ao controle de alterações e dados de distribuição. Esta seção da documentação contém referências de parâmetro para os agentes de replicação a seguir.  

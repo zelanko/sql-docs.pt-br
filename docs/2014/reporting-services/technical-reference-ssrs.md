@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 87b75fe08c201d7aace1d2465351300447e5ae7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255908"
 ---
 # <a name="technical-reference-ssrs"></a>Referência técnica (SSRS)
   Localize as ferramentas e a documentação de referência do PowerShell para usar ou administrar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -58,6 +58,6 @@ ms.locfileid: "36119830"
   
 ## <a name="see-also"></a>Consulte também  
  [Artigos do wiki do TechNet sobre a solução de problemas do Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [Wiki do TechNet sobre o modo do SharePoint para solução de problemas Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Artigos do wiki do TechNet sobre o modo do SharePoint do Reporting Services solução de problemas](http://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

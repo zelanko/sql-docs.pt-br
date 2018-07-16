@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a341b5aa6ced85e6d96a886cfe5944c4b32f960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 43e08fb5675fc5b393d5346564a1241288cda055
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256445"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
   Um pacote é um contêiner para objetos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Há três tipos de pacotes de Eventos Estendidos que incluem o seguinte:  
@@ -83,7 +83,7 @@ ms.locfileid: "36010899"
 |Admin|Os eventos Admin são principalmente direcionados aos usuários finais, administradores e suporte. Os eventos encontrados nos canais admin indicam um problema com uma solução bem definida na qual um administrador pode agir. Um exemplo de um evento admin é quando um aplicativo falha ao se conectar a uma impressora. Esses eventos são bem documentados ou têm uma mensagem associada a eles que diz ao leitor o que fazer para retificar o problema.|  
 |Operacional|Eventos operacionais são usados para analisar e diagnosticar um problema ou uma ocorrência. Eles podem ser usados para disparar ferramentas ou tarefas com base no problema ou na ocorrência. Um exemplo de um evento operacional é quando uma impressora é adicionada ou removida de um sistema.|  
 |Analítico|Eventos analíticos são publicados em grande volume. Eles descrevem operação de programa e são geralmente usados em investigações de desempenho.|  
-|Depurador|Eventos depuradores são usados somente por desenvolvedores para diagnosticar um problema de depuração.<br /><br /> Observação: Os eventos do canal de depuração retornam dados de estado internos específicos de implementação. Os esquemas e os dados retornados pelos eventos podem mudar ou se tornar inválidos em versões futuras do SQL Server. Portanto, eventos no canal de depuração podem mudar ou ser removidos em versões futuras do SQL Server, sem aviso prévio.|  
+|Depurador|Eventos depuradores são usados somente por desenvolvedores para diagnosticar um problema de depuração.<br /><br /> Observação: Eventos de canal de depuração retornam dados de estado interno de específico da implementação. Os esquemas e os dados retornados pelos eventos podem mudar ou se tornar inválidos em versões futuras do SQL Server. Portanto, eventos no canal de depuração podem mudar ou ser removidos em versões futuras do SQL Server, sem aviso prévio.|  
   
  **Palavra-chave**  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: eb5f2bfd3f8bb9afe084dfaaf80be84601d8f50a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5b68a2b113dc7d0e30bccd31c94f62a4169389d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216696"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Geral
   Selecione a caixa de diálogo **Propriedades da Fonte de Dados Compartilhada** para exibir e modificar as informações de conexão para a fonte de dados compartilhada no relatório.  
@@ -37,7 +37,7 @@ ms.locfileid: "36118583"
  Informe uma cadeia de conexão para a fonte de dados. Clique em **Editar** para criar a cadeia de conexão usando a caixa de diálogo **Propriedades da Conexão** . Clique no botão Expressões (**fx**) para editar a expressão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Caixa de diálogo Propriedades da Fonte de Dados Compartilhada, Credenciais](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)  

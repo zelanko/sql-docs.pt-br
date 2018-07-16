@@ -1,1 +1,1 @@
-**Este tópico aplica-se a:** ![Sim](media/yes.png "Sim")do SQL Server \(começando com o 2008\) ![sem](media/no.png "sem")Banco de dados SQL do azure ![sem](media/no.png "sem")Azure SQL Data Warehouse ![sem](media/no.png "sem")Parallel Data Warehouse
+**Este tópico aplica-se a:** ![yes](media/yes.png "Sim")SQL Server \(começando com o 2008\) ![nenhum](media/no.png "nenhum")Banco de dados SQL do azure ![nenhuma](media/no.png "nenhuma")Azure SQL Data Warehouse ![nenhum](media/no.png "nenhum")Parallel Data Warehouse

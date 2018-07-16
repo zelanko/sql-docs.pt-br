@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197866"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)
   Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se a um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também poderá omitir a porta se o ouvinte do grupo de disponibilidade estiver escutando na 1433).  A cadeia de conexão tem o `ApplicationIntent` propriedade definida como `ReadOnly`, tornando isso um *cadeia de caracteres de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
+ Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se a um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também poderá omitir a porta se o ouvinte do grupo de disponibilidade estiver escutando na 1433).  A cadeia de conexão tem o `ApplicationIntent` propriedade definida como `ReadOnly`, fazendo de um *cadeia de caracteres de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
   
  O banco de dados primário do grupo de disponibilidade processa a solicitação de roteamento somente leitura de entrada e tenta localizar uma réplica somente leitura online que esteja unida à réplica primária e configurada para roteamento somente leitura.  O cliente recebe informações de conexão do servidor de réplica primária e conecta-se à réplica somente leitura identificada.  
   
  Observe que a tentativa de aplicativo pode ser enviada de um driver cliente a uma instância de nível inferior do SQL Server.  Neste caso, a tentativa de aplicativo de somente leitura é ignorada e a conexão continua normalmente.  
   
- Você pode ignorar o roteamento somente leitura não definindo a propriedade de conexão de intenção de aplicativo `ReadOnly` (quando não designado, o padrão é `ReadWrite` durante o logon) ou conectando-se diretamente à instância de réplica primária do SQL Server em vez de usar o nome de ouvinte de grupo de disponibilidade.  O roteamento somente leitura também não ocorrerá se você conectar-se diretamente a uma réplica somente leitura.  
+ Você pode ignorar o roteamento somente leitura não definindo a propriedade de conexão de intenção de aplicativo como `ReadOnly` (quando não designado, o padrão é `ReadWrite` durante o logon) ou conectando-se diretamente à instância de réplica primária do SQL Server em vez de usar o nome de ouvinte do grupo de disponibilidade.  O roteamento somente leitura também não ocorrerá se você conectar-se diretamente a uma réplica somente leitura.  
   
 ####  <a name="RelatedTasksApps"></a> Tarefas relacionadas  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  Essa configuração é recomendável para conexões únicas e de várias sub-redes para ouvintes de grupos de disponibilidade e nomes de instâncias de cluster de failover do SQL Server.  A habilitação dessa opção adiciona mais otimizações, até mesmo para cenários de única sub-rede.  
   
- O `MultiSubnetFailover` conexão opção só funciona com o protocolo de rede TCP e tem suporte somente ao conectar-se a um ouvinte de grupo de disponibilidade e para qualquer conexão de nome de rede virtual para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ O `MultiSubnetFailover` conexão opção só funciona com o protocolo de rede TCP e tem suporte somente ao se conectar a um ouvinte de grupo de disponibilidade e para qualquer conexão de nome de rede virtual para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Um exemplo de um cadeia de conexão do provedor de ADO.NET (System.Data.SqlClient) que habilita o failover de várias sub-redes é o seguinte:  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- O `MultiSubnetFailover` opção de conexão deve ser definida como `True` mesmo se o grupo de disponibilidade se estenda apenas por uma única sub-rede.  Isso permite pré-configurar novos clientes para dar suporte ao futuro alcance de sub-redes sem necessidade de alterações futuras na cadeia de conexão de cliente e também otimiza o desempenho de failover para failovers de sub-rede única.  Enquanto o `MultiSubnetFailover` opção de conexão não é necessária, ela fornece o benefício de um failover de sub-rede mais rápido.  Isso ocorre porque o driver de cliente tentará abrir um soquete TCP para cada endereço IP em paralelo associado ao grupo de disponibilidade.  O driver de cliente esperará que o primeiro IP responda com êxito e quando o fizer, usa-o para a conexão.  
+ O `MultiSubnetFailover` opção de conexão deve ser definida como `True` , mesmo se o grupo de disponibilidade se estenda apenas por uma única sub-rede.  Isso permite pré-configurar novos clientes para dar suporte ao futuro alcance de sub-redes sem necessidade de alterações futuras na cadeia de conexão de cliente e também otimiza o desempenho de failover para failovers de sub-rede única.  Enquanto o `MultiSubnetFailover` opção de conexão não é necessária, ela fornece o benefício de um failover de sub-rede mais rápido.  Isso ocorre porque o driver de cliente tentará abrir um soquete TCP para cada endereço IP em paralelo associado ao grupo de disponibilidade.  O driver de cliente esperará que o primeiro IP responda com êxito e quando o fizer, usa-o para a conexão.  
   
 ##  <a name="SSLcertificates"></a> Ouvintes de grupo de disponibilidade e certificados SSL  
  Ao conectar-se a um ouvinte de grupo de disponibilidade, se as instâncias participantes do SQL Server usarem certificados SSL junto com criptografia de sessão, o driver de cliente que está fazendo a conexão precisará dar suporte ao Nome Alternativo da Entidade no certificado SSL para forçar a criptografia.  O suporte ao driver do SQL Server para o Nome Alternativo da Entidade do certificado está planejado para ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
@@ -196,7 +195,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Conectividade de cliente AlwaysOn &#40;do SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -217,8 +216,8 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [Blog da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn Team Blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conectividade de cliente AlwaysOn &#40;do SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Secundárias ativas: Réplicas secundárias legíveis &#40;grupos de disponibilidade AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

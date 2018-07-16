@@ -1,5 +1,5 @@
 ---
-title: Estimar o Assistente (mineração de dados suplementos para Excel) | Microsoft Docs
+title: Estimar o Assistente (Data Mining Add-ins para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - estimation
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 231afdcfdc5c6e9e461e463fb5b6c3c682e70cde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e81ee7d3ff6115cbec5774d8c139c0d9933afb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231976"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistente de Estimativa (Suplementos de Mineração de Dados para Excel)
   ![Assistente de estimativa na faixa de opções mineração de dados](media/dmc-estimate.gif "Assistente de estimativa na faixa de opções mineração de dados")  
@@ -33,9 +33,9 @@ ms.locfileid: "36011567"
   
 ## <a name="using-the-estimate-data-wizard"></a>Usando o Assistente para Estimar Dados  
   
-1.  Sobre o **mineração de dados** de faixa de opções, clique em **estimativa**.  
+1.  Sobre o **Data Mining** faixa de opções, clique em **estimativa**.  
   
-2.  No **Selecionar fonte de dados** caixa de diálogo, selecione a fonte de dados a ser usado. Você pode usar dados em uma Excel **tabela**, uma Excel **intervalo de dados**, ou de um **fonte de dados externa**.  
+2.  No **Selecionar fonte de dados** caixa de diálogo, selecione os dados de origem a serem usados. Você pode usar dados em uma Excel **tabela**, um Excel **intervalo de dados**, ou de um **fonte de dados externa**.  
   
      Se você usar uma fonte de dados externa, poderá criar exibições personalizadas ou as consultas e salvá-las como uma fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -43,22 +43,22 @@ ms.locfileid: "36011567"
   
      A coluna de destino deve conter dados numéricos contínuos.  
   
-4.  Selecione as colunas a serem usadas como entrada marcando o **colunas de entrada** caixa de seleção.  
+4.  Selecione as colunas a serem usadas como entrada, verificando o **colunas de entrada** caixa de seleção.  
   
      Essas colunas serão usadas para criar os padrões. Você deverá eliminar da análise qualquer coluna que provavelmente não vá ajudar, como números de ID ou colunas que contenham dados irrelevantes.  
   
 5.  O **estimativa** assistente seleciona o algoritmo ideal para seu conjunto de dados. No entanto, você pode clicar em **parâmetros** para abrir o **parâmetros de algoritmo** caixa de diálogo e definir opções avançadas.  
   
-6.  Se os dados forem numéricos e você pode usar o método de regressão Linear da Microsoft, você pode verificar o **Regressor** caixa para todas as colunas numéricas que você conhece (ou suspeita) a ser correlacionada com o valor previsível.  
+6.  Se os dados forem numéricos e você pode usar o método de regressão Linear da Microsoft, você pode verificar a **Regressor** caixa para todas as colunas numéricas que você sabe (ou suspeita) a ser correlacionada com o valor previsível.  
   
      O algoritmo irá testar os valores nessa coluna para determinar se eles afetam os resultados. Se você não tiver certeza, clique em **sugerir** e o algoritmo testará toda a coluna e automaticamente detectará os melhores valores para usar como regressores.  
   
     > [!NOTE]  
     >  Um regressor é necessário para criar uma estimativa. O assistente sempre recomenda o melhor regressor, com base em uma passagem inicial sobre os dados. Assim, caso você não tenha certeza, será melhor aceitar as seleções recomendadas.  
   
-7.  Sobre o **dividir os dados em conjuntos de teste e treinamento** página, especifique se deseja criar um pequeno subconjunto de dados de teste.  
+7.  Sobre o **dividir dados em conjuntos de teste e treinamento** , especifique se deseja criar um pequeno subconjunto dos dados para teste.  
   
-8.  Sobre o **concluir** página, forneça nomes para a nova estrutura de mineração e o modo de mineração ou aceite os nomes padrão que são fornecidos.  
+8.  Sobre o **concluir** página, fornecer nomes para a nova estrutura de mineração e o modo de mineração ou aceite os nomes padrão que são fornecidos.  
   
 9. Defina opções para usar o modelo.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36011567"
   
 -   Algoritmo rede neural da Microsoft  
   
- No **parâmetros de algoritmo** caixa de diálogo, você pode definir opções avançadas, dependendo do algoritmo escolhido. Para obter informações sobre as opções para cada um desses algoritmos, consulte esses tópicos nos Manuais Online do SQL Server:  
+ No **parâmetros de algoritmo** caixa de diálogo, você pode definir opções avançadas adicionais, dependendo do algoritmo escolhido. Para obter informações sobre as opções para cada um desses algoritmos, consulte esses tópicos nos Manuais Online do SQL Server:  
   
  [Referência técnica do algoritmo Árvores de Decisão da Microsoft](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36011567"
 ### <a name="requirements"></a>Requisitos  
  Para usar o Assistente para Estimar Dados, você deve estar conectado a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Para obter informações sobre como criar uma conexão, consulte [conectar-se à fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Para obter informações sobre como criar uma conexão, consulte [conectar-se a fonte de dados &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Para usar um algoritmo de estimativa, o resultado que você está tentando prever deve ser expresso como um valor numérico, por exemplo, uma moeda, um valor de vendas, uma data ou uma hora.  
   

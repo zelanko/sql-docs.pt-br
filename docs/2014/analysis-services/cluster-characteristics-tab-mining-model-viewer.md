@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172077"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Guia Características do Cluster (Visualizador do Modelo de Mineração)
   A guia **Características de Cluster** permite explorar as características de um cluster em um modelo de clustering ou o conjunto de todos os casos no modelo. O gráfico mostra a importância de cada par atributo-valor como uma característica que define o cluster, em comparação com outros clusters.  
@@ -41,7 +41,7 @@ ms.locfileid: "36122521"
  **Cluster**  
  Escolha o cluster que você deseja exibir ou escolha **População (Tudo)** para ver a distribuição de atributos para o modelo como um todo.  
   
- **Características de \<cluster >**  
+ **Características para \<cluster >**  
  O gráfico contém as seguintes colunas, que descrevem as características do cluster selecionado.  
   
 |Valor|Description|  
@@ -51,7 +51,7 @@ ms.locfileid: "36122521"
 |**Probabilidade**|A barra indica a força do par atributo-valor como um recurso distintivo deste cluster. Se você passar o mouse sobre a barra, poderá ver o valor da probabilidade, representado como uma porcentagem. O que isso indica é, considerando esta combinação de atributo e valor neste caso específico, qual é a probabilidade desse caso pertencer a este cluster.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
   

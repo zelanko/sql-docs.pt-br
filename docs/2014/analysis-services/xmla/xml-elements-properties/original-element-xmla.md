@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Original element
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63ee76cd3b476b3a8dbf45a50ad0f9d22a55e0fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e70d0f29f41a687cb0716fbb857ff1b3b59023e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249156"
 ---
 # <a name="original-element-xmla"></a>Elemento Original (XMLA)
   Contém o local de armazenamento de sistema arquivos original usado por um [pasta](folder-element-xmla.md) elemento.  
@@ -64,7 +64,7 @@ ms.locfileid: "36120201"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `Original` elemento contém um caminho UNC para ser substituído pelo valor da [novo](new-element-xmla.md) elemento contido pelo pai `Folder` elemento para todos os objetos restaurados ou sincronizados, respectivamente, durante um [restaurar ](../xml-elements-commands/restore-element-xmla.md) ou [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando. O valor desse elemento é comparado ao valor da [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) elemento para cada cubo, grupo de medidas ou partição e, se uma correspondência for encontrada, o valor da `New` elemento é usado para atualizar o `StorageLocation` da objeto durante a restauração ou sincronização.  
+ O `Original` elemento contém um caminho UNC a ser substituído com o valor da [New](new-element-xmla.md) contido pelo pai do elemento `Folder` elemento para todos os objetos restaurados ou sincronizados, respectivamente, durante um [restaurar ](../xml-elements-commands/restore-element-xmla.md) ou [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) comando. O valor desse elemento é comparado ao valor da [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) elemento para cada cubo, grupo de medidas ou partição e, se uma correspondência for encontrada, o valor da `New` elemento é usado para atualizar o `StorageLocation` da objeto durante a restauração ou sincronização.  
   
  Para obter mais informações sobre backup e restauração de objetos, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272312"
 ---
 # <a name="upload-file-page-report-manager"></a>Página Carregar Arquivo (Gerenciador de Relatórios)
   Use a página Carregar Arquivo para publicar um arquivo do sistema de arquivos no banco de dados do servidor de relatório. Arquivos carregados são representados como itens na hierarquia de pasta de servidor de relatório.  
@@ -47,7 +47,7 @@ ms.locfileid: "36119831"
 2.  Na barra de ferramentas, clique em **Carregar Arquivo**.  
   
 ## <a name="options"></a>Opções  
- **Arquivo para carregar**  
+ **Arquivo a ser carregado**  
  Exibe o caminho totalmente qualificado do arquivo que você está copiando do sistema de arquivos.  
   
  **Procurar**  
@@ -56,7 +56,7 @@ ms.locfileid: "36119831"
  **Nome**  
  Digite o nome do arquivo como ele aparecerá no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : @ & = +, $ * \< > | "ou / ao especificar um nome de item.  
   
- **Substituir item, se ela existe**  
+ **Substituir item, se ele existir**  
  Marque esta caixa de seleção se você quiser substituir um item existente por uma versão mais nova. Para substituir uma versão existente, o nome do novo item e o item existente devem corresponder exatamente.  
   
 ## <a name="see-also"></a>Consulte também  

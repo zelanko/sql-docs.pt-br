@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193966"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nível e Membros (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use este painel para procurar os membros da hierarquia e linguagem atualmente selecionadas. Para selecionar uma hierarquia ou linguagem para navegar, use as opções **Hierarquia** e **Linguagem** no painel **Barra de Ferramentas** . Para obter mais informações sobre o painel Barra de Ferramentas, consulte [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Modo Write-back  
- A funcionalidade deste painel alterará se o modo write-back estiver habilitado. A dimensão selecionada deve ser habilitada para gravação (em outras palavras, o `WriteEnabled` propriedade da dimensão deve ser definida como true) e a dimensão deve ser implantada em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância para habilitar o modo de write-back.  
+ A funcionalidade deste painel alterará se o modo write-back estiver habilitado. A dimensão selecionada deverá ser habilitada para gravação (em outras palavras, o `WriteEnabled` propriedade da dimensão deve ser definida como true) e a dimensão deve ser implantada em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância para habilitar o modo de write-back.  
   
  Para habilitar o modo write-back, você poderá selecionar **Write-back** no painel **Barra de Ferramentas** ou clicar com o botão direito do mouse no painel **Nível e Membros** e selecionar **Write-back** no menu de contexto.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36013452"
  Selecione para habilitar o modo write-back.  
   
 ## <a name="see-also"></a>Consulte também  
- [Barra de ferramentas &#40;guia navegador, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia do navegador, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Navegador &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

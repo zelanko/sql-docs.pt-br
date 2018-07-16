@@ -24,15 +24,15 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203976"
 ---
 # <a name="new-element-xmla"></a>Elemento New (XMLA)
   Contém o novo local de armazenamento de sistema de arquivos usado por um [pasta](folder-element-xmla.md) elemento.  
@@ -70,7 +70,7 @@ ms.locfileid: "36115990"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento original &#40;XMLA&#41;](original-element-xmla.md)   
- [Elemento Restore &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   
+ [Restaurar o elemento &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   
  [Elemento StorageLocation &#40;ASSL&#41;](../../scripting/properties/storagelocation-element-assl.md)   
  [Elemento Synchronize &#40;XMLA&#41;](../xml-elements-commands/synchronize-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201496"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
   As confirmações de transações do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou duráveis atrasadas (também conhecido como confirmação lenta).  
@@ -69,13 +68,13 @@ ms.locfileid: "36011772"
  **Você pode tolerar alguma perda de dados.**  
  Se você puder tolerar alguma perda de dados, por exemplo, nos casos em que os registros individuais não sejam críticos desde que você tenha a maioria dos dados, poderá ser válido considerar a durabilidade atrasada. Se você não puder tolerar perda de dados, não use a durabilidade de transação atrasada.  
   
- **Você está observando um afunilamento em gravações do log de transações.**  
+ **Você está observando um gargalo em gravações de log de transações.**  
  Se seus problemas de desempenho forem devido à latência em gravações do log de transações, seu aplicativo provavelmente se beneficiará do uso da durabilidade de transação atrasada.  
   
  **Suas cargas de trabalho têm uma taxa alta de contenção.**  
  Se o sistema tiver cargas de trabalho com um nível alto de contenção, muito tempo será perdido aguardando que os bloqueios sejam liberados. A durabilidade de transação atrasada reduz o tempo de confirmação e libera os bloqueios mais rapidamente, resultando em uma taxa de transferência mais alta.  
   
- **Garantias de durabilidade de transação atrasada**  
+ **Atrasado garantias de durabilidade de transação**  
   
 -   Assim que a confirmação de transação tiver êxito, as alterações feitas pela transação serão visíveis para as outras transações no sistema.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "36011772"
   
      Se uma transação completamente durável ou um sp_flush_log for confirmado com sucesso, todas as transações de durabilidade atrasada confirmadas anteriormente se tornarão duráveis.  
   
- O log pode ser liberado para o disco periodicamente. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece nenhuma garantia de durabilidade transações duráveis e sp_flush_log.  
+ O log pode ser liberado para o disco periodicamente. No entanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece nenhuma garantia de durabilidade transações duráveis e sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Como controlar a durabilidade da transação  
   
@@ -165,8 +164,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transações de nível de banco de dados.|A transação é completamente durável.|A transação é completamente durável.|A transação é durável atrasada.|  
 |`DELAYED_DURABILITY = ON` Transações de nível de banco de dados.|A transação é completamente durável.|A transação é durável atrasada.|A transação é durável atrasada.|  
-|`DELAYED_DURABILITY = OFF` Entre o banco de dados ou a transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
-|`DELAYED_DURABILITY = ON` Entre o banco de dados ou a transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
+|`DELAYED_DURABILITY = OFF` Entre o banco de dados ou uma transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
+|`DELAYED_DURABILITY = ON` Entre o banco de dados ou uma transação distribuída.|A transação é completamente durável.|A transação é completamente durável.|A transação é completamente durável.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Como forçar uma liberação de log de transações  
  Há dois meios de forçar a liberação do log de transações para o disco.  
@@ -182,13 +181,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Recuperação de pane**  
  A consistência é garantida, mas algumas alterações das transações duráveis atrasadas que foram confirmadas podem ser perdidas.  
   
- **Bancos de dados e DTC**  
+ **Entre bancos de dados e DTC**  
  Se uma transação for entre bancos de dados ou distribuída, ela será completamente durável, independentemente da configuração de confirmação de banco de dados ou transação.  
   
- **Sempre em grupos de disponibilidade e de espelhamento**  
+ **Sempre em grupos de disponibilidade e espelhamento**  
  As transações duráveis atrasadas não garantem nenhuma durabilidade no primário nem em nenhum dos secundários. Além disso, elas não garantem conhecimento sobre a transação no secundário. Após a confirmação, o controle é retornado para o cliente antes de qualquer reconhecimento ser recebido de algum secundário síncrono.  
   
- **clustering de failover**  
+ **Clustering de failover**  
  Algumas gravações de transações duráveis atrasadas podem ser perdidas.  
   
  **Replicação de transação**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266152"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriais (Construtor de Relatórios)
   Use os seguintes tutoriais do Construtor de Relatórios para obter informações sobre como criar relatórios básicos.  
@@ -32,7 +32,7 @@ ms.locfileid: "36011312"
  [Maneiras alternativas de obter uma Conexão de dados &#40;construtor de relatórios&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  A maioria destes tutoriais usa fontes de dados inseridas. Se você tiver acesso a fontes de dados compartilhadas, será possível usá-las em seu lugar. Este tópico fornece as etapas para usar fontes de dados compartilhadas.  
   
- [Tutorial: Criando um relatório de tabela básico &#40;construtor de relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Tutorial: Criando um relatório de tabela básica &#40;construtor de relatórios&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a criar seu primeiro relatório. Este tutorial mostra como trabalhar com o Construtor de Relatórios para criar uma conexão de fonte de dados, definir uma consulta simples, criar um layout para conter os dados, formatar o relatório e adicionar agrupamentos e totais.  
   
  [Tutorial: Criando um relatório de matriz &#40;construtor de relatórios&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "36011312"
  [Tutorial: Relatório de mapa &#40;construtor de relatórios&#41;](tutorial-map-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a adicionar um mapa a um relatório.  
   
- [Tutorial: Adicionar um parâmetro ao seu relatório &#40;construtor de relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Adicionar um parâmetro ao relatório &#40;construtor de relatórios&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Siga as etapas deste tutorial para aprender a personalizar a aparência e o conteúdo de um relatório usando parâmetros.  
   
  [Tutorial: Criando relatórios principais e detalhamento &#40;construtor de relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  

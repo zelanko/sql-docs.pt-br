@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201846"
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
   A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mensagens definidas pelo usuário são mensagens com um identificador igual ou maior que 50000. Mensagens com identificador menor que 50000 são mensagens de erro do sistema e não podem ser transferidas usando-se a tarefa Transferir Mensagens de Erro.  
@@ -50,7 +50,7 @@ ms.locfileid: "36115491"
  A tarefa Transferir Mensagens de Erro não informa o progresso incremental da transferência de mensagem de erro; informa somente conclusão 0% e 100 %.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido na propriedade `ExecutionValue` da tarefa retorna o número de mensagens de erro que foram transferidas. Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir mensagens de erro, informações sobre a transferência de mensagem de erro pode ser disponibilizada para outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
+ O valor de execução, definido na propriedade `ExecutionValue` da tarefa retorna o número de mensagens de erro que foram transferidas. Ao atribuir uma variável definida pelo usuário para o `ExecValueVariable` propriedade da tarefa transferir mensagens de erro, informações sobre a transferência de mensagem de erro pode se tornar disponível a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Mensagens de Erro inclui as seguintes entradas de log personalizadas:  
@@ -71,7 +71,7 @@ ms.locfileid: "36115491"
   
 -   [Editor de tarefa de mensagens de erro de transferência &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tarefa de mensagens de erro de transferência &#40;mensagens de página&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Editor de tarefa de mensagens de erro de transferência &#40;página de mensagens&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194856"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Classificação interativa, mapas de documentos e links (Construtor de Relatórios e SSRS)
   Em ambientes baseados na Web, você pode adicionar alguns recursos que permitem aos usuários interagir com relatórios. Seus usuários podem alterar a ordem de classificação de valores no relatório, mostrar ou ocultar itens no relatório ou clicar em links que vão para outros relatórios ou páginas da Web. Você também pode adicionar um índice ou um mapa do documento. Seus usuários de relatório podem clicar em itens do sumário ou do mapa do documento e ir diretamente para áreas de um relatório.  
@@ -41,19 +41,19 @@ ms.locfileid: "36117086"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Classificação interativa &#40;SSRS e construtor de relatórios&#41;](interactive-sort-report-builder-and-ssrs.md)  
+ [Classificação interativa &#40;relatórios e SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
  Explica como adicionar botões de classificação interativos a cabeçalhos de coluna.  
   
  [Criar um mapa de documentos &#40;Construtor de Relatórios e SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
  Explica como adicionar um índice para oferecer suporte à navegação em um relatório grande.  
   
- [Adicionar um indicador a um relatório &#40;SSRS e construtor de relatórios&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Adicionar um indicador a um relatório &#40;relatórios e SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Explica como adicionar marcadores para criar links dentro de um relatório.  
   
- [Adicionar um hiperlink a uma URL &#40;SSRS e construtor de relatórios&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Adicionar um hiperlink a uma URL &#40;relatórios e SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Explica como adicionar um link de seu relatório a uma URL  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;SSRS e construtor de relatórios&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;relatórios e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

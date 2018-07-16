@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cc2ef22253eaef7c86eeee43ed0260d24d3adfe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b9a3e2df3b95b6d186c5a68af5f1322e951072b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204996"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Definir a orientação da caixa de texto (Construtor de Relatórios e SSRS)
   Uma caixa de texto pode ser orientada em direções diferentes: horizontalmente, verticalmente (texto lido de cima para baixo) ou girado 270 graus (texto lido de baixo para cima). Como a orientação é definida na caixa de texto, não no texto, ela se aplica a todo o texto na caixa de texto. Você não pode especificar orientações diferentes para partes do texto. Dimensione manualmente a largura da coluna e a altura da linha para acomodar o texto girado.  
   
- A propriedade WritingMode, que é usada para especificar a orientação do texto, não está disponível na **propriedades da caixa de texto** caixa de diálogo. Abra o painel Propriedades e defina a propriedade. Os valores disponíveis para a propriedade WritingMode **Horizontal** (leitura de texto da esquerda para a direita), **Vertical** (texto lido de cima para baixo), **Rotate270** (leitura de texto baixo para cima). Você deve dimensionar manualmente a largura da coluna e a altura da linha para acomodar o texto.  
+ A propriedade WritingMode, que você usa para especificar a orientação do texto, não está disponível na **propriedades da caixa de texto** caixa de diálogo. Abra o painel Propriedades e defina a propriedade. São os valores disponíveis para a propriedade WritingMode **Horizontal** (texto lido da esquerda para a direita), **Vertical** (texto lido de cima para baixo), **Rotate270** (texto lido baixo para cima). Você deve dimensionar manualmente a largura da coluna e a altura da linha para acomodar o texto.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "36122570"
   
 3.  Clique na caixa de texto para a qual você deseja alterar a orientação do texto.  
   
-4.  Localize o WritingMode propriedade no painel Propriedades e na lista suspensa Selecionar a orientação do texto para aplicar à caixa de texto.  
+4.  Localize a propriedade no painel Propriedades e na lista suspensa Selecionar a orientação do texto a ser aplicado à caixa de texto WritingMode.  
   
     > [!NOTE]  
     >  Quando as propriedades no painel Propriedades estiverem organizadas em categorias, WritingMode estará na categoria **Localização** .  
@@ -45,7 +45,7 @@ ms.locfileid: "36122570"
 5.  Na caixa de listagem, selecione **Horizontal**, **Vertical**ou **Rotate270**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Caixas de texto &#40;SSRS e construtor de relatórios&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Caixas de texto &#40;relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md)  
   
   

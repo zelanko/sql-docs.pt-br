@@ -1,5 +1,5 @@
 ---
-title: Conta de elemento (ImpersonationInfo) (ASSL) | Microsoft Docs
+title: Elemento (ImpersonationInfo) (ASSL) de conta | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Account element
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 454e46b3515ebd6b5ad8e8193edbc2a9aea14562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4382d0e252fe7c44e7de12832e5a8a8c599e6515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237526"
 ---
 # <a name="account-element-impersonationinfo-assl"></a>Elemento Account (ImpersonationInfo) (ASSL)
   Contém o nome da conta de usuário para o [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de dados.  
@@ -60,7 +60,7 @@ ms.locfileid: "36011227"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `Account` elemento, bem como o valor da [senha](password-element-assl.md) elemento, será usado para fins de representação se o valor da [ImpersonationMode](impersonationmode-element-assl.md) de qualquer elemento derivado do `ImpersonationInfo` tipo de dados é definido como *ImpersonateAccount*.  
+ O valor da `Account` elemento, bem como o valor da [senha](password-element-assl.md) elemento, será usado para fins de representação se o valor da [ImpersonationMode](impersonationmode-element-assl.md) elemento para qualquer elemento derivado do `ImpersonationInfo` tipo de dados é definido como *ImpersonateAccount*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento DataSourceImpersonationInfo &#40;ASSL&#41;](impersonationinfo-element-assl.md)   

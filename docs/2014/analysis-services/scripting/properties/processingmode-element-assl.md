@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273782"
 ---
 # <a name="processingmode-element-assl"></a>Elemento ProcessingMode (ASSL)
   Indica se a instância deve fazer indexação e agregação durante ou após o processamento.  

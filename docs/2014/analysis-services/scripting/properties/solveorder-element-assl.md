@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173287"
 ---
 # <a name="solveorder-element-assl"></a>Elemento SolveOrder (ASSL)
   Indica a ordem de resolução na qual o [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento é aplicado a um membro calculado ou definição de célula calculada.  
@@ -62,9 +62,9 @@ ms.locfileid: "36120881"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O `SolveOrder` propriedade se aplica a `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) de *membro* ou *células*.  
+ O `SolveOrder` propriedade se aplica ao `CalculationProperty` elementos com um [CalculationType](calculationtype-element-assl.md) dos *membro* ou *células*.  
   
- O elemento que corresponde ao pai do `SolveOrder` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ O elemento que corresponde ao pai de `SolveOrder` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

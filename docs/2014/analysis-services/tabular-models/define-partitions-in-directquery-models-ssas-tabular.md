@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269682"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partições e modo DirectQuery (SSAS tabular)
   Esta seção explica como as partições são usadas em modelos DirectQuery. Para obter mais informações gerais sobre partições em modelos de tabela, consulte [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  

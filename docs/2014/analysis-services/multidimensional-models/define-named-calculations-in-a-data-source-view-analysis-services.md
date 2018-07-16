@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f69097c4047950823e51e9450e1bfb3114cf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22519994be250c7dc435228265685842f258198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226436"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definir cálculos nomeados em uma exibição da fonte de dados (Analysis Services)
   Um cálculo nomeado é uma expressão SQL representada como uma coluna calculada. Essa expressão aparece e se comporta como uma coluna da tabela. Um cálculo nomeado permite que você estenda o esquema relacional das tabelas ou exibições existentes sem modificar as tabelas ou exibições da fonte de dados subjacente. Considere os seguintes exemplos:  
@@ -67,7 +67,7 @@ FROM
   
 3.  No painel **Tabelas** ou **Diagrama** , clique com o botão direito do mouse na tabela na qual você deseja definir o cálculo nomeado e, em seguida, clique em **Novo Cálculo Nomeado**. Clique com o botão direito do mouse no nome de tabela, e não em um atributo. O menu deverá ser semelhante ao seguinte:  
   
-     ![Captura de tela de espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela de espaço de trabalho de diagrama, menu de atalho")  
+     ![Captura de tela do espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela do espaço de trabalho de diagrama, menu de atalho")  
   
     > [!NOTE]  
     >  Para localizar uma tabela ou exibição, use a opção **Localizar Tabela** clicando no menu **Exibição da Fonte de Dados** ou clicando com o botão direito do mouse em uma área livre dos painéis **Tabelas** ou **Diagrama** .  
@@ -88,6 +88,6 @@ FROM
  Quando você tenta excluir um cálculo nomeado, recebe uma lista de objetos definidos no projeto ou no banco de dados que serão invalidados pela exclusão. Revise a lista com cuidado antes de excluir o cálculo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir consultas nomeadas em uma exibição da fonte de dados &#40;do Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

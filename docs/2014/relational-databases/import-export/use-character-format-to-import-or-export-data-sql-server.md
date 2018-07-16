@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250186"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere para importar ou exportar dados (SQL Server)
   Formato de caractere é recomendado quando você exporta dados em massa para um arquivo de texto que será usado em outro programa ou quando você importa dados em massa de um arquivo de texto que é gerado por outro programa.  
@@ -48,16 +47,16 @@ ms.locfileid: "36117908"
   
 -   São armazenados quaisquer dados `sql_variant` em um arquivo do formato de caractere sem metadados. Cada valor de dados é convertido em `char` formato, de acordo com as regras de conversão implícita de dados. Quando importado em uma coluna `sql_variant`, os dados são importados como `char`. Quando importado em uma coluna com um tipo de dados diferente de `sql_variant`, os dados são convertidos de `char` usando conversão implícita. Para obter mais informações sobre conversão de dados, consulte [Conversão de tipo de dados &#40;Mecanismo do Banco de Dados &#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
--   O **bcp** utilitário exportações `money` valores como arquivos de dados de formato de caractere com quatro dígitos após o ponto decimal e sem qualquer símbolo de agrupamento de dígito como separadores de vírgula. Por exemplo, uma coluna `money` que contém o valor 1,234,567.123456 é exportado em massa para um arquivo de dados como a cadeia de caracteres 1234567.1235.  
+-   O **bcp** exportações de utilitário `money` valores como arquivos de dados de formato de caractere com quatro dígitos após o ponto decimal e sem qualquer símbolo de agrupamento de dígito como separadores de vírgula. Por exemplo, uma coluna `money` que contém o valor 1,234,567.123456 é exportado em massa para um arquivo de dados como a cadeia de caracteres 1234567.1235.  
   
 ## <a name="command-options-for-character-format"></a>Opções de comando para formato de caractere  
- Você pode importar dados de formato de caractere em uma tabela que usa **bcp**, BULK INSERT ou INSERT ... SELECIONE \* DE OPENROWSET(BULK...). Para uma **bcp** comando ou a instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
+ Você pode importar dados de formato de caractere em uma tabela que usa **bcp**, BULK INSERT ou INSERT ... SELECIONE \* DE OPENROWSET. Para um **bcp** comando ou a instrução BULK INSERT, você pode especificar o formato de dados na linha de comando. Para uma instrução INSERT ... instrução SELECT * FROM OPENROWSET(BULK...); é necessário especificar o formato dos dados em um arquivo de formato.  
   
  O formato de caractere tem suporte nas seguintes opções de linha de comando:  
   
 |Comando|Opção|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|Faz com que o **bcp** utilitário para usar dados de caractere.<sup> 1</sup>|  
+|**bcp**|**-c**|Faz com que o **bcp** utilitário use dados de caractere.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Use o formato de caractere quando na importação em massa de dados.|  
   
  <sup>1</sup> para carregar caractere (**- c**) dados em um formato compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clientes, use o **-V** alternar. Para obter mais informações, consulte [Importar dados de formato de caractere e nativo de versões anteriores do SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252948"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>Elemento AllMemberAggregationUsage (ASSL)
-  Controla como o Designer de agregação em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] projeta agregações.  
+  Controles como o Designer de agregação na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] projeta agregações.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36115516"
 |-----------|-----------------|  
 |*Full (cheio)*|Todas as agregações do cubo devem incluir o membro All.|  
 |*Nenhuma*|Nenhuma agregação do cubo deve incluir o membro All.|  
-|*Irrestrito*|Nenhuma restrição é imposta pelo Designer de Agregação.|  
+|*Sem restrições*|Nenhuma restrição é imposta pelo Designer de Agregação.|  
 |*Default*|Igual a *Unrestricted*.|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `AllMemberAggregationUsage` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ O elemento que corresponde ao pai de `AllMemberAggregationUsage` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

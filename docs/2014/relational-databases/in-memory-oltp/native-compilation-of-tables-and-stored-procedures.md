@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217346"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilação nativa de tabelas e procedimentos armazenados
   O OLTP na memória apresenta o conceito de compilação nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode compilar nativamente procedimentos armazenados que acessam tabelas com otimização de memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também pode compilar nativamente tabelas com otimização de memória. A compilação nativa permite o acesso mais rápido a dados e a execução mais eficiente de consultas, em comparação ao [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). A compilação nativa de tabelas e procedimentos armazenados gera DLLs.  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
 >  Durante a inicialização do banco de dados, o SQL Server compila DLLs para todas as tabelas necessárias para a recuperação de banco de dados. Se uma tabela foi descartada logo antes de uma reinicialização do banco de dados, ainda pode haver resíduos da tabela nos arquivos do ponto de verificação ou no log de transações, de modo que a DLL para a tabela pode ser recompilada durante a inicialização do banco de dados. Após a reinicialização, a DLL será descarregada e os arquivos serão removidos pelo processo normal de limpeza.  
   
 ## <a name="native-compilation-of-tables"></a>Compilação nativa de tabelas  
- Criando uma tabela com otimização de memória usando o `CREATE TABLE` instrução resulta nas informações da tabela que está sendo gravadas os metadados do banco de dados e as estruturas de tabela e índice criadas na memória. A tabela também será compilada em uma DLL.  
+ Criando uma tabela com otimização de memória usando o `CREATE TABLE` instrução resulta nas informações da tabela que está sendo escritas para os metadados do banco de dados e as estruturas de tabela e índice criadas na memória. A tabela também será compilada em uma DLL.  
   
  Considere o script de exemplo a seguir, que cria um banco de dados e uma tabela com otimização de memória:  
   
@@ -119,12 +119,12 @@ go
  A compilação nativa de tabelas e procedimentos armazenados usa o compilador OLTP na memória. Esse compilador gera arquivos que são gravados no disco e carregados na memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os seguintes mecanismos para limitar o acesso a esses arquivos.  
   
 ### <a name="native-compiler"></a>Compilador nativo  
- O executável do compilador, bem como os binários e os arquivos de cabeçalho necessários à compilação nativa são instalados como parte da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na pasta MSSQL\Binn\Xtp. Portanto, se a instância padrão for instalada em C:\Program Files, os arquivos do compilador serão instalados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<InstanceName>\mssql\. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ O executável do compilador, bem como os binários e os arquivos de cabeçalho necessários à compilação nativa são instalados como parte da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na pasta MSSQL\Binn\Xtp. Portanto, se a instância padrão for instalada em C:\Program Files, os arquivos do compilador serão instalados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  Para limitar o acesso ao compilador, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use listas de controle de acesso (ACLs) para restringir o acesso aos arquivos binários. Todos os binários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são protegidos contra a modificação ou violação através de ACLs. As ACLs do compilador nativo também limitam o uso do compilador; somente os administradores de sistema e de conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm permissões de leitura e execução nos arquivos do compilador nativo.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Arquivos gerados por uma compilação nativa  
- Os arquivos gerados quando uma tabela ou um procedimento armazenado é compilado são arquivos DLL e intermediários que incluem arquivos com as seguintes extensões: .c, .obj, .xml, e .pdb. Os arquivos gerados são salvos em uma subpasta da pasta de dados padrão. A subpasta é chamada Xtp. Ao instalar a instância padrão com a pasta de dados padrão, os arquivos gerados são colocados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<InstanceName>\mssql\. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Os arquivos gerados quando uma tabela ou um procedimento armazenado é compilado são arquivos DLL e intermediários que incluem arquivos com as seguintes extensões: .c, .obj, .xml, e .pdb. Os arquivos gerados são salvos em uma subpasta da pasta de dados padrão. A subpasta é chamada Xtp. Ao instalar a instância padrão com a pasta de dados padrão, os arquivos gerados são colocados em C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evita a violação das DLLs geradas de três maneiras:  
   

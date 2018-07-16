@@ -21,15 +21,15 @@ helpviewer_keywords:
 - cache [Analysis Services]
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b1b1bb0c8db3c504805bf5c972647d9f9ee73dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8a9d32557e9b9158f1fa5429b2bcaec7dd17ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216356"
 ---
 # <a name="proactive-caching-partitions"></a>Cache pró-ativo (partições)
   O cache pró-ativo fornece criação automática de cache MOLAP e gerenciamento de objetos OLAP. Os cubos incorporam imediatamente as alterações feitas nos dados no banco de dados, com base em modificações recebidas do banco de dados. O objetivo do cache pró-ativo é oferecer o desempenho do MOLAP tradicional, além de manter a instantaneidade e facilidade de gerenciamento oferecida pelo ROLAP.  
@@ -48,7 +48,7 @@ ms.locfileid: "36012387"
  Para aumentar o desempenho e também reduzir a latência, o cache também pode ser usado sem descartar os objetos MOLAP atuais. As consultas aos objetos MOLAP prosseguem, enquanto os dados são lidos e processados em um novo cache. Esse método fornece melhor desempenho, mas pode resultar em consultas que retornam dados antigos enquanto o novo cache está sendo criado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Armazenamento de dimensão](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [Armazenamento de dimensões](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Definir armazenamento de partição &#40;do Analysis Services - Multidimensional&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

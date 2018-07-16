@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193776"
 ---
 # <a name="type-element-xmla"></a>Elemento Type (XMLA)
-  Determina o tipo de processamento a ser executada pelo [processo](../xml-elements-commands/process-element-xmla.md) elemento.  
+  Determina o tipo de processamento a ser executado o [processo](../xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36013187"
 |*ProcessAdd*|Adiciona novos dados ao objeto afetado.|  
 |*ProcessUpdate*|Atualiza os dados no objeto afetado.|  
 |*ProcessIndexes*|Cria ou recria índices e agregações no objeto afetado.|  
-|*ProcessScriptCache*|Se o cubo for processado, o servidor recriará o cache de scripts MDX. Em caso negativo, um erro será gerada.<br /><br /> **Observação** aplica-se somente ao cubo.|  
+|*ProcessScriptCache*|Se o cubo for processado, o servidor recriará o cache de scripts MDX. Em caso negativo, um erro será gerada.<br /><br /> **Observação** aplica-se apenas ao cubo.|  
 |*ProcessData*|Processa dados somente no objeto afetado.|  
 |*ProcessDefault*|Detecta o estado do objeto afetado e executa a opção de processamento adequada no objeto afetado para otimizá-lo completamente e retorná-lo para um estado completamente processado.|  
 |*ProcessClear*|Descarta os dados do objeto afetado e todos os objetos relacionados.|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - exporting mining models
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9285699bf57637327bc56368a87680f20de81f23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4145ca6834a27b1159a0d2311f620085491343cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173597"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportar e importar objetos de mineração de dados
   Além da funcionalidade fornecida no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para soluções de backup, restauração e migração, a Mineração de Dados do SQL Server fornece a capacidade de transferir rapidamente estruturas e modelos de mineração de dados entre servidores diferentes usando extensões DMX.  
   
- Se sua solução de mineração de dados usar dados relacionais, em vez de um banco de dados multidimensional, a transferência de modelos usando `EXPORT` e `IMPORT` é muito mais rápido e mais fácil do que o uso da restauração do banco de dados ou implantando uma solução inteira.  
+ Se sua solução de mineração de dados usar dados relacionais, em vez de um banco de dados multidimensional, a transferência de modelos usando `EXPORT` e `IMPORT` é muito mais rápido e mais fácil do que o uso da restauração do banco de dados ou da implantação de uma solução inteira.  
   
  Esta seção fornece uma visão geral de como transferir estruturas de mineração de dados e modelos usando instruções DMX. Para obter detalhes sobre a sintaxe, junto com exemplos, consulte [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx) e [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx).  
   

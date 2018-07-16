@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GetNextOrderValue method
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8151fdd7f39f5ecc7219a0b8c54cbe1655aa8feb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6adb401f7c12340e4cc2c63d113007e4811018d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260362"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Método GetNextOrderValue (classe ClientNetworkProtocol)
   Seleciona o protocolo que está na próxima posição na lista de protocolos.  
@@ -53,6 +53,6 @@ object
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configurar protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurando protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

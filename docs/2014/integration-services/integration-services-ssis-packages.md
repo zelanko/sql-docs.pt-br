@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252378"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
   Um pacote é uma coleção organizada de conexões, elementos de fluxo de controle, elementos de fluxo de dados, manipuladores de eventos, variáveis, parâmetros e configurações que você agrupa usando as ferramentas de design gráfico fornecidas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou cria programaticamente.  Você salva o pacote concluído no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] ou no sistema de arquivos, ou pode implantar o projeto ssISnoversion para o servidor do [!INCLUDE[ssIS](../includes/ssis-md.md)] . O pacote é a unidade de trabalho que é recuperada, executada e salva.  
@@ -56,7 +56,7 @@ ms.locfileid: "36117937"
   
  Quando um pacote é criado pela primeira vez, seja programaticamente ou usando o Designer SSIS, um GUID é adicionado à sua `ID` propriedade e um nome para seu `Name` propriedade. Se você criar um novo pacote copiando um pacote existente ou usando um modelo de pacote, o nome e o GUID do pacote também serão copiados. Isso pode ser um problema se você usa log, porque o GUID e o nome do pacote são gravados em logs para identificar o pacote ao qual pertencem as informações registradas. Portanto, você deve atualizar o nome e o GUID dos novos pacotes para ajudar a diferenciá-los do pacote a partir do qual foram copiados e entre si nos dados de log.  
   
- Para alterar o GUID do pacote, você regenerar uma GUID de `ID` propriedade na janela Propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para alterar o nome do pacote, você pode atualizar o valor de `Name` propriedade na janela Propriedades. Você também pode usar o prompt de comando **dtutil** ou atualizar o GUID e o nome de forma programática. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
+ Para alterar o GUID do pacote, você gerar um GUID na `ID` propriedade na janela Propriedades no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para alterar o nome do pacote, você pode atualizar o valor da `Name` propriedade na janela Propriedades. Você também pode usar o prompt de comando **dtutil** ou atualizar o GUID e o nome de forma programática. Para obter mais informações, consulte [Definir as propriedades do pacote](set-package-properties.md) e [Utilitário dtutil](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objetos que estendem a funcionalidade do pacote  
  Os pacotes podem incluir objetos adicionais que oferecem recursos avançados ou estendem a funcionalidade existente, como manipuladores de eventos, configurações, log e variáveis.  
@@ -119,7 +119,7 @@ ms.locfileid: "36117937"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Implementando o SQL Server Integration Services com Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementando o SQL Server Integration Services com o Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
   
 -   [Como: configurar o pacote do SQL Server Integration Services para Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
   

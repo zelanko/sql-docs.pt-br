@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
 - SQL Server Analysis Services, databases
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97d7364cd9a0fe7901e2357f916d8683dc3b147c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241676"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
   Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  
@@ -53,18 +53,18 @@ ms.locfileid: "36010787"
   
  [Mover um banco de dados do Analysis Services](move-an-analysis-services-database.md)  
   
- [Renomear um banco de dados Multidimensional &#40;do Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Renomear um banco de dados Multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [Definir a compatibilidade de nível de um banco de dados Multidimensional &#40;do Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [Definir nível de banco de dados Multidimensional a de compatibilidade &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Definir propriedades de banco de dados Multidimensional &#40;do Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Definir propriedades de banco de dados Multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Sincronizar bancos de dados do Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se em modo Online a um banco de dados do Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Conectar-se em modo Online a um banco de dados do Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Criar um projeto do Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Consultando dados multidimensionais com MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   

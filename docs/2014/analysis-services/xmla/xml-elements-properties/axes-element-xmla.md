@@ -1,5 +1,5 @@
 ---
-title: Eixos elemento (XMLA) | Microsoft Docs
+title: Eixos de elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237396"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
   Contém uma coleção de [eixo](axis-element-xmla.md) elementos que representam dados de eixo contidos por um [raiz](root-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de dados.  
@@ -67,7 +67,7 @@ ms.locfileid: "36115290"
 |Elementos filho|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- No elemento `Axes`, os elementos `Axis` são listados na ordem em que eles ocorrem no conjunto de dados, começando com zero. A configuração da propriedade XMLA `AxisFormat` determina como são formatados os elementos `Axis`. Para obter mais informações sobre o `AxisFormat` propriedade, consulte [propriedades com suporte do XMLA &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ No elemento `Axes`, os elementos `Axis` são listados na ordem em que eles ocorrem no conjunto de dados, começando com zero. A configuração da propriedade XMLA `AxisFormat` determina como são formatados os elementos `Axis`. Para obter mais informações sobre o `AxisFormat` propriedade, consulte [propriedades XMLA com suporte &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
  Um eixo representa um conjunto de tuplas no qual todas as tuplas têm a mesma dimensionalidade. Um conjunto pode ser representado de modos diferentes com vantagens diferentes. Por exemplo, o seguinte conjunto de quatro tuplas pode ser representado como uma coleção de tuplas bidimensionais ou o produto Cartesiano de dois conjuntos unidimensionais.  
   

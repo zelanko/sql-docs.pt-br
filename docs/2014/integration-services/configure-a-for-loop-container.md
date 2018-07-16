@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06584a8dd74da1c22f4eee3f5c0b7c04765a5856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 262da5aac419c0b7bb07b79c97dcc6590b29574e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209516"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar um contêiner Loop For
   Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For**.  

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1b4d64cc0e0e59029361412bc96bd98559be51b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ba547a44d587851b98249d4a2980645241698b32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231886"
 ---
 # <a name="propertyref-element-csdlbi"></a>Elemento PropertyRef (CSDLBI)
   O elemento PropertyRef é um tipo simples que fornece uma referência a uma coluna que fornece um valor exigido por outra propriedade.  

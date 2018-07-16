@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -19,13 +19,13 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 631b2dfd94ce74dd96a7d411f18ecb07182460e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5598de66babc70f9301894d96b215e903e6654e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196756"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  
@@ -52,15 +52,15 @@ ms.locfileid: "36122778"
 |Termo|Opcional/Necessário|Definição|  
 |----------|------------------------|----------------|  
 |**-?**|Opcional.|Exibe a sintaxe de argumentos Rsconfig.exe.|  
-|`-c`|Necessário se `-e` argumento não é usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Argumentos que você pode especificar com `-c` incluem `-m`, **-s**, `-i`,`-d`,`-a`,`-u`,`-p`, e`-t`.|  
-|`-e`|Necessário se `-c` argumento não é usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Argumentos que você pode especificar com `-e` incluem `-u` e `-p`. Você também pode definir `-t`.|  
+|`-c`|Necessário se `-e` argumento não for usado.|Especifica a cadeia de conexão, credenciais e valores de fonte de dados usados para conectar um servidor de relatório ao banco de dados do servidor de relatório.<br /><br /> Esse argumento não exige um valor. Porém, devem ser especificados argumentos adicionais com ele para fornecer todos os valores de conexão exigidos.<br /><br /> Os argumentos que você pode especificar com `-c` incluem `-m`, **-s**, `-i`,`-d`,`-a`,`-u`,`-p`, e`-t`.|  
+|`-e`|Necessário se `-c` argumento não for usado.|Especifica a conta de execução autônoma do relatório.<br /><br /> Esse argumento não exige um valor. Porém, você deve incluir argumentos adicionais na linha de comando para especificar os valores criptografados no arquivo de configuração.<br /><br /> Argumentos que você pode especificar com `-e` incluem `-u` e `-p`. Você também pode definir `-t`.|  
 |`-m`  *ComputerName*|Obrigatório se você estiver configurando uma instância de servidor de relatório remota.|Especifica o nome do computador que está hospedando o servidor de relatório. Se esse argumento for omitido, o padrão é `localhost`.|  
 |**-s**  *servername*|Obrigatórios.|Especifica a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório.|  
 |`-i`  *InstanceName*|Obrigatório se você estiver usando instâncias nomeadas.|Se você usou uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeada para hospedar o banco de dados do servidor de relatório, esse valor especificará a instância nomeada.|  
 |`-d`  *DatabaseName*|Obrigatórios.|Especifica o nome do banco de dados do servidor de relatório.|  
 |`-a`  *AuthMethod*|Obrigatórios.|Especifica o método de autenticação usado pelo servidor de relatório para se conectar ao banco de dados do servidor de relatório. Os valores válidos são `Windows` ou `SQL` (este argumento não diferencia maiúsculas de minúsculas).<br /><br /> O `Windows` especifica que o servidor de relatório usa a Autenticação do Windows.<br /><br /> `SQL` Especifica que o servidor de relatório usar autenticação do SQL Server.|  
-|`-u`  *[domínio\\] nome de usuário*|Obrigatório com `-e`, opcional com `-c`.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig - c** e `-a SQL`, este argumento deve especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.<br /><br /> Para **rsconfig - c** e `-a Windows`, este argumento pode especificar um usuário de domínio, uma conta interna ou as credenciais de conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
-|`-p`  *Senha*|Obrigatório se `-u` for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
+|`-u`  *[domínio\\] nome de usuário*|Obrigatório com `-e`, opcional com `-c`.|Especifica uma conta de usuário para a conexão de banco de dados do servidor de relatório ou para a conta autônoma.<br /><br /> Para **rsconfig -e**, esse argumento é obrigatório. Deve ser uma conta de usuário do domínio.<br /><br /> Para **rsconfig - c** e `-a SQL`, esse argumento deve especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon.<br /><br /> Para **rsconfig - c** e `-a Windows`, este argumento pode especificar um usuário de domínio, uma conta interna ou as credenciais de conta de serviço. Se você estiver especificando uma conta de domínio, defina *domínio* e *nome de usuário* no formato *domínio\nomedeusuário*. Se você estiver usando uma conta interna, esse argumento será opcional. Se você quiser usar credenciais de conta de serviço, omita esse argumento.|  
+|`-p`  *senha*|Obrigatório se `-u` for especificado.|Especifica a senha a ser usada com o argumento *username* . Você poderá definir esse argumento como um valor em branco se a conta não exigir uma senha. Esse valor diferencia maiúsculas de minúsculas em contas de domínio.|  
 |`-t`|Opcional.|Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
   
 ## <a name="permissions"></a>Permissões  
@@ -126,8 +126,8 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Arquivos de configuração do Reporting Services](../report-server/reporting-services-configuration-files.md)   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Delete element
 ms.assetid: 76201b18-11e9-4815-9287-27a068d8fbc5
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 377ada36a836be9961b26ff7a74d40e997e2c0de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4b308a3fb9c0e2a58c830d614e7b2115b8b0d50c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173247"
 ---
 # <a name="delete-element-xmla"></a>Elemento Delete (XMLA)
   Exclui um objeto em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  

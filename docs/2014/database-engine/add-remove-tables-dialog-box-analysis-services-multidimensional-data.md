@@ -1,5 +1,5 @@
 ---
-title: Adicionar ou remover a caixa de diálogo de tabelas (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Adicionar e remover a caixa de diálogo de tabelas (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69e54f8696aa69d35fca6bb00d160520107411cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235666"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar ou remover tabelas (Analysis Services - dados multidimensionais)
   Use a caixa de diálogo **Adicionar/Remover Tabelas** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para adicionar tabelas em uma fonte de dados a uma exibição da fonte de dados ou removê-la dessa exibição. Você pode exibir a caixa de diálogo **Adicionar/Remover Tabelas** das seguintes maneiras:  

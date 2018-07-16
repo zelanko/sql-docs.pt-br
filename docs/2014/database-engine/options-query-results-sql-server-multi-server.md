@@ -1,5 +1,5 @@
 ---
-title: Opções (consulta SQL resultados vários servidores) | Microsoft Docs
+title: Opções (consulta resultados SQL Server-Multi-Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults
@@ -16,15 +16,15 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 caps.latest.revision: 9
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a1465defc783d0fde352a29648af61c0bb99ff59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3088e2e265ef44a7d490001b9a7060186ba2c3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271792"
 ---
-# <a name="options-query-results-sql-server-multi-server"></a>Opções (consulta SQL resultados vários servidores)
+# <a name="options-query-results-sql-server-multi-server"></a>Opções (consulta resultados SQL Server-Multi-Server)
   Ao consultar vários servidores ao mesmo tempo, use esta página para especificar as opções de exibição de um conjunto de resultados. A mesclagem de resultados combina os conjuntos de resultados de todos os servidores em um único conjunto de resultados. Ao mesclar resultados, o primeiro servidor que responde define o esquema para o conjunto de resultados. Para mesclar os conjuntos de resultados, a consulta deve retornar o mesmo número de colunas, com os mesmos nomes de colunas de cada servidor. Ao mesclar resultados, uma mensagem é exibida para cada servidor que não corresponde ao esquema (contagem e nomes de colunas) que é retornado pelo primeiro servidor que retorna resultados.  
   
  Se você não mesclar resultados, o conjunto de resultados de cada servidor será exibido em sua própria grade com seu próprio esquema.  
