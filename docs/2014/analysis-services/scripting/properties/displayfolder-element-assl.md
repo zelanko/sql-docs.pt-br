@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293196"
 ---
 # <a name="displayfolder-element-assl"></a>Elemento DisplayFolder (ASSL)
-  Especifica a pasta na qual listar o elemento pai. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aplicativos para desenvolvedores e administradores podem oferecer suporte o uso de pastas de exibição para categorizar vários elementos visualmente.  
+  Especifica a pasta na qual listar o elemento pai. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aplicativos para desenvolvedores e administradores podem dar suporte o uso de pastas de exibição para categorizar vários elementos visualmente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36012580"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[CalculationProperty](../objects/calculationproperty-element-assl.md), [hierarquia](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [medidas](../objects/measure-element-assl.md), [tradução](../objects/translation-element-assl.md)|  
+|Elementos pai|[CalculationProperty](../objects/calculationproperty-element-assl.md), [hierarquia](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [medida](../objects/measure-element-assl.md), [tradução](../objects/translation-element-assl.md)|  
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,9 +68,9 @@ ms.locfileid: "36012580"
   
 -   Conter um único nome de pasta, indicando que a medida deve ser processada como pertencente a uma pasta com o mesmo nome.  
   
--   Contém vários nomes de pasta separados por uma barra invertida (\\), indicando uma hierarquia de pasta inserido.  
+-   Conter vários nomes de pasta separados por uma barra invertida (\\), indicando uma hierarquia inserida na pasta.  
   
- O `DisplayFolder` propriedade se aplica a `CalculationProperty` se somente elementos o valor de [CalculationType](calculationtype-element-assl.md) é definido como *membro*.  
+ O `DisplayFolder` propriedade se aplica ao `CalculationProperty` somente se de elementos o valor de [CalculationType](calculationtype-element-assl.md) está definido como *membro*.  
   
  Os elementos que correspondem aos pais de `DisplayFolder` no modelo de objeto AMO (Objetos de Gerenciamento de Análise)são <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.Measure> e <xref:Microsoft.AnalysisServices.Translation>.  
   

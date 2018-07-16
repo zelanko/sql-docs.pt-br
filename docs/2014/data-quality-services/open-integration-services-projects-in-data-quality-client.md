@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 534bbcada8b7db3d6a96d57b4f2d4be867676469
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c3763ac1fa89ae69d905510944e75ec2a10116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217986"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
-  O [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] permite que você execute um projeto de limpeza em modo de lote. No entanto, às vezes talvez você queira examinar os resultados da limpeza em um pacote do Integration Services semelhante ao modo como é possível examinar os resultados da limpeza na guia **Gerenciar e Exibir Resultados** de uma atividade de limpeza em um projeto de qualidade de dados no DQS. O DQS permite que você abra projetos do Integration Services no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] da mesma forma que faria com qualquer outro projeto de qualidade de dados na tela **Abrir projeto** e proporciona uma experiência de limpeza interativa dos resultados da consulta em um projeto do Integration Services.  
+  O [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] permite que você execute um projeto de limpeza no modo de lote. No entanto, às vezes talvez você queira examinar os resultados da limpeza em um pacote do Integration Services semelhante ao modo como é possível examinar os resultados da limpeza na guia **Gerenciar e Exibir Resultados** de uma atividade de limpeza em um projeto de qualidade de dados no DQS. O DQS permite que você abra projetos do Integration Services no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] da mesma forma que faria com qualquer outro projeto de qualidade de dados na tela **Abrir projeto** e proporciona uma experiência de limpeza interativa dos resultados da consulta em um projeto do Integration Services.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36019674"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para abrir um projeto do Integration Services.  
   
- ![Ícone de seta usado com de volta para o link superior](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste tópico](#Intro)  
+ ![Ícone de seta usado com o link voltar ao início](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [este tópico no](#Intro)  
   
 ##  <a name="Open"></a> Abrir um projeto do Integration Services  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36019674"
   
 6.  Depois de exportar os dados, clique em **Concluir** para fechar o projeto do Integration Services.  
   
- ![Ícone de seta usado com de volta para o link superior](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com de volta para o link superior") [neste tópico](#Intro)  
+ ![Ícone de seta usado com o link voltar ao início](../2014-toc/media/uparrow16x16.gif "ícone de seta usado com o link voltar ao início") [este tópico no](#Intro)  
   
 ## <a name="see-also"></a>Consulte também  
  [Transformação de Limpeza do DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   

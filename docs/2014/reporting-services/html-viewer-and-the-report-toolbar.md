@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319787"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
@@ -43,12 +43,12 @@ ms.locfileid: "36120094"
   
 |Use este ícone ou controle||Para|  
 |------------------------------|-|--------|  
-|![Controles de navegação de página](media/htmlviewer-pagenav.gif "os controles de navegação de página")|**Controles de navegação de página**|Abrir a primeira ou a última página de um relatório, percorrer o relatório página por página e abrir uma página específica no relatório. Para exibir uma página específica, digite o número da página e pressione ENTER.|  
-|![Página exibir controles](media/htmlviewer-pagesize.gif "página exibir controles")|**Controles de exibição de página**|Aumentar ou reduzir o tamanho da página do relatório. Além das alterações com base em percentual, você pode selecionar **Largura da Página** para ajustar o comprimento horizontal de uma página de relatório na janela do navegador ou **Página Inteira** para ajustar o comprimento vertical de um relatório na janela do navegador. Uma opção **Zoom** tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 e versões posteriores.|  
+|![Controles de navegação de página](media/htmlviewer-pagenav.gif "controles de navegação de página")|**Controles de navegação de página**|Abrir a primeira ou a última página de um relatório, percorrer o relatório página por página e abrir uma página específica no relatório. Para exibir uma página específica, digite o número da página e pressione ENTER.|  
+|![Controles de exibição de página](media/htmlviewer-pagesize.gif "controles de exibição de página")|**Controles de exibição de página**|Aumentar ou reduzir o tamanho da página do relatório. Além das alterações com base em percentual, você pode selecionar **Largura da Página** para ajustar o comprimento horizontal de uma página de relatório na janela do navegador ou **Página Inteira** para ajustar o comprimento vertical de um relatório na janela do navegador. Uma opção **Zoom** tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 e versões posteriores.|  
 |![Campo de pesquisa](media/htmlviewer-search.gif "campo de pesquisa")|**Campo de pesquisa**|Procure o conteúdo no relatório digitando uma palavra ou frase que deseja localizar (o comprimento máximo do valor é 256 caracteres). A pesquisa diferencia maiúsculas e minúsculas e começa na página ou seção selecionada no momento. Somente conteúdo visível é incluído em uma operação de pesquisa. Para procurar ocorrências subsequentes do mesmo valor, clique em **Próximo**.|  
 |![Formatos de exportação](media/htmlviewer-export.GIF "formatos de exportação")|**Formatos de exportação**|Abra uma nova janela de navegador e renderize o relatório no formato selecionado. Os formatos disponíveis são determinados pelas extensões de renderização instaladas no servidor de relatório. TIFF é recomendado para imprimir. Clique em **Exportar** para exibir o relatório no formato selecionado.|  
 |![Ícone do mapa do documento](media/htmlviewer-docmap.GIF "ícone do mapa do documento")|**Ícone do mapa do documento**|Mostrar ou ocultar o painel de mapa do documento em um relatório que inclui um mapa do documento. Um mapa do documento é um controle de navegação de relatório semelhante ao painel de navegação em um site da Web. Você pode clicar em itens no mapa do documento navegar até um grupo específico, uma página ou um sub-relatório.|  
-|![Ícone da impressora](media/printer-icon.gif "ícone da impressora")|**Ícone de impressora**|Abrir uma caixa de diálogo de impressão para que você possa especificar opções de impressão e imprimir um relatório. No primeiro uso, ao clicar nesse ícone você deverá baixar o controle de impressão.|  
+|![Ícone de impressora](media/printer-icon.gif "ícone da impressora")|**Ícone de impressora**|Abrir uma caixa de diálogo de impressão para que você possa especificar opções de impressão e imprimir um relatório. No primeiro uso, ao clicar nesse ícone você deverá baixar o controle de impressão.|  
 ||**Mostrar e ocultar ícones**|Mostrar ou ocultar campos de valor de parâmetro e o botão **Exibir Relatório** em um relatório que inclui parâmetros.|  
 |![Botão Atualizar do navegador na barra de ferramentas de relatório](media/htmlviewer-refresh.GIF "Botão Atualizar do navegador na barra de ferramentas de relatório")|**Ícone de atualização de relatório**|Atualizar o relatório. Os dados de relatórios dinâmicos serão atualizados. Os relatórios armazenados em cache serão recarregados de onde estão armazenados.|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Ícone de feed de dados**|Feeds de dados gerados de relatórios.|  
@@ -78,6 +78,6 @@ ms.locfileid: "36120094"
 ## <a name="see-also"></a>Consulte também  
  [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;SSRS e construtor de relatórios&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Exportando relatórios &#40;relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

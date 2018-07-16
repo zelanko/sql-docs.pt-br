@@ -23,15 +23,15 @@ helpviewer_keywords:
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f379a046b73dbd073c7e0f01b5c41be7589964d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 01e0af9b72790b8a2ddf396434c84f25ee270313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223126"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Outras anotações (SQLXML 4.0)
   Além das anotações discutidas nos tópicos anteriores nesta seção, o carregamento em massa de XML interpreta estas outras anotações:  

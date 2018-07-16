@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.output
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3cab20d2f294c69e2916f30be0fdfb7b3af2c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8b519da50addd621ee75e7c03aaf850b708c4236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270732"
 ---
 # <a name="output-window"></a>Janela Saída
   Esta janela exibe mensagens de status para vários recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. A saída é fornecida em painéis especiais da janela **Saída** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] , em recursos de ferramentas externas ou em comandos executados na **Janela Comando**do depurador. A saída, que normalmente é exibida na janela Prompt de Comando de ferramentas externas como arquivos .bat ou .com, também fica disponível.  

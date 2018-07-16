@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292286"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
   Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários `varbinary`, `varbinary(max)` (incluindo `FILESTREAM`) ou `image`. Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  
@@ -65,7 +64,7 @@ ms.locfileid: "36019115"
 ##  <a name="impact"></a> Impacto de habilitar a pesquisa de propriedade  
  Configurar um índice de texto completo para oferecer suporte à pesquisa em uma ou mais propriedades aumenta um pouco o tamanho do índice, dependendo do número de propriedades que você especifica na sua lista de propriedades de pesquisa e do conteúdo de cada propriedade.  
   
- No teste de arquivos típicos de documentos do Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e PowerPoint<sup>®</sup> documentos, configuramos um propriedades comuns de pesquisa de índice ao índice de texto completo. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
+ No teste de arquivos típicos do Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e o PowerPoint<sup>®</sup> documentos, configuramos um propriedades comuns de pesquisa de índice ao índice de texto completo. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
   
   
   
@@ -119,7 +118,7 @@ ms.locfileid: "36019115"
   
      O nome da propriedade pode ser qualquer um destes:  
   
-    -   O nome canônico do Windows da propriedade, como `System.Author` ou `System.Contact.HomeAddress`.  
+    -   O nome canônico do Windows da propriedade, tal como `System.Author` ou `System.Contact.HomeAddress`.  
   
     -   Um nome amigável fácil de ser lembrado pelos usuários. Algumas propriedades são associadas a um nome amigável familiar ao usuário, como "Autor" ou "Endereço residencial", mas você pode especificar o nome mais apropriado aos usuários.  
   

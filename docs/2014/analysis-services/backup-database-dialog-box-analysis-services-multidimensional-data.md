@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234436"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Banco de Dados de Backup** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um arquivo de backup usando o formato Analysis Services Backup File (.abf) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "36019249"
  **Procurar**  
  Clique para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e nome do arquivo de backup a utilizar. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Permitir substituição de arquivo**  
+ **Permitir substituição de arquivos**  
  Selecione para substituir um arquivo de backup existente ou arquivo de backup remoto, se houver um.  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "36019249"
 > [!NOTE]  
 >  Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
   
- **Backup partições remotas**  
+ **Partições remotas de backup**  
  Selecione para incluir informações de local e dados para partições remotas no arquivo de backup.  
   
 > [!NOTE]  

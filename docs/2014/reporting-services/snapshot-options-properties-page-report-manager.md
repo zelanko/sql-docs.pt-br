@@ -1,5 +1,5 @@
 ---
-title: Opções de instantâneo a página de propriedades (Gerenciador de relatórios) | Microsoft Docs
+title: Página de propriedades (Gerenciador de relatórios) opções de instantâneo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218866"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propriedades Opções de Instantâneo (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Instantâneo para agendar instantâneos de relatório a serem adicionados ao histórico de relatórios e para definir limites do número de instantâneos de relatórios armazenados nesse histórico.  
   
 > [!NOTE]  
->  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos que têm suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [serviços adicionais do banco de dados](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
+>  Este recurso não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma lista de recursos que têm suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [serviços de banco de dados adicionais](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
   
 ## <a name="navigation"></a>Navegação  
  Use o procedimento a seguir para navegar para este local na interface do usuário.  
@@ -44,10 +44,10 @@ ms.locfileid: "36019059"
  **Permitir que o histórico de relatório a ser criado manualmente**  
  Marque esta caixa de seleção para adicionar instantâneos ao histórico de relatório conforme necessário. Marcando esta caixa de seleção, o botão **Novo Instantâneo** aparecerá na página Histórico.  
   
- **Armazenar todos os instantâneos de execução de relatório no histórico de relatórios**  
+ **Store todos os instantâneos de execução de relatório no histórico de relatórios**  
  Marque essa caixa de seleção para copiar um instantâneo de relatório gerado com base nas propriedades de execução de relatório no histórico do relatório. Você pode definir propriedades de execução de relatório para executar um relatório de um instantâneo gerado. Definindo essa propriedade de histórico de relatórios você pode manter um registro de todos os instantâneos gerados com o tempo, colocando cópias deles no histórico de relatórios.  
   
- **Use a seguinte agenda para adicionar instantâneos ao histórico de relatórios**  
+ **Use o agendamento a seguir para adicionar instantâneos ao histórico de relatórios**  
  Marque esta caixa de seleção para adicionar instantâneos ao histórico do relatório em uma base de agendamento. Você pode criar uma agenda usada exclusivamente para esse propósito ou pode selecionar uma agenda compartilhada predefinida se ela contiver as informações de agendamento necessárias.  
   
  **Selecione o número de instantâneos a serem mantidos**  

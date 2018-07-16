@@ -1,5 +1,5 @@
 ---
-title: Hierarquia de elementos XML de linguagem script (ASSL) do Analysis Services | Microsoft Docs
+title: Hierarquia de elemento script XML de idioma (ASSL) do Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0811c567582c3bc241a6abae6c2be2405afa68ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab6bcc89947c051dff31f566820e9fa9cdd5077a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274262"
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Hierarquia de elemento XML da ASSL (Analysis Services Scripting Language)
   A tabela a seguir exibe a hierarquia de objetos na ASSL (Analysis Services Scripting Language).  
@@ -1940,8 +1940,8 @@ ms.locfileid: "36130424"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Elementos XML de linguagem do script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)   
+ [Elementos XML de linguagem de script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-elements-assl.md)   
  [Hierarquia de tipo de dados XML de linguagem de script do Analysis Services &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
- [Linguagem de script do Analysis Services &#40;ASSL&#41; referência](analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; referência](analysis-services-scripting-language-assl-for-xmla.md)  
   
   

@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edc33b87256fb680225eaaa087ff655be1b82851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecc8167d697be2195c9ae44e214afcbc1f3a05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275472"
 ---
 # <a name="mdschemasets-rowset"></a>Conjunto de linhas MDSCHEMA_SETS
   Descreve qualquer conjunto definido atualmente em um banco de dados, incluindo conjuntos do escopo da sessão.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `MDSCHEMA_SETS` linhas contém as seguintes colunas.  
+ O `MDSCHEMA_SETS` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36122745"
 |`EXPRESSION`|`DBTYPE_WSTR`||A expressão para o conjunto.|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||Uma lista de hierarquias delimitada por vírgulas incluída no conjunto.|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||Um rótulo ou legenda associado ao conjunto. O rótulo ou legenda é usado principalmente para fins de exibição.|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição, use um ponto e vírgula (;) para separar as pastas.|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o conjunto. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para fornecer várias pastas de exibição, use um ponto e vírgula (;) para separar as pastas.|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||O contexto para o conjunto. O conjunto pode ser estático ou dinâmico.<br /><br /> Esta coluna pode ter um dos seguintes valores:<br /><br /> -MDSET_RESOLUTION_STATIC = 1<br />-MDSET_RESOLUTION_DYNAMIC = 2|  
   
  O conjunto de linhas é classificado em `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`.  
@@ -61,7 +61,7 @@ ms.locfileid: "36122745"
 |`SET_NAME`|`DBTYPE_WSTR`|Opcional.|  
 |`SCOPE`|`DBTYPE_I4`|Opcional.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Opcional. **Observação:** apenas uma hierarquia pode ser incluída e só os conjuntos nomeados cujas hierarquias correspondam exatamente à restrição serão retornados.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Opcional. **Observação:** somente uma hierarquia pode ser incluída e só os conjuntos nomeados cujas hierarquias correspondam exatamente à restrição serão retornados.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Conjuntos de linhas de esquema OLE DB para OLAP](ole-db-for-olap-schema-rowsets.md)  

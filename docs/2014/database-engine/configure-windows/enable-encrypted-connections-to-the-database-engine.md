@@ -1,5 +1,5 @@
 ---
-title: Habilitar conexões criptografadas ao mecanismo de banco de dados (SQL Server Configuration Manager) | Microsoft Docs
+title: Habilitar conexões criptografadas para o mecanismo de banco de dados (SQL Server Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275442"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Habilitar conexões criptografadas no Mecanismo de Banco de Dados (SQL Server Configuration Manager)
   Este tópico descreve como habilitar conexões criptografadas para uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] especificando um certificado para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. O computador servidor deve ter um certificado configurado e a máquina cliente deve estar configurada para confiar na autoridade raiz do certificado. Provisionamento é o processo de instalar um certificado importando-o para o Windows.  
@@ -47,7 +47,7 @@ ms.locfileid: "36012965"
   
 -   **Para habilitar conexões criptografadas:**  
   
-     [Provisionar (instalar) um certificado no servidor](#Provision)  
+     [Instalar um certificado no servidor](#Provision)  
   
      [Exportar o certificado do servidor](#Export)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36012965"
   
 ###  <a name="Provision"></a> Para instalar um certificado no servidor  
   
-1.  No **iniciar** menu, clique em **executar**e no **abrir** , digite `MMC` e clique em **Okey**.  
+1.  No **iniciar** menu, clique em **execute**e, na **abrir** , digite `MMC` e clique em **Okey**.  
   
 2.  No console do MMC, no menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36012965"
   
 1.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** *\<server instance>* e, depois, selecione **Propriedades**.  
   
-2.  No **protocolos para *\<nome da instância >* **propriedades** caixa de diálogo de **certificado** guia, selecione o certificado desejado na lista suspensa para o **certificado** caixa e, em seguida, clique em **Okey**.  
+2.  No **protocolos para * * *\<nome da instância >* **as propriedades** caixa de diálogo o **certificado** guia, selecione o certificado desejado na lista suspensa para o **certificado** caixa e, em seguida, clique em **Okey**.  
   
 3.  Na guia **Sinalizadores** , na caixa **ForceEncryption** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo.  
   

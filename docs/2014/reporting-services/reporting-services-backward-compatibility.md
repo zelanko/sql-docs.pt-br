@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - SSRS, backward compatibility
@@ -18,13 +18,13 @@ ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3e162edbaaefd658b08400589d421c08baee438
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f060ce868f55b9d919aa437b5109c7b272673b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272562"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
   Esta seção descreve as alterações no comportamento entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve as principais alterações no produto que sabidamente interrompem um aplicativo personalizado que inclua a funcionalidade do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

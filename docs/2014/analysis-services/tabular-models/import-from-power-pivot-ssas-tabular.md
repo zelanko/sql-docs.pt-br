@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245736"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar do PowerPivot (SSAS tabular)
   Este tópico descreve como você pode criar um novo projeto de modelo de tabela importando os metadados e dados de uma pasta de trabalho PowerPivot usando o modelo de projeto Importar do PowerPivot no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "36018988"
   
  Se o banco de dados de espaço de trabalho estiver em uma instância remota do Analysis Services, você não poderá importar os dados da pasta de trabalho PowerPivot para Excel. Você ainda poderá importar os metadados da pasta de trabalho; porém, isto fará um script ser executado na instância remota do Analysis Services. Você só deve importar metadados de uma pasta de trabalho confiável do PowerPivot. Os dados devem ser importados de origens definidas nas conexões da fonte de dados. Os dados copiados/colados e de tabela vinculada na pasta de trabalho PowerPivot devem ser copiados e colados no projeto de modelo tabular.  
   
-#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para criar um novo projeto de modelo de tabela de um arquivo PowerPivot para Excel  
+#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Para criar um novo projeto de modelo tabular de um arquivo PowerPivot para Excel  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Arquivo** , clique em **Novo**e, em seguida, em **Projeto**.  
   

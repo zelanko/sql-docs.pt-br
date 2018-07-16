@@ -24,15 +24,15 @@ helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 650f307d-1f11-47ce-9d0e-19cf3b1835b7
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 578c2217961a2501982d864a42622459f256ebd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e474472b2b55132667b7ec424d392fccb936d93c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284042"
 ---
 # <a name="tablenotifications-element-xmla"></a>Elemento TableNotifications (XMLA)
   Contém uma coleção de elementos [TableNotification](tablenotification-element-xmla.md) usada pelo comando [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md) .  

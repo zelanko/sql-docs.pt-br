@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a2468e4cfdbbb9a123ac552c301929b9040176d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247036"
 ---
 # <a name="server-properties-memory-page"></a>Propriedades do Servidor (página Memória)
   Use essa página para exibir ou modificar as opções de memória do servidor. Quando a **Memória mínima do servidor** está definida como 0 e a **Memória máxima do servidor** está definida como 2147483647 MB, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode tirar vantagem da quantidade ideal de memória a qualquer momento, sujeito à quantidade de memória que o sistema operacional e os outros aplicativos estão usando no momento. À medida que muda a carga no computador e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a memória alocada também muda. Você pode limitar mais essa alocação de memória dinâmica aos valores mínimo e máximo especificados abaixo.  
@@ -31,7 +31,7 @@ ms.locfileid: "36012554"
  Especifica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve iniciar com pelo menos a quantidade mínima de memória alocada e não liberar memória abaixo desse valor. Defina esse valor com base no tamanho e na atividade de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre defina a opção como um valor razoável para garantir que o sistema operacional não exija muita memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e iniba o desempenho do Windows.  
   
  **Memória máxima do servidor (em MB)**  
- Especifica a quantidade máxima de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode alocar quando inicia e enquanto está sendo executado. Essa opção de configuração pode ser definida como um valor específico, caso você tenha ciência de que há vários aplicativos em execução ao mesmo tempo como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e queira garantir que eles tenham memória suficiente para execução. Se esses outros aplicativos, tais como servidores Web ou de email, solicitarem memória apenas conforme necessário, não defina a opção, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá liberar memória para eles conforme necessário. Muitas vezes, contudo, os aplicativos usam qualquer memória disponível ao serem iniciados e não solicitam mais quando necessário. Se um aplicativo que se comporta dessa maneira estiver em execução no mesmo computador e ao mesmo tempo em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina a opção com um valor que garanta que a memória solicitada pelo aplicativo não seja alocada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A quantidade mínima de memória, você pode especificar para **memória máxima do servidor** são 64 MB (Megabytes) para sistemas de 32 bits e 128 MB para sistemas de 64 bits.  
+ Especifica a quantidade máxima de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode alocar quando inicia e enquanto está sendo executado. Essa opção de configuração pode ser definida como um valor específico, caso você tenha ciência de que há vários aplicativos em execução ao mesmo tempo como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e queira garantir que eles tenham memória suficiente para execução. Se esses outros aplicativos, tais como servidores Web ou de email, solicitarem memória apenas conforme necessário, não defina a opção, pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá liberar memória para eles conforme necessário. Muitas vezes, contudo, os aplicativos usam qualquer memória disponível ao serem iniciados e não solicitam mais quando necessário. Se um aplicativo que se comporta dessa maneira estiver em execução no mesmo computador e ao mesmo tempo em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], defina a opção com um valor que garanta que a memória solicitada pelo aplicativo não seja alocada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A quantidade mínima de memória, você pode especificar para **memória máxima do servidor** são 64 megabytes (MB) para sistemas de 32 bits e 128 MB para sistemas de 64 bits.  
   
  **Memória de criação de índice (em KB, 0 = memória dinâmica)**  
  Especifica a quantidade de memória (em KB) para usar durante as classificações de criação de índice. O valor padrão 0 permite a alocação dinâmica e deve funcionar na maioria dos casos sem ajustes adicionais, embora o usuário possa digitar um valor diferente de 704 a 2147483647.  

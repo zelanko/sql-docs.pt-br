@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295826"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grade (guia Uso da Dimensão, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Grade** da guia **Uso da Dimensão** do Designer de Cubo para exibir e editar relações entre dimensões e grupos de medidas do cubo. Cada relação de dimensão é representada como uma célula em uma grade na qual grupos de medidas são exibidos como colunas e dimensões são exibidas como linhas.  
@@ -39,9 +39,9 @@ ms.locfileid: "36012092"
 |------------|----------------|  
 |**Adicionar dimensão do cubo**|Selecione para exibir a caixa de diálogo **Adicionar Dimensão do Cubo** e adicionar referências a dimensões novas ou existentes do banco de dados ao cubo. Para obter mais informações sobre a caixa de diálogo **Adicionar Dimensão do Cubo**, consulte [Caixa de diálogo Adicionar Dimensão do Cubo &#40;Analysis Services – Dados Multidimensionais&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Novo objeto vinculado**|Selecione para exibir o **Assistente para Objetos Vinculados** e vincular grupos de medidas e dimensões de outros cubos, e para importar ações, KPIs e cálculos ao cubo selecionado. Para obter mais informações sobre o **Assistente para Objetos Vinculados**, consulte [Ajuda F1 do Assistente para Objetos Vinculados](linked-object-wizard-f1-help.md).|  
-|**Recortar**|Observação: Essa opção está desabilitada.|  
-|**Copiar**|Observação: Essa opção está desabilitada.|  
-|**Colar**|Observação: Essa opção está desabilitada.|  
+|**Recortar**|Observação: Essa opção estará desabilitada.|  
+|**Copiar**|Observação: Essa opção estará desabilitada.|  
+|**Colar**|Observação: Essa opção estará desabilitada.|  
 |**Delete (excluir)**|Selecione para excluir a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada do cubo.|  
 |**Renomear**|Selecione para renomear a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  
 |**Propriedades**|Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77e87dc08897954cb210b9e785dc4d6e266a3ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8a8b6cc94bf769be46bf3a2fc101731ba28d2021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321866"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Exibir números de página ou outras propriedades do relatório (Construtor de Relatórios e SSRS)
   É fácil adicionar números de página, um título de relatório, nome de arquivo e outras propriedades de relatório aos cabeçalhos ou rodapés de seu relatório. Essas propriedades são armazenadas como campos na pasta Campos Internos no painel de dados do relatório:  
@@ -68,7 +68,7 @@ ms.locfileid: "36118588"
   
      A caixa de texto **Definir Expressão para: Valor** contém a expressão =Globals!PageNumber.  
   
-2.  Posicione o cursor depois do sinal de = e digite `"Page " &`.  
+2.  Coloque o cursor depois do sinal de = e digite `"Page " &`.  
   
      Agora, a expressão é ="Página "&Globals! PageNumber  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36118588"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Cabeçalhos e rodapés de página &#40;SSRS e construtor de relatórios&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatar texto em uma caixa de texto &#40;SSRS e construtor de relatórios&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Cabeçalhos e rodapés de página &#40;relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatar texto em uma caixa de texto &#40;relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

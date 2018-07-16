@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53c9122620b40d827eafd9de74738fd5df72f461
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: efbcf8ccaf28f134ba1d9ec2d5a6c0353d8c7f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256732"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de banco de dados (página Propriedades Estendidas)
   Propriedades estendidas permitem adicionar propriedades personalizadas a objetos de banco de dados. Use essa página para exibir ou modificar propriedades estendidas do objeto selecionado. A página **Propriedades Estendidas** é a mesma para todos os tipos de objetos de banco de dados.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Plan Guide Successful event class
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b159257c9f1dc2291db1583527eec84d2b9f6820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3e9949ef55c7f7226574ab63eb3e0d0320449c61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254188"
 ---
 # <a name="plan-guide-successful-event-class"></a>classe de evento Plan Guide Successful
   A classe de evento Plan Guide Successful indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produziu com êxito um plano de execução para uma consulta ou lote que continha uma guia de plano. O evento dispara quando as seguintes condições forem verdadeiras:  

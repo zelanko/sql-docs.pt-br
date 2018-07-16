@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Ferramentas-Opções (página de opções gerais) | Microsoft Docs
+title: SQL Server Profiler - Ferramentas-Opções (página de opções geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fed3aec717b21b3c3486d5fd25b27892969de44c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36018959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243066"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Ferramentas-Opções (página de opções gerais)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Ferramentas-Opções (página de opções geral)
   Use a caixa de diálogo **Opções Gerais** para exibir ou especificar as opções a seguir.  
   
 ## <a name="options"></a>Opções  
@@ -77,7 +77,7 @@ ms.locfileid: "36018959"
  Especifica o intervalo de sondagem do monitor de integridade durante a repetição, em segundos. O padrão é 60 segundos. Este valor permite que o usuário configure com que frequência o monitor de integridade sonda candidatos a conclusão.  
   
 ## <a name="see-also"></a>Consulte também  
- [Iniciar um rastreamento automaticamente após a conexão com um servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Categoria de evento Sessions](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Definir padrões de exibição de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Repetir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproduzir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e18a43b8556101607fede94852e37f1c636d4561
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6770168bf37031a8236756f88a737bb4e1ba32da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241216"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
   A transformação Agregação aplica funções de agregação, como Average, a valores de coluna e copia os resultados na saída da transformação. Além de funções de agregação, a transformação fornece a cláusula GROUP BY que você pode utilizar para especificar grupos a serem agregados.  
@@ -116,7 +116,7 @@ ms.locfileid: "36012306"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agregação** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação de agregação &#40;guia agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor de transformação de agregação &#40;guia de agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
 -   [Editor de transformação de agregação &#40;guia Avançado&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   

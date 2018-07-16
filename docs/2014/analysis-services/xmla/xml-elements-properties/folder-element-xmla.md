@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64bc73db4cfb1fee4471e474bf498094751edcf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283912"
 ---
 # <a name="folder-element-xmla"></a>Elemento Folder (XMLA)
   Contém um local de armazenamento do sistema de arquivos a ser atualizado para um [local](location-element-xmla.md) elemento durante uma [restaurar](../xml-elements-commands/restore-element-xmla.md) ou [sincronizar](../xml-elements-commands/synchronize-element-xmla.md) comando.  
@@ -64,7 +64,7 @@ ms.locfileid: "36013189"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Pastas](folders-element-xmla.md)|  
-|Elementos filho|[Novo](new-element-xmla.md), [Original](original-element-xmla.md)|  
+|Elementos filho|[Novos](new-element-xmla.md), [Original](original-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento `Folder`, se for especificado, altera os locais de armazenamento dos objetos contidos pelo arquivo de backup (para os comandos `Restore`) ou pelo banco de dados na instância de origem (para os comandos `Synchronize`) que correspondem ao valor do elemento `Original` para o valor do elemento `New`.  

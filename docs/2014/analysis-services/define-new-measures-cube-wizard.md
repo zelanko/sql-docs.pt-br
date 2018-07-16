@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.definenewmeasures.f1
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 382a2f58f5383614558506b2c6eea83f7e975c86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a2896be718501d45f717d8e270e548e00664ca16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173507"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir Novas Medidas (Assistente para Cubos)
   Use a página **Definir Novas Medidas** para criar novas medidas para um cubo que está sendo criado sem usar uma fonte de dados.  
@@ -34,7 +34,7 @@ ms.locfileid: "36019960"
 > [!NOTE]  
 >  As opções listadas nesta seção serão exibidas apenas se você tiver selecionado um modelo em **Modelo** na página **Selecionar Método de Criação** .  
   
- **Selecione as medidas do modelo**  
+ **Selecionar medidas de modelo**  
  Exibe as medidas do modelo de cubo que serão incluídas no cubo.  
   
  (Coluna com caixas de seleção)  

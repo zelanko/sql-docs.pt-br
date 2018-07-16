@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283612"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -120,15 +120,15 @@ ms.locfileid: "36012298"
   
  Para variáveis definidas pelo usuário e variáveis do sistema, o valor padrão para o **InclueInDebugDump** opção é `true`.  
   
- No entanto, para variáveis definidas pelo usuário, o sistema redefine a **IncludeInDebugDump** opção para `false` quando as seguintes condições forem atendidas:  
+ No entanto, para variáveis definidas pelo usuário, o sistema redefine a **IncludeInDebugDump** opção `false` quando as seguintes condições forem atendidas:  
   
--   Se o **EvaluateAsExpression** variável está definida como `true`, o sistema redefine a **IncludeInDebugDump** opção para `false`.  
+-   Se o **EvaluateAsExpression** propriedade da variável é definida como `true`, o sistema redefine a **IncludeInDebugDump** opção `false`.  
   
-     Para incluir o texto da expressão como o valor da variável nos arquivos de despejo de depuração, defina o **IncludeInDebugDump** opção para `true`.  
+     Para incluir o texto da expressão como o valor da variável nos arquivos de despejo de depuração, defina as **IncludeInDebugDump** opção `true`.  
   
--   Se o tipo de dados da variável é alterado para uma cadeia de caracteres, o sistema redefinirá a **IncludeInDebugDump** opção para `false`.  
+-   Se o tipo de dados da variável é alterado para uma cadeia de caracteres, o sistema redefine a **IncludeInDebugDump** opção `false`.  
   
- Quando o sistema redefine a **IncludeInDebugDump** opção para `false`, isso pode substituir o valor selecionado pelo usuário.  
+ Quando o sistema redefine a **IncludeInDebugDump** opção `false`, isso poderá substituir o valor selecionado pelo usuário.  
   
  Valor  
  O valor de uma variável definida pelo usuário pode ser literal ou uma expressão. Uma variável inclui opções para definir o valor da variável e o tipo de dados do valor. As duas propriedades devem ser compatíveis: por exemplo, o uso de um valor de cadeia de caracteres com um tipo de dados inteiro não é válido.  
@@ -146,7 +146,7 @@ ms.locfileid: "36012298"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)], consulte [Janela de Variáveis](../../2014/integration-services/variables-window.md).  
   
- Para saber mais sobre propriedades variáveis e para obter mais informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Para saber mais sobre as propriedades de variáveis e para obter mais informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

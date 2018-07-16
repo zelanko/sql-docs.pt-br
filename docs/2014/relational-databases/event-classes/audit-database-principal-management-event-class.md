@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Principal Management event class
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4d113633a1e56745de8c09a5cd0011505366058
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6a564e6837c9cce33f321e6f7ba855d6b90a8acd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162867"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Classe de evento Audit Database Principal Management
   A classe de evento **Audit Database Principal Management** ocorre quando entidades, como usuários, são criadas, alteradas ou descartadas de um banco de dados.  

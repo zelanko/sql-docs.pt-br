@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Instance to upgrade, Setup
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e887baf655d7128b4e28dd959156371c9250f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f29f3e745ae56a716a617f5938c3958de36f0891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270192"
 ---
 # <a name="select-instance"></a>Selecionar Instância
   Use a página Selecionar Instância do Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar a instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que você gostaria de atualizar para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

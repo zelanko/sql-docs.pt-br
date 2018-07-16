@@ -1,5 +1,5 @@
 ---
-title: O utilitário de configuração de servidor (mineração de dados suplementos para Excel) | Microsoft Docs
+title: O utilitário de configuração de servidor (Data Mining Add-ins para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178923"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitário de Configuração de Servidor (Suplementos de Mineração de Dados para Excel)
   Quando você instala os Suplementos de Mineração de Dados para Excel, um Utilitário de Configuração de Servidor também é instalado e será executado na primeira vez em que os suplementos forem abertos. Este tópico descreve como usar o utilitário para se conectar a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e configurar um banco de dados para o trabalho com modelos de mineração de dados.  
@@ -42,11 +42,11 @@ ms.locfileid: "36012979"
 ##  <a name="bkmk_step2"></a> Etapa 2: Permitir modelos temporários  
  Antes de poder usar os suplementos, uma propriedade de servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve ser alterada para permitir a criação de modelos de mineração temporários.  
   
- Modelos de mineração temporários também são chamados de *modelos de sessão*. Isso ocorre porque os modelos são armazenados apenas enquanto a sessão atual permanece aberta. Quando você fecha a conexão com o servidor, a sessão é encerrada e os modelos usados durante ela são excluídos.  
+ Modelos de mineração temporários também são chamados *modelos de sessão*. Isso ocorre porque os modelos são armazenados apenas enquanto a sessão atual permanece aberta. Quando você fecha a conexão com o servidor, a sessão é encerrada e os modelos usados durante ela são excluídos.  
   
  O uso de modelos de mineração de sessão não afeta o espaço de armazenamento no servidor, mas a sobrecarga envolvida na criação de modelos de mineração de dados pode afetar o desempenho do servidor.  
   
- O assistente detecta primeiro as configurações no servidor que você especificou. Se o servidor já permita modelos de mineração temporários, você pode clicar em **próximo** para continuar. O assistente também fornece instruções sobre como habilitar modelos de mineração temporários no servidor especificado do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou como fazer uma solicitação ao administrador do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ O assistente detecta primeiro as configurações no servidor que você especificou. Se o servidor já permita modelos de mineração temporários, você poderá clicar **próxima** para continuar. O assistente também fornece instruções sobre como habilitar modelos de mineração temporários no servidor especificado do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou como fazer uma solicitação ao administrador do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_step3"></a> Etapa 3: Criar o banco de dados para usuários de suplemento  
  Nesta página do assistente de instalação e configuração, você pode criar um novo banco de dados dedicado à mineração de dados ou selecionar um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
@@ -64,7 +64,7 @@ ms.locfileid: "36012979"
  **Nome do banco de dados**  
  Digite o nome do novo banco de dados. Se o nome ainda não estiver em uso, ele será criado para você.  
   
- **Usar banco de dados existente**  
+ **Usar o banco de dados existente**  
  Selecione esta opção para usar um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
   
  **Backup de banco de dados**  
@@ -79,7 +79,7 @@ ms.locfileid: "36012979"
  Selecione esta opção para dar aos usuários listados acesso administrativo ao banco de dados.  
   
 > [!NOTE]  
->  Essas permissões se aplicam somente ao banco de dados listado no **nome do banco de dados** caixa.  
+>  Essas permissões se aplicam apenas ao banco de dados listado na **nome do banco de dados** caixa.  
   
  **Nome do banco de dados**  
  Exibe o nome do banco de dados selecionado.  

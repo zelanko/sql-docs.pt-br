@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216806"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
   Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Os dois métodos têm o mesmo resultado: um gráfico de pizza semelhante ao da seguinte ilustração:  
   
- ! ["Meu primeiro gráfico de pizza" em execução Exibir] (.. /Media/RS-my1stpierunview.gif "" meu primeiro gráfico de pizza "em execução Exibir")  
+ ! [Exibir "Meu primeiro gráfico de pizza" em execução] (.. /Media/RS-my1stpierunview.gif "" meu primeiro gráfico de pizza "em execução Exibir")  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Se você usa dados XML ou uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], precisa ter acesso ao Construtor de Relatórios da [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Você pode executar a versão autônoma ou a versão ClickOnce, disponível no Gerenciador de Relatórios ou em um site do SharePoint. Somente a primeira etapa, como abrir o Construtor de Relatórios, é diferente para versões do ClickOnce. Para obter mais informações, consulte [instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "36019792"
      A caixa de diálogo **Guia de Introdução** é exibida.  
   
     > [!NOTE]  
-    >  Se o **Introdução** caixa de diálogo não aparece, do **Report Builder** , clique em **novo**.  
+    >  Se o **guia de Introdução** caixa de diálogo não aparece, da **construtor de relatórios** , clique em **New**.  
   
 2.  No painel esquerdo, verifique se **Relatório** está selecionado.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36019792"
   
 9. Na página **Escolha uma conexão com uma fonte de dados** , clique em **MyPieChart**e em **Avançar**.  
   
-10. Copie o seguinte texto e cole-o na caixa grande no centro do **criar uma consulta** página.  
+10. Copie o seguinte texto e cole-o na caixa grande no centro dos **criar uma consulta** página.  
   
     ```  
     <Query>  
@@ -126,7 +126,7 @@ ms.locfileid: "36019792"
   
 15. Arraste o campo **FullName** da caixa **Campos disponíveis** para a caixa **Categorias** (ou clique duas vezes nela para ir para a caixa **Categorias**) e, em seguida, clique em **Avançar**.  
   
-16. No **escolha um estilo** página, **Oceano** é selecionada por padrão. Clique nos outros estilos para visualizar sua aparência.  
+16. No **escolher um estilo** página, **Oceano** é selecionada por padrão. Clique nos outros estilos para visualizar sua aparência.  
   
 17. Clique em **Concluir**.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36019792"
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-2.  No **novo relatório ou conjunto de dados** caixa de diálogo caixa, verifique **relatório** está selecionado no painel esquerdo.  
+2.  No **novo relatório ou conjunto de dados** diálogo caixa, verifique **relatório** está selecionado no painel esquerdo.  
   
 3.  No painel direito, clique em **Assistente de Gráfico**e em **Criar**.  
   
@@ -202,9 +202,9 @@ ms.locfileid: "36019792"
   
 1.  Clique no gráfico de pizza e selecione **Mostrar rótulos de dados**. Os rótulos de dados devem aparecer dentro de cada fatia do gráfico de pizza.  
   
-2.  Clique nos rótulos e selecione **propriedades do rótulo de série**. A caixa de diálogo **Propriedades do Rótulo de Série** é exibida.  
+2.  Clique com botão direito nos rótulos e selecione **propriedades do rótulo de série**. A caixa de diálogo **Propriedades do Rótulo de Série** é exibida.  
   
-3.  Tipo `#PERCENT{P0}` para o **Rotular dados** opção.  
+3.  Tipo de `#PERCENT{P0}` para o **Rotular dados** opção.  
   
      O `{P0}` fornece o percentual sem casas decimais. Se você digitar apenas `#PERCENT`, seus números terão duas casas decimais. `#PERCENT` é uma palavra-chave que executa um cálculo ou função para você. Há muitos outros.  
   
@@ -213,18 +213,18 @@ ms.locfileid: "36019792"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> O que vem a seguir?  
- Agora que você criou seu primeiro relatório no Construtor de Relatórios, está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o construtor de relatórios, você precisa de permissão para acessar suas fontes de dados, como bancos de dados, com um *cadeia de caracteres de conexão*, que o conecte à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
+ Agora que você criou seu primeiro relatório no Construtor de Relatórios, está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar o construtor de relatórios, você precisa de permissão para acessar suas fontes de dados, como bancos de dados, com um *cadeia de caracteres de conexão*, que, na verdade, o conecta à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.  
   
- Para trabalhar com os outros tutoriais, você precisará do nome de uma instância de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenciais suficientes para acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  
+ Para trabalhar nos outros tutoriais, você precisa do nome de uma instância de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenciais suficientes para acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.  
   
  Finalmente, para salvar seus relatórios em um servidor de relatório ou site do SharePoint integrado a um servidor de relatório, você precisa da URL e de permissões. Você pode executar qualquer relatório que criar diretamente de seu computador, mas os relatórios têm mais funcionalidade quando executados no servidor de relatório ou site do SharePoint. Você precisa de permissões para executar seus relatórios ou de outras pessoas no servidor de relatório ou site do SharePoint em que eles foram publicados. Fale com o administrador do sistema para obter acesso.  
   
- Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Para obter mais informações, consulte [conceitos de criação de relatório &#40;construtor de relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Para obter mais informações, consulte [Planejando um relatório &#40;Report Builder&#41;](../report-design/planning-a-report-report-builder.md).  
+ Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Para obter mais informações, consulte [conceitos de criação de relatório &#40;construtor de relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Para obter mais informações, consulte [Planejando um relatório &#40;construtor de relatórios&#41;](../report-design/planning-a-report-report-builder.md).  
   
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#TwoWays)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutoriais &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
+ [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)  
   
   

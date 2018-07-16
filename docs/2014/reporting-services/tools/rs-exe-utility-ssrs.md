@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255458"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   O utilitário rs.exe processa o script que você fornece em um arquivo de entrada. Use esse utilitário para automatizar a implantação de servidor de relatório e tarefas de administração.  
@@ -77,8 +77,8 @@ ms.locfileid: "36013046"
  `-u` [*domínio*\\]*nome de usuário*  
  (Opcional) Especifica uma conta do usuário usada para conexão com o servidor de relatório. Se `-u` e `-p` forem omitidos, a conta do usuário do Windows atual será usada.  
   
- `-p` *Senha*  
- (Obrigatório se `-u` for especificado) Especifica a senha para usar com o `-u` argumento. Esse valor diferencia maiúsculas de minúsculas.  
+ `-p` *senha*  
+ (Necessário se `-u` for especificado) Especifica a senha para usar com o `-u` argumento. Esse valor diferencia maiúsculas de minúsculas.  
   
  `-e`  
  (Opcional) Especifica o ponto de extremidade SOAP no qual o script deve ser executado. Os valores válidos são os seguintes:  
@@ -91,13 +91,13 @@ ms.locfileid: "36013046"
   
 -   Exec2005  
   
- Se não for especificado um valor, o ponto de extremidade Mgmt2005 será usado. Para obter mais informações sobre pontos de extremidade SOAP, consulte [relatório Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Se não for especificado um valor, o ponto de extremidade Mgmt2005 será usado. Para obter mais informações sobre os pontos de extremidade SOAP, consulte [pontos de extremidade de serviço do relatório de servidor Web](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *time_out*  
  (Opcional) Especifica o número de segundos antes que a conexão com o servidor expire. O padrão é 60 segundos. Se você não especificar um valor de tempo limite, o padrão será usado. Um valor de `0` especifica que a conexão nunca expira.  
   
  **-b**  
- (Opcional) Especifica que os comandos no arquivo de script são executados em um lote. Se algum comando falhar, o lote será revertido. Alguns comandos não podem ser processados em lote e são executados como de costume. Somente exceções emitidas e não controladas no resultado de script resultam em reversão. Se o script controlar uma exceção e retornar normalmente de `Main`, o lote será confirmado. Se você omitir esse parâmetro, os comandos serão executados sem criar um lote. Para obter mais informações, consulte [métodos em lote](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Opcional) Especifica que os comandos no arquivo de script são executados em um lote. Se algum comando falhar, o lote será revertido. Alguns comandos não podem ser processados em lote e são executados como de costume. Somente exceções emitidas e não controladas no resultado de script resultam em reversão. Se o script controlar uma exceção e retornar normalmente de `Main`, o lote será confirmado. Se você omitir esse parâmetro, os comandos serão executados sem criar um lote. Para obter mais informações, consulte [métodos de envio em lote](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *globalvar*  
  (Opcional) Especifica variáveis globais usadas no script. Se o script usa variáveis globais, você deve especificar esse argumento. O valor que você especifica deve ser válido para a variável global definida no arquivo .rss. Você deve especificar uma variável global para cada argumento **–v** .  

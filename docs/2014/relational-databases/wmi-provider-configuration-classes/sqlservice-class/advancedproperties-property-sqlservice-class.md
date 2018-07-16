@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38b009295a8b53e7b1bdc756916f74cbba337f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f477d7d7c385a717b292820049698c21cc834955
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194396"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Propriedade AdvancedProperties (classe SqlService)
   Obtém uma matriz de referências de objeto que contém as propriedades avançadas para o objeto `SqlService`.  

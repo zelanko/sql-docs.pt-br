@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213536"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -79,12 +79,12 @@ ms.locfileid: "36019866"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|Colunas do tipo numérica ou tipo `datetime` (não `mean` e `stddev` para a coluna `datetime`)|  
 |ColumnNullRatioProfile|Todas as colunas**|  
-|ColumnValueDistributionProfile|Colunas de `integer` tipo, `char` tipo, e `datetime` tipo|  
+|ColumnValueDistributionProfile|Colunas de `integer` tipo de `char` tipo, e `datetime` tipo|  
 |ColumnLengthDistributionProfile|Colunas de `char` tipo|  
 |ColumnPatternProfile|Colunas de `char` tipo|  
-|CandidateKeyProfile|Colunas de `integer` tipo, `char` tipo, e `datetime` tipo|  
-|FunctionalDependencyProfile|Colunas de `integer` tipo, `char` tipo, e `datetime` tipo|  
-|InclusionProfile|Colunas de `integer` tipo, `char` tipo, e `datetime` tipo|  
+|CandidateKeyProfile|Colunas de `integer` tipo de `char` tipo, e `datetime` tipo|  
+|FunctionalDependencyProfile|Colunas de `integer` tipo de `char` tipo, e `datetime` tipo|  
+|InclusionProfile|Colunas de `integer` tipo de `char` tipo, e `datetime` tipo|  
   
  \* Na tabela anterior de tipos de dados válidos, o `integer`, `char`, `datetime`, e `numeric` tipos incluem os seguintes tipos de dados específicos:  
   
@@ -94,9 +94,9 @@ ms.locfileid: "36019866"
   
  Entre os tipos de data e hora estão `datetime`, `smalldatetime` e `timestamp`.  
   
- Tipos numéricos estão `integer` tipos (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, e `numeric`.  
+ Tipos numéricos incluem `integer` tipos (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, e `numeric`.  
   
- \*\* `image`, `text`, `XML`, `udt`, e `variant` tipos não têm suporte para perfis diferentes do perfil de razão nula de coluna.  
+ \*\* `image`, `text`, `XML`, `udt`, e `variant` tipos não têm suporte para perfis que não sejam o perfil de razão nula de coluna.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelas e colunas válidas  
  Se a tabela ou coluna estiver vazia, a Criação de perfis de dados executará as seguintes ações:  
@@ -142,20 +142,20 @@ ms.locfileid: "36019866"
  [Página de solicitações de perfil](data-profiling-task-editor-profile-requests-page.md)  
  Na página **Solicitações de Perfil** , você especifica a fonte de dados e seleciona e configura os perfis de dados que quer computar. Para obter mais informações sobre os vários perfis que podem ser configurados, consulte os tópicos a seguir:  
   
--   [Opções de solicitação do perfil chave de candidato &#40;tarefa criação de perfil de dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil chave de candidato &#40;tarefa de criação de perfil&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de distribuição do coluna comprimento &#40;tarefa criação de perfil de dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil de distribuição de comprimento de coluna &#40;tarefa de criação de perfil&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa criação de perfil de dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa de criação de perfil&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de padrão de coluna &#40;tarefa criação de perfil de dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de padrão de coluna &#40;tarefa de criação de perfil&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa criação de perfil de dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa de criação de perfil&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de distribuição do coluna valor &#40;tarefa criação de perfil de dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil de distribuição de valor de coluna &#40;tarefa de criação de perfil&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação do perfil dependência funcional &#40;tarefa criação de perfil de dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil dependência funcional &#40;tarefa de criação de perfil&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de inclusão de valor &#40;tarefa criação de perfil de dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil inclusão de valor &#40;tarefa de criação de perfil&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

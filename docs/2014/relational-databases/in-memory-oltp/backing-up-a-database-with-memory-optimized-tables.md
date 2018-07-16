@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279392"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Fazendo backup de um banco de dados com tabelas com otimização de memória
   As tabelas com otimização de memória são incluídas no backup como parte de backups regulares de banco de dados. Quanto às tabelas baseadas em disco, o CHECKSUM de dados e os pares de arquivos delta são validados como parte do backup de banco de dados para detectar corrupção do armazenamento.  
@@ -43,7 +43,7 @@ ms.locfileid: "36012259"
 |IN TRANSITION TO TOMBSTONE|Somente metadados de arquivo|  
 |TOMBSTONE|Somente metadados de arquivo|  
   
- O tamanho dos backups de banco de dados com uma ou mais tabelas com otimização de memória normalmente é maior do que o tamanho em memória mas menor do que o do armazenamento em disco. O tamanho adicional dependerá do número de linhas excluídas e do número de pares de arquivo de ponto de verificação nos estados Origem de mesclagem e REQUIRED FOR BACKUP/HA, que dependem indiretamente da carga de trabalho. Para obter descrições dos Estados para pares de arquivos de ponto de verificação, consulte [sys.DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ O tamanho dos backups de banco de dados com uma ou mais tabelas com otimização de memória normalmente é maior do que o tamanho em memória mas menor do que o do armazenamento em disco. O tamanho adicional dependerá do número de linhas excluídas e do número de pares de arquivo de ponto de verificação nos estados Origem de mesclagem e REQUIRED FOR BACKUP/HA, que dependem indiretamente da carga de trabalho. Para obter descrições dos Estados para pares de arquivos de ponto de verificação, consulte [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Estimando o tamanho do backup de banco de dados completo  
   

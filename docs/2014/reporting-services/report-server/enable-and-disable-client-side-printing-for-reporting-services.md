@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9b5c7c1d879b2ffc9cb333bed193af9239996536
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313126"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] controle ActiveX, **RSClientPrint**, fornece impressão do lado do cliente para relatórios exibidos em um navegador. O controle exibe uma caixa de diálogo de impressão personalizada que oferece suporte aos recursos comuns com outras caixas de diálogo de impressão. Os recursos incluem a visualização de impressão, as seleções de página para determinar páginas e intervalos específicos, as margens da página e a orientação. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] controle de ActiveX **RSClientPrint**, fornece impressão do lado do cliente para relatórios exibidos em um navegador. O controle exibe uma caixa de diálogo de impressão personalizada que oferece suporte aos recursos comuns com outras caixas de diálogo de impressão. Os recursos incluem a visualização de impressão, as seleções de página para determinar páginas e intervalos específicos, as margens da página e a orientação. Embora a impressão do lado do cliente esteja habilitada por padrão, você pode desabilitar o recurso para impedi-lo de ser usado.  
   
 > [!NOTE]  
 >  Baixar controles ActiveX requer permissões de administrador.  
   
 ## <a name="downloading-the-activex-control"></a>Baixando o controle ActiveX  
- Cada usuário que deseja usar o recurso de impressão deve baixar e instalar o controle ActiveX que oferece a funcionalidade de impressão do cliente. Na primeira vez que um usuário clica o **impressora** ícone na barra de ferramentas relatório, a Microsoft controle ActiveX é baixado para o computador. Depois que o controle é baixado, o **impressão** caixa de diálogo exibe sempre que o usuário clica o **impressora** ícone.  
+ Cada usuário que deseja usar o recurso de impressão deve baixar e instalar o controle ActiveX que oferece a funcionalidade de impressão do cliente. Na primeira vez que um usuário clica o **impressora** ícone na barra de ferramentas de relatório, a Microsoft controle ActiveX é baixado no computador. Depois que o controle é baixado, a **Print** caixa de diálogo exibida sempre que o usuário clica o **impressora** ícone.  
   
  Dependendo das configurações do navegador, o usuário pode receber uma solicitação para instalar o controle, ser impedido de instalar o controle ou ter o controle instalado de maneira transparente em segundo plano.  
   
- Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, as configurações que afetam a instalação e o download do controle ActiveX são especificadas por meio de **ActiveX plug-ins e controles** nó o **as configurações de segurança** página para a zona de conteúdo da Web. As seguintes configurações determinam se os usuários podem baixar e executar o controle de impressão, com base nas preferências de segurança da zona da Web:  
+ Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, as configurações que afetam a instalação e o download do controle ActiveX são especificadas por meio de **ActiveX plug-ins e controles** nó no **configurações de segurança** página para a zona de conteúdo da Web. As seguintes configurações determinam se os usuários podem baixar e executar o controle de impressão, com base nas preferências de segurança da zona da Web:  
   
 -   Baixe os controles ActiveX assinados.  
   
@@ -42,14 +42,14 @@ ms.locfileid: "36117587"
   
  Os usuários que desejam usar **RSClientPrint** executar a impressão do lado do cliente deve habilitar o seguinte:  
   
--   **Baixar controles ActiveX assinados** e **controles de Script ActiveX marcados como seguros para script** para fins de instalação.  
+-   **Baixar controles ActiveX assinados** e **controle de Script ActiveX marcados como seguro para script** para fins de instalação.  
   
 -   **Executar controles ActiveX e plug-ins** para operações de impressão em andamento.  
   
  O **RSClientPrint** controle ActiveX é assinado, o que significa que ele contém um certificado digital válido da [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Habilitando e desabilitando a impressão do lado do cliente  
- Os administradores do servidor de relatório tem a opção de desabilitar o recurso de impressão, definindo a propriedade de sistema do servidor de relatório **EnableClientPrinting** para `false`. Isso desabilitará a impressão do lado do cliente para todos os relatórios gerenciados por esse servidor. Por padrão, **EnableClientPrinting** é definido como `true`. Você pode desabilitar a impressão do lado do cliente das seguintes formas:  
+ Os administradores de servidor de relatório tem a opção de desabilitar o recurso de impressão, definindo a propriedade de sistema do servidor de relatório **EnableClientPrinting** para `false`. Isso desabilitará a impressão do lado do cliente para todos os relatórios gerenciados por esse servidor. Por padrão, **EnableClientPrinting** é definido como `true`. Você pode desabilitar a impressão do lado do cliente das seguintes formas:  
   
 -   Para um **Servidor de relatório no modo nativo**:  
   
