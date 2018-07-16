@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90c07018747c7ad04bbd2324bb0bd697f7d774c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcbbf8a7783d152c66ec4f222ba79b00181b60f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324816"
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>Elemento ReportingWeekToMonthPattern (ASSL)
-  Define o padrão de semana a mês de relatório para o [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
+  Define o padrão de semana-para-mês de relatório para o [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

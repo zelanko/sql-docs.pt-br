@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
 caps.latest.revision: 5
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 61b8338e55195553ccbb16dc30dd9c5081c84280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6de9e321e3cd5122a6252663c533be2d536800d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320836"
 ---
 # <a name="baseproperty-element-csdlbi"></a>Elemento BaseProperty (CSDLBI)
   O elemento BaseProperty é um tipo complexo que serve como base para outros elementos.  

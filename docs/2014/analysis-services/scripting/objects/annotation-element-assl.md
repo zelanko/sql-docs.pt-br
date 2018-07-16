@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304496"
 ---
 # <a name="annotation-element-assl"></a>Elemento Annotation (ASSL)
   Contém elementos que são usados para estender o esquema ASSL (Analysis Services Scripting Language).  
@@ -61,7 +61,7 @@ ms.locfileid: "36019936"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Anotações](../collections/annotations-element-assl.md)|  
-|Elementos filho|[Nome](../properties/name-element-assl.md), [valor](../properties/value-element-assl.md), [visibilidade](../properties/visibility-element-assl.md)|  
+|Elementos filho|[Nome da](../properties/name-element-assl.md), [valor](../properties/value-element-assl.md), [visibilidade](../properties/visibility-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  O elemento `Annotation` fornece a extensibilidade do esquema ASSL para todos os objetos diferentes dos usados unicamente para definir um tipo de dados complexo. O elemento `Value` do elemento `Annotation` pode conter um XML válido de qualquer namespace XML diferente de ASSL, sujeito às seguintes regras:  

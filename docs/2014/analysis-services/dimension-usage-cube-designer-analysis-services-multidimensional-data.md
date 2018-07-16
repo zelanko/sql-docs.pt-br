@@ -1,5 +1,5 @@
 ---
-title: Uso da dimensão (Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Uso (Designer de cubo) da dimensão (Analysis Services - dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusagepane.f1
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c1b748c221bb730a855c51b80cb3bfb8c3c3d21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bc3fec6c8f618446590c89fe555f5d4592575fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288482"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso da Dimensão (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Uso da Dimensão** do Designer de Cubo para exibir e editar as relações entre dimensões e grupos de medidas do cubo.  
@@ -37,7 +37,7 @@ ms.locfileid: "36119803"
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Estrutura do cubo &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos de &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [KPIs &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Ações &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Partições &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   

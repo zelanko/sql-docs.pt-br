@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315656"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
@@ -49,7 +49,7 @@ ms.locfileid: "36013089"
   
 -   Tabela e particionamento de índice para armazenamento de dados em um esquema de partição. Para saber mais, confira [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
--   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [implementar pontos de extremidade](tasks/implementing-endpoints.md).  
+-   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [Implementing Endpoints](tasks/implementing-endpoints.md).  
   
 -   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, consulte [trabalhando com isolamento de instantâneo](../native-client/features/working-with-snapshot-isolation.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36013089"
   
 -   Bancos de dados de instantâneo para criar cópias somente leitura de bancos de dados.  
   
--   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [do SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
 -   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../synonyms/synonyms-database-engine.md).  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36013089"
   
 -   Servidores registrados dão suporte para registrar informações de conexão. Para obter mais informações, consulte [registrar servidores](../../ssms/register-servers/register-servers.md).  
   
--   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [rastreamento SQL](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [eventos estendidos](../extended-events/extended-events.md).  
+-   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [rastreamento do SQL](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [Extended Events](../extended-events/extended-events.md).  
   
 -   Suporte a certificados e chaves para controle de segurança. Para obter mais informações, consulte [hierarquia de criptografia](../security/encryption/encryption-hierarchy.md).  
   
 -   Gatilhos DDL para adicionar funcionalidade quando ocorrerem eventos de DDL. Para obter mais informações, consulte [DDL Triggers](../triggers/ddl-triggers.md).  
   
- O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Isso significa que o common language runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalada antes de usar os objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os assemblies estão localizados em [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
+ O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Isso significa que o common language runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes de usar os objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os assemblies estão localizados em [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
   
 ## <a name="smo-classes"></a>Classes do SMO  
  As classes do SMO incluem duas categorias: classes de instância e classes de utilitário.  
@@ -154,11 +154,11 @@ ms.locfileid: "36013089"
   
  O Isolamento de instantâneo (controle de versão no nível de linha) é representado através de novas propriedades de objeto do <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Namespace de esquema XML, índices XML e tipo de dados XML**  
+ **Namespace de esquema XML, índices XML e o tipo de dados XML**  
   
  Namespaces de Esquema XML são representados no SMO por uma coleção de objetos. Os índices XML são representados no SMO por uma propriedade de objeto do `Index`.  
   
- **Aprimoramentos da pesquisa de texto completo**  
+ **Aprimoramentos de pesquisa de texto completo**  
   
  São fornecidos objetos novos no SMO representando os aprimoramentos da pesquisa de texto completo.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36013089"
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> representa as opções de verificação de página do banco de dados.  
   
- **Bancos de dados do instantâneo**  
+ **Bancos de dados de instantâneo**  
   
  Um banco de dados de instantâneo é uma cópia somente leitura de um banco de dados especificado como momento determinado. Um banco de dados de instantâneo pode ser especificado usando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "36013089"
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] e sua funcionalidade são representados por um grupo de objetos  
   
- **Aprimoramentos do índice**  
+ **Aprimoramentos de índice**  
   
  Os aprimoramentos de índice do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representados por propriedades novas no objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   

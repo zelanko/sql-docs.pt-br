@@ -1,5 +1,5 @@
 ---
-title: Restaurar a chave de criptografia (modo nativo do SSRS) | Microsoft Docs
+title: Restaurar chave de criptografia (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2fd845eb3bbc64f43b499e6761b4acc5aa84ae0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303626"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar chave de criptografia (modo nativo do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados de servidor de relatório. Para assegurar-se de que tenha acesso contínuo aos dados criptografados, é importante criar um backup da chave da criptografia, caso seja necessário restaurá-la posteriormente devido a alterações na conta de serviço ou como parte de uma migração planejada. Este tópico é uma visão geral de como usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar as chaves.  
@@ -32,12 +32,12 @@ ms.locfileid: "36115578"
   
  Para verificar se você restaurou uma chave válida, use o Gerenciador de Relatórios para exibir assinaturas ou qualquer relatório que tenha uma fonte de dados que use credenciais armazenadas. Se você receber o erro "O servidor de relatório não pode acessar dados criptografados" ao tentar abrir uma página de definição de assinatura ou se for solicitado a inserir credenciais ao abrir um relatório que anteriormente usava credenciais armazenadas para a fonte de dados do relatório, você restaurou uma chave inválida.  
   
- Se você restaurar uma chave inválida que seja diferente da usada para criptografar os dados, será impossível descriptografar os dados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma chave inválida, deverá imediatamente restaurar uma cópia de backup da chave correta, se estiver disponível. Se você não tiver uma cópia de backup da chave que foi usada para criptografar os dados, deverá excluir todos os dados criptografados. Clique o **excluir** botão o [chaves de criptografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) página para executar essa etapa. Depois de excluir o conteúdo criptografado, você deverá atualizar manualmente todas as assinaturas e especificar novamente todas as credenciais armazenadas definidas para relatórios e assinaturas controladas por dados no servidor de relatório.  
+ Se você restaurar uma chave inválida que seja diferente da usada para criptografar os dados, será impossível descriptografar os dados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma chave inválida, deverá imediatamente restaurar uma cópia de backup da chave correta, se estiver disponível. Se você não tiver uma cópia de backup da chave que foi usada para criptografar os dados, deverá excluir todos os dados criptografados. Clique o **excluir** botão a [chaves de criptografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) página para executar esta etapa. Depois de excluir o conteúdo criptografado, você deverá atualizar manualmente todas as assinaturas e especificar novamente todas as credenciais armazenadas definidas para relatórios e assinaturas controladas por dados no servidor de relatório.  
   
 ## <a name="restore-encryption-key-dialog"></a>Caixa de diálogo Restaurar Chave de Criptografia  
- Para obter informações sobre onde encontrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consulte [Reporting Services Configuration Manager &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para obter informações sobre onde encontrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consulte [Reporting Services Configuration Manager &#40;nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- Para abrir a caixa de diálogo Restaurar chave de criptografia, clique em **chaves de criptografia** no painel de navegação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager e depois clique em **restauração**. Essa caixa de diálogo também é exibida quando você atualizar a conta de serviço usando a página conta de serviço a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Para obter mais informações sobre  
+ Para abrir a caixa de diálogo Restaurar chave de criptografia, clique em **chaves de criptografia** no painel de navegação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e depois clique em **restaurar**. Essa caixa de diálogo também é exibida quando você atualizar a conta de serviço usando a página de conta de serviço no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager. Para obter mais informações sobre  
   
 ## <a name="options"></a>Opções  
  **Local do arquivo**  
@@ -52,6 +52,6 @@ ms.locfileid: "36115578"
  [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Armazenar dados criptografados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Chaves de criptografia &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
+ [As chaves de criptografia &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
 - ID property
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4072342fcdace380e08b507c118279b837ba26fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323176"
 ---
 # <a name="configure-measure-properties"></a>Configurar propriedades de medida
   As medidas têm propriedades que lhe permitem definir como elas funcionam e controlar como elas aparecem para os usuários.  
@@ -66,7 +66,7 @@ ms.locfileid: "36116254"
 |`DataType`|Obrigatórios. Especifica o tipo de dados da coluna da tabela de fatos subjacente à qual a medida está associada. Esse valor é herdado da coluna de origem por padrão.|  
 |`Description`|Fornece uma descrição da medida, que pode ser exposta em aplicativos cliente.|  
 |`DisplayFolder`|Especifica a pasta na qual a medida aparecerá quando os usuários conectarem-se ao cubo. Se o cubo tiver várias medidas, você pode usar as pastas de exibição para categorizar as medidas e aprimorar a experiência de navegação do usuário.|  
-|`FormatString`|Você pode selecionar o formato que é usado para exibir os valores de medida para os usuários usando o `FormatString` propriedade da medida.<br /><br /> Embora seja fornecida uma lista de formatos de exibição em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode especificar vários outros formatos que não constam nela. Você pode especificar qualquer formato nomeado ou definido pelo usuário que seja válido no Microsoft Visual Basic.|  
+|`FormatString`|Você pode selecionar o formato que é usado para exibir valores de medida aos usuários utilizando o `FormatString` propriedade da medida.<br /><br /> Embora seja fornecida uma lista de formatos de exibição em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode especificar vários outros formatos que não constam nela. Você pode especificar qualquer formato nomeado ou definido pelo usuário que seja válido no Microsoft Visual Basic.|  
 |`ID`|Obrigatórios. Exibe o identificador exclusivo (ID) da medida. Esta propriedade é somente leitura.|  
 |`MeasureExpression`|Especifica uma expressão MDX restrita definindo o valor da medida. A expressão é avaliada no nível de folha antes de ser agregada e leva em consideração a importância de um valor. Por exemplo, em conversão de moedas em que um valor de vendas é ponderado pela taxa de câmbio.|  
 |`Name`|Obrigatórios. Especifica o nome da medida.|  

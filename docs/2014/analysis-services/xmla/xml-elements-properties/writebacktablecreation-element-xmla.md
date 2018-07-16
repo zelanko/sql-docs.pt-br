@@ -24,18 +24,18 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319206"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>Elemento WritebackTableCreation (XMLA)
-  Determina se uma tabela de write-back é criada durante a [processo](../xml-elements-commands/process-element-xmla.md) operação.  
+  Determina se uma tabela de write-back é criada durante o [processo](../xml-elements-commands/process-element-xmla.md) operação.  
   
 ## <a name="syntax"></a>Sintaxe  
   

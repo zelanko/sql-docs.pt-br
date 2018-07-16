@@ -1,5 +1,5 @@
 ---
-title: Funções de usuário para o Change Data Capture Service para Oracle da attunity | Microsoft Docs
+title: Funções de usuário para o Change Data capturam Service para Oracle da attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 196e8b952073fa4799c86549f1efdb26449c841c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc2db9d3a5df677cd1d687d2c5431c7db4affad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295146"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Funções do usuário para o serviço Change Data Capture para Oracle da Attunity
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  

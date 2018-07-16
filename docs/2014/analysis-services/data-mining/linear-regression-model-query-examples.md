@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303176"
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão linear
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo pode fornecer mais detalhes sobre a fórmula de regressão, enquanto uma consulta de previsão pode informar se um novo ponto de dados se ajusta ao modelo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [Retornar ao início](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> Exemplo de consulta 4: Prevendo a renda com o uso de uma consulta singleton  
- A maneira mais fácil de criar uma consulta single em um modelo de regressão é usando a caixa de diálogo **Entrada de Consulta Singleton** . Por exemplo, você pode criar a consulta DMX a seguir selecionando o modelo de regressão apropriado, escolhendo **consulta Singleton**e, em seguida, digitando `20` como o valor para **idade**.  
+ A maneira mais fácil de criar uma consulta single em um modelo de regressão é usando a caixa de diálogo **Entrada de Consulta Singleton** . Por exemplo, você pode compilar a consulta DMX a seguir selecionando o modelo de regressão apropriado, escolhendo **consulta Singleton**e, em seguida, digitando `20` como o valor para **idade**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -205,9 +205,9 @@ NATURAL PREDICTION JOIN
  Para obter uma lista das funções comuns a todos os algoritmos do [!INCLUDE[msCoName](../../includes/msconame-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md). Para obter mais informações sobre como usar essas funções, consulte [Referência de função de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Referência técnica do algoritmo de regressão Linear de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Conteúdo do modelo de regressão Linear modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Mining Model Content para modelos de regressão Linear &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

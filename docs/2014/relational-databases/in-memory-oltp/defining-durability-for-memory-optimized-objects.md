@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 80897eb2c4744a2dfd1253067f65eb0fd6429f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0f569def0dafcf0f185905a004685b14156079d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303966"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Definindo a durabilidade dos objetos com otimização de memória
   O OLTP na memória garante as propriedades ACID (total atomicidade, consistência, isolamento e total durabilidade). A durabilidade no contexto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nas tabelas com otimização de memória oferece as seguintes garantias:  

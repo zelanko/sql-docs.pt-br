@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8adf917831b33c1603b3c0c4a1e7b678900cf7dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d5baee6d121becc970dd6c7e6d0a82f47e4a2ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304976"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Reparar uma instalação do Distributed Replay
   A reparação de um componente do Distributed Replay (controlador ou cliente) fará o seguinte:  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60dbb6d89483305d971488209b8e13f85e7c2840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315046"
 ---
 # <a name="refreshinterval-element-assl"></a>Elemento RefreshInterval (ASSL)
   Especifica o intervalo no qual os dados ligados associados ao elemento pai são atualizados.  
@@ -52,7 +52,7 @@ ms.locfileid: "36020569"
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Duração XML|  
 |Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
-|Valor padrão|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) ou [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = PT-1s|  
+|Valor padrão|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) ou [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = PT 1s|  
 |Valor padrão|Todos os outros = PT1m|  
   
 ## <a name="element-relationships"></a>Relações do elemento  

@@ -1,5 +1,5 @@
 ---
-title: Tópicos de ajuda de F1 do Configuration Manager (modo nativo do SSRS) do Reporting Services | Microsoft Docs
+title: Reporting Services tópicos de ajuda de F1 do Gerenciador de configuração (modo nativo do SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e38b7d703fb91c0f03f2db55b3f8a82fa4c5b4cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177243"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Tópicos de Ajuda F1 do Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).
   Esta seção fornece ajuda de F1 para o Gerenciador de Configurações do Reporting Services.  
@@ -44,7 +44,7 @@ ms.locfileid: "36011040"
   
 -   [Assistente de banco de dados de alteração](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [Assistente para alterar credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [Assistente alterar credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [URL do Gerenciador de relatórios](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "36011040"
   
 -   [Restaurar chave de criptografia](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Implantação de expansão](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Implantação escalável](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Gerenciador de configuração do Reporting Services &#40;/DEL&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Alterações de comportamento no SQL Server Reporting Services no SQL Server 2014 | Microsoft Docs
+title: Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - rows [Reporting Services], heights
@@ -26,27 +26,27 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8f65fa1694cade07cbf33eec3a8b7afdc1c93280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 440066046c13629409eb4c2d332d4543ccd07c57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36008124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216946"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014
   Este tópico descreve as alterações no comportamento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. As mudanças de comportamento afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Neste tópico:  
   
--   [Alterações de comportamento SQL Server 2014 Reporting Services](#bkmk_sql14)  
+-   [SQL Server 2014 Reporting Services alterações de comportamento](#bkmk_sql14)  
   
--   [Alterações de comportamento SQL Server 2012 Reporting Services](#bkmk_rc0)  
+-   [SQL Server 2012 Reporting Services alterações de comportamento](#bkmk_rc0)  
   
--   [Alterações de comportamento SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
+-   [Alterações de comportamento de serviços de relatórios do SQL Server 2008 R2](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Alterações de comportamento do Reporting Services  
- Não há nenhum [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alterações no comportamento em [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Há nenhuma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alterações de comportamento no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Alterações de comportamento do Reporting Services  
  Esta seção descreve as alterações no comportamento do modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,33 +59,33 @@ ms.locfileid: "36008124"
  Para obter mais informações sobre os níveis de permissão do SharePoint, consulte [Permissões de usuários e níveis de permissão](http://technet.microsoft.com/library/cc721640.aspx)  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>Logs de rastreamento de servidor de relatório estão em um novo local para o modo do SharePoint (Modo do SharePoint)  
- **Novo comportamento:** para um servidor de relatório instalado no modo do SharePoint, os logs de rastreamento do servidor de relatório estarão em %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
+ **Novo comportamento:** para um servidor de relatório instalado no modo do SharePoint, os logs de rastreamento do servidor de relatório estarão em %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web services\reportserver\logfiles.  
   
- **Comportamento anterior:** logs de rastreamento do servidor de relatório foram encontrados em um caminho semelhante ao seguinte: %Programfilesdir%\Microsoft SQL Server\\< RS_instance > services\logfiles.  
+ **Comportamento anterior:** foram localizados logs de rastreamento de servidor de relatório em um caminho semelhante ao seguinte: %Programfilesdir%\Microsoft SQL Server\\< RS_instance > services\logfiles.  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>O GetServerConfigInfo SOAP API não tem mais suporte (Modo do SharePoint)  
- **Novo comportamento**: usar o PowerShell cmdlet "Get-SPRSServiceApplicationServers"  
+ **Novo comportamento**: Use PowerShell cmdlet "Get-SPRSServiceApplicationServers"  
   
  **Comportamento anterior:** clientes podiam desenvolver o código cliente SOAP para se comunicar diretamente com o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ponto de extremidade e chamar getreportserverconfiginfo ().  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Ferramentas de Configuração e Gerenciamento do Servidor de Relatório  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>O Configuration Manager não é usado para Modo do SharePoint  
- **Novo comportamento:** o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] do Configuration Manager não dá suporte a servidores de relatório do modo do SharePoint. Configuração de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo do SharePoint pode ser concluído agora usando a Administração Central do SharePoint e, portanto, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] do Configuration Manager não dá suporte ao modo do SharePoint. O Configuration Manager é usado agora apenas para servidores de relatórios de modo nativo.  
+ **Novo comportamento:** o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] do Configuration Manager não oferece suporte a servidores de relatório no modo do SharePoint. Configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modo do SharePoint agora pode ser concluído usando a Administração Central do SharePoint e, portanto, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] do Configuration Manager não dá suporte ao modo do SharePoint. O Configuration Manager é usado agora apenas para servidores de relatórios de modo nativo.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Você não pode alterar o servidor de um modo para outro  
  **Novo comportamento:** Você não pode alterar modos de servidor. Se você instalar um servidor de relatório como modo nativo, não poderá alterá-lo ou reconfigurá-lo para ser modo do SharePoint. Se você instalar no modo SharePoint, poderá alterar o servidor de relatório para o modo nativo.  
   
- **Comportamento anterior:** cliente instala um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no modo do SharePoint. Se o cliente desejar alternar o servidor de relatório para o modo nativo, ele poderá abrir o gerenciador de configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para alternar para o modo nativo, criando um novo ou se conectando a um banco de dados de modo nativo existente. O cliente também pode usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager para alternar do modo do SharePoint para o modo nativo.  
+ **Comportamento anterior:** cliente instala um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório no modo do SharePoint. Se o cliente desejar alternar o servidor de relatório para o modo nativo, ele poderá abrir o gerenciador de configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para alternar para o modo nativo, criando um novo ou se conectando a um banco de dados de modo nativo existente. O cliente também pode usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] do Configuration Manager para alternar do modo do SharePoint para modo nativo.  
   
-##  <a name="bkmk_kj"></a> Alterações de comportamento SQL Server 2008 R2 Reporting Services  
- Esta seção descreve as alterações no comportamento [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="bkmk_kj"></a> Alterações de comportamento de serviços de relatórios do SQL Server 2008 R2  
+ Esta seção descreve as alterações de comportamento [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Como o SQL Server 2008 R2 é uma atualização de versão secundária do SQL Server 2008, recomendamos que você também revise o conteúdo na seção do SQL Server 2008.  
   
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Propriedade SecureConnectionLevel na biblioteca do Provedor WMI do Reporting Services  
- Na biblioteca do provedor WMI para [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o **SecureConnectionLevel** propriedade permite que os valores de `0`,`1`,`2`,`3`, com `0` indicando que o Secure Socket Layer (SSL) não é necessário para qualquer um dos métodos de serviço Web, `3` indicando que o SSL é necessário para todos os métodos de serviço da Web, e `1` e `2` indicam subconjuntos de métodos de serviço Web que exigem SSL. Em [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], esses valores terão apenas dois significados possíveis:  
+ Na biblioteca do provedor WMI do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o **SecureConnectionLevel** propriedade permite que os valores de `0`,`1`,`2`,`3`, com `0` indicando que o Secure Socket Layer (SSL) não é necessário para qualquer um dos métodos de serviço Web `3` indicando que o SSL é necessário para todos os métodos de serviço da Web, e `1` e `2` indicar subconjuntos de métodos de serviço Web que exigem SSL. Na [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], esses valores terão apenas dois significados possíveis:  
   
 -   `0` indica que o SSL não é exigido para nenhum dos métodos de serviço Web.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36008124"
 ## <a name="see-also"></a>Consulte também  
  [O que há de novo &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Recursos preteridos no SQL Server Reporting Services no SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
- [Funcionalidade descontinuada no SQL Server Reporting Services no SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+ [Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
  [Alterações recentes no SQL Server Reporting Services no SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
   
   

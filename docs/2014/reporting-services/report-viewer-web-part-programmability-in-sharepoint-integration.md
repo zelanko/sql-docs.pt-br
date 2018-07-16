@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 57edecff9fbebb062381e9d236d24ee329facd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313156"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programabilidade do Web Part do Visualizador de Relatórios na Integração do SharePoint
   A Web Part do Visualizador de Relatórios é um controle de servidor de `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` que contém um conjunto de APIs (interfaces de programação de aplicativos) públicas, permitindo que os desenvolvedores criem aplicativos de SharePoint personalizados. Você pode criar Web Parts personalizadas que fornecem o caminho do relatório e parâmetros para a Web Part do Visualizador de Relatórios que usa conexões de Web Part. Você também pode inserir a Web Part em uma página personalizada de Web Parts do SharePoint e personalizá-la usando a API pública.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Conectando-se a uma Web Part do Visualizador de Relatórios com Web Parts personalizadas  
- A Web Part do Visualizador de Relatórios é um consumidor de conexão para Web Parts de SharePoint que implementam <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> ou `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Uma Web Part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, como **Documents**, pode fornecer um caminho de relatório para uma Web Part do Visualizador de Relatórios quando colocada na mesma página de Web Part da Web Part do Visualizador de Relatórios. Da mesma forma, um `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web Part, como o **filtro de texto** ou **escolher filtro**, pode fornecer um parâmetro de relatório para um relatório de Web Part do visualizador quando colocada na mesma página de Web Part como o Visualizador de relatório da Web Parte.  
+ A Web Part do Visualizador de Relatórios é um consumidor de conexão para Web Parts de SharePoint que implementam <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> ou `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Uma Web Part <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, como **Documents**, pode fornecer um caminho de relatório para uma Web Part do Visualizador de Relatórios quando colocada na mesma página de Web Part da Web Part do Visualizador de Relatórios. Da mesma forma, uma `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web Part, como o **filtro de texto** ou o **escolher filtro**, pode fornecer um parâmetro de relatório a um relatório de Web Part do visualizador quando colocada na mesma página de Web Part que a Web do Visualizador de relatórios Parte.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Implementando um provedor de caminho de relatório com IWebPartRow  
  Para fornecer um caminho de relatório à Web Part do Visualizador de Relatórios através de conexões de Web Parts, faça o seguinte:  

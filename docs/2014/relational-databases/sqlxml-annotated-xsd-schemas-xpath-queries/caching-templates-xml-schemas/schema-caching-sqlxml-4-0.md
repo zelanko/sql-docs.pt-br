@@ -1,5 +1,5 @@
 ---
-title: Esquema de cache (SQLXML 4.0) | Microsoft Docs
+title: Cache de esquemas (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6ddf2b95f9b72a0def960f6159cd8646a6b4439c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bf1398a83badd1ea52fd15484b4e2cda8ec8b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186193"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Cache de esquemas (SQLXML 4.0)
-  Com uma instalação lado a lado do XML para SQLXML 3.0, Microsoft SQLXML 2.0 e Microsoft SQL Server 2000 Web versão 1, você pode controlar explicitamente a cache de esquemas em todas as versões usando as seguintes chaves do registro:  
+  Com uma instalação lado a lado do XML para Microsoft SQL Server 2000 Web versão 1, o Microsoft SQLXML 2.0 e o SQLXML 3.0, você pode controlar explicitamente a cache de esquemas em todas as versões usando as seguintes chaves do registro:  
   
  Versão da Web 1:  
   
@@ -58,7 +58,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  O tamanho do esquema é definido com base na memória disponível e no número de esquemas utilizados. O padrão **SchemaCacheSize** tamanho é 31. Se você definir **SchemaCacheSize** maior, mais memória é usada. Portando, você pode aumentar o tamanho do cache se o acesso ao esquema parecer lento ou diminuir o tamanho do cache se houver pouca memória.  
   
- Por motivos de desempenho, é recomendável que você defina **SchemaCacheSize** maior que o número de esquemas de mapeamento, você geralmente usa. Como aumenta o número de esquemas, se **SchemaCacheSize** é menor que o número de esquemas, degrada o desempenho.  
+ Por motivos de desempenho, é recomendável que você defina **SchemaCacheSize** maior do que o número de esquemas de mapeamento, você geralmente usa. À medida que aumenta o número de esquemas, se **SchemaCacheSize** é menor que o número de esquemas, degrada o desempenho.  
   
 > [!NOTE]  
 >  Durante o desenvolvimento, é recomendável não armazenar os esquemas em cache, pois as alterações dos esquemas não se refletem no cache por aproximadamente dois minutos.  

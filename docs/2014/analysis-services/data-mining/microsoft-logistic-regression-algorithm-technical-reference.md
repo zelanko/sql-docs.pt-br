@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317457"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
   O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.  
@@ -48,7 +48,7 @@ ms.locfileid: "36115145"
  A seleção de recursos é usada automaticamente por todos os algoritmos de mineração de dados do Analysis Services para melhorar a análise e reduzir a carga de processamento. O método usado para seleção de recursos em um modelo de regressão logística depende do tipo de dados do atributo. Como a regressão logística se baseia no algoritmo Rede Neural da Microsoft, ela usa um subconjunto dos métodos de seleção de recursos que se aplicam às redes neurais. Para obter mais informações, consulte [Seleção de recursos &#40;Mineração de Dados&#41;](feature-selection-data-mining.md).  
   
 ### <a name="scoring-inputs"></a>Entradas de pontuação  
- *Pontuação* no contexto de um modelo de rede neural ou de regressão logística significa o processo de converter os valores presentes nos dados em um conjunto de valores que usam a mesma escala e, portanto, podem ser comparados. Por exemplo, vamos supor que as entradas do intervalo de Renda vão de 0 a 100.000, enquanto as entradas de [Número de Filhos] vão de 0 a 5. Esse processo de conversão permite que você *pontuação*, ou comparar a importância de cada entrada, independentemente da diferença em valores.  
+ *Pontuação* no contexto de um modelo de rede neural ou de regressão logística significa o processo de converter os valores presentes nos dados em um conjunto de valores que usam a mesma escala e, portanto, podem ser comparados. Por exemplo, vamos supor que as entradas do intervalo de Renda vão de 0 a 100.000, enquanto as entradas de [Número de Filhos] vão de 0 a 5. Esse processo de conversão lhe permite *pontuação*, ou comparar a importância de cada entrada, independentemente da diferença nos valores.  
   
  Para cada estado que aparece no conjunto de treinamento, o modelo gera uma entrada. Para entradas discretas ou diferenciadas, uma entrada adicional será criada para representar o estado Ausente, se o estado ausente aparecer pelo menos uma vez no conjunto de treinamento. Para entradas contínuas, no máximo dois nós de entrada são criados: um para valores Ausentes, se presentes nos Dados de Treinamento e uma entrada para todos os valores existentes ou não nulos. Cada entrada é escalonada para um formato numérico usando o método de normalização de pontuação z, (x – μ) / StdDev.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36115145"
   
  **Valores contínuos**  
   
- Valor está presente: (X – μ) / σ / X é o valor real que está sendo codificado)  
+ Valor está presente: (X – μ) / σ / / X é o valor real que está sendo codificado)  
   
  Valor está ausente: - μ/σ / / mu negativo dividido por sigma)  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36115145"
   
  StdDev = sqrt(p(1-p))  
   
- Valor está presente: (1 – μ) σ / / (um menos mu) dividido por sigma)  
+ Valor está presente: (1 – μ) / σ / / (um menos mu) dividido por sigma)  
   
- Valor está ausente: (– μ) σ / / mu negativo dividido por sigma)  
+ Valor está ausente: (– μ) / σ / / mu negativo dividido por sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Entendendo coeficientes de regressão logística  
  Há vários métodos na literatura estatística para execução de regressão logística, mas uma parte importante de todos os métodos é avaliar a adequação do modelo. Várias estatísticas de adequação do ajuste foram propostas, dentre elas taxas de possibilidades e padrões de covariável. Uma análise de como medir a adequação de um modelo está além do escopo deste tópico; no entanto, você pode recuperar o valor dos coeficientes no modelo e usá-los para projetar suas próprias medidas de ajuste.  
@@ -88,7 +88,7 @@ WHERE NODE_TYPE = 23
   
  Para cada valor de saída, essa consulta retorna os coeficientes e uma ID que aponta para o nó de entrada relacionado. Também retorna uma linha que contém o valor da saída e da interseção. Cada X de entrada tem seu próprio coeficiente (Ci), mas a tabela aninhada também contém um coeficiente (Co) “livre”, calculado de acordo com a seguinte fórmula:  
   
- F = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
   
  Ativação: exp(F (X)) / (1 + exp(F (X)) )  
   
@@ -157,9 +157,9 @@ WHERE NODE_TYPE = 23
 |Atributo previsível|Contínuo, discreto, diferenciado|  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo de regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Algoritmo Regressão logística da Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de regressão logística modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Mining Model Content para modelos de regressão logística &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Rede Neural da Microsoft](microsoft-neural-network-algorithm.md)  
   
   

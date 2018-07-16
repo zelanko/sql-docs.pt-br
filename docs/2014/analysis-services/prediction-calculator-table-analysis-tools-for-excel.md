@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
 - Table Analysis tools
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - prediction calculator
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac962304d0870c3f0882a02a0a97eb3f266aaa9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fde8a692652cbe166eaf2075a3cd0da5e17a7d6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301186"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Ferramenta cálculo de previsão](media/tat-predcal.gif "ferramenta cálculo de previsão")  
@@ -44,11 +44,11 @@ ms.locfileid: "36020585"
   
 1.  Abra uma tabela do Excel que contenha os dados que você deseja analisar.  
   
-2.  Clique em **cálculo de previsão** no **analisar** guia.  
+2.  Clique em **cálculo de previsão** sobre o **analisar** guia.  
   
-3.  No **cálculo de previsão** caixa de diálogo de destino, escolha a coluna que você deseja prever, como o comportamento de compra.  
+3.  No **cálculo de previsão** caixa de diálogo, para o destino, escolha a coluna que você deseja prever, como o comportamento de compra.  
   
-4.  Especifique o valor de destino. Se o valor for numérico, use a opção **no intervalo**e, em seguida, digite os valores mínimo e máximo para o intervalo desejado. Se o valor for discreto, selecione o **exatamente** opção e, em seguida, selecione o valor na lista suspensa.  
+4.  Especifique o valor de destino. Se o valor for numérico, use a opção **no intervalo**e, em seguida, digite os valores mínimo e máximo para o intervalo desejado. Se o valor for discreto, selecione a **exatamente** opção e, em seguida, selecione o valor na lista suspensa.  
   
 5.  Clique em **escolher colunas a serem usadas para análise**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36020585"
   
      Para não prejudicar os resultados, você também deve remover colunas que tenham informações duplicadas. Por exemplo, se houver uma coluna Entrada que contenha dados numéricos, e uma coluna Grupo de Entrada que contenha os rótulos Alto, Médio e Baixo, não inclua as duas colunas no mesmo modelo. Crie um modelo separado para cada coluna.  
   
-7.  No **opções de saída** seção, selecione **Calculadora operacional** para criar o scorecard em uma pasta de trabalho do Excel e análise. Selecione **Calculadora pronta** para criar a análise e também gerar um relatório que pode ser impresso e usado para pontuação manualmente.  
+7.  No **opções de saída** seção, selecione **Calculadora operacional** para criar a análise e o scorecard em uma pasta de trabalho do Excel. Selecione **Calculadora pronta para impressão** para criar a análise e também gerar um relatório que pode ser impresso e usado para pontuação manualmente.  
   
 8.  Clique em **Executar**.  
   
@@ -68,16 +68,16 @@ ms.locfileid: "36020585"
 ## <a name="understanding-the-scoring-reports"></a>Compreendendo os relatórios de pontuação  
  Se você selecionar opções de saída, o Cálculo de Previsão criará as seguintes planilhas novas na pasta de trabalho atual:  
   
--   Um **relatório de previsão**que contém os resultados da análise, completo com tabelas interativas e gráficos para ajudarão-lo a fazer experiências com interações e lucros.  
+-   Um **relatório de previsão**que contém os resultados da análise, completo com interativas tabelas e gráficos que ajudam você a fazer experiências com interações e lucros.  
   
--   Interativo **cálculo de previsão** que ajuda a criar pontuações.  
+-   Interativo **cálculo de previsão** que ajuda você a criar pontuações.  
   
 -   Um **Calculadora imprimível** com instruções e coeficientes a serem usados na pontuação.  
   
 -   Esta seção descreve as informações em cada relatório e como usar as várias opções de relatório.  
   
 ### <a name="prediction-report-with-graphs"></a>Relatório de previsão com elementos gráficos  
- O primeiro relatório de previsão se chama **relatório do cálculo de previsão para o \<estado de destino > de \<atributo de destino >**. Ele contém uma tabela de fatores derivados da análise, junto com ferramentas para ajudá-lo a avaliar o impacto financeiro de uma determinada análise.  
+ O primeiro relatório de previsão é intitulado **relatório do cálculo de previsão para o \<estado de destino > de \<atributo de destino >**. Ele contém uma tabela de fatores derivados da análise, junto com ferramentas para ajudá-lo a avaliar o impacto financeiro de uma determinada análise.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabela para especificar custos e lucros  
  A primeira ferramenta neste relatório, no lado superior esquerdo, é uma tabela na qual é possível especificar os custos e os lucros associados à previsão correta e incorreta de um valor.  Esses custos e lucros são necessários para calcular o limite de pontuação ideal para o cálculo.  
@@ -92,7 +92,7 @@ ms.locfileid: "36020585"
 #### <a name="chart-for-viewing-maximum-profit"></a>Gráfico para exibição do lucro máximo  
  À medida que você insere valores na tabela, os elementos gráficos relacionados são atualizados automaticamente para mostrar o melhor ponto para maximizar o lucro atribuído ao modelo atual. O elemento gráfico de linha à direita desta tabela exibe o lucro para os vários limites de pontuação. O lucro é estimado com o uso dos números de lucro e custo digitados na tabela, com base nas previsões e probabilidades do modelo.  
   
- Por exemplo, se, na tabela superior esquerda, a célula para **limite sugerido para maximizar o lucro** mostra o valor 500, o gráfico no lado direito mostrará 500 como o ponto mais alto no gráfico de linha. Esse valor de 500 significa que, para maximizar os lucros, você deve seguir as 500 recomendações principais do modelo de mineração, ordenado por probabilidade.  
+ Por exemplo, se, na tabela superior esquerda, na célula de **limite sugerido para maximizar o lucro** mostra o valor 500, o gráfico no lado direito mostrará 500 como o ponto mais alto no gráfico de linha. Esse valor de 500 significa que, para maximizar os lucros, você deve seguir as 500 recomendações principais do modelo de mineração, ordenado por probabilidade.  
   
 #### <a name="table-listing-scores-for-each-attribute-and-value"></a>Pontuações de listagem de tabela para cada atributo e valor  
  A tabela no lado inferior esquerdo do relatório mostra uma análise detalhada dos valores detectados e como cada valor afeta o resultado. Você não pode alterar os valores nesta tabela; eles são exibidos para ajudá-lo a entender a previsão.  
@@ -124,10 +124,10 @@ ms.locfileid: "36020585"
  Por exemplo, embora o primeiro gráfico sugira que buscar os 500 clientes principais previstos pelo modelo é um modo de maximizar os lucros, talvez você decida após examinar este segundo gráfico que os custos de buscar clientes incorretamente é muito grande e prefira cortar a campanha de marketing nos primeiros 400 clientes.  
   
 ### <a name="interactive-prediction-calculator"></a>Cálculo de Previsão Interativo  
- A segunda planilha criada pela ferramenta cálculo de previsão se chama **cálculo de previsão para o \<estado de destino > de \<atributo de destino >**. Trata-se de uma planilha interativa que você pode usar para calcular pontuações individuais. Como essa planilha usa estatísticas e padrões armazenados no modelo, você pode fazer experiências com valores diferentes e verificar como eles afetam a pontuação prevista. Esse relatório também tem duas seções: uma é interativa e a outra é fornecida como referência.  
+ A segunda planilha criada pela ferramenta cálculo de previsão é intitulada **cálculo de previsão para o \<estado de destino > de \<atributo de destino >**. Trata-se de uma planilha interativa que você pode usar para calcular pontuações individuais. Como essa planilha usa estatísticas e padrões armazenados no modelo, você pode fazer experiências com valores diferentes e verificar como eles afetam a pontuação prevista. Esse relatório também tem duas seções: uma é interativa e a outra é fornecida como referência.  
   
 #### <a name="first-table"></a>Primeira tabela  
- Você pode selecionar ou digitar um novo valor no **valor** coluna da tabela para ver como a alteração do valor afeta a pontuação.  
+ Você pode selecionar ou digitar um novo valor na **valor** coluna da tabela para ver como a alteração do valor afeta a pontuação.  
   
  Por exemplo, se o relatório contiver os valores a seguir, diminua o valor de Carros para 1 e depois para 0 para verificar como isso afeta o comportamento de compra dos clientes. Como alterar o valor de **carros** como 0, a previsão na parte inferior muda para verdadeira.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36020585"
 |Total||491|  
 |Previsão para 'Sim'||FALSE|  
   
- Quando você digita o novo valor, a pontuação exibida na célula, previsão para Sim, é alterada para TRUE e o **impacto relativo** pontuações para os vários atributos também são atualizados.  
+ Quando você digita o novo valor, a pontuação exibida na célula, previsão para Sim, é alterado para TRUE e o **impacto relativo** pontuações para os vários atributos também são atualizados.  
   
 > [!NOTE]  
 >  Mesmo que você altere apenas um valor, como o número de carros, os valores e os impactos de outros atributos talvez sejam alterados quando isso for feito. Isso ocorre porque os modelos de mineração de dados com frequência encontram relações complexas entre os dados, e alterar qualquer variável pode ter efeitos imprevisíveis. Por isso, é recomendável usar o cálculo de previsão interativa para fazer experiências com valores diferentes ou procurar o modelo de mineração para entender melhor as interações. Para obter mais informações, consulte [procurar modelos](prediction-calculator-table-analysis-tools-for-excel.md).  
@@ -156,11 +156,11 @@ ms.locfileid: "36020585"
  Esta tabela mostra as pontuações individuais para cada estado possível das colunas de entrada e o impacto relativo que a pontuação terá nos resultados. Esta tabela é estática e apenas para referência.  
   
 ### <a name="printable-prediction-calculator"></a>Cálculo de Previsão Imprimível  
- A terceira planilha criada pela ferramenta cálculo de previsão se chama **PrintablePrediction cálculo para o \<estado de destino > de \<atributo de destino >**. Este scorecard deve ser impresso para que você possa calcular manualmente pontuações quando estiver longe do computador.  
+ A terceira planilha criada pela ferramenta cálculo de previsão é intitulada **PrintablePrediction Calculadora para o \<estado de destino > de \<atributo de destino >**. Este scorecard deve ser impresso para que você possa calcular manualmente pontuações quando estiver longe do computador.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Para imprimir e usar o relatório de pontuação gerado pelo Cálculo de Previsão  
   
-1.  Clique na guia denominada **previsão imprimível para \<atributo >**.  
+1.  Clique na guia que é intitulada **cálculo de previsão imprimível para \<atributo >**.  
   
 2.  No menu Arquivo do Excel, selecione **Visualizar impressão**.  
   
@@ -170,16 +170,16 @@ ms.locfileid: "36020585"
   
 4.  Imprima o scorecard.  
   
-5.  Escolha apenas um valor para cada atributo. Para o valor escolher, coloque uma marca na caixa e escreva o número correspondente **pontuação** coluna.  
+5.  Escolha apenas um valor para cada atributo. Para o valor você escolher, coloque uma marca de seleção na caixa e escreva o número correspondente **pontuação** coluna.  
   
 6.  Preencha o máximo possível de atributos para assegurar a precisão.  
   
-7.  Calcular a soma das pontuações para cada atributo e digite o número no **Total** linha.  
+7.  Calcular a soma das pontuações para cada atributo e digite o número das **Total** linha.  
   
 8.  Converta a pontuação em um resultado previsto usando os critérios imprimidos na planilha imediatamente após o **Total** linha.  
   
 ## <a name="related-tools"></a>Ferramentas relacionadas  
- O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o algoritmo Regressão Logística da Microsoft para uso nesse tipo de análise. Se você já estiver familiarizado com a regressão logística, você pode criar facilmente modelos de regressão logística usando o **avançado** opção do cliente de mineração de dados para Excel. Para obter mais informações, consulte [avançadas de modelagem &#40;suplementos de mineração de dados para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obter mais informações sobre as opções e os parâmetros para modelos de regressão logística, consulte o tópico "Microsoft algoritmo de regressão logística" em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online.  
+ O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o algoritmo Regressão Logística da Microsoft para uso nesse tipo de análise. Se você já estiver familiarizado com a regressão logística, você pode criar facilmente modelos de regressão logística usando o **avançado** opção do cliente de mineração de dados para Excel. Para obter mais informações, consulte [avançadas de modelagem &#40;Data Mining Add-ins para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obter mais informações sobre as opções e parâmetros para modelos de regressão logística, consulte o tópico "Microsoft algoritmo de regressão logística" em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online.  
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

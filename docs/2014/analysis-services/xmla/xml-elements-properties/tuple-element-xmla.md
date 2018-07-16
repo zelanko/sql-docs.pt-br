@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233686"
 ---
 # <a name="tuple-element-xmla"></a>Elemento Tuple (XMLA)
   Contém uma coleção de elementos [Member](member-element-xmla.md) contida pelo elemento pai [Tuples](tuples-element-xmla.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "36021002"
 |Elementos filho|[Membro](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Quando um aplicativo cliente define o `AxisFormat` propriedade *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada `Axis` elemento contém um `Tuples` elemento que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um elemento `Tuple` que contém elementos `Member` de toda hierarquia no eixo.  
+ Quando um aplicativo cliente definir a `AxisFormat` propriedade para *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada `Axis` elemento contém um `Tuples` elemento que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um elemento `Tuple` que contém elementos `Member` de toda hierarquia no eixo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra a estrutura do `Tuple` elemento quando um cliente especifica *TupleFormat* ou *CustomFormat* para o `AxisFormat` propriedade XMLA, considerando o seguinte membros do eixo:  

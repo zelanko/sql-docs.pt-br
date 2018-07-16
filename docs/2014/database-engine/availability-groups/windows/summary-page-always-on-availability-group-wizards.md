@@ -1,14 +1,13 @@
 ---
-title: Página de resumo (assistentes de grupo de disponibilidade AlwaysOn) | Microsoft Docs
+title: Página de resumo (assistentes do grupo de disponibilidade AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.summary.f1
 - sql12.swb.addreplicawizard.summary.f1
@@ -16,15 +15,15 @@ f1_keywords:
 - sql12.swb.newagwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f17ce2ad357a44548ffe8525003ae5366ccf44a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 88edbfb939c767e31ba7bd1c32f5fa66bbaff179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324946"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Página de Resumo (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções mostradas na página **Resumo** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a grade desta página para rever suas escolhas para o novo grupo de disponibilidade. Para fazer uma ou mais alterações, clique em **Anterior** para retornar às páginas relevantes. Quando estiver pronto, clique em **Avançar** para retornar à página **Resumo** . Quando estiver satisfeito com as opções, clique em **Concluir**.  
@@ -57,6 +56,6 @@ ms.locfileid: "36020337"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

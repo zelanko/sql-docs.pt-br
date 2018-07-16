@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206246"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretização (mineração de dados)
   Alguns algoritmos usados para criar modelos de mineração de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisam de tipos de conteúdo específicos para que funcionem corretamente. Por exemplo, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes não pode usar colunas contínuas como entrada nem prever valores contínuos. Além disso, algumas colunas podem conter tantos valores que o algoritmo não pode identificar facilmente os padrões interessantes nos dados dos quais criar um modelo.  
@@ -54,19 +54,19 @@ ms.locfileid: "36120898"
   
 ## <a name="remarks"></a>Remarks  
   
--   Você pode usar o `EQUAL_AREAS` método para diferenciar as cadeias de caracteres.  
+-   Você pode usar o `EQUAL_AREAS` método discretizar cadeias de caracteres.  
   
--   O `CLUSTERS` método usa um exemplo aleatório de 1000 registros para discretizar os dados. Use o método `EQUAL_AREAS` se não quiser que o algoritmo realize a amostragem dos dados.  
+-   O `CLUSTERS` método usa uma amostra aleatória de 1000 registros para discretizar os dados. Use o método `EQUAL_AREAS` se não quiser que o algoritmo realize a amostragem dos dados.  
   
--   O tutorial de modelo de mineração de rede neural fornece um exemplo de como a discretização pode ser personalizada. Para obter mais informações, consulte [lição 5: criando rede Neural e regressão logística &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   O tutorial de modelo de mineração de rede neural fornece um exemplo de como a discretização pode ser personalizada. Para obter mais informações, consulte [lição 5: criando rede Neural e modelos de regressão logística &#40;Tutorial intermediário de mineração de dados&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)   
  [Tipos de conteúdo &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)   
  [Colunas de estrutura de mineração](mining-structure-columns.md)   
- [Distribuições de coluna &#40;mineração de dados&#41;](column-distributions-data-mining.md)  
+ [Distribuições de colunas &#40;mineração de dados&#41;](column-distributions-data-mining.md)  
   
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8cccef2b-bdd0-415a-bb53-bda14165d1e4
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a85b6971b42c537c509042b554902959e2d3b0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6a55c84438516e99d9eac86db498fa4a5102d9d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219886"
 ---
 # <a name="folderposition-element-xml"></a>Elemento FolderPosition (XML)
   Contém informações sobre a posição do elemento em uma coleção de elementos.  

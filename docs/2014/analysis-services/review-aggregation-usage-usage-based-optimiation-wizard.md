@@ -1,5 +1,5 @@
 ---
-title: Revise o uso de agregação (Assistente de otimização com base no uso) | Microsoft Docs
+title: Revise o uso de agregação (Assistente de otimização baseada em uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235676"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Verificar Uso de Agregação (Assistente de Otimização com Base no Uso)
   Use a página **Revisar Uso de Agregação** para efetuar configurações do uso de agregação.  
@@ -36,7 +36,7 @@ ms.locfileid: "36019670"
  **Nenhuma**  
  Selecione para definir a configuração do uso de agregação do atributo como Nenhum. Quando essa configuração é utilizada, nenhuma agregação para o cubo pode incluir esse atributo.  
   
- **Irrestrito**  
+ **Sem restrições**  
  Selecione para definir a configuração do uso de agregação do atributo como Irrestrito. Quando essa configuração é utilizada, nenhuma restrição é colocada no designer de agregação. O atributo, porém, ainda deverá ser avaliado para determinar se é um candidato de agregação valioso.  
   
  **Definir tudo como padrão**  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfee4af158c9cee424ee44fb28293e3a315feda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 914962bfbedc048ac648e9e0526b320c0eb2213e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286422"
 ---
 # <a name="name-element-for-database-dta"></a>Elemento de nome para o banco de dados (DTA)
   Especifica o nome de um banco de dados que você deseja ajustar.  
@@ -43,13 +43,13 @@ ms.locfileid: "36119433"
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Necessário uma vez por `Database` elemento.|  
+|**Ocorrência**|Obrigatório uma vez por `Database` elemento.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Elemento de banco de dados para o servidor &#40;DTA&#41;](database-element-for-server-dta.md)|  
+|**Elemento pai**|[Elemento Database para servidor &#40;DTA&#41;](database-element-for-server-dta.md)|  
 |**Elementos filho**|Nenhum.|  
   
 ## <a name="example"></a>Exemplo  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321882"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Preenchendo uma tabela hierárquica utilizando métodos hierárquicos
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tem oito funcionários que trabalham no departamento de Marketing. A hierarquia dos funcionários é assim:  
@@ -68,7 +68,7 @@ ms.locfileid: "36019310"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Para inserir um funcionário subordinado  
   
-1.  **Sara** é subordinada a **Davi**. Para inserir **de Sariya** nó, você deve criar um apropriado **OrgNode** o valor do tipo de dados `hierarchyid`. O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
+1.  **Sara** é subordinada a **Davi**. Para inserir **Sariya** nó, você deve criar um apropriado **OrgNode** valor de tipo de dados `hierarchyid`. O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
   
     -   Se o pai for o NULL, o `GetDescendant` retornará NULL.  
   

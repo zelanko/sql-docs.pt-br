@@ -1,5 +1,5 @@
 ---
-title: Opções (Editor de texto - página de Transact-SQL-geral) | Microsoft Docs
+title: Opções (Editor de texto - página de Transact-SQL – geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257202"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Opções (Editor de texto - página de Transact-SQL-geral)
+# <a name="options-text-editor---transact-sql--general-page"></a>Opções (Editor de texto - página de Transact-SQL – geral)
   Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda a subpasta **Transact-SQL** e clique em **Geral**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7e8db71e82f25bb31afbe5a7a789df0af0a98ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 943974287b88249bbd277aa59bd4cccef36800a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325686"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do servidor (SQLXML 4.0)
   Este tópico fornece informações sobre a formatação de documentos XML no lado do servidor a partir de conjuntos de linhas gerados por consultas executadas com relação a um banco de dados no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -58,7 +58,7 @@ FROM   Person.Contact
  Para obter mais informações sobre a cláusula FOR XML, consulte [construindo XML usando FOR XML](../../xml/for-xml-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura de formatação de XML do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Arquitetura de formatação de XML do lado do cliente e servidor &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [Formatação XML do lado do cliente &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   

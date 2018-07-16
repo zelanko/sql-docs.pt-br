@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309386"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Criar variáveis e colunas de tipo de dados XML
   O tipo de dados `xml` é um tipo de dados interno no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é um pouco semelhante a outros tipos internos, como `int` e `varchar`. Como com outros tipos internos, você pode usar o `xml` tipo de dados como um tipo de coluna quando você cria uma tabela como um tipo de variável, um tipo de parâmetro, um tipo de retorno de função, ou em [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -131,7 +131,7 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Mesma tabela ou tabela diferente  
- Um `xml` coluna de tipo de dados pode ser criada em uma tabela que contém outras colunas relacionais ou em uma tabela separada com uma relação de chave estrangeira para uma tabela principal.  
+ Um `xml` coluna de tipo de dados pode ser criada em uma tabela que contém outras colunas relacionais ou em uma tabela separada com uma relação de chave estrangeira com uma tabela principal.  
   
  Criar um `xml` coluna de tipo de dados na mesma tabela quando uma das seguintes condições for verdadeira:  
   

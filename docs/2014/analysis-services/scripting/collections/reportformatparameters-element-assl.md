@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e76ba9b70c485a938910eef7a7285520163b1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b11bab41072f558af5ecbea86852f129853ed6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234206"
 ---
 # <a name="reportformatparameters-element-assl"></a>Elemento ReportFormatParameters (ASSL)
   Contém a coleção de elementos [ReportFormatParameter](../objects/reportformatparameter-element-asl.md) para um elemento [ReportAction](../data-type/action-data-type-assl.md) .  
@@ -64,7 +64,7 @@ ms.locfileid: "36119799"
 |Elementos filho|[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `ReportFormatParameters` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReportAction>.  
+ O elemento que corresponde ao pai de `ReportFormatParameters` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Coleções &#40;ASSL&#41;](collections-assl.md)  

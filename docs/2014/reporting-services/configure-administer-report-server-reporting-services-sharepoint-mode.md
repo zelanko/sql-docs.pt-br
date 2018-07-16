@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329346"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuração e administração de um servidor de relatórios (modo do SharePoint do Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é uma plataforma de relatórios baseada em servidor que fornece uma ampla gama de ferramentas prontas para uso e serviços para ajudá-lo a criar, implantar e gerenciar relatórios para sua organização, bem como recursos de programação que permitem estender e personalizar seu relatório funcionalidade. Você pode integrar seu ambiente de relatório com um produto do SharePoint para experimentar os benefícios de usar o ambiente de colaboração fornecidos por sites do SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é uma plataforma de relatório baseada em servidor que fornece uma ampla gama de ferramentas prontas para usar e serviços para ajudá-lo a criar, implantar e gerenciar relatórios para sua organização, além de recursos de programação que permitem estender e personalizar seu relatório funcionalidade. Você pode integrar seu ambiente de relatório com um produto do SharePoint para experimentar os benefícios de usar o ambiente de colaboração fornecidos por sites do SharePoint.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  As seguintes seções vão ajudar a compreender conceitos, cenários de implantação, procedimentos e muito mais para integrar seu ambiente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] com um produto ou tecnologia do SharePoint:  
@@ -51,7 +51,7 @@ ms.locfileid: "36116878"
   
 -   [Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
--   [Adicionar tipos de conteúdo de servidor de relatório a uma biblioteca &#40;Reporting Services no SharePoint modo integrado&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+-   [Adicionar tipos de conteúdo de servidor de relatório em uma biblioteca do &#40;modo integrado do Reporting Services no SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
 -   [Relatórios em Modo Local versus em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   

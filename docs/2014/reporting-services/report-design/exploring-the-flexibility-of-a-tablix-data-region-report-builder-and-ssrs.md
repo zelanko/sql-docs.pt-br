@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5870596b88527413706c24985a3c0fb584721b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323886"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorando a flexibilidade de uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Ao adicionar uma tabela, matriz ou região de dados de lista usando a guia Inserir da faixa de opções, você começa com um modelo inicial de região de dados tablix, mas não é limitado por esse modelo. É possível continuar a desenvolver a maneira como os dados são exibidos adicionando ou removendo qualquer recurso de região de dados tablix, como grupos, linhas e colunas.  
   
- Quando você exclui um grupo de linhas ou de colunas, você tem a opção de excluir as linhas e colunas que são usadas para exibir valores de grupo. Também é possível adicionar ou remover manualmente. Para compreender como as linhas e colunas são usadas para exibir dados detalhados e agrupados, consulte [região de dados Tablix &#40;construtor de relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
+ Quando você exclui um grupo de linhas ou de colunas, você tem a opção de excluir as linhas e colunas que são usadas para exibir valores de grupo. Também é possível adicionar ou remover manualmente. Para entender como as linhas e colunas são usadas para exibir dados detalhados e agrupados, consulte [região de dados Tablix &#40;construtor de relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
   
  Depois de alterar a estrutura da região de dados tablix, você pode definir propriedades para ajudar a controlar a maneira como o relatório renderiza a região de dados. Por exemplo, é possível repetir cabeçalhos de colunas na parte superior de todas as páginas ou manter um cabeçalho com o grupo. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Arquitetura lógica (Analysis Services – mineração de dados) | Microsoft Docs
+title: Arquitetura lógica (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299296"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
   A mineração de dados é um processo que envolve a interação de vários componentes.  
@@ -45,7 +45,7 @@ ms.locfileid: "36116489"
 ##  <a name="bkmk_SourceData"></a> Dados de origem da mineração de dados  
  Os dados usados na mineração de dados não são armazenados na solução de mineração de dados. Apenas as associações são armazenadas. Além disso, os dados podem residir em um banco de dados criado em uma versão anterior do SQL Server, sistema CRM ou mesmo em um arquivo simples. Quando você treina a estrutura ou modelo por processamento, um resumo estatístico dos dados é criado e armazenado em um cache que pode ser persistido para uso em operações subsequentes ou excluídas depois do processamento. Para obter mais informações, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Você combina dados discrepantes dentro do objeto de DSV (exibição da fonte de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece uma camada de abstração sobre sua fonte de dados. Você pode especificar junções entre tabelas ou adicionar as tabelas que têm uma relação muitos para um para criar colunas de tabelas aninhadas. A definição destes objetos, a fonte de dados e a exibição da fonte de dados, é armazenada dentro da solução com as extensões de nome de arquivo *.ds e \*.dsv. Para obter mais informações sobre como criar e usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fontes de dados e exibições da fonte de dados, consulte [fontes de dados com suporte &#40;multidimensionais do SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Você combina dados discrepantes dentro do objeto de DSV (exibição da fonte de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece uma camada de abstração sobre sua fonte de dados. Você pode especificar junções entre tabelas ou adicionar as tabelas que têm uma relação muitos para um para criar colunas de tabelas aninhadas. A definição destes objetos, a fonte de dados e a exibição da fonte de dados, é armazenada dentro da solução com as extensões de nome de arquivo *.ds e \*.dsv. Para obter mais informações sobre como criar e usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fontes de dados e exibições da fonte de dados, consulte [fontes de dados com suporte &#40;Multidimensional do SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  Também é possível definir e alterar fontes de dados e exibições de fontes de dados usando AMO ou XMLA. Para obter mais informações sobre como trabalhar com esses objetos programaticamente, consulte [Visão geral da arquitetura lógica &#40;Analysis Services – Dados multidimensionais&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36116489"
   
  Os procedimentos armazenados a seguir têm suporte para uso ao realizar validação cruzada.  
   
- [Procedimentos armazenados da mineração de dados &#40;Analysis Services – mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services - mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém muitos procedimentos armazenados do sistema que são usados internamente para mineração de dados. Embora os procedimentos armazenados do sistema sejam para uso interno, você pode achá-los atalhos úteis. A Microsoft reserva-se o direito de alterar estes procedimentos armazenados conforme o necessário; portanto, para uso de produção, nós recomendamos que você crie consultas usando DMX, AMO ou XMLA.  
   

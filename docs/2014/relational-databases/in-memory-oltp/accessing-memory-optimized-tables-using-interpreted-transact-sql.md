@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170757"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acessando tabelas com otimização de memória usando Transact-SQL interpretado
   Com raras exceções, você pode acessar tabelas com otimização de memória usando qualquer consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou operação DML (SELEÇÃO, INSERÇÃO, ATUALIZAÇÃO ou EXCLUSÃO), lotes ad hoc e os módulos SQL, como procedimentos armazenados, funções com valor de tabela, gatilhos e exibições.  
@@ -57,7 +57,7 @@ ms.locfileid: "36121482"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Ao acessar uma tabela com otimização de memória em uma transação explícita ou implícita, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado, você deve incluir uma dica de tabela em nível de isolamento como SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou então você pode usar MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Para obter mais informações, consulte [diretrizes para níveis de isolamento de transação com tabelas com otimização de memória](memory-optimized-tables.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Ao acessar uma tabela com otimização de memória em uma transação explícita ou implícita, usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado, você deve incluir uma dica de tabela em nível de isolamento como SNAPSHOT, REPEATABLEREAD ou SERIALIZABLE, ou então você pode usar MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Para obter mais informações, consulte [diretrizes para níveis de isolamento da transação com tabelas com otimização de memória](memory-optimized-tables.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Uma dica de tabela de nível de isolamento não é necessária para tabelas com otimização de memória acessadas por consultas executadas no modo de confirmação automática.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4be3136f461772e2d6eb4aa63d64a828ce18eaf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12534cd4554d71c368f09a6620056e187578b456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326506"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Adicionar colunas a uma tabela (SSAS tabular)
   Este tópico descreve como adicionar colunas a uma tabela existente.  
@@ -67,6 +67,6 @@ ms.locfileid: "36013184"
   
 ## <a name="see-also"></a>Consulte também  
  [Editar caixa de diálogo de propriedades de tabela &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Alterar os mapeamentos de filtro de linha, coluna ou tabela &#40;SSAS de tabela&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Alterar tabela, coluna ou mapeamentos de filtro de linha &#40;tabela do SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273192"
 ---
 # <a name="formatstring-element-assl"></a>Elemento FormatString (ASSL)
-  Descreve o formato de exibição para um [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento ou um [medidas](../objects/measure-element-assl.md) elemento.  
+  Descreve o formato de exibição para um [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento ou um [medida](../objects/measure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36010759"
 ## <a name="remarks"></a>Remarks  
  A propriedade `FormatString` contém uma linguagem MDX. No caso de `CalculationProperty` elementos, ela se aplica aos elementos com um [CalculationType](calculationtype-element-assl.md) de *membro* ou *células*.  
   
- Os elementos que correspondem aos pais de `FormatString` no modelo de objeto de Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
+ Os elementos que correspondem aos pais de `FormatString` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento CalculationProperties &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

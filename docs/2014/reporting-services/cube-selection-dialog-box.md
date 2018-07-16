@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.cubeselection.f1
 - "10130"
 ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 937c0fe0ef15bb3841f1d4523f4d6db61d46455a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87a1226dd5bd0833cf70bd0f70cb821c7ad7e075
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253488"
 ---
 # <a name="cube-selection-dialog-box"></a>Caixa de diálogo Seleção de Cubo
   Use a caixa de diálogo **Seleção de Cubo** para selecionar um cubo diferente como uma fonte de dados para seu relatório. Selecionando um cubo diferente, sua consulta talvez não seja mais válida.  

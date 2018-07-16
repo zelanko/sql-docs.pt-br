@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268642"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o `CurvePolygon` subtipo, baixe o white paper, [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o `CurvePolygon` subtipo, baixe o white paper [novos recursos espaciais no SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Os critérios a seguir definem os atributos de um `CurvePolygon` instância:  
   
@@ -33,13 +33,13 @@ ms.locfileid: "36120106"
   
 -   O interior da instância `CurvePolygon` é o espaço entre o anel exterior e todos os anéis interiores.  
   
- Um `CurvePolygon` instância difere de um `Polygon` instância em que um `CurvePolygon` instância pode conter os seguintes segmentos de arco circular: `CircularString` e `CompoundCurve`.  
+ Um `CurvePolygon` difere de instância de um `Polygon` instância em que um `CurvePolygon` instância pode conter os seguintes segmentos de arco circular: `CircularString` e `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Instâncias CompoundCurve  
- Ilustração a seguir mostra válida `CurvePolygon` figuras:  
+ A ilustração a seguir mostra uma `CurvePolygon` figuras:  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Para um `CurvePolygon` instância seja aceita, ela precisa estar vazio ou conter apenas anéis de arco circular que sejam aceitos. Um anel de arco circular aceito atende aos requisitos a seguir.  
+ Para um `CurvePolygon` seja aceita, ela precisa estar vazia ou conter apenas anéis de arco circular que sejam aceitos. Um anel de arco circular aceito atende aos requisitos a seguir.  
   
 1.  É uma instância `LineString`, `CircularString` ou `CompoundCurve` aceita. Para obter mais informações sobre instâncias aceitas, consulte [LineString](linestring.md), [CircularString](circularstring.md)e [CompoundCurve](compoundcurve.md).  
   
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` não é aceito porque os pontos inicial e de extremidade não têm o mesmo valor de Y. `@g2` não é aceito porque o anel não contém pontos suficientes.  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Para um `CurvePolygon` instância válido anéis exterior e interior devem atender aos seguintes critérios:  
+ Para um `CurvePolygon` instância seja válida anéis exterior e interior devem atender aos seguintes critérios:  
   
 1.  Eles podem tocar apenas em pontos tangentes únicos.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Cada anel deve ser um tipo de curva aceitável.  
   
- `CurvePolygon` instâncias também deverão atender a critérios específicos se forem `geometry` ou `geography` tipos de dados.  
+ `CurvePolygon` instâncias também precisará atender a critérios específicos se fouem `geometry` ou `geography` tipos de dados.  
   
 #### <a name="geometry-data-type"></a>Tipo de dados geometry  
  Uma instância **geometryCurvePolygon** válida deve ter os seguintes atributos:  
@@ -143,7 +143,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Criando uma instância geográfica com um CurvePolygon  
- Este trecho de código mostra como declarar e inicializar uma `geography` instância com um `CurvePolygon`:  
+ Este trecho de código mostra como declarar e inicializar uma `geography` da instância com um `CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Armazenando um CurvePolygon que contém anéis interiores  
- Este exemplo cria uma rosca em uma `CurvePolygon` instância (ambos um anel delimitador exterior e um anel interior é usado para definir a rosca):  
+ Este exemplo cria uma rosca em uma `CurvePolygon` instância (ambas as um anel delimitador exterior e um anel interior é usado para definir a rosca):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- Este exemplo mostra um válido `CurvePolygon` e uma instância inválida ao usar anéis interiores:  
+ Este exemplo mostra um válido `CurvePolygon` instância e uma instância inválida ao usar anéis interiores:  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

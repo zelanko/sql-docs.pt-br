@@ -1,5 +1,5 @@
 ---
-title: Acesso de dados de modelo de tabela | Microsoft Docs
+title: Acesso a dados modelo tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316976"
 ---
 # <a name="tabular-model-data-access"></a>Acesso a dados de modelo de tabela
   Os bancos de dados modelo de tabela no Analysis Services podem ser acessados pela maioria dos mesmos clientes, interfaces e idiomas que você usa para recuperar dados ou metadados de um modelo multidimensional. Para obter mais informações, consulte [Acesso a dados de modelo multidimensional &#40;Analysis Services – dados multidimensionais 41](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "36115528"
 >  Você não pode usar as consultas MDX ou DMX em um banco de dados que foi implantado em modo DirectQuery; portanto, se você precisar executar uma consulta em um modelo DirectQuery usando os conjuntos de linhas de esquema, deve usar XMLA, e não o DMV associado. Para DMVs que retornam resultados para o servidor como um todo, como SELECT * de $ $system.DBSCHEMA_CATALOGS ou DISCOVER_TRACES, você pode executar a consulta no conteúdo de um banco de dados que é implantado em um modo armazenado em cache.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conecte-se a um banco de dados de modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [Conectar um banco de dados do modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
  [Acesso a dados PowerPivot](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [Conectar ao Analysis Services](../instances/connect-to-analysis-services.md)  
   

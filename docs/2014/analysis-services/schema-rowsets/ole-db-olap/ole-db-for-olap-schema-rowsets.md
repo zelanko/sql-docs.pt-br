@@ -17,27 +17,27 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306476"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Conjuntos de linhas de esquema OLE DB para OLAP
   O provedor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) dá suporte aos conjuntos de linhas de esquema OLE DB para OLAP a seguir.  
   
 > [!NOTE]  
->  Para verificar se um provedor de fonte de dados específico oferece suporte a um conjunto de linhas, use o `DISCOVER_ENUMERATIONS` conjunto de linhas com o [Discover](../../xmla/xml-elements-methods-discover.md) método.  
+>  Para verificar se um provedor de fonte de dados específico dá suporte a um conjunto de linhas, use o `DISCOVER_ENUMERATIONS` conjunto de linhas com o [Discover](../../xmla/xml-elements-methods-discover.md) método.  
   
- Você também pode encontrar informações detalhadas sobre esses conjuntos de linhas pesquisando o tópico "OLAP Schema Rowsets" na biblioteca MSDN em isso [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
+ Você também pode encontrar informações detalhadas sobre esses conjuntos de linhas pesquisando o tópico "OLAP Schema Rowsets", na biblioteca MSDN em isso [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Conjunto de linhas de esquema<sup>1</sup>|Description|  
+|Linhas de esquema<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
 |[Conjunto de linhas DISCOVER_INSTANCES](discover-instances-rowset.md)|Descreve as instâncias no servidor.|  
 |[Conjunto de linhas DISCOVER_KEYWORDS &#40;OLE DB para OLAP&#41;](discover-keywords-rowset-ole-db-for-olap.md)|Enumera uma lista de palavras reservadas pelo provedor.|  

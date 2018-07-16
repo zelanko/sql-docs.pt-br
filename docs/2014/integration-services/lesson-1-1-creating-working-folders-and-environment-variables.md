@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b28c191bb07ca9898c594de82dee6b27592786f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e35294a2a98d71c67553791732520cb8c710c29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246886"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Etapa 1: Criando pastas de trabalho e variáveis de ambiente
   Nesta tarefa, você criará a pasta de trabalho (C:\DeploymentTutorial) e as novas variáveis de ambiente do sistema (`DataTransfer` e `LoadXMLData`), que serão usadas em tarefas posteriores do tutorial.  
@@ -40,7 +40,7 @@ ms.locfileid: "36010478"
   
 3.  No menu **Arquivo** , aponte para **Novo**e clique em **Pasta**.  
   
-4.  Renomeie a nova pasta para `DeploymentTutorial`.  
+4.  Renomeie a nova pasta como `DeploymentTutorial`.  
   
 ### <a name="to-create-local-environment-variables"></a>Para criar variáveis locais do ambiente  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36010478"
   
 4.  Na caixa de diálogo **Variáveis de Ambiente** , no quadro **Variáveis do sistema** , clique em **Novo**.  
   
-5.  No **nova variável do sistema** caixa de diálogo, digite `DataTransfer` no **nome de variável** caixa, e `C:\DeploymentTutorial\datatransferconfig.dtsconfig` no **valor da variável** caixa.  
+5.  No **nova variável do sistema** caixa de diálogo, digite `DataTransfer` no **nome da variável** caixa, e `C:\DeploymentTutorial\datatransferconfig.dtsconfig` no **valor da variável** caixa.  
   
 6.  Clique em **OK**.  
   
-7.  Clique em **novo** novamente e o tipo `LoadXMLData` no **nome de variável** caixa, e `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` no **valor da variável** caixa.  
+7.  Clique em **New** novamente e o tipo `LoadXMLData` no **nome da variável** caixa, e `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` no **valor da variável** caixa.  
   
 8.  Clique em **OK** para sair da caixa de diálogo **Variáveis de Ambiente** .  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36010478"
   
 4.  Na caixa de diálogo **Variáveis de Ambiente** , no quadro **Variáveis do sistema** , clique em **Novo**.  
   
-5.  No **novas variáveis de sistema** caixa de diálogo, digite `DataTransfer` no **nome de variável** caixa, e `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` no **valor da variável** caixa.  
+5.  No **novas variáveis de sistema** caixa de diálogo, digite `DataTransfer` no **nome da variável** caixa, e `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` no **valor da variável** caixa.  
   
 6.  Clique em **OK**.  
   
-7.  Clique em **novo** novamente e o tipo `LoadXMLData` no **nome de variável** caixa, e `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` no **valor da variável** caixa.  
+7.  Clique em **New** novamente e o tipo `LoadXMLData` no **nome da variável** caixa, e `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` no **valor da variável** caixa.  
   
 8.  Clique em **OK** para sair da caixa de diálogo **Variáveis de Ambiente** .  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36010478"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Criando o projeto de implantação](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Criar um projeto Visual Basic SMO no Visual Studio .NET | Microsoft Docs
+title: Criar um projeto do Visual Basic SMO no Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213786"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Criar um projeto SMO do Visual Basic no Visual Studio .NET
   Esta seção descreve como criar um aplicativo de console SMO simples.  
@@ -37,7 +37,7 @@ ms.locfileid: "36120195"
   
 2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** será exibida.  
   
-3.  Em **tipos de projeto** caixa de diálogo, selecione **Visual Basic**e, em seguida, selecione **Windows**. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] painel modelos instalados, selecione **aplicativo de Console.**  
+3.  Na **tipos de projeto** caixa de diálogo, selecione **Visual Basic**e, em seguida, selecione **Windows**. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] painel de modelos instalados, selecione **aplicativo de Console.**  
   
 4.  (Opcional) No **nome** , digite o nome do novo aplicativo.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36120195"
   
 9. Clique em **Abrir**.  
   
-10. Sobre o **exibição** menu, clique em **código**. - ou - selecione a janela Module1. vb para mostrar a janela de código.  
+10. Sobre o **modo de exibição** menu, clique em **código**. - ou - selecione a janela Module1.vb para mostrar a janela de código.  
   
-11. No código, antes de qualquer declaração, digite o seguinte **Imports** instruções para qualificar os tipos no namespace SMO.  
+11. No código, antes de qualquer declaração, digite o seguinte **importações** instruções para qualificar os tipos no namespace SMO.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

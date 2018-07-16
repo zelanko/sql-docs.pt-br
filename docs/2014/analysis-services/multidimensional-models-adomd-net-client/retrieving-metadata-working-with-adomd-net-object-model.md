@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328536"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>Trabalhando com o modelo de objeto do ADOMD.NET
   O ADOMD.NET oferece um modelo de objeto para a exibição dos cubos e dos objetos subordinados contidos em uma fonte de dados analíticos. No entanto, nem todos os metadados de uma determinada fonte de dados analíticos estarão disponíveis por meio do modelo de objeto. O modelo de objeto só fornece acesso às informações mais úteis para que um aplicativo cliente as exiba e permita que um usuário crie comandos de forma interativa. Por causa da complexidade reduzida dos metadados em apresentar, o modelo de objeto do ADOMD.NET é mais fácil usar.  
@@ -37,7 +37,7 @@ ms.locfileid: "36115538"
  Sempre que possível, use o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> para representar metadados em aplicativos cliente criados para dar suporte a vários servidores OLAP ou para fins de acesso e exibição de metadados gerais.  
   
 > [!NOTE]  
->  Para provedor metadados específicos, ou para acesso e exibição detalhados de metadados, use conjuntos de linhas do esquema para recuperar metadados. Para obter mais informações, consulte [trabalhando com conjuntos de linhas de esquema no ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)).  
+>  Para provedor metadados específicos, ou para acesso e exibição detalhados de metadados, use conjuntos de linhas do esquema para recuperar metadados. Para obter mais informações, consulte [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)).  
   
  O exemplo a seguir usa o objeto <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> para recuperar os cubos visíveis e suas dimensões a partir do servidor local:  
   

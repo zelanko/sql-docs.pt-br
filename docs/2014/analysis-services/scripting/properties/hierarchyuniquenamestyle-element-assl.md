@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304286"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>Elemento HierarchyUniqueNameStyle (ASSL)
-  Determina como nomes exclusivos são gerados para hierarquias que estão contidas dentro do [CubeDimension](../data-type/dimension-data-type-assl.md).  
+  Determina como nomes exclusivos são gerados para hierarquias que estão contidas dentro de [CubeDimension](../data-type/dimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36019930"
 |*IncludeDimensionName*|O nome da dimensão é incluído como parte do nome da hierarquia.|  
 |*ExcludeDimensionName*|O nome da dimensão não é incluído como parte do nome da hierarquia.|  
   
- O elemento que corresponde ao pai do `HierarchyUniqueNameStyle` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ O elemento que corresponde ao pai de `HierarchyUniqueNameStyle` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

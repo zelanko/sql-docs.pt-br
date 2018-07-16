@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322706"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testando o pacote de tutorial da Lição 3
   Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  
@@ -47,7 +47,7 @@ ms.locfileid: "36116188"
   
 -   Com o bloco de notas ou qualquer outro editor de texto, abra o arquivo TutorialLog.log.  
   
--   Embora as semânticas das informações geradas para a `PipelineExecutionPlan` e `PipelineExecutionTrees` eventos estão além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados no **detalhes** guia de o **configurar Logs de SSIS** caixa de diálogo. Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
+-   Embora as semânticas das informações geradas para o `PipelineExecutionPlan` e `PipelineExecutionTrees` eventos estão além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados na **detalhes** guia de o **configurar Logs de SSIS** caixa de diálogo. Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
   
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 4: adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f9391fb8b85e551f2f1904e164c7d86f2dcacc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299356"
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
   Contém informações sobre um índice que você quer criar ou descartar para uma configuração especificada pelo usuário.  
@@ -69,8 +69,8 @@ ms.locfileid: "36013245"
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|[Criar elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
-|**Elementos filho**|[Nome de elemento de índice &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento de coluna para índice &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> `PartitionColumn` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> [Elemento de grupo de arquivos para índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> `PercentUsage` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
+|**Elemento pai**|[Criar o elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
+|**Elementos filho**|[Nomeie o elemento de índice &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento Column para Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> `PartitionColumn` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> [Elemento FileGroup para o índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> `PercentUsage` Elemento. Para obter mais informações, consulte o esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados.|  
   
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

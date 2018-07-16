@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying registered server connection information
 - Registered Servers [SQL Server], connection information changes
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 60c041bea868056779c3c902b3cd63419bac467c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dfc6bcc919bb60cc8f6a0fa9d4bea5b27c762d33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248046"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Alterar um registro do servidor (SQL Server Management Studio)
   Este tópico descreve como alterar o registro de um servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode alterar as informações de conexão de um servidor registrado a qualquer momento.  

@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b283d0eec203422b97b9e7981783ac81999dc18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308516"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserindo, atualizando e descartando membros (XMLA)
-  Você pode usar o [inserir](../xmla/xml-elements-commands/insert-element-xmla.md), [atualizar](../xmla/xml-elements-commands/update-element-xmla.md), e [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) comandos em XML for Analysis (XMLA) respectivamente inserir, atualizar ou excluir membros de uma dimensão habilitada para gravação. Para obter mais informações sobre dimensões habilitadas para gravação, consulte [Write-Enabled dimensões](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Você pode usar o [inserir](../xmla/xml-elements-commands/insert-element-xmla.md), [atualizar](../xmla/xml-elements-commands/update-element-xmla.md), e [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) comandos no XML for Analysis (XMLA) para inserir, respectivamente, atualizar ou excluir membros de uma dimensão habilitada para gravação. Para obter mais informações sobre dimensões habilitadas para gravação, consulte [Write-Enabled dimensões](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Inserindo membros novos  
  O comando `Insert` insere novos membros em atributos especificados de uma dimensão habilitada para gravação.  
@@ -53,7 +53,7 @@ ms.locfileid: "36019709"
   
 -   O [objeto](../xmla/xml-elements-properties/object-element-xmla.md) propriedade, que contém uma referência de objeto para a dimensão na qual os membros serão inseridos. A referência de objeto contém o identificador de banco de dados, o identificador de cubo e o identificador de dimensão para a dimensão.  
   
--   O [atributos](../xmla/xml-elements-properties/attributes-element-xmla.md) propriedade, que contém um ou mais [atributo](../xmla/xml-elements-properties/attribute-element-xmla.md) elementos para identificar os atributos em que os membros serão inseridos. Cada elemento `Attribute` identifica um atributo e fornece o nome, valor, traduções, operador unário, rollup personalizado, propriedades de rollup personalizadas e níveis ignorados para um único membro a ser adicionado ao atributo identificado.  
+-   O [atributos](../xmla/xml-elements-properties/attributes-element-xmla.md) propriedade, que contém um ou mais [atributo](../xmla/xml-elements-properties/attribute-element-xmla.md) elementos para identificar os atributos nos quais os membros serão inseridos. Cada elemento `Attribute` identifica um atributo e fornece o nome, valor, traduções, operador unário, rollup personalizado, propriedades de rollup personalizadas e níveis ignorados para um único membro a ser adicionado ao atributo identificado.  
   
     > [!NOTE]  
     >  Todas as propriedades do elemento `Attribute` devem ser incluídas. Caso contrário, poderá ocorrer um erro.  
@@ -80,7 +80,7 @@ ms.locfileid: "36019709"
     > [!NOTE]  
     >  Todas as propriedades do elemento `Attribute` devem ser incluídas. Caso contrário, poderá ocorrer um erro.  
   
--   O [onde](../xmla/xml-elements-properties/where-element-xmla.md) propriedade, que contém um ou mais `Attribute` elementos que restringem os atributos em que os membros serão atualizados. O `Where` propriedade é fundamental para limitar uma `Update` comando para instâncias específicas de um membro. Se o `Where` propriedade não for especificada, todas as instâncias de um determinado membro serão atualizadas. Por exemplo, existem três clientes para quem você deseja alterar o nome da cidade de Redmond para Bellevue. Para alterar o nome da cidade, forneça uma propriedade `Where` que identifique os três membros no atributo Customer para o qual os membros do atributo City devem ser alterados. Se você não fornecer essa propriedade `Where`, todos os clientes cujo nome da cidade é Redmond receberiam o nome da cidade Bellevue após a execução do comando `Update`.  
+-   O [onde](../xmla/xml-elements-properties/where-element-xmla.md) propriedade, que contém um ou mais `Attribute` elementos que restringem os atributos em que os membros devem ser atualizados. O `Where` propriedade é fundamental para limitar um `Update` comando para instâncias específicas de um membro. Se o `Where` propriedade não for especificada, todas as instâncias de um determinado membro serão atualizadas. Por exemplo, existem três clientes para quem você deseja alterar o nome da cidade de Redmond para Bellevue. Para alterar o nome da cidade, forneça uma propriedade `Where` que identifique os três membros no atributo Customer para o qual os membros do atributo City devem ser alterados. Se você não fornecer essa propriedade `Where`, todos os clientes cujo nome da cidade é Redmond receberiam o nome da cidade Bellevue após a execução do comando `Update`.  
   
     > [!NOTE]  
     >  Com exceção dos membros novos, o comando `Update` só pode atualizar valores chaves de atributo para atributos não incluídos na cláusula `Where`. Por exemplo, o nome da cidade não pode ser atualizado quando um cliente é atualizado; caso contrário, o nome da cidade seria alterado para todos os clientes.  
@@ -116,8 +116,8 @@ ms.locfileid: "36019709"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento drop &#40;XMLA&#41;](../xmla/xml-elements-commands/drop-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
  [Definindo e identificando objetos &#40;XMLA&#41;](../xmla/xml-elements-objects.md)   
  [Desenvolvendo com XMLA no Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

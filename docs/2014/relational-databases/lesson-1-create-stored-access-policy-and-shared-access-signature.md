@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5313872497e120ebfce452547f755f61ba567e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324296"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lição 2. Criar uma política no contêiner e gerenciar uma chave SAS (assinatura de acesso compartilhado)
   Nesta lição, você aprenderá a criar uma política no contêiner do Blob e também gerará uma chave de SAS.  
@@ -30,7 +30,7 @@ ms.locfileid: "36116906"
   
 -   Operações da API de REST do Windows Azure: [criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx), [definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx), e [obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
--   [GetSharedAccessSignature método](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) nas janelas do SDK do Azure.  
+-   [Método GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) nas janelas do SDK do Azure.  
   
     ```  
   

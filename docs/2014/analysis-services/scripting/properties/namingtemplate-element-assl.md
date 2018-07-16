@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300836"
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
   Define como os níveis são nomeados em uma hierarquia pai-filho construída a partir de [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento pai.  
@@ -62,7 +62,7 @@ ms.locfileid: "36019661"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `NamingTemplate` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai está definido como *pai*).  
+ O valor da `NamingTemplate` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai é definido como *pai*).  
   
  Quando um atributo pai é usado para construir uma hierarquia, os níveis da hierarquia são determinados pelas relações pai-filho entre os membros contidos no atributo pai. Entretanto, ao contrário de outras dimensões, os nomes de nível não podem ser formulados a partir dos nomes de atributo usados para a hierarquia.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36019661"
   
  Cada nome na lista é tratado como um modelo para garantir a exclusividade dos nomes de nível. Por exemplo, o uso de `Manager;Team Lead;Manager;Team Lead;Worker *` resulta em nomes de nível como `Manager`, `Team Lead`, `Manager 01`, `Team Lead 01`, `Worker 05`, `Worker 06`.  
   
- Use dois asteriscos (*) para incluir o asterisco (\*) caractere em um nome de nível como parte de um modelo de nomeação.  
+ Use dois asteriscos (*) para incluir o asterisco (\*) caractere em um nome como parte de um modelo de nomeação de nível.  
   
- O elemento que corresponde ao pai do `NamingTemplate` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de `NamingTemplate` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento NamingTemplateTranslations &#40;ASSL&#41;](../collections/translations-element-assl.md)   

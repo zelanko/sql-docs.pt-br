@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MergePartitions command
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 80f94365da716e08c50a2b3e0ce8df82132ea99e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64d6352cd0c5a0cb7a408722b501dd62a0d47e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226376"
 ---
 # <a name="mergepartitions-element-xmla"></a>Elemento MergePartitions (XMLA)
   Intercala os dados de uma ou mais partições de origem em uma partição de destino e então exclui as partições de origem.  

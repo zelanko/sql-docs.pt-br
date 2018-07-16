@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269662"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
@@ -55,7 +55,7 @@ ms.locfileid: "36010491"
   
 -   `String` mensagem especifica a mensagem como uma cadeia de caracteres. Ao receber mensagens, você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário e entrar em ação dependendo da comparação. A comparação de cadeias de caracteres pode ser exata, diferenciar maiúsculas e minúsculas ou não diferenciar maiúsculas e minúsculas, ou usar uma subcadeia.  
   
--   `String message to variable` Especifica a mensagem de origem como uma cadeia de caracteres que é enviada a uma variável de destino. Você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário usando uma comparação exata, que não pode diferenciar maiúsculas e minúsculas ou subcadeia. Esse tipo de mensagem só está disponível quando a tarefa estiver recebendo mensagens.  
+-   `String message to variable` Especifica a mensagem de origem como uma cadeia de caracteres que é enviada para uma variável de destino. Você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário usando uma comparação exata, que não pode diferenciar maiúsculas e minúsculas ou subcadeia. Esse tipo de mensagem só está disponível quando a tarefa estiver recebendo mensagens.  
   
 -   `Variable` Especifica que a mensagem contém uma ou mais variáveis. Você pode configurar a tarefa para especificar os nomes das variáveis incluídas na mensagem. Ao receber mensagens, você pode configurar a tarefa para especificar o pacote do qual ela pode receber mensagens e a variável que será o destino da mensagem.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36010491"
   
 -   Substituir um arquivo existente, se a mensagem for armazenada em um `Data file`.  
   
--   Salvar o arquivo de mensagem para um nome de arquivo diferente, se a mensagem usa o `Data file message` tipo.  
+-   Salvando o arquivo de mensagem para um nome de arquivo diferente, se a mensagem usa o `Data file message` tipo.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Mensagens de registro personalizadas disponíveis na tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
@@ -92,11 +92,11 @@ ms.locfileid: "36010491"
 ## <a name="configuration-of-the-message-queue-task"></a>Configuração da tarefa Fila de Mensagens  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor de tarefa da fila de mensagens &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa fila de mensagens &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de tarefa da fila de mensagens &#40;página receber&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor da tarefa fila de mensagens &#40;página receber&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor de tarefa da fila de mensagens &#40;Enviar página&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

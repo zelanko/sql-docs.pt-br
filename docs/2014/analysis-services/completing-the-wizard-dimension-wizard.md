@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente de dimensão) | Microsoft Docs
+title: Concluindo o Assistente (Assistente para dimensões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.finish.f1
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 191c0fd95b4a6a12517bb926b631cbfe05979e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e498fc8ca6b995dc30b2a2e271b90a627b8940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196556"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Concluindo o Assistente (Assistente para Dimensões)
   Use a página **Concluindo o Assistente** para fazer os seguintes procedimentos:  
@@ -32,7 +32,7 @@ ms.locfileid: "36122050"
   
 -   Se necessário, gerar o esquema necessário para oferecer suporte à dimensão.  
   
- **Para abrir o Assistente de dimensão**  
+ **Para abrir o Assistente para dimensões**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Dimensões** de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique em **Nova Dimensão**.  
   

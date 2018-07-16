@@ -1,5 +1,5 @@
 ---
-title: Limpar os Caches do Analysis Services | Microsoft Docs
+title: Limpe o Analysis Services Caches | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211846"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
   O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
@@ -60,7 +60,7 @@ ms.locfileid: "36021044"
   
 1.  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um banco de dados, aponte para **Nova Consulta**e selecione **XMLA**.  
   
-2.  Copie o exemplo de código a seguir na janela de consulta XMLA. Alterar `DatabaseID` para a ID do banco de dados a conexão atual.  
+2.  Copie o exemplo de código a seguir na janela de consulta XMLA. Alteração `DatabaseID` para a ID do banco de dados a conexão atual.  
   
     ```  
     <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -92,7 +92,7 @@ ms.locfileid: "36021044"
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Scripts de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

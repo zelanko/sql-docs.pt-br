@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 635c108ec76177b90839ebb04d00d13dec7d1099
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: dab153b8d5047f73b337e5647fdb25d3b36d9705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248058"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referências de coleções de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
@@ -47,7 +47,7 @@ ms.locfileid: "36117095"
  Por padrão, os itens na coleção Fields têm duas propriedades: Value e IsMissing. A propriedade IsMissing indica se um campo que foi definido para um conjunto de dados em tempo de design estará contido em um dos campos recuperados em tempo de execução. Por exemplo, a consulta pode chamar um procedimento armazenado cujo conjunto de resultados varia de acordo com um parâmetro de entrada ou a consulta pode ser `SELECT * FROM` *\<table>*, em que a definição da tabela foi alterada.  
   
 > [!NOTE]  
->  IsMissing detecta alterações no esquema do conjunto de dados entre o tempo de design e o tempo de execução de qualquer tipo de fonte de dados. IsMissing não pode ser usado para detectar membros vazios em um cubo multidimensional e não está relacionado aos conceitos da linguagem de consulta MDX do `EMPTY` e `NON EMPTY`.  
+>  IsMissing detecta alterações no esquema do conjunto de dados entre o tempo de design e o tempo de execução de qualquer tipo de fonte de dados. IsMissing não pode ser usado para detectar membros vazios em um cubo multidimensional e não está relacionado aos conceitos da linguagem MDX consulta de `EMPTY` e `NON EMPTY`.  
   
  É possível testar a propriedade IsMissing em código personalizado para determinar a existência de um campo em um conjunto de resultados. Não é possível testar sua presença usando uma expressão com uma chamada de função [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], como `IIF` ou `SWITCH`, pois [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] avalia todos os parâmetros da chamada de função, resultando em um erro quando a referência ao campo ausente for avaliada.  
   
@@ -92,10 +92,10 @@ End Function
 ### <a name="using-extended-field-properties"></a>Usando propriedades de campo estendidas  
  As propriedades de campo estendidas são propriedades adicionais definidas em um campo pela extensão de processamento de dados, que é determinada pelo tipo de fonte de dados do conjunto de dados. As propriedades de campo estendidas são predefinidas ou específicas para um tipo de fonte de dados. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Se você especificar uma propriedade que não há suporte para esse campo, a expressão é avaliada como `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se um provedor de dados não oferece suporte a propriedades de campo estendidas, ou se o campo não for encontrado quando a consulta é executada, o valor da propriedade é `null` (`Nothing` na [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para propriedades do tipo `String` e `Object`, e zero (0) para propriedades do tipo `Integer`. Uma extensão de processamento de dados pode fazer bom uso das propriedades predefinidas ao otimizar consultas que incluem essa sintaxe.  
+ Se você especificar uma propriedade que não há suporte para esse campo, a expressão é avaliada como `null` (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Se um provedor de dados não dá suporte a propriedades de campo estendidas, ou se o campo não for encontrado quando a consulta é executada, o valor da propriedade é `null` (`Nothing` na [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) para propriedades do tipo `String` e `Object`, e zero (0) para propriedades do tipo `Integer`. Uma extensão de processamento de dados pode fazer bom uso das propriedades predefinidas ao otimizar consultas que incluem essa sintaxe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](../report-data/report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)  
   
   

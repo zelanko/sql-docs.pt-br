@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196536"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
   Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36013002"
  Depois de selecionar o tipo de objeto de destino, em **Objeto de destino**, selecione o objeto de cubo do tipo designado.  
   
  **Condição (Opcional)**  
- Especifique uma expressão MDX opcional que resolve um valor booliano. Se o valor for `True`, a ação é executada no destino especificado. Se o valor for `False`, não é possível executar a ação.  
+ Especifique uma expressão MDX opcional que resolve um valor booliano. Se o valor for `True`, a ação é executada no destino especificado. Se o valor for `False`, a ação não será executada.  
   
  **Conteúdo da Ação**  
  Selecione o tipo de ação. A tabela a seguir resume os tipos disponíveis:  
@@ -79,8 +79,8 @@ ms.locfileid: "36013002"
 |**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interativo<br /><br /> Em Aberto|  
 |**Aplicativo**|Descreve o aplicativo da ação.|  
 |**Descrição**|Descreve a ação.|  
-|**Caption**|Fornece uma legenda que é exibida para a ação. Especifique se a legenda for MDX, `True` para **legenda é MDX**.|  
-|**A legenda é MDX**|Especifique `True` se a legenda é MDX ou `False` se não for.|  
+|**Caption**|Fornece uma legenda que é exibida para a ação. Se a legenda for MDX, especifique `True` para **legenda é MDX**.|  
+|**A legenda é MDX**|Especificar `True` se a legenda for MDX ou `False` se não for.|  
   
 > [!NOTE]  
 >  Use o Analysis Services Scripting Language (ASSL) ou o Objetos de Gerenciamento de Análise (AMO) para definir tipos de ação HTML ou de linha de comando. Para obter mais informações, consulte [Elemento Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Elemento Type &#40;Ação&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) e [Programando objetos OLAP AMO avançados](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
