@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218226"
 ---
 # <a name="memberswithdata-element-assl"></a>Elemento MembersWithData (ASSL)
   Determina se devem ou não exibir membros de dados para membros não folha no atributo pai.  
@@ -51,7 +51,7 @@ ms.locfileid: "36120212"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|*Nonleafdatahidden*|  
+|Valor padrão|*NonLeafDataVisible*|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -62,14 +62,14 @@ ms.locfileid: "36120212"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O valor da `MembersWithData` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai está definido como *pai*) para determinar se Para exibir os membros de dados para membros não folha no atributo pai. Para obter mais informações sobre membros de dados, consulte [Atributos em hierarquias pai-filho](../../multidimensional-models/parent-child-dimension-attributes.md).  
+ O valor da `MembersWithData` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai é definido como *pai*) para determinar se Para exibir membros de dados para membros não folha no atributo pai. Para obter mais informações sobre membros de dados, consulte [Atributos em hierarquias pai-filho](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |*NonLeafDataHidden*|Dados não folha estão ocultos.|  
-|*Nonleafdatahidden*|Dados não folha estão visíveis.|  
+|*NonLeafDataVisible*|Dados não folha estão visíveis.|  
   
  A enumeração que corresponde aos valores permitidos para `MembersWithData` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MembersWithData>.  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391babe6cba3330c0a072739c01748d618aec3e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 507dab440db095f844b4fad9dcdd96e29d18d487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206026"
 ---
 # <a name="state-element-assl"></a>Elemento State (ASSL)
   Contém um valor somente leitura que descreve o estado de processamento atual do elemento pai.  

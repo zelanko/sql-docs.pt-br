@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177203"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar uma conexão de dados do Office (.odc) com relatórios (Reporting Services no modo integrado do SharePoint)
   Em cenários limitados, você pode usar um arquivo de conexão de dados do Office (.odc) para fornecer informações sobre conexão com um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Um arquivo .odc pode ser usado no lugar de um arquivo .rsds quando você cria uma fonte de dados compartilhados. O servidor de relatório usa um arquivo .odc do mesmo modo que usa um arquivo .rsds; ele lê o arquivo para detectar informações sobre tipo de fonte de dados, cadeia de caracteres de conexão e credenciais.  
@@ -38,7 +38,7 @@ ms.locfileid: "36011074"
   
 -   O arquivo .odc deve especificar uma cadeia de caracteres de conexão.  
   
--   As credenciais podem ser definidas `None`, `Stored`, ou `Integrated`. Se o método das credenciais for definido como `Stored`, o servidor de relatório solicitará ao usuário credenciais em vez de usar as credenciais armazenadas. O servidor de relatório não pode usar credenciais armazenadas conforme definido em um arquivo .odc.  
+-   As credenciais podem ser definidas como `None`, `Stored`, ou `Integrated`. Se o método das credenciais for definido como `Stored`, o servidor de relatório solicitará ao usuário as credenciais em vez de usar as credenciais armazenadas. O servidor de relatório não pode usar credenciais armazenadas conforme definido em um arquivo .odc.  
   
 -   A fonte de dados deve ter esquema idêntico àquele usado para criar o relatório. Se as estruturas de dados diferirem, o relatório não será executado.  
   

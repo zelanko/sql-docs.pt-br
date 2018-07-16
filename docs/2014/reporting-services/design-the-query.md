@@ -1,5 +1,5 @@
 ---
-title: Criar a consulta | Microsoft Docs
+title: A consulta de design | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270302"
 ---
 # <a name="design-the-query"></a>Projetar a consulta
   Use esta página do Assistente de Relatório para criar uma consulta, digitando a consulta manualmente, usando o Construtor de Consultas para criar uma consulta interativamente ou importando uma consulta de outro relatório.  
@@ -38,7 +38,7 @@ ms.locfileid: "36120740"
  Para obter mais informações sobre designers de consulta, consulte [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md).  
   
 ## <a name="example"></a>Exemplo  
- Para o tipo de fonte de dados **Microsoft SQL Server**, a consulta a seguir recupera uma lista de sobrenomes do [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados `Person` tabela.  
+ Para o tipo de fonte de dados **Microsoft SQL Server**, a consulta a seguir recupera uma lista de sobrenomes das [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados `Person` tabela.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>Consulte também  
  [Ajuda do Assistente de relatório](../../2014/reporting-services/report-wizard-help.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;SSRS e construtor de relatórios&#41;](report-data/report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

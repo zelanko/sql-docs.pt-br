@@ -16,15 +16,15 @@ helpviewer_keywords:
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f58bcff9ccfc6d20ca73724373a229abf7fd7d4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 970d02311f7909ee23686d345726c140497baa7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315986"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
   Antes de desenvolver um aplicativo que utilize funcionalidades de replicação, siga estas etapas de planejamento gerais:  

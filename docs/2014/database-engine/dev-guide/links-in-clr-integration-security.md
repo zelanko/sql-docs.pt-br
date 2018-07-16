@@ -17,15 +17,15 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243096"
 ---
 # <a name="links-in-clr-integration-security"></a>Links em segurança da integração CLR
   Esta seção descreve como partes do código do usuário podem chamar uma à outra no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto em [!INCLUDE[tsql](../../includes/tsql-md.md)] quanto em uma das linguagens gerenciadas. Essas relações entre objetos são conhecidas como links.  
@@ -37,7 +37,7 @@ ms.locfileid: "36122451"
  Os links de acesso à tabela correspondem à recuperação ou à modificação de valores em uma tabela, exibição ou uma função de valor de tabela. Eles são semelhantes aos links de invocação, exceto por apresentarem um controle de acesso mais refinado em termos de permissões SELECT, INSERT, UPDATE e DELETE.  
   
 ## <a name="gated-links"></a>Links de entrada  
- Os links de entrada significam que, durante a execução, as permissões, uma vez estabelecidas, não são verificadas em todas as relações de objeto. Quando há um link de entrada entre dois objetos (por exemplo, objetos **x** e **y**), as permissões no objeto **y** e nos demais objetos acessados no objeto **y** só são verificadas no momento da criação do objeto **x**. Durante a criação do objeto **x**, `REFERENCE` permissão é verificada em **y** em comparação com o proprietário do **x**. Em tempo de execução, (por exemplo, quando alguém chama o objeto **x**), nenhuma permissão é verificada em relação a **y** ou outros objetos referenciados estatisticamente. Em tempo de execução, uma permissão apropriada será verificada em relação ao próprio objeto **x** .  
+ Os links de entrada significam que, durante a execução, as permissões, uma vez estabelecidas, não são verificadas em todas as relações de objeto. Quando há um link de entrada entre dois objetos (por exemplo, objetos **x** e **y**), as permissões no objeto **y** e nos demais objetos acessados no objeto **y** só são verificadas no momento da criação do objeto **x**. No momento da criação do objeto **x**, `REFERENCE` permissão é verificada no **y** em comparação com o proprietário da **x**. Em tempo de execução, (por exemplo, quando alguém chama o objeto **x**), nenhuma permissão é verificada em relação a **y** ou outros objetos referenciados estatisticamente. Em tempo de execução, uma permissão apropriada será verificada em relação ao próprio objeto **x** .  
   
  Os links de entrada são sempre usados em conjunto com uma dependência de metadados entre dois objetos. Essa dependência de metadados é uma relação estabelecida nos catálogos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que impede um objeto de ser descartado enquanto outro objeto depender dele.  
   

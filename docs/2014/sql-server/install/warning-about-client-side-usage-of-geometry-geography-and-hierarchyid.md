@@ -1,5 +1,5 @@
 ---
-title: Aviso sobre o uso do lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID | Microsoft Docs
+title: Aviso sobre uso de lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166107"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Aviso sobre uso no lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID
-  O assembly **Microsoft.SqlServer.Types.dll**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando certas condições forem verdadeiras.  
+  O assembly **Types**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando certas condições forem verdadeiras.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- O assembly **Microsoft.SqlServer.Types.dll**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando as condições a seguir forem verdadeiras.  
+ O assembly **Types**, que contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando as condições a seguir forem verdadeiras.  
   
--   Quando você move um aplicativo personalizado em um computador no qual [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] foi instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Talvez você receba esta mensagem de erro: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] tiver sido instalado em um computador no qual apenas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é instalado, o aplicativo falhará porque a versão referenciada 10.0 do **SqlTypes** assembly não está presente. Talvez você receba esta mensagem de erro: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
--   Quando você faz referência a **SqlTypes** assembly versão 11.0 e a versão 10.0 também estiver instalada, você verá essa mensagem de erro: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   Quando você faz referência a **SqlTypes** assembly versão 11.0 e a versão 10.0 também estiver instalada, você poderá ver esta mensagem de erro: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   Quando você faz referência a **SqlTypes** assembly versão 11.0 de um aplicativo personalizado que tem como alvo o .NET 3.5, 4 ou 4.5, o aplicativo falhará porque a versão 10.0 do assembly é carregado SqlClient por design. Essa falha ocorre quando o aplicativo chama um dos seguintes métodos:  
+-   Quando você faz referência a **SqlTypes** assembly versão 11.0 de um aplicativo personalizado que tem como alvo o .NET 3.5, 4 ou 4.5, o aplicativo falhará porque o SqlClient por design carrega a versão 10.0 do assembly. Essa falha ocorre quando o aplicativo chama um dos seguintes métodos:  
   
     -   O método `GetValue` da classe `SqlDataReader`  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0f2e5e76b9779ce2cc8362d93ebe2389db8fb8da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304366"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar propriedades de relatório para relatórios do Power View
   Nesta lição suplementar, você definirá as propriedades de relatório para o projeto Modelo de Vendas pela Internet do Adventure Works. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.  
@@ -108,7 +108,7 @@ ms.locfileid: "36115136"
   
 6.  Realize estas mesmas etapas para a tabela **Geography** , selecionando os campos a seguir e colocando-os nesta ordem.  
   
-     **Cidade**, **State Province código**, **código de região de estado**.  
+     **Cidade**, **State Province Code**, **código de região de estado**.  
   
 7.  Por fim, realize estas mesmas etapas para a tabela **Product** , selecionando os campos a seguir e colocando-os nesta ordem.  
   

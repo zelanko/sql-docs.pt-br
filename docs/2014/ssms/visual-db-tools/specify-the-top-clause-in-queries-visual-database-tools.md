@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause, queries
 - percentage of rows returned [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ede0b26356fcc77fea049fcb074c58696095904f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1726f0c0ba83e689a0f09dc9e6f64d4175302b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326996"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Especificar a cláusula TOP em consultas (Visual Database Tools)
   A cláusula TOP retorna somente as primeiras linhas *n* ou *n percent* de uma consulta. A cláusula TOP é útil quando se pretende inspecionar uma parte de seus resultados para descobrir se sua consulta faz o esperado sem despender os recursos necessários para retornar todos os resultados da consulta.  
@@ -56,7 +56,7 @@ ms.locfileid: "36117793"
 >  Além disso, você pode alterar os valores das propriedades filho de **Especificação Top** editando a cláusula TOP no painel SQL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de consultas e modos de exibição de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Tópicos explicativos de consultas e exibições de design &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Propriedades de consulta &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
   
   

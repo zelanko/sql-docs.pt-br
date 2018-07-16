@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297426"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determina o Modo de Servidor de uma instância do Analysis Services.
   O Analysis Services pode ser instalado em um dos três modos de servidor: Multidimensional e Mineração de Dados (padrão), PowerPivot para SharePoint e Tabular. O modo de servidor de uma instância do Analysis Services é determinado durante a instalação quando você escolhe opções para instalar o servidor.  
@@ -31,13 +31,13 @@ ms.locfileid: "36117998"
 ## <a name="server-icons-in-object-explorer"></a>Ícones de servidor no Pesquisador de Objetos  
  O modo mais fácil de determinar o modo de servidor é conectar-se ao servidor no SQL Server Management Studio e observar o ícone ao lado do nome de servidor no Pesquisador de Objetos. A ilustração a seguir mostra três instâncias do Analysis Services implantadas nos modos Multidimensional, Tabular e PowerPivot:  
   
- ![Ícones do Pesquisador de objetos para cada modo de servidor de objeto](../media/ssas-ssms-servermodes.gif "ícones do Pesquisador de objetos para cada modo de servidor")  
+ ![Ícones do Gerenciador para cada modo de servidor de objetos](../media/ssas-ssms-servermodes.gif "ícones do Pesquisador de objetos para cada modo de servidor")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Exibindo uma propriedade DeploymentMode no arquivo MSMDSRV.INI  
  Alternativamente, você pode verificar a propriedade `DeploymentMode` no arquivo msmdsrv.ini que é incluído em todas as instâncias do Analysis Services. O valor desta propriedade identifica o modo do servidor. Os valores válidos são 0 (Multidimensional), 1 (SharePoint) ou 2 (Tabular). Você deve ser um administrador [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ou seja, um membro da função de Servidor) para abrir o arquivo msmdsrv.ini. Esse arquivo contém o XML estruturado. Você pode usar o Bloco de Notas ou outro editor de texto para exibir o arquivo.  
   
 > [!CAUTION]  
->  Não altere o valor de `DeploymentMode` propriedade. Não há suporte para alterar a propriedade manualmente depois que o servidor está instalado.  
+>  Não altere o valor da `DeploymentMode` propriedade. Não há suporte para alterar a propriedade manualmente depois que o servidor está instalado.  
   
 ## <a name="about-the-deploymentmode-property"></a>Sobre a propriedade DeploymentMode  
  A propriedade `DeploymentMode` determina o contexto operacional de uma instância de servidor do Analysis Services. Esta propriedade é referenciada como 'modo de servidor' em caixas de diálogo, mensagens e documentação. Esta propriedade é inicializada através da Instalação baseada em como você instala o Analysis Services. Esta propriedade deve ser considerada apenas interna, sempre usando o valor especificado pela Instalação.  
@@ -56,9 +56,9 @@ ms.locfileid: "36117998"
  [Instalar o Analysis Services no modo de tabela](install-windows/install-analysis-services.md)   
  [Instalar o Analysis Services em modo multidimensional e de mineração de dados](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Conecte-se ao Analysis Services](connect-to-analysis-services.md)   
- [Soluções de modelo tabular &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [Conectar-se ao Analysis Services](connect-to-analysis-services.md)   
+ [Soluções de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Soluções de modelo multidimensional &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelos de mineração &#40;Analysis Services – mineração de dados&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

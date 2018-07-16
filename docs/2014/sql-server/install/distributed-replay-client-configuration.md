@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 330334330fd27459f19d3746187150e20900bd93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83863c8bc5547ec0839eed7e0883de4d22c4f693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168137"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuração do Distributed Replay Client
   Use a página **Configuração do Distributed Replay Client** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client.  
@@ -28,7 +28,7 @@ ms.locfileid: "36013034"
   
 ## <a name="options"></a>Opções  
  **Nome do controlador**  
- Este é um parâmetro opcional, e o valor padrão é \< *em branco*>.  
+ Este é um parâmetro opcional e o valor padrão é \< *em branco*>.  
   
  Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client. Observe o seguinte:  
   

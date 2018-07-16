@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cde5dc49851e7d8c808d4a6273f4d4caf6603e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279992"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarefa 6: Adicionando a origem do Excel ao fluxo de dados
   Nesta tarefa, você adicionará uma Origem do Excel ao fluxo de dados para ler dados do fornecedor do arquivo de origem do Excel. A Origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do Microsoft Excel. Consulte o tópico [Origem do Excel](http://msdn.microsoft.com/library/ms141683.aspx) para obter mais detalhes.  

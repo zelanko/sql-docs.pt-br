@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 622a7c51bfd6c2a8a9defba70a412967a48dee50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269912"
 ---
 # <a name="adomdnet-server-functionality"></a>Funcionalidade de servidor do ADOMD.NET
   Todos os objetos de servidor do ADOMD.NET oferecem acesso somente leitura aos dados e metadados do servidor. Para recuperar dados e metadados, use o modelo de objeto de servidor do ADOMD.NET, uma vez que o modelo de objeto de servidor não dá suporte a conjuntos de linhas do esquema.  
@@ -53,7 +53,7 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>O que é um procedimento armazenado?  
  Um *procedimento armazenado* é um método que tem as seguintes características:  
   
--   Você chamar um procedimento armazenado em sua própria com MDX [chamar](/sql/mdx/mdx-data-manipulation-call) instrução.  
+-   Você chamar um procedimento armazenado em sua própria com o MDX [chamar](/sql/mdx/mdx-data-manipulation-call) instrução.  
   
 -   Um procedimento armazenado pode conter qualquer número de parâmetros.  
   

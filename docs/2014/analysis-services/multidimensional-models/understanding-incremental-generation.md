@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38116af87dc9fe02232994aac7085945ce695215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177063"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
   Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  
@@ -89,6 +89,6 @@ ms.locfileid: "36121600"
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar alterações em exibições da fonte de dados e fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)   
- [Assistente de geração de esquema &#40;do Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Assistente de geração de esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

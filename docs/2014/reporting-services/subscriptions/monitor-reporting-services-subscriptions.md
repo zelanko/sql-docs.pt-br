@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
 - subscriptions [Reporting Services], status
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 39838673c11b980fd38cc312dea51e0c9e2dcc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 08a4b7f46721f33c1d6cf42b2c2840d0f7a07fcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214776"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
@@ -124,7 +124,7 @@ ms.locfileid: "36120511"
  Quando as condições fazem com que a assinatura se torne inativa, a assinatura reflete esse fato quando o servidor de relatório executa a assinatura. Se uma assinatura for agendada para entregar um relatório todas as sextas-feiras às 2 da manhã, e a extensão da entrega usada foi desinstalada às segundas-feiras às 9 da manhã, a assinatura não refletirá seu estado inativo até sexta-feira às 2 da manhã.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e gerenciar assinaturas de servidores de relatório de modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório do modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

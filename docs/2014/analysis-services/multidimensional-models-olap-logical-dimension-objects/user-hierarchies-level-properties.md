@@ -15,15 +15,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], user
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38cb34a5cda2425870b73662707b1d1c2c2f3bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28c5c9149d1734f410417df1d727b81e6e86ea1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288042"
 ---
 # <a name="level-properties"></a>Propriedades de nível 
   A tabela a seguir lista e descreve as propriedades de um nível em uma hierarquia definida pelo usuário.  

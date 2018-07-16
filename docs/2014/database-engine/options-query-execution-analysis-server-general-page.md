@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cf08120536537f094798c332e78febb1e7adf03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8445b20cccc8e5976860ba625c309e0fbebf22c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316986"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Opções (página de gerais do servidor de análise de execução de consulta)
   Use essa página a fim de especificar as opções para executar consultas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para exibir essas configurações, no menu **Ferramentas** , clique em **Opções**. Em **Execução da Consulta** , expanda a pasta **Analysis Server** e clique em **Geral**.  

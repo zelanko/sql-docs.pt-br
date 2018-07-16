@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310746"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>Trabalhando com conjuntos de linhas do esquema no ADOMD.NET
   Quando você precisa de mais metadados do que os que estão disponíveis no modelo de objeto do ADOMD.NET, o ADOMD.NET oferece o recurso de recuperação de todo o intervalo de conjuntos de linhas do esquema XMLA (XML for Analysis), OLE DB, OLE DB for OLAP e OLE DB for Data Mining:  
@@ -32,9 +32,9 @@ ms.locfileid: "36116251"
  **Metadados XML for Analysis**  
  Os conjuntos de linhas do esquema do XML for Analysis oferecem um método para a recuperação de informações de baixo nível sobre o servidor. As informações disponíveis incluem as fontes de dados disponíveis no servidor, as palavras-chave reservadas pelo provedor, o literais suportados pelo provedor e mais. Você pode até usar um conjunto de linhas do esquema do XML for Analysis para descobrir todos os conjuntos de linhas do esquema suportados pelo provedor.  
   
- Para obter mais informações: [XML para conjuntos de linhas de esquema de análise](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ Para obter mais informações: [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
- **Metadados de banco de dados OLE**  
+ **Metadados OLE DB**  
  Os conjuntos de linhas do esquema do OLE DB oferecem um método padrão do setor para a recuperação de informações de uma variedade de provedores.  
   
  Para obter mais informações: [OLE DB Schema Rowsets](../schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "36116251"
  **Metadados de mineração de dados**  
  Além dos metadados OLAP, os metadados de mineração de dados podem ser recuperados por meio de conjuntos de linhas do esquema. Os conjuntos de linhas disponíveis exibem informações nos modelos de mineração de dados disponíveis no banco de dados, os algoritmos de mineração disponíveis, os parâmetros exigidos pelo algoritmo, estruturas de mineração e mais.  
   
- Para obter mais informações: [conjuntos de linhas de esquema de mineração de dados](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ Para obter mais informações: [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
  Para cada um dos vários conjuntos de linhas do esquema, você recupera metadados do conjunto de linhas passando um GUID ou nome XMLA com o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> do objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36116251"
  Cada um destes métodos retorna uma instância de um objeto `DataSet` preenchido com as informações de esquema. O objeto `DataSet` pertence ao namespace `System.Data` da Biblioteca de Classes do Microsoft .NET Framework.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, a função GetActions obtém uma conexão, o nome do cubo, uma coordenada e um tipo de coordenada, recupera uma [de linhas MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)e retorna as ações disponíveis na coordenada selecionada.  
+ No exemplo a seguir, a função GetActions usa uma conexão, o nome do cubo, uma coordenada e um tipo de coordenada, recupera uma [conjunto de linhas MDSCHEMA_ACTIONS](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)e retorna as ações disponíveis na coordenada selecionada.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268152"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
   Antes de instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve selecionar o hardware e o sistema operacional nos quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
@@ -203,7 +203,7 @@ ms.locfileid: "36130918"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters não têm suporte no modo WOW. Isso inclui atualizações de versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que haviam sido instaladas originalmente no WOW. Para esses itens, a única opção de atualização é instalar a nova versão lado a lado e migrar.  
   
- <sup>2</sup> suporte para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clustering de failover de várias sub-redes.  
+ <sup>2</sup> tem suporte para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clustering de failover de várias sub-redes.  
   
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18e56dea2976e5a058a1161c1ea87eaec64d7dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f837d1380fc5198b0d42bdf0399717807ac81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302266"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino SAP BW** para selecionar o gerenciador de conexões do SAP BW que o destino de SAP BW usará. Nesta página, você também seleciona os parâmetros para carregar os dados no sistema SAP Netweaver BW.  
@@ -83,7 +83,7 @@ ms.locfileid: "36020983"
  Digite o nome do servidor ou endereço IP do host do gateway. Em geral, o nome ou o endereço IP é o mesmo que o servidor de aplicativos do SAP.  
   
  **Serviço do gateway**  
- Digite o nome do serviço de gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
+ Insira o nome do serviço do gateway, no formato `sapgwNN`, onde `NN` é o número do sistema.  
   
  **ID do Programa**  
  Insira a ID do programa que está associada ao destino RFC.  
@@ -114,7 +114,7 @@ ms.locfileid: "36020983"
 |**InfoPackage**|Crie um novo InfoPackage usando a caixa de diálogo **Criar InfoPackage** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create InfoPackage](create-infopackage.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Editor de destino do SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Editor de destino SAP BW &#40;página mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Editor de Destino SAP BW &#40;Página Saída de Erro&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Editor de Destino SAP BW &#40;Página Avançado&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

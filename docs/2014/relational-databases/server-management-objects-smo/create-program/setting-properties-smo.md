@@ -18,15 +18,15 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d372a0c777e8b4f345b821c3d2c7c864f0f5229c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f24590f0e8f496c5ac5620153cdbfd3459bc6557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309466"
 ---
 # <a name="setting-properties"></a>Definindo propriedades
   Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opções de configuração são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriedades do objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
@@ -44,7 +44,7 @@ ms.locfileid: "36020441"
   
 -   A versão do servidor não suporta a propriedade, como se você tentasse acessar uma propriedade que representasse um novo recurso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma versão mais antiga do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   O servidor não dá suporte a dados para a propriedade, como se você tentasse acessar uma propriedade que representa um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] componente que não está instalado.  
+-   O servidor não fornece dados para a propriedade, por exemplo, se você tentar acessar uma propriedade que representa um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] componente que não está instalado.  
   
  Você pode lidar com essas situações capturando as exceções do SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> e <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36020441"
   
 2.  Completamente carregado. Quando qualquer propriedade é referenciada, as propriedades restantes de carregamento rápido são inicializadas e disponibilizadas.  
   
-3.  Propriedades que consomem muita memória. As propriedades indisponíveis restantes consomem muita memória e ter um <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> valor da propriedade True (como <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Essas propriedades só são carregadas quando especificamente referenciadas.  
+3.  Propriedades que consomem muita memória. As propriedades indisponíveis restantes consomem muita memória e têm uma <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> valor da propriedade de true (como <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Essas propriedades só são carregadas quando especificamente referenciadas.  
   
  Se seu aplicativo busca outras propriedades, além daquelas fornecidas no estado parcialmente carregado, ele envia uma consulta para recuperar essas propriedades extras e sobe para o estado totalmente carregado. Isso pode gerar um tráfego desnecessário entre o cliente e o servidor. Mais otimização pode ser obtida chamando o <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> método. O método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> permite a especificação das propriedades que são carregadas quando o objeto é inicializado.  
   
@@ -85,12 +85,12 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Definindo várias propriedades antes de um objeto ser criado no Visual Basic  
- Este exemplo de código mostra como definir diretamente a <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propriedade o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto e como criar e adicionar colunas antes de criar o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
+ Este exemplo de código mostra como definir diretamente a <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propriedade do <xref:Microsoft.SqlServer.Management.Smo.Table> objeto e como criar e adicionar colunas antes de criar o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBProperties2](SMO How to#SMO_VBProperties2)]  -->  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Definindo várias propriedades antes de um objeto ser criado no Visual C#  
- Este exemplo de código mostra como definir diretamente a <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propriedade o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto e como criar e adicionar colunas antes de criar o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
+ Este exemplo de código mostra como definir diretamente a <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propriedade do <xref:Microsoft.SqlServer.Management.Smo.Table> objeto e como criar e adicionar colunas antes de criar o <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
   
 ```  
 {   

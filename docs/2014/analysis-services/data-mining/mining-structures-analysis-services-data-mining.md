@@ -1,5 +1,5 @@
 ---
-title: Estruturas de mineração (Analysis Services – mineração de dados) | Microsoft Docs
+title: Estruturas de mineração (Analysis Services - mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 76
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd363ece9193f05bf3cb9026b8520b027023b015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288492"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
   A estrutura de mineração define os dados a partir dos quais os modelos de mineração são criados. Ela especifica a exibição da fonte de dados, o número e tipo de colunas e uma partição opcional nos conjuntos de treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
@@ -97,7 +97,7 @@ ms.locfileid: "36010315"
 ### <a name="processing-mining-structures"></a>Processando estruturas de mineração  
  Uma estrutura de mineração é apenas um contêiner de metadados até ser processado. Quando você processa uma estrutura de mineração, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria um cache local que armazena estatísticas sobre os dados, informações sobre como qualquer atributo contínuo é discretizado e outras informações que serão usadas posteriormente pelos modelos de mineração. O próprio modelo de mineração não armazena estas informações de resumo, mas referencia as informações que foram armazenadas em cache quando a estrutura de mineração foi processada. No entanto, você não precisa reprocessar a estrutura cada vez que adiciona um novo modelo a uma estrutura existente; você poderá processar somente o modelo.  
   
- Você pode optar por descartar este cache depois de processar, se o cache for muito grande ou você desejar remover dados detalhados. Se não quiser que os dados sejam armazenados em cache, poderá alterar a propriedade `CacheMode` da estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache depois que qualquer modelo for processado. Definindo o `CacheMode` propriedade `ClearAfterProcessing` desabilitará o detalhamento do modelo de mineração.  
+ Você pode optar por descartar este cache depois de processar, se o cache for muito grande ou você desejar remover dados detalhados. Se não quiser que os dados sejam armazenados em cache, poderá alterar a propriedade `CacheMode` da estrutura de mineração como `ClearAfterProcessing`. Isso destruirá o cache depois que qualquer modelo for processado. Definindo o `CacheMode` propriedade para `ClearAfterProcessing` desabilitará o detalhamento do modelo de mineração.  
   
  No entanto, depois de destruir o cache, você não será capaz de adicionar novos modelos à estrutura de mineração. Ao adicionar um novo modelo de mineração à estrutura, ou alterar as propriedades de modelos existentes, você precisará reprocessar a estrutura de mineração primeiro. Para obter mais informações, consulte [Requisitos e considerações sobre processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -126,6 +126,6 @@ ms.locfileid: "36010315"
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de banco de dados &#40; Analysis Services - dados multidimensionais &#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelos de mineração &#40;Analysis Services – mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40;Analysis Services - mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
   
   

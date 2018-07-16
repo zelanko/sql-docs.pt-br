@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304576"
 ---
 # <a name="discovermemoryusage-rowset"></a>Conjunto de linhas DISCOVER_MEMORYUSAGE
   Retorna as estatísticas DISCOVER_MEMORYUSAGE de vários objetos alocados pelo servidor.  
@@ -33,7 +33,7 @@ ms.locfileid: "36012374"
  **Aplica-se a:** modelos de tabela, modelos multidimensionais  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_MEMORYUSAGE` linhas contém as seguintes colunas.  
+ O `DISCOVER_MEMORYUSAGE` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36012374"
 |`ElementCount`|`DBTYPE_UI4`||Para um objeto contêiner, este é o número de objetos contido por esse objeto.|  
 |`Shrinkable`|`DBTYPE_BOOL`|Sim|Um booliano que indica se a memória é reduzível (pode ser removida devido à pressão de memória). Se true, a memória será reduzível; se false, a memória não será reduzível.|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o caminho completo deste objeto.|  
-|`ObjectID`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o objeto. O caminho completo do objeto é representado pela cadeia de caracteres: (ObjectParentPath + '.' + ObjectId).|  
+|`ObjectID`|`DBTYPE_WSTR`||Uma cadeia de caracteres que identifica o objeto. O caminho completo desse objeto é representado pela cadeia de caracteres: (ObjectParentPath + '.' + ObjectId).|  
   
  Este conjunto de linhas do esquema não é classificado.  
   

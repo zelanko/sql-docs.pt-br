@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287332"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Os agrupamentos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como `char` e `varchar` determinam o código de página e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais trabalhará. Para listar os agrupamentos disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
+  Os agrupamentos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como `char` e `varchar` ditar o código de página e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais trabalhará. Para listar os agrupamentos disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Ao selecionar um agrupamento para o servidor, banco de dados, coluna ou expressão, você atribui determinadas características a seus dados que afetam os resultados de muitas operações no banco de dados. Por exemplo, ao construir uma consulta usando ORDER BY, a ordem de classificação de seu conjunto de resultados pode depender do agrupamento aplicado ao banco de dados ou ditado em uma cláusula COLLATE no nível de expressão da consulta.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36122192"
   
  Você não pode alterar o agrupamento de bancos de dados do sistema, exceto alterando o agrupamento para o servidor.  
   
- O agrupamento de banco de dados é usado para todos os metadados no banco de dados e é o padrão para todas as colunas de cadeia de caracteres, objetos temporários, nomes de variável e quaisquer outras cadeias de caracteres usadas no banco de dados. Quando você altera o agrupamento de um banco de dados de usuário, pode haver conflitos de agrupamento quando consultas no banco de dados acessam tabelas temporárias. Tabelas temporárias são sempre armazenadas no `tempdb` banco de dados do sistema, que usará o agrupamento para a instância. Consultas que comparam dados de caractere entre o banco de dados de usuário e `tempdb` poderão falhar se os agrupamentos causarem um conflito ao avaliar os dados de caractere. Você pode resolver isso especificando a cláusula COLLATE na consulta. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
+ O agrupamento de banco de dados é usado para todos os metadados no banco de dados e é o padrão para todas as colunas de cadeia de caracteres, objetos temporários, nomes de variável e quaisquer outras cadeias de caracteres usadas no banco de dados. Quando você altera o agrupamento de um banco de dados de usuário, pode haver conflitos de agrupamento quando consultas no banco de dados acessam tabelas temporárias. Tabelas temporárias são sempre armazenadas em do `tempdb` banco de dados do sistema, que usará o agrupamento da instância. Consultas que comparam dados de caractere entre o banco de dados de usuário e `tempdb` poderão falhar se os agrupamentos causarem um conflito ao avaliar os dados de caractere. Você pode resolver isso especificando a cláusula COLLATE na consulta. Para obter mais informações, veja [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
   
  Agrupamentos em nível de coluna  
  Quando você cria ou altera uma tabela, pode especificar agrupamentos para cada coluna de cadeia de caracteres usando a cláusula COLLATE. Se nenhum agrupamento for especificado, o agrupamento padrão do banco de dados será atribuído à coluna.  

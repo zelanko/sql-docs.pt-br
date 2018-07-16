@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10121"
 - sql12.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 937ce780dfa1c2c60e7cb930b1eb8bbf95cb1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: befed5299791b32cb00587f74123f5391da0d533
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232906"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Adicione botões de classificação interativa para permitir que os usuários alterem a ordem de classificação de linhas e colunas em tabelas e matrizes. Esse recurso só é suportado em formatos de renderização que dão suporte à interação do usuário, como o HTML.  
@@ -197,7 +197,7 @@ ms.locfileid: "36011732"
   
 8.  Clique em **Classificar**.  
   
-9. Clique em **Adicionar**. Uma nova linha de classificação é adicionada à grade de opções de classificação.  
+9.  Clique em **Adicionar**. Uma nova linha de classificação é adicionada à grade de opções de classificação.  
   
 10. Em Classificar por, na lista suspensa, escolha o mesmo campo escolhido na etapa 6 para agrupamento.  
   

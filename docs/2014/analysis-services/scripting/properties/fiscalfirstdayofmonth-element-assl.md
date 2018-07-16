@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf66dd72e1d74104a2008a0535ff5986dd3c53cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d183e519ddd3a103cd8e9cf90105b9c8848acb55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235536"
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>Elemento FiscalFirstDayOfMonth (ASSL)
   Define o primeiro dia do mês fiscal para um [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36012085"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `FiscalFirstDayOfMonth` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ O elemento que corresponde ao pai de `FiscalFirstDayOfMonth` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

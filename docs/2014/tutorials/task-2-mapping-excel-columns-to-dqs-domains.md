@@ -10,24 +10,24 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ff48d56555d3eca2bbcb961d753a47d8db38c69e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89be07ed1cdd07fc8cd923d9672147b87a165d71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202026"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapeando colunas do Excel para domínios do DQS
     
 1.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.  
   
-2.  Clique em **procurar**, selecione **Suppliers.xlsx**e clique em **abrir**.  
+2.  Clique em **navegue**, selecione **Suppliers**e clique em **abrir**.  
   
 3.  Selecione **IncomingSuppliers$** para o **planilha**.  
   
@@ -43,16 +43,16 @@ ms.locfileid: "36121181"
     |Linha de Endereço|Linha de Endereço|  
     |Cidade|Cidade|  
     |Estado|Estado|  
-    |Country (clique **+ (Adicionar um mapeamento de coluna)** barra de ferramentas para adicionar uma linha)|País|  
+    |País (clique em **+ (Adicionar um mapeamento de coluna)** barra de ferramentas para adicionar uma linha)|País|  
     |Zip Code|CEP|  
   
      ![Mapeamentos de colunas do Excel para domínios](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "mapeamentos de colunas do Excel para domínios")  
   
-5.  Como você mapeou todos os domínios individuais dentro de **Address Validation** domínio composto, o domínio composto participa automaticamente o processo de limpeza. Clique em **exibir/Selecionar domínios compostos** botão para verificar se o **Address Validation** domínio composto é selecionada automaticamente e, em seguida, clique em **Okey**.  
+5.  Como você mapeou todos os domínios individuais dentro de **Address Validation** domínio composto, o domínio composto participa automaticamente o processo de limpeza. Clique em **exibir/Selecionar domínios compostos** botão para ver que o **validação de endereço** domínio composto é selecionada automaticamente e, em seguida, clique em **Okey**.  
   
      ![Caixa de diálogo Exibir/Selecionar domínios compostos](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-02.jpg "caixa de diálogo Exibir/Selecionar domínios compostos")  
   
-6.  Clique em **próximo** para alternar para o **limpar** página.  
+6.  Clique em **próxima** para alternar para o **limpar** página.  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 3: Limpando dados em relação à base de dados de conhecimento de fornecedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  

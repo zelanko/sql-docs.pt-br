@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay segurança | Microsoft Docs
+title: Distributed Replay Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301276"
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
   Antes de instalar e usar o recurso Distributed Replay do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , revise as informações de segurança importantes neste tópico. Este tópico descreve as etapas de configuração de segurança pós-instalação que são necessárias antes de usar o Distributed Replay. Este tópico também descreve considerações importantes referentes à proteção de dados e etapas de remoção importantes.  
@@ -51,9 +51,9 @@ ms.locfileid: "36019761"
   
 1.  Execute um destes procedimentos, dependendo do sistema operacional:  
   
-    -   Clique em **iniciar**, tipo `services.msc` no **pesquisa** caixa e, em seguida, pressione ENTER.  
+    -   Clique em **iniciar**, digite `services.msc` no **pesquisa** caixa e, em seguida, pressione ENTER.  
   
-    -   Clique em **iniciar**, clique em **executar**, tipo `services.msc`, e pressione ENTER.  
+    -   Clique em **inicie**, clique em **execute**, tipo `services.msc`, e pressione ENTER.  
   
 2.  Na caixa de diálogo **Serviços** , clique com o botão direito do mouse no serviço a ser configurado e clique em **Propriedades**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36019761"
   
     1.  No computador do controlador, clique em **Iniciar**.  
   
-    2.  Tipo `dcomcnfg.exe` no **pesquisa** caixa.  
+    2.  Tipo de `dcomcnfg.exe` no **pesquisa** caixa.  
   
     3.  Pressione ENTER.  
   

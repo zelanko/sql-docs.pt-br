@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194768"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
   Em uma cláusula FOR XML, é possível solicitar que a consulta retorne um esquema embutido junto com os resultados da consulta. Para obter um esquema XDR, use a palavra-chave XMLDATA na cláusula FOR XML. Para obter um esquema XSD, use a palavra-chave XMLSCHEMA.  
@@ -36,7 +36,7 @@ ms.locfileid: "36013298"
   
 -   É possível especificar XMLSCHEMA em modo RAW e AUTO, não em modo EXPLICIT.  
   
--   Se uma consulta FOR XML aninhada especificar a diretiva TYPE, o resultado da consulta é de `xml` tipo e esse resultado será tratado como uma instância de dados XML não digitados. Para obter mais informações, veja [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
+-   Se uma consulta FOR XML aninhada especificar a diretiva TYPE, o resultado da consulta é de `xml` tipo e esse resultado será tratado como uma instância dos dados XML sem-tipo. Para obter mais informações, veja [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
   
  Quando você especifica XMLSCHEMA em uma consulta FOR XML, recebe um esquema e dados XML, o resultado da consulta. Cada elemento de alto nível dos dados faz referência ao esquema anterior usando uma declaração de namespace padrão que, por sua vez, faz referência ao namespace de destino do esquema embutido.  
   

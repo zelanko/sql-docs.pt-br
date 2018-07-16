@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297236"
 ---
 # <a name="discovercalcdependency-rowset"></a>Conjunto de linhas DISCOVER_CALC_DEPENDENCY
   Cria relatórios sobre as dependências entre cálculos e sobre os objetos referenciados nesses cálculos. Você pode usar essas informações em um aplicativo cliente para gerar relatórios sobre problemas com fórmulas complexas ou para advertir quando objetos relacionados forem excluídos ou modificados. Você também pode usar o conjunto de linhas para extrair as expressões DAX usadas em medidas ou colunas calculadas.  
@@ -30,12 +30,12 @@ ms.locfileid: "36011906"
  **Aplica-se a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DISCOVER_CALC_DEPENDENCY` linhas contém as seguintes colunas. A tabela também especifica o tipo de dados, indica se a coluna pode ser restrita para limitar as linhas que são retornadas e fornece uma descrição de cada coluna.  
+ O `DISCOVER_CALC_DEPENDENCY` linhas contém as colunas a seguir. A tabela também especifica o tipo de dados, indica se a coluna pode ser restrita para limitar as linhas que são retornadas e fornece uma descrição de cada coluna.  
   
 |Nome da coluna|Indicador de tipo|Restrição|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|Sim|Especifica o nome de banco de dados que contém o objeto para o qual a análise de dependência é solicitada. Se ele for omitido, o banco de dados atual será usado.<br /><br /> O `DISCOVER_DEPENDENCY_CALC` linhas pode ser restringido usando esta coluna.|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|Sim|Indica o tipo do objeto para o qual análise de dependência é solicitada. O objeto deve ter um dos seguintes tipos:<br /><br /> -   `ACTIVE_RELATIONSHIP`: uma relação ativa<br />-   `CALC_COLUMN`: Coluna calculada<br />-   `HIERARCHY`: uma hierarquia<br />-   `MEASURE`: uma medida<br />-   `RELATIONSHIP`: uma relação<br />-   `KPI`: um KPI (indicador chave de desempenho)<br /><br /> O `DISCOVER_DEPENDENCY_CALC` linhas pode ser restringido usando esta coluna.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Sim|Especifica o nome de banco de dados que contém o objeto para o qual a análise de dependência é solicitada. Se ele for omitido, o banco de dados atual será usado.<br /><br /> O `DISCOVER_DEPENDENCY_CALC` conjunto de linhas pode ser restrito usando esta coluna.|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|Sim|Indica o tipo do objeto para o qual análise de dependência é solicitada. O objeto deve ter um dos seguintes tipos:<br /><br /> -   `ACTIVE_RELATIONSHIP`: uma relação ativa<br />-   `CALC_COLUMN`: Coluna calculada<br />-   `HIERARCHY`: uma hierarquia<br />-   `MEASURE`: uma medida<br />-   `RELATIONSHIP`: uma relação<br />-   `KPI`: um KPI (indicador chave de desempenho)<br /><br /> O `DISCOVER_DEPENDENCY_CALC` conjunto de linhas pode ser restrito usando esta coluna.|  
 |`QUERY`|`DBTYPE_WSTR`|Sim|Para modelos tabulares criados no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], você pode incluir uma consulta ou expressão DAX para mostrar o grafo de dependência para essa consulta ou expressão. A restrição QUERY fornece aplicativos cliente com uma maneira de determinar quais objetos são usados por uma consulta DAX.<br /><br /> A restrição `QUERY` pode ser especificada no XMLA ou na cláusula WHERE de uma consulta DMV. Consulte a seção de exemplos para obter mais informações.|  
 |`TABLE`|`DBTYPE_WSTR`||O nome da tabela que contém o objeto para o qual as informações sobre dependência são geradas.|  
 |`OBJECT`|`DBTYPE_WSTR`||O nome do objeto para o qual as informações de dependência são geradas. Se o objeto for uma medida ou coluna calculada, use o nome da medida. Se o objeto for uma relação, o nome da tabela (ou dimensão de cubo) que contém a coluna que participa da relação.|  
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  A primeira consulta mostra como especificar uma restrição QUERY para nomes de objetos que incluem espaços. A segunda consulta, emprestada de [Executar consultas DAX por meio de OLE DB e ADOMD.NET](http://go.microsoft.com/fwlink/?LinkId=254329), é uma consulta mais complexa que inclui objetos de várias tabelas.  
   
 > [!NOTE]  
->  Embora as consultas pareçam usar aspas duplas, de fato somente aspas simples são usadas. Um par de aspas simples envolve ' Evaluate \<Tablename >', e aspas simples usadas em torno do nome de tabela precisam ser substituídas por aspas duplas. Aspas simples em volta do nome da tabela são necessárias somente para os nomes de tabelas que incluem um espaço.  
+>  Embora as consultas pareçam usar aspas duplas, de fato somente aspas simples são usadas. Um par de aspas simples envolve ' Evaluate \<Tablename >', e aspas simples usadas ao redor do nome de tabela precisam ser substituídas por aspas duplas. Aspas simples em volta do nome da tabela são necessárias somente para os nomes de tabelas que incluem um espaço.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -129,7 +129,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
 |ADOMDNAME|DependencyGraph|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjuntos de linhas do esquema do Analysis Services](../analysis-services-schema-rowsets.md)   
+ [Conjuntos de linhas de esquema do Analysis Services](../analysis-services-schema-rowsets.md)   
  [Usar exibições de gerenciamento dinâmico &#40;DMVs&#41; monitorar o Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

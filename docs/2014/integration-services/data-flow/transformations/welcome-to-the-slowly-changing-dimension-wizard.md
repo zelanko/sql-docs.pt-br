@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2631b2e8973885a2816b55f96c47611534b1768a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65ffb4eb6682322006cb42c95caa1cc8fe9fc46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169248"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Bem-vindo ao Assistente para Dimensões de Alteração Lenta
   Use o **Assistente de Dimensão de Alteração Lenta** para configurar o carregamento de dados em vários tipos de dimensões de alteração lenta.  

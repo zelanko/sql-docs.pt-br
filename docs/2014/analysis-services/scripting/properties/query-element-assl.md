@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac4774f6e8a2694ee79691a84f3333ab1a4226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308406"
 ---
 # <a name="query-element-assl"></a>Elemento Query (ASSL)
   Contém o texto da consulta a ser executado para a notificação.  
@@ -58,7 +58,7 @@ ms.locfileid: "36013438"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `Query` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.QueryNotification>.  
+ O elemento que corresponde ao pai de `Query` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipo de dados ProactiveCachingQueryBinding &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

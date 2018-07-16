@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316476"
 ---
 # <a name="contained-database-collations"></a>Agrupamentos de banco de dados contidos
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha do agrupamento dos dados. Para obter uma discussão mais detalhada sobre os agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../collations/collation-and-unicode-support.md).  
@@ -62,7 +62,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento de uma coluna depende do banco de dados no qual a tabela é criada, surgem problemas com o uso de tabelas temporárias que são armazenados em `tempdb`. O agrupamento de `tempdb` geralmente corresponde ao agrupamento da instância, que não precisa corresponder ao agrupamento de banco de dados.  
+ Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento para uma coluna depende do banco de dados no qual a tabela é criada, surgem problemas com o uso de tabelas temporárias que são armazenados em `tempdb`. O agrupamento de `tempdb` geralmente corresponde ao agrupamento da instância, que não precisa corresponder ao agrupamento de banco de dados.  
   
 ### <a name="example-2"></a>Exemplo 2  
  Por exemplo, considere o banco de dados (chinês) acima quando usado em uma instância com um agrupamento **Latin1_General** :  
@@ -122,9 +122,9 @@ END;
   
  Em um banco de dados independente, o agrupamento de catálogo **Latin1_General_100_CI_AS_WS_KS_SC**. Esse agrupamento é o mesmo para todos os bancos de dados independentes em todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não pode ser alterado.  
   
- O agrupamento de banco de dados é mantido, mas é usado somente como o agrupamento padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados de modelo, mas pode ser alterado pelo usuário por meio de um `CREATE` ou `ALTER DATABASE` comando como com bancos de dados dependente.  
+ O agrupamento de banco de dados é mantido, mas é usado somente como o agrupamento padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados de modelo, mas pode ser alterado pelo usuário por meio de um `CREATE` ou `ALTER DATABASE` comando como com bancos de dados dependentes.  
   
- Uma nova palavra-chave, `CATALOG_DEFAULT`, está disponível na cláusula `COLLATE`. Ela é usada como um atalho para o agrupamento atual de metadados em bancos de dados contidos e não contidos. Isto é, em um banco de dados dependente, `CATALOG_DEFAULT` retornará o agrupamento de banco de dados atual, pois os metadados são agrupados no agrupamento de banco de dados. Em um banco de dados contido, esses valores podem ser diferentes, pois o usuário pode alterar o agrupamento do banco de dados para que ele não corresponda ao agrupamento de catálogo.  
+ Uma nova palavra-chave, `CATALOG_DEFAULT`, está disponível na cláusula `COLLATE`. Ela é usada como um atalho para o agrupamento atual de metadados em bancos de dados contidos e não contidos. Ou seja, em um banco de dados dependente, `CATALOG_DEFAULT` retornará o agrupamento de banco de dados atual, pois os metadados são agrupados no agrupamento de banco de dados. Em um banco de dados contido, esses valores podem ser diferentes, pois o usuário pode alterar o agrupamento do banco de dados para que ele não corresponda ao agrupamento de catálogo.  
   
  O comportamento de vários objetos nos bancos de dados contidos e não contidos é resumido nesta tabela:  
   
@@ -159,7 +159,7 @@ JOIN #T2
   
 -   O comportamento de agrupamento para um lote é determinado pelo banco de dados no qual o lote começa.  
   
- Observe que essa decisão é tomada antes da emissão todos os comandos, incluindo um inicial `USE`. Ou seja, se um lote começar em um banco de dados independente, mas o primeiro comando é um `USE` para um banco de dados dependente, o comportamento do agrupamento independente ainda será usado para o lote. Dito isto, uma referência para uma variável, por exemplo, pode ter vários possíveis resultados:  
+ Observe que essa decisão é tomada antes de todos os comandos são emitidos, incluindo um inicial `USE`. Ou seja, se um lote começar em um banco de dados independente, mas o primeiro comando é um `USE` para um banco de dados dependente, o comportamento do agrupamento independente ainda será usado para o lote. Dito isto, uma referência para uma variável, por exemplo, pode ter vários possíveis resultados:  
   
 -   A referência pode localizar uma correspondência exatamente. Nesse caso, a referência funcionará sem erro.  
   
@@ -167,7 +167,7 @@ JOIN #T2
   
 -   A referência pode localizar várias correspondências que originalmente eram distintas. Isso também gerará um erro.  
   
- Isso será mostrado com alguns exemplos. Para eles, pressupomos que haja um banco de dados parcialmente independente denominado `MyCDB` com seu agrupamento de banco de dados definido como agrupamento padrão **Latin1_General_100_CI_AS_WS_KS_SC**. Vamos supor que o agrupamento de instância é `Latin1_General_100_CS_AS_WS_KS_SC`. Os dois agrupamentos são distintos apenas na diferenciação de maiúsculas e minúsculas.  
+ Isso será mostrado com alguns exemplos. Para eles, pressupomos que haja um banco de dados parcialmente independente denominado `MyCDB` com seu agrupamento de banco de dados definido como agrupamento padrão **Latin1_General_100_CI_AS_WS_KS_SC**. Vamos supor que o agrupamento de instância está `Latin1_General_100_CS_AS_WS_KS_SC`. Os dois agrupamentos são distintos apenas na diferenciação de maiúsculas e minúsculas.  
   
 ### <a name="example-1"></a>Exemplo 1  
  O exemplo a seguir mostra o caso onde a referência localiza uma correspondência exata.  
@@ -239,7 +239,7 @@ GO
  Nome do objeto inválido '#A'.  
   
 ### <a name="example-3"></a>Exemplo 3  
- O exemplo a seguir demonstra o caso em que a referência localiza várias correspondências que eram originalmente distintas. Primeiro, começamos `tempdb` (que tem o mesmo agrupamento de maiusculas e minúsculas da nossa instância) e execute as instruções a seguir.  
+ O exemplo a seguir demonstra o caso em que a referência localiza várias correspondências que eram originalmente distintas. Primeiro, começamos `tempdb` (que tem o mesmo agrupamento diferencia maiusculas de minúsculas que nossa instância) e execute as seguintes instruções.  
   
 ```  
 USE tempdb;  

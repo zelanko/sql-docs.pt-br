@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 caps.latest.revision: 40
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b5641a837761e113368eea47777c3c3bf82ee20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295036"
 ---
 # <a name="script-task-editor-script-page"></a>Editor da Tarefa Script (página Script)
   Use a página **Script** da caixa de diálogo **Editor da Tarefa Script** para definir propriedades de script e especificar variáveis que podem ser acessados pelo script.  
@@ -66,7 +66,7 @@ ms.locfileid: "36130786"
  [Página geral](general-page-of-integration-services-designers-options.md)   
  [Editor da tarefa script &#40;página geral&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Página expressões](expressions/expressions-page.md)   
- [Exemplos de tarefa de script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Exemplos de tarefa script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Serviços de integração &#40;SSIS&#41; variáveis](integration-services-ssis-variables.md)   
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

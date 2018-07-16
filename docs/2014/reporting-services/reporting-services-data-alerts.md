@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272332"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são uma solução de alerta de dados que ajuda você a manter-se informado sobre os dados de relatório interessantes ou importantes para você, na hora certa. Usando dados de alerta você não precisa mais procurar informações, elas vêm até você.  
@@ -116,14 +116,14 @@ ms.locfileid: "36011734"
 ##  <a name="InstallAlerting"></a> Instalar os alertas de dados  
  O recurso de alertas de dados está disponível apenas quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint. Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, a instalação cria automaticamente o banco de dados de alertas que armazena definições de alertas de dados e metadados de alertas, e duas páginas do SharePoint para gerenciamento de alertas, e adiciona o Designer de Alertas no site do SharePoint. Não há nenhuma etapa especial para execução, ou opções para definição de alertas durante a instalação.  
   
- Se você quiser saber mais sobre como instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, incluindo o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que há de novo no serviço compartilhado [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço que você deve criar e configurar antes de usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos, consulte [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) na biblioteca MSDN.  
+ Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, incluindo o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que há de novo no serviço compartilhado [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço que você deve criar e configurar antes de poder usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos, consulte [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) na biblioteca MSDN.  
   
  Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, consulte [configurar o SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço navegador do SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Você pode usar a página **Provisionar Assinaturas e Alertas** na Administração Central do SharePoint para descobrir se o SQL Server Agent está sendo executado e criar e baixar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que executa para conceder permissões ao SQL Server Agent. Se possível, gere também os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usando o PowerShell. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configurar alertas de dados  
- Desde o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , as configurações para recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusive alertas de dados, são distribuídas entre o arquivo de configuração de servidor de relatório (rsreportserver.config) e um banco de dados de configuração do SharePoint sempre que você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint. Quando você cria o aplicativo de serviço como uma etapa na instalação e configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o banco de dados de configuração do SharePoint é criado automaticamente. Para obter mais informações, consulte [arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md) e [arquivos de configuração do Reporting Services](report-server/reporting-services-configuration-files.md).  
+ Desde o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , as configurações para recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusive alertas de dados, são distribuídas entre o arquivo de configuração de servidor de relatório (rsreportserver.config) e um banco de dados de configuração do SharePoint sempre que você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint. Quando você cria o aplicativo de serviço como uma etapa na instalação e configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o banco de dados de configuração do SharePoint é criado automaticamente. Para obter mais informações, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) e [arquivos de configuração do Reporting Services](report-server/reporting-services-configuration-files.md).  
   
  As configurações para alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluem os intervalos para limpar dados e metadados de alertas e o número de repetições ao enviar mensagens de alerta de dados por email. Você pode atualizar o arquivo de configuração e o banco de dados de configuração para usarem valores diferentes para configurações de alertas de dados  
   
@@ -199,9 +199,9 @@ ms.locfileid: "36011734"
 ##  <a name="Permissions"></a> Permissões para alertas de dados  
  Para poder criar alertas de dados em relatórios, você deve ter permissão para executar o relatório e para criar alertas no site do SharePoint. Para obter mais informações sobre permissões de relatório, consulte o seguinte.  
   
--   [Gerando Feeds de dados de relatórios &#40;SSRS e construtor de relatórios&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Gerando Feeds de dados de relatórios &#40;relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;Reporting Services no SharePoint modo integrado&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Definir permissões para itens do servidor de relatório em um Site do SharePoint &#40;modo integrado do Reporting Services no SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferecem suporte a dois níveis de permissão: operador de informações e administrador de alerta. A tabela a seguir lista as permissões e as tarefas do SharePoint relacionadas.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36011734"
  Você pode usar o SQL Agent para executar o procedimento armazenado em uma agenda. Para obter mais informações, consulte [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### <a name="report-server-execution-log"></a>Log de execução de servidor de relatório  
- Relatórios são executados para gerar os feeds de dados nos quais as definições de alertas de dados se baseiam. O log de execução do servidor de relatório no banco de dados do servidor de relatório captura informações cada vez que o relatório é executado. Você pode consultar a exibição de ExecutionLog2 no banco de dados para obter informações detalhadas. Para obter mais informações, consulte [o Log de execução do servidor de relatório e a exibição do ExecutionLog3](report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Relatórios são executados para gerar os feeds de dados nos quais as definições de alertas de dados se baseiam. O log de execução do servidor de relatório no banco de dados do servidor de relatório captura informações cada vez que o relatório é executado. Você pode consultar a exibição de ExecutionLog2 no banco de dados para obter informações detalhadas. Para obter mais informações, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
 #### <a name="report-server-trace-log"></a>Log de rastreamento do Servidor de Relatório  
  O log de rastreamento do servidor de relatório contém informações detalhadas sobre as operações do serviço Servidor de Relatório, incluindo as operações executadas pelo serviço Web Servidor de Relatório, pelo Gerenciador de Relatórios e pelo processamento em segundo plano. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Para obter mais informações, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
@@ -268,7 +268,7 @@ ms.locfileid: "36011734"
 |GenerateAlert|Alerta: eventos processados - GenerateAlert|  
 |DeliverAlert|Alerta: eventos processados - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece contadores de desempenho para outros recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [contadores de desempenho do ReportServer: Service e os objetos de desempenho de Reportserversharepoint](report-server/performance-counters-reportserver-service-performance-objects.md), [contadores de desempenho para o MSRS 2014 Web Service e MSRS 2014 Windows Objetos de desempenho do serviço &#40;modo nativo&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), e [contadores de desempenho para o MSRS 2014 Web Service SharePoint Mode e objetos de desempenho do MSRS 2014 Windows Service SharePoint modo &#40;SharePoint Modo&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece contadores de desempenho para outros recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [contadores de desempenho para os objetos de desempenho de reportserversharepoint: Service e ReportServer: Service](report-server/performance-counters-reportserver-service-performance-objects.md), [contadores de desempenho para o MSRS 2014 Web Service e o Windows do MSRS 2014 Objetos de desempenho do serviço &#40;modo nativo&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), e [contadores de desempenho para o modo do SharePoint do MSRS 2014 Web Service e objetos de desempenho do MSRS 2014 Windows Service SharePoint modo &#40;SharePoint Modo de&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Suporte para SSL  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode usar o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório ou site do SharePoint.  
@@ -280,13 +280,13 @@ ms.locfileid: "36011734"
 ##  <a name="UserInterface"></a> Interface do usuário de alerta de dados  
  Os alertas de dados fornecem páginas do SharePoint para o gerenciamento de alertas e um designer para criação e edição de definições de alertas de dados.  
   
--   **Designer de Alertas de Dados** no qual você cria ou edita definições de alertas de dados. Para obter mais informações, consulte [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md), [criar um alerta de dados no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md) e [editar um alerta de dados no Designer de alertas](edit-a-data-alert-in-alert-designer.md).  
+-   **Designer de Alertas de Dados** no qual você cria ou edita definições de alertas de dados. Para obter mais informações, consulte [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md), [criar um alerta no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md) e [editar um alerta de dados no Designer de alertas](edit-a-data-alert-in-alert-designer.md).  
   
 -   **Gerenciador de Alertas de Dados** no qual você exibe listas de alertas de dados, exclui alertas e abre alertas para edição. O Gerenciador de Alertas de Dados é fornecido em duas versões: uma para os usuários gerenciarem os alertas que criam e uma para os administradores gerenciarem os alertas que pertencem aos usuários do site.  
   
      Para obter mais informações sobre como gerenciar alertas de dados que você criou, consulte [Gerenciador de alertas de dados para os usuários do SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) e [gerenciar meus alertas de dados no Gerenciador de alertas de dados](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     Para obter mais informações sobre como gerenciar todos os alertas de dados em um site, consulte [Gerenciador de alertas de dados para os administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gerenciar todos os alertas de dados em um Site do SharePoint no Gerenciador de alertas de dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     Para obter mais informações sobre como gerenciar todos os alertas de dados em um site, consulte [Gerenciador de alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gerenciar todos os alertas de dados em um Site do SharePoint no Gerenciador de alertas de dados](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   **Provisione assinaturas e alertas de dados** nos quais você descobre se os Reporting Services podem usar o SQL Server Agent para alertas de dados e scripts de download que permitem acesso ao SQL Server Agent. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36011734"
   
 ## <a name="see-also"></a>Consulte também  
  [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md)   
- [Gerenciador de alertas de dados para os administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Gerenciador de Alertas de Dados para Usuários do SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
   

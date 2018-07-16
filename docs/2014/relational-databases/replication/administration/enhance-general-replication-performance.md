@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172867"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
   É possível melhorar o desempenho geral para todos os tipos de replicação no seu aplicativo e na rede, por meio das diretrizes descritas neste tópico.  
@@ -84,7 +84,7 @@ ms.locfileid: "36122154"
   
 -   Limite o uso de tipos de dados LOB (objetos grandes).  
   
-     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados `text`, `ntext`, e `image` são preteridos. Se você incluir LOBs, recomendamos que você use os tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
+     Os LOBs requerem mais espaço de armazenamento e processamento que outros tipos de dados de coluna. Não inclua essas colunas em artigos a menos que seja necessário para seu aplicativo. Os tipos de dados `text`, `ntext`, e `image` são preteridos. Se incluir LOBs, recomendamos que você use os tipos de dados `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivamente.  
   
      Para replicação transacional, considere usar o perfil do Distribution Agent chamado **Perfil de distribuição para fluxo contínuo do banco de dados OLE**. Para saber mais, confira [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   

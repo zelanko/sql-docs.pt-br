@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177853"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML Bulk Load processa o `sql:mapped` anotação no esquema XSD conforme o esperado, ou seja, se o esquema de mapeamento especifica `sql:mapped="false"` para qualquer elemento ou atributo, o XML Bulk Load não tentará armazenar os dados associados na coluna correspondente.  
+  XML Bulk Load processa as `sql:mapped` anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica `sql:mapped="false"` para qualquer elemento ou atributo, o XML Bulk Load não tentará armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com `sql:mapped="false"`). Todo os dados não mapeados entram na coluna de estouro, se essa coluna for especificada usando `sql:overflow-field`.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36012443"
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   
-1.  Criar a tabela a seguir no **tempdb** banco de dados:  
+1.  Criar a tabela a seguir na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  

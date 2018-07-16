@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - .SPID
 - .ExecutionTime
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 794457a7858968333d988ee559d4f36c3e9e9bf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f0d1e5df1490533bd797b7142e9903ce00bf33be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306936"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
   Use a janela **Propriedades** para exibir as propriedades de elementos selecionados. Você também pode usar a janela **Propriedades** para exibir o arquivo, o projeto e as propriedades da solução. A janela **Propriedades** está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  

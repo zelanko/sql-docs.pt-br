@@ -1,5 +1,5 @@
 ---
-title: Tabela de modelagem (Tutorial do Adventure Works) | Microsoft Docs
+title: (Tutorial do Adventure Works) de modelagem de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247366"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modelagem de tabela (Tutorial do Adventure Works)
   Este tutorial fornece lições sobre como criar um modelo de tabela do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

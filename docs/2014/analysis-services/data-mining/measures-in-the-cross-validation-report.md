@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
 - cross-validation [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bedc8656248ced7c8f25b0868804e36ad410d642
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7d45c1ff8501dff8c74de22a16ac47b69c5375a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304628"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Medidas no relatório de validação cruzada
   Durante a validação cruzada, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divide os dados em uma estrutura de mineração em várias seções cruzadas e, em seguida, iterativamente testa a estrutura e os modelos de mineração associados. Com base nesta análise, ele produz um conjunto de medidas de precisão padrão para a estrutura e cada modelo.  
@@ -41,12 +41,12 @@ ms.locfileid: "36020611"
   
 |tipo de teste|Medidas e Descrições|  
 |---------------|-------------------------------|  
-|Clustering|Medidas que se aplicam a modelos de clustering:<br /><br /> **Probabilidade de caso**: essa medida geralmente indica a probabilidade é que um caso pertencer a um cluster específico. <br />                      Para validação cruzada, as contagens são somadas e, em seguida, divididas pelo número de casos; portanto, aqui a contagem é uma probabilidade de caso média.|  
-|Classificação|Medidas que se aplicam a modelos de classificação:<br /><br /> **Verdadeiro positivo**/<br />                      **Verdadeiro negativo**/ **falso positivo**/ **falso positivo**: contagem de linhas ou valores na partição onde o estado previsto corresponde ao estado de destino, e a probabilidade de previsão é maior que o limite especificado. São excluídos casos que têm valores ausentes para o atributo de destino, que significa que as contagens de todos os valores pode não somar|  
-||**Aprovado/reprovado**: contagem de linhas ou valores na partição onde o estado previsto corresponde ao estado de destino, e o valor de probabilidade de previsão é maior que 0.|  
-|Probabilidade|Medidas de probabilidade aplicam-se a vários tipos de modelo:<br /><br /> **Comparação de precisão**: A taxa de probabilidade da previsão atual para a probabilidade marginal nos casos de teste. Linhas que têm valores ausentes para o atributo de destino são excluídas. Esta medida geralmente mostra quanto a probabilidade do resultado de destino aumenta quando o modelo é usado.<br /><br /> **Erro de raiz quadrada média**: a raiz quadrada do erro médio para todos os casos de partição, dividida pelo número de casos na partição, excluindo as linhas com valores ausentes para o atributo de destino. O RMSE é um avaliador popular para modelos preditivos. A contagem calcula a média dos resíduos para cada caso para render um único indicador de erro modelo.<br /><br /> **Pontuação de log**: O logaritmo da probabilidade real para cada caso, somado e, em seguida, dividido pelo número de linhas no conjunto de dados, exceto as linhas com valores ausentes para o atributo de destino. Como a probabilidade é representada como uma fração decimal, as pontuações de log são sempre números negativos. Um número mais próximo de 0 é uma pontuação melhor. Visto que contagens brutas podem ter distribuições muito irregulares ou distorcidas, uma contagem de log é semelhante a uma porcentagem.|  
-|Estimativa|Medidas que se aplicam somente a modelos de estimativa, que preveem um atributo numérico contínuo:<br /><br /> **Erro de raiz quadrada média**: erro médio quando o valor previsto é comparado ao valor real. O RMSE é um avaliador popular para modelos preditivos. A contagem calcula a média dos resíduos para cada caso para render um único indicador de erro modelo.<br /><br /> **Erro de média absoluta**: erro médio quando os valores previstos são comparados aos valores reais, calculados como a média da soma absoluta dos erros. Erro de média absoluta é útil para entender como as previsões em geral estão próximas dos valores reais. Uma pontuação menor significa que as previsões foram mais precisas.<br /><br /> **Pontuação de log**: O logaritmo da probabilidade real para cada caso, somado e, em seguida, dividido pelo número de linhas no conjunto de dados, exceto as linhas com valores ausentes para o atributo de destino. Como a probabilidade é representada como uma fração decimal, as pontuações de log são sempre números negativos. Um número mais próximo de 0 é uma pontuação melhor. Visto que contagens brutas podem ter distribuições muito irregulares ou distorcidas, uma contagem de log é semelhante a uma porcentagem.|  
-|Agregações|As medidas de agregação fornecem uma indicação da variação nos resultados para cada partição:<br /><br /> **Significa**: valores de média de partição para uma medida específica.<br /><br /> **Desvio padrão**: média do desvio da média para uma medida específica, em todas as partições em um modelo. Para validação cruzada, um valor mais alto para esta pontuação implica variação significativa entre as dobras.|  
+|Clustering|Medidas que se aplicam a modelos de clustering:<br /><br /> **Probabilidade de caso**: essa medida geralmente indica a probabilidade de um caso pertencer a um cluster específico. <br />                      Para validação cruzada, as contagens são somadas e, em seguida, divididas pelo número de casos; portanto, aqui a contagem é uma probabilidade de caso média.|  
+|Classificação|Medidas que se aplicam a modelos de classificação:<br /><br /> **Verdadeiro positivo**/<br />                      **Verdadeiro negativo**/ **falso positivo**/ **falso positivo**: contagem de linhas ou valores na partição em que o estado previsto corresponde ao estado de destino, e a probabilidade de previsão é maior que o limite especificado. São excluídos casos que têm valores ausentes para o atributo de destino, que significa que as contagens de todos os valores pode não somar|  
+||**Aprovação/reprovação**: contagem de linhas ou valores na partição onde o estado previsto corresponde ao estado de destino e o valor de probabilidade de previsão é maior que 0.|  
+|Probabilidade|As medidas de probabilidade se aplicam a vários tipos de modelo:<br /><br /> **Comparação de precisão**: A taxa da probabilidade da previsão atual para a probabilidade marginal nos casos de teste. Linhas que têm valores ausentes para o atributo de destino são excluídas. Esta medida geralmente mostra quanto a probabilidade do resultado de destino aumenta quando o modelo é usado.<br /><br /> **Erro de raiz quadrada média**: a raiz quadrada do erro médio para todos os casos de partição, dividida pelo número de casos na partição, excluindo as linhas que têm valores ausentes para o atributo de destino. O RMSE é um avaliador popular para modelos preditivos. A contagem calcula a média dos resíduos para cada caso para render um único indicador de erro modelo.<br /><br /> **Pontuação de log**: O logaritmo da probabilidade real para cada caso, somado e, em seguida, dividido pelo número de linhas no conjunto de dados, exceto as linhas com valores ausentes para o atributo de destino. Como a probabilidade é representada como uma fração decimal, as pontuações de log são sempre números negativos. Um número mais próximo de 0 é uma pontuação melhor. Visto que contagens brutas podem ter distribuições muito irregulares ou distorcidas, uma contagem de log é semelhante a uma porcentagem.|  
+|Estimativa|Medidas que se aplicam somente a modelos de estimativa que preveem um atributo numérico contínuo:<br /><br /> **Erro de raiz quadrada média**: erro médio quando o valor previsto é comparado ao valor real. O RMSE é um avaliador popular para modelos preditivos. A contagem calcula a média dos resíduos para cada caso para render um único indicador de erro modelo.<br /><br /> **Erro de média absoluta**: erro médio quando os valores previstos são comparados aos valores reais, calculados como a média da soma absoluta dos erros. Erro de média absoluta é útil para entender como as previsões em geral estão próximas dos valores reais. Uma pontuação menor significa que as previsões foram mais precisas.<br /><br /> **Pontuação de log**: O logaritmo da probabilidade real para cada caso, somado e, em seguida, dividido pelo número de linhas no conjunto de dados, exceto as linhas com valores ausentes para o atributo de destino. Como a probabilidade é representada como uma fração decimal, as pontuações de log são sempre números negativos. Um número mais próximo de 0 é uma pontuação melhor. Visto que contagens brutas podem ter distribuições muito irregulares ou distorcidas, uma contagem de log é semelhante a uma porcentagem.|  
+|Agregações|Agregar as medidas fornecem uma indicação da variação nos resultados para cada partição:<br /><br /> **Significa**: valores de média de partição para uma medida particular.<br /><br /> **Desvio padrão**: média do desvio da média para uma medida específica, através de todas as partições em um modelo. Para validação cruzada, um valor mais alto para esta pontuação implica variação significativa entre as dobras.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  

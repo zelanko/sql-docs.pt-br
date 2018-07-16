@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247756"
 ---
 # <a name="keycolumn-element-assl"></a>Elemento KeyColumn (ASSL)
-  Contém a definição de uma coluna, ou faz parte, a chave para um atributo.  
+  Contém a definição de uma coluna que é ou faz parte, a chave para um atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36010528"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|[O item de dados](../data-type/dataitem-data-type-assl.md)|  
+|Comprimento e tipo de dados|[DataItem](../data-type/dataitem-data-type-assl.md)|  
 |Valor padrão|Nenhum|  
 |Cardinalidade|1-n: elemento obrigatório que pode ocorrer mais de uma vez.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36010528"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tipo, consulte [o tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tipo, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  Os elementos que correspondem aos pais da coleção `KeyColumns` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute> e <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   

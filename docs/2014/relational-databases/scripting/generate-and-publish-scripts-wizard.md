@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
 - sql9.swb.generatescriptswizard.scriptwizarddescription.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 06b4bbbca6699c274701ae479cf24daaabdcf18b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307606"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
   Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
@@ -192,9 +192,9 @@ ms.locfileid: "36115211"
   
 -   **Gerar script de permissões em nível de objeto** – Inclui scripts para definir a permissão nos objetos no banco de dados. O padrão é **False**.  
   
--   **Estatísticas de script** -quando definido como **estatísticas do Script**, essa opção inclui a `CREATE STATISTICS` instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Estatísticas de script** -quando definido como **estatísticas de Script**, essa opção inclui a `CREATE STATISTICS` instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Usar banco de dados de script** -adiciona o `USE DATABASE` instrução no script. Para ter certeza de que os objetos de banco de dados são criados no banco de dados correto, inclua o `USE DATABASE` instrução. Quando o script deve ser usado em um banco de dados diferente, selecione **False** para omitir o `USE DATABASE` instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Usar banco de dados de script** -adiciona o `USE DATABASE` instrução no script. Para ter certeza de que os objetos de banco de dados são criados no banco de dados correto, inclua o `USE DATABASE` instrução. Quando se espera que o script a ser usado em outro banco de dados, selecione **falsos** omitir o `USE DATABASE` instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Tipos de dados para script** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema somente**.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36115211"
   
 -   **Controle de alterações de script** – Controle de alterações de scripts se for habilitado no banco de dados de origem ou nas tabelas no banco de dados de origem. O padrão é **False**. Para obter mais informações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Restrições de verificação de script** – adiciona `CHECK` restrições para o script. O padrão é **True**. `CHECK` restrições requerem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Restrições check do script** – Adds `CHECK` restrições para o script. O padrão é **True**. `CHECK` restrições de exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para obter mais informações, consulte [Data Compression](../data-compression/data-compression.md). O padrão é **False**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36115211"
   
 8.  **Publicar estatísticas** -quando definido como **publicar estatísticas**, inclui o `CREATE STATISTICS` instrução para recriar estatísticas no objeto. A opção **Publicar estatísticas e histogramas** também cria informações de histograma. O padrão é **Não publicar estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
-9. **Publicar opções vardecimal** -permite que o `vardecimal` formato de tabela na tabela de banco de dados de destino quando ele está habilitado na tabela de banco de dados de origem. O padrão é **True**.  
+9. **Publicar opções vardecimal** -habilita o `vardecimal` formato de tabela na tabela de banco de dados de destino quando ele é habilitado na tabela de banco de dados de origem. O padrão é **True**.  
   
 10. **Qualificar nomes de objetos do esquema** – Inclui o nome do esquema no nome de objetos que são criados. O padrão é **True**.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "36115211"
   
  **Opções de Tabela/Exibição** – As opções a seguir se aplicam somente a tabelas ou exibições.  
   
-1.  **Publicar restrições check** -inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **True**. `CHECK` restrições requerem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publicar restrições check** -inclui a criação de `CHECK` restrições no processo de publicação. O padrão é **True**. `CHECK` restrições de exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publicar chaves estrangeiras** – Inclui a criação de chaves estrangeiras no processo de publicação. O padrão é **True**. Chaves estrangeiras indicam e impõem relações entre tabelas. Para obter mais informações, consulte [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   

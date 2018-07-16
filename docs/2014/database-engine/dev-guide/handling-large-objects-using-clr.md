@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36013172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310346"
 ---
 # <a name="handling-large-objects-using-clr"></a>Manipulando objetos grandes usando CLR
   O exemplo `HandlingLOBUsingCLR` do SQL Server demonstra a transferência de LOBs (objetos grandes) entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um sistema de arquivos que está disponível para o servidor com o uso dos procedimentos armazenados CLR (Common Language Runtime). Esse exemplo demonstra como acessar arquivos em código de servidor e, em seguida, invocar consultas dinâmicas e procedimentos armazenados a partir de procedimentos armazenados baseados em CLR. Ele também demonstra como cancelar o registro e registrar métodos e assemblies CLR usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  

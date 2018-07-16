@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318126"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detecção de conflitos na replicação ponto a ponto
   A replicação transacional ponto a ponto permite inserir, atualizar ou excluir dados em qualquer modo em uma topologia e faz com que as alterações de dados sejam propagadas para os outros nós. Uma vez que você pode alterar dados em qualquer nó, as alterações de dados em nós diferentes podem entrar em conflito umas com as outras. Se uma linha for modificada em mais de um nó, isso poderá causar um conflito ou mesmo uma atualização perdida quando a linha for propagada para outros nós.  
@@ -90,7 +90,7 @@ ms.locfileid: "36011747"
   
 -   Tente sincronizar o nó novamente permitindo que o Agente de Distribuição continue a aplicar as alterações:  
   
-    1.  Executar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especificar 'p2p_continue_onconflict' para o @property parâmetro e `true` para o @value parâmetro.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Especifique 'p2p_continue_onconflict' para o @property parâmetro e `true` para o @value parâmetro.  
   
     2.  Reinicie o Agente de Distribuição.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36011747"
         > [!NOTE]  
         >  Se os dados forem inconsistentes depois dessa etapa, você deve atualizar manualmente as linhas no nó que tem a prioridade mais alta e, em seguida, permitir que as alterações propagem a partir desse nó. Se não houver nenhuma outra alteração conflitante na topologia, todos os nós serão levados para um estado consistente.  
   
-    5.  Executar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especificar 'p2p_continue_onconflict' para o @property parâmetro e `false` para o @value parâmetro.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Especifique 'p2p_continue_onconflict' para o @property parâmetro e `false` para o @value parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  

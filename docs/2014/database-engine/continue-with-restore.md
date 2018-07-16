@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.continuerestore.f1
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7a5beacf1f86d3c7df7739fdbdcd0fd8dfb7980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58a890012102b263a0db9dc2df177c41a27d4625
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291382"
 ---
 # <a name="continue-with-restore"></a>Continuar Restauração
   Use a caixa de diálogo **Continuar Restauração** para indicar se você deseja restaurar o próximo conjunto de backup. Para reter a operação de restauração, por exemplo, para trocar fitas, aguarde até estar pronto para prosseguir antes de clicar em **OK**.  
@@ -32,7 +31,7 @@ ms.locfileid: "36120844"
  **Conjunto de mídias**  
  Exibe o nome do próximo conjunto de mídia (se disponível).  
   
- **conjunto de backup**  
+ **Conjunto de backup**  
  Exibe o nome do conjunto de backup.  
   
  **Descrição do conjunto de backup**  

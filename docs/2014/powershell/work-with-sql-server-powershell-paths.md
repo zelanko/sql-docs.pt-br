@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7a0f936daca1683c4aeb54e01c8b8cb567d145c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb7c5270dba5a624ec843d2c4f90019e777b462f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327776"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabalhar com caminhos do SQL Server PowerShell
   Depois de navegar para um nó em um caminho de provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] , pode executar trabalho ou recuperar informações usando os métodos e as propriedades do objeto de gerenciamento do [!INCLUDE[ssDE](../includes/ssde-md.md)] associado com o nó.  
@@ -80,7 +80,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | where {$_.Schema -eq "Sales"}  
 ```  
   
- Este exemplo usa o SMO **Script** método para gerar um script que contém o `CREATE VIEW` instruções que você deve ter para recriar as exibições em AdventureWorks2012:  
+ Este exemplo usa o SMO **Script** método para gerar um script que contém o `CREATE VIEW` instruções, você deve ter para recriar as exibições em AdventureWorks2012:  
   
 ```  
 Remove-Item C:\PowerShell\CreateViews.sql  

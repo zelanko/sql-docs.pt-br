@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200626"
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
   Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
@@ -261,7 +261,7 @@ WHERE IsInNode('001')
  [Retornar ao início](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Exemplo de consulta 8: Prevendo resultados de um modelo de clustering  
- Se o modelo de clustering criado tiver um atributo previsível, use-o para fazer previsões sobre os resultados. No entanto, o modelo manipula o atributo previsível diferente dependendo se você definir a coluna previsível `Predict` ou `PredictOnly`. Se você definir o uso da coluna a ser `Predict`, os valores de atributo são adicionados ao modelo de clustering e aparecerão como atributos no modelo finalizado. Porém, se você definir o uso da coluna como `PredictOnly`, os valores não serão usados para criar clusters. Em vez disso, depois que o modo for concluído, o algoritmo de clustering cria novos valores para o `PredictOnly` atributo com base nos clusters aos quais cada caso pertence.  
+ Se o modelo de clustering criado tiver um atributo previsível, use-o para fazer previsões sobre os resultados. No entanto, o modelo manipula o atributo previsível de forma diferente dependendo se você definir a coluna previsível `Predict` ou `PredictOnly`. Se você definir o uso da coluna a ser `Predict`, os valores para esse atributo são adicionados ao modelo de clustering e aparecerão como atributos no modelo finalizado. Porém, se você definir o uso da coluna como `PredictOnly`, os valores não serão usados para criar clusters. Em vez disso, quando o modo for concluído, o algoritmo de clustering cria novos valores para o `PredictOnly` atributo com base nos clusters aos quais cada caso pertence.  
   
  A consulta a seguir fornece um único caso novo para o modelo, onde as únicas informações sobre o caso são a idade e o sexo. A instrução SELECT especifica o par atributo/valor previsível de seu interesse e a função [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) informa a probabilidade de um caso com esses atributos ter o resultado planejado.  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Exemplo dos resultados quando uso for definido como `Predict`:  
+ Exemplo dos resultados quando o uso é definido como `Predict`:  
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1ce2159300b790042ac7979cdc63adae3e05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8bc28433c9d54f3563bb635cbdbb12590f985a40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36012479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300456"
 ---
 # <a name="user-configurable-event-class"></a>classe de evento User-Configurable
   Use a categoria de evento User-Configurable para monitorar eventos definidos pelo usuário. Crie classes de evento definidas pelo usuário para monitorar eventos que não podem ser monitorados pelas classes de eventos fornecidas pelo sistema em outras categorias de evento. Por exemplo, um evento definido pelo usuário pode ser criado para monitorar o progresso do aplicativo que você está testando. À medida que o aplicativo é executado, ele pode gerar eventos em pontos predefinidos, permitindo que você determine o ponto de execução atual no seu aplicativo.  

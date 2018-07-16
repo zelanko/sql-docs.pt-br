@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327326"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
-  Se uma consulta FOR XML especificar uma coluna de `xml` tipo na cláusula SELECT, os valores de coluna serão mapeados como elementos no XML retornado, independentemente se você especificar a diretiva ELEMENTS. Qualquer declaração XML na coluna de tipo `xml` não é serializada.  
+  Se uma consulta FOR XML especificar uma coluna de `xml` tipo na cláusula SELECT, os valores de coluna serão mapeados como elementos no XML retornado, independentemente de você especificar a diretiva ELEMENTS. Qualquer declaração XML na coluna de tipo `xml` não é serializada.  
   
- Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como o `BusinessEntityID`, `FirstName`, e `LastName` colunas e os números de telefone do `AdditionalContactInfo` coluna `xml` tipo.  
+ Por exemplo, a consulta a seguir recupera informações de contato do cliente, tais como o `BusinessEntityID`, `FirstName`, e `LastName` colunas e os números de telefone dos `AdditionalContactInfo` coluna de `xml` tipo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Uma instância das `xml` tipo  
   
- Por exemplo, a seguinte função definida pelo usuário retorna uma tabela com uma única coluna de `xm`tipo:  
+ Por exemplo, a seguinte função definida pelo usuário retorna uma tabela com uma única coluna de `xm`tipo l:  
   
 ```  
 USE AdventureWorks2012;  

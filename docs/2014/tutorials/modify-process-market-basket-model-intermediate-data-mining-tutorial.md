@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 96eb44713cd34fdcea81a7e5e4daf26739afdec1
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1f0fe6899be3f9828a8ba9d91f2c9abf7ba48b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246116"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Modificando e processando o modelo de cesta de compras (Tutorial de mineração de dados intermediário)
-  Antes de processar o modelo de mineração de associação que você criou, você deve alterar os valores padrão de dois parâmetros: *suporte* e *probabilidade*.  
+  Antes de processar o modelo de mineração de associação que você criou, você deve alterar os valores padrão de dois dos parâmetros: *suporte* e *probabilidade*.  
   
 -   *Suporte* define a porcentagem de casos em que uma regra deve existir antes de ser considerado válido. Você especificará que uma regra deve ser encontrada em pelo menos 1 por cento dos casos.  
   
--   *Probabilidade* define como provavelmente uma associação deve ser antes de ser considerado válido. Você vai considerar qualquer associação com a probabilidade de pelo menos 10 por cento.  
+-   *Probabilidade* define como provavelmente uma associação deve ser antes que ele é considerado válido. Você vai considerar qualquer associação com a probabilidade de pelo menos 10 por cento.  
   
  Para obter mais informações sobre os efeitos de aumentar ou diminuir a probabilidade e suporte, consulte [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36311904"
   
 2.  Clique com botão direito do **associação** coluna da grade no designer e selecione **definir parâmetros de algoritmo para abrir os parâmetros do algoritmo** caixa de diálogo.  
   
-3.  No **valor** coluna o **parâmetros de algoritmo** caixa de diálogo caixa, defina os seguintes parâmetros:  
+3.  No **valor** coluna da **parâmetros de algoritmo** caixa de diálogo caixa, defina os seguintes parâmetros:  
   
      MINIMUM_PROBABILITY = 0.1  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36311904"
   
 ### <a name="to-process-the-mining-model"></a>Para processar o modelo de mineração  
   
-1.  Sobre o **modelo de mineração** menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selecione **processar estrutura de mineração e todos os modelos.**  
+1.  Sobre o **modelo de mineração** menu da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selecione **processar estrutura de mineração e todos os modelos.**  
   
 2.  No aviso que pergunta se você deseja construir e implantar o projeto, clique em **Sim**.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36311904"
   
 4.  Depois que o processamento estiver completo, clique em **Fechar** para sair da caixa de diálogo **Progresso do Processo** .  
   
-5.  Clique em **fechar** novamente para sair do **processar estrutura de mineração - associação** caixa de diálogo.  
+5.  Clique em **feche** novamente para sair do **processar estrutura de mineração - associação** caixa de diálogo.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Explorando os modelos de cesta de compras &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
+ [Explorando os modelos de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

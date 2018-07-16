@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27410ba1fa02fac7b2db9f0404db450b6a6463d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a44dd79a67fe38735d54d1d91a9a37fdeb32e0e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209616"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
-  Use o **executando operação** página para exibir o progresso e os resultados da operação de importação/exportação e para interromper a operação, se necessário.  
+  Use o **realizando operação** página para exibir o progresso e os resultados da operação de importação/exportação e para interromper a operação, se necessário.  
   
  Para saber mais sobre este assistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções para iniciar o assistente, bem como as permissões necessárias para executar o assistente com êxito, consulte [executar o Assistente de exportação e importação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36122881"
  Exibe mensagens informativas e mensagens de erro que a ação pode gerar.  
   
  **Filter**  
- Escolha se você quer exibir somente erros, avisos ou ações bem sucedidas. Você pode reverter para a exibição padrão escolhendo **Mostrar todas as ações**.  
+ Escolha se você quer exibir somente erros, avisos ou ações bem sucedidas. Você pode reverter para a exibição padrão, escolhendo **Mostrar todas as ações**.  
   
  **Parar**  
  Interrompa a operação, se necessário, usando o **parar** botão.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Keys element
 ms.assetid: 67291791-0032-412a-9a4f-74f68533e83d
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0d393f7d61189ced2397a7c230434364710b063e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6875795b79daa2be3942f0e9e71ab6c4d2e6c960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310376"
 ---
 # <a name="keys-element-xmla"></a>Elemento Keys (XMLA)
   Contém uma coleção de [chave](key-element-xmla.md) elementos usados para identificar as chaves de membro do membro de atributo representado pelo pai [atributo](attribute-element-xmla.md) elemento.  
@@ -69,8 +69,8 @@ ms.locfileid: "36115703"
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento drop &#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

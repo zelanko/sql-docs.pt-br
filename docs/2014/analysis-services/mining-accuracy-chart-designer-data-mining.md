@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.overview.f1
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fbe39da10dfd1793110148388c1ae0cf0f1ad69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9df4f4a29a0a6d61422a9b82e2d5f62c16ec29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301226"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Designer do Gráfico de Precisão de Mineração (Mineração de Dados)
   Use a exibição **Gráfico de Precisão de Mineração** para comparar o desempenho dos modelos de mineração criados com base na estrutura de mineração selecionada.  
@@ -50,19 +50,19 @@ ms.locfileid: "36117763"
   
 -   [Selecione a caixa de diálogo tabela &#40;exibição de gráfico de precisão de mineração&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
   
--   [Caixa de diálogo de junção aninhada especificar &#40;exibição de gráfico de precisão de mineração&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
+-   [Especificar junção aninhada caixa de diálogo &#40;exibição de gráfico de precisão de mineração&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [Caixa de diálogo de configurações do gráfico de ganho &#40;exibição de gráfico de precisão de mineração&#41;](profit-chart-settings-dialog-box-mining-accuracy-chart-view.md)  
   
--   [Modificar mapeamento de caixa de diálogo &#40;gráfico de precisão de mineração&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
+-   [Modificar o mapeamento de caixa de diálogo &#40;gráfico de precisão de mineração&#41;](modify-mapping-dialog-box-mining-accuracy-chart.md)  
   
 -   [Caixa de diálogo filtro &#40;gráfico de precisão de mineração&#41;](filter-dialog-box-mining-accuracy-chart.md)  
   
--   [Caixa de diálogo de filtro de modelo ou filtro de conjunto de dados](data-set-filter-or-model-filter-dialog-box.md)  
+-   [Data Set filtro or Model filtro Dialog Box](data-set-filter-or-model-filter-dialog-box.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Modo de exibição de estrutura de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Exibição de modelos de mineração &#40;Designer do modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Exibição de modelos de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
   

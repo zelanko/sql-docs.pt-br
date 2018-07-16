@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f1f86d8bc9b9be2a503e6e245d2b0b4d88917903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 49dd8abf026cc3beffe30b0137abe643b29a97d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175350"
 ---
 # <a name="migrating-triggers"></a>Migrando gatilhos
   Este tópico discute gatilhos DDL e DML, e tabelas com otimização de memória.  

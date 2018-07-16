@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175239"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   Nesta lição, você usará o Gerenciador de Relatórios para selecionar um relatório que será entregue a destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.  
@@ -34,11 +34,11 @@ ms.locfileid: "36130263"
   
 -   [Para adicionar um parâmetro de relatório e republicar o relatório](#bkmk_add_reportparameter)  
   
--   [Para reimplantar o relatório](#bkmk_redeploy)  
+-   [Para implantar o relatório novamente](#bkmk_redeploy)  
   
 ##  <a name="bkmk_modify_datasource"></a> Para modificar as propriedades de fonte de dados  
   
-1.  Iniciar [Gerenciador de relatórios &#40;modo nativo do SSRS&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) com privilégios de administrador, por exemplo, com o botão direito no ícone para o Internet Explorer e clique em **executar como administrador**.  
+1.  Inicie [Gerenciador de relatórios &#40;modo nativo do SSRS&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) com privilégios de administrador, por exemplo, clique com botão direito no ícone do Internet Explorer e clique em **executar como administrador**.  
   
 2.  Navegue até a pasta que contém o relatório **Pedidos de Vendas** e, no menu de contexto do relatório, clique em **Gerenciar**.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36130263"
   
 6.  Clique em **Credenciais armazenadas com segurança no servidor de relatórios**.  
   
-7.  Digite seu nome de usuário (use o formato *domain\user*) e a senha. Se você não tem permissão para acessar o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados, especifique um logon que.  
+7.  Digite seu nome de usuário (use o formato *domain\user*) e a senha. Se você não tiver permissão para acessar o [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de banco de dados, especifique um logon que tenha.  
   
-8.  Clique em **Usar as credenciais do Windows ao conectar-se à fonte de dados**e depois clique em **OK**. Se você não estiver usando uma conta de domínio (por exemplo, se você estiver usando um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logon), não clique nesta caixa de seleção.  
+8.  Clique em **Usar as credenciais do Windows ao conectar-se à fonte de dados**e depois clique em **OK**. Se você não estiver usando uma conta de domínio (por exemplo, se você estiver usando um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logon), não clique essa caixa de seleção.  
   
 9. Clique em **Testar Conexão** para verificar se é possível conectar-se à fonte de dados.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36130263"
   
 8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção “Para publicar o relatório no Servidor de Relatório (opcional)” da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-##  <a name="bkmk_redeploy"></a> Para reimplantar o relatório  
+##  <a name="bkmk_redeploy"></a> Para implantar o relatório novamente  
   
 1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, consulte a seção “Para publicar o relatório no Servidor de Relatório (opcional)” da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   

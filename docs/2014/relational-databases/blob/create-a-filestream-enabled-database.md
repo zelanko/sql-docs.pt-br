@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], FILESTREAM-enabled databases
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea0ab6c8c418b3ea2e3d286f38b382c7e73794eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5470eb34e5084c86763b4baf360349cfd405bd83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227762"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Criar um banco de dados habilitado para FILESTREAM
   Este tópico mostra como criar um banco de dados que oferece suporte a FILESTREAM. Como o FILESTREAM usa um tipo especial de grupo de arquivos, ao criar o banco de dados, será preciso especificar a cláusula CONTAINS FILESTREAM para pelo menos um grupo de arquivos.  
@@ -32,7 +31,7 @@ ms.locfileid: "36121286"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique em **Nova Consulta** para exibir o Editor de Consultas.  
   
-2.  Copie o [!INCLUDE[tsql](../../includes/tsql-md.md)] código cria um banco de dados habilitado para FILESTREAM chamado arquivo.  
+2.  Copie o [!INCLUDE[tsql](../../includes/tsql-md.md)] código cria um banco de dados habilitado para FILESTREAM chamado arquivo morto.  
   
     > [!NOTE]  
     >  Para este script, o diretório C:\Data deve existir.  

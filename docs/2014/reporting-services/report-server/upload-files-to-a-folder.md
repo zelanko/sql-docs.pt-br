@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -21,13 +21,13 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 579d4d16e72b349ac4c2aa5d083d8dc1cfeb85a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266142"
 ---
 # <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
   Você pode carregar arquivos do sistema de arquivos e armazená-los como itens gerenciados em um banco de dados do servidor de relatório. O que acontece quando o arquivo é carregado depende do tipo de arquivo.  
@@ -63,7 +63,7 @@ ms.locfileid: "36010608"
 |Exibir o conteúdo de uma pasta|Exibir recursos, exibir relatórios|  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]. / relatório-manager-ssrs-nativo-mode.md)   
+ [Gerenciador de relatórios &#40;modo nativo do SSRS&#41;]... / relatório-manager-ssrs-native-mode.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
  [Carregar um arquivo ou relatório &#40;Gerenciador de Relatórios&#41;](../reports/upload-a-file-or-report-report-manager.md)  

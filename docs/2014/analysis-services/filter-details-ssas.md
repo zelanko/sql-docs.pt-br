@@ -1,5 +1,5 @@
 ---
-title: Detalhes do filtro (SSAS) | Microsoft Docs
+title: Filtrar detalhes (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.filterdetails.f1
 ms.assetid: 0280b963-4c5a-4ad1-904b-360b43dfb10a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 711bd4865331ba93f863b5bce7f3569414dd6ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4274a99e94aa90c6dd7120c90dfbdb8bae5a058f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293576"
 ---
 # <a name="filter-details-ssas"></a>Detalhes do Filtro (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite exibir os filtros especificados para a importação de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 caps.latest.revision: 20
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d451248e28f8c9e0fd623c96022f558b80ca8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0428ffb21563c214c362d88801f79ecb5c7ed5de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328006"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionando e configurando a fonte de arquivo simples
   Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
@@ -32,7 +32,7 @@ ms.locfileid: "36019616"
   
 2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outras Fontes**e arraste uma **Fonte de Arquivo Simples** até a superfície de design da guia **Fluxo de Dados** .  
   
-3.  Sobre o **de fluxo de dados** superfície de design, clique no recém-adicionado **fonte de arquivo simples**, clique em **Renomear**e altere o nome para `Extract Sample Currency Data`.  
+3.  Sobre o **fluxo de dados** superfície de design, clique com botão direito recém-adicionada **fonte de arquivo simples**, clique em **Renomear**e altere o nome para `Extract Sample Currency Data`.  
   
 4.  Clique duas vezes na Fonte de Arquivo Simples para abrir a caixa de diálogo Editor da Fonte de Arquivo Simples.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36019616"
   
 8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e clique em **Propriedades**.  
   
-9. Na janela Propriedades, verifique se o `LocaleID` está definida como **inglês (Estados Unidos)**.  
+9. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 6: Adicionando e configurando a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

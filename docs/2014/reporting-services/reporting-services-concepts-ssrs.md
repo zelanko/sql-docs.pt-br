@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36117117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236296"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -30,13 +30,13 @@ ms.locfileid: "36117117"
   
  **Neste tópico:**  
   
--   [Conceitos do servidor de relatório](#bkmk_ReportServerConcepts)  
+-   [Conceitos de servidor de relatório](#bkmk_ReportServerConcepts)  
   
 -   [Conceitos de relatórios e itens relacionados](#bkmk_ReportsandRelatedItemConcepts)  
   
 -   [Tipos de relatórios](#bkmk_TypesofReports)  
   
--   [Estágios do desenvolvimento de relatório](#bkmk_StagesofReports)  
+-   [Estágios de desenvolvimento de relatórios](#bkmk_StagesofReports)  
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Conceitos do servidor de relatório  
  Um servidor de relatório é um computador que tem uma instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalada. Um servidor de relatório armazena internamente itens, como relatórios, itens e recursos relacionados a relatórios, agendas e assinaturas. Um servidor de relatório pode ser configurado como um único servidor autônomo ou como um farm em expansão ou pode ser integrado ao Servidor do SharePoint. Você interage com itens do servidor de relatório por meio do serviço Web do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , do provedor WMI, de acesso à URL ou programaticamente por meio de scripts. A maneira como você interage com um servidor de relatório depende da topologia de implantação e da configuração.  
@@ -70,7 +70,7 @@ ms.locfileid: "36117117"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece uma arquitetura extensível que você pode usar para personalizar soluções de relatório. O servidor de relatório dá suporte aos seguintes tipos de extensões: autenticação personalizada, processamento de dados, processamento de relatórios, renderização e entrega, e as extensões que estão disponíveis para os usuários são configuráveis no arquivo de configuração RSReportServer.config. Por exemplo, você pode limitar os formatos de exportação que o visualizador de relatório tem permissão para usar. As extensões de entrega e de processamento de relatório são opcionais, mas necessárias se você desejar dar suporte aos controles de distribuição e personalização. Para obter mais informações, consulte [Extensões &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Acesso ao relatório**  
- O acesso sob demanda permite que os usuários selecionem os relatórios a partir de uma ferramenta de visualização de relatório. Dependendo da configuração do servidor de relatório, você pode usar o Gerenciador de relatórios, um [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web Parts, uma biblioteca do SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint, um controle ReportViewer inserido ou um navegador usando a URL acesso. Para obter mais informações sobre o acesso sob demanda aos relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ O acesso sob demanda permite que os usuários selecionem os relatórios a partir de uma ferramenta de visualização de relatório. Dependendo da configuração do servidor de relatório, você pode usar o Gerenciador de relatórios, uma [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web part, uma biblioteca do SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint, um controle ReportViewer inserido ou um navegador com URL acesso. Para obter mais informações sobre o acesso sob demanda aos relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  As assinaturas são uma alternativa à execução de um relatório sob demanda. Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36117117"
   
 -   Use a função `Lookup` para pesquisar valores de pares de nome/valor em um conjunto de dados diferente.  
   
- **partes de relatório**  
+ **Partes de relatório**  
  Uma definição de parte de relatório (.rsc) é um item de servidor de relatório que é um fragmento XML de um arquivo de definição de relatório. Para criar partes de relatório, crie uma definição de relatório e depois selecione itens de relatório no relatório para publicar separadamente como partes de relatório. Partes de relatório incluem regiões de dados, retângulos, além dos itens e imagens contidos neles. Você pode salvar uma parte de relatório com conjuntos de dados dependentes e referências à fonte de dados compartilhada para que ela seja reutilizada em outros relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
  **Alertas de dados**  
@@ -186,7 +186,7 @@ ms.locfileid: "36117117"
   
 -   **Relatório de Clickthrough.** Um relatório de clickthrough é um relatório que exibe dados relacionados de um modelo de relatório quando você clica nos dados interativos contidos no relatório baseado no modelo. Os relatórios de clickthrough são gerados automaticamente. Para obter mais informações, consulte [Relatórios de clickthrough &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md).  
   
- Para obter mais informações sobre modelos SMDL, consulte [alterações recentes no SQL Server Reporting Services no SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ Para obter mais informações sobre modelos SMDL, consulte [alterações significativas no SQL Server Reporting Services no SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  **Relatórios salvos**  
  Um relatório salvo é um arquivo de definição de relatório (.rdl). Uma definição de relatório pode ser salva localmente ou carregada em um servidor de relatório. Se você carregar uma definição de relatório em vez de publicá-la, não ocorrerá nenhuma validação de versão ou de expressão. Você não verá erros até que o relatório seja executado. Para obter mais informações, consulte [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
@@ -197,25 +197,25 @@ ms.locfileid: "36117117"
  **Relatórios atualizados**  
  Um relatório atualizado é uma definição de relatório publicada que é convertida em um esquema mais novo quando um servidor de relatório é atualizado de uma versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para uma versão posterior. A definição do relatório original é preservada. O relatório é atualizado na memória e compilado, e a versão compilada é salva internamente. Para obter mais informações, consulte [Upgrade Reports](install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_StagesofReports"></a> Estágios do desenvolvimento de relatório  
+##  <a name="bkmk_StagesofReports"></a> Estágios de desenvolvimento de relatórios  
  Uma definição de relatório pode ser criada, publicada ou salva, compilada, processada, armazenada em cache, renderizada, exibida, exportada e salva como histórico. Quando você executa um relatório, o servidor de relatório processa um relatório em três etapas: processamento, processamento de dados e renderização de relatório. O processamento dos dados e do relatório é executado em uma definição de relatório. Os resultados estão em um formato interno intermediário. Os relatórios no formato intermediário são subsequentemente renderizados para um formato de exibição específico. O diagrama a seguir mostra os estágios e os elementos de processamento de relatório.  
   
  ![Diagrama de processamento de relatório](media/report-execution.gif "Diagrama de processamento de relatório")  
 Diagrama de processamento de relatório  
   
- **definição de relatório**  
+ **Definição de relatório**  
  O arquivo de definição de relatório (.rdl) armazenado em um servidor de relatório. Para obter mais informações, consulte [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
  **Relatório compilado e formato de relatório intermediário**  
  O relatório que usa expressões avaliadas, parâmetros e propriedades de parâmetros avaliados.  
   
- **Instantâneo ou histórico de relatórios**  
+ **Instantâneo ou histórico de relatório**  
  Um instantâneo é o conjunto de dados do relatório em um momento específico junto com o formato intermediário que contém as informações de layout do relatório. Para obter mais informações, consulte [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md).  
   
  **Relatório processado**  
  Um relatório totalmente processado que contém informações de dados e de layout.  
   
- **relatório renderizado**  
+ **Relatório renderizado**  
  Um relatório totalmente processado é enviado a um renderizador de relatório para combinar os dados e o layout em cada página do formato de renderização de destino. As extensões de renderização são personalizáveis e extensíveis. O formato de renderização padrão para relatórios é HTML 4.0. Para obter mais informações, consulte [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) e [Extensões &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Relatório exportado**  
