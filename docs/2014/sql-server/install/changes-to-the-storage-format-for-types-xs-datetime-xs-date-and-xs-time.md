@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222516"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Alterações no formato de armazenamento para os tipos xs:dateTime, xs:date e xs:time
   A regra XMLDATETIME identifica se os bancos de dados contêm ou não dados XML digitados que se tornarão inválidos após a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -190,6 +190,6 @@ EXECUTE DateTimeInvestigation 1;
  Para usar índices XML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] depois da atualização, você deve recriar índices XML ou redigitar colunas XML para todas as colunas que usam xs:date, xs:time ou xs:dateTime.  
   
 ## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

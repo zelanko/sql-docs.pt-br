@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b67903b59934fb8d43d8dafe2bfc8392ab56462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e46bd0278b782c85189416b8d452b5148a3ed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187163"
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
   A tarefa Executar Processo executa um aplicativo ou arquivo de lote como parte de um fluxo de trabalho do pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
@@ -43,9 +43,9 @@ ms.locfileid: "36115265"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Execute o Editor de tarefa do processo &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa de processo de executar &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Execute o Editor de tarefa do processo &#40;processar página&#41;](../execute-process-task-editor-process-page.md)  
+-   [Editor da tarefa de processo de executar &#40;processar página&#41;](../execute-process-task-editor-process-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   

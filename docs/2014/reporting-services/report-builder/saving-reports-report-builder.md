@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290222"
 ---
 # <a name="saving-reports-report-builder"></a>Salvando relatórios (Construtor de Relatórios)
   O Construtor de Relatórios permite salvar um relatório em um servidor de relatório, na biblioteca do SharePoint, no compartilhamento de arquivo no qual você tem permissão de gravação, ou no seu computador. É possível salvar um relatório no mesmo local do qual foi aberto, salvá-lo em outro local ou salvá-lo com um novo nome no mesmo local ou em outro local. Por padrão, um relatório é salvo novamente no local do qual foi aberto. Quando salva o relatório, na verdade, você está salvando a definição do relatório, que descreve o layout do relatório. Você não está salvando os dados. Sempre que o relatório é executado, seus dados são atualizados e é provável que sejam diferentes da execução anterior do relatório.  
@@ -81,10 +81,10 @@ ms.locfileid: "36019527"
 
   
 ## <a name="see-also"></a>Consulte também  
- [Relatórios, partes de relatório e as definições de relatório &#40;SSRS e construtor de relatórios&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Relatórios, partes de relatório e definições de relatório &#40;relatórios e SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;SSRS e construtor de relatórios&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

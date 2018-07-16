@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200866"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
   Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  
@@ -64,7 +64,7 @@ ms.locfileid: "36020428"
   
     |attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas na `Extension` elemento de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
+    |`Name`|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do `Extension` elemento de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |`Type`|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
   
      Por exemplo, a entrada deve ser semelhante à seguinte para uma DLL implantada no servidor de relatórios do diretório \bin:  
@@ -87,7 +87,7 @@ ms.locfileid: "36020428"
   
 3.  Localize o elemento `CodeGroup` no arquivo rssrvpolicy.config.  
   
-4.  Adicionar um grupo de códigos para o assembly do provedor de dados que concede `FullTrust` permissão. O grupo de códigos deve ser semelhante ao seguinte:  
+4.  Adicionar um grupo de códigos para o assembly do provedor de dados que conceda `FullTrust` permissão. O grupo de códigos deve ser semelhante ao seguinte:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -137,7 +137,7 @@ ms.locfileid: "36020428"
   
     |attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas na `Extension` elemento de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
+    |`Name`|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo `Name` é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do `Extension` elemento de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |`Type`|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
   
      Por exemplo, a entrada deve ser semelhante à seguinte para uma DLL implantada no diretório PrivateAssemblies do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] :  
@@ -162,7 +162,7 @@ ms.locfileid: "36020428"
     </Extensions>  
     ```  
   
-6.  Adicione a seguinte entrada ao arquivo RSReportDesigner. config sob o `Designer` elemento. Você precisa substituir apenas o `Name` atributo com o nome que você forneceu nas entradas anteriores.  
+6.  Adicione a seguinte entrada ao arquivo RSReportDesigner config sob o `Designer` elemento. Você precisa substituir apenas a `Name` atributo com o nome que você forneceu nas entradas anteriores.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -176,7 +176,7 @@ ms.locfileid: "36020428"
   
 3.  Localize o elemento `CodeGroup` no arquivo RSPreviewPolicy.config.  
   
-4.  Adicionar um grupo de códigos para o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly do provedor de dados que concede `FullTrust` permissão. O grupo de códigos deve ser semelhante ao seguinte:  
+4.  Adicionar um grupo de códigos para o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly do provedor de dados que conceda `FullTrust` permissão. O grupo de códigos deve ser semelhante ao seguinte:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -195,7 +195,7 @@ ms.locfileid: "36020428"
  A associação da URL é apenas uma das condições de associação que você pode selecionar para o provedor de dados.  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>Verificando a implantação e o registro no Cliente do Designer de Relatórios  
- Antes de verificar a implantação, é preciso fechar todas as instâncias do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] no computador local. Depois de encerrar todas as sessões atuais, você pode verificar se o provedor de dados foi implantado com êxito ao Designer de relatórios criando um novo projeto de relatório no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. O provedor de dados deve ser incluído na lista de tipos de fontes de dados disponíveis quando você criar um novo conjunto de dados para o relatório.  
+ Antes de verificar a implantação, é preciso fechar todas as instâncias do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] no computador local. Depois de encerrar todas as sessões atuais, você pode verificar se o seu provedor de dados foi implantado com êxito ao Designer de relatórios criando um novo projeto de relatório no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. O provedor de dados deve ser incluído na lista de tipos de fontes de dados disponíveis quando você criar um novo conjunto de dados para o relatório.  
   
 ## <a name="platform-considerations"></a>Considerações sobre plataformas  
  Em uma plataforma de 64 bits (x64), o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é executado no modo WOW de 32 bits. Quando você cria relatórios em uma plataforma x64, é preciso que os provedores de dados de 32 bits estejam instalados no cliente que está criando o relatório para que seja possível visualizá-los. Ao publicar o relatório no mesmo sistema, é preciso que os provedores de dados de x64 estejam instalados para permitir a exibição do relatório com o Gerenciador de Relatórios.  

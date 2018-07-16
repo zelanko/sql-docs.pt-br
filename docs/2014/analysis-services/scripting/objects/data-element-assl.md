@@ -1,5 +1,5 @@
 ---
-title: Elemento de dados (ASSL) | Microsoft Docs
+title: Elemento Data (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a3ff1b93efe374b9ddc8b080de143550aae8388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218276"
 ---
 # <a name="data-element-assl"></a>Elemento Data (ASSL)
   Contém (na coleção de filhos [elemento de bloco &#40;ASSL&#41; ](block-element-assl.md) elementos) o conteúdo binário de um [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
@@ -62,12 +62,12 @@ ms.locfileid: "36020572"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O elemento que corresponde ao pai do `Data` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ O elemento que corresponde ao pai de `Data` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento assembly &#40;ASSL&#41;](assembly-element-assl.md)   
  [Tipo de dados ClrAssembly &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
- [Elemento de arquivos &#40;ASSL&#41;](../collections/files-element-assl.md)   
+ [Arquivos de elemento &#40;ASSL&#41;](../collections/files-element-assl.md)   
  [Bloqueia o elemento &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Objetos &#40;ASSL&#41;](objects-assl.md)  
   

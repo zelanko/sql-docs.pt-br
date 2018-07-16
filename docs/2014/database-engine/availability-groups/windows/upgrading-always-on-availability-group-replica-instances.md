@@ -1,30 +1,29 @@
 ---
-title: Fazer upgrade e atualização dos servidores do grupo de disponibilidade com tempo mínimo de inatividade e perda de dados | Microsoft Docs
+title: Fazer upgrade e atualização de servidores do grupo de disponibilidade com tempo mínimo de inatividade e perda de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247017"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Fazer upgrade e atualização dos servidores de grupo de disponibilidade com tempo de inatividade e perda de dados mínimos
   Ao atualizar ou fazer upgrade de instâncias de servidor do SQL Server 2012 para um service pack ou uma versão mais recente, você pode reduzir o tempo de inatividade de um grupo de disponibilidade para apenas um único failover manual executando uma atualização ou um upgrade sequencial. Para fazer upgrade de versões do SQL Server, essa ação é conhecida como upgrade sem interrupção; para atualizar a versão atual do SQL Server com hotfixes ou service packs, essa ação é conhecida como atualização sem interrupção.  
   
- Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para sistema operacional-upgrades/atualizações que executam em instâncias do SQL Server altamente disponíveis, consulte [entre clusters migração de grupos de disponibilidade AlwaysOn para atualização do sistema operacional](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Este tópico limita a discussão somente a upgrades/atualizações do SQL Server. Para sistema operacional-upgrades/atualizações executados em instâncias do SQL Server altamente disponível, consulte [entre clusters migração de grupos de disponibilidade AlwaysOn para atualizações do sistema operacional](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Práticas recomendadas de upgrade/atualização sem interrupção de grupos de disponibilidade AlwaysOn  
  As práticas recomendadas a seguir devem ser observadas durante os upgrades/atualizações de servidor para minimizar o tempo de inatividade e a perda de dados dos grupos de disponibilidade:  

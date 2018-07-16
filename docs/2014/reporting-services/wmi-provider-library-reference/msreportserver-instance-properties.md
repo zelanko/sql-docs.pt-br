@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Properties
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dbb471894036c2533fe9ecef50fcaec3495ba840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 77d64d80173d5204e54771f36cc31c9078eca957
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313026"
 ---
 # <a name="msreportserverinstance-properties"></a>Propriedades MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  

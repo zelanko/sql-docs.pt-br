@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
 - findresultswindow
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb713255228083fb18ff1e338b26ab8f90b06311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251758"
 ---
 # <a name="find-results-windows"></a>Janelas Localizar Resultados
   As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** de caixa de diálogo **Localizar e Substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  

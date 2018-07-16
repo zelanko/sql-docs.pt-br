@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
 - agents [SQL Server replication], Distribution Agent
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1b1d127131ea763fa40ab4be26bc3f35f195fb2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eecc519ea4093d549c245a8287424feb69df6216
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199366"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
   O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  

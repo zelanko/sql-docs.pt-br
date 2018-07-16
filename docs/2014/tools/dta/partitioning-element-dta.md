@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 379e5dae0c70278b7c0b576190faffea84c8fa19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c6d6ccf9db5904936331c796188ff8858194ab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272352"
 ---
 # <a name="partitioning-element-dta"></a>Elemento de particionamento (DTA)
   Contém o esquema de particionamento que você gostaria que o Database Engine Tuning Advisor usasse durante a análise.  

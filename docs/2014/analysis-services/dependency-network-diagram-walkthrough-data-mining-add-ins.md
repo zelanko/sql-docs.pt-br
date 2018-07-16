@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
 - shapes, data mining
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 855c66124c5084e58432f605d38a4cbb53832c74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3efc5633a31af6d26fa7ae4abc5ce5b97f8542b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218456"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de rede de dependências (Suplementos de Mineração de Dados)
   Vários tipos diferentes de modelos de mineração de dados usam um gráfico de rede como uma maneira de explorar relações nos dados. Você pode importar esses modelos no Visio usando a **rede de dependências** forma e, em seguida, continuar a personalizar e aprimorar o layout. O **formas de mineração de dados para Visio** incluem os seguintes controles personalizados para trabalhar com diagramas de rede de dependência:  
@@ -41,23 +41,23 @@ ms.locfileid: "36020167"
      Essas opções são adicionadas ao espaço de trabalho do Visio para ajudá-lo a interagir com o gráfico de rede de dependências.  
   
 ## <a name="build-a-dependency-network-graph"></a>Criar um gráfico de rede de dependências  
- Você solta uma forma na página do Visio para iniciar o **Assistente de forma do Visio Net dependência** e definir opções de diagrama.  
+ Você solta uma forma na página do Visio para iniciar o **Assistente de forma do Visio Net dependência** e defina as opções do diagrama.  
   
 #### <a name="use-the-dependency-net-visio-shape-wizard"></a>Usar o Assistente para Criar Formas da Rede de Dependências do Visio  
   
-1.  Se você não vir **formas de mineração de dados do Microsoft** no **formas** lista, clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
+1.  Se você não vir **formas de mineração de dados do Microsoft** na **formas** , clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
   
      \<unidade >: \Program files (x85) \Microsoft SQL Server 2012 DM Add-Ins  
   
 2.  Arraste o **rede de dependências** forma até a página para iniciar o assistente. Clique em **Avançar**.  
   
-3.  Na página de boas-vinda do **dependência rede Visio forma Assistente**, clique em **próximo**.  
+3.  Na página de boas-vinda a **Assistente para criar dependência rede Visio formas**, clique em **próxima**.  
   
-4.  No **selecionar uma fonte de dados** página do **dependência rede Visio forma Assistente**, escolha uma conexão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que tem o modelo que você deseja visualizar.  
+4.  No **selecionar uma fonte de dados** página do **Assistente para criar dependência rede Visio formas**, escolha uma conexão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server que tem o modelo que você deseja visualizar.  
   
-5.  Selecione um modelo de mineração apropriado e, em seguida, clique em **próximo**.  
+5.  Selecione um modelo de mineração apropriado e, em seguida, clique em **próxima**.  
   
-     Para selecionar um modelo apropriado, você pode examinar o nome, descrição, colunas e tipo de dados de **propriedades** painel.  
+     Para selecionar um modelo apropriado, você pode examinar o nome, descrição, colunas e tipo de dados do **propriedades** painel.  
   
      Essa forma dá suporte a modelos criados usando esses algoritmos:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36020167"
   
     -   Regras de associação  
   
-6.  Na página, **selecionar nós para renderização**, personalizar o tamanho do gráfico e opcionalmente filtros para apenas incluir alguns nós.  
+6.  Na página de **selecionar nós para renderização**, personalizar o tamanho do gráfico e, opcionalmente, filtrar para incluir apenas alguns nós.  
   
      Com um grande conjunto de dados, um gráfico de dependência pode se tornar grande e conter vários objetos relacionados, representados como *nós*. Ao usar essa caixa de diálogo, você poderá criar um gráfico de rede personalizado que inclui apenas os nós de interesse.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36020167"
   
 7.  Clique em **avançado** para definir opções de sombreamento e forma para o gráfico.  
   
-8.  Clique em **fechar** para sair do **avançado** caixa de diálogo Opções e clique **concluir** para criar o gráfico.  
+8.  Clique em **feche** para sair de **avançado** caixa de diálogo Opções e clique **concluir** para criar o gráfico.  
   
 ## <a name="explore-and-modify-the-finished-diagram"></a>Explorar e modificar o diagrama completo  
  Depois que o Visio criou o grafo de rede de dependências, você poderá continuar a modificar e aumentar o grafo usando os recursos no Visio.  
@@ -96,9 +96,9 @@ ms.locfileid: "36020167"
   
 1.  Use o **Panorâmica e Zoom** controlar, o **painel de tarefas** área do Visio **exibição** faixa de opções, para focalizar em uma seção do gráfico e navegar em torno do diagrama.  
   
-2.  Experiência com diferentes layouts de gráfico fornecidos pelo Visio **Refazer Layout da página** opção.  
+2.  Teste com diferentes layouts de gráfico fornecidos pelo Visio **Refazer Layout da página** opção.  
   
-3.  Clique o **Add-Ins** de faixa de opções e, em seguida, exibir uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de mineração de dados:  
+3.  Clique o **Add-Ins** faixa de opções e, em seguida, exiba uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de mineração de dados:  
   
      **Layout**  
      Otimiza o layout dos nós na página e altera a exibição para que todos os nós fiquem visíveis.  
@@ -117,7 +117,7 @@ ms.locfileid: "36020167"
      Para aumentar o número de nós no gráfico, mova a barra de controle deslizante para baixo.  
   
      **Adicionar itens**  
-     Abre o **selecionar nós para renderização** caixa de diálogo para que você possa selecionar novos nós a serem adicionados ao gráfico.  
+     Abre o **selecionar nós para renderização** caixa de diálogo para que você possa selecionar novos nós para adicionar ao gráfico.  
   
 4.  Você pode fazer gráficos simples ou elaborados como quiser e adicionar anotações, enquanto permanece conectado ao modelo.  
   
@@ -127,6 +127,6 @@ ms.locfileid: "36020167"
 >  O realce de nós dependentes e outras opções do menu de atalho que estavam disponíveis em versões anteriores dos Suplementos não funcionam no Office 2013.  
   
 ## <a name="see-also"></a>Consulte também  
- [Solucionando problemas de diagramas de mineração de dados do Visio &#40;suplementos de mineração de dados do SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+ [Solução de problemas de diagramas de mineração de dados do Visio &#40;suplementos de mineração de dados do SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

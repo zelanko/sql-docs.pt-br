@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e4b0c1a8c07e5504723e45f5985f495337ac00a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d07ed4bc46ef1872f656adb09ce1883b04514f02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187563"
 ---
 # <a name="granting-access-to-a-database-object"></a>concedendo acesso a um objeto de banco de dados
   Como administrador, você pode executar SELECT na tabela **Produtos** e na exibição **vw_Names**, além de executar o procedimento **pr_Names**; no entanto, Marina não pode. Para conceder as permissões necessárias à Mary, use a instrução GRANT.  

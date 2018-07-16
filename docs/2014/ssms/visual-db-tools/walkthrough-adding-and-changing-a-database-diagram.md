@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244016"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
   Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
@@ -105,7 +105,7 @@ ms.locfileid: "36019270"
   
      A caixa de diálogo **Restrições de Verificação** será exibida.  
   
-2.  Clique em **Adicionar**.  
+2.   Clique em **Adicionar**.  
   
      Uma nova restrição aparece na lista **Restrição de Verificação Selecionada** , com o nome padrão `CK_Table1`.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36019270"
   
      A caixa de diálogo **Índices/Chaves** é exibida.  
   
-2.  Clique em **Adicionar**.  
+2.   Clique em **Adicionar**.  
   
      Um novo índice é exibido na lista **Índice ou Chave Exclusiva/Primária Selecionada** , com um nome padrão similar a `IX_Table1`.  
   
@@ -214,9 +214,9 @@ ms.locfileid: "36019270"
  [Personalizar a quantidade de informações exibidas em diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Configurar o Designer de diagrama de banco de dados &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Adicionar tabelas a diagramas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [Criar relações entre tabelas em um diagrama &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [Criar relações entre tabelas em um diagrama de &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Criar índices XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copiar uma imagem de um diagrama de banco de dados para a área de transferência &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Copiar uma imagem de um diagrama de banco de dados na área de transferência &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

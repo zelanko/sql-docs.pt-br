@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 345e3b217933f544239c849e5a279d8fcc3623e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2d2cce4fa8bf38e8403af1a783c9b1d85eb14aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264302"
 ---
 # <a name="calling-methods"></a>Chamando métodos
   Os métodos executam tarefas específicas relacionadas ao objeto, como emitir uma `Checkpoint` em um banco de dados ou solicitar uma lista enumerada de logons para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Usando um método de enumeração que retorna um objeto DataTable no Visual Basic  
- Esta seção descreve como chamar um método de enumeração e como tratar os dados no retornado <xref:System.Data.DataTable> objeto.  
+ Esta seção descreve como chamar um método de enumeração e como lidar com os dados em retornado <xref:System.Data.DataTable> objeto.  
   
  O método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> retorna um objeto <xref:System.Data.DataTable>, que exige navegação adicional para acessar todas as informações de agrupamento disponíveis sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -108,7 +108,7 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Usando um método de enumeração que retorna um objeto DataTable no Visual C#  
- Esta seção descreve como chamar um método de enumeração e como tratar os dados no retornado <xref:System.Data.DataTable> objeto.  
+ Esta seção descreve como chamar um método de enumeração e como lidar com os dados em retornado <xref:System.Data.DataTable> objeto.  
   
  O <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> método retorna um sistema <xref:System.Data.DataTable> objeto. O <xref:System.Data.DataTable> objeto exige navegação adicional para acessar todas as informações de agrupamento disponíveis sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -161,12 +161,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Copiando um objeto SMO no Visual Basic  
- Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Copiando um objeto SMO no Visual C#  
- Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 {   
@@ -184,12 +184,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Monitorando processos de servidor no Visual Basic  
- Você pode obter as informações de tipo de status atuais sobre a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
+ Você pode obter as informações de tipo de status atuais sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Monitorando processos de servidor no Visual C#  
- Você pode obter as informações de tipo de status atuais sobre a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
+ Você pode obter as informações de tipo de status atuais sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

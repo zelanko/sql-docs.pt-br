@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,19 +20,19 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22fe47c60aadc0f5014b7aef2171399f8ea0d22a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a8e21696d9ae963f756a503bfd9833c5ef21809
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246926"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
   Um gerenciador de conexões de Vários Arquivos permite que um pacote faça referência a arquivos e pastas existentes ou crie arquivos e pastas em tempo de execução.  
   
 > [!NOTE]  
->  As tarefas internas e os componentes de fluxo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não usam o gerenciador de conexões de vários arquivos. No entanto você pode usar o gerenciador de conexões na tarefa Script ou no componente Script. Para obter informações sobre como usar gerenciadores de conexões na tarefa Script, consulte [Conectando-se a fontes de dados na tarefa Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obter informações sobre como usar gerenciadores de conexão no componente Script, consulte [conectando-se a fontes de dados no componente Script] (... / extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
+>  As tarefas internas e os componentes de fluxo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não usam o gerenciador de conexões de vários arquivos. No entanto você pode usar o gerenciador de conexões na tarefa Script ou no componente Script. Para obter informações sobre como usar gerenciadores de conexões na tarefa Script, consulte [Conectando-se a fontes de dados na tarefa Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obter informações sobre como usar gerenciadores de conexão no componente Script, consulte [conexão a fontes de dados no componente Script] (... / extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Tipos de uso do gerenciador de conexões de vários arquivos  
  A propriedade `FileUsageType` do gerenciador de conexões de vários arquivos especifica como a conexão é utilizada. O gerenciador de conexões de vários arquivos pode criar arquivos, pastas e usar arquivos e pastas existentes.  
@@ -49,7 +49,7 @@ ms.locfileid: "36019631"
 ## <a name="configuration-of-the-multiple-files-connection-manager"></a>Configuração do gerenciador de conexões de vários arquivos  
  Quando você adicionar um gerenciador de conexões de vários arquivos a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um gerenciador de conexões que será resolvido como um gerenciador de conexões de vários arquivos no tempo de execução, definirá as propriedades de conexão de vários arquivos e adicionará essa conexão à coleção `Connections` do pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `MULTIFILE`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `MULTIFILE`.  
   
  Você pode configurar um gerenciador de conexões de vários arquivos da seguinte maneira:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36019631"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, a unidade de todos os arquivos de texto em C, o valor de referência de `ConnectionString` propriedade pode ser definida como c:\\*. txt.  
+ Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, a unidade de todos os arquivos de texto em C, o valor de referência a `ConnectionString` propriedade pode ser definida como c:\\*. txt.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   

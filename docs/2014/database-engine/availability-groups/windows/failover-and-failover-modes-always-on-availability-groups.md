@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310436"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modos de failover (grupos de disponibilidade AlwaysOn)
   Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover*atual).  
@@ -239,7 +238,7 @@ ms.locfileid: "36130421"
   
 1.  Conecte-se à réplica primária.  
   
-2.  Consulta o `last_commit_lsn` (LSN da última transação confirmada) e `last_commit_time` colunas (hora da última confirmação) do [sys.DM hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) exibição de gerenciamento dinâmico.  
+2.  Consulta de `last_commit_lsn` (LSN da última transação confirmada) e `last_commit_time` colunas (hora da última confirmação) do [DM hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) exibição de gerenciamento dinâmico.  
   
 3.  Compare os valores retornados para cada banco de dados primário e cada um de seus bancos de dados secundários. A diferença entre LSNs da Última Confirmação indica o tempo de retardo.  
   
@@ -316,10 +315,10 @@ ms.locfileid: "36130421"
 -   [Blog da equipe do AlwaysOn do SQL Server: O SQL Server AlwaysOn Team Blog oficial](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade &#40;grupos de disponibilidade AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Transações entre bancos de dados não tem suportadas para espelhamento de banco de dados ou grupos de disponibilidade do AlwaysOn &#40;do SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [Transações entre bancos de dados não tem suportadas para espelhamento de banco de dados ou grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

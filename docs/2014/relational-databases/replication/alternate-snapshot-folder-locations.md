@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
 - snapshot replication [SQL Server], alternate folder locations
 - alternate snapshot folders [SQL Server replication]
 ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a227b6226bfa3a38cd0566b64f8aa68aad42770f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d6981397103a409600b3eb33880bb6e2299d47cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262442"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Locais da pasta de instantâneos alternativos
   Locais de instantâneos alternativos permitem que você armazene arquivos de instantâneos em outro local ou em local diferente do padrão onde normalmente está localizado no Distribuidor. Locais alternativos podem ficar em outro servidor, em uma unidade de rede ou uma mídia removível (como um CD-ROM ou disco removível).  

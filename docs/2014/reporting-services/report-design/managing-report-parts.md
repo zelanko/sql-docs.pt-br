@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286692"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Começando com [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], partes de relatório podem ser publicadas em servidores de relatório e reutilizadas em outros relatórios e por outros usuários se eles tiverem as permissões apropriadas.  
@@ -97,9 +97,9 @@ ms.locfileid: "36019064"
 ## <a name="see-also"></a>Consulte também  
  [Partes de relatório e conjuntos de dados no construtor de relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Página Propriedades gerais, partes de relatório &#40;Gerenciador de relatórios&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Mover itens página &#40;Gerenciador de relatórios&#41;](../move-items-page-report-manager.md)   
+ [Mover itens de página &#40;Gerenciador de relatórios&#41;](../move-items-page-report-manager.md)   
  [Gerenciamento de conteúdo do servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Solucionar problemas de partes de relatório &#40;SSRS e construtor de relatórios&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

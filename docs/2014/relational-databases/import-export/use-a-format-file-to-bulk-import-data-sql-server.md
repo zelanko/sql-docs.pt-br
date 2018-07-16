@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289052"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usar um arquivo de formato para importação em massa de dados (SQL Server)
   Este tópico ilustra o uso de um arquivo de formato operações de importação em massa. O arquivo de formato mapeia os campos do arquivo de dados para as colunas da tabela.  Você pode usar um arquivo de formato não XML ou XML para importar dados em massa ao usar um comando **bcp** ou uma instrução BULK INSERT ou INSERT... SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "36019582"
 >  Para trabalhar com um arquivo de dados de caractere Unicode, todos os campos de entrada devem ser cadeias de caracteres de texto Unicode (isto é, sejam cadeias de caracteres Unicode de tamanho fixo ou terminadas por caractere).  
   
 > [!NOTE]  
->  Se você estiver familiarizado com arquivos de formato, consulte [arquivos de formato não XML &#40;SQL Server&#41; ](xml-format-files-sql-server.md) e [arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+>  Se você estiver familiarizado com arquivos de formato, consulte [arquivos de formato não XML &#40;SQL Server&#41; ](xml-format-files-sql-server.md) e [arquivos de formato XML &#40;do SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>Opções arquivo de formato de dados para comandos de importação em massa  
  A tabela a seguir resume a opção de arquivo de formato para cada um dos comandos de importação em massa.  

@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61df846e3b9da7301650a8029d12eb72a218049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab600b39e4a8347e470153cf21510554605d1c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36130646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323066"
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_STRUCTURES
   Enumera informações sobre as estruturas de mineração no catálogo atual.  
   
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
- O `DMSCHEMA_MINING_STRUCTURES` linhas contém as seguintes colunas.  
+ O `DMSCHEMA_MINING_STRUCTURES` linhas contém as colunas a seguir.  
   
 |Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: Insira a caixa de diálogo de credenciais de fonte de dados | Microsoft Docs
+title: Inserir caixa de diálogo de credenciais de fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 caps.latest.revision: 26
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e168e05490bac9f4d3c8946d7759b5e37cea3083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2c650ed9dba79889583cc660b75abcc2d706e53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296136"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Caixa de diálogo Inserir Credenciais da Fonte de Dados
   Use a caixa de diálogo **Inserir Credenciais da Fonte de Dados** para fornecer suas credenciais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para que você possa recuperar dados da fonte de dados.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -18,27 +18,27 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 11b88bd8144651abfed39fb5b68316abc23f09a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295136"
 ---
 # <a name="ole-db-connection-manager"></a>gerenciador de conexões OLE DB
   Um gerenciador de conexões OLE DB permite que um pacote se conecte a uma fonte de dados usando um provedor OLE DB. Por exemplo, um gerenciador de conexões OLE DB que se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o provedor OLE DB da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  O provedor de OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 não dá suporte às novas palavras-chave de cadeia de conexão (MultiSubnetFailover=True) para clustering de failover de várias sub-redes. Para obter mais informações, consulte o [notas de versão do SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) e a postagem do blog, [Failover de várias sub-redes AlwaysOn e SSIS](http://go.microsoft.com/fwlink/?LinkId=247825), no www.mattmasson.com.  
+>  O provedor de OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 não dá suporte às novas palavras-chave de cadeia de conexão (MultiSubnetFailover=True) para clustering de failover de várias sub-redes. Para obter mais informações, consulte o [notas de versão do SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) e a postagem de blog [Failover de várias sub-redes AlwaysOn e SSIS](http://go.microsoft.com/fwlink/?LinkId=247825), em www.mattmasson.com.  
   
  Várias tarefas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e componentes de fluxo de dados usam um gerenciador de conexões OLE DB. Por exemplo, a fonte e o destino do OLE DB usam esse gerenciador de conexões para extrair e carregar dados e a tarefa Executar SQL pode usar esse gerenciador de conexões para se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar consultas.  
   
  O gerenciador de conexões OLE DB também é usado para acessar fontes de dados OLE DB em tarefas personalizadas gravadas em código não gerenciado que usa uma linguagem como C++.  
   
- Quando você adiciona um Gerenciador de conexão OLE DB para um pacote, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão OLE DB em tempo de execução, define a conexão propriedades do Gerenciador e adiciona o Gerenciador de conexão para o `Connections` coleção no pacote.  
+ Quando você adiciona um Gerenciador de conexão OLE DB a um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador que resolverá uma conexão OLE DB em tempo de execução, define propriedades do Gerenciador da conexão e adiciona o Gerenciador de conexão para o `Connections` coleta no pacote.  
   
- O `ConnectionManagerType` propriedade do Gerenciador de conexão está definida como `OLEDB`.  
+ O `ConnectionManagerType` propriedade do Gerenciador de conexão é definida como `OLEDB`.  
   
  O gerenciador de conexões OLE DB pode ser configurado das seguintes maneiras:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36324600"
 -   Artigo técnico, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Cadeias de conexão para provedores de OLE DB), em carlprothman.net.  
   
 ## <a name="see-also"></a>Consulte também  
- [Origem de OLE DB](../data-flow/ole-db-source.md)   
+ [Origem OLE DB](../data-flow/ole-db-source.md)   
  [Destino OLE DB](../data-flow/ole-db-destination.md)   
  [Tarefa Executar SQL](../control-flow/execute-sql-task.md)   
  [Serviços de integração &#40;SSIS&#41; conexões](integration-services-ssis-connections.md)  

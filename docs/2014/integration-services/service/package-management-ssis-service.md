@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36020523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172957"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
   O gerenciamento de pacotes envolve tarefas, inclusive as seguintes:  
@@ -85,7 +85,7 @@ ms.locfileid: "36020523"
   
 -   [Importar e exportar pacotes &#40;serviço SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Exibição de pacotes no SQL Server Management Studio Integration Services &#40;serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Exibir pacotes no SQL Server Management Studio do Integration Services &#40;serviço SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Serviço Integration Services &#40;Serviço SSIS&#41;](integration-services-service-ssis-service.md)  

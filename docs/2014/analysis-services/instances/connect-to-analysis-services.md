@@ -1,5 +1,5 @@
 ---
-title: Conecte-se ao Analysis Services | Microsoft Docs
+title: Conectar-se ao Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 564ca915bf24dbdb04829eb6815dbd7fc23135be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5daf8d36d648298343d8989db01aa5fabcf3168d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255728"
 ---
 # <a name="connect-to-analysis-services"></a>Conectar ao Analysis Services
   Utilize as informações desta seção para saber mais sobre as propriedades de cadeia de conexão, as bibliotecas de cliente utilizadas para conexões, os métodos de autenticação com suporte pelo Analysis Services e como definir ou limpar conexões antes de colocar um servidor offline.  
@@ -35,8 +35,8 @@ ms.locfileid: "36019466"
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
-|[Conecte-se de aplicativos cliente &#40;do Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Se você é novato no Analysis Services, leia este tópico para conhecer as ferramentas e os aplicativos mais usados no Analysis Services.|  
-|[Propriedades de cadeia de caracteres de Conexão &#40;do Analysis Services&#41;](connection-string-properties-analysis-services.md)|O Analysis Services inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado.|  
+|[Conectar-se de aplicativos cliente &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Se você é novato no Analysis Services, leia este tópico para conhecer as ferramentas e os aplicativos mais usados no Analysis Services.|  
+|[Propriedades de cadeia de caracteres de Conexão &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|O Analysis Services inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado.|  
 |[Metodologias de autenticação com suporte no Analysis Services](authentication-methodologies-supported-by-analysis-services.md)|Este tópico é uma breve introdução aos métodos de autenticação usados pelo Analysis Services.|  
 |[Configurar o Analysis Services para delegação restringido de Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)|Muitas soluções de business intelligence exigem a representação garantir que apenas os dados autorizados sejam retornados a cada usuário. Neste tópico, você conhecerá os requisitos para o uso da representação. Este tópico também explica as etapas de configuração do Analysis Services para autenticação restrita de Kerberos.|  
 |[Registro de SPN de uma instância do Analysis Services](spn-registration-for-an-analysis-services-instance.md)|A autenticação Kerberos requer um nome de entidade de serviço (SPN) válido para os serviços que representam ou delegam identidades de usuário em soluções de vários servidores. Use as informações deste tópico para conhecer a construção e as etapas do registro de SPN do Analysis Services.|  
@@ -45,8 +45,8 @@ ms.locfileid: "36019466"
 |[Desconectar usuários e sessões no servidor do Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Limpe as conexões e sessões existentes antes de colocar um servidor offline ou de realizar testes de desempenho de linha de base.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuração de pós-instalação &#40;do Analysis Services&#41;](post-install-configuration-analysis-services.md)   
+ [Configuração de pós-instalação &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
  [Configurar propriedades de servidor no Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Scripts de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   
