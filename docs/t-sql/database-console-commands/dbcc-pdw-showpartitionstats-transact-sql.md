@@ -7,22 +7,21 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 10
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 40f8af57d1caff81e7738fabfab0788154f90772
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 8282b2e24fbc3a0c1b69d2410e7df5484eb54d3f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702019"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926227"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ Requer a permissão **VIEW SERVER STATE**.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Estes são os resultados do comando DBCC PDW_SHOWPARTITIONSTATS.
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |partition_number|INT|Número da partição.|  
 |used_page_count|BIGINT|Número de páginas usadas para os dados.|  
