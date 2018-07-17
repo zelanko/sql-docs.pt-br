@@ -15,16 +15,16 @@ helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cdc075d1dcce93ea02af0a36c65df76ce2ff0ff3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7fa11e354f508d56ac2f32fe9fca932a3b6617
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694102"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941532"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

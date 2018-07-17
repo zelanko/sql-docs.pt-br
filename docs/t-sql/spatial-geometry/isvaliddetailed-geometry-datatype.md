@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,12 +18,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484b47de33df0f278c082831130bad233a501cf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fc22e50c69a1734840d54c8a7c58ca8a41e9185
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064853"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36249108"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (DataType geométrico)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Retorna uma mensagem que pode ajudar a identificar problemas com um objeto espac
 ## <a name="remarks"></a>Remarks  
  A tabela a seguir contém os valores de retorno possíveis:  
   
-|Valor retornado|Description|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |24400|Válido|  
 |24401|Não válido, motivo desconhecido.|  

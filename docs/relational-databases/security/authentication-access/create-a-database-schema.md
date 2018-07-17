@@ -18,16 +18,16 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 196cbbfa9c455484feb094c30f67c1fd5abdd190
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 678f19f8f6eaf3e959ef7c51f966212d723f674d
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698377"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943072"
 ---
 # <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

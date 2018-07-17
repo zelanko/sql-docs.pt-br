@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957111"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349978"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

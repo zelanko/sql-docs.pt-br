@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,12 +21,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ff91cc80d3ec8f9dc8d59369226203a30effe1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5da96e2b3e37572e45545e513164f4eae684ca9
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064343"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36245328"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
