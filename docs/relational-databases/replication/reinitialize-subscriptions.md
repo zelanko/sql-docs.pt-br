@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 251c3c3d0f4a5d52d5c825eba86d55199e6a94b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0c3a94b39787a302db13d6a3a9fed26f1718e8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960751"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357758"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinicializar as assinaturas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

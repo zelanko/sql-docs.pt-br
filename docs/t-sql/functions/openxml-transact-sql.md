@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055153"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255508"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *sinalizadores*  
  Indica o mapeamento que deve ser usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento deve ser preenchida. *flags* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
   
-|Valor do byte|Description|  
+|Valor do byte|Descrição|  
 |----------------|-----------------|  
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
 |**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Nesse caso, o mapeamento **centrado em atributo** é aplicado primeiro e, em seguida, o mapeamento **centrado em elemento** é aplicado a todas as colunas que ainda não foram tratadas.|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  A tabela a seguir descreve a estrutura da tabela de **borda**.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem o valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por essa ID não é necessariamente o elemento pai, mas depende do NodeType do nó cujo pai é identificado por essa ID. Por exemplo, se o nó for um nó de texto, o pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
