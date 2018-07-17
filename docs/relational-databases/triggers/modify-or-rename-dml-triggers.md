@@ -3,12 +3,9 @@ title: Modificar ou renomear gatilhos DML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - modifying triggers
 - DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d744070c2472f532e55cda1adc959b3fcae3ee1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 672f12f74d036530dc4442cc3d8b9f6c13ea8276
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011813"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414695"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modificar ou renomear gatilhos DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

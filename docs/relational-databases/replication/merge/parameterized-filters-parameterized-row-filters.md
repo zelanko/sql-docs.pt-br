@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965321"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356358"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Definindo 'opções de partição’  
  Você especifica um valor para a propriedade **opções de partição** ao criar um artigo, de acordo com a maneira em que os dados na tabela filtrada serão compartilhados pelos Assinantes. A propriedade pode ser definida com um dentre quatro valores usando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)e a caixa de diálogo **Propriedades do Artigo** . A propriedade pode ser definida com um dentre dois valores usando as caixas de diálogo **Adicionar Filtro** ou **Editar Filtro** , que estão disponíveis no Assistente de Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . A tabela a seguir resume os valores disponíveis:  
   
-|Description|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
+|Descrição|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Os dados nas partições estão sobrepostos e o Assinante pode atualizar colunas referenciadas em um filtro com parâmetros.|**Uma linha dessa tabela irá para múltiplas assinaturas**|**Com sobreposição**|**0**|  
 |Os dados nas partições estão sobrepostos e o Assinante não pode atualizar colunas referenciadas em um filtro com parâmetros.|N/A*|**Com sobreposição, não permitir alterações de dados fora da partição**|**1**|  

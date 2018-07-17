@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 caps.latest.revision: 56
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b149c056517c1b33b7880f3379a033b0ece3d936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96d8d07ea3e0c3f57e00b33fc75e88e42062882b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055703"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790367"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  A menos que indicado o contrário, NULL é retornado quando *property* não é um nome de propriedade válido, *object_ID* não é uma ID de objeto válida, *object_ID* é um tipo de objeto sem suporte para a propriedade especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
   
-|Propriedade|Description|Valor|  
+|Propriedade|Descrição|Valor|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Profundidade do índice.|Número de níveis de índice.<br /><br /> NULL = O índice XML ou saída não é válido.|  
 |**IndexFillFactor**|Valor do fator de preenchimento usado quando o índice foi criado ou reconstruído pela última vez.|Fator de preenchimento|  

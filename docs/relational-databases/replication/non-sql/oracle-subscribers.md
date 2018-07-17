@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca824bafc48fac904e8be917b138adc503e97533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f69c92b0624f6553f92d59a5ef38e00973f9116
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964081"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355858"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "32964081"
   
 1.  Instale e configure o software de rede cliente Oracle e o provedor Oracle OLE DB no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o Distribuidor possa realizar as conexões ao Assinante Oracle. O software de rede cliente Oracle deve ter a versão mais recente disponível. A Oracle recomenda que os usuários instalem as mais recentes versões do software cliente. O software cliente é, portanto, muitas vezes uma versão mais recente do que o software do banco de dados. A maneira mais prática para instalar o software é usar o Instalador Universal Oracle no disco do Oracle Cliente. No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-    |Informações|Description|  
+    |Informações|Descrição|  
     |-----------------|-----------------|  
     |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
     |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -48,7 +47,7 @@ ms.locfileid: "32964081"
   
      Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-    |Ação|Description|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
     |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  

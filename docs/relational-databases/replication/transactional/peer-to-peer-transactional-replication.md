@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a008570306da0413e4a71fbc5fc2576e66129b1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fde84d7da5df42bc2f9d5c37edc8f56935fd0a4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964551"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355638"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Ponto a ponto – Replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

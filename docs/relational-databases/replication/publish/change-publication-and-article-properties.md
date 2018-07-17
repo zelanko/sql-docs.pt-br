@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964951"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359308"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32964951"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propriedades de uma publicação de instantâneo ou de replicação transacional  
   
-|Description|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Alterar o formato de instantâneo.|**sp_changepublication**|**sync_method**|Novo instantâneo.|  
 |Alterar o local do instantâneo.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Novo instantâneo.|  
@@ -49,7 +48,7 @@ ms.locfileid: "32964951"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Propriedades de um artigo para instantâneo e replicação transacional  
   
-|Description|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo|**sp_droparticle**|Todos os parâmetros.|Os artigos podem ser descartados antes que as assinaturas sejam criadas. Com os procedimentos armazenados, é possível descartar uma assinatura de um artigo, usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], a assinatura inteira deve ser descartada, recriada e sincronizada. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
 |Alterar um filtro de coluna.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
@@ -67,7 +66,7 @@ ms.locfileid: "32964951"
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriedades de publicação para a replicação de mesclagem  
   
-|Description|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Alterar o formato de instantâneo|**sp_changemergepublication**|**sync_mode**|Novo instantâneo.|  
 |Alterar o local do instantâneo.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Novo instantâneo.|  
@@ -86,7 +85,7 @@ ms.locfileid: "32964951"
   
 ## <a name="article-properties-for-merge-replication"></a>Propriedades do artigo para replicação de mesclagem  
   
-|Description|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo, quando o artigo tem o último filtro com parâmetros na publicação.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, quando é um artigo pai em um filtro de junção ou em um registro lógico (isso tem como efeito colateral o descarte da junção).|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
