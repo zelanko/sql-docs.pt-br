@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331206"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui uma extensão de entrega de compartilhamento de arquivos que possibilita entregar um relatório a uma pasta. A extensão de entrega de compartilhamento de arquivos está disponível por padrão e não requer configuração adicional. Para que a entrega do arquivo seja bem-sucedida, você deve definir permissões de acesso de gravação na pasta compartilhada. Além disso, os usuários que precisam acessar os relatórios devem ter permissões de leitura na pasta compartilhada.  
@@ -35,7 +35,7 @@ ms.locfileid: "36009098"
   
  Neste tópico:  
   
--   [Características de um relatório que é fornecida a uma pasta compartilhada](#bkmk_Characteristics)  
+-   [Características de um relatório que é entregue em uma pasta compartilhada](#bkmk_Characteristics)  
   
 -   [Pastas de destino](#bkmk_target_folders)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36009098"
   
 -   [Opções de arquivo](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Características de um relatório que é fornecida a uma pasta compartilhada  
+##  <a name="bkmk_Characteristics"></a> Características de um relatório que é entregue em uma pasta compartilhada  
  Diferentemente de relatórios hospedados e gerenciados por um servidor de relatório, os relatórios entregues a uma pasta compartilhada são arquivos estáticos. Os recursos interativos definidos para o relatório não funcionam para relatórios armazenados como arquivos no sistema de arquivos. Os recursos de interação são representados como elementos estáticos. Por exemplo, se você entregar um relatório de matriz, o arquivo resultante mostrará a exibição de nível superior do relatório; não será possível expandir as linhas e colunas para exibir os dados com suporte. Se o relatório incluir gráficos, a apresentação padrão será usada. Se o relatório estiver vinculado a outro relatório, o vínculo será renderizado como texto estático. Se você quiser reter recursos interativos em um relatório entregue, use a entrega de emails. Para obter mais informações, consulte [Entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ##  <a name="bkmk_target_folders"></a> Pastas de destino  
@@ -71,7 +71,7 @@ ms.locfileid: "36009098"
   
  Você pode especificar as opões de substituição para reusar o mesmo nome de arquivo para cada entrega de relatório ou para criar um novo arquivo. Para substituir o arquivo, é necessário usar o mesmo nome e extensão de arquivo.  
   
- Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione o `@timestamp` variável ao nome do arquivo (por exemplo, *CompanySales@timestamp*). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
+ Uma abordagem alternativa para criar arquivos exclusivos para cada entrega é incluir um carimbo de hora no nome de arquivo. Para fazer isso, adicione a `@timestamp` variável ao nome do arquivo (por exemplo, *CompanySales@timestamp*). Com essa abordagem, o nome de arquivo será exclusivo por definição, portanto, nunca será substituído.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar, modificar e excluir assinaturas padrão &#40;Reporting Services no modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

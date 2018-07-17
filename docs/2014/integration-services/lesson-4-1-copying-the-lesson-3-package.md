@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 caps.latest.revision: 26
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a22a848b30e33689cd02b8ea6ce3651539501e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 031c82bb3ebdb3843eb3f9a540728a00cd8cc903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329496"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>Etapa 1: Copiando o pacote da Lição 3
   Nesta tarefa, você criará uma cópia do pacote Lesson 3.dtsx criado na Lição 3. Se você não tiver completado a lição 3, poderá adicionar o pacote completo da lição 3, incluído no tutorial do projeto, e então trabalhar com uma cópia. Você usará essa cópia nova durante toda a Lição 4.  
@@ -40,9 +40,9 @@ ms.locfileid: "36119151"
   
 6.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da guia **Fluxo de Controle** e clique em **Propriedades**.  
   
-7.  Na janela Propriedades, atualize o `Name` propriedade `Lesson 4`.  
+7.  Na janela Propriedades, atualize o `Name` propriedade para `Lesson 4`.  
   
-8.  Clique na caixa para o **ID** propriedade e, em seguida, na lista, clique em  **\<gerar nova ID >**.  
+8.  Clique na caixa para o **identificação** propriedade e, em seguida, na lista, clique em  **\<gerar nova ID >**.  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>Para adicionar o pacote concluído da Lição 3  
   

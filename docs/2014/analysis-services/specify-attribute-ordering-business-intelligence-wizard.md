@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4b9a3e1656f8b19fda03febf3c695d290a70bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56eac43752ad8528f3bb5989b0a3014573b6288e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332886"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Assistente de Business Intelligence)
   Use a página **Especificar a ordenação de atributos** para especificar a ordenação de atributos e de critérios de ordenação de atributos na dimensão selecionada.  
@@ -33,7 +33,7 @@ ms.locfileid: "36006916"
  **Atributo de ordenação**  
  Selecione o atributo com o qual ordenar o **Atributo**correspondente. É possível especificar o mesmo atributo.  
   
- Para criar um novo atributo de ordenação, selecione  **\<novo atributo >** e no **selecionar uma coluna** caixa de diálogo, selecione a coluna na qual basear o novo atributo.  
+ Para criar um novo atributo de ordenação, selecione  **\<novo atributo >** e, nas **selecionar uma coluna** caixa de diálogo, selecione a coluna em que o novo atributo deve ser baseada.  
   
  **Critérios**  
  Especifique os critérios do **Atributo de Ordenação** a serem usados para ordenar os membros no **Atributo**correspondente. A tabela a seguir lista os critérios disponíveis.  

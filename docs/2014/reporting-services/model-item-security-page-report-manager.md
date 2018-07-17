@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299796"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
   Use essa página para proteger partes de um modelo concedendo ou revogando permissões somente leitura em itens específicos. A segurança de item de modelo afeta a exploração de dados ad hoc em tempo de execução e a capacidade de usar partes de um modelo publicado ao criar relatórios no Construtor de Relatórios. Para usar esse recurso, você deve ter permissões de Gerenciador de Conteúdo.  
@@ -74,7 +74,7 @@ ms.locfileid: "36010619"
  **Herdar permissões do item pai**  
  Clique nessa opção para herdar as configurações de segurança do item pai.  
   
- **Atribuir permissão de leitura aos seguintes usuários e grupos (separado por ponto e vírgula)**  
+ **Atribuir permissão de leitura aos seguintes usuários e grupos (separados por ponto-e-vírgula)**  
  Clique nessa opção para especificar o usuário ou a conta de grupo para os quais você está definindo acesso. Se você estiver usando segurança padrão, as contas de usuário e grupo serão contas do domínio Windows. Especifique as contas neste formato:  *\<domínio >\\< conta\>*.  
   
 ## <a name="see-also"></a>Consulte também  

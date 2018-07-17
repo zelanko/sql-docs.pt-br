@@ -1,12 +1,11 @@
 ---
-title: Implantar objetos de banco de dados CLR | Microsoft Docs
+title: Implantando objetos de banco de dados CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af823eb9457cbe74785de4c110334805f9ac1ad5
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e0fe80642941daa8604aff9a169eb4cba601af5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349778"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ ms.locfileid: "35701527"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Para implantar o assembly que usa o Visual Studio  
   
-1.  Compile o projeto selecionando **criar** \<nome do projeto > do **criar** menu.  
+1.  Compilar o projeto, selecionando **construir** \<nome do projeto > da **Build** menu.  
   
 2.  Resolva todos os erros de compilação e avisos antes de implantar o assembly no servidor de teste.  
   
-3.  Selecione **implantar** do **criar** menu. O assembly será registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no banco de dados especificado quando o projeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi criado inicialmente no Visual Studio.  
+3.  Selecione **Deploy** da **Build** menu. O assembly será registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no banco de dados especificado quando o projeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi criado inicialmente no Visual Studio.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Para implantar o assembly que usa Transact-SQL  
   
@@ -61,7 +60,7 @@ ms.locfileid: "35701527"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Esses comandos iniciam o Visual c# ou Visual Basic compilador usando o **/destino** opção para especificar a criação de uma DLL de biblioteca.  
+ Esses comandos iniciam o Visual c# ou Visual Basic usando o compilador a **/destino** opção para especificar a criação de uma DLL de biblioteca.  
   
 1.  Resolva todos os erros de compilação e avisos antes de implantar o assembly no servidor de teste.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "35701527"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Assim, o procedimento, a função, a agregação, o tipo definido pelo usuário ou o gatilho deve ser criado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o **HelloWorld** assembly contém um método chamado **HelloWorld** no **procedimentos** de classe, o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser adicionadas à consulta para criar um procedimento de chamada **Olá** em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Assim, o procedimento, a função, a agregação, o tipo definido pelo usuário ou o gatilho deve ser criado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o **HelloWorld** assembly contém um método chamado **HelloWorld** no **procedimentos** classe, o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser adicionadas à consulta para criar um procedimento chamado **hello** em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -82,7 +81,7 @@ ms.locfileid: "35701527"
  Para obter mais informações sobre como criar os diferentes tipos de objetos de banco de dados gerenciados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [funções CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agregações CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Tipos definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimentos armazenados CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), e [gatilhos CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implantando o assembly em servidores de produção  
- Uma vez testados e verificados no servidor de teste, os objetos de banco de dados do CLR podem ser distribuídos para servidores de produção. Para obter mais informações sobre como depurar objetos de banco de dados gerenciados, consulte [depurar objetos de banco de dados CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
+ Uma vez testados e verificados no servidor de teste, os objetos de banco de dados do CLR podem ser distribuídos para servidores de produção. Para obter mais informações sobre como depurar objetos de banco de dados gerenciado, consulte [depurar objetos de banco de dados CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
   
  A implantação dos objetos de banco de dados gerenciados é semelhante à dos objetos de banco de dados regulares (tabelas, rotinas [!INCLUDE[tsql](../../includes/tsql-md.md)] etc.). Os assemblies que contêm os objetos de banco de dados do CLR podem ser implantados em outros servidores que usam um script de implantação. O script de implantação pode ser compilado usando a funcionalidade "Gerar Scripts" do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. O script de implantação também pode ser compilado manualmente, ou usando "Gerar Scripts", e alterados manualmente. Uma vez compilado, o script de implantação pode ser executado em outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para implantar os objetos de banco de dados gerenciados.  
   
@@ -90,22 +89,22 @@ ms.locfileid: "35701527"
   
 1.  Abra o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e se conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o assembly gerenciado ou o objeto de banco de dados a ser implantado é registrado.  
   
-2.  No **Pesquisador de objetos**, expanda o  **\<nome do servidor >** e **bancos de dados** árvores. Clique com botão direito em que o objeto de banco de dados gerenciado está registrado, selecione o banco de dados **tarefas**e, em seguida, selecione **gerar Scripts**. O Assistente de Script é aberto.  
+2.  No **Pesquisador de objetos**, expanda o  **\<nome do servidor >** e **bancos de dados** árvores. Com o banco de dados onde o objeto de banco de dados gerenciado está registrado, selecione o botão direito **tarefas**e, em seguida, selecione **gerar Scripts**. O Assistente de Script é aberto.  
   
-3.  Selecione o banco de dados na caixa da lista e clique em **próximo**.  
+3.  Selecione o banco de dados na caixa de listagem e clique em **próxima**.  
   
-4.  No **escolher opções de Script** painel, clique em **próximo**, ou alterar as opções e, em seguida, clique em **próximo**.  
+4.  No **escolher opções de Script** painel, clique em **próxima**, ou alterar as opções e, em seguida, clique em **próxima**.  
   
-5.  No **escolher tipos de objeto** painel, escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Avançar**.  
+5.  No **escolher tipos de objetos** painel, escolha o tipo de objeto de banco de dados a serem implantados. Clique em **Avançar**.  
   
-6.  Para cada tipo de objeto selecionado no **escolher tipos de objeto** painel, um **escolha \<tipo >** painel é exibido. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **próximo**.  
+6.  Para cada tipo de objeto selecionado na **escolher tipos de objetos** painel, um **escolher \<tipo >** painel é apresentado. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **próxima**.  
   
-7.  O **opções de saída** painel surge quando todos os banco de dados desejado objeto tipo foi selecionado. Selecione **Script para arquivo** e especifique um caminho de arquivo para o script. Selecione **Avançar**. Revise suas seleções e clique em **concluir**. O script de implantação é salvo no caminho do arquivo especificado.  
+7.  O **opções de saída** painel aparece quando todos os banco de dados desejado do objeto foram selecionados tipos. Selecione **Script para arquivo** e especifique um caminho de arquivo para o script. Selecione **Avançar**. Examine suas seleções e clique em **concluir**. O script de implantação é salvo no caminho do arquivo especificado.  
   
 ## <a name="post-deployment-scripts"></a>Scripts pós-implantação  
  É possível executar um script de pós-implantação.  
   
- Para adicionar um script de pós-implantação, adicione um arquivo chamado postdeployscript.sql no diretório do projeto do Visual Studio. Por exemplo, clique com botão direito no projeto **Solution Explorer** e selecione **Add Existing Item**. Adicione o arquivo na raiz do projeto, e não na pasta Test Scripts.  
+ Para adicionar um script de pós-implantação, adicione um arquivo chamado postdeployscript.sql no diretório do projeto do Visual Studio. Por exemplo, o botão direito do mouse em seu projeto no **Gerenciador de soluções** e selecione **Add Existing Item**. Adicione o arquivo na raiz do projeto, e não na pasta Test Scripts.  
   
  Quando você clicar na implantação, o Visual Studio executará esse script após a implantação do projeto.  
   

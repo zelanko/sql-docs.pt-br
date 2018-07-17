@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329936"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Criando uma transformação assíncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas pode aguardar para concluir seu processamento depois de receber todas as linhas de entrada ou ela pode gerar algumas linhas antes de receber todas as linhas de entrada. Esse tópico discute uma transformação assíncrona. Se o processamento exigir uma transformação síncrona, consulte [Criando uma transformação síncrona com o componente Script](../data-flow/transformations/script-component.md). Para obter mais informações sobre as diferenças entre componentes síncronos e assíncronos, consulte [Compreendendo as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "36118933"
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Caso existam variáveis cujos valores você deseja usar no script, adicione-as aos campos de propriedade ReadOnlyVariables e ReadWriteVariables da página **Script** do **Editor de Transformação Scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -87,9 +87,9 @@ ms.locfileid: "36118933"
  Para obter informações importantes que se aplicam a todos os tipos de componentes criados por meio do componente Script, consulte [Codificando e depurando o componente Script](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Compreendendo o código gerado automaticamente  
- Quando você abre o VSTA IDE depois de criar e configurar um componente de transformação, o editável `ScriptMain` classe aparece no editor de códigos com stubs para o ProcessInputRow e os métodos de CreateNewOutputRows. A classe ScriptMain é o local em que você escreverá seu código personalizado e ProcessInputRow é o método mais importante em um componente de transformação. O método `CreateNewOutputRows` costuma ser mais usado em um componente de origem, que é como uma transformação assíncrona pois ambos os componentes devem criar suas próprias linhas de saída.  
+ Quando você abre o VSTA IDE depois de criar e configurar um componente de transformação, o editável `ScriptMain` classe aparece no editor de códigos com stubs para o ProcessInputRow e CreateNewOutputRows métodos. A classe ScriptMain é o local em que você escreverá seu código personalizado e ProcessInputRow é o método mais importante em um componente de transformação. O método `CreateNewOutputRows` costuma ser mais usado em um componente de origem, que é como uma transformação assíncrona pois ambos os componentes devem criar suas próprias linhas de saída.  
   
- Se você abrir o VSTA **Explorador de projeto** janela, você pode ver que o componente Script também gerou somente leitura `BufferWrapper` e `ComponentWrapper` itens de projeto. A classe de ScriptMain herda da classe UserComponent a `ComponentWrapper` item de projeto.  
+ Se você abrir o VSTA **Explorador de projeto** janela, você pode ver que o componente Script também gerou somente leitura `BufferWrapper` e `ComponentWrapper` itens de projeto. A classe ScriptMain herda da classe UserComponent no `ComponentWrapper` item de projeto.  
   
  Em tempo de execução, o mecanismo de fluxo de dados chama o método PrimeOutput `UserComponent` de classe que substitui o <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> método o <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> classe pai. O método PrimeOutput, por sua vez, chama o método CreateNewOutputRows.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36118933"
   
  Em uma transformação assíncrona, você pode usar o método AddRow para adicionar linhas à saída, conforme apropriado, dentro do método ProcessInputRow ou ProcessInput. Você não precisa usar o método CreateNewOutputRows. Se estiver escrevendo uma única linha de resultados, como resultados de agregação, para determinada saída, crie a linha de saída antecipadamente usando o método CreateNewOutputRows e preencha seus valores posteriormente, depois de processar todas as linhas de entrada. Contudo, não é útil criar múltiplas linhas no método CreateNewOutputRows, pois o componente Script só permite o uso da linha atual em uma entrada ou saída. O método CreateNewOutputRows é mais importante em um componente de origem em que não há linhas de entrada a serem processadas.  
   
- É recomendável substituir o próprio método ProcessInput. Isso permite executar um processamento preliminar ou final adicional antes ou depois de executar um loop no buffer de entrada e chamar ProcessInputRow para cada linha. Por exemplo, um dos exemplos de código neste tópico substitui ProcessInput para contar o número de endereços de uma cidade específica como ProcessInputRow executa um loop em linhas`.` o exemplo grava o valor de resumo para a segunda saída depois que todas as linhas foram processado. O exemplo completa a saída em ProcessInput porque os buffers de saída não estão mais disponíveis quando PostExecute é chamado.  
+ É recomendável substituir o próprio método ProcessInput. Isso permite executar um processamento preliminar ou final adicional antes ou depois de executar um loop no buffer de entrada e chamar ProcessInputRow para cada linha. Por exemplo, um dos exemplos de código neste tópico substitui ProcessInput para contar o número de endereços em uma cidade específica como ProcessInputRow executa um loop pelas linhas`.` o exemplo grava o valor de resumo na segunda saída depois que todas as linhas tiverem sido processado. O exemplo completa a saída em ProcessInput porque os buffers de saída não estão mais disponíveis quando PostExecute é chamado.  
   
  Dependendo dos requisitos, é recomendável escrever o script nos métodos PreExecute e PostExecute disponíveis na classe ScriptMain para executar qualquer processamento preliminar ou final.  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md)   

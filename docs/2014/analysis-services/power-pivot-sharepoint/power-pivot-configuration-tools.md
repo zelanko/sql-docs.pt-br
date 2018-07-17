@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36121171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317006"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com as ferramentas de configuração do PowerPivot.  
@@ -36,7 +36,7 @@ ms.locfileid: "36121171"
   
 -   [Visão geral do uso de uma ferramenta de configuração do PowerPivot](#bkmk_overview)  
   
--   [Inicia uma das ferramentas de configuração do PowerPivot](#bmkm_start_tool)  
+-   [Iniciar uma das ferramentas de configuração do PowerPivot](#bmkm_start_tool)  
   
 ##  <a name="bkmk_requirements"></a> Requisitos para usar as ferramentas de configuração  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36121171"
 |Configuração do PowerPivot para SharePoint 2013|Ferramenta de Configuração do PowerPivot|  
 |--------------------------------------------------|-----------------------------------|  
 |A página principal tem uma nova opção para **Servidor do PowerPivot para Serviços do Excel**. A opção dá suporte à nova arquitetura com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado fora do farm do SharePoint. Você configura Serviços do Excel para usar um ou mais servidores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no modo do SharePoint.<br /><br /> ![Servidor do PowerPivot na nova ferramenta de configuração](../media/as-powerpivot-configtool-differences-new-mainpage.gif "na ferramenta de configuração do novo servidor do PowerPivot")||  
-||A ferramenta 2010 inclui a página **registrar o SQL Server Analysis Services (PowerPivot) no servidor Local** para configurar uma instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essa página não faz parte da ferramenta 2013 porque não há instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![COMO a conta de serviço na ferramenta de configuração antigo](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "como conta de serviço na antiga ferramenta de configuração")|  
+||A ferramenta 2010 inclui a página **registrar o SQL Server Analysis Services (PowerPivot) no servidor Local** para configurar uma instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essa página não faz parte da ferramenta 2013 porque não há instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![COMO a conta de serviço na ferramenta de configuração antigo](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "como conta de serviço na ferramenta de configuração antigo")|  
 ||A página **Criar Aplicativo de Serviço PowerPivot** tem uma opção adicional de **Atualizar pastas de trabalho para habilitar atualização de dados**. Essa opção não está disponível na ferramenta 2013.<br /><br /> ![Atualizar pastas de trabalho na antiga ferramenta de configuração](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "atualizar pastas de trabalho na antiga ferramenta de configuração")|  
-|A ferramenta 2013 tem uma nova página **Configurar Servidores PowerPivot**. Essa página dá suporte à nova arquitetura do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado fora do farm do SharePoint. Por padrão, o nome do servidor que foi digitado na página principal na caixa de texto **Servidor do PowerPivot para Serviços do Excel**também será listado em **Configurar Servidores PowerPivot**.<br /><br /> ![Registrar a ferramenta de configuração novos servidores PowerPivot](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot registrar servidores nova ferramenta de configuração")||  
+|A ferramenta 2013 tem uma nova página **Configurar Servidores PowerPivot**. Essa página dá suporte à nova arquitetura do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado fora do farm do SharePoint. Por padrão, o nome do servidor que foi digitado na página principal na caixa de texto **Servidor do PowerPivot para Serviços do Excel**também será listado em **Configurar Servidores PowerPivot**.<br /><br /> ![Registre-se a ferramenta de configuração novos servidores PowerPivot](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot registrar servidores nova ferramenta de configuração")||  
 |A ferramenta 2013 tem uma nova página **Registrar o Suplemento PowerPivot como Rastreador de Uso de Serviços do Excel**. Os Serviços do Excel no SharePoint 2010 não rastreiam dados de uso do PowerPivot.||  
 ||A ferramenta 2010 inclui a página **Adicionar MSOLAP.5 como um provedor confiável** para registrar MSOLAP de modo que os Serviços do Excel no SharePoint 2010 possam carregar modelos do PowerPivot. Essa página não faz parte da ferramenta 2013. Os Serviços do Excel para SharePoint 2013 não usam o provedor MSOLAP para carregar modelos.|  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36121171"
 >  -   [Instalar o Reporting Services SharePoint Mode para SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
-##  <a name="bmkm_start_tool"></a> Inicia uma das ferramentas de configuração do PowerPivot  
+##  <a name="bmkm_start_tool"></a> Iniciar uma das ferramentas de configuração do PowerPivot  
   
 1.  Sobre o **iniciar** tela, digite `powerpivot`  
   
-     No **iniciar** tela, digite `powerpivot` ou o **iniciar** menu, clique em **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração** e, em seguida, clique em um dos seguintes:  
+     No **inicie** tela, digite `powerpivot` ou na **iniciar** menu, clique em **todos os programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **ferramentas de configuração** e, em seguida, clique em um dos seguintes:  
   
     -   **Ferramenta de Configuração do PowerPivot**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36121171"
   
      Por exemplo, a imagem mostra a página de inicialização da ferramenta de configuração do PowerPivot para o SharePoint 2013.  
   
-     ![PowerPivot para a ferramenta de configuração do SharePoint 2013](../media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "PowerPivot para a ferramenta de configuração do SharePoint 2013")  
+     ![O PowerPivot para a ferramenta de configuração do SharePoint 2013](../media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "PowerPivot para a ferramenta de configuração do SharePoint 2013")  
   
  Cada tarefa é composta de ações individuais que abordam algum aspecto da configuração do servidor. Por exemplo, a tarefa de configuração inclui ações para implantar soluções, criar um aplicativo de serviço PowerPivot, ativar recursos e configurar a atualização de dados. A lista de ações variará de acordo com o estado atual da instalação. Se uma ação não for necessária, a ferramenta a excluirá da lista de tarefas.  
   

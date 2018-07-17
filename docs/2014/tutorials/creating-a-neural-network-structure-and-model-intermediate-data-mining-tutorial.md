@@ -1,5 +1,5 @@
 ---
-title: Criando uma estrutura de rede Neural e o modelo (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Criando uma estrutura de rede Neural e um modelo (Tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - DISCRETIZED column
@@ -19,18 +19,18 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 181ae461836c545a39430af08db7fb27693d7acb
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304746"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de rede neural (Tutorial de mineração de dados intermediário)
   Para criar um modelo de mineração de dados, primeiro você deve usar o Assistente de Mineração de Dados para criar uma nova estrutura de mineração com base na nova exibição da fonte de dados. Nessa tarefa, você usará o assistente para criar uma estrutura de mineração e, ao mesmo tempo, um modelo de mineração associado baseado no algoritmo Rede Neural da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
- Como as redes neurais são extremamente flexíveis e podem analisar muitas combinações de entradas e saídas, você deve testar várias maneiras de processar os dados para obter os melhores resultados. Por exemplo, convém personalizar a maneira como a meta numérica de qualidade de serviço *guardado*, ou agrupados para destinar requisitos de negócios específicos. Para fazer isso, você adicionará uma nova coluna à estrutura de mineração que agrupa dados numéricos de uma maneira diferente e, em seguida, criará um modelo que usa a nova coluna. Você usará esses modelos de mineração para fazer alguma exploração.  
+ Como as redes neurais são extremamente flexíveis e podem analisar muitas combinações de entradas e saídas, você deve testar várias maneiras de processar os dados para obter os melhores resultados. Por exemplo, você talvez queira personalizar a maneira que a meta numérica de qualidade de serviço está *guardado*, ou agrupada para atender a requisitos específicos de negócios. Para fazer isso, você adicionará uma nova coluna à estrutura de mineração que agrupa dados numéricos de uma maneira diferente e, em seguida, criará um modelo que usa a nova coluna. Você usará esses modelos de mineração para fazer alguma exploração.  
   
  Finalmente, quando você souber, com base no modelo de rede neural, quais fatores têm impacto maior para sua questão comercial, construirá um modelo separado para previsão e marcação. Você usará o algoritmo Regressão Logística da [!INCLUDE[msCoName](../includes/msconame-md.md)], que é baseado no modelo de redes neurais, mas é otimizado para localizar uma solução baseada em entradas específicas.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36313074"
   
  [Use a diferenciação para guardar a coluna previsível](#bkmk_ColumnCopy)  
   
- [Copie a coluna e alterar o método de diferenciação para um modelo diferente](#bkmk_Alias)  
+ [Copie a coluna e altere o método de diferenciação para um modelo diferente](#bkmk_Alias)  
   
  [Criar um alias para a coluna previsível para que você possa comparar modelos](#bkmk_Alias2)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36313074"
   
 2.  Na página **Bem-vindo ao Assistente de Mineração de Dados** , clique em **Avançar**.  
   
-3.  No **Selecionar método de definição** Verifique **de warehouse existente de dados ou banco de dados relacional** está selecionado e, em seguida, clique em **próximo**.  
+3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
   
-4.  No **criar a estrutura de mineração de dados** , verifique se que a opção **criar estrutura de mineração com um modelo de mineração** está selecionado.  
+4.  Sobre o **criar a estrutura de mineração de dados** página, verifique a opção **criar estrutura de mineração com um modelo de mineração** está selecionado.  
   
 5.  Clique na lista suspensa para a opção **qual técnica de mineração de dados você deseja usar?**, em seguida, selecione **redes neurais da Microsoft**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36313074"
   
      O **Selecionar exibição da fonte de dados** página será exibida.  
   
-7.  Em **modos de exibição de fonte de dados disponíveis**, selecione `Call Center`e clique em **próximo**.  
+7.  Sob **modos de exibição de fonte de dados disponíveis**, selecione `Call Center`e clique em **próximo**.  
   
 8.  No **especificar tipos de tabela** página, selecione o **caso** caixa de seleção ao lado de **FactCallCenter** tabela. Não selecione nada para **DimDate**. Clique em **Avançar**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36313074"
   
      Observe que várias colunas previsíveis foram selecionadas. Um dos pontos fortes do algoritmo de rede neural é que ele pode analisar todas as combinações possíveis de atributos de entrada e saída. Você não iria querer fazer isso para um grande conjunto de dados, pois isso poderia aumentar exponencialmente o tempo de processamento.  
   
-12. Sobre o **colunas especificar conteúdo e tipo de dados** página, verifique se a grade contém as colunas, tipos de conteúdo e tipos de dados, conforme mostrado na tabela a seguir e, em seguida, clique em **próximo**.  
+12. Sobre o **colunas especificar conteúdo e tipo de dados** página, verifique se a grade contém as colunas, tipos de conteúdo e tipos de dados, conforme mostrado na tabela a seguir e, em seguida, clique em **próxima**.  
   
     |Colunas|Tipo de Conteúdo|Tipos de dados|  
     |-------------|------------------|----------------|  
@@ -110,22 +110,22 @@ ms.locfileid: "36313074"
     |Turno|Discreto|Texto|  
     |WageType|Discreto|Texto|  
   
-13. No **Criar teste definido** página, desmarque a caixa de texto para a opção **porcentagem de dados de teste**. Clique em **Avançar**.  
+13. No **criar o teste definido** página, desmarque a caixa de texto para a opção **porcentagem de dados de teste**. Clique em **Avançar**.  
   
 14. Sobre o **Concluindo o assistente** página, para o **nome da estrutura de mineração**, tipo `Call Center`.  
   
-15. Para o **nome do modelo de mineração**, tipo `Call Center Default NN`e, em seguida, clique em **concluir**.  
+15. Para o **nome do modelo de mineração**, digite `Call Center Default NN`e, em seguida, clique em **concluir**.  
   
-     O **Permitir drill-through** caixa está desabilitada porque você não pode detalhar para dados com modelos de rede neural.  
+     O **permitir detalhamento** caixa está desabilitada porque você não pode detalhar para dados com modelos de rede neural.  
   
-16. No Gerenciador de soluções, clique no nome da estrutura de mineração de dados que você acabou criado e selecione **processo**.  
+16. No Gerenciador de soluções, clique no nome da estrutura de mineração de dados que você acabou criado e, em seguida, selecione **processo**.  
   
 ## <a name="use-discretization-to-bin-the-target-column"></a>Use a diferenciação guardar a coluna de destino  
  Por padrão, quando você cria um modelo de rede neural que tem um atributo previsível numérico, o algoritmo Rede Neural da Microsoft trata o atributo como um número contínuo. Por exemplo, o atributo ServiceGrade é um número que teoricamente varia de 0.00 (todas as chamadas são atendidas) a 1.00 (todos os chamadores desligam). Neste conjunto de dados, os valores têm a seguinte distribuição:  
   
  ![distribuição de valores de nível de serviço](../../2014/tutorials/media/skt-service-grade-valuesc.gif "distribuição de valores de nível de serviço")  
   
- Em virtude disso, quando você processa o modelo, as saídas podem ser agrupadas de modo diferente do esperado. Por exemplo, se você usar o clustering para identificar os grupos de valores, o algoritmo divide os valores de ServiceGrade em intervalos como este: 0,0748051948 - 0,09716216215. Embora esse agrupamento seja matematicamente preciso, esse tipo de intervalo pode não ser significativo para usuários empresariais.  
+ Em virtude disso, quando você processa o modelo, as saídas podem ser agrupadas de modo diferente do esperado. Por exemplo, se você usar clustering para identificar os grupos de valores, o algoritmo divide os valores de ServiceGrade em intervalos como este: 0,0748051948 - 0,09716216215. Embora esse agrupamento seja matematicamente preciso, esse tipo de intervalo pode não ser significativo para usuários empresariais.  
   
  Nesta etapa, para tornar o resultado mais intuitivo, você agrupará os valores numéricos de modo diferente, criando cópias da coluna de dados numéricos.  
   
@@ -181,12 +181,12 @@ ms.locfileid: "36313074"
   
      Quando você escolhe este método, o algoritmo força os valores em buckets de tamanhos iguais, que por sua vez altera os limites superiores e inferiores de cada intervalo. Você pode especificar o número de buckets, mas você quer evitar ter dois valores pequenos em qualquer bucket.  
   
- Para obter mais informações sobre as opções de guardar, consulte [os métodos de diferenciação &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md).  
+ Para obter mais informações sobre as opções de guardar, consulte [métodos de discretização &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md).  
   
- Como alternativa, em vez de usar os valores numéricos, você pode adicionar uma coluna derivada separada que classifica os níveis de serviço em intervalos de destino predefinidos, como **melhor** (ServiceGrade \<= 0,05),  **Aceitável** (0,10 > ServiceGrade > 0,05), e **ruim** (ServiceGrade > = 0,10).  
+ Como alternativa, em vez de usar os valores numéricos, você poderia adicionar uma coluna derivada separada que classifica os níveis de serviço em intervalos de destino predefinidos, como **melhor** (ServiceGrade \<= 0,05),  **Aceitável** (0,10 > ServiceGrade > 0,05), e **ruim** (ServiceGrade > = 0,10).  
   
-###  <a name="bkmk_newColumn"></a> Criar uma cópia de uma coluna e alterar o método de diferenciação  
- Você faça uma cópia da coluna de mineração que contém o atributo de destino, ServiceGrade e altere a maneira como os números são agrupados. É possível criar várias cópias de qualquer coluna em uma estrutura de mineração, inclusive do atributo previsível.  
+###  <a name="bkmk_newColumn"></a> Criar uma cópia de uma coluna e altere o método de diferenciação  
+ Você vai fazer uma cópia da coluna de mineração que contém o atributo de destino, ServiceGrade e altere a maneira como os números são agrupados. É possível criar várias cópias de qualquer coluna em uma estrutura de mineração, inclusive do atributo previsível.  
   
  Para este tutorial, você usará o método de Áreas Iguais de diferenciação e especificará quatro buckets. Os agrupamentos resultantes desse método são razoavelmente próximos dos valores de destino de interesse de seus usuários empresariais.  
   
@@ -196,19 +196,19 @@ ms.locfileid: "36313074"
   
 2.  Na guia estrutura de mineração, clique em **adicionar uma coluna de estrutura de mineração**.  
   
-3.  No **Selecionar coluna** caixa de diálogo, selecione ServiceGrade na lista da **coluna de origem**, em seguida, clique em **Okey**.  
+3.  No **Selecionar coluna** caixa de diálogo, selecione ServiceGrade na lista **coluna de origem**, em seguida, clique em **Okey**.  
   
      Uma nova coluna é adicionada à lista de colunas da estrutura de mineração. Por padrão, a nova coluna de mineração tem o mesmo nome que a coluna existente, com uma pós-fixação numérica: por exemplo, ServiceGrade 1. É possível alterar o nome dessa coluna para que seja mais descritivo.  
   
      Você também especificará o método de diferenciação.  
   
-4.  Clique em ServiceGrade 1 e selecione **propriedades**.  
+4.  ServiceGrade 1 com o botão direito e selecione **propriedades**.  
   
 5.  No **propriedades** janela, localize a **nome** propriedade e altere o nome para **Service Grade Binned** .  
   
 6.  Uma caixa de diálogo é exibida perguntando se você deseja fazer a mesma alteração no nome de todas as colunas do modelo de mineração relacionado. Clique em **Não**.  
   
-7.  No **propriedades** janela, localize a seção **tipo de dados** e expanda-o se necessário.  
+7.  No **propriedades** janela, localize a seção **tipo de dados** e expandi-lo se necessário.  
   
 8.  Altere o valor da propriedade `Content` de `Continuous` para `Discretized`.  
   
@@ -231,38 +231,38 @@ ms.locfileid: "36313074"
   
 -   O modelo de mineração MN Padrão do Call Center trata os valores de ServiceGrade valores como um intervalo contínuo.  
   
--   Você criará um novo modelo de mineração MN Call Center guardado que usa como seus resultados de meta os valores da coluna ServiceGrade, distribuídos em quatro buckets de tamanhos iguais.  
+-   Você criará um novo modelo de mineração Center NN guardado do Call, que usa como seus resultados de meta os valores da coluna ServiceGrade, distribuídos em quatro buckets de tamanhos iguais.  
   
 #### <a name="to-add-a-mining-model-based-on-the-new-discretized-column"></a>Para adicionar um modelo de mineração baseado na nova coluna de dados discretos  
   
-1.  No Gerenciador de soluções, a estrutura de mineração recém criado e selecione **abrir**.  
+1.  No Gerenciador de soluções, clique com botão direito a estrutura de mineração que você acabou criado e, em seguida, selecione **aberto**.  
   
 2.  Clique na guia **Modelos de Mineração** .  
   
 3.  Clique em **criar um modelo de mineração relacionado**.  
   
-4.  No **novo modelo de mineração** caixa de diálogo para **nome do modelo**, tipo `Call Center Binned NN`. No **nome do algoritmo** lista suspensa, selecione **rede Neural da Microsoft**.  
+4.  No **novo modelo de mineração** caixa de diálogo, para **nome do modelo**, tipo `Call Center Binned NN`. No **nome do algoritmo** lista suspensa, selecione **rede Neural da Microsoft**.  
   
 5.  Na lista de colunas contidas no novo modelo de mineração, localize ServiceGrade e altere o uso de `Predict` para `Ignore`.  
   
 6.  De maneira semelhante, localize ServiceGrade Guardado e altere o uso de `Ignore` para `Predict`.  
   
 ##  <a name="bkmk_Alias2"></a> Criar um Alias para a coluna de destino  
- Ordinariamente você não pode comparar modelos de mineração que usam atributos previsíveis diferentes. No entanto, é possível criar um alias para uma coluna do modelo de mineração. Ou seja, você pode renomear a coluna, ServiceGrade guardado, dentro do modelo de mineração para que ele tenha o mesmo nome da coluna original. Em seguida, é possível comparar diretamente esses dois modelos em um gráfico de exatidão, embora os dados sejam diferenciados de maneira diferente.  
+ Ordinariamente você não pode comparar modelos de mineração que usam atributos previsíveis diferentes. No entanto, é possível criar um alias para uma coluna do modelo de mineração. Ou seja, você pode renomear a coluna, ServiceGrade guardado, dentro do modelo de mineração para que ele tenha o mesmo nome que a coluna original. Em seguida, é possível comparar diretamente esses dois modelos em um gráfico de exatidão, embora os dados sejam diferenciados de maneira diferente.  
   
 ###  <a name="bkmk_Alias"></a> Para adicionar um alias para uma coluna de estrutura de mineração em um modelo de mineração  
   
-1.  No **modelos de mineração** guia em **estrutura**, selecione ServiceGrade guardado.  
+1.  No **modelos de mineração** guia, em **estrutura**, selecione ServiceGrade guardado.  
   
      Observe que o **propriedades** janela exibe as propriedades do objeto, a coluna de ScalarMiningStructure.  
   
 2.  Na coluna do modelo de mineração, NM Guardado do ServiceGrade, clique na célula que corresponde à coluna ServiceGrade Guardado.  
   
-     Observe que agora o **propriedades** janela exibe as propriedades para o objeto, MiningModelColumn.  
+     Observe que agora o **propriedades** janela exibe as propriedades do objeto, MiningModelColumn.  
   
 3.  Localize o **nome** propriedade e altere o valor para `ServiceGrade`.  
   
-4.  Localize o **descrição** propriedade e o tipo **alias temporário da coluna**.  
+4.  Localize o **descrição** propriedade e digite **alias temporário da coluna**.  
   
      O **propriedades** janela deve conter as seguintes informações:  
   
@@ -275,7 +275,7 @@ ms.locfileid: "36313074"
     |**ID da SourceColumn**|Nível de serviço 1|  
     |**Usage**|Predict|  
   
-5.  Clique em qualquer lugar do **modelo de mineração** guia.  
+5.  Clique em qualquer lugar de **modelo de mineração** guia.  
   
      A grade é atualizada para mostrar o novo alias temporário da coluna, `ServiceGrade`, ao lado de uso da coluna. A grade que contém a estrutura de mineração e dois modelos de mineração devem ser parecidas com o seguinte:  
   
@@ -305,9 +305,9 @@ ms.locfileid: "36313074"
   
 ###  <a name="bkmk_SeedProcess"></a> Para especificar a semente e processar os modelos  
   
-1.  No **modelo de mineração** guia, a coluna para o modelo denominado Call Center - LR e selecione **definir parâmetros de algoritmo**.  
+1.  No **modelo de mineração** guia, clique com botão direito na coluna para o modelo denominado Call Center - LR e selecione **definir parâmetros de algoritmo**.  
   
-2.  Na linha para o parâmetro HOLDOUT_SEED, clique na célula vazia em **valor**e o tipo `1`. Clique em **OK**. Repita essa etapa para cada modelo associado à estrutura.  
+2.  Na linha para o parâmetro HOLDOUT_SEED, clique na célula vazia sob **valor**e o tipo `1`. Clique em **OK**. Repita essa etapa para cada modelo associado à estrutura.  
   
     > [!NOTE]  
     >  O valor escolhido como semente não importa, desde que você use a mesma semente para todos os modelos relacionados.  
@@ -316,14 +316,14 @@ ms.locfileid: "36313074"
   
 4.  No **processar modelo de mineração** caixa de diálogo, clique em **executar**.  
   
-5.  Clique em **fechar** para fechar o **progresso do processo** caixa de diálogo e clique **fechar** novamente no **processar modelo de mineração** caixa de diálogo.  
+5.  Clique em **feche** para fechar o **progresso do processo** caixa de diálogo e clique **fechar** novamente no **processar modelo de mineração** caixa de diálogo.  
   
  Agora que criou os dois modelos de mineração relacionados, você explorará os dados para descobrir relações nos dados.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Explorando o modelo de Call Center &#40;intermediário de Tutorial de mineração de dados&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+ [Explorando o modelo de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Estruturas de mineração &#40;Analysis Services – mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

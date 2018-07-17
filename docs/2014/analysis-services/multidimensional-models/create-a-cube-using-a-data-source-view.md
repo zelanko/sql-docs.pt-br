@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf9a08773ef90bb4d316f7fb533e5a5a854c779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36019238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303046"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
   Use este método de criar um novo cubo se você pretender usar uma exibição existente de fonte de dados. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  
@@ -55,7 +55,7 @@ ms.locfileid: "36019238"
 > [!NOTE]  
 >  Na guia **Diagrama** , você pode ampliar ou maximizar a janela do assistente para exibir o esquema.  
   
- Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo** . Se não houver nenhum, deixe  **\<nenhum >** selecionado. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
+ Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo** . Se não houver nenhum, deixe  **\<None >** selecionado. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
  Se você especificou uma tabela de dimensão de tempo enquanto selecionava tipos de tabela, use a página **Definir períodos de tempo** do assistente para especificar as colunas na tabela que correspondem a períodos de tempo padrão. Procure os períodos padrão em **Nome da Propriedade de Tempo**. Para cada linha que tem uma coluna correspondente na tabela de dimensão de tempo, escolha a coluna correta em **Colunas da Tabela de Tempo**. O assistente usa as associações que você especifica para criar atributos e sugerir hierarquias de tempo que fazem sentido para seus dados. Estas associações também definem a propriedade **Tipo** para os atributos correspondentes na nova dimensão de tempo. O assistente cria uma dimensão de tempo com base em uma tabela de dimensão de tempo.  
@@ -92,7 +92,7 @@ ms.locfileid: "36019238"
   
  Para remover qualquer objeto na árvore do cubo, desmarque a caixa de seleção ao lado dele. Desmarcar a caixa de seleção ao lado de um objeto também remove todos os objetos debaixo dele. As dependências entre objetos são impostas, de modo que, se você remover um atributo, os níveis de hierarquia dependentes no atributo também serão removidos. Por exemplo, desmarcar uma caixa de seleção ao lado de uma hierarquia desmarca as caixas de seleção ao lado de todos os níveis na hierarquia, e remove os níveis e também as hierarquias. O atributo de chave para uma dimensão não pode ser removido.  
   
- Você pode renomear qualquer dimensão, o atributo, a hierarquia ou o nível tanto clicando no nome ou clicando com o nome e, em seguida, no menu de atalho clicando **Renomear \<objeto >**, onde  **\< objeto >** é **dimensão**, **atributo**, ou **nível**.  
+ Você pode renomear qualquer dimensão, o atributo, a hierarquia ou o nível de tanto clicando no nome ou clicando com o nome e, em seguida, no menu de atalho clicando em **renomeie \<objeto >**, onde  **\< objeto >** está **dimensão**, **atributo**, ou **nível**.  
   
  Não há necessariamente uma relação de um para um entre o número de tabelas de dimensão definido na página **Identificar Tabelas de Fatos e Dimensões** do assistente e o número de dimensões listadas nesta página do assistente. Dependendo das relações entre as tabelas na exibição da fonte de dados, o assistente pode usar duas ou mais tabelas para criar uma dimensão (por exemplo, como exigido por um esquema de floco de neve).  
   

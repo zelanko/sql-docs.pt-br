@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 159c77133a5b0a218fa308ab179b2d25376432bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36118045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315486"
 ---
 # <a name="feature-selection"></a>Seleção de recursos
   Use as caixas de seleção da página **Seleção de Recursos** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para selecionar componentes para sua instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,12 +44,12 @@ ms.locfileid: "36118045"
   
 |Recursos|Description|  
 |--------------|-----------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../../includes/ssde-md.md)], o serviço principal para armazenamento, processamento e proteção de dados, replicação, pesquisa de texto completo, ferramentas para gerenciar relacionais e dados XML e o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server (DQS). Estes são os recursos do mecanismo de banco de dados:<br /><br /> O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados.<br /><br /> Replicação: opcional: a replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.<br /><br /> Pesquisa de Texto Completo: (opcional) a Pesquisa de Texto Completo fornece funcionalidade para realizar consultas de texto completo em dados baseados em caracteres não criptografados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]: Opcional: o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) é uma solução de limpeza de dados que permite descobrir dados inconsistentes e incorretos na fonte de dados. Essa solução fornece modos interativos e assistidos por computador de limpar seus dados. Marque esta caixa de seleção para instalar o servidor DQS. Depois de concluir a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você terá de executar o arquivo DQSInstaller.exe para *concluir* a instalação do servidor DQS. Se você instalou a instância padrão do SQL server, esse arquivo está disponível em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<InstanceName>\mssql\. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **Clusters de Failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** os componentes Replicação e Pesquisa de Texto Completo são necessários e selecionados automaticamente pela Instalação para instalações de clustering de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando você seleciona Serviços de Mecanismo de Banco de Dados.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../../includes/ssde-md.md)], o principal serviço para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo, ferramentas para gerenciar relacionais e dados XML e o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] servidor (DQS). Estes são os recursos do mecanismo de banco de dados:<br /><br /> O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados.<br /><br /> Replicação: opcional: a replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.<br /><br /> Pesquisa de Texto Completo: (opcional) a Pesquisa de Texto Completo fornece funcionalidade para realizar consultas de texto completo em dados baseados em caracteres não criptografados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]: Opcional: o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) é uma solução de limpeza de dados que permite descobrir dados inconsistentes e incorretos na fonte de dados. Essa solução fornece modos interativos e assistidos por computador de limpar seus dados. Marque esta caixa de seleção para instalar o servidor DQS. Depois de concluir a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você terá de executar o arquivo DQSInstaller.exe para *concluir* a instalação do servidor DQS. Se você instalou a instância padrão do SQL server, esse arquivo estará disponível em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **Clusters de Failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** os componentes Replicação e Pesquisa de Texto Completo são necessários e selecionados automaticamente pela Instalação para instalações de clustering de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando você seleciona Serviços de Mecanismo de Banco de Dados.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui as ferramentas para criação e gerenciamento de aplicativos OLAP (processamento analítico online) e de mineração de dados.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – Nativo|O modo Nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui componentes de servidor e cliente para criar, gerenciar e implantar relatórios de tabelas, de matriz, gráficos e de forma livre. O[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também é uma plataforma extensível que você pode usar para desenvolver aplicativos de relatório.|  
   
 > [!IMPORTANT]  
->  1.  A Instalação não configura o balanceamento de carga e o endereçamento de URL única para vários nós em uma implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para concluir uma implantação de expansão, você deve usar o Windows Server, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center ou software de gerenciamento de cluster de terceiros. Para obter mais informações sobre como configurar a implantação de Web farm, consulte [Configurando o Reporting Services para implantação em expansão](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
+>  1.  A Instalação não configura o balanceamento de carga e o endereçamento de URL única para vários nós em uma implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para concluir uma implantação de expansão, você deve usar o Windows Server, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center ou software de gerenciamento de cluster de terceiros. Para obter mais informações sobre como configurar a implantação de Web farm, consulte [Configurando o Reporting Services para implantação escalável](http://go.microsoft.com/fwlink/?LinkId=199448) (http://go.microsoft.com/fwlink/?LinkId=199448).  
 > 2.  Para obter os requisitos de navegador dos componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Planejando o suporte a navegador do Reporting Services e Power View &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 > 3.  Não há suporte ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em configurações lado a lado na plataforma de 64 bits e no subsistema de 32 bits (WOW64) de uma servidor de 64 bits ao mesmo tempo.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36118045"
 ## <a name="installing-adventureworks-sample-databases"></a>Instalando bancos de dados de exemplo AdventureWorks  
  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como instalar bancos de dados de exemplo e código de exemplo, consulte o [Microsoft SQL Server Community Projects & Samples](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843).  
   
- Informações adicionais sobre exemplos estarão disponíveis depois que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalado. Do **iniciar** menu, clique em **todos os programas**, clique em **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, clique em **documentação e tutoriais** e, em seguida, clique em  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visão geral dos exemplos**.  
+ Informações adicionais sobre exemplos estarão disponíveis depois que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for instalado. Dos **inicie** menu, clique em **todos os programas**, clique em **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, clique em **documentação e tutoriais** e, em seguida, clique em  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visão geral dos exemplos**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Edições e componentes do SQL Server 2014](../editions-and-components-of-sql-server-2016.md)  

@@ -3,10 +3,9 @@ title: Alterando um Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - altering assemblies
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 03f2f9d033b4c030bd262bc5cb5621e5cdaaae6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698287"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356288"
 ---
 # <a name="altering-an-assembly"></a>Alterando um assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ALTER ASSEMBLY SQLCLRTest
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- Se o conjunto de permissões de um assembly que está sendo alterado de **seguro** para **EXTERNAL_ACCESS** ou **UNSAFE**, uma chave assimétrica e logon correspondente com  **EXTERNAL ACCESS ASSEMBLY** permissão ou **UNSAFE ASSEMBLY** permissão para o assembly deve ser criado pela primeira vez. Para obter mais informações, consulte [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+ Se o conjunto de permissões de um assembly é alterado de **seguro** à **EXTERNAL_ACCESS** ou **UNSAFE**, uma chave assimétrica e um logon correspondente com  **EXTERNAL ACCESS ASSEMBLY** permissão ou **UNSAFE ASSEMBLY** permissão para o assembly deve primeiramente ser criada. Para obter mais informações, consulte [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>Adicionando o código-fonte de um assembly  
  A cláusula ADD FILE na sintaxe ALTER ASSEMBLY não está presente em CREATE ASSEMBLY. Você pode usá-la para adicionar código-fonte ou outros arquivos associados a um assembly. Os arquivos serão copiados dos seus locais originais e armazenados em tabelas do sistema do banco de dados. Isso garante que você sempre tenha código-fonte ou outros arquivos à mão, se precisar recriar ou documentar a versão atual do UDT.  
@@ -59,7 +57,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando Assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Criando um Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [Descartar um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Descarte de um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

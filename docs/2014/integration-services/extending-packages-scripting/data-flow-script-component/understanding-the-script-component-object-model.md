@@ -18,13 +18,13 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316816"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
   Conforme discutido em [codificando e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, o projeto de componente de Script contém três itens de projeto:  
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
   
--   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput` entrega o processamento para o  **\<inputbuffer > _ProcessInput** método. Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` , em seguida, chama um método `SetEndOfRowset` no último buffer de saída.  
+-   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput` entrega o processamento para o  **\<bufferdeentrada > _ProcessInput** método. Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` , em seguida, chama um método `SetEndOfRowset` no último buffer de saída.  
   
 -   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.  
   
@@ -154,11 +154,11 @@ public override void PreExecute()
   
 -   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.  
   
--   Uma gravação somente  **\<coluna > IsNull** propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna como `null`.  
+-   Uma gravação somente  **\<coluna > _IsNull** propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna como `null`.  
   
 -   Um método `AddRow` para adicionar uma linha nova vazia ao buffer de saída.  
   
--   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Você geralmente não precisa dessas funções ao usar a métodos implementados em de processamento de entrada de `UserComponent` classe base.  
+-   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Você geralmente não precisa dessas funções ao usar os métodos implementados de processamento de entrada a `UserComponent` classe base.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece  
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:  
@@ -180,7 +180,7 @@ public override void PreExecute()
  Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> sempre que houver processamento a ser executado uma só vez após o processamento das linhas de dados. Por exemplo, em uma origem, talvez você queira fechar o `System.Data.SqlClient.SqlDataReader` usado para carregar dados no fluxo de dados.  
   
 > [!IMPORTANT]  
->  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, incremente o valor de uma variável local e defina o valor da variável de pacote para o valor da variável local no `PostExecute` método depois que todos os dados foram processado.  
+>  A coleção de `ReadWriteVariables` só está disponível no método `PostExecute`. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, incremente o valor de uma variável local e defina o valor da variável de pacote como o valor da variável local no `PostExecute` método após todos os dados foram processado.  
   
 ## <a name="releaseconnections-method"></a>Método ReleaseConnections  
  Origens e destinos geralmente precisam se conectar a uma fonte de dados externa. Substitua o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para fechar e liberar a conexão aberta anteriormente no método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.  
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**permanecer acima para data com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando o componente Script no Editor de componente de Script] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Configurando o componente Script no Editor de componente Script] ((configuring-the-script-component-in-the-script-component-editor.md)   
  [Codificando e depurando o componente Script] (.. /Extending-Packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-script-Component.MD  
   
   

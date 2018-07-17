@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aa4e7dce28a9bf0b15c40843db13d7d75d5327a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fd8bcd270794394bcb576c42657c2d9cd831fc98
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697767"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359538"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,23 +33,23 @@ ms.locfileid: "35697767"
   
  **SqlContext** fornece acesso para os seguintes componentes:  
   
--   **SqlPipe**: O **SqlPipe** objeto representa o "pipe" pelo qual os resultados fluem para o cliente. Para obter mais informações sobre o **SqlPipe** de objeto, consulte [objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: O **SqlPipe** objeto representa o "pipe" por meio do qual os resultados fluem para o cliente. Para obter mais informações sobre o **SqlPipe** do objeto, consulte [objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: O **SqlTriggerContext** objeto só pode ser recuperado de dentro de um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre o **SqlTriggerContext** de objeto, consulte [objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: O **SqlTriggerContext** objeto só pode ser recuperado de dentro um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre o **SqlTriggerContext** do objeto, consulte [objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
 -   **IsAvailable**: O **IsAvailable** propriedade é usada para determinar a disponibilidade de contexto.  
   
 -   **WindowsIdentity**: O **WindowsIdentity** propriedade é usada para recuperar a identidade do Windows do chamador.  
   
 ## <a name="determining-context-availability"></a>Determinando a disponibilidade de contexto  
- Consulta o **SqlContext** classe para ver se o código em execução no momento está em execução no processo. Para fazer isso, verifique o **IsAvailable** propriedade o **SqlContext** objeto. O **IsAvailable** propriedade é somente leitura e retorna **True** se o código de chamada está em execução dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se outros **SqlContext** membros podem ser acessados. Se o **IsAvailable** propriedade retorna **False**, todas as outras **SqlContext** membros lançam um **InvalidOperationException**, se usado . Se **IsAvailable** retorna **False**, qualquer tentativa de abrir um objeto de conexão que tem "conexão de contexto = true" na cadeia de conexão falhar.  
+ Consulta de **SqlContext** classe para ver se o código em execução no momento está em execução no processo. Para fazer isso, verifique as **IsAvailable** propriedade da **SqlContext** objeto. O **IsAvailable** propriedade é somente leitura e retorna **verdadeiro** se o código de chamada está em execução dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se outros **SqlContext** membros podem ser acessados. Se o **IsAvailable** propriedade retorna **falso**, todos os outros **SqlContext** membros lançar um **InvalidOperationException**, se usado . Se **IsAvailable** retorna **falso**, qualquer tentativa de abrir um objeto de conexão que tem "conexão de contexto = true" na cadeia de conexão falhará.  
   
 ## <a name="retrieving-windows-identity"></a>Recuperando a identidade do Windows  
  O código CLR em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é invocado no contexto da conta de processo. Se o código deve executar determinadas ações usando a identidade do usuário da chamada, em vez do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processar identidade, em seguida, um token de representação deve ser obtido por meio de **WindowsIdentity** propriedade o  **SqlContext** objeto. O **WindowsIdentity** propriedade retorna um **WindowsIdentity** instância que representa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidade Windows do chamador, ou nulo se o cliente foi autenticado usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação. Somente assemblies marcados com **EXTERNAL_ACCESS** ou **UNSAFE** permissões podem acessar essa propriedade.  
   
- Depois de obter o **WindowsIdentity** do objeto, os chamadores podem representar a conta de cliente e executar ações em nome deles.  
+ Depois de obter o **WindowsIdentity** do objeto, os chamadores podem representar a conta de cliente e executar ações em seu nome.  
   
- A identidade do chamador só está disponível por meio de **SqlContext.WindowsIdentity** se o cliente que iniciou a execução do procedimento armazenado ou função conectado ao servidor usando a autenticação do Windows. Se, em vez disso, a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi usada, essa propriedade será nula e o código não poderá representar o chamador.  
+ A identidade do chamador só está disponível por meio **Sqlcontext** se o cliente que iniciou a execução do procedimento armazenado ou da função conectado ao servidor usando a autenticação do Windows. Se, em vez disso, a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi usada, essa propriedade será nula e o código não poderá representar o chamador.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como obter a identidade do Windows do cliente que fez a chamada e representar o cliente.  

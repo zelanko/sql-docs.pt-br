@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300586"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas espera até receber todas as linhas de entrada para completar seu processamento. Este tópico discute uma transformação síncrona. Para obter informações sobre transformações assíncronas, consulte [Criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -74,9 +74,9 @@ ms.locfileid: "36122904"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
- Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade de **Script** página do **Editor de transformação scripts**.  
+ Se você quiser usar variáveis existentes em seu script, você pode adicioná-las a `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade a **Script** página da **Editor de transformação scripts**.  
   
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecione as variáveis no **selecionar variáveis** caixa de diálogo.  
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar diversas variáveis clicando no botão de reticências (**...** ) botão ao lado de `ReadOnlyVariables` e `ReadWriteVariables` campos de propriedade e, em seguida, selecionar as variáveis na **selecionar variáveis** caixa de diálogo.  
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -141,7 +141,7 @@ else
  Estes exemplos demonstram o código personalizado que é necessário na classe `ScriptMain` para criar um componente de transformação síncrono.  
   
 > [!NOTE]  
->  Esses exemplos usam o **Person. address** tabela o `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **cidade nvarchar (30)** colunas, por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
+>  Esses exemplos usam o **Person. address** na tabela a `AdventureWorks` banco de dados de exemplo e passam a primeira e a quarta colunas, o **intAddressID** e **nvarchar (30) Cidade**colunas de, pelo fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>Exemplo de transformação síncrona de saída única  
  Este exemplo demonstra um componente de transformação síncrono com uma única saída. Essa transformação passa pela coluna **AddressID** e converte a coluna **City** em maiúsculas.  
@@ -150,7 +150,7 @@ else
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados do **Person. address** tabela do `AdventureWorks` banco de dados de exemplo que contém o **AddressID** e **City** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém o **AddressID** e **Cidade** colunas.  
   
 3.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**. Marque a coluna **City** como Leitura/Gravação.  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  Adicione um novo componente Script à superfície de designer Fluxo de Dados e configure-o como uma transformação.  
   
-2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados do **Person. address** tabela do `AdventureWorks` banco de dados de exemplo que contém pelo menos o **AddressID** e **City** colunas.  
+2.  Conecte a saída de uma origem ou de uma outra transformação ao novo componente de transformação no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Essa saída deve fornecer dados a partir o **Person. address** tabela da `AdventureWorks` banco de dados de exemplo que contém pelo menos as **AddressID** e **Cidade** colunas.  
   
 3.  Abra o **Editor de Transformação Scripts**. Na página **Colunas de Entrada**, selecione as colunas **AddressID** e **City**. Marque a coluna **City** como Leitura/Gravação.  
   
@@ -266,6 +266,6 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 |![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Fique atualizado com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md) [criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desenvolvendo um componente de transformação personalizado com síncrona Saídas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+ [Compreendendo as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md) [criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [desenvolvendo um componente de transformação personalizado com síncrona Saídas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

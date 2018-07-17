@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330786"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
   Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.  
@@ -67,15 +67,15 @@ ms.locfileid: "36119224"
   
 13. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
-14. No **atributos** painel do Designer de dimensão para o **Internet Sales Order Details** dimensão, selecione **Sales Order Number**e, em seguida, altere o  **Nome** propriedade na janela Propriedades para `Item Description.`  
+14. No **atributos** painel do Designer de dimensão para o **detalhes do pedido de vendas pela Internet** dimensão, selecione **Sales Order Number**e, em seguida, altere o  **Nome** propriedade na janela Propriedades para `Item Description.`  
   
 15. Na célula da propriedade **NameColumn** , clique no botão Procurar **(…)**. Na caixa de diálogo **Coluna de Nome** , selecione **Produto** na lista **Tabela de origem** , selecione **EnglishProductName** na **Coluna de origem**e clique em **OK**.  
   
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .  
   
-17. Alterar o **nome** propriedade do novo **Sales Order Number** atributo `Order Number`e altere o **OrderBy** propriedade **chave**.  
+17. Alterar o **nome** propriedade da nova **Sales Order Number** atributo `Order Number`e altere o **OrderBy** propriedade para **chave**.  
   
-18. No **hierarquias** painel, crie um **pedidos de vendas pela Internet** hierarquia de usuário que contém o `Order Number` e **descrição do Item** níveis, nessa ordem.  
+18. No **hierarquias** painel, criar um **pedidos de vendas pela Internet** hierarquia de usuário que contém o `Order Number` e **descrição do Item** níveis, nessa ordem.  
   
 19. No painel **Atributos** , selecione **Detalhes do Pedido de Vendas pela Internet**e examine o valor da propriedade **StorageMode** na janela Propriedades.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36119224"
   
      A imagem a seguir mostra o resultado das etapas anteriores.  
   
-     ![Dimensionamento de volume de vendas pela Internet](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionamento de volume de vendas pela Internet")  
+     ![Dimensionamento de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionamento do volume de vendas pela Internet")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo uma relação muitos para muitos](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  

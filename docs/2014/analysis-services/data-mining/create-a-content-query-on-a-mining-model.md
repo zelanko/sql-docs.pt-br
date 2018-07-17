@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308886"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
   Você pode consultar o conteúdo do modelo de mineração via programação usando AMO ou XML/A, mas é mais fácil criar consultas usando DMX. Também é possível criar consultas nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e criando uma consulta usando os DMVs fornecidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -44,11 +44,11 @@ ms.locfileid: "36122949"
   
      O modelo **Consulta de Conteúdo** é aberto no editor de códigos apropriado. O painel de metadados lista os modelos que estão disponíveis no banco de dados atual. Para alterar o banco de dados, selecione outro banco de dados na lista **Bancos de Dados Disponíveis** .  
   
-5.  Insira o nome de um modelo de mineração na linha, `FROM` [*\<modelo de mineração, nome, MyModel >*]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
+5.  Insira o nome de um modelo de mineração na linha `FROM` [*\<modelo de mineração, nome, MyModel >*]`.CONTENT`. Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
   
      Se não quiser digitar o nome, você poderá selecionar um modelo de mineração no **Pesquisador de Objetos** e arrastá-lo para o modelo.  
   
-6.  Na linha, `SELECT` *\<lista de seleção, lista de expr, \* >*, digite os nomes das colunas no conjunto de linhas de esquema de conteúdo de modelo de mineração.  
+6.  Na linha `SELECT` *\<lista de seleção, lista de expr \* >*, digite os nomes das colunas no conjunto de linhas do esquema de conteúdo modelo de mineração.  
   
      Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Mineração de Dados&#41;](mining-model-content-analysis-services-data-mining.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36122949"
     >  Para ver uma lista de todos os conjuntos de linhas de esquema que você pode consultar na instância atual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Para ver uma lista de conjuntos de linhas de esquema específicos de mineração de dados, consulte [Conjuntos de linhas de esquema de mineração de dados](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração &#40;Analysis Services – mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Conteúdo do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Conjuntos de linhas de esquema de mineração de dados](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

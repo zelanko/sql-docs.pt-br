@@ -130,10 +130,11 @@
 ## [Exemplos do Analysis Services](analysis-services-samples.md)
 
 # Referência
+## [Referência do PowerShell para Analysis Services](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [Referência do PowerShell para Power Pivot para SharePoint](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [DAX (Data Analysis Expressions) no MSDN](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [Extensões de Mineração de Dados (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
 ## [Expressões Multidimensionais (MDX)](../mdx/analysis-services-language-reference.md)
-## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [Propriedades do servidor](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

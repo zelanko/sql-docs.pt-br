@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0fefbebb9c56df87c83bb3b41ee508550a5f2113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36119058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311346"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar e desabilitar o RDL Sandboxing
   O recurso RDL Sandboxing (Linguagem RDL) permite que você detecte e restrinja o uso de tipos específicos de recurso por locatários individuais em um ambiente de vários locatários que utilizam um único web farm de servidores de relatório. Um exemplo disso é um cenário de serviços de hospedagem onde você poderia manter um único web farm de servidores de relatório que são usados por vários locatários e talvez empresas diferentes. Como administrador de servidor de relatório, você pode permitir que esse recurso ajude a obter os objetivos seguintes:  
@@ -72,7 +72,7 @@ ms.locfileid: "36119058"
 |**Types**|A lista de membros para permitir dentro de expressões RDL.|  
 |**Allow**|Um tipo ou conjunto de tipos para permitir em expressões RDL.|  
 |**Namespace**|Atributo para **Allow** que é o namespace que contém um ou mais tipos que se aplicam a Valor. Esta propriedade não diferencia maiúsculas e minúsculas.|  
-|`AllowNew`|Atributo booliano para **Allow** que controla se novas instâncias do tipo têm permissão para serem criadas em expressões RDL ou em um elemento RDL **\<Class>**.<br /><br /> Observação: Quando `RDLSandboxing` estiver habilitado, novas matrizes não podem ser criados em expressões RDL, independentemente da configuração de `AllowNew`.|  
+|`AllowNew`|Atributo booliano para **Allow** que controla se novas instâncias do tipo têm permissão para serem criadas em expressões RDL ou em um elemento RDL **\<Class>**.<br /><br /> Observação: Quando `RDLSandboxing` estiver habilitado, novas matrizes não podem ser criadas em expressões RDL, independentemente da configuração de `AllowNew`.|  
 |**Value**|Valor para **Allow** que é o nome do tipo para permitir em expressões RDL. O valor **\*** indica que todos os tipos no namespace são permitidos. Esta propriedade não diferencia maiúsculas e minúsculas.|  
 |**Membros**|Para a lista de tipos incluídos no elemento **\<Types>**, a lista de nomes de membros que não são permitidos em expressões RDL.|  
 |**Deny**|O nome de um membro que não é permitido em expressões RDL. Esta propriedade não diferencia maiúsculas e minúsculas.<br /><br /> Observação: quando **Negar** é especificado para um membro, não é permitido usar todos os membros com esse nome para todos os tipos.|  
@@ -122,7 +122,7 @@ ms.locfileid: "36119058"
   
 -   Acrescente aquela nova classe à lista de permissões.  
   
- Para adicionar [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] funções do .NET Framework à lista de permissões, adicionar os tipos correspondentes do namespace Microsoft. VisualBasic à lista de permissões.  
+ Para adicionar [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] funções do .NET Framework à lista de permissões, acrescente os tipos correspondentes do namespace Microsoft. VisualBasic à lista de permissões.  
   
  Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar o [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palavra-chave do .NET Framework `Integer`, adicione o seguinte fragmento XML para o  **\<RDLSandboxing >** elemento:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36119058"
   
  Acrescentar um tipo de um assembly personalizado à lista de permissões não concede implicitamente permissão de execução no assembly. Você deve modificar especificamente o arquivo de segurança de acesso a código e fornecer permissão de execução ao assembly. Para obter mais informações, veja [Segurança de acesso do código no Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Manter o \<negar > lista de membros  
+#### <a name="maintaining-the-deny-list-of-members"></a>Manter o \<Deny > lista de membros  
  Quando você acrescentar um tipo à lista de permissões, use a lista a seguir para determinar quando você deverá atualizar a lista de membros bloqueados.  
   
 -   Quando você atualiza um assembly personalizado com uma versão que introduz novos tipos.  
@@ -152,7 +152,7 @@ ms.locfileid: "36119058"
 -   Quando você atualiza um servidor de relatório para tratar um esquema de RDL posterior, porque novos membros podem ter sido adicionados a tipos RDL.  
   
 ### <a name="working-with-operators-and-new"></a>Trabalhando com operadores e novo  
- Por padrão, os operadores de linguagem do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, com exceção de `New`, são sempre permitidos. O `New` operador é controlado pelo `AllowNew` atributo no  **\<permitir >** elemento. Outros operadores de linguagem, como o operador de acessador de coleção padrão `!` e [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] do .NET Framework macros de cast como `CInt`, são sempre permitidos.  
+ Por padrão, os operadores de linguagem do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, com exceção de `New`, são sempre permitidos. O `New` operador é controlado pelo `AllowNew` atributo as  **\<permitir >** elemento. Outros operadores de linguagem, como o operador de acessador de coleção padrão `!` e [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework macros de conversão, como `CInt`, são sempre permitidos.  
   
  Acrescentar operadores a uma lista de contatos bloqueados, incluindo operadores personalizados, não tem suporte. Para excluir operadores para um tipo, você deve fazer o seguinte:  
   

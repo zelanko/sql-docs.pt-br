@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36115732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328476"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot
   Use as informações neste tópico para configurar uma conexão de modelo semântico do BI que redireciona para uma pastas de trabalho PowerPivot no mesmo farm.  
@@ -41,9 +41,9 @@ ms.locfileid: "36115732"
 ##  <a name="bkmk_prereq"></a> Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
- Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [adicionar um tipo BI Semantic modelo Conexão conteúdo em uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [adicionar um tipo BI Semantic modelo Conexão conteúdo em uma biblioteca do &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Você deve saber a URL da pasta de trabalho PowerPivot para o qual você está configurando uma conexão de modelo semântico de BI (por exemplo, http://adventure-works/shared Documents/myworkbook.xlsx). A pasta de trabalho deve estar no mesmo farm.  
+ Você deve saber a URL da pasta de trabalho PowerPivot para o qual você está configurando uma conexão de modelo semântico de BI (por exemplo, http://adventure-works/shared myworkbook). A pasta de trabalho deve estar no mesmo farm.  
   
  Todos os computadores e usuários que participam da sequência de conexão devem estar no mesmo domínio ou domínio confiável (confiança bidirecional).  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36115732"
   
 1.  Na biblioteca que conterá a conexão de modelo semântico de BI, clique em **Documentos** na faixa de opções do SharePoint. Clique na seta para baixo em Novo Documento e selecione **Arquivo de Conexão de BISM** para abrir uma nova página de Conexão de Modelo Semântico de BI.  
   
-     ![Submenu novo documento em uma biblioteca do SharePoint](../media/ssas-bismconnection-new.gif "submenu novo documento em uma biblioteca do SharePoint")  
+     ![Submenu novo documento em uma biblioteca do SharePoint](../media/ssas-bismconnection-new.gif "submenu novo documento na biblioteca do SharePoint")  
   
-2.  Definir o **servidor** propriedade para a URL do SharePoint da pasta de trabalho PowerPivot (por exemplo,  **http://mysharepoint/shared Documents/Myworkbook.xlsx**. Em uma implantação do PowerPivot para SharePoint, dados podem ser carregados em qualquer servidor no farm. Por isso, as conexões da fonte de dados para dados PowerPivot especificam apenas o caminho para a pasta de trabalho. O Serviço de Sistema do PowerPivot determina qual servidor carrega os dados.  
+2.  Defina as **Server** propriedade para a URL do SharePoint da pasta de trabalho PowerPivot (por exemplo,  **http://mysharepoint/shared myworkbook**. Em uma implantação do PowerPivot para SharePoint, dados podem ser carregados em qualquer servidor no farm. Por isso, as conexões da fonte de dados para dados PowerPivot especificam apenas o caminho para a pasta de trabalho. O Serviço de Sistema do PowerPivot determina qual servidor carrega os dados.  
   
-     Não use o **banco de dados** propriedade; não é usado ao especificar o local da pasta de trabalho PowerPivot.  
+     Não use o **banco de dados** propriedade; ele não é usado ao especificar o local da pasta de trabalho PowerPivot.  
   
      Sua página deve ser similar à ilustração a seguir.  
   

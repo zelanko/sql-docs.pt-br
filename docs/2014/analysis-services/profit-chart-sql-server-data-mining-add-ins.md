@@ -1,5 +1,5 @@
 ---
-title: Lucro do gráfico (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: (SQL Server Data Mining Add-ins) do gráfico de ganho | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36009044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297356"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gráfico de Ganho (Suplementos de Mineração de Dados do SQL Server)
   ![Botão gráfico de ganho na faixa de opções mineração de dados](media/dmc-profitchart.gif "botão gráfico de ganho na faixa de opções mineração de dados")  
@@ -51,9 +51,9 @@ ms.locfileid: "36009044"
      A receita associada a cada venda bem sucedida.  
   
 ## <a name="using-the-profit-chart-wizard"></a>Usando o Assistente de Gráfico de Ganho  
- Para criar um gráfico de ganho, você deve referenciar um modelo de mineração de dados existente. Você pode procurar modelos para localizar um modelo que corresponda aos dados clicando em **gerenciar modelos** ou **procurar** para ver detalhes sobre o algoritmo que foi usado e as colunas no modelo de mineração.  
+ Para criar um gráfico de ganho, você deve referenciar um modelo de mineração de dados existente. Você pode procurar modelos para encontrar um modelo que corresponda aos dados clicando **gerenciar modelos** ou **procurar** para ver detalhes sobre o algoritmo que foi usada e as colunas no modelo de mineração.  
   
- Para obter mais informações, consulte [procurando modelos no Excel &#40;suplementos de mineração de dados do SQL Server&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) e [gerenciar modelos &#40;suplementos de mineração de dados do SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md).  
+ Para obter mais informações, consulte [procurando modelos no Excel &#40;SQL Server Data Mining Add-ins&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) e [gerenciar modelos &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-a-profit-chart"></a>Para criar um gráfico de ganho  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36009044"
  Se você estiver prevendo um valor numérico discreto, selecione o valor de destino exato para prever.  
   
 ## <a name="understanding-the-profit-chart"></a>Entendendo o gráfico de ganho  
- O gráfico de ganho contém uma linha vertical cinza, que você pode mover clicando em um local do gráfico. O **legenda de mineração** exibe uma pontuação, a população correta e a probabilidade de previsão que estão associados com o local da linha cinza no gráfico. Se você selecionar o ponto máximo de lucros no gráfico usando a linha cinza, utilize o valor de probabilidade de previsão para determinar um limite de probabilidade para contatar um cliente.  
+ O gráfico de ganho contém uma linha vertical cinza, que você pode mover clicando em um local do gráfico. O **legenda de mineração** exibe uma pontuação, a correção da população e a probabilidade de previsão que estão associados com o local da linha cinza no gráfico. Se você selecionar o ponto máximo de lucros no gráfico usando a linha cinza, utilize o valor de probabilidade de previsão para determinar um limite de probabilidade para contatar um cliente.  
   
  Por exemplo, se o ponto máximo da curva de lucro estiver em 55% da população e a probabilidade de previsão associada for 20%, isso indica que para alcançar o máximo de lucro, você só deve contatar os clientes cuja resposta esteja prevista com uma probabilidade de 20% ou mais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Validando modelos e usando modelos para previsão &#40;dados suplementos de mineração para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

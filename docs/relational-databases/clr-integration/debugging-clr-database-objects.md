@@ -1,12 +1,11 @@
 ---
-title: Depuração de objetos de banco de dados CLR | Microsoft Docs
+title: Depurando objetos de banco de dados CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -19,21 +18,21 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67fd37b04592bd4daeeb6a03c95d3c1976109ed4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5a983312beb68f266c20973e70f730eb13bd89e6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701007"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354338"
 ---
 # <a name="debugging-clr-database-objects"></a>Depurando objetos de banco de dados CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte para depurar o [!INCLUDE[tsql](../../includes/tsql-md.md)] e objetos CLR (Common Language Runtime) no banco de dados. Os principais aspectos da depuração no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são a facilidade de configuração e uso, e a integração do depurador do SQL Server com o depurador do Microsoft Visual Studio. Além disso, a depuração funciona entre idiomas. Os usuários podem entrar diretamente em objetos CLR do [!INCLUDE[tsql](../../includes/tsql-md.md)] e vice-versa. O depurador Transact-SQL no SQL Server Management Studio não pode ser usado para depurar objetos de banco de dados gerenciados, mas você pode depurar os objetos por meio dos depuradores do Visual Studio. A depuração de objetos de banco de dados gerenciados no Visual Studio oferece suporte a todos os recursos de depuração comuns, tais como as instruções de "depuração parcial" e "depuração completa" dentro de rotinas executadas no servidor. Os depuradores podem definir pontos de interrupção, inspecionar a pilha de chamadas, inspecionar variáveis e modificar valores de variáveis durante a depuração. Observe que o Visual Studio .NET 2003 não pode ser usado na programação de integração ou na depuração do CLR. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o .NET Framework pré-instalado, e o Visual Studio .NET 2003 não pode usar os assemblies do .NET Framework 2.0.  
   
- Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte o "[depurando código gerenciado](http://go.microsoft.com/fwlink/?LinkId=120377)" tópico na documentação do Visual Studio.  
+ Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte o "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" tópico na documentação do Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Depurando permissões e restrições  
- A depuração é uma operação altamente privilegiada e, portanto, somente os membros do **sysadmin** função de servidor fixa têm permissão para fazer isso no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ A depuração é uma operação altamente privilegiada e, portanto, somente os membros da **sysadmin** função de servidor fixa têm permissão para fazer isso no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  As seguintes restrições se aplicam durante a depuração:  
   
@@ -54,17 +53,17 @@ ms.locfileid: "35701007"
   
 1.  Abra o Microsoft Visual Studio, crie um novo projeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estabeleça uma conexão com um banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Crie um tipo novo. Em **Solution Explorer**, clique com o botão direito, selecione **adicionar** e **Novo Item...** Do **Adicionar Novo Item** janela, selecione **procedimento armazenado**, **função definida pelo usuário**, **tipo definido pelo usuário**,  **Gatilho**, **agregação**, ou **classe**. Especifique um nome para o arquivo de origem do tipo novo e clique em **adicionar**.  
+2.  Crie um tipo novo. Na **Gerenciador de soluções**, clique com botão direito no projeto, selecione **Add** e **Novo Item...** Dos **Adicionar Novo Item** janela, selecione **procedimento armazenado**, **função definida pelo usuário**, **tipo definido pelo usuário**,  **Disparador**, **agregada**, ou **classe**. Especifique um nome para o arquivo de origem do novo tipo e clique em **adicionar**.  
   
 3.  Adicione código para o tipo novo no editor de texto. Para obter um código de exemplo de um procedimento armazenado de exemplo, consulte a seção correspondente mais adiante nesse tópico.  
   
-4.  Adicione um script que testa o tipo. Em **Solution Explorer**, expanda o **TestScripts** directory clique duas vezes em **Test.sql** para abrir o arquivo de origem do script de teste padrão. Adicione o script de teste, aquele que invoca o código a ser depurado, no editor de texto. Veja um script de exemplo a seguir.  
+4.  Adicione um script que testa o tipo. Na **Gerenciador de soluções**, expanda o **TestScripts** directory clique duas vezes em **Test. SQL** para abrir o arquivo de origem do script de teste padrão. Adicione o script de teste, aquele que invoca o código a ser depurado, no editor de texto. Veja um script de exemplo a seguir.  
   
 5.  Coloque um ou mais pontos de interrupção no código fonte. Clique duas vezes em uma linha de código no editor de texto, dentro da função ou rotina que você deseja depurar, e selecione **ponto de interrupção** e **Inserir ponto de interrupção**. O ponto de interrupção é adicionado, destacando a linha de código em vermelho.  
   
-6.  No **depurar** menu, selecione **iniciar depuração** para compilar, implantar e testar o projeto. O script de teste em Test.sql será executado e o objeto de banco de dados gerenciado será invocado.  
+6.  No **Debug** menu, selecione **iniciar depuração** para compilar, implantar e testar o projeto. O script de teste em Test.sql será executado e o objeto de banco de dados gerenciado será invocado.  
   
-7.  Quando a seta amarela que designa o ponteiro de instrução aparece no ponto de interrupção, há uma pausa na execução do código e você pode começar a depurar seu objeto de banco de dados gerenciado. Você pode **passar por** do **depurar** menu para avançar o ponteiro de instrução para a próxima linha de código. O **locais** janela é usada para observar o estado dos objetos destacados no momento pelo ponteiro de instrução. Variáveis podem ser adicionadas para o **inspecionar** janela. O estado de variáveis inspecionadas pode ser observado na sessão de depuração inteira, e não apenas quando a variável está na linha de código destacada no momento pelo ponteiro de instrução. Selecione Continuar no menu Depurar para avançar o ponteiro de instrução até o próximo ponto de interrupção ou para concluir a execução da rotina se não houver mais pontos de interrupção.  
+7.  Quando a seta amarela que designa o ponteiro de instrução aparece no ponto de interrupção, há uma pausa na execução do código e você pode começar a depurar seu objeto de banco de dados gerenciado. Você pode **Step Over** da **depurar** menu para avançar o ponteiro de instrução para a próxima linha de código. O **Locals** janela é usada para observar o estado dos objetos destacados no momento pelo ponteiro de instrução. As variáveis podem ser adicionadas para o **inspeção** janela. O estado de variáveis inspecionadas pode ser observado na sessão de depuração inteira, e não apenas quando a variável está na linha de código destacada no momento pelo ponteiro de instrução. Selecione Continuar no menu Depurar para avançar o ponteiro de instrução até o próximo ponto de interrupção ou para concluir a execução da rotina se não houver mais pontos de interrupção.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir retorna a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o chamador.  

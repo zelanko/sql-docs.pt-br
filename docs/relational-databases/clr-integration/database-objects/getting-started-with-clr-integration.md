@@ -1,12 +1,11 @@
 ---
-title: Introdução à integração CLR | Microsoft Docs
+title: Introdução à integração de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,12 +27,12 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702367"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349458"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,11 +88,11 @@ End Class
   
 ```  
   
- Esse programa simples contém um único método estático em uma classe pública. Esse método usa duas classes novas, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, criando gerenciado objetos para a saída de um texto simple de banco de dados Mensagem. O método também atribui a cadeia de caracteres "Hello world!" como o valor de um parâmetro de saída. Esse método pode ser declarado como procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e executado de maneira igual a um procedimento armazenado [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Esse programa simples contém um único método estático em uma classe pública. Esse método usa duas novas classes **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para criar o managed objetos para a saída de um texto simples de banco de dados Mensagem. O método também atribui a cadeia de caracteres "Hello world!" como o valor de um parâmetro de saída. Esse método pode ser declarado como procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e executado de maneira igual a um procedimento armazenado [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Compilar esse programa como uma biblioteca, carregá-lo em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e executá-lo como um procedimento armazenado.  
   
-## <a name="compile-the-hello-world-stored-procedure"></a>Compilar o procedimento "Olá, mundo" armazenados  
+## <a name="compile-the-hello-world-stored-procedure"></a>Compilar o procedimento "Hello World" armazenados  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala os arquivos de redistribuição do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework por padrão. Esses arquivos incluem csc.exe e vbc.exe, os compiladores de linha de comando para os programas Visual C# e Visual Basic. Para compilar nosso exemplo, você precisa modificar sua variável de caminho para que aponte para o diretório que contém csc.exe ou vbc.exe. A seguir está o caminho de instalação padrão do .NET Framework.  
   
 ```  
@@ -106,7 +105,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- Depois de adicionar o diretório do .NET Framework ao caminho, você pode compilar o exemplo de procedimento armazenado em um assembly com o comando a seguir. O **/destino** opção permite compilá-lo em um assembly.  
+ Depois de adicionar o diretório do .NET Framework ao caminho, você pode compilar o exemplo de procedimento armazenado em um assembly com o comando a seguir. O **/destino** opção permite que você compilá-lo em um assembly.  
   
  Para arquivos de origem do Visual C#:  
   
@@ -180,8 +179,8 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>Confira também  
  [Procedimentos armazenados CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [Extensões específicas do SQL Server no processo para o ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
- [Depuração de objetos de banco de dados CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
+ [Extensões específicas do SQL Server em processo para o ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [Depurando objetos de banco de dados CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [Segurança da integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

@@ -1,9 +1,4 @@
 # [Manuais online do SQL Server 2014](books-online-for-sql-server-2014.md) 
-## [Estudo de caso: criando um ecossistema corporativo com o Microsoft Dynamics ERP e replicação do SQL Server 2014 para desempenho e escalabilidade](case-study-building-an-enterprise-ecosystem.md)
-## [Guia de design de índice](sql-server-index-design-guide.md)
-## [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [Arquitetura e gerenciamento de log de transações](sql-server-transaction-log-architecture-and-management.md)
-## [Glossário](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -15,6 +10,7 @@
 # [Recursos de banco de dados relacional +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [Tutoriais para SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [Glossário](glossary.md)
 
 # [Novidades do SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [Supervisor de Atualização +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [Instalação de Manutenção e Configuração +](../sql-server/install/setup-and-servicing-installation.md)
 # [Ajuda do Configuration Manager +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [Guia de design de índice](sql-server-index-design-guide.md)
+# [Guia de Controle de Versão de Linha e Bloqueio de Transações](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [Arquitetura e gerenciamento de log de transações](sql-server-transaction-log-architecture-and-management.md)
+# [Estudo de caso: criando um ecossistema corporativo com o Microsoft Dynamics ERP e replicação do SQL Server 2014 para desempenho e escalabilidade](case-study-building-an-enterprise-ecosystem.md)
 

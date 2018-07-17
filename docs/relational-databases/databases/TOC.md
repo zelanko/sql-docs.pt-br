@@ -25,7 +25,6 @@
 ## [Usar o Assistente para Copiar Banco de Dados](use-the-copy-database-wizard.md)  
 ## [Copiar bancos de dados com backup e restauração](copy-databases-with-backup-and-restore.md)  
 ## [Publicar um banco de dados (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [Anexar e desanexar bancos de dados](database-detach-and-attach-sql-server.md)  
 ## [Mover um banco de dados utilizando Desanexar e Anexar (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [Atualizar um banco de dados utilizando Desanexar e Anexar (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

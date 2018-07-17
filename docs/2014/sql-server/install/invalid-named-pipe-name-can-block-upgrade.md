@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - invalid named pipes [SQL Server]
 - named pipes
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c94c1eeff18bff698e2a6353e29b72dd33278d03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d5a0b27ab1362a15730692b7bc41849ba4724bfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297776"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Nome de pipe nomeado inválido pode interromper atualização
   A atualização falhará se o protocolo de pipes nomeados estiver configurado incorretamente.  
@@ -31,10 +31,10 @@ ms.locfileid: "36010827"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Durante a atualização, o programa de instalação inicia o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância com suporte à memória compartilhada, um pipe nomeado que aceita apenas conexões locais. Se o nome de pipe especificado no servidor não está em branco, ele deve começar com a cadeia de caracteres "\\\\. \pipe\\" válido. Se o nome de pipe não for válido, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não iniciará e a instalação falhará.  
+ Durante a atualização, o programa de instalação inicia a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância com suporte de memória compartilhada, um pipe nomeado que aceita apenas conexões locais. Se o nome do pipe especificado no servidor não está em branco, ele deve começar com a cadeia de caracteres "\\\\. \pipe\\" seja válido. Se o nome de pipe não for válido, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não iniciará e a instalação falhará.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Use o  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility** para fornecer um nome de pipe válido e, em seguida, execute a instalação.  
+ Use o  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitário de rede** para fornecer um nome de pipe válido e, em seguida, execute a instalação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

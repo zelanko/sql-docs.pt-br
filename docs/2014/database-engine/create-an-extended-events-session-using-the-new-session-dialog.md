@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SSMS.XEDISPLAY.GROUPING.F1
 - SQL12.SSMS.XEDISPLAY.AGGREGATION.F1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Extended Events Dialog Box
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 52b40b5fe3a43565acacfdc0b85f3404f9c10a88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 92fc98d32c8fe021af008dcd1058f6e43fc2fdd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306246"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Criar uma sessão de Eventos Estendidos usando a caixa de diálogo Nova Sessão
   A caixa de diálogo Nova Sessão permite definir uma sessão de Eventos Estendidos que captura, exibe e analisa seus dados. A caixa de diálogo Nova Sessão expõe toda a funcionalidade de Eventos Estendidos.  
@@ -168,7 +168,7 @@ ms.locfileid: "36010306"
     |**etw_classic_sync_target**|**Nome do arquivo de log de sessão no servidor**. Insira o nome do arquivo de log e do diretório no servidor ou clique em **Procurar** para localizar e selecionar o arquivo de log.<br /><br /> **Tamanho máximo do log do arquivo**. Insira o tamanho máximo do arquivo de log para o evento ETW (Rastreamento de Eventos para Windows). O padrão é 20 megabytes (MB). Você pode selecionar outra unidade de armazenamento na lista suspensa.<br /><br /> **Tamanho do buffer**. Insira o tamanho de buffer na memória para o evento de sessão. O valor padrão é 128 KB (quilobytes). Você pode selecionar outra unidade de armazenamento na lista suspensa.<br /><br /> **Nome da sessão**. Insira um nome de sessão ETW significativo.<br /><br /> **Repetir se houver erro ao gravar no ETW**. Marque essa caixa de seleção para repetir a publicação do evento no subsistema ETW.<br /><br /> **Número máximo de tentativas**. Insira o número máximo de vezes que você tentará publicar o evento novamente no subsistema ETW antes de remover o evento. O número máximo de novas tentativas é zero (0). Para esta propriedade de destino, zero (0) significa nenhuma nova tentativa.|  
     |**event_counter**|Não há nenhuma propriedade de destino para o contador de eventos.|  
     |**event_file**|**Nome do arquivo no servidor**. Insira o diretório e o nome do arquivo de destino no servidor ou clique em **Procurar** para localizar e selecionar o arquivo de destino.<br /><br /> **Tamanho máximo de arquivo**. Especifique o tamanho máximo de arquivo do destino de arquivo. Se você não especificar o tamanho máximo do arquivo, este crescerá até que o disco fique cheio. O tamanho de arquivo padrão é 1 GB (gigabyte). Você pode selecionar outra unidade de armazenamento na lista suspensa.<br /><br /> **Habilitar substituição de arquivo**. Marque esta caixa de seleção para habilitar substituição de arquivo do destino de arquivo.<br /><br /> **Número máximo de arquivos**. Insira o número máximo de arquivos a serem retidos no sistema de arquivos.|  
-    |**Histograma**|**Evento para filtrar em**. Selecione o evento a ser filtrado na lista suspensa. Você pode realizar a filtragem em qualquer evento existente na sessão de evento. Você também pode selecionar  **\<nenhum >** na lista suspensa para incluir todos os eventos e os buckets base na ação.<br /><br /> **Basear buckets em: Ação**. Selecione esta opção para basear os buckets no nome de ação usado como fonte de dados e selecione a ação na lista suspensa.<br /><br /> **Basear buckets em: Campo**. Selecione esta opção para basear os buckets no campo de evento usado como fonte de dados e selecione o campo na lista suspensa.<br /><br /> **Número máximo de buckets**. Insira o número máximo de buckets a serem retidos. Quando esse valor for atingido, a sessão de evento ignorará quaisquer novos eventos que não pertençam aos buckets existentes.|  
+    |**histograma**|**Evento para filtrar em**. Selecione o evento a ser filtrado na lista suspensa. Você pode realizar a filtragem em qualquer evento existente na sessão de evento. Você também pode selecionar  **\<None >** na lista suspensa para incluir todos os eventos e os buckets base na ação.<br /><br /> **Basear buckets em: Ação**. Selecione esta opção para basear os buckets no nome de ação usado como fonte de dados e selecione a ação na lista suspensa.<br /><br /> **Basear buckets em: Campo**. Selecione esta opção para basear os buckets no campo de evento usado como fonte de dados e selecione o campo na lista suspensa.<br /><br /> **Número máximo de buckets**. Insira o número máximo de buckets a serem retidos. Quando esse valor for atingido, a sessão de evento ignorará quaisquer novos eventos que não pertençam aos buckets existentes.|  
     |**pair_matching**|**Eventos: Iniciar com**. Selecione o nome de evento na lista suspensa que especifica o evento inicial em uma sequência emparelhada.<br /><br /> **Eventos: Finalizar com**. Selecione o nome de evento na lista suspensa que especifica o evento final em uma sequência emparelhada.<br /><br /> **Campos e ações: Iniciar com**. Selecione o campo inicial e/ou ação em uma sequência emparelhada na lista suspensa.<br /><br /> **Campos e ações: Finalizar com**. Selecione o campo final e/ou ação em uma sequência emparelhada na lista suspensa.<br /><br /> **Descartar os novos eventos não emparelhados se ocorrer pressão de memória**. Marque esta caixa de seleção para interromper a coleta de eventos no destino pair_matching quando o computador estiver sob pressão de memória. Quando não houver mais nenhuma pressão de memória, a coleta de eventos será retomada.<br /><br /> **Máximo de eventos órfãos**. Especifique o número máximo de eventos órfãos a ser mantido na memória.|  
     |**ring_buffer**|**Número de eventos a serem mantidos**. Use as setas para cima e para baixo a fim de especificar o número de eventos a ser mantido. O padrão é 1000.<br /><br /> **Tamanho máximo da memória do buffer**. Insira a quantidade máxima de memória ser usada. Os eventos existentes são removidos quando esse valor é atingido. O tamanho de memória padrão é 0 MB (megabytes), que significa ilimitado. Você pode selecionar outra unidade de armazenamento na lista suspensa.<br /><br /> **Manter um número específico de eventos (por tipo) quando o buffer estiver cheio**. Selecione esta opção para manter um número de eventos especificado para cada tipo no buffer.<br /><br /> **Número de eventos a serem mantidos (por tipo)**. Insira o número preferido de eventos de cada tipo a ser mantido no buffer.|  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36010306"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar uma sessão de eventos estendidos usando o Editor de consultas](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
- [Criar uma sessão de eventos estendidos usando o assistente &#40;Pesquisador de objetos&#41;](../ssms/object/object-explorer.md)   
+ [Criar uma sessão de eventos estendidos usando o Assistente de &#40;Pesquisador de objetos&#41;](../ssms/object/object-explorer.md)   
  [Criar script de uma sessão de evento estendido](../../2014/database-engine/script-an-extended-event-session.md)  
   
   

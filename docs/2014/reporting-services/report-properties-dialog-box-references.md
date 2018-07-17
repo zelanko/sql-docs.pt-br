@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10530"
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8fc7bafa0a9cd0e292b5f697e94a781f21ca1844
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abc6ea1f5322303f8a4429f226e44fd32c018962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36010834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299716"
 ---
 # <a name="report-properties-dialog-box-references"></a>Caixa de diálogo Propriedades do Relatório, Referências
   Selecione **Referências** na caixa de diálogo **Propriedades do Relatório** para adicionar ou remover as referências para assemblies personalizados ou outros assemblies externos e instâncias de classe personalizada usadas pelas expressões na definição do relatório.  
   
 ## <a name="options"></a>Opções  
  **Adicionar ou remover assemblies**  
- Lista os assemblies aos quais o relatório faz referência. O assembly deve estar disponível no computador no qual a ferramenta que você usando para criar o relatório está instalada e no servidor de relatório. O nome da referência deve corresponder ao conteúdo de  **\<CodeModule >** marcas exatamente no arquivo de linguagem de definição de relatório (. RDL).  
+ Lista os assemblies aos quais o relatório faz referência. O assembly deve estar disponível no computador no qual a ferramenta que você usando para criar o relatório está instalada e no servidor de relatório. O nome da referência deve corresponder o conteúdo do  **\<CodeModule >** exatamente de marcas no arquivo de linguagem de definição de relatório (. RDL).  
   
  **Adicionar**  
  Clique para adicionar um assembly. Clique no botão de reticências (…) para abrir a caixa de diálogo **Abrir** e selecione os assemblies necessários para concluir o processamento de relatório e a avaliação da expressão.  

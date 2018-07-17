@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36120396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316056"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
@@ -55,9 +55,9 @@ ms.locfileid: "36120396"
 -   A propriedade `IsSorted` da saída que indica se os dados foram classificados. Essa propriedade deve ser definida como `True`.  
   
     > [!IMPORTANT]  
-    >  Definir o valor da `IsSorted` propriedade `True` não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente.  
+    >  Definindo o valor da `IsSorted` propriedade para `True` não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente.  
   
--   O `SortKeyPosition` propriedades de colunas de saída que indica se uma coluna está classificada, ordem de classificação da coluna e a sequência na qual várias colunas são classificadas. Esta propriedade deve ser definida para cada coluna de dados classificados.  
+-   O `SortKeyPosition` propriedade de colunas de saída que indica se uma coluna é classificada, ordem de classificação da coluna e a sequência na qual várias colunas são classificadas. Esta propriedade deve ser definida para cada coluna de dados classificados.  
   
  Se você usar a transformação Classificação para classificar os dados, essa transformação define ambas as propriedades como necessárias para a transformação Mesclar ou Junção de Mesclagem. Ou seja, a transformação classificação define a `IsSorted` propriedade de sua saída para `True`e define o `SortKeyPosition` propriedades de suas colunas de saída.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "36120396"
   
 5.  Clique na guia **Propriedades de Entrada e Saída** .  
   
-6.  Clique em  **\<nome do componente > saída**e defina o `IsSorted` propriedade `True`.  
+6.  Clique em  **\<nome do componente > saída**e defina as `IsSorted` propriedade `True`.  
   
     > [!NOTE]  
-    >  Se você definir manualmente o `IsSorted` propriedade de saída para `True` e os dados não está classificada, pode ser ausências de dados ou comparações de dados incorretos na transformação downstream ou junção de mesclagem quando você executa o pacote.  
+    >  Se você definir manualmente as `IsSorted` propriedade da saída para `True` e os dados não forem classificados, ausências de dados ou comparações de dados inválidas na transformação downstream ou junção de mesclagem quando você executa o pacote.  
   
 7.  Expanda **Colunas de Saída**.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "36120396"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Para esta instrução, você configuraria o `SortKeyPosition` propriedade para cada coluna da seguinte maneira:  
+     Para esta instrução, você definiria o `SortKeyPosition` propriedade para cada coluna da seguinte maneira:  
   
     -   Defina a propriedade `SortKeyPosition` da Coluna A como 1. Isso indica que a Coluna A é a primeira a ser classificada e é classificada em ordem crescente.  
   
     -   Defina a propriedade `SortKeyPosition` da Coluna B como -2. Isso indica que a Coluna B é a segunda a ser classificada e é classificada em ordem decrescente.  
   
-    -   Definir o `SortKeyPosition` propriedade da coluna c como 3. Isso indica que a Coluna C é a terceira a ser classificada e é classificada em ordem crescente.  
+    -   Defina o `SortKeyPosition` propriedade da coluna c como 3. Isso indica que a Coluna C é a terceira a ser classificada e é classificada em ordem crescente.  
   
 9. Repita a etapa 8 para cada coluna classificada.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36120396"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação de mesclagem](merge-transformation.md)   
+ [Transformação mesclar](merge-transformation.md)   
  [Transformação junção de mesclagem](merge-join-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
