@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2550514f373a91457a75bdf2c04b60ea13fe137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055173"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420455"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,23 +64,23 @@ Define uma data combinada com uma hora do dia que inclui frações de segundos e
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formatos de literais de cadeia de caracteres com suporte para datetime  
 As tabelas a seguir listam os formatos de literais de cadeia de caracteres com suporte para **datetime**. Exceto para ODBC, os literais de cadeia de caracteres **datetime** estão entre aspas simples ('), por exemplo, 'string_literaL'. Se o ambiente não for **us_english**, os literais de cadeia de caracteres deverão estar no formato N'string_literaL'.
   
-|Numérico|Description|  
+|Numérico|Descrição|  
 |---|---|
 |Formatos de data:<br /><br /> [0]4/15/[19]96--(mda)<br /><br /> [0]4-15-[19]96 -- (mda)<br /><br /> [0]4.15.[19]96 -- (mda)<br /><br /> [0]4/[19]96/15 -- (mad)<br /><br /> 15/[0]4/[19]96 -- (dma)<br /><br /> 15/[19]96/[0]4 -- (dam)<br /><br /> [19]96/15/[0]4 -- (adm)<br /><br /> [19]96/[0]4/15 -- (amd)<br /><br /> Formatos de hora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|Você pode especificar dados de data com um mês numérico especificado. Por exemplo, 5/20/97 representa o vigésimo dia de maio de 1997. Ao usar um formato de data numérico, especifique o mês, o dia e o ano em uma cadeia de caracteres com barras (/), hífens (-) ou pontos (.) como separadores. Essa cadeia de caracteres deve ser exibida da seguinte forma:<br /><br /> *número separador número separador número [time] [time]*<br /><br /> <br /><br /> Quando o idioma é definido como **us_english**, a ordem padrão da data é mdy. Você pode alterar a ordem da data usando a instrução [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> A configuração de SET DATEFORMAT determina como são interpretados os valores de data. Se a ordem não corresponder à configuração, os valores não serão interpretados como datas, porque eles estarão fora do intervalo ou serão mal-interpretados. Por exemplo, 12/10/08 pode ser interpretada como uma de seis datas, dependendo da configuração DATEFORMAT. Um ano de quatro partes é interpretado como o ano.|  
   
-|Em ordem alfabética|Description|  
+|Em ordem alfabética|Descrição|  
 |---|---|
 |Apr[il] [15][,] 1996<br /><br /> Apr[il] 15[,] [19]96<br /><br /> Apr[il] 1996 [15]<br /><br /> [15] Apr[il][,] 1996<br /><br /> 15 Apr[il][,][19]96<br /><br /> 15 [19]96 apr[il]<br /><br /> [15] 1996 apr[il]<br /><br /> 1996 APR[IL] [15]<br /><br /> 1996 [15] APR[IL]|Você pode especificar dados de data com um mês especificado como o nome de mês cheio. Por exemplo, abril ou a abreviação Apr especificadas na linguagem atual; vírgulas são opcionais e não há diferenciação entre letras maiúsculas e minúsculas.<br /><br /> Aqui estão algumas diretrizes para o uso de formatos de data alfabéticos:<br /><br /> 1) Insira os dados de data e hora com aspas simples ('). Para idiomas diferentes de inglês, use N'<br /><br /> 2) Os caracteres entre colchetes são opcionais.<br /><br /> 3) Se você especificar apenas os dois últimos dígitos do ano, os valores menores que os dois últimos dígitos do valor da opção de configuração [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) estarão no mesmo século do ano de corte. Os valores maiores ou iguais ao valor dessa opção estão no século anterior ao ano de corte. Por exemplo, se **two digit year cutoff** for 2050 (padrão), 25 será interpretado como 2025 e 50 será interpretado como 1950. Para evitar ambiguidade, use anos de quatro dígitos.<br /><br /> 4) Se o dia estiver ausente, o primeiro dia do mês será fornecido.<br /><br /> <br /><br /> A configuração de sessão SET DATEFORMAT não é aplicada quando você especifica o mês de forma alfabética.|  
   
-|ISO 8601|Description|  
+|ISO 8601|Descrição|  
 |---|---|
 |AAAA-MM-DDThh:mm:ss[.mmm]<br /><br /> AAAAMMDD[ hh:mm:ss[.mmm]]|Exemplos:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Para usar o formato ISO 8601, você deve especificar cada elemento no formato. Isto também inclui o **T**, os dois pontos (:) e o ponto final (.) que são mostrados no formato.<br /><br /> Os parênteses indicam que o componente de fração de segundo é opcional. O componente de hora é especificado no formato de 24 horas.<br /><br /> O T indica o início da parte de hora do valor de **datetime**.<br /><br /> A vantagem de usar o formato ISO 8601 é que ele é um padrão internacional com especificação não ambígua. Além disso, esse formato não é afetado pela configuração SET DATEFORMAT ou [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).|  
   
-|Não separado|Description|  
+|Não separado|Descrição|  
 |---|---|
 |AAAAMMDDThh:mm:ss[.mmm]||  
   
-|ODBC|Description|  
+|ODBC|Descrição|  
 |---|---|
 |{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|A API ODBC define sequências de escape para representar valores de data e hora que o ODBC chama de dados de carimbo de data/hora. Também há suporte para esse formato de carimbo de data/hora do ODBC na definição de idioma OLE DB (DBGUID-SQL) compatível com o provedor OLE DB do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os aplicativos que usam ADO, OLE DB e as APIs baseadas em ODBC podem usar esse formato de carimbo de data/hora de ODBC para representar datas e horas.<br /><br /> As sequências de escape do carimbo de data/hora do ODBC estão no formato: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* especifica o tipo da sequência de escape. Os carimbos de data/hora têm três especificadores de *literal_type*:<br />1) d = somente data<br />2) t = somente hora<br />3) ts = carimbo de data/hora (hora + data)<br /><br /> <br /><br /> - '*constant_value*' é o valor da sequência de escape. *constant_value* deve seguir esses formatos para cada *literal_type*.<br />d: yyyy-mm-dd<br />t: hh:mm:ss[.fff]<br />ts: yyyy-mm-dd hh:mm:ss[.fff]|  
   

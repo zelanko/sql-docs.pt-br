@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,12 +21,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20f55565e5cd5cf0eecdb55fdd8fe6cf4e3aa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05f405bbbf06feac6108136c628db932b6b708bf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33062603"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36247558"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "33062603"
 ## <a name="remarks"></a>Remarks  
  A tabela a seguir contém os valores de retorno possíveis:  
   
-|Valor retornado|Description|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |24400|Válido|  
 |24401|Não válido, motivo desconhecido.|  

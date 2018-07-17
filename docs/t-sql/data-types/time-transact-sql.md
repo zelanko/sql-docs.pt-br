@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 6/7/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 767f6650a46e67463dd51ad67ad1d506cc96c303
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055923"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421565"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "33055923"
 ## <a name="supported-string-literal-formats-for-time"></a>Há suporte para formatos de literais de cadeia de caracteres para hora  
  A tabela a seguir mostra os formatos de literais de cadeia de caracteres válidos para o tipo de dados **time**.  
   
-|SQL Server|Description|  
+|SQL Server|Descrição|  
 |----------------|-----------------|  
 |hh:mm[:ss][:segundos fracionários][AM][PM]<br /><br /> hh:mm[:ss][.segundos fracionários][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM [PM]|O valor de hora 0 representa a hora depois da meia-noite (AM), independentemente de AM ter sido especificado. PM não pode ser especificado quando a hora é igual a 0.<br /><br /> Os valores de hora de 01 a 11 representam as horas antes do meio-dia se não for especificado AM nem PM. Os valores também representam as horas antes do meio-dia quando AM é especificado. Os valores representarão as horas depois do meio-dia, se PM for especificado.<br /><br /> O valor de hora 12 representa a hora que começa ao meio-dia, se não for especificado AM nem PM. Se AM for especificado, o valor representará a hora que começa à meia-noite. Se PM for especificado, o valor representará a hora que começa ao meio-dia. Por exemplo, 12:01 é 1 minuto depois do meio-dia, assim como 12:01 PM; e 12:01 AM é 1 minuto depois da meia-noite. Especificar 12:01 AM é igual a especificar 00:01 ou 00:01 AM.<br /><br /> Os valores de hora de 13 a 23 representam as horas após o meio-dia, se AM nem PM estiverem especificados. Os valores também representam as horas após o meio-dia quando PM é especificado. AM não pode ser especificado quando o valor de hora é de 13 a 23.<br /><br /> Um valor de hora de 24 não é válido. Para representar meia-noite, use 12:00 AM ou 00:00.<br /><br /> Os milissegundos podem ser precedidos por ou dois-pontos (:) ou ponto (.). Se for usado dois-pontos, o número significa milésimos de segundo. Se for usado um ponto, um único dígito significa décimos de segundo, dois dígitos significa centésimos de segundo e três dígitos, milésimos de segundo. Por exemplo, 12:30:20:1 indica vinte e um milésimos de segundo após 12:30; 12:30:20.1 indica vinte e um décimos de segundo após 12:30.|  
   
@@ -250,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. Inserindo literais de cadeia de caracteres válidos na coluna time(7)  
  A tabela a seguir lista os diferentes literais de cadeia de caracteres que podem ser inseridos em uma coluna de tipo de dados **time(7)** com os valores que, em seguida, são armazenados nessa coluna.  
   
-|Tipo de formato de literal de cadeia de caracteres|Literal de cadeia de caracteres inserido|valor de time(7) que é armazenado|Description|  
+|Tipo de formato de literal de cadeia de caracteres|Literal de cadeia de caracteres inserido|valor de time(7) que é armazenado|Descrição|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|Quando dois pontos (:) precedem a precisão de frações de segundo, a escala não pode exceder três posições ou ocorrerá um erro.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|1:01:01.1234567|Quando AM ou PM é especificado, a hora é armazenada em formato de 24 horas sem o literal AM ou PM|  
@@ -265,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Inserindo o literal de cadeia de caracteres nas colunas de cada tipo de data e hora  
  Na tabela a seguir, a primeira coluna mostra um literal de cadeia de caracteres de hora a ser inserido em uma coluna da tabela do banco de dados do tipo de dados de data e hora exibido na segunda coluna. A terceira coluna mostra o valor que será armazenado na coluna da tabela do banco de dados.  
   
-|Literal de cadeia de caracteres inserido|Tipo de dados da coluna|Valor que é armazenado na coluna|Description|  
+|Literal de cadeia de caracteres inserido|Tipo de dados da coluna|Valor que é armazenado na coluna|Descrição|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Se a precisão das frações de segundo exceder o valor especificado para a coluna, a cadeia de caracteres será truncada sem erro.|  
 |'2007-05-07'|**date**|NULL|Qualquer valor de hora fará a instrução INSERT falhar.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,15 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075443"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786007"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -260,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -430,7 +430,7 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
   
 -   Uma instrução [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) converte um índice clusterizado em um heap. Neste caso, um outro grupo de arquivos FILESTREAM, um esquema de partição ou **"** default **"** pode ser especificado.  
   
- O grupo de arquivos da cláusula `FILESTREAM_ON <filegroup>`, ou cada grupo de arquivos FILESTREAM nomeado no esquema de partição, deve ter um arquivo definido para o grupo de arquivos. Esse arquivo deve ser definido usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); caso contrário, ocorrerá um erro.  
+ O grupo de arquivos da cláusula `FILESTREAM_ON <filegroup>`, ou cada grupo de arquivos FILESTREAM nomeado no esquema de partição, deve ter um arquivo definido para o grupo de arquivos. Esse arquivo deve ser definido usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); caso contrário, ocorrerá um erro.  
   
  Para obter tópicos de FILESTREAM relacionados, veja [Dados de blob &#40;objeto binário grande&#41;&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -550,7 +550,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
 
  Especifica a colocação de dados FILESTREAM para a tabela quando um índice clusterizado é criado. A cláusula FILESTREAM_ON permite mover os dados FILESTREAM para outro grupo de arquivos ou esquema de partição FILESTREAM.  
   
- *filestream_filegroup_name* é o nome de um grupo de arquivos FILESTREAM. O grupo de arquivos deve ter um arquivo definido para o grupo de arquivos usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); caso contrário, será gerado um erro.  
+ *filestream_filegroup_name* é o nome de um grupo de arquivos FILESTREAM. O grupo de arquivos deve ter um arquivo definido para o grupo de arquivos usando uma instrução [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); caso contrário, será gerado um erro.  
   
  Se a tabela for particionada, a cláusula FILESTREAM_ON deverá ser incluída e especificar um esquema de partição de grupo de arquivos FILESTREAM que use a mesma função de partição e colunas de partição que o esquema de partição da tabela. Caso contrário, será gerado um erro.  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3a405bf525cc5203b82860097e8904fca2de4f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 450de8b521cbbec33375a429bcfc7fb1035194a5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074733"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788457"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +163,7 @@ ms.locfileid: "33074733"
 ## <a name="queue-columns"></a>Colunas de fila  
  A tabela a seguir lista as colunas em uma fila.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**=Pronto**1**=Mensagem recebida**2**=Ainda não concluído**3**=Mensagem enviada retida|  
 |**priority**|**tinyint**|O nível de prioridade de conversa aplicado à mensagem.|  
