@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -21,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8598505eaf65bb3748df87f14e52a5c7477a58ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964571"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353958"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ Este tutorial é destinado a usuários familiarizados com operações fundamenta
   
 Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server Management Studio) e um banco de dados do AdventureWorks: 
   
-- No servidor do editor (fonte), instale:  
+- No servidor do editor (origem), instale:  
   
    - Qualquer edição do SQL Server, exceto o SQL Server Express ou o SQL Server Compact. Essas edições não podem ser um editor de replicação.   
    - O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão.  
@@ -57,12 +56,12 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
 
 - Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
-> - A replicação não é compatível em instâncias do SQL Server que tenham um intervalo de mais de duas versões. Para obter mais informações, consulte [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versões do SQL Server compatíveis na topologia de replicação).
-> - No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário conectar-se ao editor e ao assinante usando um logon que seja membro da função de servidor fixa **sysadmin**. Para obter mais informações sobre essa função, consulte [Funções de nível de servidor](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - A replicação não é compatível em instâncias do SQL Server que tenham um intervalo de mais de duas versões. Para saber mais, veja [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versões do SQL Server compatíveis na topologia de replicação).
+> - No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário conectar-se ao editor e ao assinante usando um logon que seja membro da função de servidor fixa **sysadmin**. Para saber mais sobre essa função, veja [Funções de nível de servidor](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Tempo estimado para concluir este tutorial: 60 minutos**  
@@ -146,7 +145,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
 
     ![Seleção para criar um instantâneo imediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Na página **Segurança do Agente**, selecione **Configurações de Segurança**. Insira <*Nome_do_Computador_do_Publicador*>**\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**. Selecione **Avançar**.  
+22. Na página **Segurança do Agente**, selecione **Configurações de Segurança**. Insira <*Nome_do_Computador_do_Editor*>**\repl_snapshot** na caixa **Conta de Processo**, forneça a senha para essa conta e selecione **OK**. Selecione **Avançar**.  
 
     ![Seleções para configurar a segurança do Agente de Instantâneo](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   

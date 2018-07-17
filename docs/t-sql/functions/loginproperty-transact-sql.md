@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,15 +33,15 @@ helpviewer_keywords:
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9a52853e96c01b7fbb638061e103100aed2658a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6c130ea8c926150b0b45f6e23ca06ede7534be0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054923"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789227"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  É uma expressão que contém as informações de propriedade a serem retornadas para o logon. *propertyname* pode ser um dos valores a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Retorna o número de tentativas consecutivas de fazer logon com uma senha incorreta.|  
 |**BadPasswordTime**|Retorna a hora da última tentativa de fazer logon com uma senha incorreta.|  

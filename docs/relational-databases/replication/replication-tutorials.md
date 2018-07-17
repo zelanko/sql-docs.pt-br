@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -22,12 +21,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f168e135dd563d1b76d99254bfa17d7ba8cf721a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce86448f4266da763c96c5b7f934aa8acaefd861
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960531"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351428"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ Esses tutoriais usam NODE1\SQL2016 como o editor e o distribuidor. Eles usam NOD
  
 Aprenda a preparar servidores de forma que a replicação possa ser executada com menos privilégios. É preciso completar este tutorial antes dos outros tutoriais de replicação.  
   
-[Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 Saiba como configurar a replicação transacional para replicar dados entre servidores totalmente conectados. Este tutorial também inclui uma metodologia de solução básica de erros. 
 

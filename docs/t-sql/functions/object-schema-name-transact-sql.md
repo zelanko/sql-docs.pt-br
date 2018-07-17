@@ -1,10 +1,9 @@
 ---
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e616434a72eb7c19d831874e475fcfed2ef57668
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b14711117e766e8ee4bdf4596b9b5ed6a75c645
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054453"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788417"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Retorna o nome de esquema de banco de dados para objetos no escopo do esquema. Para obter uma lista de objetos no escopo do esquema, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -72,7 +71,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  Se *database_id* não for especificado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presumirá que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de esquema de objeto para a identificação do objeto especificado naquele banco de dados, em lugar do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
   
@@ -80,7 +79,7 @@ FROM master.sys.objects;
   
  O exemplo a seguir especifica a identificação de banco de dados para o banco de dados `master` na função `OBJECT_SCHEMA_NAME` e retorna os resultados corretos.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
 FROM master.sys.objects;  
   
@@ -91,7 +90,7 @@ FROM master.sys.objects;
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. Retornando o nome do esquema do objeto e o nome do objeto  
  O exemplo a seguir retorna o nome de esquema do objeto, nome de objeto e texto de SQL para todos os planos de consulta em cache que não sejam instruções ad hoc ou preparadas.  
   
-```  
+```sql
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -105,7 +104,7 @@ GO
 ### <a name="b-returning-three-part-object-names"></a>B. Retornando nomes de objetos de três partes  
  O exemplo a seguir retorna o banco de dados, esquema e nome de objeto juntamente com todas as outras colunas na exibição de gerenciamento dinâmico `sys.dm_db_index_operational_stats` de todos os objetos em todos os bancos de dados.  
   
-```  
+```sql
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -121,6 +120,4 @@ GO
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Protegíveis](../../relational-databases/security/securables.md)  
-  
-  
+ [Protegíveis](../../relational-databases/security/securables.md)

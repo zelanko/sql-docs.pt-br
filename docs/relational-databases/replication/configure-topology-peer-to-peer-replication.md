@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c534b0114c3e54d9a3ecd17bdde03d779c7edc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955711"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351278"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar Topologia (replicação ponto a ponto)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32955711"
 ## <a name="options"></a>Opções  
  A página **Configurar topologia** contém elementos de interface e opções disponíveis ao clicar com o botão direito do mouse em um elemento. A tabela a seguir descreve cada elemento de interface.  
   
-|Elemento de interface|Description|  
+|Elemento de interface|Descrição|  
 |-----------------------|-----------------|  
 |Superfície de design|Exibe outros elementos de interface. Para adicionar elementos, clique com o botão direito do mouse na superfície de design.|  
 |![O primeiro nó em uma topologia](../../relational-databases/replication/media/p2pwizard-firstnode.gif "O primeiro nó em uma topologia")|O nó original na topologia. Novos nós são iniciados usando uma cópia do banco de dados de publicação do nó original.|  
