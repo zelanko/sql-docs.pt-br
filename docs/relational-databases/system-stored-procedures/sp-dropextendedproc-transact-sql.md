@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049384"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sp_dropextendedproc [ @functname = ] 'procedure'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@functname =**] **'***procedimento***'**  
- É o nome do procedimento armazenado estendido a ser descartado. *procedimento* é **nvarchar (517)**, sem padrão.  
+ É o nome do procedimento armazenado estendido a ser descartado. *procedimento* está **nvarchar(517)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
- Executar **sp_dropextendedproc** descarta o nome do procedimento armazenado estendido definido pelo usuário da [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição do catálogo e remove a entrada do [extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) exibição do catálogo. Esse procedimento armazenado pode ser executado somente no **mestre** banco de dados.  
+ Executando **sp_dropextendedproc** descarta o nome do procedimento armazenado estendido definido pelo usuário da [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição do catálogo e remove a entrada do [extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) exibição do catálogo. Esse procedimento armazenado pode ser executado somente na **mestre** banco de dados.  
   
 **sp_dropextendedproc** não descarta procedimentos armazenados estendido de sistema. Em vez disso, o administrador do sistema deve negar a permissão EXECUTE no procedimento armazenado estendido para o **pública** função.  
   
  **sp_dropextendedproc** não pode ser executado dentro de uma transação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_dropextendedproc**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir descarta o procedimento armazenado estendido `xp_hello`.  

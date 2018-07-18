@@ -40,15 +40,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 563a79b68a39a886d70234f2e9f6eaae118d11ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046144"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Um diagrama de atualização indica uma operação de inserção quando uma instância de registro aparece no  **\<depois >** bloco, mas não no correspondente  **\<antes >** bloco. Nesse caso, o diagrama de atualização insere o registro no  **\<depois >** bloco no banco de dados.  
+  Um diagrama de atualização indica uma operação de inserção quando uma instância de registro aparece na  **\<depois >** bloco, mas não em correspondente  **\<antes >** bloco. Nesse caso, o diagrama de atualização insere o registro na  **\<depois >** bloco no banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de inserção:  
   
@@ -72,21 +72,21 @@ ms.locfileid: "32973491"
 ```  
   
 ## <a name="before-block"></a>\<antes de > bloco  
- O  **\<antes >** bloco pode ser omitido de uma operação de inserção. Se o valor opcional **esquema de mapeamento** atributo não for especificado, o  **\<ElementName >** que é especificado no diagrama de atualização mapeará para uma tabela de banco de dados e os elementos filhos ou atributos são mapeados para colunas da tabela.  
+ O  **\<antes de >** bloco pode ser omitido para uma operação de inserção. Se o opcional **esquema de mapeamento** atributo não for especificado, o  **\<ElementName >** que é especificado no diagrama de atualização mapeará para uma tabela de banco de dados e os elementos filho ou atributos são mapeados para colunas da tabela.  
   
 ## <a name="after-block"></a>\<Depois de > bloco  
- Você pode especificar um ou mais registros no  **\<depois >** bloco.  
+ Você pode especificar um ou mais registros na  **\<depois >** bloco.  
   
- Se o  **\<depois >** bloco não fornecer um valor para uma determinada coluna, o diagrama usa o valor padrão especificado no esquema anotado (se foi especificado um esquema). Se o esquema não especificar um valor padrão para a coluna, o diagrama de atualização não especificar qualquer valor explícito para essa coluna e, em vez disso, atribui o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de padrão (se especificado) para essa coluna. Se não houver nenhum valor padrão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a coluna aceitar um valor NULL, o diagrama de atualização definirá o valor da coluna como NULL. Caso a coluna não tenha um valor padrão nem aceite valores NULL, o comando apresentará uma falha e o diagrama de atualização retornará um erro. Opcional **updg: ReturnId** atributo é usado para retornar o valor de identidade que é gerado pelo sistema quando um registro é adicionado em uma tabela com uma coluna de tipo de identidade.  
+ Se o  **\<depois >** bloco não fornece um valor para uma determinada coluna, o diagrama usa o valor padrão que é especificado no esquema anotado (se foi especificado um esquema). Se o esquema não especificar um valor padrão para a coluna, o diagrama de atualização não especifica nenhum valor explícito para esta coluna e, em vez disso, atribui a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de padrão (se especificado) a esta coluna. Se não houver nenhum valor padrão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a coluna aceitar um valor NULL, o diagrama de atualização definirá o valor da coluna como NULL. Caso a coluna não tenha um valor padrão nem aceite valores NULL, o comando apresentará uma falha e o diagrama de atualização retornará um erro. Opcional **updg: ReturnId** atributo é usado para retornar o valor de identidade que é gerado pelo sistema quando um registro é adicionado em uma tabela com uma coluna de tipo de identidade.  
   
 ## <a name="updgid-attribute"></a>Atributo updg:id  
- Se o diagrama de atualização só estiver inserindo registros, o diagrama de atualização não exige a **updg: ID** atributo. Para obter mais informações sobre **updg: ID**, consulte [atualização de dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Se o diagrama de atualização só estiver inserindo registros, o diagrama de atualização não requer o **updg: ID** atributo. Para obter mais informações sobre **updg: ID**, consulte [atualizando dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Atributo updg:at-identity  
- Quando um diagrama de atualização insere um registro em uma tabela que possui uma coluna de tipo de identidade, o diagrama pode capturar o valor atribuído pelo sistema usando opcional **updg: a identidade** atributo. Esse valor pode ser usado em todas as operações subsequentes. Após a execução do diagrama de atualização, você pode retornar o valor de identidade gerado pela especificação de **updg: ReturnId** atributo.  
+ Quando um diagrama de atualização insere um registro em uma tabela que tem uma coluna de tipo de identidade, o diagrama pode capturar o valor atribuído do sistema com o uso opcional **updg: em identidade** atributo. Esse valor pode ser usado em todas as operações subsequentes. Após a execução de diagrama de atualização, você pode retornar o valor de identidade gerado pela especificação de **updg: ReturnId** atributo.  
   
 ## <a name="updgguid-attribute"></a>Atributo updg:guid  
- O **updg: GUID** é um atributo opcional que gera um identificador global exclusivo. Esse valor permanece em escopo para todo o  **\<sincronização >** bloco no qual ele é especificado. Você pode usar esse valor em qualquer lugar no  **\<sincronização >** bloco. O atributo chama o **NewGuid** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] função para gerar o identificador exclusivo.  
+ O **updg: GUID** é um atributo opcional que gera um identificador global exclusivo. Esse valor permanece no escopo para todo o  **\<sincronização >** bloco em que é especificado. Você pode usar esse valor em qualquer lugar na  **\<sincronização >** bloco. O atributo chama a **NewGuid** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] função para gerar o identificador exclusivo.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -164,7 +164,7 @@ ms.locfileid: "32973491"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Inserindo vários registros usando um diagrama de atualização  
- Este diagrama de atualização adiciona dois novos registros de troca à tabela HumanResources.Shift. O diagrama não especifica opcional  **\<antes >** bloco.  
+ Este diagrama de atualização adiciona dois novos registros de troca à tabela HumanResources.Shift. O diagrama não especifica opcional  **\<antes de >** bloco.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -215,12 +215,12 @@ ms.locfileid: "32973491"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Trabalhando com caracteres SQL Server válidos que não são válidos no XML  
- No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os nomes de tabela podem incluir um espaço, como a tabela Order Details no banco de dados Northwind. No entanto, isso não é válido em caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, mas não pode ser codificado usando ' __xHHHH\_\_' como valor de codificação, onde HHHH representa o código UCS-2 hexadecimal de quatro dígitos de para o caractere na ordem do primeiro bit mais significativo.  
+ No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], os nomes de tabela podem incluir um espaço, como a tabela Order Details no banco de dados Northwind. No entanto, isso não é válido em caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, mas identificadores não válidos em XML podem ser codificados usando ' __xHHHH\_\_' como valor de codificação, onde HHHH representa o código UCS-2 hexadecimal de quatro dígitos de o caractere na ordem do primeiro bit mais significativo.  
   
 > [!NOTE]  
->  Este exemplo usa o banco de dados Northwind. Você pode instalar o banco de dados Northwind usando um script SQL disponível para download deste [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Este exemplo usa o banco de dados Northwind. Você pode instalar o banco de dados Northwind usando um script SQL disponível para download nesse [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
   
- Além disso, o nome do elemento deve ser colocado entre colchetes ([]). Como os caracteres [e] não são válidos em XML, você deve codificá-los como _x005B\_ e _x005D\_, respectivamente. (Se você usar um esquema de mapeamento, poderá fornecer nomes de elemento que não contêm caracteres inválidos, como espaços em branco. O esquema de mapeamento faz o mapeamento necessário; portanto, você não precisa codificar esses caracteres).  
+ Além disso, o nome do elemento deve ser colocado entre colchetes ([]). Porque os caracteres [e] não são válidos em XML, você deve codificá-los como _x005B\_ e _x005D\_, respectivamente. (Se você usar um esquema de mapeamento, poderá fornecer nomes de elemento que não contêm caracteres inválidos, como espaços em branco. O esquema de mapeamento faz o mapeamento necessário; portanto, você não precisa codificar esses caracteres).  
   
  Este diagrama de atualização adiciona um registro à tabela Order Details no banco de dados Northwind:  
   
@@ -240,9 +240,9 @@ ms.locfileid: "32973491"
 </ROOT>  
 ```  
   
- A coluna UnitPrice da tabela Order Details é do **money** tipo. Para aplicar a conversão de tipo adequado (de um **cadeia de caracteres** tipo para um **money** tipo), o caractere de cifrão ($) deve ser adicionado como parte do valor. Se o diagrama não especifica um esquema de mapeamento, o primeiro caractere do **cadeia de caracteres** valor é avaliado. Se o primeiro caractere for um cifrão ($), a conversão apropriada será aplicada.  
+ A coluna UnitPrice da tabela Order Details é do **dinheiro** tipo. Para aplicar a conversão de tipo apropriada (de um **cadeia de caracteres** de tipo para um **dinheiro** tipo), o caractere de cifrão ($) deve ser adicionado como parte do valor. Se o diagrama não especifica um esquema de mapeamento, o primeiro caractere dos **cadeia de caracteres** valor é avaliado. Se o primeiro caractere for um cifrão ($), a conversão apropriada será aplicada.  
   
- Se o diagrama de atualização é especificado em um esquema de mapeamento em que a coluna adequadamente é marcada como **dt:type="fixed.14.4"** ou **SQL: DataType = "money"**, o sinal de cifrão ($) não é necessário e o conversão é feita pelo mapeamento. Esse é o modo recomendado para garantir uma conversão de tipos bem-sucedida.  
+ Se o diagrama de atualização é especificado em um esquema de mapeamento em que a coluna adequadamente está marcada como **dt:type="fixed.14.4"** ou **SQL: DataType = "dinheiro"**, o sinal de cifrão ($) não é necessário e o conversão é feita pelo mapeamento. Esse é o modo recomendado para garantir uma conversão de tipos bem-sucedida.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
@@ -255,7 +255,7 @@ ms.locfileid: "32973491"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Usando o atributo at-identity para recuperar o valor inserido na coluna do tipo IDENTITY  
  O diagrama de atualização a seguir insere dois registros: um na tabela Sales.SalesOrderHeader e outro na tabela Sales.SalesOrderDetail.  
   
- Primeiro, o diagrama adiciona um registro à tabela Sales.SalesOrderHeader. Nessa tabela, a coluna SalesOrderID é uma coluna do tipo IDENTITY. Portanto, quando você adiciona esse registro à tabela, o diagrama usa o **em identidade** atributo para capturar o valor SalesOrderID atribuído como "x" (um valor de espaço reservado). O diagrama especifica essa **em identidade** variável como o valor do atributo SalesOrderID no \<Sales. SalesOrderDetail > elemento.  
+ Primeiro, o diagrama adiciona um registro à tabela Sales.SalesOrderHeader. Nessa tabela, a coluna SalesOrderID é uma coluna do tipo IDENTITY. Portanto, quando você adiciona esse registro à tabela, o diagrama usa o **em identidade** atributo para capturar o valor SalesOrderID atribuído como "x" (um valor de espaço reservado). O diagrama especifica essa **em-identity** variável como o valor do atributo SalesOrderID no \<Sales. SalesOrderDetail > elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -292,7 +292,7 @@ ms.locfileid: "32973491"
 </ROOT>  
 ```  
   
- Se você quiser retornar o valor de identidade gerado pelo **updg: a identidade** atributo, você pode usar o **updg: ReturnId** atributo. A seguir, é mostrado um diagrama de atualização revisado que retorna esse valor de identidade. (Esse diagrama adiciona dois registros de pedido e dois registros de detalhe de pedido, só para tornar o exemplo um pouco mais complexo.)  
+ Se você quiser retornar o valor de identidade gerado pelo **updg: em identidade** atributo, você pode usar o **updg: ReturnId** atributo. A seguir, é mostrado um diagrama de atualização revisado que retorna esse valor de identidade. (Esse diagrama adiciona dois registros de pedido e dois registros de detalhe de pedido, só para tornar o exemplo um pouco mais complexo.)  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -389,7 +389,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  Um esquema XSD é especificado nesse diagrama (ou seja, não há nenhum mapeamento padrão dos elementos e atributos). O esquema fornece o mapeamento necessário dos elementos e atributos para as tabelas e colunas do banco de dados.  
   
- O esquema a seguir (CustOrderSchema.xml) descreve um  **\<CustOrder >** elemento que consiste o **OrderID** e **EmployeeID** atributos. Para tornar o esquema mais interessante, um valor padrão é atribuído para o **EmployeeID** atributo. Um diagrama usa o valor padrão de um atributo apenas em operações de inserção e, nesse caso, só se o diagrama não especificar tal atributo.  
+ Descreve o esquema a seguir (Custorderschema) uma  **\<CustOrder >** elemento que consiste o **OrderID** e **EmployeeID** atributos. Para tornar o esquema mais interessante, um valor padrão é atribuído para o **EmployeeID** atributo. Um diagrama usa o valor padrão de um atributo apenas em operações de inserção e, nesse caso, só se o diagrama não especificar tal atributo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -421,7 +421,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
-1.  Criar essa tabela no **tempdb** banco de dados:  
+1.  Criar essa tabela na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  
@@ -456,7 +456,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
   
 ### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>G. Usando o atributo xsi:nil para inserir valores nulos em uma coluna  
- Se você desejar inserir um valor nulo na coluna correspondente na tabela, você pode especificar o **xsi: nil** atributo em um elemento em um diagrama de atualização. No esquema XSD correspondente, o XSD **anulável** atributo também deve ser especificado.  
+ Se você quiser inserir um valor nulo na coluna correspondente na tabela, você pode especificar o **xsi: nil** atributo em um elemento em um diagrama de atualização. No esquema XSD correspondente, o XSD **nillable** atributo também deve ser especificado.  
   
  Por exemplo, considere este esquema XSD:  
   
@@ -488,7 +488,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Especifica o esquema XSD **anulável = "true"** para o  **\<fname >** elemento. O seguinte diagrama usa esse esquema:  
+ Especifica o esquema XSD **nillable = "true"** para o  **\<fname >** elemento. O seguinte diagrama usa esse esquema:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -512,7 +512,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
-1.  Criar a tabela a seguir no **tempdb** banco de dados:  
+1.  Criar a tabela a seguir na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  
@@ -536,7 +536,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Especificando namespaces em um diagrama de atualização  
  Em um diagrama de atualização, você pode ter elementos que pertencem a um namespace declarado no mesmo elemento do diagrama. Nesse caso, o esquema correspondente deve declarar também o mesmo namespace e o elemento deve pertencer àquele namespace de destino.  
   
- Por exemplo, no diagrama a seguir (updategram-elementhavingnamespace.XML do arquivo de dados), o  **\<ordem >** elemento pertence a um namespace declarado no elemento.  
+ Por exemplo, no diagrama a seguir (UpdateGram-Elementhavingnamespace), o  **\<ordem >** elemento pertence a um namespace declarado no elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -617,13 +617,13 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. Inserindo dados em uma coluna de tipo de dados XML  
- O **xml** tipo de dados foi introduzido em [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Você pode usar diagramas de atualização para inserir e atualizar dados armazenados em **xml** colunas com as seguintes provisões de tipo de dados:  
+ O **xml** tipo de dados foi introduzido no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Você pode usar diagramas de atualização para inserir e atualizar os dados armazenados no **xml** colunas com as seguintes provisões de tipo de dados:  
   
--   O **xml** coluna não pode ser usada para identificar uma linha existente. Portanto, não pode ser incluído no **updg: antes de** seção de um diagrama de atualização.  
+-   O **xml** coluna não pode ser usada para identificar uma linha existente. Portanto, não pode ser incluído na **updg: antes de** seção de um diagrama de atualização.  
   
--   Namespaces que estão no escopo do fragmento XML inserido a **xml** coluna será preservada e suas declarações de namespace são adicionadas ao elemento superior do fragmento inserido.  
+-   Os namespaces que estão no escopo do fragmento de XML inseridos a **xml** coluna será preservada e suas declarações de namespace são adicionadas ao elemento superior do fragmento inserido.  
   
- Por exemplo, no diagrama (SampleUpdateGram.xml) a seguir o  **\<Desc >** elemento atualiza a coluna ProductDescription na produção > tabela productModel no [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] banco de dados de exemplo. O resultado desse diagrama é que o conteúdo XML da coluna ProductDescription é atualizados com o conteúdo XML do  **\<Desc >** elemento.  
+ Por exemplo, no seguinte diagrama de atualização (Sampleupdategram), o  **\<Desc >** elemento atualiza a coluna ProductDescription na produção > tabela productModel no [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] banco de dados de exemplo. O resultado desse diagrama é que o conteúdo XML da coluna ProductDescription é atualizados com o conteúdo XML do  **\<Desc >** elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -724,7 +724,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 1.  Copie o esquema acima e cole-o em um arquivo de texto. Salve o arquivo como XSD-SampleSchema.xml.  
   
     > [!NOTE]  
-    >  Como os diagramas suportarem o mapeamento padrão, não há nenhuma maneira de identificar o início e fim do **xml** tipo de dados. Isso significa que um esquema de mapeamento é necessário ao inserir ou atualizar tabelas com **xml** colunas de tipo de dados. Quando um esquema não é fornecido, SQLXML retorna um erro informando que uma das colunas da tabela está faltando.  
+    >  Como updategrams suportarem o mapeamento padrão, não há nenhuma maneira de identificar o início e o final do **xml** tipo de dados. Isso significa que um esquema de mapeamento é necessário ao inserir ou atualizar tabelas com **xml** colunas de tipo de dados. Quando um esquema não é fornecido, SQLXML retorna um erro informando que uma das colunas da tabela está faltando.  
   
 2.  Copie o diagrama de atualização acima e cole-o em um arquivo de texto. Salve o arquivo como SampleUpdategram.xml na mesma pasta usada para salvar SampleSchema.xml.  
   

@@ -30,13 +30,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046874"
 ---
-# <a name="path-expressions---specifying-axis"></a>Expressões de caminho - especificação de eixo
+# <a name="path-expressions---specifying-axis"></a>Expressões de caminho – especificando eixo
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
@@ -60,15 +60,15 @@ ms.locfileid: "33077943"
 |**self**|Retorna o próprio nó de contexto.|  
 |**descendant-or-self**|Retorna o nó de contexto e todos os descendentes do nó de contexto.|  
   
- Todos esses eixos, exceto o **pai** eixo, são eixos encaminhados. O **pai** eixo é um eixo inverso, pois ele pesquisa para trás na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera o \<ProductDescription > elemento filho do nó de contexto. Para cada \<ProductDescription > nó de elemento, a segunda etapa recupera o \<resumo > filhos do nó de elemento.  
+ Todos esses eixos, exceto o **pai** eixo, são eixos para frente. O **pai** eixo é um eixo inverso, pois ele pesquisa para trás na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera os \<ProductDescription > elementos filhos do nó de contexto. Para cada \<ProductDescription > nó de elemento, a segunda etapa recupera os \<resumo > filhos do nó de elemento.  
   
- A expressão de caminho relativo, `child::root/child::Location/attribute::LocationID`, tem três etapas. As primeiras duas etapas especificam um eixo `child` e a terceira etapa especifica o eixo `attribute`. Quando executado em instruções de fabricação documentos XML no **productmodel** de tabela, a expressão retorna o `LocationID` atributo do \<local > filho do nó de elemento do \<raiz > elemento.  
+ A expressão de caminho relativo, `child::root/child::Location/attribute::LocationID`, tem três etapas. As primeiras duas etapas especificam um eixo `child` e a terceira etapa especifica o eixo `attribute`. Quando executado em instruções de fabricação documentos XML na **productmodel** de tabela, a expressão retorna o `LocationID` atributo do \<local > filho do nó de elemento da \<raiz > elemento.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos de consulta neste tópico são especificados em relação **xml** colunas de tipo de **AdventureWorks** banco de dados.  
+ Os exemplos de consulta neste tópico são especificados em relação **xml** colunas de tipo a **AdventureWorks** banco de dados.  
   
 ### <a name="a-specifying-a-child-axis"></a>A. Especificando um eixo filho  
- Para um modelo de produto específico, a consulta a seguir recupera o \<recursos > filhos do nó de elemento de \<ProductDescription > nó de elemento da descrição de catálogo de produtos armazenada no `Production.ProductModel` tabela.  
+ Para um modelo de produto específico, a consulta a seguir recupera o \<recursos > filhos do nó de elemento de \<ProductDescription > nó de elemento de descrição do catálogo de produtos armazenada no `Production.ProductModel` tabela.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -80,12 +80,12 @@ WHERE ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
--   O `query()` método o **xml** tipo de dados especifica a expressão de caminho.  
+-   O `query()` método da **xml** tipo de dados especifica a expressão de caminho.  
   
 -   Ambas as etapas na expressão de caminho especificam um eixo `child` e os nomes de nó, `ProductDescription` e `Features`. Para obter informações sobre testes de nó, consulte [especificando Node Test em uma etapa de expressão de caminho](../xquery/path-expressions-specifying-node-test.md).  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. Especificando eixos descendentes e descendentes ou independentes  
- O exemplo a seguir usa os eixos descendente e descendente ou self. A consulta neste exemplo é especificada em relação a um **xml** variável de tipo. A instância XML é simplificada para ilustrar facilmente a diferença nos resultados gerados.  
+ O exemplo a seguir usa os eixos descendente e descendente ou self. A consulta neste exemplo é especificada em uma **xml** variável de tipo. A instância XML é simplificada para ilustrar facilmente a diferença nos resultados gerados.  
   
 ```  
 declare @x xml  
@@ -147,7 +147,7 @@ select @y
 <d>text3</d>   
 ```  
   
- A seguinte consulta de exemplo no **AdventureWorks** banco de dados recupera todos os nós de elemento descendentes a <`Features`> do filho do elemento de <`ProductDescription`> elemento:  
+ A seguinte consulta de exemplo na **AdventureWorks** banco de dados recupera todos os nós de elemento descendentes da <`Features`> do filho do elemento de <`ProductDescription`> elemento:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -182,7 +182,7 @@ WHERE  ProductModelID=19
   
  Um exemplo mais útil do eixo pai é fornecido no exemplo a seguir.  
   
- Cada descrição de catálogo de modelo do produto armazenada no **CatalogDescription** coluna o **ProductModel** tabela tem um `<ProductDescription>` elemento que tem o `ProductModelID` atributo e `<Features>`elemento filho, conforme mostrado no fragmento a seguir:  
+ Cada descrição de catálogo de modelo do produto armazenada na **CatalogDescription** coluna da **ProductModel** tabela tem um `<ProductDescription>` elemento que tem o `ProductModelID` atributo e o `<Features>`elemento filho, conforme mostrado no fragmento a seguir:  
   
 ```  
 <ProductDescription ProductModelID="..." >  

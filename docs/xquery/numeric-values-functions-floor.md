@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f0ec0cc8b4a6e958767c805a5bc7ec68678f753
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077149"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991338"
 ---
-# <a name="numeric-values-functions---floor"></a>Funções de valores numéricas - floor
+# <a name="numeric-values-functions---floor"></a>Funções de valores numéricos – floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o maior número sem parte de fração que não seja maior que o valor de seu argumento. Se o argumento for uma sequência vazia, ele retornará a sequência vazia.  
@@ -47,14 +47,14 @@ fn:floor ($arg as numeric?) as numeric?
  Número ao qual a função é aplicada.  
   
 ## <a name="remarks"></a>Remarks  
- Se o tipo de *$arg* é um de três tipos base numéricos, **xs: float**, **xs: Double**, ou **xs: decimal**, o tipo de retorno é igual a *$arg* tipo. Se o tipo de *$arg* é um tipo que é derivado de um dos tipos numéricos, o tipo de retorno é o tipo numérico básico.  
+ Se o tipo de *$arg* é um dos tipos base numéricos três, **xs: float**, **xs: Double**, ou **xs: decimal**, o tipo de retorno é igual a *$arg* tipo. Se o tipo de *$arg* é um tipo que é derivado de um dos tipos numéricos, o tipo de retorno é o tipo numérico básico.  
   
- Se a entrada para as funções fn: Floor, FN: Ceiling ou FN: round for **XDT: untypedatomic**, dados não digitados, ela será convertida implicitamente para **xs: Double**. Qualquer outro tipo gera um erro estático.  
+ Se for de entrada para as funções fn: Floor, FN: Ceiling ou FN: round **XDT: untypedatomic**, dados não digitados, ela será convertida implicitamente para **xs: Double**. Qualquer outro tipo gera um erro estático.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados de exemplo AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados de exemplo AdventureWorks.  
   
- Você pode usar o exemplo de funcionamento do [função ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) para o **Floor ()** função XQuery. Tudo o que você precisa fazer é substituir a **Ceiling** função na consulta com o **Floor ()** função.  
+ Você pode usar a amostra de funcionamento na [função ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) para o **Floor ()** função XQuery. Tudo o que você precisa fazer é substituir a **Ceiling ()** função na consulta com o **Floor ()** função.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  

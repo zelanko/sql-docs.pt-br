@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992468"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
   
 -   Se *n* é maior que zero, os valores de sequência mais prováveis nas próximas *n* etapas.  
   
--   Se ambos os *n-start* e *n-end* forem especificados, os valores de sequência de *n-start* para *n-end*.  
+-   Se os dois *n-start* e *n-end* forem especificados, a sequência de valores de *n início* para *n-end*.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma sequência de cinco produtos com mais probabilidade de serem comprados por um cliente do banco de dados da [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], com base no modelo de mineração MSC.  
@@ -53,6 +53,6 @@ From
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

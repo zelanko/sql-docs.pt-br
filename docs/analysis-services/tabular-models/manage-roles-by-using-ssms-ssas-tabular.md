@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045344"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gerenciar funções usando SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,12 +58,12 @@ ms.locfileid: "34045210"
   
 6.  Na janela de configurações de associação, clique em **Adicionar**e, na caixa de diálogo **Selecionar Usuários ou Grupos** , adicione os usuários ou grupos do Windows que você deseja adicionar como membros.  
   
-7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, no **propriedades da função - \<rolename >** na caixa **selecionar uma página**, clique em **filtros de linha**.  
+7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, nos **propriedades da função - \<rolename >** na caixa **selecionar uma página**, clique em **filtros de linha**.  
   
-8.  Na janela de filtros de linha, selecione uma tabela, clique no **filtro DAX** campo e, em seguida, o **filtro DAX - \<tablename >** , digite uma fórmula DAX.  
+8.  Na janela de filtros de linha, selecione uma tabela, clique no **filtro DAX** campo e, em seguida, no **filtro DAX - \<tablename >** , digite uma fórmula DAX.  
   
     > [!NOTE]  
-    >  O filtro DAX - \<tablename > campo não contém um editor de consultas de preenchimento automático ou recurso de Inserir função. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  O filtro DAX - \<tablename > campo não contém um editor de consulta de preenchimento automático ou recurso de Inserir função. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Clique em **OK** para salvar a função.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34045210"
   
 ###  <a name="bkmk_edit_role"></a> Para editar uma função  
   
--   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções** e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
+-   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
   
-     No **propriedades de função** \<rolename > caixa de diálogo, você pode alterar as permissões, adicionar ou remover membros, e filtros de linha de adicionar/editar.  
+     No **propriedades da função** \<rolename > caixa de diálogo, você pode alterar as permissões, adicionar ou remover membros e adicionar/editar filtros de linha.  
   
 ###  <a name="bkmk_deletet_role"></a> Para excluir uma função  
   

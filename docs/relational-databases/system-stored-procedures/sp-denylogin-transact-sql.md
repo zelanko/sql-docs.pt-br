@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef296a57b8fec029695654e5e519b723b455b59f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241834"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049457"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **' * logon* **'**  
- É o nome de um usuário ou grupo do Windows. *logon* é **sysname**, sem padrão.  
+ [  **@loginame =** ] **' * * * logon* **'**  
+ É o nome de um usuário ou grupo do Windows. *login* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_denylogin** nega a permissão CONNECT SQL para a entidade de segurança de nível de servidor mapeada para o usuário do Windows especificado ou o grupo do Windows. Se o principal do servidor não existir, será criado. O novo principal será visível no [sys. server_principals &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição do catálogo.  
+ **sp_denylogin** nega a permissão CONNECT SQL para a entidade de segurança de nível de servidor mapeada para o usuário especificado do Windows ou grupo do Windows. Se o principal do servidor não existir, será criado. O novo principal será visível na [sys. server_principals &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) exibição de catálogo.  
   
  **sp_denylogin** não pode ser executado em uma transação definida pelo usuário.  
   

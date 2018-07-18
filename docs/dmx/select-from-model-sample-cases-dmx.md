@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f4443f05fbee790f5f1d266f451e1105b9c00197
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841519"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992038"
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;modelo&gt;. SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna casos de exemplo que representam os casos utilizados para treinar o modelo de mineração de dados.  
   
- Para usar essa instrução é preciso ativar o detalhamento durante a criação do modelo de mineração. Para obter mais informações sobre como habilitar o detalhamento, consulte [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), e [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Para usar essa instrução é preciso ativar o detalhamento durante a criação do modelo de mineração. Para obter mais informações sobre como habilitar o detalhamento, consulte [criar um modelo de MINERAÇÃO &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), e [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Remarks  
  Casos de exemplo podem ser gerados e podem não existir de fato nos dados de treinamento. O caso retornado é representativo do nó de conteúdo especificado.  
   
- Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo msc é o único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo oferece suporte ao uso de SELECT FROM \<modelo >. SAMPLE_CASES, algoritmos de terceiros podem também dar suporte a ele.  
+ Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering é a única [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo dá suporte ao uso de SELECT FROM \<modelo >. SAMPLE_CASES, algoritmos de terceiros podem também dar suporte a ele.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna casos de exemplo utilizados para treinar o modelo de mineração de Correio de destino. Usando o [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) funcionar a **onde** cláusula retorna apenas casos que estão associados com o nó 000000003'. A cadeia de caracteres de nó pode se encontrar na coluna de NODE_UNIQUE_NAME do conjunto de linhas de esquema.  

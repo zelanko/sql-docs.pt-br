@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841839"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989528"
 ---
-# <a name="operators---logical"></a>Operadores - lógicas
+# <a name="operators---logical"></a>Operadores – lógicos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Você pode usar os operadores lógicos em expressões de extensões DMX (Data Mining) para avaliar valores e retornar um valor booliano em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Você pode usar operadores lógicos em expressões de extensões DMX (Data Mining) para avaliar valores e retornar um valor booliano em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  A tabela a seguir identifica os operadores lógicos aos quais a DMX oferece suporte.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "34841839"
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressões &#40;DMX&#41;](../dmx/expressions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

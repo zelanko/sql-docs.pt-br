@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077993"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990005"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequência e QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  Na expressão (`/Root/a`), `Root` e `a` são QNames.  
   
- No exemplo a seguir, uma consulta é especificada em relação a um tipo **xml** coluna. A consulta itera todas \<etapa > elementos no primeiro local de centro de trabalho.  
+ No exemplo a seguir, uma consulta é especificada em relação a um tipado **xml** coluna. A consulta itera em todos os \<etapa > elementos no primeiro local de centro de trabalho.  
   
 ```  
 SELECT Instructions.query('  

@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento baseado em políticas armazenados procedimentos (Transact-SQL) | Microsoft Docs
+title: Gerenciamento baseado em políticas armazenadas Procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b941921556665ef27fc20f8af706d45f44dbcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991938"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimentos armazenados de Gerenciamento Baseado em Políticas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao sistema a seguir procedimentos armazenados que são usados para gerenciamento baseado em políticas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao sistema a seguir procedimentos armazenados que são usados para o gerenciamento baseado em políticas.  
   
 > [!IMPORTANT]  
 >  Há suporte apenas aos procedimentos armazenados de Gerenciamento Baseado em Políticas documentados nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Procedimentos armazenados não documentados são usados por componentes do Gerenciamento Baseado em Políticas e não devem ser usados para administrar o Gerenciamento Baseado em Políticas.  

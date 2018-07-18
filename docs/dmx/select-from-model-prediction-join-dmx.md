@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989508"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,17 +48,17 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *consulta de fonte de dados*  
  Consulta de fonte.  
   
- *lista de mapeamentos de junção*  
+ *lista de mapeamento de junção*  
  Opcional. Expressão lógica que compara colunas do modelo com colunas da consulta de fonte.  
   
- *Expressão de condição*  
+ *expressão de condição*  
  Opcional. Uma condição para restringir os valores retornados da lista de colunas.  
   
  *Expressão*  
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Remarks  
- A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. Colunas no \< *lista de mapeamentos de junção*> são relacionadas por meio de um sinal de igual (=), conforme mostrado no exemplo a seguir:  
+ A cláusula ON define o mapeamento entre as colunas da consulta de fonte e as colunas do modelo de mineração. Esse mapeamento é usado para direcionar colunas de uma consulta de fonte para colunas no modelo de mineração, de modo que as colunas possam ser usadas como entradas para criar as previsões. Colunas na \< *lista de mapeamento de junção*> são relacionados por meio de um sinal de igual (=), conforme mostrado no exemplo a seguir:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -70,7 +70,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  A consulta de fonte para a junção de previsão pode ser uma tabela ou uma consulta singleton.  
   
- Você pode especificar funções de previsão que retornam uma expressão de tabela no \< *lista de expressões select*> e o \< *expressão da condição*>.  
+ Você pode especificar funções de previsão que retornam uma expressão de tabela na \< *lista de expressões select*> e o \< *expressão da condição*>.  
   
  **NATURAL PREDICTION JOIN** automaticamente juntos mapeia nomes de coluna da consulta de fonte que correspondem aos nomes de coluna no modelo. Se você usar **previsão NATURAL**, você pode omitir a cláusula ON.  
   
@@ -89,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Tem dois filhos que moram em casa  
   
- Usando o modelo de mineração de árvore de decisão TM e as características conhecidas do assunto, a consulta retorna um valor booliano que descreve se a pessoa comprou a bicicleta e um conjunto de valores de tabela, retornado pelo [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) função, que descrevem como a previsão foi feita.  
+ Usando o modelo de mineração de árvore de decisão TM e as características conhecidas sobre o assunto, a consulta retorna um valor booliano que descreve se a pessoa comprou a bicicleta e um conjunto de valores de tabela, retornado pela [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) função, que descrevem como a previsão foi feita.  
   
 ```  
 SELECT  
@@ -163,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- O [prever &#40;DMX&#41; ](../dmx/predict-dmx.md) função é polimórfica e pode ser usada com todos os tipos de modelo. Use value3 como um argumento para a função, para limitar o número de itens retornados pela consulta. O **selecione** lista que segue a cláusula NATURAL PREDICTION JOIN fornece os valores a serem usados como entrada para previsão.  
+ O [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) função é polimórfica e pode ser usada com todos os tipos de modelo. Use value3 como um argumento para a função, para limitar o número de itens retornados pela consulta. O **selecionar** lista que segue a cláusula NATURAL PREDICTION JOIN fornece os valores a serem usados como entrada para previsão.  
   
 ```  
 SELECT FLATTENED  
@@ -184,7 +184,7 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- Como a coluna que contém o atributo previsível `[v Assoc Seq Line Items]` é uma coluna de tabela, a consulta retorna uma única coluna que contém uma tabela aninhada. Por padrão a coluna de tabela aninhada é denominada `Expression`. Se seu provedor não oferece suporte a conjuntos de linhas hierárquicos, você pode usar o **FLATTENED** palavra-chave, conforme mostrado neste exemplo para facilitar os resultados exibir.  
+ Como a coluna que contém o atributo previsível `[v Assoc Seq Line Items]` é uma coluna de tabela, a consulta retorna uma única coluna que contém uma tabela aninhada. Por padrão a coluna de tabela aninhada é denominada `Expression`. Se seu provedor não oferece suporte a conjuntos de linhas hierárquicos, você pode usar o **FLATTENED** palavra-chave, conforme mostrado neste exemplo, para facilitar os resultados exibir.  
   
 ## <a name="see-also"></a>Consulte também  
  [SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

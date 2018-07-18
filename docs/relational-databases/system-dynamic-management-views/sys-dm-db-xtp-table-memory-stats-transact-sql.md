@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bea396c2625b282b0b63d9be240ed932c640749b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991858"
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34465302"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|A ID de objeto da tabela. NULL para tabelas do sistema OLTP na memória.|  
+|object_id|**int**|A ID de objeto da tabela. NULL para tabelas do sistema OLTP na memória.|  
 |memory_allocated_for_table_kb|**bigint**|Memória alocada para essa tabela.|  
 |memory_used_by_table_kb|**bigint**|Memória usada pela tabela, incluindo versões de linha.|  
 |memory_allocated_for_indexes_kb|**bigint**|Memória alocada para índices nessa tabela.|  
@@ -217,6 +217,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

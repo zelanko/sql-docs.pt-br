@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e04f44d9caa3ae51ea141997e83de54524000fee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576848"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046726"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>Elemento WritebackTableCreation (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Determina se uma tabela de write-back é criada durante a [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operação.  
+  Determina se uma tabela de write-back é criada durante o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operação.  
   
 ## <a name="syntax"></a>Sintaxe  
   

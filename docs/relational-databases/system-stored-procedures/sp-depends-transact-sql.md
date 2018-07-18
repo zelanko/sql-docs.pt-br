@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261282"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049444"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_depends [ @objname = ] '<object>'
  É o nome do esquema ao qual o objeto pertence.  
   
  *object_name*  
- É o objeto de banco de dados que será examinado para verificar se há dependências. O objeto pode ser uma tabela, exibição, procedimento armazenado, função definida pelo o usuário ou gatilho. o*bject_name* é **nvarchar(776)**, sem padrão.  
+ É o objeto de banco de dados que será examinado para verificar se há dependências. O objeto pode ser uma tabela, exibição, procedimento armazenado, função definida pelo o usuário ou gatilho. s*bject_name* é **nvarchar(776)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -68,17 +68,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_depends** exibe dois conjuntos de resultados.  
   
- O conjunto de resultados a seguir mostra os objetos que  *\<objeto >* depende.  
+ O conjunto de resultados a seguir mostra os objetos nos quais  *\<objeto >* depende.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
 |**type**|**nvarchar(16)**|Tipo do item.|  
-|**Atualizado**|**nvarchar(7)**|Caso o item seja atualizado.|  
+|**atualizado**|**nvarchar(7)**|Caso o item seja atualizado.|  
 |**Selecionado**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
- O conjunto de resultados a seguir mostra os objetos que dependem de  *\<objeto >*.  
+ O conjunto de resultados a seguir mostra os objetos que dependem  *\<objeto >*.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  

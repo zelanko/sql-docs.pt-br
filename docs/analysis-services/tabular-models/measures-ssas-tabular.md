@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043980"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045324"
 ---
-# <a name="measures"></a>Medidas
+# <a name="measures"></a>medidas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
   
@@ -60,7 +60,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Por padrão, ao usar AutoSoma, o nome da medida é definido pelo nome da coluna associada seguido por dois-pontos e pela fórmula. O nome pode ser alterado na barra de fórmula ou na configuração de propriedade **Nome da Medida** na janela Propriedades. Ao criar uma medida usando uma fórmula personalizada, você pode digitar um nome na barra de fórmula, seguido por dois-pontos e pela fórmula, ou pode digitar um nome na configuração de propriedade **Nome da Medida** na janela de Propriedades.  
   
- É importante nomear medidas com cuidado. O nome de medida será exibido com a tabela associada na Lista de Campos do cliente de relatório. Um KPI também será nomeado de acordo com a medida de base. Uma medida não pode ter o mesmo nome de qualquer coluna em qualquer tabela no modelo.  
+ Ele é importante nomear medidas com cuidado. O nome de medida será exibido com a tabela associada na Lista de Campos do cliente de relatório. Um KPI também será nomeado de acordo com a medida de base. Uma medida não pode ter o mesmo nome de qualquer coluna em qualquer tabela no modelo.  
   
 > [!TIP]  
 >  É possível agrupar medidas de várias tabelas em uma tabela. Para tanto, crie uma tabela vazia e, depois, mova ou crie novas medidas nela. Lembre-se de que talvez seja necessário incluir nomes de tabelas em fórmulas DAX ao referenciar colunas em outras tabelas.  

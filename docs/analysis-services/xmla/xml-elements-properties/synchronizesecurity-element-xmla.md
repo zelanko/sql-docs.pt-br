@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046920"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Elemento SynchronizeSecurity (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Especifica como sincronizar definições de segurança, como funções e permissões, durante um [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Especifica como sincronizar definições de segurança, como funções e permissões, durante um [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34576478"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|*skipMembership*|  
+|Valor padrão|*SkipMembership*|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -47,13 +47,13 @@ ms.locfileid: "34576478"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **segurança** elemento determina se as definições de segurança, como funções e permissões, definidas em um banco de dados do Analysis Services são sincronizadas durante um **sincronizar** comando. Esse elemento também determina se as contas de usuário e os grupos do Windows definidos como membros das definições de segurança estão incluídos como parte do comando **Synchronize** .  
+ O **segurança** elemento determina se as definições de segurança, como funções e permissões, definidas em um banco de dados do Analysis Services são sincronizadas durante uma **Synchronize** comando. Esse elemento também determina se as contas de usuário e os grupos do Windows definidos como membros das definições de segurança estão incluídos como parte do comando **Synchronize** .  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclui definições de segurança, mas exclui informações de associação, durante o comando **Synchronize** .|  
+|*SkipMembership*|Inclui definições de segurança, mas exclui informações de associação, durante o comando **Synchronize** .|  
 |*CopyAll*|Inclui definições de segurança e informações de associação durante o comando **Synchronize** .|  
 |*IgnoreSecurity*|Exclui definições de segurança durante o comando **Synchronize** .|  
   

@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f4a7b50619ecb4196b5c88ac0b237a5cff8ecb73
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239876"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990558"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +50,22 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>Argumentos  
  [ @Action=] '*ação*'  
- Descreve a ação a ser executada pelo procedimento. *ação* é **varchar (10)**. *ação* pode ter um dos valores a seguir.  
+ Descreve a ação a ser executada pelo procedimento. *ação* está **varchar(10)**. *ação* pode ter um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado do **Auto_Fix** instrução para confirmar que o vínculo correto foi realmente estabelecido. Evite usar **Auto_Fix** em situações confidenciais de segurança.<br /><br /> Quando você usa **Auto_Fix**, você deve especificar *usuário* e *senha* se o logon não existir, caso contrário, você deve especificar *usuário*mas *senha* será ignorado. *logon* deve ser NULL. *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
-|**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *login*, e *senha* deve ser NULL ou não especificado.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **sys. server_prinicpals** com as entradas em **database_principals**.|  
+|**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado dos **Auto_Fix** instrução para confirmar o vínculo correto foi realmente estabelecido. Evite usar **Auto_Fix** em situações confidenciais de segurança.<br /><br /> Quando você usa **Auto_Fix**, você deve especificar *usuário* e *senha* se o logon ainda não existir, caso contrário, você deve especificar *usuário*, mas *senha* será ignorado. *logon* deve ser NULL. *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
+|**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *login*, e *senha* deve ser NULL ou não especificado.<br /><br /> Para substituir a opção de relatório com uma consulta usando as tabelas do sistema, comparar as entradas no **server_prinicpals** com as entradas na **sys. database_principals**.|  
 |**Update_One**|Vincula especificado *usuário* no banco de dados atual a um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *logon*. *usuário* e *login* deve ser especificado. *senha* deve ser NULL ou não especificado.|  
   
  [ @UserNamePattern=] '*usuário*'  
- É o nome de um usuário no banco de dados atual. *usuário* é **sysname**, com um padrão NULL.  
+ É o nome de um usuário no banco de dados atual. *usuário* está **sysname**, com um padrão NULL.  
   
  [ @LoginName=] '*login*'  
  E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
  [ @Password=] '*senha*'  
- É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon é criado especificando **Auto_Fix**. Se já existir um logon correspondente, o usuário e logon serão mapeados e *senha* será ignorado. Se não existir um logon correspondente, sp_change_users_login criará um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon e atribui *senha* como a senha para o novo logon. *senha* é **sysname**, e não deve ser NULL.  
+ É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que é criado especificando **Auto_Fix**. Se já existir um logon correspondente, o usuário e logon são mapeadas e *senha* será ignorado. Se não existir um logon correspondente, sp_change_users_login criará um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login e atribui *senha* como a senha para o novo logon. *senha* está **sysname**, e não deve ser NULL.  
   
 > **IMPORTANTE:** Sempre use um [senha forte!](../../relational-databases/security/strong-passwords.md)
   
@@ -89,7 +89,7 @@ sp_change_users_login [ @Action = ] 'action'
  Não é possível executar sp_change_users_login em uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na função de banco de dados fixa db_owner. Somente membros da função de servidor fixa sysadmin podem especificar o **Auto_Fix** opção.  
+ Requer associação na função de banco de dados fixa db_owner. Somente os membros da função de servidor fixa sysadmin podem especificar o **Auto_Fix** opção.  
   
 ## <a name="examples"></a>Exemplos  
   

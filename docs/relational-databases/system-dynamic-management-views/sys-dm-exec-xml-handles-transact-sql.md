@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66702418faae18f1c4582a28353e2f5ae7c156bc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046104"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -44,7 +44,7 @@ dm_exec_xml_handles (session_id | 0 )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *session_id* | 0  
+ *session_id* | 0,  
  ID da sessão. Se *session_id* for especificado, essa função retorna informações sobre identificadores XML na sessão especificada.  
   
  Se 0 for especificado, a função retornará as informações sobre todos os identificadores XML em todas as sessões.  
@@ -53,21 +53,21 @@ dm_exec_xml_handles (session_id | 0 )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID de sessão da sessão que contém o identificador de documento XML.|  
-|**document_id**|**Int**|ID do identificador de documento XML retornado por **sp_xml_preparedocument**.|  
-|**namespace_document_id**|**Int**|ID do identificador interno usado para o documento de namespace associado que foi passado como o terceiro parâmetro para **sp_xml_preparedocument**. NULL se não houver nenhum documento de namespace.|  
+|**session_id**|**int**|ID de sessão da sessão que contém o identificador de documento XML.|  
+|**document_id**|**int**|ID do identificador de documento XML retornado por **sp_xml_preparedocument**.|  
+|**namespace_document_id**|**int**|ID do identificador interno usado para o documento de namespace associado que foi passado como o terceiro parâmetro para **sp_xml_preparedocument**. NULL se não houver nenhum documento de namespace.|  
 |**sql_handle**|**varbinary(64)**|Identificador para o texto do código SQL em que o identificador foi definido.|  
-|**statement_start_offset**|**Int**|Número de caracteres em execução no momento em lote ou procedimento armazenado no qual o **sp_xml_preparedocument** chamada ocorre. Pode ser usado junto com o **sql_handle**, o **statement_end_offset**e o **dm_exec_sql_text** função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
-|**statement_end_offset**|**Int**|Número de caracteres em execução no momento em lote ou procedimento armazenado no qual o **sp_xml_preparedocument** chamada ocorre. Pode ser usado junto com o **sql_handle**, o **statement_start_offset**e o **dm_exec_sql_text** função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
+|**statement_start_offset**|**int**|Número de caracteres em execução no momento, lote ou procedimento armazenado no qual o **sp_xml_preparedocument** chamada ocorre. Pode ser usada junto com o **sql_handle**, o **statement_end_offset**e o **DM exec_sql_text** a função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
+|**statement_end_offset**|**int**|Número de caracteres em execução no momento, lote ou procedimento armazenado no qual o **sp_xml_preparedocument** chamada ocorre. Pode ser usada junto com o **sql_handle**, o **statement_start_offset**e o **DM exec_sql_text** a função de gerenciamento dinâmico para recuperar o atualmente executar a instrução para a solicitação.|  
 |**creation_time**|**datetime**|Carimbo de hora quando **sp_xml_preparedocument** foi chamado.|  
 |**original_document_size_bytes**|**bigint**|Tamanho do documento XML não analisado em bytes.|  
 |**original_namespace_document_size_bytes**|**bigint**|Tamanho do documento XML de namespace não analisado, em bytes. NULL se não houver nenhum documento de namespace.|  
 |**num_openxml_calls**|**bigint**|Número de chamadas de OPENXML com esse identificador de documento.|  
 |**row_count**|**bigint**|Número de linhas retornadas por todas as chamadas de OPENXML anteriores para esse identificador de documento.|  
-|**dormant_duration_ms**|**bigint**|Milissegundos desde a última chamada de OPENXML. Se OPENXML não foi chamado, retornará milissegundos desde a **sp_xml_preparedocument**chamada.|  
+|**dormant_duration_ms**|**bigint**|Milissegundos desde a última chamada de OPENXML. Se OPENXML não foi chamado, retornará milissegundos desde o **sp_xml_preparedocument**chamada t.|  
   
 ## <a name="remarks"></a>Remarks  
- O tempo de vida de **sql_handles** usado para recuperar o texto SQL que executou uma chamada a **sp_xml_preparedocument** superam o plano de cache usado para executar a consulta. Se o texto de consulta não estiver disponível no cache, os dados não poderão ser recuperados usando as informações fornecidas no resultado de função. Isso poderá ocorrer se você estiver executando muitos lotes grandes.  
+ O tempo de vida dos **sql_handles** usado para recuperar o texto SQL que executou uma chamada a **sp_xml_preparedocument** dura mais do que o plano armazenado em cache usado para executar a consulta. Se o texto de consulta não estiver disponível no cache, os dados não poderão ser recuperados usando as informações fornecidas no resultado de função. Isso poderá ocorrer se você estiver executando muitos lotes grandes.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW SERVER STATE no servidor para ver todas as sessões ou IDs de sessões que não pertencem ao chamador. Um chamador sempre pode ver os dados para sua própria ID de sessão atual.      

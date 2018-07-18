@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998178"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33178572"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**Int**|ID do assembly a partir do qual este tipo foi criado.|  
+|**assembly_id**|**int**|ID do assembly a partir do qual este tipo foi criado.|  
 |**assembly_class**|**sysname**|Nome da classe no assembly que define este tipo.|  
 |**is_binary_ordered**|**bit**|A classificação dos bytes deste tipo é equivalente à classificação com o uso de operadores de comparação no tipo.|  
 |**is_fixed_length**|**bit**|O comprimento do tipo é sempre o mesmo que max_length.|  

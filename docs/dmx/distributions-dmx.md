@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ffd21a2b507e03af6534296715528d83aac0f6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841239"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992028"
 ---
 # <a name="distributions-dmx"></a>Distribuições (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode definir o conteúdo das colunas em uma estrutura de mineração para afetar como os algoritmos processarão os dados nessas colunas quando você cria modelos de mineração. Com relação a certos algoritmos, é útil definir a distribuição de colunas contínuas antes de processar o modelo, principalmente quando se sabe que as colunas contêm distribuições comuns de valores. Se as distribuições não estiverem definidas, os modelos de mineração resultantes poderão produzir previsões menos precisas do que se as distribuições estiverem definidas, uma vez que os algoritmos terão menos informações com as quais interpretar dados.  
+  Na [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode definir o conteúdo das colunas em uma estrutura de mineração para afetar como os algoritmos processarão os dados nessas colunas quando você cria modelos de mineração. Com relação a certos algoritmos, é útil definir a distribuição de colunas contínuas antes de processar o modelo, principalmente quando se sabe que as colunas contêm distribuições comuns de valores. Se as distribuições não estiverem definidas, os modelos de mineração resultantes poderão produzir previsões menos precisas do que se as distribuições estiverem definidas, uma vez que os algoritmos terão menos informações com as quais interpretar dados.  
   
  Os algoritmos de mineração de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] oferecem suporte aos seguintes tipos de distribuição:  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34841239"
  **UNIFORME**  
  Os valores para a coluna contínua formam uma curva plana, na qual todos os valores são igualmente prováveis.  
   
- Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar os tipos de distribuição um algoritmo oferece suporte, use o **SUPPORTED_DISTRIBUTION_FLAGS** de linhas de esquema.  
+ Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar os tipos de distribuição um algoritmo oferece suporte, use o **SUPPORTED_DISTRIBUTION_FLAGS** linhas de esquema.  
   
- Para obter mais informações sobre tipos de distribuição, consulte [distribuições de coluna &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
+ Para obter mais informações sobre tipos de distribuição, consulte [distribuições de colunas &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de conteúdo &#40;mineração de dados&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
@@ -44,8 +44,8 @@ ms.locfileid: "34841239"
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

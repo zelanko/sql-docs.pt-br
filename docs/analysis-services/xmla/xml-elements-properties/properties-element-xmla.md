@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c72d367944a79e86d9bfa251121e8589cbc0e86
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994548"
 ---
 # <a name="properties-element-xmla"></a>Elemento Properties (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém o XML para propriedades de análise (XMLA) usadas pelo [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
+  Contém o XML para as propriedades do Analysis (XMLA) usadas pelo [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) e [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) métodos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34576118"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Descobrir](../../../analysis-services/xmla/xml-elements-methods-discover.md), [executar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Elementos pai|[Descubra](../../../analysis-services/xmla/xml-elements-methods-discover.md), [executar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Elementos filho|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O **propriedades** elemento representa propriedades XMLA usadas para controlar aspectos do **Discover** e **Execute** métodos, como definir as informações necessárias para Conecte-se à fonte de dados, especificando o formato de retorno do conjunto de resultados ou especificando o local no qual os dados devem ser formatados.  
+ O **propriedades** elemento representa as propriedades XMLA usadas para controlar aspectos da **Discover** e **Execute** métodos, como definir as informações necessárias para Conecte-se à fonte de dados, especificando o formato de retorno do conjunto de resultados, ou especificando o local em que os dados devem ser formatados.  
   
  As propriedades disponíveis e seus valores podem ser obtidos usando o tipo de solicitação DISCOVER_PROPERTIES com o método **Discover** .  
   

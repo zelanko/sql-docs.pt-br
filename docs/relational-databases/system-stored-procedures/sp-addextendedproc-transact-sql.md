@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239786"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046084"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,29 +49,29 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@functname =** ] **'***procedimento***'**  
- É o nome da função a ser chamada dentro da DLL (biblioteca de vínculo dinâmico). *procedimento* é **nvarchar (517)**, sem padrão. *procedimento* opcionalmente pode incluir o nome do proprietário na forma *owner.function*.  
+ É o nome da função a ser chamada dentro da DLL (biblioteca de vínculo dinâmico). *procedimento* está **nvarchar(517)**, sem padrão. *procedimento* , opcionalmente, pode incluir o nome do proprietário na forma *owner.function*.  
   
  [  **@dllname =** ] **'***dll***'**  
- É o nome da DLL que contém a função. *dll* é **varchar (255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
+ É o nome da DLL que contém a função. *dll* está **varchar(255)**, sem padrão. É recomendável especificar o caminho completo da DLL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
- Depois que um procedimento armazenado estendido é criado, ele deve ser adicionado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **sp_addextendedproc**. Para obter mais informações, consulte [adicionando um procedimento armazenado estendido para o SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+ Depois que um procedimento armazenado estendido é criado, ele deve ser adicionado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio **sp_addextendedproc**. Para obter mais informações, consulte [adicionando um procedimento armazenado estendido ao SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
- Esse procedimento pode ser executado somente no **mestre** banco de dados. Para executar um procedimento armazenado estendido de um banco de dados diferente de **mestre**, qualifique o nome do procedimento armazenado estendido com **mestre**.  
+ Esse procedimento pode ser executado somente na **mestre** banco de dados. Para executar um procedimento armazenado estendido de um banco de dados diferente de **mestre**, qualifique o nome do procedimento armazenado estendido com **mestre**.  
   
- **sp_addextendedproc** adiciona entradas para o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição de catálogo, registrar o nome do novo procedimento armazenado estendido com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também adiciona uma entrada de [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) exibição do catálogo.  
+ **sp_addextendedproc** adiciona entradas para o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição de catálogo, registrar o nome do novo procedimento armazenado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também adiciona uma entrada na [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) exibição do catálogo.  
   
 > [!IMPORTANT]  
 >  DLLs existentes que não são registradas com um caminho completo não funcionarão depois da atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para corrigir o problema, use **sp_dropextendedproc** para cancelar o registro de DLL e, em seguida, registrá-la novamente com **sp_addextendedproc**, especificando o caminho completo.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_addextendedproc**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir adiciona o **xp_hello** o procedimento armazenado estendido.  

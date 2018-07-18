@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_objects_impacted_on_version_change (banco de dados do SQL Azure) | Microsoft Docs
+title: sys.dm_db_objects_impacted_on_version_change (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465122"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051284"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "34465122"
   
 |Nome da coluna|Tipo de Dados|Description|  
 |-----------------|---------------|-----------------|  
-|class|**int** não NULL|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
+|class|**int** NOT NULL|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
 |class_desc|**nvarchar(60)** NOT NULL|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**int** não NULL|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
+|major_id|**int** NOT NULL|ID de objeto da restrição ou ID de objeto da tabela que contém índice ou heap.|  
 |minor_id|**int** nulo|**NULO** para restrições<br /><br /> Index_id para índices e heaps|  
-|dependência|**nvarchar(60)** NOT NULL|Descrição da dependência que está causando efeito na restrição ou índice. O mesmo valor é usado também para os avisos gerados durante a atualização.<br /><br /> Exemplos:<br /><br /> **espaço** (para intrínseco)<br /><br /> **Geometry** (para sistema UDT)<br /><br /> **geography:: Parse** (para método UDT de sistema)|  
+|dependência|**nvarchar(60)** NOT NULL|Descrição da dependência que está causando efeito na restrição ou índice. O mesmo valor é usado também para os avisos gerados durante a atualização.<br /><br /> Exemplos:<br /><br /> **espaço** (para intrínseco)<br /><br /> **geometria** (para sistema UDT)<br /><br /> **geography:: Parse** (para o método de sistema UDT)|  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma consulta em **sys.DM db_objects_impacted_on_version_change** para localizar os objetos afetados por uma atualização para a próxima versão principal do servidor  
+ O exemplo a seguir mostra uma consulta em **sys.dm_db_objects_impacted_on_version_change** para localizar os objetos afetados por uma atualização para a próxima versão do servidor principal  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -73,7 +73,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Order|Objeto afetado|Ação corretiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Recriar índices identificados por **sys.DM db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objeto**|Todas as restrições definidas por **sys.DM db_objects_impacted_on_version_change** devem ser revalidadas depois que os dados de geometria e Geografia na tabela subjacente são recalculados. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Índices**|Recriar índices identificados por **sys.dm_db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou em<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objeto**|Todas as restrições identificadas por **sys.dm_db_objects_impacted_on_version_change** deverá ser revalidado depois que os dados de geometria e Geografia na tabela subjacente serão recalculados. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou em<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

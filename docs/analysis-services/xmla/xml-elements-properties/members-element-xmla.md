@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994708"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "34579098"
 |Hierarquia|Atributo **String** obrigatório. O nome da hierarquia à qual os membros contidos pelo **membros** elemento pertence.|  
   
 ## <a name="remarks"></a>Remarks  
- Quando um aplicativo cliente define o **AxisFormat** propriedade *ClusterFormat*, os membros em cada eixo são divididos em clusters nos quais cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada **eixo** elemento consiste em um ou mais **CrossProduct** elementos. Cada **CrossProduct** elemento contém um **membros** elemento para cada hierarquia no eixo. O **membros** elemento, por sua vez, contém um **membro** elemento para cada membro da hierarquia especificada incluída no produto cruzado.  
+ Quando um aplicativo cliente definir a **AxisFormat** propriedade *ClusterFormat*, os membros em cada eixo são divididos em clusters em que cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada **eixo** elemento consiste em um ou mais **CrossProduct** elementos. Cada **CrossProduct** elemento contém uma **membros** elemento para cada hierarquia no eixo. O **membros** elemento, por sua vez, contém um **membro** elemento para cada membro da hierarquia especificada incluída no produto cruzado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra a estrutura do **membros** elemento quando um cliente especifica *ClusterFormat* para o **AxisFormat** propriedade XMLA, considerando o membros a seguir para o eixo:  
+ O exemplo a seguir ilustra a estrutura do **membros** elemento quando um cliente especifica *ClusterFormat* para o **AxisFormat** propriedade XMLA, considerando o seguintes membros para o eixo:  
   
 ||||||  
 |-|-|-|-|-|  

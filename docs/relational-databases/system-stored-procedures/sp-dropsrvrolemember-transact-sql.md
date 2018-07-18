@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242408"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049364"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'***login***'**  
- É o nome de um logon a ser removido da função de servidor fixa. *logon* é **sysname**, sem padrão. *logon* deve existir.  
+ [ @loginame **=** ] **'***logon***'**  
+ É o nome de um logon a ser removido da função de servidor fixa. *login* está **sysname**, sem padrão. *logon* deve existir.  
   
  [ @rolename **=** ] **'***função***'**  
- É o nome de uma função de servidor. *função* é **sysname**, com um padrão NULL. *função* deve ser um dos seguintes valores:  
+ É o nome de uma função de servidor. *função* está **sysname**, com um padrão NULL. *função* deve ser um dos seguintes valores:  
   
 -   sysadmin  
   
@@ -80,7 +80,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
  sp_dropsrvrolemember não pode ser executado em uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação sysadmin fixa a função de servidor, ou a permissão ALTER ANY LOGIN no servidor e a associação na função da qual o membro está sendo descartado.  
+ Requer associação sysadmin fixa a função de servidor ou a permissão ALTER ANY LOGIN no servidor e a associação na função da qual o membro está sendo descartado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove o logon `JackO` da função de servidor fixa `sysadmin`.  
@@ -94,7 +94,7 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

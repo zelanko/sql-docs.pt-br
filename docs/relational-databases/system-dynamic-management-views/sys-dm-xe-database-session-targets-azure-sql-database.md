@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_targets (banco de dados do SQL Azure) | Microsoft Docs
+title: DM xe_database_session_targets (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,20 +17,20 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 8978a41b22beb36ccc31d1cfdc0a73eaf2da34ec
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041014"
 ---
-# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets (banco de dados do SQL Azure)
+# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>DM xe_database_session_targets (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre os destinos de sessão.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  

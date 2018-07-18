@@ -23,23 +23,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046224"
 ---
 # <a name="files-and-version-numbers"></a>Arquivos e números de versão
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Todos os necessários componentes do SQL Server Management Object (SMO) estão incluídos no pacote do Microsoft.SqlServer.SqlManagementObjects NuGet. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
+  Todos os necessários componentes do SQL Server Management Object (SMO) estão incluídos no pacote Microsoft.SqlServer.SqlManagementObjects NuGet. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
 
 >>[!Important]
-A versão do arquivo dos assemblies do SMO é exibida como principal. **0**. Build.Revision. Mas a versão de assembly inserido é o principal. **100**. Build.Revision. Isso é feito para manter a versão do SMO usado em todos os aplicativos separados para atualizações para um não afeta outras.
+A versão dos assemblies SMO é exibida como principal. **0**. Build.Revision. Mas a versão do assembly inserido é o principal. **100**. Build.Revision. Isso é feito para manter a versão do SMO usado em cada aplicativo separado para que as atualizações para um não afetam todos os outros.
 >>
->>Por isso, você deve **não** instalar essas versões dos assemblies para o Cache de Assembly Global (GAC). Isso pode fazer com que outros aplicativos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, para interromper. 
+>>Por isso você deve **não** instalar essas versões de assemblies ao Cache de Assembly Global (GAC). Isso poderia fazer com que outros aplicativos, tais como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, a fim de interromper. 
   
-|Arquivo|Descrição|  
+|Arquivo|Description|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Contém suporte para conexão a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Contém suporte para programação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Só é necessário em programas que acessam o Service Broker.|  

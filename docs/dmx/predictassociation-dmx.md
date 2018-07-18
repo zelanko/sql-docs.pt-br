@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989538"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Prevê associação de membro.  
   
-Por exemplo, você pode usar a função PredictAssociation para obter o conjunto de recomendações devido ao estado atual do carrinho de compras de um cliente. 
+Por exemplo, você pode usar a função PredictAssociation para obter o conjunto de recomendações devido ao estado atual do carrinho de compras para um cliente. 
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,7 +31,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se a  
- Algoritmos que contêm tabelas aninhadas previsíveis, incluindo alguns algoritmos de classificação e associação. Algoritmos de classificação que oferecem suporte a tabelas aninhadas incluem o [!INCLUDE[msCoName](../includes/msconame-md.md)] árvores de decisão, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de rede Neural.  
+ Algoritmos que contêm tabelas aninhadas previsíveis, incluindo associação e alguns algoritmos de classificação. Algoritmos de classificação que dão suporte a tabelas aninhadas incluem o [!INCLUDE[msCoName](../includes/msconame-md.md)] árvores de decisão [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos rede Neural.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  \<expressão de tabela >  
@@ -53,7 +53,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
  Se você incluir **$AdjustedProbability**, a instrução retorna a parte superior *n* valores com base no **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa o **PredictAssociation** função para retornar os quatro produtos da Adventure Works de bancos de dados que são mais prováveis de serem vendidos juntos.  
+ O exemplo a seguir usa o **PredictAssociation** função para retornar os quatro produtos da Adventure Works do banco de dados que são mais prováveis de serem vendidos juntos.  
   
 ```  
 SELECT  
@@ -61,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-O exemplo a seguir demonstra como você pode usar uma tabela aninhada como entrada para a função de previsão, usando a cláusula de forma. A consulta de forma cria um conjunto de linhas com customerId como uma coluna e uma tabela aninhada como uma segunda coluna, que contém a lista de produtos que um cliente já foi colocado. 
+O exemplo a seguir demonstra como você pode usar uma tabela aninhada como entrada para a função de previsão, usando a cláusula SHAPE. A consulta de forma cria um conjunto de linhas com customerId como uma coluna e uma tabela aninhada como uma segunda coluna, que contém a lista de produtos que já trouxe um cliente. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -80,6 +80,6 @@ SHAPE {
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

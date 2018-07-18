@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046214"
 ---
 # <a name="smo-object-model-diagram"></a>Diagrama de modelos de objetos SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "32966151"
   
  ![Diagrama que mostra as relações hierárquicas](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "diagrama que mostra as relações hierárquicas")  
   
- ![Modelo de objeto, exibição de árvore mostrando a hierarquia de](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "o modelo de objeto, exibição de árvore mostrando a hierarquia")  
+ ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
   
- ![Modelo de objeto, exibição de árvore mostrando a hierarquia de](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "o modelo de objeto, exibição de árvore mostrando a hierarquia")  
+ ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
   
- ![Modelo de objeto, exibição de árvore mostrando a hierarquia de](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "o modelo de objeto, exibição de árvore mostrando a hierarquia")  
+ ![Modelo de objeto, mostrando a hierarquia de exibição de árvore](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "modelo de objeto, mostrando a hierarquia de exibição de árvore")  
   
   

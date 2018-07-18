@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 036f5fa2b276d5cb078fdf6e9528b1877280f94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991998"
 ---
 # <a name="creating-smo-programs"></a>Criando programas SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32968121"
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Conectar a uma instância do SQL Server](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|O programa SMO mais básico que estabelece uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Demonstra a Autenticação do Windows e a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Também inclui exemplos que mostram a conexão com um local e uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Conectando-se a uma instância do SQL Server](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|O programa SMO mais básico que estabelece uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Demonstra a Autenticação do Windows e a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Também inclui exemplos que mostram a conexão com um local e uma instância remota do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Desconectando de uma instância do SQL Server](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|Um programa que demonstra como se desconectar da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Chamando métodos](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|Esta seção descreve a abordagem geral de chamada de métodos. Mostra o uso de parâmetros e como tratar tabelas de dados retornadas em um objeto <xref:System.Data.DataTable>. Também inclui um exemplo de como chamar um construtor de objeto e como chamar o **Clone** método.|  
 |[Configurando propriedades – SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|Esta seção descreve como definir diferentes tipos de propriedades. Mostra como definir e obter propriedades de objetos. Também inclui exemplos que definem propriedades de objetos quando o objeto é criado e como iterar por todas as propriedades de um objeto.|  
@@ -45,6 +45,6 @@ ms.locfileid: "32968121"
 |[Manipulando exceções SMO](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)|Esta seção descreve como interceptar exceções no SMO. Inclui exemplos de como capturar uma exceção e como exibir uma exceção interna.|  
 |[Trabalhando com tipos de dados](../../../relational-databases/server-management-objects-smo/create-program/working-with-data-types.md)|Esta seção descreve como trabalhar com diferentes tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Descreve como construir um tipo de dados com a especificação do construtor de objeto. Também inclui um exemplo de como criar um tipo de dados usando o construtor padrão.|  
 |[Usando transações](../../../relational-databases/server-management-objects-smo/create-program/using-transactions.md)|Esta seção descreve como implementar o processamento de transações em um programa SMO. Inclui um exemplo de como usar transações em um programa SMO.|  
-|[Usando o modo de captura](../../../relational-databases/server-management-objects-smo/create-program/using-capture-mode.md)|Esta seção descreve como registrar a saída do programa SMO. O exemplo registra o programa SMO como instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] enviadas à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para execução posterior.|  
+|[Usando modo de captura](../../../relational-databases/server-management-objects-smo/create-program/using-capture-mode.md)|Esta seção descreve como registrar a saída do programa SMO. O exemplo registra o programa SMO como instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] enviadas à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para execução posterior.|  
   
   
