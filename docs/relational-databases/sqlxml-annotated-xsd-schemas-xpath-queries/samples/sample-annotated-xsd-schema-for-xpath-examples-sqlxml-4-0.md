@@ -1,5 +1,5 @@
 ---
-title: Esquema XSD anotado de exemplo para obter exemplos de XPath (SQLXML 4.0) | Microsoft Docs
+title: Esquema XSD anotado de exemplo para exemplos de XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6af6bcbd760cb74c55bda4caa3164bc304dadcd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053724"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Esquema XSD anotado de exemplo para exemplos de XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  As consultas XPath de exemplo desta seção se referem a um esquema de mapeamento. O esquema de mapeamento é um arquivo XSD (Esquema XML) anotado. Para obter mais informações sobre esquemas de mapeamento, consulte [Introdução a esquemas de XSD anotado &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  As consultas XPath de exemplo desta seção se referem a um esquema de mapeamento. O esquema de mapeamento é um arquivo XSD (Esquema XML) anotado. Para obter mais informações sobre esquemas de mapeamento, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Você precisa dos itens a seguir para executar consultas XPath no esquema XSD anotado:  
   
--   Crie um modelo com uma consulta de XPath. No modelo, você especifica o esquema de mapeamento em que a consulta XPath será executada. Nesse caso, o esquema de mapeamento deve ser armazenado no diretório (ou um de seus subdiretórios, nesse caso um caminho relativo for especificado como o valor da **esquema de mapeamento** atributo no modelo) associado ao arquivo de modelo.  
+-   Crie um modelo com uma consulta de XPath. No modelo, você especifica o esquema de mapeamento em que a consulta XPath será executada. Nesse caso, o esquema de mapeamento deve ser armazenado no diretório (ou um de seus subdiretórios, no qual o caso de um caminho relativo é especificado como o valor da **esquema de mapeamento** atributo no modelo) associado ao arquivo de modelo.  
   
 -   Crie um aplicativo de teste que use extensões de SQLXML para o ADO executar consultas. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   

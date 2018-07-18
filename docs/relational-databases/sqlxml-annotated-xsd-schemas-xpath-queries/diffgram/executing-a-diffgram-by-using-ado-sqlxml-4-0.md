@@ -1,5 +1,5 @@
 ---
-title: Executando um DiffGram usando ADO (SQLXML 4.0) | Microsoft Docs
+title: Executando um DiffGram usando o ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969101"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053714"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Executando um DiffGram usando o ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32969101"
   
  Este é o processo para o aplicativo de exemplo:  
   
--   O **conn** objeto (**ADODB. Conexão**) estabelece uma conexão a uma instância em execução do SQL Server em um servidor específico.  
+-   O **conn** objeto (**ADODB. Conexão**) estabelece uma conexão para executar uma instância do SQL Server em um servidor específico.  
   
 -   O **cmd** objeto (**ADODB**) é executado sobre a conexão estabelecida.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "32969101"
   
 -   O DiffGram é copiado para o fluxo de comando (**strmIn**) de um arquivo.  
   
--   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Fluxo**) receber qualquer retornou dados.  
+-   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Stream**) receber qualquer dados retornados.  
   
--   Ao usar o Provedor SQLOLEDB, por padrão, você obterá a funcionalidade do Microsoft SQLXML fornecida por Sqlxmlx.dll. Para usar Sqlxml4.dll com o provedor SQLOLEDB, o **SQLXML Version** propriedade deve ser definida como **SQLXML.4.0** no provedor SQLOLEDB **Conexão** objeto.  
+-   Ao usar o Provedor SQLOLEDB, por padrão, você obterá a funcionalidade do Microsoft SQLXML fornecida por Sqlxmlx.dll. Para usar Sqlxml4.dll com o provedor SQLOLEDB, o **SQLXML Version** propriedade deve ser definida como **SQLXML.4.0** sobre o provedor SQLOLEDB **Conexão** objeto.  
   
 -   O comando (DiffGram) é executado.  
   
@@ -91,7 +91,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>Para testar o DiffGram  
   
-1.  Para uma pasta no seu computador, copie um dos DiffGrams e o esquema XSD correspondente de um dos exemplos de [exemplos de DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+1.  Para uma pasta no seu computador, copie um dos DiffGrams e o esquema XSD correspondente de um dos exemplos [exemplos de DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
 2.  Abra o Visual Basic e crie um projeto EXE padrão.  
   
@@ -101,7 +101,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  Na caixa de ferramentas, clique em **CommandButton**e desenhe um botão no formulário.  
+4.  Na caixa de ferramentas, clique em **CommandButton**e, em seguida, desenhe um botão no formulário.  
   
 5.  Clique duas vezes no botão para editar o código e adicione o código do aplicativo que é fornecido no tópico.  
   

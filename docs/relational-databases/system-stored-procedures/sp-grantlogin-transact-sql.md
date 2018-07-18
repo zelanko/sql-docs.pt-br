@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054214"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***login***'**  
- É o nome de um usuário ou grupo do Windows. O usuário ou grupo deve ser qualificado com um nome de domínio do Windows no formato *domínio*\\*usuário*; por exemplo, **London\Joeb**. *logon* é **sysname**, sem padrão.  
+ [  **@loginame =** ] **'***logon***'**  
+ É o nome de um usuário ou grupo do Windows. O usuário do Windows ou grupo deve ser qualificado com um nome de domínio do Windows na forma *domínio*\\*usuário*; por exemplo, **London\Joeb**. *login* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_grantlogin** chama CREATE LOGIN, que oferece suporte a opções adicionais. Para obter informações sobre como criar logons do SQL Server, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
+ **sp_grantlogin** chama CREATE LOGIN, que dá suporte a opções adicionais. Para obter informações sobre como criar logons do SQL Server, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** não pode ser executado em uma transação definida pelo usuário.  
   

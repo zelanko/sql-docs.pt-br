@@ -1,5 +1,5 @@
 ---
-title: sys.DM resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
+title: DM resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: abee195d109b751df856c720264a42241bf861f9
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052294"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.DM resource_governor_external_resource_pool_affinity (Transact-SQL)
+# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>DM resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
@@ -38,7 +38,7 @@ Retorna informações de afinidade de CPU sobre a configuração atual do pool d
   
 |Nome da coluna|Tipo de dados|Description|
 |----------------|---------------|-----------------|
-|pool_id|**Int**|A ID do pool de recursos externos. Não permite valor nulo.|
+|pool_id|**int**|A ID do pool de recursos externos. Não permite valor nulo.|
 |processor_group|**smallint**|A ID do grupo de processadores lógicos do Windows. Não permite valor nulo.|
 |cpu_mask|**bigint**|A máscara binária que representa as CPUs associadas a esse pool. Não permite valor nulo.|
   
@@ -50,7 +50,7 @@ Pools criados com uma afinidade de `AUTO` não aparecem nessa exibição porque 
 
 Requer a permissão `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Governança de recursos para o aprendizado de máquina no SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
 

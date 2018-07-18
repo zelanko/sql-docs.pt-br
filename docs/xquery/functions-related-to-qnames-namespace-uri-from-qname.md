@@ -1,5 +1,5 @@
 ---
-title: namespace-uri-de-QName (XQuery) | Microsoft Docs
+title: namespace-uri-from-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077483"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999798"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções relacionadas a QNames - namespace uri do QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções relacionadas a QNames – namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma cadeia de caracteres que representa o uri de namespace do QName especificado por *$arg*. O resultado será a sequência vazia se *$arg* é a sequência vazia.  
+  Retorna uma cadeia de caracteres que representa o uri de namespace do QName especificado por *$arg*. O resultado é a sequência vazia se *$arg* for a sequência vazia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  É o QName cujo namespace-uri é retornado.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Recuperar o URI do namespace de um QName  
- Para obter um exemplo de funcionamento, consulte [nome local do QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ Para obter um exemplo funcional, consulte [local-nome-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  

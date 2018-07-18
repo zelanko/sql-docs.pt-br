@@ -24,33 +24,33 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 110f514c4688536decfd29c412ce310746cd972e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001188"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
-Dá suporte ao gerenciamento de bibliotecas de pacote relacionadas a tempos de execução externos, como R ou Python.
+Dá suporte ao gerenciamento de bibliotecas de pacotes relacionados a tempos de execução externos, como R ou Python.
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 
-O sys.external_libraries de exibição de catálogo lista uma linha para cada biblioteca externa que tenha sido carregada no banco de dados.
+O sys.external_libraries do modo de exibição de catálogo lista uma linha para cada biblioteca externa que tenha sido carregada no banco de dados.
 
 |Nome da coluna |Tipo de dados | Description|
 |------|------|------|
-|external_library_id |int | ID do objeto de biblioteca externa. |
+|external_library_id |INT | ID do objeto de biblioteca externa. |
 |nome |sysname |Nome da biblioteca externa. É exclusivo no banco de dados por proprietário.|
-|principal_id |int |ID da entidade de segurança que possui esta biblioteca externa. |
-|language | sysname | Nome do idioma ou tempo de execução que oferece suporte a biblioteca externa. Os valores válidos são 'R'. Tempos de execução adicionais podem ser adicionados no futuro.|
-|escopo |int |0 para escopo público. 1 para o escopo particular |  
-|scope_desc |varchar(7) |Indica se o pacote é público ou privado|
+|principal_id |INT |ID da entidade de segurança que possui essa biblioteca externa. |
+|language | sysname | Nome do idioma ou tempo de execução que dá suporte a biblioteca externa. Os valores válidos são 'R'. Tempos de execução adicionais podem ser adicionados no futuro.|
+|escopo |INT |0 para um escopo público; 1 para o escopo particular |  
+|scope_desc |varchar(7) |Indica se o pacote é pública ou privada|
 
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[CRIAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Gerenciamento de pacotes do SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[CRIAR A BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
+[Pacote de gerenciamento para SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

@@ -1,5 +1,5 @@
 ---
-title: sysusers (Transact-SQL) | Microsoft Docs
+title: sys. sysusers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0561ed37fa705f0952ae2a6e7cfd012d81364432
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000958"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "33223151"
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|ID do grupo ao qual este usuário pertence. Se **uid** é o mesmo que **gid**, esta entrada definirá um grupo. Estoura ou retorna NULL se o número de usuários e grupos combinados exceder 32.767.|  
 |**environ**|**varchar(255)**|Reservado.|  
-|**hasdbaccess**|**Int**|1 = Conta tem acesso ao banco de dados.|  
-|**islogin**|**Int**|1 = Conta é um grupo do Windows, usuário do Windows ou usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conta de logon.|  
-|**isntname**|**Int**|1 = Conta é um grupo do Windows ou usuário do Windows.|  
-|**isntgroup**|**Int**|1 = Conta é um grupo do Windows.|  
-|**isntuser**|**Int**|1 = Conta é um usuário do Windows.|  
-|**issqluser**|**Int**|1 = Conta é um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**isaliased**|**Int**|1 = Conta recebeu alias de outro usuário.|  
-|**issqlrole**|**Int**|1 = Conta é uma função de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**isapprole**|**Int**|1 = Conta é uma função de aplicativo.|  
+|**hasdbaccess**|**int**|1 = Conta tem acesso ao banco de dados.|  
+|**islogin**|**int**|1 = Conta é um grupo do Windows, usuário do Windows ou usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conta de logon.|  
+|**isntname**|**int**|1 = Conta é um grupo do Windows ou usuário do Windows.|  
+|**isntgroup**|**int**|1 = Conta é um grupo do Windows.|  
+|**isntuser**|**int**|1 = Conta é um usuário do Windows.|  
+|**issqluser**|**int**|1 = Conta é um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**isaliased**|**int**|1 = Conta recebeu alias de outro usuário.|  
+|**issqlrole**|**int**|1 = Conta é uma função de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**isapprole**|**int**|1 = Conta é uma função de aplicativo.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

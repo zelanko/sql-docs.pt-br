@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051594"
 ---
 # <a name="type-element-xmla"></a>Elemento Type (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Determina o tipo de processamento a ser executada pelo [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
+  Determina o tipo de processamento a ser executado o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34576708"
 |*ProcessAdd*|Adiciona novos dados ao objeto afetado.|  
 |*ProcessUpdate*|Atualiza os dados no objeto afetado.|  
 |*ProcessIndexes*|Cria ou recria índices e agregações no objeto afetado.|  
-|*ProcessScriptCache*|Se o cubo for processado, o servidor recriará o cache de scripts MDX. Em caso negativo, um erro será gerada.<br /><br /> **Observação** aplica-se somente ao cubo.|  
+|*ProcessScriptCache*|Se o cubo for processado, o servidor recriará o cache de scripts MDX. Em caso negativo, um erro será gerada.<br /><br /> **Observação** aplica-se apenas ao cubo.|  
 |*ProcessData*|Processa dados somente no objeto afetado.|  
 |*ProcessDefault*|Detecta o estado do objeto afetado e executa a opção de processamento adequada no objeto afetado para otimizá-lo completamente e retorná-lo para um estado completamente processado.|  
 |*ProcessClear*|Descarta os dados do objeto afetado e todos os objetos relacionados.|  

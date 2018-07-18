@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077223"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048286"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQueries que envolvem hierarquias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A maioria dos **xml** colunas de tipo de **AdventureWorks** banco de dados são documentos semiestruturados. Portanto, os documentos armazenados em cada linha podem parecer diferentes. Os exemplos de consulta neste tópico ilustram como extrair informações desses vários documentos.  
+  A maioria dos **xml** colunas de tipo a **AdventureWorks** banco de dados são documentos semiestruturados. Portanto, os documentos armazenados em cada linha podem parecer diferentes. Os exemplos de consulta neste tópico ilustram como extrair informações desses vários documentos.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -63,7 +63,7 @@ WHERE ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O **namespace** palavra-chave no [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. Esse prefixo é usado mais tarde no corpo da consulta.  
+-   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. Esse prefixo é usado mais tarde no corpo da consulta.  
   
 -   As chaves agem como tokens de troca de contexto,{) e (}, e são usadas para alternar a consulta da construção XML para avaliação de consulta.  
   
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
   
 -   Ao construir o elemento <`Location`>, $wc/@* recupera todos os atributos de local de centro de trabalho.  
   
--   O **String ()** função retorna o valor de cadeia de caracteres do <`step`> elemento.  
+-   O **String ()** função retorna o valor de cadeia de caracteres da <`step`> elemento.  
   
  Este é um resultado parcial:  
   
@@ -123,7 +123,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Fundamentos de XQuery](../xquery/xquery-basics.md)   
  [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

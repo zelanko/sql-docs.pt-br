@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21bb83be0940b806c071f305d75826ab65330c15
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054193"
 ---
 # <a name="messages-element-xmla"></a>Elemento Messages (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém uma coleção de [mensagem](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) elementos retornados de uma instância do Analysis Services por um [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
+  Contém uma coleção de [mensagem](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) elementos retornados de uma instância do Analysis Services de um [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   
 ## <a name="syntax"></a>Sintaxe  
   

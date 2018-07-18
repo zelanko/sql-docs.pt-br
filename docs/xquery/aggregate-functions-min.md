@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077403"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051704"
 ---
-# <a name="aggregate-functions---min"></a>Agregar funções - min
+# <a name="aggregate-functions---min"></a>Funções de agregação – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna de uma sequência de valores atômicos, *$arg*, o item cujo valor é menor do que todos os outros.  
@@ -47,14 +47,14 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Sequência de itens dos quais retornar o valor mínimo.  
   
 ## <a name="remarks"></a>Remarks  
- Todos os tipos de valores atomizados que são passados para **min ()** precisam ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
+ Todos os tipos de valores atomizados que são passados para **min ()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
   
  O resultado de **min ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic. Se a entrada estiver estaticamente vazia, o vazio será implícito e um erro estático será retornado.  
   
- O **min ()** função retorna o valor na sequência que é menor do que qualquer outro na sequência de entrada. Para valores xs:string, o agrupamento de ponto de código Unicode padrão está sendo usado. Se um valor XDT: untypedatomic não pode ser convertido em xs: Double, o valor será ignorado na sequência de entrada, *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
+ O **min ()** função retorna um valor na sequência que é menor do que qualquer outro na sequência de entrada. Para valores xs:string, o agrupamento de ponto de código Unicode padrão está sendo usado. Se um valor XDT: untypedatomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Usando a função min() XQuery para localizar o local de centro de trabalho com menos horas de trabalho  
  A consulta a seguir recupera todos os locais de centro de trabalho no processo de fabricação do modelo de produto (ProductModelID=7) com menos horas de trabalho. Geralmente, como mostrado a seguir, um único local é retornado. Se vários locais tivessem um número igual de horas de trabalho mínimas, todos eles seriam retornados.  
@@ -93,7 +93,7 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **min ()** função mapeia todos os inteiros para xs: decimal.  
+-   O **min ()** função mapeia todos os números inteiros para xs: decimal.  
   
 -   O **min ()** não há suporte para a função em valores do tipo xs: Duration.  
   

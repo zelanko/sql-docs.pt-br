@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076993"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048734"
 ---
 # <a name="sequence-expressions-xquery"></a>Expressões de sequência (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Exemplo C  
- A consulta a seguir é especificada na coluna AdditionalContactInfo do **xml** tipo na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<telephoneNumber >, \<pager >, e outros nós podem aparecer em qualquer lugar no documento. A consulta constrói uma sequência que contém todos os a \<telephoneNumber > filhos do nó de contexto, seguido de \<pager > filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
+ A consulta a seguir é especificada na coluna AdditionalContactInfo do **xml** tipo na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<telephoneNumber >, \<pager >, e outros nós podem aparecer em qualquer lugar no documento. A consulta constrói uma sequência que contém todos os \<telephoneNumber > filhos do nó de contexto, seguido pelo \<pager > filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  

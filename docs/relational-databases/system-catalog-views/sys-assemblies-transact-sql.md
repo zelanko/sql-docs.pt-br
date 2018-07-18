@@ -1,5 +1,5 @@
 ---
-title: sys (Transact-SQL) | Microsoft Docs
+title: sys. assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 22a200cee9b07332440076feb0981c1610682089
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179112"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000868"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "33179112"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do assembly. É exclusiva no banco de dados.|  
-|**principal_id**|**Int**|ID da entidade que é proprietária desse assembly.|  
-|**assembly_id**|**Int**|Número de identificação de assembly. É exclusivo em um banco de dados.|  
+|**principal_id**|**int**|ID da entidade que é proprietária desse assembly.|  
+|**assembly_id**|**int**|Número de identificação de assembly. É exclusivo em um banco de dados.|  
 |**clr_name**|**nvarchar(4000)**|Cadeia de caracteres canônica que codifica o nome simples, o número de versão, a cultura, a chave pública e a arquitetura do assembly. Esse valor identifica exclusivamente o assembly no lado CLR (Common Language Runtime).|  
 |**permission_set**|**tinyint**|Conjunto de permissões/nível de segurança do assembly.<br /><br /> 1 = Acesso seguro<br /><br /> 2 = Acesso externo<br /><br /> 3 = Acesso não seguro|  
 |**permission_set_desc**|**nvarchar(60)**|Descrição do conjunto de permissões/nível de segurança do assembly.<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  

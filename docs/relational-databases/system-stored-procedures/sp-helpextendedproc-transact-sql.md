@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052244"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@funcname =**] **'***procedimento***'**  
- É o nome do procedimento armazenado estendido para o qual as informações são relatadas. *procedimento* é **sysname**, com um padrão NULL.  
+ É o nome do procedimento armazenado estendido para o qual as informações são relatadas. *procedimento* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -61,7 +61,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**DLL**|**nvarchar(255)**|O nome da DLL.|  
   
 ## <a name="remarks"></a>Remarks  
- Quando *procedimento* for especificado, **sp_helpextendedproc** relatórios em especificado o procedimento armazenado estendido. Quando esse parâmetro não for fornecido, **sp_helpextendedproc** retorna todas as estendido nomes de procedimento armazenado e os nomes DLL para o qual cada procedimento armazenado estendido pertence.  
+ Quando *procedimento* for especificado, **sp_helpextendedproc** procedimento armazenado estendido de relatórios no especificado. Quando esse parâmetro não for fornecido, **sp_helpextendedproc** retorna todas as estendido nomes de procedimento armazenado e os nomes DLL para o qual cada procedimento armazenado estendido pertence.  
   
 ## <a name="permissions"></a>Permissões  
  Permissão para executar **sp_helpextendedproc** é concedida a **público**.  

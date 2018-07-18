@@ -18,35 +18,35 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 423bae3ce66e21721e328a23d51a8356be40ea2a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000798"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contém informações adicionais (por [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sobre o desempenho e o status de todos os nós de dispositivo. Ele lista uma linha por nó no dispositivo.  
+  Contém informações adicionais (ao longo [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sobre o desempenho e o status de todos os nós de dispositivo. Ele lista uma linha por nó no dispositivo.  
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**Int**|Id numérico exclusivo associado ao nó.<br /><br /> Chave para este modo de exibição.|Exclusivo por dispositivo, independentemente do tipo.|  
-|process_id|**Int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|pdw_node_id|**int**|Id numérico exclusivo associado ao nó.<br /><br /> A chave para este modo de exibição.|Exclusivo em todo o dispositivo, independentemente do tipo.|  
+|process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |nome_do processo|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**bigint**|Total alocada memória neste nó.||  
+|allocated_memory|**bigint**|Total alocado de memória neste nó.||  
 |available_memory|**bigint**|Total de memória disponível neste nó.||  
-|process_cpu_usage|**bigint**|Uso de CPU total do processo em tiques.||  
+|process_cpu_usage|**bigint**|Uso de CPU do processo total, em tiques.||  
 |total_cpu_usage|**bigint**|Uso total de CPU, em tiques.||  
-|thread_count|**bigint**|Número total de segmentos em uso neste nó.||  
+|thread_count|**bigint**|Número total de threads em uso neste nó.||  
 |handle_count|**bigint**|Número total de identificadores em uso neste nó.||  
-|total_elapsed_time|**bigint**|Tempo total decorrido desde que o sistema iniciar ou reiniciar.|Tempo total decorrido desde que o sistema iniciar ou reiniciar. Se total_elapsed_time excede o valor máximo para um inteiro (24.8 dias em milissegundos), isso causará falha materialização devido ao estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24.8 dias.|  
-|is_available|**bit**|Sinalizador que indica se este nó estará disponível.||  
-|sent_time|**datetime**|Última vez em que um pacote de rede foi enviado por este nó.||  
-|received_time|**datetime**|Última vez em que um pacote de rede foi recebido por este nó.||  
-|error_id|**nvarchar(36)**|Identificador exclusivo do último erro ocorrido neste nó.||  
+|total_elapsed_time|**bigint**|Tempo total decorrido desde que o sistema iniciar ou reiniciar.|Tempo total decorrido desde que o sistema iniciar ou reiniciar. Se total_elapsed_time exceder o valor máximo para um inteiro (24,8 dias em milissegundos), ela causará falha de materialização devido a estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
+|is_available|**bit**|Sinalizador que indica se este nó está disponível.||  
+|sent_time|**datetime**|Última vez em um pacote de rede foi enviado por este nó.||  
+|received_time|**datetime**|Última vez em um pacote de rede foi recebido por este nó.||  
+|error_id|**nvarchar(36)**|Identificador exclusivo do último erro que ocorreu nesse nó.||  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse Parallel Data Warehouse e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

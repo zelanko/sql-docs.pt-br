@@ -24,11 +24,11 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001168"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ Lista uma linha para cada arquivo que compõe uma biblioteca externa.
 
 |Nome da coluna |Tipo de dados |Description|
 |------|------|-----|
-|external_library_id | int |ID do objeto de biblioteca externa. |
+|external_library_id | INT |ID do objeto de biblioteca externa. |
 |content |varbinary(max) |Conteúdo do artefato de arquivo de biblioteca externa. |
-|Plataforma |tinyint |ID da plataforma de host no qual o SQL Server está instalado. |
-|platform_desc | nvarchar(60) |Nome da plataforma de host. Os valores válidos são 'WINDOWS', 'LINUX'. |
+|Plataforma |TINYINT |ID da plataforma do host no qual o SQL Server está instalado. |
+|platform_desc | nvarchar(60) |Nome da plataforma do host. Os valores válidos são 'WINDOWS', 'LINUX'. |
 
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>Confira também  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
-[CRIAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Gerenciamento de pacotes para serviço de aprendizado de máquina do SQL Server](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[CRIAR A BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  
+[Pacote de gerenciamento para o serviço do SQL Server Machine Learning](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

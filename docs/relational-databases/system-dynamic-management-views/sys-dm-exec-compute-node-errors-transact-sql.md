@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4038eed706e25ae779d6f0a2fd16babb5a951fac
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048752"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,18 +40,18 @@ ms.locfileid: "34464442"
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Id numérico exclusivo associado ao erro.|Em todos os erros de consulta no sistema|  
-|origem|**nvarchar(255)**|Descrição da fonte de processo ou thread||  
+|error_id|**nvarchar(36)**|Id numérico exclusivo associado ao erro.|Exclusivo em todos os erros de consulta no sistema|  
+|origem|**nvarchar(255)**|Descrição da fonte de thread ou processo||  
 |Tipo|**nvarchar(255)**|Tipo de erro.||  
 |create_time|**datetime**|A hora da ocorrência do erro||  
-|compute_node_id|**Int**|Identificador do nó de computação específico|Consulte compute_node_id de [sys.DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|Identificador de consulta PolyBase, se houver.||  
-|spid|**Int**|Identificador da sessão do SQL Server||  
-|thread_id|**Int**|Identificador numérico do thread no qual ocorreu o erro.||  
+|compute_node_id|**int**|Identificador do nó de computação específico|Consulte compute_node_id dos [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|**nvarchar(36)**|Identificador da consulta do PolyBase, se houver.||  
+|spid|**int**|Identificador da sessão do SQL Server||  
+|thread_id|**int**|Identificador numérico do thread no qual ocorreu o erro.||  
 |detalhes|nvarchar(4000)|Descrição completa dos detalhes do erro.||  
   
 ## <a name="see-also"></a>Consulte também  
- [PolyBase, solucionando problemas com exibições de gerenciamento dinâmico](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

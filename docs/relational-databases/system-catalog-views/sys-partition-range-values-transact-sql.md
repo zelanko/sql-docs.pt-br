@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001208"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33179562"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|ID da função de partição para este valor de limite de intervalo.|  
 |**boundary_id**|**int**|ID (de base 1 ordinal) da tupla de valor de limite, com limite mais à esquerda iniciando com um ID 1.|  
-|**parameter_id**|**int**|ID do parâmetro da função à qual este valor corresponde. Os valores nesta coluna correspondem do **parameter_id** coluna o **partition_parameters** exibição de qualquer catálogo **function_id**.|  
+|**parameter_id**|**int**|ID do parâmetro da função à qual este valor corresponde. Os valores nesta coluna correspondem aos **parameter_id** coluna da **partition_parameters** exibição para qualquer determinado do catálogo **function_id**.|  
 |**value**|**sql_variant**|O valor de limite real.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -51,6 +51,6 @@ ms.locfileid: "33179562"
  [Exibições do catálogo de função de partição &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
+ [sys. partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 262fb2743efef806c31cf1b452a214150691e255
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048514"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -27,28 +27,28 @@ ms.locfileid: "34464022"
 Rastreia solicitações de mesclagem de banco de dados. A solicitação de mesclagem pode ter sido gerada pelo SQL Server ou a solicitação foi feita por um usuário com [sp_xtp_merge_checkpoint_files (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md).
 
 > [!NOTE]
-> Este modo de exibição de gerenciamento dinâmico (DMV), sys.dm_db_xtp_merge_requests, existe até que o Microsoft SQL Server 2014.
+> Este modo de exibição de gerenciamento dinâmico (DMV), sys.dm_db_xtp_merge_requests, existe até o Microsoft SQL Server 2014.
 > 
-> Mas a partir do SQL Server 2016, essa DMV já não se aplica.
+> Mas, começando com o SQL Server 2016, essa DMV não se aplica.
 
 ## <a name="columns-in-the-report"></a>Colunas do relatório
 
 | Nome da coluna | Tipo de dados | Description |
 | :-- | :-- | :-- |
-| request_state | tinyint | O status da solicitação de mesclagem:<br/>0 = solicitado<br/>1 = pendente<br/>2 = instalado<br/>3 = abandonado |
-| request_state_desc | nvarchar(60) | Significados para o estado atual da solicitação:<br/><br/>Uma solicitação de mesclagem solicitada - existe.<br/>Pendente - a mesclagem está sendo processada.<br/>Instalado - a mesclagem for concluída.<br/>Abandonado - a mesclagem não pôde concluir, talvez devido à falta de armazenamento. |
+| request_state | TINYINT | O status da solicitação de mesclagem:<br/>0 = solicitado<br/>1 = pendente<br/>2 = instalado<br/>3 = abandonado |
+| request_state_desc | nvarchar(60) | Significados para o estado atual da solicitação:<br/><br/>Uma solicitação de mesclagem solicitado - existe.<br/>Pendente - a mesclagem está sendo processada.<br/>Instalado - a mesclagem foi concluída.<br/>Abandonado - a mesclagem não pôde concluir, talvez devido à falta de armazenamento. |
 | destination_file_id | GUID | O identificador exclusivo do arquivo de destino para a mesclagem dos arquivos de origem. |
-| lower_bound_tsn | bigint | O carimbo de data/hora mínimo para o arquivo de mesclagem de destino. O carimbo de data/hora da transação mais baixa de todos os arquivos de origem a serem mesclados. |
-| upper_bound_tsn | bigint | O carimbo de data/hora máximo para o arquivo de mesclagem de destino. O carimbo de data/hora da transação mais alta de todos os arquivos de origem a serem mesclados. |
-| collection_tsn | bigint | O carimbo de data/hora em que a linha atual pode ser coletada.<br/><br/>Uma linha no estado Instalado será removida quando checkpoint_tsn for maior que collection_tsn.<br/><br/>Uma linha no estado Abandonado será removida quando checkpoint_tsn for menor que collection_tsn. |
-| checkpoint_tsn | bigint | A hora em que o ponto de verificação foi iniciado.<br/><br/>Todas as exclusões feitas por transações com um carimbo de data/hora inferior a esse serão contabilizadas no novo arquivo de dados. As exclusões restantes são movidas para o arquivo delta de destino. |
+| lower_bound_tsn | BIGINT | O carimbo de data/hora mínimo para o arquivo de mesclagem de destino. O carimbo de data/hora da transação mais baixa de todos os arquivos de origem a serem mesclados. |
+| upper_bound_tsn | BIGINT | O carimbo de data/hora máximo para o arquivo de mesclagem de destino. O carimbo de data/hora da transação mais alta de todos os arquivos de origem a serem mesclados. |
+| collection_tsn | BIGINT | O carimbo de data/hora em que a linha atual pode ser coletada.<br/><br/>Uma linha no estado Instalado será removida quando checkpoint_tsn for maior que collection_tsn.<br/><br/>Uma linha no estado Abandonado será removida quando checkpoint_tsn for menor que collection_tsn. |
+| checkpoint_tsn | BIGINT | A hora em que o ponto de verificação foi iniciado.<br/><br/>Todas as exclusões feitas por transações com um carimbo de data/hora inferior a esse serão contabilizadas no novo arquivo de dados. As exclusões restantes são movidas para o arquivo delta de destino. |
 | sourcenumber_file_id | GUID | Até 16 IDs internas do arquivo que identificam exclusivamente os arquivos de origem na mesclagem. |
 
 ## <a name="permissions"></a>Permissões
 
 Requer a permissão VIEW DATABASE STATE no banco de dados atual.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Exibições de gerenciamento dinâmico de tabela com otimização de memória (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 

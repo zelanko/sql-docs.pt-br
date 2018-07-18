@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 944a8096c20d6ab825503d4db9f824ba0bbe208e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181792"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001228"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "33181792"
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|data_source_id|**Int**|Identificação do objeto de fonte de dados externa.||  
+|data_source_id|**int**|Identificação do objeto de fonte de dados externa.||  
 |nome|**sysname**|Nome da fonte de dados externa.||  
 |local|**nvarchar(4000)**|A cadeia de conexão, que inclui o protocolo, endereço IP e porta para a fonte de dados externa.||  
 |type_desc|**nvarchar(255)**|Tipo de fonte de dados exibido como uma cadeia de caracteres.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
 |Tipo|**tinyint**|Tipo de fonte de dados exibido como um número.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
-|resource_manager_location|**nvarchar(4000)**|Para digitar HADOOP, o IP e a porta local do Gerenciador de recursos do Hadoop. Isso é usado para enviar um trabalho em uma fonte de dados do Hadoop.<br /><br /> NULL para outros tipos de fontes de dados externas.||  
-|credential_id|**Int**|A ID de objeto do banco de dados no escopo a credencial usada para conectar-se à fonte de dados externa.||  
-|database_name|**sysname**|Para tipo de RDBMS, o nome do banco de dados remoto. Para tipo, SHARD_MAP_MANAGER, o nome do banco de Gerenciador de mapa do fragmento. NULL para outros tipos de fontes de dados externas.||  
-|shard_map_name|**sysname**|Para o tipo SHARD_MAP_MANAGER, o nome do mapa do fragmento. NULL para outros tipos de fontes de dados externas.||  
+|resource_manager_location|**nvarchar(4000)**|Para o tipo de HADOOP, o IP e a porta local do Gerenciador de recursos do Hadoop. Isso é usado para enviar um trabalho em uma fonte de dados do Hadoop.<br /><br /> NULL para outros tipos de fontes de dados externas.||  
+|credential_id|**int**|A ID de objeto do banco de dados com escopo de credencial usado para se conectar à fonte de dados externa.||  
+|database_name|**sysname**|Tipo RDBMS, o nome do banco de dados remoto. Tipo, SHARD_MAP_MANAGER, o nome do que o banco de dados do Gerenciador de mapa do fragmento. NULL para outros tipos de fontes de dados externas.||  
+|shard_map_name|**sysname**|Tipo SHARD_MAP_MANAGER, o nome do mapa de fragmentos. NULL para outros tipos de fontes de dados externas.||  
   
 ## <a name="permissions"></a>Permissões  
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

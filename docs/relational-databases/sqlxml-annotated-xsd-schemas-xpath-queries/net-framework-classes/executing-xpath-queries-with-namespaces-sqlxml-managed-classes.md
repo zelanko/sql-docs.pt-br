@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051484"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Executando consultas XPath com namespaces (classes gerenciadas SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "32969051"
   
  Como o caractere curinga (*) não é suportado no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver o prefixo, use a propriedade de namespaces para especificar a associação de namespace.  
   
- No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath example e namespace-uri(). Essa consulta XPath retorna todos os elementos em que o nome local é **funcionário** e o URI de namespace é **urn: myschema:Contacts**:  
+ No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath example e namespace-uri(). Essa consulta XPath retorna todos os elementos em que é o nome local **funcionário** e o URI de namespace é **urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- No SQLXML 4.0, especifique essa consulta XPath com um prefixo de namespace. Um exemplo é **x: Contact**, onde **x** é o prefixo de namespace. Considere o esquema XSD a seguir:  
+ No SQLXML 4.0, especifique essa consulta XPath com um prefixo de namespace. Um exemplo é **x: entre em contato com**, onde **x** é o prefixo de namespace. Considere o esquema XSD a seguir:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -61,7 +61,7 @@ ms.locfileid: "32969051"
   
  Como esse esquema define o namespace de destino, uma consulta XPath (como "Employee") com relação a esse esquema precisa incluir o namespace.  
   
- O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação do namespace usando a propriedade de Namespaces do objeto SqlXmlCommand.  
+ O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação de namespace usando a propriedade de Namespaces do objeto SqlXmlCommand.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  

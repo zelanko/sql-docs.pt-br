@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a704ccc0b5be37a668984ce4d8d543984f360b54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053965"
 ---
 # <a name="atomization-xquery"></a>Atomização (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A atomização é o processo de extrair o valor digitado de um item. Esse processo está implícito em determinadas circunstâncias. Alguns dos operadores XQuery, como operadores de aritmética e de comparação, dependem desse processo. Por exemplo, quando você aplicar operadores aritméticos diretamente a nós, o valor digitado de um nó é recuperado primeiramente invocando implicitamente a [função dados](../xquery/data-accessor-functions-data-xquery.md). Isso passa o valor atômico como um operando para o operador aritmético.  
+  A atomização é o processo de extrair o valor digitado de um item. Esse processo está implícito em determinadas circunstâncias. Alguns dos operadores XQuery, como operadores de aritmética e de comparação, dependem desse processo. Por exemplo, quando você aplica operadores aritméticos diretamente a nós, o valor digitado de um nó é recuperado primeiro invocando implicitamente a [função dados](../xquery/data-accessor-functions-data-xquery.md). Isso passa o valor atômico como um operando para o operador aritmético.  
   
  Por exemplo, a consulta a seguir retorna o total dos atributos LaborHours. Nesse caso, **Data ()** é aplicado implicitamente a nós de atributo.  
   
@@ -51,7 +51,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Outro exemplo de atomização implícita é quando você usa operadores aritméticos. O **+** operador requer valores atômicos e **Data ()** é aplicado implicitamente para recuperar o valor atômico do atributo LaborHours. A consulta é especificada na coluna Instructions do **xml** tipo na tabela ProductModel. A consulta a seguir retorna o atributo LaborHours três vezes. Na consulta, observe o seguinte:  
+ Outro exemplo de atomização implícita é quando você usa operadores aritméticos. O **+** operador requer valores atômicos, e **Data ()** é aplicado implicitamente para recuperar o valor atômico do atributo LaborHours. A consulta é especificada na coluna Instructions do **xml** tipo na tabela ProductModel. A consulta a seguir retorna o atributo LaborHours três vezes. Na consulta, observe o seguinte:  
   
 -   Na construção do atributo OriginalLaborHours, a atomização é aplicada implicitamente à sequência de singleton retornada por (`$WC/@LaborHours`). O valor digitado do atributo LaborHours é atribuído a OriginalLaborHours.  
   
@@ -80,7 +80,7 @@ where ProductModelID=7
   
  A atomização resulta em uma instância de um tipo simples, um conjunto vazio ou um erro de tipo estático.  
   
- Atomização também ocorre em parâmetros de expressão de comparação passados para as funções, os valores retornados por funções, **cast** expressões e expressões de ordenação passadas na ordem por cláusula.  
+ Atomização também ocorre em parâmetros de expressão de comparação passados para funções, valores retornados pelas funções, **cast ()** expressões e expressões de ordenação passadas na ordem por cláusula.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fundamentos de XQuery](../xquery/xquery-basics.md)   

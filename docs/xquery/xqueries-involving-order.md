@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051674"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   A consulta constrói o < Loca`tion`> elemento e recupera seu atributo valores do banco de dados.  
+-   A consulta constrói o < Loca`tion`> elemento e recupera seu atributo de valores do banco de dados.  
   
 -   Ela usa duas iterações FLWOR (for...return): uma para recuperar ferramentas e outra para recuperar o material usado.  
   
@@ -167,7 +167,7 @@ where ProductModelID=19
   
  O corpo da consulta constrói XML que inclui o elemento <`ProductModel`> que tem os atributos ProductModelID e ProductModelName.  
   
--   A consulta usa um loop FOR... RETURN para recuperar as descrições de recurso de modelo de produto. O **Position** função é usada para recuperar os primeiros dois recursos.  
+-   A consulta usa um loop FOR... RETURN para recuperar as descrições de recurso de modelo de produto. O **Position ()** função é usada para recuperar os primeiros dois recursos.  
   
  Este é o resultado:  
   
@@ -189,7 +189,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Localizar as duas primeiras ferramentas usadas no primeiro local do centro de trabalho no processo de fabricação do produto  
- Para um modelo de produto, a consulta recupera as duas primeiras ferramentas no primeiro centro de trabalho na sequência de locais de centro de trabalho no processo de produção. A consulta é especificada em instruções de fabricação armazenadas no **instruções** coluna o **productmodel** tabela.  
+ Para um modelo de produto, a consulta recupera as duas primeiras ferramentas no primeiro centro de trabalho na sequência de locais de centro de trabalho no processo de produção. A consulta é especificada em relação a instruções de fabricação armazenadas na **instruções** coluna o **productmodel** tabela.  
   
 ```  
 SELECT Instructions.query('  
