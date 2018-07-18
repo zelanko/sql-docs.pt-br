@@ -1,6 +1,6 @@
 ---
-title: Dados de exemplo do Download lição 1 e os scripts para inseridos R (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
+title: Dados de exemplo de Download de lição 1 e scripts para embedded R (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,18 +9,18 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030374"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>Lição 1: Baixar dados e scripts
+# <a name="lesson-1-download-data-and-scripts"></a>Lição 1: Baixar os dados e scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
+Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
 
-Nesta etapa, você baixará o conjunto de dados de exemplo e o [!INCLUDE[tsql](../../includes/tsql-md.md)] script arquivos que são usados neste tutorial. Os dados e os arquivos de script são compartilhados no GitHub, mas o script do PowerShell baixará os arquivos de dados e o script para um diretório local de sua escolha.
+Nesta etapa, você baixará o conjunto de dados de exemplo e o [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivos de script que são usados neste tutorial. Os dados e os arquivos de script são compartilhados no GitHub, mas o script do PowerShell baixará os arquivos de dados e de script para um diretório local de sua escolha.
 
 ## <a name="download-tutorial-files-from-github"></a>Baixe os arquivos do tutorial do Github
 
@@ -66,4 +66,4 @@ Nesta etapa, você baixará o conjunto de dados de exemplo e o [!INCLUDE[tsql](.
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Análise de R inserido para desenvolvedores em SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Análise de R incorporado para desenvolvedores do SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

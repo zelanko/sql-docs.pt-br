@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_object_columns (banco de dados do SQL Azure) | Microsoft Docs
+title: sys.dm_xe_database_session_object_columns (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,28 +17,28 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029402"
 ---
-# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (banco de dados do SQL Azure)
+# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Mostra os valores de configuração de objetos associados a uma sessão.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos-para-um com sys.dm_xe_database_sessions.address. Não permite valor nulo.|  
 |column_name|**nvarchar(60)**|O nome do valor de configuração. Não permite valor nulo.|  
-|column_id|**Int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
+|column_id|**int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
 |column_value|**nvarchar(2048)**|O valor configurado da coluna. Permite valor nulo.|  
-|object_type|**nvarchar(60)**|O tipo do objeto.  Não é nullable.object_type é um destes:<br /><br /> event<br /><br /> target|  
+|object_type|**nvarchar(60)**|O tipo do objeto.  Não é nullable.object_type é um dos:<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o objeto. Não permite valor nulo.|  
   

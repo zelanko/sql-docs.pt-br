@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970408"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>Argumentos  
  [ @dbname=] '*database_name*'  
- É o nome do banco de dados. *DBName* é **sysname** com um valor padrão de NULL. Se *dbname* não for especificado, o banco de dados atual será usado.  
+ É o nome do banco de dados. *DBName* está **sysname** com um valor padrão de NULL. Se *dbname* não for especificado, o banco de dados atual será usado.  
   
  [ @increased_partitions=] '*increased_partitions*'  
- Habilita ou desabilita suporte para 15.000 partições no banco de dados especificado. *increased_partitions* é **varchar(6)** com um padrão NULL. Os valores aceitos são 'ON' ou 'TRUE' para habilitar suporte e 'OFF' ou 'FALSE' para desabilitar o suporte. Se *increased_partitions* não for especificado, o procedimento retornará 1 para indicar o suporte está habilitado para o banco de dados especificado ou 0 para indicar o suporte está desabilitado.  
+ Habilita ou desabilita suporte para 15.000 partições no banco de dados especificado. *increased_partitions* está **varchar(6)** com um padrão NULL. Os valores aceitos são 'ON' ou 'TRUE' para habilitar suporte e 'OFF' ou 'FALSE' para desabilitar o suporte. Se *increased_partitions* não for especificado, o procedimento retornará 1 para indicar o suporte está habilitado para o banco de dados especificado ou 0 para indicar o suporte está desabilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

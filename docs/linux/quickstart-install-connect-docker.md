@@ -14,13 +14,13 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020694"
 ---
-# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Início rápido: Executar a imagem de contêiner de 2017 do SQL Server com o Docker
+# <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Guia de início rápido: Executar a imagem de contêiner do SQL Server 2017 com o Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,7 +31,7 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
 > [!NOTE]
 > Este guia de início rápido concentra-se especificamente no uso da imagem mssql-server-**linux**. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página de Hub do Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Pré-requisitos
+## <a id="requirements"></a> Prerequisites
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 - Mínimo de 2 GB de espaço em disco
@@ -52,7 +52,7 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
 
    O comando anterior efetua pull da imagem de contêiner mais recente do SQL Server 2017. Se você quiser efetuar pull de uma imagem específica, adicione dois-pontos e o nome da marca (por exemplo, `microsoft/mssql-server-linux:2017-GA`). Para ver todas as imagens disponíveis, veja [a página de hub do Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
    
-   Para os comandos de bash neste artigo, `sudo` é usado. Em MacOS, `sudo` talvez não seja necessário. No Linux, se você não quiser usar `sudo` para executar o Docker, você pode configurar um **docker** grupo e adicionar usuários a esse grupo. Para obter mais informações, consulte [as etapas de pós-instalação para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+   Para os comandos de bash neste artigo, `sudo` é usado. No MacOS, `sudo` pode não ser necessário. No Linux, se você não quiser usar `sudo` para executar o Docker, você pode configurar uma **docker** de grupo e adicionar usuários a esse grupo. Para obter mais informações, consulte [etapas de pós-instalação para Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Para executar a imagem de contêiner com o Docker, você pode usar o comando a seguir de um shell bash (Linux/macOS) ou do prompt de comando do PowerShell elevado.
 
@@ -80,7 +80,7 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Defina a variável **ACCEPT_EULA** com qualquer valor para confirmar sua aceitação dos [Termos de Licença](http://go.microsoft.com/fwlink/?LinkId=746388). Configuração exigida para a imagem do SQL Server. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Especifique sua própria senha forte que tenha pelo menos 8 caracteres e atenda aos [Requisitos de senha do SQL Server](../relational-databases/security/password-policy.md). Configuração exigida para a imagem do SQL Server. |
-   | **1433:1433 -p** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, SQL Server está escutando em TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
+   | **-p 1433:1433** | Mapeie uma porta TCP no ambiente do host (primeiro valor) para uma porta TCP no contêiner (segundo valor). Neste exemplo, SQL Server está escutando na TCP 1433 no contêiner e isso é exposto para a porta 1433 no host. |
    | **--name sql1** | Especifique um nome personalizado para o contêiner em vez de um nome gerado aleatoriamente. Se você executar mais de um contêiner, não será possível reutilizar esse mesmo nome. |
    | **microsoft/mssql-server-linux:2017-latest** | A imagem de contêiner do SQL Server 2017 do Linux. |
 
@@ -228,7 +228,7 @@ As etapas a seguir usam a **sqlcmd** fora do contêiner para conectar-se ao SQL 
 
 1. Localize o endereço IP do computador que hospeda o contêiner. No Linux, use **ifconfig** ou **ip addr**. No Windows, use **ipconfig**.
 
-1. Execute a sqlcmd especificando o endereço IP e a porta mapeada para a porta 1433 no seu contêiner. Neste exemplo, que é a mesma porta 1433 no computador host. Se você especificou uma porta diferente de mapeada no computador host, você deve usá-lo aqui.
+1. Execute a sqlcmd especificando o endereço IP e a porta mapeada para a porta 1433 no seu contêiner. Neste exemplo, que é a mesma porta, 1433, na máquina host. Se você tiver especificado uma porta diferente de mapeada no computador host, você deve usá-lo aqui.
 
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'

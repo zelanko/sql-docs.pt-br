@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e0c462c8ae4183889b9c75f5fe30203042a02a0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045450"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982478"
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34045450"
   
 -   Os conjuntos de dados podem ser maiores do que a capacidade de memória de um servidor do Analysis Services.  
   
--   DirectQuery pode tirar proveito de aceleração de consulta do provedor, como a fornecida por índices de coluna de otimização de memória.  
+-   DirectQuery pode aproveitar a aceleração de consulta no lado do provedor, como a fornecida por índices de coluna com otimização de memória.  
   
 -   A segurança pode ser imposta pelo banco de dados de back-end, usando recursos de segurança em nível de linha do banco de dados (como alternativa, você pode usar a segurança em nível de linha no modelo por meio do DAX).  
   
@@ -50,11 +50,11 @@ Os modelos de tabela no modo DirectQuery apresentam algumas restrições. Antes 
 |**Tabelas calculadas**|As tabelas calculadas não têm suporte para modelos DirectQuery, mas as colunas calculadas têm. Se você tentar converter um modelo de tabela que contém uma tabela calculada, ocorrerá um erro informando que o modelo não pode conter dados colados.|  
 |**Limites de consulta**|O limite de linha padrão é um milhão de linhas, que você pode aumentar especificando **MaxIntermediateRowSize** no arquivo msmdsrv.ini. Consulte [Propriedades do DAX](../../analysis-services/server-properties/dax-properties.md) para obter detalhes.
 |**Fórmulas DAX**|Ao consultar um modelo de tabela no modo DirectQuery, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converte todas as fórmulas DAX e definições de medida em instruções SQL. As fórmulas DAX que contêm elementos que não podem ser convertidos em sintaxe SQL retornarão erros de validação no modelo.<br /><br /> Na maioria das vezes, essa restrição é limitada a algumas funções DAX. Para medidas, as fórmulas DAX são convertidas em operações baseadas em conjunto no repositório de dados relacional. Isso significa que todas as medidas criadas implicitamente têm suporte. <br /><br /> Quando ocorrer um erro de validação, você precisará gravar a fórmula novamente, substituindo uma função diferente, ou encontrar uma solução alternativa para isso usando colunas derivadas na fonte de dados.  Se um modelo de tabela incluir fórmulas que contêm funções incompatível, isso será relatado quando você mudar para o modo DirectQuery no designer. <br /><br />**Observação:**  algumas fórmulas no modelo podem ser validadas quando você muda o modelo para o modo DirectQuery, mas retornam resultados diferentes quando executadas no cache versus no armazenamento de dados relacionais. Isso ocorre porque os cálculos no cache usam a semântica do mecanismo de análise na memória (que contém recursos que visam emular o comportamento do Excel), enquanto as consultas nos dados armazenados na fonte de dados relacionais usam a semântica do SQL Server.<br /><br /> SQL armazenado  <br /><br /> Para obter mais informações, consulte [compatibilidade de fórmula do DAX no modo DirectQuery](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
-|**Consistência de fórmula**|Em alguns casos, a mesma fórmula pode retornar resultados diferentes em um modelo em cache comparado a um modelo do DirectQuery que usa apenas o armazenamento de dados relacionais. Estas diferenças são uma consequência das diferenças semânticas entre o mecanismo de análise in-memory e o SQL Server.<br /><br /> Para obter uma lista completa de problemas de compatibilidade, incluindo funções que podem retornar resultados diferentes quando o modelo é implantado em tempo real, consulte [compatibilidade de fórmula do DAX no modo DirectQuery (SQL Server Analysis Services)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
+|**Consistência de fórmula**|Em alguns casos, a mesma fórmula pode retornar resultados diferentes em um modelo em cache comparado a um modelo do DirectQuery que usa apenas o armazenamento de dados relacionais. Estas diferenças são uma consequência das diferenças semânticas entre o mecanismo de análise in-memory e o SQL Server.<br /><br /> Para obter uma lista completa dos problemas de compatibilidade, incluindo funções que podem retornar resultados diferentes quando o modelo é implantado em tempo real, consulte [compatibilidade de fórmula do DAX no modo DirectQuery (SQL Server Analysis Services)](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
 |**Limitações de MDX**|Nenhum nome de objeto relativo. Todos os nomes de objeto devem estar totalmente qualificados.<br /><br /> Nenhuma instrução MDX no escopo da sessão (conjuntos nomeados, membros calculados, células calculadas, totais visuais, membros padrão e assim por diante), mas você pode usar construções no escopo da consulta, como a cláusula 'WITH'.<br /><br /> Não há tuplas com membros de níveis diferentes em cláusulas de subseleção MDX.<br /><br /> Não há hierarquias definidas pelo usuário.<br /><br /> Não há nenhuma consulta SQL nativa (normalmente, o Analysis Services dá suporte a um subconjunto T-SQL, mas não para modelos DirectQuery).|  
 
 ## <a name="data-sources-supported-for-directquery"></a>Fontes de dados com suporte no DirectQuery
-Modelos de tabela DirectQuery no nível de compatibilidade 1200 e superior são compatíveis com as seguintes fontes de dados e provedores:
+Modelos de tabela do DirectQuery no nível de compatibilidade 1200 e superior são compatíveis com as seguintes fontes de dados e provedores:
 
 Fonte de dados   |Versões  |Provedores
 ---------|---------|---------
@@ -75,7 +75,7 @@ Se você já tiver ativado o DirectQuery, mas ainda não se conectou a uma fonte
 Se você já tiver usado o Assistente de Importação de Tabela para importar dados, mas ainda não ativou o modo DirectQuery, quando você fizer isso, o cache na memória será limpo.
 
   
-## <a name="additional-articles-in-this-section"></a>Artigos nesta seção
+## <a name="additional-articles-in-this-section"></a>Outros artigos nesta seção
 [Habilitar o modo DirectQuery no SSDT](../../analysis-services/tabular-models/enable-directquery-mode-in-ssdt.md)
 
 [Habilitar o modo DirectQuery no SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)

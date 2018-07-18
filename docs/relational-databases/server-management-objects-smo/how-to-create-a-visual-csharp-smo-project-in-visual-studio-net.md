@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974186"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Como criar um projeto Visual c# SMO no Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,19 +36,19 @@ ms.locfileid: "34708314"
   
 1. Inicie o Visual Studio
   
-2. Sobre o **arquivo** menu, clique em **novo** e, em seguida, **projeto**.  A caixa de diálogo **Novo Projeto** será exibida.   
+2. Sobre o **arquivo** menu, clique em **New** e, em seguida, **projeto**.  A caixa de diálogo **Novo Projeto** será exibida.   
   
-3. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** painel, navegue até **modelos**\\**Visual C#**\\**Windows** e selecione **aplicativo de Console**.  
+3. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** painel, navegue até **modelos**\\**Visual c#**\\**Windows** e selecione **aplicativo de Console**.  
   
 4. (Opcional) No **nome** texto, digite o nome do novo aplicativo.  
 
 5. Clique em **Okey** para carregar o modelo de aplicativo de console.  
 
-6. Siga as instruções na [SMO instalando](installing-smo.md) para instalar o pacote para o seu projeto fazer referência.
+6. Siga as instruções em [instalando o SMO](installing-smo.md) para instalar o pacote para seu projeto fazer referência.
   
 7. No menu **Exibir** , clique em **Código**.
     
-8. No código, antes da declaração de namespace, digite o seguinte **usando** instruções para qualificar os tipos no namespace SMO:
+8. No código, antes da instrução do namespace, digite o seguinte **usando** instruções para qualificar os tipos no namespace SMO:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  

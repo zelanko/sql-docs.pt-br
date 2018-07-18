@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031434"
 ---
 # <a name="primary-expressions-xquery"></a>Expressões primárias (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33078113"
 |&quot;|"|  
 |&apos;|'|  
   
- Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo do Euro pode ser representado pela referência de caractere, "&\#8364;".  
+ Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo do Euro pode ser representado pela referência de caractere, "&\#8364".  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a versão XML 1.0 como a base da análise.  
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- As funções booleanas internas, **verdadeiro ()** e **False ()**, pode ser usado para representar valores booleanos, conforme mostrado no exemplo a seguir.  
+ As funções booleanas internas **True ()** e **False ()**, pode ser usado para representar valores boolianos, conforme mostrado no exemplo a seguir.  
   
 ```  
 DECLARE @var XML  
@@ -180,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Chamadas de função  
- Você pode chamar funções XQuery internas e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funções Variable () e SQL: Column. Para obter uma lista de funções implementadas, consulte [funções XQuery em relação ao tipo de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Você pode chamar funções XQuery internas e a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funções Variable () e SQL: Column. Para obter uma lista de funções implementadas, consulte [funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações de implementação:  

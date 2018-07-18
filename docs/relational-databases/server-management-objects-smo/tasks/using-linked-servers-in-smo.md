@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c864271d5ca3d9cfb4155f6b755493432d441110
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029623"
 ---
 # <a name="using-linked-servers-in-smo"></a>Usando servidores vinculados no SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Um servidor vinculado representa uma fonte de dados OLE DB em um servidor remoto. Fontes de dados OLE DB remotas estão vinculadas à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto.  
+  Um servidor vinculado representa uma fonte de dados OLE DB em um servidor remoto. Fontes de dados remotas OLE DB são vinculadas à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto.  
   
  Servidores de banco de dados remoto podem ser vinculados à instância atual do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um provedor OLE DB. No SMO, servidores vinculados são representados pelo <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto. O <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A> propriedade referencia uma coleção de <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin> objetos. Aqui são armazenadas as credenciais de logon que são necessárias para estabelecer uma conexão com o servidor vinculado.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "32968361"
  No SMO, provedores OLE DB instalados são representados por uma coleção de objetos <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings>.  
   
 ## <a name="example"></a>Exemplo  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>Criando um link com um servidor de provedor OLE DB no Visual C#  
- O exemplo de código mostra como criar um link para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, origem de dados heterogêneos usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto. Especificando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como o nome do produto, os dados são acessados no servidor vinculado usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente OLE DB Provider, que é o provedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ O exemplo de código mostra como criar um link para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, a fonte de dados heterogêneos usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto. Especificando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como o nome do produto, os dados são acessados no servidor vinculado usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente OLE DB Provider, que é o provedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -56,7 +56,7 @@ ms.locfileid: "32968361"
 ```  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-powershell"></a>Criando um link para um servidor de provedor OLE DB no PowerShell  
- O exemplo de código mostra como criar um link para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, origem de dados heterogêneos usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto. Especificando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como o nome do produto, os dados são acessados no servidor vinculado usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente OLE DB Provider, que é o provedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ O exemplo de código mostra como criar um link para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, a fonte de dados heterogêneos usando o <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> objeto. Especificando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como o nome do produto, os dados são acessados no servidor vinculado usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente OLE DB Provider, que é o provedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

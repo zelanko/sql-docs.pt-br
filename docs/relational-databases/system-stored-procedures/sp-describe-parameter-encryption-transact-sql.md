@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974491"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Analisa especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução e seus parâmetros, para determinar quais parâmetros correspondem a colunas de banco de dados que são protegidas usando o recurso sempre criptografado. Retorna os metadados de criptografia para os parâmetros que correspondem a colunas criptografadas.  
+  Analisa especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução e seus parâmetros, para determinar quais parâmetros correspondem às colunas de banco de dados que são protegidas usando o recurso Always Encrypted. Retorna os metadados de criptografia para os parâmetros que correspondem a colunas criptografadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,48 +51,48 @@ sp_describe_parameter_encryption
  [ @params =] 'N'parameters  
  *@params* Fornece uma cadeia de caracteres de declaração para os parâmetros para o lote Transact-SQL, que é similar a sp_executesql. Parâmetros podem ser nvarchar (n) ou nvarchar (max).  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em *@params*. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros, *@params* não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em *@params*. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, *@params* não é necessária. NULL é o valor padrão para esse parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  0 indica êxito. Qualquer outra coisa indicam falha.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_parameter_encryption** retorna dois conjuntos de resultados:  
   
--   O conjunto de resultados que descreve as chaves de criptografia configuradas para colunas de banco de dados, os parâmetros do [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução corresponde a.  
+-   O conjunto de resultados que descreve as chaves criptográficas configuradas para colunas de banco de dados, os parâmetros de especificado [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução correspondem às.  
   
--   Descrever específico como parâmetros de conjunto de resultados devem ser criptografado. Este conjunto de resultados referências as chaves descritas no primeiro conjunto de resultados.  
+-   Descrever específico como parâmetros de conjunto de resultados devem ser criptografados. Este conjunto de resultados referências as chaves descritas no primeiro conjunto de resultados.  
   
- Cada linha do primeiro conjunto de resultados descreve um par de chaves; uma chave de criptografia e sua chave mestra de coluna correspondente.  
+ Cada linha do primeiro conjunto de resultados descreve um par de chaves; uma chave de criptografia de coluna criptografada e sua chave mestra de coluna correspondente.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_ordinal**|**Int**|ID da linha no conjunto de resultados.|  
-|**database_id**|**Int**|Id do banco de dados.|  
-|**column_encryption_key_id**|**Int**|A id de chave de criptografia de coluna. Observação: essa id indica uma linha de [sys. column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) exibição do catálogo.|  
-|**column_encryption_key_version**|**Int**|Reservado para uso futuro. No momento, sempre contém 1.|  
+|**column_encryption_key_ordinal**|**int**|ID da linha no conjunto de resultados.|  
+|**database_id**|**int**|Id do banco de dados.|  
+|**column_encryption_key_id**|**int**|A id de chave de criptografia de coluna. Observação: essa id denota uma linha na [column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) exibição de catálogo.|  
+|**column_encryption_key_version**|**int**|Reservado para uso futuro. Atualmente, contém sempre 1.|  
 |**column_encryption_key_metadata_version**|**binary(8)**|Um carimbo de hora que representa a hora de criação da chave de criptografia de coluna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|O valor criptografado da chave de criptografia de coluna.|  
 |**column_master_key_store_provider_name**|**sysname**|O nome do provedor de repositório de chaves que contém a chave mestra de coluna que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
-|**column_master_key_path**|**nvarchar(4000)**|O caminho da chave da chave mestra de coluna, que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
+|**column_master_key_path**|**nvarchar(4000)**|O caminho da chave da chave mestra de coluna, o que foi usada para produzir o valor criptografado da chave de criptografia de coluna.|  
 |**column_encryption_key_encryption_algorithm_name**|**sysname**|O nome do algoritmo de criptografia usado para gerar o valor de criptografia da chave de criptografia de coluna.|  
   
  Cada linha do segundo conjunto de resultados contém metadados de criptografia para um parâmetro.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**Int**|ID da linha no conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados no *@params* argumento.|  
-|**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde ao. Os valores atualmente suportados são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde ao. Os valores com suporte são:<br /><br /> 0 – texto sem formatação (a coluna não está criptografada)<br /><br /> 1 – a criptografia aleatória<br /><br /> 2 – criptografia determinística.|  
-|**column_encryption_key_ordinal**|**Int**|Código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde ao.|  
+|**parameter_ordinal**|**int**|ID da linha no conjunto de resultados.|  
+|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados na *@params* argumento.|  
+|**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte no momento são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte são:<br /><br /> 0 – texto sem formatação (a coluna não é criptografada)<br /><br /> 1 – a criptografia aleatória<br /><br /> 2 – a criptografia determinística.|  
+|**column_encryption_key_ordinal**|**int**|O código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versão do algoritmo de normalização de tipo.|  
   
 ## <a name="remarks"></a>Remarks  
- Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver de cliente, dando suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitidas pelo aplicativo. Subsequentemente, o driver usa os metadados de criptografia para criptografar os valores de parâmetros que correspondem às colunas de banco de dados protegidas com o sempre criptografado e substitui os valores de parâmetro de texto sem formatação, enviados pelo aplicativo, com criptografada valores de parâmetro antes de enviar a consulta para o mecanismo de banco de dados.  
+ Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver do cliente, que dão suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitida pelo aplicativo. Subsequentemente, o driver usa os metadados de criptografia para criptografar os valores de parâmetros que correspondem às colunas de banco de dados protegidas com o Always Encrypted e substitui os valores de parâmetro de texto sem formatação, enviados pelo aplicativo, com o criptografado valores de parâmetro, antes de enviar a consulta para o mecanismo de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Exigir o **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** permissões no banco de dados.  
+ Exigir a **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** e **VIEW ANY COLUMN MASTER KEY DEFINITION** permissões no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -154,7 +154,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_master_key_store_provider_name|column_master_key_path|column_encryption_key_encryption_algorithm_name|  
 |------------------------------------------------|-------------------------------|----------------------------------------------------------|  
-|MSSQL_CERTIFICATE_STORE|CurrentUser/meu/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
+|MSSQL_CERTIFICATE_STORE|CurrentUser/my/A66BB0F6DD70BDFF02B62D0F87E340288E6F9305|RSA_OAEP|  
   
  Aqui está o segundo conjunto de resultados:  
   

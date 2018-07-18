@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030354"
 ---
 # <a name="xquery-expressions"></a>Expressões XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "33077363"
  Descreve as expressões de comparação com suporte de XQuery. Ou seja, as expressões gerais, de valor, de comparação de nó e de comparação de tipo de nó.  
   
  [Expressões lógicas &#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- Descreve o suporte XQuery para lógico **e** e **ou** operadores.  
+ Descreve o suporte XQuery para a lógica **e** e **ou** operadores.  
   
  [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  Descreve construtores XQuery que lhe permitem construir XML em uma consulta.  
@@ -71,8 +71,8 @@ ms.locfileid: "33077363"
  [Expressões SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  Descreve a sintaxe SequenceType em XQuery.  
   
- [Valide expressões &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
- O **validar** não há suporte para a expressão.  
+ [Validar expressões &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
+ O **validar** expressão não é suportada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

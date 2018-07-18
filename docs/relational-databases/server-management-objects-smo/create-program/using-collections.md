@@ -1,5 +1,5 @@
 ---
-title: Usando coleções | Microsoft Docs
+title: Uso de coleções | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85f06095f120086bd4f11e3fd5959b8fe17198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970793"
 ---
 # <a name="using-collections"></a>Usando coleções
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "32966981"
  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **para... Cada** instrução ou o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** instrução pode ser usada para iterar por meio de cada membro da coleção.  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Referenciando um objeto usando uma coleção no Visual Basic  
- Este exemplo de código mostra como definir uma propriedade de coluna usando o <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriedades. Essas propriedades representam coleções, que podem ser usadas para identificar um determinado objeto quando usadas com um parâmetro que especifica o nome do objeto. O nome e o esquema são necessários para o <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriedade do objeto de coleção.  
+ Este exemplo de código mostra como definir uma propriedade de coluna usando o <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriedades. Essas propriedades representam coleções, que podem ser usadas para identificar um determinado objeto quando usadas com um parâmetro que especifica o nome do objeto. O nome e o esquema são necessárias para o <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriedade do objeto de coleção.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -51,7 +51,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Referenciando um objeto usando uma coleção no Visual C#  
- Este exemplo de código mostra como definir uma propriedade de coluna usando o <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriedades. Essas propriedades representam coleções, que podem ser usadas para identificar um determinado objeto quando usadas com um parâmetro que especifica o nome do objeto. O nome e o esquema são necessários para o <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriedade do objeto de coleção.  
+ Este exemplo de código mostra como definir uma propriedade de coluna usando o <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriedades. Essas propriedades representam coleções, que podem ser usadas para identificar um determinado objeto quando usadas com um parâmetro que especifica o nome do objeto. O nome e o esquema são necessárias para o <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriedade do objeto de coleção.  
   
 ```csharp  
 {   
@@ -66,7 +66,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Iterando através dos membros de uma coleção no Visual Basic  
- Este exemplo de código itera por meio de <xref:Microsoft.AnalysisServices.Server.Databases%2A> exibe todas as conexões com a instância do banco de dados e propriedade da coleção [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código itera por meio de <xref:Microsoft.AnalysisServices.Server.Databases%2A> exibe todas as conexões com a instância do banco de dados e propriedade de coleção [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -87,7 +87,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Iterando através dos membros de uma coleção no Visual C#  
- Este exemplo de código itera por meio de <xref:Microsoft.AnalysisServices.Server.Databases%2A> exibe todas as conexões com a instância do banco de dados e propriedade da coleção [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código itera por meio de <xref:Microsoft.AnalysisServices.Server.Databases%2A> exibe todas as conexões com a instância do banco de dados e propriedade de coleção [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

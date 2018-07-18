@@ -18,16 +18,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33231345"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023864"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Retorna os instantâneos do Azure associados aos arquivos de banco de dados. Se o banco de dados especificado não foi encontrado ou se os arquivos de banco de dados não são armazenados no serviço de armazenamento de BLOBs do Microsoft Azure, nenhuma linha será retornada. Use essa função de sistema em conjunto com o **sys. sp_delete_backup_file_snapshot** sistema de procedimento armazenado para identificar e excluir órfãos os instantâneos de backup. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Retorna os instantâneos do Azure associados com os arquivos de banco de dados. Se o banco de dados especificado não for encontrado ou se os arquivos de banco de dados não são armazenados no serviço de armazenamento de BLOBs do Microsoft Azure, nenhuma linha será retornada. Use essa função do sistema junto com o **sp_delete_backup_file_snapshot** sistema de procedimento armazenado para identificar e excluir instantâneos de backup órfãos. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,14 @@ sys.fn_db_backup_file_snapshots
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Database_Name*  
+ *Database_name*  
  O nome do banco de dados que está sendo consultado. Se for NULL, essa função é executada no escopo do banco de dados atual.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|file_id|**int**|A ID de arquivo para o banco de dados. Não permite valor nulo.|  
+|file_id|**int**|A ID do arquivo para o banco de dados. Não permite valor nulo.|  
 |snapshot_time|**nvarchar(260)**|O carimbo de hora do instantâneo como ele é retornado pela API REST. Retorna NULL se nenhum instantâneo existe.|  
 |snapshot_url|**nvarchar(360)**|A URL completa para o instantâneo de arquivo. Retorna nulo se nenhum instantâneo existe.|  
   

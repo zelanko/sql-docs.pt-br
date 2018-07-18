@@ -22,11 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028834"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
   
 |Nome de Colmn      |Tipo de dados      |Description|  
 |----------------|---------------|-----------------| 
-| external_pool_id|**Int**|ID do pool de recursos. Não permite valor nulo. |
+| external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
 | nome|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
-| pool_version|**Int**|número de versão nterna.|
-| max_cpu_percent|**Int**|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo. |
-| max_processes|**Int**|Número máximo de processos externos simultâneos. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.|
-| max_memory_percent|**Int**|A configuração atual da porcentagem de memória total de servidor que pode ser usada pelas solicitações nesse pool de recursos. Não permite valor nulo. |
+| pool_version|**int**|número de versão nterno.|
+| max_cpu_percent|**int**|A configuração atual do máximo de largura de banda de CPU média permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo. |
+| max_processes|**int**|Número máximo de processos externos simultâneos. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.|
+| max_memory_percent|**int**|A configuração atual da porcentagem de memória total de servidor que pode ser usada pelas solicitações nesse pool de recursos. Não permite valor nulo. |
 | statistics_start_time|**datetime**|O momento em que as estatísticas deste pool foram redefinidas. Não permite valor nulo. 
 | peak_memory_kb|**bigint**|he máximo de memória usada, em quilobytes, para o pool de recursos. Não permite valor nulo. |
-| write_io_count|**Int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
-| read_io_count|**Int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_kernel_ms|**bigint**|O tempo de usuário de CPU cumulativo em milissegundos desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
-| total_cpu_user_ms|**bigint**|O tempo de usuário de CPU cumulativo em milissegundos desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
-| active_processes_count|**Int**|O número de processos externos em execução no momento da solicitação. Não permite valor nulo. |
+| write_io_count|**int**|O total de E/Ss de gravação emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
+| read_io_count|**int**|O total de E/S lidas emitidas desde que as estatísticas do Administrador de Recursos foram redefinidas. Não permite valor nulo. |
+| total_cpu_kernel_ms|**bigint**|O tempo de usuário de CPU cumulativo em milissegundos, desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
+| total_cpu_user_ms|**bigint**|O tempo de usuário de CPU cumulativo em milissegundos, desde que as estatísticas do administrador de recursos foram redefinidas. Não permite valor nulo. |
+| active_processes_count|**int**|O número de processos externos em execução no momento da solicitação. Não permite valor nulo. |
 
  
 ## <a name="permissions"></a>Permissões

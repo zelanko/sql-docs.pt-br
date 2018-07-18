@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972992"
 ---
 # <a name="allowoverwrite-element-xmla"></a>Elemento AllowOverwrite (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34577518"
 ## <a name="remarks"></a>Remarks  
  Para os comandos **Backup** , o elemento **AllowOverwrite** determinará se o comando pode substituir o arquivo de backup especificado no elemento **File** .  
   
- Para **restaurar** elementos, o **AllowOverwrite** elemento determina se o comando pode substituir o banco de dados do Analysis Services especificado no **DatabaseName** elemento.  
+ Para **restaurar** elementos, o **AllowOverwrite** elemento determina se o comando pode substituir o banco de dados do Analysis Services especificado na **DatabaseName** elemento.  
   
 ## <a name="see-also"></a>Confira também
  [Elemento DatabaseName &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   

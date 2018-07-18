@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020595"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitações e problemas conhecidos do SSIS no Linux
 
@@ -33,7 +33,7 @@ Os recursos a seguir não têm suporte nesta versão do SSIS no Linux:
   - Autenticação do Windows
   - Componentes de terceiros
   - Change Data Capture (CDC)
-  - Expansão do SSIS
+  - SSIS Scale Out
   - Azure Feature Pack para SSIS
   - Suporte de Hadoop e HDFS
   - Microsoft Connector for SAP BW
@@ -42,7 +42,7 @@ Para outras limitações e problemas conhecidos com o SSIS no Linux, consulte o 
 
 ## <a name="components"></a> Componentes compatíveis e sem suportados
 
-Os seguintes componentes internos do Integration Services têm suporte no Linux. Algumas delas têm limitações na plataforma Linux. Componentes internos que não estão listados aqui não têm suporte no Linux.
+Os seguintes componentes internos do Integration Services têm suporte no Linux. Alguns deles têm limitações na plataforma Linux. Componentes internos que não estão listados aqui não têm suporte no Linux.
 
 ## <a name="supported-control-flow-tasks"></a>Suporte para tarefas de fluxo de controle
 - Tarefa Inserção em Massa
@@ -60,8 +60,8 @@ Os seguintes componentes internos do Integration Services têm suporte no Linux.
 | Tarefa | Limitações |
 |------------|---|
 | Tarefa executar processo | Só dá suporte ao modo em processo. |
-| Tarefa sistema de arquivos | O *mover diretório* e *definir atributos de arquivo* ações não têm suporte. |
-| tarefa Script | Só oferece suporte a APIs padrão do .NET Framework. |
+| Tarefa sistema de arquivos | O *diretório de movimentação* e *definir atributos de arquivo* ações não têm suporte. |
+| tarefa Script | Só dá suporte a APIs padrão do .NET Framework. |
 | Tarefa Enviar Email | Só dá suporte ao modo de usuário anônimo. |
 | Tarefa de transferência de banco de dados | Não há suporte para caminhos UNC. |
 | | |
@@ -75,12 +75,12 @@ Não há suporte para as seguintes tarefas de plano de manutenção no Linux:
 - Executar trabalho do SQL Server Agent
 
 As seguintes tarefas de plano de manutenção têm suporte no Linux:
-- Verificação de integridade do banco de dados
-- Reduzir o banco de dados
+- Verificar integridade do banco de dados
+- Reduzir banco de dados
 - Reorganizar Índice
 - Recriar índice
 - Atualização de Estatísticas
-- Limpeza de histórico
+- Limpar histórico
 - Fazer backup de banco de dados
 - Instrução T-SQL
 
@@ -90,21 +90,21 @@ As seguintes tarefas de plano de manutenção têm suporte no Linux:
 - Contêiner Loop Foreach
 
 ## <a name="supported-data-flow-sources-and-destinations"></a>Fontes de fluxo de dados com suporte e destinos
-- Destino e origem arquivo bruto
+- Destino e origem do arquivo bruto
 - Origem XML
 
-## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Fluxo de dados origens e destinos compatíveis com limitações
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Fontes de fluxo de dados e destinos com suporte com limitações
 
 | Componente | Limitações |
 |------------|---|
-| Destino e origem do ADO.NET | Suportam apenas o provedor de dados SQLClient. |
-| Fonte de arquivo simples e de destino | Somente dão suporte a caminhos de arquivo de estilo do Windows, aos quais a regra de mapeamento de caminho padrão é aplicada. Por exemplo `D:\home\ssis\travel.csv` torna-se `/home/ssis/travel.csv`. |
-| Fonte OData | Suporta apenas a autenticação básica. |
+| Destino e origem do ADO.NET | Só há suporte para o provedor de dados SQLClient. |
+| Fonte de arquivo simples e de destino | Suportam apenas caminhos de arquivo de estilo do Windows, ao qual a regra de mapeamento de caminho padrão é aplicada. Por exemplo `D:\home\ssis\travel.csv` torna-se `/home/ssis/travel.csv`. |
+| Origem do OData | Só dá suporte à autenticação básica. |
 | Origem e destino ODBC | Dá suporte a drivers de ODBC Unicode de 64 bits no Linux. Depende do Gerenciador de driver UnixODBC no Linux. |
-| Origem de OLE DB e de destino | Apenas suporte do SQL Server Native Client 11.0 e o Microsoft OLE DB Provider para SQL Server. |
+| Destino e origem de OLE DB | Apenas suporte do SQL Server Native Client 11.0 e o Microsoft OLE DB Provider para SQL Server. |
 | | |
 
-## <a name="supported-data-flow-transformations"></a>Suporte para transformações de fluxo de dados
+## <a name="supported-data-flow-transformations"></a>Transformações de fluxo de dados com suporte
 - Agregado
 - Auditar o
 - Balanced Data Distributor
@@ -134,20 +134,20 @@ As seguintes tarefas de plano de manutenção têm suporte no Linux:
 | Componente | Limitações |
 |------------|---|
 | transformação Comando OLE DB | Mesmas limitações que a origem de OLE DB e o destino. |
-| componente Script | Só oferece suporte a APIs padrão do .NET Framework. |
+| componente Script | Só dá suporte a APIs padrão do .NET Framework. |
 | | |
 
 ## <a name="supported-and-unsupported-log-providers"></a>Provedores de log com e sem suporte
-Todos os provedores internos de log do SSIS têm suporte no Linux, exceto o provedor de Log de eventos do Windows.
+Todos os provedores de log SSIS internos têm suporte no Linux, exceto o provedor de Log de eventos do Windows.
 
-O provedor de log do SQL Server oferece suporte somente a autenticação do SQL; ele não dá suporte a autenticação do Windows.
+O provedor de log do SQL Server oferece suporte somente a autenticação do SQL; ele não oferece suporte a autenticação do Windows.
 
-Os provedores de log do SSIS para arquivos de texto, arquivos XML e SQL Server Profiler gravar sua saída em um arquivo que você especificar. As seguintes considerações se aplicam ao caminho do arquivo:
--   Se você não fornecer um caminho, o provedor de log grava no diretório atual do host. Se o usuário atual não tem permissão para gravar no diretório atual do host, o provedor de log gera um erro.
--   Você não pode usar uma variável de ambiente em um caminho de arquivo. Se você especificar uma variável de ambiente, o texto literal que você especificar será exibida no caminho do arquivo. Por exemplo, se você especificar `%TMP%/log.txt`, o provedor de log anexa o texto literal `/%TMP%/log.txt` para o diretório de host atual.
+Os provedores de log do SSIS para arquivos de texto, arquivos XML e SQL Server Profiler gravam sua saída para um arquivo que você especifica. As seguintes considerações se aplicam ao caminho do arquivo:
+-   Se você não fornecer um caminho, o provedor de log gravará no diretório atual do host. Se o usuário atual não tem permissão para gravar no diretório atual do host, o provedor de log gera um erro.
+-   Você não pode usar uma variável de ambiente em um caminho de arquivo. Se você especificar uma variável de ambiente, o texto literal que você especifica será exibida no caminho do arquivo. Por exemplo, se você especificar `%TMP%/log.txt`, o provedor de log acrescenta o texto literal `/%TMP%/log.txt` para o diretório do host atual.
 
 ## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
 -   [Extrair, transformar e carregar dados em Linux com o SSIS](sql-server-linux-migrate-ssis.md)
 -   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
--   [Configurar o SQL Server Integration Services no Linux com conf ssis](sql-server-linux-configure-ssis.md)
--   [A execução no Linux com cron do pacote de agendamento SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)
+-   [Configurar o SQL Server Integration Services no Linux com o ssis-conf](sql-server-linux-configure-ssis.md)
+-   [SQL Server Integration Services de agenda a execução no Linux com cron do pacote](sql-server-linux-schedule-ssis-packages.md)

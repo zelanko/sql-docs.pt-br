@@ -14,11 +14,11 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 7f34cda192cbd909ac6c2392ab49acb58038b416
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020488"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server no Linux
 
@@ -28,31 +28,31 @@ Este artigo fornece uma visão geral da autenticação do Active Directory (AD) 
 
 ## <a name="ad-authentication-overview"></a>Visão geral de autenticação do AD
 
-Autenticação do AD permite que os clientes de domínio no Windows ou Linux para autenticar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando suas credenciais de domínio e o protocolo Kerberos.
+Autenticação do AD permite que os clientes ingressados no domínio no Windows ou Linux para se autenticar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando suas credenciais de domínio e o protocolo Kerberos.
 
 Autenticação do AD tem as seguintes vantagens sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticação:
 
-- Os usuários autenticados por meio de logon único, sem precisar inserir uma senha.   
-- Ao criar logons para grupos do AD, você pode gerenciar o acesso e permissões em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando associações de grupo do AD.  
-- Cada usuário tem uma única identidade na sua organização, para que você não precisa manter o controle de qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logons correspondem às quais pessoas.   
-- AD permite que você aplique uma política de senha centralizado na sua organização.   
+- Os usuários autenticados por meio de logon único, sem inserir uma senha.   
+- Ao criar logons para grupos do AD, você pode gerenciar o acesso e permissões no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando associações de grupo do AD.  
+- Cada usuário tem uma única identidade na sua organização, para que você não precise manter o controle de quais [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logons correspondem às quais as pessoas.   
+- AD permite que você aplique uma política de senha centralizado em sua organização.   
 
 ## <a name="configuration-steps"></a>Etapas de configuração
 
-Para usar a autenticação do Active Directory, você deve ter um controlador de domínio do AD (Windows) em sua rede.
+Para usar autenticação do Active Directory, você deve ter um controlador de domínio do AD (Windows) em sua rede.
 
-Os detalhes sobre como configurar a autenticação do AD são fornecidos no tutorial, [Tutorial: autenticação de usar o Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md). A lista a seguir fornece um resumo com um link para cada seção do tutorial:
+Os detalhes de como configurar a autenticação do AD são fornecidos no tutorial [Tutorial: autenticação de usar o Active Directory com o SQL Server no Linux](sql-server-linux-active-directory-authentication.md). A lista a seguir fornece um resumo com um link para cada seção do tutorial:
 
-1. [Ingressar em um host do SQL Server para um domínio do Active Directory](sql-server-linux-active-directory-authentication.md#join).
-1. [Crie um usuário do AD para o SQL Server e defina o ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
+1. [Ingressar em um host do SQL Server em um domínio do Active Directory](sql-server-linux-active-directory-authentication.md#join).
+1. [Criar um usuário do AD para o SQL Server e definir o ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configurar o SQL Server service keytab](sql-server-linux-active-directory-authentication.md#configurekeytab).
-1. [Criar logons do SQL Server baseado no AD no Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
-1. [Conecte-se ao SQL Server usando a autenticação do AD](sql-server-linux-active-directory-authentication.md#connect).
+1. [Criar logons do SQL Server com base no AD no Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
+1. [Conectar-se ao SQL Server usando a autenticação do AD](sql-server-linux-active-directory-authentication.md#connect).
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
 - Neste momento, o único método de autenticação com suporte para o ponto de extremidade de espelhamento de banco de dados é o certificado. Método de autenticação do WINDOWS será habilitado em uma versão futura.
-- Ferramentas de terceiros do AD como Centrify, Powerbroker, e não há suporte para Vintela.
+- Ferramentas de AD de terceiros, como o Centrify, Powerbroker, e Vintela não têm suporte.
 
 ## <a name="next-steps"></a>Próximas etapas
 

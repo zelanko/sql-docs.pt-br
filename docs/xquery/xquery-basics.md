@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970618"
 ---
 # <a name="xquery-basics"></a>Fundamentos de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33077613"
  [Valor booliano efetivo &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  Descreve o valor Booliano efetivo. Esse valor pode ser calculado para expressões que retornem um único valor Booliano, uma sequência de nó ou uma sequência vazia.  
   
- [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipo &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  Descreve o sistema de tipo de XQuery com vários tipos predefinidos. XQuery é uma linguagem com rigidez de tipos para tipos de esquemas, e uma linguagem fraca em tipos para dados não digitados.  
   
  [Tratamento de erros &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  

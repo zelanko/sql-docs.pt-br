@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3035799df52ec4c4dbd44225247638b92048c0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 418a0f9a5b80a65c2a55d442403eb02b8e52e01d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026363"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982588"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Recuperando dados usando o AdomdDataReader
   Na recuperação de dados analíticos, o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> oferece um bom equilíbrio entre sobrecarga e interatividade. O objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> recupera um fluxo dados somente leitura, somente encaminhamento, bidimensional a partir de uma fonte de dados analíticos. Esse fluxo de dados não armazenado permite que a lógica procedural processe com eficiência os resultados de uma fonte de dados analíticos de forma sequencial. Isso faz do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> uma boa opção para a recuperação de grandes quantidades de dados para fins de exibição, uma vez que os dados não são armazenados em cache em memória.  
@@ -32,13 +32,13 @@ ms.locfileid: "34026363"
   
 2.  **Recupere dados.**  
   
-     Quando o comando executa a consulta, o ADOMD.NET retorna os resultados no **Resultset** Formatar, um formato tabular como descrito na especificação XML for Analysis, para mesclar os dados para o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto. Um formato tabelar é incomum na consulta de dados analíticos que consideram a dimensionalidade variável em tais dados.  
+     Quando o comando executa a consulta, o ADOMD.NET retorna os resultados na **Resultset** Formatar, um formato tabular conforme descrito na especificação XML for Analysis, para mesclar os dados para o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objeto. Um formato tabelar é incomum na consulta de dados analíticos que consideram a dimensionalidade variável em tais dados.  
   
      O ADOMD.NET armazena esses resultados tabulares no buffer de rede no cliente até que você solicite-os usando um dos métodos a seguir:  
   
     -   Chame o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Read%2A> do objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.  
   
-         O método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Read%2A> obtém uma linha dos resultados da consulta. Você pode passar o nome ou a referência ordinal, da coluna para o [Item](https://msdn.microsoft.com/en-us/library/ms131793(v=sql.130).aspx) propriedade para acessar cada coluna da linha retornada. Por exemplo, a primeira coluna da linha atual é nomeada, ColumnName. Em seguida, `reader[0].ToString()` ou `reader["ColumnName"].ToString()` retornarão o conteúdo da primeira coluna da linha atual.  
+         O método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Read%2A> obtém uma linha dos resultados da consulta. Você pode passar o nome ou a referência ordinal, da coluna para o [Item](https://msdn.microsoft.com/library/ms131793(v=sql.130).aspx) propriedade para acessar cada coluna da linha retornada. Por exemplo, a primeira coluna da linha atual é nomeada, ColumnName. Em seguida, `reader[0].ToString()` ou `reader["ColumnName"].ToString()` retornarão o conteúdo da primeira coluna da linha atual.  
   
     -   Chame um dos métodos de acessador de tipo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34026363"
   
 3.  **Feche o leitor.**  
   
-     Você deve sempre chamar o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Close%2A> ao terminar de usar o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>. Embora uma instância de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> esteja aberta, o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> é usado exclusivamente pelo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>. Você não poderá executar qualquer comando na instância do <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, incluindo a criação de outro <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> ou **System.XML. XmlReader**, até que você feche o original <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.  
+     Você deve sempre chamar o método <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Close%2A> ao terminar de usar o objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>. Embora uma instância de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> esteja aberta, o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> é usado exclusivamente pelo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>. Você não poderá executar qualquer comando na instância das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, incluindo a criação de outra <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> ou **System.Xml.XmlReader**, até que você feche o original <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>.  
   
 ### <a name="example-of-retrieving-data-from-the-adomddatareader"></a>Exemplo de recuperação de dados do AdomdDataReader  
  O exemplo de código a seguir itera por meio de um objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> e retorna os dois primeiros valores, como cadeias de caracteres, de cada linha.  
@@ -108,11 +108,11 @@ foreach (DataRow objRow in schemaTable.Rows)
 ```  
   
 ## <a name="retrieving-multiple-result-sets"></a>Recuperando vários conjuntos de resultados  
- A mineração de dados dá suporte ao conceito de tabelas aninhadas, exibidas pelo ADOMD.NET como conjuntos de linhas aninhados. Para recuperar o conjunto de linhas aninhado associado a cada linha, você deve chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> método.  
+ A mineração de dados dá suporte ao conceito de tabelas aninhadas, exibidas pelo ADOMD.NET como conjuntos de linhas aninhados. Para recuperar o conjunto de linhas aninhado associado com cada linha, você deve chamar o <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A> método.  
   
 ## <a name="see-also"></a>Consulte também  
  [Recuperando dados de uma fonte de dados analíticos](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
- [Recuperando dados usando o conjunto de células](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
+ [Recuperando dados usando CellSet](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [Recuperando dados usando o XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ordenados e não ordenados expressões (XQuery) | Microsoft Docs
+title: Ordenados e não ordenadas (XQuery) de expressões | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f36e7adf5334ce9ef343b6d518d762a2b4f4c0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076853"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974001"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expressões ordenadas e não ordenadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Por padrão, o modo de ordenação para todas as operações em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é **ordenados**. Portanto, as sequências de nó retornado por expressões de caminho e pelas expressões FLWOR, sem o **Ordenar por** cláusula, estão na ordem do documento.  
+  Por padrão, o modo de ordenação para todas as operações na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está **ordenados**. Portanto, as sequências de nó retornados por expressões de caminho e pelas expressões FLWOR, sem a **Ordenar por** cláusula, estão na ordem do documento.  
   
  Adicional **ordenados** e **não ordenada** não há suporte para a sintaxe descrita na especificação do XQuery.  
   

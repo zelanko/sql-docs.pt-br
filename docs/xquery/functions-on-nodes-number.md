@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 65faec31c6e89421ce05bab28dae97e18195bdde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031514"
 ---
-# <a name="functions-on-nodes---number"></a>Funções em nós - número
+# <a name="functions-on-nodes---number"></a>Funções em nós – número
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o valor numérico do nó que é indicado por *$arg*.  
@@ -48,7 +48,7 @@ fn:number($arg as node()?) as xs:double?
  Nó cujo valor será retornado como um número.  
   
 ## <a name="remarks"></a>Remarks  
- Se *$arg* não é especificado, o valor numérico do nó de contexto, convertido em um duplo, será retornado. No SQL Server, **fn:number()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]). Por exemplo, a expressão a seguir retorna o elemento <`ROOT`>.  
+ Se *$arg* não é especificado, o valor numérico do nó de contexto, convertido em um duplo, será retornado. No SQL Server **fn:number()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]). Por exemplo, a expressão a seguir retorna o elemento <`ROOT`>.  
   
 ```  
 declare @x xml  
@@ -56,7 +56,7 @@ set @x='<ROOT>111</ROOT>'
 select @x.query('/ROOT[number()=111]')  
 ```  
   
- Se o valor do nó não é uma representação léxica válida de um tipo numérico simple, conforme definido em **esquema XML parte 2: Datatypes, recomendação do W3C**, a função retorna uma sequência vazia. Não é oferecido suporte a NaN.  
+ Se o valor do nó não for uma representação léxica válida de um tipo numérico simple, conforme definido em **XML Schema Part 2: Datatypes, recomendação do W3C**, a função retorna uma sequência vazia. Não é oferecido suporte a NaN.  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  

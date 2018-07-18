@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258548"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974166"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,10 +58,10 @@ sp_droprolemember 'role' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome da função da qual o membro está sendo removido. *Função* é **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+ É o nome da função da qual o membro está sendo removido. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
   
  [  **@membername =** ] **'***security_account***'**  
- É o nome da conta de segurança que está sendo removida da função. *security_account* é **sysname**, sem padrão. *security_account* pode ser um usuário de banco de dados, outra função de banco de dados, um logon do Windows ou um grupo do Windows. *security_account* deve existir no banco de dados atual.  
+ É o nome da conta de segurança que está sendo removida da função. *security_account* está **sysname**, sem padrão. *security_account* pode ser um usuário de banco de dados, outra função de banco de dados, um logon do Windows ou um grupo do Windows. *security_account* deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -71,7 +71,7 @@ sp_droprolemember 'role' ,
   
  Para remover um usuário de uma função de servidor fixa, use sp_dropsrvrolemember. Os usuários não podem ser removidos da função pública e dbo não pode ser removido de qualquer função.  
   
- Use sp_helpuser para ver os membros de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função e use ALTER ROLE para adicionar um membro a uma função.  
+ Use sp_helpuser para ver os membros de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função e use ALTER ROLE para adicionar um membro a uma função.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER na função.  

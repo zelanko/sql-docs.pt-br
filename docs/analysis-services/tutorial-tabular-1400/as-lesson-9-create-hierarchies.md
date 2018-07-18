@@ -1,5 +1,5 @@
 ---
-title: 'Lição tutorial do Analysis Services 9: criar hierarquias | Microsoft Docs'
+title: 'Lição 9 do tutorial de serviços de análise: criar hierarquias | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973015"
 ---
 # <a name="create-hierarchies"></a>Criar hierarquias
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Nesta lição, você deve criar hierarquias. Hierarquias são grupos de colunas organizados em níveis. Por exemplo, uma hierarquia de Geografia pode ter subníveis para país, estado, município e cidade. As hierarquias podem aparecer separadas de outras colunas em uma lista de campo de aplicativo cliente de relatório, tornando mais fácil para os usuários clientes navegarem e incluírem itens em um relatório. Para obter mais informações, consulte [hierarquias](../tabular-models/hierarchies-ssas-tabular.md)
+Nesta lição, você criará hierarquias. Hierarquias são grupos de colunas organizados em níveis. Por exemplo, uma hierarquia de Geografia pode ter subníveis para país, estado, município e cidade. As hierarquias podem aparecer separadas de outras colunas em uma lista de campo de aplicativo cliente de relatório, tornando mais fácil para os usuários clientes navegarem e incluírem itens em um relatório. Para obter mais informações, consulte [hierarquias](../tabular-models/hierarchies-ssas-tabular.md)
   
 Para criar hierarquias, use o designer de modelo do *exibição de diagrama*. Não há suporte para criar e gerenciar hierarquias na exibição de dados.  
   
@@ -36,26 +36,26 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
 1.  No designer de modelo (exibição de diagrama), clique com botão direito do **DimProduct** tabela > **criar hierarquia**. A nova hierarquia aparece na parte inferior da janela de tabela. Renomeie a hierarquia **categoria**.  
   
-2.  Clique e arraste o **ProductCategoryName** coluna para o novo **categoria** hierarquia.  
+2.  Clique e arraste a **ProductCategoryName** coluna para a nova **categoria** hierarquia.  
   
 3.  No **categoria** hierarquia, clique com botão direito **ProductCategoryName** > **Renomear**e, em seguida, digite **categoria**.  
   
     > [!NOTE]  
     > A renomeação de uma coluna em uma hierarquia não renomeia essa coluna na tabela. Uma coluna em uma hierarquia é apenas uma representação da coluna na tabela.  
   
-4.  Clique e arraste o **ProductSubcategoryName** coluna para o **categoria** hierarquia. Renomeie- **subcategoria**. 
+4.  Clique e arraste a **ProductSubcategoryName** coluna para o **categoria** hierarquia. Renomeá-lo **subcategoria**. 
   
-5.  Clique com botão direito do **ModelName** coluna > **adicionar à hierarquia**e, em seguida, selecione **categoria**. Renomeie- **modelo**.
+5.  Clique com botão direito do **ModelName** coluna > **adicionar à hierarquia**e, em seguida, selecione **categoria**. Renomeá-lo **modelo**.
 
-6.  Finalmente, adicione **EnglishProductName** à hierarquia de categoria. Renomeie- **produto**.  
+6.  Por fim, adicione **EnglishProductName** à hierarquia de categoria. Renomeá-lo **produto**.  
 
     ![categoria como lesson9](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Para criar hierarquias na tabela DimDate  
   
-1.  No **DimDate** de tabela, crie uma hierarquia chamada **calendário**.  
+1.  No **DimDate** da tabela, crie uma hierarquia chamada **calendário**.  
   
-3.  Adicione a seguintes colunas na ordem:
+3.  Adicione as seguintes colunas em ordem:
 
     *  CalendarYear
     *  CalendarSemester
@@ -63,7 +63,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
     *  MonthCalendar
     *  DayNumberOfMonth
     
-4.  No **DimDate** de tabela, crie um **Fiscal** hierarquia. Inclua a seguintes colunas na ordem:  
+4.  No **DimDate** da tabela, criar um **Fiscal** hierarquia. Incluem as seguintes colunas em ordem:  
   
     *  FiscalYear
     *  FiscalSemester
@@ -71,7 +71,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
     *  MonthCalendar
     *  DayNumberOfMonth
   
-5.  Por fim, no **DimDate** de tabela, crie um **ProductionCalendar** hierarquia. Inclua a seguintes colunas na ordem:  
+5.  Por fim, na **DimDate** da tabela, criar um **ProductionCalendar** hierarquia. Incluem as seguintes colunas em ordem:  
     *  CalendarYear
     *  WeekNumberOfYear
     *  DayNumberOfWeek

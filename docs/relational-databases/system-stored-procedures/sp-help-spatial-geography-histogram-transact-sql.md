@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a2eadfd9864c3d595d9d93078cd028a66b5d22ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263112"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019784"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  [  **@tabname =**] **'***tabname***'**  
  É o nome qualificado ou não da tabela para a qual o índice espacial foi especificado.  
   
- As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **sysname**, sem padrão.  
+ As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **sysname**, sem padrão.  
   
  [  **@colname =** ] **'***columnname***'**  
  É o nome da coluna espacial especificada. *ColumnName* é um **sysname**, sem padrão.  
@@ -64,8 +64,8 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**Int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
-|**Célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**cellid**|**int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
+|**célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -80,7 +80,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  A caixa delimitadora para o **geografia** tipo é o globo inteiro.  
   
 ## <a name="examples"></a>Exemplos  
- A exemplo a seguir chama **sp_help_spatial_geography_histogram** no `Person.Address` tabela o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
+ A exemplo a seguir chama **sp_help_spatial_geography_histogram** sobre o `Person.Address` na tabela a [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

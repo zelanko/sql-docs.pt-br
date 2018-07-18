@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970712"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Retorna os metadados para o primeiro resultado possíveis do conjunto do [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Retorna um conjunto de resultados vazio quando o lote não retorna resultados. Gera um erro se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não é possível determinar os metadados para a primeira consulta que será executada por meio de uma análise estática. O modo de exibição de gerenciamento dinâmico [sys.DM exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retorna as mesmas informações.  
+  Retorna os metadados para o primeiro resultado possível conjunto do [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Retorna um conjunto de resultados vazio quando o lote não retorna resultados. Gera um erro se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não é possível determinar os metadados para a primeira consulta que será executada por meio de uma análise estática. O modo de exibição de gerenciamento dinâmico [DM exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retorna as mesmas informações.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,12 +48,12 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* podem ser **nvarchar (***n***)** ou **nvarchar (max)**.  
+ Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parâmetros***'**  
- @params Fornece uma cadeia de caracteres de declaração para os parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar** ou **nvarchar (max)**.  
+ @params Fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em @params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiver parâmetros, @params não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em @params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, @params não é necessária. NULL é o valor padrão para esse parâmetro.  
   
  [ **@browse_information_mode =** ] *tinyint*  
  Especifica se colunas de chave adicionais e informações de tabela de origem são retornadas. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
@@ -65,22 +65,22 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Se for definido como 2, cada consulta será analisada como se fosse usada na preparação ou execução de um cursor. Isto retornará nomes de exibição como as informações de coluna de origem.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- **sp_describe_first_result_set** sempre retorna um status de zero em caso de sucesso. Se o procedimento lançar um erro e o procedimento é chamado como uma RPC, o status de retorno é preenchido com o tipo de erro descrito na coluna error_type de sys.DM exec_describe_first_result_set. Se o procedimento for chamado de [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor de retorno sempre será zero, até mesmo se houver erro.  
+ **sp_describe_first_result_set** sempre retorna um status de zero em caso de sucesso. Se o procedimento lançar um erro e o procedimento é chamado como uma RPC, o status de retorno é populado pelo tipo de erro descrito na coluna error_type de DM exec_describe_first_result_set. Se o procedimento for chamado de [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor de retorno sempre será zero, até mesmo se houver erro.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Estes metadados comuns são retornados como um conjunto de resultados com uma linha para cada coluna nos metadados de resultados. Cada linha descreve o tipo e a nulidade da coluna no formato descrito na seção a seguir. Se a primeira instrução não existir para todo caminho de controle, um conjunto de resultados com zero linhas será retornado.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**bit não NULL**|Indica que a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
-|**column_ordinal**|**int não NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
+|**is_hidden**|**bit NOT NULL**|Indica que a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
+|**column_ordinal**|**int NOT NULL**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
 |**name**|**sysname NULL**|Conterá o nome da coluna se um nome puder ser determinado. Caso contrário, conterá NULL.|  
-|**is_nullable**|**bit não NULL**|Conterá o valor 1 se a coluna permitir NULLs, 0 se a coluna não permitir NULLs e 1 caso não seja possível determinar se a coluna permite NULLs.|  
-|**system_type_id**|**int não NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
+|**is_nullable**|**bit NOT NULL**|Conterá o valor 1 se a coluna permitir NULLs, 0 se a coluna não permitir NULLs e 1 caso não seja possível determinar se a coluna permite NULLs.|  
+|**system_type_id**|**int NOT NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
 |**system_type_name**|**nvarchar(256) NULL**|Contém o nome e argumentos (como comprimento, precisão, escala), especificados para o tipo de dados da coluna. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de CLR definido pelo usuário, NULL será retornado nessa coluna.|  
-|**max_length**|**Smallint não NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna de tipo de dados é **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido por **sp_tableoption 'text in row'**.|  
-|**precisão**|**tinyint não NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
-|**scale**|**tinyint não NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**max_length**|**smallint não NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption 'text in row'**.|  
+|**precisão**|**tinyint NOT NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**scale**|**tinyint NOT NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**collation_name**|**sysname NULL**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int NULL**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
 |**user_type_database**|**sysname NULL**|Para tipos de CLR e de alias, contém o nome do banco de dados no qual o tipo é definido. Caso contrário, é NULL.|  
@@ -91,49 +91,49 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**xml_collection_database**|**sysname NULL**|Contém o banco de dados no qual a coleção de esquemas XML associada a esse tipo está definida. Essa coluna retornará NULL se o tipo retornado não estiver associado uma coleção de esquemas XML.|  
 |**xml_collection_schema**|**sysname NULL**|Contém o esquema no qual a coleção de esquemas XML associada a esse tipo está definida. Essa coluna retornará NULL se o tipo retornado não estiver associado uma coleção de esquemas XML.|  
 |**xml_collection_name**|**sysname NULL**|Contém o nome da coleção de esquemas XML associada a esse tipo. Essa coluna retornará NULL se o tipo retornado não estiver associado uma coleção de esquemas XML.|  
-|**is_xml_document**|**bit não NULL**|Retornará 1 se o tipo de dados retornado for o XML e esse tipo for garantido de ser um documento XML completo (incluindo um nó raiz), em vez de um fragmento XML. Caso contrário, retorna 0.|  
-|**is_case_sensitive**|**bit não NULL**|Retornará 1 se a coluna for um tipo de cadeia de caracteres com diferenciação de maiúsculas e minúsculas; caso contrário, retornará 0.|  
-|**is_fixed_length_clr_type**|**bit não NULL**|Retornará 1 se a coluna for um tipo de CLR de comprimento fixo; caso contrário, retornará 0.|  
-|**source_server**|**sysname**|Nome do servidor de origem retornado pela coluna neste resultado (se a origem for um servidor remoto). O nome é fornecido como ele aparece em sys. Retornará NULL se a coluna tiver origem no servidor local ou caso não seja possível determinar o servidor de origem. Será populado somente se informações de navegação são solicitadas.|  
-|**source_database**|**sysname**|Nome do banco de dados de origem retornado pela coluna neste resultado. Retornará NULL se o banco de dados não puder ser determinado. Será populado somente se informações de navegação são solicitadas.|  
-|**source_schema**|**sysname**|Nome do esquema de origem retornado pela coluna neste resultado. Retornará NULL se o esquema não puder ser determinado. Será populado somente se informações de navegação são solicitadas.|  
-|**source_table**|**sysname**|Nome da tabela de origem retornado pela coluna neste resultado. Retornará NULL se a tabela não puder ser determinada. Será populado somente se informações de navegação são solicitadas.|  
-|**source_column**|**sysname**|Nome da coluna de origem retornado pela coluna de resultado. Retornará NULL se a coluna não puder ser determinada. Será populado somente se informações de navegação são solicitadas.|  
+|**is_xml_document**|**bit NOT NULL**|Retornará 1 se o tipo de dados retornado for o XML e esse tipo for garantido de ser um documento XML completo (incluindo um nó raiz), em vez de um fragmento XML. Caso contrário, retorna 0.|  
+|**is_case_sensitive**|**bit NOT NULL**|Retornará 1 se a coluna for um tipo de cadeia de caracteres com diferenciação de maiúsculas e minúsculas; caso contrário, retornará 0.|  
+|**is_fixed_length_clr_type**|**bit NOT NULL**|Retornará 1 se a coluna for um tipo de CLR de comprimento fixo; caso contrário, retornará 0.|  
+|**source_server**|**sysname**|Nome do servidor de origem retornado pela coluna neste resultado (se a origem for um servidor remoto). O nome é fornecido como ele aparece em sys. Servers. Retornará NULL se a coluna tiver origem no servidor local ou caso não seja possível determinar o servidor de origem. É populado somente se informações de navegação são solicitadas.|  
+|**source_database**|**sysname**|Nome do banco de dados de origem retornado pela coluna neste resultado. Retornará NULL se o banco de dados não puder ser determinado. É populado somente se informações de navegação são solicitadas.|  
+|**source_schema**|**sysname**|Nome do esquema de origem retornado pela coluna neste resultado. Retornará NULL se o esquema não puder ser determinado. É populado somente se informações de navegação são solicitadas.|  
+|**source_table**|**sysname**|Nome da tabela de origem retornado pela coluna neste resultado. Retornará NULL se a tabela não puder ser determinada. É populado somente se informações de navegação são solicitadas.|  
+|**source_column**|**sysname**|Nome da coluna de origem retornado pela coluna de resultado. Retornará NULL se a coluna não puder ser determinada. É populado somente se informações de navegação são solicitadas.|  
 |**is_identity_column**|**bit nulo**|Retornará 1 se a coluna for uma coluna de identidade; caso contrário, retornará 0. Retornará NULL caso não seja possível determinar se a coluna é uma coluna de identidade.|  
 |**is_part_of_unique_key**|**bit nulo**|Retornará 1 se a coluna fizer parte de um índice exclusivo (incluindo restrição exclusiva e primária); caso contrário, retornará 0. Retornará NULL caso não seja possível determinar se a coluna faz parte de um índice exclusivo. Será populado somente se informações de navegação forem solicitadas.|  
 |**is_updateable**|**bit nulo**|Retornará 1 se a coluna for uma coluna atualizável; caso contrário, retornará 0. Retornará NULL caso não seja possível determinar se a coluna é atualizável.|  
 |**is_computed_column**|**bit nulo**|Retornará 1 se a coluna for uma coluna computada; caso contrário, retornará 0. Retorna NULL se não puder ser determinado que a coluna é uma coluna computada.|  
-|**is_sparse_column_set**|**bit nulo**|Retornará 1 se a coluna for uma coluna esparsa; caso contrário, retornará 0. Retorna NULL se não for possível determinar se a coluna faz parte de um conjunto de colunas esparsas.|  
+|**is_sparse_column_set**|**bit nulo**|Retornará 1 se a coluna for uma coluna esparsa; caso contrário, retornará 0. Retorna NULL se não puder ser determinado que a coluna faz parte de um conjunto de colunas esparsas.|  
 |**ordinal_in_order_by_list**|**smallint NULL**|Posição desta coluna na lista ORDER BY. Retornará NULL se a coluna não aparecer na lista ORDER BY ou se a lista ORDER BY não puder ser determinada exclusivamente.|  
 |**order_by_list_length**|**smallint NULL**|Comprimento da lista ORDER BY. Retornará NULL se não houver uma lista ORDER BY ou se a lista ORDER BY não puder ser determinada exclusivamente. Observe que esse valor será o mesmo para todas as linhas retornadas por **sp_describe_first_result_set.**|  
-|**order_by_is_descending**|**smallint NULL**|Se o ordinal_in_order_by_list não for NULL, o **order_by_is_descending** coluna relatará a direção da cláusula ORDER BY para essa coluna. Caso contrário, relatará NULL.|  
-|**tds_type_id**|**int não NULL**|Para uso interno.|  
-|**tds_length**|**int não NULL**|Para uso interno.|  
+|**order_by_is_descending**|**smallint NULL**|Se o ordinal_in_order_by_list não for nulo, o **order_by_is_descending** coluna relatará a direção da cláusula ORDER BY para esta coluna. Caso contrário, relatará NULL.|  
+|**tds_type_id**|**int NOT NULL**|Para uso interno.|  
+|**tds_length**|**int NOT NULL**|Para uso interno.|  
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_describe_first_result_set** garante que se o procedimento retorna os metadados do primeiro conjunto de resultados para (um hipotético) lote A e, se esse lote (A) for subsequentemente executado, em seguida, o lote será (1) gera um erro de tempo de otimização, (2) gera um erro de tempo de execução, (3) não retornará nenhum resultado definida ou (4) retorna um primeiro conjunto de resultados com os mesmos metadados descritos por **sp_describe_first_result_set**.  
+ **sp_describe_first_result_set** garantias de que se o procedimento retorna os metadados do primeiro conjunto de resultados para (um controle) em lotes A e, se esse lote (A) for subsequentemente executado, em seguida, o lote serão de (1) gerará um erro de tempo de otimização, (2) gera um erro de tempo de execução, (3) não retornará nenhum resultado definida, ou (4) retorna um primeiro conjunto de resultados com os mesmos metadados descritos por **sp_describe_first_result_set**.  
   
- O nome, a nulidade e o tipo de dados podem diferir. Se **sp_describe_first_result_set** retorna um conjunto de resultados vazio, a garantia é que a execução do lote retornará conjuntos sem resultados.  
+ O nome, a nulidade e o tipo de dados podem diferir. Se **sp_describe_first_result_set** retorna um conjunto de resultados vazio, a garantia é que a execução de lote retornará conjuntos sem resultados.  
   
- Essa garantia presume que não existem alterações de esquema relevantes no servidor. Alterações de esquema relevantes no servidor não incluem a criação de tabelas temporárias ou variáveis de tabela no lote A entre a hora em que **sp_describe_first_result_set** é chamado e a hora em que o conjunto de resultados é retornado durante execução, inclusive alterações de esquema feitas pelo lote B.  
+ Essa garantia presume que não existem alterações de esquema relevantes no servidor. Alterações de esquema relevantes no servidor não incluem a criação de tabelas temporárias ou variáveis de tabela no lote A entre a hora em que **sp_describe_first_result_set** é chamado e a hora em que o conjunto de resultados é retornado durante execução, incluindo alterações de esquema feitas pelo lote B.  
   
- **sp_describe_first_result_set** retorna um erro em qualquer um dos seguintes casos.  
+ **sp_describe_first_result_set** retornará um erro em qualquer um dos casos a seguir.  
   
 -   Se a entrada @tsql não é válido [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Validade é determinada pela análise de [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Os erros causados pelo lote durante a otimização da consulta ou durante a execução não são considerados ao determinar se o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote é válido.  
   
--   Se @params não for NULL e contém uma cadeia de caracteres que não é uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contém uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
+-   Se @params não for NULL e contém uma cadeia de caracteres que não é uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contiver uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
   
--   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado em @params.  
+-   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado na @params.  
   
 -   Se a instrução usar uma tabela temporária.  
   
 -   A consulta inclui a criação de uma tabela permanente que é então consultada.  
   
- Se todas as outras verificações forem bem-sucedidas, serão considerados todos os caminhos de fluxo de controle possíveis dentro do lote de entrada. Este leva em conta todo o controle instruções de fluxo (GOTO, IF/ELSE, WHILE e [!INCLUDE[tsql](../../includes/tsql-md.md)] blocos TRY/CATCH), bem como quaisquer procedimentos, dinâmicos [!INCLUDE[tsql](../../includes/tsql-md.md)] lotes ou gatilhos invocados de lote de entrada por uma instrução EXEC, uma instrução DDL que causa Gatilhos DDL para ser acionado, ou uma instrução DML que faz com que os gatilhos ser acionado em uma tabela de destino ou em uma tabela que é modificada por causa de ação em cascata em uma restrição foreign key. No caso de muitos possíveis caminhos de controle, em algum ponto, um algoritmo para.  
+ Se todas as outras verificações forem bem-sucedidas, serão considerados todos os caminhos de fluxo de controle possíveis dentro do lote de entrada. Esse leva em conta o controle de todas as instruções de fluxo (GOTO, IF/ELSE, WHILE, e [!INCLUDE[tsql](../../includes/tsql-md.md)] blocos TRY/CATCH), bem como quaisquer procedimentos, dinâmicos [!INCLUDE[tsql](../../includes/tsql-md.md)] lotes ou invocados de lote de entrada por uma instrução EXEC, uma instrução DDL que faz com que os gatilhos Gatilhos DDL deve ser acionado, ou uma instrução DML que faz com que os gatilhos ser acionado em uma tabela de destino ou em uma tabela que é modificada por causa de ação em cascata em uma restrição foreign key. No caso de muitos possíveis caminhos de controle, em algum ponto, um algoritmo para.  
   
- Para cada caminho de fluxo de controle, a primeira instrução (se houver) que retorna um conjunto de resultados é determinado pelo **sp_describe_first_result_set**.  
+ Para cada caminho de fluxo de controle, a primeira instrução (se houver) que retorna um conjunto de resultados é determinado pela **sp_describe_first_result_set**.  
   
  Quando houver várias e possíveis primeiras instruções em um lote, seus resultados podem diferir no número de colunas, no nome da coluna, na nulidade e no tipo de dados. Veja aqui mais detalhadamente como essas diferenças são tratadas:  
   
@@ -145,15 +145,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   Se o tipo de dados diferir, um erro será gerado e nenhum resultado será retornado, exceto nos seguintes casos:  
   
-    -   **varchar(a)** para **varchar(a')** onde um ' > um.  
+    -   **varchar(a)** à **varchar(a')** onde um ' > um.  
   
     -   **varchar(a)** para **varchar (max)**  
   
-    -   **nvarchar(a)** para **nvarchar(a')** onde um ' > um.  
+    -   **nvarchar(a)** à **nvarchar(a')** onde um ' > um.  
   
     -   **nvarchar(a)** para **nvarchar (max)**  
   
-    -   **varbinary(a)** para **varbinary(a')** onde um ' > um.  
+    -   **varbinary(a)** à **varbinary(a')** onde um ' > um.  
   
     -   **varbinary(a)** para **varbinary (max)**  
   
@@ -277,7 +277,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \<nome de coluna desconhecido > **varchar (20) NULL**  
+ Resultado: \<nome de coluna desconhecido > **varchar(20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome de coluna forçado a ser idêntico via alias  
  Igual ao anterior, mas as colunas têm o mesmo nome via alias de coluna.  
@@ -291,7 +291,7 @@ ELSE
     SELECT d AS b FROM t2;'  
 ```  
   
- Resultado: b **varchar (20) nulo**  
+ Resultado: b **varchar (20) NULL**  
   
 #### <a name="error-because-column-types-cannot-be-matched"></a>Erro porque os tipos de coluna não podem ser correspondidos  
  Os tipos de coluna diferem nos primeiros possíveis conjuntos de resultados diferentes.  
@@ -305,7 +305,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- Resultado: Erro, tipos incompatíveis (**varchar (10)** versus **nvarchar (10)**).  
+ Resultado: Erro, tipos incompatíveis (**varchar(10)** versus **nvarchar (10)**).  
   
 #### <a name="result-set-can-return-an-error"></a>O conjunto de resultados pode retornar um erro  
  O primeiro conjunto de resultados é erro ou conjunto de resultados.  
@@ -377,10 +377,10 @@ EXEC(@SQL)
     ); '  
 ```  
   
- Resultado: Column1 **bigint não NULL**  
+ Resultado: Coluna1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>Erro causado por um conjunto de resultados ambíguo  
- Este exemplo presume que outro usuário nomeado Usuário1 tem uma tabela nomeada t1 no esquema padrão s1 com colunas (uma **int não NULL**).  
+ Este exemplo supõe que o outro usuário nomeado Usuário1 tem uma tabela nomeada t1 no esquema padrão s1 com colunas (uma **int NOT NULL**).  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -391,7 +391,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- Resultado: Erro. T1 pode ser dbo. T1 ou s1.t1, cada um com um número diferente de colunas.  
+ Resultado: Erro. T1 pode ser dbo.t1 ou s1.t1, cada um com um número diferente de colunas.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>Resulta até mesmo com um conjunto de resultados ambíguo  
  Use as mesmas suposições do exemplo anterior.  
@@ -404,7 +404,7 @@ N'
     SELECT a FROM t1;'  
 ```  
   
- Resultado: um **int NULL** como DBO e S1 s1.t1.a tem tipo **int** e nulidade diferente.  
+ Resultado: uma **int NULL** porque dbo.t1.a e s1.t1.a têm o tipo **int** e nulidade diferente.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   

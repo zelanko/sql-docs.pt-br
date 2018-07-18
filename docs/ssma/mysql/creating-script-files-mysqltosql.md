@@ -1,5 +1,5 @@
 ---
-title: Criando arquivos de Script (MySQLToSQL) | Microsoft Docs
+title: Criar arquivos de Script (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,40 +21,40 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0de174bd310fb4cdd69deb87ebf6ead7d66a0a7b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775864"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982508"
 ---
-# <a name="creating-script-files-mysqltosql"></a>Criando arquivos de Script (MySQLToSQL)
-A primeira etapa antes de iniciar o aplicativo de console SSMA é criar o arquivo de script e, se necessário criar o arquivo de valor da variável e o arquivo de conexão de servidor.  
+# <a name="creating-script-files-mysqltosql"></a>Criar arquivos de Script (MySQLToSQL)
+A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
   
-O arquivo de script pode ser dividido em três seções, viz..,:  
+O arquivo de script pode ser dividido em três seções, sobre visualização..,:  
   
-1.  **configuração:** permite ao usuário definir os parâmetros de configuração para o aplicativo de console.  
+1.  **config:** permite que o usuário definir os parâmetros de configuração para o aplicativo de console.  
   
-2.  **servidores:** permite ao usuário definir definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
+2.  **servidores:** permite que o usuário defina definições de servidor de origem/destino. Isso também pode ser em um arquivo de conexão de servidor separado.  
   
 3.  **comandos de script:** permite que o usuário executar comandos de fluxo de trabalho do SSMA.  
   
-Cada seção é descrita em detalhes a seguir:  
+Cada seção é descrita em detalhes abaixo:  
   
-## <a name="configuring-mysql-console-settings"></a>Configurar as configurações do Console do MySQL  
+## <a name="configuring-mysql-console-settings"></a>Definindo as configurações do Console do MySQL  
 As configurações de um script são exibidas no arquivo de script de console.  
   
-Se qualquer um dos elementos são especificados no nó de configuração, eles serão definidos como a configuração global ou seja, elas são aplicáveis a todos os comandos de script. Esses elementos de configuração também podem ser definidos dentro de cada comando na seção do comando de script se o usuário deseja substituir a configuração global.  
+Se qualquer um dos elementos são especificados no nó de configuração, elas serão definidas como a configuração global ou seja, eles são aplicáveis a todos os comandos de script. Esses elementos de configuração também podem ser definidos dentro de cada comando na seção de comando de script se o usuário deseja substituir a configuração global.  
   
 As opções configuráveis pelo usuário incluem:  
   
-1.  **Provedor de janela de saída:** se suprimir mensagens atributo for definido como 'true', o comando específico mensagens não são exibidas no console. A descrição de atributos é fornecida abaixo:  
+1.  **Provedor de janela de saída:** se o atributo de suprimir as mensagens é definido como 'true', específicos do comando mensagens não são exibidas no console. A descrição de atributos é fornecida abaixo:  
   
-    -   destino: Especifica se a saída deve obter impresso em um arquivo ou stdout. Isso é false por padrão.  
+    -   destino: Especifica se a saída precisa obter impresso em um arquivo ou o stdout. Isso é false por padrão.  
   
     -   nome do arquivo: O caminho do arquivo (opcional).  
   
-    -   Suprimir mensagens: suprime mensagens no console. Isso é 'false' por padrão.  
+    -   Suprimir-messages: suprime mensagens no console. Isso é 'false', por padrão.  
   
     **Exemplo:**  
   
@@ -91,13 +91,13 @@ As opções configuráveis pelo usuário incluem:
     </…All commands…>  
     ```  
   
-2.  **Provedor de Conexão de migração de dados:** Especifica que o servidor de origem/destino seja considerado para migração de dados.  Origem-uso-usado por último indica que o último servidor de origem usado é usado para a migração de dados. Da mesma forma destino-uso-usado por último indica que o último servidor de destino usado é usado para a migração de dados. O usuário também pode especificar o servidor (de origem ou de destino) usando o servidor de origem de atributos ou o servidor de destino.  
+2.  **Provedor de Conexão de migração de dados:** Especifica que o servidor de origem/destino seja considerado para a migração de dados.  Código-fonte-use-last-used indica que o último servidor de origem usados é usado para a migração de dados. Da mesma forma destino-use-last-used indica que o último servidor de destino usado é usado para a migração de dados. O usuário também pode especificar o servidor (origem ou destino) usando o servidor de origem de atributos ou o servidor de destino.  
   
-    Apenas um ou outro atributo especificado pode ser usado por exemplo:  
+    Apenas um ou outro atributo especificado pode ser usado ou seja:  
   
-    - origem-uso-usado por último = "true" (padrão) ou o servidor de origem = "source_servername"  
+    - código-fonte-use-last-used = "true" (padrão) ou servidor de origem = "source_servername"  
   
-    - destino-uso-usado por último = "true" (padrão) ou o servidor de destino = "target_servername"  
+    - destino-use-last-used = "true" (padrão) ou servidor de destino = "target_servername"  
   
     **Exemplo:**  
   
@@ -122,13 +122,13 @@ As opções configuráveis pelo usuário incluem:
     </migrate-data>  
     ```  
   
-3.  **Pop-up entrada do usuário:** Isso permite a manipulação de erros, quando os objetos são carregados do banco de dados. O usuário fornece os modos de entrada e, no caso de erro, o console continua conforme o usuário especifica.  
+3.  **Pop-up entrada do usuário:** Isso permite a manipulação de erros, quando os objetos são carregados do banco de dados. O usuário fornece os modos de entrada e, em caso de erro, o console continua conforme o usuário especifica.  
   
     Os modos incluem:  
   
-    -   **Pergunte-usuário -** solicita ao usuário continue('yes') ou erro ('não').  
+    -   **Pergunte-usuário-** solicita que o usuário continue('yes') ou ocorre um erro ('não').  
   
-    -   **Erro -** o console exibe um erro e interromperá a execução.  
+    -   **Erro -** o console exibirá um erro e interrompe a execução.  
   
     -   **continuar-** console prossegue com a execução.  
   
@@ -155,13 +155,13 @@ As opções configuráveis pelo usuário incluem:
     </connect-target-database>  
     ```  
   
-4.  **Provedor de reconexão:** Isso permite ao usuário definir a reconexão configurações caso de falhas de conexão. Isso pode ser definido para servidores de origem e destino.  
+4.  **Provedor de reconexão:** Isso permite que o usuário defina a reconexão configurações caso de falhas de conexão. Isso pode ser definido para servidores de origem e destino.  
   
     Os modos de reconexão são:  
   
-    -   reconectar-se a última-usado-servidor: se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
+    -   reconectar-se ao último servidor---usado: se a conexão não está ativo, ele tentará reconectar-se para o último servidor usado no máximo 5 vezes.  
   
-    -   Gerar um erro: se a conexão não está ativa, um erro será gerado.  
+    -   Gerar um erro: se a conexão não estiver ativo, um erro será gerado.  
   
     O modo padrão é **gerar um erro**.  
   
@@ -205,7 +205,7 @@ As opções configuráveis pelo usuário incluem:
   
 5.  **Provedor de substituição de conversor:** Isso permite que o usuário lidar com objetos que já estão presentes no destino de metabase. As ações possíveis incluem:  
   
-    -   Erro: O console exibe um erro e interromperá a execução.  
+    -   Erro: O console exibirá um erro e interrompe a execução.  
   
     -   Substituir: substitui valores existentes do objeto. Essa ação é executada por padrão.  
   
@@ -232,7 +232,7 @@ As opções configuráveis pelo usuário incluem:
     </convert-schema>  
     ```  
   
-6.  **Provedor de pré-requisitos com falha:** Isso permite que o usuário lidar com todos os pré-requisitos necessários para um comando de processamento. Por padrão, o modo estrito é 'false'. Se ele for definido como 'true', uma exceção será gerado para falha de atender aos pré-requisitos.  
+6.  **Provedor de pré-requisitos com falha:** Isso permite que o usuário lidar com todos os pré-requisitos que são necessários para processar um comando. Por padrão, o modo estrito é 'false'. Se ele for definido como 'true', uma exceção será gerado para falha de atender aos pré-requisitos.  
   
     **Exemplo:**  
   
@@ -244,23 +244,23 @@ As opções configuráveis pelo usuário incluem:
     </output-providers>  
     ```  
   
-7.  **Operação de interrupção:** durante a operação intermediária, se o usuário deseja parar a operação, em seguida, **'Ctrl + C'** tecla de acesso pode ser usada. SSMA para MySQL Console aguardará a conclusão da operação e termina a execução do console.  
+7.  **Operação de parada:** durante a operação intermediária, se o usuário deseja parar a operação, então **'Ctrl + C'** tecla de acesso pode ser usada. O SSMA para MySQL Console aguardará a conclusão da operação e finaliza a execução do console.  
   
-    Se o usuário deseja interromper a execução imediatamente, em seguida, **'Ctrl + C'** tecla de acesso pode ser pressionada novamente para término abrupto de aplicativo do Console SSMA  
+    Se o usuário deseja parar a execução imediatamente, em seguida, **'Ctrl + C'** tecla de acesso pode ser pressionada novamente para término abrupto do aplicativo de Console do SSMA  
   
-8.  **Provedor de progresso:** informa o progresso de cada comando de console. Isso é desabilitado por padrão. Os relatórios de progresso atributos incluem:  
+8.  **Provedor de progresso:** informa o progresso de cada comando de console. Isso está desabilitado por padrão. Os atributos de relatório de progresso compreendem:  
   
     -   off  
   
-    -   cada 1%  
+    -   todos - 1%  
   
-    -   a cada 2%  
+    -   todos - 2%  
   
-    -   a cada 5%  
+    -   todos - 5%  
   
-    -   a cada 10%  
+    -   todos - 10%  
   
-    -   cada 20%  
+    -   todos - 20%  
   
     **Exemplo:**  
   
@@ -291,15 +291,15 @@ As opções configuráveis pelo usuário incluem:
     </…All commands…>  
     ```  
   
-9. **Detalhes do agente de log:** conjuntos de nível de detalhes de log. Isso corresponde com a opção de todas as categorias na interface de usuário. Por padrão, o nível de detalhes de log é "error".  
+9. **Detalhamento do agente de log:** conjuntos de nível de detalhes de log. Isso corresponde com a opção de todas as categorias na interface do usuário. Por padrão, o nível de detalhamento do log é "error".  
   
     As opções de nível de agente de log incluem:  
   
-    -   Erro fatal: somente-erro fatal são registradas.  
+    -   Erro fatal: apenas-erro fatal mensagens são registradas.  
   
-    -   Erro: somente mensagens de erro e o erro fatal são registradas.  
+    -   Erro: apenas as mensagens de erro e fatal erro são registradas.  
   
-    -   Aviso: todos os níveis, exceto as mensagens de depuração e informações são registrados.  
+    -   Aviso: todos os níveis, exceto as mensagens de depuração e as informações são registrados.  
   
     -   INFO: todos os níveis, exceto as mensagens de depuração são registradas.  
   
@@ -327,13 +327,13 @@ As opções configuráveis pelo usuário incluem:
     </…All commands…>  
     ```  
   
-10. **Senha de criptografado de substituição:** se 'true', a senha de texto não criptografado especificado na seção de definição de servidor de arquivo de conexão do servidor ou no arquivo de script, substituições a senha criptografada armazenada no armazenamento protegido se existe. Se nenhuma senha for especificada em texto não criptografado, o usuário será solicitado a inserir a senha.  
+10. **Senha criptografada de substituição:** se 'true', a senha de texto não criptografado especificado na seção de definição de servidor do arquivo de conexão do servidor ou no arquivo de script, substitui a senha criptografada armazenada no armazenamento protegido se existir. Se nenhuma senha for especificada em texto não criptografado, o usuário é solicitado a inserir a senha.  
   
     Aqui surgem dois casos:  
   
-    1.  Se substituir a opção é **false**, a ordem de pesquisa será protegido armazenamento -&gt;arquivo de Script -&gt;arquivo de Conexão de servidor -&gt; solicitar ao usuário.  
+    1.  Se substituir a opção é **falsos**, a ordem de pesquisa será protegido armazenamento -&gt;arquivo de Script -&gt;arquivo de Conexão do servidor -&gt; solicitar ao usuário.  
   
-    2.  Se substituir a opção é **true**, será a ordem de pesquisa de arquivo de Script -&gt;arquivo de Conexão de servidor -&gt;solicitar ao usuário.  
+    2.  Se substituir a opção é **verdadeira**, será a ordem de pesquisa de arquivo de Script -&gt;arquivo de Conexão do servidor -&gt;solicitar ao usuário.  
   
     **Exemplo:**  
   
@@ -347,17 +347,17 @@ As opções configuráveis pelo usuário incluem:
   
 A opção não configurável é:  
   
--   **Número máximo de tentativas de reconexão:** quando uma conexão estabelecida expira ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas para um máximo de **5** tentativas após o qual o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço de executar novamente o script.  
+-   **Máximo de tentativas de reconexão:** quando uma conexão estabelecida atinge o tempo limite ou quebras devido à falha de rede, o servidor é necessário ser reconectado. As tentativas de reconexão são permitidas no máximo **5** novas tentativas depois disso, o console executa automaticamente a reconexão. O recurso de reconexão automática reduz o esforço em executar novamente o script.  
   
-## <a name="server-connection-parameters"></a>Parâmetros de Conexão de servidor  
-Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte o [criar os arquivos de Conexão de servidor &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) seção para obter mais detalhes.  
+## <a name="server-connection-parameters"></a>Parâmetros de Conexão do servidor  
+Parâmetros de conexão de servidor podem ser definidos no arquivo de script ou no arquivo de conexão do servidor. Consulte a [criar os arquivos de Conexão de servidor &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) para obter mais detalhes.  
   
 ## <a name="script-commands"></a>Comandos de script  
-O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
+O arquivo de script contém uma sequência de comandos de fluxo de trabalho de migração no formato XML. O aplicativo de console do SSMA processa a migração na ordem os comandos que aparecem no arquivo de script.  
   
 Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados MySQL segue a hierarquia de: banco de dados -&gt; tabela.  
   
-Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console SSMA é encerrado e retorna o controle ao usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em um [arquivos de valores de variável](http://msdn.microsoft.com/en-us/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
+Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
 **Exemplo:**  
   
@@ -384,7 +384,7 @@ Quando todos os comandos no arquivo de script são executados com êxito, o apli
   
 </ssma-script-file>  
 ```  
-Modelos que consiste em 3 de arquivos de script (para executar vários cenários), arquivo de valor da variável e um arquivo de conexão de servidor são fornecidos na pasta Scripts do Console de exemplo do diretório do produto:  
+Modelos consiste em 3 arquivos de script (para executar vários cenários), arquivo de valor da variável e um arquivo de conexão de servidor são fornecidos na pasta Scripts do Console de exemplo do diretório do produto:  
   
 -   AssessmentReportGenerationSample.xml  
   
@@ -398,14 +398,14 @@ Modelos que consiste em 3 de arquivos de script (para executar vários cenários
   
 Você pode executar os modelos (arquivos) depois de alterar os parâmetros exibidos para relevância.  
   
-Lista completa de comandos de script pode ser encontrada em [executando o Console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+Lista completa dos comandos de script pode ser encontrada no [executar o Console do SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="script-file-validation"></a>Validação de arquivo de script  
-O usuário pode facilmente validar seu arquivo de script no arquivo de definição de esquema **'M2SSConsoleScriptSchema.xsd'** disponíveis na pasta 'Esquemas'.  
+## <a name="script-file-validation"></a>Validação do arquivo de script  
+O usuário pode validar com facilidade seu arquivo de script no arquivo de definição de esquema **'M2SSConsoleScriptSchema.xsd'** disponível na pasta "Esquemas".  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [criando arquivos de valor variável &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+É a próxima etapa no operando o console [criando arquivos de valor de variável &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Criando arquivos do valor da variável &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[Criando arquivos de valor da variável &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

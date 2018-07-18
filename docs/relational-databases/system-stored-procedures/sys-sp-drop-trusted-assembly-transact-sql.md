@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255329"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971848"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Remove um assembly na lista de assemblies confiáveis no servidor.
+Remove um assembly da lista de assemblies confiáveis no servidor.
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -49,15 +49,15 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>Argumentos
 
 [ @hash =] '*valor*'  
-O valor de hash SHA2_512 do assembly para remover da lista de assemblies confiáveis para o servidor. Assemblies confiáveis podem carregar quando segurança rigorosa do clr está habilitada, mesmo se o assembly não está assinado ou o banco de dados não está marcado como confiável.
+O valor de hash SHA2_512 do assembly para remover da lista de assemblies confiáveis para o servidor. Assemblies confiáveis podem carregar quando segurança estrita do clr está habilitada, mesmo se o assembly estiver assinado ou o banco de dados não está marcado como confiável.
 
 ## <a name="remarks"></a>Remarks  
 
-Este procedimento remove um assembly de [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Este procedimento remove um assembly a partir [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="permissions"></a>Permissões
 
-Requer a participação no `sysadmin` função de servidor fixa ou `CONTROL SERVER` permissão.
+Requer associação na `sysadmin` função de servidor fixa ou `CONTROL SERVER` permissão.
 
 ## <a name="examples"></a>Exemplos  
 
@@ -69,7 +69,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>Consulte também  
-  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

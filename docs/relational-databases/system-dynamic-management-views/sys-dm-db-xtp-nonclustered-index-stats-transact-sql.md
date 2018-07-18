@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978118"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "34464642"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|A ID do objeto.|  
+|object_id|**int**|A ID do objeto.|  
 |xtp_object_id|**bigint**|ID da tabela com otimização de memória.|  
-|index_id|**Int**|ID do índice.|  
+|index_id|**int**|ID do índice.|  
 |delta_pages|**bigint**|O número total de páginas delta deste índice na árvore.|  
 |internal_pages|**bigint**|Para uso interno. O número total de páginas internas deste índice na árvore.|  
 |leaf_pages|**bigint**|O número total de páginas de folha deste índice na árvore.|  
@@ -70,6 +70,6 @@ ms.locfileid: "34464642"
  Requer a permissão VIEW DATABASE STATE no banco de dados atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

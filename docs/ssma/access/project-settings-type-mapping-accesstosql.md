@@ -1,5 +1,5 @@
 ---
-title: Configurações (mapeamento de tipo) do projeto (AccessToSQL) | Microsoft Docs
+title: Configurações do projeto (mapeamento de tipo) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,21 +23,21 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774462"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985738"
 ---
-# <a name="project-settings-type-mapping-accesstosql"></a>Configurações (mapeamento de tipo) do projeto (AccessToSQL)
-As configurações de mapeamento de tipo de projeto permitem definir mapeamentos de tipo de padrão para o projeto SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+# <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
+As configurações de mapeamento de tipo de projeto permitem que você definir mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
   
-Mapeamento de tipo está disponível no **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo:  
+Mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo:  
   
--   Use o **configurações de projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de mapeamento de tipo, no **ferramentas** menu, selecione **configurações de projeto**e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
+-   Use o **configurações do projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de mapeamento de tipo na **ferramentas** menu, selecione **configurações do projeto**e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
   
--   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de mapeamento de tipo, no **ferramentas** menu, selecione **configurações de projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido e alterado de **versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
+-   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de mapeamento de tipo na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida / alterado de  **Versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** no painel esquerdo.  
   
 ## <a name="options"></a>Opções  
 **Tipo de Origem**  
@@ -46,7 +46,7 @@ O tipo de dados do Access para mapear.
 **Tipo de destino**  
 O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure para o tipo de dados de acesso especificado.  
   
-A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e destino.  
+A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e destino.  
   
 |Tipo de dados do Access|Tipo de dados do SQL Server|  
 |--------------------|------------------------|  
@@ -65,10 +65,10 @@ A tabela a seguir mostra o mapeamento padrão entre tipos de dados de origem e d
 |**Memorando** - para Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
-|**texto [\*... \*]** - para o Access 97|**varchar[\*]**|  
+|**texto [\*... \*]** - para Access 97|**varchar[\*]**|  
   
 **Adicionar**  
-Clique para adicionar um tipo de dados para a lista de mapeamento.  
+Clique para adicionar um tipo de dados à lista de mapeamento.  
   
 **Editar**  
 Clique para editar um tipo de dados na lista de mapeamento.  
@@ -77,9 +77,9 @@ Clique para editar um tipo de dados na lista de mapeamento.
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
 **Redefinir para padrão**  
-Clique para restaurar todos os mapeamentos de tipo de dados para os padrões do SSMA.  
+Clique para redefinir todos os mapeamentos de tipo de dados para os padrões do SSMA.  
   
 ## <a name="see-also"></a>Consulte também  
-[Mapeamento de tipo de dados de destino e de origem](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
-[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Mapeamento de tipo de dados de destino e de origem](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

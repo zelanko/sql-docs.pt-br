@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031454"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Contém estatísticas coletadas desde a última reinicialização do banco de dados.  
   
- Para obter mais informações, consulte [OLTP na memória &#40;otimização na memória&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) e [diretrizes para usar índices em tabelas com otimização de memória](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Para obter mais informações, consulte [OLTP in-memory &#40;otimização na memória&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) e [Guidelines for Using Indexes em tabelas com otimização de memória](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
 |Nome da coluna|Tipo de dados|Description|  
@@ -64,6 +64,6 @@ ms.locfileid: "34468502"
  Requer a permissão VIEW DATABASE STATE no banco de dados atual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

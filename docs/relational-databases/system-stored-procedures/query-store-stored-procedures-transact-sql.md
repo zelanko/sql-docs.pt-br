@@ -1,5 +1,5 @@
 ---
-title: Repositório de consultas procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Consulta Store armazenados Procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3778acbe0fdfcbb05eec3318daf007799322e410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978248"
 ---
-# <a name="query-store-stored-procedures-transact-sql"></a>Repositório de consultas procedimentos armazenados (Transact-SQL)
+# <a name="query-store-stored-procedures-transact-sql"></a>Consulta Store armazenados Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Esta seção contém os seguintes procedimentos armazenados usados para configurar o repositório de consultas.  
@@ -50,6 +50,6 @@ ms.locfileid: "33238097"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Monitorar o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

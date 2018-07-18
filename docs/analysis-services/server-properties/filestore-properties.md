@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239036"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975001"
 ---
 # <a name="filestore-properties"></a>Propriedades FileStore
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35239036"
  **RandomFileAccessMode**  
  Uma propriedade Booliana que indica se os arquivos de banco de dados e arquivos armazenados em cache são acessados em modo de acesso aleatório ao arquivo. Essa propriedade é desativada por padrão. Por padrão, o servidor não define o sinalizador de acesso de arquivo aleatório ao abrir arquivos de dados de partição para acesso de leitura.  
   
- Em sistemas avançados, especialmente os com recursos de memória grandes e vários nós NUMA, pode ser vantajoso usar acesso aleatório ao arquivo. No modo de acesso aleatório, o Windows ignora operações de mapeamento de página que leem dados do disco para o cache de arquivo do sistema, reduzindo a contenção no cache.  
+ Em sistemas avançados, especialmente os com recursos de memória grandes e vários nós NUMA, pode ser vantajoso usar acesso aleatório ao arquivo. No modo de acesso aleatório, o Windows ignora operações de mapeamento de página que leem dados do disco no cache de arquivos de sistema, reduzindo a contenção no cache.  
   
  Você precisará executar testes de comparação para determinar se o desempenho da consulta melhorou como o resultado da alteração desta propriedade. Para conhecer as práticas recomendadas sobre como fazer testes de comparação, inclusive limpar o cache e evitar erros comuns, consulte [Guia de operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539). Para obter informações adicionais sobre as vantagens e desvantagens de usar essa propriedade, consulte [ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369).  
   

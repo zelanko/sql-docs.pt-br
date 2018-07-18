@@ -13,19 +13,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3dd2c69dae65f073ec7bc34a40ae1f31be2c1a7c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321268"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020104"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>A execução no Linux com cron do pacote de agendamento SQL Server Integration Services
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>SQL Server Integration Services de agenda a execução no Linux com cron do pacote
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Quando você executa o SQL Server Integration Services (SSIS) e o SQL Server no Windows, você pode automatizar a execução de pacotes SSIS usando o SQL Server Agent. Quando você executa o SQL Server e do SSIS no Linux, no entanto, o utilitário do SQL Server Agent não está disponível para agendar trabalhos no Linux. Em vez disso, você pode usar o serviço de cron, que é amplamente usado em plataformas Linux para automatizar a execução do pacote.
+Quando você executa o SQL Server Integration Services (SSIS) e o SQL Server no Windows, você pode automatizar a execução de pacotes do SSIS usando o SQL Server Agent. Quando você executa o SQL Server e o SSIS no Linux, no entanto, o utilitário do SQL Server Agent não está disponível para agendar trabalhos em Linux. Em vez disso, você pode usar o serviço de cron, que é amplamente usado nas plataformas Linux para automatizar a execução do pacote.
 
-Este artigo fornece exemplos que mostram como automatizar a execução de pacotes do SSIS. Os exemplos são criados para serem executados no Red Hat Enterprise. O código é semelhante para outras distribuições do Linux, como Ubuntu.
+Este artigo fornece exemplos que mostram como automatizar a execução de pacotes do SSIS. Os exemplos são gravados para ser executado no Red Hat Enterprise. O código é semelhante para outras distribuições do Linux, como o Ubuntu.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -33,13 +33,13 @@ Antes de usar o serviço de cron para executar trabalhos, verifique se ele está
 
 Para verificar o status do serviço cron, use o seguinte comando: `systemctl status crond.service`.
 
-Se o serviço não está ativo (ou seja, ele não está funcionando), consulte o administrador para instalar e configurar o serviço de cron corretamente.
+Se o serviço não está ativo (ou seja, ele não está em execução), consulte o administrador para instalar e configurar o serviço de cron corretamente.
 
 ## <a name="create-jobs"></a>Criar trabalhos
 
-Um trabalho cron é uma tarefa que você pode configurar para ser executado regularmente em um intervalo especificado. O trabalho pode ser tão simple quanto um comando que normalmente digite diretamente no console ou executado como um script de shell.
+Um trabalho cron é uma tarefa que você pode configurar para executar regularmente em um intervalo especificado. O trabalho pode ser tão simple quanto um comando que normalmente seria digitar diretamente no console do ou executado como um script de shell.
 
-Para fins de manutenção e facilidade de gerenciamento, é recomendável que você coloque seus comandos de execução do pacote em um script que contém um nome descritivo.
+Para fins de manutenção e de fácil gerenciamento, é recomendável que você coloque seus comandos de execução do pacote em um script que contém um nome descritivo.
 
 Aqui está um exemplo de um script de shell simples para executar um pacote. Ele contém apenas um único comando, mas você pode adicionar mais comandos conforme necessário.
 
@@ -52,26 +52,26 @@ Aqui está um exemplo de um script de shell simples para executar um pacote. Ele
 
 ## <a name="schedule-jobs-with-the-cron-service"></a>Agendar trabalhos com o serviço de cron
 
-Depois que você definiu os trabalhos, você pode agendar sejam executados automaticamente, usando o serviço de cron.
+Depois de definir seus trabalhos, você pode agendá-los para serem executados automaticamente usando o serviço de cron.
 
-Para adicionar seu trabalho para cron executar, adicione o trabalho no arquivo crontab. Para abrir o arquivo crontab em um editor, onde você pode adicionar ou atualizar o trabalho, use o seguinte comando: `crontab -e`.
+Para adicionar seu trabalho de cron executar, adicione o trabalho no arquivo crontab. Para abrir o arquivo crontab em um editor no qual você pode adicionar ou atualizar o trabalho, use o seguinte comando: `crontab -e`.
 
-Para agendar o trabalho descrito anteriormente para executar diariamente às 2:10, adicione a seguinte linha ao arquivo crontab:
+Para agendar o trabalho descrito anteriormente para executar diariamente às 2H: 10, adicione a seguinte linha ao arquivo crontab:
 
 ```
 # run <SSIS package name> at 2:10 AM every day
 10 2 \* \* \* $/HOME/SSIS/jobs/SSISpackageName.daily
 ```
 
-Salve o arquivo crontab e, em seguida, feche o editor.
+Salve o arquivo de crontab e, em seguida, feche o editor.
 
-Para entender o formato do comando de exemplo, revise as informações na seção a seguir.
+Para entender o formato do comando de exemplo, examine as informações na seção a seguir.
  
 ## <a name="format-of-a-crontab-file"></a>Formato de um arquivo crontab
 
 A imagem a seguir mostra a descrição do formato da linha de trabalho que é adicionada ao arquivo crontab.
 
-![Descrição do formato de entrada no arquivo crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
+![Descrição do formato de entrada no arquivo crontab.](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
 Para obter uma descrição mais detalhada do formato de arquivo crontab, use o seguinte comando: `man 5 crontab`.
 
@@ -82,5 +82,5 @@ Aqui está um exemplo parcial da saída que ajuda a explicar o exemplo neste art
 ## <a name="related-content-about-ssis-on-linux"></a>Conteúdo relacionado sobre SSIS no Linux
 -   [Extrair, transformar e carregar dados em Linux com o SSIS](sql-server-linux-migrate-ssis.md)
 -   [Instalar o SQL Server Integration Services (SSIS) no Linux](sql-server-linux-setup-ssis.md)
--   [Configurar o SQL Server Integration Services no Linux com conf ssis](sql-server-linux-configure-ssis.md)
+-   [Configurar o SQL Server Integration Services no Linux com o ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitações e problemas conhecidos do SSIS no Linux](sql-server-linux-ssis-known-issues.md)

@@ -1,6 +1,6 @@
 ---
-title: Monitor com o SCOM - Analytics Platform System | Microsoft Docs
-description: Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analytics Platform System (APS).
+title: Monitorar com o SCOM - Analytics Platform System | Microsoft Docs
+description: Use o System Center Operations Manager (SCOM) para monitorar o dispositivo do Analytics Platform System (APS).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538976"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909716"
 ---
-# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitor com o System Center Operations Manager - Analytics Platform System
-Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analytics Platform System (APS).
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o System Center Operations Manager - Analytics Platform System
+Use o System Center Operations Manager (SCOM) para monitorar o dispositivo do Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
@@ -27,7 +27,7 @@ Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analy
   
 2.  SQL Server 2008 R2 Native Client ou SQL Server 2012 Native Client deve ser instalado.  
   
-3.  Os pacotes de gerenciamento para monitorar o SQL Server PDW e HDInsight devem ser instalados, importados e configurados. Use os seguintes artigos para obter instruções para executar essas tarefas.  
+3.  Os pacotes de gerenciamento para monitorar o SQL Server PDW devem ser instalados, importados e configurados. Use os seguintes artigos para obter instruções para executar essas tarefas.  
   
     -   [Instalar os pacotes de gerenciamento do SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   
@@ -39,29 +39,29 @@ Use o System Center Operations Manager (SCOM) para monitorar o dispositivo Analy
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Para monitorar o SQL Server PDW com SCOM  
-Depois de configurar os pacotes de gerenciamento do SCOM, clique em sobre o painel de monitoramento do SCOM e fazer drill down até **SQL Server Appliance** e **Microsoft SQL Server Parallel Data Warehouse**. Sob o Microsoft SQL Server Parallel Data Warehouse, há quatro opções: alertas, dispositivos, o diagrama de dispositivo e nós.  
+Depois de configurar os pacotes de gerenciamento do SCOM, clique o painel de monitoramento do SCOM e fazer drill down até **SQL Server Appliance** e, em seguida **Microsoft SQL Server Parallel Data Warehouse**. Sob o Microsoft SQL Server Parallel Data Warehouse, há quatro opções: alertas, dispositivos, diagrama de dispositivo e nós.  
   
 ### <a name="alerts"></a>Alertas  
-Alertas são onde você pode encontrar os alertas atuais para gerenciar.  
+Os alertas são onde você pode encontrar os alertas atuais para gerenciar.  
   
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Dispositivos  
-Os dispositivos são onde você encontrará os dispositivos de PDW do servidor do SQL que tenha atualmente descobertos e monitorados no seu ambiente. Se um dispositivo não aparecerão aqui e você criou a conexão ODBC para ele, em seguida, pode haver algum problema com sua conta PDWWatcher. Se eles aparecem como "Não monitorado", pode haver algum problema com sua conta PDWMonitor. Tenha Paciência pois SCOM não fazer alterações em tempo real, mas verifica periodicamente se há novos dispositivos monitorar e periodicamente envia consultas com dispositivos para monitoramento.  
+Os dispositivos são onde você encontrará os dispositivos de PDW do servidor do SQL que tenha atualmente descobertos e monitorados em seu ambiente. Se um dispositivo não aparece aqui e você criou a conexão ODBC para ele, em seguida, pode haver algo errado com sua conta PDWWatcher. Se eles aparecem como "Não monitorado", pode haver algo errado com sua conta PDWMonitor. Seja paciente, pois o SCOM não faz alterações em tempo real, mas verifica periodicamente se há novos dispositivos monitorar e periodicamente envia consultas para os dispositivos para monitoramento.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagrama de aplicativos  
-A página de diagrama de dispositivos é onde você pode obter uma aparência a integridade do seu dispositivo com uma exibição de árvore:  
+A página de diagrama de dispositivos é onde você pode obter a integridade do seu dispositivo com uma exibição de árvore de examinar:  
   
 ![Diagrama de aplicativos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
 ### <a name="nodes"></a>Nós  
-Por fim, o modo de exibição de nós permite ver a integridade do seu dispositivo por meio de cada nó:  
+Por fim, o modo de exibição de nós permite que você veja a integridade do seu dispositivo por meio de cada nó:  
   
 ![Nós](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Consulte também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Alertas do Console de administração de Noções básicas sobre &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
+[Console de administração de Noções básicas sobre alertas &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

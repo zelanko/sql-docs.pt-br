@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242883"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974002"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**, e deve ser uma ID válida.  
+ Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
  [  **@job_id =**] **'***job_id***'**  
- Especifica o ID do trabalho ao qual o plano de manutenção está associado. *job_id* é **uniqueidentifier**, e deve ser uma ID válida.  
+ Especifica o ID do trabalho ao qual o plano de manutenção está associado. *job_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -65,7 +65,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
  Quando todos os trabalhos foram removidos do plano de manutenção, é recomendável que os usuários executem **sp_delete_maintenance_plan_db** para remover os bancos de dados restantes do plano.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan_job**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo exclui o trabalho "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" do plano de manutenção.  

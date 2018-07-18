@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e32ce8235adfe6774b339219ced7ecb6a38f505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972299"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "32971221"
  XPath também permite a filtragem com base na posição. Uma expressão de predicado avaliada como um número seleciona esse nó ordinal. Por exemplo, o caminho do local `Customer[3]` retorna o terceiro cliente. Não há suporte para tais predicados numéricos. Há suporte somente para expressões de predicado que retornem um resultado Boolean.  
   
 > [!NOTE]  
->  Para obter informações sobre as limitações desta implementação XPath do XPath e as diferenças entre ele e a especificação do W3C, consulte [Introdução ao usando consultas XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Para obter informações sobre as limitações desta implementação XPath do XPath e as diferenças entre ele e a especificação do W3C, consulte [Introdução a consultas de XPath usando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Predicado de seleção: Exemplo 1  
- A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos o  **\<cliente >** filhos do elemento que tem o **CustomerID** atributo com valor ALFKI:  
+ A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos os as  **\<cliente >** filhos do elemento que tem o **CustomerID** atributo com valor ALFKI:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<nó de elemento >**, pois  **\<elemento >** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (TRUE se **CustomerID** é um atributo do nó de contexto, porque  **\<atributo >** é a entidade de segurança tipo de nó do **atributo** eixo).  
+ Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<nó de elemento >**, pois  **\<elemento >** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (TRUE se **CustomerID** é um atributo do nó de contexto, pois  **\<atributo >** é a entidade de segurança tipo de nó **atributo** eixo).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "32971221"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>Predicado de seleção: Exemplo 2  
- A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos o  **\<ordem >** netos que têm o **SalesOrderID** atributo com o valor 1:  
+ A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos os as  **\<ordem >** netos do elemento que tem o **SalesOrderID** atributo com o valor 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -70,7 +70,7 @@ ms.locfileid: "32971221"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Predicado de seleção: Exemplo 3  
- A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos os  **\<cliente >** filhos que apresentam um ou mais  **\<ContactName >** filhos:  
+ A seguinte expressão XPath (caminho do local) seleciona do nó de contexto atual todos os  **\<cliente >** filhos que têm uma ou mais  **\<ContactName >** filhos:  
   
 ```  
 child::Customer[child::ContactName]  
@@ -78,9 +78,9 @@ child::Customer[child::ContactName]
   
  Este exemplo supõe que o  **\<ContactName >** é um elemento filho do  **\<cliente >** elemento no documento XML, que é conhecido como  *mapeamento centrado em elemento* em um esquema XSD anotado.  
   
- Nesta expressão XPath, `child` é o nome do eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<elemento >** nó, porque  **\<elemento >** é o tipo de nó principal para `child` eixo). `child::ContactName` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (TRUE se `ContactName` é um  **\<elemento >** nó).  
+ Nesta expressão XPath, `child` é o nome do eixo. `Customer` é o teste de nó (TRUE se `Customer` é um  **\<elemento >** nó, pois  **\<elemento >** é o tipo de nó principal para `child` eixo). `child::ContactName` é o predicado. O predicado `child` é o eixo e `ContactName` é o teste de nó (TRUE se `ContactName` é um  **\<elemento >** nó).  
   
- Essa expressão retorna somente o  **\<cliente >** filhos do elemento do nó de contexto que têm  **\<ContactName >** filhos do elemento.  
+ Essa expressão retorna somente o  **\<cliente >** filhos do elemento do nó de contexto que tenham  **\<ContactName >** filhos do elemento.  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -95,9 +95,9 @@ Customer[ContactName]
 child::Customer[not(child::ContactName)]  
 ```  
   
- Este exemplo supõe que  **\<ContactName >** é um elemento filho do  **\<cliente >** elemento no documento XML e o campo ContactName não é necessário do banco de dados.  
+ Este exemplo supõe que  **\<ContactName >** é um elemento filho do  **\<cliente >** elemento no documento XML e o campo ContactName não é necessário o banco de dados.  
   
- Neste exemplo, `child` é o eixo. `Customer` é o teste de nó (TRUE se `Customer` é um \<elemento > nó). `not(child::ContactName)` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (TRUE se `ContactName` é um \<elemento > nó).  
+ Neste exemplo, `child` é o eixo. `Customer` é o teste de nó (TRUE se `Customer` é um \<elemento > nó). `not(child::ContactName)` é o predicado. O predicado `child` é o eixo e `ContactName` é o teste de nó (TRUE se `ContactName` é um \<elemento > nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -106,13 +106,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>Predicado de seleção: Exemplo 5  
- A seguinte expressão XPath seleciona do nó de contexto atual todos o  **\<cliente >** filhos que possuem o **CustomerID** atributo:  
+ A seguinte expressão XPath seleciona do nó de contexto atual todos os  **\<cliente >** filhos que têm o **CustomerID** atributo:  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- Neste exemplo, `child` é o eixo e `Customer` é o teste de nó (TRUE se `Customer` é um \<elemento > nó). `attribute::CustomerID` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o predicado (TRUE se `CustomerID` é um  **\<atributo >** nó).  
+ Neste exemplo, `child` é o eixo e `Customer` é o teste de nó (TRUE se `Customer` é um \<elemento > nó). `attribute::CustomerID` é o predicado. O predicado `attribute` é o eixo e `CustomerID` é o predicado (TRUE se `CustomerID` é um  **\<atributo >** nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -130,7 +130,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  Esta consulta seleciona todos os clientes com qualquer `Order` para o qual `OrderDate` é igual a qualquer `ShipDate` de qualquer `Order`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução aos esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Formatação XML do lado do cliente & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Introdução a esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [Formatação XML do lado do cliente &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

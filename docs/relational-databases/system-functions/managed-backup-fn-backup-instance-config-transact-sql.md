@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4dae80911e6508a1a398cf208300bf4145faeecc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970498"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- Nenhuma  
+ Nenhum  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -66,7 +66,7 @@ managed_backup.fn_backup_db_config ()
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer a participação no **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões. O usuário não deve ser negado **VIEW ANY DEFINITION** permissões.  
+ Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões. O usuário não deve ser negado **VIEW ANY DEFINITION** permissões.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna os parâmetros de configuração padrão de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] da instância na qual ele é executado.  

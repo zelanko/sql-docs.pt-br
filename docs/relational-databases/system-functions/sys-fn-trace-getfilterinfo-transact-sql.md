@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236299"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971871"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ fn_trace_getfilterinfo ( trace_id )
   
 ## <a name="arguments"></a>Argumentos  
  *trace_id*  
- É a identificação do rastreamento. *trace_id* é **int**, sem padrão.  
+ É a identificação do rastreamento. *trace_id* está **int**, sem padrão.  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
  Retorna as informações a seguir. Para obter mais informações sobre as colunas, consulte [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**columnid**|**Int**|A identificação da coluna na qual o filtro é aplicado.|  
-|**logical_operator**|**Int**|Especifica se o operador AND ou OR é aplicado.|  
-|**comparison_operator**|**Int**|Especifica o tipo de comparação feita:<br /><br /> 0 = Igual<br /><br /> 1 = Diferente de<br /><br /> 2 = Maior que<br /><br /> 3 = Menor que<br /><br /> 4 = Maior que ou igual a<br /><br /> 5 = Menor que ou igual a<br /><br /> 6 = Like<br /><br /> 7 = Not like|  
+|**columnid**|**int**|A identificação da coluna na qual o filtro é aplicado.|  
+|**logical_operator**|**int**|Especifica se o operador AND ou OR é aplicado.|  
+|**comparison_operator**|**int**|Especifica o tipo de comparação feita:<br /><br /> 0 = Igual<br /><br /> 1 = Diferente de<br /><br /> 2 = Maior que<br /><br /> 3 = Menor que<br /><br /> 4 = Maior que ou igual a<br /><br /> 5 = Menor que ou igual a<br /><br /> 6 = Like<br /><br /> 7 = Not like|  
 |**value**|**sql_variant**|Especifica o valor no qual o filtro é aplicado.|  
   
 ## <a name="remarks"></a>Remarks  
- O usuário define *trace_id* valor para identificar, modificar e controlar o rastreamento. Quando é passada a identificação de um rastreamento específico, **fn_trace_getfilterinfo** retorna informações sobre qualquer filtro desse rastreamento. Se o rastreamento especificado não tiver um filtro, essa função retornará um conjunto de linhas vazio. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio. Para obter informações similares sobre rastreamentos, consulte [fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ O usuário define *trace_id* valor para identificar, modificar e controlar o rastreamento. Quando é passada a identificação de um rastreamento específico, **fn_trace_getfilterinfo** retorna informações sobre qualquer filtro desse rastreamento. Se o rastreamento especificado não tiver um filtro, essa função retornará um conjunto de linhas vazio. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio. Para obter informações similares sobre rastreamentos, consulte [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER TRACE no servidor.  

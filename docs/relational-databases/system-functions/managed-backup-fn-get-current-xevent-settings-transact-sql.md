@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227811"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029531"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Tipo de eventos estendidos|  
-|is_configurable|NVARCHAR(128)|Isso é definido como **True** se o evento for configurável, caso contrário ele definido como **False**.|  
+|is_configurable|NVARCHAR(128)|Isso é definido como **verdadeira** se o evento for configurável, caso contrário ele definido como **falso**.|  
 |is_enabled|NVARCHAR(128)|Isso será definido como True se o evento estiver habilitado; defina como False se não estiver habilitado. Use o smart_admin.sp_set_parameter para habilitar eventos de depuração.|  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer **selecione** permissões na função.  
+ Requer **selecionar** permissões na função.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todos os Eventos Estendidos com seu status atual.  

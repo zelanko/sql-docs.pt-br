@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969788"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ ms.locfileid: "33221787"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|ID local do servidor vinculado.|  
-|**name**|**sysname**|Quando **server_id** = 0, este é o nome do servidor.<br /><br /> Quando **server_id** > 0, este é o nome local do servidor vinculado.|  
+|**server_id**|**int**|ID local do servidor vinculado.|  
+|**name**|**sysname**|Quando **server_id** = 0, esse é o nome do servidor.<br /><br /> Quando **server_id** > 0, esse é o nome local do servidor vinculado.|  
 |**product**|**sysname**|Nome de produto do servidor vinculado. "SQL Server" indica que esta é outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
+|**provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
-|**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
+|**Local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, exceto se o chamador tiver a permissão ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Propriedade de conexão do catálogo OLEDB. NULL se nenhum.|  
-|**connect_timeout**|**Int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  
-|**query_timeout**|**Int**|Tempo de limite  de consulta em segundos, 0 se nenhum.|  
+|**connect_timeout**|**int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  
+|**query_timeout**|**int**|Tempo de limite  de consulta em segundos, 0 se nenhum.|  
 |**is_linked**|**bit**|0 = é um servidor de estilo antigo adicionado usando **sp_addserver**com RPC diferente e o comportamento de transação distribuída.<br /><br /> 1 = Servidor vinculado padrão.|  
 |**is_remote_login_enabled**|**bit**|Opção RPC está configurado para permitir logons remotos de entrada para este servidor.|  
 |**is_rpc_out_enabled**|**bit**|RPC de saída (deste servidor) está habilitado.|  
@@ -70,15 +70,15 @@ ms.locfileid: "33221787"
 ## <a name="permissions"></a>Permissões  
  O valor em **provider_string** é sempre NULL, a menos que o chamador tenha a permissão ALTER ANY LINKED SERVER.  
   
- Não são necessárias permissões para exibir o servidor local (**server_id** = 0).  
+ As permissões não são necessárias para exibir o servidor local (**server_id** = 0).  
   
- Quando você cria um servidor vinculado ou remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um mapeamento de logon padrão para o **pública** função de servidor. Isso significa que, por padrão, todos os logons podem enxergar todos os servidores remotos e vinculados. Para restringir a visibilidade a estes servidores, remova o mapeamento de logon padrão executando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e especificando NULL para o *locallogin* parâmetro.  
+ Quando você cria um servidor vinculado ou remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um mapeamento de logon padrão para o **público** função de servidor. Isso significa que, por padrão, todos os logons podem enxergar todos os servidores remotos e vinculados. Para restringir a visibilidade para esses servidores, remover o mapeamento de logon padrão, executando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e especificando NULL para o *locallogin* parâmetro.  
   
  Se o mapeamento padrão de logon for excluído, só usuários que foram adicionados explicitamente como um logon vinculado ou um logon remoto pode enxergar os servidores remotos e vinculados para os quais eles têm um logon. Para exibir todos os servidores vinculados e remotos, depois que o mapeamento de logon padrão for excluído requer as seguintes permissões:  
   
 -   ALTER ANY LINKED SERVER ou ALTER ANY LOGIN ON SERVER  
   
--   Associação de **setupadmin** ou **sysadmin** funções de servidor fixas  
+-   Associação a **setupadmin** ou **sysadmin** funções de servidor fixas  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

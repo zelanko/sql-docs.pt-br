@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971448"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,20 +33,20 @@ ms.locfileid: "34045680"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
 |Valor padrão|*Regular*|  
-|Cardinalidade|0-1: elemento obrigatório que pode ocorrer apenas uma vez.|  
+|Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhuma|  
+|Elementos filho|Nenhum|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -68,7 +68,7 @@ ms.locfileid: "34045680"
 |*AddressStreet*|O atributo representa a rua do endereço.|  
 |*AddressZip*|O atributo representa o código postal (CEP) do endereço.|  
 |*BOMResource*|O atributo representa um recurso de uma conta de materiais (BOM).|  
-|*Caption*|O atributo representa uma legenda.|  
+|*Legenda*|O atributo representa uma legenda.|  
 |*CaptionAbbreviation*|O atributo representa uma abreviação.|  
 |*CaptionDescription*|O atributo representa uma descrição.|  
 |*Canal*|O atributo representa um canal.|  
@@ -76,22 +76,22 @@ ms.locfileid: "34045680"
 |*Empresa*|O atributo representa uma empresa.|  
 |*Continente*|O atributo representa um continente.|  
 |*País*|O atributo representa um país ou uma região.|  
-|*Região*|O atributo representa uma região.|  
+|*Município*|O atributo representa uma região.|  
 |*CurrencyDestination*|O atributo representa a moeda de destino ou um câmbio da moeda.|  
 |*CurrencyISOcode*|O atributo representa o código ISO de uma moeda.|  
 |*CurrencName*|O atributo representa o nome de uma moeda.|  
 |*CurrencySource*|O atributo representa a moeda de origem de um câmbio monetário.|  
 |*CustomerGroup*|O atributo representa um grupo de clientes.|  
 |*CustomerHousehold*|O atributo representa uma casa de clientes.|  
-|*Customers*|O atributo representa um cliente.|  
+|*Clientes*|O atributo representa um cliente.|  
 |*Data*|O atributo representa uma data.|  
 |*DateCanceled*|O atributo representa uma data de cancelamento.|  
 |*DateDuration*|O atributo representa uma duração.|  
 |*DateEnded*|O atributo representa uma data de término.|  
 |*DateModified*|O atributo representa uma data de modificação.|  
-|*Propriedade DateStart*|O atributo representa uma data de início.|  
+|*DateStart*|O atributo representa uma data de início.|  
 |*DayOfHalfYears*|O atributo representa o ordinal de dia de um semestre.|  
-|*DayOfMonth*|O atributo representa o ordinal de dia de um mês.|  
+|*Dia do mês*|O atributo representa o ordinal de dia de um mês.|  
 |*DayOfQuarter*|O atributo representa o ordinal de dia de um trimestre.|  
 |*DayOfTrimester*|O atributo representa o ordinal de dia de um quadrimestre.|  
 |*DayOfWeek*|O atributo representa o ordinal de dia de uma semana.|  
@@ -107,7 +107,7 @@ ms.locfileid: "34045680"
 |*FiscalDayOfYear*|O atributo representa o ordinal de dia de um ano em um calendário fiscal.|  
 |*FiscalHalfYears*|O atributo representa semestres em um calendário fiscal.|  
 |*FiscalHalfYearsOfYear*|O atributo representa o ordinal de semestre de um ano em um calendário fiscal.|  
-|*Mês*|O atributo representa meses em um calendário fiscal.|  
+|*Mês fiscal*|O atributo representa meses em um calendário fiscal.|  
 |*FiscalMonthOfHalfYears*|O atributo representa o ordinal de mês de um semestre em um calendário fiscal.|  
 |*FiscalMonthOfQuarter*|O atributo representa o ordinal de mês de um trimestre em um calendário fiscal.|  
 |*FiscalMonthOfTrimester*|O atributo representa o ordinal de mês de um quadrimestre em um calendário fiscal.|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045680"
 |*MonthOfTrimester*|O atributo representa o ordinal de mês de um quadrimestre.|  
 |*MonthOfYear*|O atributo representa o ordinal de mês de um ano.|  
 |*Meses*|O atributo representa meses.|  
-|*organizationalUnit*|O atributo representa uma unidade organizacional.|  
+|*OrganizationalUnit*|O atributo representa uma unidade organizacional.|  
 |*OrgTitle*|O atributo representa um cargo organizacional.|  
 |*PercentOwnership*|O atributo representa uma porcentagem da propriedade.|  
 |*PercentVoteRight*|O atributo representa uma porcentagem dos direitos de voto.|  
@@ -204,8 +204,8 @@ ms.locfileid: "34045680"
 |*PhysicalVolume*|O atributo representa volume.|  
 |*PhysicalWeight*|O atributo representa peso.|  
 |*PhysicalWidth*|O atributo representa largura.|  
-|*Point*|O atributo representa um ponto.|  
-|*PostalCode*|O atributo representa um CEP.|  
+|*Ponto*|O atributo representa um ponto.|  
+|*CEP*|O atributo representa um CEP.|  
 |*Product*|O atributo representa um produto.|  
 |*ProductBrand*|O atributo representa a marca de um produto.|  
 |*ProductCategory*|O atributo representa a categoria de um produto.|  
@@ -219,7 +219,7 @@ ms.locfileid: "34045680"
 |*Promoção*|O atributo representa uma promoção.|  
 |*QtyRangeHigh*|O atributo representa o valor mais alto de um intervalo de quantidades.|  
 |*QtyRangeLow*|O atributo representa o valor mais baixo de um intervalo de quantidades.|  
-|*Quantitative*|O atributo representa um atributo quantitativo.|  
+|*Quantitativa*|O atributo representa um atributo quantitativo.|  
 |*QuarterOfHalfYear*|O atributo representa o ordinal de trimestre de um semestre.|  
 |*QuarterOfYear*|O atributo representa o ordinal de trimestre de um ano.|  
 |*Trimestres*|O atributo representa trimestres.|  
@@ -259,7 +259,7 @@ ms.locfileid: "34045680"
 |*Seconds (segundos) (segundos)*|O atributo representa segundos.|  
 |*Sequência*|O atributo representa um atributo de sequência.|  
 |*ShortCaption*|O atributo representa uma legenda curta.|  
-|*StateOrProvince*|O atributo representa um estado.|  
+|*Código postal*|O atributo representa um estado.|  
 |*TenDayOfHalfYears*|O atributo representa o ordinal de período de dez dias de um semestre.|  
 |*TenDayOfQuarter*|O atributo representa o ordinal de período de dez dias de um trimestre.|  
 |*TenDayOfTrimester*|O atributo representa o ordinal de período de dez dias de um quadrimestre.|  
@@ -285,11 +285,11 @@ ms.locfileid: "34045680"
   
  A enumeração que corresponde aos valores permitidos para **tipo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- O elemento que corresponde ao pai do **tipo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ O elemento que corresponde ao pai de **tipo** no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos de elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Elemento Dimension & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propriedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Atributos do elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Elemento de dimensão &#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propriedades &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

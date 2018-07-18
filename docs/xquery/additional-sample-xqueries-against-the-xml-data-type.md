@@ -1,5 +1,5 @@
 ---
-title: Adicionais exemplo XQueries em relação ao tipo de dados xml | Microsoft Docs
+title: Mais exemplos XQueries em relação ao tipo de dados xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030364"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Exemplos adicionais de XQueries em relação ao tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "33076193"
 -   [Manipulando Namespaces em XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções XQuery em relação ao tipo de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Operadores XQuery em relação ao Tipo de Dados XML](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   

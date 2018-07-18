@@ -26,18 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974549"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>Módulos e Prólogos - prólogo do XQuery
+# <a name="modules-and-prologs---xquery-prolog"></a>Módulos e Prólogos – prólogo XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Uma consulta XQuery é composta de prólogo e corpo. O prólogo do XQuery é uma série de declarações e definições que juntas criam o ambiente exigido para o processamento de consulta. No SQL Server, o prólogo do Xquery pode incluir declarações de namespace. O corpo do XQuery é constituído de uma sequência de expressões que especificam o resultado da consulta desejada.  
   
- Por exemplo, o XQuery a seguir é especificado na coluna Instructions de **xml** tipo que armazena instruções de fabricação como XML. A consulta recupera as instruções de produção para o local de centro de trabalho `10`. O `query()` método o **xml** tipo de dados é usado para especificar o XQuery.  
+ Por exemplo, o XQuery a seguir é especificado na coluna Instructions da **xml** tipo que armazena instruções de fabricação como XML. A consulta recupera as instruções de produção para o local de centro de trabalho `10`. O `query()` método da **xml** tipo de dados é usado para especificar o XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           

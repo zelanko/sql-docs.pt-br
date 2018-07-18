@@ -26,11 +26,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e55e2b1494a8b575e240340969ce127a63b5f2e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259146"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969738"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Para obter informações sobre como usar um, dois ou três parâmetros, consulte "Comentários", posteriormente neste tópico.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -79,13 +79,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |Esta lista de parâmetros...|Tem este resultado...|  
 |--------------------------|----------------------|  
-|*table_id*|Quando invocado apenas com o *table_id* parâmetro, sp_fulltext_keymappings retorna todos os valores de chave de texto completo (Key) da tabela base especificada, juntamente com o DocId que corresponde a cada chave. Isso inclui as chaves que estão com exclusão pendente.<br /><br /> Essa função é útil para solucionar vários problemas. É especialmente útil para ver o conteúdo do índice de texto completo quando a chave de texto completo selecionada não é do tipo de dados de números inteiros. Isso envolve a junção de resultados de sp_fulltext_keymappings com os resultados de **sys.DM fts_index_keywords_by_document**. Para obter mais informações, consulte [sys.DM fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Em geral, no entanto, recomendamos que, se possível, você execute sp_fulltext_keymappings com os parâmetros que especificam uma chave de texto completo específica ou DocId. Isso é muito mais eficiente do que retornar um mapa de chaves inteiro, especialmente para uma tabela muito grande para a qual o custo de desempenho de retornar um mapa de chaves inteiro pode ser substancial.|  
-|*table_id*, *docid*|Se apenas o *table_id* e *docid* forem especificados, *docid* devem ser não nulos e especificar um DocId válido na tabela especificada. Essa função é útil para isolar a chave de texto completo personalizada a partir da tabela base que corresponde ao DocId de um índice de texto completo específico.|  
-|*table_id*, NULL, *chave*|Se houver três parâmetros, o segundo parâmetro deve ser NULL, e *chave* devem ser não nulos e especifique um valor de chave de texto completo válido da tabela especificada. Essa função é útil no isolamento do DocId que corresponde a uma chave de texto completo específica da tabela base.|  
+|*table_id*|Quando invocado apenas com o *table_id* parâmetro, sp_fulltext_keymappings retorna todos os valores de chave de texto completo (Key) da tabela base especificada, juntamente com o DocId que corresponde a cada chave. Isso inclui as chaves que estão com exclusão pendente.<br /><br /> Essa função é útil para solucionar vários problemas. É especialmente útil para ver o conteúdo do índice de texto completo quando a chave de texto completo selecionada não é do tipo de dados de números inteiros. Isso envolve a junção de resultados de sp_fulltext_keymappings com os resultados de **DM fts_index_keywords_by_document**. Para obter mais informações, consulte [DM fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Em geral, no entanto, recomendamos que, se possível, você execute sp_fulltext_keymappings com os parâmetros que especificam uma chave de texto completo específica ou DocId. Isso é muito mais eficiente do que retornar um mapa de chaves inteiro, especialmente para uma tabela muito grande para a qual o custo de desempenho de retornar um mapa de chaves inteiro pode ser substancial.|  
+|*table_id*, *docid*|Se apenas a *table_id* e *docid* forem especificados, *docid* deve ser não NULL e especificar um DocId válido na tabela especificada. Essa função é útil para isolar a chave de texto completo personalizada a partir da tabela base que corresponde ao DocId de um índice de texto completo específico.|  
+|*table_id*, NULL, *chave*|Se três parâmetros estiverem presentes, o segundo parâmetro deve ser NULL, e *chave* deve ser não NULL e especificar um valor de chave de texto completo válido da tabela especificada. Essa função é útil no isolamento do DocId que corresponde a uma chave de texto completo específica da tabela base.|  
   
  Um erro é retornado em qualquer uma das condições a seguir:  
   
--   Especifique um inválido *table_id*.  
+-   Você especifica um inválido *table_id*.  
   
 -   A tabela não está indexada por texto completo.  
   
@@ -94,13 +94,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Exemplos  
   
 > [!NOTE]  
->  Os exemplos desta seção usam a `Production.ProductReview` analítico o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. Você pode criar esse índice executando o exemplo fornecido para o `ProductReview` tabela [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Os exemplos desta seção usam a `Production.ProductReview` tabela do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. Você pode criar esse índice executando o exemplo fornecido para o `ProductReview` na tabela [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtendo todos os valores de Chave e DocId  
  O exemplo a seguir usa uma [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) instrução para criar uma variável local, `@table_id` e atribuir a ID do `ProductReview` tabela como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o *table_id* parâmetro.  
   
 > [!NOTE]  
->  Usando **sp_fulltext_keymappings** somente com o *table_id* parâmetro é adequado para tabelas pequenas.  
+>  Usando o **sp_fulltext_keymappings** apenas com o *table_id* parâmetro é adequado para tabelas pequenas.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
  O exemplo a seguir usa uma instrução DECLARE para criar uma variável local, `@table_id`, e para atribuir a ID da tabela `ProductReview` como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o *table_id* parâmetro, NULL para o *docid* parâmetro e 4 para o *chave* parâmetro.  
   
 > [!NOTE]  
->  Usando **sp_fulltext_keymappings** somente com o *table_id* parameteris adequado para tabelas pequenas.  
+>  Usando o **sp_fulltext_keymappings** apenas com o *table_id* é adequado para tabelas pequenas.  
   
 ```  
 USE AdventureWorks2012;  

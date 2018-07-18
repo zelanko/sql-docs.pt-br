@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970508"
 ---
 # <a name="system-functions-for-transact-sql"></a>Funções do sistema para o Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +32,8 @@ ms.locfileid: "33234196"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece os seguintes grupos de funções do sistema.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Funções de grupos de disponibilidade AlwaysOn](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
- [Funções de captura de dados de alteração](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [Funções de grupos de disponibilidade Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
+ [Funções do Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Funções de controle de alterações](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Funções do coletor de dados](../../relational-databases/system-functions/data-collector-functions-transact-sql.md)  
  [Funções FileStream e FileTable](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)  

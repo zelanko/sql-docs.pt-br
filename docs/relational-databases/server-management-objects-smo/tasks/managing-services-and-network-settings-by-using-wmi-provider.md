@@ -22,24 +22,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031624"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gerenciando serviços e configurações de rede através do provedor do WMI
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O provedor WMI é uma interface publicada que é usada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) para gerenciar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serviços e protocolos de rede. No SMO, o <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto representa o provedor WMI.  
   
- O <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto funciona independentemente da conexão estabelecida com o <xref:Microsoft.SqlServer.Management.Smo.Server> objeto para uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e usa as credenciais do Windows para se conectar ao serviço WMI.  
+ O <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto funciona independentemente da conexão estabelecida com o <xref:Microsoft.SqlServer.Management.Smo.Server> objeto a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e usa as credenciais do Windows para se conectar ao serviço WMI.  
   
 ## <a name="example"></a>Exemplo  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
- Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor WMI, você deve incluir o **Imports** instrução para qualificar o namespace do WMI. Insira a instrução após outras instruções **Imports** , antes de qualquer declaração no aplicativo, como:  
+ Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor WMI, você deve incluir o **importações** instrução para qualificar o namespace do WMI. Insira a instrução após outras instruções **Imports** , antes de qualquer declaração no aplicativo, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

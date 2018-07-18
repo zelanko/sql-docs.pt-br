@@ -1,5 +1,5 @@
 ---
-title: Mapeamento Sybase ASE e tipos de dados do SQL Server (SybaseToSQL) | Microsoft Docs
+title: Mapear ASE Sybase e tipos de dados do SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,36 +19,36 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779132"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985318"
 ---
-# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapeamento Sybase ASE e tipos de dados do SQL Server (SybaseToSQL)
-Os tipos de banco de dados do Sybase Adaptive Server Enterprise (ASE) variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipos de banco de dados do SQL Azure. Ao converter objetos de banco de dados ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
+# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapear ASE Sybase e tipos de dados do SQL Server (SybaseToSQL)
+Os tipos de banco de dados do Sybase Adaptive Server Enterprise (ASE) variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipos de banco de dados do SQL Azure. Quando você converte objetos de banco de dados ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
-O SSMA tem um conjunto de mapeamentos de tipo de dados padrão. Para obter a lista de mapeamentos padrão, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Tipo de mapeamento de herança  
-Você pode personalizar mapeamentos de tipo no nível de projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que substituída em um nível inferior. Por exemplo, se você mapear **smallmoney** para **money** no nível de projetos, todos os objetos no projeto usará esse mapeamento, a menos que você personalizar o mapeamento no nível de categoria de objeto ou no nível de objeto.  
+Você pode personalizar mapeamentos de tipo no nível do projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que substituído em um nível inferior. Por exemplo, se você mapear **smallmoney** à **money** no nível de projetos, todos os objetos no projeto usará esse mapeamento, a menos que você personalize o mapeamento no nível de categoria de objeto ou no nível do objeto.  
   
-Quando você exibe o **mapeamento de tipo** guia SSMA, o plano de fundo é codificadas por cor para mostrar os mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e branco para qualquer mapeamento especificado no nível atual.  
+Quando você exibe o **mapeamento de tipo** guia no SSMA, o plano de fundo é codificadas por cores para mostrar quais mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e, em branco para qualquer mapeamento especificado no nível atual.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizando mapeamentos de tipo de dados  
-O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível de objeto.  
+O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível do objeto.  
   
 **Para mapear tipos de dados**  
   
-1.  Para personalizar o mapeamento de tipo de dados para o projeto inteiro, abra o **configurações de projeto** caixa de diálogo:  
+1.  Para personalizar o mapeamento de tipo de dados para todo o projeto, abra o **configurações do projeto** caixa de diálogo:  
   
-    1.  Sobre o **ferramentas** menu, selecione **configurações de projeto**.  
+    1.  Sobre o **ferramentas** menu, selecione **configurações do projeto**.  
   
     2.  No painel esquerdo, selecione **mapeamento de tipo**.  
   
-        Os botões e o gráfico de mapeamento de tipo aparecem no painel direito.  
+        O gráfico de mapeamento de tipo e os botões aparecem no painel direito.  
   
     Ou, para personalizar o tipo de dados de mapeamento no banco de dados, tabela, exibição ou nível de procedimento armazenado, selecione o banco de dados, a categoria de objeto ou o objeto no Gerenciador de metadados do Sybase:  
   
@@ -60,15 +60,15 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
     1.  Clique em **Adicionar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados ASE para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados ASE para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e especifique o comprimento máximo dos dados para o mapeamento no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **partir** caixa e especifique o comprimento máximo dos dados para o mapeamento no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa.  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa.  
   
     5.  Clique em **OK**.  
   
@@ -76,27 +76,27 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
     1.  Clique em **Editar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados ASE para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados ASE para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e especifique o comprimento máximo dos dados para o mapeamento no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **partir** caixa e especifique o comprimento máximo dos dados para o mapeamento no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa e, em seguida, clique em **Okey**.  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa e, em seguida, clique em **Okey**.  
   
-4.  Para remover um mapeamento de tipo de dados personalizados, faça o seguinte:  
+4.  Para remover um mapeamento de tipo de dados personalizada, faça o seguinte:  
   
     1.  Selecione a linha na lista de mapeamento de tipo que contém o mapeamento de tipo de dados que deseja remover.  
   
     2.  Clique em **Remover**.  
   
-        Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
+        Você não pode remover mapeamentos herdados. No entanto, mapeamentos herdados são substituídos pelas mapeamentos personalizados em uma categoria de objeto ou um objeto específico.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa no processo de migração é como [criar um relatório de avaliação](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) ou [objetos de banco de dados Sybase ASE de converter a sintaxe do SQL Server ou SQL Azure](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se você criar um relatório de avaliação, os objetos do Sybase ASE são convertidos automaticamente durante a avaliação.  
+A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) ou [objetos de banco de dados ASE do Sybase converter a sintaxe do SQL Server ou SQL Azure](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se você criar um relatório de avaliação, os objetos do Sybase ASE são convertidos automaticamente durante a avaliação.  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados Sybase ASE para o SQL Server - banco de dados SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrando bancos de dados do Sybase ASE para o SQL Server – BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

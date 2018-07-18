@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f2f06d0955d8f7febece5cc98c0719131554e764
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019844"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Consulte [argumentos e as propriedades do índice espacial procedimentos armazenados](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Ver [procedimentos armazenados de argumentos e propriedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Propriedades  
- Consulte [argumentos e as propriedades do índice espacial procedimentos armazenados](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Ver [procedimentos armazenados de argumentos e propriedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permissões  
  O usuário deve ter uma função PUBLIC atribuída a ele para acessar o procedimento. Requer permissão READ ACCESS no servidor e no objeto.  
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `sp_help_spatial_geography_index` para investigar o **geografia** índice espacial **SIndx_SpatialTable_geography_col2** definida na tabela **geography_col** para o exemplo de consulta **@qs**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
+ O exemplo a seguir usa `sp_help_spatial_geography_index` para investigar os **geografia** índice espacial **SIndx_SpatialTable_geography_col2** definida na tabela **geography_col** para determinado exemplo de consulta no **@qs**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
   
 ```  
 declare @qs geography  
@@ -66,7 +66,7 @@ declare @qs geography
 exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geography_col2', 0, @qs;  
 ```  
   
- A caixa delimitadora de uma **geografia** instância é toda a Terra.  
+ A caixa delimitadora de um **geografia** instância é toda a Terra.  
   
 ## <a name="requirements"></a>Requisitos  
   

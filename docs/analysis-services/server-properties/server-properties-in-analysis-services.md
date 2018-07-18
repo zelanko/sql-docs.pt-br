@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975094"
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriedades do servidor do Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instância tem suas próprias propriedades de configuração, que são definidas de forma independente de outras instâncias no mesmo servidor.  
   
- Para configurar o servidor, use o SQL Server Management Studio ou edite o arquivo msmdsrv.ini de uma instância específica do SQL Server Analysis Services.  
+ Para configurar o servidor, use o SQL Server Management Studio ou edite o arquivo msmdsrv. ini de uma instância específica do SQL Server Analysis Services.  
  
 As páginas de propriedades do SQL Server Management Studio mostram um subconjunto das propriedades mais prováveis de serem modificadas. A lista completa de propriedades pode ser encontrada no arquivo msmdsrv.ini.   
   
 > [!NOTE]  
->  Em uma instalação padrão do SQL Server Analysis Services, msmdsrv.ini pode ser encontrado na \Program Files\Microsoft Server\MSAS13 SQL. Pasta MSSQLSERVER\OLAP\Config.
+>  Em uma instalação do SQL Server Analysis Services padrão, msmdsrv. ini pode ser encontrado em \Program Files\Microsoft Server\MSAS13 SQL. Pasta MSSQLSERVER\OLAP\Config.
 > 
 > Outras propriedades que afetam a configuração do servidor incluem as propriedades de configuração de implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter mais informações sobre essas propriedades, consulte [Especificando definições de configuração para implantação de solução](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  

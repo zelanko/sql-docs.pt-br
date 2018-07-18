@@ -1,5 +1,5 @@
 ---
-title: Configurar o cluster de disco compartilhado SLES no SQL Server | Microsoft Docs
+title: Configurar o cluster de disco compartilhado de SLES para SQL Server | Microsoft Docs
 description: Implementar a alta disponibilidade por meio da configuração de cluster de disco compartilhado do SUSE Linux Enterprise Server (SLES) para o SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,23 +13,23 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 5c394dbfc613803a8f7eb0cf906b4b7733777919
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323857"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020755"
 ---
-# <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para SQL Server
+# <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado de SLES para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no SUSE Linux Enterprise Server (SLES). A camada de clustering é baseada no SUSE [alta disponibilidade extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior do [Pacemaker](http://clusterlabs.org/). 
+Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no SUSE Linux Enterprise Server (SLES). A camada de clustering é baseada no SUSE [alta disponibilidade de extensão (HAE)](https://www.suse.com/products/highavailability) criado na parte superior da [Pacemaker](http://clusterlabs.org/). 
 
-Para obter mais informações sobre a configuração de cluster, opções do recurso de agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Para obter mais informações sobre a configuração de cluster, opções de recurso do agente, gerenciamento, as práticas recomendadas e recomendações, consulte [SUSE Linux Enterprise alta disponibilidade extensão 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento de NFS. Etapas a seguir descrevem como esses servidores serão configurados.
+Para concluir o seguinte cenário de ponta a ponta, você precisa de duas máquinas para implantar o cluster de dois nós e outro servidor para configurar o compartilhamento NFS. As etapas a seguir descrevem como esses servidores serão configurados.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar e configurar o sistema operacional em cada nó de cluster
 
@@ -38,8 +38,8 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Instalar e configurar o SQL Server em cada nó de cluster
 
 1. Instalar e configurar o SQL Server em ambos os nós. Para obter instruções detalhadas, consulte [instalar o SQL Server no Linux](sql-server-linux-setup.md).
-2. Designe um nó como primário e o outro como secundário, para fins de configuração. Usar essas condições para o seguinte neste guia. 
-3. No nó secundário, interromper e desabilitar o SQL Server. O exemplo a seguir para e desabilita o SQL Server:
+2. Designe um nó como primário e o outro como secundário, para fins de configuração. Usar esses termos para os seguintes itens neste guia. 
+3. No nó secundário, interrompa e desabilite o SQL Server. O exemplo a seguir interrompe e desabilita o SQL Server:
 
     ```bash
     sudo systemctl stop mssql-server
@@ -47,13 +47,13 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
     ```
 
     > [!NOTE]
-    > No momento da instalação, uma chave mestre do servidor é gerado para a instância do SQL Server e colocado no `/var/opt/mssql/secrets/machine-key`. No Linux, o SQL Server sempre é executado como uma conta local chamada mssql. Como é uma conta local, sua identidade não é compartilhada entre nós. Portanto, é necessário copiar a chave de criptografia do nó principal para cada nó secundário para que cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor.
-4. No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. Pacemaker usa essa conta para verificar qual nó está executando o SQL Server.
+    > No momento da instalação, uma chave mestra do servidor é gerado para a instância do SQL Server e colocado no `/var/opt/mssql/secrets/machine-key`. No Linux, SQL Server sempre é executado como uma conta local chamada mssql. Porque é uma conta local, sua identidade não é compartilhada entre os nós. Portanto, você precisará copiar a chave de criptografia do nó principal para cada nó secundário, portanto, cada conta mssql local pode acessá-lo para descriptografar a chave mestra do servidor.
+4. No nó primário, crie um logon do SQL server para Pacemaker e conceder a permissão de logon para executar `sp_server_diagnostics`. O pacemaker usa essa conta para verificar qual nó está executando o SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
     ```
-    Conecte-se para o banco de dados mestre do SQL Server com a conta 'sa' e execute o seguinte:
+    Conectar-se para o banco de dados mestre do SQL Server com a conta 'sa' e execute o seguinte:
 
     ```tsql
     USE [master]
@@ -62,7 +62,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 5. No nó primário, interrompa e desabilite o SQL Server.
-6. Siga as instruções [na documentação do SUSE](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) para configurar e atualizar o arquivo de hosts para cada nó do cluster. O arquivo de 'host' deve incluir o endereço IP e o nome de cada nó de cluster.
+6. Siga as instruções [na documentação do SUSE](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) para configurar e atualizar o arquivo de hosts para cada nó do cluster. O arquivo de 'host' deve incluir o endereço IP e o nome de cada nó do cluster.
 
     Para verificar o endereço IP do nó atual executar:
 
@@ -72,7 +72,7 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
 
     Defina o nome do computador em cada nó. Dê a cada nó de um nome exclusivo que é de 15 caracteres ou menos. Definir o nome do computador, adicionando-o para `/etc/hostname` usando [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) ou [manualmente](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
 
-    A exemplo a seguir mostra `/etc/hosts` com adições de dois nós denominados `SLES1` e `SLES2`.
+    A exemplo a seguir mostra `/etc/hosts` com adições para dois nós denominados `SLES1` e `SLES2`.
 
     ```
     127.0.0.1   localhost
@@ -81,26 +81,26 @@ A primeira etapa é configurar o sistema operacional em nós de cluster. Para es
     ```
 
     > [!NOTE]
-    > Todos os nós de cluster devem ser capazes de acessar umas às outras por meio do SSH. Ferramentas como hb_report ou crm_report (para solução de problemas) e Gerenciador de histórico do Hawk exigem acesso SSH sem senha entre os nós, caso contrário, eles podem apenas coletar dados do nó atual. No caso de você usar uma porta SSH não padrão, use a opção -X ([consulte a página do manual](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Por exemplo, se a porta SSH é 3479, invoque um crm_report com:
+    > Todos os nós de cluster devem ser capazes de acessar um ao outro via SSH. Ferramentas como hb_report ou crm_report (para solução de problemas) e Gerenciador de histórico do Hawk exigem acesso SSH sem senha entre os nós, caso contrário, eles podem apenas coletar dados do nó atual. No caso de você usar uma porta SSH não padrão, use a opção -X ([consulte a página do manual](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Por exemplo, se a porta SSH é 3479, invoque um crm_report com:
     >
     >```bash
     >crm_report -X "-p 3479" [...]
     >```
-    >Para obter mais informações, consulte [o guia de administração]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
+    >Para obter mais informações, consulte o [guia de administração]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
 
 Na próxima seção, você irá configurar o armazenamento compartilhado e mover os arquivos de banco de dados para que o armazenamento.  
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Configurar o armazenamento compartilhado e mover arquivos de banco de dados
 
-Há uma variedade de soluções para fornecer armazenamento compartilhado. Este passo a passo demonstra como configurar o armazenamento compartilhado com NFS. É recomendável seguir as práticas recomendadas e usar o Kerberos para proteger NFS: 
+Há uma variedade de soluções que fornecem armazenamento compartilhado. Este passo a passo demonstra como configurar o armazenamento compartilhado com NFS. É recomendável seguir as práticas recomendadas e usar o Kerberos para proteger o NFS: 
 
-- [Compartilhamento de sistemas de arquivos com NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
+- [Compartilhamento de sistemas de arquivos com o NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
-Se você não seguir essas diretrizes, quem pode acessar sua rede e falsificar o endereço IP de um nó do SQL poderão acessar seus arquivos de dados. Como sempre, certifique-se de seu sistema de modelo de ameaça você antes de usá-lo em produção. 
+Se você não seguir essas diretrizes, qualquer pessoa que possa acessar sua rede e falsificar o endereço IP de um nó do SQL será capaz de acessar seus arquivos de dados. Como sempre, certifique-se de modelo de risco você em seu sistema antes de usá-lo em produção. 
 
 Outra opção de armazenamento é usar o compartilhamento de arquivos SMB:
 
-- [Seção Samba documentação SUSE](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.samba)
+- [Seção do Samba da documentação do SUSE](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.samba)
 
 ### <a name="configure-an-nfs-server"></a>Configurar um servidor NFS
 
@@ -110,7 +110,7 @@ Para configurar um servidor NFS, consulte as etapas a seguir na documentação d
 
 Antes de configurar o cliente NFS para montar o caminho de arquivos de banco de dados do SQL Server para apontar para o local de armazenamento compartilhado, certifique-se de que salvar os arquivos de banco de dados para um local temporário para poder copiá-los posteriormente o compartilhamento:
 
-1. **No nó primário**, salvar os arquivos de banco de dados para um local temporário. O script a seguir, cria um novo diretório temporário, copia os arquivos de banco de dados para o novo diretório e remove os arquivos de banco de dados antigo. Como o SQL Server é executado como usuário local mssql, você precisa garantir que, após a transferência de dados para o compartilhamento montado, usuário local tenha acesso de leitura / gravação ao compartilhamento de. 
+1. **No nó primário**, salvar os arquivos de banco de dados em um local temporário. O script a seguir cria um novo diretório temporário, copia os arquivos de banco de dados para o novo diretório e remove os arquivos antigos do banco de dados. Como o SQL Server é executado como usuário local mssql, você precisa certificar-se de que, após a transferência de dados para o compartilhamento montado, usuário local tem acesso de leitura / gravação ao compartilhamento. 
 
     ```bash
     su mssql
@@ -125,9 +125,9 @@ Antes de configurar o cliente NFS para montar o caminho de arquivos de banco de 
     - [Configuração de clientes](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > É recomendável seguir do SUSE práticas recomendadas e recomendações sobre o armazenamento altamente disponível NFS: [armazenamento de NFS altamente disponível com DRBD e Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > É recomendável seguir as práticas recomendadas e recomendações sobre armazenamento altamente disponível NFS do SUSE: [armazenamento de NFS altamente disponível com DRBD e Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
-2. Valide que o SQL Server inicia com êxito com o novo caminho de arquivo. Faça isso em cada nó. Neste ponto somente um nó deve executar o SQL Server por vez. Eles não podem ambos executar ao mesmo tempo porque eles irão tentar acessar os arquivos de dados simultaneamente (para evitar acidentalmente iniciando o SQL Server em ambos os nós, use um recurso de cluster do sistema de arquivos para verificar se que o compartilhamento não está montado duas vezes por nós diferentes). Os comandos a seguir iniciar o SQL Server, verificam o status e, em seguida, interrompa o SQL Server.
+2. Valide que SQL Server é iniciado com êxito com o novo caminho de arquivo. Faça isso em cada nó. No momento apenas um nó deve executar o SQL Server por vez. Eles não podem ambos executados ao mesmo tempo porque eles ambos tentará acessar os arquivos de dados simultaneamente (para evitar acidentalmente iniciando o SQL Server em ambos os nós, use um recurso de cluster do sistema de arquivos para garantir que o compartilhamento não está montado duas vezes por nós diferentes). Os comandos a seguir iniciar o SQL Server, verificam o status e, em seguida, interrompa o SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -135,9 +135,9 @@ Antes de configurar o cliente NFS para montar o caminho de arquivos de banco de 
     sudo systemctl stop mssql-server
     ```
 
-Neste ponto, ambas as instâncias do SQL Server estão configuradas para executar com os arquivos de banco de dados no armazenamento compartilhado. A próxima etapa é configurar o SQL Server para Pacemaker. 
+Neste ponto, ambas as instâncias do SQL Server são configuradas para executar com os arquivos de banco de dados no armazenamento compartilhado. A próxima etapa é configurar o SQL Server para Pacemaker. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalar e configurar Pacemaker em cada nó de cluster
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalar e configurar o Pacemaker em cada nó de cluster
 
 1. **Em ambos os nós de cluster, crie um arquivo para armazenar o nome de usuário do SQL Server e a senha para o logon do Pacemaker**. O comando a seguir cria e popula este arquivo:
 
@@ -194,14 +194,14 @@ Neste ponto, ambas as instâncias do SQL Server estão configuradas para executa
 
 7.  **Procedimentos de remoção**. Se você precisar remover um nó do cluster, use o script de inicialização **ha-cluster-remove**. Para obter mais informações, consulte [visão geral dos Scripts de inicialização](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 
-## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurar os recursos de cluster do SQL Server
+## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurar os recursos de cluster para o SQL Server
 
-As etapas a seguir explicam como configurar o recurso de cluster do SQL Server. Há duas configurações que você precisa personalizar.
+As etapas a seguir explicam como configurar o recurso de cluster para o SQL Server. Há duas configurações que você precisa personalizar.
 
-- **Nome de recurso do SQL Server**: um nome para o recurso de cluster do SQL Server. 
-- **Valor de tempo limite**: O valor de tempo limite é a quantidade de tempo que o cluster espera enquanto um recurso é colocado online. Para o SQL Server, essa é a hora em que você espera que o SQL Server para colocar o `master` banco de dados online. 
+- **Nome de recurso do SQL Server**: um nome para o recurso clusterizado do SQL Server. 
+- **Valor de tempo limite**: O valor de tempo limite é a quantidade de tempo que o cluster espera enquanto um recurso é colocado online. Para o SQL Server, isso é a hora em que você espera que o SQL Server para trazer o `master` banco de dados online. 
 
-Atualize os valores do script a seguir para o seu ambiente. Execute em um nó para configurar e iniciar o serviço de cluster.
+Atualize os valores do script a seguir para o seu ambiente. Execute em um nó para configurar e iniciar o serviço clusterizado.
 
 ```bash
 sudo crm configure
@@ -212,7 +212,7 @@ commit
 exit
 ```
 
-Por exemplo, o script a seguir cria um recurso de cluster do SQL Server chamado mssqlha. 
+Por exemplo, o script a seguir cria um recurso clusterizado do SQL Server chamado mssqlha. 
 
 ```bash
 sudo crm configure
@@ -229,13 +229,13 @@ Para obter mais informações, consulte [Configurando e gerenciando recursos de 
 
 ### <a name="verify-that-sql-server-is-started"></a>Verifique se o SQL Server é iniciado. 
 
-Para verificar se o SQL Server foi iniciado, execute o **crm status** comando:
+Para verificar se o SQL Server foi iniciado, execute as **crm status** comando:
 
 ```bash
 crm status
 ```
 
-Os exemplos a seguir mostra os resultados quando Pacemaker foi iniciado com êxito como recurso de cluster. 
+Os exemplos a seguir mostra os resultados quando o Pacemaker foi iniciado com êxito como recurso de cluster. 
 ```
 2 nodes configured
 2 resources configured
@@ -250,13 +250,13 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Gerenciar recursos de cluster
 
-Para gerenciar seus recursos de cluster, consulte o tópico a seguir SUSE: [Gerenciando recursos de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Para gerenciar os recursos de cluster, consulte o tópico SUSE a seguir: [Gerenciando recursos de Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>failover manual
 
-Embora os recursos estiverem configurados para failover automaticamente (ou migrar) para outros nós do cluster em caso de falha de hardware ou software, você pode mover um recurso também manualmente para outro nó do cluster usando a GUI do Pacemaker ou a linha de comando. 
+Embora os recursos são configurados para failover automaticamente (ou migrar) para outros nós do cluster em caso de falha de hardware ou software, você pode mover um recurso manualmente para outro nó no cluster usando a GUI do Pacemaker ou a linha de comando . 
 
-Use o comando de migração para esta tarefa. Por exemplo, para migrar o recurso SQL para nomes de nó de cluster SLES2 executar: 
+Use o comando de migração para esta tarefa. Por exemplo, para migrar do recurso SQL em nomes de nó de cluster SLES2 executar: 
 
 ```bash
 crm resource

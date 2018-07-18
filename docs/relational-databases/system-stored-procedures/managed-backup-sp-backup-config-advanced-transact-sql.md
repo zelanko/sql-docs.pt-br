@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08c79b906a95c41013f28a559acdc7f98809c186
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970478"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ EXEC managed_backup.sp_backup_config_advanced
  O nome do banco de dados para habilitar o backup gerenciado em um banco de dados específico. Se for NULL ou *, em seguida, esse backup gerenciado se aplica a todos os bancos de dados no servidor.  
   
  @encryption_algorithm  
- O nome do algoritmo de criptografia usado durante o backup para criptografar o arquivo de backup. O @encryption_algorithm é **SYSNAME**. É um parâmetro obrigatório ao configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez para o banco de dados. Especifique **NO_ENCRYPTION** se você não quiser criptografar o arquivo de backup. Ao alterar os parâmetros de configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], esse parâmetro será opcional – se o parâmetro não for especificado, os valores de configuração existentes serão retidos. Os valores permitidos para este parâmetro são:  
+ O nome do algoritmo de criptografia usado durante o backup para criptografar o arquivo de backup. O @encryption_algorithm está **SYSNAME**. É um parâmetro obrigatório ao configurar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez para o banco de dados. Especificar **NO_ENCRYPTION** se você não quiser criptografar o arquivo de backup. Ao alterar os parâmetros de configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], esse parâmetro será opcional – se o parâmetro não for especificado, os valores de configuração existentes serão retidos. Os valores permitidos para este parâmetro são:  
   
 -   AES_128  
   
@@ -70,10 +70,10 @@ EXEC managed_backup.sp_backup_config_advanced
  Para obter mais informações sobre algoritmos de criptografia, consulte [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- O tipo de Criptografador, que pode ser 'Certificado' ou ' ASYMMETRIC_KEY ". O @encryptor_type é **nvarchar (32)**. Esse parâmetro é opcional se você especificar NO_ENCRYPTION para o @encryption_algorithm parâmetro.  
+ O tipo de Criptografador, que pode ser 'Certificado' ou ' ASYMMETRIC_KEY ". O @encryptor_type está **nvarchar(32)**. Esse parâmetro é opcional se você especificar NO_ENCRYPTION para o @encryption_algorithm parâmetro.  
   
  @encryptor_name  
- O nome de um certificado existente ou chave assimétrica a ser usado para criptografar o backup. O @encryptor_name é **SYSNAME**. Se estiver usando uma chave assimétrica, ela deverá ser configurada com EKM (gerenciamento de chave extensível). Esse parâmetro é opcional se você especificar NO_ENCRYPTION para o @encryption_algorithm parâmetro.  
+ O nome de um certificado existente ou chave assimétrica a ser usado para criptografar o backup. O @encryptor_name está **SYSNAME**. Se estiver usando uma chave assimétrica, ela deverá ser configurada com EKM (gerenciamento de chave extensível). Esse parâmetro é opcional se você especificar NO_ENCRYPTION para o @encryption_algorithm parâmetro.  
   
  Para obter mais informações, veja [EKM &#40;Gerenciamento de Chave Extensível&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
@@ -86,7 +86,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer a participação no **db_backupoperator** função, do banco de dados com **ALTER ANY CREDENTIAL** permissões, e **EXECUTE** permissões **sp_delete _ backuphistory** procedimento armazenado.  
+ Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e **EXECUTE** permissões em **sp_delete backuphistory** procedimento armazenado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define as opções de configuração avançada para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para a instância do SQL Server.  

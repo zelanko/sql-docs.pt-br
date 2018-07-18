@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ba326369983800065b6ae23cfa83e35ad034f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023834"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimentos armazenados do plano de manutenção do banco de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao sistema a seguir procedimentos armazenados que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao sistema a seguir procedimentos armazenados que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -44,6 +44,6 @@ ms.locfileid: "33237584"
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Planos de Manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

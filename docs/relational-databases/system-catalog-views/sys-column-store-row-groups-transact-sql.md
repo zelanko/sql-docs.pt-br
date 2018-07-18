@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef19c029232369de3a2da590e17f97a8bdb13655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181682"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029786"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "33181682"
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|A ID da tabela na qual esse índice é definido.|  
-|**index_id**|**Int**|ID do índice para a tabela que contém esse índice columnstore.|  
-|**partition_number**|**Int**|ID da partição da tabela que contém o row_group_id do grupo de linhas. Você pode usar o partition_number para adicionar esse DMV a sys.partitions.|  
-|**row_group_id**|**Int**|O número do grupo de linhas associado a esse grupo de linhas. Isso é exclusivo dentro da partição.<br /><br /> -1 = final de uma tabela na memória.|  
+|**object_id**|**int**|A ID da tabela na qual esse índice é definido.|  
+|**index_id**|**int**|ID do índice para a tabela que contém esse índice columnstore.|  
+|**partition_number**|**int**|ID da partição da tabela que contém o row_group_id do grupo de linhas. Você pode usar o partition_number para adicionar esse DMV a sys.partitions.|  
+|**row_group_id**|**int**|O número do grupo de linhas associado a esse grupo de linhas. Isso é exclusivo dentro da partição.<br /><br /> -1 = a parte final de uma tabela na memória.|  
 |**delta_store_hobt_id**|**bigint**|O hobt_id para o grupo de linhas aberto no repositório delta.<br /><br /> NULL se o grupo de linhas não está no repositório delta.<br /><br /> NULL para o final de uma tabela na memória.|  
-|**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = DA MARCA DE EXCLUSÃO|  
+|**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = DA MARCA PARA EXCLUSÃO|  
 |**state_description**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> INVISIBLE – um segmento compactado oculto no processo de ter sido criado a partir dos dados em um repositório delta. As ações de leitura usarão o repositório delta até que o segmento compactado invisível seja concluído. Em seguida, o novo segmento é tornado visível e o repositório delta da origem é removido.<br /><br /> OPEN – Um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED – Um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo Tuple Mover.<br /><br /> COMPRESSED – Um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
 |**deleted_rows**|**bigint**|Total de linhas no grupo de linhas marcadas como excluídas. Isso é sempre 0 para grupos de linhas DELTA.|  
@@ -52,11 +52,11 @@ ms.locfileid: "33181682"
 ## <a name="remarks"></a>Remarks  
  Retorna uma linha para cada grupo de linhas columnstore para cada tabela que tem um índice columnstore clusterizado ou não clusterizado.  
   
- Use **column_store_row_groups** para determinar o número de linhas incluídas no grupo de linhas e o tamanho do grupo de linhas.  
+ Use **column_store_row_groups** para determinar o número de linhas incluído no grupo de linhas e o tamanho do grupo de linhas.  
   
- Quando o número de linhas excluídas em um grupo de linhas cresce para uma grande porcentagem do total de linhas, a tabela fica menos eficiente. Recrie o índice columnstore para reduzir o tamanho da tabela, reduzindo a E/S de disco necessária para ler a tabela. Para recriar o índice columnstore, use o **RECRIAR** opção do **ALTER INDEX** instrução.  
+ Quando o número de linhas excluídas em um grupo de linhas cresce para uma grande porcentagem do total de linhas, a tabela fica menos eficiente. Recrie o índice columnstore para reduzir o tamanho da tabela, reduzindo a E/S de disco necessária para ler a tabela. Para recriar o índice columnstore, use o **recompile** opção do **ALTER INDEX** instrução.  
   
- O columnstore atualizável primeiro insere novos dados em um **abrir** rowgroup, que está no formato rowstore e às vezes também é conhecido como uma tabela delta.  Quando um rowgroup aberto está cheio, seu estado é alterado para **fechado**. Um rowgroup fechado é compactado no formato columnstore pelo tuple mover e o estado muda para **COMPRESSED**.  O Tuple Mover é um processo em segundo plano que periodicamente é acionado e verifica se há algum rowgroup fechado que já esteja pronto para compactar em um rowgroup columnstore.  O Tuple Mover também desaloca todos os rowgroups nos quais cada linha foi excluída. Rowgroups desalocados são marcados como **TOMBSTONE**. Para executar o tuple mover imediatamente, use o **REORGANIZAR** opção do **ALTER INDEX** instrução.  
+ O columnstore atualizável primeiro insere novos dados em um **abrir** rowgroup, o que está no formato rowstore e, às vezes também é conhecido como uma tabela delta.  Quando um rowgroup aberto está cheio, seu estado é alterado para **fechado**. Um rowgroup fechado é compactado no formato columnstore pelo tuple mover e o estado muda para **COMPRESSED**.  O Tuple Mover é um processo em segundo plano que periodicamente é acionado e verifica se há algum rowgroup fechado que já esteja pronto para compactar em um rowgroup columnstore.  O Tuple Mover também desaloca todos os rowgroups nos quais cada linha foi excluída. Rowgroups desalocados são marcados como **marca para exclusão**. Para executar o tuple mover imediatamente, use o **REORGANIZE** opção do **ALTER INDEX** instrução.  
   
  Quando um grupo de linhas de columnstore tiver sido preenchido, ele é compactado e para de aceitar novas linhas. Quando as linhas são excluídas de um grupo compactado, elas permanecem, mas são marcadas como excluídas. As atualizações para um grupo compactado são implementadas como uma exclusão do grupo compactado, e uma inserção em um grupo aberto.  
   

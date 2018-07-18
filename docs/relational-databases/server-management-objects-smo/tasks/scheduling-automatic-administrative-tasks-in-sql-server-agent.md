@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029834"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Agendando tarefas administrativas automáticas no SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32970892"
  Os objetos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estão no namespace <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, você deve incluir o **usando** instrução para qualificar o namespace do Agent. Insira a instrução após outras **usando** instruções, antes de qualquer declaração no aplicativo, como:
+Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, você deve incluir o **usando** instrução para qualificar o namespace do Agent. Insira a instrução após a outra **usando** instruções antes de qualquer declaração no aplicativo, tais como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -173,7 +173,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instância | ComparisionOp | CompValue**  
   
- É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo exige colchetes porque **operador** é um [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
+ É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> exige colchetes porque **operador** é um [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
   
 ```csharp  
 {  
@@ -206,7 +206,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instância | ComparisionOp | CompValue**  
   
- É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo exige colchetes porque **operador** é um [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
+ É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> exige colchetes porque **operador** é um [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -272,7 +272,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [O SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
   

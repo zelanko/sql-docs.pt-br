@@ -31,16 +31,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9215cc303d4a6541e958a86dbdd352802bd64bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007723"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030874"
 ---
 # <a name="replication-views-transact-sql"></a>Exibições de replicação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Essas exibições contêm informações que são usadas pela replicação no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As exibições habilitam acesso facilitado aos dados em [tabelas do sistema de replicação](../../relational-databases/system-tables/replication-tables-transact-sql.md). As exibições são criadas em um banco de dados de usuário quando esse banco de dados está habilitado como banco de dados de publicação ou assinatura. Todos os objetos de replicação são removidos dos bancos de dados do usuário quando o banco de dados é removido de uma topologia de replicação. O método preferencial para acessar os metadados de replicação é usando [procedimentos armazenados de replicação](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Essas exibições contêm informações que são usadas pela replicação [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As exibições habilitam acesso facilitado aos dados no [tabelas do sistema de replicação](../../relational-databases/system-tables/replication-tables-transact-sql.md). As exibições são criadas em um banco de dados de usuário quando esse banco de dados está habilitado como banco de dados de publicação ou assinatura. Todos os objetos de replicação são removidos dos bancos de dados do usuário quando o banco de dados é removido de uma topologia de replicação. O método preferencial para acessar os metadados de replicação é usando [procedimentos armazenados de replicação](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Exibições de sistema não devem ser alteradas diretamente por nenhum usuário.  

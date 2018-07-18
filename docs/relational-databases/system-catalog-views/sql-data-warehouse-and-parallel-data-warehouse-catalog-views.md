@@ -1,5 +1,5 @@
 ---
-title: SQL Data Warehouse Parallel Data Warehouse e exibições do catálogo | Microsoft Docs
+title: SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,18 +19,18 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029721"
 ---
-# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse e exibições de catálogo do Parallel Data Warehouse
+# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Este tópico lista os [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] exibições do catálogo.  
   
- Todos os [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] exibições do catálogo começam com **sys.pdw**.  
+ Todos os [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] modos de exibição de catálogo começam com **sys.pdw**.  
   
 ## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] exibições do catálogo  
  As exibições de catálogo a seguir se aplicam a ambos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  

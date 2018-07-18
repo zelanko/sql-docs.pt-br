@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82b4093aa1a46cf1a7bb14b4c689ba6ba09e4d2b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973163"
 ---
 # <a name="mark-as-date-table"></a>Marcar como Tabela de Data
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Na lição 2: Obter dados, você importou uma tabela de dimensão chamada **DimDate**. Enquanto seu modelo essa tabela é denominada DimDate, ele também é conhecido como uma *a tabela de data*, em que ela contém dados de data e hora.  
+Na lição 2: Obter dados, você importou uma tabela de dimensão chamada **DimDate**. Enquanto no seu modelo essa tabela é denominada DimDate, ela também é conhecida como uma *tabela de data*, que contém dados de data e hora.  
   
-Sempre que você usar funções de inteligência de tempo DAX, como quando você criar medidas mais tarde, você deve especificar as propriedades que incluem um *a tabela de data* e um identificador exclusivo *coluna data* nessa tabela.
+Sempre que você usar funções de inteligência de tempo DAX, como quando você cria medidas mais adiante, você deve especificar as propriedades que inclui um *tabela de datas* e um identificador exclusivo *coluna data* nessa tabela.
   
-Nesta lição, você deve marcar o **DimDate** tabela como o *a tabela de data* e **data** coluna (na tabela de data) como o *coluna data* (exclusivo identificador).  
+Nesta lição, você deve marcar a **DimDate** de tabela como o *a tabela de data* e o **data** coluna (na tabela de data) como o *coluna data* (exclusivo identificador).  
 
-Antes de marcar a tabela de data e a coluna de data, é um bom momento para fazer a manutenção do sistema um pouco para facilitar a compreensão do seu modelo. Observe, na tabela DimDate, uma coluna denominada **FullDateAlternateKey**. Esta coluna contém uma linha para cada dia em cada ano civil incluído na tabela. Você usa essa coluna muito em fórmulas de medida e em relatórios. Porém, FullDateAlternateKey não é um identificador válido para essa coluna. Você renomeá-la para **data**, tornando mais fácil identificar e incluir em fórmulas. Sempre que possível, é recomendável renomear objetos, como tabelas e colunas para torná-los mais fáceis de identificar no SSDT e aplicativos cliente de relatório. 
+Antes de marcar a tabela de data e a coluna de data, é um bom momento para fazer uma pequena limpeza para facilitar a compreensão do seu modelo. Observe, na tabela DimDate, uma coluna denominada **FullDateAlternateKey**. Esta coluna contém uma linha para cada dia em cada ano civil incluído na tabela. Você usa muito essa coluna em fórmulas de medida e em relatórios. Mas, FullDateAlternateKey não é um bom identificador para essa coluna. Você renomeá-lo para **data**, tornando mais fácil de identificar e incluir em fórmulas. Sempre que possível, é uma boa ideia para renomear objetos, como tabelas e colunas para torná-los mais fáceis de identificar no SSDT e aplicativos cliente de relatório. 
   
 Tempo estimado para concluir esta lição: **três minutos**  
   
@@ -38,7 +38,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
 
 1.  No designer de modelo, clique o **DimDate** tabela.
 
-2.  Clique duas vezes no cabeçalho para o **FullDateAlternateKey** coluna e, em seguida, renomeie-o para **data**.
+2.  Clique duas vezes no cabeçalho para o **FullDateAlternateKey** coluna e, em seguida, renomeie-o como **data**.
 
   
 ### <a name="to-set-mark-as-date-table"></a>Para definir Marcar como Tabela de Data  
@@ -47,7 +47,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
 2.  Clique no menu **Tabela** , clique em **Data**e em **Marcar como Tabela de Data**.  
   
-3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione a coluna **Data** como o identificador exclusivo. Ele geralmente é selecionado por padrão. Clique em **OK**. 
+3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione a coluna **Data** como o identificador exclusivo. Ela geralmente é selecionada por padrão. Clique em **OK**. 
 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   

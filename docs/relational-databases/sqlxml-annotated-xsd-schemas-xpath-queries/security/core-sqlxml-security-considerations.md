@@ -19,17 +19,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3e0f77d2e6ee7a225288e5c83006c1f37650d98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971901"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Principais considerações de segurança do SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A seguir, encontram-se diretrizes de segurança para o uso do SQLXML para acessar dados.  
   
--   O provedor SQLXMLOLEDB expõe uma **StreamFlags** propriedade permite que você defina sinalizadores indicando qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [provedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   O provedor SQLXMLOLEDB expõe um **StreamFlags** propriedade que permite que você defina sinalizadores para indicar qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [provedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   Quando erros de SQLXML ocorrem e são retornados, eles podem conter informações sobre o esquema de banco de dados, como nomes de tabela, nomes de colunas ou informações sobre tipo. Você deve ter cuidado ao tratar esses erros, para que as informações sobre a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não sejam facilmente descobertas por usuários não autorizados.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32971981"
   
 -   Ao receber resultados de consulta, o SQLXML não executa nenhuma ação com base no conteúdo dos dados que recebe. Nenhum processamento adicional é feito baseado no tipo ou no conteúdo dos dados. Os dados nunca são tratados como código com o qual as ações serão executadas.  
   
--   Ao executar modelos XML, o SQLXML converte as consultas XPath e DBObject contidas no modelo enviado em comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que são, por sua vez, executados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão a estrutura do banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, por incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar modelos XML, o SQLXML converte as consultas XPath e DBObject contidas no modelo enviado em comandos de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que são, por sua vez, executados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão a estrutura do banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
   
 -   Ao executar consultas DBObject e instruções XPath em arquivos de mapeamento, o SQLXML não alterará os dados no banco de dados.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "32971981"
   
 -   O SQLXML permite que os usuários executem qualquer consulta SQL que queiram no banco de dados. Essa funcionalidade nunca deve ser exposta para uma fonte não segura ou não controlada, já que ela está abrindo o banco de dados SQL para qualquer usuário.  
   
--   Ao executar diagramas de atualização, o SQLXML converte o **updg:sync** blocos em comandos INSERT, UPDATE e DELETE em relação a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, por incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar diagramas de atualização, o SQLXML converte o **updg:sync** blocos de comandos INSERT, UPDATE e DELETE em relação a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
   
--   Ao executar diagramas de atualização, o SQLXML converte o diagrama em comandos DELETE, UPDATE e INSERT na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, por incluí-los em um **sql:query** bloco de um modelo.  
+-   Ao executar diagramas de atualização, o SQLXML converte o diagrama em comandos DELETE, UPDATE e INSERT na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, ao incluí-los em um **sql:query** bloco de um modelo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Considerações de segurança do SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

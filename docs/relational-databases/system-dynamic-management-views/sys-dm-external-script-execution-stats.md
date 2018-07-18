@@ -1,5 +1,5 @@
 ---
-title: sys.DM external_script_execution_stats | Microsoft Docs
+title: DM external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023810"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Portanto, os contadores acompanhados por esta DMV são mantidos em execução, e
 ### <a name="r-counter-values"></a>Valores de contador do R
  Atualmente, a única linguagem de script externo com suporte no [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] é o R. As solicitações de script externo para a linguagem R são tratadas pelo [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
 
-Para R, essa DMV rastreia o número de chamadas de R que são feitas em uma instância. Por exemplo, se `rxLinMod` for chamado e executado em paralelo, o contador será incrementado em 1.
+Para R, essa DMV registra o número de chamadas de R que são feitas em uma instância. Por exemplo, se `rxLinMod` for chamado e executado em paralelo, o contador será incrementado em 1.
  
 Na linguagem R, os valores de contador exibidos no campo *counter_name* representam os nomes das funções ScaleR registradas. Os valores do campo *counter_value* representam o número cumulativo de instâncias da função ScaleR específica. 
 

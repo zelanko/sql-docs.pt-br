@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972662"
 ---
 # <a name="divide-dmx"></a>(Divisão) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,10 +29,10 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *dividendo*  
+ *Dividendo*  
  Expressão DMX (Data Mining Extensions) válida que retorna um valor numérico.  
   
- *divisor*  
+ *Divisor*  
  Expressão DMX válida que retorna um valor numérico.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -47,7 +47,7 @@ Dividend / Divisor
  [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Dividir &#40;expressão SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [Dividir &#40;expressão do SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
  [&#40;Dividir&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   
