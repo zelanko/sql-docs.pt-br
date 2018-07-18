@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de2d55bbe2dafaa02886a1e0deeb675a43469e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be59e84a5b40444e6218c2b390b832516193ecf
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075153"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782687"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de agrupamento do Windows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Georgiano (Geórgia)|Cyrillic_General_100_|Não disponível|  
 |Groenlandês (Groenlândia)|Danish_Greenlandic_100_|Não disponível|  
 |Gujarati (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
-|Hausa (Nigéria, Latino)|Latin1_General_100_|Não disponível|  
+|hauçá (Nigéria, Latino)|Latin1_General_100_|Não disponível|  
 |Híndi (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |Igbo (Nigéria)|Latin1_General_100_|Não disponível|  
 |Inuktitut (Canadá, latino)|Latin1_General_100_|Não disponível|  
@@ -156,7 +155,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Irlandês (Irlanda)|Latin1_General_100_|Não disponível|  
 |Japonês (Japão XJIS)|Japanese_XJIS_100_|Japanese_90_, Japanese_|  
 |Japonês (Japão)|Japanese_Bushu_Kakusu_100_|Não disponível|  
-|Kannada (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|canarim (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |Khmer (Camboja)|Khmer_100_<sup>1</sup>|Não disponível|  
 |Quiché (Guatemala)|Modern_Spanish_100_|Não disponível|  
 |Quiniaruanda (Ruanda)|Latin1_General_100_|Não disponível|  
@@ -169,16 +168,16 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Maori (Nova Zelândia)|Maori_100_|Não disponível|  
 |Mapudungun (Chile)|Mapudungan_100_|Não disponível|  
 |Marati (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
-|Mohawk (Canadá)|Mohawk_100_|Não disponível|  
+|moicano (Canadá)|Mohawk_100_|Não disponível|  
 |Mongol (RPC)|Cyrillic_General_100_|Não disponível|  
 |Nepalês (Nepal)|Nepali_100_<sup>1</sup>|Não disponível|  
 |Norueguês, (Bokmål, Noruega)|Norwegian_100_|Não disponível|  
 |Norueguês (Nynorsk, Noruega)|Norwegian_100_|Não disponível|  
-|Occitano (França)|French_100_|Não disponível|  
+|occitânico (França)|French_100_|Não disponível|  
 |Oriá (Índia)|Indic_General_100_<sup>1</sup>|Não disponível|  
 |Pashto (Afeganistão)|Pashto_100_<sup>1</sup>|Não disponível|  
 |Persa (Irã)|Persian_100_|Não disponível|  
-|Punjabi (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|panjabi (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |Quíchua (Bolívia)|Latin1_General_100_|Não disponível|  
 |Quíchua (Equador)|Latin1_General_100_|Não disponível|  
 |Quíchua (Peru)|Latin1_General_100_|Não disponível|  
@@ -197,7 +196,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Sérvio (Bósnia e Herzegovina, latino)|Serbian_Latin_100_|Não disponível|  
 |Sérvio (Sérvia, cirílico)|Serbian_Cyrillic_100_|Não disponível|  
 |Sérvio (Sérvia, latino)|Serbian_Latin_100_|Não disponível|  
-|Sesotho sa Leboa/Sotho do Norte (África do Sul)|Latin1_General_100_|Não disponível|  
+|soto setentrional (África do Sul)|Latin1_General_100_|Não disponível|  
 |Setswana/Tswana (África do Sul)|Latin1_General_100_|Não disponível|  
 |Cingalês (Sri Lanka)|Indic_General_100_<sup>1</sup>|Não disponível|  
 |Suaíle (Quênia)|Latin1_General_100_|Não disponível|  
@@ -212,7 +211,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Sorábio Alto (Alemanha)|Upper_Sorbian_100_|Não disponível|  
 |Urdu (Paquistão)|Urdu_100_|Não disponível|  
 |Galês (Reino Unido)|Welsh_100_|Não disponível|  
-|Uólofe (Senegal)|French_100_|Não disponível|  
+|uolofe (Senegal)|French_100_|Não disponível|  
 |Xhosa/isiXhosa (África do Sul)|Latin1_General_100_|Não disponível|  
 |Yakut (Rússia)|Yakut_100_|Não disponível|  
 |Yi (RPC)|Latin1_General_100_|Não disponível|  
@@ -231,7 +230,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
  [Suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   

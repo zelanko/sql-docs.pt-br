@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702510"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782427"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ A restauração de um backup em um dispositivo com um número maior de nós de C
   
 Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós (30 GB por nó) em um dispositivo de 6 nós, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cria um banco de dados de 180 GB (6 nós com 30 GB por nó) no dispositivo de 6 nós. Inicialmente, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaura o banco de dados em dois nós para que isso corresponda à configuração de origem e, em seguida, redistribui os dados para todos os seis nós.  
   
- Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md) para reduzir os tamanhos de arquivos de banco de dados.  
+ Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) para reduzir os tamanhos de arquivos de banco de dados.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Para essas limitações e restrições, o dispositivo de origem é o dispositivo por meio do qual o backup do banco de dados foi criado e o dispositivo de destino é o dispositivo no qual o banco de dados será restaurado.  

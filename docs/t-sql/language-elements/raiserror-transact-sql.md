@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9e89081eadae06a6dd14ae9a4d5e273657146f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f835fc61aea7474d9c31f33b070d96da1afa3033
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065783"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36241058"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  É um código que determina o espaçamento e a justificação do valor substituído.  
   
-|Código|Prefixo ou justificação|Description|  
+|Código|Prefixo ou justificação|Descrição|  
 |----------|-----------------------------|-----------------|  
 |- (menos)|Justificado à esquerda|Justifica o valor de argumento à esquerda dentro da largura de campo especificada.|  
 |+ (mais)|Prefixo de sinal|Precede o valor do argumento com um mais (+) ou menos (-) se o valor for de um tipo assinado.|  
@@ -162,7 +161,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *opção*  
  É uma opção personalizada para o erro e pode ser um dos valores na tabela a seguir.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |LOG|Registra o erro no log de erros e no log do aplicativo para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os erros registrados no log de erros atualmente estão limitados a no máximo 440 bytes. Somente um membro da função de servidor fixa sysadmin ou um usuário com permissões ALTER TRACE pode especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envia mensagens imediatamente ao cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

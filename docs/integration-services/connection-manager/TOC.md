@@ -5,6 +5,7 @@
 # [Gerenciador de Conexões do Analysis Services](analysis-services-connection-manager.md)  
 ## [Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
 # [Gerenciador de conexões do Azure Data Lake Store](azure-data-lake-store-connection-manager.md)  
+# [Gerenciador de Conexão do Azure Data Lake Analytics](azure-data-lake-analytics-connection-manager.md) 
 # [Gerenciador de Conexões do Microsoft Azure HDInsight](azure-hdinsight-connection-manager.md)  
 # [Gerenciador de Conexões do Azure Resource Manager](azure-resource-manager-connection-manager.md)  
 # [Gerenciador de conexões do Armazenamento do Azure](azure-storage-connection-manager.md)  
