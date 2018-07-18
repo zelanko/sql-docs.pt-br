@@ -1,6 +1,6 @@
 ---
-title: 'Início rápido: Conectar e consultar um Azure SQL Data Warehouse usando o Studio de operações do SQL (visualização) | Microsoft Docs'
-description: Este guia de início rápido mostra como usar o Studio de operações do SQL (visualização) para se conectar a um banco de dados SQL e executar uma consulta
+title: 'Guia de início rápido: Conectar e consultar um Azure SQL Data Warehouse usando o SQL Operations Studio (versão prévia) | Microsoft Docs'
+description: Este início rápido mostra como usar o SQL Operations Studio (versão prévia) para se conectar a um banco de dados SQL e executar uma consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -13,59 +13,59 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2f0ad75a6be9cb3ad1404a0406601fbef68b0303
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 8439dd5881629a5761b1a7a5581489ee47296358
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235506"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980488"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar e consultar dados no Azure SQL Data Warehouse
 
-Este guia de início rápido demonstra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Azure data warehouse e, em seguida, usar instruções Transact-SQL para criar, inserir e selecione os dados. 
+Neste início rápido demonstra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao Azure SQL data warehouse e, em seguida, usar instruções Transact-SQL para criar, inserir e selecionar dados. 
 
 ## <a name="prerequisites"></a>Prerequisites
-Para concluir este guia de início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)]e um data warehouse do SQL Azure.
+Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)]e um Azure SQL data warehouse.
 
-- [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Instale [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Se você ainda não tiver um SQL data warehouse, consulte [criar um Data Warehouse do SQL](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Se você ainda não tiver um SQL data warehouse, consulte [criar um SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Lembre-se o nome do servidor e credenciais de logon!
 
 
-## <a name="connect-to-your-data-warehouse"></a>Conecte-se ao data warehouse
+## <a name="connect-to-your-data-warehouse"></a>Conectar-se ao data warehouse
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma conexão ao seu servidor do Azure SQL Data Warehouse.
 
-1. Na primeira vez que você executar [!INCLUDE[name-sos](../includes/name-sos-short.md)] o **Conexão** deve abrir a página. Se você não vir o **Conexão** , clique em **Adicionar Conexão**, ou o **nova Conexão** ícone o **servidores** barra lateral:
+1. Na primeira vez que você executar [!INCLUDE[name-sos](../includes/name-sos-short.md)] as **Conexão** deve abrir a página. Se você não vir as **Conexão** , clique em **Adicionar Conexão**, ou o **nova Conexão** ícone no **servidores** barra lateral:
    
    ![Novo ícone de Conexão](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Este artigo usa *logon SQL*, mas *autenticação do Windows* também tem suporte. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a senha para *sua* servidor SQL do Azure:
+2. Este artigo usa *logon do SQL*, mas *autenticação do Windows* também tem suporte. Preencha os campos da seguinte maneira usando o nome do servidor, nome de usuário e senha para *sua* servidor SQL do Azure:
 
    | Configuração       | Valor sugerido | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve ser semelhante a esta: **sqldwsample.database.windows.net** |
+   | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve ser algo parecido com isto: **sqldwsample.database.windows.net** |
    | **Autenticação** | Logon do SQL| Autenticação do SQL é usada neste tutorial. |
    | **Nome de usuário** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha (logon do SQL)** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
-   | **Salvar senha?** | Sim ou Não | Selecione Sim se você não deseja digitar a senha cada vez. |
+   | **Salvar senha?** | Sim ou Não | Selecione Sim se você não quiser inserir a senha de cada vez. |
    | **Nome do banco de dados** | *Deixe em branco* | O nome do banco de dados ao qual se conectar. |
    | **Grupo de servidores** | Selecione <Default> | Se você criou um grupo de servidores, você pode definir para um grupo de servidores específicos. | 
 
    ![Novo ícone de Conexão](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Se o servidor não tiver uma regra de firewall permitindo operações de SQL Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [as regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Se seu servidor não tiver uma regra de firewall permitindo que o SQL Operations Studio para se conectar, o **criar nova regra de firewall** é aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, consulte [regras de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nova regra de firewall](media/quickstart-sql-dw/firewall.png)  
 
-4. Depois de se conectar com êxito o servidor é aberto no *servidores* barra lateral.
+4. Depois de se conectar com êxito o servidor é aberto na *servidores* barra lateral.
 
 ## <a name="create-the-tutorial-data-warehouse"></a>Criar o tutorial de data warehouse
 1. Clique com o botão direito no seu servidor, no Pesquisador de objetos e selecione **nova consulta.**
 
-1. Cole o trecho a seguir no editor de consulta e clique em **executar**:
+1. Cole o trecho a seguir no editor de consultas e clique em **executar**:
 
    ```sql
     IF NOT EXISTS (
@@ -83,17 +83,17 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
 ## <a name="create-a-table"></a>Criar uma tabela
 
-O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas deseja criar uma tabela no *TutorialDB* banco de dados. 
+O editor de consultas ainda está conectado para o *mestre* banco de dados, mas podemos deseja criar uma tabela na *TutorialDB* banco de dados. 
 
 1. Alterar o contexto de conexão para **TutorialDB**:
 
    ![Contexto de alteração](media/quickstart-sql-database/change-context.png)
 
 
-1. Cole o trecho a seguir no editor de consulta e clique em **executar**:
+1. Cole o trecho a seguir no editor de consultas e clique em **executar**:
 
    > [!NOTE]
-   > Você pode anexá-lo para ou substitua a consulta anterior no editor. Observe que clicar nos **executar** executa somente a consulta selecionada. Se nada estiver selecionado, clicando em **executar** executa todas as consultas no editor.
+   > Você pode anexá-lo para ou substituir a consulta anterior no editor. Observe que clicar em **executar** executa somente a consulta selecionada. Se nada estiver selecionado, clicando em **executar** executa todas as consultas no editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +115,7 @@ O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas dese
 
 ## <a name="insert-rows"></a>Inserir linhas
 
-1. Cole o trecho a seguir no editor de consulta e clique em **executar**:
+1. Cole o trecho a seguir no editor de consultas e clique em **executar**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -129,7 +129,7 @@ O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas dese
 
 
 ## <a name="view-the-result"></a>Exibir o resultado
-1. Cole o trecho a seguir no editor de consulta e clique em **executar**:
+1. Cole o trecho a seguir no editor de consultas e clique em **executar**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -143,10 +143,10 @@ O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas dese
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
-Outros artigos nesta coleção incrementar este guia de início rápido. Se você planeja continuar a trabalhar com os tutoriais subsequentes, limpar os recursos criados neste guia de início rápido. Se você não planeja continuar, use as etapas a seguir para excluir recursos criados por este guia de início rápido no portal do Azure.
-Limpe recursos excluindo os grupos de recursos que não é mais necessário. Para obter detalhes, consulte [limpar os recursos](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Outros artigos nesta coleção aproveitam esse início rápido. Se você planeja continuar trabalhando com inícios rápidos subsequentes, não limpe os recursos criados neste início rápido. Se você não planeja continuar, use as etapas a seguir para excluir os recursos criados neste início rápido no portal do Azure.
+Limpe recursos excluindo os grupos de recursos que você não precisa mais. Para obter detalhes, consulte [limpar os recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você se conectou com êxito para um data warehouse do SQL Azure e executar uma consulta, experimente o [tutorial do editor de código](tutorial-sql-editor.md).
+Agora que você se conectou com êxito para um Azure SQL data warehouse e executou uma consulta, experimente o [tutorial do editor de código](tutorial-sql-editor.md).

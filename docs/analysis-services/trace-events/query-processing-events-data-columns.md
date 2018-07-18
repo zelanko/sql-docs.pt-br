@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c0222c19d1f21e130f342f689ebb72cc8c0fda7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045530"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017593"
 ---
 # <a name="query-processing-events-data-columns"></a>Colunas de dados de eventos de processamento de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -77,7 +77,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -98,7 +98,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -121,7 +121,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -163,7 +163,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -206,7 +206,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -228,7 +228,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -249,7 +249,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -271,7 +271,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -293,7 +293,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ProgressTotal|9|1|Andamento total.|  
 |IntegerData|10|1|Dados Integer.|  
@@ -315,7 +315,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
@@ -335,7 +335,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
@@ -354,7 +354,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
@@ -374,7 +374,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
@@ -419,7 +419,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
@@ -431,7 +431,7 @@ ms.locfileid: "34045530"
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |ObjectReference|15|8|Referência ao objeto. Codificado como XML para todos os pais, usando marcas para descrever o objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -493,7 +493,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
@@ -503,7 +503,7 @@ ms.locfileid: "34045530"
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -521,7 +521,7 @@ ms.locfileid: "34045530"
 |CurrentTime|2|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Horário de início do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Período de tempo (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |JobID|7|1|ID do trabalho para andamento.|  
 |SessionType|8|8|Tipo de sessão (qual entidade causou a operação).|  
@@ -531,7 +531,7 @@ ms.locfileid: "34045530"
 |ObjectName|13|8|Nome do objeto.|  
 |ObjectPath|14|8|Caminho do objeto. Uma lista de pais separados por vírgulas, começando com o pai do objeto.|  
 |Severity|22|1|Nível de severidade de uma exceção.|  
-|Success|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
+|Êxito|23|1|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|  
 |Erro|24|1|Número de erro de um determinado evento.|  
 |ConnectionID|25|1|ID de conexão exclusiva.|  
 |DatabaseName|28|8|Nome do banco de dados no qual a instrução do usuário está sendo executada.|  
@@ -542,6 +542,6 @@ ms.locfileid: "34045530"
 |ServerName|43|8|Nome do servidor que gera o evento.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Categoria de eventos de processamento de consulta](../../analysis-services/trace-events/query-processing-events-category.md)  
+ [Categoria de eventos de processamento de consultas](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

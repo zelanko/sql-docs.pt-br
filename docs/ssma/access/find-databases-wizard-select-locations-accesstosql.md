@@ -1,5 +1,5 @@
 ---
-title: Localizar o Assistente de bancos de dados (selecionados locais) (AccessToSQL) | Microsoft Docs
+title: Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,27 +18,27 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773652"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979478"
 ---
-# <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecionados locais) (AccessToSQL)
-Na página Selecionar locais do Assistente para localizar os bancos de dados, você pode inserir os parâmetros de pesquisa para localizar os bancos de dados do Access.  
+# <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL)
+Na página Selecionar locais do assistente localizar bancos de dados, você pode inserir os parâmetros de pesquisa para localizar bancos de dados do Access.  
   
-Para abrir o Assistente de bancos de dados de localização no **arquivo** menu, clique em **localizar bancos de dados**. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Para abrir o assistente localizar bancos de dados, o **arquivo** menu, clique em **localizar bancos de dados**. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
 ## <a name="options"></a>Opções  
 **Procurar**  
-Clique para procurar o computador ou na rede. Selecione a pasta ou o local para pesquisar e, em seguida, clique em **Okey**. Clique em **adicionar** para adicionar este local à lista.  
+Clique para procurar o computador ou na rede. Selecione a pasta ou local para pesquisar e, em seguida, clique em **Okey**. Clique em **adicionar** para adicionar esse local à lista.  
   
 **Caixa de caminho**  
 Mostra o caminho para adicionar a caixa de locais. Insira ou navegue até o caminho que você deseja verificar e, em seguida, clique no **adicionar** botão.  
   
 **Caixa de locais**  
-Lista os locais que SSMA examinará. Quando você clica o **adicionar** botão, o caminho especificado é adicionado à caixa.  
+Lista os locais que examinará o SSMA. Quando você clica o **adicionar** botão, o caminho especificado é adicionado à caixa.  
   
 **Adicionar**  
 Adiciona o local na caixa de texto caminho à lista de locais.  
@@ -50,21 +50,21 @@ Se um item na lista de locais é selecionado, o item na caixa de texto caminho s
 Remove o item selecionado da lista de locais para pesquisa.  
   
 **Todo ou parte do nome do arquivo**  
-Para localizar os bancos de dados que têm nomes que contêm uma cadeia de caracteres específica, insira a cadeia de caracteres. Não use caracteres curinga.  
+Para localizar bancos de dados que têm nomes que contêm uma cadeia de caracteres específica, insira a cadeia de caracteres. Não use caracteres curinga.  
   
 **Data de criação**  
-Para localizar os bancos de dados criados em um intervalo de data específica, insira a data de início no **de** caixa e o término data o **para** caixa.  
+Para localizar bancos de dados que foram criados dentro de um intervalo de datas específico, insira a data de início na **de** caixa e o término de data na **para** caixa.  
   
 **Data da última atualização**  
-Para localizar os bancos de dados que foram atualizados por último no intervalo de datas específicas, insira a data de início no **de** caixa e o término data o **para** caixa.  
+Para localizar bancos de dados que foram atualizados por último no intervalo de datas específico, insira a data de início na **de** caixa e o término de data na **para** caixa.  
   
 **Tamanho**  
-Para localizar os bancos de dados que correspondam a um critério de tamanho, selecione um caractere de comparação na primeira caixa, insira um número para o tamanho e selecione bytes, quilobytes ou megabytes na terceira caixa.  
+Para localizar bancos de dados que correspondem a um critério de tamanho, selecione um caractere de comparação na primeira caixa, digite um número para o tamanho e selecione bytes, quilobytes ou megabytes na terceira caixa de.  
   
 **Proprietário**  
-Digite o nome de usuário do Windows completo do proprietário. Isso pode ser formatado como *domínio*\\*usuário*.  
+Insira o nome de usuário completo do Windows do proprietário. Isso pode ser formatado como *domínio*\\*usuário*.  
   
 ## <a name="see-also"></a>Consulte também  
-[Adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
-[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Reference(Access) de Interface do usuário](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

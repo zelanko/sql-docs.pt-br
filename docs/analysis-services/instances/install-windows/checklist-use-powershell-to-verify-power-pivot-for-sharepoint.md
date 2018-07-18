@@ -1,5 +1,5 @@
 ---
-title: 'Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint | Microsoft Docs'
+title: 'Lista de verificação: Usar o PowerShell para verificar o Power Pivot para SharePoint | Microsoft Docs'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019433"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985408"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de verificação: usar o PowerShell para verificar o Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![PowerPivot para sharepoint gerais do aplicativo conjunto](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot no conjunto de aplicativos em geral do sharepoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obter mais informações sobre o painel, consulte [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot no sharepoint gerais do aplicativo conjunto](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot no conjunto de aplicativos em geral do sharepoint")|Se desejar, você pode verificar a maioria dos componentes na Administração Central, usando o painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir o painel na Administração Central, clique em **Configurações Gerais do Aplicativo**e clique em **Painel de Gerenciamento** no **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obter mais informações sobre o painel, consulte [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Sintomas e ações recomendadas  
  A tabela a seguir é uma lista de sintomas ou problemas e a ação sugerida deste tópico para ajudar você a resolver o problema.  
@@ -57,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |A atualização de dados não está em execução|Veja a seção [Trabalhos de temporizador](#bkmk_timer_jobs) e verifique se o **Trabalho de temporizador de atualização de dados online do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** está online.|  
 |Os dados do painel de gerenciamento são antigos|Consulte a seção [Trabalhos de timer](#bkmk_timer_jobs) e verifique se o **Trabalho de timer de processamento do painel de gerenciamento** está online.|  
-|Algumas partes do Painel de Gerenciamento|Se você instalar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint em um farm que tenha a topologia de Administração Central, sem os Serviços do Excel ou o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, será necessário baixar e instalar a biblioteca cliente do Microsoft ADOMD.NET se quiser ter acesso completo aos relatórios internos no painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Alguns relatórios no painel usam ADOMD.NET para acessar dados internos que fornecem dados de relação sobre o processamento de consultas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e a integridade de servidor no farm. Veja a seção [Biblioteca de cliente do ADOMD.Net](#bkmk_adomd) e o tópico [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Algumas partes do Painel de Gerenciamento|Se você instalar o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint em um farm que tenha a topologia de Administração Central, sem os Serviços do Excel ou o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, será necessário baixar e instalar a biblioteca cliente do Microsoft ADOMD.NET se quiser ter acesso completo aos relatórios internos no painel de gerenciamento do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Alguns relatórios no painel usam ADOMD.NET para acessar dados internos que fornecem dados de relação sobre o processamento de consultas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e a integridade de servidor no farm. Veja a seção [Biblioteca de cliente do ADOMD.Net](#bkmk_adomd) e o tópico [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Serviço Windows do Analysis Services  
  O script nesta seção verifica a instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Verifique se o serviço está **em execução**.  
@@ -167,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![Observação](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação")o pool de aplicativos também pode ser verificado na página Administração Central **gerenciar aplicativos de serviço**. Clique no nome do aplicativo de serviço e, em seguida, clique em **propriedades** na faixa de opções.  
+ ![Observação](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Observação")o pool de aplicativos também pode ser verificado na página de Administração Central **gerenciar aplicativos de serviço**. Clique no nome do aplicativo de serviço e, em seguida, clique em **propriedades** na faixa de opções.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e dos Serviços do Excel**  
   
@@ -350,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Para saber mais, confira [Instalar o provedor OLE DB do Analysis Services nos servidores do SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) e [Adicionar MSOLAP.5 como um provedor de dados confiável aos Serviços do Excel](http://technet.microsoft.com/library/hh758436.aspx).  
+ Para saber mais, confira [Instalar o provedor OLE DB do Analysis Services nos servidores do SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) e [Adicionar MSOLAP.5 como um provedor de dados confiável aos Serviços do Excel](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> Biblioteca de cliente ADOMD.Net  
   
@@ -367,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Para obter mais informações, confira [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Para obter mais informações, confira [Instalar o ADOMD.NET em servidores Web front-end executando a Administração Central](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Regras de coleta de dados de integridade  
  Verifique se o **Status** é Online e se **Habilitado** está definido como True.  

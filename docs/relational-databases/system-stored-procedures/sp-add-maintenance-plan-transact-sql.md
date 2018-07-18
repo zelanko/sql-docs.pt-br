@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018463"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_name =**] **'***plan_name***'**  
- Especifica o nome do plano de manutenção a ser adicionado. *plan_name* é **varchar (128)**.  
+ Especifica o nome do plano de manutenção a ser adicionado. *plan_name* está **varchar (128)**.  
   
  **@plan_id = '** *plan_id* **'**  
- Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
+ Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_add_maintenance_plan** deve ser executado a partir de **msdb** cria um plano de manutenção novos, mas vazio e o banco de dados. Para adicionar um ou mais bancos de dados e associá-los a um trabalho ou trabalhos, execute **sp_add_maintenance_plan_db** e **sp_add_maintenance_plan_job**.  
+ **sp_add_maintenance_plan** deve ser executado a partir de **msdb** cria um plano de manutenção de novo, mas vazio e o banco de dados. Para adicionar um ou mais bancos de dados e associá-los a um trabalho ou trabalhos, execute **sp_add_maintenance_plan_db** e **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemplos  
  Criar um plano de manutenção denominado Myplan.  

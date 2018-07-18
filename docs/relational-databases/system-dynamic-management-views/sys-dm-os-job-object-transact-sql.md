@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_job_object (banco de dados do SQL Azure) | Microsoft Docs
+title: sys.dm_os_job_object (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
 ms.prod: ''
@@ -27,41 +27,41 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968758"
 ---
-# <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados do SQL Azure)
+# <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Retorna uma única linha que descreve a configuração do objeto de trabalho que gerencia o processo do SQL Server, bem como algumas estatísticas de consumo de recursos no nível do objeto de trabalho. Retorna um conjunto vazio se o SQL Server não está em execução em um objeto de trabalho. 
+Retorna uma única linha descrevendo a configuração do objeto de trabalho que gerencia o processo do SQL Server, bem como algumas estatísticas de consumo de recursos no nível do objeto de trabalho. Retorna um conjunto vazio se o SQL Server não está em execução em um objeto de trabalho. 
 
-Um objeto de trabalho é uma construção Windows que implementa o controle de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
 
 > [!NOTE]
-> O sys.dm_os_job_object DMV atualmente pode aparecer como sys.dm_job_object. Isso é temporário: `sys.dm_os_job_object` será o nome permanente dessa DMV. 
+> O sys.dm_os_job_object DMV atualmente pode aparecer como sys.dm_job_object. Isso é temporário: `sys.dm_os_job_object` será o nome permanente desse DMV. 
   
 |Colunas|Tipo de Dados|Description|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**Int**|Especifica a parte de ciclos do processador que os threads do SQL Server podem usar durante cada intervalo de agendamento. O valor será relatado como um percentual de ciclos disponíveis dentro de um intervalo de agendamento do ciclo de 10000. Por exemplo, o valor de 100 significa que os threads podem usar núcleos de CPU é sua capacidade total.|
-|cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos processo do SQL Server pode usar dentro do grupo de processador. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os oito primeiros processadores lógicos podem ser usados.|
-|cpu_affinity_group|**Int**|O número do grupo de processador que é usado pelo SQL Server.|
-|memory_limit_mb|**bigint**|A quantidade máxima de memória confirmada, em MB, que todos os processos no objeto de trabalho, incluindo o SQL Server, podem usar cumulativamente.| 
-|process_memory_limit_mb |**bigint**|A quantidade máxima de memória confirmada, em MB, o que pode usar um único processo no objeto de trabalho, como o SQL Server.|
-|workingset_limit_mb |**bigint**|A quantidade máxima de memória, em MB, o que pode usar o conjunto de trabalho do SQL Server.|
-|non_sos_mem_gap_mb|**bigint**|A quantidade de memória em MB, reservou para pilhas de thread, DLLs e outras alocações de memória não SOS. Memória de destino SOS é a diferença entre `process_memory_limit_mb` e `non_sos_mem_gap_mb`.| 
-|low_mem_signal_threshold_mb|**bigint**|Um limite de memória, em MB. Quando a quantidade de memória disponível para o objeto de trabalho estiver abaixo desse limite, um sinal de notificação de memória baixa é enviado para o processo do SQL Server. |
-|total_user_time|**bigint**|O número total de tiques de 100 ns threads dentro do objeto de trabalho ter gasto no modo de usuário, desde que o objeto de trabalho foi criado. |
-|total_kernel_time |**bigint**|O número total de tiques de 100 ns threads dentro do objeto de trabalho ter gasto no modo de kernel, desde que o objeto de trabalho foi criado. |
-|write_operation_count |**bigint**|O número total de operações de gravação e/s em discos locais emitidas pelo SQL Server, desde que o objeto de trabalho foi criado. |
+|cpu_rate|**int**|Especifica a parte de ciclos de processador que os threads do SQL Server podem usar durante cada intervalo de agendamento. O valor é relatado como um percentual de ciclos disponíveis dentro de um intervalo de agendamento do ciclo de 10000. Por exemplo, a valor 100 significa que os threads podem usar núcleos de CPU é sua capacidade total.|
+|cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos o processo do SQL Server pode usar dentro do grupo de processador. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os primeiros oito processadores lógicos podem ser usados.|
+|cpu_affinity_group|**int**|O número do grupo de processador que é usado pelo SQL Server.|
+|memory_limit_mb|**bigint**|A quantidade máxima de memória confirmada, em MB, que todos os processos no objeto de trabalho, incluindo o SQL Server, podem usar de forma cumulativa.| 
+|process_memory_limit_mb |**bigint**|A quantidade máxima de memória confirmada, em MB, o que um único processo no objeto de trabalho, como o SQL Server, pode usar.|
+|workingset_limit_mb |**bigint**|A quantidade máxima de memória, em MB, o que o conjunto de trabalho do SQL Server pode usar.|
+|non_sos_mem_gap_mb|**bigint**|A quantidade de memória em MB, reservar para as pilhas de thread, DLLs e outras alocações de memória não-SOS. Memória de destino do SOS é a diferença entre `process_memory_limit_mb` e `non_sos_mem_gap_mb`.| 
+|low_mem_signal_threshold_mb|**bigint**|Um limite de memória, em MB. Quando a quantidade de memória disponível para o objeto de trabalho estiver abaixo desse limite, um sinal de notificação de memória insuficiente é enviado para o processo do SQL Server. |
+|total_user_time|**bigint**|O número total de tiques de 100 ns que os threads dentro do objeto de trabalho tê gasto no modo de usuário, desde que o objeto de trabalho foi criado. |
+|total_kernel_time |**bigint**|O número total de tiques de 100 ns que os threads dentro do objeto de trabalho tê gasto no modo kernel, desde que o objeto de trabalho foi criado. |
+|write_operation_count |**bigint**|O número total de gravar operações de e/s nos discos locais emitidas pelo SQL Server, desde que o objeto de trabalho foi criado. |
 |read_operation_count |**bigint**|O número total de operações de e/s de leitura em discos locais emitidas pelo SQL Server, desde que o objeto de trabalho foi criado. |
-|peak_process_memory_used_mb|**bigint**|A quantidade máxima de memória, em MB, o que um único processo no objeto de trabalho, como o SQL Server, foi usado desde que o objeto de trabalho foi criado.| 
-|peak_job_memory_used_mb|**bigint**|A quantidade máxima de memória, em MB, que todos os processos no objeto de trabalho usaram cumulativamente desde o objeto de trabalho foi criada.|
+|peak_process_memory_used_mb|**bigint**|Quantidade máxima de memória, em MB, o que um único processo no objeto de trabalho, como o SQL Server tem usado uma vez que o objeto de trabalho foi criado.| 
+|peak_job_memory_used_mb|**bigint**|Quantidade máxima de memória em MB, que todos os processos no objeto de trabalho tenham usado cumulativamente desde o objeto de trabalho foi criada.|
   
 ## <a name="permissions"></a>Permissões  
-No SQL banco de dados gerenciado instância requer `VIEW SERVER STATE` permissão. No banco de dados SQL, requer o `VIEW DATABASE STATE` no banco de dados.  
+Na instância de gerenciada de banco de dados de SQL, requer `VIEW SERVER STATE` permissão. No banco de dados SQL requer o `VIEW DATABASE STATE` permissão no banco de dados.  
  
 ## <a name="see-also"></a>Consulte também  
 

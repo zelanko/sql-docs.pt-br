@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076473"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968868"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>Funções do acessador de dados - cadeia de caracteres (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>Funções do acessador de dados – cadeia de caracteres (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o valor de *$arg* representado como uma cadeia de caracteres.  
@@ -51,16 +51,16 @@ fn:string($arg as item()?) as xs:string
   
 -   Se *$arg* é a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
   
--   Se *$arg* é um nó, a função retornará o valor de cadeia de caracteres do nó que é obtido usando o acessador de valor de cadeia de caracteres. Isso está definido nas especificações do W3C XQuery 1.0 e do XPath 2.0 Data Model.  
+-   Se *$arg* é um nó, a função retorna o valor de cadeia de caracteres do nó que é obtido usando o acessador de valor de cadeia de caracteres. Isso está definido nas especificações do W3C XQuery 1.0 e do XPath 2.0 Data Model.  
   
--   Se *$arg* é um valor atômico, a função retorna a mesma cadeia de caracteres que é retornada pela expressão convertida como **xs: string**, *$arg*, exceto quando indicado em contrário.  
+-   Se *$arg* é um valor atômico, a função retorna a mesma cadeia de caracteres que é retornada pela expressão convertida como **xs: string**, *$arg*, exceto quando indicado o contrário.  
   
 -   Se o tipo de *$arg* é **xs: anyURI**, o URI é convertido em uma cadeia de caracteres sem escapar caracteres especiais.  
   
 -   Nessa implementação, **fn:string()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>A. Usando a função string  
  A consulta a seguir recupera o nó do elemento filho <`Features`> do elemento <`ProductDescription`>.  
@@ -106,7 +106,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. Usando a função string em vários nós  
- No exemplo a seguir, uma instância XML é atribuída a uma variável do tipo xml. Consultas são especificadas para ilustrar o resultado da aplicação **String ()** em vários nós.  
+ No exemplo a seguir, uma instância XML é atribuída a uma variável do tipo xml. As consultas são especificadas para ilustrar o resultado da aplicação **String ()** para vários nós.  
   
 ```  
 declare @x xml  

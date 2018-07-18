@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017759"
 ---
 # <a name="notification-events-data-columns"></a>Colunas de dados de eventos de notificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34045710"
 |CurrentTime|2|5|Contém a hora atual do evento de notificação, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém a quantidade de tempo (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Contém a quantidade de tempo (em milissegundos) utilizado pelo evento.|  
 |IntegerData|10|1|Contém os dados inteiros associados ao evento de notificação. Quando a coluna EventSubclass é igual a 8, os valores são:<br /><br /> 1 = Criado<br /><br /> 2 = Excluído<br /><br /> 3 = Propriedades de objeto alteradas<br /><br /> 4 = Propriedades dos filhos do objeto alteradas<br /><br /> 6 = Filhos adicionados<br /><br /> 7 = Filhos excluídos<br /><br /> 8 = Objeto completamente processado<br /><br /> 9 = Objeto parcialmente processado<br /><br /> 10 = Objeto não processado<br /><br /> 11 = Objeto completamente otimizado<br /><br /> 12 = Objeto parcialmente otimizado<br /><br /> 13 = Objeto não otimizado|  
 |ObjectID|11|8|Contém a ID de Objeto para a qual esta notificação é emitida; este é um valor da cadeia de caracteres.|  
 |ObjectType|12|1|Contém o tipo de objeto associado ao evento de notificação.|  
@@ -75,6 +75,6 @@ ms.locfileid: "34045710"
 |ServerName|43|8|Contém o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual ocorreu o evento de notificação.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Categoria Notification Events](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

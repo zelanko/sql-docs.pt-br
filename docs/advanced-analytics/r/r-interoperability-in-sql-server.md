@@ -7,23 +7,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59196e0569ac9cc683b3affa68fc17f068e74994
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da739700cabb6a9d691d5f284cd6f0532898393f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203168"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979018"
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilidade de R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tópico enfoca o mecanismo de execução de R no SQL Server e descreve as diferenças entre o Microsoft R e software livre R.
+Este tópico enfoca o mecanismo de execução para R no SQL Server e descreve as diferenças entre o Microsoft R e r de software livre
 
-Aplica-se a: SQL Server 2016 R Services, SQL Server 2017 serviços de aprendizado de máquina
+Aplica-se a: SQL Server 2016 R Services, SQL Server 2017 serviços de Machine Learning
 
 Para obter informações sobre os componentes adicionais, consulte [novos componentes do SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
 
-### <a name="open-source-r-components"></a>Componentes de software livre R
+### <a name="open-source-r-components"></a>Componentes de R de software livre
 
 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] inclui uma distribuição completa dos pacotes R de base e ferramentas. Para obter mais informações sobre o que está incluído na distribuição de base, consulte a documentação instalada durante a instalação no seguinte local padrão: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
@@ -31,19 +31,19 @@ Como parte da instalação do [!INCLUDE[rsql_productname_md](../../includes/rsql
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] não modifica o tempo de execução de R de nenhuma maneira. O tempo de execução de R é executado fora do processo [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e pode ser executado independentemente de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. No entanto, é altamente recomendável que você não execute essas ferramentas enquanto [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está usando R, para evitar contenção de recursos.
 
-A distribuição de pacote base de R que está associada a uma determinada instância [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser encontrada na pasta associada à instância. Por exemplo, se você instalou o R Services na instância padrão, as bibliotecas de R estão localizadas na pasta por padrão:
+A distribuição de pacote base de R que está associada a uma determinada instância [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser encontrada na pasta associada à instância. Por exemplo, se você instalou o R Services na instância padrão, as bibliotecas do R estão localizadas nesta pasta por padrão:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 
-Da mesma forma, as ferramentas de R associadas com a instância padrão deve estar localizadas na pasta de est por padrão:
+Da mesma forma, as ferramentas do R associadas à instância padrão devem estar localizadas na pasta de est por padrão:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-Para obter mais informações sobre como o Microsoft R é diferente de uma distribuição de base de R que você pode obter de CRAN, consulte [interoperabilidade com produtos Microsoft R e recursos e linguagem R](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+Para obter mais informações sobre como o Microsoft R é diferente de uma distribuição de base do R que você pode obter do CRAN, consulte [interoperabilidade com linguagem R e recursos e produtos R da Microsoft](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
-### <a name="additional-r-packages-from-microsoft-r"></a>Pacotes R adicionais da Microsoft R
+### <a name="additional-r-packages-from-microsoft-r"></a>Pacotes R adicionais do Microsoft R
 
-Além da distribuição de R base, [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] inclui alguns pacotes de R proprietárias, bem como uma estrutura para execução paralela de R que também dá suporte à execução de R em contextos de computação remota.
+Além da distribuição de R base, [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] inclui alguns pacotes de R proprietários, bem como uma estrutura para execução paralela de R que também dá suporte à execução do R em contextos de computação remota.
 
 Esse conjunto combinado de recursos de R – a distribuição de base de R mais os recursos aprimorados e pacotes de R – é chamado de **Microsoft R**. Se você instalar o Microsoft R Server (autônomo), obterá exatamente o mesmo conjunto de pacotes que é instalado com o SQL Server R Services (no banco de dados), mas em uma pasta diferente.
 
@@ -62,7 +62,7 @@ Entre as adições mais importantes do Microsoft R, estão os pacotes **RevoScal
 
 + **RevoPemaR.** PEMA significa Algoritmo Paralelo de Memória Externa (Parallel External Memory Algorithm). O pacote **RevoPemaR** fornece APIs que podem ser usadas para desenvolver seus próprios algoritmos paralelos. Para obter mais informações, consulte [Guia de introdução ao RevoPemaR](https://docs.microsoft.com/r-server/r/how-to-developer-pemar).
 
-Também é recomendável que você tente [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), um novo pacote de R da Microsoft que oferece suporte à execução remota de código R e escalonável, processamento, distribuído usar algoritmos de aprendizado de máquina aprimorada desenvolvida pela Microsoft Research.
+Também recomendamos que você tente [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), um novo pacote de R da Microsoft que oferece suporte à execução remota de código R e escalonável, distribuído de processamento, usando algoritmos de aprendizado de máquina aprimorada desenvolvida pela Microsoft Research.
 
 ## <a name="next-steps"></a>Próximas etapas
 

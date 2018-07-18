@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024193"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984758"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implantar soluções Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34024193"
  [Sobre as soluções Power Pivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo usa o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo **http://\<nome do site de nível superior >** com o nome do seu site do SharePoint:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo utiliza o modo clássico, execute o seguinte cmdlet do PowerShell a partir de **Shell de gerenciamento do SharePoint 2010**, substituindo **http://\<nome do site de nível superior >** com o nome do seu site do SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  O valor retornado deve ser **false**. Se ele for **true**, você não poderá acessar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] com este aplicativo Web.  
   
 ##  <a name="bkmk_farm"></a> Etapa 1: implantar a solução de farm  
- Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Esta tarefa precisa ser executada somente uma vez, depois de você instalar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint.  
   
@@ -119,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Clique em **Cancelar Solução**.  
   
- Se você encontrar problemas de implantação de servidor rastreados desde a solução de farm, poderá reimplantá-lo executando a opção **Reparar** na Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Se você encontrar problemas de implantação de servidor rastreados desde a solução de farm, poderá reimplantá-lo executando a opção **Reparar** na Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . As operações de reparo pela ferramenta são preferíveis porque exigem menos etapas de sua parte. Para obter mais informações, consulte [Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Se você ainda desejar reimplantar todas as soluções, siga esta ordem:  
   

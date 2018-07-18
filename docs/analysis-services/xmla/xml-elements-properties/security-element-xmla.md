@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576239"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968738"
 ---
 # <a name="security-element-xmla"></a>Elemento Security (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34576239"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|*skipMembership*|  
+|Valor padrão|*SkipMembership*|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -53,7 +53,7 @@ ms.locfileid: "34576239"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclui definições de segurança, mas exclui informações de associação, durante comandos **Backup** ou **Restore** .|  
+|*SkipMembership*|Inclui definições de segurança, mas exclui informações de associação, durante comandos **Backup** ou **Restore** .|  
 |*CopyAll*|Inclui definições de segurança e informações de associação durante comandos **Backup** ou **Restore** .|  
 |*IgnoreSecurity*|Exclui definições de segurança durante comandos **Backup** ou **Restore** .|  
   

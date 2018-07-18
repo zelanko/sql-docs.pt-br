@@ -1,5 +1,5 @@
 ---
-title: 'Função (XQuery) SQL: Variable | Microsoft Docs'
+title: 'SQL: Variable Function (XQuery) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018197"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>Funções de extensão XQuery - SQL: Variable
+# <a name="xquery-extension-functions---sqlvariable"></a>Funções de extensão XQuery – SQL: Variable
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Expõe uma variável que contém um valor relacional SQL dentro de uma expressão XQuery.  
@@ -43,13 +43,13 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar essa função quando você usar [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
+ Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar essa função quando você usa [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
   
- Por exemplo, o [método Query ()](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em um **xml** variável ou coluna de tipo de dados. Às vezes, você pode também desejar que sua consulta utilize valores de uma variável ou de um parâmetro [!INCLUDE[tsql](../includes/tsql-md.md)], para unir dados relacionais e de XML. Para fazer isso, use o **SQL: Variable** função.  
+ Por exemplo, o [método Query ()](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em um **xml** variável ou coluna de tipo de dados. Às vezes, você pode também desejar que sua consulta utilize valores de uma variável ou de um parâmetro [!INCLUDE[tsql](../includes/tsql-md.md)], para unir dados relacionais e de XML. Para fazer isso, você deve usar o **SQL: Variable** função.  
   
- O valor SQL será mapeado para um valor correspondente XQuery e seu tipo será um tipo base XQuery equivalente para o tipo SQL correspondente.  
+ O valor SQL será mapeado para um valor correspondente XQuery e seu tipo será um tipo base XQuery equivalente ao tipo SQL correspondente.  
   
- Você só pode fazer referência a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir aos valores que são do tipo **xml** ou um common language runtime (CLR) tipo definido pelo usuário.  
+ Você só pode se referir a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir aos valores que são do tipo **xml** ou um common language runtime (CLR) tipo definido pelo usuário.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -90,7 +90,7 @@ WHERE ProductID=771
   
 -   O XQuery dentro do método `query()` constrói o XML.  
   
--   O `namespace` palavra-chave é usada para definir um prefixo de namespace no [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Isso é feito porque o valor do atributo `ProductModelName` é recuperado na coluna de tipo `CatalogDescription xml`, que tem um esquema associado a ela.  
+-   O `namespace` palavra-chave é usada para definir um prefixo de namespace na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Isso é feito porque o valor do atributo `ProductModelName` é recuperado na coluna de tipo `CatalogDescription xml`, que tem um esquema associado a ela.  
   
  Este é o resultado:  
   
@@ -105,7 +105,7 @@ WHERE ProductID=771
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;linguagem de manipulação de dados XML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

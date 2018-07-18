@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259576"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018400"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33259576"
   Especifica se ou não uma determinada coluna de uma tabela participa da indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER_FULLTEXT_INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,21 +53,21 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@tabname=** ] **'***qualified_table_name***'**  
- É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. A tabela deve ter um índice de texto completo. *qualified_table_name* é **nvarchar (517)**, sem nenhum valor padrão.  
+ É um nome de tabela de uma ou duas partes. A tabela deve existir no banco de dados atual. A tabela deve ter um índice de texto completo. *qualified_table_name* está **nvarchar(517)**, sem nenhum valor padrão.  
   
  [ **@colname=** ] **'***column_name***'**  
- É o nome de uma coluna em *qualified_table_name*. A coluna deve ser um caractere, **varbinary (max)** ou **imagem** coluna e não pode ser uma coluna computada. *nome da coluna* é **sysname**, sem padrão.  
+ É o nome de uma coluna na *qualified_table_name*. A coluna deve ser um caractere, **varbinary (max)** ou **imagem** coluna e não pode ser uma coluna computada. *column_name* está **sysname**, sem padrão.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar índices de texto completo de dados de texto armazenados em colunas de **varbinary (max)** ou **imagem** tipo de dados. Imagens e figuras não são indexadas.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar índices de texto completo de dados de texto armazenados em colunas que são de **varbinary (max)** ou **imagem** tipo de dados. Imagens e figuras não são indexadas.  
   
  [  **@action=** ] **'***ação***'**  
- É a ação a ser executada. *ação* é **varchar (20)**, sem nenhum valor padrão e pode ser um dos valores a seguir.  
+ É a ação a ser executada. *ação* está **varchar(20)**, sem nenhum valor padrão e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**add**|Adiciona *column_name* de *qualified_table_name* para índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
-|**drop**|Remove *column_name* de *qualified_table_name* do índice de texto completo inativo da tabela.|  
+|**add**|Adiciona *column_name* dos *qualified_table_name* para índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
+|**drop**|Remove *column_name* dos *qualified_table_name* do índice de texto completo inativo da tabela.|  
   
  [  **@language=** ] **'***language_term***'**  
  É o idioma dos dados armazenados na coluna. Para obter uma lista dos idiomas incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -76,13 +76,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  Use 'Neutro' quando uma coluna tiver dados em vários idiomas ou em um idioma sem-suporte. O padrão é especificado pela opção de configuração 'default full-text language.'  
   
  [  **@type_colname =** ] **'***type_column_name***'**  
- É o nome de uma coluna em *qualified_table_name* que contém o tipo de documento de *column_name*. Esta coluna deve ser **char**, **nchar**, **varchar**, ou **nvarchar**. Ele é usado somente quando o tipo de dados *column_name* é do tipo **varbinary (max)** ou **imagem**. *type_column_name* é **sysname**, sem padrão.  
+ É o nome de uma coluna na *qualified_table_name* que contém o tipo de documento da *column_name*. Essa coluna deve ser **char**, **nchar**, **varchar**, ou **nvarchar**. Ele é usado somente quando o tipo de dados *column_name* é do tipo **varbinary (max)** ou **imagem**. *type_column_name* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
  Se o índice de texto completo estiver ativo, qualquer população em andamento será interrompida. Além disso, se o controle de alterações estiver habilitado em uma tabela com um índice de texto completo ativo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegura que o índice seja atual. Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interrompe qualquer população atual na tabela, descarta o índice existente e inicia uma nova população.  
@@ -90,7 +90,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Se o controle de alterações estiver ativo e for necessário adicionar ou descartar colunas do índice de texto completo, mas mantendo o índice preservado, a tabela deverá ser desativada e as colunas necessárias deverão ser adicionadas ou descartadas. Essas ações congelam o índice. A tabela pode ser ativada mais tarde, quando o início de uma população for praticável.  
   
 ## <a name="permissions"></a>Permissões  
- Usuário deve ser um membro do **db_ddladmin** fixo de função de banco de dados ou um membro do **db_owner** fixo de função de banco de dados ou o proprietário da tabela.  
+ Usuário deve ser um membro do **db_ddladmin** fixo de função de banco de dados ou um membro do **db_owner** fixa a função de banco de dados ou o proprietário da tabela.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir adiciona a coluna `DocumentSummary` da tabela `Document` ao índice de texto completo da tabela.  

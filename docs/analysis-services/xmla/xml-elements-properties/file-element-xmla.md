@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb80a091c9b9585a6efc29088d15139db7033efb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969994"
 ---
 # <a name="file-element-xmla"></a>Elemento File (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "34575188"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **arquivo** elemento contém um nome de arquivo UNC e o elemento pai determina o uso do **arquivo** elemento.  
+ O **arquivo** elemento contém um nome de arquivo UNC e o elemento pai determina o uso das **arquivo** elemento.  
   
- Para **Backup** comandos, o **arquivo** elemento determina o nome do arquivo de backup criado pelo **Backup** comando. Se um caminho não for especificado como parte do nome do arquivo, o caminho especificado no **BackupDir** propriedade de configuração para a instância do Analysis Services é usada. Se o arquivo especificado já existir, ocorrerá um erro, a menos que o **AllowOverwrite** elemento do pai **Backup** estiver definido como **True**.  
+ Para **Backup** comandos, o **arquivo** elemento determina o nome do arquivo de backup criado pelo **Backup** comando. Se um caminho não for especificado como parte do nome do arquivo, o caminho especificado na **BackupDir** propriedade de configuração para a instância do Analysis Services é usada. Se o arquivo especificado já existir, ocorrerá um erro, a menos que o **AllowOverwrite** elemento pai **Backup** estiver definido como **verdadeiro**.  
   
  Para **restaurar** comandos, o **arquivo** elemento determina o nome do arquivo de backup a ser restaurado pelo **restaurar** comando.  
   
- Para **local** elementos, o **arquivo** elemento descreve um arquivo de backup remoto para um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância que contém partições remotas. Para obter mais informações sobre backup e restaurando partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para **local** elementos, o **arquivo** elemento descreve um arquivo de backup remoto para um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância que contém partições remotas. Para obter mais informações sobre como fazer backup e restaurar partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Confira também
  [Elemento AllowOverwrite &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   

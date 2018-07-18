@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969768"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "34465222"
 Os comprimentos de cadeia longos podem afetar significativamente o desempenho de todas as operações DML em linhas individuais, incluindo SELECT e INSERT. Os comprimentos de cadeias curtas com um número alto de buckets vazios estão na indicação de um bucket_count que seja muito alto. Isso diminui o desempenho de verificações de índice.  
   
 > [!WARNING]
-> **sys.DM db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas no banco de dados, **sys.DM db_xtp_hash_index_stats** pode levar um longo tempo de execução.  
+> **DM db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas no banco de dados **DM db_xtp_hash_index_stats** pode levar um longo tempo de execução.  
   
 Para obter mais informações, consulte [índices de Hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
-|object_id|**Int**|A ID de objeto da tabela pai.|  
+|object_id|**int**|A ID de objeto da tabela pai.|  
 |xtp_object_id|**bigint**|ID da tabela com otimização de memória.|  
-|index_id|**Int**|A ID do índice.|  
+|index_id|**int**|A ID do índice.|  
 |total_bucket_count|**bigint**|O número total de buckets de hash no índice.|  
 |empty_bucket_count|**bigint**|O número de bucket de hash vazio no índice.|  
 |avg_chain_length|**bigint**|O comprimento médio das cadeias de linha em todos os buckets de hash no índice.|  
@@ -67,7 +67,7 @@ Para obter mais informações, consulte [índices de Hash para tabelas com otimi
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Solução de problemas de contagem de buckets do índice de hash
 
-A consulta a seguir pode ser usada para solucionar problemas de contagem de bucket do índice de hash de uma tabela existente. A consulta retorna estatísticas sobre o percentual de buckets vazios e o comprimento da cadeia de todos os índices de hash em tabelas de usuário.
+A consulta a seguir pode ser usada para solucionar problemas de contagem de bucket do índice de hash de uma tabela existente. A consulta retorna estatísticas sobre o percentual de buckets vazios e comprimento da cadeia de todos os índices de hash em tabelas de usuário.
 
 ```sql
   SELECT  
@@ -91,11 +91,11 @@ A consulta a seguir pode ser usada para solucionar problemas de contagem de buck
   ORDER BY [table], [index];  
 ``` 
 
-Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [de solução de problemas de índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [solução de problemas de índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estatísticas de índice de hash para tabelas internas
 
-Determinados recursos usam tabelas internas que aproveitam os índices de hash, como índices columnstore em tabelas com otimização de memória. A consulta a seguir retorna estatísticas para índices de hash em tabelas internas que estão vinculadas a tabelas de usuário.
+Determinados recursos usam tabelas internas que aproveitam os índices de hash, por exemplo os índices de columnstore em tabelas com otimização de memória. A consulta a seguir retorna estatísticas para índices de hash em tabelas internas que estão vinculadas a tabelas de usuário.
 
 ```sql
   SELECT  
@@ -116,9 +116,9 @@ Determinados recursos usam tabelas internas que aproveitam os índices de hash, 
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Observe que o BUCKET_COUNT de índice em tabelas internas não podem ser alterados, portanto, a saída dessa consulta deve ser considerada informativa apenas. Nenhuma ação é necessária.  
+Observe que o BUCKET_COUNT de índice em tabelas internas não podem ser alteradas, portanto, a saída dessa consulta deve ser considerada informativa apenas. Nenhuma ação é necessária.  
 
-Essa consulta não é esperada para retornar todas as linhas, a menos que você estiver usando um recurso que aproveita os índices de hash em tabelas internas. A tabela a seguir com otimização de memória contém um índice columnstore. Depois de criar essa tabela, você verá os índices de hash em tabelas internas.
+Essa consulta não é esperada para retornar todas as linhas, a menos que você estiver usando um recurso que aproveita os índices de hash em tabelas internas. A tabela com otimização de memória a seguir contém um índice columnstore. Depois de criar essa tabela, você verá os índices de hash em tabelas internas.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -129,6 +129,6 @@ Essa consulta não é esperada para retornar todas as linhas, a menos que você 
 ```
 
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Adicionar MSOLAP. 5 como um provedor de dados confiável em serviços do Excel | Microsoft Docs
+title: Adicionar MSOLAP.5 como um provedor de dados confiável nos serviços do Excel | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3ba11e1242a7deb63e19221985e1e56f83acb94
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026103"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979448"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34026103"
   
  somente é necessário executar essa etapa uma vez para cada aplicativo de serviço de Serviços do Excel.  
   
- Cada servidor físico que manipula uma solicitação de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , como um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o servidor SharePoint ou um servidor de Serviços do Excel, deve ter o provedor OLE DB instalado no computador. Uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint sempre inclui o provedor OLE DB, mas se os Serviços do Excel estiverem sendo executados em um computador que não tenha o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você deverá instalar o provedor manualmente. Para obter mais informações, consulte [Instalar o Provedor OLE DB do Analysis Services nos Servidores SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Cada servidor físico que manipula uma solicitação de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , como um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para o servidor SharePoint ou um servidor de Serviços do Excel, deve ter o provedor OLE DB instalado no computador. Uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint sempre inclui o provedor OLE DB, mas se os Serviços do Excel estiverem sendo executados em um computador que não tenha o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, você deverá instalar o provedor manualmente. Para obter mais informações, consulte [Instalar o Provedor OLE DB do Analysis Services nos Servidores SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Adicionar um provedor confiável aos Serviços do Excel  
   

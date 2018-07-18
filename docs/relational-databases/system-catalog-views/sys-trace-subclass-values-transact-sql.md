@@ -1,5 +1,5 @@
 ---
-title: trace_subclass_values (Transact-SQL) | Microsoft Docs
+title: sys. trace_subclass_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,26 +25,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 070327b43854e9b78f927e68ebfb1f20d607f5d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969629"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **trace_subclass_values** exibição do catálogo contém uma lista de valores de coluna nomeada. Esses valores de subclasse não mudam para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  O **sys. trace_subclass_values** exibição do catálogo contém uma lista de valores de coluna nomeada. Esses valores de subclasse não mudam para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Para obter uma lista completa de eventos de rastreamento com suporte, consulte [referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Para obter uma lista completa de eventos de rastreamento com suporte, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use exibições do catálogo de Eventos Estendidos.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|ID do evento de rastreamento. Esse parâmetro também está no **trace_events** exibição do catálogo.|  
-|**trace_column_id**|**smallint**|ID da coluna de rastreamento usado para enumeração. Esse parâmetro também está no **trace_columns** exibição do catálogo.|  
+|**trace_event_id**|**smallint**|ID do evento de rastreamento. Esse parâmetro também está na **trace_events** exibição do catálogo.|  
+|**trace_column_id**|**smallint**|ID da coluna de rastreamento usado para enumeração. Esse parâmetro também está na **trace_columns** exibição do catálogo.|  
 |**subclass_name**|**nvarchar(128)**|Significado do valor de coluna.|  
 |**subclass_value**|**smallint**|Valor da coluna.|  
   

@@ -15,36 +15,36 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 6c2b58c0a589501951c76f4930689f15f2e9def8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777452"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979319"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapeamento de Oracle e tipos de dados do SQL Server (OracleToSQL)
-Os tipos de banco de dados Oracle variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
+Os tipos de banco de dados Oracle variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Quando você converte objetos de banco de dados Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
-O SSMA tem um conjunto de mapeamentos de tipo de dados padrão. Para obter a lista de mapeamentos padrão, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Tipo de mapeamento de herança  
-Você pode personalizar mapeamentos de tipo no nível de projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que elas são substituídas em um nível inferior. Por exemplo, se você mapear **smallmoney** para **money** no nível de projeto, todos os objetos no projeto usará esse mapeamento, a menos que você personalize o mapeamento no nível do objeto ou categoria.  
+Você pode personalizar mapeamentos de tipo no nível do projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que eles sejam substituídos em um nível inferior. Por exemplo, se você mapear **smallmoney** à **money** no nível do projeto, todos os objetos no projeto usará esse mapeamento, a menos que você personalize o mapeamento no nível do objeto ou categoria.  
   
-Quando você exibe o **mapeamento de tipo** guia SSMA, o plano de fundo é codificadas por cor para mostrar os mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e branco para qualquer mapeamento especificado no nível atual.  
+Quando você exibe o **mapeamento de tipo** guia no SSMA, o plano de fundo é codificadas por cores para mostrar quais mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e, em branco para qualquer mapeamento especificado no nível atual.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizando mapeamentos de tipo de dados  
-O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível de objeto:  
+O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível do objeto:  
   
 **Para mapear tipos de dados**  
   
-1.  Para personalizar o mapeamento de tipo de dados para o projeto inteiro, abra o **configurações de projeto** caixa de diálogo:  
+1.  Para personalizar o mapeamento de tipo de dados para todo o projeto, abra o **configurações do projeto** caixa de diálogo:  
   
-    1.  Sobre o **ferramentas** menu, selecione **configurações de projeto**.  
+    1.  Sobre o **ferramentas** menu, selecione **configurações do projeto**.  
   
     2.  No painel esquerdo, selecione **mapeamento de tipo**.  
   
-        Os botões e o gráfico de mapeamento de tipo aparecem no painel direito.  
+        O gráfico de mapeamento de tipo e os botões aparecem no painel direito.  
   
     Ou, para personalizar o tipo de dados de mapeamento no banco de dados, tabela, exibição ou nível de procedimento armazenado, selecione o banco de dados, a categoria de objeto ou o objeto no Gerenciador de metadados do Oracle:  
   
@@ -56,15 +56,15 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
     1.  Clique em **Adicionar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados Oracle para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados Oracle para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e o comprimento máximo dos dados no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento na **de** caixa e o comprimento máximo de dados no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa.  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa.  
   
     5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
@@ -72,27 +72,27 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
     1.  Clique em **Editar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados Oracle para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados Oracle para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e o comprimento máximo dos dados no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento na **de** caixa e o comprimento máximo de dados no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa e, em seguida, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa e, em seguida, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
-4.  Para remover um mapeamento de tipo de dados personalizados, faça o seguinte:  
+4.  Para remover um mapeamento de tipo de dados personalizada, faça o seguinte:  
   
     1.  Selecione a linha na lista de mapeamento de tipo que contém o mapeamento de tipo de dados que deseja remover.  
   
     2.  Clique em **Remover**.  
   
-        Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
+        Você não pode remover mapeamentos herdados. No entanto, mapeamentos herdados são substituídos pelas mapeamentos personalizados em uma categoria de objeto ou um objeto específico.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa no processo de migração é como [criar um relatório de avaliação](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) ou [converter objetos de banco de dados Oracle em sintaxe de SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Se você criar um relatório de avaliação, objetos Oracle são automaticamente convertidos durante a avaliação.  
+A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) ou [converter objetos de banco de dados Oracle para a sintaxe do SQL Server](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Se você criar um relatório de avaliação, os objetos do Oracle são convertidos automaticamente durante a avaliação.  
   
 ## <a name="see-also"></a>Consulte também  
-[Bancos de dados Oracle migrando para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Migrando do Oracle bancos de dados para o SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

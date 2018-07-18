@@ -1,5 +1,5 @@
 ---
-title: Provedor Microsoft OLE DB para Oracle | Microsoft Docs
+title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,32 +18,32 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 66e2994479c222c5f050ce13e19eb3a9ed5c01e8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271095"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979208"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provedor Microsoft OLE DB para visão geral do Oracle
 > [!IMPORTANT]
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o provedor do OLE DB do Oracle.
 
- O Microsoft OLE DB Provider for Oracle permite que o ADO acessar bancos de dados Oracle.
+ O Microsoft OLE DB Provider for Oracle permite que o ADO para acessar bancos de dados Oracle.
 
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de caracteres de Conexão
- Para se conectar ao provedor, defina o *provedor* argumento o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para:
+ Para se conectar ao provedor, defina as *provedor* argumento do [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para:
 
 ```
 MSDAORA
 ```
 
- Lendo o [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade retornará essa cadeia de caracteres.
+ Lendo a [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade retornará essa cadeia de caracteres.
 
- Se uma consulta de junção com um cursor keyset ou dynamic é executada em um banco de dados Oracle, ocorrerá um erro. Oracle só oferece suporte a um cursor estático somente leitura.
+ Se uma consulta de junção com um cursor keyset ou dynamic é executada em um banco de dados Oracle, ocorrerá um erro. Oracle dá suporte apenas um cursor de somente leitura estático.
 
 ## <a name="typical-connection-string"></a>Cadeia de caracteres de Conexão típica
- Uma cadeia de conexão típica para esse provedor é:
+ Uma cadeia de caracteres de conexão típica para esse provedor é:
 
 ```
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
@@ -59,20 +59,20 @@ MSDAORA
 |**Senha**|Especifica a senha do usuário.|
 
 > [!NOTE]
->  Se você estiver se conectando a um provedor de fonte de dados que oferece suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **segurança integrada = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **Integrated Security = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.
 
-## <a name="provider-specific-connection-parameters"></a>Parâmetros de Conexão específicos do provedor
- O provedor oferece suporte a vários parâmetros de conexão específica do provedor, além daqueles definidos pelo ADO. Como com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio de [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou como parte do **ConnectionString**.
+## <a name="provider-specific-connection-parameters"></a>Parâmetros de Conexão específicas do provedor
+ O provedor oferece suporte a vários parâmetros de conexão específica do provedor além daqueles definidos pelo ADO. Como com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio de [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção de uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou como parte do **ConnectionString**.
 
- Esses parâmetros são totalmente descritos o [referência do programador de DB OLE](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). O [índice de propriedade dinâmica de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornece uma referência cruzada entre esses nomes de parâmetros e as propriedades de OLE DB correspondentes.
+ Esses parâmetros são totalmente descritos na [referência do programador DB OLE](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). O [índice de propriedade dinâmica do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornece uma referência cruzada entre esses nomes de parâmetro e as propriedades de OLE DB correspondentes.
 
 |Parâmetro|Description|
 |---------------|-----------------|
 |**Identificador de janela**|Indica o identificador de janela a ser usado para solicitar informações adicionais.|
 |**Identificador de Localidade**|Indica um número de 32 bits exclusivo (por exemplo, 1033) que especifica as preferências de idioma do usuário. Essas preferências indicam como datas e horas são formatadas, os itens são classificados em ordem alfabética, cadeias de caracteres são comparadas e assim por diante.|
-|**Serviços do OLE DB**|Indica um bitmask que especifica os serviços de OLE DB para habilitar ou desabilitar.|
-|**prompt**|Indica se o usuário enquanto está sendo estabelecida uma conexão.|
-|**Propriedades estendidas**|Uma cadeia de caracteres que contém informações de conexão específicas do provedor, estendido. Use essa propriedade somente para informações de conexão específicas do provedor que não podem ser descritas por meio do mecanismo de propriedade.|
+|**Serviços do OLE DB**|Indica um bitmask que especifica os serviços do OLE DB para habilitar ou desabilitar.|
+|**Solicitar**|Indica se deve solicitar ao usuário enquanto está sendo estabelecida uma conexão.|
+|**Propriedades estendidas**|Uma cadeia de caracteres que contém informações de conexão específicas do provedor, estendida. Use essa propriedade apenas para informações de conexão específicas do provedor que não podem ser descritas por meio do mecanismo de propriedade.|
 
 ## <a name="see-also"></a>Consulte também
- [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [propriedade do provedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [o objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [propriedade Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

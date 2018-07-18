@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019984"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_fulltext_system_components
  Retorna informações de todos os componentes de texto completo.  
   
  [ **@component_type=** ] *component_type*  
- Especifica o tipo do componente. *component_type* pode ser um dos seguintes:  
+ Especifica o tipo do componente. *component_type* pode ser uma das seguintes opções:  
   
 -   **wordbreaker**  
   
@@ -77,7 +77,7 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filtro<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|O nome do componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
-|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro de **serveradmin** função de servidor fixa.|  
+|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é membro de **serveradmin** função de servidor fixa.|  
 |**version**|**nvarchar(30)**|A versão do componente.|  
 |**manufacturer**|**sysname**|Nome do fabricante do componente.|  
   
@@ -85,11 +85,11 @@ sp_help_fulltext_system_components
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**Int**|ID do banco de dados.|  
-|**ftcatid**|**Int**|Identificação do catálogo de texto completo.|  
+|**dbid**|**int**|ID do banco de dados.|  
+|**ftcatid**|**int**|Identificação do catálogo de texto completo.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **pública** função; no entanto, os usuários podem ver apenas informações sobre os catálogos de texto completo para os quais têm permissão VIEW DEFINITION. Somente os membros da função fixa **serveradmin** podem ver os valores na coluna **fullpath** .  
+ Requer associação na **pública** função; no entanto, os usuários podem ver apenas informações sobre os catálogos de texto completo para os quais têm permissão VIEW DEFINITION. Somente os membros da função fixa **serveradmin** podem ver os valores na coluna **fullpath** .  
   
 ## <a name="remarks"></a>Remarks  
  Este método é importante na preparação para uma atualização. Execute o procedimento armazenado em um determinado banco de dados e use a saída para determinar se um catálogo específico será afetado pela atualização.  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinando se um separador de palavras específico está registrado  
- O exemplo a seguir listará o separador de palavras do idioma turco (LCID = 1055) se este tiver sido instalado no sistema e registrado na instância do serviço. Este exemplo especifica os nomes de parâmetro, **@component_type** e **@param**.  
+ O exemplo a seguir listará o separador de palavras do idioma turco (LCID = 1055) se este tiver sido instalado no sistema e registrado na instância do serviço. Este exemplo especifica os nomes de parâmetro **@component_type** e **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

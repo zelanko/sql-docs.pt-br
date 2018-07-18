@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c51e99c4dcfde8de6060bf57e248d32322da8ac9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574068"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969664"
 ---
 # <a name="binding-element-xmla"></a>Elemento Binding (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Define uma associação fora de linha para um objeto do Analysis Services, como um atributo em uma dimensão, para o [associações](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) coleção de um [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) ou [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) comando.  
+  Define uma associação fora de linha para um objeto do Analysis Services, como um atributo em uma dimensão, para o [ligações](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) coleção de uma [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) ou [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,9 +49,9 @@ ms.locfileid: "34574068"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- **Associação** elementos definem associações fora de linha, diferentes fontes de dados e exibições da fonte de dados, para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos a serem processados por um **lote** ou **processo** comando. Para obter mais informações sobre o processamento de objetos, consulte [processar objetos &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
+ **Associando** elementos definem associações fora de linha, diferentes de fontes de dados e exibições da fonte de dados, para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos a serem processados por um **lote** ou **processo** comando. Para obter mais informações sobre processamento de objetos, consulte [processamento de objetos do &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
- Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;multidimensionais do SSAS&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obter mais informações sobre associações fora de linha, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Confira também
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

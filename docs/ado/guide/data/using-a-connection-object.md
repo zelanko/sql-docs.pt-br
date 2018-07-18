@@ -16,15 +16,15 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07528c4434a7278566ba6a7f3659e64d2638dab9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e04067cda6fad31ebd07f5d887e387139c7739b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273095"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979768"
 ---
 # <a name="using-a-connection-object"></a>Usando um objeto de Conexão
-Antes de abrir um **Conexão** do objeto, você deve definir certas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantido pelo *ConnectionString* parâmetro do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no **Conexão** objeto, ou o [ConnectionString propriedade](../../../ado/reference/ado-api/connectionstring-property-ado.md) no **Conexão** objeto. Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  
+Antes de abrir um **Conexão** do objeto, você deve definir certas informações sobre a fonte de dados e o tipo de conexão. A maioria dessas informações é mantida pela *ConnectionString* parâmetro do [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) no **Conexão** objeto, ou pelo [ConnectionString propriedade](../../../ado/reference/ado-api/connectionstring-property-ado.md) sobre o **Conexão** objeto. Uma cadeia de caracteres de conexão consiste em uma lista de pares de valor do argumento separados por ponto e vírgula, com os valores entre aspas simples. Por exemplo:  
   
 ```  
 Dim sConn As String  
@@ -33,9 +33,9 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  Você também pode especificar um nome de fonte de dados ODBC (DSN) ou um arquivo UDL (Data Link) em uma cadeia de caracteres de conexão. Para obter mais informações sobre DSNs, consulte [gerenciar fontes de dados](../../../odbc/admin/managing-data-sources.md) na referência do programador de ODBC. Para obter mais informações sobre UDLs, consulte [visão geral de API de Link de dados](http://msdn.microsoft.com/en-us/95c180ea-bd4f-4dca-b95a-576afd135bbc) de referência OLE DB do programador.  
+>  Você também pode especificar um nome de fonte de dados ODBC (DSN) ou um arquivo de dados UDL (Link) em uma cadeia de conexão. Para obter mais informações sobre DSNs, consulte [gerenciar fontes de dados](../../../odbc/admin/managing-data-sources.md) na referência do programador de ODBC. Para obter mais informações sobre o UDL, consulte [visão geral da API de Link de dados](http://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) na referência do OLE DB do programador.  
   
- Normalmente, você estabelece uma conexão chamando o **Connection.Open** método com um número apropriado um *cadeia de caracteres de conexão* como seu parâmetro. Um exemplo é mostrado no seguinte trecho de código do Visual Basic:  
+ Normalmente, você estabelece uma conexão por meio da chamada a **Connection** método com um número apropriado um *cadeia de caracteres de conexão* como seu parâmetro. Um exemplo é mostrado no seguinte trecho de código do Visual Basic:  
   
 ```  
 Dim oConn As ADODB.Connection  
@@ -61,7 +61,7 @@ Set oConn = Nothing
   
 ```  
   
- Aqui **oRs.Open** leva um **Conexão** objeto (*oConn*) variável como o valor do seu *ActiveConnection* parâmetro. Além disso, o **Connection.CursorLocation** propriedade assume o valor padrão de **adUseServer**. Compare isso para o [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemplo na seção anterior. A instrução a seguir pode resultar em erros de tempo de execução.  
+ Aqui **oRs.Open** leva um **Conexão** objeto (*oConn*) variável como o valor do seu *ActiveConnection* parâmetro. Além disso, o **Connection.CursorLocation** propriedade pressupõe que o valor padrão de **adUseServer**. Compare-a com o [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemplo na seção anterior. A instrução a seguir pode resultar em erros de tempo de execução.  
   
 ```  
 oRs.MarshalOptions = adMarshalModifiedOnly  

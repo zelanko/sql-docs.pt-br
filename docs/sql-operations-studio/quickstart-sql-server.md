@@ -1,6 +1,6 @@
 ---
-title: 'Início rápido: Conectar e consultar o SQL Server usando o Studio de operações do SQL (visualização) | Microsoft Docs'
-description: Este guia de início rápido mostra como usar o Studio de operações do SQL (visualização) para se conectar ao SQL Server e executar uma consulta
+title: 'Guia de início rápido: Conectar e consultar o SQL Server usando o SQL Operations Studio (versão prévia) | Microsoft Docs'
+description: Este início rápido mostra como usar o SQL Operations Studio (versão prévia) para se conectar ao SQL Server e executar uma consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -13,44 +13,44 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 7f8963de448c39709a4df102cdf764a361b7654c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235386"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985068"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Início rápido: Conectar e consultar usando o SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-Este guia de início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando o SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Para concluir este guia de início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)]e o acesso a um servidor SQL.
+Para concluir este início rápido, você precisa [!INCLUDE[name-sos](../includes/name-sos-short.md)]e o acesso a um SQL Server.
 
-- [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Instale [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Se você não tiver acesso a um SQL Server, selecione a plataforma os links a seguir (certifique-se de lembrar o logon do SQL e a senha!):
+Se você não tiver acesso a um SQL Server, selecione sua plataforma nos links a seguir (certifique-se de lembrar seu logon do SQL e uma senha!):
 - [Windows – Baixar o SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS – Baixar o SQL Server 2017 no Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -você precisa seguir as etapas até *criar e consultar dados*.
+- [macOS – Baixar o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -você só precisará seguir as etapas até *criar e consultar dados*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Conectar a um SQL Server
 
    
-1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. Na primeira vez que você executar *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* o **Conexão** caixa de diálogo é aberta. Se o **Conexão** não abre a caixa de diálogo, clique no **nova Conexão** ícone o **servidores** página:
+1. Inicie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Na primeira vez que você executar *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* o **Conexão** caixa de diálogo é aberta. Se o **Conexão** caixa de diálogo não abre, clique no **nova Conexão** ícone no **servidores** página:
    
    ![Novo ícone de Conexão](media/quickstart-sql-server/new-connection-icon.png)
 
-1. Este artigo usa *logon SQL*, mas *autenticação do Windows* tem suporte. Preencha os campos da seguinte maneira:
+1. Este artigo usa *logon do SQL*, mas *autenticação do Windows* tem suporte. Preencha os campos da seguinte maneira:
  
     - **Nome do servidor:** localhost
     - **Tipo de autenticação:** logon do SQL  
     - **Nome de usuário:** nome de usuário para o SQL Server  
     - **Senha:** senha para o SQL Server  
     - **Nome do banco de dados:** deixe esse campo em branco 
-    - **Grupo de servidores:** \<padrão\>  
+    - **Grupo de servidor:** \<padrão\>  
 
    ![Nova tela de Conexão](media/quickstart-sql-server/new-connection-screen.png)
 
@@ -60,7 +60,7 @@ Se você não tiver acesso a um SQL Server, selecione a plataforma os links a se
 
 As seguintes etapas criam um banco de dados denominado **TutorialDB**:
 
-1. Clique com o botão direito no seu servidor, **localhost**e selecione **nova consulta.**
+1. Clique com botão direito no seu servidor **localhost**e selecione **nova consulta.**
 1. Cole o trecho a seguir na janela de consulta: 
 
    ```sql
@@ -79,12 +79,12 @@ As seguintes etapas criam um banco de dados denominado **TutorialDB**:
    ```
 1. Para executar a consulta, clique em **executar** .
 
-Depois que a consulta é concluída, o novo **TutorialDB** aparece na lista de bancos de dados. Se você não estiver visível, clique com botão direito do **bancos de dados** nó e selecione **atualizar**.
+Depois que a consulta for concluída, o novo **TutorialDB** aparece na lista de bancos de dados. Se você não estiver visível, clique com botão direito do **bancos de dados** nó e selecione **atualizar**.
 
 
 ## <a name="create-a-table"></a>Criar uma tabela
 
-O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas deseja criar uma tabela no *TutorialDB* banco de dados. 
+O editor de consultas ainda está conectado para o *mestre* banco de dados, mas podemos deseja criar uma tabela na *TutorialDB* banco de dados. 
 
 1. Alterar o contexto de conexão para **TutorialDB**:
 
@@ -95,7 +95,7 @@ O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas dese
 1. Cole o trecho a seguir na janela de consulta e clique em **executar**:
 
    > [!NOTE]
-   > Você pode anexá-lo para ou substitua a consulta anterior no editor. Observe que clicar nos **executar** executa somente a consulta selecionada. Se nada estiver selecionado, clicando em **executar** executa todas as consultas no editor.
+   > Você pode anexá-lo para ou substituir a consulta anterior no editor. Observe que clicar em **executar** executa somente a consulta selecionada. Se nada estiver selecionado, clicando em **executar** executa todas as consultas no editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -114,7 +114,7 @@ O editor de consulta ainda estiver conectado a *mestre* banco de dados, mas dese
    GO
    ```
 
-Depois que a consulta é concluída, o novo **clientes** tabela aparece na lista de tabelas. Talvez seja necessário com o botão direito do **TutorialDB > tabelas** nó e selecione **atualizar**.
+Depois que a consulta for concluída, o novo **clientes** tabela aparece na lista de tabelas. Talvez seja necessário com o botão direito do **TutorialDB > tabelas** nó e selecione **atualizar**.
 
 ## <a name="insert-rows"></a>Inserir linhas
 
@@ -148,6 +148,6 @@ Depois que a consulta é concluída, o novo **clientes** tabela aparece na lista
 
 
 ## <a name="next-steps"></a>Próximas etapas
-Agora que você se conectou com êxito do SQL Server e execute uma consulta, experimente o [tutorial do editor de código](tutorial-sql-editor.md).
+Agora que você se conectou com êxito ao SQL Server e executar uma consulta, experimente o [tutorial do editor de código](tutorial-sql-editor.md).
 
 

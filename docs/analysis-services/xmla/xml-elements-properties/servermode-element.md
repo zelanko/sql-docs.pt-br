@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576258"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968489"
 ---
 # <a name="servermode-element"></a>Elemento ServerMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  O **ServerMode** elemento server especifica o modo de servidor está operando.  
+  O **ServerMode** elemento de servidor especifica o modo de servidor está operando no.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34576258"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Multidimensional*|Modo multidimensional e de mineração de dados|  
-|*Tabela*|Modo de Tabela|  
+|*Tabular*|Modo de Tabela|  
 |*SharePoint*|SharePoint|  
   
 ## <a name="see-also"></a>Confira também
