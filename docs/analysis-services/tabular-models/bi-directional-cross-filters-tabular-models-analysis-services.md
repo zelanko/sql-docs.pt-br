@@ -1,5 +1,5 @@
 ---
-title: Replicação bidirecional entre os filtros em modelos de tabela | Microsoft Docs
+title: Replicação bidirecional entre filtros em modelos de tabela | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033304"
 ---
-# <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidirecionais em modelos de tabela
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados de BI-direcional em modelos de tabela
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Novo método interno do SQL Server 2016 para habilitação de *filtros cruzados bidirecionais* em modelos de tabela, que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela.  
   
  Dividindo o conceito pelas respectivas partes componentes: *filtragem cruzada* é a capacidade de definir um contexto de filtro em uma tabela com base nos valores de uma tabela relacionada; *bidirecional* se refere à transferência de um contexto de filtro para uma segunda tabela relacionada do outro lado de uma relação de tabela. Como o próprio nome sugere, você pode fatiar nas duas direções da relação em vez de usar apenas uma.  Internamente, a filtragem bidirecional expande o contexto do filtro para consultar um superconjunto dos dados.  
   
- ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
+ ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "Filteroption SSAS-BIDI-1")  
   
  Há dois tipos de filtros cruzados: filtragem unidirecional e bidirecional. Unidirecional é a direção do filtro tradicional de muitos para um entre tabelas de fatos e tabelas de dimensões nessa relação. Bidirecional é um filtro cruzado que permite o uso do contexto do filtro de uma única relação como o contexto do filtro de outra relação de tabela, com uma única tabela comum para as duas relações.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34044870"
   
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## <a name="learn-step-by-step"></a>Saiba mais passo a passo  
+## <a name="learn-step-by-step"></a>Aprenda passo a passo  
  Para experimentar os filtros cruzados bidirecionais, confira esta apresentação passo a passo. Para acompanhar, é necessário ter:  
   
 -   Uma instância do Analysis Services para SQL Server 2016, um modelo de tabela e a versão mais recente do CTP  
@@ -196,10 +196,10 @@ ms.locfileid: "34044870"
   
  Na prática, a filtragem cruzada permite formas de exploração de dados que são fornecidas normalmente apenas por meio de uma construção de muitos para muitos. No entanto, é importante reconhecer que a filtragem cruzada bidirecional não é uma construção de muitos para muitos.  A configuração de tabela de muitos para muitos continua sem suporte no Designer para os modelos de tabela desta versão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Criar e gerenciar relações no Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Um exemplo prático de como tratar relações muitos-para-muitos simples no Power Pivot e modelos de tabela](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Resolvendo relações muitos-para-muitos aproveitando DAX filtragem cruzadam de tabelas](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Um exemplo prático de como muitos para tratar relações simples no Power Pivot e modelos de tabela](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Resolvendo relações de muitos para muitos aproveitando DAX filtragem cruzadam de tabelas](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Revolução muitos para muitos (blog do SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   

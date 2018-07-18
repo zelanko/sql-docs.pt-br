@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979107"
 ---
-# <a name="xml-elements---objects---executeresponse"></a>XML elementos - objetos - ExecuteResponse
+# <a name="xml-elements---objects---executeresponse"></a>XML elementos – objetos – ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Contém as informações retornadas por uma instância do Analysis Services em resposta a um [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   

@@ -1,5 +1,5 @@
 ---
-title: Não é possível atualizar dados de uma conexão de dados na pasta de trabalho | Microsoft Docs
+title: Não é possível atualizar os dados para uma conexão de dados na pasta de trabalho | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1fabd45d3b9858114e48e3bdde258ed6ccc8362
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037420"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981708"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "34037420"
   
  Para determinar a versão da pasta de trabalho, abra-a no Excel e verifique o provedor de dados que está especificado na cadeia de conexão. Uma pasta de trabalho do SQL Server 2008 R2 usa MSOLAP.4 como provedor de dados.  
   
- Para resolver esse problema, você pode atualizar a pasta de trabalho. Opcionalmente, você pode instalar bibliotecas de cliente da versão do SQL Server 2008 R2 do Analysis Services nos computadores físicos executando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint ou os serviços do Excel. Consulte: [Instalar o provedor OLE DB do Analysis Services em servidores do SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Para resolver esse problema, você pode atualizar a pasta de trabalho. Opcionalmente, você pode instalar bibliotecas de cliente da versão do SQL Server 2008 R2 do Analysis Services nos computadores físicos executando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint ou os serviços do Excel. Consulte: [Instalar o provedor OLE DB do Analysis Services em servidores do SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Cenário 2b: Serviços do Excel em execução em um servidor de aplicativos que tem a versão incorreta das bibliotecas de cliente**  
   
  Por padrão, o SharePoint Server 2010 instala a versão SQL Server 2008 do provedor OLE DB do Analysis Services em servidores de aplicativos que executam Serviços do Excel. Em um farm com suporte para o acesso a dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , todos os servidores físicos executando aplicativos que exigem dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , como os serviços do Excel e do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, deverão usar uma versão posterior do provedor de dados.  
   
- Os servidores que executam o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint obtêm o provedor de dados OLE DB atualizado automaticamente. Outros servidores, como os que executam uma instância autônoma dos Serviços do Excel sem o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no mesmo computador, devem ser reparados para usar as bibliotecas de cliente mais recentes. Para obter mais informações, consulte [Instalar o provedor OLE DB do Analysis Services nos servidores do SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Os servidores que executam o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint obtêm o provedor de dados OLE DB atualizado automaticamente. Outros servidores, como os que executam uma instância autônoma dos Serviços do Excel sem o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no mesmo computador, devem ser reparados para usar as bibliotecas de cliente mais recentes. Para obter mais informações, consulte [Instalar o Provedor OLE DB do Analysis Services nos Servidores SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Cenário 3: o controlador de domínio está indisponível.**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34037420"
   
  Para solucionar este problema, una o computador ao mesmo domínio do servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou instale um controlador de domínio em seu computador local. A segunda solução, instalar o controlador de domínio, exigirá que você crie contas de domínio locais para todos os serviços e usuários. Você precisará configurar contas de serviço e permissões do SharePoint para as contas que definir.  
   
- Instalar um controlador de domínio em seu computador é útil se o seu objetivo for usar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] off-line, consulte a entrada de blog "colocar sua [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidor fora da rede" em [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Instalar um controlador de domínio em seu computador é útil se o seu objetivo for usar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline, consulte a entrada de blog "levando seus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server fora da rede" no [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Cenário 4: servidor instável**  
   

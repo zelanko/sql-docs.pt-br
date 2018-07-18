@@ -1,5 +1,5 @@
 ---
-title: 'Lição tutorial do Analysis Services 7: criar indicadores chave de desempenho | Microsoft Docs'
+title: 'Lição de tutorial do Analysis Services 7: criar indicadores chave de desempenho | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979128"
 ---
 # <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Nesta lição, você deve criar indicadores chave de desempenho (KPIs). KPIs são usados para medir o desempenho de um valor definido por um *Base* medidas, em relação a um *destino* também definido por uma medida ou valor absoluto do valor. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs](../tabular-models/kpis-ssas-tabular.md)
+Nesta lição, você deve criar indicadores chave de desempenho (KPIs). Os KPIs são usados para medir o desempenho de um valor definido por uma *Base* medida, em relação a um *destino* também definido por uma medida ou valor absoluto do valor. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs](../tabular-models/kpis-ssas-tabular.md)
   
 Tempo estimado para concluir esta lição: **15 minutos**  
   
@@ -30,7 +30,7 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
   
-#### <a name="to-create-an-internetcurrentquartersalesperformance-kpi"></a>Para criar um KPI InternetCurrentQuarterSalesPerformance  
+#### <a name="to-create-an-internetcurrentquartersalesperformance-kpi"></a>Para criar um KPI de InternetCurrentQuarterSalesPerformance  
   
 1.  No designer de modelo, clique o **FactInternetSales** tabela.  
   
@@ -42,11 +42,11 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
     InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
     ```
 
-    Essa medida serve como a medida Base do KPI.  
+    Essa medida serve como a medida Base para o KPI.  
   
 4.  Na grade de medida, clique com botão direito **InternetCurrentQuarterSalesPerformance** > **criar KPI**.   
   
-5.  Na caixa de diálogo de desempenho KPI (indicador chave), em **destino** selecione **valor absoluto**e, em seguida, digite **1.1**.  
+5.  Na caixa de diálogo desempenho KPI (indicador chave), em **alvo** selecionar **valor absoluto**e, em seguida, digite **1.1**.  
   
 7.  No campo de controle deslizante à esquerda (baixo), digite **1**e, no campo de controle deslizante à direita (alto), digite **1.07**.  
   
@@ -55,13 +55,13 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
     ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
-    > Observe o expansível **descrições** rótulo abaixo os estilos de ícone disponíveis. Use as descrições para os vários elementos KPI para torná-los mais identificáveis nos aplicativos cliente.  
+    > Observe o expansível **descrições** rótulo abaixo dos estilos de ícone disponíveis. Use as descrições para os vários elementos KPI para torná-los mais identificáveis nos aplicativos cliente.  
   
 9. Clique em **OK** para concluir o KPI.  
   
     Na grade de medida, observe o ícone ao lado de **InternetCurrentQuarterSalesPerformance** medidas. Esse ícone indica que essa medida serve como um valor Base para um KPI.  
   
-#### <a name="to-create-an-internetcurrentquartermarginperformance-kpi"></a>Para criar um KPI InternetCurrentQuarterMarginPerformance  
+#### <a name="to-create-an-internetcurrentquartermarginperformance-kpi"></a>Para criar um KPI de InternetCurrentQuarterMarginPerformance  
   
 1.  Na grade de medida para o **FactInternetSales** da tabela, clique em uma célula vazia.  
   
@@ -73,9 +73,9 @@ Este artigo faz parte de um tutorial de modelagem de tabela, que deve ser conclu
  
 3.  Clique com botão direito **InternetCurrentQuarterMarginPerformance** > **criar KPI**.  
   
-4.  Na caixa de diálogo de desempenho KPI (indicador chave), em **destino** selecione **valor absoluto**e, em seguida, digite **1.25**.   
+4.  Na caixa de diálogo desempenho KPI (indicador chave), em **alvo** selecionar **valor absoluto**e, em seguida, digite **1,25**.   
   
-5.  No campo deslizante (baixa) à esquerda, deslize até que o campo exibe **0,8**e, em seguida, slide campo o controle deslizante à direita (alto), até que o campo exibe **1.03**.  
+5.  No campo de controle deslizante esquerdo de (baixo), deslize até que o campo exiba **0.8**e, em seguida, deslize o controle deslizante à direita (alto) campo até que o campo exiba **1.03**.  
   
 6.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde) e clique em **OK**.  
   

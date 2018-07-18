@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3de15b3d1f02f3acf8dd5809dce7ec01ad74e65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035264"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome da nova função de aplicativo. *Função* é **sysname**, sem padrão. *função* deve ser um identificador válido e não pode existir no banco de dados atual.  
+ É o nome da nova função de aplicativo. *função* está **sysname**, sem padrão. *função* deve ser um identificador válido e não pode existir no banco de dados atual.  
   
- Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Os nomes de função não podem conter uma barra invertida (\\) nem ser nulo ou uma cadeia de caracteres vazia (").  
+ Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Nomes de função não podem conter uma barra invertida (\\) nem ser nulo ou uma cadeia de caracteres vazia (").  
   
  [  **@password =** ] **'***senha***'**  
- É a senha necessária para ativar a função de aplicativo. *senha* é **sysname**, sem padrão. *senha* não pode ser NULL.  
+ É a senha necessária para ativar a função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,14 +67,14 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 -   Se um esquema de nome igual ao da função de aplicativo já existir, o procedimento falhará.  
   
--   Complexidade de senha não é verificada por **sp_addapprole**. Mas a complexidade da senha é verificada por CREATE APPLICATION ROLE.  
+-   A complexidade de senha não é verificada pelo **sp_addapprole**. Mas a complexidade da senha é verificada por CREATE APPLICATION ROLE.  
   
  O parâmetro *senha* é armazenado como um hash unidirecional.  
   
  O **sp_addapprole** procedimento armazenado não pode ser executado de dentro de uma transação definida pelo usuário.  
   
 > [!IMPORTANT]  
->  O Microsoft ODBC **criptografar** opção não é suportada por **SqlClient**. Quando possível, solicite que os usuários insiram as credenciais de função de aplicativo no momento da execução. Evite armazenar as credenciais em um arquivo. Se precisar manter as credenciais, criptografe-as usando as funções CryptoAPI.  
+>  O Microsoft ODBC **criptografar** opção não é compatível com **SqlClient**. Quando possível, solicite que os usuários insiram as credenciais de função de aplicativo no momento da execução. Evite armazenar as credenciais em um arquivo. Se precisar manter as credenciais, criptografe-as usando as funções CryptoAPI.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY APPLICATION ROLE no banco de dados. Se um esquema com nome e proprietário iguais aos da nova função ainda não existir, isso também exigirá a permissão CREATE SCHEMA no banco de dados.  

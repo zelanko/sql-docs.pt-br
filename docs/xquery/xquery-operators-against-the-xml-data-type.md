@@ -1,5 +1,5 @@
 ---
-title: Operadores XQuery em relação ao tipo de dados xml | Microsoft Docs
+title: Operadores de XQuery em tipos de dados xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988168"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operadores XQuery em relação ao tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "33077563"
   
 -   Operadores para comparação de valor (eq, ne, lt, gt, le, ge)  
   
--   Operadores de comparação geral (=,! =, \<, >, \<=, > =)  
+-   Operadores para comparação geral (=,! =, \<, >, \<=, > =)  
   
  Para obter mais informações sobre esses operadores, consulte [expressões de comparação &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-general-operators"></a>A. Usando operadores gerais  
- A consulta ilustra o uso de operadores gerais que se aplicam a sequências, além de comparar sequências. A consulta recupera uma sequência de números de telefone para cada cliente do **AdditionalContactInfo** coluna o **contato** tabela. Em seguida, essa sequência é comparada com a sequência de dois números de telefone ("111-111-1111", "222-2222").  
+ A consulta ilustra o uso de operadores gerais que se aplicam a sequências, além de comparar sequências. A consulta recupera uma sequência de números de telefone para cada cliente da **AdditionalContactInfo** coluna o **entre em contato com** tabela. Em seguida, essa sequência é comparada com a sequência de dois números de telefone ("111-111-1111", "222-2222").  
   
- A consulta usa o **=** operador de comparação. Cada nó na sequência no lado direito do **=** operador é comparado com cada nó na sequência no lado esquerdo. Se os nós forem correspondentes, a comparação de nó é **TRUE**. Em seguida, o nó será convertido em int, comparado com 1 e a consulta retornará o ID do cliente.  
+ A consulta usa o **=** operador de comparação. Cada nó na sequência do lado direito do **=** operador é comparado com cada nó na sequência no lado esquerdo. Se os nós forem correspondentes, a comparação de nó é **verdadeira**. Em seguida, o nó será convertido em int, comparado com 1 e a consulta retornará o ID do cliente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -99,10 +99,10 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Como ambos os operandos para o **eq** operador são valores atômicos, o operador de valor é usado na consulta. Você pode escrever a mesma consulta usando o operador de comparação geral ( **=** ).  
+ Porque ambos os operandos para o **eq** operador são valores atômicos, o operador de valor é usado na consulta. Você pode escrever a mesma consulta usando o operador de comparação geral ( **=** ).  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções XQuery em relação ao tipo de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

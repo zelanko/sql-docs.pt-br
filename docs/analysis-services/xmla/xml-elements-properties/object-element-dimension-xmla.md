@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b321a6c26edb4f569b4174d64a0a50b8ac23ae6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968298"
 ---
 # <a name="object-element-dimension-xmla"></a>Elemento Object (Dimension) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34575758"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Descartar](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [atualização](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
+|Elementos pai|[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [atualização](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
 |Elementos filho|[Cubo](../../../analysis-services/xmla/xml-elements-properties/cube-element-xmla.md), [banco de dados](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md), [dimensão](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

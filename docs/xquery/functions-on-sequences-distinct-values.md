@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040504"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>Funções em sequências - valores distintos
+# <a name="functions-on-sequences---distinct-values"></a>Funções em sequências – distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove valores duplicados da sequência especificada por *$arg*. Se *$arg* é uma sequência vazia, a função retornará a sequência vazia.  
@@ -45,17 +45,17 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  Sequência de valores atômicos.  
   
 ## <a name="remarks"></a>Remarks  
- Todos os tipos de valores atomizados que são passados para **distinct-values()** tem que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **eq** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Os valores do tipo xdt:untypedAtomic são convertidos em xs:string. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
+ Todos os tipos de valores atomizados que são passados para **distinct-values()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **eq** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Os valores do tipo xdt:untypedAtomic são convertidos em xs:string. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
   
  O resultado de **distinct-values()** recebe o tipo base dos tipos passados como xs: string no caso de XDT: untypedatomic, com a cardinalidade original. Se a entrada estiver estaticamente vazia, vazio será implícito e um erro estático será gerado.  
   
  Os valores de xs:string são comparados ao agrupamento de ponto de código Unicode padrão XQuery.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Usando a função distinct-values() para remover valores duplicados da sequência  
- Neste exemplo, uma instância XML que contém números de telefone é atribuída a um **xml** variável de tipo. O XQuery especificado contra essa variável usa o **distinct-values()** função para compilar uma lista de números de telefone que não contêm duplicatas.  
+ Neste exemplo, uma instância XML que contém os números de telefone é atribuída a um **xml** variável de tipo. O XQuery especificado contra essa variável usa o **distinct-values()** função para compilar uma lista de números de telefone que não contêm duplicatas.  
   
 ```  
 declare @x xml  
@@ -93,7 +93,7 @@ select @x.query('
   
 -   O **distinct-values()** função mapeia os valores inteiros para xs: decimal.  
   
--   O **distinct-values()** função oferece suporte apenas os tipos mencionados anteriormente e não suporta a mistura de tipos de base.  
+-   O **distinct-values()** função apenas suporta os tipos mencionados anteriormente e não suporta a combinação de tipos base.  
   
 -   O **distinct-values()** não há suporte para a função nos valores xs: Duration.  
   

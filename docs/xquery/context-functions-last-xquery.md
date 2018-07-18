@@ -1,5 +1,5 @@
 ---
-title: última função (XQuery) | Microsoft Docs
+title: Função (XQuery) Last | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 33b7afe5bdef612fe48938d8118c17d5d6e7a512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038434"
 ---
-# <a name="context-functions---last-xquery"></a>Funções de contexto - last (XQuery)
+# <a name="context-functions---last-xquery"></a>Funções de contexto – último (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o número de itens na sequência que está sendo processada atualmente. Especificamente, retorna o índice de inteiro do último item na sequência. O primeiro item na sequência tem um valor de índice de 1.  
@@ -43,13 +43,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Remarks  
- No SQL Server, **fn:last()** só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, ele só pode ser usado entre parênteses (`[ ]`).  
+ No SQL Server **fn:last()** só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, ele só pode ser usado entre parênteses (`[ ]`).  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Usando a função last() XQuery para recuperar as últimas duas etapas de fabricação  
- A consulta a seguir recupera as duas últimas etapas do processo de fabricação de um modelo de produto específico. O valor, o número de etapas de fabricação, retornado pelo **Last ()** nesta consulta, a função é usada para recuperar as duas últimas etapas de fabricação.  
+ A consulta a seguir recupera as duas últimas etapas do processo de fabricação de um modelo de produto específico. O valor, o número de etapas de fabricação, retornado pela **Last ()** nesta consulta, a função é usada para recuperar as duas últimas etapas de fabricação.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   

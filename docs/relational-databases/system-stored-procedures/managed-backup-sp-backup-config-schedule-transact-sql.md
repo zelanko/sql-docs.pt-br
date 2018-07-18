@@ -1,5 +1,5 @@
 ---
-title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
+title: sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8ebeca4b0a1c9079f8786303207bcbae4dfe74c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035274"
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configura as opções de agendamento automatizadas ou personalizadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Configura as opções de agendamento personalizadas ou automatizadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
     
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,25 +57,25 @@ EXEC managed_backup.sp_backup_config_schedule
  O nome do banco de dados para habilitar o backup gerenciado em um banco de dados específico. Se for NULL ou *, em seguida, esse backup gerenciado se aplica a todos os bancos de dados no servidor.  
   
  @scheduling_option  
- Especifique 'System' controladas pelo sistema de agendamento de backup. Especifique 'Custom' para um agendamento personalizado definido pela outros paratmeters.  
+ Especifique 'System' controlado pelo sistema de agendamento de backup. Especifique 'Custom' para um agendamento personalizado definido pelos outros parâmetros.  
   
  @full_backup_freq_type  
- O tipo de frequência para a operação de backup gerenciado, que pode ser definida como 'Diário' ou 'Semanalmente'.  
+ O tipo de frequência para a operação de backup gerenciado, que pode ser definida como "Semanalmente" ou "Daily".  
   
  @days_of_week  
- Os dias da semana para os backups quando @full_backup_freq_type está definido para semanal. Especifica nomes de cadeia de caracteres completa como '"segunda-feira.  Você também pode especificar mais de um nome de um dia, separado por barra vertical. Por exemplo, N'Monday | Quarta-feira | Sexta-feira '.  
+ Os dias da semana para os backups quando @full_backup_freq_type está definido para semanal. Especifique os nomes de cadeia de caracteres completa, como '"segunda-feira.  Você também pode especificar mais de um nome de um dia, separados por Pipe. Por exemplo, N'Monday | Quarta-feira | Sexta-feira '.  
   
  @backup_begin_time  
- A hora de início da janela de backup. Os backups não serão iniciados fora do período de tempo, que é definido por uma combinação de @backup_begin_time e @backup_duration.  
+ Hora de início da janela de backup. Backups não serão iniciados fora da janela de tempo, o que é definida por uma combinação de @backup_begin_time e @backup_duration.  
   
  @backup_duration  
- A duração da janela de tempo de backup. Observe que não há nenhuma garantia de que os backups serão concluídos durante a janela de tempo definida pelo @backup_begin_time e @backup_duration. Operações de backup que são iniciadas nesta janela de tempo, mas excedem a duração da janela não serão canceladas.  
+ A duração da janela de tempo de backup. Observe que não há nenhuma garantia de que os backups serão concluídos durante a janela de tempo definida pela @backup_begin_time e @backup_duration. Operações de backup que são iniciadas nessa janela de tempo, mas excederem a duração da janela não serão canceladas.  
   
  @log_backup_freq  
- Isso determina a frequência dos backups de log de transações. Esses backups ocorrem em intervalos regulares, em vez de no agendamento especificado para os backups de banco de dados. @log_backup_freq pode ser em minutos ou horas e 0 é válido, que não indica que nenhum backup de log. Desabilitar backups de log só podem ser adequada para bancos de dados com um modelo de recuperação simples.  
+ Isso determina a frequência dos backups de log de transação. Esses backups ocorrem em intervalos regulares, em vez de no agendamento especificado para os backups de banco de dados. @log_backup_freq pode ser em minutos ou horas, e 0 é válido, que não indica que nenhum backup de log. Desabilitando os backups de log só podem ser apropriada para bancos de dados com um modelo de recuperação simples.  
   
 > [!NOTE]  
->  Se o modelo de recuperação for alterado de simple para full, você precisa reconfigurar o log_backup_freq de 0 para um valor diferente de zero.  
+>  Se o modelo de recuperação for alterado de simple para full, você precisará reconfigurar o log_backup_freq de 0 para um valor diferente de zero.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -83,7 +83,7 @@ EXEC managed_backup.sp_backup_config_schedule
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Requer a participação no **db_backupoperator** função, do banco de dados com **ALTER ANY CREDENTIAL** permissões, e **EXECUTE** permissões **sp_delete _ backuphistory** procedimento armazenado.  
+ Requer associação na **db_backupoperator** função de banco de dados com **ALTER ANY CREDENTIAL** permissões, e **EXECUTE** permissões em **sp_delete backuphistory** procedimento armazenado.  
   
 ## <a name="see-also"></a>Consulte também  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   

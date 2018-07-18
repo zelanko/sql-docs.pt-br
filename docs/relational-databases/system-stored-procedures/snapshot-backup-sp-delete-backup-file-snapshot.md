@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12cb91c23c87e32d25d73f551d7aa6b76fa66288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036204"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Exclui um instantâneo de backup especificado do banco de dados especificado. Use este sistema de procedimento armazenado em conjunto com o **sys. fn_db_backup_file_snapshots** órfãos de função do sistema para identificar e excluir instantâneos de backup. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Exclui um instantâneo de backup especificado do banco de dados especificado. Use este sistema o procedimento armazenado em conjunto com o **sys. fn_db_backup_file_snapshots** órfãos de função do sistema para identificar e excluir instantâneos de backup. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,7 +43,7 @@ sys.sp_delete_backup_file_snapshot
   
 ## <a name="arguments"></a>Argumentos  
  *[ @db_name =] database_name*  
- O nome do banco de dados que contém o instantâneo a ser excluído, fornecido como uma cadeia de caracteres Unicode.  
+ O nome do banco de dados que contém o instantâneo seja excluído, fornecido como uma cadeia de caracteres Unicode.  
   
  *[ @snapshot_url =] snapshot_url*  
  A URL do instantâneo a ser excluída, fornecida como uma cadeia de caracteres Unicode.  

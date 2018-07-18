@@ -24,18 +24,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981938"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>Funções de extensão XQuery - SQL: Column
+# <a name="xquery-extension-functions---sqlcolumn"></a>Funções de extensão XQuery – SQL: Column
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar o **sql:column(()** funcionar quando você usar [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
+  Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar o **sql:column(()** funcionar quando você usa [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
   
- Por exemplo, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em uma variável ou coluna de **xml** tipo. Às vezes, você também pode desejar que sua consulta use valores de outra coluna que não seja XML, para agrupar dados relacionais e XML. Para fazer isso, use o **SQL: Column** função.  
+ Por exemplo, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em uma variável ou coluna da **xml** tipo. Às vezes, você também pode desejar que sua consulta use valores de outra coluna que não seja XML, para agrupar dados relacionais e XML. Para fazer isso, você deve usar o **SQL: Column** função.  
   
  O valor SQL será mapeado para um valor correspondente XQuery e seu tipo será um tipo base XQuery equivalente ao tipo de SQL correspondente.  
   
@@ -47,9 +47,9 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Observe que essa referência a uma coluna especificada no **SQL: Column** função dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
+ Observe que essa referência a uma coluna especificada na **SQL: Column** função dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
   
- Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode fazer referência a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir a colunas do tipo **xml** ou um CLR tipo definido pelo usuário.  
+ Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode se referir a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir a colunas que são do tipo **xml** ou um CLR tipo definido pelo usuário.  
   
  O **SQL: Column** função não tem suporte em operações de junção. Em vez disso, pode ser usada a operação APPLY.  
   
@@ -69,9 +69,9 @@ sql:column("columnName")
   
 -   O **ProductID**, **ProductName**, e **ProductPrice** valores de atributo são obtidos com o **produto** tabela.  
   
--   O **ProductModelID** valor de atributo é recuperado do **ProductModel** tabela.  
+-   O **ProductModelID** o valor de atributo é recuperado do **ProductModel** tabela.  
   
--   Para tornar a consulta mais interessante, o **ProductModelName** o valor do atributo é obtido o **CatalogDescription** coluna de **tipo xml**. Como as informações do catálogo de modelo do produto XML não são armazenadas para todos os modelos de produtos, a instrução `if` será usada para recuperar o valor somente se ele existir.  
+-   Para tornar a consulta mais interessante, o **ProductModelName** o valor de atributo é obtido do **CatalogDescription** coluna da **tipo de xml**. Como as informações do catálogo de modelo do produto XML não são armazenadas para todos os modelos de produtos, a instrução `if` será usada para recuperar o valor somente se ele existir.  
   
     ```  
     SELECT P.ProductID, CatalogDescription.query('  
@@ -98,7 +98,7 @@ sql:column("columnName")
   
 -   Como os valores são recuperados em duas tabelas diferentes, a cláusula FROM especifica duas tabelas. A condição na cláusula WHERE filtra o resultado e recupera apenas produtos cujos modelos de produto tenham descrições de catálogo.  
   
--   O **namespace** palavra-chave no [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace XML, "pd", que é usado no corpo da consulta. Observe que os aliases de tabela, "P" e "PM", são definidos na cláusula FROM da própria consulta.  
+-   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace XML, "pd", que é usado no corpo da consulta. Observe que os aliases de tabela, "P" e "PM", são definidos na cláusula FROM da própria consulta.  
   
 -   O **SQL: Column** função é usada para colocar valores não XML dentro do XML.  
   
@@ -113,7 +113,7 @@ ProductID               Result
 ...  
 ```  
   
- A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. O XML é então atribuído ao @x variáveis de **xml** tipo.  
+ A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. O XML é atribuído, em seguida, para o @x variável de **xml** tipo.  
   
 ```  
 declare @x xml  
@@ -142,7 +142,7 @@ select @x
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;linguagem de manipulação de dados XML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

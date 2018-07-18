@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 883fa5df355874516ffd6f0cac01ff50d727d737
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979138"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "34573758"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **DataSourceID** elemento contém o nome da fonte de dados na instância de origem que identifica a instância remota na qual as informações de partição remota são ser submetidos a backup, restaurados ou sincronizados.  
+ O **DataSourceID** elemento contém o nome da fonte de dados na instância de origem que identifica a instância remota, no qual as informações de partição remota deve ser submetidos a backup, restaurados ou sincronizados.  
   
- Para obter mais informações sobre backup e restaurando partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obter mais informações sobre como fazer backup e restaurar partições remotas, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Confira também
  [Elemento ConnectionString &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   

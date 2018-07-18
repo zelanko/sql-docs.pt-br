@@ -20,33 +20,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 125712a02b362a49902c9f1e2422414f059864ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8780920f4b535c77b82f404e84917d4cc97af4e1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965931"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983878"
 ---
 #<a name="installing-smo"></a>Instalando o SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Esta página fornece informações sobre como instalar o SMO para uso por aplicativos e os requisitos de sistema para usar o SMO.
+Esta página fornece informações sobre como instalar o SMO para uso por aplicativos e os requisitos do sistema para usar o SMO.
 
 ## <a name="smo-nuget-package"></a>Pacote do NuGet SMO
 
-Começando com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO é distribuído como o [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) pacote NuGet para permitir que os usuários a desenvolver aplicativos com o SMO.
+Começando com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO é distribuído como o [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) pacote do NuGet para permitir que os usuários a desenvolver aplicativos com o SMO.
 
-Isso é uma substituição para SharedManagementObjects.msi, que foi lançada anteriormente como parte do Feature Pack SQL para cada versão do SQL Server. Aplicativos que usam o SMO devem ser atualizados para usar o pacote do NuGet em vez disso e serão responsáveis por garantir que os binários são instalados com o aplicativo que está sendo desenvolvido.
+Isso é uma substituição para sharedmanagementobjects. msi, que foi lançada anteriormente como parte do Feature Pack SQL para cada versão do SQL Server. Aplicativos que usam o SMO devem ser atualizados para usar o pacote do NuGet em vez disso e serão responsáveis por garantir que os binários são instalados com o aplicativo que está sendo desenvolvido.
 
 >>[!Important]
->>Conforme mencionado no [arquivos e números de versão](files-and-version-numbers.md) página, você não deve instalar os assemblies SMO no GAC. Isso pode causar problemas com outros aplicativos que também usam essas versões do SMO (como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
+>>Como mencionado na [arquivos e números de versão](files-and-version-numbers.md) página, você não deve instalar os assemblies SMO no GAC. Isso poderia causar problemas com outros aplicativos que também usam essas versões do SMO (como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##<a name="installing-the-package"></a>Instalando o pacote
+##<a name="installing-the-package"></a>A instalação do pacote
 
-Consulte [NuGet Quick Start - Use um pacote](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) para obter instruções e exemplos de como instalar e usar um pacote do NuGet. 
+Ver [início rápido NuGet – Use um pacote](https://docs.microsoft.com/nuget/quickstart/use-a-package) para obter instruções e exemplos de como instalar e usar um pacote do NuGet. 
   
 ## <a name="system-requirements"></a>Requisitos do sistema
   
- O SMO requer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 em execução, para que os aplicativos usando devem garantir que computadores cliente têm essa versão ou superior instalado.
+ Requer o SMO [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 em execução, portanto, quaisquer aplicativos que a utilizam devem garantir que os computadores cliente tem essa versão ou superior instalado.
   

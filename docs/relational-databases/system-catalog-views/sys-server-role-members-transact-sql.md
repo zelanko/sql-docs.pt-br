@@ -1,5 +1,5 @@
 ---
-title: server_role_members (Transact-SQL) | Microsoft Docs
+title: sys. server_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039005"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "33221077"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**Int**|ID do principal do servidor da função.|  
-|**member_principal_id**|**Int**|ID do principal do servidor do membro.|  
+|**role_principal_id**|**int**|ID do principal do servidor da função.|  
+|**member_principal_id**|**int**|ID do principal do servidor do membro.|  
   
- Para adicionar ou remover membros da função de servidor, use o [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instrução.  
+ Para adicionar ou remover a associação à função de servidor, use o [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instrução.  
   
 ## <a name="permissions"></a>Permissões  
- Os logons podem exibir a própria associação de função de servidor e também o principal_id dos membros das funções de servidor fixas. Para exibir todas as associação de função de servidor requer o **VIEW DEFINITION ON SERVER ROLE** permissão ou associação no **securityadmin** função de servidor fixa.  
+ Os logons podem exibir a própria associação de função de servidor e também o principal_id dos membros das funções de servidor fixas. Para exibir todos os membro da função de servidor requer o **VIEW DEFINITION ON SERVER ROLE** permissão ou associação na **securityadmin** função de servidor fixa.  
   
  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

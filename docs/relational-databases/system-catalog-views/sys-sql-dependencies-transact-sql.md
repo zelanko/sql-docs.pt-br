@@ -1,5 +1,5 @@
 ---
-title: sql_dependencies (Transact-SQL) | Microsoft Docs
+title: sys. sql_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b458e22f8b0b803dcd359b870af6f14b85a95f48
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981387"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "33221377"
   Contém uma linha para cada dependência em uma entidade referenciada na expressão [!INCLUDE[tsql](../../includes/tsql-md.md)] ou instruções que definem algum outro objeto de referência.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) em vez disso.  
 
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica a classe da entidade referenciada:<br /><br /> 0 = Objeto ou coluna (somente referências não associadas a esquema)<br /><br /> 1 = Objeto ou coluna (somente referências associadas a esquema)<br /><br /> 2 = Tipos (referências associadas a esquema)<br /><br /> 3 = Coleções de esquema XML (referências associadas a esquema)<br /><br /> 4 = Função de partição (referências associadas a esquema)|  
 |**class_desc**|**nvarchar(60)**|Descrição da classe da entidade referenciada:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
-|**object_id**|**Int**|ID do objeto de referência.|  
-|**column_id**|**Int**|Se a ID de referência for uma coluna, ID da coluna de referência; caso contrário, 0.|  
-|**referenced_major_id**|**Int**|ID da entidade referenciada, interpretada por valor de classe, de acordo com:<br /><br /> 0, 1 = ID de objeto do objeto ou coluna.<br /><br /> 2 = ID do tipo.<br /><br /> 3 = ID da coleção de esquemas XML.|  
-|**referenced_minor_id**|**Int**|ID secundária da entidade referenciada, interpretada pelo valor de classe, como mostrado a seguir.<br /><br /> Quando classe =:<br /><br /> 0, **referenced_minor_id** é uma ID de coluna; ou, se não for uma coluna, será 0.<br /><br /> 1, **referenced_minor_id** é uma ID de coluna; ou, se não for uma coluna, será 0.<br /><br /> Caso contrário, **referenced_minor_id** = 0.|  
+|**object_id**|**int**|ID do objeto de referência.|  
+|**column_id**|**int**|Se a ID de referência for uma coluna, ID da coluna de referência; caso contrário, 0.|  
+|**referenced_major_id**|**int**|ID da entidade referenciada, interpretada por valor de classe, de acordo com:<br /><br /> 0, 1 = ID de objeto do objeto ou coluna.<br /><br /> 2 = ID do tipo.<br /><br /> 3 = ID da coleção de esquemas XML.|  
+|**referenced_minor_id**|**int**|ID secundária da entidade referenciada, interpretada pelo valor de classe, como mostrado a seguir.<br /><br /> Quando classe =:<br /><br /> 0, **referenced_minor_id** é uma ID de coluna; ou, se não for uma coluna, será 0.<br /><br /> 1, **referenced_minor_id** é uma ID de coluna; ou, se não for uma coluna, será 0.<br /><br /> Caso contrário, **referenced_minor_id** = 0.|  
 |**is_selected**|**bit**|Objeto ou coluna é selecionada.|  
 |**is_updated**|**bit**|Objeto ou coluna é atualizada.|  
 |**is_select_all**|**bit**|Objeto é usado na cláusula SELECT * (somente no nível do objeto).|  

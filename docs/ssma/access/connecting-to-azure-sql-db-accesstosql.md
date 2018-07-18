@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao banco de dados do SQL Azure (AccessToSQL) | Microsoft Docs
+title: Conectar-se ao banco de dados SQL do Azure (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,31 +25,31 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1ac762974e9e08d7e225534a4628b873efe28c4b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773612"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983923"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectar-se ao banco de dados do SQL Azure (AccessToSQL)
-Para migrar bancos de dados do Access para o SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conectar, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados de banco de dados no Explorador de metadados do SQL Azure. O SSMA armazena informações sobre a instância do SQL Azure está conectado, mas não armazena as senhas.  
+# <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectar-se ao banco de dados SQL do Azure (AccessToSQL)
+Para migrar bancos de dados Access para o SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conectar, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados de banco de dados no Gerenciador de metadados do SQL Azure. O SSMA armazena informações sobre qual instância do SQL Azure você está conectado ao, mas não armazena as senhas.  
   
-Sua conexão com o SQL Azure permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve reconectar ao SQL Azure se você quiser uma conexão ativa com o servidor. Você pode trabalhar offline até que você carregar objetos de banco de dados no SQL Azure e migra dados.  
+Sua conexão ao SQL Azure permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar ao SQL Azure se você quiser que uma conexão ativa com o servidor. Você pode trabalhar offline até que você carregar objetos de banco de dados no SQL Azure e migra dados.  
   
-Metadados sobre a instância do SQL Azure não será sincronizado automaticamente. Em vez disso, para atualizar os metadados no Gerenciador de metadados do SQL Azure, você deve atualizar manualmente os metadados do SQL Azure. Para obter mais informações, consulte a seção "Sincronizando o SQL Azure metadados" mais adiante neste tópico.  
+Metadados sobre a instância do SQL Azure não será sincronizado automaticamente. Em vez disso, para atualizar os metadados no Gerenciador de metadados do SQL Azure, você deve atualizar manualmente os metadados do SQL Azure. Para obter mais informações, consulte a seção "Sincronizar metadados de SQL Azure" mais adiante neste tópico.  
   
-## <a name="required-sql-azure-permissions"></a>Necessário SQL permissões do Azure  
-A conta que é usada para se conectar ao SQL Azure requer permissões diferentes dependendo de ações que realiza a conta:  
+## <a name="required-sql-azure-permissions"></a>Exigido do SQL Azure permissões  
+A conta que é usada para se conectar ao SQL Azure exige permissões diferentes, dependendo das ações que executa a conta:  
   
--   Para converter objetos de acesso a [!INCLUDE[tsql](../../includes/tsql_md.md)] sintaxe, para atualizar os metadados do SQL Azure, ou salvar sintaxe convertido para scripts, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
+-   Para converter objetos de acesso para [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts de sintaxe, para atualizar os metadados do SQL Azure ou para salvar a sintaxe a ser convertido, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
   
--   Para carregar os objetos de banco de dados no SQL Azure, o requisito mínimo de permissão é a associação de **db_owner** função de banco de dados no banco de dados de destino.  
+-   Para carregar objetos de banco de dados no SQL Azure, o requisito mínimo de permissão é a associação à **db_owner** função de banco de dados no banco de dados de destino.  
   
 ## <a name="establishing-a-sql-azure-connection"></a>Estabelecendo um SQL Azure Conexão  
-Antes de converter objetos de banco de dados do Access a sintaxe do SQL Azure, você deve estabelecer uma conexão com a instância do SQL Azure em que você deseja migrar o banco de dados ou bancos de dados.  
+Antes de converter objetos de banco de dados de acesso à sintaxe do SQL Azure, você deve estabelecer uma conexão à instância do SQL Azure em que você deseja migrar o banco de dados ou bancos de dados.  
   
-Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Depois de se conectar ao SQL Azure, você pode personalizar esse mapeamento no nível do esquema de acesso. Para obter mais informações, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Você pode personalizar esse mapeamento no nível do esquema de acesso depois que você se conectar ao SQL Azure. Para obter mais informações, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
 > Antes de tentar se conectar ao SQL Azure, certifique-se de que a instância do SQL Azure está em execução e pode aceitar conexões.  
@@ -58,9 +58,9 @@ Quando você define as propriedades de conexão, você também especificar o ban
   
 1.  Sobre o **arquivo** menu, selecione **conectar-se ao SQL Azure** (essa opção é habilitada após a criação de um projeto).  
   
-    Se você se conectado anteriormente ao SQL Azure, o nome do comando será **reconectar-se ao SQL Azure**.  
+    Se você conectado anteriormente ao SQL Azure, será o nome do comando **reconectar-se ao SQL Azure**.  
   
-2.  Na caixa de diálogo de conexão, digite ou selecione o nome do servidor do SQL Azure.  
+2.  Na caixa de diálogo de conexão, insira ou selecione o nome do servidor do SQL Azure.  
   
 3.  Insira, selecione ou **procurar** o nome do banco de dados.  
   
@@ -73,12 +73,12 @@ Quando você define as propriedades de conexão, você também especificar o ban
 7.  Clique em **Conectar**.  
   
 > [!IMPORTANT]  
-> O SSMA para Access não dá suporte a conexão para **mestre** banco de dados no SQL Azure.  
+> O SSMA para Access não dá suporte a conexão ao **mestre** banco de dados no SQL Azure.  
   
-Se não houver nenhum banco de dados na conta do SQL Azure, você pode criar o banco de dados usando a primeira **criar banco de dados do Azure** opção que aparece ao clicar de **procurar** botão.  
+Se não houver nenhum banco de dados na conta do SQL Azure, você pode criar o banco de dados usando a primeira **criar banco de dados do Azure** opção que aparece em clique **procurar** botão.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Sincronizando o SQL Azure metadados  
-Metadados sobre bancos de dados do SQL Azure não são atualizados automaticamente. Os metadados no Gerenciador de metadados do SQL Azure são um instantâneo dos metadados quando conectado primeiro para o SQL Azure, ou a última vez que você manualmente atualizado metadados. Você pode atualizar manualmente os metadados para todos os bancos de dados ou para qualquer banco de dados ou objeto de banco de dados.  
+Metadados sobre bancos de dados do SQL Azure não é atualizado automaticamente. Os metadados no Gerenciador de metadados do SQL Azure são um instantâneo dos metadados quando você primeiro conectado ao SQL Azure ou a última vez que você manualmente atualizado metadados. Você pode atualizar manualmente os metadados para todos os bancos de dados ou para qualquer banco de dados individual ou um objeto de banco de dados.  
   
 **Para sincronizar os metadados**  
   
@@ -91,28 +91,28 @@ Metadados sobre bancos de dados do SQL Azure não são atualizados automaticamen
 3.  Bancos de dados, ou o banco de dados individual ou o esquema de banco de dados e, em seguida, selecione **sincronizar com o banco de dados**.  
   
 ## <a name="refreshing-sql-azure-metadata"></a>Atualizando o SQL Azure metadados  
-Se os esquemas do SQL Azure alteram depois de se conectar, você pode atualizar metadados do servidor.  
+Se os esquemas do SQL Azure alteram depois de se conectar, você pode atualizar os metadados do servidor.  
   
 **Para atualizar os metadados do SQL Azure**  
   
--   No Gerenciador de metadados do SQL Azure, clique com botão direito **bancos de dados**e, em seguida, selecione **de atualização do banco de dados**.  
+-   No Gerenciador de metadados do SQL Azure, clique com botão direito **bancos de dados**e, em seguida, selecione **atualização do banco de dados**.  
   
 ## <a name="reconnecting-to-sql-azure"></a>Reconectar-se ao SQL Azure  
-Sua conexão com o SQL Azure permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve reconectar ao SQL Azure se você quiser uma conexão ativa com o servidor. Você pode trabalhar offline até que você carregar objetos de banco de dados no SQL Azure e migra dados.  
+Sua conexão ao SQL Azure permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar ao SQL Azure se você quiser que uma conexão ativa com o servidor. Você pode trabalhar offline até que você carregar objetos de banco de dados no SQL Azure e migra dados.  
   
 O procedimento para reconectar-se ao SQL Azure é o mesmo que o procedimento para estabelecer uma conexão.  
   
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento entre esquemas de acesso e esquemas de bancos de dados do SQL Azure, consulte [bancos de dados do mapeamento de acesso para esquemas SQL Server](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4).  
+-   Para personalizar o mapeamento entre esquemas de acesso e bancos de dados do SQL Azure e esquemas, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4).  
   
--   Para personalizar opções de configuração para os projetos, consulte [definindo opções de projeto](http://msdn.microsoft.com/en-us/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+-   Para personalizar opções de configuração para os projetos, consulte [definir opções do projeto](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
   
--   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [tipos de dados de destino e origem do mapeamento de](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+-   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
   
--   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados do Access em definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados do Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados do Access em definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados do Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

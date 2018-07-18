@@ -35,27 +35,27 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f88f27de2202679147ad3b3f0b3e1a3765292d88
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773562"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983358"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
-Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto SSMA. Esses bancos de dados devem ser Access 97 ou posterior. Se você tiver bancos de dados de uma versão anterior do Access, você deve converter os bancos de dados em uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados do Access 97 ou posterior antes de adicioná-los para o SSMA.  
+Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto do SSMA. Esses bancos de dados devem ser Access 97 ou versões posteriores. Se você tiver bancos de dados de uma versão anterior de acesso, você deve converter os bancos de dados para uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados no Access 97 ou posterior antes de adicioná-los a SSMA.  
   
-## <a name="what-happens-when-you-add-access-database-files"></a>O que acontece quando você adicionar arquivos de banco de dados de acesso?  
-Quando você adiciona um banco de dados a um projeto do SSMA, SSMA lê os metadados de banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados descrevem o banco de dados e seus objetos. O SSMA usa os metadados ao converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou sintaxe de SQL Azure, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure. Você pode procurar esses metadados no Gerenciador de metadados de acesso e revisar as propriedades dos objetos de banco de dados individuais.  
+## <a name="what-happens-when-you-add-access-database-files"></a>O que acontece quando você adiciona arquivos de banco de dados de acesso?  
+Quando você adiciona um banco de dados a um projeto do SSMA, SSMA lê os metadados de banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados descrevem o banco de dados e seus objetos. O SSMA usa os metadados quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou a sintaxe do SQL Azure, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você pode procurar esses metadados no Gerenciador de metadados de acesso e examine as propriedades dos objetos de banco de dados individuais.  
   
 > [!NOTE]  
-> Um banco de dados pode ser dividido em vários arquivos: um banco de dados de back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você deseja migrar um banco de dados de divisão para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure, adicione o banco de dados front-end para o SSMA.  
+> Um banco de dados pode ser dividido em vários arquivos: um banco de dados de back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você quiser migrar um banco de dados divisão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, adicione o banco de dados front-end para o SSMA.  
   
-## <a name="permissions-that-are-required-by-ssma"></a>Permissões necessárias para o SSMA  
-Para migrar um banco de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, o grupo de usuários e o usuário administrador devem ter permissões de administrador. Para obter informações sobre como migrar bancos de dados com proteção do grupo de trabalho, consulte [Preparar bancos de dados para migração](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+## <a name="permissions-that-are-required-by-ssma"></a>Permissões que são exigidas pelo SSMA  
+Para migrar um banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, o grupo de usuários e o usuário administrador devem ter permissões de administrador. Para obter informações sobre como migrar bancos de dados com proteção do grupo de trabalho, consulte [Preparando bancos de dados de acesso para a migração](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
 ## <a name="selecting-databases-to-add"></a>Selecionar bancos de dados para adicionar  
-Se você deseja adicionar um ou mais bancos de dados a um projeto do SSMA, e os arquivos estão em um local conhecido, você pode adicionar os arquivos usando o procedimento a seguir.  
+Se você deseja adicionar um ou mais bancos de dados a um projeto do SSMA e os arquivos estão todos em um local conhecido, você pode adicionar os arquivos usando o procedimento a seguir.  
   
 **Para adicionar arquivos de banco de dados individual**  
   
@@ -63,18 +63,18 @@ Se você deseja adicionar um ou mais bancos de dados a um projeto do SSMA, e os 
   
 2.  No **abrir** caixa de diálogo caixa, localize a pasta que contém o arquivo de banco de dados ou arquivos.  
   
-3.  Selecione os arquivos que você deseja adicionar e, em seguida, clique em **abrir**.  
+3.  Selecione os arquivos que você deseja adicionar e, em seguida, clique em **aberto**.  
   
-## <a name="finding-databases-to-add"></a>Localizando bancos de dados para adicionar  
-Se você deseja adicionar vários bancos de dados de acesso de pastas diferentes para um projeto do SSMA, ou você deseja adicionar um único arquivo, mas tem que localizar o arquivo, você pode seguir estas etapas para localizar um mais arquivos e adicioná-los ao projeto.  
+## <a name="finding-databases-to-add"></a>Localizando os bancos de dados para adicionar  
+Se você deseja adicionar vários bancos de dados de acesso de pastas diferentes a um projeto do SSMA, ou você deseja adicionar um único arquivo, mas precisa encontrar o arquivo, você pode seguir estas etapas para localizar um ou mais arquivos e adicioná-los ao projeto.  
   
 **Para localizar e adicionar bancos de dados**  
   
 1.  Sobre o **arquivo** menu, clique em **localizar bancos de dados**.  
   
-2.  No Assistente de bancos de dados de localização, digite o nome da unidade, caminho do arquivo ou caminho UNC que você deseja pesquisar. Como alternativa, clique em **procurar** para localizar a unidade ou pasta de rede.  
+2.  No assistente localizar bancos de dados, insira o nome da unidade, caminho do arquivo ou caminho UNC que você deseja pesquisar. Como alternativa, clique em **procurar** para localizar a unidade ou pasta de rede.  
   
-3.  Clique em **adicionar** para adicionar o local na lista.  
+3.  Clique em **adicionar** para adicionar o local à lista.  
   
     Repita as duas etapas anteriores para adicionar mais locais de pesquisa.  
   
@@ -83,47 +83,47 @@ Se você deseja adicionar vários bancos de dados de acesso de pastas diferentes
     > [!IMPORTANT]  
     > O **todo ou parte do nome do arquivo** caixa de texto não oferece suporte a caracteres curinga.  
   
-5.  Clique em **verificação**.  
+5.  Clique em **Scan**.  
   
-    A página de verificação é exibida. Isso mostra os bancos de dados que foram encontrados e o andamento da pesquisa. Para interromper a pesquisa, clique em **parar**.  
+    A página de verificação aparece. Isso mostra os bancos de dados que foram localizados e o progresso da pesquisa. Para parar a pesquisa, clique em **parar**.  
   
 6.  Na página Selecionar arquivos, selecione os bancos de dados que você deseja adicionar ao projeto.  
   
-    Você pode usar o **Selecionar tudo** e **Limpar tudo** botões na parte superior da lista para selecionar ou desmarcar todos os bancos de dados. Você pode mantenha a tecla CTRL pressionada para selecionar vários bancos de dados, ou mantenha pressionada a tecla SHIFT para baixo para selecionar um intervalo de bancos de dados.  
+    Você pode usar o **Selecionar tudo** e **Limpar tudo** botões na parte superior da lista para selecionar ou desmarcar todos os bancos de dados. Você pode mantenha a tecla CTRL pressionada para selecionar vários bancos de dados, ou mantenha a tecla SHIFT pressionada para baixo para selecionar um intervalo de bancos de dados.  
   
 7.  Clique em **Avançar**.  
   
-8.  Na página de verificação, clique em **concluir**.  
+8.  Na página verificar, clique em **concluir**.  
   
 ## <a name="browsing-access-metadata"></a>Navegando em metadados de acesso  
-Depois de adicionar um banco de dados a um projeto, os metadados do projeto é exibido no Gerenciador de metadados de acesso. Você pode procurar a hierarquia de bancos de dados e objetos de banco de dados no Gerenciador.  
+Depois de adicionar um banco de dados a um projeto, os metadados do projeto é exibido no Gerenciador de metadados de acesso. Você pode procurar a hierarquia dos bancos de dados e objetos de banco de dados no explorer.  
   
-**Para procurar os metadados**  
+**Para procurar metadados**  
   
 1.  No Gerenciador de metadados de acesso, expanda **acesso metabase**e, em seguida, expanda **bancos de dados**.  
   
-2.  Expanda o banco de dados que você deseja analisar e, em seguida, expanda **consultas**.  
+2.  Expanda o banco de dados que você deseja examinar e, em seguida, expanda **consultas**.  
   
-    Observe a lista de consultas. Se você selecionar uma consulta, um **SQL** guia e um **propriedades** guia aparecerá no painel direito.  
+    Observe a lista de consultas. Se você selecionar uma consulta, uma **SQL** guia e um **propriedades** guia aparecerá no painel direito.  
   
-3.  Expanda **tabelas** e, em seguida, selecione uma tabela.  
+3.  Expandir **tabelas** e, em seguida, selecione uma tabela.  
   
     Observe que são exibidos em quatro guias: **tabela**, **mapeamento de tipo**, **propriedades**, e **dados**.  
   
-4.  Expanda uma tabela, **chaves**e, em seguida, selecione uma chave.  
+4.  Expanda uma tabela, expanda **chaves**e, em seguida, selecione uma chave.  
   
     As propriedades de chave são exibidas no painel direito.  
   
-5.  Expanda **índices**e, em seguida, selecione um índice.  
+5.  Expandir **índices**e, em seguida, selecione um índice.  
   
-    As propriedades do índice são exibidas no painel direito.  
+    As propriedades de índice são exibidas no painel direito.  
   
 ## <a name="refreshing-databases"></a>Atualizando bancos de dados  
-Se um banco de dados do Access for alterado depois que você adicionar seu arquivo, você pode atualizar metadados do banco de dados do Access.  
+Se um banco de dados do Access for alterado depois de adicionar seu arquivo, você pode atualizar os metadados do banco de dados do Access.  
   
 **Para atualizar os metadados de acesso**  
   
--   No Gerenciador de metadados de acesso, o banco de dados e, em seguida, selecione **de atualização do banco de dados**.  
+-   No Gerenciador de metadados de acesso, o banco de dados com o botão direito e, em seguida, selecione **Refresh do banco de dados**.  
   
 ## <a name="removing-databases"></a>Removendo bancos de dados  
 Você pode remover um banco de dados de um projeto seguindo estas etapas.  
@@ -132,12 +132,12 @@ Você pode remover um banco de dados de um projeto seguindo estas etapas.
   
 1.  No Gerenciador de metadados de acesso, expanda **acesso metabase**e, em seguida, expanda **bancos de dados**.  
   
-2.  O banco de dados e, em seguida, selecione **remover banco de dados**.  
+2.  O banco de dados com o botão direito e, em seguida, selecione **remover banco de dados**.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no processo de migração é [conectar ao SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+É a próxima etapa no processo de migração [conectar-se ao SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Criando e gerenciando projetos](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Criando e gerenciando projetos](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   

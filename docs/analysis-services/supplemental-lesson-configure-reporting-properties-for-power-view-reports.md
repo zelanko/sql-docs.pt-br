@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033425"
 ---
-# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementares lição - configurar propriedades de relatório para relatórios do Power View
+# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementares lição – configurar propriedades de relatório para relatórios do Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Esta lição suplementar, você definirá propriedades de relatório para o projeto de vendas pela Internet AW. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.   
+Nesta lição suplementar, você irá definir propriedades de relatório para o projeto de vendas pela Internet AW. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.   
   
 Tempo estimado para concluir esta lição: **30 minutos**  
   
@@ -71,7 +71,7 @@ Muitas vezes, pode ser necessário criar novos dados em seu modelo usando fórmu
 ## <a name="default-field-set"></a>Conjunto de Campos Padrão  
 O conjunto de campos padrão é uma lista predefinida de colunas e medidas para uma tabela que são adicionadas automaticamente a uma tela de relatório quando a tabela é clicada na lista de campos de relatório. Essencialmente, você pode especificar as colunas padrão, as medidas e a ordenação de campos que os usuários desejarão ver quando esta tabela for visualizada em relatórios do Power View.  Para o modelo de Vendas pela Internet, você definirá um conjunto de campos padrão e ordem para as tabelas Customer, Geography e Product. Incluídas estão somente as colunas mais comuns que os usuários desejarão ver ao analisarem os dados de Vendas pela Internet do Adventure Works usando os relatórios do Power View.  
   
-Para obter informações detalhadas sobre o conjunto de campos padrão, consulte [configurar conjunto de campos padrão para relatórios do Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) nos Manuais Online do SQL Server.  
+Para obter informações detalhadas sobre o conjunto de campo padrão, consulte [configurar o conjunto de campos padrão para relatórios do Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) nos Manuais Online do SQL Server.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>Para definir o Conjunto de Campos Padrão para tabelas  
   
@@ -106,9 +106,9 @@ Para obter informações detalhadas sobre o conjunto de campos padrão, consulte
 ## <a name="table-behavior"></a>Comportamento de tabela  
 Usando as propriedades do Comportamento da Tabela, você pode alterar o comportamento padrão para diferentes tipos de visualização e o comportamento de agrupamento para tabelas usadas nos relatórios do Power View. Isto permite uma melhor colocação padrão de identificação de informações como nomes, imagens ou títulos em layouts de peça, cartão e gráfico.  
   
-Para obter informações detalhadas sobre as propriedades de comportamento de tabela, consulte [configurar propriedades de comportamento de tabela para relatórios do Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nos Manuais Online do SQL Server.  
+Para obter informações detalhadas sobre as propriedades de comportamento da tabela, consulte [configurar propriedades de comportamento de tabela para relatórios do Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) nos Manuais Online do SQL Server.  
   
-#### <a name="to-set-table-behavior"></a>Para definir o comportamento da tabela 
+#### <a name="to-set-table-behavior"></a>Para definir o comportamento de tabela 
   
 1.  No designer de modelos, clique na tabela **Cliente** (guia).  
   
@@ -131,7 +131,7 @@ Para obter informações detalhadas sobre as propriedades de comportamento de ta
 ## <a name="reporting-properties-for-columns"></a>Propriedades de relatório para colunas  
 Há várias propriedades básicas de coluna e propriedades específicas de relatório nas colunas que você pode definir para melhorar a experiência de relatório do modelo. Por exemplo, pode não ser necessário que os usuários vejam todas as colunas em todas as tabelas. Da mesma maneira que você ocultou as tabelas Product Category e Product Subcategory anteriormente, usando a propriedade Oculto de uma coluna, você pode ocultar colunas específicas de uma tabela que seriam mostradas de outra forma. Outras propriedades, como Formato de Dados e Classificar por Coluna, também podem afetar o modo como os dados da coluna podem aparecer nos relatórios. Você definirá algumas dessas propriedades em colunas específicas agora. Outras colunas não exigem nenhuma ação e não são mostradas abaixo.  
   
-Você somente definirá algumas propriedades de coluna diferentes aqui, mas há muitas outras. Para obter mais informações sobre a coluna de propriedades de relatório, consulte [propriedades de coluna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nos Manuais Online do SQL Server.  
+Você somente definirá algumas propriedades de coluna diferentes aqui, mas há muitas outras. Para obter mais informações sobre propriedades de relatório de coluna, consulte [propriedades da coluna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Para definir propriedades para colunas  
   
@@ -147,57 +147,57 @@ Você somente definirá algumas propriedades de coluna diferentes aqui, mas há 
   
     **Cliente**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Oculto|Verdadeiro|  
+    |Geography Id|Hidden|True|  
     |Birth Date|Formato de Dados|Data Abreviada|  
   
-    **Data**  
+    **Date**  
   
     > [!NOTE]  
-    > Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de data, consulte [especifique marcar como tabela de data para uso com inteligência de tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
+    > Como a tabela Date foi selecionada como a tabela de datas do modelo usando a configuração Marcar como Tabela de Data, na Lição 7: Marcar como Tabela de Data, e a coluna Date na tabela Date como a coluna a ser usada como o identificador exclusivo, a propriedade Identificador de Linha para a coluna Date será automaticamente definida como True e não poderá ser alterada. Ao usar as funções de inteligência de tempo em fórmulas DAX, você deverá especificar uma tabela de data. Neste modelo, você criou várias medidas usando funções de inteligência de tempo para calcular dados de vendas para vários períodos como trimestres anterior e atual, e também para usar em KPIs. Para obter mais informações sobre como especificar uma tabela de datas, consulte [especificar marcar como tabela de data para uso com inteligência de tempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) nos Manuais Online do SQL Server.  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Data|Formato de Dados|Data Abreviada|  
-    |Day Number of Week|Oculto|Verdadeiro|  
+    |data|Formato de Dados|Data Abreviada|  
+    |Day Number of Week|Hidden|True|  
     |Day Name|Sort By Column|Day Number of Week|  
-    |Day Of Week|Oculto|Verdadeiro|  
-    |Day of Month|Oculto|Verdadeiro|  
-    |Day of Year|Oculto|Verdadeiro|  
+    |Day Of Week|Hidden|True|  
+    |Day of Month|Hidden|True|  
+    |Day of Year|Hidden|True|  
     |Month Name|Sort By Column|Month|  
-    |Month|Oculto|Verdadeiro|  
-    |Month Calendar|Oculto|Verdadeiro|  
-    |Fiscal Quarter|Oculto|Verdadeiro|  
-    |Fiscal Year|Oculto|Verdadeiro|  
-    |Fiscal Semester|Hidden|Verdadeiro|  
+    |Month|Hidden|True|  
+    |Month Calendar|Hidden|True|  
+    |Fiscal Quarter|Hidden|True|  
+    |Fiscal Year|Hidden|True|  
+    |Fiscal Semester|Hidden|True|  
   
     **Geography**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Geography Id|Oculto|Verdadeiro|  
-    |Sales Territory Id|Oculto|Verdadeiro|  
+    |Geography Id|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Product Id|Oculto|Verdadeiro|  
-    |Product Alternate Id|Rótulo Padrão|Verdadeiro|  
-    |Product Subcategory Id|Oculto|Verdadeiro|  
+    |Product Id|Hidden|True|  
+    |Product Alternate Id|Rótulo Padrão|True|  
+    |Product Subcategory Id|Hidden|True|  
     |Product Start Date|Formato de Dados|Data Abreviada|  
     |Product End Date|Formato de Dados|Data Abreviada|  
   
     **Internet Sales**  
   
-    |Coluna|Propriedade|Value|  
+    |coluna|Propriedade|Valor|  
     |----------|------------|---------|  
-    |Product Id|Oculto|Verdadeiro|  
-    |Customer Id|Oculto|Verdadeiro|  
-    |Promotion Id|Oculto|Verdadeiro|  
-    |Currency Id|Oculto|Verdadeiro|  
-    |Sales Territory Id|Oculto|Verdadeiro|  
+    |Product Id|Hidden|True|  
+    |Customer Id|Hidden|True|  
+    |Promotion Id|Hidden|True|  
+    |Currency Id|Hidden|True|  
+    |Sales Territory Id|Hidden|True|  
     |Order Quantity|Tipo de Dados<br /><br />Formato de Dados<br /><br />Casas Decimais|Número Decimal<br /><br />Número Decimal<br /><br />0|  
     |Data do Pedido|Formato de Dados|Data Abreviada|  
     |Due Date|Formato de Dados|Data Abreviada|  
@@ -208,7 +208,7 @@ Como você alterou o modelo, deverá reimplantá-lo.
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Para reimplantar o modelo de tabela de vendas pela Internet da Adventure Works.  
   
--   No SSDT, clique no **criar** menu e clique **implantar a modelo de vendas do Adventure Works Internet**.  
+-   No SSDT, clique o **construir** menu e clique **implantar a modelo de vendas do Adventure Works Internet**.  
   
     A caixa de diálogo **Implantar** será exibida com o status de implantação dos metadados, bem como cada tabela incluída no modelo.  
   

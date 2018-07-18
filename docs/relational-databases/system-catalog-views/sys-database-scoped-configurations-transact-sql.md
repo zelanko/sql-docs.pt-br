@@ -1,5 +1,5 @@
 ---
-title: sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
+title: database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989239"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34172985"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**Int**|ID da opção de configuração.|  
+|**configuration_id**|**int**|ID da opção de configuração.|  
 |**name**|**nvarchar(60)**|O nome da opção de configuração. Para obter informações sobre as configurações possíveis, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|O valor definido para essa opção de configuração para a réplica primária.|  
 |**value_for_secondary**|**sqlvariant**|O valor definido para essa opção de configuração para as réplicas secundárias.|  
 |**elevate_online**|**nvarchar(60)** |O banco de dados no escopo padrão definido para a opção online para operações de índice |
-|**elevate_resumable**|nvarchar(60)|O banco de dados no escopo padrão definido para a opção reiniciável para operações de índice| 
+|**elevate_resumable**|nvarchar(60)|O banco de dados no escopo padrão definido para a opção retomável para operações de índice| 
   
 ##  <a name="Permissions"></a> Permissões  
  Requer associação à função **pública** .  

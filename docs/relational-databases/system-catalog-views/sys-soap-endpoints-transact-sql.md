@@ -1,5 +1,5 @@
 ---
-title: soap_endpoints (Transact-SQL) | Microsoft Docs
+title: sys. soap_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 7f3af00bccbef87dd6390c5421b8d625e4b6ed42
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981595"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Contém uma linha para cada ponto de extremidade no servidor que transmite uma carga útil do tipo SOAP. Para cada linha nessa exibição, há uma linha correspondente com o mesmo **endpoint_id** no **http_endpoints** exibição do catálogo que contém os metadados de configuração HTTP.  
+ Contém uma linha para cada ponto de extremidade no servidor que transmite uma carga útil do tipo SOAP. Para cada linha nesta exibição, há uma linha correspondente com o mesmo **endpoint_id** na **sys. http_endpoints** exibição do catálogo que carrega os metadados de configuração de HTTP.  
   
  
 |Nome da coluna|Tipo de dados|Description|  
@@ -50,9 +50,9 @@ ms.locfileid: "33221347"
 |**default_result_schema_desc**|**nvarchar(60)**|Descrição do valor padrão da opção SCHEMA =.<br /><br /> Nenhuma<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = A opção CHARACTER_SET = SQL foi especificada.<br /><br /> 1 = A opção CHARACTER_SET = XML foi especificada.|  
 |**is_session_enabled**|**bit**|0 = A opção SESSION = DISABLE foi especificada.<br /><br /> 1 = A opção SESSION = ENABLED foi especificada.|  
-|**session_timeout**|**Int**|Valor especificado na opção SESSION_TIMEOUT =.|  
+|**session_timeout**|**int**|Valor especificado na opção SESSION_TIMEOUT =.|  
 |**login_type**|**nvarchar(60)**|Tipo de autenticação permitido nesse ponto de extremidade.<br /><br /> WINDOWS<br /><br /> MIXED|  
-|**header_limit**|**Int**|Tamanho máximo permitido para o cabeçalho de SOAP.|  
+|**header_limit**|**int**|Tamanho máximo permitido para o cabeçalho de SOAP.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

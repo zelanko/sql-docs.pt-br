@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f708e89b4cc152e3f508c5eede3f95f1624148fa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981948"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "33225957"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**constid**|**Int**|ID da restrição FOREIGN KEY.|  
-|**fkeyid**|**Int**|ID da tabela de referência.|  
-|**rkeyid**|**Int**|ID da tabela referenciada.|  
+|**constid**|**int**|ID da restrição FOREIGN KEY.|  
+|**fkeyid**|**int**|ID da tabela de referência.|  
+|**rkeyid**|**int**|ID da tabela referenciada.|  
 |**rkeyindid**|**smallint**|ID do índice exclusivo na tabela referenciada, abrangendo as colunas de chave referenciadas.|  
 |**keycnt**|**smallint**|Número de colunas na chave.|  
 |**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -24,15 +24,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989108"
 ---
-# <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - método SetDefaults
+# <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings – método SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir dados existentes.  
+  Define todos os valores padrão para a instância das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente com a opção de substituir dados existentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um **ClientSettings** objeto que representa um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do cliente.  
   
 #### <a name="parameters"></a>Parâmetros  

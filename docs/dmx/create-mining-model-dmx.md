@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842629"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980586"
 ---
 # <a name="create-mining-model-dmx"></a>CRIAR UM MODELO DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,23 +44,23 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *lista de definições de coluna*  
  Uma lista de definições de coluna separadas por vírgulas.  
   
- *Algoritmo*  
+ *algoritmo*  
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor atual.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada usando [linhas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de mineração de dados](../analysis-services/server-properties/data-mining-properties.md).  
+>  Uma lista dos algoritmos suportados pelo provedor atual pode ser recuperada por meio [conjunto de linhas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para exibir os algoritmos suportados na instância atual do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [propriedades de Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
- *Lista de parâmetros*  
+ *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
  *Cadeia de caracteres XML*  
  (Apenas para uso avançado.) Um modelo codificado por XML (PMML). A cadeia deve estar entre aspas simples (').  
   
- O **sessão** cláusula permite que você crie um modelo de mineração removido automaticamente do servidor quando a conexão fecha ou o fim da sessão. **SESSÃO** modelos de mineração são úteis porque eles não exigem que o usuário seja um administrador de banco de dados e possa apenas usar espaço em disco para desde que a conexão está aberta.  
+ O **sessão** cláusula permite que você crie um modelo de mineração removido automaticamente do servidor quando a conexão é fechada ou a sessão expira. **SESSÃO** modelos de mineração são úteis porque eles não exigem que o usuário seja um administrador de banco de dados e possa apenas usar espaço em disco para desde que a conexão está aberta.  
   
- O **com DETALHAMENTO** cláusula habilita o detalhamento no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo. Para alguns tipos de modelo, o detalhamento é necessário para procurar o modelo no visualizador personalizado. O detalhamento não é necessário para previsão ou para procurar o modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft.  
+ O **WITH DRILLTHROUGH** cláusula habilita o detalhamento no modelo de mineração novo. O detalhamento pode ser habilitado somente durante a criação do modelo. Para alguns tipos de modelo, o detalhamento é necessário para procurar o modelo no visualizador personalizado. O detalhamento não é necessário para previsão ou para procurar o modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft.  
   
- O **criar modelo de MINERAÇÃO** instrução cria um novo modelo de mineração com base na lista de definições de coluna, o algoritmo e a lista de parâmetros de algoritmo.  
+ O **CREATE MINING MODEL** instrução cria um novo modelo de mineração que se baseia a lista de definições de coluna, o algoritmo e a lista de parâmetros de algoritmo.  
   
 ### <a name="column-definition-list"></a>Lista de definições de coluna  
  Você define a estrutura de um modelo que usa a lista de definições da coluna incluindo as seguintes informações para cada coluna:  
@@ -75,9 +75,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Tipo de conteúdo (obrigatório)  
   
--   Solicitação de previsão, que indica o algoritmo para prever esta coluna, indicada pela **PREVER** ou **PREDICT_ONLY** cláusula  
+-   Solicitação de previsão, que indica ao algoritmo para prever esta coluna, indicada pela **PREDICT** ou **PREDICT_ONLY** cláusula  
   
--   Relação com uma coluna de atributo (obrigatório apenas se aplicável), indicada pelo **RELATED TO** cláusula  
+-   Relação com uma coluna de atributo (obrigatório apenas se aplicável), indicada pela **RELATED TO** cláusula  
   
  Use a seguinte sintaxe para a lista de definições de coluna, para definir uma única coluna:  
   
@@ -99,13 +99,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Tipos de conteúdo &#40;mineração de dados&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuições de coluna &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuições de colunas &#40;mineração de dados&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
 -   [Sinalizadores de modelagem &#40;mineração de dados&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte ao uso dos seguintes \<relação de coluna > cláusula.  
+ É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte ao uso dos seguintes \<Column relationship > cláusula.  
   
- **RELACIONADAS AO**  
+ **RELACIONADOS A**  
  Este formulário indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  
   
  Use uma cláusula de previsão para descrever como a coluna de previsão é usada. A seguinte tabela descreve as duas possíveis cláusulas.  
@@ -122,7 +122,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- Para obter uma lista dos parâmetros que estão associados a cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Para obter uma lista dos parâmetros que estão associados com cada algoritmo, consulte [algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="remarks"></a>Remarks  
  Se você desejar criar um modelo que tem um conjunto de dados de teste interno, deverá usar a instrução CREATE MINING STRUCTURE seguida por ALTER MINING STRUCTURE. No entanto nem todos os tipos de modelo oferecem suporte a um conjunto de dados de validação. Para obter mais informações, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -175,7 +175,7 @@ USING Microsoft_Sequence_Clustering
  O seguinte exemplo usa o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Times Series para criar um novo modelo de mineração usando o algoritmo ARTxp. ReportingDate é a coluna de chave para a série temporal e ModelRegion é a coluna de chave para a série de dados. Neste exemplo, presume-se que a periodicidade dos dados é a cada 12 meses. Portanto, o *PERIODICITY_HINT* parâmetro for definido como 12.  
   
 > [!NOTE]  
->  Você deve especificar o *PERIODICITY_HINT* parâmetro usando caracteres de chave. Além disso, como o valor é uma cadeia de caracteres, ele deve estar entre aspas simples: "{\<valor numérico >}".  
+>  Você deve especificar o *PERIODICITY_HINT* parâmetro usando caracteres de chave. Além disso, como o valor é uma cadeia de caracteres, ela deve ser colocada entre aspas simples: "{\<valor numérico >}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

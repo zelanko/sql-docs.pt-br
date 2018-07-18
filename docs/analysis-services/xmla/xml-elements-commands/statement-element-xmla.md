@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979158"
 ---
 # <a name="statement-element-xmla"></a>Elemento Statement (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém uma consulta ou instrução a ser enviada usando o **Execute** método para uma instância do Analysis Services.  
+  Contém uma consulta ou instrução a ser enviada usando o **Execute** método a uma instância do Analysis Services.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34575018"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **instrução** comando executa uma consulta ou instrução sobre o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte às linguagens a seguir:  
+ O **instrução** comando executa uma consulta ou instrução no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte às linguagens a seguir:  
   
 -   Linguagem MDX  
   

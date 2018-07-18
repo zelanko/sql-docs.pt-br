@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d738649ea357b172975505ff7993b56181ce0b4f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018753"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985880"
 ---
 # <a name="lesson-10-create-partitions"></a>Lição 10: Criar partições
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ Nesta lição, você criará partições dividir a tabela FactInternetSales em p
   
 Tempo estimado para concluir esta lição: **15 minutos**  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 9: criar hierarquias](../analysis-services/lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Criar partições  
@@ -34,10 +34,10 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 2.  Na caixa de diálogo Gerenciador de partições, clique em **cópia**.  
   
-3.  Em **nome da partição**, altere o nome para **FactInternetSales2010**.  
+3.  Na **nome da partição**, altere o nome para **FactInternetSales2010**.  
   
     > [!TIP]  
-    > Observe os nomes das colunas na janela de visualização de tabela exibem essas colunas incluídas na tabela de modelo (marcada) com os nomes de coluna da origem. Isso acontece porque a janela Visualização de Tabela exibe colunas da tabela de origem, e não da tabela de modelo.  
+    > Observe os nomes de coluna na janela de visualização de tabela exibem essas colunas incluídas na tabela de modelo (marcada) com os nomes de coluna da origem. Isso acontece porque a janela Visualização de Tabela exibe colunas da tabela de origem, e não da tabela de modelo.  
   
 4.  Selecione o **SQL** botão logo acima do lado direito da janela de visualização para abrir o editor de instrução SQL.  
   
@@ -81,9 +81,9 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
   
 #### <a name="to-create-a-partition-for-the-2011-year"></a>Para criar uma partição para o ano 2011  
   
-1.  Na lista de partições, clique no **FactInternetSales2010** partição que você acabou de criar e, em seguida, clique em **cópia**.  
+1.  Na lista de partições, clique no **FactInternetSales2010** particionar você acabou de criar e, em seguida, clique em **cópia**.  
   
-2.  Em **nome da partição**, tipo **FactInternetSales2011**.  
+2.  Na **nome da partição**, digite **FactInternetSales2011**.  
   
 3.  Na Instrução SQL, para que a partição inclua somente as linhas do ano 2011, substitua a cláusula WHERE pelo seguinte:  
   
@@ -116,20 +116,20 @@ Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluí
     ```  
 
 ## <a name="delete-the-factinternetsales-partition"></a>Excluir a partição FactInternetSales
-Agora que você tiver partições para cada ano, você pode excluir a partição FactInternetSales. Isso impede que se sobrepõem ao escolher o processo de todos os durante o processamento de partições.
+Agora que você tem partições para cada ano, você pode excluir a partição FactInternetSales. Isso impede que se sobrepõem ao escolher o processo de todos os durante o processamento de partições.
 #### <a name="to-delete-the-factinternetsales-partition"></a>Para excluir a partição FactInternetSales
 -  Clique na partição FactInternetSales e, em seguida, clique em **excluir**.
 
 
 
 ## <a name="process-partitions"></a>Processar partições  
-No Gerenciador de partições, observe o **último processados** coluna para cada um dos novos partições acabou de criar mostra essas partições nunca tiveram sido processadas. Quando você cria novas partições, deve executar a operação Processar Partições ou Processar Tabela para atualizar os dados nessas partições.  
+No Gerenciador de partições, observe os **último processamento** coluna para cada uma das novas partições que você acabou de criar mostra essas partições nunca foram processadas. Quando você cria novas partições, deve executar a operação Processar Partições ou Processar Tabela para atualizar os dados nessas partições.  
   
-#### <a name="to-process-the-factinternetsales-partitions"></a>Para processar as partições de FactInternetSales  
+#### <a name="to-process-the-factinternetsales-partitions"></a>Para processar as partições FactInternetSales  
   
 1.  Clique em **Okey** para fechar a caixa de diálogo Gerenciador de partições.  
   
-2.  Clique o **FactInternetSales** de tabela e, em seguida, clique no **modelo** menu > **processo** > **processar partições**.  
+2.  Clique o **FactInternetSales** da tabela e, em seguida, clique no **modelo** menu > **processo** > **processar partições**.  
   
 3.  Na caixa de diálogo processar partições, verifique se **modo** é definido como **processar padrão**.  
   
@@ -137,11 +137,11 @@ No Gerenciador de partições, observe o **último processados** coluna para cad
 
     ![como--lesson10-processo-partições de tabela](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
-    Se você for solicitado a fornecer credenciais de representação, insira o nome de usuário do Windows e a senha que você especificou na lição 2.  
+    Se você for solicitado para credenciais de representação, insira o nome de usuário do Windows e a senha que você especificou na lição 2.  
   
     A caixa de diálogo **Processamento de Dados** será exibida, mostrando os detalhes do processo de cada partição. Observe que um número diferente de linhas para cada partição é transferido. Isso acontece porque cada partição inclui somente as linhas referentes ao ano especificado na cláusula WHERE da Instrução SQL: Quando o processamento for concluído, vá em frente e feche a caixa de diálogo Processamento de Dados.  
   
-    ![como-tabela-lesson10-processo-concluído](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![como tabular-lesson10-processo-preenchimento](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>O que vem a seguir?
 Vá para a próxima lição: [lição 11: criar funções](../analysis-services/lesson-11-create-roles.md). 

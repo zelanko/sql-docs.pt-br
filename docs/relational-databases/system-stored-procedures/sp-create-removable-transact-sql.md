@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035234"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33239496"
   Cria um banco de dados de mídia removível. Cria três ou mais arquivos (um para as tabelas de catálogo de sistema, um para o log de transações e um ou mais para as tabelas de dados) e coloca o banco de dados nesses arquivos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Recomendamos que você use [criar banco de dados](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use [criar banco de dados](../../t-sql/statements/create-database-sql-server-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,42 +61,42 @@ sp_create_removable
   
 ## <a name="arguments"></a>Argumentos  
  [ **@dbname=** ] **'***dbname***'**  
- É o nome do banco de dados a ser criado para uso em mídia removível. *DBName* é **sysname**.  
+ É o nome do banco de dados a ser criado para uso em mídia removível. *DBName* está **sysname**.  
   
  [ **@syslogical=** ] **'***syslogical***'**  
- É o nome lógico do arquivo que contém as tabelas de catálogo de sistema. *syslogical* é **sysname**.  
+ É o nome lógico do arquivo que contém as tabelas de catálogo de sistema. *syslogical* está **sysname**.  
   
  [  **@sysphysical=** ] **'***sysphysical***'**  
- É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de catálogo de sistema. *sysphysical* é **nvarchar (260)**.  
+ É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de catálogo de sistema. *sysphysical* está **nvarchar (260)**.  
   
  [  **@syssize=** ] *syssize*  
- É o tamanho, em megabytes, do arquivo que contém as tabelas de catálogo do sistema. *syssize* é **int**. O mínimo *syssize* é 1.  
+ É o tamanho, em megabytes, do arquivo que contém as tabelas de catálogo do sistema. *syssize* está **int**. O mínimo *syssize* é 1.  
   
  [  **@loglogical=** ] **'***loglogical***'**  
- É o nome lógico do arquivo que contém o log de transações. *loglogical* é **sysname**.  
+ É o nome lógico do arquivo que contém o log de transações. *loglogical* está **sysname**.  
   
  [  **@logphysical=** ] **'***logphysical***'**  
- É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém o log de transações. *logphysical* é **nvarchar (260)**.  
+ É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém o log de transações. *logphysical* está **nvarchar (260)**.  
   
  [  **@logsize=** ] *logsize*  
- É o tamanho, em megabytes, do arquivo que contém o log de transações. *logsize* é **int**. O mínimo *logsize* é 1.  
+ É o tamanho, em megabytes, do arquivo que contém o log de transações. *logsize* está **int**. O mínimo *logsize* é 1.  
   
  [  **@datalogical1=** ] **'***datalogical***'**  
- É o nome lógico do arquivo que contém as tabelas de dados. *datalogical* é **sysname**.  
+ É o nome lógico do arquivo que contém as tabelas de dados. *datalogical* está **sysname**.  
   
  Deve ser de 1 a 16 arquivos de dados. Geralmente, mais de um arquivo de dados é criado quando é esperado que o banco de dados seja grande e deve ser distribuído em vários discos.  
   
  [  **@dataphysical1=** ] **'***dataphysical***'**  
- É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de dados. *dataphysical* é **nvarchar (260)**.  
+ É o nome físico. Isso inclui um caminho totalmente qualificado do arquivo que contém as tabelas de dados. *dataphysical* está **nvarchar (260)**.  
   
  [  **@datasize1=** ] **'***datasize***'**  
- É o tamanho, em megabytes, de um arquivo que contém as tabelas de dados. *datasize* é **int**. O mínimo *datasize* é 1.  
+ É o tamanho, em megabytes, de um arquivo que contém as tabelas de dados. *datasize* está **int**. O mínimo *datasize* é 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
  Se você quiser fazer uma cópia de seu banco de dados em mídia removível, como um CD, e distribuir o banco de dados a outros usuários, use este procedimento armazenado.  

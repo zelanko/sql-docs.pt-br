@@ -22,26 +22,26 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971241"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032434"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-relational-operator"></a>A. Especifique operador relacional  
- Essa consulta XPath retorna os elementos filho do  **\<cliente >** elemento onde o **CustomerID** valor do atributo é "1" e onde qualquer filho  **\<ordem >** elementos contêm uma  **\<OrderDetail >** filho com um **OrderQty** atributo com um valor maior que 3:  
+ Essa consulta XPath retorna os elementos filho do  **\<cliente >** elemento no qual o **CustomerID** valor do atributo é "1" e onde qualquer filho  **\<ordem >** elementos contêm uma  **\<OrderDetail >** filho com um **OrderQty** atributo com um valor maior que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- O predicado especificado nos filtros de colchetes do  **\<cliente >** elementos. Somente o  **\<cliente >** elementos que têm pelo menos um  **\<OrderDetail >** neto com um valor de atributo OrderQty maior que 3 são retornados.  
+ O predicado especificado nos filtros de colchetes a  **\<cliente >** elementos. Somente o  **\<cliente >** elementos que têm pelo menos um  **\<OrderDetail >** neto com um valor de atributo OrderQty maior que 3 são retornados.  
   
  O **filho** eixo é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32971241"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (SpecifyRelationalA.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "32971241"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
- Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que têm um **SalesPersonID** valor inferior a 270 do atributo:  
+ Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que tenham um **SalesPersonID** valor inferior a 270 do atributo:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -103,7 +103,7 @@ ms.locfileid: "32971241"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Copie o [código de esquema de exemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Cópia de [exemplos de código de esquema](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (SpecifyRelationalB.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   

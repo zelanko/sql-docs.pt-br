@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991057"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,29 +29,29 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Tipo de objeto*  
+ *tipo de objeto*  
  Opcional o tipo de objeto a ser exportado (modelo de mineração ou estrutura de mineração).  
   
- *Nome do objeto*  
+ *nome do objeto*  
  Opcional. Nome do objeto a ser exportado.  
   
  *filename*  
  Nome e local do arquivo a ser exportado como cadeia de caracteres.  
   
 ## <a name="remarks"></a>Remarks  
- Se a instrução especificar um modelo de mineração, o arquivo resultante também conterá uma estrutura de mineração associada. Se a declaração especifica **com dependências**, todos os objetos necessários para processar o objeto (por exemplo, a fonte de dados e a exibição da fonte de dados) são incluídos no arquivo. abf.  
+ Se a instrução especificar um modelo de mineração, o arquivo resultante também conterá uma estrutura de mineração associada. Se a declaração especifica **WITH DEPENDENCIES**, todos os objetos necessários para processar o objeto (por exemplo, a fonte de dados e a exibição da fonte de dados) estão incluídos no arquivo. abf.  
   
  Você deve ser um banco de dados ou administrador do servidor para exportar ou importar objetos de um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados.  
   
 ## <a name="export-mining-structure-example"></a>Exemplo de estrutura de mineração de exportação  
- O exemplo a seguir exporta as estruturas de mineração Targeted Mailing e Forecasting, e o modelo de mineração Association para um local de arquivo específico. Como o modelo Association integra a estrutura de mineração de Market Basket, o exemplo exporta igualmente a estrutura Market Basket. Outros modelos de mineração que existam como parte da estrutura de mineração cesta não será exportado, porque o modelo de associação foi exportado usando **modelo de MINERAÇÃO**, não **estrutura de MINERAÇÃO**.  
+ O exemplo a seguir exporta as estruturas de mineração Targeted Mailing e Forecasting, e o modelo de mineração Association para um local de arquivo específico. Como o modelo Association integra a estrutura de mineração de Market Basket, o exemplo exporta igualmente a estrutura Market Basket. Outros modelos de mineração que existam como parte da estrutura de mineração de cesta de compras não será exportado, porque o modelo de associação foi exportado usando **modelo de MINERAÇÃO**, e não **estrutura de MINERAÇÃO**.  
   
 ```  
 EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Association TO 'C:\TM_NEW.abf'  
 ```  
   
 ## <a name="export-mining-model-example"></a>Exemplo de modelo de mineração de exportação  
- O exemplo a seguir exporta o modelo de mineração de Associação para um local de arquivo especificado. Como a instrução especifica **com dependências**, a fonte de dados e objetos de exibição de fonte de dados também estão incluídos no arquivo. abf.  
+ O exemplo a seguir exporta o modelo de mineração de Associação para um local de arquivo especificado. Como a instrução especifica **WITH DEPENDENCIES**, a fonte de dados e objetos de exibição da fonte de dados também estão incluídos no arquivo. abf.  
   
 ```  
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  

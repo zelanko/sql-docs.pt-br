@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8c0cc23eb76d3da97aadbb9a1738580ebdbc62f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968368"
 ---
 # <a name="olapinfo-element-xmla"></a>Elemento OlapInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34576778"
 |Elementos filho|[AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md), [CellInfo](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md), [CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O **OLAPInfo** seção um **raiz** elemento usando o **MDDataSet** tipo de dados fornece metadados sobre o cubo, os eixos do resultado multidimensional e as propriedades as células que incluíram o resultado.  
+ O **OLAPInfo** seção de uma **raiz** elemento usando o **MDDataSet** tipo de dados fornece metadados sobre o cubo, os eixos do resultado multidimensional e as propriedades as células que incluíram o resultado.  
   
 ## <a name="see-also"></a>Confira também
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

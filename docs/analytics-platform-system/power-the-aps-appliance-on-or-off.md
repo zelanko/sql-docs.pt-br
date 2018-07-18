@@ -1,6 +1,6 @@
 ---
-title: Ligar o dispositivo ou desative - o Analytics Platform System | Microsoft Docs
-description: Power dispositivo ativado ou desativado para Analytics Platform System
+title: O dispositivo ativado ou desativado - Analytics Platform System de energia | Microsoft Docs
+description: Ativar ou desativar o dispositivo de energia para o Analytics Platform System
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,127 +9,103 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538756"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909506"
 ---
-# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power dispositivo ativado ou desativado para Analytics Platform System
-Este tópico descreve como ligar ou desligar o Systemappliance de plataforma de análise que esteja executando o Parallel Data Warehouse e, opcionalmente, executando uma região de HDInsight. Use este tópico quando um dispositivo Analytics Platform System é movido ou a potência em um dispositivo após uma falha catastrófica de energia.  
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Ativar ou desativar o dispositivo de energia para o Analytics Platform System
+Este tópico descreve como a liga / desliga sua Systemappliance de plataforma de análise que está executando o Parallel Data Warehouse. Use este tópico quando um dispositivo do Analytics Platform System é movido, ou a potência em um dispositivo após uma falha catastrófica de energia.  
   
-Alimentar o dispositivo e desativar não é o mesmo que iniciar e parar os serviços de dispositivo. Para obter informações sobre o assunto, consulte [Status de serviços PDW &#40;Analytics Platform System&#41;](pdw-services-status.md). Para obter informações sobre a habilitação de ativar ou desativar um SQL Server 2008 Parallel Data Warehouse, consulte o arquivo de Ajuda do SQL Server 2008 Parallel Data Warehouse. Para obter informações sobre a habilitação ou desativar um SQL Server 2012 AU1 ou AU2 Parallel Data Warehouse, consulte o arquivo de ajuda para essas versões.  
+Alimentar o dispositivo de intermitente não é o mesmo que iniciar e interromper os serviços do dispositivo. Para obter informações sobre esse assunto, consulte [Status de serviços do PDW &#40;Analytics Platform System&#41;](pdw-services-status.md). Para obter informações sobre a habilitação ou desativar um SQL Server 2008 Parallel Data Warehouse, consulte o arquivo de Ajuda do SQL Server 2008 Parallel Data Warehouse. Para obter informações sobre a habilitação ou desativar um SQL Server 2012 AU1 ou AU2 Parallel Data Warehouse, consulte o arquivo de ajuda para essas versões.  
   
-Quando essas instruções especifiquem a conexão a um nó do SQL Server PDW, a conexão pode ser local usando dispositivos conectados (KVM) ou remoto usando a área de trabalho remota. Algumas ações devem ser físico (ativar um chave liga / desliga) e alguns (como desligar) pode ser físico ou usando o Windows comandos.  
+Quando essas instruções especificam a conexão a um nó do SQL Server PDW, a conexão pode ser local usando dispositivos conectados (KVM) ou remoto usando a área de trabalho remota. Algumas ações devem ser física (ativar um chave liga / desliga) e alguns (como desligar) poderá ser físico ou usando o Windows comandos.  
   
-Conexões para nós do SQL Server PDW podem ser feitas usando os endereços IP atribuídos a nós ou do **HST01** computador usando o **Gerenciador de Cluster de Failover** (**cluadmin.msc**) ou **Gerenciador Hyper-V** (**virtmgmt.msc**) clicando duas vezes o nome do nó e aplicativos.  
+Conexões para SQL Server PDW nós podem ser feitas usando os endereços IP atribuídos a nós ou do **HST01** computador usando o **Gerenciador de Cluster de Failover** (**cluadmin**) ou **Gerenciador do Hyper-V** (**virtmgmt.msc**) clicando duas vezes o nome do nó e aplicativos.  
   
 ## <a name="PowerOff"></a>Desligar o dispositivo  
   
 ### <a name="before-you-begin"></a>Antes de começar  
 Antes de desligar o dispositivo, você deve encerrar todas as atividades no dispositivo. Para encerrar todas as atividades:  
   
--   Use o **sessões** página do Console de administração para identificar os usuários atuais. Entre em contato com eles e solicite a fazer logoff.  
+-   Use o **sessões** página do Console do administrador para identificar os usuários atuais. Entre em contato com eles e peça para ele fazer logoff.  
   
--   Se necessário você pode usar o **KILL** instrução para forçar o encerramento de uma conexão de cliente. Tenha cuidado quando a eliminação de conexões. Quando interrompida, alguns processos transacionais, como uma atualização de longa execução deve atividade de reversão antes do SQL Server pode concluir a recuperação do banco de dados. Revertendo uma atualização parcialmente concluída ou delete, pode ser demorado.  
+-   Se necessário você pode usar o **KILL** instrução para forçar o encerramento de uma conexão de cliente. Tenha cuidado ao encerrar conexões. Quando interrompida, alguns processos transacionais, como uma atualização de longa execução, deverá atividade de reversão antes do SQL Server pode concluir a recuperação do banco de dados. Revertendo uma atualização parcialmente concluída ou exclusão, pode ser demorado.  
   
 ### <a name="to-power-off-the-appliance"></a>Para desligar o dispositivo  
   
 > [!WARNING]  
-> Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída para a próxima etapa é executada, a menos que indicado o contrário. Executar etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros quando o dispositivo é ligado em um momento posterior.  
+> Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída antes que a próxima etapa é executada, a menos que indicado o contrário. Executando etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros quando o dispositivo é ligado em um momento posterior.  
   
-1.  Conecte-se ao nó de controle do PDW (***PDW_region *-CTL01** ) e faça logon com a conta de administrador de domínio de aplicativo Analytics Platform System.  
+1.  Conectar-se ao nó de controle do PDW (***PDW_region *-CTL01** ) e faça logon com a conta de administrador de domínio de dispositivo do Analytics Platform System.  
   
-2.  Executar `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para abrir o **do Configuration Manager**.  
+2.  Execute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para abrir o **Configuration Manager**.  
   
-3.  No Configuration Manager, sob o **topologia de depósito de dados paralela** menu, clique no **Status de serviços** guia e, em seguida, clique em **região parar** para interromper os serviços do PDW.  
+3.  No Configuration Manager, sob o **topologia de depósito de dados paralela** menu, clique no **Status dos serviços** guia e, em seguida, clique em **parar região** para interromper os serviços do PDW.   
   
-4.  Se houver uma região de HDInsight, no **HDInsight topologia** menu, clique no **Status de serviços** guia e, em seguida, clique em **região parar** para interromper os serviços do HDInsight.  
+4.  Conectar-se para ***appliance_domain *-HST01** e faça logon com a conta de administrador de domínio do dispositivo.  
   
-5.  Conecte-se a ***appliance_domain *-HST01** e faça logon com a conta de administrador de domínio do dispositivo.  
+5.  Usando o **Gerenciador de Cluster de Failover** conecte-se para o ***appliance_domain *-WFOHST01** cluster, se não é automaticamente conectado e, em seguida, no painel de navegação, clique em **funções**. No **funções** painel:  
   
-6.  Usando o **Gerenciador de Cluster de Failover** se conectem a ***appliance_domain *-WFOHST01** de cluster, se conectado automaticamente e, em seguida, no painel de navegação, clique em **funções**. No **funções** painel:  
+    1.  Multisseleção de todas as máquinas virtuais. Clique com botão direito-los e, em seguida, selecione **desligar**.  
   
-    1.  Multisseleção de todas as máquinas virtuais. -Los e selecione **desligar**.  
+    2.  Aguarde até que todas as VMs selecionadas concluir o desligamento.  
   
-    2.  Aguarde até que todas as máquinas virtuais selecionadas concluir o desligamento.  
+6.  Fechar o **Gerenciador de Cluster de Failover** aplicativo.  
   
-7.  Se houver uma região de HDInsight:  
+7. Desligar todos os servidores, exceto ***appliance_domain *-HST01**.  
   
-    1.  Conecte-se ao cluster HDInsight. Para fazer isso, clique duas vezes em **Gerenciador de Cluster de Failover**, selecione **conectar-se ao Cluster**e especifique ***appliance_domain *-WFOHST02** para o nome do cluster.  
+8. Desligar o ***appliance_domain *-HST01** server.  
   
-    2.  Sob o cluster HDInsight, clique em **funções**. No **funções** painel:  
-  
-        1.  Multisseleção de todas as máquinas virtuais, eles e selecione **desligar**.  
-  
-        2.  Aguarde até que as máquinas virtuais desligar.  
-  
-8.  Fechar o **Gerenciador de Cluster de Failover** aplicativo.  
-  
-9. Desligar todos os servidores, exceto ***appliance_domain *-HST01**.  
-  
-10. Desligar o ***appliance_domain *-HST01** server.  
-  
-11. Desligue as unidades de distribuição de alimentação (PDUs).  
+9. Desligue a unidades de distribuição de alimentação (PDUs).  
   
 ## <a name="PowerOn"></a>Ligar o dispositivo  
   
 ### <a name="to-power-on-the-appliance"></a>Para ligar o dispositivo  
   
 > [!WARNING]  
-> Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída para a próxima etapa é executada, a menos que indicado o contrário. Executar etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros de inicialização.  
+> Todas as etapas devem ser executadas na ordem exata listada e cada etapa deve ser concluída antes que a próxima etapa é executada, a menos que indicado o contrário. Executando etapas fora de ordem ou sem aguardar concluir cada etapa pode resultar em erros de inicialização.  
   
-1.  Ligue o unidades de distribuição de alimentação (PDU) e aguarde as opções para iniciar automaticamente.  
+1.  Ligue o unidades de distribuição de alimentação (PDU) e aguarde até que as opções para iniciar automaticamente.  
   
-2.  Ligue o ***appliance_domain *-HST01** server.  
+2.  Ligar o ***appliance_domain *-HST01** server.  
   
 3.  Faça logon no ***appliance_domain *-HST01** como o administrador de domínio do dispositivo.  
   
-4.  Iniciar o **Gerenciador Hyper-V** programa (**virtmgmt.msc**) e conecte-se a ***appliance_domain *-HST01** se não conectado por padrão.  
+4.  Iniciar o **Gerenciador do Hyper-V** programa (**virtmgmt.msc**) e conecte-se ao ***appliance_domain *-HST01** se não conectado por padrão.  
   
-    1.  Se você não pode se conectar por nome porque a ***PDW_region *-AD01** é não em execução, tente conectar-se usando o endereço IP.  
+    1.  Se você não pode se conectar por nome porque o ***PDW_region *-AD01** é não em execução, tente conectar-se usando o endereço IP.  
   
     2.  No **máquinas virtuais** painel, localize ***PDW_region *-AD01** e confirme se ele está em execução. Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
   
-5.  Ligue o restante dos servidores no dispositivo.  
+5.  Ligar o restante dos servidores no dispositivo.  
   
-6.  Na **HST01** estiver conectado como administrador de domínio do dispositivo, no **Gerenciador Hyper-V**:  
+6.  Enquanto estiver em **HST01** estiver conectado como administrador de domínio do dispositivo, no **Gerenciador do Hyper-V**:  
   
-    1.  Conecte-se a ***appliance_domain *-HST02**.  
+    1.  Conectar-se para ***appliance_domain *-HST02**.  
   
     2.  No **máquinas virtuais** painel, localize ***PDW_region *-AD02** e confirme se ele está em execução.  Caso contrário, inicie essa VM e aguarde até que ele seja totalmente iniciado.  
   
-7.  Usando o **Gerenciador de Cluster de Failover** se conectem a ***appliance_domain *-WFOHST01** de cluster, se conectado automaticamente e, em seguida, no **navegação** painel, clique em **Funções**. No **funções** painel:  
+7.  Usando o **Gerenciador de Cluster de Failover** conectar-se para o ***appliance_domain *-WFOHST01** do cluster, se não é automaticamente conectado e, em seguida, no **navegação** painel, clique em **Funções**. No **funções** painel:  
   
-    1.  Multisseleção de todas as máquinas virtuais, com o botão direito-las e, em seguida, clique em **iniciar**.  
+    1.  Multisseleção de todas as máquinas virtuais, clique com botão direito-los e, em seguida, clique em **iniciar**.  
   
-    2.  Aguarde até que todas as máquinas virtuais selecionadas concluir a inicialização antes de prosseguir para a próxima etapa.  
+    2.  Aguarde até que todas as VMs selecionadas para concluir a inicialização antes de prosseguir para a próxima etapa.  
   
-    3.  Se for necessário para as VMs que falhou, fechá-los, movê-los e reiniciá-los no host principal adequado.  
+    3.  Se for necessário para as VMs com failover, desligá-los, movê-los e reiniciá-los no host principal adequado.  
   
-8.  Se o dispositivo tem uma região de HDInsight, conecte-se ao cluster HDInsight. (Para fazer isso, clique duas vezes em **Gerenciador de Cluster de Failover**, selecione **conectar-se ao Cluster**e especifique ***appliance_domain *-WFOHST01** para o nome do cluster.)  
+8. Desconecte **HST01** se desejar.  
   
-    1.  Sob o cluster HDInsight, clique em **funções**. No **funções** painel.  
+9. Conectar-se para ***PDW_region *-CTL01** usando a conta de administrador de domínio do dispositivo.  
   
-        1.  Multisseleção de todas as máquinas virtuais, eles e selecione **iniciar**,  
+10. Execute `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para iniciar o **Configuration Manager**.  
   
-        2.  Aguarde até que todas as máquinas virtuais selecionadas concluir a inicialização antes de prosseguir para a próxima etapa.  
-  
-        3.  Se for necessário para as VMs que falhou, fechá-los, movê-los e reiniciá-los no host principal adequado.  
-  
-9. Desconectar **HST01** se desejar.  
-  
-10. Conecte-se a ***PDW_region *-CTL01** usando a conta de administrador de domínio do dispositivo.  
-  
-11. Executar `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` para iniciar o **do Configuration Manager**.  
-  
-12. No **do Configuration Manager**, no **topologia de depósito de dados paralela** menu, clique no **Status de serviços** guia e, em seguida, clique em **iniciar região**para iniciar serviços do PDW.  
-  
-13. Se o dispositivo tiver uma região de HDInsight, no menu de topologia de HDInsight, clique o **Status de serviços** guia e, em seguida, clique em **iniciar região** para iniciar os serviços do HDInsight.  
+11. No **Configuration Manager**, no **topologia de depósito de dados paralela** menu, clique no **Status dos serviços** guia e, em seguida, clique em **iniciar região**para iniciar os serviços do PDW.  
   
 ### <a name="to-verify-the-appliance-health"></a>Para verificar a integridade do dispositivo  
-Depois que o dispositivo foi iniciado, abra o **Console de administração** e verificar a página de integridade para alertas que indicam as condições de falha. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
+Depois que o dispositivo for iniciada, abra o **Console de administração** e verifique a página de integridade para alertas que podem indicar as condições de falha. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
 ## <a name="see-also"></a>Consulte também  
 [Tarefas de gerenciamento de dispositivo &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  

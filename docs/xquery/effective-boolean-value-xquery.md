@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987428"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valor Booliano efetivo (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "33077513"
   
 -   [Expressões condicionais](../xquery/conditional-expressions-xquery.md)  
   
--   [Expressões quantificadas](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  A seguir é apresentado um exemplo de valor Booliano efetivo. Quando o **se** expressão é processada, o valor booliano efetivo da condição é determinado. Como `/a[1]` retorna uma sequência vazia, o valor Booliano efetivo é false. O resultado é retornado como XML com um nó de texto (false).  
   
@@ -72,11 +72,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Quando a consulta digitada **xml** colunas ou variáveis, você pode ter nós do tipo booliano. O **Data ()** nesse caso retorna um valor booliano. Se a expressão de consulta retorna um valor Booliano true, o valor Booliano efetivo é true, como exibido no exemplo a seguir. O exemplo também ilustra o seguinte:  
+ Quando a consulta digitado **xml** colunas ou variáveis, você pode ter nós do tipo booliano. O **Data ()** nesse caso, retorna um valor booliano. Se a expressão de consulta retorna um valor Booliano true, o valor Booliano efetivo é true, como exibido no exemplo a seguir. O exemplo também ilustra o seguinte:  
   
 -   Uma coleção de esquemas XML é criada. O elemento \<b > na coleção é do tipo booliano.  
   
--   Um tipo **xml** variável é criada e consultada.  
+-   Tipado **xml** variável é criada e consultada.  
   
 -   A expressão `data(/b[1])` retorna um valor Booliano true. Portanto, o valor Booliano efetivo nesse caso, é true.  
   

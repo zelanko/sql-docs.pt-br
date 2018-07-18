@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979048"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano do plano de manutenção. *plan_id* é **UNIQUEIDENTIFIER**. O padrão é NULO.  
+ Especifica a ID do plano do plano de manutenção. *plan_id* está **UNIQUEIDENTIFIER**. O padrão é NULO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *plan_id* for especificado, **sp_help_maintenance_plan** retornará três tabelas: plano, o banco de dados e o trabalho.  
@@ -66,10 +66,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_name**|**sysname**|Nome do plano de manutenção.|  
 |**date_created**|**datetime**|Data em que o plano de manutenção foi criado.|  
 |**proprietário**|**sysname**|Proprietário do plano de manutenção.|  
-|**max_history_rows**|**Int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
-|**remote_history_server**|**Int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
-|**max_remote_history_rows**|**Int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
-|**user_defined_1**|**Int**|O padrão é NULL.|  
+|**max_history_rows**|**int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
+|**remote_history_server**|**int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
+|**max_remote_history_rows**|**int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
+|**user_defined_1**|**int**|O padrão é NULL.|  
 |**user_defined_2**|**nvarchar(100)**|O padrão é NULL.|  
 |**user_defined_3**|**datetime**|O padrão é NULL.|  
 |**user_defined_4**|**uniqueidentifier**|O padrão é NULL.|  
@@ -84,13 +84,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
-|**job_id**|ID de todos os trabalhos associados ao plano de manutenção. *job_id* é **uniqueidentifier**.|  
+|**job_id**|ID de todos os trabalhos associados ao plano de manutenção. *job_id* está **uniqueidentifier**.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_maintenance_plan** está no **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_help_maintenance_plan**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo descreve informações sobre o plano de manutenção FAD6F2AB-3571-11D3-9D4A-00C04FB925FC.  

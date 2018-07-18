@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 32ca47ff848d735c9310d894eff46c94b0c8da92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037804"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *função* é **sysname**, com um padrão NULL. Se *função* não for especificado, as permissões para todas as funções fixas de banco de dados são exibidas.  
+ É o nome de uma função de banco de dados fixa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *função* está **sysname**, com um padrão NULL. Se *função* não for especificado, as permissões para todas as funções de banco de dados fixas são exibidas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -58,10 +58,10 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome da função de banco de dados fixa|  
-|**Permissão**|**nvarchar (70)**|Permissões associadas com **DbFixedRole**|  
+|**Permissão**|**nvarchar(70)**|Permissões associadas **DbFixedRole**|  
   
 ## <a name="remarks"></a>Remarks  
- Para exibir uma lista das funções fixas de banco de dados, execute **sp_helpdbfixedrole**. A tabela a seguir mostra as funções de banco de dados fixas.  
+ Para exibir uma lista das funções de banco de dados fixa, execute **sp_helpdbfixedrole**. A tabela a seguir mostra as funções de banco de dados fixas.  
   
 |Função de banco de dados fixa|Description|  
 |-------------------------|-----------------|  
@@ -75,7 +75,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Leitores de negação dos dados de banco de dados|  
 |**db_denydatawriter**|Gravadores de negação dos dados de banco de dados|  
   
- Membros de **db_owner** função fixa de banco de dados tem as permissões de todas as outras funções de banco de dados fixa. Para exibir as permissões para funções de servidor fixas, execute **sp_srvrolepermission**.  
+ Os membros de **db_owner** função fixa de banco de dados tem as permissões de todas as outras funções de banco de dados fixa. Para exibir as permissões para funções de servidor fixas, execute **sp_srvrolepermission**.  
   
  O conjunto de resultados inclui as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem ser executadas, e outras atividades especiais que podem ser realizadas, por membros da função de banco de dados.  
   
@@ -93,7 +93,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

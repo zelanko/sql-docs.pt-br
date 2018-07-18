@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578738"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968299"
 ---
 # <a name="restrictions-element-xmla"></a>Elemento Restrictions (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém colunas de restrição e dados usados pelo [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
+  Contém as colunas de restrição e dados usados pelos [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   

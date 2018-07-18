@@ -1,5 +1,5 @@
 ---
-title: Fontes de dados com suporte em modelos de tabela 1200 SQL Server Analysis Services | Microsoft Docs
+title: Fontes de dados com suporte em modelos do SQL Server Analysis Services tabulares 1200 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017524"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   
-Este artigo descreve os tipos de fontes de dados que podem ser usados com modelos de tabela do SQL Server Analysis Services na 1200 e nível de compatibilidade inferior. 
+Este artigo descreve os tipos de fontes de dados que podem ser usados com modelos de tabela do SQL Server Analysis Services no 1200 e nível de compatibilidade inferior. 
 
-Para modelos nos níveis de compatibilidade 1400, consulte [fontes de dados com suporte em modelos do SQL Server Analysis Services tabulares 1400](data-sources-supported-ssas-tabular-1400.md).
+Para modelos nos níveis de compatibilidade 1400, consulte [fontes de dados com suporte nos modelos do SQL Server Analysis Services tabular 1400](data-sources-supported-ssas-tabular-1400.md).
 
-Para serviços de análise do Azure, consulte [fontes de dados com suporte no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+Para o Azure Analysis Services, consulte [fontes de dados com suporte no Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Fontes de dados com suporte para modelos de tabela na memória  
-Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a instalação não instala os provedores listados para cada fonte de dados. Alguns provedores podem ser instalados com outros aplicativos no seu computador. Em outros casos, talvez seja necessário baixar e instalar o provedor.  
+Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a instalação não instala os provedores listados para cada fonte de dados. Alguns provedores podem ser instalados com outros aplicativos em seu computador. Em outros casos, você precisa baixar e instalar o provedor.  
   
 |||||  
 |-|-|-|-|  
 |Origem|Versões|Tipo de arquivo|Provedores|  
 |Bancos de dados do Access|Microsoft Access 2010 e posterior.|.accdb ou .mdb|Provedor OLE DB ACE 14|  
-|Bancos de dados relacionais do SQL Server|SQL Server 2008 e posterior, depósito de dados do SQL Server 2008 e posterior, o Azure SQL Database, Azure SQL Data Warehouse, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. |(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
+|Bancos de dados relacionais do SQL Server|SQL Server 2008 e posterior, o depósito de dados do SQL Server 2008 e posterior, o Azure banco de dados SQL do Azure SQL Data Warehouse, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) era anteriormente conhecido como SQL Server Parallel Data Warehouse (PDW). Originalmente, conectar o PDW a partir do Analysis Services exigia um provedor de dados especial. Esse provedor foi substituído no SQL Server 2012. A partir do SQL Server 2012, o cliente nativo do SQL Server é usado para as conexões com o PDW/APS. |(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |Bancos de dados relacionais da Oracle|Oracle 9i e posterior.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6 e posterior|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
 |Bancos de dados relacionais do Informix||(não se aplica)|Provedor OLE DB para Informix|  
@@ -43,12 +43,12 @@ Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudi
 |Arquivos do Microsoft Excel|Excel 2010 e posterior|.xlsx, xlsm, .xlsb, .xltx, .xltm|Provedor OLE DB ACE 14|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho|Microsoft SQL Server 2008 Analysis Services e posterior|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (usado apenas com pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicadas em farms do SharePoint com o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalado)|  
 |Cubo do Analysis Services|Microsoft SQL Server 2008 Analysis Services e posterior|(não se aplica)|ASOLEDB 10|  
-|Alimentações de dados<br /><br /> (usado para importar dados de relatórios do Reporting Services, documentos do serviço Atom, Microsoft Azure Marketplace DataMarket e feed de dados único)|Formato Atom 1.0<br /><br /> Qualquer banco de dados ou documento exposto como um Serviço de dados do WCF (Windows Communication Foundation) (antes ADO.NET Data Services).|`.atomsvc` para um documento de serviço que define uma ou mais alimentações<br /><br /> .atom para um documento de feed da Web do Atom|Provedor de Feed de Dados Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provedor de dados do feed de dados do .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Alimentações de dados<br /><br /> (usado para importar dados de relatórios do Reporting Services, documentos do serviço Atom, Microsoft Azure Marketplace DataMarket e feed de dados único)|Formato Atom 1.0<br /><br /> Qualquer banco de dados ou documento exposto como um Serviço de dados do WCF (Windows Communication Foundation) (antes ADO.NET Data Services).|`.atomsvc` para um documento de serviço que define um ou mais feeds<br /><br /> .atom para um documento de feed da Web do Atom|Provedor de Feed de Dados Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provedor de dados do feed de dados do .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Arquivos de conexão de banco de dados do Office||.odc||  
   
   
 ##  <a name="bkmk_supported_ds_dq"></a> Fontes de dados com suporte para modelos DirectQuery  
- O DirectQuery é uma alternativa para o modo de armazenamento na memória, roteando consultas e retornando os resultados diretamente em sistemas de dados de back-end em vez de armazenar todos os dados dentro do modelo (e na RAM depois que o modelo é carregado). Como o Analysis Services tem que formular consultas na sintaxe da consulta de banco de dados nativo, um subconjunto menor de fontes de dados é suporte para esse modo.  
+ O DirectQuery é uma alternativa para o modo de armazenamento na memória, roteando consultas e retornando os resultados diretamente em sistemas de dados de back-end em vez de armazenar todos os dados dentro do modelo (e na RAM depois que o modelo é carregado). Porque o Analysis Services tem que formular consultas na sintaxe de consulta de banco de dados nativo, um subconjunto menor de fontes de dados tem suporte para esse modo.  
   
 Fonte de dados   |Versões  |Provedores
 ---------|---------|---------
@@ -68,9 +68,9 @@ Você também pode eliminar etapas com a importação de várias tabelas e a exc
   
 Colunas que contêm dados semelhantes em fontes de dados diferentes são a base para criar relações dentro do designer de modelos. Ao usar fontes de dados heterogêneos, escolha tabelas com colunas que possam ser mapeadas para tabelas em outras fontes de dados que contêm dados idênticos ou semelhantes.  
   
-Provedores OLE DB às vezes podem oferecer desempenho mais rápido para dados em larga escala. Ao escolher entre diferentes provedores para a mesma fonte de dados, experimente primeiro o provedor OLE DB.  
+Provedores OLE DB, às vezes, podem oferecer um desempenho mais rápido para dados em larga escala. Ao escolher entre diferentes provedores para a mesma fonte de dados, experimente primeiro o provedor OLE DB.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Fontes de dados com suporte no SQL Server Analysis Services, modelos de tabela 1400](data-sources-supported-ssas-tabular-1400.md)
 

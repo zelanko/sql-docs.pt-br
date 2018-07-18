@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de registros hierárquicos persistentes | Microsoft Docs
+title: Manter conjuntos de registros hierárquicos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,19 +18,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef907391ad15cb5dd4d58efb6268a0b1688274fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 281204b15620eba99f30c4480817973052af0cea
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272515"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980952"
 ---
-# <a name="persisting-hierarchical-recordsets"></a>Conjuntos de registros hierárquicos persistentes
-Você pode salvar um hierárquica **registros** para um arquivo no formato ADTG ou XML, chamando o [salvar](../../../ado/reference/ado-api/save-method.md) método. No entanto, duas limitações se aplicam ao salvar hierárquica **registros**s em formato XML: não é possível salvar em XML se o hierárquica **registros** contém as atualizações pendentes, e não é possível salvar um com parâmetros hierárquica **registros**.  
+# <a name="persisting-hierarchical-recordsets"></a>Persistência de conjuntos de registros hierárquicos
+Você pode salvar um hierárquica **conjunto de registros** em um arquivo no formato ADTG ou XML, chamando o [salvar](../../../ado/reference/ado-api/save-method.md) método. No entanto, duas limitações se aplicam ao salvar hierárquica **conjunto de registros**s em formato XML: não é possível salvar em XML se o hierárquica **Recordset** contém as atualizações pendentes, e não é possível salvar um com parâmetros hierárquica **conjunto de registros**.  
   
- Para obter mais informações sobre o provedor de dados de formatação, consulte [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) e [visão geral do Data Shaping Service para OLE DB](http://msdn.microsoft.com/en-us/9f51e471-8e85-448e-9fb8-b64bbf767bf3).  
+ Para obter mais informações sobre o provedor de dados de formatação, consulte [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) e [visão geral de Data Shaping Service para OLE DB](http://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3).  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
+ [Exemplo de Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

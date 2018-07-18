@@ -21,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987238"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Retorna o plano de execução para solicitações em andamento de consulta. Use essa DMV para recuperar o showplan XML estatísticas transitório. 
+Retorna o plano de execução para solicitações em andamento de consulta. Use essa DMV para recuperar o showplan XML estatísticas transitórias. 
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +40,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="arguments"></a>Argumentos 
 *session_id*  
- A id de sessão está executando o lote a ser pesquisado. *session_id* é **smallint**. *session_id* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+ A id de sessão está executando o lote a ser pesquisado. *session_id* está **smallint**. *session_id* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -52,46 +52,46 @@ sys.dm_exec_query_statistics_xml(session_id)
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID da sessão. Não permite valor nulo.|
-|request_id|**Int**|ID da solicitação. Não permite valor nulo.|
+|request_id|**int**|ID da solicitação. Não permite valor nulo.|
 |sql_handle|**varbinary(64)**|Mapa de hash do texto SQL da solicitação. Anulável.|
 |plan_handle|**varbinary(64)**|Mapa de hash do plano de consulta. Anulável.|
 |query_plan|**xml**|Showplan XML estatísticas parcial. Anulável.|
 
 ## <a name="remarks"></a>Remarks
-Essa função de sistema está disponível desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Essa função do sistema está disponível começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-Essa função do sistema funciona em ambos **padrão** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta.  
+Essa função do sistema funciona em ambos **standard** e **leve** infraestrutura de criação de perfil de estatísticas de execução de consulta.  
   
-**Padrão** estatísticas de infraestrutura de criação de perfil podem ser habilitadas usando:
+**Padrão** infraestrutura de criação de perfil de estatísticas podem ser habilitadas usando:
   -  [SET STATISTICS XML EM](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [DEFINIR O PERFIL DE ESTATÍSTICAS EM](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  o `query_post_execution_showplan` eventos estendidos.  
+  -  [SET STATISTICS PROFILE EM](../../t-sql/statements/set-statistics-profile-transact-sql.md)
+  -  o `query_post_execution_showplan` evento estendido.  
   
-**Lightweight** estatísticas de infraestrutura de criação de perfil estão disponível em [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pode ser habilitado:
-  -  Globalmente usando rastreamento sinalizador 7412.
-  -  Usando o [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) eventos estendidos.
+**Lightweight** infraestrutura de criação de perfil de estatísticas estão disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pode ser habilitado:
+  -  Globalmente usando o rastreamento de sinalizador 7412.
+  -  Usando o [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) evento estendido.
   
 > [!NOTE]
-> Uma vez habilitada, o sinalizador de rastreamento 7412, criação de perfil leve será habilitada para qualquer consumidor das estatísticas de execução de consulta perfis de infraestrutura, em vez de padrão de criação de perfil, como o DMV [sys.DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> No entanto, a criação de perfil padrão ainda é usada para SET STATISTICS XML, *incluir plano real* ação [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], e `query_post_execution_showplan` xEvent.
+> Uma vez habilitado pelo sinalizador de rastreamento 7412, criação de perfil leve será habilitada para qualquer consumidor das estatísticas de execução de consulta infraestrutura em vez de padrão de criação de perfil, como o DMV de criação de perfil [DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
+> No entanto, a criação de perfil padrão ainda é usada para SET STATISTICS XML *incluir plano real* ação no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], e `query_post_execution_showplan` xEvent.
 
 > [!IMPORTANT]
-> TPC-C como testes de carga de trabalho, permitindo que a infraestrutura de criação de perfil de estatísticas leve adiciona uma sobrecarga de 1,5 a 2 por cento. Por outro lado, a infraestrutura de criação de perfil de padrão de estatísticas pode adicionar até 90% de sobrecarga para o mesmo cenário de carga de trabalho.
+> Em TPC-C, como testes de carga de trabalho, permitindo que a infraestrutura de criação de perfil de estatísticas leve adiciona uma sobrecarga de 1,5 a 2 por cento. Por outro lado, a infraestrutura de criação de perfil de padrão de estatísticas pode adicionar até 90% de sobrecarga para o mesmo cenário de carga de trabalho.
 
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  
 
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Procurando nas estatísticas de plano e execução de consulta ao vivo de um lote em execução  
- A exemplo a seguir consulta **exec_requests** para localizar a consulta interessante e copiar seu `session_id` da saída.  
+### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Observando as estatísticas de plano e execução de consulta ao vivo para um lote em execução  
+ A exemplo a seguir consulta **. DM exec_requests** para localizar a consulta interessante e copiar seu `session_id` da saída.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Em seguida, para obter as estatísticas de plano e execução de consulta em tempo real, use copiado `session_id` com a função de sistema **sys.dm_exec_query_statistics_xml**.  
+ Em seguida, para obter as estatísticas de plano e execução de consultas dinâmicas, use copiado `session_id` com a função do sistema **DM exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
@@ -99,7 +99,7 @@ SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);
 GO  
 ```   
 
- Ou combinado de todas as solicitações em execução.  
+ Ou combinados para todas as solicitações em execução.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

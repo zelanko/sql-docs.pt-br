@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036094"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33239436"
   Adiciona um novo usuário ao banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) em vez disso.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [criar usuário](../../t-sql/statements/create-user-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,14 +49,14 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***login***'**  
- É o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do logon do Windows. *logon* é um **sysname**, sem padrão. *logon* deve ser um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou logon do Windows.  
+ [  **@loginame =** ] **'***logon***'**  
+ É o nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do logon do Windows. *login* é um **sysname**, sem padrão. *login* deve ser um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou logon do Windows.  
   
  [  **@name_in_db =** ] **'***usuário***'**  
- É o nome do novo usuário de banco de dados. *usuário* é um **sysname**, com um padrão NULL. Se *usuário* não for especificado, o nome do novo usuário de banco de dados padrão é o *login* nome. Especificando *usuário* fornece um nome do novo usuário no banco de dados diferente do nome de logon de nível de servidor.  
+ É o nome do novo usuário de banco de dados. *usuário* é um **sysname**, com um padrão NULL. Se *usuário* não for especificado, o nome do novo usuário de banco de dados assumirá o *login* nome. Especificando *usuário* fornece um nome do novo usuário no banco de dados diferente do nome de logon de nível de servidor.  
   
  [  **@grpname =** ] **'***função***'**  
- É a função de banco de dados da qual o novo usuário se torna um membro. *função* é **sysname**, com um padrão NULL. *função* deve ser uma função de banco de dados válido no banco de dados atual.  
+ É a função de banco de dados da qual o novo usuário se torna um membro. *função* está **sysname**, com um padrão NULL. *função* deve ser uma função de banco de dados válido no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -68,13 +68,13 @@ sp_adduser [ @loginame = ] 'login'
   
  Use **sys. server_principals** para exibir uma lista de nomes de logon válido.  
   
- Use **sp_helprole** para exibir uma lista dos nomes de função válido. Quando você especifica uma função, o usuário automaticamente ganha as permissões definidas para ela. Se uma função não for especificada, o usuário obtém as permissões concedidas para o padrão **pública** função. Para adicionar um usuário a uma função, um valor para o *nome de usuário* deve ser fornecido. (*username* pode ser o mesmo que *login_id*.)  
+ Use **sp_helprole** para exibir uma lista dos nomes de função válido. Quando você especifica uma função, o usuário automaticamente ganha as permissões definidas para ela. Se uma função não for especificada, o usuário ganhará as permissões concedidas para o padrão **pública** função. Para adicionar um usuário a uma função, um valor para o *nome de usuário* deve ser fornecido. (*nome de usuário* pode ser o mesmo que *login_id*.)  
   
  Usuário **convidado** já existe em cada banco de dados. Adicionando usuário **convidado** habilitará esse usuário, se ele foi previamente desabilitado. Por padrão, usuário **convidado** está desabilitado em novos bancos de dados.  
   
- **sp_adduser** não pode ser executado em uma transação definida pelo usuário.  
+ **sp_adduser** não pode ser executado dentro de uma transação definida pelo usuário.  
   
- Não é possível adicionar um **convidado** usuário porque um **convidado** usuário já existe em cada banco de dados. Para habilitar o **convidado** usuário, conceda **convidado** permissão CONNECT conforme mostrado:  
+ Não é possível adicionar um **convidado** usuário porque um **convidado** já existe um usuário dentro de cada banco de dados. Para habilitar o **convidado** usuário, conceder **convidado** permissão CONNECT conforme mostrado:  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -94,7 +94,7 @@ EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Adicionando um usuário de banco de dados com a mesma ID de logon  
- O exemplo a seguir adiciona o usuário `Arvind` ao banco de dados atual para o logon `Arvind` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este usuário pertence ao padrão **pública** função.  
+ O exemplo a seguir adiciona o usuário `Arvind` ao banco de dados atual para o logon `Arvind` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse usuário pertence ao padrão **pública** função.  
   
 ```  
 EXEC sp_adduser 'Arvind';  

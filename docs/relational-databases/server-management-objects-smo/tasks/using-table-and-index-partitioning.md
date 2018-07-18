@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039054"
 ---
 # <a name="using-table-and-index-partitioning"></a>Usando o particionamento de tabela e índice
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dados podem ser armazenados usando os algoritmos de armazenamento fornecidos por [tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
+  Dados podem ser armazenados usando os algoritmos de armazenamento fornecidos pelo [tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). O particionamento pode tornar as tabelas e os índices grandes mais gerenciáveis e escalonáveis.  
   
 ## <a name="index-and-table-partitioning"></a>Particionamento de tabela e índice  
  O recurso permite a difusão de dados de tabela e índice por vários grupos de arquivos em partições. Uma função de partição define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de certas colunas, chamadas de colunas de particionamento. Um esquema de partição mapeia cada partição especificada pela função de partição para um grupo de arquivos. Isso permite desenvolver estratégias de arquivamento que possibilitam o dimensionamento de tabelas em grupos de arquivos e, portanto, em dispositivos físicos.  
@@ -41,10 +41,10 @@ ms.locfileid: "32969221"
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> e <xref:Microsoft.SqlServer.Management.Smo.Index> especifica o esquema de partição usado na propriedade <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> e especifica as colunas no <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## <a name="example"></a>Exemplo  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurando um esquema de partição para uma tabela no Visual C#  
- O exemplo de código mostra como criar uma função de partição e um esquema de partição para o `TransactionHistory` tabela o [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
+ O exemplo de código mostra como criar uma função de partição e um esquema de partição para o `TransactionHistory` na tabela a [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
   
 ```csharp  
 {   
@@ -92,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Configurando um esquema de partição para uma tabela no PowerShell  
- O exemplo de código mostra como criar uma função de partição e um esquema de partição para o `TransactionHistory` tabela o [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
+ O exemplo de código mostra como criar uma função de partição e um esquema de partição para o `TransactionHistory` na tabela a [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] banco de dados de exemplo. As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -138,6 +138,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

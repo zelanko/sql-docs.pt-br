@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985355"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,10 +35,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Uma tabela.  
   
 ## <a name="remarks"></a>Remarks  
- Um histograma gera colunas de estatísticas. A estrutura de coluna do histograma retornado depende do tipo de referência de coluna que é usado com o **PredictHistogram** função.  
+ Um histograma gera colunas de estatísticas. A estrutura da coluna do histograma retornado depende do tipo de referência de coluna que é usado com o **PredictHistogram** função.  
   
 ## <a name="scalar-columns"></a>Colunas escalares  
- Para uma \<referência de coluna escalar >, o histograma que o **PredictHistogram** função retorna consiste das seguintes colunas:  
+ Para um \<referência de coluna escalar >, o histograma que o **PredictHistogram** retornos de função consiste as seguintes colunas:  
   
 -   Valor sendo previsto.  
   
@@ -48,18 +48,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados não oferecem suporte a **$ProbabilityVariance**. Essa coluna sempre contém 0 para algoritmos do [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados não suportam **$ProbabilityVariance**. Essa coluna sempre contém 0 para algoritmos do [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados não oferecem suporte a **$ProbabilityStdev**. Essa coluna sempre contém 0 para algoritmos do [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de mineração de dados não suportam **$ProbabilityStdev**. Essa coluna sempre contém 0 para algoritmos do [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$AdjustedProbability**  
   
-     O **$AdjustedProbability** coluna é uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensão para o [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para mineração de dados.  
+     O **$AdjustedProbability** coluna é um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensão para o [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para mineração de dados.  
   
 ## <a name="cluster-columns"></a>Colunas cluster  
- O histograma que o **PredictHistogram** função retorna para um \<referência de coluna de cluster > consiste nas seguintes colunas:  
+ O histograma que o **PredictHistogram** função retorna para um \<referência de coluna do cluster > consiste nas seguintes colunas:  
   
 -   **$Cluster** (representa o nome do cluster)  
   
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna o estado previsto da coluna Bike Buyer em uma consulta singleton. A consulta também retorna os estados mais prováveis duas primeiras do atributo Bike Buyer, com base na probabilidade ajustada obtida usando o **PredictHistogram** função.  
+ O exemplo a seguir retorna o estado previsto da coluna Bike Buyer em uma consulta singleton. A consulta também retorna os estados de dois primeiros mais prováveis do atributo Bike Buyer, com base na probabilidade ajustada obtida usando o **PredictHistogram** função.  
   
 ```  
 SELECT  
@@ -92,9 +92,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmos de mineração de dados &#40;Analysis Services – mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de mineração de dados &#40;Analysis Services - mineração de dados&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

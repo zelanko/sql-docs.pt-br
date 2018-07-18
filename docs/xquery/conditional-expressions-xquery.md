@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979008"
 ---
 # <a name="conditional-expressions-xquery"></a>Expressões condicionais (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Oferece suporte a XQuery condicional seguinte **if-then-else** instrução:  
+  XQuery oferece suporte aos seguinte condicional **if-then-else** instrução:  
   
 ```  
 if (<expression1>)  
@@ -61,7 +61,7 @@ else
   
 -   O **else** expressão é necessária. Se você não precisar dela, poderá retornar " ( ) ", como ilustrado nos exemplos neste tópico.  
   
- Por exemplo, a consulta a seguir é especificada em relação a **xml** variável de tipo. O **se** condição testa o valor da variável SQL (@v) dentro da expressão XQuery usando o [função SQL: Variable](../xquery/xquery-extension-functions-sql-variable.md) função de extensão. Se o valor de variável for "FirstName", ele retornará o elemento <`FirstName`>. Caso contrário, retornará o elemento <`LastName`>.  
+ Por exemplo, a consulta a seguir é especificada em relação a **xml** variável de tipo. O **se** condição testa o valor da variável SQL (@v) dentro da expressão XQuery usando a [função SQL: Variable](../xquery/xquery-extension-functions-sql-variable.md) função de extensão. Se o valor de variável for "FirstName", ele retornará o elemento <`FirstName`>. Caso contrário, retornará o elemento <`LastName`>.  
   
 ```  
 declare @x xml  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Na consulta anterior, a condição de **se** expressão verifica se há mais de dois elementos filho em <`Features`>. Caso haja, ela retornará o elemento `\<there-is-more/>` no resultado.  
+ Na consulta anterior, a condição na **se** expressão verifica se há mais de dois elementos filho em <`Features`>. Caso haja, ela retornará o elemento `\<there-is-more/>` no resultado.  
   
  Este é o resultado:  
   

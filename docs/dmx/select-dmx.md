@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989875"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  O **selecione** instrução em extensões DMX (Data Mining) é usada para as seguintes tarefas de mineração de dados:  
+  O **selecionar** instrução em extensões DMX (Data Mining) é usada para as seguintes tarefas em mineração de dados:  
   
 -   Navegar o conteúdo de um modelo de mineração existente  
   
@@ -41,14 +41,14 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED (mesclado/nivelado)  
  Alguns clientes de mineração de dados não podem aceitar conjuntos de resultados em formato hierárquico de um provedor de mineração de dados. O cliente pode não ter a habilidade de manusear a hierarquia ou ele pode ter que armazenar os resultados em uma tabela simples não normalizada. Para converter os dados de tabelas aninhadas para tabelas mescladas, você deve requerer que os resultados da consulta sejam mesclados.  
   
- Para mesclar os resultados da consulta, use o **selecione** sintaxe com o **FLATTENED** opção, conforme mostrado no exemplo a seguir:  
+ Para mesclar os resultados da consulta, use o **selecionar** sintaxe com o **FLATTENED** opção, conforme mostrado no exemplo a seguir:  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>SUPERIOR \<n > e ORDER BY  
- Você pode classificar os resultados de uma consulta usando uma expressão e, em seguida, pode retornar um subconjunto dos resultados usando uma combinação da **ORDER BY** e **superior** cláusulas. Isto é útil em um cenário como o de mala direta onde você deseja enviar os resultados para quem tenha mais probabilidade de responder. Você pode classificar os resultados de um consulta de previsão de endereçamento por probabilidade da previsão de destino e, em seguida, retornar somente as principais \<n > resultados.  
+## <a name="top-n-and-order-by"></a>Parte superior \<n > e ORDER BY  
+ Você pode ordenar os resultados de uma consulta usando uma expressão e, em seguida, pode retornar um subconjunto dos resultados, usando uma combinação da **ORDER BY** e **superior** cláusulas. Isto é útil em um cenário como o de mala direta onde você deseja enviar os resultados para quem tenha mais probabilidade de responder. Você pode ordenar os resultados de um consulta de previsão de endereçamento pela previsão de probabilidade de destino e, em seguida, retornar apenas as principais \<n > resultados.  
   
 ## <a name="select-list"></a>Lista de seleção  
  O  *\<lista de seleção >* podem incluir referências de coluna escalar, funções de previsão e expressões. As opções que estão disponíveis dependem do algoritmo e dos contextos seguintes:  
@@ -77,17 +77,17 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Você pode limitar os casos que são retornados pela consulta usando um **onde** cláusula. O **onde** cláusula Especifica que a coluna referenciada no **onde** expressão deve ter a mesma semântica de referências de coluna no  *\<lista de seleção >* do **selecione** instrução e pode somente retornar uma expressão booleana. A sintaxe para a **onde** cláusula é da seguinte maneira  
+ Você pode limitar os casos que são retornados pela consulta usando um **onde** cláusula. O **onde** cláusula Especifica que a coluna referenciada na **onde** expressão deve ter a mesma semântica que referências de coluna no  *\<lista de seleção >* do **selecione** instrução e pode somente retornar uma expressão booliana. A sintaxe para o **onde** cláusula é da seguinte maneira  
   
 ```  
 WHERE < condition expression >  
 ```  
   
- A lista de seleção e **onde** cláusula de um **selecione** instrução deve seguir as regras a seguir:  
+ A lista de seleção e **onde** cláusula de uma **selecione** instrução deve seguir as regras a seguir:  
   
 -   A lista de seleção deve conter uma expressão que não retorna um resultado Booliano. É possível modificar a expressão, mas ela deve retornar resultados não Boolianos.  
   
--   O **onde** cláusula deve conter uma expressão que retorna um resultado booleano. Você pode modificar a cláusula, mas ela deve retornar um resultado Booliano.  
+-   O **onde** cláusula deve conter uma expressão que retorna um resultado booliano. Você pode modificar a cláusula, mas ela deve retornar um resultado Booliano.  
   
 ## <a name="predictions"></a>Previsões  
  Há dois tipos de sintaxe que você pode usar para criar previsões:  
@@ -109,13 +109,13 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  Para obter mais informações sobre como criar consultas de previsão, consulte [estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md).  
   
 ## <a name="clause-syntax"></a>Sintaxe da cláusula  
- Devido à complexidade de navegar com o **selecione** instrução, elementos de sintaxe detalhados e argumentos são descritos por cláusula. Para obter mais informações sobre cada cláusula, clique em um tópico na lista seguinte:  
+ Devido à complexidade de navegar com o **selecionar** instrução, elementos de sintaxe detalhados e argumentos são descritos por cláusula. Para obter mais informações sobre cada cláusula, clique em um tópico na lista seguinte:  
   
  [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
  [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
  [SELECT FROM &#60;modelo&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   

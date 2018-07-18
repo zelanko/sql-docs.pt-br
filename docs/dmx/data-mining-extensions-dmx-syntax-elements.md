@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842379"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989918"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxe de DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode usar vários elementos de sintaxe para definir as instruções de extensões DMX (Data Mining) que você pode usar para criar, gerenciar e trabalhar com modelos de mineração de dados. As seções a seguir descrevem esses elementos de sintaxe.  
+  Na [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode usar vários elementos de sintaxe para definir instruções de extensões DMX (Data Mining) que você pode usar para criar, gerenciar e trabalhar com modelos de mineração de dados. As seções a seguir descrevem esses elementos de sintaxe.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Identificadores &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "34842379"
  [Distribuições &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  Define a distribuição de dados em uma coluna.  
   
- [Uso &#40;DMX&#41;](../dmx/usage-dmx.md)  
+ [Uso de &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Defina como um modelo de mineração utiliza as colunas que contém.  
   
  [Sinalizadores de modelagem &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
@@ -61,8 +61,8 @@ ms.locfileid: "34842379"
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

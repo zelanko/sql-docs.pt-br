@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038824"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumentos  
  [ @loginame=] '*login*'  
- É a ID de logon do novo proprietário do banco de dados atual. *logon* é **sysname**, sem padrão. *logon* deve ser um já existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou usuário do Windows. *logon* não pode ser o proprietário do banco de dados atual se já tiver acesso ao banco de dados por meio de uma conta de segurança de usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
+ É a ID de logon do novo proprietário do banco de dados atual. *login* está **sysname**, sem padrão. *login* deve ser um já existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou usuário do Windows. *logon* se não é possível tornar o proprietário do banco de dados atual se já tiver acesso ao banco de dados por meio de uma conta de segurança do usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
   
  [ @map=] *remap_alias_flag*  
  O *remap_alias_flag* parâmetro é preterido porque foram removidos aliases de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usando o *remap_alias_flag* parâmetro não causa um erro, mas não tem nenhum efeito.  
@@ -64,7 +64,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
  Para exibir uma lista de válidos *login* valores, execute o procedimento armazenado sp_helplogins.  
   
- Execução de sp_changedbowner somente com o *login* para propriedade de banco de dados de alterações do parâmetro *logon*.  
+ Execução de sp_changedbowner somente com o *login* propriedade de banco de dados de alterações de parâmetro *login*.  
   
  É possível alterar o proprietário de qualquer protegível usando a instrução ALTER AUTHORIZATION. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   

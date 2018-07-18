@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842009"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968178"
 ---
-# <a name="dmx-statements---data-manipulation"></a>Instruções DMX - manipulação de dados
+# <a name="dmx-statements---data-manipulation"></a>Instruções DMX – manipulação de dados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   A tabela a seguir lista as instruções que integram a DML (Data Manipulation Language) da mineração de dados em DMX (Data Mining Extensions).  
@@ -24,7 +24,7 @@ ms.locfileid: "34842009"
 |Tópico|Description|  
 |-----------|-----------------|  
 |[EXCLUIR &AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|Desmarca o conteúdo treinado de um modelo de mineração.|  
-|[INSERIR &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
+|[INSERIR NO &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Treina modelos de mineração|  
 |[SELECIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|Pesquisa modelos de mineração.|  
 |[&#60;consulta de fonte de dados&#62;](../dmx/source-data-query.md)|Consulta fontes de dados para ambos **INSERT INTO** e **selecione** instruções.|  
 |[ATUALIZAÇÃO &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Altera conteúdos no modelo de mineração|  

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978598"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Todos os objetos em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] devem ter um identificador. O nome de um objeto é seu identificador. Servidores, banco de dados e objetos de banco de dados, como fontes de dados, exibições de fonte de dados, cubos, dimensões e modelos de mineração, entre outros, têm identificadores.  
+  Todos os objetos no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve ter um identificador. O nome de um objeto é seu identificador. Servidores, banco de dados e objetos de banco de dados, como fontes de dados, exibições de fonte de dados, cubos, dimensões e modelos de mineração, entre outros, têm identificadores.  
   
  Há duas classes de identificadores em extensões DMX:  
   
@@ -41,7 +41,7 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  O primeiro caractere de um identificador normal deve ser um dos seguintes:  
   
-    -   Uma letra, conforme definido pelo padrão Unicode 2.0. Isso inclui caracteres latinos de a até z, de A até Z, além de caracteres de letras de outros idiomas.  
+    -   Uma letra, conforme definido pelo Unicode Standard 2.0. Isso inclui caracteres latinos de a até z, de A até Z, além de caracteres de letras de outros idiomas.  
   
     -   Um sublinhado (_).  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Quando palavras reservadas forem usadas em nomes de objeto ou partes de nomes de objeto.  
   
-     É recomendável não usar palavras-chave reservadas como nomes de objeto. Bancos de dados atualizados de versões anteriores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem conter identificadores que incluem palavras que não foram reservadas na versão anterior do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas que são palavras reservadas para[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Um identificador delimitado pode ser usado para fazer referência a um objeto assim, até que seja possível alterar o nome do objeto.  
+     É recomendável não usar palavras-chave reservadas como nomes de objeto. Bancos de dados que você atualizar de versões anteriores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem conter identificadores que incluem palavras que não foram reservadas na versão anterior do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas que são palavras reservadas para[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Um identificador delimitado pode ser usado para fazer referência a um objeto assim, até que seja possível alterar o nome do objeto.  
   
 -   Quando se usam caracteres que não estão listados como identificadores qualificados.  
   
@@ -103,8 +103,8 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

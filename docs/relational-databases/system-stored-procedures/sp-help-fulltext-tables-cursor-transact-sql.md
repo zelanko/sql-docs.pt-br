@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0e188636c3152c6ba7e1daa941f01c5766ad4320
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036274"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -54,10 +54,10 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  É a variável de saída do tipo **cursor**. O cursor é somente leitura, rolável e dinâmico.  
   
  [  **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- É o nome do catálogo de texto completo. *fulltext_catalog_name* é **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se ambos os *fulltext_catalog_name* e *table_name* for especificado, uma linha é retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
+ É o nome do catálogo de texto completo. *fulltext_catalog_name* está **sysname**, com um padrão NULL. Se *fulltext_catalog_name* for omitido ou for NULL, todas as tabelas indexadas de texto completo associadas com o banco de dados são retornadas. Se *fulltext_catalog_name* for especificado, mas *table_name* for omitido ou for NULL, as informações de índice de texto completo são recuperadas para cada tabela indexada de texto completo associada a este catálogo. Se os dois *fulltext_catalog_name* e *table_name* forem especificados, uma linha será retornada se *table_name* associado *fulltext_catalog_name*; Caso contrário, ocorrerá um erro.  
   
  [  **@table_name=**] **'***table_name***'**  
- É o nome de uma ou duas partes da tabela para a qual são solicitados metadados de texto completo. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, apenas as linhas relevantes para *table_name* é retornado.  
+ É o nome de uma ou duas partes da tabela para a qual são solicitados metadados de texto completo. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se apenas *table_name* for especificado, somente a linha relevante ao *table_name* é retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -69,8 +69,8 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**TABLE_OWNER**|**sysname**|Proprietário da tabela. Esse é o nome do usuário de banco de dados que criou a tabela.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Índice que impõe a restrição UNIQUE na coluna designada como a coluna de chave exclusiva.|  
-|**FULLTEXT_KEY_COLID**|**Int**|ID de coluna do índice exclusivo identificado por FULLTEXT_KEY_NAME.|  
-|**FULLTEXT_INDEX_ACTIVE**|**Int**|Especifica se as colunas marcadas para indexação de texto completo nessa tabela são elegíveis para consultas:<br /><br /> 0 = Inativo<br /><br /> 1 = Ativo|  
+|**FULLTEXT_KEY_COLID**|**int**|ID de coluna do índice exclusivo identificado por FULLTEXT_KEY_NAME.|  
+|**FULLTEXT_INDEX_ACTIVE**|**int**|Especifica se as colunas marcadas para indexação de texto completo nessa tabela são elegíveis para consultas:<br /><br /> 0 = Inativo<br /><br /> 1 = Ativo|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|Catálogo de texto completo no qual os dados de índice de texto completo residem.|  
   
 ## <a name="permissions"></a>Permissões  

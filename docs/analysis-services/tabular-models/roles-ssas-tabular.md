@@ -9,36 +9,36 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e73af245aaddbeb321acd60aeabd8a1617f3972f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045320"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981528"
 ---
 # <a name="roles"></a>Funções
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha. 
   
- Para o SQL Server Analysis Services, funções contêm membros de usuário por nome de usuário do Windows ou grupo do Windows e permissões (leitura, processo, administrador). Para o Azure Analysis Services, os usuários devem ser no seu Active Directory do Azure e os nomes de usuário e grupos especificados devem ser com o endereço de email organizacional ou UPN. 
+ Para o SQL Server Analysis Services, funções contêm membros de usuário por nome de usuário do Windows ou grupo do Windows e permissões (leitura, processo, administrador). Para o Azure Analysis Services, os usuários devem estar no seu Active Directory do Azure e nomes de usuário e grupos especificados devem ser pelo endereço de email organizacionais ou UPN. 
   
 > [!IMPORTANT]  
->  Para os usuários se conectem a um modelo implantado usando um aplicativo cliente de relatório, você deve criar pelo menos uma função pelo menos a permissão para que os usuários são membros de leitura.  
+>  Para que os usuários a se conectar a um modelo implantado por meio de um aplicativo cliente de relatório, você deve criar pelo menos uma função pelo menos a permissão para que esses usuários são membros de leitura.  
   
- Informações neste tópico se destina a autores de modelos tabulares que definem funções usando a caixa de diálogo Gerenciador de funções no SSDT. As funções definidas durante a criação do modelo aplicam-se ao banco de dados de espaço de trabalho do modelo. Depois que um banco de dados de modelo foi implantado, os administradores de banco de dados de modelo podem gerenciar (Adicionar, editar e excluir) membros de função usando o SSMS. Para obter informações sobre como gerenciar os membros das funções em um banco de dados implantado, consulte [funções de modelo de tabela](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Informações neste tópico se destina a autores de modelos tabulares que definem funções usando a caixa de diálogo Gerenciador de funções no SSDT. As funções definidas durante a criação do modelo aplicam-se ao banco de dados de espaço de trabalho do modelo. Depois de um banco de dados de modelo foi implantado, os administradores de banco de dados de modelo podem gerenciar (Adicionar, editar e excluir) membros da função usando o SSMS. Para saber mais sobre como gerenciar os membros das funções em um banco de dados implantado, consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_underst"></a> Understanding roles  
- Funções são usadas no Analysis Services para gerenciar o acesso de dados de modelo. Existem dois tipos de funções:  
+ As funções são usadas no Analysis Services para gerenciar o acesso de dados de modelo. Existem dois tipos de funções:  
   
 -   A função de servidor, uma função fixa que fornece acesso de administrador para uma instância de servidor do Analysis Services.  
   
 -   As funções de banco de dados, funções definidas por autores e administradores do modelo para controlar o acesso a banco de dados modelo e dados para usuários não administradores.  
   
- As funções, definidas para um modelo de tabela, são funções de banco de dados. Ou seja, as funções contêm membros que consistem em usuários ou grupos que têm permissões específicas que definem a ação que esses membros podem realizar no banco de dados modelo. Uma função de banco de dados é criada como um objeto separado no banco de dados e aplica-se apenas ao banco de dados no qual a função foi criada. Usuários e grupos que são incluídos na função pelo autor do modelo, que, por padrão, tem permissões de administrador no servidor de banco de dados do espaço de trabalho. para um modelo implantado, por um administrador.  
+ As funções, definidas para um modelo de tabela, são funções de banco de dados. Ou seja, as funções contêm membros que consistem em usuários ou grupos que têm permissões específicas que definem a ação que esses membros podem executar em banco de dados modelo. Uma função de banco de dados é criada como um objeto separado no banco de dados e aplica-se apenas ao banco de dados no qual a função foi criada. Usuários e grupos são incluídos na função pelo autor do modelo, que, por padrão, tem permissões de administrador no servidor de banco de dados de espaço de trabalho; para um modelo implantado, por um administrador.  
   
  As funções em modelos tabulares podem ser definidas posteriormente com filtros de linha. Os filtros de linha usam expressões DAX para definir as linhas em uma tabela, e as linhas relacionadas nas muitas direções, que um usuário pode consultar. Os filtros de linha que usam expressões DAX somente podem ser definidos para as permissões de Leitura e Leitura e Processo. Para obter mais informações, consulte [filtros de linha](#bkmk_rowfliters) mais adiante neste tópico.  
   
- Por padrão, quando você cria um novo projeto de modelo de tabela, o projeto de modelo não tem nenhuma função. Funções podem ser definidas usando a caixa de diálogo Gerenciador de funções no SSDT. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de espaço de trabalho do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo foi implantado, os membros da função de servidor ([administrador do Analysis Services) e os administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o SSMS.  
+ Por padrão, quando você cria um novo projeto de modelo de tabela, o projeto de modelo não tem nenhuma função. As funções podem ser definidas usando a caixa de diálogo Gerenciador de funções no SSDT. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de espaço de trabalho do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo tiver sido implantado, os membros da função de servidor ([administrador do Analysis Services) e os administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o SSMS.  
   
 ##  <a name="bkmk_permissions"></a> Permissões  
  Cada função tem uma única permissão de banco de dados definida (exceto para a permissão de Ler e Processar combinada). Por padrão, uma nova função terá a permissão Nenhum. Ou seja, quando os membros são adicionados à função com a permissão Nenhum, eles não podem modificar o banco de dados, executar uma operação de processo, consultar dados ou ver o banco de dados a menos que uma permissão diferente seja concedida.  
@@ -49,11 +49,11 @@ ms.locfileid: "34045320"
   
 |Permissões|Description|Filtros de linha usando DAX|  
 |-----------------|-----------------|----------------------------|  
-|Nenhuma|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
-|Leitura|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
-|Leitura e processo|Os membros têm permissão de consultar dados (com base em filtros em nível de linha) e executar operações de processo por meio de um script ou pacote que contém um comando de processo, mas não pode fazer nenhuma alteração ao banco de dados. Não é possível exibir o banco de dados de modelo no SSMS.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha possam ser consultados.|  
+|Nenhum|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
+|leitura|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
+|Leitura e processo|Os membros têm permissão de consultar dados (com base em filtros em nível de linha) e executar operações de processo por meio de um script ou pacote que contém um comando de processo, mas não pode fazer nenhuma alteração ao banco de dados. Não é possível exibir o banco de dados modelo no SSMS.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha possam ser consultados.|  
 |Processar|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não é possível consultar o banco de dados de modelo no SSMS.|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  
-|Administrador|Membros podem fazer modificações ao esquema modelo e podem consultar todos os dados no designer de modelo, no cliente de relatório e no SSMS.|Filtros de linha não são aplicáveis. Todos os dados podem ser consultados nesta função.|  
+|Administrador|Os membros podem fazer modificações ao esquema modelo e podem consultar todos os dados no designer de modelo, do cliente de relatório e do SSMS.|Filtros de linha não são aplicáveis. Todos os dados podem ser consultados nesta função.|  
   
 ##  <a name="bkmk_rowfliters"></a> Row filters  
  Os filtros de linha definem quais linhas em uma tabela podem ser consultados por membros de uma função específica. Os filtros de linha são definidos para cada tabela em um modelo usando fórmulas DAX.  
@@ -81,8 +81,8 @@ ms.locfileid: "34045320"
   
 |Função|Description|  
 |--------------|-----------------|  
-|[Função USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
-|[Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
+|[Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
+|[Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
   
  Você pode usar a função LOOKUPVALUE para retornar valores para uma coluna na qual o nome de usuário do Windows seja igual ao nome de usuário retornado pela função USERNAME ou uma cadeia de caracteres retornada pela função CustomData. As consultas podem ser então restritas onde os valores retornados por LOOKUPVALUE correspondem a valores na mesma tabela ou na tabela relacionada.  
   
@@ -125,8 +125,8 @@ ms.locfileid: "34045320"
 ## <a name="see-also"></a>Consulte também  
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [Função USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [Função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Função USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [Função LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
+ [Função CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

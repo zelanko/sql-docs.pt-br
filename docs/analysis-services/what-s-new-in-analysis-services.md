@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016083"
 ---
 # <a name="what39s-new-in-analysis-services"></a>O que&#39;novo no Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services inclui vários novos aprimoramentos fornecer melhor desempenho, criação de solução mais fácil, gerenciamento de banco de dados automatizada, relações aprimoradas com bidirecional entre a filtragem, paralelo processamento da partição, e muito mais. O cerne da maioria dos aprimoramentos para esta versão é o novo nível de compatibilidade 1200 para bancos de dados de modelo tabular.     
+SQL Server 2016 Analysis Services inclui vários novos aprimoramentos que proporcionam melhor desempenho, criação de solução mais fácil, gerenciamento automatizado de banco de dados, relações aprimoradas com bidirecional entre a filtragem, processamento de partição, em paralelo e e muito mais. O cerne da maioria dos aprimoramentos para esta versão é o novo nível de compatibilidade 1200 para bancos de dados de modelo tabular.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Anunciado na conferência 2016 SQL PASSA, o Analysis Services agora está disponível na nuvem como um serviço do Azure. **Serviços de análise do Azure** dá suporte a modelos de tabela nos níveis de compatibilidade 1200 e superior. DirectQuery, partições, segurança de nível de linha, relações bidirecionais e traduções todas têm suporte. Para saber mais e experimentar gratuitamente, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Anunciado na conferência 2016 SQL PASSA, o Analysis Services agora está disponível na nuvem como um serviço do Azure. **O Azure Analysis Services** dá suporte a modelos tabulares nos níveis de compatibilidade 1200 e superior. DirectQuery, partições, segurança de nível de linha, relações bidirecionais e traduções todas têm suporte. Para saber mais e experimentar gratuitamente, consulte [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Novidades no SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
@@ -63,14 +63,14 @@ Nesta versão, você não precisa mais de duas versões do SSDT para compilar pr
 As pastas de exibição agora estão disponíveis para modelos de tabela 1200. Definidas no SQL Server Data Tools e renderizadas nos aplicativos cliente como Excel ou Power BI Desktop, as pastas de exibição ajudam a organizar grandes números de medidas em pastas individuais, adicionando uma hierarquia visual para facilitar a navegação em listas de campos.
 ### <a name="bi-directional-cross-filtering"></a>Filtragem cruzada bidirecional
 Uma novidade nesta versão é a abordagem interna para habilitar filtros cruzados bidirecionais em modelos de tabela, o que elimina a necessidade de soluções alternativas manuais de DAX para a propagação de contextos de filtro em relações da tabela. Os filtros são gerados automaticamente apenas quando a direção pode ser estabelecida com um alto grau de certeza. Caso haja ambiguidade na forma de vários caminhos de consulta entre relações de tabela, um filtro não será criado automaticamente. Consulte [Filtros cruzados bidirecionais para modelos de tabela no SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obter detalhes.
- ### <a name="translations"></a>Traduções    
+ ### <a name="translations"></a>Translations    
  Agora você pode armazenar metadados traduzidos em um modelo tabular 1200. Metadados do modelo incluem campos para **Culture**, legendas traduzidas e descrições traduzidas. Para adicionar traduções, use o comando **Model** > **Translations** em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Consulte [Traduções em modelos de tabela &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para ver mais detalhes.    
  ### <a name="pasted-tables"></a>Tabelas coladas    
  Agora é possível atualizar um modelo de tabela 1100 ou 1103 para 1200 quando o modelo contém tabelas coladas. É recomendável usar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. No SSDT, defina **CompatibilityLevel** para 1200 e implante em uma instância [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter detalhes, consulte [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
  ### <a name="calculated-tables-in-ssdt"></a>Tabelas calculadas no SSDT    
 Uma *tabela calculada* é uma construção exclusivamente de modelos com base em uma expressão DAX ou consulta no SSDT. Quando implantada em um banco de dados, não é possível distinguir uma tabela calculada de tabelas comuns.    
 
- Há vários usos para tabelas calculadas, incluindo a criação de novas tabelas para expor uma tabela existente em uma função específica. O exemplo clássico é uma tabela de data que opera em vários contextos (data do pedido, data de remessa e assim por diante). Criando uma tabela calculada para uma determinada função, agora você pode ativar uma relação de tabela para facilitar consultas ou a interação de dados usando a tabela calculada. Outro uso de tabelas calculadas é combinar partes de tabelas existentes em uma tabela totalmente nova, que existe somente no modelo.  Consulte [criar uma tabela calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para saber mais.    
+ Há vários usos para tabelas calculadas, incluindo a criação de novas tabelas para expor uma tabela existente em uma função específica. O exemplo clássico é uma tabela de data que opera em vários contextos (data do pedido, data de remessa e assim por diante). Criando uma tabela calculada para uma determinada função, agora você pode ativar uma relação de tabela para facilitar consultas ou a interação de dados usando a tabela calculada. Outro uso de tabelas calculadas é combinar partes de tabelas existentes em uma tabela totalmente nova, que existe somente no modelo.  Ver [criar uma tabela calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para saber mais.    
  ### <a name="formula-fixup"></a>Correção de fórmulas    
  Com a correção de fórmulas em um modelo de tabela 1200, o SSDT atualizará automaticamente quaisquer medidas que fizerem referência a uma coluna ou tabela que tiver sido renomeada.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Suporte para o Visual Studio Configuration Manager    
@@ -80,7 +80,7 @@ Uma *tabela calculada* é uma construção exclusivamente de modelos com base em
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administrar modelos tabulares 1200 no SSMS    
  Nessa versão, uma instância do Analysis Services no modo de servidor de tabela pode executar modelos de tabela em qualquer nível de compatibilidade (1100, 1103, 1200). O [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) mais recente é atualizado para exibir as propriedades e fornecer administração de modelos de banco de dados para modelos de tabela no nível de compatibilidade 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Processamento paralelo para várias partições de tabela em modelos de tabela    
- Essa versão inclui uma nova funcionalidade de processamento paralelo para tabelas com duas ou mais partições, aumentando o desempenho de processamento. Não há nenhuma configuração para esse recurso. Para obter mais informações sobre como configurar partições e processar tabelas, consulte [partições de modelo de tabela](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Essa versão inclui uma nova funcionalidade de processamento paralelo para tabelas com duas ou mais partições, aumentando o desempenho de processamento. Não há nenhuma configuração para esse recurso. Para obter mais informações sobre como configurar partições e processar tabelas, consulte [partições de modelos tabulares](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Adicionar contas de computador como Administradores no SSMS    
  Os administradores do[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agora podem usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar contas de computador para serem membros do grupo de administradores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Na caixa de diálogo **Selecionar Usuários ou Grupos** , defina os **Locais** para o domínio dos computadores e, em seguida, adicione o tipo de objeto **Computers** . Para obter mais informações, consulte [Conceder direitos de administração de servidor a uma instância do Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC para Analysis Services    
@@ -159,7 +159,7 @@ Agora você pode salvar medidas DAX incompletas diretamente em um projeto de mod
     
  Os aplicativos existentes não são afetados pelos novos assemblies. No entanto, se você optar por recompilar os aplicativos que usam o novo assembly do AMO por qualquer motivo, certifique-se de adicionar uma referência ao Microsoft.AnalysisServices.Core.    
     
- De modo similar, os scripts do PowerShell que carregam e chamam o AMO agora devem carregar o Microsoft.AnalysisServices.Core.dll. Certifique-se de atualizar todos os scripts.  
+ De modo similar, os scripts do PowerShell que carregam e chamam o AMO agora devem carregar o Microsoft.AnalysisServices.Core.dll. Certifique-se de atualizar os scripts.  
 
 ### <a name="json-editor-for-bim-files"></a>Editor de JSON para arquivos BIM
 A Exibição de Código no Visual Studio 2015 agora renderiza o arquivo BIM no formato JSON para modelos de tabela 1200. A versão do Visual Studio determina se o arquivo BIM é renderizado em JSON por meio do Editor de JSON interno ou como texto simples.
@@ -197,7 +197,7 @@ Esta versão traz melhorias significativas no DirectQuery para modelos de tabela
 -   Otimizações de desempenho incluem a eliminação de junções redundantes para VertiPaq e DirectQuery. 
 
 ### <a name="new-data-sources-for-directquery-mode"></a>Novas fontes de dados para o modo DirectQuery    
- Fontes de dados com suporte para modelos de tabela 1200 no modo DirectQuery agora incluem o Oracle, Teradata e plataforma de análise do Microsoft (anteriormente conhecido como Parallel Data Warehouse).    
+ Fontes de dados com suporte para modelos de tabela 1200 no modo DirectQuery agora incluem o Oracle, Teradata e plataforma de análise da Microsoft (anteriormente conhecido como Parallel Data Warehouse).    
     
 Para obter mais informações, consulte [o modo DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 

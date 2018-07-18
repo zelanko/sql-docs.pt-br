@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_targets (banco de dados do SQL Azure) | Microsoft Docs
+title: sys. database_event_session_targets (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,28 +19,28 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e3969ef0ff469392a93cd389a2104d2f3f82f87b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177862"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979468"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (banco de dados do SQL Azure)
+# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys. database_event_session_targets (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada destino de evento em uma sessão de evento.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|A identificação da sessão de evento. Não permite valor nulo.|  
-|target_id|**Int**|A identificação do destino. Essa identificação é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
+|event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
+|target_id|**int**|A identificação do destino. Essa identificação é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
 |nome|**sysname**|O nome do destino de evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um destino de evento. Não permite valor nulo.|  
-|Módulo|**sysname**|O nome do módulo que contém um destino de evento. Não permite valor nulo.|  
+|módulo|**sysname**|O nome do módulo que contém um destino de evento. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  

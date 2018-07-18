@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b03a2aa4b8e6f2327a58884defe1e9435bfbc326
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077524"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987368"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQueries que manipulam dados relacionais
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Você especifica XQuery em uma **xml** coluna de tipo ou variável, usando uma da [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md). Isso inclui **Query ()**, **Value ()**, **exist ()**, ou **Modify ()**. A XQuery é executada na instância de XML identificada na consulta que está gerando o XML.  
+  Especifique o XQuery em relação a um **xml** coluna de tipo ou variável, usando uma da [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md). Eles incluem **Query ()**, **Value ()**, **exist ()**, ou **Modify ()**. A XQuery é executada na instância de XML identificada na consulta que está gerando o XML.  
   
  O XML gerado pela execução de XQuery pode incluir valores recuperados de outras variáveis ou colunas de conjunto de linhas Transact-SQL. Para associar os dados relacionais não XML ao XML resultante, o SQL Server fornece as pseudofunções seguintes como extensões XQuery:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33077524"
   
 -   **SQL: Variable** função  
   
- Você pode usar essas extensões XQuery ao especificar um XQuery no **Query ()** método o **xml** tipo de dados. Como resultado, o **Query ()** método pode produzir XML que combina dados de XML e não-**xml** tipos de dados.  
+ Você pode usar essas extensões XQuery ao especificar um XQuery na **Query ()** método o **xml** tipo de dados. Como resultado, o **Query ()** método pode produzir XML que combina dados de XML e não-**xml** tipos de dados.  
   
  Você também pode usar essas funções quando você usa o **xml** métodos de tipo de dados **Modify ()**, **Value ()**, **Query ()**, e  **exist ()** para expor um valor relacional dentro do XML.  
   

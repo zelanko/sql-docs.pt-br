@@ -1,5 +1,5 @@
 ---
-title: sys. database_usage (banco de dados do SQL Azure) | Microsoft Docs
+title: sys. database_usage (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,20 +28,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038814"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Observação: Isso se aplica somente a V11 de banco de dados do SQL Azure.**  
+  **Observação: Isso se aplica somente à V11 de banco de dados SQL do Azure.**  
   
- Lista o número, tipo e duração de bancos de dados sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Lista o número, tipo e duração dos bancos de dados sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
- O **sys. database_usage** exibição contém as seguintes colunas.  
+ O **sys. database_usage** exibição contém as colunas a seguir.  
   
 |Nome da coluna|Description|  
 |-----------------|-----------------|  
@@ -57,6 +57,6 @@ ms.locfileid: "33177441"
   
 ## <a name="see-also"></a>Consulte também  
  [Detalhes de preços de banco de dados SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Contas e cobrança no banco de dados do Microsoft SQL Azure](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Contas e cobrança no Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

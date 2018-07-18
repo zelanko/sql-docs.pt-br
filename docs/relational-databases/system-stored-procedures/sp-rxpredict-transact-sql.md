@@ -21,18 +21,18 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036044"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Gera um valor previsto com base em um modelo armazenado.
 
-Fornece a pontuação em modelos de aprendizado de máquina quase em tempo real. `sp_rxPredict` é um procedimento armazenado fornecido como um wrapper para o `rxPredict` funcionar em [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) e [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Ele está escrito em C++ e é otimizado especificamente para operações de pontuação. Ele dá suporte a ambos os R ou modelos de aprendizado de máquina do Python.
+Fornece a pontuação em modelos de aprendizado de máquina em tempo quase real. `sp_rxPredict` é um procedimento armazenado fornecido como um wrapper para o `rxPredict` funcionar [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) e [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Ele é escrito em C + + e é otimizado especificamente para operações de pontuação. Ele dá suporte a ambos os R ou Python modelos de aprendizado de máquina.
 
 **Este tópico aplica-se a**:  
 - SQL Server 2017  
@@ -48,7 +48,7 @@ sp_rxPredict  ( @model, @input )
 
 **modelo**
 
-Um modelo pré-treinado em um formato com suporte. 
+Um modelo previamente treinado em um formato com suporte. 
 
 **input**
 
@@ -57,34 +57,34 @@ Uma consulta SQL válida
 ### <a name="return-values"></a>Valores retornados
 
 Uma coluna de classificação é retornada, bem como quaisquer colunas de passagem da fonte de dados de entrada.
-Adicionais classificar colunas, como o intervalo de confiança, pode ser retornado se o algoritmo oferece suporte à geração de tais valores.
+Adicional classificar colunas, como o intervalo de confiança, pode ser retornado se o algoritmo oferece suporte à geração de tais valores.
 
 ## <a name="remarks"></a>Remarks
 
-Para habilitar o uso do procedimento armazenado, SQLCLR deve ser habilitado na instância.
+Para habilitar o uso do procedimento armazenado, deve ser habilitado para SQLCLR na instância.
 
 > [!NOTE]
-> Considere as implicações de segurança antes de habilitar essa opção.
+> Considere as implicações de segurança antes de você habilitar essa opção.
 
-O usuário precisa `EXECUTE` no banco de dados.
+O usuário precisa `EXECUTE` permissão no banco de dados.
 
-### <a name="supported-platforms"></a>Plataformas com suporte
+### <a name="supported-platforms"></a>Plataformas compatíveis
 
 Requer uma das seguintes edições:  
-- Serviços de aprendizado de máquina do SQL Server de 2017 (inclui o Microsoft R Server 9.1.0)  
-- Aprendizado de máquina do Microsoft Server  
-- SQL Server R Services 2016, com uma atualização da instância do R Services para Microsoft R Server 9.1.0 ou posterior  
+- Serviços de aprendizado de máquina do SQL Server 2017 (inclui o Microsoft R Server 9.1.0)  
+- Microsoft Machine Learning Server  
+- SQL Server R Services 2016, com a atualização da instância do R Services para Microsoft R Server 9.1.0 ou posterior  
 
 ### <a name="supported-algorithms"></a>Algoritmos compatíveis
 
-Para obter uma lista dos algoritmos com suporte, consulte [em tempo real de pontuação](../../advanced-analytics/real-time-scoring.md).
+Para obter uma lista dos algoritmos com suporte, consulte [pontuação em tempo real](../../advanced-analytics/real-time-scoring.md).
 
-Os seguintes tipos de modelo são **não** com suporte:  
-- Modelos que contém outros tipos de transformações de R sem suporte  
-- Modelos usando o `rxGlm` ou `rxNaiveBayes` algoritmos em RevoScaleR  
+Os seguintes tipos de modelo estão **não** com suporte:  
+- Modelos que contenham outros tipos de transformações de R sem suporte  
+- Os modelos usando o `rxGlm` ou `rxNaiveBayes` algoritmos de RevoScaleR  
 - Modelos PMML  
-- Modelos criados usando outras bibliotecas de R de CRAN ou outros repositórios  
-- Modelos que contêm qualquer outro tipo de transformação de R diferente das listadas aqui  
+- Modelos criados usando outras bibliotecas de R do CRAN ou outros repositórios  
+- Modelos que contenham qualquer outro tipo de transformação de R diferente dos listados aqui  
 
 ## <a name="examples"></a>Exemplos
 
@@ -99,7 +99,7 @@ EXEC sp_rxPredict @model = @model,
 
 Além de ser uma consulta SQL válida, os dados de entrada em *@inputData* deve incluir colunas compatíveis com as colunas no modelo armazenado.
 
-`sp_rxPredict` suporta somente os seguintes tipos de coluna de .NET: double, float, short, ushort, long, ulong e cadeia de caracteres. Talvez seja necessário filtrar tipos sem suporte em seus dados de entrada antes de usá-lo para a pontuação em tempo real. 
+`sp_rxPredict` suporta apenas os seguintes tipos de coluna de .NET: double, float, short, ushort, long, ulong e cadeia de caracteres. Talvez você precise filtrar os tipos sem suporte em seus dados de entrada antes de usá-lo para pontuação em tempo real. 
 
-  Para obter informações sobre tipos SQL correspondentes, consulte [mapeamento de tipo CLR SQL](https://msdn.microsoft.com/library/bb386947.aspx) ou [mapeamento de dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  Para obter informações sobre tipos SQL correspondentes, consulte [mapeamento de tipo de SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) ou [Mapeando dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

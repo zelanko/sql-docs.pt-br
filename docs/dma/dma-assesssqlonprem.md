@@ -2,7 +2,7 @@
 title: Executar uma avaliação de migração do SQL Server (Assistente de migração de dados) | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para avaliar um SQL Server no local antes de migrar para outro SQL Server ou banco de dados do Azure SQL
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782217"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934948"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de migração de dados
 
@@ -86,7 +86,7 @@ A duração da avaliação depende do número de bancos de dados adicionados e o
 
 2.  Examine os problemas de compatibilidade em todos os níveis de compatibilidade com suporte pela versão do SQL Server de destino que você selecionou na **opções** página.
 
-Você pode examinar os problemas de compatibilidade, analisando o objeto afetado e seus detalhes para cada problema identificado em **alterações significativas**, **alterações de comportamento**, e **recursos preteridos** .
+Você pode examinar os problemas de compatibilidade, analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento**, e  **Recursos preteridos**.
 
 ![Exibir resultados da avaliação](../dma/media/ReviewResults.png)
 

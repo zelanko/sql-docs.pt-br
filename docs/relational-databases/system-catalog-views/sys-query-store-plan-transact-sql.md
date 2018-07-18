@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8883fb4fd7f70712f8e71ca9015380fd5c81ca93
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032314"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,24 +41,24 @@ ms.locfileid: "33182022"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Chave primária.|  
-|**query_id**|**bigint**|Chave estrangeira. Une a [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|ID do grupo de plano. Consultas de cursor geralmente requerem várias (popular e buscar) planos. Popular e planos de busca que são compilados juntos estão no mesmo grupo.<br /><br /> 0 significa que o plano não está em um grupo.|  
-|**engine_version**|**nvarchar(32)**|Versão do mecanismo usado para compilar o plano de **'Revision'** formato.|  
+|**query_id**|**bigint**|Chave estrangeira. Ingressa [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
+|**plan_group_id**|**bigint**|ID do grupo de plano. Consultas de cursor normalmente exigem vários (popular e buscar) planos. Preencher e planos de busca que são compilados juntos estão no mesmo grupo.<br /><br /> 0 significa que o plano não está em um grupo.|  
+|**engine_version**|**nvarchar(32)**|Versão do mecanismo usado para compilar o plano no **'Major'** formato.|  
 |**compatibility_level**|**smallint**|Nível de compatibilidade do banco de dados do banco de dados referenciado na consulta.|  
 |**query_plan_hash**|**binary(8)**|Hash MD5 do plano individual.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML para o plano de consulta.|  
-|**is_online_index_plan**|**bit**|Plano foi usado durante a criação de índice online.|  
-|**is_trivial_plan**|**bit**|Plano é um plano trivial (saída no estágio 0 do otimizador de consulta).|  
+|**is_online_index_plan**|**bit**|Plano foi usado durante a criação de um índice online.|  
+|**is_trivial_plan**|**bit**|Plano é um plano trivial (saída do estágio 0 do otimizador de consulta).|  
 |**is_parallel_plan**|**bit**|Plano é paralelo.|  
-|**is_forced_plan**|**bit**|Plano está marcado como forçado quando o usuário executa o procedimento armazenado **sys.sp_query_store_force_plan**. Mecanismo de imposição *não garante* que exatamente este plano será usado para a consulta referenciada por **query_id**. Imposição de plano faz com que a consulta a ser compilado novamente e geralmente produz exatamente iguais ou semelhante plano para o plano referenciado por **plan_id**. Se a imposição de plano não for bem-sucedida, **force_failure_count** é incrementada e **last_force_failure_reason** é preenchida com o motivo da falha.|  
-|**is_natively_compiled**|**bit**|Plano inclui procedimentos compilados nativamente otimizada de memória. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|Número de vezes que forçar esse plano falhou. Ele pode ser incrementado somente quando a consulta é recompilada (*não em cada execução*). Ele é redefinido para 0 sempre **is_plan_forced** é alterado de **FALSE** para **TRUE**.|  
-|**last_force_failure_reason**|**Int**|Motivo pelo qual a imposição de plano falhou.<br /><br /> 0: nenhuma falha, caso contrário, número do erro do erro que causou a imposição de falha<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<outro valor >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrição textual do last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: query tenta modificar dados enquanto a tabela de destino tem um índice que está sendo criado online<br /><br /> INVALID_STARJOIN: o plano contém especificação inválida de StarJoin<br /><br /> TIME_OUT: Otimizador excedida o número de operações permitidas ao procurar o plano especificado pelo plano forçado<br /><br /> NO_DB: Um banco de dados especificado no plano não existe<br /><br /> HINT_CONFLICT: Consulta não pode ser compilada porque o plano está em conflito com uma dica de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: Não é possível executar a consulta porque o plano está em conflito com o uso de consulta distribuída ou operações de texto completo.<br /><br /> NO_PLAN: O processador de consultas não pôde produzir o plano de consulta porque o plano forçado não pôde ser verificado para ser válido para a consulta<br /><br /> NO_INDEX: O índice especificado no plano não existe<br /><br /> VIEW_COMPILE_FAILED: Não foi possível forçar o plano de consulta devido a um problema em uma exibição indexada referenciada no plano<br /><br /> GENERAL_FAILURE: erro geral de imposição (não abordado com motivos acima)|  
+|**is_forced_plan**|**bit**|Plano está marcado como forçado quando o usuário executa o procedimento armazenado **sys.sp_query_store_force_plan**. Mecanismo de imposição *não garante* que exatamente este plano será usado para a consulta referenciada por **query_id**. A imposição de plano faz com que a consulta a ser compilado novamente e geralmente produz exatamente o plano iguais ou semelhante para o plano referenciado pelo **plan_id**. Se a imposição de plano não for bem-sucedida, **force_failure_count** será incrementado e **last_force_failure_reason** é preenchido com o motivo da falha.|  
+|**is_natively_compiled**|**bit**|Plano inclui procedimentos compilados nativamente com otimização de memória. (0 = FALSE, 1 = TRUE).|  
+|**force_failure_count**|**bigint**|Número de vezes que impor esse plano falhou. Ele pode ser incrementado somente quando a consulta é recompilada (*não em cada execução*). Ele é redefinido como 0 sempre **is_plan_forced** é alterado de **falso** para **TRUE**.|  
+|**last_force_failure_reason**|**int**|Motivo pelo qual a imposição de plano falhou.<br /><br /> 0: não falha, caso contrário, número do erro do erro que causou a imposição de falha<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<outro valor >: GENERAL_FAILURE|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descrição textual do last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta tenta modificar dados enquanto a tabela de destino tem um índice que está sendo criado online<br /><br /> INVALID_STARJOIN: o plano contém especificação inválida de StarJoin<br /><br /> TIME_OUT: Otimizador excedida o número de operações permitidas ao procurar o plano especificado pelo plano forçado<br /><br /> NO_DB: Um banco de dados especificado no plano não existe<br /><br /> HINT_CONFLICT: A consulta não pode ser compilada porque o plano está em conflito com uma dica de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: Não é possível executar a consulta porque o plano está em conflito com o uso de consulta distribuída ou operações de texto completo.<br /><br /> NO_PLAN: O processador de consultas não pôde produzir o plano de consulta porque o plano forçado não pôde ser verificado para ser válido para a consulta<br /><br /> NO_INDEX: O índice especificado no plano não existe<br /><br /> VIEW_COMPILE_FAILED: Não foi possível forçar o plano de consulta devido a um problema em uma exibição indexada referenciada no plano<br /><br /> GENERAL_FAILURE: erro geral de imposição (não abordado com motivos acima)|  
 |**count_compiles**|**bigint**|Planeje as estatísticas de compilação.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planeje as estatísticas de compilação.|  
 |**last_compile_start_time**|**datetimeoffset**|Planeje as estatísticas de compilação.|  
-|**last_execution_time**|**datetimeoffset**|Horário da última execução refere-se para a última hora de término do plano de consulta /.|  
+|**last_execution_time**|**datetimeoffset**|Último tempo de execução refere-se para a última hora de término do/plano de consulta.|  
 |**avg_compile_duration**|**float**|Planeje as estatísticas de compilação.|  
 |**last_compile_duration**|**bigint**|Planeje as estatísticas de compilação.|  
   
@@ -96,6 +96,6 @@ Por fim, problemas com o próprio plano:
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procedimentos armazenados do repositório de consulta &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados de Store de consulta &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

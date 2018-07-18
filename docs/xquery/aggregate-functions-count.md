@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987478"
 ---
-# <a name="aggregate-functions---count"></a>Funções de agregação - contagem
+# <a name="aggregate-functions---count"></a>Funções de agregação – contagem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o número de itens que estão contidos na sequência especificada por *$arg*.  
+  Retorna o número de itens que estão contidos em sequência especificada por *$arg*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,10 +47,10 @@ fn:count($arg as item()*) as xs:integer
  Itens a serem contados.  
   
 ## <a name="remarks"></a>Remarks  
- Retorna 0 se *$arg* for uma sequência vazia.  
+ Retorna 0 se *$arg* é uma sequência vazia.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Usando a função count() XQuery para contar o número de locais de centro de trabalho na fabricação de um modelo de produto  
  A consulta a seguir conta o número de locais de centro de trabalho no processo de fabricação de um modelo de produto (ProductModelID=7).  
@@ -70,11 +70,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O **namespace** palavra-chave em [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. O prefixo é então usado no corpo do XQuery.  
+-   O **namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace. O prefixo é então usado no corpo do XQuery.  
   
 -   A consulta constrói XML que inclui o elemento <`NoOfWorkStations`>.  
   
--   O **contagem** funcionam no corpo do XQuery conta o número de <`Location`> elementos.  
+-   O **Count ()** funcionam no corpo do XQuery conta o número de <`Location`> elementos.  
   
  Este é o resultado:  
   

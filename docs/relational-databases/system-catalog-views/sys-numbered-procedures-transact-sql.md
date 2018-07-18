@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987438"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contém uma linha para cada procedimento armazenado do SQL Server que foi criado como um procedimento numerado. Isto não mostra uma linha para o procedimento armazenado básico (número = 1). Entradas para os procedimentos armazenados de base podem ser encontradas nos modos de exibição, como **sys. Objects** e **Procedures**.  
+  Contém uma linha para cada procedimento armazenado do SQL Server que foi criado como um procedimento numerado. Isto não mostra uma linha para o procedimento armazenado básico (número = 1). As entradas para os procedimentos armazenados básicos podem ser encontradas nos modos de exibição, como **sys. Objects** e **Procedures**.  
   
 > [!IMPORTANT]  
 >  Os procedimentos numerados são preteridos. O uso de procedimentos numerados é desaconselhável. Um evento DEPRECATION_ANNOUNCEMENT será acionado quando uma consulta que usa essa exibição do catálogo for compilada.  

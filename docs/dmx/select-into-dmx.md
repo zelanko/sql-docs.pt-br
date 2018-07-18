@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040414"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Cria um novo modelo de mineração que é criado na estrutura de mineração de um modelo de mineração existente. O **SELECT INTO** instrução cria o novo modelo de mineração copiando o esquema e outras informações que não são específicas para o algoritmo real.  
+  Cria um novo modelo de mineração que é criado na estrutura de mineração de um modelo de mineração existente. O **SELECT INTO** instrução cria o novo modelo de mineração copiando o esquema e outras informações que não não específicas para o algoritmo real.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ FROM <existing model>
  *novo modelo*  
  Nome exclusivo para o novo modelo que está sendo criado.  
   
- *Algoritmo*  
+ *algoritmo*  
  Nome definido pelo provedor para um algoritmo de mineração de dados.  
   
- *Lista de parâmetros*  
+ *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
  *Expressão*  
@@ -51,10 +51,10 @@ FROM <existing model>
   
  O **SELECT INTO** instrução só funcionará se a estrutura do modelo existente é compatível com o algoritmo do novo modelo. Portanto, essa instrução é mais útil para criação rápida e teste de modelos que se baseiam no mesmo algoritmo. Se você alterar o tipo de algoritmo, o novo algoritmo deverá dar suporte ao tipo de dados de cada coluna no modelo existente ou um erro ocorrerá quando o modelo for processado.  
   
- O **com DETALHAMENTO** cláusula permite o detalhamento no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo.  
+ O **WITH DRILLTHROUGH** cláusula permite o detalhamento no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Exemplo 1: Alterando os parâmetros do modelo  
- O exemplo a seguir cria um novo modelo de mineração com base em um modelo de mineração existente, `TM_Clustering`, que você cria no [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
+ O exemplo a seguir cria um novo modelo de mineração com base em um modelo de mineração existente, `TM_Clustering`, que você criar na [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078023"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980018"
 ---
-# <a name="type-system---sequence-type-matching"></a>Tipo de sistema - correspondência de tipo de sequência
+# <a name="type-system---sequence-type-matching"></a>Sistema de tipos – correspondência de tipo de sequência
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Um valor de expressão do XQuery sempre é uma sequência de zero ou mais itens. Um item pode ser tanto um valor atômico quanto um nó. O tipo de sequência se refere à habilidade de associar o tipo de sequência retornada por uma expressão de consulta com um tipo específico. Por exemplo:  
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações específicas:  
   
--   **Document-Node()** com o tipo de conteúdo de sintaxe não tem suporte.  
+-   **Document-Node()** com tipo de conteúdo sintaxe não tem suporte.  
   
 -   **processing-instruction(Name)** sintaxe não tem suporte.  
   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>Exemplo B  
- O exemplo a seguir ilustra como determinar se o nó retornado por uma expressão é um nó de elemento com um nome específico. Ele usa o **element()** de teste.  
+ O exemplo a seguir ilustra como determinar se o nó retornado por uma expressão é um nó de elemento com um nome específico. Ele usa o **Element ()** de teste.  
   
  No exemplo a seguir, os dois elementos <`Customer`> na instância XML que estão sendo consultados são de dois tipos diferentes: `CustomerType` e `SpecialCustomerType`. Supondo que você deseja saber o tipo do elemento <`Customer`> retornado pela expressão. A seguinte coleção de esquemas XML define os tipos `CustomerType` e `SpecialCustomerType`.  
   
@@ -343,7 +343,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Esta coleção de esquema XML é usada para criar um tipo **xml** variável. A instância XML atribuída a essa variável tem dois elementos <`customer`> de dois tipos diferentes. O primeiro elemento é do tipo `CustomerType` e o segundo é do tipo `SpecialCustomerType`.  
+ Essa coleção de esquemas XML é usada para criar um tipado **xml** variável. A instância XML atribuída a essa variável tem dois elementos <`customer`> de dois tipos diferentes. O primeiro elemento é do tipo `CustomerType` e o segundo é do tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -390,7 +390,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- A consulta a seguir retorna True, porque há um nó de atributo cujo nome é `Age` na instância XML que está sendo consultada. O teste de atributo `attribute(Age)` é usado nessa expressão. Em razão dos atributos não terem nenhuma ordem, a consulta usa a expressão FLWOR para recuperar todos os atributos e depois testar cada atributo usando a expressão `instance of`. O exemplo cria uma coleção de esquemas XML para criar um tipo **xml** variável.  
+ A consulta a seguir retorna True, porque há um nó de atributo cujo nome é `Age` na instância XML que está sendo consultada. O teste de atributo `attribute(Age)` é usado nessa expressão. Em razão dos atributos não terem nenhuma ordem, a consulta usa a expressão FLWOR para recuperar todos os atributos e depois testar cada atributo usando a expressão `instance of`. O exemplo cria uma coleção de esquemas XML para criar um tipado **xml** variável.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -441,6 +441,6 @@ RETURN
 -   Consultando explicitamente **xsi: Type** ou **xsi: nil** não tem suporte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipo &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

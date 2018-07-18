@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077203"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040494"
 ---
-# <a name="functions-on-sequences---empty"></a>Funções em sequências - vazias
+# <a name="functions-on-sequences---empty"></a>Funções em sequências – vazias
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna VERDADEIRO se o valor de *$arg* for uma sequência vazia. Caso contrário, a função retornará False.  
+  Retorna VERDADEIRO se o valor de *$arg* é uma sequência vazia. Caso contrário, a função retornará False.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,10 +50,10 @@ fn:empty($arg as item()*) as xs:boolean
  O **fn:exists()** não há suporte para a função. Como alternativa, o **not ()** função pode ser usada.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Usando a função empty() Xquery para determinar se um atributo está presente  
- No processo de fabricação de produto modelo 7, essa consulta retorna todos os locais de centro de trabalho que não têm um **MachineHours** atributo.  
+ No processo de fabricação de produto modelo 7, essa consulta retorna todos os locais de centro de trabalho que não têm uma **MachineHours** atributo.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -82,7 +82,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- A consulta a seguir, ligeiramente modificada, retornará "NotFound" se o **MachineHour** atributo não estiver presente:  
+ A consulta a seguir, ligeiramente modificada, retorna "NotFound" se o **MachineHour** atributo não estiver presente:  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -119,7 +119,7 @@ ProductModelID Result
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções XQuery em relação ao tipo de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Método exist&#40;&#41; &#40;tipo de dados XML&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

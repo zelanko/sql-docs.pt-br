@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56a945a1130753fc2feb08a89bd4f6e2676f1bd0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042494"
 ---
 # <a name="queries-events-data-columns"></a>Colunas de dados de eventos de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34045630"
 |CurrentTime|2|5|Contém a hora atual do evento, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora em que o evento iniciou, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém a quantidade de tempo decorrido (em milissegundos) utilizado pelo evento.|  
+|Duração|5|2|Contém a quantidade de tempo decorrido (em milissegundos) utilizado pelo evento.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |Severity|22|1|Contém o nível de severidade de uma exceção associada ao evento de consulta. Os valores são:<br /><br /> 0 = Êxito<br /><br /> 1 = Informativo<br /><br /> 2 = Aviso<br /><br /> 3 = Erro|  
 |Success|23|1|Contém o êxito ou a falha do evento de consulta. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  

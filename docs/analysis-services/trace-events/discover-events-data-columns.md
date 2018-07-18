@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042544"
 ---
 # <a name="discover-events-data-columns"></a>Colunas de dados de eventos de identificação
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +58,10 @@ ms.locfileid: "34044941"
 |CurrentTime|2|5|Contém a hora atual do evento de identificação, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|3|5|Contém a hora (se disponível) em que o evento final de identificação foi iniciado. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |EndTime|4|5|Contém a hora em que o evento terminou. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
-|Duration|5|2|Contém o período de tempo aproximado da duração (milissegundos) do evento de identificação.|  
+|Duração|5|2|Contém o período de tempo aproximado da duração (milissegundos) do evento de identificação.|  
 |CPUTime|6|2|Contém a quantidade de tempo da CPU (em milissegundos) usado pelo evento.|  
 |Severity|22|1|Contém o nível de severidade de uma exceção.|  
-|Success|23|1|Contém o êxito ou a falha do evento de identificação. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  
+|Êxito|23|1|Contém o êxito ou a falha do evento de identificação. Os valores são:<br /><br /> 0 = Falha<br /><br /> 1 = Êxito|  
 |Erro|24|1|Contém o número de erro de qualquer erro associado ao evento de identificação.|  
 |ConnectionID|25|1|Contém a ID de conexão exclusiva associada ao evento de identificação.|  
 |DatabaseName|28|8|Contém o nome do banco de dados no qual o evento de identificação ocorreu.|  
@@ -77,6 +77,6 @@ ms.locfileid: "34044941"
 |RequestProperties|45|9|Contém as propriedades na solicitação XMLA.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Categoria Discover Events](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

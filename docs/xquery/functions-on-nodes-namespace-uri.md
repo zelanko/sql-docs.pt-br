@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077243"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039628"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>Funções em nós - namespace-uri
+# <a name="functions-on-nodes---namespace-uri"></a>Funções em nós – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o namespace URI do QName especificado em *$arg* como xs: String.  
+  Retorna o URI do QName especificado no namespace *$arg* como xs: String.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   Se o argumento for omitido, o padrão será o nó de contexto.  
   
--   No SQL Server, **fn:namespace-uri()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
+-   No SQL Server **fn:namespace-uri()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, só pode ser usado entre parênteses ([]).  
   
 -   Se *$arg* é a sequência vazia, a cadeia de caracteres de comprimento zero será retornada.  
   
@@ -86,7 +86,7 @@ http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuI
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Usando um namespace-uri() sem argumento em um predicado  
- A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `http://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** função é especificada sem um argumento e usa o nó de contexto.  
+ A consulta a seguir está especifica em uma coluna digitada CatalogDescription xml. A expressão retorna todos os nós de elementos cujo namespace URI seja `http://www.adventure-works.com/schemas/OtherFeatures`. O namespace -**URI ()** for especificada sem um argumento de função e usa o nó de contexto.  
   
 ```  
 SELECT CatalogDescription.query('  

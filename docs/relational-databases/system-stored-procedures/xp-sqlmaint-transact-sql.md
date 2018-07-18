@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256644"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979378"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Chamadas de **sqlmaint** com uma cadeia de caracteres que contém o utilitário **sqlmaint**comutadores. O **sqlmaint** utilitário executa um conjunto de operações de manutenção em um ou mais bancos de dados.  
+  Chamadas a **sqlmaint** utility com uma cadeia de caracteres que contém **sqlmaint**comutadores. O **sqlmaint** utilitário executa um conjunto de operações de manutenção em um ou mais bancos de dados.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -50,13 +50,13 @@ xp_sqlmaint 'switch_string'
  **'** *switch_string* **'**  
  É uma cadeia de caracteres que contém o **sqlmaint** opções do utilitário. As opções e seus valores devem ser separados por um espaço.  
   
- O **-?** não é válida para **xp_sqlmaint**.  
+ O **-?** switch não é válido para **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma. Retorna um erro se o **sqlmaint** utilitário falhar.  
+ Nenhum. Retorna um erro se o **sqlmaint** utilitário falhar.  
   
 ## <a name="remarks"></a>Remarks  
- Se esse procedimento for chamado por um usuário feito logon com a autenticação do SQL Server, o **- U "***login_id***"** e **-P "***senha***"** switches são pré-anexados *switch_string* antes da execução. Se o usuário estiver conectado com a autenticação do Windows, *switch_string* é passado sem alteração **sqlmaint**.  
+ Se esse procedimento for chamado por um usuário feito logon com a autenticação do SQL Server, o **- U "***login_id***"** e **-P "***senha***"** switches são pré-anexados *switch_string* antes da execução. Se o usuário fizer logon com a autenticação do Windows, *switch_string* é passado sem alteração **sqlmaint**.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  

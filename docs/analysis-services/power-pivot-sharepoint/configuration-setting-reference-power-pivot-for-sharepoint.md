@@ -1,5 +1,5 @@
 ---
-title: Configuração de referência (PowerPivot para SharePoint) | Microsoft Docs
+title: Configuração de referência (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcc526e6527431c3f8dc1a09f112ff40c556fe3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026474"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982608"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Referência de parâmetro de configuração (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,8 +76,8 @@ ms.locfileid: "34026474"
 |----------|-------------|------------------|-----------------|  
 |Hora de início|4h00|1 a 12 horas, quando o valor for um inteiro válido dentro desse intervalo.<br /><br /> O tipo é Time.|Define o limite inferior de um intervalo de horário comercial.|  
 |Hora de término|20h00|1 a 12 horas, quando o valor for um inteiro válido dentro desse intervalo.<br /><br /> O tipo é Time.|Define o limite superior de um intervalo de horário comercial.|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Conta autônoma de atualização de dados|Nenhuma|A ID de um aplicativo de destino|Esta conta é usada para executar trabalhos de atualização de dados em nome de um proprietário de agenda.<br /><br /> A conta autônoma de atualização de dados deve ser definida com antecedência antes de poder ser referenciada na página de configuração do aplicativo de serviço. Para obter mais informações, consulte [Configurar a conta autônoma da atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
-|Permitir que usuários digitem credenciais do Windows personalizadas|Ativado|Booliano|Determina se a página de configuração de atualização de dados agendada mostra uma opção que permite que um proprietário de agenda especifique conta de usuário do Windows e senha para executar um trabalho de atualização de dados.<br /><br /> O Serviço de Repositório Seguro deve ser habilitado para que esta opção funcione. Para obter mais informações, consulte [Configurar credenciais armazenadas para atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Conta autônoma de atualização de dados|Nenhum|A ID de um aplicativo de destino|Esta conta é usada para executar trabalhos de atualização de dados em nome de um proprietário de agenda.<br /><br /> A conta autônoma de atualização de dados deve ser definida com antecedência antes de poder ser referenciada na página de configuração do aplicativo de serviço. Para obter mais informações, consulte [Configurar a conta autônoma da atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
+|Permitir que usuários digitem credenciais do Windows personalizadas|Habilitado|Booliano|Determina se a página de configuração de atualização de dados agendada mostra uma opção que permite que um proprietário de agenda especifique conta de usuário do Windows e senha para executar um trabalho de atualização de dados.<br /><br /> O Serviço de Repositório Seguro deve ser habilitado para que esta opção funcione. Para obter mais informações, consulte [Configurar credenciais armazenadas para atualização de dados do Power Pivot (Power Pivot para SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
 |Comprimento máximo de histórico de processamento|365|1 a 5000 dias|Determina por quanto tempo o histórico de dados será retido no banco de dados de aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obter mais informações, consulte [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Coleta de dados de uso  
@@ -94,7 +94,7 @@ ms.locfileid: "34026474"
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e configurar um aplicativo de serviço do Power Pivot na Administração Central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Atualização de dados do Power Pivot com o SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Atualização de dados do Power Pivot com SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurar a coleta de dados de uso para o &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configurar contas de serviço Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Painel de Gerenciamento Power Pivot e dados de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
