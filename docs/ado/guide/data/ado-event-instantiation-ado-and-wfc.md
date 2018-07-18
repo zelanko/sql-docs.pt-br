@@ -44,7 +44,7 @@ ADO para Windows Foundation Classes (ADO/WFC) desenvolve o modelo de evento do A
   
      O primeiro argumento do **ConnectionEventHandler** construtor é uma referência à classe que contém o manipulador de eventos chamado no segundo argumento.  
   
-3.  Adicione o manipulador de eventos para uma lista de manipuladores designado para processar um determinado tipo de evento. Use o método com um nome, como **addOn * EventName*(*manipulador*).  
+3.  Adicione o manipulador de eventos para uma lista de manipuladores designado para processar um determinado tipo de evento. Use o método com um nome, como **addOn** *EventName*(*manipulador*).  
   
 4.  Internamente, o ADO/WFC implementa todos os manipuladores de eventos do ADO. Portanto, um evento gerado por um **Conexão** ou **registros** operação é interceptada por um manipulador de eventos de ADO/WFC.  
   
@@ -62,7 +62,7 @@ ADO para Windows Foundation Classes (ADO/WFC) desenvolve o modelo de evento do A
   
 6.  Retorna o manipulador de eventos para o manipulador de ADO/WFC para o evento de ADO. ADO/WFC copia os membros de dados de evento de ADO/WFC pertinentes para os parâmetros de evento do ADO e, em seguida, retorna o manipulador de eventos do ADO.  
   
-7.  Quando tiver terminado de processamento, remova o manipulador da lista de manipuladores de eventos de ADO/WFC. Use o método com um nome, como **removeOn * EventName*(*manipulador*).  
+7.  Quando tiver terminado de processamento, remova o manipulador da lista de manipuladores de eventos de ADO/WFC. Use o método com um nome, como **removeOn** *EventName*(*manipulador*).  
   
 ## <a name="see-also"></a>Consulte também  
  [Resumo de manipulador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

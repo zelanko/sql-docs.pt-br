@@ -3,9 +3,7 @@ title: Notas de versão do SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036753"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926967"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ O SQL Server 2014 SP2 contém rollups de hotfixes lançados para a Atualização
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>Melhorias de desempenho e escalabilidade no SP2
 
-|Recurso|Description|Para obter mais informações|
+|Recurso|Descrição|Para obter mais informações|
 |---|---|---|
 |Particionamento automático de Soft NUMA|É possível configurar automaticamente o Soft NUMA em sistemas que estejam relatando 8 ou mais CPUs por nó NUMA.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Buffer Pool Extension|Permite que o pool de buffers do SQL Server seja dimensionado para mais de 8 TB.|[Extensão do pool de buffers](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -44,7 +42,7 @@ O SQL Server 2014 SP2 contém rollups de hotfixes lançados para a Atualização
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Melhorias de diagnóstico e da capacidade de suporte no SP2
 
-|Recurso|Description|Para obter mais informações|
+|Recurso|Descrição|Para obter mais informações|
 |---|---|---|
 |Registro em log do tempo limite de AlwaysON|Foi adicionada uma nova funcionalidade de registro em log para mensagens de Tempo limite de concessão para que a hora atual e os tempos de renovação esperados sejam registrados. |[Melhoria no diagnóstico de tempo limite de concessão do grupo de disponibilidade AlwaysOn](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |Contadores de desempenho e XEvents AlwaysON|Os novos contadores de desempenho e XEvents AlwaysON para melhorar o diagnóstico ao solucionar problemas de latência com AlwaysON. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) e [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

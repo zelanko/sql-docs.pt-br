@@ -18,15 +18,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: 53dbddd996e6b982e0bedf8549f4f2e6bc3d7d8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fc9a696c7141f87400eea7d962718aa0718a32fb
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702207"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940792"
 ---
 # <a name="surface-area-configuration"></a>Configuração da Área de Superfície
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

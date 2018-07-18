@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9a9c20e8967f7c7cb23b66aa7ed5e9040525b36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957531"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349988"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  É a prioridade da conexão do Snapshot Agent com o Distribuidor quando um deadlock ocorre. Esse parâmetro é especificado para resolver deadlocks que possam ocorrer entre o Snapshot Agent e aplicativos de usuário durante a geração de instantâneo.  
   
-|Valor DistributorDeadlockPriority|Description|  
+|Valor DistributorDeadlockPriority|Descrição|  
 |---------------------------------------|-----------------|  
 |**-1**|Aplicativos diferentes do Snapshot Agent têm prioridade quando ocorre um deadlock no Distribuidor.|  
 |**0** (padrão)|A prioridade não é atribuída.|  
@@ -132,7 +131,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Snapshot Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|Description|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -146,7 +145,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de instantâneo. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Mensagens de Progresso são gravadas no console ou em um arquivo de saída. Registros de histórico não são registrados no banco de dados de distribuição.|  
 |**1**|Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -192,7 +191,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica se a saída deve ser detalhada.  
   
-|Valor OutputVerboseLevel|Description|  
+|Valor OutputVerboseLevel|Descrição|  
 |------------------------------|-----------------|  
 |**0**|Somente mensagens de erro são impressas.|  
 |**1** (padrão)|Todas as mensagens de relatório de progresso são impressas (padrão).|  
@@ -213,7 +212,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  É a prioridade da conexão do Snapshot Agent com o Publicador quando um deadlock ocorre. Esse parâmetro é especificado para resolver deadlocks que possam ocorrer entre o Snapshot Agent e aplicativos de usuário durante a geração de instantâneo.  
   
-|Valor PublisherDeadlockPriority|Description|  
+|Valor PublisherDeadlockPriority|Descrição|  
 |-------------------------------------|-----------------|  
 |**-1**|Aplicativos diferentes do Snapshot Agent têm prioridade quando ocorre um deadlock no Publicador.|  
 |**0** (padrão)|A prioridade não é atribuída.|  

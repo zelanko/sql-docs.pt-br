@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154527"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
@@ -67,7 +67,7 @@ ms.locfileid: "36006867"
 ####  <a name="Permissions"></a> Permissões  
  Um DAC só pode ser implantado pelos membros das funções de servidor fixas **sysadmin** ou **serveradmin** , ou por logons que estejam na função de servidor fixa **dbcreator** e tenham as permissões ALTER ANY LOGIN. A conta interna de administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada **sa** também pode implantar um DAC. A implantação de um DAC com logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções loginmanager ou serveradmin. A implantação de um DAC sem logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige a associação nas funções dbmanager ou serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Usando o Assistente de aplicativo da camada de dados de implantação  
+##  <a name="UsingDeployDACWizard"></a> Usando a implantar o Data-tier Application Wizard  
  **Para implantar um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância na qual você deseja implantar o DAC.  
@@ -173,7 +173,7 @@ ms.locfileid: "36006867"
   
  **As configurações a seguir serão usadas para implantar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o pacote de DAC selecionado e o nome selecionado para a instância de DAC escolhida. A janela também exibe as configurações que serão usadas durante a criação do banco de dados associado ao DAC.  
   
- **\< Anterior** -retorna para o **Atualizar configuração** página para alterar suas seleções.  
+ **\< Anterior** -retorna para o **configuração de atualização** página para alterar suas seleções.  
   
  **Avançar >** – Implanta o DAC e exibe os resultados na página **Implantar DAC**.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36006867"
   
 4.  Use `add_DacActionStarted` e `add_DacActionFinished` para assinar os eventos de implantação do DAC.  
   
-5.  Definir o `DatabaseDeploymentProperties`.  
+5.  Defina o `DatabaseDeploymentProperties`.  
   
 6.  Use o método `DacStore.Install` para implantar o DAC.  
   

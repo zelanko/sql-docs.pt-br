@@ -1,27 +1,23 @@
 ---
-title: Instalar o Distributed Replay - visão geral | Microsoft Docs
+title: Instalar o Distributed Replay – visão geral | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40f3f702f887593ed047d5e7307a02e0d31a4820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69a57a42ac3fcd9b54952cca7bdb90a70e3422a9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067493"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36874864"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33067493"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)|Tópico de procedimento que lista os requisitos para instalar o Distributed Replay.|  
 |[Instalar o Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)|Tópico de procedimento que apresenta uma instalação típica do Distributed Replay usando o Assistente de instalação, o exemplo sintaxe e parâmetros de instalação para executar uma instalação autônoma e exemplo sintaxe e parâmetros de instalação para execução do Distributed Reply através de um arquivo de configuração.|  

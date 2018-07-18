@@ -7,85 +7,89 @@ ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sos
+ms.component: sqlpackage
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4e5528ca046de83385171890fbda389928e41cf3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fa682766fe4330a34cff39600b6296403031a3e4
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703821"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080034"
 ---
 # <a name="download-and-install-sqlpackage"></a>Baixe e instale o sqlpackage
 
 sqlpackage é executado no Windows, macOS e Linux.
 
-Baixe e instale a versão mais recente do .NET Framework e macOS e visualizações do Linux:
+Baixe e instale a versão mais recente do .NET Framework e o macOS e Linux visualizações:
 
 |Plataforma|Download|Data de liberação|Versão|Compilação|
 |:---|:---|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=875508)|25 de janeiro de 2018|17.4.1|14.0.3917.1|
-|macOS (visualização)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|9 de maio de 2018 |0.0.1|15.0.4057.1|
+|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=875508)|22 de junho de 2018|17.8|14.0.4079.2|
+|macOS (versão prévia)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|9 de maio de 2018 |0.0.1|15.0.4057.1|
 |Linux (versão prévia)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|9 de maio de 2018 |0.0.1|15.0.4057.1|
+
+Para obter detalhes sobre a versão mais recente, consulte o [notas de versão](sqlpackage-release-notes.md).
 
 ## <a name="get-sqlpackage-for-windows"></a>Obter sqlpackage para Windows
 
-Esta versão do sqlpackage inclui uma experiência de instalação padrão do Windows e. zip: 
+Esta versão do sqlpackage inclui uma experiência padrão do Windows installer e. zip: 
 
-**Instalador**
-
-1. Baixe e execute o [DacFramework.msi installer para Windows](https://go.microsoft.com/fwlink/?linkid=875508).
+1. Baixe e execute o [dacframework. msi installer para Windows](https://go.microsoft.com/fwlink/?linkid=875508).
 2. Abra uma nova janela de Prompt de comando e execute sqlpackage.exe
-    - sqlpackage está instalado para o ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` pasta
+    - sqlpackage é instalado para o ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` pasta
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Obter sqlpackage (visualização) para macOS
 
-1. Baixar [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=873927).
-2. Para extrair o arquivo e inicie sqlpackage, abra uma nova janela do Terminal e digite os seguintes comandos:
+1. Baixe [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=873927).
+2. Para extrair o arquivo e inicie o sqlpackage, abra uma nova janela do Terminal e digite os seguintes comandos:
 
    **Instalação do .zip:**
-   ```bash 
+
+   ```bash
    mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
-   sqlpackage 
-   ``` 
+   sqlpackage
+   ```
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Obter sqlpackage (visualização) para Linux
 
-1. Baixar [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=873926) usando os instaladores ou o arquivamento gz:
-2. Para extrair o arquivo e inicie sqlpackage, abra uma nova janela do Terminal e digite os seguintes comandos:
+1. Baixe [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=873926) usando um dos instaladores ou gz arquivo morto:
+2. Para extrair o arquivo e inicie o sqlpackage, abra uma nova janela do Terminal e digite os seguintes comandos:
 
    **Instalação do .zip:**
-   ```bash 
-   cd ~ 
+
+   ```bash
+   cd ~
    mkdir sqlpackage
    unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
-   source ~/.bashrc 
-   sqlpackage 
-   ``` 
+   source ~/.bashrc
+   sqlpackage
+   ```
 
    > [!NOTE]
-   > No Debian, Redhat e Ubuntu, você pode ter dependências ausentes. Use os comandos a seguir para instalar essas dependências, dependendo de sua versão do Linux:
-   
+   > No Ubuntu, Redhat e Debian, você pode ter dependências ausentes. Use os comandos a seguir para instalar essas dependências, dependendo de sua versão do Linux:
 
-   **Debian:** 
+   **Debian:**
+
    ```bash
    sudo apt-get install libuwind8
    ```
 
-   **Red Hat:** 
+   **Red Hat:**
+
    ```bash
-   yum install libunwind 
-   yum install libicu 
+   yum install libunwind
+   yum install libicu
    ```
 
-   **Ubuntu:** 
+   **Ubuntu:**
+
    ```bash
    sudo apt-get install libunwind8
 
@@ -96,32 +100,34 @@ Esta versão do sqlpackage inclui uma experiência de instalação padrão do Wi
    sudo apt-get install libicu60      # for 18.x
    ```
 
-
 ## <a name="uninstall-sqlpackage-preview"></a>Desinstalar o sqlpackage (visualização)
 
-Se você instalou o sqlpackage usando o Windows installer, desinstale o da mesma maneira que você remova qualquer aplicativo do Windows.
+Se você instalou o sqlpackage usando o instalador do Windows, desinstale da mesma maneira que você remova qualquer aplicativo do Windows.
 
-Se você instalou sqlpackage com outros arquivamento ou. zip, simplesmente exclua os arquivos.
+Se você instalou o sqlpackage com um. zip ou de outro arquivo, simplesmente exclua os arquivos.
 
 ## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
-sqlpackage é executado no Linux, Windows e macOS e é suportado nas seguintes plataformas:
+sqlpackage é executado no Windows, macOS e Linux e é suportado nas seguintes plataformas:
 
 ### <a name="windows"></a>Windows
+
 - Windows 10
-- Windows 8.1 
-- Windows 8 
-- Windows 7 SP1 
+- Windows 8.1
+- Windows 8
+- Windows 7 SP1
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012 
+- Windows Server 2012
 - Windows Server 2008 R2
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 Serra alta
-- macOS 10.12 Serra
+
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux-x64"></a>Linux (x64)
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5482ca3ec570b4155712dbeaf3768a55372eccad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fec5ecbe30bb55262a274b5764d6650044a54a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36006543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216846"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
   É possível desinstalar a versão autônoma do Construtor de Relatórios no painel de controle ou na linha de comando. Não é possível desinstalar a versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] do Construtor de Relatórios sem desinstalar o [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  

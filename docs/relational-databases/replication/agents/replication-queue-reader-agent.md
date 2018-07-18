@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 756040486a286a294410858111c8f9258619839b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d959635a9d43bc03325a039b71fff1c0f827617b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957041"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356708"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de Leitor de Fila de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Queue Reader Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|Description|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -98,7 +97,7 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de fila. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Nenhum log de histórico (não recomendado).|  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  

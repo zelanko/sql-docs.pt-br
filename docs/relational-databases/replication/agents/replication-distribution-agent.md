@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb6fd99b07d623e2fb3d63ddb3c25adfd01efbb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba002103b632cf406eafe59072f4949951483425
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957411"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349958"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +141,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL usada pelo Agente de Distribuição ao fazer conexões.  
   
-|Valor EncryptionLevel|Description|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -174,7 +173,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Especifica a quantidade de histórico registrada durante uma operação de distribuição. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Mensagens de Progresso são gravadas no console ou em um arquivo de saída. Registros de histórico não são registrados no banco de dados de distribuição.|  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -253,7 +252,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Especifica o tipo de conexão de Assinante usado pelo Agente de Distribuição.  
   
-|Valor SubscriberType|Description|  
+|Valor SubscriberType|Descrição|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Fonte de dados ODBC|  

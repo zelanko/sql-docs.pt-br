@@ -22,36 +22,36 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1dae3bfeae19e302d7e6320dcd61695d5d79d1e1
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: HT
+ms.openlocfilehash: adf1023b7975e788fc460756c0eb6d16f40ba2ef
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612281"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042626"
 ---
-# <a name="stored-procedures---calling"></a>Procedimentos armazenados - chamar
+# <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o Driver OLE DB para SQL Server, os parâmetros para um procedimento armazenado podem ser transmitidos por:  
+  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o Driver do OLE DB para SQL Server, os parâmetros para um procedimento armazenado podem ser passados por:  
   
 -   Hard-coding o valor de dados.  
   
 -   Usando um marcador de parâmetro (?) para especificar parâmetros, associar uma variável de programa ao marcador de parâmetro e, em seguida, inserir o valor dos dados na variável de programa.  
   
 > [!NOTE]  
->  Ao chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam parâmetros denominados com o OLE DB, os nomes de parâmetros devem começar com o caractere “\@'”. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver OLE DB para SQL Server impõe esta restrição mais estritamente que o MDAC.  
+>  Ao chamar procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usam parâmetros denominados com o OLE DB, os nomes de parâmetros devem começar com o caractere '\@'. Esta é uma restrição específica do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver do OLE DB para SQL Server impõe essa restrição mais estritamente que o MDAC.  
   
- Para dar suporte a parâmetros, o **ICommandWithParameters** interface é exposta no objeto de comando. Para usar parâmetros, o consumidor primeiro descreve os parâmetros para o provedor, chamando o **ICommandWithParameters:: SetParameterInfo** método (ou, opcionalmente, prepara uma instrução de chamada que chama o **GetParameterInfo** método). O consumidor cria um acessador que especifica a estrutura de um buffer e coloca os valores dos parâmetros nesse buffer. Finalmente, ele passa o identificador do acessador e um ponteiro para o buffer de **Execute**. Em chamadas posteriores para **Execute**, o consumidor coloca novos valores de parâmetro no buffer e chama **Execute** com o ponteiro de buffer e o identificador do acessador.  
+ Para dar suporte aos parâmetros, a interface **ICommandWithParameters** é exposta no objeto de comando. Para usar parâmetros, o consumidor primeiro descreve os parâmetros para o provedor, chamando o método **ICommandWithParameters::SetParameterInfo** (ou, como opção, prepara uma instrução de chamada que chama o método **GetParameterInfo**). O consumidor cria um acessador que especifica a estrutura de um buffer e coloca os valores dos parâmetros nesse buffer. Finalmente, ele transmite o identificador do acessador e um ponteiro ao buffer para **Executar**. Em chamadas posteriores para **Executar**, o consumidor coloca novos valores de parâmetros no buffer e chama **Executar** com o identificador do acessador e o ponteiro do buffer.  
   
- Um comando que chama um procedimento armazenado temporário usando parâmetros deve primeiro chamar **ICommandWithParameters:: SetParameterInfo** para definir as informações de parâmetro antes do comando pode ser preparado com êxito. Isso ocorre porque o nome interno para um procedimento armazenado temporário difere do nome externo usado por um cliente e MSOLEDBSQL não é possível consultar as tabelas do sistema para determinar as informações de parâmetro para um procedimento armazenado temporário.  
+ Um comando que chama um procedimento armazenado temporário usando parâmetros deve primeiro chamar **ICommandWithParameters::SetParameterInfo** para definir as informações do parâmetro, para que o comando possa ser preparado com êxito. Isto ocorre porque o nome interno de um procedimento armazenado temporário difere do nome externo usado por um cliente e MSOLEDBSQL não pode consultar as tabelas do sistema para determinar as informações dos parâmetros para um procedimento armazenado temporário.  
   
  Estas são as etapas no processo de associação de parâmetros:  
   
-1.  Preencha as informações dos parâmetros em uma matriz de estruturas DBPARAMBINDINFO; isto é, nome do parâmetro, nome específico do provedor para o tipo de dados do parâmetro ou um nome de tipo de dados padrão, e assim por diante. Cada estrutura na matriz descreve um parâmetro. Esta matriz é então passada para o **SetParameterInfo** método.  
+1.  Preencha as informações dos parâmetros em uma matriz de estruturas DBPARAMBINDINFO; isto é, nome do parâmetro, nome específico do provedor para o tipo de dados do parâmetro ou um nome de tipo de dados padrão, e assim por diante. Cada estrutura na matriz descreve um parâmetro. Em seguida, essa matriz é transmitida ao método **SetParameterInfo**.  
   
-2.  Chamar o **ICommandWithParameters:: SetParameterInfo** método para descrever parâmetros ao provedor. **SetParameterInfo** Especifica o tipo de dados nativo de cada parâmetro. **SetParameterInfo** argumentos são:  
+2.  Chame o método **ICommandWithParameters::SetParameterInfo** para descrever parâmetros ao provedor. **SetParameterInfo** especifica o tipo de dados nativo de cada parâmetro. Os argumentos de **SetParameterInfo** são:  
   
     -   O número de parâmetros para o qual definir informações de tipo.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "35612281"
   
     -   Uma matriz de estruturas DBPARAMBINDINFO.  
   
-3.  Criar um acessador de parâmetro usando o **IAccessor:: CreateAccessor** comando. O acessador especifica a estrutura de um buffer e coloca valores dos parâmetros no buffer. O **CreateAccessor** comando cria um acessador de um conjunto de associações. Essas associações são descritas pelo consumidor usando uma matriz de estruturas DBBINDING. Cada associação liga um único parâmetro ao buffer do consumidor e contém informações como:  
+3.  Crie um acessador de parâmetro usando o comando **IAccessor::CreateAccessor**. O acessador especifica a estrutura de um buffer e coloca valores dos parâmetros no buffer. O comando **CreateAccessor** cria um acessador de um conjunto de associações. Essas associações são descritas pelo consumidor usando uma matriz de estruturas DBBINDING. Cada associação liga um único parâmetro ao buffer do consumidor e contém informações como:  
   
     -   O ordinal do parâmetro ao qual a associação se aplica.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "35612281"
   
     -   O comprimento e o tipo do valor de dados, como existe no buffer do consumidor.  
   
-     Um acessador é reconhecido por seu identificador, que é do tipo HACCESSOR. Esse identificador é retornado pelo **CreateAccessor** método. Sempre que o consumidor termina de usar um acessador, o consumidor deve chamar o **ReleaseAccessor** método para liberar a memória que ele contém.  
+     Um acessador é reconhecido por seu identificador, que é do tipo HACCESSOR. Esse identificador é retornado pelo método **CreateAccessor**. Sempre que o consumidor termina de usar um acessador, o consumidor deve chamar o método **ReleaseAccessor** para liberar a memória que ele detém.  
   
-     Quando o consumidor chama um método, como **ICommand:: execute**, ele passa o identificador para um acessador e um ponteiro para um buffer propriamente dito. O provedor usa esse acessador para determinar como transferir os dados contidos no buffer.  
+     Quando o consumidor chama um método, como **ICommand::Execute**, transmite o identificador a um acessador e um ponteiro para um buffer propriamente dito. O provedor usa esse acessador para determinar como transferir os dados contidos no buffer.  
   
-4.  Preencha a estrutura DBPARAMS. As variáveis do consumidor do parâmetro de entrada que os valores são obtidos e para o parâmetro de saída, os valores são gravados são passadas em tempo de execução para **ICommand:: execute** na estrutura DBPARAMS. A estrutura DBPARAMS inclui três elementos:  
+4.  Preencha a estrutura DBPARAMS. As variáveis do consumidor das quais os valores dos parâmetros são obtidos e nas quais os valores dos parâmetros de saída são gravados são transmitidas em tempo de execução para **ICommand::Execute** na estrutura DBPARAMS. A estrutura DBPARAMS inclui três elementos:  
   
     -   Um ponteiro para o buffer do qual o provedor recupera dados de parâmetro de entrada e para o qual o provedor retorna dados de parâmetro de saída, de acordo com as associações especificadas pelo identificador do acessador.  
   
@@ -81,10 +81,10 @@ ms.locfileid: "35612281"
   
     -   O identificador do acessador criado na Etapa 3.  
   
-5.  Execute o comando usando **ICommand:: execute**.  
+5.  Execute o comando usando **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos de chamar um procedimento armazenado  
- Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Driver OLE DB para SQL Server oferece suporte a:  
+ Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Driver do OLE DB para SQL Server dá suporte a:  
   
 -   Sequência de escape CALL do ODBC.  
   
@@ -92,8 +92,8 @@ ms.locfileid: "35612281"
   
 -   Instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE.  
   
-### <a name="odbc-call-escape-sequence"></a>Sequência de Escape ODBC CALL  
- Se você souber informações de parâmetro, chame **ICommandWithParameters:: SetParameterInfo** método para descrever os parâmetros para o provedor. Caso contrário, quando a sintaxe ODBC CALL for usada na chamada de um procedimento armazenado, o provedor chamará uma função auxiliar para localizar as informações de parâmetros do procedimento armazenado.  
+### <a name="odbc-call-escape-sequence"></a>Sequência de escape ODBC CALL  
+ Se você souber informações de parâmetro, chame o método **ICommandWithParameters::SetParameterInfo** para descrever os parâmetros ao provedor. Caso contrário, quando a sintaxe ODBC CALL for usada na chamada de um procedimento armazenado, o provedor chamará uma função auxiliar para localizar as informações de parâmetros do procedimento armazenado.  
   
  Se você não tiver certeza sobre as informações de parâmetro (metadados de parâmetro), a sintaxe do ODBC CALL será recomendada.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "35612281"
 {call SalesByCategory('Produce', '1995')}  
 ```  
   
-### <a name="rpc-escape-sequence"></a>Sequência de Escape RPC  
+### <a name="rpc-escape-sequence"></a>Sequência de escape RPC  
  A sequência de escape RPC é semelhante à sintaxe ODBC CALL de chamar um procedimento armazenado. Se você for chamar o procedimento várias vezes, a sequência de escape RPC proporcionará o melhor desempenho possível entre os três métodos de chamada de um procedimento armazenado.  
   
- Quando a sequência de escape RPC é usada para executar um procedimento armazenado, o provedor não chama nenhuma função auxiliar para determinar as informações dos parâmetros (como ela faz no caso da sintaxe de ODBC CALL). A sintaxe de RPC é mais simples que a sintaxe de ODBC CALL, assim o comando é analisado mais rápido, melhorando o desempenho. Nesse caso, você precisa fornecer as informações de parâmetro executando **ICommandWithParameters:: SetParameterInfo**.  
+ Quando a sequência de escape RPC é usada para executar um procedimento armazenado, o provedor não chama nenhuma função auxiliar para determinar as informações dos parâmetros (como ela faz no caso da sintaxe de ODBC CALL). A sintaxe de RPC é mais simples que a sintaxe de ODBC CALL, assim o comando é analisado mais rápido, melhorando o desempenho. Neste caso, você precisa fornecer as informações de parâmetro executando **ICommandWithParameters::SetParameterInfo**.  
   
- A sequência de escape RPC exige que você tenha um valor de retorno. Se o procedimento armazenado não retornar um valor, o servidor retornará um 0 por padrão. Além disso, você não pode abrir um cursor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no procedimento armazenado. O procedimento armazenado é implicitamente preparado e a chamada para **icommandprepare:: Prepare** falhará. Devido à impossibilidade de preparar uma chamada RPC, você não pode consultar metadados de coluna; Icolumnsinfo:: Getcolumninfo e IColumnsRowset:: Getcolumnsrowset retornarão DB_E_NOTPREPARED.  
+ A sequência de escape RPC exige que você tenha um valor de retorno. Se o procedimento armazenado não retornar um valor, o servidor retornará um 0 por padrão. Além disso, você não pode abrir um cursor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no procedimento armazenado. O procedimento armazenado é implicitamente preparado e a chamada a **ICommandPrepare::Prepare** falhará. Devido à impossibilidade de preparar uma chamada RPC, você não pode consultar os metadados de coluna; Icolumnsinfo:: Getcolumninfo e IColumnsRowset:: Getcolumnsrowset retornarão DB_E_NOTPREPARED.  
   
  Se você souber todos os metadados de parâmetro, a sequência de escape RPC será o modo recomendado para executar procedimentos armazenados.  
   
@@ -122,18 +122,18 @@ ms.locfileid: "35612281"
 {rpc SalesByCategory}  
 ```  
   
- Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, consulte [executar um procedimento armazenado &#40;usando sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, consulte [executar um procedimento armazenado &#40;usando a sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
- A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado, em vez do [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) instrução. O Driver OLE DB para SQL Server usa o mecanismo RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento do comando. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+ A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O Driver do OLE DB para SQL Server usa o mecanismo RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento do comando. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
- Este é um exemplo de como o [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** instrução:  
+ Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados](../../oledb/ole-db/stored-procedures.md)  
   
   

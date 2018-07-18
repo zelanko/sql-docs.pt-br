@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867711"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324430"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "32867711"
 |Conexão a uma instância padrão que não está escutando na porta TCP padrão, especificando a porta que está sendo usada, neste caso, 2828. (Isto não será necessário se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver escutando na porta padrão (1433).)|APPHOST,2828|  
 |Conexão para uma instância nomeada em uma porta TCP designada, neste caso, 2828. (Isto costuma ser necessário quando o serviço de Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está sendo executado no computador host.)|APPHOST,2828|  
 |Conexão a uma instância padrão que não está escutando na porta TCP padrão, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28,2828|  
-|Conexão a uma instância nomeada, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28,2828|  
+|Conexão a uma instância nomeada, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Conectando à instância padrão através de nome, forçando uma conexão TCP.|tcp:APPHOST|  
 |Conectando à instância nomeada através de nome, forçando uma conexão TCP.|tcp:APPHOST\SQLEXPRESS|  
 |Conectando a uma instância padrão especificando um nome de pipe nomeado.|\\\APPHOST\pipe\unit\app|  

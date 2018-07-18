@@ -1,7 +1,7 @@
 ---
 title: Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769732"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934898"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769732"
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se o sistema não é um controlador de domínio.|Os grupos de disponibilidade não têm suporte em controladores de domínio.|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se cada computador está executando o Windows Server 2012 ou versões posteriores.|[Requisitos de hardware e software para a instalação do SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se cada computador é um nó em um WSFC.|[WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se o WSFC contém nós suficientes para dar suporte às configurações de grupo de disponibilidade.|Um nó de cluster pode hospedar apenas uma réplica de disponibilidade para determinado grupo de disponibilidade. Em um nó de cluster específico, uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem hospedar réplicas de disponibilidade para muitos grupos de disponibilidade.<br /><br /> Pergunte aos administradores de banco de dados quantos nós de cluster são necessários para dar suporte às réplicas de disponibilidade dos grupos de disponibilidade planejados.<br /><br /> [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Verifique se o WSFC contém nós suficientes para dar suporte às configurações de grupo de disponibilidade.|Um nó de cluster pode hospedar uma réplica de um grupo de disponibilidade. O mesmo nó não pode hospedar duas réplicas do mesmo grupo de disponibilidade. O nó de cluster pode participar de vários grupos de disponibilidade, com uma réplica de cada grupo. <br /><br /> Pergunte aos administradores de banco de dados quantos nós de cluster são necessários para dar suporte às réplicas de disponibilidade dos grupos de disponibilidade planejados.<br /><br /> [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+
   
 > [!IMPORTANT]  
 >  Verifique também se seu ambiente está corretamente configurado para a conexão a um grupo de disponibilidade. Para obter mais informações, veja [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -170,8 +171,10 @@ ms.locfileid: "34769732"
   
     -   Se um determinado thread ficar ocioso por um tempo, ele será liberado novamente no pool de threads geral do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Normalmente, um thread inativa é liberado após ~15 segundos de inatividade. No entanto, dependendo da última atividade, um thread ocioso pode ser retido por mais tempo.  
 
-    - Uma instância do SQL Server usa até 100 threads de restauração paralela para réplicas secundárias. Cada banco de dados usa até metade do número total de núcleos de CPU, mas não mais de 16 threads por banco de dados. Se o número total de threads necessários para uma única instância exceder 100, o SQL Server usará um único thread de restauração para cada banco de dados restante. Os threads de restauração são liberados após ~15 segundos de inatividade. 
-
+    -   Uma instância do SQL Server usa até 100 threads de restauração paralela para réplicas secundárias. Cada banco de dados usa até metade do número total de núcleos de CPU, mas não mais de 16 threads por banco de dados. Se o número total de threads necessários para uma única instância exceder 100, o SQL Server usará um único thread de restauração para cada banco de dados restante. Os threads de restauração serial são liberados após aproximadamente 15 segundos de inatividade. 
+    
+    > [!NOTE]
+    > Os bancos de dados são escolhidos para seguir em thread único com base na ID de banco de dados em ordem crescente. Como tal, a ordem de criação do banco de dados deve ser considerada para instâncias do SQL Server que hospedam mais bancos de dados de grupo de disponibilidade do que threads de trabalho disponíveis. Por exemplo, em um sistema com 32 ou mais núcleos de CPU, todos os bancos de dados começando com o 7º banco de dados que ingressaram no grupo de disponibilidade estarão em modo de restauração serial, independentemente da carga de trabalho real de restauração de cada banco de dados. Os bancos de dados que exigem a restauração paralela devem ser adicionados primeiro ao grupo de disponibilidade.    
   
 -   Além disso, os grupos de disponibilidade usam threads não compartilhados, da seguinte maneira:  
   

@@ -3,11 +3,6 @@ title: Parceiros de gerenciamento do SQL Server | Microsoft Docs
 description: Lista de parceiros terceirizados com soluções para monitorar o servidor.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,21 +10,22 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 80a7cceee6693b00e2bd61bbdb82229edef5d8d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031943"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926387"
 ---
 # <a name="sql-server-managing-partners"></a>Parceiros de gerenciamento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para gerenciar os serviços do SQL Server, escolha entre uma ampla variedade de ferramentas do setor.  Este artigo destaca empresas parceiras da Microsoft com soluções de gerenciamento com suporte ao Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Nossos parceiros de gerenciamento
-| Partner (parceiro) | Description | Links |
+| Partner (parceiro) | Descrição | Links |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager é uma abrangente solução de auditoria que exibe quem fez o quê, quando e como nos SQL Servers, para ajudar a garantir a conformidade com regulamentos e requisitos de segurança de dados.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] | |
 

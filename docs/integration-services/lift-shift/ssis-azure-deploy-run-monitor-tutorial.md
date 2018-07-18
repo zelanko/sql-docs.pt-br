@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335830"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262490"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure
 Este tutorial mostra como implantar um projeto do SSIS (SQL Server Integration Services) no Catálogo do SSIS no Banco de Dados SQL do Azure, executar um pacote no Azure-SSIS Integration Runtime e monitorar o pacote em execução.

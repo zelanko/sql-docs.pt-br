@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36122330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268622"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidas em seu relatório escrevendo expressões que especificá-los por nome usando o interno `Fields` coleção.  
   
- As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados que são mapeados para nomes de propriedade de campo específico e podem ser acessados por meio de interno `Fields` coleção por nome. As propriedades personalizadas são específicas de cada provedor de dados e pode ser acessada por meio da coleção interna de `Fields` apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
+ As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns a várias fontes de dados que são mapeados para nomes de propriedade de campo específico e podem ser acessados por meio de interno `Fields` coleção por nome. As propriedades personalizadas são específicas de cada provedor de dados e pode ser acessada por meio da coleção interna de `Fields` apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
  Ao usar o designer de consultas MDX do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo gráfico para definir a consulta, um conjunto predefinido de propriedades de células e propriedades de dimensão é adicionado automaticamente à consulta MDX. Apenas as propriedades estendidas que estiverem especificamente listadas na consulta MDX em seu relatório poderão ser usadas. Dependendo do relatório, é possível modificar o texto do comando MDX padrão para incluir outra dimensão ou propriedades personalizadas definidas no cubo. Para obter mais informações sobre os campos estendidos disponíveis nas fontes de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Criando e usando valores de propriedade &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabalhando com as propriedades de campo em um relatório  
- As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deve arrastar o campo para o relatório e, em seguida, alterar o `Value` propriedade de campo para a propriedade que você deseja usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
+ As propriedades de campo estendidas incluem as propriedades predefinidas e as propriedades específicas para um provedor de dados. As propriedades de campo não são exibidas com a lista de campos no painel **Dados do Relatório** , embora elas estejam na consulta criada para um conjunto de dados; portanto, não é possível arrastar as propriedades de campo para a superfície de design de relatórios. Em vez disso, você deve arrastar o campo para o relatório e, em seguida, alterar o `Value` propriedade do campo para a propriedade que você deseja usar. Por exemplo, se os dados da célula de um cubo já tiverem sido formatados, você poderá usar a propriedade de campo FormattedValue usando a seguinte expressão: `=Fields!FieldName.FormattedValue`.  
   
  Para consultar uma propriedade estendida que não seja predefinida, use a seguinte sintaxe em uma expressão:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36122330"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica o valor de dados do campo.|  
 |`IsMissing`|`Boolean`|Indica se o campo foi encontrado no conjunto de dados resultante.|  
-|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[funcionário]. [ Departamento do funcionário]. [Departamento]. & [vendas]. & [gerente de vendas na América do Norte]. & [272]*.|  
+|`UniqueName`|`String`|Retorna o nome totalmente qualificado de um nível. Por exemplo, o `UniqueName` valor de um funcionário pode ser *[funcionário]. [ Employee Department]. [Department]. & [Sales]. & [gerente de vendas na América do Norte]. Manager].&[272]*.|  
 |`BackgroundColor`|`String`|Retorna a cor do segundo plano definida no banco de dados para o campo.|  
 |`Color`|`String`|Retorna a cor do primeiro plano definida no banco de dados para o item.|  
 |`FontFamily`|`String`|Retorna o nome da fonte definido no banco de dados para o item.|  
@@ -58,7 +58,7 @@ ms.locfileid: "36122330"
 |`FontWeight`|`String`|Retorna a espessura da fonte definida no banco de dados para o item.|  
 |`FontStyle`|`String`|Retorna o estilo da fonte definido no banco de dados para o item.|  
 |`TextDecoration`|`String`|Retorna a formatação de texto especial definida no banco de dados para o item.|  
-|`FormattedValue`|`String`|Retorna um valor formatado para a medida ou o número chave. Por exemplo, o `FormattedValue` propriedade **cota de vendas** retorna um formato de moeda como $1.124.400,00.|  
+|`FormattedValue`|`String`|Retorna um valor formatado para a medida ou o número chave. Por exemplo, o `FormattedValue` propriedade para **Sales Amount Quota** retorna um formato de moeda como $1.124.400,00.|  
 |`Key`|`Object`|Retorna a chave para um nível.|  
 |`LevelNumber`|`Integer`|Para hierarquias pai-filho, retorna o nível ou o número de dimensões.|  
 |`ParentUniqueName`|`String`|Para hierarquias pai-filho, retorna um nome totalmente qualificado do nível pai.|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Se você criar um conjunto de dados de relatório com essa consulta e associar o conjunto de dados a uma tabela, poderá ver a propriedade VALUE padrão de um campo, por exemplo, `=Fields!Month_of_Year!Value`. Se você definir essa expressão como a expressão de classificação para a tabela, os resultados serão para classificar a tabela em ordem alfabética por mês, porque o campo valor usa um `String` tipo de dados. Para classificar a tabela de forma que os meses fiquem na ordem correta do ano, de janeiro a dezembro, use a seguinte expressão:  
+ Se você criar um conjunto de dados de relatório com essa consulta e associar o conjunto de dados a uma tabela, poderá ver a propriedade VALUE padrão de um campo, por exemplo, `=Fields!Month_of_Year!Value`. Se você definir essa expressão como a expressão de classificação para a tabela, seus resultados servirão para classificar a tabela em ordem alfabética por mês, porque o campo de valor usa um `String` tipo de dados. Para classificar a tabela de forma que os meses fiquem na ordem correta do ano, de janeiro a dezembro, use a seguinte expressão:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -154,7 +154,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Coleções internas em expressões &#40;SSRS e construtor de relatórios&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Coleções internas em expressões &#40;relatórios e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

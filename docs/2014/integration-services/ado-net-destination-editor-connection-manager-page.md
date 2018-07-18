@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 674fff53082aae97171e8ee282590efabd0a6260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 15f5a12e688d18a95e822fbaacb3714236ab7fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36011190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256992"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de Destino ADO NET (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino ADO NET** para selecionar a conexão [!INCLUDE[vstecado](../includes/vstecado-md.md)] para o destino. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -65,7 +65,7 @@ ms.locfileid: "36011190"
  Se você selecionar **Usar a inserção em massa quando disponível**e definir a opção **Erro** como **Redirecionar a linha**, o lote de dados que o destino redireciona à saída de erro poderá incluir linhas válidas. Para obter mais informações sobre o tratamento de erro em operações em massa, consulte [Tratamento de erros em dados](data-flow/error-handling-in-data.md). Para obter mais informações sobre a opção **Erro** , consulte [ADO NET Destination Editor &#40;Erro Output Page&#41;.  
   
 > [!NOTE]  
->  Se uma tabela de origem do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para executar uma instrução SET IDENTITY_INSERT antes e depois do destino ADO NET. A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT habilita os valores explícitos a serem inseridos na coluna de identidade. Para executar as instruções CREATE TABLE e SET IDENTITY na mesma conexão de banco de dados, defina o `RetainSameConnection` propriedade o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão para `True`. Use também o mesmo gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para as tarefas Executar SQL e para o destino ADO NET.  
+>  Se uma tabela de origem do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou do Sybase incluir uma coluna de identidade, utilize as tarefas Executar SQL para executar uma instrução SET IDENTITY_INSERT antes e depois do destino ADO NET. A propriedade da coluna de identidade especifica um valor incremental para a coluna. A instrução SET IDENTITY_INSERT habilita os valores explícitos a serem inseridos na coluna de identidade. Para executar as instruções CREATE TABLE e SET IDENTITY na mesma conexão de banco de dados, defina a `RetainSameConnection` propriedade do [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão para `True`. Use também o mesmo gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para as tarefas Executar SQL e para o destino ADO NET.  
 >   
 >  Para obter mais informações, consulte [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) e [IDENTITY &#40;Propriedade&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36011190"
 ## <a name="see-also"></a>Consulte também  
  [Editor de destino do ADO NET &#40;página mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [Editor de destino do ADO NET &#40;página de saída de erro&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
- [Gerenciador de Conexão ADO.NET](connection-manager/ado-net-connection-manager.md)   
+ [Gerenciador de Conexão do ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)  
   
   

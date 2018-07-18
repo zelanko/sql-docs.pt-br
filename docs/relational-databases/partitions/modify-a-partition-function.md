@@ -3,26 +3,22 @@ title: Modificar uma função de partição | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: partitions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-partition
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7b0639e19c4a1fcce079b9c660176b00c1508ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebf9e56b09b7300611643a8dd86d5b67edbc8067
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263782"
 ---
 # <a name="modify-a-partition-function"></a>Modificar uma função de partição
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

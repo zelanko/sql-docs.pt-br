@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87ed7a12ae763b0ad40fb0750506ca1ee2be30fe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408348"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042586"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   A tabela a seguir descreve as propriedades personalizadas da origem ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
@@ -35,7 +35,7 @@ ms.locfileid: "35408348"
 |ExposeCharColumnsAsUnicode|Booliano|Essa propriedade determina como o componente expõe colunas CHAR. O valor padrão é False, que indica as colunas CHAR que são expostas como cadeias de caracteres de vários bytes (DT_STR). Se True, as colunas CHAR são expostas como cadeias de caracteres amplas (DT_WSTR).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |FetchMethod|Inteiro (enumeração)|O método usado para adquirir os dados. As possíveis opções são Linha a linha (0) e Lote (1). O valor padrão é Lote (1).<br /><br /> Para obter mais informações sobre essas opções, consulte [Fonte ODBC](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Observação**: esta propriedade não está disponível no **Editor de Fonte ODBC**, mas pode ser definida por meio do **Editor Avançado**.|  
 |SqlCommand|Cadeia de caracteres|O comando SQL a ser executado quando AccessMode é definido como Comando SQL.|  
-|StatementTimeout|Integer|O número de segundos a aguardar a execução de uma instrução SQL antes de retornar com um erro para o aplicativo. O valor padrão é 120. Um valor de 0 indica se o sistema não alcança o tempo limite.|  
+|StatementTimeout|Integer|O número de segundos a aguardar a execução de uma instrução SQL antes de retornar com um erro para o aplicativo. O valor padrão é 0. Um valor de 0 indica se o sistema não alcança o tempo limite.|  
 |TableName|Cadeia de caracteres|O nome da tabela com os dados que estão sendo usados quando AccessMode é definido como Nome da Tabela.|  
 |LobChunckSize|Integer|A alocação de tamanho de parte para colunas LOB.|  
 ||||  

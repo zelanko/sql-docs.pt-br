@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36116857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259712"
 ---
 # <a name="data-mining-projects"></a>Projetos de mineração de dados
   Um projeto de mineração de dados faz parte de uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante o processo de design, os objetos que você cria neste projeto estão disponíveis para teste e consulta como parte de um banco de dados de espaço de trabalho. Quando você quiser que os usuários possam consultar ou procurar os objetos no projeto, deverá implantar o projeto em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado em modo multidimensional.  
@@ -33,7 +33,7 @@ ms.locfileid: "36116857"
  Se você criar um projeto de mineração de dados dentro de uma solução existente, por padrão os objetos de mineração de dados serão implantados em um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com o mesmo nome do arquivo de solução. Você pode alterar este nome e o servidor de destino usando a caixa de diálogo **Propriedades do Projeto** . Para obter mais informações, consulte [Configurar propriedades do projeto do Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  Para criar e implantar seu projeto com êxito, você deverá ter acesso a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que esteja sendo executada no modo OLAP/Mineração de dados. Você não pode desenvolver ou implantar soluções de mineração de dados em uma instância de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que dá suporte a modelos de tabela, nem pode usar dados diretamente de uma pasta de trabalho PowerPivot ou de um modelo de tabela que usa o repositório de dados na memória. Para determinar se a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que você tem dá suporte à mineração de dados, consulte [Determinar o Modo de Servidor de uma Instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  Para criar e implantar seu projeto com êxito, você deverá ter acesso a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que esteja sendo executada no modo OLAP/Mineração de dados. Você não pode desenvolver ou implantar soluções de mineração de dados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que dá suporte a modelos de tabela, nem pode usar dados diretamente de uma pasta de trabalho PowerPivot ou de um modelo de tabela que usa o repositório de dados na memória. Para determinar se a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que você tem dá suporte à mineração de dados, consulte [Determinar o Modo de Servidor de uma Instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Dentro de cada projeto de mineração de dados que você cria, você seguirá estas etapas:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36116857"
   
  Por exemplo, um único projeto de mineração de dados pode conter uma referência a várias fontes de dados, com cada fonte de dados dando suporte a várias exibições das fontes de dados. Em troca, cada exibição da fonte de dados pode dar suporte a várias estruturas de mineração, cada uma com muitos modelos de mineração relacionados.  
   
- Além disso, seu projeto pode incluir algoritmos de plug-in, assemblies personalizados ou procedimentos armazenados personalizados; porém, estes objetos não são descritos aqui. Para obter mais informações, consulte [guia do desenvolvedor &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Além disso, seu projeto pode incluir algoritmos de plug-in, assemblies personalizados ou procedimentos armazenados personalizados; porém, estes objetos não são descritos aqui. Para obter mais informações, consulte [guia do desenvolvedor do &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -201,7 +201,7 @@ ms.locfileid: "36116857"
 |Tarefas|Tópicos|  
 |-----------|------------|  
 |Descreve como trabalhar com colunas de estrutura de mineração|[Criar uma estrutura de mineração relacional](create-a-relational-mining-structure.md)|  
-|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar modelos de mineração a uma estrutura &#40;Analysis Services – mineração de dados&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Fornece mais informações sobre como adicionar novos modelos de mineração e processar uma estrutura e modelos|[Adicionar modelos de mineração a uma estrutura &#40;Analysis Services - mineração de dados&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Fornece links para recursos que ajudam a personalizar os algoritmos que criam modelos de mineração|[Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)|  
 |Fornece links para informações sobre cada um dos visualizadores de modelo de mineração|[Visualizadores do modelo de Mineração de dados](data-mining-model-viewers.md)|  
 |Saiba criar um gráfico de comparação de precisão, gráfico de ganho ou matriz de classificação ou testar uma estrutura de mineração|[Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)|  

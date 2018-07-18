@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957231"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358138"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Merge Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|Description|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -186,7 +185,7 @@ replmerg [-?]
   
  Especifica o tipo de troca de dados durante a sincronização, que pode ser um dos seguintes:  
   
-|Valor ExchangeType|Description|  
+|Valor ExchangeType|Descrição|  
 |------------------------|-----------------|  
 |**1**|O agente deve carregar alterações de dados do Assinante para o Publicador.|  
 |**2**|O agente deve baixar alterações de dados do Publicador para o Assinante.|  
@@ -205,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Especifica o nível de convergência que o Merge Agent deve usar e pode ser um dos seguintes:  
   
-|Valor ForceConvergenceLevel|Description|  
+|Valor ForceConvergenceLevel|Descrição|  
 |---------------------------------|-----------------|  
 |**0** (padrão)|Padrão. Executa uma mesclagem padrão sem convergência adicional.|  
 |**1**|Impõe convergência para todas as gerações.|  
@@ -226,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Especifica a quantidade de histórico registrada durante uma operação de mesclagem. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Description|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Registre a mensagem de status de agente final, detalhes finais da sessão e qualquer erro.|  
 |**1**|Registre detalhes incrementais da sessão em cada status da sessão, incluindo porcentagem concluída, além da mensagem de status final do agente, detalhes finais da sessão e qualquer erro.|  
@@ -331,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Especifica se existe um banco de dados do Assinante.  
   
-|Valor SubscriberDBAddOption|Description|  
+|Valor SubscriberDBAddOption|Descrição|  
 |---------------------------------|-----------------|  
 |**0**|Use o banco de dados existente (padrão).|  
 |**1**|Crie um banco de dados de Assinante novo, vazio.|  
@@ -377,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Especifica se a validação deve ser feita no final da mensagem de mesclagem e, se for, o tipo de validação. O valor **3** é o valor recomendado.  
   
-|Valor de validação|Description|  
+|Valor de validação|Descrição|  
 |--------------------|-----------------|  
 |**0** (padrão)|Nenhuma validação.|  
 |**1**|Validação só de número de linhas.|  
