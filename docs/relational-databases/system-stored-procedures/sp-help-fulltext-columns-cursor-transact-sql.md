@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 075411f7cfd3f8439a9cb15a4111fa3c3a5d1421
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999648"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  É a variável de saída do tipo **cursor**. O cursor resultante é rolável, dinâmico, somente leitura.  
   
  [  **@table_name =**] **'***table_name***'**  
- É o nome de uma ou duas partes da tabela para a qual são solicitadas informações de índice de texto completo. *table_name* é **nvarchar (517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
+ É o nome de uma ou duas partes da tabela para a qual são solicitadas informações de índice de texto completo. *table_name* está **nvarchar(517)**, com um valor padrão de NULL. Se *table_name* for omitido, as informações de coluna de índice de texto completo são recuperadas para cada tabela indexada de texto completo.  
   
  [  **@column_name =**] **'***column_name***'**  
- É o nome da coluna na qual para a qual os metadados de índice de texto completo são desejados. *nome da coluna* é **sysname** com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo de *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo são retornadas para cada coluna indexada de texto completo de todas as tabelas no banco de dados.  
+ É o nome da coluna na qual para a qual os metadados de índice de texto completo são desejados. *column_name* está **sysname** com um valor padrão de NULL. Se *column_name* for omitido ou for NULL, as informações de coluna de texto completo serão retornadas para cada coluna indexada de texto completo de *table_name*. Se *table_name* também for omitido ou for NULL, as informações de coluna de índice de texto completo serão retornadas para cada coluna indexada de texto completo de todas as tabelas no banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou (1) falha  
@@ -66,12 +66,12 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Proprietário da tabela. Esse é o nome do usuário de banco de dados que criou a tabela.|  
-|**TABLE_ID**|**Int**|Identificação da tabela.|  
+|**TABLE_ID**|**int**|Identificação da tabela.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|A coluna em uma tabela indexada de texto completo que é designada para indexação.|  
-|**FULLTEXT_COLID**|**Int**|ID da indexada de texto completo.|  
+|**FULLTEXT_COLID**|**int**|ID da indexada de texto completo.|  
 |**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Coluna em uma tabela indexada de texto completo que especifica seu tipo de documento. Esse valor só é aplicável quando a coluna indexada de texto completo é um **varbinary (max)** ou **imagem** coluna.|  
-|**FULLTEXT_BLOBTP_COLID**|**Int**|ID da coluna de tipo de documento. Esse valor só é aplicável quando a coluna indexada de texto completo é um **varbinary (max)** ou **imagem** coluna.|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|ID da coluna de tipo de documento. Esse valor só é aplicável quando a coluna indexada de texto completo é um **varbinary (max)** ou **imagem** coluna.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Idioma usado para a pesquisa de texto completo da coluna.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983558"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém um ou mais elementos de Analysis Services Scripting Language (ASSL), usados para criar ou alterar objetos em uma instância do Analysis Services.  
+  Contém um ou mais elementos ASSL Analysis Services Scripting Language (), usados para criar ou alterar objetos em uma instância do Analysis Services.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34575888"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Alterar](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [criar](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
+|Elementos pai|[ALTER](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [criar](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |Elementos filho|Elementos ASSL obrigatórios. Um ou mais elementos ASSL, usados para definir objetos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre ASSL, consulte [propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
 ## <a name="remarks"></a>Remarks  

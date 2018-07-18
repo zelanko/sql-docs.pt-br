@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33181312"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037264"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "33181312"
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<herdado colunas >||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
-|max_column_id_used|**int**|ID de máximo de coluna já usada para essa tabela.||  
+|max_column_id_used|**int**|ID de máximo para a coluna já usada para essa tabela.||  
 |uses_ansi_nulls|**bit**|A tabela foi criada com a opção de banco de dados SET ANSI_NULLS definida como ON.||  
 |data_source_id|**int**|Identificação do objeto de fonte de dados externa.||  
-|file_format_id|**int**|Para tabelas externas em uma fonte de dados externa do HADOOP, esta é a ID de objeto para o formato de arquivo externo.||  
-|local|**nvarchar(4000)**|Para tabelas externas em uma fonte de dados externa do HADOOP, este é o caminho dos dados externos no HDFS.||  
-|reject_type|**tinyint**|Para tabelas externas em uma fonte de dados externa do HADOOP, essa é a maneira linhas rejeitadas são contadas ao consultar dados externos.|VALOR – o número de linhas rejeitadas.<br /><br /> Porcentagem – a porcentagem de linhas rejeitadas.|  
-|reject_value|**float**|Para tabelas externas em uma fonte de dados externa do HADOOP:<br /><br /> Para *reject_type =* valor, este é o número de rejeições da linha para permitir antes da falha da consulta.<br /><br /> Para *reject_type* = porcentagem, esta é a porcentagem de rejeições da linha para permitir antes da falha da consulta.||  
-|reject_sample_value|**int**|Para *reject_type* = porcentagem, este é o número de linhas a serem carregadas, com ou sem êxito, antes de calcular a porcentagem de linhas rejeitadas.|NULO se reject_type = valor.|  
-|distribution_type|**int**|Para tabelas externas em uma fonte de dados externos SHARD_MAP_MANAGER, essa é a distribuição de dados das linhas em tabelas base subjacentes.|0 – Sharded<br /><br /> 1 – replicados<br /><br /> 2 – Round robin|  
-|distribution_desc|**nvarchar(120)**|Para tabelas externas em uma fonte de dados externos SHARD_MAP_MANAGER, esse é o tipo de distribuição exibido como uma cadeia de caracteres.||  
-|sharding_column_id|**int**|Para tabelas externas em uma fonte de dados externos SHARD_MAP_MANAGER e uma distribuição fragmentada, esta é a ID de coluna da coluna que contém os valores de chave de fragmentação.||  
-|remote_schema_name|**sysname**|Para tabelas externas em uma fonte de dados externos SHARD_MAP_MANAGER, este é o esquema em que a tabela base está localizada nos bancos de dados remotos (se for diferente do esquema onde a tabela externa é definida).||  
-|remote_object_name|**sysname**|Para tabelas externas em uma fonte de dados externos SHARD_MAP_MANAGER, isso é o nome da tabela base nos bancos de dados remotos (se for diferente do nome da tabela externa).||  
+|file_format_id|**int**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a ID de objeto para o formato de arquivo externo.||  
+|local|**nvarchar(4000)**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, esse é o caminho dos dados externos no HDFS.||  
+|reject_type|**tinyint**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP, essa é a maneira que linhas rejeitadas são contadas ao consultar dados externos.|VALOR – o número de linhas rejeitadas.<br /><br /> Porcentagem – a porcentagem de linhas rejeitadas.|  
+|reject_value|**float**|Para tabelas externas ao longo de uma fonte de dados externa do HADOOP:<br /><br /> Para *reject_type =* valor, isso é o número de rejeições de linha para permitir que antes de fazer a consulta.<br /><br /> Para *reject_type* = porcentagem, esta é a porcentagem de rejeições de linha para permitir que antes de fazer a consulta.||  
+|reject_sample_value|**int**|Para *reject_type* = porcentagem, este é o número de linhas a serem carregadas, com ou sem êxito, antes de calcular a porcentagem de linhas rejeitadas.|NULO se reject_type = VALUE.|  
+|distribution_type|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, essa é a distribuição de dados das linhas entre as tabelas base subjacentes.|0 – Sharded<br /><br /> 1 – replicados<br /><br /> 2 – Round robin|  
+|distribution_desc|**nvarchar(120)**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, esse é o tipo de distribuição exibido como uma cadeia de caracteres.||  
+|sharding_column_id|**int**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER e uma distribuição fragmentada, essa é a ID de coluna da coluna que contém os valores de chave de fragmentação.||  
+|remote_schema_name|**sysname**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, este é o esquema no qual a tabela base está localizada nos bancos de dados remotos (se for diferente do esquema no qual a tabela externa é definida).||  
+|remote_object_name|**sysname**|Para tabelas externas ao longo de uma fonte de dados externos SHARD_MAP_MANAGER, isso é o nome da tabela base nos bancos de dados remotos (se for diferente do nome da tabela externa).||  
   
 ## <a name="permissions"></a>Permissões  
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

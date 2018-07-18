@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984918"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "33222411"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nome do fuso horário no formato padrão do Windows. Por exemplo, **Cen. Hora oficial Austrália** ou **hora oficial da Europa Central**.|  
+|**name**|**sysname**|Nome do fuso horário no formato padrão do Windows. Por exemplo, **Cen. Hora oficial Austrália** ou **hora padrão da Europa Central**.|  
 |**current_utc_offset**|**nvarchar(12)**|Atual em UTC de deslocamento. Por exemplo, **+ 01:00** ou **-07:00**.|  
-|**is_currently_dst**|**bit**|True se atualmente observando o horário de verão.|  
+|**is_currently_dst**|**bit**|True se observando no momento, o horário de verão.|  
   
 ## <a name="see-also"></a>Consulte também  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   

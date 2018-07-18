@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4baa06f92e9f12b1b46e888b298eb1b90ef4fe70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049534"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano de manutenção a ser excluído. *plan_id* é **uniqueidentifier**, e deve ser uma ID válida.  
+ Especifica a ID do plano de manutenção a ser excluído. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -59,7 +59,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
  **sp_delete_maintenance_plan** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemplos  
  Exclui o plano de manutenção criado usando **sp_add_maintenance_plan**.  

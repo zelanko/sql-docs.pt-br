@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ab7672d51a90e30701666fbf391ffec6060f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575468"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994938"
 ---
 # <a name="lnum-element-xmla"></a>Elemento LNum (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34575468"
 ## <a name="remarks"></a>Remarks  
  Para **HierarchyInfo** elementos, o **LNum** elemento contém o nome da propriedade que fornece as posições ordinais de nível da hierarquia. O valor é equivalente à propriedade LEVEL_NUMBER definida para conjuntos de linhas de eixo no comando OLE DB para a especificação OLAP.  
   
- Para **membro** elementos, o **LNum** elemento contém a com base em zero posição ordinal do nível raiz da hierarquia do membro representado pelo pai [membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)elemento. Um valor zero representa o nível raiz da hierarquia.  
+ Para **membro** elementos, o **LNum** elemento contém a baseado em zero posição ordinal do nível raiz da hierarquia do membro representado pelo pai [membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)elemento. Um valor zero representa o nível raiz da hierarquia.  
   
 ## <a name="see-also"></a>Confira também
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

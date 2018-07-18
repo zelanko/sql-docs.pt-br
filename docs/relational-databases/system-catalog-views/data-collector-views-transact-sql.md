@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e93651a43d703ff9d7452f776bec533735ecec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33176539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003230"
 ---
 # <a name="data-collector-views-transact-sql"></a>Exibições do Coletor de Dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  O coletor de dados oferece as exibições a seguir, com informações sobre a configuração do coletor de dados, como propriedades do tipo de coletor, conjuntos de coleta e itens de conjunto de coleta, assim como estatísticas de execução obtidas quando um conjunto de coleta é executado. Esses modos de exibição, que estão na **msdb** banco de dados, também fornecem uma camada de abstração para as tabelas subjacentes. Essa abstração aprimora a segurança ao impedir o acesso direto às tabelas, enquanto permite alterações nas mesmas, sem que os aplicativos associados sejam afetados.  
+  O coletor de dados oferece as exibições a seguir, com informações sobre a configuração do coletor de dados, como propriedades do tipo de coletor, conjuntos de coleta e itens de conjunto de coleta, assim como estatísticas de execução obtidas quando um conjunto de coleta é executado. Essas exibições, que estão na **msdb** de banco de dados, também fornecem uma camada de abstração para as tabelas subjacentes. Essa abstração aprimora a segurança ao impedir o acesso direto às tabelas, enquanto permite alterações nas mesmas, sem que os aplicativos associados sejam afetados.  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: No lado do cliente e do servidor de formatação (SQLXML 4.0) | Microsoft Docs
+title: Formatação de cliente e do lado do servidor (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003378"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formatação do lado do cliente e do lado do servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "34708454"
   
 -   Formatação do lado do cliente  
   
- Esta seção inclui informações sobre a formatação de documentos XML no lado do cliente ou no lado do servidor de conjuntos de linhas que são gerados por consultas executadas em um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Esta seção inclui informações sobre a formatação de documentos XML no lado do cliente ou do servidor de conjuntos de linhas que são gerados por consultas executadas em um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura de formatação de XML do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
+ [Arquitetura de formatação de XML do lado do cliente e servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
  Fornece diagramas de arquitetura e descreve os pontos básicos da arquitetura de formatação dos lados do cliente e do servidor no SQLXML.  
   
  [Formatação XML do lado do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  

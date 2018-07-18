@@ -1,5 +1,5 @@
 ---
-title: Executar um diagrama de atualização usando o ADO (SQLXML 4.0) | Microsoft Docs
+title: Executando um diagrama de atualização usando o ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971971"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051454"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32971971"
   
 -   O diagrama de atualização é copiado para o fluxo de comando (**strmIn**).  
   
--   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Fluxo**) receber qualquer retornou dados.  
+-   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Stream**) receber qualquer dados retornados.  
   
 -   Por fim, o comando (diagrama de atualização) é executado.  
   
@@ -189,7 +189,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passando parâmetros  
- Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, o **ContactID** e **MiddleName** valores são transmitidos como entrada com parâmetros para o diagrama de atualização.  
+ Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, o **ContactID** e **MiddleName** valores são passados como entrada com parâmetros para o diagrama de atualização.  
   
 ```vb  
 Private Sub Form_Load()  

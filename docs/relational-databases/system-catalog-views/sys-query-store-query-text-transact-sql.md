@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985112"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33181432"
 |**query_text_id**|**bigint**|Chave primária.|  
 |**query_sql_text**|**nvarchar(max)**|Texto SQL da consulta, conforme fornecido pelo usuário. Inclui espaços em branco, dicas e comentários.|  
 |**statement_sql_handle**|**vabinary(64)**|Identificador SQL da consulta individual.|  
-|**is_part_of_encrypted_module**|**bit**|Texto da consulta é uma parte de um módulo de criptografado.|  
+|**is_part_of_encrypted_module**|**bit**|Texto da consulta é uma parte de um módulo criptografado.|  
 |**has_restricted_text**|**bit**|Texto da consulta contém uma senha ou outras palavras unmentionable.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -59,7 +59,7 @@ ms.locfileid: "33181432"
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procedimentos armazenados do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

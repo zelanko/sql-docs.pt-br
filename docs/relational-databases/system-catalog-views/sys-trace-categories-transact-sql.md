@@ -1,5 +1,5 @@
 ---
-title: trace_categories (Transact-SQL) | Microsoft Docs
+title: sys. trace_categories (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,24 +25,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85c5ad8a9cd6e901151797e763913713f2a228b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993758"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Classes de evento semelhantes são agrupadas por uma categoria. Cada linha de **trace_categories** exibição do catálogo identifica uma categoria que é exclusiva no servidor. Essas categorias não são diferentes para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Classes de evento semelhantes são agrupadas por uma categoria. Cada linha de **sys. trace_categories** exibição do catálogo identifica uma categoria que é exclusiva em todo o servidor. Essas categorias não são diferentes para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Para obter uma lista completa de eventos de rastreamento com suporte, consulte [referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Para obter uma lista completa de eventos de rastreamento com suporte, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use exibições do catálogo de Eventos Estendidos.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**smallint**|ID exclusiva dessa categoria. Esta coluna também está no **trace_events** exibição do catálogo.|  
+|**category_id**|**smallint**|ID exclusiva dessa categoria. Esta coluna também está na **trace_events** exibição do catálogo.|  
 |**name**|**nvarchar(128)**|Nome exclusivo dessa categoria. Este parâmetro não é localizado.|  
 |**type**|**tinyint**|Tipo de categoria:<br /><br /> 0 = Normal<br /><br /> 1 = Conexão<br /><br /> 2 = Erro|  
   

@@ -27,38 +27,38 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8500beb0be1e231e2beae4cd56e719ad8951c72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048844"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retorna informações sobre a carga de trabalho por trabalho, em cada nó de computação.  
   
- Girado sys.dm_exec_external_work de consulta para identificar o trabalho de backup para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou externa do SQL Server).  
+ Sys.dm_exec_external_work de consulta para identificar o trabalho é rotacionado para se comunicar com a fonte de dados externa (por exemplo, Hadoop ou SQL Server externo).  
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificador exclusivo de consulta PolyBase associado.|Consulte *request_ID* na [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**Int**|A solicitação que este trabalhador está executando.|Consulte *step_index* na [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**Int**|Etapa no plano de DMS que este trabalhador está executando.|Consulte [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**Int**|O nó que o trabalho está em execução.|Consulte [sys.DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|Tipo|**nvarchar(60)**|O tipo de trabalho externo.|Divisão de arquivo|  
-|work_id|**Int**|ID da divisão real.|Maior que ou igual a 0.|  
-|input_name|**nvarchar(4000)**|Nome da entrada a ser lido|Nome do arquivo ao usar o Hadoop.|  
-|read_location|**bigint**|Deslocamento ou ler local.|Deslocamento de arquivo para leitura.|  
+|execution_id|**nvarchar(32)**|Identificador exclusivo para a consulta do PolyBase associado.|Ver *request_ID* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|**int**|A solicitação em que este trabalhador está executando.|Ver *step_index* na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|**int**|Etapa no plano de DMS que este trabalhador está em execução.|Ver [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|O nó do trabalhador está em execução.|Ver [DM exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Tipo|**nvarchar(60)**|O tipo de trabalho externo.|Divisão de arquivos|  
+|work_id|**int**|ID da divisão real.|Maior que ou igual a 0.|  
+|input_name|**nvarchar(4000)**|Nome da entrada a ser lido|Nome do arquivo quando o uso do Hadoop.|  
+|read_location|**bigint**|Deslocamento ou ler local.|Deslocamento do arquivo a ser lido.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior que ou igual a 0.|  
-|comprimento|**bigint**|Comprimento da divisão ou bloco HDFS no caso de Hadoop|Definido pelo usuário. O padrão é 64M|  
-|status|**nvarchar(32)**|Status do trabalhador|Pendente, processando, concluído, falha, anulada|  
+|comprimento|**bigint**|Tamanho da divisão ou bloco HDFS em caso de Hadoop|Definíveis pelo usuário. O padrão é 64M|  
+|status|**nvarchar(32)**|Status do trabalho|Pendente, processando, concluído, falha, anulado|  
 |start_time|**datetime**|Início do trabalho||  
 |end_time|**datetime**|Término do trabalho||  
-|total_elapsed_time|**Int**|Tempo total em milissegundos||  
+|total_elapsed_time|**int**|Tempo total em milissegundos||  
   
 ## <a name="see-also"></a>Consulte também  
- [PolyBase, solucionando problemas com exibições de gerenciamento dinâmico](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

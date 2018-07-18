@@ -24,15 +24,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050089"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretação de anotação - SQL: limit-campo e SQL: limit-valor
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretação de anotação – SQL: limit-campo e SQL: limit-valor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O XML Bulk Load processa as anotações **sql:limit-field** e **sql:limit-value** por suas definições. Para obter mais informações, consulte [Filtrando valores usando SQL: limit-campo e SQL: limit-valor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  O XML Bulk Load processa as anotações **sql:limit-field** e **sql:limit-value** por suas definições. Para obter mais informações, consulte [Filtrando valores usando SQL: limit-campo e SQL: limit-valor de &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Por exemplo, suponha que um banco de dados contenha as seguintes tabelas:  
   

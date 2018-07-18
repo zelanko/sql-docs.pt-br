@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a53b02bc682bf7b3c918a02d5a16dc326ca3a594
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077853"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983384"
 ---
-# <a name="aggregate-functions---max"></a>Funções de agregação - max
+# <a name="aggregate-functions---max"></a>Funções de agregação – máximo
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna de uma sequência de valores atômicos, *$arg*, o item cujo valor é maior do que todos os outros.  
@@ -47,22 +47,22 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Sequência de valores atômicos do qual deve ser retornado o valor máximo.  
   
 ## <a name="remarks"></a>Remarks  
- Todos os tipos de valores atomizados que são passados para **Max ()** precisam ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
+ Todos os tipos de valores atomizados que são passados para **Max ()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
   
  O resultado de **Max ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic. Se a entrada estiver estaticamente vazia, vazio será implícito e um erro estático será gerado.  
   
- O **Max ()** função retorna o valor na sequência que é maior do que qualquer outro na sequência de entrada. Para valores xs:string, o agrupamento de ponto de código Unicode padrão está sendo usado. Se um valor XDT: untypedatomic não pode ser convertido em xs: Double, o valor será ignorado na sequência de entrada, *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
+ O **Max ()** função retorna um valor na sequência que é maior do que qualquer outro na sequência de entrada. Para valores xs:string, o agrupamento de ponto de código Unicode padrão está sendo usado. Se um valor XDT: untypedatomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada *$arg*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Usando a função max() XQuery para localizar locais de centro de trabalho no processo de fabricação que têm grande parte das horas de trabalho  
- A consulta fornecida na [função min (XQuery)](../xquery/aggregate-functions-min.md) pode ser reescrita para usar o **Max ()** função.  
+ A consulta fornecida na [função min (XQuery)](../xquery/aggregate-functions-min.md) pode ser reescrito para usar o **Max ()** função.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **max (**) função mapeia todos os inteiros para xs: decimal.  
+-   O **máximo (**) função mapeia todos os números inteiros para xs: decimal.  
   
 -   O **Max ()** não há suporte para a função em valores do tipo xs: Duration.  
   

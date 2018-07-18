@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971691"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998119"
 ---
 # <a name="programming-specific-tasks"></a>Tarefas específicas de programação
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "32971691"
 |[Implementando a pesquisa de texto completo](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Descreve como implementar catálogos de pesquisa de texto completo e índices no SMO.|  
 |[Implementando pontos de extremidade](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Descreve como criar pontos de extremidade para controlar as cargas de Monitoramento de Banco de Dados, de solicitações de protocolo SOAP e de Service Broker.|  
 |[Criando e atualizando estatísticas](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Descreve como configurar e monitorar estatísticas em um banco de dados no SMO.|  
-|[Rastreando e reproduzindo eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Descreve como usar o **rastreamento** e **repetir** objetos no SMO para eventos de rastreamento e reprodução.|  
+|[Rastreando e reproduzindo eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Descreve como usar o **rastreamento** e **Replay** objetos no SMO para eventos de rastreamento e reprodução.|  
   
   

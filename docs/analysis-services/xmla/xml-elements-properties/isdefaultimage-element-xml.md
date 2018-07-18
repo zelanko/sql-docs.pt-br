@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf053ce660091fa9b47048e9dccb9b7f470acaad
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036834"
 ---
 # <a name="isdefaultimage-element-xml"></a>Elemento IsDefaultImage (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "34575348"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para **RelationshipEndVisualizationProperties** elementos, o **IsDefaultImage** elemento indica que a imagem padrão para esta entidade pode ser obtida navegando até o fim deste relação. O valor padrão de **false** indica que não há nenhuma imagem padrão a ser obtida.  
+ Para **RelationshipEndVisualizationProperties** elementos, o **IsDefaultImage** elemento indica que a imagem padrão para esta entidade pode ser obtida navegando até o final desta relação. O valor padrão de **falsos** indica que não há nenhuma imagem padrão a ser obtida.  
   
   

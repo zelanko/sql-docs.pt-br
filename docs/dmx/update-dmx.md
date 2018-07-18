@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4049c6052a4aabcfe7207086db1db19961354eb0
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989688"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Alterações de **NODE_CAPTION** coluna no modelo de mineração de dados.  
+  As alterações a **NODE_CAPTION** coluna no modelo de mineração de dados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ SET NODE_CAPTION='new caption'
  *nova legenda*  
  Uma cadeia de caracteres que contém o novo nome para o **NODE_CAPTION** coluna.  
   
- *Expressão de condição*  
+ *expressão de condição*  
  Opcional. Uma condição para restringir os valores retornados da lista de colunas.  
   
 ## <a name="examples"></a>Exemplos  

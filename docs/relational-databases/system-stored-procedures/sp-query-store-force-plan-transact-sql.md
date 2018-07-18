@@ -27,18 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036114"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Permite impor um plano específico para uma consulta específica.  
+  Permite forçar um plano específico para uma consulta específica.  
   
- Quando um plano é forçado para determinada consulta, sempre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrar a consulta, ele tenta forçar o plano no otimizador. Se a imposição de plano falhar, um XEvent é acionado e o otimizador é instruído para otimizar a forma normal.  
+ Quando um plano é forçado para uma consulta específica, sempre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontra a consulta, ele tenta forçar o plano no otimizador. Se a imposição de plano falhar, um XEvent é acionado e o otimizador é instruído para otimizar a forma normal.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
  É a id da consulta. *query_id* é um **bigint**, sem padrão.  
   
  [  **@plan_id =** ] *plan_id*  
- É a id do plano de consulta deve ser forçado. *plan_id* é um **bigint**, sem padrão.  
+ É a id do plano de consulta ser forçado. *plan_id* é um **bigint**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -62,7 +62,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** no banco de dados, e **inserir**, **atualização**, e **excluir** permissão no catálogo do repositório de consulta Modos de exibição.  
+ Requer o **EXECUTE** permissão no banco de dados, e **inserir**, **atualização**, e **excluir** permissão no catálogo de repositório de consulta Modos de exibição.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre as consultas no repositório de consultas.  

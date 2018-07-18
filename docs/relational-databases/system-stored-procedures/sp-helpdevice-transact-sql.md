@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 041cd12fe621a8f74b60b81d7a8964752caa4fde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049294"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33242794"
   Relata informações sobre dispositivos de backup do Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Recomendamos que você use o [backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) exibição do catálogo  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use o [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) exibição do catálogo  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,9 +60,9 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**device_name**|**sysname**|Nome do dispositivo lógico.|  
 |**physical_name**|**nvarchar(260)**|Nome do arquivo físico.|  
 |**Descrição**|**nvarchar(255)**|A descrição do dispositivo.|  
-|**status**|**Int**|Um número que corresponde a descrição do status do **descrição** coluna.|  
+|**status**|**int**|Um número que corresponde à descrição do status na **descrição** coluna.|  
 |**cntrltype**|**smallint**|Tipo de controlador do dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de fita|  
-|**size**|**Int**|Tamanho do dispositivo em páginas de 2 KB.|  
+|**size**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  
   
 ## <a name="remarks"></a>Remarks  
  Se *nome* for especificado, **sp_helpdevice** exibe informações sobre o dispositivo de despejo especificado. Se *nome* não for especificado, **sp_helpdevice** exibe informações sobre todos os dispositivos de despejo no **backup_devices** exibição do catálogo.  

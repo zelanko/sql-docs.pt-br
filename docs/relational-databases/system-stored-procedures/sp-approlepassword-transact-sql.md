@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 51ccbeb8487739d69e31c39d7bad9a0d8d11233d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049593"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome da função de aplicativo. *Função* é **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
+ É o nome da função de aplicativo. *função* está **sysname**, sem padrão. *função* deve existir no banco de dados atual.  
   
  [  **@newpwd =** ] **'***senha***'**  
- É a nova senha da função de aplicativo. *senha* é **sysname**, sem padrão. *senha* não pode ser NULL.  
+ É a nova senha da função de aplicativo. *senha* está **sysname**, sem padrão. *senha* não pode ser NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  

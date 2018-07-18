@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239246"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050597"
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  
   
- Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém seu próprio conjunto de pools de threads. Há diferenças em como as instâncias tabulares e multidimensionais usam pools de threads. Por exemplo, apenas instâncias multidimensionais usam o pool de thread **IOProcess** . Como tal, o **PerNumaNode** propriedade, como descrita neste artigo, não é significativa para instâncias tabulares. Na seção [Referência de Propriedade](#bkmk_propref) abaixo, os requisitos do modo são indicados para cada propriedade.
+ Cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantém seu próprio conjunto de pools de threads. Há diferenças em como as instâncias tabulares e multidimensionais usam pools de threads. Por exemplo, apenas instâncias multidimensionais usam o pool de thread **IOProcess** . Como tal, o **PerNumaNode** propriedade, descrita neste artigo, não é significativa para instâncias tabulares. Na seção [Referência de Propriedade](#bkmk_propref) abaixo, os requisitos do modo são indicados para cada propriedade.
   
  Este artigo inclui as seções a seguir:  
   
@@ -189,13 +189,13 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  Nós NUMA são ignorados. Haverá apenas um pool de threads do IOProcess, e todos os threads nesse pool de threads serão relacionados a todos os processadores lógicos. Por padrão (onde PerNumaNode=-1), essa é a configuração operacional se o computador tiver menos de 4 nós NUMA.  
   
- ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "correspondance de pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=1**  
   
  Os pools de threads do IOProcess são criados para cada nó NUMA. Ter pools de threads separados melhora o acesso coordenado a recursos locais, como o cache local em um nó NUMA.  
   
- ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "correspondance de pool de Numa, processador e thread")  
   
  **Configurando PerNumaNode=2**  
   
@@ -203,7 +203,7 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
   
  No exemplo a seguir, em um sistema que tem 4 nós NUMA e 32 processadores lógicos, definir **PerNumaNode** como 2 resultaria em 32 pools de threads do IOProcess. Os threads nos primeiros 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 0, mas com o processador ideal definido como 0, 1, 2, até 7. Os próximos 8 pools de threads seriam relacionados a todos os processadores lógicos no nó NUMA 1, mas com o processador ideal definido como 8, 9, 10, até 15 e assim por diante.  
   
- ![Correspondência entre pool de numa, processador e thread](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "correspondência entre pool de Numa, processador e thread")  
+ ![Numa, processador e thread correspondance de pool](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "correspondance de pool de Numa, processador e thread")  
   
  Nesse nível de afinidade, o agendador sempre tenta usar primeiro o processador lógico ideal, dentro do nó NUMA preferencial. Se o processador lógico não estiver disponível, o agendador escolherá outro processador dentro do mesmo nó ou dentro do mesmo grupo de processador se nenhum outro thread estiver disponível. Para obter mais informações e exemplos, consulte [Parâmetros de configuração do Analysis Services 2012 (blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -275,9 +275,9 @@ Recomendamos a CU1 (Atualização Cumulativa 1) do SQL Server 2016 ou posterior 
  [Sobre Processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Vários processadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [Grupos de processador](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Alterações de Pool de Thread Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Configurações de análise de configuração Services 2012 (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Suporte a sistemas que têm mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Alterações de Pool de Thread do Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Configurações do Analysis Services 2012 Configuration (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [Suporte a sistemas com mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guia de operações do SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

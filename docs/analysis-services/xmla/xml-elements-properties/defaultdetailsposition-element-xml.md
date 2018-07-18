@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae920ba37f210e4f9bbdf6305899eb79eac74167
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573838"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994898"
 ---
 # <a name="defaultdetailsposition-element-xml"></a>Elemento DefaultDetailsPosition (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "34573838"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para **RelationshipEndVisualizationProperties** elementos, o **DefaultDetailsPosition** elemento contém a posição do elemento de detalhes padrão em uma coleção de detalhes. O valor padrão de **false** indica que não há nenhum detalhe padrão a ser usado.  
+ Para **RelationshipEndVisualizationProperties** elementos, o **DefaultDetailsPosition** elemento contém a posição do elemento de detalhes padrão em uma coleção de detalhes. O valor padrão de **falsos** indica que não há nenhum detalhe padrão a ser usado.  
   
   

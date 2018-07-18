@@ -1,5 +1,5 @@
 ---
-title: Requisitos para executar os exemplos do SQLXML | Microsoft Docs
+title: Requisitos para executar exemplos do SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049894"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para executar exemplos do SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O [programação do SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) seção fornece inúmeros exemplos. Este tópico lista os requisitos para criar exemplos funcionais.  
+  O [programação do SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) seção fornece vários exemplos. Este tópico lista os requisitos para criar exemplos funcionais.  
   
  Para criar os exemplos funcionais a partir de exemplos do SQLXML 4.0, você precisa ter estes programas instalados:  
   

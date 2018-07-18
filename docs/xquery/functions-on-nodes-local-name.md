@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078093"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997128"
 ---
-# <a name="functions-on-nodes---local-name"></a>Funções em nós - local-name
+# <a name="functions-on-nodes---local-name"></a>Funções em nós – local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna a parte local do nome do *$arg* como xs: String que será a cadeia de caracteres de comprimento zero ou terá a forma léxica de um xs: NCName. Se o argumento não for fornecido, o padrão será o nó de contexto.  
+  Retorna a parte local do nome da *$arg* como xs: String que será a cadeia de caracteres de comprimento zero ou terá a forma léxica de um xs: NCName. Se o argumento não for fornecido, o padrão será o nó de contexto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,14 +48,14 @@ fn:local-name($arg as node()?) as xs:string
   
 ## <a name="remarks"></a>Remarks  
   
--   No SQL Server, **fn:local-name()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, ele só pode ser usado entre parênteses (`[ ]`).  
+-   No SQL Server **fn:local-name()** sem um argumento só pode ser usado no contexto de um predicado dependente de contexto. Mais precisamente, ele só pode ser usado entre parênteses (`[ ]`).  
   
 -   Se o argumento for fornecido e a sequência for vazia, a função retornará a cadeia de caracteres de comprimento zero.  
   
 -   Se o nó designado não tiver nome, por ser um nó de documento, um comentário ou um nó de texto, a função retornará a cadeia de caracteres de comprimento zero.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recuperar o nome local de um nó específico  
  A consulta a seguir é especificada em uma instância XML não digitada. A expressão de consulta, `local-name(/ROOT[1])`, recupera a parte do nome local do nó especificado.  
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Usando o local-name sem argumento em um predicado  
- A consulta a seguir é especificada na coluna Instructions, digitada **xml** coluna da tabela ProductModel. A expressão retorna todos os filhos do elemento do elemento <`root`> cuja parte do nome local do QName é "Location". O **example** função é especificada no predicado e não tem argumentos do nó de contexto é usado pela função.  
+ A consulta a seguir é especificada na coluna Instructions, digitado **xml** coluna da tabela ProductModel. A expressão retorna todos os filhos do elemento do elemento <`root`> cuja parte do nome local do QName é "Location". O **example** função é especificada no predicado e não tem nenhum argumento, o nó de contexto é usado pela função.  
   
 ```  
 SELECT Instructions.query('  

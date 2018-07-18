@@ -26,24 +26,24 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001288"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma linha para cada membro de cada função de banco de dados.  Usuários de banco de dados, funções de aplicativo e outras funções de banco de dados podem ser membros de uma função de banco de dados. Para adicionar membros a uma função, use o [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrução com o `ADD MEMBER` opção. Associar [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para retornar os nomes do `principal_id` valores.
+  Retorna uma linha para cada membro de cada função de banco de dados.  Usuários de banco de dados, funções de aplicativo e outras funções de banco de dados podem ser membros de uma função de banco de dados. Para adicionar membros a uma função, use o [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrução com o `ADD MEMBER` opção. Junte-se com o [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para retornar os nomes do `principal_id` valores.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**Int**|ID do banco de dados principal da função.|  
-|**member_principal_id**|**Int**|ID do banco de dados principal do membro.|  
+|**role_principal_id**|**int**|ID do banco de dados principal da função.|  
+|**member_principal_id**|**int**|ID de entidade de segurança do banco de dados do membro.|  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer usuário pode exibir a própria associação de função. Para exibir a outra função associações requer a participação no `db_securityadmin` função de banco de dados fixa ou `VIEW DEFINITION` no banco de dados.  
+ Qualquer usuário pode exibir a própria associação de função. Para exibir a outra função associações requer a participação na `db_securityadmin` função de banco de dados fixa ou `VIEW DEFINITION` no banco de dados.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -66,8 +66,8 @@ ORDER BY DP1.name;
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-[FUNÇÃO ALTER (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
-[server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[Alterar função (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
+[sys. server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
   
 
 

@@ -1,5 +1,5 @@
 ---
-title: sys. database_credentials (Transact-SQL) | Microsoft Docs
+title: database_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -24,28 +24,28 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 88ec73b3c29dfa8d9db0d4322b34b08ac535a621
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995685"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>sys. database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Retorna uma linha para cada banco de dados no escopo de credencial no banco de dados.  
+  Retorna uma linha para cada banco de dados com escopo de credencial no banco de dados.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) em vez disso.    
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|credential_id|**Int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
-|nome|**sysname**|Credencial com escopo de nome do banco de dados. É exclusivo no banco de dados.|  
+|credential_id|**int**|ID da credencial no escopo do banco de dados. É exclusivo no banco de dados.|  
+|nome|**sysname**|Credencial no escopo do nome do banco de dados. É exclusivo no banco de dados.|  
 |credential_identity|**nvarchar(4000)**|Nome da identidade a ser usada. Geralmente é um usuário do Windows. Não precisa ser exclusivo.|  
 |create_date|**datetime**|Hora em que a credencial no escopo do banco de dados foi criada.|  
 |modify_date|**datetime**|Hora em que a credencial no escopo do banco de dados foi modificada pela última vez.|  
-|target_type|**nvarchar(100)**|Credencial com escopo de tipo de banco de dados. As credenciais no escopo retorna NULL para o banco de dados.|  
-|target_id|**Int**|ID do objeto mapeado para a credencial no escopo do banco de dados. As credenciais no escopo retorna 0 para o banco de dados|  
+|target_type|**nvarchar(100)**|Credencial no escopo do tipo de banco de dados. Retorna NULL para o banco de dados de credenciais no escopo.|  
+|target_id|**int**|ID do objeto mapeado para a credencial no escopo do banco de dados. Retorna 0 para o banco de dados de credenciais no escopo|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `CONTROL` no banco de dados.  

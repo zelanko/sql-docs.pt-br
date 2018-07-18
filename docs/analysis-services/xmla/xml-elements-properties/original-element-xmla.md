@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ddf701f236e66680f562fa0721bcc8a2eb179f8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050384"
 ---
 # <a name="original-element-xmla"></a>Elemento Original (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34575928"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **Original** elemento contém um caminho UNC para ser substituído pelo valor da [novo](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md) elemento contido pelo pai **pasta** elemento para todos os objetos restaurados ou sincronizados, respectivamente, durante um [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) ou [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando. O valor desse elemento é comparado ao valor da [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md) elemento para cada cubo, grupo de medidas ou partição e, se uma correspondência for encontrada, o valor da **novo** elemento é usado para atualizar o  **StorageLocation** do objeto durante a restauração ou sincronização.  
+ O **Original** elemento contém um caminho UNC a ser substituído com o valor da [New](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md) elemento contido pelo pai **pasta** elemento para todos os objetos restaurados ou sincronizados, respectivamente, durante um [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) ou [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando. O valor desse elemento é comparado ao valor da [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md) elemento para cada cubo, grupo de medidas ou partição e, se uma correspondência for encontrada, o valor da **New** elemento é usado para atualizar o  **StorageLocation** do objeto durante a restauração ou sincronização.  
   
  Para obter mais informações sobre backup e restauração de objetos, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

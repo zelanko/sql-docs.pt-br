@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3e542534b85d0f87b689b196001e9a00fe49b15
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036764"
 ---
 # <a name="exception-element-xmla"></a>Elemento Exception (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Indica se uma exceção foi retornada de uma [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) chamada de método.  
   
- **namespace** `http://schemas.microsoft.com/analysisservices/2003/exception`  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/exception`  
   
 ## <a name="syntax"></a>Sintaxe  
   

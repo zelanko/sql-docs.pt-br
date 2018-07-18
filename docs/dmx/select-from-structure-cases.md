@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985258"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;estrutura&gt;. CASOS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34842099"
   
  Se detalhamento não estiver habilitado na estrutura, a instrução falhará. Além disso, a instrução falhará se o usuário não tiver permissões de detalhamento na estrutura de mineração.  
   
- Em [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], detalhamento em novas estruturas de mineração é habilitado por padrão. Para verificar se o detalhamento está habilitado para uma estrutura específica, verifique se o valor da **CacheMode** está definida como **KeepTrainingCases**.  
+ No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], detalhamento em novas estruturas de mineração está habilitado por padrão. Para verificar se o detalhamento está habilitado para uma determinada estrutura, verifique se o valor da **CacheMode** estiver definida como **KeepTrainingCases**.  
   
- Se o valor de **CacheMode** é alterado para **ClearAfterProcessing**, os casos de estrutura serão apagados do cache e não é possível usar o detalhamento.  
+ Se o valor de **CacheMode** é alterado para **ClearAfterProcessing**, casos de estrutura serão apagados do cache e você não pode usar o detalhamento.  
   
 > [!NOTE]  
 >  Não é possível habilitar ou desabilitar o detalhamento na estrutura de mineração usando DMX (Data Mining Extensions).  
@@ -50,7 +50,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *estrutura*  
  O nome da estrutura.  
   
- *Expressão de condição*  
+ *expressão de condição*  
  Uma condição para restringir os valores retornados da lista de colunas.  
   
  *Expressão*  
@@ -63,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e atribuir **AllowDrillthrough** permissão em uma estrutura de mineração ou modelo de mineração somente quando necessário.  
+ Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e conceder **AllowDrillthrough** permissão em uma estrutura de mineração ou modelo de mineração somente quando necessário.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir baseiam-se na estrutura de mineração, correspondência destinada, que se baseia o [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] banco de dados e modelos de mineração associados. Para obter mais informações, consulte [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Os exemplos a seguir baseiam-se na estrutura de mineração, destinada, que se baseia o [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] banco de dados e modelos de mineração associados. Para obter mais informações, consulte [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Exemplo 1: detalhamento para casos da estrutura  
  O seguinte exemplo retorna uma lista dos 500 clientes mais antigos na estrutura de mineração, Correspondência destinada. A consulta retorna todas as colunas no modelo de mineração, mas restringe as linhas para as que compraram uma bicicleta e as classifica por idade. Também é possível editar a lista de expressões para retornar apenas as colunas necesárias.  

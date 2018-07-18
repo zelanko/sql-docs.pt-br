@@ -1,5 +1,5 @@
 ---
-title: Routes (Transact-SQL) | Microsoft Docs
+title: sys. Routes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 89fb63380c95e38f97f02b24eb68c178182b873a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985225"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "33220057"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da rota, exclusivo no banco de dados. Não é NULLABLE.|  
-|**route_id**|**Int**|Identificador para a rota. Não é NULLABLE.|  
-|**principal_id**|**Int**|Identificador para o principal de banco de dados que é proprietário da rota. É NULLABLE.|  
+|**route_id**|**int**|Identificador para a rota. Não é NULLABLE.|  
+|**principal_id**|**int**|Identificador para o principal de banco de dados que é proprietário da rota. É NULLABLE.|  
 |**remote_service_name**|**nvarchar(256)**|Nome do serviço remoto. É NULLABLE.|  
 |**broker_instance**|**nvarchar(128)**|Identificador do agente que hospeda o serviço remoto. É NULLABLE.|  
 |**lifetime**|**datetime**|A data e hora em que a rota expira. Observe que esse valor não usa o fuso horário local. Em vez disso, o valor mostra a hora de expiração para UTC. É NULLABLE.|  
-|**address**|**nvarchar(256)**|Endereço de rede para o qual o Service Broker envia mensagens ao serviço remoto. É NULLABLE. Para a instância da gerenciados de banco de dados SQL, o endereço deve ser local.|  
+|**address**|**nvarchar(256)**|Endereço de rede para o qual o Service Broker envia mensagens ao serviço remoto. É NULLABLE. Para a instância da gerenciada de banco de dados SQL, o endereço deve ser local.|  
 |**mirror_address**|**nvarchar(256)**|Endereço de rede do parceiro de espelhamento para o servidor especificado no endereço. É NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  

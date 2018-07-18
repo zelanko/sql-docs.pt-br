@@ -19,18 +19,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984205"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Remove uma instância do SQL Server de um grupo de PolyBase para a computação de expansão. 
+  Remove uma instância do SQL Server de um grupo de PolyBase da computação de escala horizontal. 
  
- A instância do SQL Server deve ter o [guia do PolyBase](../../relational-databases/polybase/polybase-guide.md) recurso instalado.  O PolyBase permite a integração de fontes de dados do SQL Server, como o armazenamento de blob de Hadoop e o Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ A instância do SQL Server deve ter o [guia do PolyBase](../../relational-databases/polybase/polybase-guide.md) recurso instalado.  O PolyBase permite a integração de fontes de dados não SQL Server, como o armazenamento de blob do Hadoop e do Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>Remarks  
  Você só pode remover um nó de computação de um grupo.  
   
- Depois de executar o procedimento armazenado, reinicie o mecanismo de PolyBase e o serviço de movimentação de dados de PolyBase na máquina. Para verificar a executar a seguinte DMV no nó principal: **sys.DM exec_compute_nodes**.  
+ Depois de executar o procedimento armazenado, reinicie o mecanismo de PolyBase e o serviço de movimentação de dados de PolyBase na máquina. Para verificar a executar a seguinte DMV no nó principal: **DM exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo remove o computador atual de um grupo de PolyBase.  
+ O exemplo remove o computador atual de um grupo do PolyBase.  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  

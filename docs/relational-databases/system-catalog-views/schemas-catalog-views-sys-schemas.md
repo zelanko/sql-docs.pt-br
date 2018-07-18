@@ -1,5 +1,5 @@
 ---
-title: Schemas (Transact-SQL) | Microsoft Docs
+title: sys. Schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049943"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>Catálogo de esquemas exibições - schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Esquemas exibições - do catálogo sys. schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contém uma linha para cada esquema de banco de dados.  
@@ -47,7 +47,7 @@ ms.locfileid: "33178332"
 |**principal_id**|**int**|ID da entidade proprietária do esquema.|  
   
 ## <a name="remarks"></a>Remarks  
- Esquemas de banco de dados atuam como namespaces ou contêineres de objetos, como tabelas, exibições, procedimentos e funções, que podem ser encontrados no **sys. Objects** exibição do catálogo.  
+ Esquemas de banco de dados atuam como namespaces ou contêineres para objetos, como tabelas, exibições, procedimentos e funções, que podem ser encontrados na **sys. Objects** exibição do catálogo.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

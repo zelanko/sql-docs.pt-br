@@ -1,5 +1,5 @@
 ---
-title: Compatibilidade com versões anteriores do SQL Server de 2017 Analysis Services | Microsoft Docs
+title: Compatibilidade com versões anteriores do SQL Server 2017 Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014093"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037514"
 ---
-# <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (SQL 2017)
+# <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidade com versões anteriores do Analysis Services (2017 do SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-Este artigo descreve as alterações na disponibilidade do recurso e comportamento entre a versão atual e a versão anterior.
+Este artigo descreve as alterações na disponibilidade de recursos e o comportamento entre a versão atual e a versão anterior.
 
 ## <a name="deprecated-features"></a>Recursos preteridos
-Um *recurso preterido* será descontinuado do produto em uma versão futura, mas há ainda suporte e incluído na versão atual para manter a compatibilidade com versões anteriores. É recomendável que você pare de usar recursos preteridos em projetos novos e existentes para manter a compatibilidade com versões futuras.
+Um *recurso preterido* será descontinuado do produto em uma versão futura, mas é ainda tem suporte e incluído na versão atual para manter a compatibilidade com versões anteriores. Recomenda-se que você interromper o uso de recursos preteridos em projetos novos e existentes para manter a compatibilidade com versões futuras.
 
-Os recursos a seguir estão obsoletas nesta versão:
+Os seguintes recursos foram preteridos nessa versão:
   
 |||  
 |-|-|  
@@ -32,37 +32,37 @@ Os recursos a seguir estão obsoletas nesta versão:
 |Multidimensional|Mineração de dados|
 |Multidimensional|Grupos de medidas vinculados remotos|
 |Tabular|Modelos no nível de compatibilidade 1100 e 1103|
-|Tabular|Propriedades do modelo de objeto de tabela: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
-|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitorar o Analysis Services com Eventos Estendidos do SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)|  
+|Tabular|Propriedades do modelo de objeto tabulares: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Ferramentas|SQL Server Profiler para captura de rastreamento<br /><br /> A substituição é usar o Extended Events Profiler interno no SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Ferramentas|Server Profiler para reprodução de rastreamento <br />Substituição. Não há nenhuma substituição.|  
-|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: Microsoft.SqlServer.Management.XEvent<br />-Leitura de rastreamento: Microsoft.SqlServer.XEvent.Linq<br />-   Reprodução de rastreamento: nenhuma|  
+|APIs Trace Management Objects e Trace|Objetos Microsoft.AnalysisServices.Trace (contêm as APIs para os objetos Analysis Services Trace e Replay). A substituição é composta por várias partes:<br /><br /> -Configuração de rastreamento: XEvent<br />-Leitura de rastreamento: XEvent<br />-   Reprodução de rastreamento: nenhuma|  
 
 
 ## <a name="discontinued-features"></a>Recursos descontinuados
-Um *recurso Descontinuado* foi substituído em uma versão anterior. Ele pode continuar a ser incluído na versão atual, mas não é mais suportado. Recursos descontinuados podem ser removidos inteiramente em um futuro versão ou atualizar.
+Um *recurso Descontinuado* foi preterido em uma versão anterior. Ele pode continuar a ser incluído na versão atual, mas não é mais suportado. Recursos descontinuados podem ser removidos inteiramente em uma futura versão ou atualizar.
 
-Os recursos a seguir foram preteridos em uma versão anterior e não têm mais suporte nesta versão.
+Os seguintes recursos foram preteridos em uma versão anterior e não têm mais suporte nesta versão.
   
 |||  
 |-|-|  
 |**Modo/categoria**|**Recurso**|  
-|Tabular|Valor da propriedade VertipaqPagingPolicy memória (2), habilitar paginação em disco usando memória mapeada arquivos.|
+|Tabular|Valor da propriedade VertipaqPagingPolicy memória (2), habilitar paginação para o disco usando memória mapeada arquivos.|
 |Multidimensional|Partições remotas|  
 |Multidimensional|Grupos de medidas vinculados remotos|  
 |Multidimensional|Write-back dimensional|  
 |Multidimensional|Dimensões vinculadas|
 
 
-## <a name="breaking-changes"></a>Alterações mais recentes
-Um *alteração significativa* faz com que um recurso, o modelo de dados, o código do aplicativo ou script não funcionem depois de atualizar para a versão atual.
+## <a name="breaking-changes"></a>Alterações significativas
+Um *alteração significativa* faz com que um recurso, o modelo de dados, o código do aplicativo ou o script não funcionem depois de atualizar para a versão atual.
 
-Não há nenhuma alteração de quebra nesta versão.
+Não há nenhuma alteração significativa nesta versão.
 
 ## <a name="behavior-changes"></a>Alterações de comportamento
-Um *alteração de comportamento* afeta como o mesmo recurso funciona na versão atual em comparação com a versão anterior. Somente as alterações de comportamento significativa descritas. Alterações na interface do usuário não são incluídas.
+Um *alteração de comportamento* afeta como o mesmo recurso funciona na versão atual em comparação com a versão anterior. Somente as alterações de comportamento significativo são descritas. Alterações na interface do usuário não são incluídas.
 
-Alterações em MDSCHEMA_MEASUREGROUP_DIMENSIONS e DISCOVER_CALC_DEPENDENCY, detalhado no [Novidades no SQL Server de 2017 CTP 2.1 para o Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) comunicado.
+Alterações em MDSCHEMA_MEASUREGROUP_DIMENSIONS e DISCOVER_CALC_DEPENDENCY, detalhado na [o que há de novo no SQL Server 2017 CTP 2.1 para o Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) comunicado.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Compatibilidade com versões anteriores do Analysis Services (SQL Server 2016)](analysis-services-backward-compatibility.md)

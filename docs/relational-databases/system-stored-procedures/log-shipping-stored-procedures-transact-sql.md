@@ -1,5 +1,5 @@
 ---
-title: Envio de logs procedimentos armazenados (Transact-SQL) | Microsoft Docs
+title: Envio de logs de procedimentos armazenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81a208679f0b3d0ba9f420eb0d987acb6a0b3aeb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056124"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Procedimentos armazenados de envio de logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versões posteriores suportam sistema a seguir procedimentos armazenados que são usados para configurar, modificar e monitorar configurações de envio de log.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versões posteriores suportam a seguinte sistema procedimentos armazenados que são usados para configurar, modificar e monitorar configurações de envio de log.  
   
 |||  
 |-|-|  
@@ -48,7 +48,7 @@ ms.locfileid: "33240306"
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

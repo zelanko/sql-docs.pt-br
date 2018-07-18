@@ -35,31 +35,31 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1836db12438017023637185d6e8ba24a6e533a77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050199"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Atributos e elementos XSD de mapeamento explícito para tabelas e colunas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ao usar um esquema XSD para fornecer uma exibição XML do banco de dados relacional, os elementos e atributos do esquema devem ser mapeados em tabelas e colunas do banco de dados. As linhas na tabela/exibição do banco de dados serão mapeadas em elementos no documento XML. Os valores de coluna no banco de dados são mapeados em atributos ou elementos.  
   
- Quando são especificadas consultas XPath com relação ao esquema XSD anotado, os dados dos elementos e atributos no esquema são recuperados das tabelas e colunas nas quais eles são mapeados. Para obter um único valor do banco de dados, o mapeamento especificado no esquema XSD deve ter especificação de campo e relação. Se o nome de um elemento/atributo não é o mesmo nome que o nome de tabela/exibição ou coluna à qual ele é mapeado, o **SQL: Relation** e **SQL: Field** anotações são usadas para especificar o mapeamento entre um elemento ou atributo em um documento XML e a tabela (exibição) ou coluna em um banco de dados.  
+ Quando são especificadas consultas XPath com relação ao esquema XSD anotado, os dados dos elementos e atributos no esquema são recuperados das tabelas e colunas nas quais eles são mapeados. Para obter um único valor do banco de dados, o mapeamento especificado no esquema XSD deve ter especificação de campo e relação. Se o nome de um elemento/atributo não for o mesmo nome que o nome de tabela/exibição ou coluna à qual ele é mapeado, o **Relation** e **SQL: Field** anotações são usadas para especificar o mapeamento entre um elemento ou atributo em um documento XML e a tabela (exibição) ou coluna em um banco de dados.  
   
 ## <a name="sql-relation"></a>sql-relation  
- O **SQL: Relation** anotação foi adicionada para mapear um nó XML no esquema XSD para uma tabela de banco de dados. O nome de uma tabela (exibição) é especificado como o valor da **SQL: Relation** anotação.  
+ O **Relation** anotação é adicionada para mapear um nó XML no esquema XSD em uma tabela de banco de dados. O nome de uma tabela (exibição) é especificado como o valor de **Relation** anotação.  
   
- Quando **SQL: Relation** é especificado em um elemento, o escopo dessa anotação se aplica a todos os atributos e elementos filho que são descritos na definição de tipo complexo desse elemento, fornecendo assim um atalho na escrita anotações.  
+ Quando **Relation** é especificado em um elemento, o escopo dessa anotação se aplica a todos os atributos e elementos filho que são descritos na definição de tipo complexo desse elemento, fornecendo assim um atalho na gravação anotações.  
   
- O **SQL: Relation** anotação também é útil quando identificadores que são válidos em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são válidos em XML. Por exemplo, "Pedido de Vendas" é um nome de tabela válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não no XML. Nesses casos, o **SQL: Relation** anotação pode ser usada para especificar o mapeamento, por exemplo:  
+ O **Relation** anotação também é útil quando identificadores que são válidos em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são válidos em XML. Por exemplo, "Pedido de Vendas" é um nome de tabela válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não no XML. Nesses casos, o **Relation** anotação pode ser usada para especificar o mapeamento, por exemplo:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- O **campo sql** anotação mapeia um elemento ou atributo para uma coluna de banco de dados. O **SQL: Field** anotação foi adicionada para mapear um nó XML no esquema para uma coluna de banco de dados. Não é possível especificar **SQL: Field** em um elemento de conteúdo vazio.  
+ O **campo sql** anotação mapeia um elemento ou atributo para uma coluna de banco de dados. O **SQL: Field** anotação é adicionada para mapear um nó XML no esquema a uma coluna de banco de dados. Não é possível especificar **SQL: Field** em um elemento de conteúdo vazio.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "32970612"
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificando as anotações sql:relation e sql:field  
  Neste exemplo, o esquema XSD consiste em uma  **\<contato >** elemento do tipo complexo com  **\<FName >** e  **\<LName >** elementos filho e o **ContactID** atributo.  
   
- O **SQL: Relation** anotação mapeia o  **\<contato >** elemento para a tabela Person. Contact no banco de dados AdventureWorks. O **SQL: Field** anotação mapeia o  **\<FName >** elemento para a coluna FirstName e o  **\<LName >** elemento para o sobrenome coluna.  
+ O **Relation** mapas de anotação a  **\<contato >** elemento para a tabela Person. Contact no banco de dados AdventureWorks. O **SQL: Field** anotação mapeia o  **\<FName >** elemento para a coluna FirstName e o  **\<LName >** elemento para o sobrenome coluna.  
   
  Nenhuma anotação é especificada para o **ContactID** atributo. Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
   

@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 9af8a740ae349f748acc6c8385d95b97a0e2490d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036984"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Quando um usuário de banco de dados é removido, qualquer alias para esse usuário também é removido. Se o usuário possuir um esquema vazio com o mesmo nome do usuário, o esquema será descartado. Se o usuário possuir qualquer outro item protegível no banco de dados, o usuário não será descartado. A propriedade dos objetos deve ser transferida primeiro a outro principal. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). A remoção do usuário de banco de dados remove automaticamente as permissões associadas ao usuário e remove o usuário de todas as funções de banco de dados das quais seja membro.  
   
- **sp_dropuser** não pode ser usado para remover o proprietário do banco de dados (**dbo**) **INFORMATION_SCHEMA** usuários, ou o **convidado** usuário o **mestre**  ou **tempdb** bancos de dados. Em bancos de dados `EXEC sp_dropuser 'guest'` revogar a permissão CONNECT do usuário **convidado**. Mas o próprio usuário não será descartado.  
+ **sp_dropuser** não pode ser usado para remover o proprietário do banco de dados (**dbo**) **INFORMATION_SCHEMA** usuários, ou o **convidado** usuário o **mestre**  ou **tempdb** bancos de dados. Em bancos de dados `EXEC sp_dropuser 'guest'` revogará a permissão CONNECT do usuário **convidado**. Mas o próprio usuário não será descartado.  
   
  **sp_dropuser** não pode ser executado em uma transação definida pelo usuário.  
   
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [Remover usuário & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

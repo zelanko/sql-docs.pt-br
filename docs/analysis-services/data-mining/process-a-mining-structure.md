@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017123"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999728"
 ---
 # <a name="process-a-mining-structure"></a>Processar uma estrutura de mineração
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "34017123"
   
      Caso faça alterações na estrutura, você receberá uma solicitação para implantar a estrutura novamente antes de processar os modelos. Clique em **Sim**.  
   
-2.  Clique em **executar** no **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
+2.  Clique em **executados** na **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
   
      A caixa de diálogo **Andamento do Processo** é aberta para exibir os detalhes sobre o processamento do modelo.  
   
 3.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** após os modelos completarem seu processamento.  
   
-4.  Clique em **fechar** no **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
+4.  Clique em **feche** na **processando estrutura de mineração - \<estrutura >** caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tarefas de estrutura de mineração e instruções](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tarefas e instruções da estrutura de mineração](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

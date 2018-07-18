@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842769"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989843"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ TopCount(<table expression>, <rank expression>, <count>)
  \<expressão de tabela >  
   
 ## <a name="remarks"></a>Remarks  
- O valor que é fornecido pelo \<expressão de classificação > argumento determina a ordem decrescente de classificação para as linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas superiores especificado no \<contagem > argumento será retornado.  
+ O valor fornecido pelo \<expressão de classificação > argumento determina a ordem decrescente de classificação para as linhas que são fornecidos no \<expressão de tabela > argumento e o número de linhas superiores especificado na \<contagem > argumento será retornado.  
   
- A função TopCount foi apresentada originalmente para habilitar previsões associativas e, em geral, produz os mesmos resultados que uma instrução que inclui **SELECT TOP** e **ORDER BY** cláusulas. Você obterá melhor desempenho para previsões associativas se você usar o **prever (DMX)** função, que oferece suporte à especificação de um número de previsões a serem retornadas.  
+ A função TopCount originalmente foi introduzida para permitir previsões associativas e, em geral, produz os mesmos resultados que uma instrução que inclui **SELECT TOP** e **ORDER BY** cláusulas. Você obterá melhor desempenho para previsões associativas se você usar o **prever (DMX)** função, que oferece suporte à especificação de um número de previsões a serem retornadas.  
   
- No entanto, há situações em que você ainda precisará usar TopCount. Por exemplo, o DMX não oferece suporte a **superior** qualificador em uma instrução de Subseleção. O [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) função também não oferece suporte à adição de **superior**.  
+ No entanto, há situações em que você talvez ainda precise usar TopCount. Por exemplo, o DMX não oferece suporte a **superior** qualificador em uma instrução de Subseleção. O [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) função também não oferece suporte a adição de **superior**.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir são consultas de previsão no modelo de associação que você cria usando o [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). As consultas retornam os mesmos resultados, mas o primeiro exemplo usa TopCount e o segundo exemplo usa a função de previsão.  
+ Os exemplos a seguir são consultas de previsão no modelo de associação que você compila usando o [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). As consultas retornam os mesmos resultados, mas o primeiro exemplo usa TopCount e o segundo exemplo usa a função Predict.  
   
- Para entender como TopCount funciona, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
+ Para entender como funciona o TopCount, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -87,11 +87,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- O primeiro argumento para a função TopCount é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada da chamada da função de previsão e usando o argumento INCLUDE_STATISTICS.  
+ O primeiro argumento para a função TopCount é o nome de uma coluna de tabela. Neste exemplo, a tabela aninhada é retornada ao chamar a função Predict e usando o argumento INCLUDE_STATISTICS.  
   
- O segundo argumento para a função TopCount é a coluna na tabela aninhada que você pode usar para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $SUPPORT para classificar os resultados.  
+ O segundo argumento para a função TopCount é a coluna na tabela aninhada que você usa para ordenar os resultados. Neste exemplo, a opção INCLUDE_STATISTICS retorna as colunas $SUPPORT, $PROBABILTY e $ADJUSTED PROBABILITY. Este exemplo usa $SUPPORT para classificar os resultados.  
   
- O terceiro argumento para a função TopCount Especifica o número de linhas a ser retornado como um inteiro. Para obter os três principais produtos, ordenados por $SUPPORT, digite 3.  
+ O terceiro argumento para a função TopCount Especifica o número de linhas a serem retornadas como um número inteiro. Para obter os três principais produtos, ordenados por $SUPPORT, digite 3.  
   
  Resultados do exemplo:  
   
@@ -113,7 +113,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
 ## <a name="see-also"></a>Consulte também  
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  

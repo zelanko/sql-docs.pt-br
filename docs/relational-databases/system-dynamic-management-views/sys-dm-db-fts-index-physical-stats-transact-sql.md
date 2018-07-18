@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 952f07e7112b316e9109e0761deecf99f694306a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997968"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34464132"
 ||||  
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
-|**object_id**|int|ID do objeto da tabela que contém o índice.|  
+|**object_id**|INT|ID do objeto da tabela que contém o índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
 |**similarity_index_page_count**|**bigint**|Tamanho lógico da extração em número de páginas de índice.|  
@@ -56,8 +56,8 @@ ms.locfileid: "34464132"
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como consultar o tamanho lógico de cada índice de texto completo ou semântico em cada tabela que tenha um índice de texto completo ou semântico associado:  

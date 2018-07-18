@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aae158d1daebfc5fbf51d18eeaccf8536d26e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220757"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993868"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **trace_columns** exibição de catálogo contém uma lista de todas as colunas de evento de rastreamento. Essas colunas não são diferentes para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  O **trace_columns** exibição do catálogo contém uma lista de todas as colunas de evento de rastreamento. Essas colunas não são diferentes para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Para obter uma lista completa de eventos de rastreamento com suporte, consulte [referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Para obter uma lista completa de eventos de rastreamento com suporte, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use exibições do catálogo de Eventos Estendidos.  
@@ -46,7 +46,7 @@ ms.locfileid: "33220757"
 |**trace_column_id**|**smallint**|ID exclusivo desta coluna.|  
 |**name**|**nvarchar(128)**|Nome exclusivo desta coluna. Este parâmetro não é localizado.|  
 |**type_name**|**nvarchar(128)**|Nome do tipo de dados desta coluna.|  
-|**max_size**|**Int**|Tamanho máximo dos dados desta coluna em bytes.|  
+|**max_size**|**int**|Tamanho máximo dos dados desta coluna em bytes.|  
 |**is_filterable**|**bit**|Indica se a coluna pode ser usada em uma especificação de filtro.<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeatable**|**bit**|Indica se a coluna pode ser referenciada nos dados de “coluna repetida”.<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeated_base**|**bit**|Indica se esta coluna é usada como uma chave exclusiva para referenciar dados repetidos.<br /><br /> 0 = false<br /><br /> 1 = true|  

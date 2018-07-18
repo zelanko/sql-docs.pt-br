@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984348"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- A consulta a seguir compara uma sequência de números de telefone em < número\> elementos para a cadeia de caracteres literal "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
+ A consulta a seguir compara uma sequência de números de telefone em < número\> elementos a cadeia de caracteres literal "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -158,7 +158,7 @@ WHERE ContactID=1
   
  Esses operadores só funcionam em valores atômicos singleton. Ou seja, você não pode especificar uma sequência como um dos operandos.  
   
- Por exemplo, a seguinte consulta recupera \<imagem > elementos de um modelo de produto em que o tamanho da imagem é "pequeno:  
+ Por exemplo, a seguinte consulta recupera \<imagem > elementos para um modelo de produto em que o tamanho da imagem é "pequeno:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -175,7 +175,7 @@ WHERE ProductModelID=19
   
 -   O `declare namespace` define o prefixo de namespace que é subsequentemente utilizado na consulta.  
   
--   O \<tamanho > o valor do elemento é comparado com o valor atômico especificado, "pequeno".  
+-   O \<tamanho > valor do elemento é comparado com o valor atômico especificado, "pequeno".  
   
 -   Observe que, como os operadores de valor só funcionam em valores atômicos, o **Data ()** função implicitamente é usada para recuperar o valor do nó. Ou seja, o `data($P/PD:Size) eq "small"` produz o mesmo resultado.  
   
@@ -193,7 +193,7 @@ WHERE ProductModelID=19
  Observe que as regras da promoção de tipo para comparações de valor são as mesmas das comparações gerais. Além disso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa as mesmas regras de conversão para valores não digitados durante as comparações de valor que as usadas durante as comparações gerais. Em contraste, as regras na especificação XQuery sempre convertem o valor não digitado em xs:string durante as comparações de valor.  
   
 ## <a name="node-comparison-operator"></a>Operador de comparação de nó  
- O operador de comparação de nó, **é**, aplica-se somente aos tipos de nó. O resultado que ele retorna indica se dois nós passados como operandos representam o mesmo nó no documento original. Esse operador retornará True se os dois operandos forem o mesmo nó. Caso contrário, retornará False.  
+ O operador de comparação de nó **é**, só se aplica a tipos de nó. O resultado que ele retorna indica se dois nós passados como operandos representam o mesmo nó no documento original. Esse operador retornará True se os dois operandos forem o mesmo nó. Caso contrário, retornará False.  
   
  A consulta a seguir verifica se o local do centro de trabalho 10 é o primeiro no processo de fabricação de um modelo de produto específico.  
   
@@ -226,11 +226,11 @@ ProductModelID       Result
   
  Estas são as comparações feitas, com base na ordem do documento:  
   
--   `<<` : **Operando 1** preceder **operando 2** na ordem do documento.  
+-   `<<` : O **operando 1** preceder **operando 2** na ordem do documento.  
   
--   `>>` : **Operando 1** siga **operando 2** na ordem do documento.  
+-   `>>` : O **operando 1** siga **operando 2** na ordem do documento.  
   
- A consulta a seguir retorna True se a descrição do catálogo de produto tem a \<garantia > elemento que aparecem antes do \<manutenção > elemento na ordem do documento de um produto específico.  
+ A consulta a seguir retornará True se a descrição do catálogo de produto tem a \<garantia > que aparecem antes do elemento a \<manutenção > elemento na ordem do documento de um produto específico.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -253,7 +253,7 @@ where ProductModelID=19
 -   A consulta retorna True.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
+ [Sistema de tipo &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Expressões XQuery](../xquery/xquery-expressions.md)  
   
   

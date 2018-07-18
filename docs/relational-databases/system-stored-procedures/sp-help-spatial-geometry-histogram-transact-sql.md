@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049304"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  [  **@tabname =**] **'***tabname***'**  
  É o nome qualificado ou não da tabela para a qual o índice espacial foi especificado.  
   
- As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* é **sysname**, sem padrão.  
+ As aspas somente serão requeridas se uma tabela qualificada for especificada. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *tabname* está **sysname**, sem padrão.  
   
  [  **@colname =** ] **'***colname***'**  
  É o nome da coluna espacial especificada. *colName* é um **sysname**, sem padrão.  
@@ -73,15 +73,15 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  É a propriedade de caixa delimitadora do máximo de Y. *yMax* é um **float**, sem padrão.  
   
  [  **@sample =** ] **'***exemplo***'**  
- É a porcentagem da tabela usada. Os valores válidos são de 0 a 100. *exemplo* é um **float**. Valor padrão é 100.  
+ É a porcentagem da tabela usada. Os valores válidos são de 0 a 100. *amostra* é um **float**. Valor padrão é 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor de tabela é retornado. A grade a seguir descreve o conteúdo da coluna da tabela.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**Int**|Representa a ID exclusiva de cada célula. A contagem é iniciada a partir de 1.|  
-|**Célula**|**geometria**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**cellid**|**int**|Representa a ID exclusiva de cada célula. A contagem é iniciada a partir de 1.|  
+|**célula**|**geometria**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  

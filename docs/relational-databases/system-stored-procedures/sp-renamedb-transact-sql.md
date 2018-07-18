@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3e1763b46d3d98616685878b27f60d76b398ab49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984183"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@dbname=**] **'***nome_antigo***'**  
- É o nome atual do banco de dados. *nome_antigo* é **sysname**, sem padrão.  
+ É o nome atual do banco de dados. *nome_antigo* está **sysname**, sem padrão.  
   
- [  **@newname=**] **'***novo_nome***'**  
- É o novo nome do novo banco de dados. *Novo_nome* devem seguir as regras para identificadores. *Novo_nome* é **sysname**, sem padrão.  
+ [  **@newname=**] **'***new_name***'**  
+ É o novo nome do novo banco de dados. *new_name* deve seguir as regras para identificadores. *new_name* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** ou **dbcreator** funções de servidor fixas.  
+ Requer associação na **sysadmin** ou **dbcreator** funções de servidor fixas.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria o banco de dados `Accounting` e altera o seu nome para `Financial`. Em seguida, a exibição de catálogo `sys.databases` será consultada para verificar o novo nome do banco de dados.  

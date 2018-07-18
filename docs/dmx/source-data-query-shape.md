@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985289"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de fonte de dados&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Combina consultas de várias fontes de dados em uma tabela hierárquica única (ou seja, uma tabela com tabelas aninhadas), que se torna a tabela de caso do modelo de mineração.  
   
- A sintaxe completa do **forma** comando está documentado no [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
+ A sintaxe completa da **forma** comando está documentado no [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,14 +52,14 @@ APPEND ({ <child table query> }
  *coluna filho*  
  Coluna da tabela filho para identificar linhas pai no resultado de uma consulta mestre.  
   
- *nome da coluna de tabela*  
+ *nome da tabela de coluna*  
  Nome de coluna recentemente adicionada à tabela pai da tabela aninhada.  
   
 ## <a name="remarks"></a>Remarks  
  É preciso classificar as consultas pela coluna que relaciona a tabela pai à tabela filho.  
   
 ## <a name="examples"></a>Exemplos  
- Você pode usar o exemplo a seguir em um [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instrução para treinar um modelo que contém uma tabela aninhada. As duas tabelas dentro a **forma** instrução são relacionadas por meio de **OrderNumber** coluna.  
+ Você pode usar o exemplo a seguir dentro de um [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instrução para treinar um modelo que contém uma tabela aninhada. As duas tabelas do **forma** instrução são relacionadas por meio de **OrderNumber** coluna.  
   
 ```  
 SHAPE {  

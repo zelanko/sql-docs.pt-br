@@ -1,5 +1,5 @@
 ---
-title: Usando esquemas XSD em consultas (SQLXML 4.0) anotados | Microsoft Docs
+title: Usando anotados a esquemas XSD em consultas (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -28,17 +28,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc4d6f7c2d77f2c375765bd745bee8e35e70f622
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035509"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usando esquemas XSD anotados em consultas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Você pode especificar consultas com relação a um esquema anotado para recuperar dados do banco de dados especificando consultas XPath em um modelo com relação ao esquema XSD.  
   
- O  **\<sql:xpath-consulta >** elemento permite que você especifique uma consulta XPath contra a exibição XML definida pelo esquema anotado. O esquema anotado com a qual a consulta XPath será executada é identificado usando o **esquema de mapeamento** atributo o  **\<sql:xpath-consulta >** elemento.  
+ O  **\<sql:xpath-consulta >** elemento permite que você especifique uma consulta XPath com o modo de exibição XML que é definida pelo esquema anotado. O esquema anotado com relação à qual a consulta XPath será executada é identificado usando o **esquema de mapeamento** atributo da  **\<sql:xpath-consulta >** elemento.  
   
  Os modelos são documentos XML válidos que contêm uma ou mais consultas. As consultas FOR XML e XPath retornam um fragmento de documento. Os modelos atuam como contêineres dos fragmentos de documento; os modelos oferecem uma maneira de especificar um único elemento de nível superior.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "32974151"
 ## <a name="using-inline-mapping-schemas"></a>Usando esquemas de mapeamento embutidos  
  Um esquema anotado pode ser incluído diretamente em um modelo e, em seguida, uma consulta XPath pode ser especificada no modelo com relação ao esquema embutido. O modelo pode também ser um diagrama de atualização.  
   
- Um modelo pode incluir vários esquemas embutidos. Para usar um esquema embutido que é incluído em um modelo, especifique o **id** atributo com um valor exclusivo no  **\<xsd: schema >** elemento e use **#idvalue**para referenciar o esquema embutido. O **id** atributo é idêntico em comportamento para o **SQL: ID** ({urn: schemas-microsoft-com: XML-sql} id) usado em esquemas XDR.  
+ Um modelo pode incluir vários esquemas embutidos. Para usar um esquema embutido que é incluído em um modelo, especifique o **id** atributo com um valor exclusivo a  **\<XSD >** elemento e, em seguida, use **#idvalue**para referenciar o esquema embutido. O **id** atributo é idêntico ao comportamento de **SQL: ID** ({urn: schemas-microsoft-com: XML-sql} id) usados em esquemas XDR.  
   
  Por exemplo, o seguinte modelo especifica dois esquemas anotados embutidos:  
   
@@ -121,23 +121,23 @@ ms.locfileid: "32974151"
 </ROOT>  
 ```  
   
- O modelo também especifica duas consultas XPath. Cada uma da  **\<consulta xpath >** elementos identifica exclusivamente o esquema de mapeamento especificando o **esquema de mapeamento** atributo.  
+ O modelo também especifica duas consultas XPath. Cada um dos  **\<consulta xpath >** elementos identifica exclusivamente o esquema de mapeamento especificando o **esquema de mapeamento** atributo.  
   
- Quando você especificar um esquema embutido no modelo, o **sql: esquema é de mapeamento** anotação também deverá ser especificada no  **\<xsd: schema >** elemento. O **sql: esquema é de mapeamento** tem um valor booleano (0 = false, 1 = true). Um esquema embutido com **sql: for-mapping-schema = "1"** é tratado como esquema anotado embutido e não é retornado no documento XML.  
+ Quando você especifica um esquema embutido no modelo, o **sql: for-esquema de mapeamento** anotação também deverá ser especificada na  **\<XSD >** elemento. O **sql: for-esquema de mapeamento** tem um valor booleano (0 = false, 1 = true). Um esquema embutido com **sql: for-esquema de mapeamento = "1"** é tratado como esquema anotado embutido e não é retornado no documento XML.  
   
- O **sql: esquema é de mapeamento** anotação pertence ao namespace de modelo **urn: schemas-microsoft-com: XML-sql**.  
+ O **sql: for-esquema de mapeamento** anotação pertence ao namespace de modelo **urn: schemas-microsoft-com: XML-sql**.  
   
  Para testar este exemplo, salve o modelo (InlineSchemaTemplate.xml) em um diretório local e, em seguida, crie e use o Script de Teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Além de especificar o **esquema de mapeamento** atributo no  **\<sql:xpath-consulta >** elemento em um modelo (quando há uma consulta XPath) ou em  **\< updg:Sync >** elemento em um diagrama de atualização, você pode fazer o seguinte:  
+ Além de especificar o **esquema de mapeamento** atributo as  **\<sql:xpath-consulta >** elemento em um modelo (quando há uma consulta XPath) ou no  **\< updg:Sync >** elemento em um diagrama de atualização, você pode fazer o seguinte:  
   
--   Especifique o **esquema de mapeamento** atributo no  **\<raiz >** elemento (declaração global) no modelo. Este esquema de mapeamento torna-se o esquema padrão que será usado por todos os nós de XPath e diagrama de atualização que têm explícita não **esquema de mapeamento** anotação.  
+-   Especifique o **esquema de mapeamento** atributo as  **\<raiz >** elemento (declaração global) no modelo. Esse esquema de mapeamento, em seguida, torna-se o esquema padrão que será usado por todos os nós de XPath e o diagrama de atualização tem não explícita **esquema de mapeamento** anotação.  
   
 -   Especifique o **esquema de mapeamento** atributo usando o ADO **comando** objeto.  
   
- O **esquema de mapeamento** que é especificado no atributo de  **\<consulta xpath >** ou  **\<updg:sync >** elemento tem o mais alto precedência; o ADO **comando** objeto tem a precedência mais baixa.  
+ O **esquema de mapeamento** que é especificado no atributo as  **\<consulta xpath >** ou  **\<updg:sync >** elemento tem a mais alta precedência; o ADO **comando** objeto tem a precedência mais baixa.  
   
- Observe que, se você especifica uma consulta XPath em um modelo e não especificar um esquema de mapeamento no qual a consulta XPath é executada, a consulta XPath é tratada como um **dbobject** consulta do tipo. Por exemplo, considere este modelo:  
+ Observe que, se você especifica uma consulta XPath em um modelo e não especificar um esquema de mapeamento com relação à qual a consulta XPath é executada, a consulta XPath será tratada uma **dbobject** consulta de tipo. Por exemplo, considere este modelo:  
   
 ```  
 <sql:xpath-query   
@@ -146,6 +146,6 @@ ms.locfileid: "32974151"
 </sql:xpath-query>  
 ```  
   
- O modelo especifica uma consulta Xpath, mas não especifica um esquema de mapeamento. Portanto, essa consulta é tratada uma **dbobject** Production. ProductPhoto é o nome da tabela de consulta do tipo e @ProductPhotoID= '100' é um predicado que localiza uma foto do produto com o valor da ID de 100. @LargePhoto é a coluna da qual recuperar o valor.  
+ O modelo especifica uma consulta Xpath, mas não especifica um esquema de mapeamento. Portanto, essa consulta é tratada como uma **dbobject** consulta do tipo no qual ProductPhoto é o nome da tabela e @ProductPhotoID= '100' é um predicado que localiza uma foto do produto com o valor de ID 100. @LargePhoto é a coluna da qual recuperar o valor.  
   
   

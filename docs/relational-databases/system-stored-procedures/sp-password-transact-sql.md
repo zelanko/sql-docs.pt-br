@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993698"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@old=** ] **'***old_password***'**  
- É a senha antiga. *old_password* é **sysname**, com um padrão NULL.  
+ É a senha antiga. *old_password* está **sysname**, com um padrão NULL.  
   
  [  **@new=** ] **'***nova_senha***'**  
- É a nova senha. *nova_senha* é **sysname**, sem padrão. *old_password* deve ser especificado se os parâmetros nomeados não são usados.  
+ É a nova senha. *nova_senha* está **sysname**, sem padrão. *old_password* deve ser especificado se os parâmetros nomeados não forem usados.  
   
 > [!IMPORTANT]  
 >  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***login***'**  
- É o nome de logon afetado pela mudança de senha. *login* é **sysname**, com um padrão de NULL. *logon* já deve existir e pode ser especificado somente por membros do **sysadmin** ou **securityadmin** funções de servidor fixas.  
+ [  **@loginame=** ] **'***logon***'**  
+ É o nome de logon afetado pela mudança de senha. *login* é **sysname**, com um padrão de NULL. *login* já deve existir e pode ser especificado somente por membros da **sysadmin** ou **securityadmin** funções de servidor fixas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

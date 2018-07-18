@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970771"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049734"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Criando, alterando e removendo índices
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "32970771"
  Você pode criar um índice em uma coluna de XML especificando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Criando um índice não clusterizado composto no Visual Basic  
- Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Definir o <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade **False** para um índice não clusterizado.  
+ Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Defina as <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade para **falso** para um índice não clusterizado.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -93,7 +93,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Criando um índice não clusterizado composto no Visual C#  
- Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Definir o <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade **False** para um índice não clusterizado.  
+ Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Defina as <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade para **falso** para um índice não clusterizado.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -151,7 +151,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Criando um índice composto não clusterizado no PowerShell  
- Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Definir o <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade **False** para um índice não clusterizado.  
+ Este exemplo de código demonstra como criar um índice não clusterizado composto. Para um índice composto, adicione mais de uma coluna ao índice. Defina as <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propriedade para **falso** para um índice não clusterizado.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

@@ -24,16 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037744"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** é uma extensão de **sp_validate_redirected_publisher** que permite que todas as réplicas secundárias ser validada, em vez de apenas a réplica primária atual. **sp_validate_replicat_hosts_as_publisher** valida uma topologia de replicação AlwaysOn inteira. **sp_validate_replica_hosts_as_publishers** deve ser executado diretamente no distribuidor usando uma sessão de área de trabalho remota para evitar um erro de segurança de salto duplo (21892).  
+  **sp_validate_replica_hosts_as_publishers** é uma extensão da **sp_validate_redirected_publisher** que permite que todas as réplicas secundárias para serem validados, em vez de apenas a réplica primária atual. **sp_validate_replicat_hosts_as_publisher** valida uma topologia de replicação AlwaysOn inteira. **sp_validate_replica_hosts_as_publishers** deve ser executado diretamente no distribuidor, usando uma sessão de área de trabalho remota para evitar um erro de segurança de salto duplo (21892).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,26 +49,26 @@ sp_validate_replica_hosts_as_publishers
   
 ## <a name="arguments"></a>Argumentos  
  [ **@original_publisher** =] **'***original_publisher***'**  
- O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* é **sysname**, sem padrão.  
+ O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
- O nome do banco de dados que está sendo publicado. *publisher_db* é **sysname**, sem padrão.  
+ O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
   
  [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- O destino de redirecionamento quando **sp_redirect_publisher** foi chamado para o publicador original/publicado par de banco de dados. *redirected_publisher* é **sysname**, sem padrão.  
+ O destino de redirecionamento quando **sp_redirect_publisher** foi chamado para o publicador original/publicação de banco de dados par. *redirected_publisher* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="remarks"></a>Remarks  
- Se não houver nenhuma entrada para o publicador e o banco de dados de publicação, **sp_validate_redirected_publisher** retorna um valor nulo para o parâmetro de saída *@redirected_publisher*. Caso contrário, o publicador redirecionado associado será retornado, nos casos de êxito e de falha.  
+ Se não houver nenhuma entrada para o publicador e o banco de dados de publicação, **sp_validate_redirected_publisher** retorna null para o parâmetro de saída *@redirected_publisher*. Caso contrário, o publicador redirecionado associado será retornado, nos casos de êxito e de falha.  
   
  Se a validação for bem-sucedida, **sp_validate_redirected_publisher** retorna uma indicação de sucesso.  
   
- Se a validação falhar, serão emitidos erros apropriados.  **sp_validate_redirected_publisher** faz um melhor esforço para levantar todos os problemas e não apenas o primeiro encontrado.  
+ Se a validação falhar, serão emitidos erros apropriados.  **sp_validate_redirected_publisher** possibilita um melhor esforço para gerar todos os problemas e não apenas o primeiro encontrado.  
   
 > [!NOTE]  
 >  **sp_validate_replica_hosts_as_publishers** falhará com o erro a seguir ao validar hosts de réplica secundária que não permitirem acesso de leitura ou exigirem a especificação da intenção de leitura.  
@@ -80,7 +80,7 @@ sp_validate_replica_hosts_as_publishers
 >  Foram encontrados um ou mais erros de validação de publicador para o host de réplica 'MyReplicaHostName'.  
   
 ## <a name="permissions"></a>Permissões  
- Chamador deve ser um membro do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados para o banco de dados de distribuição ou um membro de uma lista de acesso da publicação para uma publicação definida associado com o banco de dados do publicador.  
+ Chamador deve ser um membro do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados para o banco de dados de distribuição ou membro de uma lista de acesso da publicação para uma publicação definida associado com o banco de dados do publicador.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a879dfcc6dd0feb57126574947b51f84261af915
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995865"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,23 +40,23 @@ ms.locfileid: "33181932"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da entidade de segurança, exclusivo no banco de dados.|  
-|**principal_id**|**Int**|ID da entidade de segurança, exclusiva no banco de dados.|  
-|**type**|**char(1)**|Tipo do principal:<br /><br /> A = Função de aplicativo<br /><br /> C = Usuário mapeado para um certificado<br /><br /> E = usuário externo do Active Directory do Azure<br /><br /> G = Grupo do Windows<br /><br /> K = Usuário mapeado para uma chave assimétrica<br /><br /> R = Função de banco de dados<br /><br /> S = Usuário do SQL<br /><br /> U = Usuário do Windows<br /><br /> X = grupo externo de aplicativos ou de grupo do Active Directory do Azure|  
+|**principal_id**|**int**|ID da entidade de segurança, exclusiva no banco de dados.|  
+|**type**|**char(1)**|Tipo do principal:<br /><br /> A = Função de aplicativo<br /><br /> C = Usuário mapeado para um certificado<br /><br /> E = usuário externo do Azure Active Directory<br /><br /> G = Grupo do Windows<br /><br /> K = Usuário mapeado para uma chave assimétrica<br /><br /> R = Função de banco de dados<br /><br /> S = Usuário do SQL<br /><br /> U = Usuário do Windows<br /><br /> X = grupo externo de grupo do Active Directory do Azure ou aplicativos|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de principal.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nome a ser usado quando o nome SQL não especificar um esquema. Nulo para principais que não sejam do tipo S, U ou A.|  
 |**create_date**|**datetime**|Hora em que o principal foi criado.|  
 |**modify_date**|**datetime**|Hora em que a entidade de segurança foi modificada pela última vez.|  
-|**owning_principal_id**|**Int**|ID da entidade de segurança que é proprietária desta entidade de segurança. Todas as entidades, exceto as funções de banco de dados devem ser de propriedade de **dbo**.|  
+|**owning_principal_id**|**int**|ID da entidade de segurança que é proprietária desta entidade de segurança. Todas as entidades, exceto as funções de banco de dados devem ser de propriedade de **dbo**.|  
 |**sid**|**varbinary(85)**|SID (ID de segurança) da entidade de segurança.  NULL for SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se 1, essa linha representará uma entrada para uma das funções de banco de dados fixa: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**Int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa um tipo de autenticação. Estes são os valores possíveis e suas descrições.<br /><br /> 0: nenhuma autenticação<br />1: autenticação de instância<br />2: autenticação de banco de dados<br />3: autenticação do Windows|  
-|**authentication_type_desc**|**nvarchar(60)**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrição do tipo de autenticação. Estes são os valores possíveis e suas descrições.<br /><br /> NONE: Nenhuma autenticação.<br />INSTÂNCIA: Autenticação de instância<br />Banco de dados: Autenticação de banco de dados<br />WINDOWS: Autenticação|  
+|**authentication_type**|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa um tipo de autenticação. A seguir estão os valores possíveis e suas descrições.<br /><br /> 0: sem autenticação<br />1: autenticação de instância<br />2: autenticação de banco de dados<br />3: autenticação do Windows|  
+|**authentication_type_desc**|**nvarchar(60)**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrição do tipo de autenticação. A seguir estão os valores possíveis e suas descrições.<br /><br /> NONE: Nenhuma autenticação.<br />INSTÂNCIA: Autenticação de instância<br />Banco de dados: Autenticação de banco de dados<br />WINDOWS: Autenticação de Windows|  
 |**default_language_name**|**sysname**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o idioma padrão para esta entidade de segurança.|  
-|**default_language_lcid**|**Int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o LCID padrão para esta entidade de segurança.|  
-|**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copiar em massa dados criptografados usando sempre criptografado, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
+|**default_language_lcid**|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o LCID padrão para esta entidade de segurança.|  
+|**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copiar em massa dados criptografados usando Always Encrypted, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
   
 ## <a name="remarks"></a>Remarks  
- O *PasswordLastSetTime* propriedades estão disponíveis em todas as configurações com suporte do SQL Server, mas as outras propriedades estão disponíveis somente quando o SQL Server está em execução no Windows Server 2003 ou posterior e CHECK_POLICY e CHECK_ EXPIRAÇÃO estão habilitados. Consulte [política de senha](../../relational-databases/security/password-policy.md) para obter mais informações.  
+ O *PasswordLastSetTime* propriedades estão disponíveis em todas as configurações com suporte do SQL Server, mas as outras propriedades só estão disponíveis quando o SQL Server está em execução no Windows Server 2003 ou posterior e CHECK_POLICY e CHECK_ EXPIRAÇÃO estão habilitados. Ver [política de senha](../../relational-databases/security/password-policy.md) para obter mais informações.  
   
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode ver seu próprio nome de usuário, os usuários do sistema e as funções de banco de dados fixas. Ver outros usuários requer ALTER ANY USER ou uma permissão no usuário. Ver funções definidas pelo usuário requer ALTER ANY ROLE ou associação na função.  
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: listando todas as permissões de objetos de banco de dados  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: listando todas as permissões de entidades de segurança do banco de dados  
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do banco de dados.  
   
 > [!IMPORTANT]  
@@ -109,8 +109,8 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>Unidade d: listando permissões em objetos de esquema de um banco de dados  
- A consulta a seguir junções `sys.database_principals` e `sys.database_permissions` para `sys.objects` e `sys.schemas` à lista de permissões concedidas ou negadas a objetos de esquema específico.  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>Unidade d: listando permissões a objetos de esquema em um banco de dados  
+ A consulta a seguir junções `sys.database_principals` e `sys.database_permissions` à `sys.objects` e `sys.schemas` para listar permissões concedidas ou negadas a objetos de esquema específico.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

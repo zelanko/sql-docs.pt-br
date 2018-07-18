@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 980bb14800bb346471cacb75e52022dde67b5d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003039"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano do plano de manutenção. *plan_id* é **uniqueidentifier**, e deve ser uma ID válida.  
+ Especifica a ID do plano do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
  [  **@db_name =**] **'***database_name***'**  
  Especifica o nome do banco de dados a ser adicionado ao plano de manutenção. O banco de dados deve ser criado ou existir antes de ser adicionado ao plano. *database_name* é **sysname**.  
@@ -63,10 +63,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  **sp_add_maintenance_plan_db** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan_db**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo adiciona o **AdventureWorks2012** banco de dados para o plano de manutenção criado em **sp_add_maintenance_plan**.  
+ Este exemplo adiciona o **AdventureWorks2012** banco de dados para o plano de manutenção criado na **sp_add_maintenance_plan**.  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  

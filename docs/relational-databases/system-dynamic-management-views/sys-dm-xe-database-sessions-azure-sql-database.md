@@ -1,5 +1,5 @@
 ---
-title: sys.DM xe_database_sessions (banco de dados do SQL Azure) | Microsoft Docs
+title: sys.dm_xe_database_sessions (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,20 +17,20 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466452"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984195"
 ---
-# <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.DM xe_database_sessions (banco de dados do SQL Azure)
+# <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre os eventos da sessão. Eventos são pontos de execução discretos. Predicados poderão ser se aplicados a eventos para fazer com que parem de acionar caso o evento não contiver a informação exigida.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "34466452"
  Requer a permissão VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relações  
-A partir de 2015-07-13, xe_objects' é um desses DMVs XEvents que não contêm banco de dados' em seu nome. Não é um erro de digitação ou erro na coluna do lado direito da tabela a seguir. O nome é o mesmo no Microsoft SQL Server e banco de dados do SQL Azure. GeneMi.  
+A partir de 2015-07-13, 'sys.dm_xe_objects' é um desses DMVs de XEvents que não contêm Database"no nome. Não é um erro de digitação ou erro na coluna do lado direito da tabela a seguir. O nome é o mesmo no Microsoft SQL Server e banco de dados SQL. GeneMi.  
   
 |De|Para|Relação|  
 |--------|------|----------------|  
@@ -51,7 +51,7 @@ A partir de 2015-07-13, xe_objects' é um desses DMVs XEvents que não contêm b
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Muitos para um|  
   
 ## <a name="see-also"></a>Consulte também  
-[Eventos estendidos no banco de dados do SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Eventos estendidos no banco de dados SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
  

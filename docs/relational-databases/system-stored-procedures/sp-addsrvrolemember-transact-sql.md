@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238876"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056094"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame **=** ] **'***login***'**  
- É o nome do logon que está sendo adicionado à função de servidor fixa. *logon* é **sysname**, sem padrão. *logon* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. Se o logon do Windows já não tiver acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o acesso será concedido automaticamente.  
+ [ @loginame **=** ] **'***logon***'**  
+ É o nome do logon que está sendo adicionado à função de servidor fixa. *login* está **sysname**, sem padrão. *login* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. Se o logon do Windows já não tiver acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o acesso será concedido automaticamente.  
   
  [ @rolename **=** ] **'***função***'**  
- É o nome da função de servidor fixa à qual o logon está sendo adicionado. *função* é **sysname**, com um padrão NULL, e deve ser um dos seguintes valores:  
+ É o nome da função de servidor fixa à qual o logon está sendo adicionado. *função* está **sysname**, com um padrão de NULL, e deve ser um dos seguintes valores:  
   
 -   sysadmin  
   
@@ -76,9 +76,9 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="remarks"></a>Remarks  
  Quando é adicionado a uma função de servidor fixa, o logon ganha as permissões associadas a ela.  
   
- A associação de função do logon sa e público não pode ser alterada.  
+ A associação da função pública e de logon de sa não pode ser alterada.  
   
- Use sp_addrolemember para adicionar um membro a um banco de dados fixo ou função definida pelo usuário.  
+ Use sp_addrolemember para adicionar um membro a um banco de dados fixo ou uma função definida pelo usuário.  
   
  sp_addsrvrolemember não pode ser executado em uma transação definida pelo usuário.  
   

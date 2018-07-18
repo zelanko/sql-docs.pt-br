@@ -30,33 +30,33 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995138"
 ---
 # <a name="xml-construction-xquery"></a>Construção XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  No XQuery, você pode usar o **direto** e **computada** construtores para construir estruturas XML em uma consulta.  
+  No XQuery, você pode usar o **direto** e **computado** construtores para construir estruturas XML dentro de uma consulta.  
   
 > [!NOTE]  
->  Não há nenhuma diferença entre o **direto** e **computada** construtores.  
+>  Não há nenhuma diferença entre o **direto** e **computado** construtores.  
   
 ## <a name="using-direct-constructors"></a>Usando construtores diretos  
  Ao usar construtores diretos, você especifica a sintaxe semelhante a XML ao construir o XML. Os exemplos a seguir ilustram a construção XML pelos construtores diretos.  
   
 ### <a name="constructing-elements"></a>Construindo elementos  
- Usando notações de XML, é possível construir elementos. O exemplo a seguir usa a expressão de construtor de elemento direto e cria um \<ProductModel > elemento. O elemento construído tem três elementos filho  
+ Usando notações de XML, é possível construir elementos. O exemplo a seguir usa a expressão do construtor de elemento direto e cria um \<ProductModel > elemento. O elemento construído tem três elementos filho  
   
 -   Um nó de texto.  
   
--   Dois nós de elemento, \<resumo > e \<recursos >.  
+-   Dois nós de elemento \<Summary > e \<recursos >.  
   
     -   O \<resumo > elemento tem um nó de texto filho cujo valor é "Some description".  
   
-    -   O \<recursos > elemento tem três filhos do nó de elemento, \<cor >, \<peso >, e \<garantia >. Cada um desses nós tem um nó de texto filho e os valores Red, 25, 2 years parts and labor, respectivamente.  
+    -   O \<recursos > elemento tem três filhos do nó de elemento, \<Color >, \<peso >, e \<garantia >. Cada um desses nós tem um nó de texto filho e os valores Red, 25, 2 years parts and labor, respectivamente.  
   
 ```  
 declare @x xml;  
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Embora seja útil construir elementos de expressões constantes, como mostrado neste exemplo, o verdadeiro poder desse recurso de linguagem do XQuery é a capacidade de construir XML capaz de extrair dinamicamente dados de um banco de dados. Você pode usar chaves para especificar expressões de consulta. No XML resultante, a expressão é substituída por seu valor. Por exemplo, a consulta a seguir constrói um elemento <`NewRoot`> com um elemento filho (<`e`>). O valor do elemento <`e`> é computado pela especificação de uma expressão de caminho entre chaves ("{... }").  
+ Embora seja útil construir elementos de expressões constantes, como mostrado neste exemplo, o verdadeiro poder desse recurso de linguagem do XQuery é a capacidade de construir XML capaz de extrair dinamicamente dados de um banco de dados. Você pode usar chaves para especificar expressões de consulta. No XML resultante, a expressão é substituída por seu valor. Por exemplo, a consulta a seguir constrói um elemento <`NewRoot`> com um elemento filho (<`e`>). O valor do elemento <`e`> é computado pela especificação de uma expressão de caminho entre chaves ({..." }").  
   
 ```  
 DECLARE @x xml;  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- A consulta a seguir é semelhante à anterior. No entanto, a expressão entre chaves Especifica a **Data ()** função para recuperar o valor atômico do <`root`> elemento e o atribui ao elemento construído, <`e`>.  
+ A consulta a seguir é semelhante à anterior. No entanto, a expressão entre chaves Especifica a **Data ()** função para recuperar o valor atômico da <`root`> elemento e o atribui ao elemento construído, <`e`>.  
   
 ```  
 DECLARE @x xml;  
@@ -250,7 +250,7 @@ This is product model catalog description.
   
  Ao construir um atributo, é possível especificar seu valor com uma expressão entre chaves. Nesse caso, o resultado da expressão é retornado como o valor de atributo.  
   
- No exemplo a seguir, o **Data ()** função não é estritamente necessária. Como você está atribuindo o valor da expressão para um atributo, **Data ()** é aplicado implicitamente para recuperar o valor digitado da expressão especificada.  
+ No exemplo a seguir, o **Data ()** função não é estritamente necessária. Como você está atribuindo o valor da expressão a um atributo **Data ()** é aplicado implicitamente para recuperar o valor digitado da expressão especificada.  
   
 ```  
 DECLARE @x xml;  
@@ -322,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   Use o [função concat](../xquery/functions-on-string-values-concat.md) para concatenar os argumentos de cadeia de caracteres de dois no valor de atributo resultante:  
+    -   Use o [função concat](../xquery/functions-on-string-values-concat.md) para concatenar os argumentos de cadeia de caracteres de dois em valor de atributo resultante:  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -352,7 +352,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Se você aplicar o **Data ()** função, a consulta funcionará, pois ele recupera o valor atômico da expressão, `/x`, que é concatenado com a cadeia de caracteres. Apresentamos a seguir uma sequência de valores atômicos:  
+     Se você aplicar a **Data ()** função, a consulta funcionará, pois ele recupera o valor atômico da expressão, `/x`, que é concatenado com a cadeia de caracteres. Apresentamos a seguir uma sequência de valores atômicos:  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Outros construtores XML diretos  
  Os construtores de processamento de instruções e comentários XML usam a mesma sintaxe do construtor XML correspondente. Também há suporte para construtores computados para nós de texto, mas eles são usados principalmente em XML DML para construir nós de texto.  
   
- **Observação** para obter um exemplo do uso de um construtor de nó de texto explícito, consulte o exemplo específico em [inserir &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **Observação** para obter um exemplo de como usar um construtor de nó de texto explícito, consulte o exemplo específico na [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  Na consulta a seguir, o XML construído inclui um elemento, dois atributos, um comentário e uma instrução de processamento. Observe que uma vírgula é usada antes de <`FirstLocation`>, pois uma sequência está sendo construída.  
   
@@ -589,7 +589,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Usando construtores computados  
- . Nesse caso, especifique as palavras-chave que identificam o tipo de nó que você deseja construir. São suportadas apenas as seguintes palavras-chave:  
+ para obter informações sobre a ferramenta de configuração e recursos adicionais. Nesse caso, especifique as palavras-chave que identificam o tipo de nó que você deseja construir. São suportadas apenas as seguintes palavras-chave:  
   
 -   elemento  
   
@@ -640,7 +640,7 @@ text{"Some text "},
   
  Observe que o elemento computado e os construtores de atributo, como definidos na especificação de XQuery, permitem computar os nomes de nó. Ao usar construtores diretos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os nomes de nó, como elemento e atributo, deverão ser especificados como literais constantes. Portanto, não há diferença entre construtores diretos e construtores computados para elementos e atributos.  
   
- No exemplo a seguir, o conteúdo para os nós construídos é obtido de instruções de fabricação XML armazenadas na coluna Instructions do **xml** tipo de dados na tabela ProductModel.  
+ No exemplo a seguir, o conteúdo para os nós construídos é obtido de instruções de fabricação de XML armazenadas na coluna Instructions do **xml** tipo de dados na tabela ProductModel.  
   
 ```  
 SELECT Instructions.query('  

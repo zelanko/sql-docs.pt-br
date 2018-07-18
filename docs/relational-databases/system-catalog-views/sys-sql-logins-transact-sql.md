@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cdf6447b7673606224852078f80306c4b7fb4632
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220737"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985159"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "33220737"
  Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Para exibir tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de autenticação e logons de autenticação do Windows, consulte [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Para ver as duas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de autenticação e logons de autenticação do Windows, consulte [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Quando estiver contido os usuários de banco de dados estão habilitados, conexões podem ser feitas sem logons. Para identificar essas contas, consulte [database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Quando contido usuários de banco de dados estão habilitados, as conexões podem ser feitas sem logons. Para identificar essas contas, consulte [sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Os logons de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ver seu próprio nome de logon e o logon de sa. Ver outros logons requer ALTER ANY LOGIN ou uma permissão no logon.  

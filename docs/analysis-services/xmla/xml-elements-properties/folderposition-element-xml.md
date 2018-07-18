@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5607f8d40fce117f3fe9526f5350312203144684
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036794"
 ---
 # <a name="folderposition-element-xml"></a>Elemento FolderPosition (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "34575228"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- Para **RelationshipEndVisualizationProperties** elementos, o **FolderPosition** elemento contém a posição do elemento de pasta padrão em uma coleção de pastas. O valor padrão de **false** indica que não há nenhuma pasta padrão a ser usado.  
+ Para **RelationshipEndVisualizationProperties** elementos, o **FolderPosition** elemento contém a posição do elemento de pasta padrão em uma coleção de pastas. O valor padrão de **falsos** indica que não há nenhuma pasta padrão a ser usado.  
   
   

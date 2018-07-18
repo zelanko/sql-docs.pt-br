@@ -24,17 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968471"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050144"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação - sql: mapeado
+# <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação – sql: mapeado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML Bulk Load processa o **sql: mapeado** anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
+  XML Bulk Load processa as **sql: mapeado** anotação no esquema XSD conforme o esperado — ou seja, se o esquema de mapeamento especifica **sql: mapeado = "false"** para qualquer elemento ou atributo, o XML Bulk Load não faz tentativa de armazenar os dados associados na coluna correspondente.  
   
- O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"**). Todos os dados não mapeados vai para a coluna de estouro, se essa coluna é especificada usando **SQL: overflow-campo**.  
+ O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não são descritos no esquema ou porque eles são anotados no esquema XSD com **sql: mapeado = "false"**). Todos os dados não mapeados entra em coluna de estouro, se uma coluna desse tipo é especificada usando **SQL: overflow-campo**.  
   
  Por exemplo, considere este esquema XSD:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "32968471"
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   
-1.  Criar a tabela a seguir no **tempdb** banco de dados:  
+1.  Criar a tabela a seguir na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002098"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  O **prever** função retorna um valor previsto ou conjunto de valores de uma coluna especificada.  
+  O **Predict** função retorna um valor previsto ou conjunto de valores de uma coluna especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,27 +48,27 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  As opções incluem EXCLUDE_NULL (padrão), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (padrão), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
->  Para modelos de série temporal, a função de previsão não dá suporte a INCLUDE_STATISTICS.  
+>  Para modelos de série temporal, a função Predict não oferece suporte a INCLUDE_STATISTICS.  
   
- O parâmetro INCLUDE_NODE_ID retorna a coluna $NODEID no resultado. NODE_ID é o nó de conteúdo no qual a previsão é executada para um caso particular. Esse parâmetro é opcional ao usar a previsão em colunas de tabela.  
+ O parâmetro INCLUDE_NODE_ID retorna a coluna $NODEID no resultado. NODE_ID é o nó de conteúdo no qual a previsão é executada para um caso particular. Esse parâmetro é opcional quando uso Predict em colunas de tabela.  
   
- O *n* parâmetro se aplica a colunas de tabela. Define o número de linhas retornadas com base no tipo de previsão. Se a coluna subjacente for sequência, chamará o **PredictSequence** função. Se a coluna subjacente for série temporal, chamará o **PredictTimeSeries** função. Para tipos associativos de previsão, ele chama o **PredictAssociation** função.  
+ O *n* parâmetro se aplica a colunas da tabela. Define o número de linhas retornadas com base no tipo de previsão. Se a coluna subjacente for sequência, ele chama o **PredictSequence** função. Se a coluna subjacente for uma série de tempo, ele chama o **PredictTimeSeries** função. Para tipos associativos de previsão, ele chama o **PredictAssociation** função.  
   
- O **prever** função oferece suporte a polimorfismo.  
+ O **Predict** função dá suporte a polimorfismo.  
   
  As formas abreviadas alternativas a seguir são usadas frequentemente:  
   
--   [Sexo] é uma alternativa para **prever**([sexo], EXCLUDE_NULL).  
+-   [Sexo] é uma alternativa para **Predict**([sexo], EXCLUDE_NULL).  
   
--   [Compras de produtos] é uma alternativa para **prever**([compras de produtos], EXCLUDE_NULL, EXCLUSIVE).  
+-   [Compras de produtos] é uma alternativa para **Predict**([compras de produtos], EXCLUDE_NULL, EXCLUSIVE).  
   
     > [!NOTE]  
-    >  O próprio tipo de retorno dessa função é considerado uma referência de coluna. Isso significa que o **prever** função pode ser usada como um argumento em outras funções que usam uma referência de coluna como um argumento (exceto para o **prever** própria função).  
+    >  O próprio tipo de retorno dessa função é considerado uma referência de coluna. Isso significa que o **Predict** função pode ser usada como um argumento em outras funções que usam uma referência de coluna como um argumento (exceto para o **Predict** própria função).  
   
  Passar INCLUDE_STATISTICS para uma previsão em uma coluna com valor de tabela adiciona as colunas **$Probability** e **$Support** para a tabela resultante. Essas colunas descrevem a probabilidade de existência para o registro de tabela aninhada associada.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa a função de previsão para retornar os quatro produtos no banco de dados Adventure Works que têm mais probabilidade de serem vendidos juntos. Como a função é previsão com relação um modelo de mineração de regras de associação, ele usa automaticamente o **PredictAssociation** funcionar conforme descrito anteriormente.  
+ O exemplo a seguir usa a função Predict para retornar os quatro produtos no banco de dados Adventure Works que têm mais probabilidade de serem vendidos juntos. Como a função é previsão com relação um modelo de mineração de regras de associação, ele automaticamente usa o **PredictAssociation** funcionar conforme descrito anteriormente.  
   
 ```  
 SELECT  
@@ -90,6 +90,6 @@ FROM     [Association]
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

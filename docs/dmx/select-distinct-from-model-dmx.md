@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842709"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985321"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,13 +48,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Remarks  
  O **SELECT DISTINCT FROM** instrução só funciona com uma única coluna ou com um conjunto de colunas relacionadas. Essa cláusula não funciona com um conjunto de colunas não relacionadas.  
   
- O **SELECT DISTINCT FROM** permite que você faça referência direta a uma coluna dentro de uma tabela aninhada. Por exemplo:  
+ O **SELECT DISTINCT FROM** instrução permite que você faça referência diretamente a uma coluna dentro de uma tabela aninhada. Por exemplo:  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- Os resultados de **SELECT DISTINCT FROM \<modelo >** instrução variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
+ Os resultados do **SELECT DISTINCT FROM \<modelo >** instrução variam, dependendo do tipo de coluna. A tabela a seguir descreve os tipos de coluna com suporte e a saída da instrução.  
   
 |Tipo de coluna|Saída|  
 |-----------------|------------|  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Contínuo|Ponto central para os valores da coluna.|  
   
 ## <a name="discrete-column-example"></a>Exemplo de coluna Discrete  
- O exemplo de código a seguir se baseia o `[TM Decision Tree]` modelo que você criar no [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna os valores exclusivos que existem na coluna discreta `Gender`.  
+ O exemplo de código a seguir se baseia a `[TM Decision Tree]` criadas no modelo a [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna os valores exclusivos que existem na coluna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -100,7 +100,7 @@ FROM [TM Decision Tree]
  A consulta também retorna uma única linha de valores nulos, para representar valores ausentes.  
   
 ## <a name="discretized-column-example"></a>Exemplo de coluna Discretized  
- O exemplo de código a seguir retorna os valores de ponto médio, máximo e mínimo de cada bucket criado pelo algoritmo para a coluna, [`Yearly Income]`. Para reproduzir os resultados deste exemplo, crie uma nova estrutura de mineração igual à de `[Targeted Mailing]`. No assistente, altere o tipo de conteúdo a `Yearly Income` coluna **contínuo** para **Discretized**.  
+ O exemplo de código a seguir retorna os valores de ponto médio, máximo e mínimo de cada bucket criado pelo algoritmo para a coluna, [`Yearly Income]`. Para reproduzir os resultados deste exemplo, crie uma nova estrutura de mineração igual à de `[Targeted Mailing]`. No assistente, altere o tipo de conteúdo a `Yearly Income` coluna a partir **contínuo** à **Discretized**.  
   
 > [!NOTE]  
 >  Também é possível alterar o modelo de mineração criado no Tutorial Mineração Básica para diferenciar a coluna da estrutura de mineração, [`Yearly Income]`. Para obter informações sobre como fazer isso, consulte [alterar a diferenciação de uma coluna em um modelo de mineração](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). No entanto, quando você altera a diferenciação da coluna, isso força a estrutura de mineração a ser reprocessada, o que altera os resultados dos outros modelos criados com o uso dessa estrutura.  

@@ -1,5 +1,5 @@
 ---
-title: Email de banco de dados e alertas de Email com o SQL Agent no Linux | Microsoft Docs
+title: DB Mail e alertas de Email com o SQL Agent no Linux | Microsoft Docs
 description: Este artigo descreve como usar o DB Mail e alertas de Email com o SQL Server no Linux
 author: meet-bhagdev
 ms.author: meetb
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984258"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Email de banco de dados e alertas de Email com o SQL Agent no Linux
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail e alertas de Email com o SQL Agent no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-As etapas a seguir mostram como configurar o email de banco de dados e usá-lo com o SQL Server Agent (**mssql-server-agente**) no Linux. 
+As etapas a seguir mostram como configurar o DB Mail e usá-lo com o SQL Server Agent (**mssql-server-agent**) no Linux. 
 
 ## <a name="1-enable-db-mail"></a>1. Habilitar o DB Mail
 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6. Enviar email de teste
 > [!NOTE]
-> Talvez você precise ir para o seu cliente de email e habilitar o "permitir que clientes menos seguros enviar email". Nem todos os clientes reconhecem o DB Mail como um daemon do email.
+> Talvez você precise ir para o cliente de email e habilitar a "permitir que clientes menos seguros enviar email". Nem todos os clientes reconhecem DB Mail como um daemon do email.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -94,8 +94,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Definir o perfil de email do banco de dados usando a variável de ambiente ou mssql conf
-Você pode usar o utilitário mssql conf ou variáveis de ambiente para registrar o seu perfil de email de banco de dados. Nesse caso, vamos chamar nosso padrão de perfil.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Definir perfil de email do banco de dados usando a variável de ambiente ou de mssql-conf
+Você pode usar o utilitário mssql-conf ou variáveis de ambiente para registrar seu perfil de email de banco de dados. Nesse caso, vamos chamar nossa padrão do perfil.
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configurar um operador para notificações de SQLAgent 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configurar um operador para notificações de trabalho do SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Enviar email quando 'Trabalho de teste do agente' concluído com êxito 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Enviar email quando o 'Agente de trabalho de teste' for bem-sucedido 
 
 ```
 EXEC msdb.dbo.sp_update_job 

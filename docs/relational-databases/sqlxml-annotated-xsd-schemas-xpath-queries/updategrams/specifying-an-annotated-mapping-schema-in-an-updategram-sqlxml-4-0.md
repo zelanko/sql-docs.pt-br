@@ -27,33 +27,33 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce7e9b90c034643ba31df7f34425ff8203956b9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003349"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em um diagrama de atualização, é usado para processar as atualizações. Em um diagrama de atualização, você pode fornecer o nome de um esquema de mapeamento anotado para usar no mapeamento de elementos e atributos no diagrama para tabelas e colunas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando um esquema de mapeamento é especificado em um diagrama de atualização, os nomes de elementos e atributos especificados no diagrama deverão ser mapeados para os elementos e atributos do esquema de mapeamento.  
+  Este tópico explica como o esquema de mapeamento (XSD ou XDR), especificado em um diagrama de atualização, é usado para processar as atualizações. Em um diagrama de atualização, você pode fornecer o nome de um esquema de mapeamento anotado para usar no mapeamento de elementos e atributos no diagrama de atualização para tabelas e colunas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando um esquema de mapeamento é especificado em um diagrama de atualização, os nomes de elementos e atributos especificados no diagrama deverão ser mapeados para os elementos e atributos do esquema de mapeamento.  
   
- Para especificar um esquema de mapeamento, use o **esquema de mapeamento** atributo o  **\<sincronização >** elemento. Os exemplos a seguir mostram dois diagramas de atualização: um que usa um esquema de mapeamento simples e outro que usa um esquema mais complexo.  
+ Para especificar um esquema de mapeamento, você deve usar o **esquema de mapeamento** atributo da  **\<sincronização >** elemento. Os exemplos a seguir mostram dois diagramas de atualização: um que usa um esquema de mapeamento simples e outro que usa um esquema mais complexo.  
   
 > [!NOTE]  
->  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotado & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Lidando com tipos de dados  
- Se o esquema Especifica a **imagem**, **binário**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (usando **SQL: DataType**) e não Especifique um tipo de dados XML, o diagrama de atualização pressupõe que o tipo de dados XML é **binários na base 64**. Se os dados forem **bin.base** tipo, você deve especificar explicitamente o tipo (**dt:type=bin.base** ou **tipo = "xsd:hexBinary"**).  
+ Se o esquema Especifica a **imagem**, **binário**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (usando **SQL: DataType**) e não Especifique um tipo de dados XML, o diagrama de atualização assumirá que o tipo de dados XML é **binários na base 64**. Se os dados estiverem **bin.base** tipo, você deve especificar explicitamente o tipo (**dt:type=bin.base** ou **tipo = "xsd:hexBinary"**).  
   
- Se o esquema Especifica a **dateTime**, **data**, ou **tempo** tipo de dados XSD, você deve também especificar correspondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados usando  **SQL: DataType = "dateTime"**.  
+ Se o esquema Especifica a **dateTime**, **data**, ou **tempo** tipo de dados XSD, você também deve especificar correspondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados usando  **SQL: DataType = "dateTime"**.  
   
- Ao lidar com parâmetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** tipo, você deve especificar explicitamente **SQL: DataType = "money"** no nó apropriado no esquema de mapeamento.  
+ Ao lidar com parâmetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dinheiro** tipo, você deve especificar explicitamente **SQL: DataType = "dinheiro"** no nó apropriado no esquema de mapeamento.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Criando um diagrama de atualização com um esquema de mapeamento simples  
- O seguinte esquema XSD (SampleSchema.xml) é um esquema de mapeamento que mapeia o  **\<cliente >** elemento à tabela Sales. Customer:  
+ O seguinte esquema XSD (SampleSchema. xml) é um esquema de mapeamento que mapeia o  **\<cliente >** elemento na tabela Sales. Customer:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -71,7 +71,7 @@ ms.locfileid: "32972721"
 </xsd:schema>  
 ```  
   
- O diagrama de atualização a seguir insere um registro na tabela Sales.Customer e usa o esquema de mapeamento anterior para mapear adequadamente esses dados para a tabela. Observe que o diagrama usa o mesmo nome de elemento,  **\<cliente >**, conforme definido no esquema. Isso é obrigatório porque o diagrama especifica um esquema específico.  
+ O diagrama de atualização a seguir insere um registro na tabela Sales.Customer e usa o esquema de mapeamento anterior para mapear adequadamente esses dados para a tabela. Observe que o diagrama de atualização usa o mesmo nome do elemento  **\<cliente >**, conforme definido no esquema. Isso é obrigatório porque o diagrama especifica um esquema específico.  
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
@@ -120,9 +120,9 @@ ms.locfileid: "32972721"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserindo um registro usando a relação pai-filho especificada no esquema de mapeamento  
- Elementos de esquema podem ser relacionados. O  **\<SQL: Relationship >** elemento Especifica a relação pai-filho entre os elementos do esquema. Essas informações são usadas para atualizar as tabelas correspondentes que têm relação chave primária/chave estrangeira.  
+ Elementos de esquema podem ser relacionados. O  **\<SQL: Relationship >** elemento Especifica a relação de pai-filho entre os elementos do esquema. Essas informações são usadas para atualizar as tabelas correspondentes que têm relação chave primária/chave estrangeira.  
   
- O seguinte esquema de mapeamento (SampleSchema.xml) consiste em dois elementos,  **\<ordem >** e  **\<OD >**:  
+ O seguinte esquema de mapeamento (SampleSchema. xml) consiste em dois elementos,  **\<ordem >** e  **\<OD >**:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -237,9 +237,9 @@ ms.locfileid: "32972721"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Inserindo um registro usando a relação pai-filho e a anotação de inverso especificada no esquema XSD  
- Este exemplo ilustra como a lógica do diagrama usa a relação pai-filho especificada no XSD para processar atualizações e como o **inverso** anotação é usada. Para obter mais informações sobre o **inverso** anotação, consulte [especificando o atributo SQL: Inverse em SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ Este exemplo ilustra como a lógica do diagrama usa a relação de pai-filho especificada no XSD para processar atualizações e como a **inverso** anotação é usada. Para obter mais informações sobre o **inverso** anotação, consulte [especificando o atributo SQL: Inverse em SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- Este exemplo supõe que as tabelas a seguir estão no **tempdb** banco de dados:  
+ Este exemplo pressupõe que as tabelas a seguir na **tempdb** banco de dados:  
   
 -   `Cust (CustomerID, CompanyName)`, onde `CustomerID` é a chave primária  
   
@@ -280,11 +280,11 @@ ms.locfileid: "32972721"
 </xsd:schema>  
 ```  
   
- O esquema XSD neste exemplo tem  **\<cliente >** e  **\<ordem >** elementos e especifica uma relação pai-filho entre os dois elementos. Ele identifica  **\<ordem >** como o elemento pai e  **\<cliente >** como o elemento filho.  
+ O esquema XSD neste exemplo tem  **\<cliente >** e  **\<Order >** elementos e especifica uma relação pai-filho entre os dois elementos. Ele identifica  **\<ordem >** como o elemento pai e  **\<cliente >** como o elemento filho.  
   
  A lógica de processamento do diagrama de atualização usa as informações sobre a relação pai-filho para determinar a ordem na qual os registros são inseridos nas tabelas. Neste exemplo, a lógica do diagrama primeiro tenta inserir um registro na tabela Ord (porque  **\<ordem >** é o pai) e, em seguida, tenta inserir um registro na tabela Cust (porque  **\<Cliente >** é o filho). No entanto, devido às informações de chave primária/chave estrangeira contidas no esquema da tabela do banco de dados, esta operação de inserção gera um erro de violação de chave estrangeira no banco de dados e a inserção não é bem sucedida.  
   
- Para instruir a lógica do diagrama para inverter a relação pai-filho durante a operação de atualização, o **inverso** anotação é especificada no  **\<relação >** elemento. Como resultado, os registros são adicionados primeiro na tabela Cust e, depois, na tabela Ord, e a operação é bem-sucedida.  
+ Para instruir a lógica do diagrama para inverter a relação pai-filho durante a operação de atualização, o **inverso** anotação é especificada na  **\<relação >** elemento. Como resultado, os registros são adicionados primeiro na tabela Cust e, depois, na tabela Ord, e a operação é bem-sucedida.  
   
  O seguinte diagrama de atualização insere um pedido (OrderID=2) na tabela Ord e um cliente (CustomerID='AAAAA') na tabela Cust usando o esquema XSD especificado:  
   
@@ -303,7 +303,7 @@ ms.locfileid: "32972721"
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
-1.  Crie estas tabelas no **tempdb** banco de dados:  
+1.  Crie estas tabelas na **tempdb** banco de dados:  
   
     ```  
     USE tempdb  

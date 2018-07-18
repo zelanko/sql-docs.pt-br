@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049544"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
+ Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**.  
   
  [  **@db_name =**] **'***database_name***'**  
  Especifica o nome do banco de dados a ser excluído do plano de manutenção. *database_name* é **sysname**.  
@@ -70,10 +70,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  Quando **sp_delete_maintenance_plan_db** remove o último banco de dados do plano de manutenção, o procedimento armazenado também exclui o plano de manutenção.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan_db**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Exemplos  
- Exclui o plano de manutenção de **AdventureWorks2012** banco de dados, anteriormente adicionado usando **sp_add_maintenance_plan_db**.  
+ Exclui o plano de manutenção do **AdventureWorks2012** banco de dados, anteriormente adicionado usando **sp_add_maintenance_plan_db**.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  

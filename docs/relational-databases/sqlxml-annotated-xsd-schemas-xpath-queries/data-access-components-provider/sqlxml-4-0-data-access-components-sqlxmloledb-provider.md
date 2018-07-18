@@ -24,13 +24,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049984"
 ---
-# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 Data Access Components - provedor SQLXMLOLEDB
+# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML Data Access Components 4.0 – provedor SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 dispõe de três provedores de dados que podem inserir dados XML e recuperá-los de um banco de dados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   

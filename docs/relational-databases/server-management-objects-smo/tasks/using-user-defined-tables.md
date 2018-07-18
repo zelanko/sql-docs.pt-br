@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7231545e9037458669ff6eb3e9fcafcd0d3f9da9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971521"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985268"
 ---
 # <a name="using-user-defined-tables"></a>Usando tabelas definidas pelo usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Tabelas definidas pelo usuário representam informações tabulares. Elas são usadas como parâmetros quando você transmite dados tabulares em procedimentos armazenados ou em funções definidas pelo usuário. Tabelas definidas pelo usuário não podem ser usadas para representar colunas em uma tabela de banco de dados.  
   
- O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto coleção tem um **colunas** propriedade que faz referência a uma coleção de <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
+ O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> do objeto nessa coleção tem um **colunas** que se refere a uma coleção de propriedade <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que lista as colunas na tabela definida pelo usuário. Use o método Adicionar para adicionar colunas à tabela definida pelo usuário.  
   
  Quando você definir uma nova tabela definida pelo usuário através do objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, forneça colunas e uma chave primária com base em uma das colunas.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "32971521"
  A classe <xref:Microsoft.SqlServer.Management.Smo.DataType> é usada para especificar o tipo de dados que é associado a colunas e parâmetros. Use esse tipo para especificar o tipo de tabela definido pelo usuário como um parâmetro para funções definidas pelo usuário e procedimentos armazenados.  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Criando uma tabela definida pelo usuário no Visual Basic  
- Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classe que contém o **StringCollection** tipo.  
+ Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classes que contém o **StringCollection** tipo.  
   
  `Imports System.Collections.Specialized`  
   
@@ -107,7 +107,7 @@ Para usar qualquer exemplo de código fornecido, será necessário escolher o am
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Criando uma tabela definida pelo usuário no Visual C#  
- Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classe que contém o **StringCollection** tipo.  
+ Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classes que contém o **StringCollection** tipo.  
   
  `using System.Collections.Specialized;`  
   
@@ -177,7 +177,7 @@ Para usar qualquer exemplo de código fornecido, será necessário escolher o am
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>Criando uma tabela definida pelo usuário no PowerShell  
- Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classe que contém o **StringCollection** tipo.  
+ Neste exemplo, você precisará incluir uma instrução imports para a biblioteca de classes que contém o **StringCollection** tipo.  
   
  `using System.Collections.Specialized;`  
   

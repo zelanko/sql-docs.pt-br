@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_fields (banco de dados do SQL Azure) | Microsoft Docs
+title: sys. database_event_session_fields (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179652"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981848"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (banco de dados do SQL Azure)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys. database_event_session_fields (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada coluna personalizável explicitamente definida em eventos e destinos.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|A identificação da sessão de evento. Não permite valor nulo.|  
-|object_id|**Int**|A ID do objeto ao qual este campo é associado. Não permite valor nulo.|  
+|event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
+|object_id|**int**|A ID do objeto ao qual este campo é associado. Não permite valor nulo.|  
 |nome|**sysname**|O nome do campo. Não permite valor nulo.|  
 |value|**sql_variant**|O valor do campo. Não permite valor nulo.|  
   

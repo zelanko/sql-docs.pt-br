@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ade405c0abdd5d3a07db3e7e5727677fd5d4e7be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037254"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame=**] **'***login***'**  
- É o nome de logon. *logon* é **sysname**, sem padrão. *logon* pode ser uma existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário ou grupo. Se não existir um logon para o usuário ou grupo do Windows no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é adicionado automaticamente.  
+ [  **@loginame=**] **'***logon***'**  
+ É o nome de logon. *login* está **sysname**, sem padrão. *login* pode ser uma existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um usuário do Windows ou grupo. Se não existir um logon para o usuário ou grupo do Windows no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é adicionado automaticamente.  
   
  [  **@defdb=**] **'***banco de dados***'**  
- É o nome do novo banco de dados padrão. *banco de dados* é **sysname**, sem padrão. *banco de dados* já deve existir.  
+ É o nome do novo banco de dados padrão. *banco de dados* está **sysname**, sem padrão. *banco de dados* já deve existir.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

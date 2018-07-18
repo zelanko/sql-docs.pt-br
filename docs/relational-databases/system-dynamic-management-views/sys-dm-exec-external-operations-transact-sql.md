@@ -27,27 +27,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75ea1d3250c88ae40abcf34280a68c7384f6557e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997958"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Captura informações sobre operações de PolyBase externas.  
+  Captura informações sobre operações externas do PolyBase.  
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificador exclusivo de consulta associado à consulta do PolyBase|Consulte a ID de [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**Int**|Índice da etapa de consulta|Consulte step_index em [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|tipo de operação|**nvarchar(128)**|Descreve uma operação de Hadoop ou outra operação externa|'Operação Hadoop externo'|  
-|nome de operação|**nvarchar(4000)**|Indica como o status do trabalho na porcentagem de (quanto a entrada consumida)|0-1 – multiplicado pelo fator de 100 (concluída)|  
-|progresso de map_|**float**|Indica como o status de uma redução de trabalho em porcentagem, se houver|0-1 – multiplicado pelo fator de 100 (concluída)|  
+|execution_id|**nvarchar(32)**|Identificador exclusivo de consulta associado à consulta do PolyBase|Consulte a ID na [. DM exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Índice da etapa de consulta|Consulte step_index na [DM exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|tipo de operação|**nvarchar(128)**|Descreve uma operação do Hadoop ou outra operação externa|'Operation Hadoop externo'|  
+|nome da operação|**nvarchar(4000)**|Indica como o status do trabalho em percentual (quanto a entrada consumida é)|0-1 – multiplicado pelo fator de 100 (concluída)|  
+|progresso de map_|**float**|Indica como o status de uma redução do trabalho em percentual, se houver|0-1 – multiplicado pelo fator de 100 (concluída)|  
   
 ## <a name="see-also"></a>Consulte também  
- [PolyBase, solucionando problemas com exibições de gerenciamento dinâmico](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas com exibições de gerenciamento dinâmico do PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

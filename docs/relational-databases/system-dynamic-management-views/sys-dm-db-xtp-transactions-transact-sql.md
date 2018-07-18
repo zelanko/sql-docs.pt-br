@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd5be6e6617172755f1ac293d94ddfe406b11a04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997838"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,30 +45,30 @@ ms.locfileid: "34464952"
 |session_id|**smallint**|O identificador da sessão que está executando essa transação. Junções com sys.dm_exec_sessions.|  
 |begin_tsn|**bigint**|Número de série inicial da transação.|  
 |end_tsn|**bigint**|Número de série final da transação.|  
-|state|**Int**|O estado da transação:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|state|**int**|O estado da transação:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|A descrição do estado da transação.|  
-|result|**Int**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 = ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
-|last_error|**Int**|Somente para uso interno|  
+|result|**int**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 = ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
+|result_desc|**nvarchar**|O resultado dessa transação. Veja os valores possíveis a seguir:<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> erro<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|last_error|**int**|Somente para uso interno|  
 |is_speculative|**bit**|Somente para uso interno|  
 |is_prepared|**bit**|Somente para uso interno|  
 |is_delayed_durability|**bit**|Somente para uso interno|  
 |memory_address|**varbinary**|Somente para uso interno|  
 |database_address|**varbinary**|Somente para uso interno|  
-|thread_id|**Int**|Somente para uso interno|  
-|read_set_row_count|**Int**|Somente para uso interno|  
-|write_set_row_count|**Int**|Somente para uso interno|  
-|scan_set_count|**Int**|Somente para uso interno|  
-|savepoint_garbage_count|**Int**|Somente para uso interno|  
+|thread_id|**int**|Somente para uso interno|  
+|read_set_row_count|**int**|Somente para uso interno|  
+|write_set_row_count|**int**|Somente para uso interno|  
+|scan_set_count|**int**|Somente para uso interno|  
+|savepoint_garbage_count|**int**|Somente para uso interno|  
 |log_bytes_required|**bigint**|Somente para uso interno|  
-|count_of_allocations|**Int**|Somente para uso interno|  
-|allocated_bytes|**Int**|Somente para uso interno|  
-|reserved_bytes|**Int**|Somente para uso interno|  
-|commit_dependency_count|**Int**|Somente para uso interno|  
-|commit_dependency_total_attempt_count|**Int**|Somente para uso interno|  
-|scan_area|**Int**|Somente para uso interno|  
+|count_of_allocations|**int**|Somente para uso interno|  
+|allocated_bytes|**int**|Somente para uso interno|  
+|reserved_bytes|**int**|Somente para uso interno|  
+|commit_dependency_count|**int**|Somente para uso interno|  
+|commit_dependency_total_attempt_count|**int**|Somente para uso interno|  
+|scan_area|**int**|Somente para uso interno|  
 |scan_area_desc|**nvarchar**|Somente para uso interno|  
-|scan_location|**Int**|Somente para uso interno.|  
+|scan_location|**int**|Somente para uso interno.|  
 |dependent_1_address|**varbinary(8)**|Somente para uso interno|  
 |dependent_2_address|**varbinary(8)**|Somente para uso interno|  
 |dependent_3_address|**varbinary(8)**|Somente para uso interno|  
@@ -82,6 +82,6 @@ ms.locfileid: "34464952"
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

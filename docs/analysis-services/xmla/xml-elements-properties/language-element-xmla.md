@@ -1,5 +1,5 @@
 ---
-title: Elemento de linguagem (XMLA) | Microsoft Docs
+title: Elemento Language (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b2e3a188a9681508473394a6323457cc4fa1726
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575428"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036824"
 ---
 # <a name="language-element-xmla"></a>Elemento Language (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "34575428"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **idioma** elemento Especifica o LCID usado pelo pai **tradução** elemento para atribuir a **nome** elemento do pai **tradução** elemento para um membro de atributo para o idioma especificado, durante um **inserir** ou **atualização** comando.  
+ O **linguagem** elemento Especifica o LCID usado pelo pai **tradução** elemento para atribuir a **nome** elemento pai **tradução** elemento para um membro de atributo para o idioma especificado, durante um **inserir** ou **atualização** comando.  
   
 ## <a name="see-also"></a>Confira também
- [Elemento Insert &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Nome de elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
- [Elemento Update &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Nomeie o elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
+ [Atualizar o elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

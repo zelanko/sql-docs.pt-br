@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049953"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Executando consultas XPath (provedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32969011"
   
 -   **ClientSideXML**  
   
--   **Caminho de base**  
+-   **Caminho base**  
   
 -   **Esquema de mapeamento**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "32969011"
 </xsd:schema>  
 ```  
   
- A propriedade de esquema de mapeamento fornece o esquema de mapeamento no qual a consulta XPath é executada. O esquema de mapeamento pode ser um esquema XSD ou XDR. A propriedade do caminho de Base fornece o caminho de arquivo para o esquema de mapeamento.  
+ A propriedade de esquema de mapeamento fornece o esquema de mapeamento com relação à qual a consulta XPath é executada. O esquema de mapeamento pode ser um esquema XSD ou XDR. A propriedade de caminho de Base fornece o caminho do arquivo para o esquema de mapeamento.  
   
  A propriedade ClientSideXML é definida como True. Assim, o documento XML é gerado no cliente.  
   

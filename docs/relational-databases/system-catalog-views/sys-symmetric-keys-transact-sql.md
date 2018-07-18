@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9920ff9e4b648c4911568b44374d860cc2d18710
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985278"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "33221927"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da chave. É exclusivo no c4database.|  
-|**principal_id**|**Int**|ID da entidade de banco de dados que possui a chave.|  
-|**symmetric_key_id**|**Int**|ID da chave. Exclusiva no banco de dados.|  
-|**key_length**|**Int**|Comprimento da chave em bits.|  
+|**principal_id**|**int**|ID da entidade de banco de dados que possui a chave.|  
+|**symmetric_key_id**|**int**|ID da chave. Exclusiva no banco de dados.|  
+|**key_length**|**int**|Comprimento da chave em bits.|  
 |**key_algorithm**|**char(2)**|Algoritmo usado com a chave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = DES triplo<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = Chave EKM|  
 |**algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo usado com a chave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (somente algoritmos de Gerenciador de Chave Extensível)|  
 |**create_date**|**datetime**|A data em que a chave foi criada.|  

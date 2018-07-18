@@ -1,5 +1,5 @@
 ---
-title: Fonte do elemento (erro) (XMLA) | Microsoft Docs
+title: Fonte de elemento (Error) (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: de8496fb688066830605fea99e74944be1193d6f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036484"
 ---
 # <a name="source-element-error-xmla"></a>Elemento Source (Error) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

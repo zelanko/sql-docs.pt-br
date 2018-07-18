@@ -1,6 +1,6 @@
 ---
-title: Exemplo de banco de dados do gráfico SQL | Microsoft Docs
-description: Um exemplo rápido que ajudará você a começar com as novas sintaxes introduzidas no banco de dados de gráfico SQL.
+title: Exemplo de banco de dados do SQL Graph | Microsoft Docs
+description: Um exemplo rápido que ajudará você a começar com as novas sintaxes introduzidas no banco de dados do SQL graph.
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,22 +22,22 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935383"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999638"
 ---
-# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Criar um banco de dados do gráfico e executar algumas consultas usando o T-SQL de correspondência de padrões
+# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Criar um banco de dados do grafo e executar algumas consultas usando o T-SQL de correspondência de padrão
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Este exemplo fornece uma [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados do gráfico conosco e bordas e, em seguida, usar a nova cláusula de correspondência para corresponder alguns padrões e percorrer o gráfico. Esse script de exemplo funcionará em ambos os banco de dados do SQL Azure e [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Este exemplo fornece um [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados do gráfico conosco e bordas e, em seguida, usar a nova cláusula de correspondência para coincidir com alguns padrões e percorrer o gráfico. Este exemplo de script funcionará em ambos os banco de dados do SQL Azure e [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Esquema de exemplo  
-Este exemplo cria um esquema de gráfico, como mostrado na Figura 1, para uma rede social hipotética que tem nós de pessoas, restaurante e cidade. Esses nós são conectados entre si usando amigos, gosta, bordas LivesIn e LocatedIn. 
+Este exemplo cria um esquema de grafo, conforme mostrado na Figura 1, para uma rede social hipotética conosco de pessoas, restaurante e cidade. Esses nós são conectados umas às outras usando amigos, Curtidas, LivesIn e LocatedIn bordas. 
 
-![pessoa-cidades restaurantes tabelas](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "exemplo de banco de dados do gráfico de Sql")  
-Figura 1: O esquema de exemplo com restaurante, cidade, nós de pessoa e LivesIn, LocatedIn, equipara bordas.
+![pessoa-cidades restaurantes tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "exemplo de banco de dados do Sql graph")  
+Figura 1: O esquema de exemplo com o restaurante, cidade, nós de pessoa e LivesIn LocatedIn, Curtidas bordas.
 
 
 ## <a name="sample-script"></a>Exemplo de Script
@@ -147,7 +147,7 @@ WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->
 ```
 
 ## <a name="clean-up"></a>Limpar  
-Limpe o esquema e o banco de dados criado para o exemplo.
+Limpe o esquema e banco de dados criado para o exemplo.
 ```
 USE graphdemo;
 go
@@ -168,11 +168,11 @@ go
 
 ```
 
-## <a name="script-explanation"></a>Explicação de script  
-Esse script usa a nova sintaxe do T-SQL para criar tabelas de nó e borda. Mostra como inserir dados em tabelas de nó e borda usando `INSERT` instrução e também mostra como usar `MATCH` cláusula para correspondência de padrões e navegação.
+## <a name="script-explanation"></a>Explicação sobre o script  
+Esse script usa a nova sintaxe do T-SQL para criar tabelas de nó e de borda. Mostra como inserir dados em tabelas de nó e de borda usando `INSERT` instrução e também mostra como usar `MATCH` cláusula para correspondência de padrões e navegação.
 
 |Comando    |Observações
 |---  |---  |
-|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Criar tabela de borda ou nó de gráfico  |
-|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Inserir em uma tabela de borda ou de nó  |
-|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Use MATCH para corresponder a um padrão ou percorrer o gráfico  |
+|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Criar tabela de nó ou borda do gráfico  |
+|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Inserir em uma tabela de nó ou borda  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Use MATCH para corresponder a um padrão ou percorrer o grafo  |

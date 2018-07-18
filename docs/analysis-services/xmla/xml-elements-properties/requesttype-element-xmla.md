@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994788"
 ---
 # <a name="requesttype-element-xmla"></a>Elemento RequestType (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Determina o tipo de metadados retornado pelo [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
+  Determina o tipo de metadados retornados pela [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34577618"
 |Elementos filho|Nenhum|  
   
 ## <a name="remarks"></a>Remarks  
- O **RequestType** elemento determina o conjunto de linhas de esquema do qual o **Discover** método retorna dados. Essa enumeração é limitada aos nomes dos conjuntos de linhas de esquema com suporte do Analysis Services. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [conjuntos de linhas de esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ O **RequestType** elemento determina o conjunto de linhas de esquema do qual o **Discover** método retorna dados. Essa enumeração é limitada aos nomes dos conjuntos de linhas de esquema com suporte pelo Analysis Services. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [conjuntos de linhas de esquema do Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  O **RequestType** elemento enumera apenas os nomes de conjunto de linhas do esquema. Ocorre um erro se for usado o conjunto de linhas de esquema GUID.  
