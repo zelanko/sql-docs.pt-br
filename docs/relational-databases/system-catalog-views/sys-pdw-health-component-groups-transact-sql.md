@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 369a2934a31bbc70b9c417966b17cd6dc25425e3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33697879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058194"
 ---
 # <a name="syspdwhealthcomponentgroups-transact-sql"></a>sys.pdw_health_component_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "33697879"
   
 |Nome da coluna|Tipo de dados|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|group_id|**Int**|Identificador exclusivo de componentes e dispositivos.<br /><br /> Chave para este modo de exibição.|NOT NULL|  
+|group_id|**int**|Identificador exclusivo para componentes e dispositivos.<br /><br /> A chave para este modo de exibição.|NOT NULL|  
 |group_name|**nvarchar(255)**|Nome do grupo lógico para os componentes e dispositivos.|NOT NULL|  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e exibições de catálogo do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

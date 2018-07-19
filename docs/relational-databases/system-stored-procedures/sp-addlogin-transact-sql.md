@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5f9458c1459aef35bcf9d6e47963025f87000c32
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060151"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,27 +57,27 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumentos  
  [ @loginame=] '*login*'  
- É o nome do logon. *logon* é **sysname**, sem padrão.  
+ É o nome do logon. *login* está **sysname**, sem padrão.  
   
  [ @passwd=] '*senha*'  
- É a senha de logon. *senha* é **sysname**, com um padrão NULL.  
+ É a senha de logon. *senha* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb=] '*banco de dados*'  
- É o banco de dados padrão do logon (o banco de dados ao qual o logon foi conectado pela primeira vez após a conexão). *banco de dados* é **sysname**, com um padrão de **mestre**.  
+ É o banco de dados padrão do logon (o banco de dados ao qual o logon foi conectado pela primeira vez após a conexão). *banco de dados* está **sysname**, com um padrão de **mestre**.  
   
- [ @deflanguage=] '*idioma*'  
- É o idioma padrão do logon. *idioma* é **sysname**, com um padrão NULL. Se *idioma* não for especificado, o padrão *idioma* do novo logon é definido como o idioma padrão atual do servidor.  
+ [ @deflanguage=] '*linguagem*'  
+ É o idioma padrão do logon. *linguagem* está **sysname**, com um padrão NULL. Se *linguagem* não for especificado, o padrão *idioma* do novo logon é definido como o idioma padrão atual do servidor.  
   
  [ @sid=] '*sid*'  
- É o número de identificação de segurança (SID). *SID* é **varbinary (16)**, com um padrão NULL. Se *sid* for NULL, o sistema gera um SID para o novo logon. Apesar do uso de um **varbinary** tipo de dados, valores diferentes de NULL devem ter exatamente 16 bytes de comprimento e não deve existir. Especificando *sid* é útil, por exemplo, quando você está criando scripts ou movendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de um servidor para outro e você deseja que os logons tenham o mesmo SID em servidores diferentes.  
+ É o número de identificação de segurança (SID). *SID* está **varbinary (16)**, com um padrão NULL. Se *sid* for NULL, o sistema gera um SID para o novo logon. Apesar do uso de um **varbinary** tipo de dados, valores diferentes de NULL devem ter exatamente 16 bytes de comprimento e não deve existir. Especificando *sid* é útil, por exemplo, quando você está criando scripts ou movendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons de um servidor para outro e você deseja que os logons tenham o mesmo SID em servidores diferentes.  
   
  [ @encryptopt=] '*encryption_option*'  
- Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* é **varchar (20)**, e pode ser um dos valores a seguir.  
+ Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* está **varchar(20)**, e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |NULL|A senha é passada sem-criptografia. Esse é o padrão.|  
 |**skip_encryption**|A senha já tem hash. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash.|  
@@ -95,7 +95,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  A alteração do idioma padrão de servidor não altera o idioma padrão de logons existentes. Para alterar o idioma padrão do servidor, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Usando **skip_encryption** para suprimir a senha de hash é útil se a senha já tem hash quando o logon é adicionado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a senha foi hash por uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use **skip_encryption_old**.  
+ Usando o **skip_encryption** para suprimir a senha hash é útil se a senha já tem hash quando o logon é adicionado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a senha já tinha hash em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use **skip_encryption_old**.  
   
  sp_addlogin não pode ser executado em uma transação definida pelo usuário.  
   

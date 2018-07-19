@@ -1,5 +1,5 @@
 ---
-title: sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
+title: sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055771"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ Este procedimento adiciona um assembly ao [sys.trusted_assemblies](../../relatio
 ## <a name="arguments"></a>Argumentos
 
 [ @hash =] '*valor*'  
-O valor de hash SHA2_512 do assembly a ser adicionado à lista de assemblies confiáveis para o servidor. Confiáveis assemblies podem ser carregados quando [segurança estrita CLR](../../database-engine/configure-windows/clr-strict-security.md) estiver habilitado, mesmo se o assembly não está assinado ou o banco de dados não está marcado como confiável.
+O valor de hash SHA2_512 do assembly a ser adicionado à lista de assemblies confiáveis para o servidor. Confiável assemblies podem ser carregados quando [segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md) estiver habilitado, mesmo se o assembly estiver assinado ou o banco de dados não está marcado como confiável.
 
 [ @description =] '*descrição*'  
-Descrição opcional definida pelo usuário do assembly. A Microsoft recomenda usando o nome canônico que codifica o nome simples, número de versão, cultura, chave pública e arquitetura do assembly para a relação de confiança. Esse valor exclusivamente identifica o assembly do lado common language runtime (CLR) e é o mesmo que o valor de clr_name em sys. 
+Descrição opcional definida pelo usuário do assembly. A Microsoft recomenda usar o nome canônico que codifica o nome simples, número de versão, cultura, chave pública e arquitetura do assembly para confiar. Esse valor identifica o assembly do lado common language runtime (CLR) exclusivamente e é o mesmo que o valor de clr_name em sys. assemblies. 
 
 ## <a name="permissions"></a>Permissões
 
-Requer a participação no `sysadmin` função de servidor fixa ou `CONTROL SERVER` permissão.
+Requer associação na `sysadmin` função de servidor fixa ou `CONTROL SERVER` permissão.
 
 ## <a name="examples"></a>Exemplos  
 
-O exemplo a seguir adiciona um assembly chamado `pointudt` à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis no [sys](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+O exemplo a seguir adiciona um assembly denominado `pointudt` à lista de assemblies confiáveis para o servidor. Esses valores estão disponíveis no [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 

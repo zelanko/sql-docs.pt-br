@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2990ccbfd28e16d71aba887e814805e9af50bca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966761"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060254"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Criando, alterando e removendo esquemas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32966761"
   O objeto <xref:Microsoft.SqlServer.Management.Smo.Schema> representa um contexto de propriedade do objeto de banco de dados. A propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Database> representa uma coleção de objetos do <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Criando, alterando e removendo um esquema no Visual Basic  
  Este exemplo de código demonstra como criar um esquema e atribuí-lo a um objeto de banco de dados. Então, o programa concede permissão a um usuário e cria uma tabela nova no esquema.  

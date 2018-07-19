@@ -1,5 +1,5 @@
 ---
-title: Exibições de gerenciamento dinâmico (Transact-SQL) da tabela de otimização de memória | Microsoft Docs
+title: A otimização de memória exibições de gerenciamento dinâmico de tabela (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da3bf7189d2fb4455b8186a41a24c7d5f546a348
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061564"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico da tabela com otimização de memória (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "34465522"
 
 ### <a name="object-catalog-views"></a>Exibições do catálogo de objeto
 
-As seguintes exibições de catálogo do objeto são usadas especificamente com OLTP na memória.
+As seguintes exibições do catálogo de objeto são usadas especificamente com OLTP na memória.
 
 |||  
 |-|-|   
-|[sys. hash_indexes & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ### <a name="internal-dmvs"></a>DMVs internos
 
-Há DMVs adicionais que se destinam para uso interno apenas e para que não fornecemos nenhuma documentação direta. Na área de tabelas com otimização de memória, não documentados DMVs incluem o seguinte:
+Há DMVs adicionais que se destinam para uso interno apenas e para quais não fornecemos nenhuma documentação direta. Na área de tabelas com otimização de memória, não documentadas DMVs incluem o seguinte:
 
 - sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows

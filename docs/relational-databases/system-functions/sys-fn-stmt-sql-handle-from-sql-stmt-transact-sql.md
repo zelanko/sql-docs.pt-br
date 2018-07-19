@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060364"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Obtém o **stmt_sql_handle** para um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução em tipo de parametrização (simple ou forçado) fornecido. Isso permite que você consulte consultas armazenadas no repositório de consultas usando seus **stmt_sql_handle** quando você sabe que seu texto.  
+  Obtém o **stmt_sql_handle** para um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução sob considerando o tipo de parametrização (simple ou forçado). Isso permite que você se referir a consultas armazenadas no Store a consulta usando seus **stmt_sql_handle** quando você souber que seu texto.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,16 +44,16 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Argumentos  
  *query_sql_text*  
- É o texto da consulta no repositório de consultas que você deseja que a alça de. *query_sql_text* é um **nvarchar (max)**, sem padrão.  
+ É o texto da consulta no repositório de consultas que você deseja que o identificador do. *query_sql_text* é um **nvarchar (max)**, sem padrão.  
   
  *query_param_type*  
- É o tipo de parâmetro de consulta. *query_param_type* é um **tinyint**. Os valores possíveis são:  
+ É o tipo de parâmetro da consulta. *query_param_type* é um **tinyint**. Os valores possíveis são:  
   
--   NULL – padrão é 0  
+-   NULL – o padrão é 0  
   
 -   0 – none  
   
--   1 – usuário  
+-   1 = usuário  
   
 -   2 – simples  
   
@@ -74,17 +74,17 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
- Requer o **EXECUTE** no banco de dados, e **excluir** permissão nas exibições do catálogo de repositório de consulta.  
+ Requer o **EXECUTE** permissão no banco de dados, e **excluir** permissão em exibições de catálogo de repositório de consultas.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir executa uma instrução e, em seguida, usa `sys.fn_stmt_sql_handle_from_sql_stmt` para retornar o identificador SQL da instrução.  
+ O exemplo a seguir executa uma instrução e, em seguida, usa `sys.fn_stmt_sql_handle_from_sql_stmt` para retornar o identificador SQL dessa instrução.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Use a função para correlacionar dados de repositório de consultas com outros modos de exibição de gerenciamento dinâmico. O exemplo a seguir:  
+ Use a função para correlacionar dados de consulta Store com outros modos de exibição de gerenciamento dinâmico. O exemplo a seguir:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -105,6 +105,6 @@ JOIN sys.dm_exec_query_stats AS qs
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Monitorar o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

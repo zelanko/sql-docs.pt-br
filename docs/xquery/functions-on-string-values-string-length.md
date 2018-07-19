@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059770"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funções em valores de cadeia de caracteres - comprimento de cadeia de caracteres
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ fn:string-length($arg as xs:string?) as xs:integer
 ## <a name="remarks"></a>Remarks  
  Se o valor de *$arg* é uma sequência vazia, um **xs: Integer** valor 0 será retornado.  
   
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados. Se o nível de compatibilidade for 110 ou posterior, cada par substituto será contado como um único caractere. Em níveis de compatibilidade anteriores, eles são contados como dois caracteres. Para obter mais informações, consulte [nível de compatibilidade do banco de dados ALTER &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados. Se o nível de compatibilidade for 110 ou posterior, cada par substituto será contado como um único caractere. Em níveis de compatibilidade anteriores, eles são contados como dois caracteres. Para obter mais informações, consulte [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Se o valor contiver um caractere Unicode de 4 bytes, representado por dois caracteres substitutos, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contará os caracteres substitutos individualmente.  
   
@@ -63,7 +63,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade do banco de dados ALTER &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
@@ -137,7 +137,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **PD** e **wm** são os prefixos de namespace usados nessa consulta. Eles identificam os mesmos namespaces utilizados no documento que está sendo consultado.  
   
--   O XQuery especifica um loop FOR aninhado. O loop FOR exterior é necessário, pois você deseja recuperar o **ProductModelID** atributos de <`ProductDescription`> elemento. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
+-   O XQuery especifica um loop FOR aninhado. O loop FOR externo é necessário, pois você deseja recuperar o **ProductModelID** atributos da <`ProductDescription`> elemento. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
   
  Este é o resultado parcial:  
   

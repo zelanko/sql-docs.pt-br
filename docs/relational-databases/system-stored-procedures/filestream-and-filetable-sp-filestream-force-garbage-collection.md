@@ -24,18 +24,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063744"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Força a execução do coletor de lixo FILESTREAM, excluindo qualquer arquivo FILESTREAM desnecessário.  
   
- Não é possível remover um contêiner FILESTREAM antes que o coletor de lixo limpe todos os arquivos excluídos contidos nele. O coletor de lixo FILESTREAM é executado automaticamente. No entanto, se você precisar remover um contêiner antes do coletor de lixo foi executado, você pode usar sp_filestream_force_garbage_collection para executar o coletor de lixo manualmente.  
+ Não é possível remover um contêiner FILESTREAM antes que o coletor de lixo limpe todos os arquivos excluídos contidos nele. O coletor de lixo FILESTREAM é executado automaticamente. No entanto, se você precisar remover um contêiner antes do coletor de lixo foi executada, você pode usar sp_filestream_force_garbage_collection para executar o coletor de lixo manualmente.  
   
   
 ## <a name="syntax"></a>Sintaxe  
@@ -47,11 +47,11 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@dbname** = *Database_Name * '**  
+ **@dbname** = *Database_Name * * * '**  
  Significa o nome do banco de dados no qual o coletor de lixo será executado.  
   
 > [!NOTE]  
->  *DBName* é **sysname**. Se não for especificado, o atual banco de dados será assumido.  
+>  *DBName* está **sysname**. Se não for especificado, o atual banco de dados será assumido.  
   
  **@filename** = *logical_file_name*  
  Especifica o nome lógico do contêiner FILESTREAM no qual o coletor de lixo será executado. **@filename** é opcional. Se nenhum nome de arquivo lógico for especificado, o coletor de lixo limpa todos os contêineres FILESTREAM no banco de dados especificado.  
@@ -60,18 +60,18 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|Value|Descrição|  
+|Valor|Description|  
 |0|Êxito na operação|  
 |1|Falha na operação|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*file_name*|Indica o nome de contêiner FILESTREAM|  
 |*num_collected_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram limpos (excluídos) pelo coletor de dados neste contêiner.|  
-|*num_marked_for_collection_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram marcados para coleta de lixo neste contêiner. Estes itens ainda não foram excluídos, mas podem ser qualificados para exclusão após a fase de coleta de lixo.|  
-|*num_unprocessed_items*|Indica o número de itens FILESTREAM qualificados (arquivos ou diretórios) que não foram processados para coleta de lixo neste FILESTREAM. Itens podem não ser processados por várias razões, inclusive as seguintes:<br /><br /> Arquivos que precisam ser definidos porque não foi obtido o backup de log ou um ponto de verificação.<br /><br /> Arquivos no modelo de recuperação FULL ou BULK_LOGGED.<br /><br /> Há uma transação ativa de execução longa.<br /><br /> O trabalho de leitor de log de replicação não foi executado. Consulte o white paper [armazenamento FILESTREAM no SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obter mais informações.|  
+|*num_marked_for_collection_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram marcados para coleta de lixo neste contêiner. Estes itens ainda não foram excluídos, mas podem ser elegíveis para exclusão após a fase de coleta de lixo.|  
+|*num_unprocessed_items*|Indica o número de itens FILESTREAM qualificados (arquivos ou diretórios) que não foram processados para coleta de lixo neste FILESTREAM. Itens podem não ser processados por várias razões, inclusive as seguintes:<br /><br /> Arquivos que precisam ser definidos porque não foi obtido o backup de log ou um ponto de verificação.<br /><br /> Arquivos no modelo de recuperação FULL ou BULK_LOGGED.<br /><br /> Há uma transação ativa de execução longa.<br /><br /> O trabalho de leitor de log de replicação não foi executada. Consulte o white paper [armazenamento de FILESTREAM no SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obter mais informações.|  
 |*last_collected_xact_seqno*|Retorna o número de sequência de log correspondente (LSN) até onde os arquivos do contêiner FILESTREAM especificado foram coletados pelo coletor de lixo.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -82,9 +82,9 @@ sp_filestream_force_garbage_collection
   
 É possível executar várias invocações desse procedimento armazenado simultaneamente em contêineres ou em bancos de dados separados.  
 
-Devido às operações de fase 2, o procedimento armazenado deve ser executado duas vezes para realmente excluir arquivos Filestream subjacentes.  
+Devido a operações de fase 2, o procedimento armazenado deve ser executado duas vezes para realmente excluir os arquivos de Filestream subjacentes.  
 
-Coleta de lixo (GC) se baseia em truncamento de log. Portanto, se os arquivos foram excluídos recentemente em um banco de dados usando o modelo de recuperação completa, eles são GC ed somente depois que for feito um backup de log dessas partes do log de transação e a parte do log é marcada como inativa. Em um banco de dados usando o modelo de recuperação simples, ocorre um truncamento de log após um `CHECKPOINT` tiver sido emitida no banco de dados.  
+Coleta de lixo (GC) se baseia em truncamento de log. Portanto, se os arquivos foram excluídos recentemente em um banco de dados usando o modelo de recuperação completa, eles são GC ed somente depois que é feito um backup de log dessas partes do log de transação e a parte do log é marcada como inativa. Em um banco de dados usando o modelo de recuperação simples, ocorre um truncamento de log após um `CHECKPOINT` tiver sido emitida no banco de dados.  
 
 
 ## <a name="permissions"></a>Permissões  

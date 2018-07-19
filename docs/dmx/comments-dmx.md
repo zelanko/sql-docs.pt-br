@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842949"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042104"
 ---
 # <a name="comments-dmx"></a>Comentários (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Comentários em extensões DMX (Data Mining) são cadeias de caracteres de texto no programa de código que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não é executado. Os comentários são também conhecidos como comentários. Os comentários são usados para documentar código ou para desabilitar temporariamente partes de um script ou instrução DMX durante o diagnóstico de um código.  
+  Os comentários em extensões DMX (Data Mining) são cadeias de caracteres de texto no programa de código que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não será executada. Os comentários são também conhecidos como comentários. Os comentários são usados para documentar código ou para desabilitar temporariamente partes de um script ou instrução DMX durante o diagnóstico de um código.  
   
  Usar comentários para documentar código de programa facilita a manutenção do código no futuro. Use comentários para registrar detalhes, como o nome do programa, nome do desenvolvedor que escreveu o código e as datas de alterações significativas do código. Use igualmente os comentários para descrever cálculos complexos ou para explicar um método de programação.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "34842949"
   
  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oferece suporte aos seguintes tipos de caracteres de comentário:  
   
--   **(barras duplas).** Use esses caracteres de comentário para gravar um comentário na mesma linha como código que deve ser executado, ou para gravar um comentário em uma linha por si próprio. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avalia tudo, desde as barras duplas até o final da linha como parte do comentário. Para criar um comentário de várias linhas, use as barras duplas no início de cada linha de comentário. Para obter mais informações sobre esse caractere de comentário, consulte [barras duplas &#40;comentário&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
+-   **(barras duplas).** Use esses caracteres de comentário para gravar um comentário na mesma linha como código que deve ser executado, ou para gravar um comentário em uma linha por si próprio. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avalia tudo, desde as barras duplas até o final da linha como parte do comentário. Para criar um comentário de várias linhas, use as barras duplas no início de cada linha de comentário. Para obter mais informações sobre esse caractere de comentário, consulte [barra dupla &#40;comentário&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
   
 -   **-(hífens duplos).** Use esses caracteres de comentário para gravar um comentário na mesma linha como código que deve ser executado, ou para gravar um comentário em uma linha por si próprio. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avalia tudo que estiver a partir das barras duplas até o final da linha como parte do comentário. Para criar um comentário de várias linhas, use os hífens duplos no início de cada linha de comentário. Para obter mais informações sobre esse caractere de comentário, consulte [– &#40;comentário&#41; &#40;DMX&#41; resumo](../dmx/comment-dmx-summary.md).  
   
--   **/\* ... \*/ (pares de barra e asterisco caractere).** Use esses caracteres de comentário para gravar um comentário na mesma linha como o código que deve ser executado, para gravar um comentário em uma linha por si próprio ou até mesmo para gravar comentários dentro do código executável. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avalia tudo, desde o par de comentário de abertura (/ *) para o par de comentário de fechamento (\*/) como parte do comentário. Para criar um comentário de várias linhas, comece o comentário com o par de caracteres de comentário de abertura (/\*) e encerre o comentário com o par de caracteres de comentário de fechamento (\*/). Nenhum outro caractere de comentário deve ser incluído em qualquer linha do comentário. Para obter mais informações sobre esse caractere de comentário, consulte [estrela de barra &#40;comentário&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
+-   **/\* ... \*/ (barra-asterisco pares de caracteres).** Use esses caracteres de comentário para gravar um comentário na mesma linha como o código que deve ser executado, para gravar um comentário em uma linha por si próprio ou até mesmo para gravar comentários dentro do código executável. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avalia tudo, desde o par de comentário de abertura (/ *) para o par de comentário de fechamento (\*/) como parte do comentário. Para criar um comentário de várias linhas, comece o comentário com o par de caracteres de comentário de abertura (/\*) e encerre o comentário com o par de caracteres de comentário de fechamento (\*/). Nenhum outro caractere de comentário deve ser incluído em qualquer linha do comentário. Para obter mais informações sobre esse caractere de comentário, consulte [estrela barra "/" &#40;comentário&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -44,8 +44,8 @@ ms.locfileid: "34842949"
  [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensões de mineração de dados &#40;DMX&#41; convenções de sintaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensões de mineração de dados &#40;DMX&#41; elementos de sintaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estrutura e o uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

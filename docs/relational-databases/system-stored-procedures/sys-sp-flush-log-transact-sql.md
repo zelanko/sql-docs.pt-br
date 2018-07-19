@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 010870b0364cd302928fd9e0cc8491133f2283b4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060233"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sys.sp_flush_log
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Um código de retorno de 1 indica êxito.  Qualquer outro valor indica falha.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="sample-code"></a>Código de exemplo  
   

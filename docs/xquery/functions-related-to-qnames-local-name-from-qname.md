@@ -1,5 +1,5 @@
 ---
-title: local-nome-do-QName (XQuery) | Microsoft Docs
+title: local-nome-from-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077753"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061354"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>Funções relacionadas a QNames - nome local do QName
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>Funções relacionadas a QNames – local-nome-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um xs: NCName que representa a parte local do QName especificado por *$arg*. O resultado será uma sequência vazia se *$arg* é a sequência vazia.  
+  Retorna um xs: NCName que representa a parte local do QName especificado por *$arg*. O resultado é uma sequência vazia se *$arg* for a sequência vazia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +44,9 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  É do QName que o nome local deveria ser extraído.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
- O exemplo a seguir usa o **local-name-from-QName()** função para recuperar o nome local e o URI de namespace partes de um valor de tipo QName. O exemplo executa o seguinte:  
+ O exemplo a seguir usa o **local-name-from-QName()** partes de função para recuperar o nome local e o URI de namespace de um valor de tipo QName. O exemplo executa o seguinte:  
   
 -   Cria uma coleção de esquemas XML.  
   

@@ -1,5 +1,5 @@
 ---
-title: assembly_modules (Transact-SQL) | Microsoft Docs
+title: sys. assembly_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,25 +26,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d457f00cdab5d8b7e6584c895c9a9070a1d9e395
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180272"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062021"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Retorna uma linha para cada função, procedimento ou gatilho definido por um assembly CLR (Common Language Runtime). Esta exibição do catálogo mapeia procedimentos armazenados, gatilhos ou funções CLR para sua implementação subjacente. Os objetos do tipo TA, AF, PC, FS e FT possuem um módulo assembly associado. Para localizar a associação entre o objeto e o assembly, você poderá unir esta exibição do catálogo a outras exibições do catálogo. Por exemplo, quando você cria um procedimento armazenado CLR, ele é representado por uma linha em **sys. Objects**, uma linha em **Procedures** (que herda de **sys. Objects**), e uma linha em **assembly_modules**. O próprio procedimento armazenado é representado pelos metadados em **sys. Objects** e **Procedures**. Referências a implementação de CLR subjacente do procedimento são encontradas em **assembly_modules**.  
+  Retorna uma linha para cada função, procedimento ou gatilho definido por um assembly CLR (Common Language Runtime). Esta exibição do catálogo mapeia procedimentos armazenados, gatilhos ou funções CLR para sua implementação subjacente. Os objetos do tipo TA, AF, PC, FS e FT possuem um módulo assembly associado. Para localizar a associação entre o objeto e o assembly, você poderá unir esta exibição do catálogo a outras exibições do catálogo. Por exemplo, quando você cria um procedimento armazenado CLR, ele é representado por uma linha em **sys. Objects**, uma linha na **Procedures** (que herda do **sys. Objects**), e uma linha em **sys. assembly_modules**. O próprio procedimento armazenado é representado pelos metadados em **sys. Objects** e **Procedures**. Referências a implementação de CLR subjacente do procedimento são encontradas no **sys. assembly_modules**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|Número de identificação do objeto SQL. É exclusivo em um banco de dados.|  
-|**assembly_id**|**Int**|ID do assembly a partir do qual o módulo foi criado.|  
+|**object_id**|**int**|Número de identificação do objeto SQL. É exclusivo em um banco de dados.|  
+|**assembly_id**|**int**|ID do assembly a partir do qual o módulo foi criado.|  
 |**assembly_class**|**sysname**|Nome da classe dentro do assembly que define este módulo.|  
 |**assembly_method**|**sysname**|Nome do método dentro de **assembly_class** que define este módulo.<br /><br /> NULL para funções de agregação (AF).|  
 |**null_on_null_input**|**bit**|O módulo foi declarado para produzir uma saída NULL para qualquer entrada NULL.|  
-|**execute_as_principal_id**|**Int**|ID do banco de dados principal no qual a execução de contexto ocorre, conforme especificado pela cláusula EXECUTE AS da função, do procedimento armazenado ou do gatilho CLR.<br /><br /> NULL = EXECUTE AS CALLER. Esse é o padrão.<br /><br /> ID da entidade de banco de dados especificada = EXECUTE AS SELF, EXECUTE AS *user_name*, ou EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID do banco de dados principal no qual a execução de contexto ocorre, conforme especificado pela cláusula EXECUTE AS da função, do procedimento armazenado ou do gatilho CLR.<br /><br /> NULL = EXECUTE AS CALLER. Esse é o padrão.<br /><br /> ID da entidade de banco de dados especificada = EXECUTE AS SELF, EXECUTE AS *user_name*, ou EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

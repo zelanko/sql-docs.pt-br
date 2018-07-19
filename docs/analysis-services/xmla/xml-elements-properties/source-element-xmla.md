@@ -1,5 +1,5 @@
 ---
-title: Fonte do elemento (XMLA) | Microsoft Docs
+title: Fonte de elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061054"
 ---
 # <a name="source-element-xmla"></a>Elemento Source (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "34576418"
 |Elementos filho|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- O **fonte** elemento é uma referência de objeto para uma única partição a serem mescladas em uma partição de destino especificada pelo **destino** elemento do pai **MergePartitions** elemento.  
+ O **fonte** elemento é uma referência de objeto para uma única partição a ser mesclado com uma partição de destino especificada pela **destino** elemento pai **MergePartitions** elemento.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir combina as quatro partições do grupo de medidas `Internet Sales` na partição de destino `Internet_Sales_2004` . O exemplo refere-se para o **Adventure Works** cubo do [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados.  
+ O exemplo a seguir combina as quatro partições do grupo de medidas `Internet Sales` na partição de destino `Internet_Sales_2004` . O exemplo refere-se para o **Adventure Works** cubo da [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemplo [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

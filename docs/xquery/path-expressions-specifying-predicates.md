@@ -26,13 +26,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058516"
 ---
-# <a name="path-expressions---specifying-predicates"></a>Expressões de caminho - especificação de predicados
+# <a name="path-expressions---specifying-predicates"></a>Expressões de caminho – especificando predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Conforme descrito no tópico [expressões de caminho no XQuery](../xquery/path-expressions-xquery.md), uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
@@ -144,7 +144,7 @@ WHERE ProductModelID=7
   
      O caminho de expressão nessa consulta, só retornará aqueles nós do elemento <`Location`> que tenham um atributo LotSize especificado. Se o predicado retornar uma sequência vazia para um <`Location`>específico, aquele local de centro de trabalho não será retornado no resultado.  
   
-2.  Predicado valores só podem ser xs: Integer, xs: Boolean ou nó\*. Para o nó\*, o predicado é avaliada como True se houver qualquer nó e False para uma sequência vazia. Qualquer outro tipo numérico, como dobro e tipo de float, gera um erro de tipo estático. O valor verdadeiro do predicado de uma expressão é True se e somente se o inteiro resultante for igual ao valor da posição de contexto. Além disso, somente valores inteiros literais e **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para 1.  
+2.  Valores só podem ser xs: Integer, xs: Boolean ou nó de predicado\*. Para o nó\*, o predicado é avaliada como True se houver quaisquer nós e False para uma sequência vazia. Qualquer outro tipo numérico, como dobro e tipo de float, gera um erro de tipo estático. O valor verdadeiro do predicado de uma expressão é True se e somente se o inteiro resultante for igual ao valor da posição de contexto. Além disso, apenas valores inteiros literais e os **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para 1.  
   
      Por exemplo, a consulta a seguir recupera o terceiro nó do elemento filho do elemento <`Features`>.  
   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7
   
 3.  Se o valor da expressão do predicado é um valor de tipo simples de tipo Booliano, o valor verdadeiro do predicado é igual ao valor da expressão do predicado.  
   
-     Por exemplo, a consulta a seguir é especificada em relação a um **xml**variável de tipo que contém uma instância XML, a instância XML de pesquisa do cliente. A consulta recupera aqueles clientes que têm filhos. Essa consulta, que seria \<HasChildren > 1\</HasChildren >.  
+     Por exemplo, a consulta a seguir é especificada em relação a um **xml**variável de tipo que contém uma instância XML, a instância XML de pesquisa do cliente. A consulta recupera aqueles clientes que têm filhos. Nesta consulta, que seria \<lt;haschildren>1</haschildren&gt > 1\</HasChildren >.  
   
     ```  
     declare @x xml  
@@ -199,9 +199,9 @@ WHERE ProductModelID=7
   
      Observe o seguinte na consulta anterior:  
   
-    -   A expressão no **para** loop tem duas etapas, e a segunda etapa especifica um predicado. O valor desse predicado é um valor de tipo Booliano. Se esse valor for True, o valor verdadeiro do predicado também será True.  
+    -   A expressão na **para** loop tem duas etapas, e a segunda etapa especifica um predicado. O valor desse predicado é um valor de tipo Booliano. Se esse valor for True, o valor verdadeiro do predicado também será True.  
   
-    -   A consulta retorna o <`Customer`> filhos do elemento, cujo valor de predicado é True, do \<pesquisa > filhos do elemento do documento raiz. Este é o resultado:  
+    -   A consulta retorna o <`Customer`> filhos do elemento, cujo valor de predicado é True, da \<Survey > elementos filhos da raiz do documento. Este é o resultado:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  Se o valor da expressão do predicado é uma sequência que contém no mínimo um nó, o valor verdadeiro do predicado é True.  
   
- Por exemplo, a consulta a seguir recupera ProductModelID para modelos de produto cuja descrição de catálogo XML inclui pelo menos um recurso, um elemento filho do <`Features`> elemento, do namespace associado a **wm**prefixo.  
+ Por exemplo, a consulta a seguir recupera ProductModelID para modelos de produto cuja descrição de catálogo XML inclui pelo menos um recurso, um elemento filho da <`Features`> elemento, do namespace associado com o **wm**prefixo.  
   
 ```  
 SELECT ProductModelID  
@@ -228,6 +228,6 @@ WHERE CatalogDescription.exist('
 -   A expressão de caminho dentro de **exist ()** método Especifica um predicado na segunda etapa. Se a expressão de predicado retornar uma sequência de pelo menos um recurso, o valor verdadeiro dessa expressão de predicado será True. Nesse caso, porque o **exist ()** método retorna True, ProductModelID é retornado.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Digitação estática e filtros de predicado  
- Os predicados também podem afetar estaticamente o tipo inferido de uma expressão. Valores inteiros literais e **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para no máximo uma.  
+ Os predicados também podem afetar estaticamente o tipo inferido de uma expressão. Valores inteiros literais e os **Last ()** função reduzem a cardinalidade da expressão de etapa filtrada para no máximo um.  
   
   

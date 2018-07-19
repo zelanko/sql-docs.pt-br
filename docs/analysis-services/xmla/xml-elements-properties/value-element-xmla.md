@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062847"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contém o valor desejado de um [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento a ser adicionado por um [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, ou um [célula](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento a ser atualizada por um [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
+  Contém o valor desejado de um [atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elemento a ser adicionado por um [inserir](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) comando, ou uma [célula](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) elemento a ser atualizada por um [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,8 +56,8 @@ ms.locfileid: "34576788"
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## <a name="see-also"></a>Confira também
- [O elemento CellOrdinal &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
- [Elemento Insert &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Elemento CellOrdinal &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
+ [Inserir o elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Elemento UpdateCells &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

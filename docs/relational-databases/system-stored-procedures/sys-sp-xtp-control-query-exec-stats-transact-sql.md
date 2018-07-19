@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23301458684008945c057aa1d7f9f97380a9cb68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055844"
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33257567"
   
  Reduz o desempenho quando você habilita a coleta de estatísticas. Se você precisar solucionar problemas de um ou alguns procedimentos armazenados compilados nativamente, será necessário habilitar a coleta de estatísticas apenas para esses.  
   
- Para habilitar a coleta de estatísticas no nível de procedimento para todos os procedimentos armazenados compilados nativamente, consulte [sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ Para habilitar a coleta de estatísticas no nível de procedimento para todos os procedimentos armazenados compilados nativamente, consulte [sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value é definido como zero quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  
   
  @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
- A ID de banco de dados e a ID de objeto do procedimento armazenado compilado nativamente. Se a coleta de estatísticas está habilitada para a instância ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), as estatísticas em um procedimento armazenado compilado nativamente são coletadas. Se você desativar a coleção de estatísticas na instância, ela não será desativada para cada procedimento armazenado compilado de forma nativa.  
+ A ID de banco de dados e a ID de objeto do procedimento armazenado compilado nativamente. Se a coleta de estatísticas é habilitada para a instância ([sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), as estatísticas em um procedimento armazenado compilado nativamente são coletadas. Se você desativar a coleção de estatísticas na instância, ela não será desativada para cada procedimento armazenado compilado de forma nativa.  
   
  Use [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md), ou [OBJECT_ID &#40;Transact-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md) para obter as IDs de um banco de dados e o procedimento armazenado.  
   
@@ -89,6 +89,6 @@ SELECT @c AS 'collection status';
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [OLTP na memória &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

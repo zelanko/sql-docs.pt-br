@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464592"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058230"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "34464592"
 
 |Nome da coluna|Propriedade|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|O nível de log para o cluster de failover do SQL Server. O log detalhado pode ser ativado para fornecer detalhes adicionais nos logs de erros para solução de problemas. Um dos valores seguintes:<br /><br /> 0 – O log está desativado (padrão)<br /><br /> 1 – Apenas erros<br /><br /> 2 – Erros e avisos<br /><br /> Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
-|SqlDumperDumpFlags|bigint|Sinalizadores de despejo do SQLDumper determinam o tipo de arquivos de despejo gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A configuração padrão é 0.|  
+|VerboseLogging|BIGINT|O nível de log para o cluster de failover do SQL Server. O log detalhado pode ser ativado para fornecer detalhes adicionais nos logs de erros para solução de problemas. Um dos valores seguintes:<br /><br /> 0 – O log está desativado (padrão)<br /><br /> 1 – Apenas erros<br /><br /> 2 – Erros e avisos<br /><br /> Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|SqlDumperDumpFlags|BIGINT|Sinalizadores de despejo do SQLDumper determinam o tipo de arquivos de despejo gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A configuração padrão é 0.|  
 |SqlDumperDumpPath|nvarchar(260)|O local onde o utilitário SQLDumper gera os arquivos de despejo.|  
-|SqlDumperDumpTimeOut|bigint|O valor de tempo limite em milissegundos para o utilitário SQLDumper gerar um despejo no caso de uma falha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é 0.|  
-|FailureConditionLevel|bigint|Define as condições sob as quais o cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve apresentar uma falha ou reiniciar. O valor padrão é 3. Para obter uma explicação detalhada ou para alterar as configurações de propriedade, consulte [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|bigint|O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco de Dados do SQL Server deve aguardar por informações de integridade do servidor antes de considerar a instância do SQL Server como sem resposta. O valor de tempo limite é expresso em milissegundos. O padrão é 60000. Para obter mais informações ou para alterar essa configuração de propriedade, consulte [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|SqlDumperDumpTimeOut|BIGINT|O valor de tempo limite em milissegundos para o utilitário SQLDumper gerar um despejo no caso de uma falha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é 0.|  
+|FailureConditionLevel|BIGINT|Define as condições sob as quais o cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve apresentar uma falha ou reiniciar. O valor padrão é 3. Para obter uma explicação detalhada ou para alterar as configurações de propriedade, consulte [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
+|HealthCheckTimeout|BIGINT|O valor do tempo limite de quanto tempo a DLL de recursos do Mecanismo de Banco de Dados do SQL Server deve aguardar por informações de integridade do servidor antes de considerar a instância do SQL Server como sem resposta. O valor de tempo limite é expresso em milissegundos. O padrão é 60000. Para obter mais informações ou para alterar a configuração dessa propriedade, consulte [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
 ## <a name="permissions"></a>Permissões  
  Exige permissões de VIEW SERVER STATE na instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

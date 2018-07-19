@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 18faadc4dbcd4b2966c8e922aed01127b13c8baa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465692"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061404"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,22 +31,22 @@ ms.locfileid: "34465692"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|`database_id`|`int`|ID do banco de dados. Isso é exclusivo dentro de uma instância de um banco de dados do SQL Server ou um servidor de banco de dados do SQL Azure. |  
+|`database_id`|`int`|ID do banco de dados. Isso é exclusivo dentro de uma instância de um banco de dados do SQL Server ou um servidor de banco de dados SQL do Azure. |  
 |`object_id`|`int`|A ID do objeto. O objeto é uma da object_types. | 
 |`index_id`|`int`|ID do índice columnstore.|  
 |`partition_number`|`bigint`|Número de partição com base 1 no índice ou heap. Cada tabela ou exibição tem pelo menos uma partição.| 
 |`column_id`|`int`|ID da coluna columnstore. Isso é NULL para DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID do rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – um segmento de coluna. `object_id` é a ID do segmento. Um segmento armazena todos os valores para uma coluna dentro de um grupo de linhas. Por exemplo, se uma tabela tiver 10 colunas, há 10 segmentos de coluna por grupo de linhas. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – um dicionário global que contém informações de pesquisa para todos os segmentos de coluna na tabela.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - um dicionário local associado a uma coluna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – outra representação do dicionário global. Isso fornece uma pesquisa inversa de valor para dictionary_id. Usado para criar segmentos compactados como parte do motor de tupla ou de carregamento em massa.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – um bitmap que controla o segmento exclui. Há um bitmap de exclusão por partição.|  
-|`access_count`|`int`|Número de leitura ou gravação acessa a este objeto.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – um segmento de coluna. `object_id` é a ID do segmento. Um segmento armazena todos os valores para uma coluna dentro de um grupo de linhas. Por exemplo, se uma tabela tiver 10 colunas, há 10 segmentos de coluna por rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – um dicionário global que contém informações de pesquisa para todos os segmentos de coluna na tabela.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - um dicionário local associado a uma coluna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – outra representação de dicionário global. Isso fornece uma pesquisa inversa de valor para dictionary_id. Usado para criar segmentos compactados como parte do motor de tupla ou de carregamento em massa.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – um bitmap que controla o segmento exclui. Há um bitmap de exclusão por partição.|  
+|`access_count`|`int`|Número de leitura ou gravação acessos a este objeto.|  
 |`memory_used_in_bytes`|`bigint`|Memória usada por este objeto no pool de objeto.|  
-|`object_load_time`|`datetime`|Hora de quando object_id foi colocado no pool de objetos.|  
+|`object_load_time`|`datetime`|Tempo de relógio para quando o object_id foi trazida para o pool de objetos.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
  
 ## <a name="see-also"></a>Consulte também  
   

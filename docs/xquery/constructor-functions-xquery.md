@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059724"
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Qualquer tipo XSD interno.  
   
 ## <a name="remarks"></a>Remarks  
- Há suporte para construtores de tipos base e XSD derivados atômicos. No entanto, os subtipos de **xs: Duration**, que inclui **XDT: yearmonthduration e XDT: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: Notation** não têm suporte. Tipos atômicos definidos pelo usuário, que estejam disponíveis nas coleções de esquemas associadas também estarão disponíveis, desde que eles sejam direta ou indiretamente derivados dos tipos a seguir.  
+ Há suporte para construtores de tipos base e XSD derivados atômicos. No entanto, os subtipos **xs: Duration**, que inclui **XDT: yearmonthduration e XDT: daytimeduration**, e **xs: QName**, **xs: NMTOKEN**, e **xs: Notation** não têm suporte. Tipos atômicos definidos pelo usuário, que estejam disponíveis nas coleções de esquemas associadas também estarão disponíveis, desde que eles sejam direta ou indiretamente derivados dos tipos a seguir.  
   
 #### <a name="supported-base-types"></a>Tipos de base com suporte  
  Esses são os tipos base com suporte:  
@@ -143,7 +143,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   Se o argumento for um literal de outro tipo, a expressão será avaliada durante a compilação. Quando o valor não atender às restrições de tipo, uma sequência vazia será retornada.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
  Neste exemplo, um documento XML de exemplo é atribuído pela primeira vez para um **xml** variável de tipo. Esse documento contém três exemplos de elementos <`ProductDescription`>, com cada um deles contendo um elemento filho <`DateCreated`>.  
@@ -181,7 +181,7 @@ select @x.query('
   
  Observe o seguinte na consulta anterior:  
   
--   A estrutura de loop FOR ... Estrutura de loop WHERE é usada para recuperar o \<ProductDescription > elemento que satisfazem a condição especificada na cláusula WHERE.  
+-   A estrutura de loop FOR ... Estrutura de loop em que é usada para recuperar o \<ProductDescription > elemento que satisfaz a condição especificada na cláusula WHERE.  
   
 -   O **DateTime ()** função de construtor é usada para construir **dateTime** digite valores para que eles possam ser comparados adequadamente.  
   

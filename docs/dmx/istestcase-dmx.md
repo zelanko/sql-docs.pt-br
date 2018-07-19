@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063946"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ IsTestCase()
 ```  
   
 ## <a name="result-type"></a>Tipo de Resultado  
- Retorna **true** se o caso fizer parte do conjunto de dados de teste; caso contrário, **false**.  
+ Retorna **verdadeira** se o caso fizer parte do conjunto de dados de teste; caso contrário **falso**.  
   
 ## <a name="remarks"></a>Remarks  
  Se você usar o Assistente de Mineração de Dados para criar uma estrutura de mineração e o modelo de mineração relacionado, por padrão, 30% dos casos serão separados para serem usados como um conjunto de dados de teste. Os casos restantes serão utilizados para treinar o modelo de mineração de dados. O mesmo conjunto de dados de teste pode ser usado com todos os modelos baseados nessa estrutura. No entanto, se você usar DMX para criar o modelo de mineração, por padrão, todos os dados são usados para treinar o modelo, e nenhum conjunto de teste é criado. Para habilitar a criação de um conjunto de dados de teste, você deve definir os parâmetros da cláusula WITH HOLDOUT.  
@@ -42,7 +42,7 @@ IsTestCase()
  Para retornar casos que fazem parte do conjunto de dados de treinamento, use a função [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa o `Targeted Mailing` estrutura de mineração que é criada no [Tutorial básico de mineração de dados](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna todos os casos da estrutura que são usados para teste.  
+ O exemplo a seguir usa o `Targeted Mailing` estrutura de mineração que é criada na [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna todos os casos da estrutura que são usados para teste.  
   
 ```  
 SELECT *  
@@ -50,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- Para obter mais informações sobre como consultar os casos usados na mineração de dados, consulte [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) e [SELECT FROM &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obter mais informações sobre como consultar casos usados na mineração de dados, consulte [SELECT FROM &#60;modelo&#62;. CASOS de &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) e [SELECT FROM &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   

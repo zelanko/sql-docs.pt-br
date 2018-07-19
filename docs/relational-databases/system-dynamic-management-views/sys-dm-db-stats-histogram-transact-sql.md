@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042764"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34464232"
 Retorna o histograma de estatísticas para o objeto de banco de dados especificado (tabela ou exibição indexada) no atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Semelhante ao `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Essa DMF está disponível desde [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Essa DMF está disponível começando com [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,20 +56,20 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id |**Int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
-|stats_id |**Int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**Int** |O número da etapa do histograma. |
+|object_id |**int**|ID do objeto (tabela ou exibição indexada) para o qual as propriedades do objeto de estatísticas serão retornadas.|  
+|stats_id |**int**|ID do objeto de estatísticas. É exclusiva na tabela ou exibição indexada. Para obter mais informações, veja [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
+|step_number |**int** |O número da etapa no histograma. |
 |range_high_key |**sql_variant** |Valor da coluna associada superior de uma etapa do histograma. O valor da coluna também será denominado um valor de chave.|
 |range_rows |**real** |Número estimado de linhas cujo valor de coluna fica dentro de uma etapa do histograma, excluindo-se o limite superior. |
 |equal_rows |**real** |Número estimado de linhas cujo valor de coluna é igual ao limite superior da etapa do histograma. |
 |distinct_range_rows |**bigint** |Número estimado de linhas com um valor de coluna distinto dentro de uma etapa do histograma, excluindo-se o limite superior. |
-|average_range_rows |**real** |Número médio de linhas com valores de colunas duplicados em uma etapa de histograma, exceto o limite superior (`RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |Número médio de linhas com valores de coluna duplicados dentro de uma etapa de histograma, exceto o limite superior (`RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0`). |
   
  ## <a name="remarks"></a>Remarks  
  
- O conjunto de resultados para `sys.dm_db_stats_histogram` retorna informações semelhantes `DBCC SHOW_STATISTICS WITH HISTOGRAM` e também inclui `object_id`, `stats_id`, e `step_number`.
+ O conjunto de resultados para `sys.dm_db_stats_histogram` retorna informações semelhantes às `DBCC SHOW_STATISTICS WITH HISTOGRAM` e também inclui `object_id`, `stats_id`, e `step_number`.
 
- Porque a coluna `range_high_key` é do tipo de dados sql_variant tipo, você precisará usar `CAST` ou `CONVERT` se um predicado de comparação com uma constante de cadeia de caracteres não.
+ Porque a coluna `range_high_key` é um dados sql_variant tipo, você talvez precise usar `CAST` ou `CONVERT` se um predicado faz a comparação com uma constante de cadeia de caracteres não.
 
 ### <a name="histogram"></a>Histograma
   
@@ -114,7 +114,7 @@ A chave primária ocupa `stat_id` número 1, portanto, chame `sys.dm_db_stats_hi
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. Consulta úteis:   
+### <a name="b-useful-query"></a>B. Consultas úteis:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -123,7 +123,7 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Consulta úteis:
+### <a name="c-useful-query"></a>C. Consultas úteis:
 O exemplo a seguir seleciona da tabela `Country` com um predicado na coluna `Country_Name`.
 
 ```sql  
@@ -131,7 +131,7 @@ SELECT * FROM Country
 WHERE Country_Name = 'Canada';
 ```
 
-O exemplo a seguir examina a estatística criada anteriormente na tabela `Country` e coluna `Country_Name` para a etapa de histograma correspondência o predicado na consulta acima.
+O exemplo a seguir examina a estatística criada anteriormente na tabela `Country` e na coluna `Country_Name` para a etapa de histograma correspondente ao predicado na consulta acima.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -150,5 +150,5 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
   
 ## <a name="see-also"></a>Consulte também  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[Objeto exibições de gerenciamento dinâmico relacionadas e funções (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Objeto (Transact-SQL) de funções e exibições de gerenciamento dinâmico relacionadas ao](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

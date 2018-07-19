@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055241"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regras de conversão de tipos em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33077903"
   
  Este tópico descreve as regras de conversão de tipos aplicadas à conversão de um tipo em outro usando um dos seguintes métodos:  
   
--   Conversão explícita que você fazer usando **conversão como** ou as funções de construtor do tipo (por exemplo, `xs:integer("5")`).  
+-   Conversão explícita que você faz usando **convertido** ou as funções do construtor de tipo (por exemplo, `xs:integer("5")`).  
   
 -   Conversão implícita que ocorre durante a promoção de tipos  
   
@@ -54,21 +54,21 @@ ms.locfileid: "33077903"
   
 -   Um tipo primitivo interno pode ser convertido em outro tipo primitivo interno, com base nas regras na tabela.  
   
--   Um tipo primitivo pode ser convertido em qualquer tipo derivado desse tipo primitivo. Por exemplo, você pode converter de **xs: decimal** para **xs: Integer**, ou de **xs: decimal** para **xs: Long**.  
+-   Um tipo primitivo pode ser convertido em qualquer tipo derivado desse tipo primitivo. Por exemplo, você pode converter de **xs: decimal** à **xs: Integer**, ou de **xs: decimal** para **xs: Long**.  
   
--   Um tipo derivado pode ser convertido em qualquer tipo que seja seu ancestral na hierarquia de tipo, todo o caminho até o seu tipo base primitivo interno. Por exemplo, você pode converter de **xs: token** para **xs: normalizedstring** ou **xs: string**.  
+-   Um tipo derivado pode ser convertido em qualquer tipo que seja seu ancestral na hierarquia de tipo, todo o caminho até o seu tipo base primitivo interno. Por exemplo, você pode converter de **xs: token** à **xs: normalizedstring** ou a **xs: string**.  
   
--   Um tipo derivado poderá ser convertido em um tipo primitivo se seu ancestral primitivo puder ser convertido no tipo de destino. Por exemplo, você pode converter **xs: Integer**, um tipo derivado, em um **xs: string**, primitivos de tipo, porque **xs: decimal**, **xs: Integer**do ancestral primitivo, pode ser convertido em **xs: string**.  
+-   Um tipo derivado poderá ser convertido em um tipo primitivo se seu ancestral primitivo puder ser convertido no tipo de destino. Por exemplo, você pode converter **xs: Integer**, um tipo derivado, em um **xs: string**, primitivos de tipo, porque **xs: decimal**, **xs: Integer**do o ancestral primitivo, pode ser convertido em **xs: string**.  
   
--   Um tipo derivado pode ser convertido em outro tipo derivado se o ancestral primitivo do tipo de origem puder ser convertido no ancestral primitivo do tipo de destino. Por exemplo, você pode converter de **xs: Integer** para **xs: token**, pois você pode converter de **xs: decimal** para **xs: string**.  
+-   Um tipo derivado pode ser convertido em outro tipo derivado se o ancestral primitivo do tipo de origem puder ser convertido no ancestral primitivo do tipo de destino. Por exemplo, você pode converter de **xs: Integer** à **xs: token**, pois você pode converter de **xs: decimal** para **xs: string**.  
   
 -   As regras de conversão de tipos definidos pelo usuário em tipos internos são as mesmas para os tipos internos. Por exemplo, você pode definir um **myInteger** tipo derivado de **xs: Integer** tipo. Em seguida, **myInteger** pode ser convertido em **xs: token**, pois **xs: decimal** pode ser convertido em **xs: string**.  
   
  Não há suporte para os seguintes tipos de conversão:  
   
--   Não é permitida a conversão em ou de tipos de lista. Isso inclui tipos de lista definidos pelo usuário e tipos de lista internos, como **xs: IDREFS**, **xs: Entities**, e **xs: NMTOKENS**.  
+-   Não é permitida a conversão em ou de tipos de lista. Isso inclui tipos de lista definidos pelo usuário e tipos de listas internos, como **xs: IDREFS**, **xs: Entities**, e **xs: NMTOKENS**.  
   
--   Conversão para ou do **xs: QName** não tem suporte.  
+-   Conversão em ou de **xs: QName** não tem suporte.  
   
 -   **xs: Notation** e os subtipos completamente ordenados de duração, **XDT: yearmonthduration** e **XDT: daytimeduration**, não têm suporte. Consequentemente, não há suporte para conversão em ou desses tipos.  
   
@@ -148,17 +148,17 @@ go
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- Neste exemplo, os dois valores passados no XQuery **min ()** função são de tipos diferentes. Portanto, a conversão implícita é executada onde **inteiro** tipo é promovido para **duplo** e duas **duplo** valores são comparados.  
+ Neste exemplo, os dois valores passados em XQuery **min ()** função são de tipos diferentes. Portanto, a conversão implícita é executada em que **inteiro** tipo é promovido a **duplo** e as duas **double** valores são comparados.  
   
  A promoção de tipo como descrita nesse exemplo segue estas regras:  
   
 -   Um tipo numérico derivado interno pode ser promovido a seu tipo básico. Por exemplo, **inteiro** pode ser promovido a **decimal**.  
   
--   Um **decimal** pode ser promovido a **float,** e um **float** pode ser promovido a **duplo**.  
+-   Um **decimais** pode ser promovido a **float,** e um **float** pode ser promovido a **double**.  
   
  Como a conversão implícita só é permitida para tipos numéricos, o seguinte não é permitido:  
   
--   Conversão implícita para tipos de cadeia de caracteres. Por exemplo, se dois **cadeia de caracteres** tipos esperados e você passar um **cadeia de caracteres** e um **token**, nenhuma conversão implícita ocorrerá e um erro será retornado.  
+-   Conversão implícita para tipos de cadeia de caracteres. Por exemplo, se duas **cadeia de caracteres** tipos são esperados e passar em um **cadeia de caracteres** e um **token**, nenhuma conversão implícita ocorrerá e um erro será retornado.  
   
 -   Conversão implícita de tipos numéricos em tipos de cadeia de caracteres. Por exemplo, se você passar um valor do tipo inteiro em uma função que está esperando um parâmetro de tipo de cadeia de caracteres, nenhuma conversão implícita ocorrerá e um erro será retornado.  
   
@@ -175,7 +175,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Na conversão em tipos binários, como xs:base64Binary ou xs:hexBinary, de um tipo de cadeia de caracteres ou untypedAtomic, os valores de entrada precisam ser codificados como base64 ou hex, respectivamente.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Convertendo um valor em um tipo de cadeia de caracteres ou untypedAtomic  
- A conversão em um tipo de cadeia de caracteres ou untypedAtomic transforma o valor em sua representação léxica canônica do XQuery. Especificamente, isso pode significar que um valor que pode ter obedecido a um padrão específico ou outra restrição durante a entrada não será representado de acordo com essa restrição.  Para informar os usuários sobre isso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sinaliza os tipos em que a restrição de tipo pode ser um problema, fornecendo um aviso quando esses tipos são carregados na coleção de esquema.  
+ A conversão em um tipo de cadeia de caracteres ou untypedAtomic transforma o valor em sua representação léxica canônica do XQuery. Especificamente, isso pode significar que um valor que pode ter obedecido a um padrão específico ou outra restrição durante a entrada não será representado de acordo com essa restrição.  Para informar os usuários sobre isso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sinaliza os tipos em que a restrição de tipo pode ser um problema, fornecendo um aviso quando esses tipos são carregados na coleção de esquemas.  
   
  Ao converter um valor do tipo xs:float ou xs:double, ou qualquer um de seus subtipos, em um tipo de cadeia de caracteres ou untypedAtomic, o valor será representado em notação científica. Isso só é realizado quando o valor absoluto do valor é inferior a 1.0E-6, ou superior ou igual a 1.0E6. Isso significa que 0 é serializado em notação científica para 0.0E0.  
   

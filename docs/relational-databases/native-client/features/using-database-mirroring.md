@@ -22,11 +22,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e799cb1d725cd756e271ba5706f97d655314c9a9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042814"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

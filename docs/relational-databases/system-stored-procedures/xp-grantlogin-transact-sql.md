@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258843"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058784"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***login***'**  
- É o nome do usuário ou grupo do Windows a ser adicionado. O usuário ou grupo deve ser qualificado com um nome de domínio do Windows no formato *domínio*\\*usuário*. *logon* é **sysname**, sem padrão.  
+ [  **@loginame =** ] **'***logon***'**  
+ É o nome do usuário ou grupo do Windows a ser adicionado. O usuário do Windows ou grupo deve ser qualificado com um nome de domínio do Windows na forma *domínio*\\*usuário*. *login* está **sysname**, sem padrão.  
   
  [  **@logintype =** ] **'***logintype***'**  
- É o nível de segurança do logon que está recebendo o acesso. *logintype* é **varchar(5)**, com um padrão NULL. Somente **administrador** pode ser especificado. Se **admin** for especificado, *login* é concedido acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
+ É o nível de segurança do logon que está recebendo o acesso. *logintype* está **varchar(5)**, com um padrão NULL. Somente **admin** pode ser especificado. Se **admin** for especificado, *login* tem acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e adicionado como um membro do **sysadmin** função de servidor fixa.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -60,7 +60,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  **xp_grantlogin** é agora um sistema armazenados procedimento em vez de um procedimento armazenado estendido. **xp_grantlogin** chamadas **sp_grantlogin** e **sp_addsrvrolemember**.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **securityadmin** função de servidor fixa. Ao alterar o *logintype*, requer a participação no **sysadmin** função de servidor fixa.  
+ Requer associação na **securityadmin** função de servidor fixa. Ao alterar o *logintype*, requer associação na **sysadmin** função de servidor fixa.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

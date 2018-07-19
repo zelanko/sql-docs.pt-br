@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c33a607587ee19de0f47942cd2c1e5b350229a88
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061034"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ IsDescendant(<NodeID>)
  Um tipo booliano.  
   
 ## <a name="remarks"></a>Remarks  
- **IsDescendant** é usado somente em [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) e [SELECT FROM &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) consultas.  
+ **IsDescendant** é usado somente no [SELECT FROM &#60;modelo&#62;. CONTEÚDO &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) e [SELECT FROM &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) consultas.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todos os casos que descendem do nó especificado na função IsDescendant.  
@@ -45,6 +45,6 @@ WHERE IsDescendant('00000000100')
 ## <a name="see-also"></a>Consulte também  
  [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão geral &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
+title: tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,29 +24,29 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: fbfc968d9fb4620884f282121a820dad548405cc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060243"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Retorna uma tabela que exibe o total de espaço em tempdb usado pelos registros de repositório de versão para cada banco de dados. **sys.dm_tran_version_store_space_usage** é eficiente e não é caro para ser executado, ele não navegar por meio de registros de repositório de versão individual, e retorna agregados espaço de armazenamento de versão consumido em tempdb por banco de dados.
+Retorna uma tabela que exibe o total de espaço em tempdb usado pelos registros de repositório de versão para cada banco de dados. **tran_version_store_space_usage** é eficiente e não é caro para ser executado, pois não navegue por meio de registros de repositório de versão individuais e retorna agregado consumido em tempdb por banco de dados de espaço de armazenamento de versão.
   
 Cada registro com controle de versão é armazenado como dados binários, junto com algumas informações de rastreamento ou de status. Semelhante a registros em tabelas de banco de dados, os registros de armazenamento de versão são armazenados em páginas de 8.192 bytes. Se um registro exceder 8.192 bytes, ele será dividido em dois registros diferentes.  
   
-Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com agrupamentos diferentes de bancos de dados diferentes. Use **sys.dm_tran_version_store_space_usage** para monitorar e planejar o tamanho de tempdb com base no uso de espaço do repositório de versão de bancos de dados em uma instância do SQL Server.
+Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com agrupamentos diferentes de bancos de dados diferentes. Use **tran_version_store_space_usage** para monitorar e planejar tamanho de tempdb com base no uso de espaço de armazenamento a versão de bancos de dados em uma instância do SQL Server.
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID do banco de dados do banco de dados.|  
-|**reserved_page_count**|**bigint**|Contagem total de páginas reservadas em tempdb para a versão armazenar os registros do banco de dados.|  
+|**database_id**|**int**|ID do banco de dados do banco de dados.|  
+|**reserved_page_count**|**bigint**|Contagem total de páginas reservadas no tempdb para a versão armazenar os registros do banco de dados.|  
 |**reserved_space_kb**|**bigint**|Espaço total usado em quilobytes em tempdb para a versão armazenar os registros do banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 
 ## <a name="examples"></a>Exemplos  
 A consulta a seguir pode ser usada para determinar o espaço consumido em tempdb, pelo repositório de versão de cada banco de dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. 

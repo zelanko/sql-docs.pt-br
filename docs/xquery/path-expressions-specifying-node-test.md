@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077663"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058296"
 ---
-# <a name="path-expressions---specifying-node-test"></a>Expressões de caminho - especificando Node Test
+# <a name="path-expressions---specifying-node-test"></a>Expressões de caminho – especificando teste de nó
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
@@ -75,9 +75,9 @@ child::ProductDescription
   
  A expressão de caminho, `/child::PD:ProductDescription/child::PD:Features/descendant::*,` tem três etapas. Tais etapas especificam os eixos filho e descendente. Em cada etapa, o nome de nó é especificado como o node test. O caractere curinga (`*`) na terceira etapa indica todos os nós do tipo de nó de principal para o eixo descendente. O tipo de nó principal do eixo determina o tipo de nó selecionado e os filtros de nome de nó que os nós selecionaram.  
   
- Como resultado, quando essa expressão é executada em documentos XML do catálogo de produtos no **ProductModel** tabela, ele recupera todos os filhos do nó de elemento do \<recursos > filho do nó de elemento de \< ProductDescription > elemento.  
+ Como resultado, quando essa expressão é executada em documentos XML do catálogo de produtos na **ProductModel** tabela, ele recupera todos os filhos do nó de elemento da \<recursos > filho do nó de elemento a \< ProductDescription > elemento.  
   
- A expressão de caminho, `/child::PD:ProductDescription/attribute::ProductModelID`, é composto de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **ProductModelID** nó de atributo do \<ProductDescription > nó de elemento.  
+ A expressão de caminho, `/child::PD:ProductDescription/attribute::ProductModelID`, é composto de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **ProductModelID** nó de atributo a \<ProductDescription > nó de elemento.  
   
  Ao especificar os nomes de nós para node tests, você também pode usar o caractere curinga (*) para especificar o nome local de um nó ou para seu prefixo de namespace, como mostrado no seguinte exemplo:  
   
@@ -111,7 +111,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- Da mesma forma, `/child::ProductDescription/child::Features/child::comment()` filhos do nó de comentário recupera o \<recursos > filho do nó de elemento de \<ProductDescription > nó de elemento.  
+ Da mesma forma, `/child::ProductDescription/child::Features/child::comment()` filhos do nó de comentário recupera as \<recursos > filho do nó de elemento a \<ProductDescription > nó de elemento.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir comparam nome de nó e tipo de nó.  

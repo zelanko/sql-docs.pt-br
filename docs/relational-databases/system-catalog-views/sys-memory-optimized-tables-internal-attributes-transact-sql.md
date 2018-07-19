@@ -1,5 +1,5 @@
 ---
-title: memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
+title: sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058208"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ Contém uma linha para cada tabela com otimização de memória interna usada pa
  
 | Nome da coluna  | Tipo de dados  | Description |
 | :------ |:----------| :-----|
-|object_id  |**Int**|       ID da tabela de usuário. Tabelas internas com otimização de memória que existem para dar suporte a uma tabela de usuário (como armazenamento fora de linha ou linhas excluídas no caso de combinações de Hk/Columnstore) têm o mesmo object_id como pai. |
+|object_id  |**int**|       ID da tabela de usuário. Tabelas internas com otimização de memória que existem para dar suporte a uma tabela de usuário (como armazenamento fora de linha ou linhas excluídas no caso de combinações de Hk/Columnstore) têm o mesmo object_id como pai. |
 |xtp_object_id  |**bigint**|    ID de objeto OLTP in-memory correspondente à tabela interna com otimização de memória usada para dar suporte à tabela de usuário. Ela é exclusiva no banco de dados e pode mudar com o tempo de vida do objeto. 
-|Tipo|  **Int** |   Tipo de tabela interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Tipo|  **int** |   Tipo de tabela interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Descrição do tipo<br/><br/>DELETED_ROWS_TABLE -> Linhas de acompanhamento de tabela interna excluídas de um índice columnstore<br/>USER_TABLE -> Tabela contendo os dados do usuário em linha<br/>DICTIONARIES_TABLE -> Dicionários para um índice columnstore<br/>SEGMENTS_TABLE -> Segmentos compactados para um índice columnstore<br/>ROW_GROUPS_INFO_TABLE -> Metadados sobre grupos de linhas compactados de um índice columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Tabela interna usada para o armazenamento de uma coluna fora da linha. Nesse caso, minor_id reflete column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte final mais acessada da tabela de histórico baseada em disco. Linhas inseridas no histórico de linhas são inseridas primeiro nessa tabela interna com otimização de memória. Há uma tarefa em segundo plano que move as linhas de forma assíncrona desta tabela interna para a tabela de histórico baseada em disco. |
-|minor_id|  **Int**|    0 indica um usuário ou uma tabela interna<br/><br/>Não 0 indica a ID de uma coluna armazenada fora de linha. Junções com column_id em sys.columns.<br/><br/>Cada coluna armazenada fora de linha tem uma linha correspondente nesta exibição do sistema.|
+|minor_id|  **int**|    0 indica um usuário ou uma tabela interna<br/><br/>Não 0 indica a ID de uma coluna armazenada fora de linha. Junções com column_id em sys.columns.<br/><br/>Cada coluna armazenada fora de linha tem uma linha correspondente nesta exibição do sistema.|
 
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -118,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Use a seguinte consulta dividem o consumo de memória por estruturas internas usadas para índices columnstore em tabelas com otimização de memória:
+Use a seguinte consulta dividem o consumo de memória entre as estruturas internas usadas para índices columnstore em tabelas com otimização de memória:
 
 ```Transact-SQL
 SELECT

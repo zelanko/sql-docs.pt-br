@@ -25,19 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066827"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Retorna estatísticas de E/S para arquivos de dados e de log. Este modo de exibição de gerenciamento dinâmico substitui o [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) função.  
+  Retorna estatísticas de E/S para arquivos de dados e de log. Essa exibição de gerenciamento dinâmico substitui o [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) função.  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use o nome **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use o nome **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,13 +73,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
  
 ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número de ID de um arquivo ou NULL. Quando NULL for especificado, serão retornados todos os arquivos do banco de dados.  
   
- A função interna [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) pode ser especificado e se refere a um arquivo de banco de dados atual.  
+ A função interna [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) podem ser especificados e se refere a um arquivo de banco de dados atual.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nome do banco de dados.</br></br>Para o SQL Data Warehouse, isso é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados de tempdb com 13 arquivos. Cada nó também tem um banco de dados por distribuição, e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contém 4 distribuições, os resultados mostram 20 arquivos de banco de dados de distribuição por pdw_node_id. 
+|**database_name**|**sysname**|Nome do banco de dados.</br></br>Para o SQL Data Warehouse, esse é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados do tempdb que tem 13 arquivos. Cada nó também tem um banco de dados por distribuição, e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contém 4 distribuições, os resultados mostram 20 arquivos de banco de dados de distribuição por pdw_node_id. 
 |**database_id**|**smallint**|ID do banco de dados.|  
 |**file_id**|**smallint**|ID de arquivo.|  
 |**sample_ms**|**bigint**|Número de milissegundos desde que o computador foi iniciado. Essa coluna pode ser usada para comparar saídas diferentes dessa função.</br></br>O tipo de dados é **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -92,9 +92,9 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**io_stall**|**bigint**|Tempo total, em milissegundos, que os usuários aguardaram até o término de E/S no arquivo.|  
 |**size_on_disk_bytes**|**bigint**|Número de bytes do disco usado por esse arquivo. No caso de arquivos esparsos, esse número é o número real de bytes do disco que é utilizado para os instantâneos do banco de dados.|  
 |**file_handle**|**varbinary**|Identificador de arquivo do Windows desse arquivo.|  
-|**io_stall_queued_read_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [sys.DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Não é aplicável a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
-|**pdw_node_id**|**Int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
+|**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
  
   
 ## <a name="permissions"></a>Permissões  
@@ -102,9 +102,9 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-return-statistics-for-a-log-file"></a>A. Retorna as estatísticas para um arquivo de log
+### <a name="a-return-statistics-for-a-log-file"></a>A. Retornar as estatísticas para um arquivo de log
 
-**Aplica-se a:** SQL Server (começando com o 2008), o banco de dados do SQL Azure
+**Aplica-se a:** SQL Server (começando com o 2008), o banco de dados SQL
 
  O exemplo a seguir retorna todas as estatísticas do arquivo de log no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -113,7 +113,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retorna estatísticas para o arquivo em tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retornar as estatísticas para o arquivo em tempdb
 
 **Aplica-se a:** Azure SQL Data Warehouse
 
@@ -125,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Eu O exibições de gerenciamento dinâmico e funções relacionadas a &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Eu O relacionadas a funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

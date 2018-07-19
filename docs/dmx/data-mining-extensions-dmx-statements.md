@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042114"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instruções Data Mining Extensions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Trabalhando com dados de modelos de mineração em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] envolve as seguintes tarefas principais:  
+  Trabalhar com dados modelos de mineração [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] envolve as seguintes tarefas principais:  
   
 -   Criando estruturas de mineração e modelos de mineração  
   
@@ -36,9 +36,9 @@ ms.locfileid: "34841489"
  Use as instruções DMX (Data Mining Extensions) para realizar todas essas tarefas de forma programada.  
   
  Criando estruturas de mineração e modelos de mineração  
- Use o [criar estrutura de MINERAÇÃO &#40;DMX&#41; ](../dmx/create-mining-structure-dmx.md) instrução para adicionar uma nova estrutura de mineração para um banco de dados. Você pode usar o [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) instrução para adicionar modelos de mineração à estrutura de mineração.  
+ Use o [criar estrutura de MINERAÇÃO &#40;DMX&#41; ](../dmx/create-mining-structure-dmx.md) instrução para adicionar uma nova estrutura de mineração a um banco de dados. Você pode usar o [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) instrução para adicionar modelos de mineração à estrutura de mineração.  
   
- Use o [criar modelo de MINERAÇÃO &#40;DMX&#41; ](../dmx/create-mining-model-dmx.md) instrução para criar uma nova estrutura de mineração associada e modelo de mineração.  
+ Use o [CREATE MINING MODEL &#40;DMX&#41; ](../dmx/create-mining-model-dmx.md) instrução para criar uma nova estrutura de mineração associada e modelo de mineração.  
   
  Processando estruturas de mineração e modelos de mineração  
  Use o [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instrução para processar uma estrutura de mineração e um modelo de mineração.  
@@ -50,12 +50,12 @@ ms.locfileid: "34841489"
  Use o [SELECT INTO &#40;DMX&#41; ](../dmx/select-into-dmx.md) instrução para copiar a estrutura de um modelo de mineração existente em um novo modelo de mineração e para treinar o novo modelo com os mesmos dados.  
   
  Pesquisando modelos de mineração  
- Use o [selecione &#40;DMX&#41; ](../dmx/select-dmx.md) instrução para pesquisar as informações que o algoritmo de mineração de dados calcula e armazena no modelo de mineração de dados durante o treinamento do modelo. Semelhantemente ao [!INCLUDE[tsql](../includes/tsql-md.md)], você pode usar várias cláusulas com a instrução SELECT, para estender a sua capacidade. Essas cláusulas incluem [DISTINTOS de \<modelo >](../dmx/select-distinct-from-model-dmx.md), [FROM \<modelo >. CASOS](../dmx/select-from-model-cases-dmx.md), [FROM \<modelo >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [FROM \<modelo >. CONTEÚDO](../dmx/select-from-model-content-dmx.md) e [FROM \<modelo >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Use o [selecione &#40;DMX&#41; ](../dmx/select-dmx.md) instrução para pesquisar as informações que o algoritmo de mineração de dados calcula e armazena no modelo de mineração de dados durante o treinamento de modelo. Semelhantemente ao [!INCLUDE[tsql](../includes/tsql-md.md)], você pode usar várias cláusulas com a instrução SELECT, para estender a sua capacidade. Essas cláusulas incluem [DISTINCT FROM \<modelo >](../dmx/select-distinct-from-model-dmx.md), [FROM \<modelo >. CASOS](../dmx/select-from-model-cases-dmx.md), [FROM \<modelo >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [FROM \<modelo >. CONTEÚDO](../dmx/select-from-model-content-dmx.md) e [FROM \<modelo >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Prevendo segundo modelos de mineração  
  Use o [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) cláusula da instrução SELECT para criar previsões com base em um modelo de mineração existente.  
   
- Você também pode importar e exportar modelos usando o [importar &#40;DMX&#41; ](../dmx/import-dmx.md) e [exportar &#40;DMX&#41; ](../dmx/export-dmx.md) instruções.  
+ Você também pode importar e exportar modelos usando o [importação &#40;DMX&#41; ](../dmx/import-dmx.md) e [exportar &#40;DMX&#41; ](../dmx/export-dmx.md) instruções.  
   
  Essas tarefas encaixam-se em duas categorias, instruções de definição de dados e instruções de manipulação de dados, descritas na tabela a seguir.  
   

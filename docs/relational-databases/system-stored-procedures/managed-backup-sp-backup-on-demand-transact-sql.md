@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239336"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058034"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Argumentos  
  @database_name  
- O nome do banco de dados em que o backup será executado. O @database_name é **SYSNAME**.  
+ O nome do banco de dados em que o backup será executado. O @database_name está **SYSNAME**.  
   
  @type  
- O tipo de backup a ser executado: Banco de Dados ou Log. O @type parâmetro é **nvarchar (32)**.  
+ O tipo de backup a ser executado: Banco de Dados ou Log. O @type parâmetro é **NVARCHAR(32)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
