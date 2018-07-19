@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041164"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Executa um preparada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução usando um identificador especificado e o valor do parâmetro opcional. sp_execute é invocado pela especificação de ID = 12 em um pacote de protocolo TDS de dados tabulares.  
+  Executa um preparada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução usando um identificador especificado e o valor do parâmetro opcional. sp_execute é invocado pela especificação de ID = 12 em um pacote do protocolo TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_execute handle OUTPUT
   
 ## <a name="arguments"></a>Argumentos  
  *Identificador*  
- É o *tratar* valor retornado por sp_prepare. *tratar* é um parâmetro obrigatório que chama **int** valor de entrada.  
+ É o *manipular* valor retornado por sp_prepare. *manipular* é um parâmetro obrigatório que chama **int** valor de entrada.  
   
  *bound_param*  
  Significa o uso de parâmetros adicionais. *bound_param* é um parâmetro obrigatório que chama valores de entrada de qualquer tipo de dados para significar parâmetros adicionais para o procedimento.  
   
 > [!NOTE]  
->  *bound_param* devem corresponder às declarações feitas de sp_prepare*params* valor e pode estar no formato  *@name = valor* ou *valor*.  
+>  *bound_param* deve corresponder às declarações feitas pelo sp_prepare*params* de valor e pode ser na forma  *@name = value* ou *valor*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

@@ -31,11 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076683"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004628"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressões quantificadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "33076683"
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- Você pode usar essas expressões em uma consulta para aplicar explicitamente quantificação existencial ou universal a uma expressão em uma ou em várias sequências. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a expressão na cláusula `satisfies` deve resultar em um dos seguintes: uma sequência de nó, uma sequência vazia ou um valor Booliano. O valor Booliano efetivo do resultado dessa expressão será usado na quantificação. A quantificação existencial que usa **alguns** retornará True se pelo menos um dos valores associado pelo quantificador tiver um resultado True na expressão de satisfação. A quantificação universal que usa **cada** deve ter True em todos os valores associados pelo quantificador.  
+ Você pode usar essas expressões em uma consulta para aplicar explicitamente quantificação existencial ou universal a uma expressão em uma ou em várias sequências. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a expressão na cláusula `satisfies` deve resultar em um dos seguintes: uma sequência de nó, uma sequência vazia ou um valor Booliano. O valor Booliano efetivo do resultado dessa expressão será usado na quantificação. A quantificação existencial que usa **alguns** retornará True se pelo menos um dos valores associados pelo quantificador tiver um resultado na expressão de satisfação. A quantificação universal que usa **cada** deve ter True em todos os valores associados pelo quantificador.  
   
- Por exemplo, a consulta a seguir verifica cada \<local > elemento para ver se ele possui um atributo LocationID.  
+ Por exemplo, a consulta a seguir verifica cada \<local > elemento para ver se ele tem um atributo LocationID.  
   
 ```  
 SELECT Instructions.query('  

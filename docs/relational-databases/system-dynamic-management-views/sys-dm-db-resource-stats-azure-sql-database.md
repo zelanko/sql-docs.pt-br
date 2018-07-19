@@ -1,5 +1,5 @@
 ---
-title: sys.DM db_resource_stats (banco de dados do SQL Azure) | Microsoft Docs
+title: sys.DM db_resource_stats (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -26,29 +26,30 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005688"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retorna o consumo de CPU, e/s e memória para um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] banco de dados. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Dados do histórico são mantidos por uma hora.  
+  Retorna o consumo de CPU, memória e e/s para um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] banco de dados. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Dados do histórico são mantidos por uma hora.  
   
 |Colunas|Tipo de Dados|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
-|avg_data_io_percent|**decimal (5,2)**|Média de dados utilização de e/s em porcentagem do limite da camada de serviço.|  
+|avg_data_io_percent|**decimal (5,2)**|Média de dados de utilização e/s em percentual do limite da camada de serviço.|  
 |avg_log_write_percent|**decimal (5,2)**|Utilização média do recurso de gravação, em porcentagem, do limite da camada de serviço.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para o armazenamento de objetos OLTP na memória.|  
-|xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatório). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações de ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP na memória no banco de dados.|  
-|max_worker_percent|**decimal (5,2)**|Máximo simultâneos trabalhadores (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
-|max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em porcentagem do limite da camada de serviço do banco de dados.|  
-|dtu_limit|**Int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. |
+|avg_memory_usage_percent|**decimal (5,2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para armazenamento de objetos OLTP na memória.|  
+|xtp_storage_percent|**decimal (5,2)**|Utilização de armazenamento para o OLTP na memória em percentual do limite da camada de serviço (no final do intervalo de emissão de relatórios). Isso inclui a memória usada para armazenamento dos seguintes objetos OLTP na memória: variáveis de tabela, índices e tabelas com otimização de memória. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retorna 0 se não for usado o OLTP in-memory no banco de dados.|  
+|max_worker_percent|**decimal (5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite da camada de serviço do banco de dados.|  
+|max_session_percent|**decimal (5,2)**|Máximo de sessões simultâneas em percentual do limite da camada de serviço do banco de dados.|  
+|dtu_limit|**int**|Banco de dados max DTU configuração atual para este banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em vCore, esta coluna é NULL.|
+|cpu_limit|**decimal (5,2)**|Número de vCores para esse banco de dados durante esse intervalo. Para bancos de dados usando o modelo baseado em DTU, esta coluna é NULL.|
 |||
   
 > [!TIP]  
@@ -58,13 +59,13 @@ ms.locfileid: "34464182"
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Remarks  
- Os dados retornados por **sys.DM db_resource_stats** é expresso como uma porcentagem do máximo permitido de limites para o nível de desempenho/da camada de serviço que você está executando.
+ Os dados retornados pelo **sys.DM db_resource_stats** é expresso como uma porcentagem dos limites máximos permitidos para o nível de desempenho/camada de serviço que você está executando.
  
  Se o banco de dados fez failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas dados para o tempo pelo qual ele foi o banco de dados primário desde esse failover.  
   
- Para obter uma exibição menos detalhada desses dados, use **sys. resource_stats** exibição do catálogo de **mestre** banco de dados. Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys. resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para obter uma exibição menos detalhada desses dados, use **sys. resource_stats** exibição de catálogo a **mestre** banco de dados. Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys. resource_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Quando um banco de dados é um membro de um pool Elástico, estatísticas de recursos apresentadas como valores de porcentagem são expressas como porcentagem do limite máximo de bancos de dados conforme definido na configuração do pool Elástico.  
+ Quando um banco de dados é um membro de um pool Elástico, as estatísticas de recursos apresentadas como valores de porcentagem são expressas como a porcentagem do limite máximo para os bancos de dados, conforme definido na configuração do pool Elástico.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -103,8 +104,8 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys. resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. resource_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limites e recursos de nível de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Limites e recursos de camada de serviço](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

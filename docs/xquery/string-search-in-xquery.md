@@ -1,5 +1,5 @@
 ---
-title: String de pesquisa no XQuery | Microsoft Docs
+title: Pesquisa em XQuery de cadeia de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041554"
 ---
 # <a name="string-search-in-xquery"></a>Pesquisa de cadeia de caracteres em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Na consulta anterior, o `where` na FLOWR expressão filtra o resultado da `for` expressão e retorna apenas os elementos que satisfazem a **Contains ()** condição.  
+ Na consulta anterior, o `where` em FLOWR expressão filtra o resultado do `for` expressão e retorna apenas os elementos que satisfazem a **Contains ()** condição.  
   
  Este é o resultado:  
   

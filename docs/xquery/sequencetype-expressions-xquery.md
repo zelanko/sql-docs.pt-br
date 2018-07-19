@@ -26,18 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2be9250c77c23e00a302d57f0148507f0db41bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041624"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressões SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   No XQuery, um valor é sempre uma sequência. O tipo do valor é referido como um tipo de sequência. O tipo de sequência pode ser usado em uma **instância de** expressão XQuery. A sintaxe SequenceType descrita na especificação XQuery é usada quando você precisar consultar um tipo em uma expressão XQuery.  
   
- O nome de tipo atômico também pode ser usado no **conversão como** expressão XQuery. Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o **instância de** e **conversão como** expressões XQuery em SequenceTypes têm suporte parcial.  
+ O nome de tipo atômico também pode ser usado na **convertido como** expressão XQuery. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o **instância de** e **convertido como** expressões XQuery em SequenceTypes têm suporte parcial.  
   
 ## <a name="instance-of-operator"></a>Operador instance of  
  O **instância de** operador pode ser usado para determinar o tipo dinâmico ou tempo de execução, o valor da expressão especificada. Por exemplo:  
@@ -47,18 +47,18 @@ ms.locfileid: "33078013"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Observe que o `instance of` operador, o `Occurrence indicator`, especifica a cardinalidade, o número de itens na sequência resultante. Se não estiver especificada, supõe-se que a cardinalidade seja 1. Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], somente o ponto de interrogação (**?)**  indicador de ocorrência tem suporte. O **?** indicador de ocorrência indica que `Expression` pode retornar zero ou um item. Se o **?** indicador de ocorrência for especificado, `instance of` retorna verdadeiro quando o `Expression` tipo corresponde especificado `SequenceType`, independentemente de `Expression` retorna um singleton ou uma sequência vazia.  
+ Observe que o `instance of` operador, o `Occurrence indicator`, especifica a cardinalidade, o número de itens na sequência resultante. Se não estiver especificada, supõe-se que a cardinalidade seja 1. Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], apenas o ponto de interrogação (**?)**  indicador de ocorrência é suportado. O **?** indicador de ocorrência indica que `Expression` pode retornar zero ou um item. Se o **?** indicador de ocorrência for especificado, `instance of` retorna True quando o `Expression` tipo corresponde ao especificado `SequenceType`, independentemente de `Expression` retornar um singleton ou uma sequência vazia.  
   
- Se o **?** indicador de ocorrência não for especificado, `sequence of` só retornará True quando o `Expression` correspondência do tipo de `Type` especificado e `Expression` retorna um singleton.  
+ Se o **?** indicador de ocorrência não for especificado, `sequence of` só retornará True quando o `Expression` correspondência do tipo a `Type` especificado e `Expression` retornar um singleton.  
   
- **Observação** o símbolo de adição (**+**) e o asterisco (**\***) não há suporte para indicadores de ocorrência em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Observação** o símbolo de adição (**+**) e o asterisco (**\***) não há suporte para os indicadores de ocorrência no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Os exemplos a seguir ilustram o uso do**instância de** operador XQuery.  
   
 ### <a name="example-a"></a>Exemplo A  
- O exemplo a seguir cria um **xml** variável de tipo e especifica uma consulta em relação a ela. A expressão de consulta especifica um operador `instance of` para determinar se o tipo dinâmico do valor retornado pelo primeiro operando corresponde ao tipo especificado no segundo operando.  
+ O exemplo a seguir cria uma **xml** variável de tipo e especifica uma consulta em relação a ela. A expressão de consulta especifica um operador `instance of` para determinar se o tipo dinâmico do valor retornado pelo primeiro operando corresponde ao tipo especificado no segundo operando.  
   
- A consulta a seguir retorna True, pois o valor 125 é uma instância do tipo especificado, **xs: Integer**:  
+ A consulta a seguir retorna True, porque o valor 125 é uma instância do tipo especificado, **xs: Integer**:  
   
 ```  
 declare @x xml  
@@ -152,7 +152,7 @@ where ProductModelID=19
   
 -   Crie uma coleção de esquemas XML com um tipo de união, como um inteiro ou tipo de cadeia de caracteres, definido nele.  
   
--   Declarar um tipo **xml** variável usando a coleção de esquemas XML.  
+-   Declarar um tipado **xml** variável usando a coleção de esquemas XML.  
   
 -   Atribua uma instância XML de amostra à variável.  
   
@@ -196,7 +196,7 @@ go
 ```  
   
 ### <a name="example-d"></a>Exemplo D  
- Neste exemplo, você primeiro crie uma coleção de esquemas XML e usá-lo para o tipo de um **xml** variável. O tipo **xml** variável é então consultada para ilustrar o `instance of` funcionalidade.  
+ Neste exemplo, você primeiro crie uma coleção de esquemas XML e usá-lo para o tipo de um **xml** variável. Com o tipo **xml** variável é então consultada para ilustrar o `instance of` funcionalidade.  
   
  A coleção de esquemas XML a seguir define um tipo simples, myType, e um elemento, <`root`>, do tipo myType:  
   
@@ -217,7 +217,7 @@ xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">
 Go  
 ```  
   
- Agora, crie um tipo **xml** variável e consultá-los:  
+ Agora, crie um tipado **xml** variável e consultá-lo:  
   
 ```  
 DECLARE @var XML(SC)  
@@ -244,7 +244,7 @@ go
   
 -   Cria uma coleção de esquemas XML no qual o <`Customer`> elemento tem um **OrderList** atributo IDREFS do tipo e o <`Order`> elemento tem um **OrderID** atributo de tipo ID.  
   
--   Cria um tipo **xml** variável e atribui uma instância XML de exemplo-lo.  
+-   Cria um tipado **xml** variável e atribui uma instância XML de exemplo-lo.  
   
 -   Especifica uma consulta em relação à variável. A expressão de consulta recupera o primeiro valor de ID de ordem do atributo de tipo OrderList IDRERS do primeiro <`Customer`>. O valor recuperado é do tipo IDREF. Portanto, `instance of` retorna True.  
   
@@ -316,11 +316,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **schema-element()** e **schema-attribute()** não há suporte para tipos de sequência para comparação com o `instance of` operador.  
+-   O **schema-element()** e **schema-attribute()** tipos de sequência não têm suporte para comparação com o `instance of` operador.  
   
 -   Sequências completas, por exemplo, `(1,2) instance of xs:integer*`, não têm suporte.  
   
--   Quando você estiver usando uma forma do **element()** de sequência de tipo que especifica um nome de tipo, como `element(ElementName, TypeName)`, o tipo deve ser qualificado com um ponto de interrogação (?). Por exemplo, `element(Title, xs:string?)` indica que o elemento pode ser nulo. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a detecção de tempo de execução do **xsi: nil** propriedade usando `instance of`.  
+-   Quando você estiver usando uma forma do **Element ()** que especifica um nome de tipo, como tipo de sequência `element(ElementName, TypeName)`, o tipo deve ser qualificado com um ponto de interrogação (?). Por exemplo, `element(Title, xs:string?)` indica que o elemento pode ser nulo. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a detecção de tempo de execução do **xsi: nil** propriedade usando `instance of`.  
   
 -   Se o valor na `Expression` vier de um elemento ou atributo digitado como uma união, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode identificar só o tipo primitivo, não derivado, do qual o tipo do valor foi derivado. Por exemplo, se <`e1`> for definido como tendo um tipo estático de (xs:integer | xs:string), o seguinte retornará False.  
   
@@ -330,10 +330,10 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      Porém, `data(<e1>123</e1>) instance of xs:decimal` retornará True.  
   
--   Para o **Instruction ()** e **document-node()** tipos de sequência na qual são permitidos somente formulários sem argumentos. Por exemplo, `processing-instruction()` é permitido, mas `processing-instruction('abc')` não é permitido.  
+-   Para o **Instruction ()** e **document-node()** tipos de sequência, na qual são permitidos somente formulários sem argumentos. Por exemplo, `processing-instruction()` é permitido, mas `processing-instruction('abc')` não é permitido.  
   
 ## <a name="cast-as-operator"></a>Operador cast as  
- O **conversão como** expressão pode ser usada para converter um valor para um tipo de dados específico. Por exemplo:  
+ O **convertido como** expressão pode ser usada para converter um valor para um tipo de dados específico. Por exemplo:  
   
 ```  
   
@@ -348,7 +348,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- Na consulta a seguir, **Data ()** retorna o valor digitado do atributo ProductModelID, um tipo de cadeia de caracteres. O `cast as`operador converte o valor em xs: Integer.  
+ Na consulta a seguir **Data ()** retorna o valor digitado do atributo ProductModelID, um tipo de cadeia de caracteres. O `cast as`operador converte o valor em xs: Integer.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -362,7 +362,7 @@ WHERE ProductModelID = 19
  O uso explícito de **Data ()** não é necessário nesta consulta. A expressão `cast as` executa atomização implícita na expressão de entrada.  
   
 ### <a name="constructor-functions"></a>Funções de construtor  
- Você pode usar as funções de construtor de tipo atômico. Por exemplo, em vez de usar o `cast as` operador, `"2" cast as xs:integer?`, você pode usar o **xs:integer()** função de construtor, como no exemplo a seguir:  
+ Você pode usar as funções de construtor de tipo atômico. Por exemplo, em vez de usar o `cast as` operador `"2" cast as xs:integer?`, você pode usar o **xs:integer()** função de construtor, como no exemplo a seguir:  
   
 ```  
 declare @x xml  
@@ -378,15 +378,15 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- Você também pode usar construtores para os tipos atômicos definidos pelo usuário. Por exemplo, se a coleção de esquemas XML associados ao tipo de dados XML define um tipo simples, um **myType()** construtor pode ser usado para retornar um valor desse tipo.  
+ Você também pode usar construtores para os tipos atômicos definidos pelo usuário. Por exemplo, se a coleção de esquemas XML associada com o tipo de dados XML define um tipo simples, uma **myType()** construtor pode ser usado para retornar um valor desse tipo.  
   
 #### <a name="implementation-limitations"></a>Limitações de implementação  
   
 -   As expressões XQuery **typeswitch**, **conversíveis**, e **tratar** não têm suporte.  
   
--   **conversão como** requer um ponto de interrogação (?) Depois do tipo atômico.  
+-   **convertido como** requer um ponto de interrogação (?) Após o tipo atômico.  
   
--   **xs: QName** não é suportado como um tipo de conversão. Use **expanded-QName** em vez disso.  
+-   **xs: QName** não tem suporte como um tipo para conversão. Use **expanded-QName** em vez disso.  
   
 -   **xs: Date**, **xs: time**, e **xs: DateTime** requerem um fuso horário, que é indicado por um Z.  
   
@@ -416,6 +416,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões XQuery](../xquery/xquery-expressions.md)   
- [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipo &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467542"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005648"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações (estatística geral) sobre o comportamento atual do processo de coleta de lixo do [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- As linhas são coletadas como lixo durante o processamento de transação regular ou pelo thread principal de coleta de lixo, que é conhecido como trabalhador inativo. Quando uma transação de usuário é confirmada, ela remove um item de trabalho da fila de coleta de lixo ([xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Qualquer linha que poderia ser coletada como lixo mas não foi acessada pela transação de usuário principal é coletada como lixo por um trabalhador inativo, como parte da verificação de canto sujo (uma verificação das áreas do índice que são menos acessadas).  
+ As linhas são coletadas como lixo durante o processamento de transação regular ou pelo thread principal de coleta de lixo, que é conhecido como trabalhador inativo. Quando uma transação de usuário é confirmada, ela remove um item de trabalho da fila de coleta de lixo ([DM xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Qualquer linha que poderia ser coletada como lixo mas não foi acessada pela transação de usuário principal é coletada como lixo por um trabalhador inativo, como parte da verificação de canto sujo (uma verificação das áreas do índice que são menos acessadas).  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -74,6 +74,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

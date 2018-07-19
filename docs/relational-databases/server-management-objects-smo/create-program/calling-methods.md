@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3629f2f5d5905ce17df7a5aa15936edaa876ef4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707704"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005821"
 ---
 # <a name="calling-methods"></a>Chamando métodos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34707704"
  Use o tratamento de exceções para detectar se o método obteve êxito. Para obter mais informações, consulte [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md).  
   
 ## <a name="examples"></a>Exemplos  
-Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Usando um método SMO simples no Visual Basic  
@@ -97,7 +97,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Usando um método de enumeração que retorna um objeto DataTable no Visual Basic  
- Esta seção descreve como chamar um método de enumeração e como tratar os dados no retornado <xref:System.Data.DataTable> objeto.  
+ Esta seção descreve como chamar um método de enumeração e como lidar com os dados em retornado <xref:System.Data.DataTable> objeto.  
   
  O método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> retorna um objeto <xref:System.Data.DataTable>, que exige navegação adicional para acessar todas as informações de agrupamento disponíveis sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -121,7 +121,7 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Usando um método de enumeração que retorna um objeto DataTable no Visual C#  
- Esta seção descreve como chamar um método de enumeração e como tratar os dados no retornado <xref:System.Data.DataTable> objeto.  
+ Esta seção descreve como chamar um método de enumeração e como lidar com os dados em retornado <xref:System.Data.DataTable> objeto.  
   
  O <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> método retorna um sistema <xref:System.Data.DataTable> objeto. O <xref:System.Data.DataTable> objeto exige navegação adicional para acessar todas as informações de agrupamento disponíveis sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -184,7 +184,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Copiando um objeto SMO no Visual Basic  
- Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -200,7 +200,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Copiando um objeto SMO no Visual C#  
- Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este exemplo de código usa o <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para criar uma cópia do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. O <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa uma conexão a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 {   
@@ -218,7 +218,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Monitorando processos de servidor no Visual Basic  
- Você pode obter as informações de tipo de status atuais sobre a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
+ Você pode obter as informações de tipo de status atuais sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -240,7 +240,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Monitorando processos de servidor no Visual C#  
- Você pode obter as informações de tipo de status atuais sobre a instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
+ Você pode obter as informações de tipo de status atuais sobre a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por meio de métodos de enumeração. O exemplo de código usa o método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para descobrir informações sobre os processos atuais. Ele também demonstra como trabalhar com as colunas e linhas no objeto <xref:System.Data.DataTable> retornado.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

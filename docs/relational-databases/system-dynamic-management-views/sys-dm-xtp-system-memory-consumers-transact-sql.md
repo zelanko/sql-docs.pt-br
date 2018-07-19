@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468632"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015186"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,18 @@ select * from sys.dm_xtp_system_memory_consumers
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interna do consumidor de memória.|  
-|memory_consumer_type|**Int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – Não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 – LOOKASIDE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool da página e/s: rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
+|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – Não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 – LOOKASIDE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – Não deve ser exibido.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-Ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s existe pools são três pool da página sistema 4K tamanhos diferentes, o pool de página do sistema 64K e pool da página sistema 256K.|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s pools lá são três pool de página de 4K do sistema de tamanhos diferentes, o pool de página do sistema 64K e pool da página de 256K do sistema.|  
 |lookaside_id|**bigint**|A ID do provedor de memória de direções de local de thread.|  
 |pagepool_id|**bigint**|A ID do provedor de memória do pool de páginas de local de thread.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
 |used_bytes|**bigint**|Bytes usados por este consumidor. Aplica-se somente a consumidores de memória de varheap.|  
-|allocation_count|**Int**|Número de alocações.|  
-|partition_count|**Int**|Somente para uso interno.|  
-|sizeclass_count|**Int**|Somente para uso interno.|  
-|min_sizeclass|**Int**|Somente para uso interno.|  
-|max_sizeclass|**Int**|Somente para uso interno.|  
+|allocation_count|**int**|Número de alocações.|  
+|partition_count|**int**|Somente para uso interno.|  
+|sizeclass_count|**int**|Somente para uso interno.|  
+|min_sizeclass|**int**|Somente para uso interno.|  
+|max_sizeclass|**int**|Somente para uso interno.|  
 |memory_consumer_address|**varbinary**|Endereço interno do consumidor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -109,6 +109,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

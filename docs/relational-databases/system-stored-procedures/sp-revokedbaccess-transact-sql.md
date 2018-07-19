@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3cd5e5b13d8451ffa064783fdb27dd7cb42b0406
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005386"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name_in_db =** ] **'***nome***'**  
- É o nome do usuário do banco de dados a ser removido. *nome* é um **sysname** sem nenhum padrão. *nome* pode ser o nome de um logon de servidor, um logon do Windows ou um grupo do Windows e deve existir no banco de dados atual. Ao especificar um logon do Windows ou um grupo do Windows, especifique o nome pelo qual o logon ou grupo é conhecido no banco de dados.  
+ É o nome do usuário do banco de dados a ser removido. *nome da* é um **sysname** sem nenhum padrão. *nome* pode ser o nome de um logon de servidor, um logon do Windows ou um grupo do Windows e deve existir no banco de dados atual. Ao especificar um logon do Windows ou um grupo do Windows, especifique o nome pelo qual o logon ou grupo é conhecido no banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -56,7 +56,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="remarks"></a>Remarks  
  Quando o usuário de banco de dados é removido, as permissões e os aliases que dependem do usuário também são removidos.  
   
- **sp_revokedbaccess** pode remover apenas os usuários de banco de dados do banco de dados atual. Antes de remover um usuário que possui objetos no banco de dados atual, é necessário transferir a propriedade dos objetos ou descartá-los do banco de dados. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess** pode remover somente os usuários de banco de dados do banco de dados atual. Antes de remover um usuário que possui objetos no banco de dados atual, é necessário transferir a propriedade dos objetos ou descartá-los do banco de dados. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  **sp_revokedbaccess** não pode ser executado em uma transação definida pelo usuário.  
   
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Remover usuário & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

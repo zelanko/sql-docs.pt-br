@@ -1,5 +1,5 @@
 ---
-title: 'Lição do Analysis Services tutorial 1: criar um novo projeto de modelo de tabela | Microsoft Docs'
+title: 'Lição 1 do tutorial de serviços de análise: criar um novo projeto de modelo de tabela | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,72 +10,72 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 403e6d04d339e3126afe964bd919304d04295c0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007124"
 ---
 # <a name="create-a-tabular-model-project"></a>Criar um projeto de modelo de tabela
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Nesta lição, você usa o Visual Studio com o SQL Server Data Tools (SSDT) ou o Visual Studio de 2017 com VSIX de projetos do Microsoft Analysis Services para criar um novo projeto de modelo de tabela no nível de compatibilidade 1400. Depois que o novo projeto é criado, você pode começar a adicionar dados e criar seu modelo. Esta lição fornece uma breve introdução ao ambiente do Visual Studio de criação de modelo de tabela.  
+Nesta lição, você usa o Visual Studio com SQL Server Data Tools (SSDT) ou o Visual Studio 2017 com VSIX de projetos do Microsoft Analysis Services para criar um novo projeto de modelo tabular no nível de compatibilidade 1400. Depois que seu novo projeto é criado, você pode começar a adicionar dados e criar seu modelo. Esta lição fornece uma breve introdução ao ambiente no Visual Studio de criação de modelos tabulares.  
   
 Tempo estimado para concluir esta lição: **10 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites
 
-Este artigo é a primeira lição em um tutorial de criação de modelo tabular. Para concluir esta lição, existem vários pré-requisitos que você precisa ter in-loco. Para obter mais informações, consulte [Analysis Services – tutorial do Adventure Works](../tutorial-tabular-1400/as-adventure-works-tutorial.md).  
+Este artigo é a primeira lição em um tutorial de criação de modelo tabular. Para concluir esta lição, existem vários pré-requisitos que você precisa ter no local. Para obter mais informações, consulte [Analysis Services – tutorial da Adventure Works](../tutorial-tabular-1400/as-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Criar um novo projeto de modelo de tabela  
   
 #### <a name="to-create-a-new-tabular-model-project"></a>Para criar um novo projeto de modelo de tabela  
   
-1.  No Visual Studio, no **arquivo** menu, clique em **novo** > **projeto**.  
+1.  No Visual Studio, sobre o **arquivo** menu, clique em **New** > **projeto**.  
   
-2.  No **novo projeto** caixa de diálogo caixa, expanda **instalado** > **Business Intelligence** > **Analysis Services**e, em seguida, clique em **projeto Tabular do Analysis Services**.  
+2.  No **novo projeto** diálogo caixa, expanda **instalado** > **Business Intelligence** > **Analysis Services**e, em seguida, clique em **projeto Tabular do Analysis Services**.  
   
-3.  Em **nome**, tipo **de vendas pela Internet AW**e, em seguida, especifique um local para os arquivos de projeto.  
+3.  Na **nome**, digite **vendas pela Internet AW**e, em seguida, especifique um local para os arquivos de projeto.  
   
-    Por padrão, **nome da solução** é o mesmo que o nome do projeto; no entanto, você pode digitar outro nome de solução.  
+    Por padrão, **nome da solução** é o mesmo que o nome do projeto; no entanto, você pode digitar outro nome da solução.  
   
 4.  Clique em **OK**.  
   
-5.  No **designer de modelo Tabular** caixa de diálogo, selecione **integrado de espaço de trabalho**.  
+5.  No **designer de modelo Tabular** caixa de diálogo, selecione **espaço de trabalho integrado**.  
   
     O espaço de trabalho hospeda um banco de dados de modelo de tabela com o mesmo nome que o projeto durante a criação do modelo. Espaço de trabalho integrado significa que o Visual Studio usa uma instância interna, eliminando a necessidade de instalar uma instância de servidor do Analysis Services separada apenas para a criação do modelo.
       
-6.  Em **nível de compatibilidade**, selecione **SQL Server 2017 / Azure Analysis Services (1400)**.   
+6.  Na **nível de compatibilidade**, selecione **SQL Server 2017 / Azure Analysis Services (1400)**.   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Se você não vir o SQL Server 2017 / Azure Analysis Services (1400) na caixa de listagem de nível de compatibilidade, você não estiver usando a versão mais recente do SQL Server Data Tools. Para obter a versão mais recente, consulte [Instalar o SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       
   
-## <a name="understanding-the-ssdt-tabular-model-authoring-environment"></a>Noções básicas sobre o modelo de tabela do SSDT ambiente de criação  
+## <a name="understanding-the-ssdt-tabular-model-authoring-environment"></a>Noções básicas sobre o modelo de tabela SSDT ambiente de criação  
 
 Agora que você criou um novo projeto de modelo de tabela, vamos explorar o ambiente no Visual Studio de criação do modelo de tabela.  
   
-Depois que o projeto é criado, ele é aberto no Visual Studio. No lado direito, em **Gerenciador de modelos de tabela**, verá uma exibição de árvore de objetos em seu modelo. Desde que você ainda não tiver importado dados, as pastas estão vazias. Clique com botão direito uma pasta de objeto para executar ações, semelhantes à barra de menus. Como você percorrer este tutorial, você usar o Gerenciador de modelos de tabela para navegar objetos diferentes em seu projeto de modelo.
+Depois que o projeto é criado, ele é aberto no Visual Studio. No lado direito, na **Gerenciador de modelos tabulares**, ver uma exibição de árvore dos objetos em seu modelo. Uma vez que você ainda não tiver importado dados, as pastas estarão vazias. Clique com botão direito uma pasta de objeto para executar ações, semelhantes à barra de menus. Conforme você percorre este tutorial, você use o Gerenciador de modelos tabulares para navegar por diferentes objetos no seu projeto de modelo.
 
-![tempo como lição 1](../tutorial-tabular-1400/media/as-lesson1-tme.png)
+![como em tme lição 1](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
-Clique o **Solution Explorer** guia. Aqui, você vê seu **Model.bim** arquivo. Se você não vir a janela do designer para a esquerda (a janela vazia com a guia Model.bim), em **Solution Explorer**, em **projeto de vendas da Internet AW**, clique duas vezes o **Model.bim** arquivo. O arquivo Model.bim contém os metadados para o seu projeto de modelo. 
+Clique o **Gerenciador de soluções** guia. Aqui, você verá sua **Model. BIM** arquivo. Se você não vir a janela do designer para a esquerda (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em **projeto de vendas pela Internet AW**, clique duas vezes o **Model. BIM** arquivo. O arquivo Model. BIM contém os metadados para seu projeto de modelo. 
 
 ![se como lição 1](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
-Clique em **Model.bim**. No **propriedades** janela, você ver as propriedades do modelo, mais importantes do que é o **o modo DirectQuery** propriedade. Essa propriedade especifica se o modelo é implantado no modo na memória (desativado) ou no modo DirectQuery (ativado). Para este tutorial, você pode cria e implanta o modelo no modo na memória.
+Clique em **Model.bim**. No **propriedades** janela, você ver as propriedades do modelo, mais importantes do que é a **o modo DirectQuery** propriedade. Esta propriedade especifica se o modelo é implantado no modo na memória (desativado) ou no modo DirectQuery (ativado). Para este tutorial, você pode cria e implanta o modelo no modo na memória.
 
 ![propriedades como lição 1](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
-Quando você cria um projeto de modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas o **ferramentas** menu > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você pode alterar essas configurações posteriormente se necessário, mas por enquanto, deixe essas propriedades como estão.  
+Quando você cria um projeto de modelo, determinadas propriedades de modelo são definidas automaticamente acordo com as configurações de modelagem de dados que podem ser especificadas na **ferramentas** menu > **opções** caixa de diálogo. As propriedades de Backup de Dados, Retenção de Espaço de trabalho e Servidor de Espaço de Trabalho especificam como e onde o banco de dados de espaço de trabalho (seu banco de dados de criação de modelo) será submetido a backup, retido na memória e compilado. Você pode alterar essas configurações posteriormente se necessário, mas por enquanto, deixe essas propriedades como estão.  
 
-Em **Solution Explorer**, clique com botão direito **de vendas pela Internet AW** (projeto) e, em seguida, clique em **propriedades**. O **páginas de propriedades de vendas de Internet AW** caixa de diálogo é exibida. Você definir algumas dessas propriedades posteriormente quando você implanta o modelo.  
+Na **Gerenciador de soluções**, clique com botão direito **vendas pela Internet AW** (projeto) e, em seguida, clique em **propriedades**. O **páginas de propriedades de vendas de Internet do AW** caixa de diálogo é exibida. Você define algumas dessas propriedades posteriormente quando implantar seu modelo.  
   
-Quando você tiver instalado o SSDT, vários novos itens de menu foram adicionados ao ambiente do Visual Studio. Clique o **modelo** menu. A partir daqui, você pode importar dados, atualizar dados de espaço de trabalho, procurar seu modelo no Excel, criar perspectivas e funções, selecione o modo de exibição do modelo e definir opções de cálculo. Clique o **tabela** menu. A partir daqui, você pode criar e gerenciar relações, especifique configurações de tabela de data, criar partições e editar propriedades da tabela. Se você clicar no **coluna** menu, você pode adicionar e excluir colunas em uma tabela, congelar colunas e especificar a ordem de classificação. O SSDT também adiciona alguns botões para a barra. Mais útil é o recurso AutoSoma para criar uma medida de agregação padrão para uma coluna selecionada. Outros botões da barra de ferramentas fornecem acesso rápido a recursos e comandos frequentemente usados.  
+Quando você instalou o SSDT, vários novos itens de menu foram adicionados ao ambiente do Visual Studio. Clique o **modelo** menu. A partir daqui, você pode importar dados, atualizar os dados de espaço de trabalho, navegar pelo seu modelo no Excel, criar perspectivas e funções, selecione a exibição do modelo e definir opções de cálculo. Clique o **tabela** menu. A partir daqui, você pode criar e gerenciar relações, especificar configurações de tabela de data, criar partições e editar propriedades da tabela. Se você clicar na **coluna** menu, você pode adicionar e excluir colunas em uma tabela, congelar colunas e especificar ordem de classificação. O SSDT também adiciona alguns botões à barra. Mais útil é o recurso AutoSoma, para criar uma medida de agregação padrão para uma coluna selecionada. Outros botões da barra de ferramentas fornecem acesso rápido a recursos e comandos frequentemente usados.  
   
-Explore algumas das caixas de diálogo e locais de vários recursos específicos da criação de modelos de tabela. Enquanto alguns itens ainda não estiverem ativas, você pode ter uma boa noção do ambiente de criação de modelo de tabela.  
+Explore algumas das caixas de diálogo e locais de vários recursos específicos da criação de modelos de tabela. Embora alguns itens ainda não estiverem ativas, você pode obter uma boa ideia do ambiente de criação de modelos tabulares.  
   
 
 ## <a name="whats-next"></a>O que vem a seguir?

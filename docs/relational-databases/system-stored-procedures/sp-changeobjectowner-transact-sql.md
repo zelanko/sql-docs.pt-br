@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005718"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname =** ] **'***objeto***'**  
- É o nome de uma tabela, exibição ou função definida pelo usuário já existente, ou de um procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)**, sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, no formato *existing_owner ***.*** objeto* se o esquema e seu proprietário tiverem o mesmo nome.  
+ É o nome de uma tabela, exibição ou função definida pelo usuário já existente, ou de um procedimento armazenado no banco de dados atual. *objeto* é um **nvarchar(776)**, sem padrão. *objeto* pode ser qualificado com o proprietário do objeto existente, na forma *existing_owner ***.*** objeto* se o esquema e seu proprietário tiverem o mesmo nome.  
   
- [  **@newowner=**] **' * proprietário* **'**  
- É o nome da conta de segurança que será o novo proprietário do objeto. *proprietário* é **sysname**, sem padrão. *proprietário* deve ser um usuário de banco de dados válido, a função de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou grupo do Windows com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
+ [  **@newowner=**] **' * * * proprietário* **'**  
+ É o nome da conta de segurança que será o novo proprietário do objeto. *proprietário* está **sysname**, sem padrão. *proprietário* deve ser um usuário de banco de dados válido, a função de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou grupo do Windows com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_changeobjectowner** remove todas as permissões existentes do objeto. Será necessário reaplicar as permissões que você deseja manter depois de executar **sp_changeobjectowner**. Portanto, é recomendável gerar o script de permissões existentes antes de executar **sp_changeobjectowner**. Depois que propriedade do objeto foi alterada, você poderá usar o script para reaplicar permissões. É necessário modificar o proprietário do objeto no script de permissões antes de executar.  
+ **sp_changeobjectowner** remove todas as permissões existentes do objeto. Será necessário reaplicar as permissões que você deseja manter depois de executar **sp_changeobjectowner**. Portanto, é recomendável que você gerar o script de permissões existentes antes da execução **sp_changeobjectowner**. Depois que propriedade do objeto foi alterada, você poderá usar o script para reaplicar permissões. É necessário modificar o proprietário do objeto no script de permissões antes de executar.  
   
  Para alterar o proprietário de um protegível, use ALTER AUTHORIZATION. Para alterar um esquema, use ALTER SCHEMA.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **db_owner** fixo de função de banco de dados ou a associação em ambos o **db_ddladmin** função fixa de banco de dados e o **db_securityadmin** função de banco de dados fixa e também a permissão CONTROL no objeto.  
+ Requer associação na **db_owner** fixo de função de banco de dados ou a associação em ambos o **db_ddladmin** função fixa de banco de dados e o **db_securityadmin** função de banco de dados fixa e também a permissão CONTROL no objeto.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o proprietário da tabela `authors` para `Corporate\GeorgeW`.  

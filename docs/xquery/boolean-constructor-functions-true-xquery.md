@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077583"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014026"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>Funções do construtor Boolianas - true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>Funções do construtor booliano – true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o valor xs:boolean True. Isso é equivalente a `xs:boolean("1")`.  
@@ -42,10 +42,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Usando a função booliana true() XQuery  
- O exemplo a seguir consulta sem um tipo **xml** variável. A expressão no **Value ()** método retorna um valor booleano **verdadeiro ()** se "aaa" é o valor do atributo. O **Value ()** método o **xml** converte o valor booliano em algum tipo de dados e o retorna.  
+ O exemplo a seguir consulta uma não tipado **xml** variável. A expressão na **Value ()** método retorna um valor booliano **True ()** se "aaa" é o valor do atributo. O **Value ()** método o **xml** converte o valor booliano em um pouco de tipo de dados e o retorna.  
   
 ```  
 DECLARE @x XML  
@@ -55,11 +55,11 @@ go
 -- result = 1  
 ```  
   
- No exemplo a seguir, a consulta é especificada em relação a um tipo **xml** coluna. A expressão `if` verifica o valor Booliano digitado do elemento <`ROOT`> e retorna o XML construído. O exemplo executa o seguinte:  
+ No exemplo a seguir, a consulta é especificada em relação a um tipado **xml** coluna. A expressão `if` verifica o valor Booliano digitado do elemento <`ROOT`> e retorna o XML construído. O exemplo executa o seguinte:  
   
 -   Cria uma coleção de esquemas XML que define o elemento <`ROOT`> do tipo xs:boolean.  
   
--   Cria uma tabela com um tipo **xml** coluna por meio da coleção de esquema XML.  
+-   Cria uma tabela com um tipado **xml** coluna usando a coleção de esquemas XML.  
   
 -   Salva uma instância XML na coluna e a consulta.  
   

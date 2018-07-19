@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575998"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007028"
 ---
 # <a name="parentobject-element-xmla"></a>Elemento ParentObject (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34575998"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Criar](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Elementos filho|Elementos obrigatórios do ASSL (Analysis Services Scripting Language) Especificados pela listagem de elementos ID do objeto e seus ancestrais (exceto o **Server** objeto.) Por exemplo, a seguinte **ParentObject** elemento identifica uma partição:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|Elementos filho|Elementos obrigatórios do ASSL (Analysis Services Scripting Language) Especificado, listando os elementos de ID do objeto e seus ancestrais (exceto o **Server** objeto.) Por exemplo, a seguinte **ParentObject** elemento identifica uma partição:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Remarks  
  A ordem na qual os identificadores aparecem não é importante.  

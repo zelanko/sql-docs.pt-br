@@ -22,18 +22,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66e6dfd0bd563dfc43fa1bbb44c4042159f0608a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005950"
 ---
 # <a name="smo-object-model-namespaces"></a>Namespaces de modelos de objeto do SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) tem vários namespaces. Os diversos namespaces representam áreas de funcionalidades diferentes no SMO.  
   
- Em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies SMO estão localizados na pasta C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\.  
+ No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os assemblies SMO estão localizados na pasta C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\.  
   
 ## <a name="namespaces"></a>Namespaces  
  Os namespaces do SMO são os seguintes:  

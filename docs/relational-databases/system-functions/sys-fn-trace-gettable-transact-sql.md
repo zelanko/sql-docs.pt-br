@@ -1,5 +1,5 @@
 ---
-title: fn_trace_gettable (Transact-SQL) | Microsoft Docs
+title: sys. fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234767"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014924"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>Argumentos  
  '*filename*'  
- Especifica o arquivo de rastreamento inicial a ser lido. *nome de arquivo* é **nvarchar (256)**, sem padrão.  
+ Especifica o arquivo de rastreamento inicial a ser lido. *nome do arquivo* está **nvarchar(256)**, sem padrão.  
   
  *number_files*  
- Especifica o número de arquivos de substituição a serem lidos. Esse número inclui o arquivo inicial especificado em *filename*. *number_files* é um **int**.  
+ Especifica o número de arquivos de substituição a serem lidos. Esse número inclui o arquivo inicial especificado na *filename*. *number_files* é um **int**.  
   
 ## <a name="remarks"></a>Remarks  
- Se *number_files* é especificado como **padrão**, **fn_trace_gettable** lerá todos os arquivos de substituição até atingir o final do rastreamento. **fn_trace_gettable** retorna uma tabela com todas as colunas válidas para o rastreamento especificado. Para obter mais informações, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Se *number_files* é especificado como **padrão**, **fn_trace_gettable** lê todos os arquivos de substituição até atingir o final do rastreamento. **fn_trace_gettable** retorna uma tabela com todas as colunas válidas para o rastreamento especificado. Para obter mais informações, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Lembre-se de que a função fn_trace_gettable não carregará arquivos de substituição (quando esta opção é especificada usando o *number_files* argumento) onde o nome do arquivo de rastreamento original termina com um sublinhado e um valor numérico. (Isso não se aplica ao sublinhado e ao número que são acrescentados automaticamente quando um arquivo é substituído.) Como alternativa, você pode renomear os arquivos de rastreamento para remover os sublinhados no nome de arquivo original. Por exemplo, se o arquivo original é chamado **Trace_Oct_5.trc** e o arquivo de substituição nomeado **Trace_Oct_5_1.trc**, você pode renomear os arquivos a serem **TraceOct5.trc** e  **TraceOct5_1.trc**.  
+ Lembre-se de que a função fn_trace_gettable não carregará arquivos de substituição (quando essa opção for especificada, usando o *number_files* argumento) onde o nome do arquivo de rastreamento original termina com um sublinhado e um valor numérico. (Isso não se aplica ao sublinhado e ao número que são acrescentados automaticamente quando um arquivo é substituído.) Como alternativa, você pode renomear os arquivos de rastreamento para remover os sublinhados no nome de arquivo original. Por exemplo, se o arquivo original é denominado **Trace_Oct_5.trc** e o arquivo de substituição é denominado **Trace_Oct_5_1.trc**, você pode renomear os arquivos a serem **TraceOct5.trc** e  **TraceOct5_1.trc**.  
   
  Essa função pode ler um rastreamento que ainda esteja ativo na instância na qual é executado.  
   

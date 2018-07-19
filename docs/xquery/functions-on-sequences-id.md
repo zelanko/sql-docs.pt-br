@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077843"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004618"
 ---
-# <a name="functions-on-sequences---id"></a>Funções em sequências - id
+# <a name="functions-on-sequences---id"></a>Funções em sequências – id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna a sequência de nós de elemento com valores xs: ID que correspondem aos valores de um ou mais dos valores xs: IDREF fornecidos em *$arg*.  
+  Retorna a sequência de nós de elemento com valores xs: ID correspondentes aos valores de um ou mais dos valores xs: IDREF fornecidos em *$arg*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,20 +52,20 @@ fn:id($arg as xs:IDREF*) as element()*
  Se o valor xs:IDREF não corresponder a qualquer elemento, a função retornará a sequência vazia.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML que são armazenados em várias **xml** colunas de tipo de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperando elementos com base no valor do atributo IDREF  
  O exemplo a seguir usa fn:id para recuperar os elementos <`employee`>, com base no atributo gerente IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
   
- Para um valor de atributo gerente específico, o **ID ()** função localiza o <`employee`> elemento cujo valor do atributo de tipo ID corresponda o valor IDREF de entrada. Em outras palavras, para um funcionário específico, o **ID ()** função retornará o gerente do funcionário.  
+ Para um valor de atributo gerente específico, o **ID ()** função localiza o <`employee`> elemento cujo valor do atributo de tipo ID corresponda ao valor IDREF de entrada. Em outras palavras, para um funcionário específico, o **ID ()** função retornará o gerente do funcionário.  
   
  Isso é o que ocorre no exemplo:  
   
 -   Uma coleção de esquemas XML é criada.  
   
--   Um tipo **xml** variável é criada usando a coleção de esquemas XML.  
+-   Tipado **xml** variável é criada usando a coleção de esquemas XML.  
   
--   A consulta recupera o elemento que tem um valor de atributo de ID referenciado pelo **manager** atributo IDREF do <`employee`> elemento.  
+-   A consulta recupera o elemento que tem um valor de atributo de ID referenciado pela **manager** atributo IDREF da <`employee`> elemento.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -108,7 +108,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperando elementos com base no valor do atributo IDREFS de OrderList  
  No exemplo a seguir, o atributo OrderList do elemento <`Customer`> é um atributo do tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada id de ordem, há um filho do elemento <`Order`> em <`Customer`> fornecendo o valor de ordem.  
   
- A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é então passado para o **ID ()** função. A função então localiza o <`Order`> elemento cujo valor de atributo OrderID corresponde à entrada de **ID ()** função.  
+ A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é então passado para o **ID ()** função. A função então localiza o <`Order`> elemento cujo valor de atributo OrderID corresponde à entrada para o **ID ()** função.  
   
 ```  
 drop xml schema collection SC  
@@ -184,7 +184,7 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dá suporte à versão de dois argumentos de **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a versão de dois argumentos de **ID ()**.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requer que o tipo de argumento de **ID ()** para ser um subtipo de xs: IDREF *.  
   

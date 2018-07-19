@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0b4a24cce24a94fdd6c4f901974d0f4accf7ff1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005658"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,28 +52,28 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@table_name=** ] **'***table_name***'**  
- Especifica a tabela usada para retornar informações do catálogo. *table_name* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
+ Especifica a tabela usada para retornar informações do catálogo. *table_name* está **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
   
  [  **@table_owner=** ] **'***proprietário***'**  
- É o nome do proprietário da tabela usada para retornar informações do catálogo. *table_owner* é **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *proprietário* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+ É o nome do proprietário da tabela usada para retornar informações do catálogo. *table_owner* está **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *proprietário* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, os índices dessa tabela serão retornados. Se *proprietário* não for especificado e o usuário atual não possuir uma tabela com especificado *nome*, esse procedimento procurará uma tabela com especificado *nome* pertencentes a proprietário do banco de dados. Caso exista, os índices da tabela serão retornados.  
   
  [  **@table_qualifier=** ] **'***qualificador***'**  
- É o nome do qualificador da tabela. *qualificador* é **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *qualificador* está **sysname**, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [  **@index_name=** ] **'***index_name***'**  
- É o nome do índice. *index_name* é **sysname**, com um padrão de %. Há suporte para a correspondência do padrão curinga.  
+ É o nome do índice. *index_name* está **sysname**, com um padrão de %. Há suporte para a correspondência do padrão curinga.  
   
  [  **@is_unique=** ] **'***is_unique***'**  
- É se apenas índices exclusivos (se **Y**) devem ser retornadas. *is_unique* é **char (1)**, com um padrão de **N**.  
+ É se apenas índices exclusivos (se **Y**) devem ser retornados. *is_unique* está **char(1)**, com um padrão de **N**.  
   
  [  **@accuracy=** ] **'***precisão***'**  
- É o nível de cardinalidade e exatidão de página para estatísticas. *precisão* é **char (1)**, com um padrão de **p**. Especifique **E** para certificar-se de que as estatísticas são atualizadas para que a cardinalidade e as páginas são precisas.  
+ É o nível de cardinalidade e exatidão de página para estatísticas. *precisão* está **char(1)**, com um padrão de **Q**. Especificar **eletrônico** para certificar-se de que as estatísticas são atualizadas para que a cardinalidade e as páginas são precisas.  
   
- O valor **E** (SQL_ENSURE) solicita ao driver recupere as estatísticas incondicionalmente.  
+ O valor **eletrônico** (SQL_ENSURE) solicita ao driver recupere as estatísticas incondicionalmente.  
   
- O valor **p** (SQL_QUICK) solicita ao driver para recuperar a cardinalidade e as páginas somente se elas estiverem prontamente disponíveis do servidor. Nesse caso, o driver não assegura que os valores são atuais. Aplicativos escritos em padrão Open Group sempre obterão o comportamento SQL_QUICK de drivers ODBC compatíveis com 3.x.  
+ O valor **Q** (SQL_QUICK) solicita ao driver para recuperar a cardinalidade e as páginas somente se elas estiverem prontamente disponíveis no servidor. Nesse caso, o driver não assegura que os valores são atuais. Aplicativos escritos em padrão Open Group sempre obterão o comportamento SQL_QUICK de drivers ODBC compatíveis com 3.x.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -83,21 +83,21 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|Nome do proprietário de tabela. Esta coluna sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esta coluna sempre retorna um valor.|  
 |**NON_UNIQUE**|**smallint**|NOT NULL.<br /><br /> 0 = Exclusivo<br /><br /> 1 = Não exclusivo|  
-|**INDEX_QUALIFIER**|**sysname**|Nome do proprietário do índice. Alguns produtos DBMS permitem que outros usuários, que não o proprietário da tabela, criam índices. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que **TABLE_NAME**.|  
+|**INDEX_QUALIFIER**|**sysname**|Nome do proprietário do índice. Alguns produtos DBMS permitem que outros usuários, que não o proprietário da tabela, criam índices. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que **TABLE_NAME**.|  
 |**INDEX_NAME**|**sysname**|É o nome do índice. Esta coluna sempre retorna um valor.|  
 |**TYPE**|**smallint**|Esta coluna sempre retorna um valor:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = não clusterizado|  
-|**SEQ_IN_INDEX**|**smallint**|Posição da coluna dentro do índice.|  
-|**COLUMN_NAME**|**sysname**|Nome de coluna para cada coluna do **TABLE_NAME** retornado. Esta coluna sempre retorna um valor.|  
+|**SEQ_IN_INDEX**|**smallint**|Posição da coluna no índice.|  
+|**COLUMN_NAME**|**sysname**|Nome da coluna para cada coluna do **TABLE_NAME** retornado. Esta coluna sempre retorna um valor.|  
 |**COLLATION**|**char(1)**|Ordem usada no agrupamento. Pode ser:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável|  
-|**CARDINALIDADE**|**Int**|Número de linhas na tabela ou valores exclusivos no índice.|  
-|**PÁGINAS**|**Int**|Número de páginas para armazenar o índice ou a tabela.|  
+|**CARDINALIDADE**|**int**|Número de linhas na tabela ou valores exclusivos no índice.|  
+|**PÁGINAS**|**int**|Número de páginas para armazenar o índice ou a tabela.|  
 |**FILTER_CONDITION**|**varchar(128)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
- Os índices no conjunto de resultados aparecem em ordem crescente pelas colunas **NON_UNIQUE**, **tipo**, **INDEX_NAME**, e **SEQ_IN_INDEX**.  
+ Os índices no conjunto de resultados são exibidos em ordem crescente pelas colunas **NON_UNIQUE**, **tipo**, **INDEX_NAME**, e **SEQ_IN_INDEX**.  
   
  O tipo de índice clusterizado se refere a um índice no qual são armazenados dados de tabela na ordem do índice. Isso corresponde à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] índices clusterizados.  
   
@@ -118,7 +118,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

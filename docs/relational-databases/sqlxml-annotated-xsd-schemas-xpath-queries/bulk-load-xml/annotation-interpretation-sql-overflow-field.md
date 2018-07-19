@@ -22,19 +22,19 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005809"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação - SQL: overflow-campo
+# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – SQL: overflow-campo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Essa coluna é especificada no esquema usando o **SQL: overflow-campo** anotação. É possível ter várias colunas de estouro.  
+  Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Esta coluna é especificada no esquema usando o **SQL: overflow-campo** anotação. É possível ter várias colunas de estouro.  
   
- Sempre que um nó XML (elemento ou atributo) para o qual há uma **SQL: overflow-campo** anotação definida entra no escopo, a coluna de estouro é ativada e recebe dados não consumidos. Quando o nó sair do escopo, a coluna de estouro não ficará mais ativa e o XML Bulk Load tornará o campo de estouro anterior (se houver) ativo.  
+ Sempre que um nó XML (elemento ou atributo) para os quais um **SQL: overflow-campo** anotação definida entra no escopo, a coluna de estouro será ativada e receberá os dados não consumidos. Quando o nó sair do escopo, a coluna de estouro não ficará mais ativa e o XML Bulk Load tornará o campo de estouro anterior (se houver) ativo.  
   
- Conforme ele armazena dados na coluna de estouro, o XML Bulk Load também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-campo** está definido.  
+ Conforme ele armazena dados na coluna de estouro, o XML Bulk Load também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-campo** é definido.  
   
  Por exemplo, o esquema a seguir descreve o  **\<clientes >** e  **\<CustOrder >** elementos. Cada um destes elementos identifica uma coluna de estouro:  
   
@@ -80,9 +80,9 @@ ms.locfileid: "32970221"
 </xsd:schema>  
 ```  
   
- No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<ordem >** elemento é mapeado para a tabela CustOrder.  
+ No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<Order >** elemento é mapeado para a tabela CustOrder.  
   
- Ambos os  **\<cliente >** e  **\<ordem >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filhos não consumidos e atributos da  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
+ Os dois os  **\<cliente >** e  **\<Order >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filho não consumido e atributos dos  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

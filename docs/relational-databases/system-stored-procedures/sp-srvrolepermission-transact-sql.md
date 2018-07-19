@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261505"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014757"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@srvrolename =** ] **'***função***'**  
- É o nome da função de servidor fixa para a qual são retornadas permissões. *função* é **sysname**, com um padrão NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. *função* pode ter um dos valores a seguir.  
+ É o nome da função de servidor fixa para a qual são retornadas permissões. *função* está **sysname**, com um padrão NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. *função* pode ter um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**sysadmin**|Administradores de sistema|  
 |**securityadmin**|Administradores de segurança|  
@@ -68,7 +68,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**A função de servidor**|**sysname**|Nome de uma função de servidor fixa|  
+|**ServerRole**|**sysname**|Nome de uma função de servidor fixa|  
 |**Permissão**|**sysname**|Permissão associada **ServerRole**|  
   
 ## <a name="remarks"></a>Remarks  

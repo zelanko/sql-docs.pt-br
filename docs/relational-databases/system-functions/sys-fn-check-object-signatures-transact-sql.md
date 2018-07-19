@@ -1,5 +1,5 @@
 ---
-title: fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015148"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -57,23 +57,23 @@ fn_ check_object_signatures (
   
 -   'chave assimétrica'  
   
- @*classe* é **sysname**.  
+ @*classe* está **sysname**.  
   
  {@*impressão digital* }  
- O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave assimétrica com a qual a chave é criptografada. @*impressão digital* é **varbinary(20)**.  
+ O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave assimétrica com a qual a chave é criptografada. @*impressão digital* está **varbinary(20)**.  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir lista as colunas que **fn_check_object_signatures** retorna.  
   
-|Coluna|Tipo|Description|  
+|coluna|Tipo|Description|  
 |------------|----------|-----------------|  
 |Tipo|**nvarchar(120)**|Retorna a descrição do tipo ou o assembly.|  
-|entity_id|**Int**|Retorna a id de objeto do objeto que está sendo avaliado.|  
-|is_signed|**Int**|Retorna 0 quando o objeto não foi assinado pela impressão digital fornecida. Retorna 1 quando o objeto foi assinado pela impressão digital fornecida.|  
-|is_signature_valid|**Int**|Quando o valor de is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor de is_signed é 0, sempre retorna 0.|  
+|entity_id|**int**|Retorna a id de objeto do objeto que está sendo avaliado.|  
+|is_signed|**int**|Retorna 0 quando o objeto não foi assinado pela impressão digital fornecida. Retorna 1 quando o objeto foi assinado pela impressão digital fornecida.|  
+|is_signature_valid|**int**|Quando o valor de is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor de is_signed é 0, sempre retorna 0.|  
   
 ## <a name="remarks"></a>Remarks  
- Use **fn_check_object_signatures** para confirmar que usuários mal-intencionados não violaram objetos.  
+ Use **fn_check_object_signatures** para confirmar que usuários mal-intencionados não alterados com objetos.  
   
 ## <a name="permissions"></a>Permissões  
  Requer VIEW DEFINITION no certificado ou na chave assimétrica.  

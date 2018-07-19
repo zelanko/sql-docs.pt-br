@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ecf272b61591124b6e7ce920ecf1c8b481a6ac5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241824"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014911"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33241824"
   Retorna um identificador exclusivo para a transação. Esse identificador exclusivo é uma cadeia de caracteres usada para associar sessões usando sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use MARS (vários conjuntos de resultados ativos) ou, então, transações distribuídas. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use MARS (vários conjuntos de resultados ativos) ou, então, transações distribuídas. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,16 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
   
 ## <a name="arguments"></a>Argumentos  
  [@out_token=]'*return_value*'  
- É o token a ser usado para associar sessões. *RETURN_VALUE* é **varchar (255)** sem nenhum padrão.  
+ É o token a ser usado para associar sessões. *RETURN_VALUE* está **varchar(255)** sem nenhum padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ Nenhum  
   
 ## <a name="remarks"></a>Remarks  
- sp_getbindtoken retornará um token válido somente quando o procedimento armazenado é executado dentro de uma transação ativa. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem de erro. Por exemplo:  
+ sp_getbindtoken retornará um token válido somente quando o procedimento armazenado for executado dentro de uma transação ativa. Caso contrário, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem de erro. Por exemplo:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -102,7 +102,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- O token de associação pode ser usado com sp_bindsession para associar novas sessões à mesma transação. O token de ligação só é válido localmente dentro de cada instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)] e não pode ser compartilhado entre várias instâncias.  
+ O token de associação pode ser usado com sp_bindsession para associar novas sessões à mesma transação. O token de associação só é válido localmente dentro de cada instância da [!INCLUDE[ssDE](../../includes/ssde-md.md)] e não pode ser compartilhado entre várias instâncias.  
   
  Para obter e passar um token de associação, você deve executar sp_getbindtoken antes de sp_bindsession para compartilhar o mesmo espaço de bloqueio. Se você obtiver um token de associação, sp_bindsession será executado corretamente.  
   
@@ -131,7 +131,7 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>Consulte também  
- [sp_bindsession & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   

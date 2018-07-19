@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015002"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,17 +57,17 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  O valor para a chave especificada, do tipo **sql_variant**. Definir um valor NULL libera a memória. O tamanho máximo é 8.000 bytes.  
   
  [ @read_only= ] { 0 | 1 }  
- Um sinalizador de tipo **bit**. Se for 1, em seguida, o valor para a chave especificada não pode ser alterado novamente essa conexão lógica. Se 0 (padrão) e, em seguida, o valor pode ser alterado.  
+ Um sinalizador de tipo **bit**. Se for 1, em seguida, o valor para a chave especificada não pode ser alterado novamente nessa conexão lógica. Se 0 (padrão) e, em seguida, o valor pode ser alterado.  
   
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode definir um contexto de sessão para sua sessão.  
   
 ## <a name="remarks"></a>Remarks  
- Como outros procedimentos armazenados, apenas literais e variáveis (não expressões ou chamadas de função) podem ser passados como parâmetros.  
+ Como outros procedimentos armazenados, apenas literais e variáveis (não a expressões ou chamadas de função) podem ser passadas como parâmetros.  
   
- O tamanho total do contexto da sessão é limitado a 256 kb. Se definir um valor que faz com que esse limite ser excedido, a instrução falhará. Você pode monitorar o uso de memória global em [sys.DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ O tamanho total do contexto da sessão é limitado a 256 kb. Se definir um valor que faz com que esse limite ser excedido, a instrução falhará. Você pode monitorar o uso de memória global no [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Você pode monitorar o uso de memória global consultando [sys.DM os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) da seguinte maneira: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Você pode monitorar o uso de memória global consultando [DM os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) da seguinte maneira: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como definir e, em seguida, retornar uma chave de contexto de sessões chamada linguagem com um valor de inglês.  

@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 200638dc2e227ad2b8428f668deb424ab3a277c2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041084"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =**] **'***plan_id***'**  
- Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**, e deve ser uma ID válida.  
+ Especifica a ID do plano de manutenção. *plan_id* está **uniqueidentifier**, e deve ser uma ID válida.  
   
  [  **@job_id =**] **'***job_id***'**  
- Especifica a ID do trabalho a ser associado ao plano de manutenção. *job_id* é **uniqueidentifier**, e deve ser uma ID válida. Para criar um trabalho ou trabalhos, execute **sp_add_job**, ou use o SQL Server Management Studio.  
+ Especifica a ID do trabalho a ser associado ao plano de manutenção. *job_id* está **uniqueidentifier**, e deve ser uma ID válida. Para criar um trabalho ou trabalhos, execute **sp_add_job**, ou usar o SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -62,7 +62,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
  **sp_add_maintenance_plan_job** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan_job**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo adiciona o trabalho "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" ao plano de manutenção criado usando **sp_add_maintenance_plan_job**.  

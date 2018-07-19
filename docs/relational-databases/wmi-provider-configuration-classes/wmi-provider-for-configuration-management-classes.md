@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 967d26b76a75da27a5b4df98ecf5cd53d2cb9950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011143"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005232"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Provedor WMI para classes de gerenciamento de configuração
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33011143"
   
  [Classe ClientSettings](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)  
   
- [Classe ClientSettingsGeneralFlag](../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
+ [ClientSettingsGeneralFlag Class](../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)  
   
  [Classe SecurityCertificate](../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)  
   

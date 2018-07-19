@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015171"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,19 +41,19 @@ ms.locfileid: "34467672"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (interna) do consumidor de memória.|  
-|memory_consumer_type|**Int**|O tipo de consumidor de memória:<br /><br /> 0=Agregação. (Agrega o uso de memória de dois ou mais consumidores. Ele não deve ser exibido.)<br /><br /> 2=VARHEAP (Rastreia o consumo de memória para um heap de comprimento variável.)<br /><br /> 3=HASH (Rastreia o consumo da memória para um índice.)<br /><br /> 5=Pool da página do BD (Rastreia o consumo de memória de um pool de página de banco de dados usado em operações de tempo de execução. Por exemplo, as variáveis de tabela e algumas verificações serializáveis. Há apenas um consumidor de memória deste tipo por banco de dados.)|  
+|memory_consumer_type|**int**|O tipo de consumidor de memória:<br /><br /> 0=Agregação. (Agrega o uso de memória de dois ou mais consumidores. Ele não deve ser exibido.)<br /><br /> 2=VARHEAP (Rastreia o consumo de memória para um heap de comprimento variável.)<br /><br /> 3=HASH (Rastreia o consumo da memória para um índice.)<br /><br /> 5=Pool da página do BD (Rastreia o consumo de memória de um pool de página de banco de dados usado em operações de tempo de execução. Por exemplo, as variáveis de tabela e algumas verificações serializáveis. Há apenas um consumidor de memória deste tipo por banco de dados.)|  
 |memory_consumer_type_desc|**nvarchar(64)**|Tipo de consumidor de memória: VARHEAP, HASH ou PGPOOL.<br /><br /> 0 – (Não deve ser exibido.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o índice de hash.<br /><br /> PGPOOL: Para o banco de dados há pool da página somente um pool de página do banco de dados de 64K.|  
+|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do banco de dados. Usado para alocar dados do usuário para um banco de dados (linhas).<br />Heap do sistema de banco de dados. Usado para alocar dados do banco de dados que serão incluídos nos despejos de memória e não incluem dados de usuário.<br />Heap do índice de intervalo. Heap privado usado pelo índice de intervalo para alocar páginas do BW.<br /><br /> HASH: Nenhuma descrição desde que o object_id indica a tabela e o index_id, o índice de hash.<br /><br /> PGPOOL: Para o banco de dados há pool da página de apenas um pool de página do banco de dados de 64K.|  
 |object_id|**bigint**|A ID de objeto à qual a memória alocada está atribuída. Um valor negativo de objetos do sistema.|  
 |xtp_object_id|**bigint**|A ID de objeto para a tabela com otimização de memória.|  
-|index_id|**Int**|A ID de índice do consumidor (se houver). NULL para tabelas base.|  
+|index_id|**int**|A ID de índice do consumidor (se houver). NULL para tabelas base.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
 |used_bytes|**bigint**|Bytes usados por este consumidor. Aplica-se somente a varheap.|  
-|allocation_count|**Int**|Número de alocações.|  
-|partition_count|**Int**|Somente para uso interno.|  
-|sizeclass_count|**Int**|Somente para uso interno.|  
-|min_sizeclass|**Int**|Somente para uso interno.|  
-|max_sizeclass|**Int**|Somente para uso interno.|  
+|allocation_count|**int**|Número de alocações.|  
+|partition_count|**int**|Somente para uso interno.|  
+|sizeclass_count|**int**|Somente para uso interno.|  
+|min_sizeclass|**int**|Somente para uso interno.|  
+|max_sizeclass|**int**|Somente para uso interno.|  
 |memory_consumer_address|**varbinary**|Endereço interno do consumidor. Somente para uso interno.|  
 |xtp_object_id|**bigint**|A ID de objeto OLTP na memória que corresponde à tabela com otimização de memória.|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34467672"
  As tabelas do sistema são retornadas apenas para usuários com permissão VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Quando uma tabela com otimização de memória tem um índice columnstore, o sistema usa algumas tabelas internas que consomem memória, para acompanhar os dados para o índice columnstore. Para obter detalhes sobre essas tabelas internas e consultas de exemplo mostrando o consumo de memória, consulte [memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Quando uma tabela com otimização de memória tem um índice columnstore, o sistema usa algumas tabelas internas que consomem parte da memória, para acompanhar dados para o índice columnstore. Para obter detalhes sobre essas tabelas internas e consultas de exemplo mostrando o consumo de memória, consulte [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Exemplos  
@@ -115,7 +115,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- A memória total alocada e usada dessa DMV é o mesma que o nível de objeto em [sys.DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ A memória total alocada e usada dessa DMV é o mesma que o nível de objeto na [DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -128,6 +128,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela de otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

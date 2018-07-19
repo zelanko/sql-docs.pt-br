@@ -18,21 +18,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e7b4534410eabf1186b115c07fef8a8d79960938
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005778"
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Retorna uma lista de todas as credenciais de rede armazenada no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo para todos os servidores de destino. Resultados são listados para o nó de controle e cada nó de computação.  
+  Retorna uma lista de todas as credenciais de rede armazenada do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance para todos os servidores de destino. Os resultados são listados para o nó de controle e cada nó de computação.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|pdw_node_id|**Int**|Id numérico exclusivo associado ao nó.|  
-|target_server_name|**nvarchar(32)**|Endereço IP do servidor de destino que [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] terão acesso usando as credenciais de usuário e senha.|  
+|pdw_node_id|**int**|Id numérico exclusivo associado ao nó.|  
+|target_server_name|**nvarchar(32)**|Endereço IP do servidor de destino que [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] acessará usando as credenciais de nome de usuário e senha.|  
 |username|**nvarchar(32)**|O nome de usuário para o qual a senha é armazenada.|  
 |LAST_MODIFIED|**datetime**|Data e hora da última operação que modificou a credencial.|  
   
@@ -40,9 +40,9 @@ ms.locfileid: "34466702"
  Requer VIEW SERVER STATE.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- A chave para este modo de exibição de gerenciamento dinâmico é *pdw_node_id* mais *target_server_name*.  
+ É a chave para este modo de exibição de gerenciamento dinâmico *pdw_node_id* plus *target_server_name*.  
   
 ## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse Parallel Data Warehouse e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

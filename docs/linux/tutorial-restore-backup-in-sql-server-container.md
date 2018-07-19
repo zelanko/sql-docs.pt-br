@@ -1,6 +1,6 @@
 ---
 title: Restaurar um banco de dados do SQL Server no Docker | Microsoft Docs
-description: Este tutorial mostra como restaura um backup de banco de dados do SQL Server em um novo contêiner de Docker do Linux.
+description: Este tutorial mostra como restaura um backup de banco de dados do SQL Server em um novo contêiner do Docker do Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,24 +12,24 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842809"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041204"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados do SQL Server em um contêiner do Docker do Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server em uma imagem de contêiner do SQL Server de 2017 Linux em execução no Docker.
+Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server em uma imagem de contêiner do SQL Server 2017 Linux em execução no Docker.
 
 > [!div class="checklist"]
-> * Pull e executar a imagem de contêiner mais recente do SQL Server de 2017 Linux.
+> * Efetuar pull e executar a imagem de contêiner mais recente do SQL Server 2017 Linux.
 > * Copie o arquivo de banco de dados do World Wide Importers no contêiner.
 > * Restaure o banco de dados no contêiner.
 > * Execute instruções Transact-SQL para exibir e modificar o banco de dados.
-> * Fazer backup do banco de dados modificado.
+> * Fazer backup de banco de dados modificado.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -53,9 +53,9 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
     ```
 
     > [!TIP]
-    > Em todo este tutorial, são fornecidos exemplos de comando do docker para o shell bash (Linux/Mac) e do PowerShell (Windows).
+    > Ao longo deste tutorial, os exemplos de comando do docker são fornecidos para o shell bash (Linux/Mac) e o PowerShell (Windows).
 
-1. Para executar a imagem de contêiner com Docker, você pode usar o seguinte comando:
+1. Para executar a imagem de contêiner com Docker, você pode usar o comando a seguir:
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -71,7 +71,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Este comando cria um contêiner de 2017 do SQL Server com a edição de desenvolvedor (padrão). Porta do SQL Server **1433** é exposta no host como porta **1401**. Opcional `-v sql1data:/var/opt/mssql` parâmetro cria um contêiner de volume de dados denominado **sql1ddata**. Isso é usado para manter os dados criados pelo SQL Server.
+    Este comando cria um contêiner do SQL Server 2017 com a edição de desenvolvedor (padrão). Porta do SQL Server **1433** é exposta no host de porta **1401**. Opcional `-v sql1data:/var/opt/mssql` parâmetro cria um contêiner de volume de dados denominado **sql1ddata**. Isso é usado para manter os dados criados pelo SQL Server.
 
    > [!NOTE]
    > O processo para executar edições do SQL Server de produção em contêineres é ligeiramente diferente. Para obter mais informações, veja [Executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production). Se você usar o mesmo nomes de contêiner e portas, o restante deste passo a passo ainda funciona com contêineres de produção.
@@ -101,9 +101,9 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Copiar um arquivo de backup no contêiner
 
-Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Use as etapas a seguir para baixar e copie o arquivo de backup do banco de dados Wide World Importers no seu contêiner do SQL Server.
+Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Use as etapas a seguir para baixar e copiar o arquivo de backup do banco de dados Wide World Importers para seu contêiner do SQL Server.
 
-1. Primeiro, use **a execução do docker** para criar uma pasta de backup. O comando a seguir cria um **/var/opt/mssql/backup** diretório dentro do contêiner do SQL Server.
+1. Primeiro, use **o docker exec** para criar uma pasta de backup. O comando a seguir cria uma **/var/opt/mssql/backup** diretório dentro do contêiner do SQL Server.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -113,7 +113,7 @@ Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/w
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Em seguida, baixe o [wideworldimporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) arquivo à sua máquina host. Os seguintes comandos, navegue até o diretório inicial/usuário e baixa o arquivo de backup como **wwi.bak**.
+1. Em seguida, baixe o [WideWorldImporters-Full](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) arquivo para o computador host. Os seguintes comandos, navegue até o diretório de usuário/home e baixa o arquivo de backup como **wwi.bak**.
 
    ```bash
    cd ~
@@ -124,7 +124,7 @@ Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/w
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. Use **docker cp** para copiar o arquivo de backup para o contêiner no **/var/opt/mssql/backup** directory.
+1. Use **docker cp** para copiar o arquivo de backup no contêiner na **/var/opt/mssql/backup** directory.
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -136,12 +136,12 @@ Este tutorial usa o [banco de dados de exemplo Wide World Importers](../sample/w
 
 ## <a name="restore-the-database"></a>Restaurar o banco de dados
 
-O arquivo de backup agora está localizado dentro do contêiner. Antes de restaurar o backup, é importante saber os nomes de arquivo lógico e tipos de arquivo dentro do backup. Os seguintes comandos Transact-SQL inspecionar o backup e executar a restauração usando **sqlcmd** no contêiner.
+Agora, o arquivo de backup está localizado dentro do contêiner. Antes de restaurar o backup, é importante conhecer os nomes de arquivo lógico e os tipos de arquivos dentro do backup. Os seguintes comandos Transact-SQL inspecionar o backup e realizar a restauração usando **sqlcmd** no contêiner.
 
 > [!TIP]
-> Este tutorial usa **sqlcmd** dentro do contêiner, como o contêiner é fornecido com essa ferramenta pré-instalado. No entanto, você também pode executar instruções Transact-SQL com outro cliente de ferramentas fora do contêiner, como [código do Visual Studio](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para se conectar, use a porta de host foi mapeada para a porta 1433 no contêiner. Neste exemplo, que é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
+> Este tutorial usa **sqlcmd** dentro do contêiner, como o contêiner é fornecido com essa ferramenta pré-instalada. No entanto, você também pode executar instruções Transact-SQL com outro cliente ferramentas fora do contêiner, como [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para se conectar, use a porta de host foi mapeada para a porta 1433 no contêiner. Neste exemplo, que é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
 
-1. Executar **sqlcmd** dentro do contêiner à lista de nomes de arquivo lógicos e caminhos dentro do backup. Isso é feito com o **RESTORE FILELISTONLY** instrução Transact-SQL.
+1. Execute **sqlcmd** dentro do contêiner para listar os nomes de arquivo lógico e caminhos dentro do backup. Isso é feito com o **RESTORE FILELISTONLY** instrução Transact-SQL.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -156,7 +156,7 @@ O arquivo de backup agora está localizado dentro do contêiner. Antes de restau
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   Você verá uma saída semelhante à seguinte:
+   Você deve ver saídas semelhantes ao seguinte:
 
    ```
    LogicalName   PhysicalName
@@ -167,7 +167,7 @@ O arquivo de backup agora está localizado dentro do contêiner. Antes de restau
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. Chamar o **RESTAURAR banco de dados** comando para restaurar o banco de dados dentro do contêiner. Especifique novos caminhos para cada um dos arquivos na etapa anterior.
+1. Chame o **RESTAURAR banco de dados** comando para restaurar o banco de dados dentro do contêiner. Especifica um caminho novo para cada um dos arquivos na etapa anterior.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -181,7 +181,7 @@ O arquivo de backup agora está localizado dentro do contêiner. Antes de restau
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   Você verá uma saída semelhante à seguinte:
+   Você deve ver saídas semelhantes ao seguinte:
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -227,11 +227,11 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 Você deve ver **WideWorldImporters** na lista de bancos de dados.
 
-## <a name="make-a-change"></a>Fazer uma alteração
+## <a name="make-a-change"></a>Faça uma alteração
 
-As etapas a seguir fazer uma alteração no banco de dados.
+As etapas a seguir faz uma alteração no banco de dados.
 
-1. Executar uma consulta para exibir os itens top 10 a **Warehouse.StockItems** tabela.
+1. Executar uma consulta para exibir os 10 principais itens a **Warehouse.StockItems** tabela.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -245,7 +245,7 @@ As etapas a seguir fazer uma alteração no banco de dados.
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   Você verá uma lista de nomes e identificadores de item:
+   Você deve ver uma lista de nomes e identificadores de item:
 
    ```
    StockItemID StockItemName
@@ -262,7 +262,7 @@ As etapas a seguir fazer uma alteração no banco de dados.
             10 USB food flash drive - chocolate bar
    ```
 
-1. Atualize a descrição do primeiro item com o seguinte **atualização** instrução:
+1. Atualizar a descrição do primeiro item com o seguinte **atualização** instrução:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -276,7 +276,7 @@ As etapas a seguir fazer uma alteração no banco de dados.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   Você verá uma saída semelhante ao seguinte:
+   Você deve ver saídas semelhantes ao seguinte texto:
 
    ```
    (1 rows affected)
@@ -287,9 +287,9 @@ As etapas a seguir fazer uma alteração no banco de dados.
 
 ## <a name="create-a-new-backup"></a>Crie um novo backup
 
-Depois que você tiver restaurado o banco de dados em um contêiner, você também poderá criar backups de banco de dados dentro do contêiner em execução regularmente. As etapas a seguem um padrão semelhante para as etapas anteriores, mas na ordem inversa.
+Depois de ter restaurado o banco de dados em um contêiner, você também poderá criar regularmente os backups de banco de dados dentro do contêiner em execução. As etapas seguem um padrão semelhante para as etapas anteriores, mas na ordem inversa.
 
-1. Use o **BACKUP de banco de dados** comando Transact-SQL para criar um backup de banco de dados no contêiner. Este tutorial cria um novo arquivo de backup, **wwi_2.bak**, em criado anteriormente **/var/opt/mssql/backup** directory.
+1. Use o **BACKUP do banco de dados** comando Transact-SQL para criar um backup de banco de dados no contêiner. Este tutorial cria um novo arquivo de backup **wwi_2.bak**, em criado anteriormente **/var/opt/mssql/backup** directory.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -303,7 +303,7 @@ Depois que você tiver restaurado o banco de dados em um contêiner, você tamb�
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   Você verá uma saída semelhante à seguinte:
+   Você deve ver saídas semelhantes ao seguinte:
 
    ```
    10 percent processed.
@@ -338,7 +338,7 @@ Depois que você tiver restaurado o banco de dados em um contêiner, você tamb�
 
 ## <a name="use-the-persisted-data"></a>Use os dados persistentes
 
-Além de fazer backups de banco de dados para proteger seus dados, você também pode usar contêineres de volume de dados. O início deste tutorial criado o **sql1** contêiner com o `-v sql1data:/var/opt/mssql` parâmetro. O **sql1data** contêiner de volume de dados persiste o **/var/opt/mssql** dados mesmo depois que o contêiner é removido. As etapas a seguir removem completamente o **sql1** contêiner e, em seguida, crie um novo contêiner, **sql2**, com os dados persistentes.
+Além de fazer backups de banco de dados para proteger seus dados, você também pode usar contêineres de volume de dados. O início deste tutorial criada o **sql1** contêiner com o `-v sql1data:/var/opt/mssql` parâmetro. O **sql1data** persiste do contêiner de volume de dados de **/var/opt/mssql** dados mesmo depois que o contêiner é removido. As etapas a seguir removem completamente o **sql1** contêiner e, em seguida, crie um novo contêiner **sql2**, com os dados persistentes.
 
 1. Parar o **sql1** contêiner.
 
@@ -350,7 +350,7 @@ Além de fazer backups de banco de dados para proteger seus dados, você também
    docker stop sql1
    ```
 
-1. Remova o contêiner. Isso não exclui criado anteriormente **sql1data** contêiner de volume de dados e os dados persistentes nele.
+1. Remova o contêiner. Isso não exclui criado anteriormente **sql1data** contêiner de volume de dados e os dados persistentes nela.
 
    ```bash
    sudo docker rm sql1
@@ -360,7 +360,7 @@ Além de fazer backups de banco de dados para proteger seus dados, você também
    docker rm sql1
    ```
 
-1. Criar um novo contêiner, **sql2**e reutilize o **sql1data** contêiner de volume de dados.
+1. Criar um novo contêiner **sql2**e reutilizar as **sql1data** contêiner de volume de dados.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -374,7 +374,7 @@ Além de fazer backups de banco de dados para proteger seus dados, você também
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. O banco de dados do Wide World Importers está agora o novo contêiner. Execute uma consulta para verificar a alteração anterior feita.
+1. O banco de dados da Wide World Importers está agora no novo contêiner. Execute uma consulta para verificar a alteração anterior feita.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -389,19 +389,19 @@ Além de fazer backups de banco de dados para proteger seus dados, você também
    ```
 
    > [!NOTE]
-   > A senha de SA não é a senha especificada para o **sql2** contêiner, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos os dados do SQL Server foi restaurado de **sql1**, incluindo a senha alterada de anteriormente no tutorial. Na verdade, algumas opções como esta são ignoradas devido a restauração dos dados no /var/opt/mssql. Por esse motivo, a senha é `<YourNewStrong!Passw0rd>` conforme mostrado aqui.
+   > A senha de SA não é a senha especificada para o **sql2** contêiner, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos os dados do SQL Server foi restaurado a partir **sql1**, incluindo a senha alterada de anteriormente no tutorial. Na verdade, algumas opções como esta são ignoradas devido a restauração dos dados no /var/opt/mssql. Por esse motivo, a senha é `<YourNewStrong!Passw0rd>` conforme mostrado aqui.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você aprendeu como fazer backup de um banco de dados no Windows e movê-lo para um servidor Linux executando o SQL Server de 2017 RC2. Você aprendeu como para:
+Neste tutorial, você aprendeu a fazer backup de um banco de dados no Windows e movê-lo para um servidor Linux executando o SQL Server 2017 RC2. Você aprendeu como para:
 > [!div class="checklist"]
-> * Crie imagens de contêiner do SQL Server de 2017 Linux.
+> * Crie imagens de contêiner do SQL Server 2017 Linux.
 > * Copie os backups de banco de dados do SQL Server em um contêiner.
 > * Executar instruções Transact-SQL dentro do contêiner com **sqlcmd**.
 > * Criar e extrair arquivos de backup de um contêiner.
-> * Use contêineres de volume de dados no Docker para manter os dados do SQL Server.
+> * Use contêineres de volume de dados no Docker para persistir dados do SQL Server.
 
-Em seguida, examine a outra configuração do Docker e cenários de solução de problemas:
+Em seguida, examine outras configurações do Docker e cenários de solução de problemas:
 
 > [!div class="nextstepaction"]
 >[Guia de configuração para o SQL Server 2017 no Docker](sql-server-linux-configure-docker.md)

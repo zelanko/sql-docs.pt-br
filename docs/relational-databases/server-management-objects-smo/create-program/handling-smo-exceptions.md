@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967271"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005728"
 ---
 # <a name="handling-smo-exceptions"></a>Manipulando exceções SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,23 +35,23 @@ ms.locfileid: "32967271"
   
  Existem classes diferentes de exceção no SMO. As informações sobre a exceção podem ser obtidas das propriedades de exceção, como a propriedade **Message** , que fornece uma mensagem de texto sobre a exceção.  
   
- As instruções que manipulam exceção são específicas da linguagem de programação. Por exemplo, em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic é a **Catch** instrução.  
+ As instruções que manipulam exceção são específicas da linguagem de programação. Por exemplo, na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic é a **Catch** instrução.  
   
 ## <a name="inner-exceptions"></a>Exceções internas  
  As exceções podem ser gerais ou específicas. As exceções gerais contêm um conjunto de exceções específicas. Várias instruções **Catch** podem ser usadas para tratar erros antecipados e deixar os erros restantes sem solução no código geral de manipulação de exceção. Normalmente, as exceções ocorrem em uma sequência em cascata. Com frequência, a exceção do SMO é causada por uma exceção SQL. Para detectar isso, use a propriedade **InnerException** sucessivamente para determinar a exceção original que causou a exceção final de nível superior.  
   
 > [!NOTE]  
->  O **SQLException** exceção for declarada no **SqlClient** namespace.  
+>  O **SQLException** exceção é declarada na **System.Data.SqlClient** namespace.  
   
  ![Um diagrama que mostra os níveis da qual uma exceção](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "um diagrama que mostra os níveis da qual uma exceção")  
   
  O diagrama mostra o fluxo de exceções pelas camadas do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Capturando uma exceção no Visual Basic  
- Este exemplo de código mostra como usar o **tente... Catch... Por fim** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] instrução para capturar uma exceção de SMO. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte a documentação do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ Este exemplo de código mostra como usar o **tente... Catch... Por fim** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] instrução para capturar uma exceção de SMO. Todas as exceções do SMO têm o tipo SmoException e estão listadas na referência de SMO. A sequência de exceções internas é exibida para mostrar a raiz do erro. Para obter mais informações, consulte o [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] documentação do .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

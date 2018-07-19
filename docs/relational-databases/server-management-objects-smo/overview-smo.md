@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708004"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006009"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34708004"
   
 -   Tabela e particionamento de índice para armazenamento de dados em um esquema de partição. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
--   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [implementar pontos de extremidade](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
+-   Pontos de extremidade de HTTP para o gerenciamento de solicitações de SOAP. Para obter mais informações, consulte [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
 -   Isolamento de instantâneo e versão do nível de linha para aprimoramento de simultaneidade. Para obter mais informações, consulte [trabalhando com isolamento de instantâneo](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34708004"
   
 -   Bancos de dados de instantâneo para criar cópias somente leitura de bancos de dados.  
   
--   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [do SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   Suporte do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para comunicação baseada em mensagem. Para obter mais informações, consulte [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
 -   Suporte de sinônimo para vários nomes de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sinônimos &#40;mecanismo de banco de dados&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
@@ -66,13 +66,13 @@ ms.locfileid: "34708004"
   
 -   Servidores registrados dão suporte para registrar informações de conexão. Para obter mais informações, consulte [registrar servidores](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [rastreamento SQL](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
+-   Rastreamento e repetição de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), e [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
 -   Suporte a certificados e chaves para controle de segurança. Para obter mais informações, consulte [hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   Gatilhos DDL para adicionar funcionalidade quando ocorrerem eventos de DDL. Para obter mais informações, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Isso significa que o common language runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalada antes de usar os objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
+ O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Isso significa que o common language runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes de usar os objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os assemblies estão localizados em C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obter mais informações, consulte o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentação.  
   
 ## <a name="smo-classes"></a>Classes do SMO  
  As classes do SMO incluem duas categorias: classes de instância e classes de utilitário.  
@@ -96,7 +96,7 @@ ms.locfileid: "34708004"
 ## <a name="smo-features"></a>Recursos do SMO  
  **Desempenho otimizado**  
   
- A arquitetura do SMO é eficiente em termos de memória porque objetos são somente parcialmente instanciados primeiro, e informações de propriedade mínimo é solicitado do servidor. A instanciação total de objetos é atrasada até que o objeto seja explicitamente referenciado. Um objeto é totalmente instanciado quando uma propriedade é solicitada e não está no conjunto de propriedades recuperadas primeiramente ou quando um método é chamado exigindo tal propriedade. A transição entre objetos parcialmente e totalmente instanciados é transparente para o usuário. Além disso, algumas propriedades que usam muitos memória nunca são recuperadas, a menos que a propriedade seja explicitamente referenciada. Um exemplo disto é a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> da propriedade do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Porém, a instanciação parcial requer mais viagens de ida e volta de rede e não é a melhor opção de desempenho para o seu aplicativo.  
+ A arquitetura do SMO é eficiente em termos de memória porque objetos são somente parcialmente instanciados primeiro, e informações de propriedade mínimo são solicitadas do servidor. A instanciação total de objetos é atrasada até que o objeto seja explicitamente referenciado. Um objeto é totalmente instanciado quando uma propriedade é solicitada e não está no conjunto de propriedades recuperadas primeiramente ou quando um método é chamado exigindo tal propriedade. A transição entre objetos parcialmente e totalmente instanciados é transparente para o usuário. Além disso, algumas propriedades que usam muitos memória nunca são recuperadas, a menos que a propriedade seja explicitamente referenciada. Um exemplo disto é a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> da propriedade do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Porém, a instanciação parcial requer mais viagens de ida e volta de rede e não é a melhor opção de desempenho para o seu aplicativo.  
   
  Você pode controlar instanciação para que fique adequada ao ambiente do sistema. A dependência na instanciação adiada minimiza a quantidade de memória exigida pelo aplicativo, embora possa ativar muitas solicitações do servidor quando as propriedades forem referenciadas.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34708004"
   
 -   Criação de script de 1 fase (cria o script em uma etapa)  
   
--   Fase 3 scripts avançados (cria o script em três etapas; descoberta de dependência, geração de lista, geração de script)  
+-   Avançada de script de 3 fases (cria o script em três etapas; descoberta de dependência, geração de lista, geração de script)  
   
 -   Descoberta de dependência bidirecional (permite a descoberta de dependências ou dependentes)  
   
@@ -153,11 +153,11 @@ ms.locfileid: "34708004"
   
  O Isolamento de instantâneo (controle de versão no nível de linha) é representado através de novas propriedades de objeto do <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Namespace de esquema XML, índices XML e tipo de dados XML**  
+ **Namespace de esquema XML, índices XML e o tipo de dados XML**  
   
  Namespaces de Esquema XML são representados no SMO por uma coleção de objetos. Os índices XML são representados no SMO por uma propriedade de objeto do **Index** .  
   
- **Aprimoramentos da pesquisa de texto completo**  
+ **Aprimoramentos de pesquisa de texto completo**  
   
  São fornecidos objetos novos no SMO representando os aprimoramentos da pesquisa de texto completo.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "34708004"
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> representa as opções de verificação de página do banco de dados.  
   
- **Bancos de dados do instantâneo**  
+ **Bancos de dados de instantâneo**  
   
  Um banco de dados de instantâneo é uma cópia somente leitura de um banco de dados especificado como momento determinado. Um banco de dados de instantâneo pode ser especificado usando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "34708004"
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] e sua funcionalidade são representados por um grupo de objetos  
   
- **Aprimoramentos do índice**  
+ **Aprimoramentos de índice**  
   
  Os aprimoramentos de índice do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representados por propriedades novas no objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   

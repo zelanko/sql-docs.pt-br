@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574208"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007146"
 ---
 # <a name="backup-element-xmla"></a>Elemento de backup (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "34574208"
 |OLAP híbrido (HOLAP)|Agregações e metadados|  
 |OLAP relacional (ROLAP)|Metadados|  
   
- Durante uma **Backup** de comando, um bloqueio compartilhado é colocado no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no **objeto** elemento. As versões de bloqueio compartilhado são liberadas depois que o comando **Backup** é completado.  
+ Durante um **Backup** de comando, um bloqueio compartilhado é colocado na [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] banco de dados especificado no **objeto** elemento. As versões de bloqueio compartilhado são liberadas depois que o comando **Backup** é completado.  
   
- Vários **Backup** comandos podem ser executados em paralelo, se os comandos forem incluídos no [paralela](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) coleção de um [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando. A coleção **Parallel** permite que um banco de dados tenha backup feito em vários arquivos de backup ao mesmo tempo.  
+ Vários **Backup** comandos podem ser executados em paralelo, se os comandos forem incluídos na [paralela](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) coleção de um [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando. A coleção **Parallel** permite que um banco de dados tenha backup feito em vários arquivos de backup ao mesmo tempo.  
   
  Para obter mais informações sobre backup e restaurando bancos de dados, consulte [fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34574208"
 >  Para cada arquivo de backup, o usuário que executar o comando de backup deve ter permissão para gravar no local de backup especificado de cada arquivo. Além disso, o usuário deve ter uma das seguintes funções: membro de uma função de servidor para a instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou membro de uma função de banco de dados com permissões de Controle total (Administrador) no banco de dados cujo backup será feito.  
   
 ## <a name="see-also"></a>Confira também
- [Elemento Restore &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Restaurar o elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [Elemento Synchronize &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Comandos &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   

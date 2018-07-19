@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1e93de452634e0f97d648e6548357cc040b9aca
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574108"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004568"
 ---
 # <a name="cubeinfo-element-xmla"></a>Elemento CubeInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34574108"
  O **CubeInfo** elemento contém um **cubo** elemento para cada cubo referenciado no conjunto de dados multidimensional.  
   
 > [!NOTE]  
->  Analysis Services retorna um único **cubo** elemento desta coleção porque [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não dá suporte a instruções que fazem referência a vários cubos na cláusula FROM da linguagem MDX (Multidimensional Expressions).  
+>  Analysis Services retorna um único **cubo** elemento nesta coleção porque [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] não dá suporte a instruções que fazem referência a vários cubos na cláusula FROM da linguagem MDX (Multidimensional Expressions).  
   
 ## <a name="see-also"></a>Confira também
  [Propriedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
