@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235790"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262140"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,27 +91,29 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="transaction-log-considerations"></a>Considerações do log de transações  
  As operações de índice em larga escala, executadas offline ou online, podem gerar grandes cargas de dados que podem fazer com que o log de transações seja preenchido rapidamente. Para assegurar que a operação de índice possa ser revertida, o log de transações não pode ser truncado até que a operação de índice se complete. Durante a operação de índice, no entanto, poderá ser feito backup do log. Portanto, o log de transações deve ter espaço suficiente para armazenar as transações da operação de índice e quaisquer transações simultâneas de usuário pelo período da operação de índice. Para obter mais informações, consulte [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
-## <a name="resumable-index-rebuild-considerations"></a>Considerações de recompilação de índice retomáveis
+## <a name="resumable-index-considerations"></a>Considerações de índice retomável
 
 > [!NOTE]
-> A opção de índice retomável aplica-se ao SQL Server (Começando com o SQL Server 2017) e Banco de Dados SQL. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
+> A opção de índice retomável aplica-se ao SQL Server (começando com o SQL Server 2017) (somente a recompilação de índice) e o Banco de Dados SQL (criação de índice não clusterizado e recompilação de índice). Confira [Criar Índice](../../t-sql/statements/create-index-transact-sql.md) (atualmente em visualização pública para o Banco de Dados SQL somente) e [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
 
-As diretrizes a seguir se aplicam ao executar a recompilação de índice online retomável:
--   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de recompilação de índice várias vezes para adequar-se às janelas de manutenção.
-- Recuperação de falhas de recompilação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
+Quando você executa a criação ou a recriação de índice online retomável, as seguintes diretrizes se aplicam:
+-   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de criação ou recriação de índice várias vezes para adequar-se às janelas de manutenção.
+- Recuperação de falhas de criação ou recriação de índice (tais como failovers de banco de dados ou ficar sem espaço em disco).
 - Quando uma operação de índice está em pausa, tanto o índice original quanto um recém-criado exigem espaço em disco e precisam ser atualizados durante as operações de DML.
 
-- Habilita o truncamento de logs de transação durante uma operação de recompilação de índice (esta operação não pode ser realizada para uma operação de índice online regular).
+- Habilita o truncamento de logs de transações durante uma operação de criação ou recompilação de índice.
 - A opção SORT_IN_TEMPDB=ON não é compatível
 
 > [!IMPORTANT]
-> A recompilação retomável não exige que você mantenha aberta uma transação de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
+> A criação ou a recriação retomável não exige que você mantenha aberta uma transação de longa execução, permitindo o truncamento de log durante essa operação e um melhor gerenciamento do espaço de log. Com o novo design, conseguimos manter os dados necessários em um banco de dados junto com todas as referências necessárias para reiniciar a operação retomável.
 
-Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Quando você atualiza um índice retomável enquanto uma operação de recompilação de índice está em pausa:
+Em geral, não há nenhuma diferença de desempenho entre a recompilação de índice online retomável e não retomável. Para criar o índice retomável, há uma sobrecarga de constante que causa uma pequena diferença no desempenho entre a criação dos índices retomável e não retomável. Essa diferença é bastante notável apenas para tabelas menores.
+
+Quando você atualiza um índice retomável enquanto uma operação de índice está em pausa:
 - Para cargas de trabalho primariamente de leitura, o impacto no desempenho é irrisório. 
 - Para cargas de trabalho com atualização intensa, você pode observar certa degradação da taxa de transferência (nossos testes mostram menos de 10% de degradação).
 
-Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a recompilação de índice online retomável e não retomável.
+Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a criação ou a recriação de índice online retomável e não retomável.
 
 ## <a name="online-default-options"></a>Opções online padrão 
 

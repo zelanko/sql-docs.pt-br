@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769672"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065996"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769672"
 >  Antes de criar seu primeiro ouvinte, é altamente recomendável ler [Conectividade de cliente AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Requisitos para o nome DNS de um ouvinte de grupo de disponibilidade  
- Cada ouvinte de grupo de disponibilidade exige um nome de host DNS que é exclusivo no domínio e no NetBIOS. O nome DNS é um valor da cadeia de caracteres. Este nome pode conter somente caracteres alfanuméricos, traços (-) e hífens (_), em qualquer ordem. Os nomes de host DNS diferenciam maiúsculas de minúsculas. O comprimento máximo é 63 caracteres; no entanto, no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o comprimento máximo que você pode especificar é 15 caracteres.  
+ Cada ouvinte de grupo de disponibilidade exige um nome de host DNS que é exclusivo no domínio e no NetBIOS. O nome DNS é um valor da cadeia de caracteres. Este nome pode conter somente caracteres alfanuméricos, traços/hifens (-) e sublinhados (_), em qualquer ordem. Os nomes de host DNS diferenciam maiúsculas de minúsculas. O comprimento máximo é 63 caracteres; no entanto, no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o comprimento máximo que você pode especificar é 15 caracteres.  
   
  Nós recomendamos que você especifique uma cadeia de caracteres significativa. Por exemplo, para um grupo de disponibilidade denominado `AG1`, um nome de host de DNS significativo seria `ag1-listener`.  
   

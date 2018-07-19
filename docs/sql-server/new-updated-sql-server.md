@@ -9,15 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: sql-server
 ms.date: 04/28/2018
-ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f1e3d0fd2b63ac3eb9ab0d66b14df15dad0c15ee
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686646"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926817"
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Novos e recém-atualizados: documentos do SQL Server
 
@@ -107,7 +105,7 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 - [Feature Pack do SQL Server 2012 SP3](http://go.microsoft.com/fwlink/?linkid=615935)
 - [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
 
-Para obter mais informações detalhadas para identificar o local e o nome do arquivo a ser baixado com base na versão instalada no momento, consulte a seção "Selecionar o arquivo correto a ser baixado" em [Informações de versão do SQL Server 2012 Service Pack 3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
+Para obter mais informações detalhadas para identificar o local e o nome do arquivo a ser baixado com base na versão instalada no momento, consulte a seção “Selecionar o arquivo correto a ser baixado” em [Informações de versão do SQL Server 2012 Service Pack 3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 **Notas de versão do Service Pack 2**
 

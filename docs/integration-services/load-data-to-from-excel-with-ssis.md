@@ -1,7 +1,7 @@
 ---
 title: Importar do Excel ou exportar para o Excel com o SSIS | Microsoft Docs
 description: Saiba como importar ou exportar dados do Excel com o SSIS (SQL Server Integration Services), junto com pré-requisitos, problemas conhecidos e limitações.
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403388"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137925"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
-Este artigo descreve como importar dados do Excel ou exportá-los para o Excel com o SSIS (SQL Server Integration Services). O artigo também descreve os pré-requisitos, as limitações e os problemas conhecidos.
+Este artigo descreve as informações de conexão que você precisa fornecer e as configurações que deve configurar, para importar dados do Excel ou exportar dados para o Excel com o SQL Server Integration Services (SSIS).
 
-É possível importar dados do Excel ou exportá-los para o Excel criando um pacote do SSIS e usando o Gerenciador de Conexões do Excel e a Origem ou o Destino do Excel. Também é possível usar o Assistente de Importação e de Exportação do SQL Server, criado no SSIS.
+As seções a seguir contêm as informações necessárias para usar o Excel com êxito com o SSIS e para compreender e solucionar problemas comuns:
 
-Este artigo contém três conjuntos de informações de que você precisa para usar o Excel com êxito no SSIS ou para entender e solucionar problemas comuns:
-1.  [Os arquivos necessários](#files-you-need).
-2.  As informações que você precisa fornecer quando carrega dados bidirecionalmente no Excel.
+1.  As [ferramentas](#tools) que você pode usar.
+
+2.  Os [arquivos](#files-you-need) necessários.
+
+3.  As informações de conexão que você precisa fornecer e as configurações que você definiu ao carregar dados de ou para o Excel.
     -   [Especifique o Excel](#specify-excel) como a fonte de dados.
     -   Forneça o [nome de arquivo e o caminho do Excel](#excel-file).
     -   Selecione a [versão do Excel](#excel-version).
     -   Especifique se a [primeira linha contém nomes de coluna](#first-row).
     -   Forneça a [planilha ou o intervalo que contém os dados](#sheets-ranges).
-3.  Problemas conhecidos e limitações.
+
+4.  Problemas conhecidos e limitações.
     -   Problemas com [tipos de dados](#issues-types).
     -   Problemas com a [importação](#issues-importing).
     -   Problemas com a [exportação](#issues-exporting).
+
+## <a name="tools"></a> Ferramentas que você pode usar
+
+Você pode importar dados do Excel ou exportar dados para ele usando uma das seguintes ferramentas:
+
+-   **Do SSIS (SQL Server Integration Services)**. Crie um pacote do SSIS que usa a Origem ou o Destino do Excel com o Gerenciador de Conexão do Excel. (Este artigo não descreve como projetar pacotes do SSIS.)
+
+-   O **Assistente de Importação e de Exportação do SQL Server**, criado no SSIS. Para saber mais, confira [Importar e exportar dados com o Assistente de Exportação e Importação do SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) e [Conectar-se a uma fonte de dados do Excel (Assistente de Exportação e Importação do SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="files-you-need"></a> Obter os arquivos necessários para se conectar ao Excel
 
 Antes de poder importar dados do Excel ou exportá-los para o Excel, talvez seja necessário baixar os componentes de conectividade para o Excel, se você ainda não os tiver instalado. Os componentes de conectividade do Excel não são instalados por padrão.
 
-Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do Mecanismo de Banco de Dados do Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920).
-  
-A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
+Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do Mecanismo de Banco de Dados do Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920). A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
 
-Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de Dados do Access, e não o *Tempo de Execução* do Microsoft Access 2016.
+### <a name="notes-about-the-download-and-installation"></a>Observações sobre o download e a instalação
 
-Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
+-   Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de Dados do Access, e não o *Tempo de Execução* do Microsoft Access 2016.
 
-Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
+-   Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
-Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> Especificar o Excel
+    Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
+
+## <a name="specify-excel"></a>Especifique o Excel como a fonte de dados
 
 A primeira etapa é indicar que você deseja se conectar ao Excel.
 

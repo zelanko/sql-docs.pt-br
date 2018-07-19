@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,27 +20,26 @@ helpviewer_keywords:
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46b6c72283ab0ead6aad871f3801fb3ed967f8f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed29d25330ceb824bef86969e822ae706ffd1a5c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055563"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786937"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o status do último cursor que a instrução FETCH emitiu em relação a qualquer cursor atualmente aberto pela conexão.  
+Essa função retorna o status do último cursor que a instrução FETCH emitiu em relação a qualquer cursor atualmente aberto pela conexão.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 @@FETCH_STATUS  
 ```  
   
@@ -50,22 +48,22 @@ ms.locfileid: "33055563"
   
 ## <a name="return-value"></a>Valor retornado  
   
-|Valor retornado|Description|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
-|0|A instrução FETCH foi bem-sucedida.|  
+|&nbsp;0|A instrução FETCH foi bem-sucedida.|  
 |-1|A instrução FETCH falhou ou a linha estava além do conjunto de resultados.|  
 |-2|A linha buscada está ausente.|
 |-9|O cursor não está executando uma operação de busca.|  
   
 ## <a name="remarks"></a>Remarks  
- Uma vez que @@FETCH_STATUS é global para todos os cursores em uma conexão, use @@FETCH_STATUS com cuidado. Depois que uma instrução FETCH é executada, o teste para @@FETCH_STATUS deve ocorrer antes que qualquer outra instrução FETCH seja executada com relação a outro cursor. O valor de @@FETCH_STATUS é indefinido antes de ocorrer qualquer busca na conexão.  
+Como `@@FETCH_STATUS` é global para todos os cursores em uma conexão, use-o com cuidado. Depois que uma instrução FETCH é executada, o teste para `@@FETCH_STATUS` deve ocorrer antes que qualquer outra instrução FETCH seja executada com relação a outro cursor. `@@FETCH_STATUS` é indefinido antes de ocorrer qualquer busca na conexão.  
   
- Por exemplo, um usuário executa uma instrução FETCH a partir de um cursor e, depois, chama um procedimento armazenado que abre e processa os resultados de outro cursor. Quando o controle é retornado do procedimento armazenado chamado, @@FETCH_STATUS reflete o último FETCH executado no procedimento armazenado, e não a instrução FETCH executada antes que o procedimento armazenado fosse chamado.  
+Por exemplo, um usuário executa uma instrução FETCH a partir de um cursor e, depois, chama um procedimento armazenado que abre e processa os resultados de outro cursor. Quando o controle retorna desse procedimento armazenado chamado, `@@FETCH_STATUS` reflete o último FETCH executado no procedimento armazenado, não a instrução FETCH executada antes de chamar o procedimento armazenado.  
   
- Para recuperar o último status chamado de um cursor específico, veja a coluna **fetch_status** da função de gerenciamento dinâmico **sys.dm_exec_cursors**.  
+Para recuperar o último status chamado de um cursor específico, veja a coluna **fetch_status** da função de gerenciamento dinâmico **sys.dm_exec_cursors**.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa `@@FETCH_STATUS` para controlar atividades de cursor em um loop `WHILE`.  
+Este exemplo usa `@@FETCH_STATUS` para controlar atividades de cursor em um loop `WHILE`.  
   
 ```  
 DECLARE Employee_Cursor CURSOR FOR  

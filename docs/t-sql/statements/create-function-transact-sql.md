@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,15 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075173"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790397"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,10 @@ ms.locfileid: "33075173"
 -   Usar uma função embutida como um predicado de filtro para uma política de segurança  
   
 > [!NOTE]  
->  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Banco de Dados SQL do Azure.  
+>  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Banco de Dados SQL do Azure.
+
+> [!NOTE]  
+>  Para o SQL Data Warehouse do Azure, confira o artigo [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016).
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>Interoperabilidade de colunas computadas  
  As funções têm as seguintes propriedades. Os valores dessas propriedades determinam se as funções podem ser usadas em colunas computadas que podem ser persistidas ou indexadas.  
   
-|Propriedade|Description|Observações|  
+|Propriedade|Descrição|Observações|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|A função é determinística ou não determinística.|O acesso a dados locais é permitido em funções determinísticas. Por exemplo, funções que sempre retornam o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada e com o mesmo estado do banco de dados são rotuladas como determinísticas.|  
 |**IsPrecise**|A função é precisa ou imprecisa.|As funções imprecisas contêm operações, como operações de ponto flutuante.|  
@@ -649,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadados  
  A tabela a seguir lista as exibições do catálogo do sistema que você pode usar para retornar metadados sobre funções definidas pelo usuário.  
   
-|Exibição do sistema|Description|  
+|Exibição do sistema|Descrição|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Veja o exemplo E na seção Exemplos abaixo.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Exibe informações sobre funções CLR definidas pelo usuário.|  

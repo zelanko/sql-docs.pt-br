@@ -1,7 +1,7 @@
 ---
 title: Guia de arquitetura e design de índices do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: 15c3db3784c056946a8ec047360691515c1c12be
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812160"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909586"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,13 +108,20 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
 ### <a name="query-considerations"></a>Considerações sobre consultas  
  Quando você projeta um índice, considere as seguintes diretrizes para consultas:  
   
--   Crie índices não clusterizados nas colunas frequentemente usadas em predicados e condições de junção em consultas. No entanto, evite adicionar colunas desnecessárias. Acrescentar muitas colunas de índice pode afetar adversamente o espaço em disco e o desempenho de manutenção de índice.  
+-   Crie índices não clusterizados nas colunas frequentemente usadas em predicados e condições de junção em consultas. Essas são as colunas SARGable<sup>1</sup>. No entanto, evite adicionar colunas desnecessárias. Acrescentar muitas colunas de índice pode afetar adversamente o espaço em disco e o desempenho de manutenção de índice.  
   
 -   Cobrindo índices pode melhorar desempenho de consulta porque todos os dados precisaram satisfazer os requisitos da consulta existe dentro do próprio índice. Ou seja, apenas as páginas de índice, e não as páginas de dados da tabela ou do índice clusterizado, são necessárias para recuperar os dados solicitados, portanto reduzindo as operações de E/S gerais do disco. Por exemplo, uma consulta de colunas **a** e **b** em uma tabela que tem um índice composto criado em colunas **a**, **b**e **c** pode recuperar os dados especificados somente do índice.  
-  
+
+    > [!IMPORTANT]
+    > Índices abrangentes são a designação para um [índice não clusterizado](#nonclustered-index-architecture) que resolve um ou vários resultados de consulta semelhantes diretamente, sem acesso à tabela base e sem incorrer em pesquisas.
+    > Esses índices têm todas as colunas não [SARGable](#sargable) necessárias em seu nível de folha. Isso significa que as colunas retornadas por qualquer cláusula SELECT e todos os argumentos WHERE e JOIN são cobertos pelo índice.
+    > Haverá potencialmente muito menos E/S para executar a consulta, se o índice for estreito o suficiente em comparação com as linhas e colunas da tabela em si, o que significa que ele é um subconjunto real do total de colunas. Considere cobrir índices ao selecionar uma pequena parte de uma tabela grande e quando essa pequena parte for definida por um predicado fixo, como [colunas esparsas](../relational-databases/tables/use-sparse-columns.md) que contêm apenas alguns valores não NULL, por exemplo.
+    
 -   Escreva consultas que insiram ou modifiquem o máximo de filas possível em uma única instrução, em vez de usar consultas múltiplas para atualizar essas mesmas filas. Ao usar apenas uma instrução, pode-se explorar uma manutenção otimizada do índice.  
   
 -   Avalie o tipo da consulta e como as colunas são usadas na consulta. Por exemplo, uma coluna usada em uma consulta de correspondência exata seria uma boa candidata para um índice clusterizado ou não clusterizado.
+
+<a name="sargable"></a><sup>1</sup> o termo SARGable em bancos de dados relacionais se refere a um predicado **S**earch **ARG**ument-**able** que pode aproveitar um índice para acelerar a execução da consulta.
   
 ### <a name="column-considerations"></a>Considerações sobre colunas  
  Quando você projeta um índice, considere as seguintes diretrizes para as colunas:  
@@ -148,7 +155,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
 -   Columnstore versus rowstore
 -   Hash versus não clusterizado para tabelas com otimização de memória
   
- Você também pode personalizar as características de armazenamento inicial do índice para aperfeiçoar seu desempenho ou manutenção definindo uma opção como FILLFACTOR. Além disso, você pode determinar o local de armazenamento de índice usando grupos de arquivos ou esquemas de partição para aperfeiçoar o desempenho.  
+Você também pode personalizar as características de armazenamento inicial do índice para aperfeiçoar seu desempenho ou manutenção definindo uma opção como FILLFACTOR. Além disso, você pode determinar o local de armazenamento de índice usando grupos de arquivos ou esquemas de partição para aperfeiçoar o desempenho.  
   
 ###  <a name="Index_placement"></a> Posição do índice em grupos de arquivos ou esquemas de partição  
  À medida que desenvolve sua estratégia de design de índices, considere a colocação dos índices nos grupos de arquivos associados ao banco de dados. A seleção cuidadosa do grupo de arquivos ou esquema de partição pode melhorar o desempenho da consulta.  
@@ -159,9 +166,9 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
 -   Particione índices cluster e não cluster para que ocupem vários grupos de arquivos.  
 -   Mova uma tabela de um grupo de arquivos para outro descartando o índice cluster e especificando um novo grupo de arquivos ou esquema de partição na cláusula MOVE TO da instrução DROP INDEX ou usando a instrução CREATE INDEX com a cláusula DROP_EXISTING.  
   
- Ao criar o índice não cluster em um grupo de arquivos diferente, você pode obter ganhos de desempenho se os grupos de arquivos estiverem usando unidades físicas diferentes com seus próprios controladores. As informações de índices e de dados podem ser lidas em paralelo pelas várias cabeças de disco. Por exemplo, se `Table_A` no grupo de arquivos `f1` e `Index_A` no grupo de arquivos `f2` estiverem ambos sendo usados pela mesma consulta, podem-se obter ganhos de desempenho porque os dois grupos de arquivos estão sendo completamente usados sem contenção. Porém, se `Table_A` for verificado pela consulta, mas `Index_A` não for referenciado, apenas o grupo de arquivos `f1` será usado. Isso não cria nenhum ganho de desempenho.  
+Ao criar o índice não cluster em um grupo de arquivos diferente, você pode obter ganhos de desempenho se os grupos de arquivos estiverem usando unidades físicas diferentes com seus próprios controladores. As informações de índices e de dados podem ser lidas em paralelo pelas várias cabeças de disco. Por exemplo, se `Table_A` no grupo de arquivos `f1` e `Index_A` no grupo de arquivos `f2` estiverem ambos sendo usados pela mesma consulta, podem-se obter ganhos de desempenho porque os dois grupos de arquivos estão sendo completamente usados sem contenção. Porém, se `Table_A` for verificado pela consulta, mas `Index_A` não for referenciado, apenas o grupo de arquivos `f1` será usado. Isso não cria nenhum ganho de desempenho.  
   
- Como você não pode prever que tipo de acesso acontecerá e quando ocorrerá, pode ser preferível distribuir suas tabelas e índices por todos os grupos de arquivos. Isso garantirá que todos os discos estejam sendo acessados, pois todos os dados e índices estarão distribuídos igualmente por todos os discos, independentemente da maneira como os dados sejam acessados. Essa também é uma abordagem mais simples para os administradores do sistema.  
+Como você não pode prever que tipo de acesso acontecerá e quando ocorrerá, pode ser preferível distribuir suas tabelas e índices por todos os grupos de arquivos. Isso garantirá que todos os discos estejam sendo acessados, pois todos os dados e índices estarão distribuídos igualmente por todos os discos, independentemente da maneira como os dados sejam acessados. Essa também é uma abordagem mais simples para os administradores do sistema.  
   
 #### <a name="partitions-across-multiple-filegroups"></a>Partições em vários grupos de arquivos  
  Você também pode considerar o particionamento de índices cluster e não cluster em vários grupos de arquivos. Os índices particionados são particionados horizontalmente, ou por linha, com base na função de uma partição. A função da partição define como cada linha é mapeada para um conjunto de partições, com base nos valores de certas colunas, chamadas colunas de particionamento. Um esquema de partição especifica o mapeamento das partições para um conjunto de grupos de arquivos.  
@@ -172,7 +179,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 -   Fazer as consultas serem executadas de maneira mais rápida e eficiente. Quando as consultas acessarem várias partições de um índice, o otimizador de consulta pode processar partições individuais ao mesmo tempo e pode excluir partições que não sejam afetadas pela consulta.  
   
- Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Diretrizes de criação de ordem de classificação de índice  
  Ao definir índices, confirme se os dados da coluna de chave de índice deverão ser armazenados em ordem crescente ou decrescente. Ordem crescente é o padrão e assegura a compatibilidade com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A sintaxe das instruções CREATE INDEX, CREATE TABLE e ALTER TABLE dá suporte às palavras-chave ASC (crescente) e DESC (decrescente) em colunas individuais de índices e restrições.  
@@ -237,7 +244,7 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
   
 -   Pode ser usado em consultas de intervalo.  
   
- Se o índice clusterizado não for criado com a propriedade `UNIQUE`, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna de indicador de exclusividade de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
+Se o índice clusterizado não for criado com a propriedade `UNIQUE`, o [!INCLUDE[ssDE](../includes/ssde-md.md)] adicionará automaticamente uma coluna de indicador de exclusividade de 4 bytes à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
   
 ### <a name="clustered-index-architecture"></a>Arquitetura de índice clusterizado  
  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os índices são organizados como Árvores B. Cada página em uma árvore B de índice é chamada de nó do índice. O nó superior da árvore B é chamado de nó raiz. Os nós inferiores no índice são chamados de nós folha. Quaisquer níveis de índice entre os nós raiz e folha são coletivamente conhecidos como níveis intermediários. Em um índice clusterizado, os nós folha contêm as páginas de dados da tabela subjacente. Os nós de nível intermediário e raiz contêm páginas de índice com linhas de índice. Cada linha de índice contém um valor de chave e um ponteiro para uma página de nível de intermediário na árvore B ou uma linha de dados no nível folha do índice. As páginas de cada nível do índice são vinculadas a uma lista vinculada duas vezes.  
@@ -272,32 +279,32 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
   
 -   Sejam exclusivas ou contenham muitos valores distintos  
   
-     Por exemplo, uma ID de funcionário identifica os funcionários de maneira exclusiva. Um índice clusterizado ou uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) na coluna `EmployeeID` melhorará o desempenho de consultas que pesquisam informações de funcionário com base no número de ID do funcionário. Como alternativa, um índice clusterizado poderia ser criado em `LastName`, `FirstName`, `MiddleName` porque os registros dos funcionários são agrupados e consultados frequentemente dessa maneira e a combinação dessas colunas ainda ofereceria um grau alto de diferença. 
+    Por exemplo, uma ID de funcionário identifica os funcionários de maneira exclusiva. Um índice clusterizado ou uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) na coluna `EmployeeID` melhorará o desempenho de consultas que pesquisam informações de funcionário com base no número de ID do funcionário. Como alternativa, um índice clusterizado poderia ser criado em `LastName`, `FirstName`, `MiddleName` porque os registros dos funcionários são agrupados e consultados frequentemente dessa maneira e a combinação dessas colunas ainda ofereceria um grau alto de diferença. 
 
-     > [!TIP]
-     > Se não for especificado de forma diferente, ao criar uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um [índice clusterizado](#clustered_index) para dar suporte a essa restrição.
-     > Embora um *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa ser usado para impor exclusividade como uma PRIMARY KEY, ele não é uma chave de clustering eficiente.
-     > Se estiver usando um *uniqueidentifier* como a PRIMARY KEY, a recomendação é criá-lo como um índice não clusterizado e usar outra coluna, como um `IDENTITY` para criar o índice clusterizado.   
+    > [!TIP]
+    > Se não for especificado de forma diferente, ao criar uma restrição [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] criará um [índice clusterizado](#clustered_index) para dar suporte a essa restrição.
+    > Embora um *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa ser usado para impor exclusividade como uma PRIMARY KEY, ele não é uma chave de clustering eficiente.
+    > Se estiver usando um *uniqueidentifier* como a PRIMARY KEY, a recomendação é criá-lo como um índice não clusterizado e usar outra coluna, como um `IDENTITY` para criar o índice clusterizado.   
   
 -   Sejam acessadas sequencialmente  
   
-     Por exemplo, um ID de produto identifica produtos de maneira exclusiva na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Consultas nas quais uma pesquisa sequencial seja especificada, tais como `WHERE ProductID BETWEEN 980 and 999`, se beneficiariam de um índice clusterizado em `ProductID`. Isso ocorre porque as linhas seriam armazenadas em ordem classificada nessa coluna de chave.  
+    Por exemplo, um ID de produto identifica produtos de maneira exclusiva na tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Consultas nas quais uma pesquisa sequencial seja especificada, tais como `WHERE ProductID BETWEEN 980 and 999`, se beneficiariam de um índice clusterizado em `ProductID`. Isso ocorre porque as linhas seriam armazenadas em ordem classificada nessa coluna de chave.  
   
 -   Definido como `IDENTITY`.  
   
 -   Frequentemente usado para classificar os dados recuperados de uma tabela.  
   
-     Pode ser uma boa ideia agrupar, ou seja, classificar fisicamente, a tabela nessa coluna para economizar o custo de uma operação de classificação toda vez que a coluna for consultada.  
+    Pode ser uma boa ideia agrupar, ou seja, classificar fisicamente, a tabela nessa coluna para economizar o custo de uma operação de classificação toda vez que a coluna for consultada.  
   
  Índices clusterizados não são uma boa escolha para os seguintes atributos:  
   
 -   Colunas que sofrem mudanças frequentes  
   
-     Isso faz com que uma fila inteira se mova, pois o [!INCLUDE[ssDE](../includes/ssde-md.md)] deve manter os valores de dados de uma linha em ordem física. Essa é uma consideração importante em sistemas de processamento de transações de alto volume nos quais os dados sejam normalmente voláteis.  
+    Isso faz com que uma fila inteira se mova, pois o [!INCLUDE[ssDE](../includes/ssde-md.md)] deve manter os valores de dados de uma linha em ordem física. Essa é uma consideração importante em sistemas de processamento de transações de alto volume nos quais os dados sejam normalmente voláteis.  
   
 -   Chaves largas  
   
-     Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
+    Chaves largas são uma combinação de várias colunas ou de várias colunas de tamanho grande. Os valores de chave do índice clusterizado são usados por todos os índices não clusterizados como chaves de pesquisa. Qualquer índice não clusterizado definido na mesma tabela será significativamente maior porque as entradas de índice não clusterizado contêm a chave de cluster e também as colunas de chave definidas para aquele índice não clusterizado.  
   
 ##  <a name="Nonclustered"></a> Diretrizes de criação de índice não clusterizado  
  Um índice não clusterizado contém os valores de chave do índice e os localizadores de linha que apontam para o local de armazenamento dos dados da tabela. Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada. Em geral, os índices não clusterizados devem ser criados para aprimorar o desempenho de consultas utilizadas com frequência que não são cobertas pelo índice clusterizado.  
@@ -309,19 +316,19 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
   
 -   As linhas de dados da tabela subjacente não são classificadas nem armazenadas em ordem com base nas suas chaves não clusterizadas.  
   
--   A camada de folha de um índice não clusterizado é constituída de páginas de índice, em vez de páginas de dados.  
+-   O nível de folha de um índice não clusterizado é constituído de páginas de índice, em vez de páginas de dados.  
   
- Os localizadores de linha, em linhas de índice não clusterizado, são um ponteiro para uma linha ou uma chave de índice clusterizado para uma linha, como descrito a seguir.  
+Os localizadores de linha, em linhas de índice não clusterizado, são um ponteiro para uma linha ou uma chave de índice clusterizado para uma linha, como descrito a seguir.  
   
 -   Se a tabela for um heap, ou seja, se não tiver um índice clusterizado, o localizador de linha será um ponteiro para a linha. O ponteiro é criado a partir do ID (identificador), do número da página e do número da linha na página do arquivo. O ponteiro inteiro é conhecido como RID (Identificação de Linha).  
   
 -   Se a tabela tiver um índice clusterizado, ou o índice estiver em uma exibição indexada, o localizador de linha será a chave de índice clusterizado da linha.  
   
- Os índices não clusterizados têm uma linha em [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) com **index_id** >1 para cada partição usada pelo índice. Por padrão, um índice não clusterizado tem uma única partição. Quando um índice não clusterizado tem várias partições, cada partição tem uma estrutura de árvore B que contém linhas de índice para aquela partição específica. Por exemplo, se um índice não clusterizado tiver quatro partições, haverá quatro estruturas de árvore B, uma em cada partição.  
+Os índices não clusterizados têm uma linha em [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) com **index_id** >1 para cada partição usada pelo índice. Por padrão, um índice não clusterizado tem uma única partição. Quando um índice não clusterizado tem várias partições, cada partição tem uma estrutura de árvore B que contém linhas de índice para aquela partição específica. Por exemplo, se um índice não clusterizado tiver quatro partições, haverá quatro estruturas de árvore B, uma em cada partição.  
   
- Dependendo dos tipos de dados no índice não clusterizado, cada estrutura de índice não clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de uma partição específica. No mínimo, cada índice não clusterizado terá uma unidade de alocação *IN_ROW_DATA* por partição que armazena as páginas de árvore B do índice. O índice não clusterizado também terá uma unidade de alocação *LOB_DATA* por partição se contiver colunas LOB (objetos grandes). Além disso, ele terá uma unidade de alocação *ROW_OVERFLOW_DATA* por partição se contiver colunas de comprimento variável que excedem o limite de tamanho de linha de 8.060 bytes.  
+Dependendo dos tipos de dados no índice não clusterizado, cada estrutura de índice não clusterizado terá uma ou mais unidades de alocação para armazenar e gerenciar os dados de uma partição específica. No mínimo, cada índice não clusterizado terá uma unidade de alocação *IN_ROW_DATA* por partição que armazena as páginas de árvore B do índice. O índice não clusterizado também terá uma unidade de alocação *LOB_DATA* por partição se contiver colunas LOB (objetos grandes). Além disso, ele terá uma unidade de alocação *ROW_OVERFLOW_DATA* por partição se contiver colunas de comprimento variável que excedem o limite de tamanho de linha de 8.060 bytes.  
   
- A ilustração a seguir mostra a estrutura de um índice não clusterizado em uma única partição.  
+A ilustração a seguir mostra a estrutura de um índice não clusterizado em uma única partição.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -332,7 +339,7 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
   
      Os aplicativos do Sistema de Suporte a Decisões e os bancos de dados que contêm fundamentalmente dados somente leitura podem se beneficiar de vários índices não clusterizados. O otimizador de consulta tem mais índices dos quais selecionar para determinar o método de acesso mais rápido e as baixas características de atualização do banco de dados significam que a manutenção do índice não impedirá o desempenho.  
   
--   Os aplicativos de Processamento de Transações online e os bancos de dados que contêm tabelas com grandes atualizações devem evitar a superindexação. Adicionalmente, os índices deveriam ser restritos, ou seja, com o mínimo possível de colunas.  
+-   Os aplicativos de Processamento de Transações online (OLTP) e os bancos de dados que contêm tabelas com grandes atualizações devem evitar a superindexação. Adicionalmente, os índices deveriam ser restritos, ou seja, com o mínimo possível de colunas.  
   
      Números grandes de índices em uma tabela afetam o desempenho das instruções INSERT, UPDATE, DELETE e MERGE porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela.  
   
@@ -345,19 +352,25 @@ Use essas exibições de metadados para ver os atributos de índices. Mais infor
   
 -   Consultas que não retornam grandes conjuntos de resultados.  
   
-     Crie índices filtrados para abranger consultas que retornam um subconjunto bem definido de linhas de uma tabela grande.  
-  
+     Crie índices filtrados para abranger consultas que retornam um subconjunto bem definido de linhas de uma tabela grande. 
+     
+     > [!TIP] 
+     > Normalmente, a cláusula WHERE da instrução CREATE INDEX corresponde à cláusula WHERE de uma consulta que está sendo abordada.  
+
 -   Contém as colunas envolvidas frequentemente em condições de pesquisa de consulta, como a cláusula WHERE, que retorna correspondências exatas.  
-  
+
+    > [!TIP]
+    > Considere o custo versus benefício ao adicionar novos índices. Pode ser preferível para consolidar as necessidades de consulta adicionais em um índice existente. Por exemplo, considere a adição de uma ou duas colunas extras de nível de folha a um índice existente, se isso permitir a cobertura de várias consultas críticas, em vez de ter uma cobertura exata de índice por consulta crítica.
+    
 ### <a name="column-considerations"></a>Considerações sobre colunas  
  Considere as colunas que tenham um ou mais destes atributos:  
   
 -   Cubra a consulta.  
   
-     São obtidos ganhos de desempenho quando o índice contém todas as colunas da consulta. O otimizador de consulta pode localizar todos os valores da coluna dentro do índice. Os dados de tabela ou de índice clusterizado não são acessados, o que resulta em menos operações de E/S. Use índice com colunas incluídas para adicionar colunas de cobertura, em vez de criar uma ampla chave de índice.  
+     São obtidos ganhos de desempenho quando o índice contém todas as colunas da consulta (ou . O otimizador de consulta pode localizar todos os valores da coluna dentro do índice. Os dados de tabela ou de índice clusterizado não são acessados, o que resulta em menos operações de E/S. Use índice com [colunas incluídas](#Included_Columns) para adicionar colunas de cobertura, em vez de criar uma ampla chave de índice.  
   
      Se a tabela tiver um índice clusterizado, a coluna ou as colunas definidas no índice clusterizado serão anexadas automaticamente ao final de cada índice não clusterizado da tabela. Isso pode produzir uma consulta coberta sem especificar as colunas de índice clusterizado na definição do índice não clusterizado. Por exemplo, se uma tabela tiver um índice clusterizado na coluna `C`, um índice não clusterizado nas colunas `B` e `A` , terá como colunas de valores de chave `B`, `A`e `C`.  
-  
+      
 -   Muitos valores distintos, como uma combinação de sobrenome e nome, caso um índice clusterizado seja usado em outras colunas.  
   
      Se houver poucos valores distintos, como apenas 1 e 0, a maioria das consultas não usará o índice porque uma verificação de tabela é, em geral, mais eficaz. Para esse tipo de dados, considere a criação de um índice filtrado em um valor diferente que ocorra apenas em um número pequeno de linhas. Por exemplo, se a maioria dos valores for 0, o otimizador de consulta pode usar um índice filtrado para as linhas de dados que contêm 1.  
@@ -392,7 +405,7 @@ INCLUDE (FileName);
 ```  
   
 ##### <a name="index-with-included-columns-guidelines"></a>Índice com diretrizes das colunas incluídas  
- Quando você projeta índices não clusterizados com colunas incluídas, considere as seguintes diretrizes:  
+Quando você projeta índices não clusterizados com colunas incluídas, considere as seguintes diretrizes:  
   
 -   As colunas não chave estão definidas na cláusula INCLUDE da instrução CREATE INDEX.  
   
@@ -407,7 +420,7 @@ INCLUDE (FileName);
 -   Os nomes das colunas não podem ser especificados na lista INCLUDE e na lista de coluna de chave.  
   
 -   Os nomes das colunas não podem ser repetidos na lista INCLUDE.  
-  
+
 ##### <a name="column-size-guidelines"></a>Diretrizes do tamanho da coluna  
   
 -   Pelo menos uma coluna de chave deve ser definida. O número de máximo de colunas não chave é de 1023 colunas. Esse é o número máximo de colunas de tabela menos 1.  

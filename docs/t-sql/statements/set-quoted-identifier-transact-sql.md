@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/03/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b78a2ba8a3d9520376746da1810c4a2d64324781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba68407344b9b5fe79d8230a9036b13dcb17eeae
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074073"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784607"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER entra em vigor no momento da análise e afeta apenas a análise, não a execução da consulta.  
   
- Para um lote Ad Hoc de nível superior, a análise começa usando a configuração atual da sessão para QUOTED_IDENTIFIER.  Conforme o lote é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante e salvará essa configuração para a sessão.  Portanto depois que o lote for analisado e executado, a configuração QUOTED_IDENTIFER da sessão será definida de acordo com a última ocorrência de SET QUOTED_IDENTIFIER no lote.  
+ Para um lote ad hoc de nível superior, a análise começa usando a configuração atual da sessão para QUOTED_IDENTIFIER.  Conforme o lote é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante e salvará essa configuração para a sessão.  Portanto depois que o lote for analisado e executado, a configuração QUOTED_IDENTIFER da sessão será definida de acordo com a última ocorrência de SET QUOTED_IDENTIFIER no lote.  
  SQL estático em um procedimento armazenado é analisado usando a configuração QUOTED_IDENTIFIER em vigor para o lote que criou ou alterou o procedimento armazenado.  SET QUOTED_IDENTIFIER não tem efeito quando aparece no corpo de um procedimento armazenado como SQL estático.  
   
  Para um lote aninhado usando sp_executesql ou EXEC(), a análise inicia usando a configuração de QUOTED_IDENTIFIER da sessão.  Se o lote aninhado dentro de um procedimento armazenado a análise começará a usar a configuração QUOTED_IDENTIFIER do procedimento armazenado.  Conforme o lote aninhado é analisado, qualquer ocorrência de SET QUOTED_IDENTIFIER mudará o comportamento de análise desse ponto em diante, mas a configuração QUOTED_IDENTIFIER da sessão não será atualizada.  
@@ -196,7 +195,7 @@ GO
  ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

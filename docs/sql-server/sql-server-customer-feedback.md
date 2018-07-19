@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074299"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926407"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurar o SQL Server para enviar comentários à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ Para o SQL Server no Linux, confira [Comentários de Clientes para o SQL Server 
 Após a instalação, a configuração de coleta de dados de uso para instâncias e componentes do SQL Server pode ser alterada por meio do aplicativo de Relatório de Uso e Erro. Esse aplicativo está disponível como parte da instalação do SQL Server. Essa ferramenta permite que cada instância do SQL Server defina sua própria configuração de Dados de Uso.
 
 > [!NOTE]
-> O aplicativo de Relatório de Uso e Erro é listado em Ferramentas de Configuração do SQL Server. Você pode usar essa ferramenta para gerenciar sua preferência para a coleta de Relatórios de Erro e Comentários de Uso da mesma maneira do SQL Server 2017. O Relatório de Erros é separado da coleta de Comentários de Uso, portanto pode ser ativado ou desativado independentemente da coleta de Comentários de Uso. O Relatório de Erros coleta despejos de memória que são enviados à Microsoft e que podem conter informações confidenciais, conforme descrito na Declaração de Privacidade.
+> O aplicativo de Relatório de Uso e Erro é listado em Ferramentas de Configuração do SQL Server. Você pode usar essa ferramenta para gerenciar sua preferência para a coleta de Relatórios de Erro e Comentários de Uso da mesma maneira do SQL Server 2017. O Relatório de Erros é separado da coleta de Comentários de Uso, portanto pode ser ativado ou desativado independentemente da coleta de Comentários de Uso. O Relatório de Erros coleta despejos de memória que são enviados à Microsoft e que podem conter informações confidenciais, conforme descrito na [Política de Privacidade](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Para iniciar o Relatório de Uso e Erro do SQL Server, clique ou toque em **Iniciar** e pesquise "Erro" na caixa de pesquisa. O item de Relatório de Uso e Erro do SQL Server será exibido. Depois de iniciar a ferramenta, você pode gerenciar o comentário de uso e erros graves que são coletados para instâncias e componentes que estão instalados no computador.
 

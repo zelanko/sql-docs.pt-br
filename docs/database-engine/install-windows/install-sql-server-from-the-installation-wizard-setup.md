@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771492"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080124"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -68,7 +68,10 @@ A Microsoft identificou um problema com a versão específica dos binários do T
   
      Para continuar, clique em **Avançar**.  
 
-4.  Na página Termos de Licença, examine o contrato de licença e, se concordar, marque a caixa de seleção **Aceito os termos da licença** e clique em **Avançar**. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Na página Termos de Licença, examine o contrato de licença e, se concordar, marque a caixa de seleção **Aceito os termos da licença** e clique em **Avançar**.  
+
+  >[!NOTE]
+  > O SQL Server transmite informações sobre sua experiência de instalação, bem como outros dados de uso e desempenho para ajudar a Microsoft a melhorar o produto. Para saber mais sobre o processamento de dados do SQL Server e controles de privacidade, confira a [Política de privacidade](https://privacy.microsoft.com/en-us/privacystatement) e [Configurar o SQL Server para enviar comentários à Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Na janela Regras Globais, o procedimento de instalação avançará automaticamente para a janela Atualizações de Produto se não houver nenhum erro de regra.  
   
@@ -80,9 +83,9 @@ A Microsoft identificou um problema com a versão específica dos binários do T
   
 9. Em **Regras de Instalação**, a Instalação do SQL Server verifica para identificar potenciais problemas que podem ocorrer durante a execução da Instalação. Se ocorrerem falhas, clique na coluna **Status** para obter mais informações. Caso contrário, clique em **Avançar**. 
 
-10. Em **Tipo de Instalação**, escolha executar uma nova instalação ou adicionar recursos a uma instalação existente. Clique em **Avançar**. 
+10. Se esta for a primeira instalação do SQL Server no computador, a página **Tipo de instalação** será ignorada, e a instalação irá diretamente para a página **Seleção de Recursos**. No entanto, se o SQL Server já está instalado no sistema, no **Tipo de Instalação**, opte por executar uma nova instalação ou adicionar recursos a uma instalação existente. Clique em **Avançar**. 
   
-11. Na página Seleção de Recursos, selecione os componentes para a instalação. Por exemplo, para instalar uma nova instância do mecanismo de banco de dados do SQL Server, consulte **Serviços do Mecanismo de Banco de Dados**.
+11. Na página **Seleção de Recursos**, selecione os componentes para a instalação. Por exemplo, para instalar uma nova instância do mecanismo de banco de dados do SQL Server, consulte **Serviços do Mecanismo de Banco de Dados**.
 
     Uma descrição de cada grupo de componentes é exibida no painel **Descrição do recurso** depois que você seleciona o nome do recurso. Você pode selecionar qualquer combinação de caixas de seleção. Para obter mais informações, consulte [Edições e componentes do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) e [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

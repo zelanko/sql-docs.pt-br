@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334700"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964348"
 ---
 # <a name="azure-blob-source"></a>Fonte de Blobs do Azure
   O componente de **Fonte de Blobs do Azure** permite que um pacote SSIS leia dados de um blob do Azure. Os formatos de arquivo com suporte são: CSV e AVRO.
@@ -37,10 +37,14 @@ ms.locfileid: "35334700"
   
 3.  Para o campo **Nome do Blob** , especifique o caminho para o blob.  
   
-4.  Para o campo **Formato de arquivo de blob** , especifique o formato de blob que você deseja usar.  
+4.  Para o campo **Formato de arquivo de blob**, selecione o formato de blob que você deseja usar, **Texto** ou **Avro**.  
   
-5.  Se o formato de arquivo for CSV, você deverá especificar o valor de **Caractere delimitador de coluna** . Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.  
+5.  Se o formato de arquivo for **Texto**, você deverá especificar o valor do **Caractere delimitador de coluna**. Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.
+
+6.  Se o arquivo estiver compactado, selecione **Descompactar o arquivo**.
+
+7.  Se o arquivo estiver compactado, selecione o **Tipo de compactação**: **GZIP**, **DEFLATE** ou **BZIP2**. Observe que não há suporte para o formato Zip.
   
-6.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.  
+8.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.  
   
   
