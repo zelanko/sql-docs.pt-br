@@ -1,6 +1,6 @@
 ---
 title: Controlar os alertas do dispositivo - Analytics Platform System | Microsoft Docs
-description: Controlar os alertas de dispositivo no sistema de plataforma de análise.
+description: Controlar os alertas do dispositivo no Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539266"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909786"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Controlar os alertas do dispositivo no Analytics Platform System
-Este tópico explica como usar o Console de administração e as exibições do sistema para rastrear alertas em um dispositivo de PDW do SQL Server.  
+Este tópico explica como usar o Console de administração e as exibições do sistema para controlar os alertas em um dispositivo de PDW do SQL Server.  
   
-## <a name="to-track-appliance-alerts"></a>Para controlar o dispositivo de alertas  
+## <a name="to-track-appliance-alerts"></a>Para acompanhar alertas do dispositivo  
 SQL Server PDW cria alertas para problemas de hardware e software que precisam de atenção. Cada alerta contém um título e uma descrição do problema.  
   
 SQL Server PDW logs e alertas [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. O sistema mantém um limite de 10.000 alertas e exclui o alerta mais antigo primeiro quando o limite for excedido.  
   
 ### <a name="view-alerts-by-using-the-admin-console"></a>Exibir alertas usando o Console de administração  
-Há um **alertas** guia para a região PDW, região HDI e para a região de malha do dispositivo. Após o failover, o evento de failover está incluído no número de alertas na página. Há uma página para a região PDW, região HDI e para a região de malha do dispositivo. Cada página de integridade tem uma guia. Para saber mais sobre um alerta, clique o **integridade** página, o **alertas** guia e, em seguida, clique em um alerta.  
+Há um **alertas** guia para a região PDW e para a região de malha do dispositivo. Após o failover, o evento de failover está incluído no número de alertas na página. Há uma página para a região PDW e para a região de malha do dispositivo. Cada página de integridade tem uma guia. Para saber mais sobre um alerta, clique o **integridade** página, o **alertas** guia e, em seguida, clique em um alerta.  
   
 ![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
@@ -33,12 +33,12 @@ Sobre o **alertas** página:
   
 -   Para exibir o histórico do alerta, clique no **histórico de alertas de revisão** link.  
   
--   Para exibir o componente de alerta e seus valores de propriedade atual, clique na linha de alerta.  
+-   Para exibir o componente de alerta e seus valores de propriedade atuais, clique na linha de alerta.  
   
 -   Para exibir detalhes sobre o nó que gerou o alerta, clique no nome do nó.  
   
 ### <a name="view-alerts-by-using-the-system-views"></a>Exibir alertas usando as exibições do sistema  
-Para exibir alertas usando exibições do sistema, consulte [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Essa DMV mostra alertas que não foram corrigidos. Para obter ajuda com erros e separação de alertas, use o [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
+Para exibir alertas por meio de exibições do sistema, consulte [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Essa DMV mostra os alertas que não foram corrigidos. Para obter ajuda com a triagem dos alertas e erros, use o [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
   
 O exemplo a seguir é uma consulta comum para exibir os alertas atuais.  
   

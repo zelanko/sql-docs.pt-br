@@ -68,7 +68,7 @@ Por causa da diferença na pilha do cluster, algumas alterações precisam ser f
 
 * WSFC 
 * External
-* Nenhuma
+* Nenhum
 
 Todos os grupos de disponibilidade que exigem disponibilidade devem usar um cluster subjacente, o que no caso do SQL Server 2017 significa um WSFC ou Pacemaker. Para grupos de disponibilidade com base no Windows Server que usam um WSFC subjacente, o tipo de cluster padrão é WSFC e não precisa ser definido. Para grupos de disponibilidade com base em Linux, ao criar o grupo de disponibilidade, o tipo de cluster deve ser definido como Externo. A integração com o Pacemaker é configurada depois que o grupo de disponibilidade for criado, enquanto em um WSFC isso é feito no momento da criação.
 
@@ -132,7 +132,7 @@ Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais
 > [!IMPORTANT] 
 > No Linux, os trabalhos do SQL Server Agent não são incluídos como parte da instalação do SQL Server em si. Ele está disponível no pacote mssql-server-Agent, que também deve ser instalados para usar o envio de log.
 
-![Envio de log][LogShipping]
+![Envio de logs][LogShipping]
  
 Possivelmente, a maior vantagem de usar o envio de logs, de alguma forma, é que ele é responsável por erro humano. O aplicativo dos logs de transações pode estar atrasado. Portanto, se alguém emitir algo parecido com uma ATUALIZAÇÃO sem uma cláusula WHERE, o modo em espera poderá não ter a alteração, então você poderá alternar para ela enquanto repara o sistema primário. Enquanto o envio de logs é fácil de configurar, a troca do primário para um estado de espera passiva, conhecido como uma alteração de função, é sempre manual. Uma alteração de função é iniciada por meio do Transact-SQL e, como um grupo de disponibilidade, todos os objetos não capturados no log de transações devem ser sincronizados manualmente. O envio de logs também precisa ser configurado por banco de dados, enquanto um único grupo de disponibilidade pode conter vários bancos de dados. Ao contrário de um grupo de disponibilidade ou FCI, o envio de logs não tem nenhuma abstração para uma alteração de função. Os aplicativos devem ser capazes de lidar com isso. Podem ser empregadas técnicas como um alias DNS (CNAME), mas há vantagens e desvantagens, como o tempo necessário que o DNS leva para atualizar após a troca.
 

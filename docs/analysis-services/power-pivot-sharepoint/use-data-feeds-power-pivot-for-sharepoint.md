@@ -1,5 +1,5 @@
 ---
-title: Usar Feeds de dados (PowerPivot para SharePoint) | Microsoft Docs
+title: Usar Feeds de dados (Power Pivot para SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027746"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979858"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Use feeds de dados (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027746"
   
  Você deve ter um serviço Web ou um serviço de dados que forneça dados no formato Atom 1.0. O [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o SharePoint 2010 podem fornecer dados nesse formato.  
   
- Antes de exportar uma lista do SharePoint como um feed de dados, você deve instalar os ADO.NET Data Services no servidor do SharePoint. Para obter mais informações, consulte [Instalar o ADO.NET Data Services para dar suporte a exportações do feed da dodos das listas do SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Antes de exportar uma lista do SharePoint como um feed de dados, você deve instalar os ADO.NET Data Services no servidor do SharePoint. Para obter mais informações, consulte [Instalar o ADO.NET Data Services para dar suporte a exportações do feed da dodos das listas do SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Criar um feed de dados de uma lista do SharePoint  
  Em um farm do SharePoint 2010, uma lista do SharePoint tem um botão Exportar como Feed de Dados na faixa de opções da lista. Você pode clicar nesse botão para exportar a lista como um feed. Para obter os melhores resultados, você deve ter o Excel 2010 com o aplicativo cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na estação de trabalho. O aplicativo cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] será inicializado em resposta à exportação do feed de dados criando uma nova tabela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contém a lista.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027746"
   
 5.  Se você escolheu **Abrir**, use o Assistente de Importação de Tabela para importar o feed de dados para uma planilha. O feed de dados será adicionado como uma nova tabela na janela do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Um erro ocorrerá se o ADO.NET Data Services 3.5.1 não estiver instalado no servidor do SharePoint. Para obter mais informações sobre o erro e como resolvê-lo, consulte [Instalar o ADO.NET Data Services para dar suporte a exportações do feed de dados das listas do SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Um erro ocorrerá se o ADO.NET Data Services 3.5.1 não estiver instalado no servidor do SharePoint. Para obter mais informações sobre o erro e como resolvê-lo, consulte [Instalar o ADO.NET Data Services para dar suporte a exportações do feed de dados das listas do SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Criar um feed de dados de um relatório do Reporting Services  
  Se você tiver uma implantação do SQL Server 2008 R2 Reporting Services, poderá usar a nova extensão de renderização Atom para gerar um feed de dados a partir de um relatório existente. Para obter os melhores resultados, você deve ter o Excel 2010 com o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel na estação de trabalho. O aplicativo cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] será inicializado em resposta à exportação de feed de dados, adicionando e relacionando automaticamente as tabelas e colunas à medida que elas são transmitidas.  

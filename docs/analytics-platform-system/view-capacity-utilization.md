@@ -1,6 +1,6 @@
 ---
-title: Exibir a utilização da capacidade no Analytics Platform System | Microsoft Docs
-description: Exibir a utilização de capacidade no sistema de plataforma de análise.
+title: Exibir a utilização de capacidade no Analytics Platform System | Microsoft Docs
+description: Exibir a utilização de capacidade no Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539216"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909726"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Exibição de utilização de capacidade no sistema de plataforma de análise
-Este tópico explica como exibir utilização de capacidade no dispositivo de PDW do SQL Server.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Modo de exibição de utilização de capacidade no Analytics Platform System
+Este tópico explica como exibir a utilização da capacidade no dispositivo de PDW do SQL Server.  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização de capacidade usando o Console de administração  
-Para exibir o espaço usado, abra o Console de administração e clique no **armazenamento** guia. Há um **armazenamento** guia para a região PDW e a região HDI.  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização de capacidade por meio do Console do administrador  
+Para exibir o espaço usado, abra o Console de administração e clique no **armazenamento** guia. Há um **armazenamento** guia para a região PDW.  
   
 ![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Para exibir a utilização de capacidade por meio de consultas  
-Para entender se um nó está com pouco espaço, o sistema de monitoramento de integridade do SQL Server PDW já monitora o espaço livre para todos os volumes em cada nó.  
+Para entender se um nó está com pouco espaço, o sistema de monitoramento de integridade do SQL Server PDW já monitora o espaço livre para todos os volumes dentro de cada nó.  
   
-Se o espaço livre em um volume ficar abaixo de 30%, o SQL Server PDW gera um **aviso** alerta em [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  O alerta permanece até que o espaço livre está disponível.  
+Se o espaço livre dentro de um volume cair abaixo de 30%, o SQL Server PDW gera uma **aviso** alerta na [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  O alerta continuará até que o espaço livre é disponibilizado.  
   
-Se o espaço livre em um volume em está 10%, o SQL Server PDW gera um **crítico** alerta. Isso é considerado crítico porque consultas poderá falhar se elas causarem expandir o banco de dados.  
+Se o espaço livre dentro de um volume fique abaixo de 10%, o SQL Server PDW gera uma **críticos** alerta. Isso é considerado crítico porque consultas poderá falhar se eles fazem com que o banco de dados expandir.  
   
 Para recuperar o uso do volume, consulte o exemplo a seguir.  
   

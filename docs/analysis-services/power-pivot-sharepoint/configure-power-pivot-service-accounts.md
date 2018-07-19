@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed619d7a0a4e593193f0ac3f736f059d9826512d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025723"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984838"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar contas de serviço Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "34025723"
 |-----------------|-----------------|  
 |Requisito de provisionamento|Esta conta deve ser especificada durante a Instalação do SQL Server usando a **Página Analysis Services - Configuração** no assistente de instalação (ou o parâmetro de instalação **ASSVCACCOUNT** em uma instalação de linha de comando).<br /><br /> Você pode modificar o nome de usuário ou a senha usando a Administração Central, o PowerShell ou a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não há suporte para o uso de outras ferramentas para alterar contas e senhas.|  
 |Requisito da conta de usuário de domínio|Essa conta deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local). A Instalação do SQL Server impõe o requisito de conta de usuário de domínio bloqueando a instalação sempre que uma conta de computador é especificada.|  
-|Requisitos de permissão|Essa conta deve ser um membro do SQLServerMSASUser$\<server > $PowerPivot grupo de segurança e os grupos de segurança WSS_WPG no computador local. Essas permissões devem ser concedidas automaticamente. Para obter mais informações sobre como verificar ou conceder permissões, consulte [Conceder permissões administrativas à conta de serviço do Power Pivot manualmente](#updatemanually) neste tópico e [Configuração Inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
+|Requisitos de permissão|Essa conta deve ser um membro do SQLServerMSASUser$\<server > grupo de segurança de $PowerPivot e os grupos de segurança WSS_WPG no computador local. Essas permissões devem ser concedidas automaticamente. Para obter mais informações sobre como verificar ou conceder permissões, consulte [Conceder permissões administrativas à conta de serviço do Power Pivot manualmente](#updatemanually) neste tópico e [Configuração Inicial (Power Pivot para SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
 |Requisitos de expansão|Se você instalar várias instâncias de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint em um farm, todas as instâncias de servidor do Analysis Services deverão ser executadas sob a mesma conta de usuário de domínio. Por exemplo, se você configurar a primeira instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para execução como Contoso\ssas-srv01, todas as instâncias do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] adicionais implantadas posteriormente no mesmo farm também deverão executar como Contoso\ssas-srv01 (ou qualquer que seja a conta atual).<br /><br /> A configuração de todas as instâncias de serviço para execução na mesma conta permite que o serviço de Sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aloque o processamento de consultas ou trabalhos de atualização de dados para qualquer instância de serviço do Analysis Services no farm. Além disso, ela habilita o uso do recurso Conta Gerenciada na Administração Central para instâncias de servidor do Analysis Services. Usando a mesma conta para todas as instâncias do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , você pode alterar a conta ou a senha uma vez, e todas as instâncias de serviço que usam essas credenciais são atualizadas automaticamente.<br /><br /> A Instalação do SQL Server impõe o requisito de mesma conta. Em uma implantação em expansão na qual um farm do SharePoint já tem uma instância do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint instalada, a Instalação bloqueará a nova instalação se a conta do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] especificada for diferente daquela já em uso no farm.|  
   
 #### <a name="power-pivot-service-application-pool"></a>Pool de aplicativos de serviço Power Pivot  
@@ -113,7 +113,7 @@ ms.locfileid: "34025723"
 |Requisito de provisionamento|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O Serviço do Sistema é um recurso compartilhado no farm que fica disponível quando você cria um aplicativo de serviço. O pool de aplicativos de serviço deve ser especificado quando o aplicativo de serviço é criado. Ele pode ser especificado de dois modos: usando a Ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou por comandos do PowerShell.<br /><br /> Você pode ter configurado a identidade do pool de aplicativos para executar sob uma conta exclusiva. Mas se você não fez isso, considere alterá-la agora para executar sob uma conta diferente.|  
 |Requisito da conta de usuário de domínio|A identidade do pool de aplicativos deve ser uma conta de usuário de domínio do Windows. São proibidas contas de máquinas internas (como Serviço de Rede ou Serviço Local).|  
 |Requisitos de permissão|Esta conta não precisa de permissões de Administrador do sistema local no computador. Entretanto, essa conta deve ter permissões de administrador de sistema do Analysis Services no [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local instalado no mesmo computador. Essas permissões são concedidas automaticamente pela Instalação do SQL Server, ou quando você define ou altera a identidade de pool e aplicativos na Administração Central.<br /><br /> Permissões administrativas são necessárias para encaminhar consultas ao [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elas também são necessárias para monitorar a integridade, fechar sessões inativas e escutar eventos de rastreamento.<br /><br /> A conta precisa ter permissões de conexão, leitura e gravação no banco de dados do aplicativo do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Essas permissões são concedidas automaticamente quando o aplicativo é criado e são atualizadas automaticamente quando você altera as contas ou senhas na Administração Central.<br /><br /> O aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verificará se um usuário do SharePoint está autorizado a exibir dados antes de recuperar o arquivo, mas ele não representa o usuário. Não há requisitos de permissão para representação.|  
-|Requisitos de expansão|Nenhuma.|  
+|Requisitos de expansão|Nenhum.|  
   
 ##  <a name="updatemanually"></a> Solucionando problemas: Conceder permissões administrativas manualmente  
  As permissões administrativas não atualizarão se a pessoa que atualiza as credenciais não for um administrador local no computador. Se isto ocorrer, você poderá conceder permissões administrativas manualmente. O modo mais fácil de fazer isto é executar o trabalho do temporizador de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na Administração Central. Com esta abordagem, você pode reiniciar permissões para todos os servidores do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no farm. Observe que esta abordagem somente funcionará se o trabalho de timer do SharePoint estiver sendo executado como administrador de farm e como administrador local no computador.  
@@ -128,7 +128,7 @@ ms.locfileid: "34025723"
   
  Você deve ser um administrador local para atualizar grupos de segurança do Windows.  
   
-1.  No SQL Server Management Studio, conecte-se à instância do Analysis Services, \<nome do servidor > \POWERPIVOT.  
+1.  No SQL Server Management Studio, conecte-se à instância do Analysis Services, \<nome do servidor > \powerpivot.  
   
 2.  Clique com o botão direito do mouse no nome do servidor e selecione **Propriedades**.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "34025723"
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciar ou parar um Power Pivot para SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configurar a conta da atualização de dados autônoma PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurar o Power Pivot (Power Pivot para SharePoint) da conta de atualização de dados autônoma](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   
