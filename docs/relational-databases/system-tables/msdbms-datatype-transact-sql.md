@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5927d0c839793e58b2bc6422fa9f3646b0538699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10e748d771414e9dee552a0e0f7ecdc643ba298a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004673"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103534"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSdbms_datatype** tabela contém a lista completa de tipos de dados nativos em cada sistema de gerenciamento de banco de dados (DBMS) usado como um publicador ou assinante em replicação de banco de dados heterogênea. Essa tabela é armazenada no **msdb** banco de dados.  
+  O **MSdbms_datatype** tabela contém a lista completa de tipos de dados nativos em cada sistema de gerenciamento de banco de dados com suporte (DBMS) usado como um publicador ou assinante em replicação de banco de dados heterogênea. Essa tabela é armazenada na **msdb** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**datatype_id**|**Int**|Identifica cada tipo de dados exclusivo.|  
-|**dbms_id**|**Int**|Identifica o DBMS ao qual o tipo pertence.|  
+|**datatype_id**|**int**|Identifica cada tipo de dados exclusivo.|  
+|**dbms_id**|**int**|Identifica o DBMS ao qual o tipo pertence.|  
 |**type**|**sysname**|Nome do tipo de dados (nativo).|  
-|**createparams**|**Int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = precisão.<br /><br /> **0x2** = escala.<br /><br /> **0x4** = comprimento.|  
+|**createparams**|**int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = precisão.<br /><br /> **0x2** = escala.<br /><br /> **0x4** = comprimento.|  
   
 ## <a name="remarks"></a>Remarks  
  Esta tabela contém entradas para tipos de dados do SQL Server porque uma instância do SQL Server pode se inscrever em um banco de dados do SQL Server e publicar para um assinante não SQL Server.  

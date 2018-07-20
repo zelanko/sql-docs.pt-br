@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 37eaf9824ac36333208ba538f36a5016ca6b87c8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029770"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084098"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Criando, alterando e removendo procedimentos armazenados
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), procedimentos armazenados são representados pelo <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
- Criando um <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto no SMO exige a configuração de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriedade para o [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define o procedimento armazenado. Parâmetros exigeem o prefixo @ e devem ser criados individualmente usando objetos <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> e adicionando-os à coleção <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> do objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Criando um <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto no SMO exige a configuração de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriedade para o [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define o procedimento armazenado. Parâmetros exigem o \@ de prefixo e devem ser criados individualmente usando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos e adicionando ao <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> coleção do <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
 ## <a name="example"></a>Exemplo  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um Visual C&#35; projeto do SMO no Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

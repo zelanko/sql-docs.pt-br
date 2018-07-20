@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dc80b0e2412712b5bd70e036d42ad41fbb43a04
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083548"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressões do SSIS (Integration Services)
   Uma expressão é uma combinação de símbolos (identificadores, literais, funções e operadores) gera um único valor de dados. Expressões simples podem ser uma única constante, variável ou função. Na maioria das vezes, as expressões são complexas, usando diversos operadores e funções e consultando diversas colunas e variáveis. No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], as expressões podem ser usadas para definir condições para instruções CASE, criar e atualizar valores em colunas de dados, atribuir valores às variáveis, atualizar ou preencher propriedades em tempo de execução, definir restrições em restrições de precedência e fornecem as expressões usadas pelo contêiner Loop For.  
@@ -47,9 +47,9 @@ ms.locfileid: "37292826"
   
 -   Variáveis usam uma expressão para definir seu valor. Por exemplo, GETDATE() define o valor da variável como a data atual.  
   
--   As restrições de precedência podem usar expressões para especificar as condições que determinam se a tarefa ou contêiner restrito em um pacote é executado. As expressões usadas em uma restrição de precedência devem ser avaliadas como `true` ou `false`. Por exemplo, a expressão @A > @B compara duas variáveis definidas pelo usuário para determinar se a tarefa restrita é executada.  
+-   As restrições de precedência podem usar expressões para especificar as condições que determinam se a tarefa ou contêiner restrito em um pacote é executado. As expressões usadas em uma restrição de precedência devem ser avaliadas como `true` ou `false`. Por exemplo, a expressão \@um > \@B compara duas variáveis definidas pelo usuário para determinar se a tarefa restrita é executada.  
   
--   O contêiner Loop For pode usar expressões para construir a inicialização, avaliação e instruções de incremento usadas pela estrutura de looping. Por exemplo, a expressão @Counter = 1 inicializa o contador de loop.  
+-   O contêiner Loop For pode usar expressões para construir a inicialização, avaliação e instruções de incremento usadas pela estrutura de looping. Por exemplo, a expressão \@Counter = 1 inicializa o contador de loop.  
   
  As expressões também podem ser usadas para atualizar os valores de propriedades de pacotes, contêineres como Loop For e Loop Foreach, tarefas, gerenciadores de conexões no nível de pacote e projeto, provedores de log e enumeradores Foreach. Por exemplo, ao usar uma expressão de propriedade, a cadeia de caracteres “Localhost.AdventureWorks” pode ser atribuída à propriedade ConnectionName da tarefa Executar SQL. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "37292826"
 ## <a name="expression-builder"></a>Construtor de Expressões  
  O construtor de expressões é uma ferramenta gráfica para criação de expressões. Está disponível nas caixas de diálogo **Editor de Transformação de Divisão Condicional**, **Editor de Transformação de Colunas Derivadas** e na caixa de diálogo **Construtor de Expressões** , é uma ferramenta gráfica para construir expressões.  
   
- O construtor de expressões fornece pastas que contêm elementos específicos do pacote e pastas que contêm funções, conversões de tipo e operadores fornecidos pela linguagem de expressão. Os elementos específicos do pacote incluem variáveis de sistema e variáveis definidas pelo usuário. Nas caixas de diálogo **Editor de Transformação de Divisão Condicional** e **Editor de Transformação de Coluna Derivada** , você também pode exibir colunas de dados. Para construir expressões para as transformações, é possível arrastar itens das pastas para a coluna **Condição** ou **Expressão** ou pode digitar a expressão diretamente na coluna. O construtor de expressão soma elementos de sintaxe necessários automaticamente como o prefixo @ em nomes de variável.  
+ O construtor de expressões fornece pastas que contêm elementos específicos do pacote e pastas que contêm funções, conversões de tipo e operadores fornecidos pela linguagem de expressão. Os elementos específicos do pacote incluem variáveis de sistema e variáveis definidas pelo usuário. Nas caixas de diálogo **Editor de Transformação de Divisão Condicional** e **Editor de Transformação de Coluna Derivada** , você também pode exibir colunas de dados. Para construir expressões para as transformações, é possível arrastar itens das pastas para a coluna **Condição** ou **Expressão** ou pode digitar a expressão diretamente na coluna. O construtor de expressões adiciona automaticamente os elementos de sintaxe necessários, como o \@ prefixo em nomes de variável.  
   
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  

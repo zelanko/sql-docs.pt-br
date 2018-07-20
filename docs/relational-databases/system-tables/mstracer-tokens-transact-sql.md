@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MStracer_tokens system table
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1822cdc0dd42a2e7797dec4aeb3a5b9627b4eac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25a5d05c3c4ad81da0856d4e073f7aeb462109e7
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004533"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103246"
 ---
 # <a name="mstracertokens-transact-sql"></a>MStracer_tokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "33004533"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**tracer_id**|**Int**|Identifica um registro de token de rastreamento.|  
-|**publication_id**|**Int**|Identifica a publicação na qual o registro de token de rastreamento foi inserido.|  
+|**tracer_id**|**int**|Identifica um registro de token de rastreamento.|  
+|**publication_id**|**int**|Identifica a publicação na qual o registro de token de rastreamento foi inserido.|  
 |**publisher_commit**|**datetime**|A data e hora em que o registro de token de rastreamento foi confirmado no Publicador.|  
 |**distributor_commit**|**datetime**|A data e hora em que o registro de token de rastreamento foi confirmado no Distribuidor.|  
   

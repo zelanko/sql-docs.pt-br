@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d147e8e73ee7b153ce14d3ffd6d9082095ac1a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bdae242526c6985cc428d332be92e0b810f3a6c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004723"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101924"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_errorlineage** tabela contém linhas que foram excluídas no assinante, mas cuja exclusão não é propagada ao publicador. Essa tabela é armazenada nos bancos de dados de publicação e assinatura.  
+  O **MSmerge_errorlineage** tabela contém linhas que foram excluídas no assinante, mas cuja exclusão não é propagada ao publicador. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**Int**|O valor de inteiro atribuído à tabela que é publicada para replicação de mesclagem. Corresponde ao campo de apelido no **sysmergearticles** tabela.|  
+|**tablenick**|**int**|O valor de inteiro atribuído à tabela que é publicada para replicação de mesclagem. Corresponde ao campo de apelido na **sysmergearticles** tabela.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador de linha.|  
 |**linhagem**|**varbinary(501)**|Armazena uma lista de histórico de atualizações feitas em uma linha por Assinantes e Publicadores. É usado para detectar e resolver situações de conflito.|  
   

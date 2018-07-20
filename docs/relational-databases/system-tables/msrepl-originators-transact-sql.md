@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b09a8c577b0389702ada6c9b5372c3d10b9916a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7d0bb1049790123de504af1955e43807613e6db
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004843"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103034"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "33004843"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|Identifica o Assinante de atualização.|  
-|**publisher_database_id**|**Int**|Identifica o banco de dados de publicação.|  
+|**id**|**int**|Identifica o Assinante de atualização.|  
+|**publisher_database_id**|**int**|Identifica o banco de dados de publicação.|  
 |**srvname**|**sysname**|O nome do servidor da atualização.|  
 |**dbname**|**sysname**|O nome do banco de dados de atualização.|  
-|**publication_id**|**Int**|Identifica a publicação.|  
-|**dbversion**|**Int**|Identifica a versão do banco de dados.|  
+|**publication_id**|**int**|Identifica a publicação.|  
+|**dbversion**|**int**|Identifica a versão do banco de dados.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

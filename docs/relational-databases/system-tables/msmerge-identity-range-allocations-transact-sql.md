@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7d2e628f8bd70b5e71b294b64674214dd2a0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df286fcd67db26ac149bd56d3635425453d78405
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005473"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102784"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33005473"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
 |**publisher_db**|**nvarchar(128)**|O nome do banco de dados de publicação.|  
-|**Publicação**|**nvarchar(128)**|O nome da publicação.|  
+|**publicação**|**nvarchar(128)**|O nome da publicação.|  
 |**article**|**nvarchar(128)**|O nome do artigo.|  
 |**Assinante**|**nvarchar(128)**|O nome do Assinante.|  
 |**subscriber_db**|**nvarchar(128)**|O nome do banco de dados de assinatura.|  

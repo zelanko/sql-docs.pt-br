@@ -22,15 +22,15 @@ helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 620cc0de62221ad784c4e38dbf51aba39eea5047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3743d46635e467ee4a752bfefffd72680bf9a156
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007473"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101204"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "33007473"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**artid**|**Int**|A ID exclusiva de um artigo.|  
+|**artid**|**int**|A ID exclusiva de um artigo.|  
 |**srvid**|**smallint**|A ID de servidor do Assinante.|  
 |**dest_db**|**sysname**|O nome do banco de dados de destino.|  
 |**status**|**tinyint**|O status da assinatura:<br /><br /> **0** = inativo.<br /><br /> **1** = assinado.<br /><br /> **2** = ativo.|  
-|**sync_type**|**tinyint**|O tipo de sincronização inicial:<br /><br /> **1** = automático.<br /><br /> **2** = nenhum|  
+|**sync_type**|**tinyint**|O tipo de sincronização inicial:<br /><br /> **1** = automatic.<br /><br /> **2** = nenhum|  
 |**login_name**|**sysname**|O nome de logon usado ao adicionar a assinatura.|  
-|**subscription_type**|**Int**|O tipo de assinatura:<br /><br /> 0 = Push - o agente de distribuição é executado no Distribuidor.<br /><br /> 1 = Pull - o agente de distribuição é executado no Assinante.|  
+|**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push - o agente de distribuição é executado no Distribuidor.<br /><br /> 1 = Pull - o agente de distribuição é executado no Assinante.|  
 |**distribution_jobid**|**binary(16)**|A ID do trabalho do Distribution Agent.|  
 |**timestamp**|**timestamp**|O carimbo de data e hora.|  
 |**update_mode**|**tinyint**|O modo de atualização:<br /><br /> **0** = somente leitura.<br /><br /> **1** = atualização imediata.|  

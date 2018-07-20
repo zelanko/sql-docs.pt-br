@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9641b794b7ac71b0fc8fb555ba04b4fa5bc83a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 137fb38215788b030f1831a92ad85cec570e0421
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004603"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101954"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSpeer_response** tabela é usada em replicação ponto a ponto para armazenar a resposta de cada nó a uma solicitação de status de publicação. Essa tabela é armazenada no banco de dados de publicação.  
+  O **MSpeer_response** tabela é usada na replicação ponto a ponto para armazenar a resposta de cada nó a uma solicitação de status de publicação. Essa tabela é armazenada no banco de dados de publicação.  
   
 ## <a name="definition"></a>Definição  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**Int**|Identifica uma entrada de solicitação de status no [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) tabela.|  
+|**request_id**|**int**|Identifica uma entrada de solicitação de status na [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) tabela.|  
 |**ponto a ponto**|**sysname**|O par que gerou a resposta.|  
 |**peer_db**|**sysname**|O banco de dados de assinatura no nível que gerou a resposta.|  
 |**received_date**|**datetime**|A data e hora de envio da solicitação de item do mesmo nível.|  

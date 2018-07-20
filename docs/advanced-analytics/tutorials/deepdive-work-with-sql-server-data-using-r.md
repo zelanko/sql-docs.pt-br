@@ -1,5 +1,5 @@
 ---
-title: Trabalhar com dados do SQL Server usando o R (SQL e R mergulho profundo) | Microsoft Docs
+title: Trabalhar com dados do SQL Server usando o R (R e SQL aprofundamento) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e57e94d1d7856bfc9082c1a73a13a5c0a620b5ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202989"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084178"
 ---
-# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>Trabalhar com dados do SQL Server usando o R (SQL e R mergulho profundo)
+# <a name="lesson-1-create-a-database-and-permissions"></a>Lição 1: Criar um banco de dados e permissões
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este artigo faz parte do [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar [funções RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Nesta lição, configurar o ambiente e adicionar os dados que necessários para treinar os modelos e executar alguns resumos rápidos de dados. Como parte do processo, você deve concluir estas tarefas:
+Nesta lição, você configura o ambiente e adiciona os dados que necessários para treinar seus modelos e executar alguns resumos rápidos dos dados. Como parte do processo, você deve concluir estas tarefas:
   
 - Criar um novo banco de dados para armazenar os dados de treinamento e pontuação dos dois modelos do R.
   
@@ -37,12 +37,12 @@ Nesta lição, configurar o ambiente e adicionar os dados que necessários para 
   
 ## <a name="create-the-database-and-user"></a>Criar o banco de dados e o usuário
 
-Para este passo a passo, crie um novo banco de dados em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e adicionar um logon SQL com permissões para gravar e ler dados e executar scripts R.
+Para este passo a passo, crie um novo banco de dados em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e adicionar um logon SQL com permissões para gravar e ler dados e executar scripts do R.
 
 > [!NOTE]
-> Se você é somente leitura de dados, a conta que executa os scripts de R requer permissões SELECT (**db_datareader** função) no banco de dados especificado. No entanto, neste tutorial, você deve ter privilégios de administrador DDL para preparar o banco de dados e para criar tabelas para salvar os resultados de pontuação.
+> Se você só estiver lendo dados, a conta que executa os scripts R que requer permissões SELECT (**db_datareader** função) no banco de dados especificado. No entanto, neste tutorial, você deve ter privilégios de administrador DDL para preparar o banco de dados e para criar tabelas para salvar os resultados da pontuação.
 > 
-> Além disso, se você não for o proprietário do banco de dados, você precisa de permissão EXECUTE ANY EXTERNAL SCRIPT, para executar scripts R.
+> Além disso, se você não for o proprietário do banco de dados, você precisa da permissão EXECUTE ANY EXTERNAL SCRIPT, para executar scripts R.
 
 1. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione a instância em que o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] está habilitado, clique com o botão direito do mouse em **Bancos de dados**e selecione **Novo banco de dados**.
   
@@ -107,13 +107,13 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
   
     Por esse motivo, um banco de dados pode conter várias tabelas com o mesmo nome, desde que as tabelas pertençam a esquemas diferentes.
    
-    Se você está procurando uma tabela e não especificar um esquema, o servidor de banco de dados procura um esquema que você possui. Portanto, não é necessário especificar o nome do esquema ao acessar tabelas em um esquema associado ao seu logon.
+    Se você estiver procurando por uma tabela e não especificar um esquema, o servidor de banco de dados procurará um esquema que você possui. Portanto, não é necessário especificar o nome do esquema ao acessar tabelas em um esquema associado ao seu logon.
   
 - **Não tenho privilégios DDL. Ainda posso executar o tutorial**?
   
     Sim. No entanto, você precisará pedir que alguém pré-carregue os dados nas tabelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ignorar as seções que solicitam a criação de novas tabelas. As funções que exigem privilégios DDL são destacadas no tutorial sempre que possível.
 
-    Além disso, peça ao administrador para conceder a permissão EXECUTE ANY EXTERNAL SCRIPT. É necessário para a execução de script R, se for remoto, ou usando `sp_execute_external_script`.
+    Além disso, solicite ao administrador para conceder permissão, EXECUTE ANY EXTERNAL SCRIPT. Ela é necessária para execução do script R, se for remoto, ou usando `sp_execute_external_script`.
 
 ## <a name="next-step"></a>Próxima etapa
 

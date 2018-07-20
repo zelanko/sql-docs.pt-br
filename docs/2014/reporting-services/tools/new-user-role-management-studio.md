@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6654b0bef25504737e2f3fb42cdb2b0f8d017506
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397ad5d6eab8567362199c7a6a33552e6fc621af
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251358"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084998"
 ---
 # <a name="new-user-role-management-studio"></a>Nova função do usuário (Management Studio)
   Use essa página para criar uma definição de função de nível de item. Uma definição de função de nível é uma coleção nomeada de tarefas que enumera as tarefas que um usuário pode executar em relação a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Um exemplo de uma definição de função de nível de item é uma função de navegador predefinida que identifica os tipos de ações que um usuário final de relatório pode necessitar para navegar pelas pastas e exibir relatórios.  
@@ -35,7 +35,7 @@ ms.locfileid: "37251358"
  **Nome**  
  Digite o nome da definição da função. O nome de definição de função deve ser exclusivo no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : @ & = +, $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

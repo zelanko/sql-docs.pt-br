@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 1dab0dcc403a7e0f85cd78e69e9461ef0d566b0c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7bb600d59e104fcc8e69307dd523f17452d95fef
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006780"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085188"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server no cliente Linux VDI especificação de SDK
 
@@ -220,7 +220,7 @@ Quando essa rotina deve bloquear a espera para um comando, o thread será deixad
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |Nenhum | Não aplicável
+| |None | Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -240,7 +240,7 @@ Quando essa rotina deve bloquear a espera para um comando, o thread será deixad
 
 | Parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |Nenhum |Não aplicável
+| |None |Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |

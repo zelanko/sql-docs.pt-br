@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970712"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087268"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ [  **\@tsql =** ] **'***SQL_batch Transact***'**  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
- [  **@params =** ] **N'***parâmetros***'**  
- @params Fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
+ [  **\@params =** ] **N'***parâmetros***'**  
+ \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é similar a sp_executesql. Parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em @params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, @params não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em \@params. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, \@params não é necessária. NULL é o valor padrão para esse parâmetro.  
   
- [ **@browse_information_mode =** ] *tinyint*  
+ [  **\@browse_information_mode =** ] *tinyint*  
  Especifica se colunas de chave adicionais e informações de tabela de origem são retornadas. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
   
 -   Se for definido como 0, nenhuma informação será retornada.  
@@ -79,7 +79,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**int NOT NULL**|Contém o system_type_id do tipo de dados da coluna como especificado em sys. Types. Para tipos de CLR, embora a coluna system_type_name retorne NULL, essa coluna retornará o valor 240.|  
 |**system_type_name**|**nvarchar(256) NULL**|Contém o nome e argumentos (como comprimento, precisão, escala), especificados para o tipo de dados da coluna. Se o tipo de dados for um tipo de alias definido pelo usuário, o tipo de sistema subjacente será especificado aqui. Se for um tipo de CLR definido pelo usuário, NULL será retornado nessa coluna.|  
 |**max_length**|**smallint não NULL**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o **max_length** valor será 16 ou o valor definido pelo **sp_tableoption 'text in row'**.|  
-|**precisão**|**tinyint NOT NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
+|**Precisão**|**tinyint NOT NULL**|Precisão da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**scale**|**tinyint NOT NULL**|Escala da coluna, se tiver base numérica. Caso contrário, retorna 0.|  
 |**collation_name**|**sysname NULL**|Nome do agrupamento da coluna, se baseada em caracteres. Caso contrário, retornará NULL.|  
 |**user_type_id**|**int NULL**|Para tipos de CLR e alias, contém o user_type_id do tipo de dados da coluna como especificado em sys.types. Caso contrário, é NULL.|  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** retornará um erro em qualquer um dos casos a seguir.  
   
--   Se a entrada @tsql não é válido [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Validade é determinada pela análise de [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Os erros causados pelo lote durante a otimização da consulta ou durante a execução não são considerados ao determinar se o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote é válido.  
+-   Se a entrada \@tsql não é válido [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Validade é determinada pela análise de [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Os erros causados pelo lote durante a otimização da consulta ou durante a execução não são considerados ao determinar se o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote é válido.  
   
--   Se @params não for NULL e contém uma cadeia de caracteres que não é uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contiver uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
+-   Se \@params não for NULL e contém uma cadeia de caracteres que não é uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contiver uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
   
--   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado na @params.  
+-   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado na \@params.  
   
 -   Se a instrução usar uma tabela temporária.  
   
@@ -160,7 +160,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** não oferece suporte a recursão indireta.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão para executar o @tsql argumento.  
+ Requer permissão para executar o \@argumento tsql.  
   
 ## <a name="examples"></a>Exemplos  
   

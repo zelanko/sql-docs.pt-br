@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201016"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083618"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Página Novo Relatório Vinculado (Gerenciador de Relatórios)
   Use a página Novo Relatório Vinculado para criar um relatório vinculado. Um relatório vinculado é um relatório com configurações e propriedades próprias, mas vincula à definição de relatório de outro relatório. Relatórios vinculados são úteis quando você tem um relatório padrão que deseja variar para grupos ou usuários específicos; por exemplo, um relatório regional que retorna dados diferentes com base em um código regional especificado como parâmetro. Geralmente, um relatório vinculado é criado a partir um relatório com parâmetros quando você deseja variar e salvar valores de parâmetro diferentes com cada instância de relatório. Porém, você pode criar um relatório vinculado de qualquer relatório ao qual tenha acesso.  
@@ -51,7 +51,7 @@ ms.locfileid: "37201016"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique o nome do relatório vinculado. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Porém, você não deve usar os caracteres; ? : @ & = +, $ / * \< > | "ou / ao especificar um nome.  
+ Especifique o nome do relatório vinculado. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Porém, você não deve usar os caracteres; ? : \@ & = +, $ / * \< > | "ou / ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição do conteúdo do relatório. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar o relatório.  

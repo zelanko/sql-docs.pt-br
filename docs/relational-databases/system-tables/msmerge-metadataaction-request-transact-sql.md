@@ -22,28 +22,28 @@ helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a26726d6fb6bc38a79ab50f958f071301a841f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 951b42bb78d2b15d2d107e6a4de0291aa16c7693
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004163"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103224"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_metadataaction_request** tabela armazena uma linha para cada ação de compensação é necessária. Usando a sincronização da Web, se ocorrer um erro e a sincronização deve ser repetida, será feita uma entrada em **MSmerge_metadataaction_request**. Durante a fase de carregamento da mesclagem subsequente, solicitações de todos os artigos que pertencem à publicação que está sendo sincronizada são recuperadas dessa tabela e carregadas. Quando a sincronização foi concluída com êxito, a linha correspondente a **MSmerge_metadataaction_request** tabela for excluída. Essa tabela é armazenada no Publicador, no banco de dados de publicação, e no Assinante, no banco de dados de assinatura.  
+  O **MSmerge_metadataaction_request** tabela armazena uma linha para cada ação compensatória é necessária. Usar sincronização da Web, se ocorrer um erro e a sincronização deve ser repetida, uma entrada é transformada em **MSmerge_metadataaction_request**. Durante a fase de carregamento da mesclagem subsequente, solicitações de todos os artigos que pertencem à publicação que está sendo sincronizada são recuperadas dessa tabela e carregadas. Quando a sincronização é concluída com êxito, a linha correspondente a **MSmerge_metadataaction_request** tabela for excluída. Essa tabela é armazenada no Publicador, no banco de dados de publicação, e no Assinante, no banco de dados de assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**Int**|O apelido da tabela publicada.|  
+|**tablenick**|**int**|O apelido da tabela publicada.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  
 |**action**|**tinyint**|Identifica a ação compensatória requerida.|  
-|**Geração**|**bigint**|O valor da geração para a qual a ação compensatória é necessária.|  
-|**Alterado**|**Int**|Interno-somente para uso.|  
+|**geração**|**bigint**|O valor da geração para a qual a ação compensatória é necessária.|  
+|**alterado**|**int**|Interno-somente para uso.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

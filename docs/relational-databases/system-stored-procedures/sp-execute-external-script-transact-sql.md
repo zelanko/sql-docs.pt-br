@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974088"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086168"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Executa o script fornecido como argumento em um local externo. O script deve ser gravado em uma linguagem com suporte e registrada. Para executar **sp_execute_external_script**, você deve primeiro habilitar scripts externos por meio da instrução `sp_configure 'external scripts enabled', 1;`.  
+  Executa o script fornecido como argumento em um local externo. O script deve ser gravado em um idioma com suporte e registrado (R ou Python). Para executar **sp_execute_external_script**, você deve primeiro habilitar scripts externos por meio da instrução `sp_configure 'external scripts enabled', 1;`.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>Argumentos
- @language = N'*linguagem*'  
+ \@Language = N'*linguagem*'  
  Indica a linguagem de script. *linguagem* está **sysname**.  
 
  Os valores válidos são `Python` ou `R`. 
   
- @script = N'*script*'  
+ \@script = N'*script*'  
  Script de linguagem externo especificado como uma entrada de literal ou variável. *script* está **nvarchar (max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- Especifica o nome da variável usado para representar a consulta definida pelo @input_data_1. O tipo de dados da variável no script externo depende do idioma. No caso de R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* está **sysname**.  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ Especifica o nome da variável usado para representar a consulta definida por \@input_data_1. O tipo de dados da variável no script externo depende do idioma. No caso de R, a variável de entrada é um quadro de dados. No caso do Python, a entrada deve ser tabular. *input_data_1_name* está **sysname**.  
   
  Valor padrão é `InputDataSet`.  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  Especifica os dados de entrada usados pelo script externo na forma de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. O tipo de dados *input_data_1* é **nvarchar (max)**.
   
- [ @output_data_1_name = N'*output_data_1_name*']  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  Especifica o nome da variável no script externo que contém os dados a ser retornado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] após a conclusão da chamada de procedimento armazenado. O tipo de dados da variável no script externo depende do idioma. Para R, a saída deve ser um quadro de dados. Para o Python, a saída deve ser um quadro de dados pandas. *output_data_1_name* está **sysname**.  
   
  Valor padrão é "OutputDataSet".  
   
- [ @parallel = 0 | 1] Habilitar execução paralela de scripts do R, definindo o `@parallel` parâmetro como 1. O padrão para esse parâmetro é 0 (nenhum paralelismo).  
+ [ \@paralelo = 0 | 1]
+
+ Habilitar execução paralela de scripts do R, definindo o `@parallel` parâmetro como 1. O padrão para esse parâmetro é 0 (nenhum paralelismo).  
   
  Para scripts do R que não usam funções RevoScaleR, usando o `@parallel` parâmetro pode ser benéfico para o processamento de grandes conjuntos de dados, supondo que o script pode ser paralelizado trivialmente. Por exemplo, ao usar o R `predict` função com um modelo para gerar novas previsões, defina `@parallel = 1` como uma dica para o mecanismo de consulta. Se a consulta pode ser paralelizada, linhas são distribuídas de acordo com o **MAXDOP** configuração.  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  Para scripts do R que usam funções RevoScaleR, processamento paralelo será tratado automaticamente e você não deve especificar `@parallel = 1` para o **sp_execute_external_script** chamar.  
   
- [ @params = N' *@parameter_name data_type* [OUT | SAÍDA] [,... n]']  
+ [ \@params = N'*\@data_type parameter_name* [OUT | SAÍDA] [,... n]']  
  Uma lista de declarações de parâmetro de entrada que são usados no script externo.  
   
- [ @parameter1 = '*value1*' [OUT | SAÍDA] [,... n]]  
+ [ \@parameter1 = '*value1*' [OUT | SAÍDA] [,... n]]  
+
  Uma lista de valores para os parâmetros de entrada usados pelo script externo.  
 
 ## <a name="remarks"></a>Remarks
@@ -119,7 +122,7 @@ Os dois o `@r_rowsPerRead` parâmetro para streaming e o `@parallel` argumento d
 
 ### <a name="data-types"></a>Tipos de dados
 
-Os seguintes tipos de dados não têm suporte quando usado na consulta de entrada ou parâmetros de `sp_execute_external_script` procedimento e retornar um erro de tipo sem suporte.  
+Os seguintes tipos de dados não têm suporte quando usado na consulta de entrada ou parâmetros de **sp_execute_external_script** procedimento e retornar um erro de tipo sem suporte.  
 
 Como alternativa, **CAST** a coluna ou valor em um tipo com suporte no [!INCLUDE[tsql](../../includes/tsql-md.md)] antes de enviá-la para o script externo.  
   

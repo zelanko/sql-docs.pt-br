@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e59cadf84f2e05bf08690d44fb14036369fc502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b57b1577f806aa14a9649b40c8b0cbf7b6fe533d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004033"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102174"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "33004033"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_id**|**smallint**|Identifica um publicador não SQL Server.|  
-|**Fornecedor**|**sysname**|O nome do fornecedor para o banco de dados do SQL Server.|  
+|**publisher_id**|**smallint**|Identifica um editor não SQL Server.|  
+|**fornecedor**|**sysname**|O nome do fornecedor para o banco de dados do SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|Um GUID que identifica o Editor não SQL Server.|  
 |**flush_request_time**|**datetime**|Indica a data de hora de ocorrência da última alteração nos metadados do artigo que solicitaram que o Log Reader Agent atualizasse seu cache de metadados.|  
 |**version**|**sysname**|Uma cadeia de caracteres de texto que caracteriza a versão do publicador não SQL Server.|  

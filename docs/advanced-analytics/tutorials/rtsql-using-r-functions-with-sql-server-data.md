@@ -1,29 +1,34 @@
 ---
-title: Usando funções de R com dados do SQL Server (R no início rápido do SQL) | Microsoft Docs
+title: Início rápido que mostra o R funciona com dados do SQL Server (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Neste início rápido, saiba como escrever uma função R que usa dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585738"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086668"
 ---
-# <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Usando funções de R com dados do SQL Server (R no início rápido do SQL)
+# <a name="quickstart-using-r-functions-with-sql-server-data"></a>Guia de início rápido: Usando funções de R com dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Agora que você está familiarizado com operações básicas, chegou a hora de divertir-se um pouco com o R. Por exemplo, muitas funções estatísticas avançadas podem ser complicadas de implementar usando T-SQL, mas exigem apenas uma única linha de código R.  Com R Services, é fácil inserir scripts R de utilitário em um procedimento armazenado.
+Se você concluiu os inícios rápidos anteriores, você está familiarizado com operações básicas e pronto para algo mais complexo, como as funções estatísticas. Funções estatísticas avançadas que são complicadas para implementar em T-SQL podem ser feitas em R com apenas uma única linha de código.
 
-Nestes exemplos, você inserirá R matemático e funções de utilitário em um procedimento armazenado do SQL Server.
+Neste início rápido, você inserirá R matemático e procedimento armazenado de funções de utilitário em um SQL Server.
+
+## <a name="prerequisites"></a>Prerequisites
+
+Um início rápido anterior, [Olá, mundo em R e SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Criar um procedimento armazenado para gerar números aleatórios
 
-Para simplificar, vamos usar o R `stats` pacote, que é instalado e carregado por padrão com os serviços de R. O pacote contém centenas de funções para tarefas estatísticas comuns, entre elas, a função `rnorm`, que gera um número específico de números aleatórios usando a distribuição normal, dado um desvio padrão e uma média.
+Para simplificar, vamos usar o R `stats` pacote, que é instalado e carregado por padrão quando você instala o suporte ao recurso de R no SQL Server. O pacote contém centenas de funções para tarefas estatísticas comuns, entre elas, a função `rnorm`, que gera um número específico de números aleatórios usando a distribuição normal, dado um desvio padrão e uma média.
 
 Por exemplo, esse código R retorna 100 números em uma média de 50, dado um desvio padrão de 3.
 
@@ -90,12 +95,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-Muitos usuários, como usar as funções de tempo do sistema em R, como `system.time` e `proc.time`, para capturar o tempo usado por processos de R e analisar problemas de desempenho.
+Muitos usuários gostam de usar as funções de tempo do sistema em R, como `system.time` e `proc.time`, para capturar o tempo usado por processos de R e analisar problemas de desempenho.
 
 Para obter um exemplo, consulte este tutorial: [Criar recursos de dados](../tutorials/walkthrough-create-data-features.md). Neste passo a passo, funções de tempo R são inseridas na solução para comparar o desempenho de dois métodos para criar recursos de dados: funções R vs. funções T-SQL.
 
-## <a name="next-lesson"></a>Próxima lição
+## <a name="next-steps"></a>Próximas etapas
 
 Em seguida, você criará um modelo de previsão usando R no SQL Server.
 
-[Criar um modelo preditivo](../tutorials/rtsql-create-a-predictive-model-r.md)
+> [!div class="nextstepaction"]
+> [Início rápido: Criar um modelo de previsão](rtsql-create-a-predictive-model-r.md)

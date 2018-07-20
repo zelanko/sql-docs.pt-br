@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352748"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085868"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -40,7 +40,7 @@ Este artigo de configuração fornece cenários de uso adicionais nas seções a
 
 O guia de início rápido na seção anterior é executado a edição de desenvolvedor gratuita do SQL Server do Hub do Docker. A maioria das informações ainda se aplica se você quiser executar imagens de contêiner, como as edições Enterprise, Standard ou Web de produção. No entanto, há algumas diferenças são descritas aqui.
 
-- Você só pode usar o SQL Server em um ambiente de produção se você tiver uma licença válida. Você pode obter uma licença de produção do SQL Server Express gratuita [aqui](https://go.microsoft.com/fwlink/?linkid=857693). Licenças do SQL Server Standard e Enterprise Edition estão disponíveis por meio [licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+- Você só pode usar o SQL Server em um ambiente de produção se você tiver uma licença válida. Você pode obter uma licença de produção do SQL Server Express gratuita [aqui](https://go.microsoft.com/fwlink/?linkid=857693). Licenças do SQL Server Standard e Enterprise Edition estão disponíveis por meio [licenciamento por Volume da Microsoft](https://www.microsoft.com/en-us/licensing/default.aspx).
 
 - Imagens de contêiner do SQL Server de produção devem ser extraídas de [Docker Store](https://store.docker.com). Se você ainda não tiver um, crie uma conta no Docker Store.
 

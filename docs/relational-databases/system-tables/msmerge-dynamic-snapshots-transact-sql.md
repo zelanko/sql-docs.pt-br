@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 948a643d96228df9ecb816ac7a2a382c052c6c12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5149e141b3e8e84386e4607c5cb633e1388afa61
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004103"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103704"
 ---
 # <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_dynamic_snapshots** tabela rastreia o local do instantâneo de dados filtrados para cada partição definida para uma publicação de mesclagem com filtros de linha com parâmetros. Essa tabela é armazenada no **publicação** banco de dados.  
+  O **MSmerge_dynamic_snapshots** tabela rastreia o local do instantâneo de dados filtrados para cada partição definida para uma publicação de mesclagem com filtros de linha com parâmetros. Essa tabela é armazenada na **publicação** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**Int**|A ID da partição de mesclagem.|  
+|**partition_id**|**int**|A ID da partição de mesclagem.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|O local do instantâneo de dados filtrado para a partição.|  
 |**last_updated**|**datetime**|A data que o instantâneo de dados filtrado foi atualizado.|  
   

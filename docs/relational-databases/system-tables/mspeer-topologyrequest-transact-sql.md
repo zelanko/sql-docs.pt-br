@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_topologyrequest
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d7b69c535b762cd136e5fa0ef86af6d2cd3a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1eb68a533cda94f9cbeaea0a065c875850cbe5de
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004643"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101724"
 ---
 # <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33004643"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|id|**Int**|Identifica uma solicitação de status de topologia. A coluna request_id em [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) usa esse valor.|  
+|id|**int**|Identifica uma solicitação de status de topologia. A coluna request_id em [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) usa esse valor.|  
 |publication|**sysname**|Nome da publicação da qual a solicitação de status de topologia originou.|  
 |sent_date|**datetime**|Data e hora em que a solicitação de status de topologia foi iniciada.|  
   

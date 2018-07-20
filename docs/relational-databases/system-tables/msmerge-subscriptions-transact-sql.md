@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e985f871e1409dc9e837fcbc192b136365d212d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825b41072c6114271c295488ff0ff700a8de74c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004783"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102924"
 ---
 # <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "33004783"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**publication_id**|**Int**|A ID da publicação.|  
+|**publication_id**|**int**|A ID da publicação.|  
 |**subscriber_id**|**smallint**|A ID do assinante.|  
 |**subscriber_db**|**sysname**|O nome do banco de dados de assinatura.|  
-|**subscription_type**|**Int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
+|**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
 |**sync_type**|**tinyint**|O tipo de sincronização:<br /><br /> 1 = Automático.<br /><br /> 2 = Nenhuma sincronização.|  
 |**status**|**tinyint**|O status da assinatura.|  
 |**subscription_time**|**datetime**|A hora que a assinatura foi adicionada.|  

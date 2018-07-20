@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012823"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103434"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelas de replicação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Uma topologia de replicação tem suporte das tabelas do sistema de replicação. Quando um banco de dados de usuário é configurado como um Publicador ou um Assinante, a replicação adiciona tabelas de sistema ao banco de dados. Essas tabelas são removidas quando um banco de dados de usuário é removido de uma topologia de replicação. Para regras gerais em relação ao uso de tabelas do sistema, consulte [tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+  Uma topologia de replicação tem suporte das tabelas do sistema de replicação. Quando um banco de dados de usuário é configurado como um Publicador ou um Assinante, a replicação adiciona tabelas de sistema ao banco de dados. Essas tabelas são removidas quando um banco de dados de usuário é removido de uma topologia de replicação. Para regras gerais sobre o uso de tabelas do sistema, consulte [tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tabelas de Replicação  
  A seguir, uma lista de tabelas de sistema usadas pela replicação, agrupadas por banco de dados.  

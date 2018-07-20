@@ -22,34 +22,34 @@ helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d713dbd76921955aab6066b51d163a17ca7cba9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f0235a7c4e1b13d6e85e59afd7bf0ffd57ba705
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001583"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103724"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **IHcolumns** tabela do sistema contém uma linha para cada coluna publicada. Esta tabela é usada para definir como os tipos de dados de coluna do publicador não SQL Server serão representados quando publicado, qual essencialmente mapeia tipos de dados entre um sistemas de gerenciamento de banco de dados do SQL Server (DBMS) e o SQL Server. Esta tabela é armazenada no banco de dados de distribuição.  
+  O **IHcolumns** tabela do sistema contém uma linha para cada coluna publicada. Esta tabela é usada para definir como os tipos de dados de coluna do publicador não SQL Server serão representados quando publicado, a qual essencialmente mapeia tipos de dados entre um sistemas de gerenciamento de banco de dados do SQL Server (DBMS) e o SQL Server. Esta tabela é armazenada no banco de dados de distribuição.  
   
 ## <a name="definition"></a>Definição  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**Int**|Identifica uma coluna publicada.|  
-|**publishercolumn_id**|**Int**|Associa uma coluna publicada com metadados de coluna armazenados o [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) tabela do sistema.|  
+|**column_id**|**int**|Identifica uma coluna publicada.|  
+|**publishercolumn_id**|**int**|Associa uma coluna publicada com metadados de coluna armazenados em do [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) tabela do sistema.|  
 |**name**|**sysname**|Especifica o nome de coluna.|  
-|**article_id**|**Int**|Identifica o artigo ao qual a coluna pertence.|  
-|**column_ordinal**|**Int**|Identifica a coluna por ordem.|  
+|**article_id**|**int**|Identifica o artigo ao qual a coluna pertence.|  
+|**column_ordinal**|**int**|Identifica a coluna por ordem.|  
 |**mapped_type**|**tinyint**|O tipo de dados da coluna.de destino no Assinante.|  
 |**mapped_length**|**bigint**|O comprimento da coluna no Assinante.|  
-|**mapped_prec**|**Int**|A precisão da coluna no Assinante.|  
-|**mapped_scale**|**Int**|A escala da coluna no Assinante.|  
+|**mapped_prec**|**int**|A precisão da coluna no Assinante.|  
+|**mapped_scale**|**int**|A escala da coluna no Assinante.|  
 |**mapped_nullable**|**bit**|Indica se a coluna no assinante aceita valores NULL, onde **1** significa que valores NULL são aceitos.|  
   
 ## <a name="see-also"></a>Consulte também  

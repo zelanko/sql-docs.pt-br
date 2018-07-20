@@ -4,19 +4,19 @@ description: Este artigo fornece respostas para perguntas frequentes sobre o SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001788"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102224"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server no Linux perguntas frequentes (FAQ)
 
@@ -89,6 +89,9 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 1. **Quais ferramentas estão disponíveis para monitorar o desempenho do SQL Server no Linux?**
 
    Você pode usar [exibições de gerenciamento dinâmico (DMVs) do sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para coletar vários tipos de informações sobre o SQL Server, incluindo informações de processo do Linux. Você pode usar [Store consulta](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) para melhorar o desempenho da consulta. Outras ferramentas, como a conta interna [painel de desempenho](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), trabalhar remotamente no Management Studio SSMS (SQL Server) do Windows.
+
+   > [!TIP]
+   > Uma maneira para melhorar o desempenho é configurar corretamente o seu sistema de operacional Linux e o insance do SQL Server. Para obter mais informações, consulte [práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Administração
 

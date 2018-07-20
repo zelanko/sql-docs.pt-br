@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006013"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101854"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +39,22 @@ ms.locfileid: "33006013"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**Int**|A ID do Queue Reader Agent.|  
-|**publication_id**|**Int**|A ID da publicação.|  
-|**runstatus**|**Int**|O estado de execução do agente:<br /><br /> **1** = iniciar.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
+|**agent_id**|**int**|A ID do Queue Reader Agent.|  
+|**publication_id**|**int**|A ID da publicação.|  
+|**runstatus**|**int**|O estado de execução do agente:<br /><br /> **1** = início.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
 |**start_time**|**datetime**|A data e hora de início da sessão do agente.|  
 |**time**|**datetime**|A data e a hora da última mensagem registrada.|  
-|**duration**|**Int**|O tempo decorrido da atividade de sessão registrada, em segundos.|  
+|**duration**|**int**|O tempo decorrido da atividade de sessão registrada, em segundos.|  
 |**Comentários**|**nvarchar(255)**|O texto descritivo.|  
 |**transaction_id**|**nvarchar(40)**|A ID da transação armazenada com a mensagem, se aplicável.|  
-|**transaction_status**|**Int**|O status da transação.|  
-|**transactions_processed**|**Int**|O número acumulado de transações processadas na sessão.|  
-|**commands_processed**|**Int**|O número acumulado de comandos processados na sessão.|  
+|**transaction_status**|**int**|O status da transação.|  
+|**transactions_processed**|**int**|O número acumulado de transações processadas na sessão.|  
+|**commands_processed**|**int**|O número acumulado de comandos processados na sessão.|  
 |**delivery_rate**|**float(53)**|O número médio de comandos entregues por segundo.|  
 |**transaction_rate**|**float(53)**|A taxa de transações processadas.|  
 |**Assinante**|**sysname**|O nome do Assinante.|  
 |**subscriberdb**|**sysname**|O nome do banco de dados de assinatura.|  
-|**error_id**|**Int**|Caso não seja zero, o número representa um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de erro.|  
+|**error_id**|**int**|Se não zero, o número representa um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem de erro.|  
 |**timestamp**|**timestamp**|A coluna de carimbo de data e hora para a tabela.|  
   
 ## <a name="see-also"></a>Consulte também  

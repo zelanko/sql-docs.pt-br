@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255818"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083898"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página Propriedades Gerais, Pastas (Gerenciador de Relatórios)
   Use a página Propriedades Gerais de pastas para exibir e definir propriedades para pastas criadas. As informações sobre quem criou ou modificou a pasta e quando ela foi modificada aparecem na parte superior da página Propriedades gerais.  
@@ -39,7 +39,7 @@ ms.locfileid: "37255818"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique um nome para a pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os caracteres ; ? : @ & = +, $ * \< > | "ou / ao especificar um nome.  
+ Especifique um nome para a pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< > | "ou / ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição dos conteúdos de pasta. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar a pasta.  

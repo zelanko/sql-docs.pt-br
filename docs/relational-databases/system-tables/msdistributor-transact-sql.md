@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSdistributor system table
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 519b425dbea36885b4e7c763f2f889e56258674e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a318e37567d5d6da707fd95328f1d534e853a79
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004173"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101184"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSdistributor** tabela contém as propriedades do distribuidor. Essa tabela é armazenada no **msdb** banco de dados.  
+  O **MSdistributor** tabela contém as propriedades do distribuidor. Essa tabela é armazenada na **msdb** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**propriedade**|**sysname**|O nome da propriedade|  
+|**property**|**sysname**|O nome da propriedade|  
 |**value**|**nvarchar(3000)**|O valor da propriedade|  
   
 ## <a name="see-also"></a>Consulte também  

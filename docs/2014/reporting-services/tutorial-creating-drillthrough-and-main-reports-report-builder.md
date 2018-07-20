@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084038"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200826"
   
 1.  No painel Dados do Relatório, expanda **Parâmetros**.  
   
-2.  Clique com o botão direito do mouse em @ProductProductCategoryNamee clique em **Propriedades do Parâmetro**.  
+2.  Clique com botão direito \@ProductProductCategoryName e, em seguida, clique em **propriedades do parâmetro**.  
   
     > [!NOTE]  
-    >  O caracteres @ próximo ao nome indica que este é um parâmetro.  
+    >  O \@ caractere ao lado do nome indica que se trata de um parâmetro.  
   
 3.  Na guia **Geral** , clique em **Oculto**.  
   

@@ -23,12 +23,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 1c1676fe8f270fc5c054c8a9f2c3b9b7a0c3a519
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce38cf053b16ae43ab9a9c5cd617bace6d78e4db
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989771"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085948"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,31 +44,39 @@ ms.locfileid: "32989771"
 sp_changedistpublisher [ @publisher = ] 'publisher'  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
+    [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [  **@publisher=** ] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [  **@property=** ] **'***propriedade***'**  
- É uma propriedade a ser alterada para o publicador determinado. *propriedade* é **sysname** e pode ser um destes valores.  
+ É uma propriedade a ser alterada para o publicador determinado. *propriedade* está **sysname** e pode ser um destes valores.  
   
  [ **@value=** ] **'***value***'**  
- É o valor da propriedade determinada. *valor* é **nvarchar (255)**, com um padrão NULL.  
+ É o valor da propriedade determinada. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
+ [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ É necessário para a instância gerenciada do banco de dados SQL, deve coincidir com a chave de acesso para o volume de armazenamento do banco de dados SQL. 
+
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+ 
  Esta tabela descreve as propriedades de Publicadores e os valores para essas propriedades.  
   
 |Propriedade|Valores|Description|  
 |--------------|------------|-----------------|  
-|**Ativo**|**true**|Ativa o Publicador.|  
+|**Active Directory**|**true**|Ativa o Publicador.|  
 ||**false**|Desativa o Publicador.|  
 |**distribution_db**||Nome do banco de dados de distribuição.|  
 |**login**||Nome de logon.|  
 |**password**||Senha forte para o logon fornecido.|  
-|**security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Publicador. *Isso não pode ser alterado para não* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
-||**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador. *Isso não pode ser alterado para não* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
+|**security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Publicador. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
+||**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador. *Isso não pode ser alterado para um não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
 |**working_directory**||Diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação.|  
-|NULL (padrão)||Disponíveis *propriedade* opções são impressas.|  
+|NULL (padrão)||Todos disponíveis *propriedade* opções são impressos.| 
+|**storage_connection_string**| Chave de acesso | A chave de acesso para o diretório de trabalho quando o banco de dados banco de dados de instância gerenciada do SQL. 
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -77,7 +85,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  **sp_changedistpublisher** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changedistpublisher**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

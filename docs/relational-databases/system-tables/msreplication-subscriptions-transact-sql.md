@@ -20,30 +20,30 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005463"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103374"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSreplication_subscriptions** tabela contém uma linha de informações de replicação para cada agente de distribuição de manutenção de banco de dados de assinante local. Essa tabela é armazenada no banco de dados de assinatura.  
+  O **MSreplication_subscriptions** tabela contém uma linha de informações de replicação para cada agente de distribuição de manutenção de banco de dados do assinante local. Essa tabela é armazenada no banco de dados de assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|O nome do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**Publicação**|**sysname**|O nome da publicação.|  
+|**publicação**|**sysname**|O nome da publicação.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
-|**subscription_type**|**Int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
+|**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anônimo.|  
 |**distribution_agent**|**sysname**|O nome do Distribution Agent.|  
-|**Hora**|**smalldatetime**|A hora da última atualização pelo Distribution Agent.|  
+|**Time**|**smalldatetime**|A hora da última atualização pelo Distribution Agent.|  
 |**Descrição**|**nvarchar(255)**|A descrição da assinatura.|  
 |**transaction_timestamp**|**varbinary(16)**|Interno-somente para uso.|  
 |**update_mode**|**tinyint**|O tipo de atualização.|  

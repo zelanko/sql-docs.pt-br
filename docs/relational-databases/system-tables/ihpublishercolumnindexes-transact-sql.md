@@ -22,28 +22,28 @@ helpviewer_keywords:
 - IHpublishercolumnindexes system table
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d54f286215d34974f1ca10ecd08d3eb7413c95c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38b21617981b7db9bde8ded481b1d403ba628e31
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000783"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103235"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **IHpublishercolumnindexes** tabela do sistema mapeia as colunas de uma publicação não SQL Server no [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) para índices de tabela do sistema de [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)tabela do sistema. Esta tabela é armazenada no banco de dados de distribuição.  
+  O **IHpublishercolumnindexes** tabela de sistema mapeia colunas de uma publicação não SQL Server no [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) para índices na tabela do sistema a [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)tabela do sistema. Esta tabela é armazenada no banco de dados de distribuição.  
   
 ## <a name="definition"></a>Definição  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**Int**|Identifica a coluna de [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) com um índice associado.|  
-|**publisherindex_id**|**Int**|Identifica um índice a partir de [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) associada à coluna de tabela.|  
-|**indid**|**Int**|Indica posição da coluna na tabela publicada.|  
+|**publishercolumn_id**|**int**|Identifica a coluna de [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) com um índice associado.|  
+|**publisherindex_id**|**int**|Identifica um índice a partir de [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) associada à coluna de tabela.|  
+|**indid**|**int**|Indica posição da coluna na tabela publicada.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

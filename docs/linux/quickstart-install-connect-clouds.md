@@ -5,18 +5,18 @@ author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f63fc385171469ad13d21fd844bb130ac0e6e7cd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995885"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084188"
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Início rápido: Executar o SQL Server 2017 na nuvem
 

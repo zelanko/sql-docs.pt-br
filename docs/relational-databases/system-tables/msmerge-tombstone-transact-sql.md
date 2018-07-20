@@ -22,28 +22,28 @@ helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99823a19970cf5732aa4e68b3588c6b5a6934a07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af64c598ccb092a5c0e408496ceba8d97f609124
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004813"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102064"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_tombstone** tabela contém informações sobre linhas excluídas e permite que exclusões sejam propagadas para outros assinantes. Essa tabela é armazenada nos bancos de dados de publicação e assinatura.  
+  O **MSmerge_tombstone** tabela contém informações sobre linhas excluídas e permite que exclusões sejam propagadas para outros assinantes. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**ROWGUID**|**uniqueidentifier**|O identificador de linha.|  
-|**tablenick**|**Int**|O apelido da tabela.|  
+|**tablenick**|**int**|O apelido da tabela.|  
 |**type**|**tinyint**|O tipo de exclusão:<br /><br /> 1 = Exclusão de usuário.<br /><br /> 5 = A linha não mais pertence à partição filtrada.<br /><br /> 6 = Exclusão de sistema.|  
 |**linhagem**|**varbinary(249)**|Indica a versão do registro que foi excluído e quais atualizações eram conhecidas quando ele foi excluído. Permite regras de resolução consistente de um conflito quando um Assinante atualiza uma linha enquanto está sendo excluída em outro Assinante.|  
-|**Geração**|**Int**|É atribuído quando uma linha é excluída. Se um Assinante solicitar geração N, somente marcas para exclusão com geração >= N serão enviadas.|  
+|**geração**|**int**|É atribuído quando uma linha é excluída. Se um Assinante solicitar geração N, somente marcas para exclusão com geração >= N serão enviadas.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica o registro lógico ao qual uma linha excluída pertence.|  
 |**logical_record_lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das exclusões do registro lógico ao qual essa linha pertence.|  
   

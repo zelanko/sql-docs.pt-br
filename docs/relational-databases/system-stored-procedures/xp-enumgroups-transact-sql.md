@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_enumgroups
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ca84dd52786613e7489ae3272d014e819fe4f04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844460db0fd4cec42b8b89bf70deb72098d3ce6a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257135"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101544"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  **'** *domain_name* **'**  
- É o nome do domínio do Windows para o qual será enumerada uma lista de grupos globais. *nome_do_domínio* é **sysname**, com um padrão NULL.  
+ É o nome do domínio do Windows para o qual será enumerada uma lista de grupos globais. *nome_do_domínio* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -58,12 +57,12 @@ xp_enumgroups [ 'domain_name' ]
 |**comment**|**sysname**|Descrição do grupo do Windows fornecida pelo Windows|  
   
 ## <a name="remarks"></a>Remarks  
- Se *domain_name* é o nome do computador com Windows que uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no, ou nenhum nome de domínio for especificado, **xp_enumgroups** enumera os grupos locais do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se *domain_name* é o nome do computador baseado em Windows que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no, ou nenhum nome de domínio for especificado, **xp_enumgroups** enumera os grupos locais do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **xp_enumgroups** não pode ser usado quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no Windows 98.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **db_owner** função de banco de dados fixa no **mestre** banco de dados, ou a associação a **sysadmin** função de servidor fixa.  
+ Requer associação na **db_owner** função de banco de dados fixa na **mestre** banco de dados ou associação na **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir lista os grupos do domínio `sales`.  

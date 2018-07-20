@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005893"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102305"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,28 +39,28 @@ ms.locfileid: "33005893"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|A ID do Merge Agent.|  
+|**id**|**int**|A ID do Merge Agent.|  
 |**name**|**nvarchar(100)**|O nome do Merge Agent.|  
 |**publisher_id**|**smallint**|A ID do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**Publicação**|**sysname**|O nome da publicação.|  
+|**publicação**|**sysname**|O nome da publicação.|  
 |**subscriber_id**|**smallint**|A ID do assinante.|  
 |**subscriber_db**|**sysname**|O nome do banco de dados de assinatura.|  
 |**local_job**|**bit**|Indica se há um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no Distribuidor local.|  
 |**job_id**|**binary(16)**|O número de identificação do trabalho.|  
-|**profile_id**|**Int**|A ID de configuração do **MSagent_profiles** tabela.|  
+|**profile_id**|**int**|A ID de configuração a partir de **MSagent_profiles** tabela.|  
 |**anonymous_subid**|**uniqueidentifier**|A ID de um agente anônimo.|  
 |**subscriber_name**|**sysname**|O nome do Assinante.|  
 |**creation_date**|**datetime**|A data e hora que o Distribution ou Merge Agent foi criado.|  
-|**offload_enabled**|**bit**|Especifica que o agente pode ser ativado remotamente.<br /><br /> **0** Especifica que o agente não pode ser ativado remotamente.<br /><br /> **1** Especifica o agente será ativado remotamente e no computador remoto especificado na propriedade offload_server.|  
+|**offload_enabled**|**bit**|Especifica que o agente pode ser ativado remotamente.<br /><br /> **0** Especifica o agente não pode ser ativado remotamente.<br /><br /> **1** Especifica o agente será ativado remotamente e no computador remoto especificado na propriedade offload_server.|  
 |**offload_server**|**sysname**|Especifica o nome da rede de servidor a ser usado para ativação de agente remota.|  
 |**sid**|**varbinary(85)**|O SID (número de identificação de segurança) para o Distribution Agent ou Merge Agent durante sua primeira execução.|  
 |**subscriber_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Assinante que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.|  
 |**subscriber_login**|**sysname**|O logon usado na conexão com o Assinante.|  
-|**subscriber_password**|**nvarchar (524)**|O valor criptografado da senha usada na conexão com o Assinante.|  
+|**subscriber_password**|**nvarchar(524)**|O valor criptografado da senha usada na conexão com o Assinante.|  
 |**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente na conexão com o Publicador que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.|  
 |**publisher_login**|**sysname**|O logon usado na conexão com o Publicador.|  
-|**publisher_password**|**nvarchar (524)**|O valor criptografado da senha usada na conexão com o Publicador.|  
+|**publisher_password**|**nvarchar(524)**|O valor criptografado da senha usada na conexão com o Publicador.|  
 |**job_step_uid**|**uniqueidentifier**|A ID exclusiva da etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na qual o agente foi iniciado.|  
   
 ## <a name="see-also"></a>Consulte também  

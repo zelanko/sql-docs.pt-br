@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8dfae0143bf2c9841166220ff32b898cec601d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f71452985e4f386cd3ee7f4b74cd8bdba96edc0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004923"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101384"
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "33004923"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|O nome do publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
-|**Publicação**|**sysname**|O nome da publicação.|  
-|**Tranid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  
+|**publicação**|**sysname**|O nome da publicação.|  
+|**tranid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  
 |**maxorderkey**|**bigint**|Interno-somente para uso.|  
 |**commandcount**|**bigint**|Interno-somente para uso.|  
   

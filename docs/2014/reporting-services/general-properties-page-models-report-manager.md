@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280662"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082718"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propriedades Gerais, Modelos (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os modelos de relatório renomeiem, movam ou substituam o arquivo de definição do modelo (.smdl). Os detalhes sobre quem criou ou modificou o modelo e quando as alterações ocorreram são indicados na parte superior da página.  
@@ -41,7 +41,7 @@ ms.locfileid: "37280662"
  **Nome**  
  Especifica o nome do modelo. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Descrição**  
  Digite uma descrição do modelo. Essa descrição é exibida na página Conteúdo para usuários com permissão de acessar o modelo.  

@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227157"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083008"
 ---
 # <a name="strong-passwords"></a>Senhas fortes
   As senhas podem ser o link mais fraco em uma implantação de segurança de servidor. Você sempre deveria tomar muito cuidado ao selecionar uma senha. Uma senha segura tem as seguintes características:  
@@ -53,9 +53,9 @@ ms.locfileid: "37227157"
   
 -   Contém ou começa com um caractere de espaço.  
   
--   Começa com o $ ou @.  
+-   Começa com o $ ou \@ caracteres.  
   
- Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! @. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
+ Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! \@. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Política de senha](password-policy.md)  

@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af67d79616f2223f62998494122787460eaa3a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193106"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084028"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
   Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
@@ -43,21 +43,21 @@ ms.locfileid: "37193106"
   
 |Atributo de metapropriedade|Description|  
 |----------------------------|-----------------|  
-|**@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
-|**@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
-|**@mp:namespaceuri**|Fornece o URI do namespace do elemento atual. Se o valor desse atributo for NULL, nenhum namespace estará presente|  
-|**@mp:prefix**|Armazena o prefixo do namespace do nome do elemento atual.<br /><br /> Se nenhum prefixo estiver presente (NULL) e um URI for fornecido, ele indicará que o namespace identificado é o namespace padrão. Se nenhum URI for fornecido, nenhum namespace será anexado.|  
-|**@mp:prev**|Armazena o irmão anterior relativo a um nó. Isso fornece informações sobre a ordenação de elementos no documento.<br /><br /> **@mp:prev** contém a ID de XML do irmão anterior que tem o mesmo elemento pai. Se um elemento estiver à frente da lista de irmãos, **@mp:prev** será NULL.|  
-|**@mp:xmltext**|Usado para fins de processamento. É a serialização textual do elemento e seus atributos e também dos subelementos, conforme usado na manipulação de estouro do OPENXML.|  
+|**\@MP:ID**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
+|**\@MP:LocalName**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
+|**\@MP:NamespaceURI**|Fornece o URI do namespace do elemento atual. Se o valor desse atributo for NULL, nenhum namespace estará presente|  
+|**\@MP:prefix**|Armazena o prefixo do namespace do nome do elemento atual.<br /><br /> Se nenhum prefixo estiver presente (NULL) e um URI for fornecido, ele indicará que o namespace identificado é o namespace padrão. Se nenhum URI for fornecido, nenhum namespace será anexado.|  
+|**\@MP:Prev**|Armazena o irmão anterior relativo a um nó. Isso fornece informações sobre a ordenação de elementos no documento.<br /><br /> **\@MP:Prev** contém a ID de XML do irmão anterior que tem o mesmo elemento pai. Se um elemento estiver à frente da lista de irmãos,  **\@mp:prev** é NULL.|  
+|**\@MP:XMLTEXT**|Usado para fins de processamento. É a serialização textual do elemento e seus atributos e também dos subelementos, conforme usado na manipulação de estouro do OPENXML.|  
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
 |Atributo de metapropriedade pai|Description|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|Corresponde a **../@mp:id**|  
-|**@mp:parentlocalname**|Corresponde a **../@mp:localname**|  
-|**@mp:parentnamespacerui**|Corresponde a **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|Corresponde a **../@mp:prefix**|  
+|**\@MP:parentID**|Corresponde ao **... /\@mp:id**|  
+|**\@MP:parentlocalname**|Corresponde ao **... /\@mp:localname**|  
+|**\@MP:parentnamespacerui**|Corresponde ao **... /\@mp:namespaceuri**|  
+|**\@MP:parentprefix**|Corresponde ao **... /\@mp:prefix**|  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos seguintes ilustram como o OPENXML é usado para criar exibições de conjunto de linhas diferentes.  
@@ -67,11 +67,11 @@ ms.locfileid: "37193106"
   
  A instrução OPENXML ilustra o seguinte:  
   
--   O parâmetro **id** é mapeada para o atributo de metapropriedade **@mp:id** e indica que a coluna contém a ID de XML exclusiva do elemento gerado pelo sistema.  
+-   O **identificação** coluna é mapeada para o  **\@mp:id** atributo de metapropriedade e indica que a coluna contém a ID gerada pelo sistema de XML a exclusiva do elemento.  
   
--   O parâmetro **parent** é mapeada para o **@mp:parentid** e indica que a coluna contém a ID de XML do pai do elemento.  
+-   O **pai** coluna é mapeada para  **\@mp:parentid** e indica que a coluna contém a ID de XML do pai do elemento.  
   
--   O parâmetro **parentLocalName** é mapeada para o **@mp:parentlocalname** e indica que a coluna contém o nome local do pai.  
+-   O **parentLocalName** coluna é mapeada para  **\@mp:parentlocalname** e indica que a coluna contém o nome local do pai.  
   
  Em seguida, a instrução SELECT retorna o conjunto de linhas fornecido por OPENXML:  
   
@@ -164,13 +164,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Especificando a metapropriedade xmltext para recuperar os dados não consumidos em uma coluna  
  Este exemplo usa OPENXML para criar uma exibição do conjunto de linhas do documento XML de exemplo. O exemplo mostra como recuperar os dados XML não consumidos mapeamento o atributo de metapropriedade **xmltext** para uma coluna do conjunto de linhas no OPENXML.  
   
- O parâmetro **comment** é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext** . O parâmetro *flags* é definido como **9** (XML_ATTRIBUTE e XML_NOCOPY). Isso indica mapeamento **centrado em atributo** e indica que apenas os dados não consumidos devem ser copiados para a coluna de estouro.  
+ O **comentário** coluna é identificada como a coluna de estouro mapeando-a para o  **\@mp:xmltext** metapropriedade. O parâmetro *flags* é definido como **9** (XML_ATTRIBUTE e XML_NOCOPY). Isso indica mapeamento **centrado em atributo** e indica que apenas os dados não consumidos devem ser copiados para a coluna de estouro.  
   
  Em seguida, a instrução SELECT retorna o conjunto de linhas fornecido por OPENXML:  
   
- Neste exemplo, a metapropriedade **@mp:parentlocalname** é definida para uma coluna, **ParentLocalName**, no conjunto de linhas gerado por OPENXML. Como resultado, essa coluna contém o nome local do elemento pai.  
+ Neste exemplo, o  **\@mp:parentlocalname** metapropriedade é definida para uma coluna **ParentLocalName**, no conjunto de linhas gerado por OPENXML. Como resultado, essa coluna contém o nome local do elemento pai.  
   
- São especificadas duas colunas adicionais no conjunto de linhas, **parent** e **comment**. O parâmetro **parent** é mapeada para o **@mp:parentid** e indica que a coluna contém a ID de XML do elemento pai do elemento. A coluna comment é identificada como a coluna de estouro mapeando-a para a metapropriedade **@mp:xmltext** .  
+ São especificadas duas colunas adicionais no conjunto de linhas, **parent** e **comment**. O **pai** coluna é mapeada para  **\@mp:parentid** e indica que a coluna contém a ID de XML do elemento pai do elemento. A coluna comment é identificada como a coluna de estouro mapeando-a para o  **\@mp:xmltext** metapropriedade.  
   
 ```  
 DECLARE @idoc int  

@@ -1,0 +1,1 @@
+Bancos de dados publicador e distribuidor no banco de dados SQL exigem [instância gerenciada](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) para obter mais informações, consulte [replicação com o banco de dados SQL](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database).

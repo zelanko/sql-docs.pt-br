@@ -22,12 +22,12 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f2c77960d87f06aed87ffddefa534b8ee8a1640
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e30e89de74cfd031229effc1bebedb5b32c896e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148227"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083838"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Criar, excluir ou modificar uma função (Management Studio)
   O Reporting Services fornece funções predefinidas que definem um nível de acesso a um servidor de relatório. Cada usuário ou grupo que requer acesso ao servidor de relatório faz isso através de uma função que descreve as tarefas que podem ser executadas. As funções são definidas para o servidor de relatório como um todo. Não é possível variar uma definição de função para partes específicas do servidor de relatório nem especificar que uma função seja usada de modo diferente dependendo das circunstâncias.  
@@ -49,7 +49,7 @@ ms.locfileid: "37148227"
   
      Se você estiver criando uma definição de função no nível do sistema, clique com o botão direito do mouse em **Funções do Sistema**e aponte para **Nova Função do Sistema**.  
   
-4.  Digite um nome exclusivo para a função. Um nome deve conter pelo menos um caractere. Ele também pode incluir espaços e alguns símbolos, mas não os caracteres ; ? : @ & = +, $ / * \< > | "ou /.  
+4.  Digite um nome exclusivo para a função. Um nome deve conter pelo menos um caractere. Ele também pode incluir espaços e alguns símbolos, mas não os caracteres ; ? : \@ & = +, $ / * \< > | "ou /.  
   
 5.  Como opção, digite uma descrição. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , essa descrição só é visível nesta página. Os usuários que exibem esse item por meio do Gerenciador de Relatórios podem ver essa descrição nessa ferramenta.  
   

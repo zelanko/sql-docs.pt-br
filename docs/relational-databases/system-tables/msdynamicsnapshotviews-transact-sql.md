@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 587f5859f174e184d55d2fa297d76c0f07ffbdca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ca4e1ab1d13e88f54790205b2c3bad8e32a6b70
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004183"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102554"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSdynamicsnapshotviews** tabela rastreia todas as exibições de instantâneo de dados filtrados temporário criadas pelo snapshot agent e é usada pelo sistema para limpar exibições no caso de um desligamento anormal do SQL Server Agent ou o Agente de instantâneo. Essa tabela é armazenada nos bancos de dados de publicação e assinatura.  
+  O **MSdynamicsnapshotviews** tabela rastreia todas as exibições de instantâneo de dados filtrados temporário criadas pelo snapshot agent e é usada pelo sistema para limpar exibições no caso de um desligamento anormal do SQL Server Agent ou o Agente de instantâneo. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  

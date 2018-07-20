@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a6725912ab05a7f4002d1130f38a1b4b09ba6b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7eec90fb29378f4cea3530093f2b505b87593fd8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006903"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102394"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "33006903"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_database_id**|**Int**|A ID do banco de dados Publicador.|  
+|**publisher_database_id**|**int**|A ID do banco de dados Publicador.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
-|**type**|**Int**|O tipo de comando.|  
-|**article_id**|**Int**|A ID do artigo.|  
-|**originator_id**|**Int**|A ID do originador.|  
-|**command_id**|**Int**|A ID do comando.|  
+|**type**|**int**|O tipo de comando.|  
+|**article_id**|**int**|A ID do artigo.|  
+|**originator_id**|**int**|A ID do originador.|  
+|**command_id**|**int**|A ID do comando.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
 |**command**|**varbinary(1024)**|O valor do comando.|  
-|**hashKey**|**Int**|Interno-somente para uso.|  
+|**hashKey**|**int**|Interno-somente para uso.|  
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN para o comando na publicação de origem. Usado em replicação transacional ponto a ponto.|  
   
 ## <a name="see-also"></a>Consulte também  

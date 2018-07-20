@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974491"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085468"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @tsql =] 'SQL_batch Transact'  
+ [ \@tsql =] 'Transact-SQL_batch'  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. SQL_batch Transact pode ser nvarchar (n) ou nvarchar (max).  
   
- [ @params =] 'N'parameters  
- *@params* Fornece uma cadeia de caracteres de declaração para os parâmetros para o lote Transact-SQL, que é similar a sp_executesql. Parâmetros podem ser nvarchar (n) ou nvarchar (max).  
+ [ \@params =] 'N'parameters  
+ *\@params* fornece uma cadeia de caracteres de declaração para os parâmetros para o lote Transact-SQL, que é similar a sp_executesql. Parâmetros podem ser nvarchar (n) ou nvarchar (max).  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em *@params*. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros, *@params* não é necessária. NULL é o valor padrão para esse parâmetro.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos no [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetro adicionais. Todo parâmetro especificado na instrução deve ser definido em  *\@params*. Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote na instrução não contiverem parâmetros,  *\@params* não é necessária. NULL é o valor padrão para esse parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
  0 indica êxito. Qualquer outra coisa indicam falha.  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID da linha no conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados na *@params* argumento.|  
+|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados na  *\@params* argumento.|  
 |**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte no momento são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde à. Os valores com suporte são:<br /><br /> 0 – texto sem formatação (a coluna não é criptografada)<br /><br /> 1 – a criptografia aleatória<br /><br /> 2 – a criptografia determinística.|  
 |**column_encryption_key_ordinal**|**int**|O código da linha em que o primeiro resultado definido. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde à.|  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@C1|1|1|  
   
  (Continuam resultados).  
   

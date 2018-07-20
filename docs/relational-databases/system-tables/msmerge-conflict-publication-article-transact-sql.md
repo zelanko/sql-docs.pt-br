@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e873cf77753c4d3e210cd1238a1cfc6bd7aaca1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b5ec935f352e64678b98136953dfbb5041430a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004853"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101194"
 ---
 # <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>Msmerge_conflict _&lt;publicação&gt;_&lt;artigo&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33004853"
 |-----------------|---------------|-----------------|  
 |***article_column_name***|**variable**|Representa uma coluna em uma tabela replicada. Essa tabela do sistema contém uma coluna para cada coluna no artigo de tabela.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador de linha para o conflito de exclusão.|  
-|**ModifiedDate**|**datetime**|A hora em que o conflito ocorreu.|  
+|**ModifiedDate**|**datetime**|A hora quando o conflito ocorreu.|  
 |**origin_datasource_id**|**uniqueidentifier**|A assinatura para a qual a alteração de linha foi desfeita ou perdeu o conflito.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585928"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085048"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar os dados usando o PowerShell (passo a passo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,17 +22,17 @@ Neste momento, você deve ter o seguinte instalado:
 + SQL Server 2016 R Services
 + SQL Server 2017 Machine Learning Services, com a linguagem R habilitada
 
-Nesta lição, você pode baixar os dados, os pacotes R e os scripts de R usados no passo a passo de um repositório Github. Você pode baixar tudo usando um script do PowerShell para sua conveniência.
+Nesta lição, você pode baixar os dados, pacotes de R e scripts de R usados no passo a passo de um repositório Github. Você pode baixar tudo usando um script do PowerShell para sua conveniência.
 
-Você também precisa instalar alguns pacotes de R adicionais, no servidor e na estação de trabalho de R. As etapas são descritas.
+Você também precisa instalar alguns pacotes R adicionais no servidor e em sua estação de trabalho do R. As etapas são descritas.
 
-Em seguida, você deve usar um segundo script do PowerShell, RunSQL_R_Walkthrough.ps1, para configurar o banco de dados que é usado para modelar e pontuação. Se o script executa um carregamento em massa dos dados no banco de dados especificar e, em seguida, cria algumas funções SQL e procedimentos armazenados que simplificam as tarefas de ciência de dados.
+Em seguida, você deve usar um segundo script do PowerShell, RunSQL_R_Walkthrough.ps1, para configurar o banco de dados que é usado para modelagem e pontuação. Se o script executa um carregamento em massa dos dados no banco de dados especifique e, em seguida, cria algumas funções SQL e procedimentos armazenados que simplificam as tarefas de ciência de dados.
 
 Vamos começar!
 
 ## <a name="1-download-the-data-and-scripts"></a>1. Baixar os dados e scripts
 
-Todo o código necessário foi fornecido em um repositório do GitHub. Você pode usar um script do PowerShell para fazer uma cópia local dos arquivos.
+Todo o código necessário foi fornecido em um repositório GitHub. Você pode usar um script do PowerShell para fazer uma cópia local dos arquivos.
 
 1.  No computador cliente da ciência de dados, abra um prompt de comando do Windows PowerShell como administrador.
 
@@ -42,7 +42,7 @@ Todo o código necessário foi fornecido em um repositório do GitHub. Você pod
     Set-ExecutionPolicy Unrestricted -Scope Process -Force
     ```
       
-3.  Execute o comando do PowerShell a seguir para baixar os arquivos de script em um diretório local. Se você não especificar um diretório diferente, por padrão, a pasta `C:\tempR` é criado e salvos de todos os arquivos.
+3.  Execute o comando do PowerShell a seguir para baixar os arquivos de script em um diretório local. Se você não especificar um diretório diferente, por padrão, a pasta `C:\tempR` é criada e todos os arquivos salvos nela.
   
     ```
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_R_Walkthrough.ps1'  
@@ -60,9 +60,9 @@ Todo o código necessário foi fornecido em um repositório do GitHub. Você pod
   
 5.  No console do PowerShell, execute o comando `ls` para exibir uma lista dos arquivos que foram baixados em *DestDir*.  Para obter uma descrição dos arquivos, consulte [o que está incluído](#whats-included-in-the-sample).
 
-## <a name="2-install-required-r-packages"></a>2. Instalar pacotes de R necessários
+## <a name="2-install-required-r-packages"></a>2. Instalar pacotes R necessários
 
-Este passo a passo exige algumas bibliotecas do R que não são instaladas por padrão como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Você deve instalar os pacotes no cliente onde você desenvolve a solução e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador onde você implanta a solução.
+Este passo a passo exige algumas bibliotecas do R que não são instaladas por padrão como parte do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Você deve instalar os pacotes no cliente onde você desenvolve a solução e no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computador em que você implantar a solução.
 
 ### <a name="install-required-packages-on-the-client"></a>Instalar os pacotes necessários no cliente
 
@@ -84,10 +84,10 @@ O script do R baixado inclui os comandos para baixar e instalar esses pacotes.
 
 ### <a name="install-required-packages-on-the-server"></a>Instalar os pacotes necessários no servidor
 
-Há várias maneiras diferentes que você pode instalar pacotes no SQL Server. Por exemplo, o SQL Server fornece [gerenciamento de pacotes de R](../r/install-additional-r-packages-on-sql-server.md) recurso que permite que os administradores de banco de dados cria um repositório de pacote e atribuir os direitos para instalar seus próprios pacotes de usuário. No entanto, se você for um administrador no computador, você pode instalar novos pacotes usando o R, contanto que você instale a biblioteca correta.
+Há muitas maneiras diferentes que você pode instalar pacotes no SQL Server. Por exemplo, o SQL Server fornece [gerenciamento de pacotes R](../r/install-additional-r-packages-on-sql-server.md) recurso que permite que os administradores de banco de dados, criar um repositório de pacotes e atribuir os direitos para instalar seus próprios pacotes de usuário. No entanto, se você for um administrador no computador, você pode instalar novos pacotes usando o R, desde que você instale a biblioteca correta.
 
 > [!NOTE]
-> No servidor, **não** instalar em uma biblioteca do usuário, mesmo se for solicitado. Se você instalar uma biblioteca de usuário, a instância do SQL Server não pode localizar ou executar os pacotes. Para saber mais, veja [Instalando novos pacotes de R no SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+> No servidor, **não** instale em uma biblioteca de usuário, mesmo se for solicitado. Se você instalar em uma biblioteca do usuário, a instância do SQL Server não pode localizar ou executar os pacotes. Para saber mais, veja [Instalando novos pacotes de R no SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 1. No computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra RGui.exe **como administrador**.  Se você tiver instalado o SQL Server R Services usando os padrões, RGui.exe poderá ser encontrado em C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64.
 
@@ -100,13 +100,13 @@ Há várias maneiras diferentes que você pode instalar pacotes no SQL Server. P
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Este exemplo usa a função de grep R para pesquisar o vetor de caminhos disponíveis e localize o caminho que inclui "Arquivos de programas". Para obter mais informações, consulte [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Este exemplo usa a função grep do R para pesquisar o vetor dos caminhos disponíveis e localizar o caminho que inclui "Arquivos de programas". Para obter mais informações, consulte [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Se você acha que os pacotes já estão instalados, verifique a lista de pacotes instalados executando `installed.packages()`.
 
 ## <a name="3-prepare-the-environment-using-runsqlrwalkthroughps1"></a>3. Preparar o ambiente usando RunSQL_R_Walkthrough.ps1
 
-Juntamente com os arquivos de dados, scripts de R e scripts T-SQL, o download inclui o script do PowerShell `RunSQL_R_Walkthrough.ps1`. O script executa estas ações:
+Juntamente com os arquivos de dados, scripts do R e scripts T-SQL, o download inclui o script do PowerShell `RunSQL_R_Walkthrough.ps1`. O script executa estas ações:
 
 - Verifica se o SQL Native Client e os utilitários de linha de comando do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instalados. As ferramentas de linha de comando é necessária para executar o [Utilitário bcp](../../tools/bcp-utility.md), que é usado para o carregamento em massa rápido de dados em tabelas SQL.
 
@@ -118,7 +118,7 @@ Juntamente com os arquivos de dados, scripts de R e scripts T-SQL, o download in
 
 - Grava os argumentos novamente no arquivo de script do R para usar o nome do banco de dados especificado.
 
-Execute este script no computador em que você compile a solução: por exemplo, o laptop em que você desenvolve e testar seu código R. Esse computador, que chamaremos de cliente de ciência de dados, deve ser capaz de conectar-se ao computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o protocolo de Pipes Nomeados.
+Execute este script no computador em que você compile a solução: por exemplo, o laptop em que você desenvolve e testa seu código R. Esse computador, que chamaremos de cliente de ciência de dados, deve ser capaz de conectar-se ao computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o protocolo de Pipes Nomeados.
 
 1. Abra uma linha de comando do PowerShell **como administrador**.
   
@@ -130,7 +130,7 @@ Execute este script no computador em que você compile a solução: por exemplo,
   
 3.  Você será solicitado para cada um dos seguintes parâmetros:
   
-    **Nome do servidor de banco de dados**: O nome da instância do SQL Server em que os serviços ou serviços de R de aprendizado de máquina está instalada.
+    **Nome do servidor de banco de dados**: O nome da instância do SQL Server onde o Machine learning Services ou R Services está instalado.
 
     Dependendo dos requisitos da rede, o nome da instância poderá exigir qualificação com um ou mais nomes de sub-rede.  Por exemplo, se MYSERVER não funcionar, tente myserver.subnet.mycompany.com.
     
@@ -151,7 +151,7 @@ Execute este script no computador em que você compile a solução: por exemplo,
 
     O script deve baixar o arquivo e carregar os dados no banco de dados automaticamente. Isso pode levar algum tempo. Observe as mensagens de status na janela do PowerShell.
       
-    Se, importação em massa ou qualquer outra etapa falhar, você poderá carregar os dados manualmente conforme descrito no [solução de problemas](#bkmk_Troubleshooting) seção.
+    Se, importação em massa ou qualquer outra etapa falhar, você poderá carregar os dados manualmente conforme descrito na [solução de problemas](#bkmk_Troubleshooting) seção.
 
 **Resultados (conclusão bem-sucedida)**
 
@@ -175,11 +175,11 @@ Para baixar os dados manualmente, clique com o botão direito do mouse no link a
 
 [http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
-Anote o caminho para o arquivo de dados baixado e o nome do arquivo em que os dados foram salvos. É necessário o caminho completo para carregar os dados para a tabela usando **bcp**.
+Anote o caminho para o arquivo de dados baixado e o nome do arquivo em que os dados foram salvos. Você precisará do caminho completo para carregar os dados para a tabela usando **bcp**.
 
 ### <a name="unable-to-download-the-data"></a>Não foi possível baixar os dados
 
-O arquivo de dados é grande. Você deve usar um computador que tenha uma conexão de Internet relativamente boa ou o download pode atingir o tempo limite.
+O arquivo de dados é grande. Você deve usar um computador que tenha uma conexão de Internet relativamente boa ou o download pode expirar.
 
 ### <a name="could-not-connect-or-script-failed"></a>Não foi possível conectar ou ocorreu falha no script
 
@@ -247,35 +247,35 @@ O exemplo a seguir executa o script usando um logon do SQL:
 
 ### <a name="the-data-loaded-but-it-contains-duplicates"></a>Os dados foram carregados, mas eles contêm duplicatas
 
-Se seu banco de dados contiver uma tabela existente de mesmo nome e o mesmo esquema, **bcp** insere uma nova cópia de dados em vez de sobrescrever os dados existentes.
+Se seu banco de dados contiver uma tabela existente de mesmo nome e o mesmo esquema, **bcp** insere uma nova cópia dos dados em vez de sobrescrever os dados existentes.
 
 Para evitar dados duplicados, trunca as tabelas existentes antes de executar o script novamente.
 
 ## <a name="whats-included-in-the-sample"></a>O que está incluído no exemplo
 
-Quando você baixa os arquivos do repositório GitHub, você obtém o seguinte:
+Quando você baixa os arquivos do repositório do GitHub, você obtém o seguinte:
 
-+ Dados em formato CSV; consulte [treinamento e pontuação dados](#bkmk_data) para obter detalhes
++ Dados em formato CSV; ver [dados de pontuação e treinamento](#bkmk_data) para obter detalhes
 + Um script do PowerShell para preparar o ambiente
 + Um arquivo de formato XML para importar os dados para o SQL Server usando o bcp
 + Vários scripts T-SQL
 + Todo o código do R que você precisa para executar este passo a passo
 
-### <a name="bkmk_data"></a>Treinamento e classificar dados
+### <a name="bkmk_data"></a>Dados de pontuação e treinamento
 
-Os dados são uma amostragem representativa do conjunto de dados de táxi de Nova York, que contém registros de mais de 173 milhões de corridas individuais em 2013, incluindo tarifas e valores de gorjetas pagas por cada corrida. Para facilitar o trabalho com os dados, a equipe de ciência de dados da Microsoft reduziu a resolução para obter apenas 1% dos dados.  Esses dados foram compartilhados em um contêiner do armazenamento de blobs público no Azure, em formato .CSV. A fonte de dados é um arquivo não compactado, apenas em 350 MB.
+Os dados são uma amostragem representativa do conjunto de dados de táxi de Nova York, que contém registros de mais de 173 milhões de corridas individuais em 2013, incluindo tarifas e valores de gorjetas pagas por cada corrida. Para facilitar o trabalho com os dados, a equipe de ciência de dados da Microsoft reduziu a resolução para obter apenas 1% dos dados.  Esses dados foram compartilhados em um contêiner do armazenamento de blobs público no Azure, em formato .CSV. A fonte de dados é um arquivo não compactado, com quase 350 MB.
 
-+ Conjunto de dados público: ([NYC táxi e comissão Limousine]http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Conjunto de dados público: [táxi de NYC e Limusines comissão] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Criação de modelos do Azure ML no conjunto de dados NYC táxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Criação de modelos de ML do Azure no conjunto de dados de táxi de NYC] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>Arquivos de script do PowerShell e R
 
-+ **RunSQL_R_Walkthrough.ps1** executar esse script em primeiro lugar, usando o PowerShell. Ele chama os scripts SQL para carregar dados no banco de dados.
++ **RunSQL_R_Walkthrough.ps1** executar esse script primeiro, usando o PowerShell. Ele chama os scripts SQL para carregar dados no banco de dados.
 
 + **taxiimportfmt.xml** Um arquivo de definição de formato que é usado pelo utilitário BCP para carregar dados no banco de dados.
 
-+ **RSQL_R_Walkthrough.R** este é o script de R de núcleo que é usado no restante das lições para fazer a análise de dados e modelagem. Ele fornece todo o código do R de que você precisa para explorar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , criar o modelo de classificação e criar gráficos.
++ **Rsql_r_walkthrough** este é o script principal do R que é usado no restante das lições para fazer a análise de dados e modelagem. Ele fornece todo o código do R de que você precisa para explorar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , criar o modelo de classificação e criar gráficos.
 
 ### <a name="t-sql-script-files"></a>Arquivos de script T-SQL
 
@@ -290,7 +290,7 @@ O script do PowerShell executa vários [!INCLUDE[tsql](../../includes/tsql-md.md
 |fnCalculateDistance.sql|Cria uma função de valor escalar do SQL que calcula a distância direta entre os locais de embarque e desembarque de passageiros.|
 |fnEngineerFeatures.sql|Cria uma função com valor de tabela SQL que cria recursos para treinar o modelo de classificação|
 
-As consultas T-SQL usadas neste passo a passo foram testadas em podem ser executadas como-está em seu código R. No entanto, se você quer realizar mais testes ou desenvolver sua própria solução, recomendamos o uso de um ambiente de desenvolvimento SQL dedicado para testar e ajustar as consultas primeiro, antes de adicioná-las ao código R.
+As consultas do T-SQL usadas neste passo a passo foram testadas em podem ser executadas como-está em seu código R. No entanto, se você quer realizar mais testes ou desenvolver sua própria solução, recomendamos o uso de um ambiente de desenvolvimento SQL dedicado para testar e ajustar as consultas primeiro, antes de adicioná-las ao código R.
 
 + A [extensão mssql](https://code.visualstudio.com/docs/languages/tsql) para [Visual Studio Code](https://code.visualstudio.com/) é um ambiente leve e gratuito para executar consultas e que também dá suporte à maioria das tarefas de desenvolvimento de banco de dados.
 + O [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) é uma ferramenta poderosa, mas gratuita fornecida para desenvolvimento e gerenciamento de bancos de dados do SQL Server.
@@ -303,4 +303,3 @@ As consultas T-SQL usadas neste passo a passo foram testadas em podem ser execut
 
 [Passo a passo de ciência de dados de ponta a ponta para R e SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Pré-requisitos para o passo a passo de ciência de dados](walkthrough-prerequisites-for-data-science-walkthroughs.md)

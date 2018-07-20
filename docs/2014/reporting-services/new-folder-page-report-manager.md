@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162287"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083398"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nova Pasta (Gerenciador de Relatórios)
   Use a página Nova Pasta para criar uma pasta nova na hierarquia de pasta do servidor de relatório. A pasta que você cria é uma pasta virtual que é armazenada em um banco de dados do servidor de relatórios. A pasta não é criada no sistema de arquivos do seu computador.  
@@ -39,7 +39,7 @@ ms.locfileid: "37162287"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique o nome da pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : @ & = +, $ / * \< > | "ou / ao especificar um nome.  
+ Especifique o nome da pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ / * \< > | "ou / ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição do conteúdo da pasta. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar a pasta.  

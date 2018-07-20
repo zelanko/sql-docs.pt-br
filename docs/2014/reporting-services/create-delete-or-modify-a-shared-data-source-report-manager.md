@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202686"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085078"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Criar, excluir ou modificar uma fonte de dados compartilhada (Gerenciador de Relatórios)
   Uma fonte de dados compartilhada especifica propriedades de conexão para uma fonte de dados. Se você tiver uma fonte de dados usada por um número grande de relatórios, modelos ou assinaturas controladas por dados, considere a criação de uma fonte de dados compartilhada para eliminar a sobrecarga em manter as mesmas informações de conexão em vários lugares.  
@@ -43,7 +43,7 @@ ms.locfileid: "37202686"
   
 3.  Clique em **Nova Fonte de Dados**. A página **Nova Fonte de Dados** será aberta.  
   
-4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : @ & = +, $ / * \< > | " /.  
+4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = +, $ / * \< > | " /.  
   
 5.  Como opção, digite uma descrição para oferecer aos usuários informações sobre a conexão. Essa descrição será exibida na página **Conteúdo** no Gerenciador de Relatórios.  
   

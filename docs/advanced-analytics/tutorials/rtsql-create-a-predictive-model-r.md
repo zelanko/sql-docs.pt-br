@@ -1,23 +1,28 @@
 ---
-title: Criar um modelo de previsão (R no início rápido do SQL) | Microsoft Docs
+title: Guia de início rápido para criar um modelo de previsão usando o R no SQL Server Machine Learning | Microsoft Docs
+description: Neste início rápido, saiba como criar um modelo em R usando dados do SQL Server para plotar previsões.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202638"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086818"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Criar um modelo de previsão (R no início rápido do SQL)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Início rápido: Criar um modelo de previsão usando R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Nesta etapa, você aprenderá a treinar um modelo usando o R e, em seguida, salvar o modelo em uma tabela no SQL Server. O modelo é um modelo de regressão simples que prevê a distância de parada de um carro com base na velocidade. Você usará o `cars` conjunto de dados incluído com R, porque ele é pequeno e fáceis de entender.
+Neste início rápido, você aprenderá a treinar um modelo usando R e, em seguida, salvar o modelo em uma tabela no SQL Server. O modelo é um modelo de regressão simples que prevê a distância de parada de um carro com base na velocidade. Você usará o `cars` conjunto de dados incluído com o R, porque ele é pequeno e fácil de entender.
+
+## <a name="prerequisites"></a>Prerequisites
+
+Um início rápido anterior, [Olá, mundo em R e SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), fornece informações e links para configurar o ambiente de R necessários para este início rápido.
 
 ## <a name="create-the-source-data"></a>Criar os dados de origem
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ Algumas pessoas gostam de usar tabelas temporárias, mas lembre-se de que alguns clientes R desconectarem sessões entre os lotes.
++ Algumas pessoas gostam de usar tabelas temporárias, mas lembre-se de que alguns clientes do R desconectar sessões entre os lotes.
 
 + Vários conjuntos de dados, pequenos e grandes, estão incluídos com o tempo de execução de R. Para obter uma lista de conjuntos de dados instalados com o R, digite `library(help="datasets")` em um prompt de comando de R.
 
@@ -48,7 +53,7 @@ Os requisitos de um modelo linear são simples:
 + Fornecer dados de entrada para usar no treinamento do modelo
 
 > [!TIP]
-> Se você precisar de uma atualização em modelos lineares, é recomendável neste tutorial, que descreve o processo de ajuste de um modelo usando rxLinMod: [modelos lineares de ajuste](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> Se você precisar de um lembrete sobre modelos lineares, recomendamos que este tutorial, que descreve o processo de ajuste de um modelo usando o rxLinMod: [modelos lineares de ajuste](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 Para realmente criar o modelo, você define a fórmula dentro de seu código R e passa os dados como um parâmetro de entrada.
 
@@ -92,7 +97,7 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-Observe que, se você executar esse código uma segunda vez, você receberá esse erro:
+Observe que, se você executar esse código uma segunda vez, você receber esse erro:
 
 ```
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -112,7 +117,7 @@ Normalmente, a saída do R do procedimento armazenado [sp_execute_external_scrip
 
 No entanto, é possível retornar saídas de outros tipos, como escalares, além do quadro de dados.
 
-Por exemplo, suponha que você deseja treinar um modelo, mas exibir imediatamente uma tabela de coeficientes do modelo. Seria possível criar a tabela de coeficientes como o principal conjunto de resultados e transmitir o modelo treinado em uma variável SQL. Você poderia imediatamente novamente usar o modelo ao chamar a variável, ou pode salvar o modelo em uma tabela, conforme mostrado aqui.
+Por exemplo, suponha que você deseja treinar um modelo, mas exibir imediatamente uma tabela de coeficientes do modelo. Seria possível criar a tabela de coeficientes como o principal conjunto de resultados e transmitir o modelo treinado em uma variável SQL. Você imediatamente poderia usar novamente o modelo ao chamar a variável, ou pode salvar o modelo em uma tabela, conforme mostrado aqui.
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -139,16 +144,15 @@ VALUES ('latest model', @model)
 
 ### <a name="summary"></a>Resumo
 
-Lembre-se essas regras para trabalhar com parâmetros SQL e R variáveis `sp_execute_external_script`:
+Lembre-se dessas regras para trabalhar com parâmetros SQL e variáveis do R em `sp_execute_external_script`:
 
-+ Todos os parâmetros SQL mapeados para o script R devem ser listados por nome no _@params_ argumento.
-+ Para transmitir um desses parâmetros, adicione a palavra-chave OUTPUT na lista _@params_.
-+ Depois de listar os parâmetros mapeados, forneça o mapeamento, linha por linha, dos parâmetros SQL para variáveis do R, imediatamente após a lista _@params_.
++ Todos os parâmetros SQL mapeados para o script R devem ser listados por nome na  _\@params_ argumento.
++ A saída de um desses parâmetros, adicione a palavra-chave OUTPUT na  _\@params_ lista.
++ Depois de listar os parâmetros mapeados, forneça o mapeamento, linha por linha, dos parâmetros SQL para variáveis do R, imediatamente após o  _\@params_ lista.
 
-## <a name="next-lesson"></a>Próxima lição
+## <a name="next-steps"></a>Próximas etapas
 
-Agora que você tem um modelo, na etapa final, você aprenderá a gerar previsões com base nele e plotar os resultados.
+Agora que você tem um modelo, o guia de início rápido final, você aprenderá a gerar previsões com base nele e plotar os resultados.
 
-[Prever e plotar com base no modelo](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [Guia de início rápido: Prever e plotar com base no modelo](../tutorials/rtsql-predict-and-plot-from-model.md)

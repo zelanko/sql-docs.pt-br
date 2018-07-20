@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9cbce9de4325e9090e7b607a63e6e899d224420
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8928f3f0a2f40ba97d49887c9f9863ed51a39117
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009574"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101564"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33009574"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**artid**|**Int**|Identifica um artigo.|  
+|**artid**|**int**|Identifica um artigo.|  
 |**colid**|**smallint**|Identifica uma coluna em um artigo.|  
 |**is_udt**|**bit**|Indica se a coluna é uma coluna UDT (User-Defined Data Type). Um valor de **1** indica uma coluna UDT.|  
 |**is_xml**|**bit**|Indica se a coluna é uma **xml** coluna. Um valor de **1** indica uma coluna xml.|  

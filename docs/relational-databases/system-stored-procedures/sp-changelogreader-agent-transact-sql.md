@@ -1,7 +1,7 @@
 ---
 title: sp_changelogreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b3a7d5a86ddbfb5af307c38e20948e5ebc7af383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24e2c08d56ffa85e2b6825cfbd73057014b8249c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991083"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087568"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Altera as propriedades de segurança de um agente Log Reader. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -52,31 +52,31 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_login**=] **'***job_login***'**  
- É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão NULL. *Isso não pode ser alterado para não* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
+ É o logon para a conta sob a qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL. No banco de dados de instância gerenciada do SQL, use uma conta do SQL Server. *Isso não pode ser alterado para um não -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
  [ **@job_password**=] **'***job_password***'**  
- É a senha da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_password* é **sysname**, com um padrão NULL.  
+ É a senha para a conta sob a qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* é **smallint**, com um padrão NULL. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica autenticação do Windows.  
+ É o modo de segurança usado pelo agente ao conectar-se ao Publicador. *publisher_security_mode* está **smallint**, com um padrão NULL. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação, e **1** Especifica a autenticação do Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- É o logon usado na conexão com o Publicador. *publisher_login* é **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* é NULL e *publisher_security_mode* é **1**, em seguida, a conta do Windows especificada na *job_login* é usado quando Conectando-se ao publicador.  
+ É o logon usado na conexão com o Publicador. *publisher_login* está **sysname**, com um padrão NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for NULL e *publisher_security_mode* está **1**, em seguida, a conta do Windows especificada na *job_login* é usado quando conectar-se ao publicador.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
- É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, com um padrão NULL.  
+ É a senha usada ao conectar-se ao Publicador. *publisher_password* está **sysname**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
- [ **@publisher**=] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL. Esse parâmetro só tem suporte para Editores não SQL Server.  
+ [ **@publisher**=] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL. Esse parâmetro só tem suporte para Editores não SQL Server.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -89,7 +89,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changelogreader_agent**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_changelogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

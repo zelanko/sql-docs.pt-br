@@ -14,12 +14,12 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189893"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084648"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página Propriedades Gerais, Relatórios (Gerenciador de Relatórios)
   Use a página Propriedades Gerais para que os relatórios renomeiem, excluam, movam ou substituam a definição do relatório. Você também pode usar essa página para criar um relatório vinculado. Detalhes sobre quem criou ou modificou o relatório e quando as alterações ocorreram são indicados na parte superior da página.  
@@ -37,7 +37,7 @@ ms.locfileid: "37189893"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : @ & = +, $ * \< >  
+ Especifique um nome para o relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< >  
   
  " ou / ao especificar um nome.  
   

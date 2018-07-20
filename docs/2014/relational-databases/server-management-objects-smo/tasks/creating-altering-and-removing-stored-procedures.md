@@ -17,17 +17,17 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3dbd0c9ac5bf18d4c0f53d33cba8ab54f276985
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223176"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082858"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Criando, alterando e removendo procedimentos armazenados
   Na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), procedimentos armazenados são representados pelo <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
- Criando um <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto no SMO exige a configuração de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriedade para o [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define o procedimento armazenado. Parâmetros exigeem o prefixo @ e devem ser criados individualmente usando objetos <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> e adicionando-os à coleção <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> do objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Criando um <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto no SMO exige a configuração de <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriedade para o [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define o procedimento armazenado. Parâmetros exigem o \@ de prefixo e devem ser criados individualmente usando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos e adicionando ao <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> coleção do <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
 ## <a name="example"></a>Exemplo  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual Basic SMO no Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um Visual C&#35; projeto de SMO no Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

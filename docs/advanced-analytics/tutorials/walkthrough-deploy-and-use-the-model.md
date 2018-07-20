@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983008"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085348"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Implantar o modelo de R e usá-lo no SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ Um procedimento armazenado para pontuação do lote foi criado quando você inic
     END
     ```
 
-    + Você pode usar uma instrução SELECT para chamar o modelo armazenado em uma tabela SQL. O modelo é recuperado da tabela de **varbinary (max)** dados armazenados na variável SQL _@lmodel2_e passado como o parâmetro *mod* no sistema armazenados procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Você pode usar uma instrução SELECT para chamar o modelo armazenado em uma tabela SQL. O modelo é recuperado da tabela de **varbinary (max)** dados armazenados na variável SQL  _\@lmodel2_e passado como o parâmetro *mod* no sistema procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenado como uma cadeia de caracteres na variável SQL _@input_. Como os dados são recuperados do banco de dados, ele é armazenado em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro *_@input_data_1_name_*.
+    + Os dados usados como entradas para a pontuação é definida como uma consulta SQL e armazenado como uma cadeia de caracteres na variável SQL  _\@entrada_. Como os dados são recuperados do banco de dados, ele é armazenado em um quadro de dados chamado *InputDataSet*, que é apenas o nome padrão para dados de entrada para o [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimento; você pode definir outro nome de variável, se necessário, usando o parâmetro   *_\@input_data_1_name_*.
 
     + Para gerar as pontuações, o procedimento armazenado chama a função `rxPredict` da biblioteca **RevoScaleR** .
 

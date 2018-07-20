@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48346fe7e8beb4c1885507de48d14889bd6ffee6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 992e5594f208cd64ef48d90f2b29e7018719a6da
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005393"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103714"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33005393"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|A ID do erro.|  
+|**id**|**int**|A ID do erro.|  
 |**time**|**datetime**|A hora da ocorrência do erro.|  
-|**error_type_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**source_type_id**|**Int**|A ID de tipo de origem do erro.|  
+|**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**source_type_id**|**int**|A ID de tipo de origem do erro.|  
 |**source_name**|**nvarchar(100)**|O nome de origem do erro.|  
 |**error_code**|**sysname**|O código do erro.|  
 |**error_text**|**ntext**|A mensagem de erro.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência do log de transações inicial do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
-|**command_id**|**Int**|A ID de comando do lote de execução com falha. Usado somente por Distribution Agents, essa é a ID de comando do primeiro comando do lote de execução com falha.|  
-|**session_id**|**Int**|A ID da sessão de agente na qual ocorreu o erro.|  
+|**command_id**|**int**|A ID de comando do lote de execução com falha. Usado somente por Distribution Agents, essa é a ID de comando do primeiro comando do lote de execução com falha.|  
+|**session_id**|**int**|A ID da sessão de agente na qual ocorreu o erro.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

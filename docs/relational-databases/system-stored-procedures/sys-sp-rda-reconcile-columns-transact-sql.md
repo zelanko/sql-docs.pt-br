@@ -19,12 +19,12 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e53540b06850f380f6ea5cfe80ea7cc33455fd7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fe05d88b6453bd9918b5777b3f52291ec9fefc2c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414205"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087938"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  O nome da tabela do SQL Server habilitados para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

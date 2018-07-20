@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda79bde63b4f9ca7b33348374cd00e92d79c1a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd6d30b4af38bfde278e22da916f12d8639a2a82
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005163"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102434"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "33005163"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**publication_id**|**Int**|Identifica a publicação para a qual um limite foi definido.|  
-|**metric_id**|**Int**|Identifica uma métrica de desempenho de replicação sendo monitorada como definida no [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) tabela do sistema.|  
+|**publication_id**|**int**|Identifica a publicação para a qual um limite foi definido.|  
+|**metric_id**|**int**|Identifica uma métrica de desempenho de replicação sendo monitorada como definida na [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) tabela do sistema.|  
 |**value**|**sql_variant**|O valor de limite da métrica que está sendo monitorada.|  
 |**shouldalert**|**bit**|Um valor de **1** indica que um alerta deve ser gerado quando a métrica excede o limite definido.|  
 |**IsEnabled**|**bit**|Um valor de **1** indica que o monitoramento está habilitado para esta métrica de desempenho de replicação.|  

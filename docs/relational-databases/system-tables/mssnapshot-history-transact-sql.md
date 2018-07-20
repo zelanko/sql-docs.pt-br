@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc94c56dd1d0caa7972bda84ddd5f6ef14bcdd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 632149e8d813c0f247ea069386d963906ce90b97
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005913"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102054"
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33005913"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**Int**|A ID do Snapshot Agent.|  
-|**runstatus**|**Int**|O status da execução:<br /><br /> **1** = iniciar.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
+|**agent_id**|**int**|A ID do Snapshot Agent.|  
+|**runstatus**|**int**|O status da execução:<br /><br /> **1** = início.<br /><br /> **2** = êxito.<br /><br /> **3** = em andamento.<br /><br /> **4** = ocioso.<br /><br /> **5** = repetição.<br /><br /> **6** = falha.|  
 |**start_time**|**datetime**|A hora inicial de execução do trabalho.|  
 |**time**|**datetime**|A hora de registro da mensagem.|  
-|**duration**|**Int**|A duração, em segundos, da sessão de mensagem.|  
+|**duration**|**int**|A duração, em segundos, da sessão de mensagem.|  
 |**Comentários**|**nvarchar(255)**|O texto da mensagem.|  
-|**delivered_transactions**|**Int**|O número total de transações entregues na sessão.|  
-|**delivered_commands**|**Int**|O número de comandos entregues por segundo.|  
+|**delivered_transactions**|**int**|O número total de transações entregues na sessão.|  
+|**delivered_commands**|**int**|O número de comandos entregues por segundo.|  
 |**delivery_rate**|**float(53)**|A média de comandos entregues por segundo.|  
-|**error_id**|**Int**|A ID do erro no [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) tabela do sistema.|  
+|**error_id**|**int**|A ID do erro na [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) tabela do sistema.|  
 |**timestamp**|**timestamp**|A coluna de carimbo de data e hora dessa tabela.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272312"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083019"
 ---
 # <a name="upload-file-page-report-manager"></a>Página Carregar Arquivo (Gerenciador de Relatórios)
   Use a página Carregar Arquivo para publicar um arquivo do sistema de arquivos no banco de dados do servidor de relatório. Arquivos carregados são representados como itens na hierarquia de pasta de servidor de relatório.  
@@ -54,7 +54,7 @@ ms.locfileid: "37272312"
  Clique para escolher um arquivo do sistema de arquivos.  
   
  **Nome**  
- Digite o nome do arquivo como ele aparecerá no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : @ & = +, $ * \< > | "ou / ao especificar um nome de item.  
+ Digite o nome do arquivo como ele aparecerá no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< > | "ou / ao especificar um nome de item.  
   
  **Substituir item, se ele existir**  
  Marque esta caixa de seleção se você quiser substituir um item existente por uma versão mais nova. Para substituir uma versão existente, o nome do novo item e o item existente devem corresponder exatamente.  

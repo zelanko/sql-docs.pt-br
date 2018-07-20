@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968758"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164207"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968758"
 Retorna uma única linha descrevendo a configuração do objeto de trabalho que gerencia o processo do SQL Server, bem como algumas estatísticas de consumo de recursos no nível do objeto de trabalho. Retorna um conjunto vazio se o SQL Server não está em execução em um objeto de trabalho. 
 
 Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
-
-> [!NOTE]
-> O sys.dm_os_job_object DMV atualmente pode aparecer como sys.dm_job_object. Isso é temporário: `sys.dm_os_job_object` será o nome permanente desse DMV. 
   
 |Colunas|Tipo de Dados|Description|  
 |-------------|---------------|-----------------|  

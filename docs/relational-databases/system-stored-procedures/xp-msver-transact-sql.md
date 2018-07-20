@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb4961a51a7a4104fd47b64544727eb609618da4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d35365cc3c1891521635b463d795c98af97f1ea
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261162"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103644"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna informações sobre versão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **xp_msver** também retorna informações sobre o número de compilação do servidor e informações sobre o ambiente de servidor. As informações que **xp_msver** retorna pode ser usada em [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, lotes, procedimentos armazenados e assim por diante, para aperfeiçoar a lógica de código independente de plataforma.  
+  Retorna informações sobre versão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **xp_msver** também retorna informações sobre o número de build real do servidor e informações sobre o ambiente de servidor. As informações que **xp_msver** retorna pode ser usada em [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, lotes, procedimentos armazenados e assim por diante, para aperfeiçoar a lógica de código independente da plataforma.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +73,7 @@ xp_msver [ optname ]
  1 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- **xp_msver**, sem nenhum parâmetro, retorna um conjunto de resultados de quatro colunas que lista todos os valores de opção. **xp_msver**, para qualquer parâmetro, retorna o resultado de quatro colunas com valores para essa opção.  
+ **xp_msver**, sem nenhum parâmetro, retorna um conjunto de resultados de quatro colunas que lista todos os valores de opção. **xp_msver**, para qualquer parâmetro, retorna o resultado de quatro colunas definidas com valores para essa opção.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

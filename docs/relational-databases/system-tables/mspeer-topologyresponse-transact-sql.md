@@ -22,16 +22,16 @@ helpviewer_keywords:
 - MSpeer_topologyresponse
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8deee6f30e06be53994f61d28dce6759ec216aa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0a7f1b39d87855a59cd5b7c4c366edc3192b953
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005243"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102074"
 ---
 # <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "33005243"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|request_id|**Int**|Identifica uma entrada de solicitação de status de topologia no [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabela.|  
+|request_id|**int**|Identifica uma entrada de solicitação de status de topologia na [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabela.|  
 |peer|**sysname**|O nome do instância do servidor que gerou a resposta.|  
-|peer_version|**Int**|Identifica o número da versão do Publicador.|  
+|peer_version|**int**|Identifica o número da versão do Publicador.|  
 |peer_db|**sysname**|Banco de dados de assinatura no nível que gerou a resposta.|  
-|originator_id|**Int**|Identifica cada nó na topologia com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|peer_conflict_retention|**Int**|Período de tempo, em dias, que os metadados são armazenados em tabelas de conflitos.|  
+|originator_id|**int**|Identifica cada nó na topologia com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|peer_conflict_retention|**int**|Período de tempo, em dias, que os metadados são armazenados em tabelas de conflitos.|  
 |received_date|**datetime**|Hora na qual a solicitação de topologia foi recebida.|  
 |connection_info|**xml**|Informações sobre o nó que respondeu à solicitação.|  
   

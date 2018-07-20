@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00873769699c217a3efc2b20458e3e8b594f68af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c1a2f38666d48127b68211fc62b7de9ebaf5aa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005723"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103674"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33005723"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|id|**Int**|Identifica uma solicitação.|  
+|id|**int**|Identifica uma solicitação.|  
 |publication|**sysname**|Nome da publicação para a qual a solicitação de status foi iniciada.|  
 |sent_date|**datetime**|Data e hora em que a solicitação de status foi iniciada.|  
 |descrição|**nvarchar(4000)**|Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais.|  

@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936461"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087888"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "32936461"
   
 -  
   
- Depois que o procedimento armazenado estendido DLL é carregada, a DLL permanece carregada no espaço de endereço do servidor até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está parado ou o administrador Descarregue explicitamente usando DBCC *DLL_name* (FREE).  
+ Depois que o procedimento armazenado estendido DLL é carregada, a DLL permanece carregada no espaço de endereço do servidor de até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for interrompido ou o administrador a Descarregue explicitamente o DLL usando DBCC *DLL_name* (gratuito).  
   
  O procedimento armazenado estendido pode ser executado a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] como um procedimento armazenado usando a instrução EXECUTE:  
   
@@ -53,13 +53,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- @ *retval*  
+ \@ *retval*  
  É um valor de retorno.  
   
- @ *param1*  
+ \@ *param1*  
  É um parâmetro de entrada.  
   
- @ *param2*  
+ \@ *param2*  
  É um parâmetro de entrada/saída.  
   
 > [!CAUTION]  

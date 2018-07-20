@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227406"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084058"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "37227406"
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
 |sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM`  *\< nome_da_função >*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
-|'@' e nomes que começam com '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Um identificador que começa com @ ou @@ foi encontrado. Não use @, @@ ou nomes que comecem com @@ como identificadores. Ocorre uma vez por compilação.|  
+|'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
 |ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice'`tape`' foi encontrado. Use sp_addumpdevice'`disk`' em vez disso. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227406"
 |sp_defaultlanguage|O procedimento sp_defaultlanguage foi encontrado. Em vez disso, use ALTER LOGIN. Ocorre uma vez por compilação.|  
 |sp_denylogin|O procedimento sp_denylogin foi encontrado. Em vez disso, use ALTER LOGIN DISABLE. Ocorre uma vez por consulta.|  
 |sp_depends|O procedimento sp_depends foi encontrado. Use sys.dm_sql_referencing_entities e sys.dm_sql_referenced_entities em vez disso. Ocorre uma vez por consulta.|  
-|sp_detach_db @keepfulltextindexfile|O argumento @keepfulltextindexfile foi encontrado em uma instrução sp_detach_db. Não use este argumento.|  
+|sp_detach_db \@keepfulltextindexfile|O argumento \@keepfulltextindexfile foi encontrado em uma instrução sp_detach_db. Não use este argumento.|  
 |sp_dropalias|O procedimento sp_dropalias foi encontrado. Substitua aliases por uma combinação de contas de usuário e funções de banco de dados. Use sp_dropalias para remover aliases em bancos de dados atualizados. Ocorre uma vez por compilação.|  
 |sp_dropapprole|O procedimento sp_dropapprole foi encontrado. Em vez disso, use DROP APPLICATION ROLE. Ocorre uma vez por consulta.|  
 |sp_dropextendedproc|O procedimento sp_dropextendedproc foi encontrado. Em vez disso, use CLR. Ocorre uma vez por compilação.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227406"
 |sp_fulltext_catalog|O procedimento sp_fulltext_catalog foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT CATALOG. Ocorre uma vez por compilação.|  
 |sp_fulltext_column|O procedimento sp_fulltext_column foi encontrado. Em vez disso, use ALTER FULLTEXT INDEX. Ocorre uma vez por compilação.|  
 |sp_fulltext_database|O procedimento sp_fulltext_database foi encontrado. Em vez disso, use ALTER DATABASE. Ocorre uma vez por compilação.|  
-|sp_fulltext_service @action=clean_up|A opção clean_up do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
-|sp_fulltext_service @action=connect_timeout|A opção connect_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
-|sp_fulltext_service @action=data_timeout|A opção data_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
-|sp_fulltext_service @action=resource_usage|A opção resource_usage do procedimento sp_fulltext_service foi encontrada. Essa opção não tem nenhuma função. Ocorre uma vez por consulta.|  
+|sp_fulltext_service \@action=clean_up|A opção clean_up do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
+|sp_fulltext_service \@action=connect_timeout|A opção connect_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
+|sp_fulltext_service \@action=data_timeout|A opção data_timeout do procedimento sp_fulltext_service foi encontrada. Ocorre uma vez por consulta.|  
+|sp_fulltext_service \@action=resource_usage|A opção resource_usage do procedimento sp_fulltext_service foi encontrada. Essa opção não tem nenhuma função. Ocorre uma vez por consulta.|  
 |sp_fulltext_table|O procedimento sp_fulltext_table foi encontrado. Em vez disso, use CREATE/ALTER/DROP FULLTEXT INDEX. Ocorre uma vez por compilação.|  
 |sp_getbindtoken|O procedimento sp_getbindtoken foi encontrado. Em vez disso, use MARS (vários conjuntos de resultados ativos) ou transações distribuídas. Ocorre uma vez por compilação.|  
 |sp_grantdbaccess|O procedimento sp_grantdbaccess foi encontrado. Em vez disso, use CREATE USER. Ocorre uma vez por consulta.|  

@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38afed73fdee3817e632c02a0584d960d589fe8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3b246b0c174838529dd5e0c6c38bd633c0a90b8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004313"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101374"
 ---
 # <a name="msagentprofiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSagent_profiles** tabela contém uma linha para cada perfil de agente de replicação definido. Essa tabela é armazenada no **msdb** banco de dados.  
+  O **MSagent_profiles** tabela contém uma linha para cada perfil de agente de replicação definido. Essa tabela é armazenada na **msdb** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**Int**|A ID do perfil.|  
+|**profile_id**|**int**|A ID do perfil.|  
 |**profile_name**|**sysname**|O nome de perfil exclusivo para tipo de agente.|  
-|**agent_type**|**Int**|O tipo de agente:<br /><br /> **1** = o agente de instantâneo<br /><br /> **2** = o log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
-|**type**|**Int**|O tipo de perfil:<br /><br /> **0** = sistema**1** = personalizado|  
+|**agent_type**|**int**|O tipo de agente:<br /><br /> **1** = o agente de instantâneo<br /><br /> **2** = log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
+|**type**|**int**|O tipo de perfil:<br /><br /> **0** = system**1** = personalizado|  
 |**Descrição**|**nvarchar(3000)**|A descrição do perfil.|  
 |**def_profile**|**bit**|Especifica se este perfil será o padrão para esse tipo de agente.|  
   

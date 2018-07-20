@@ -22,31 +22,31 @@ helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad83b251629b87a85da723a0d7db2875c8c45462
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4643b0ba6bdfd9eea4405be02ca481133f0db096
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005213"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101554"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_contents** tabela contém uma linha para cada linha modificada no banco de dados atual desde que foi publicado. Essa tabela é usada pelo processo de mesclagem para determinar as linhas que foram alteradas. Essa tabela é armazenada nos bancos de dados de publicação e assinatura.  
+  O **MSmerge_contents** tabela contém uma linha para cada linha modificada no banco de dados atual desde que foi publicado. Essa tabela é usada pelo processo de mesclagem para determinar as linhas que foram alteradas. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**Int**|O apelido da tabela publicada.|  
+|**tablenick**|**int**|O apelido da tabela publicada.|  
 |**ROWGUID**|**uniqueidentifier**|O identificador para a linha determinada.|  
-|**Geração**|**bigint**|A geração da linha identificada pelo **tablenick** e **rowguid**.|  
+|**geração**|**bigint**|A geração da linha identificada pelo **tablenick** e **rowguid**.|  
 |**partchangegen**|**bigint**|A geração associada à última alteração de dados que poderia ter sido alterada se a linha pertencesse a uma publicação filtrada.|  
 |**linhagem**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações nessa linha.|  
 |**colvl**|**varbinary(7489)**|As informações de versão da coluna.|  
-|**Marcador**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica a linha pai de alto nível em **MSmerge_contents** (por **rowguid**) para cada linha filho correspondente em um registro lógico.|  
+|**marcador**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica a linha pai de alto nível **MSmerge_contents** (por **rowguid**) para cada linha filho correspondente em um registro lógico.|  
 |**logical_record_lineage**|**varbinary(501)**|O apelido do Assinante, pares de números de versão que são usados para manter um histórico das alterações na linha pai de alto nível em um registro lógico. Para todas as linhas filho em um registro lógico, esse valor é NULL.|  
 |**logical_relation_change_gen**|**bigint**|O valor de geração associado à última alteração que causou realinhamento no registro lógico, onde uma linha existente foi movida para dentro ou fora de um registro lógico.|  
   

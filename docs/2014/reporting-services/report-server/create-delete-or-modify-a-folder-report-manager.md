@@ -21,12 +21,12 @@ caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccfded2316c40eaede10cfcc366025c55dec589c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177263"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084711"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Criar, excluir ou modificar uma pasta (Gerenciador de Relatórios)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
@@ -39,7 +39,7 @@ ms.locfileid: "37177263"
   
      A página **Nova Pasta** será aberta.  
   
-3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : @ & = +, $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = +, $ / * \< > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
 4.  Como opção, digite uma descrição.  
   

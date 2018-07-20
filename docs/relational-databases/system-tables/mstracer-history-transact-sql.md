@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8c7755a6a09be5aebe2d815a8b4dfe9178bab04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6530c5da824206efb907999ffc3ae16e77399fca
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004763"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101244"
 ---
 # <a name="mstracerhistory-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "33004763"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**parent_tracer_id**|**Int**|Identifica com exclusividade um token de rastreamento.|  
-|**agent_id**|**Int**|Identifica o agente que tratou o registro de token de rastreamento.|  
+|**parent_tracer_id**|**int**|Identifica com exclusividade um token de rastreamento.|  
+|**agent_id**|**int**|Identifica o agente que tratou o registro de token de rastreamento.|  
 |**subscriber_commit**|**datetime**|A data e hora em que o registro de token de rastreamento foi confirmado no Assinante.|  
   
 ## <a name="see-also"></a>Consulte também  
