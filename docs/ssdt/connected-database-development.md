@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
@@ -16,12 +16,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3867162e302fdf119d8f4b7f728d9f31ef0e96ee
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: bf0953bf3b5de20f697ca5b8c4ba15235b3e4b20
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093612"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085038"
 ---
 # <a name="connected-database-development"></a>Desenvolvimento de banco de dados conectado
 Esta seção descreve os recursos fornecidos pelo SQL Server Data Tools para criar e consultar um banco de dados conectado.  

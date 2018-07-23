@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bafb27ae13609989820cc8ad9f8ba121e30036ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045773"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980428"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ O operador à prova de falhas é um recurso de segurança. Não é possível exc
 |-|-|  
 |**Tarefas**|**Tópico**|  
 |Tarefas relacionadas à criação de um operador|[Criar um operador](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093669"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085938"
 ---
 # <a name="transact-sql-editor-options"></a>Opções do Editor do Transact-SQL
 Este tópico contém informações sobre algumas das opções do Editor Transact-SQL. Para definir essas opções, navegue até a caixa de diálogo **Opção** pelo menu **Ferramentas\Opções**.  

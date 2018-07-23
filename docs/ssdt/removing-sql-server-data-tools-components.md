@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f8ddb919-661f-4868-8c71-87c96f1f4487
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 124b4f4f591966d8dc5294f3150892091f71ba74
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 3a3fcb24fc18812b139dfe49376699e83607f16d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093652"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087538"
 ---
 # <a name="removing-sql-server-data-tools-components"></a>Removendo componentes do SQL Server Data Tools
 Alguns componentes do SSDT (SQL Server Data Tools) não são removidos quando você desinstala o SSDT ou o Visual Studio.  

@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e43a42c781ae0133f7d1644d6ea0c82e3197bef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054713"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981798"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Mostra o nome da fonte dos dados para a coluna selecionada. (Aplica-se somente a
 Expande para mostrar as propriedades restantes.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento de Identidade**  
 Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
@@ -99,7 +99,7 @@ Exibe o nome da coluna. Para editar o nome, digite-o na caixa de texto.
 Mostra se o tipo de dados da coluna permite ou não valores nulos.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Valor Padrão ou Associação**  
 Mostra o padrão para essa coluna quando nenhum valor for especificado para essa coluna. A lista suspensa contém todos os padrões gerais definidos na fonte de dados. Para associar a coluna a um padrão geral, faça a seleção na lista suspensa. Alternativamente, para criar uma restrição padrão para a coluna, digite o valor padrão diretamente como texto.  
@@ -147,7 +147,7 @@ Mostra que coluna é usada para definir o tipo de documento de uma coluna do tip
 Indica a linguagem usada para indexar a coluna.  
   
 **Semântica Estatística**  
-Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será definida como **Não** e não poderá ser modificada. Se você selecionar **Sim** na opção **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na coluna **Idioma** serão restringidos a esses para os quais o Modelo de Idioma Semântico oferece suporte.  
   

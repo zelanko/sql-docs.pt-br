@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
 - sql.data.tools.dacsettings.dialog
@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf95f469cd5a94514d0e91d13ef7b9125c1531f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093663"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087188"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -213,8 +213,8 @@ Além disso, a publicação de linha de comando permite que você substitua esse
   
 |Campo|Valor padrão|Descrição|  
 |---------|-----------------|---------------|  
-|Linha de comando de evento de pré-compilação|Nenhum|Especifica que a linha de comando deve ser executada antes do projeto ser compilado. Clique em **Editar Pré-compilação** para modificar a linha de comando.|  
-|Linha de comando de eventos pós-compilação|Nenhum|Especifica que a linha de comando deve ser executada depois do projeto ser compilado. Clique em **Editar Pós-compilação** para modificar a linha de comando.|  
+|Linha de comando de evento de pré-compilação|None|Especifica que a linha de comando deve ser executada antes do projeto ser compilado. Clique em **Editar Pré-compilação** para modificar a linha de comando.|  
+|Linha de comando de eventos pós-compilação|None|Especifica que a linha de comando deve ser executada depois do projeto ser compilado. Clique em **Editar Pós-compilação** para modificar a linha de comando.|  
 |Executar o evento pós-compilação|Na compilação bem-sucedida|Especifica se a linha de comando pós-compilação deve ser executada sempre, apenas se a compilação for bem-sucedida ou apenas quando a compilação atualizar a saída do projeto (o script de compilação).|  
   
 ## <a name="bkmk_debug"></a>Depurador  
@@ -222,7 +222,7 @@ Além disso, a publicação de linha de comando permite que você substitua esse
   
 |Campo|Valor padrão|Descrição|  
 |---------|-----------------|---------------|  
-|Iniciar Ação|Nenhum|Especifica um script ou um programa externo para execução quando você depura seu projeto.|  
+|Iniciar Ação|None|Especifica um script ou um programa externo para execução quando você depura seu projeto.|  
 |Cadeia de Conexão de Destino|Fonte de Dados=(localdb)\\*SolutionName*;Catálogo Inicial=*DatabaseProjectName*;Segurança Integrada=True;Pooling=False;Tempo Limite de Conexão=30|Especifica as informações de conexão do servidor de banco de dados de destino para a configuração da compilação especificada. A cadeia de conexão padrão é em relação a uma instância e banco de dados LocalDB do SQL Server criados localmente.|  
 |Implantar propriedades do banco de dados|Sim|Especifica se as configurações de DatabaseProperties.DatabaseProperties são implantadas ou atualizadas quando você compila ou implanta o projeto de banco de dados.|  
 |Sempre recriar banco de dados|não|Especifica se o banco de dados será cancelado e recriado em vez da execução de uma atualização incremental. Você pode selecionar essa caixa de seleção se desejar executar testes de unidade de banco de dados em uma implantação limpa do banco de dados, por exemplo. Se a caixa de seleção for limpa, o banco de dados existente será atualizado, em vez de ser removido e recriado.|  

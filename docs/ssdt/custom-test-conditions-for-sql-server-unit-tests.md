@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 807b718aaf84ed3760ba6b4bcece880ca73e6bc6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8f42e25023a989489000b124a653beb69c1afb33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093606"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082558"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Condições de teste personalizadas para testes de unidade do SQL Server
 Você pode adicionar condições de teste personalizadas para testes de unidade do SQL Server. No entanto, você deve primeiro instalar a condição de teste antes de usá-la, se criou a extensão ou se estiver instalando uma que alguém criou.  

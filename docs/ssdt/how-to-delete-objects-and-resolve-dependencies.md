@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d734b9d8e200742e9dae7363e0d1559a99b7532
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093658"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082688"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Como: Excluir objetos e resolver dependências
 Quando você renomear ou excluir um objeto no **Pesquisador de Objetos do SQL Server**, o SQL Server Data Tools detectará automaticamente todos os seus objetos de dependência e preparará um script ALTER para renomear ou remover a dependência conforme necessário.  

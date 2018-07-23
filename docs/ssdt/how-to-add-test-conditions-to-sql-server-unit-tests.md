@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e341b085f4a7ca591e02328db1bda8fae75a4ed
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 86e450a6eb6c1e169d5c9dc6147f0ab3cc2a9fb6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093621"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085428"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Como: Adicionar condições de teste a testes de unidade do SQL Server
 Você pode adicionar condições de teste a um teste de unidade do SQL Server usando o **Designer de Teste de Unidade do SQL Server**. Quando você salvar a classe de teste, as condições de teste serão salvas automaticamente no projeto de teste como código Visual C\# ou Visual Basic no arquivo de código-fonte contendo a classe de teste. Após salvar uma condição de teste, você poderá editá-la no **Designer de Teste de Unidade do SQL Server** ou em seu arquivo de código-fonte.  

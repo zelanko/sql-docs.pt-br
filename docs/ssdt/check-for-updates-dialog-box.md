@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.checkforupdates.dialog
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ef36bab7a60398bec26d7a5462b8cf567f6d645
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 6d1a1dba5f6d1cd0bdc86500ac68c67693e04fdf
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093593"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088378"
 ---
 # <a name="check-for-updates-dialog-box"></a>Caixa de diálogo Verificar Atualizações
 Com a versão de novembro de 2012 do SQL Server Data Tools, você verá a opção de menu **Verificar Atualizações** no menu **SQL**.  

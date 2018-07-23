@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
@@ -17,12 +17,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab9468ad6bc1e8d29ce040ceb66392dff3764fe4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 34430ec8b9da41806e86a0b7fa6de99057765aca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093635"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088298"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Como: Criar um instantâneo de um projeto
 Um arquivo de **Aplicativo da camada de dados** fornece uma representação somente leitura do esquema de banco de dados no momento em que ele é criado. Ele está sendo tratado basicamente como um esquema de banco de dados do qual você pode importar os objetos de esquema de volta para um projeto. Você também pode compará-lo com o esquema de um banco de dados ou um projeto e atualizar o banco de dados ou o projeto para refletir o esquema definido no instantâneo.  

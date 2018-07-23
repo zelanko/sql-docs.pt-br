@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042003"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985308"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ Considere as seguintes questões ao criar um ambiente multisservidor:
 ## <a name="related-tasks"></a>Related Tasks  
 Os tópicos a seguir documentam tarefas comuns de criação de um ambiente multisservidor.  
   
-|Description|Tópico|  
+|Descrição|Tópico|  
 |---------------|---------|  
 |Descreve como criar um servidor mestre.|[Criar um servidor mestre](../../ssms/agent/make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](../../ssms/agent/make-a-target-server.md)|  
 |Descreve como inscrever um servidor de destino em um servidor mestre.|[Inscrever um servidor de destino em um servidor mestre](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |Descreve como cancelar a inscrição de um servidor de destino de um servidor mestre.|[Remover um servidor de destino de um servidor mestre](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |Descreve como cancelar a inscrição de vários servidores de destino de um servidor mestre.|[Remover vários servidores de destino de um servidor mestre](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|Descreve como verificar o status de um servidor de destino.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|Descreve como verificar o status de um servidor de destino.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Solucionar problemas de trabalhos com multisservidor que usam proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

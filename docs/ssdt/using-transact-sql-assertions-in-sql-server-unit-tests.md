@@ -8,25 +8,25 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe428b40676e90d7ed849e1d93c69c9797cf126e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1fb4f10489c1284625b8797381d914291bc2eb1d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093650"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088338"
 ---
-# <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usar asserções Transact-SQL nos testes de unidade do SQL Server
+# <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
 Em um teste de unidade do SQL Server, um script de teste Transact\-SQL executa e retorna um resultado. Muitas vezes, os resultados são retornados como um conjunto de resultados. Você pode validar resultados usando condições de teste. Por exemplo, você pode usar uma condição de teste para verificar quantas linhas foram retornadas em um conjunto de resultados específico ou para verificar quanto tempo um teste específico levou para ser executado. Para saber mais sobre as condições de teste, confira [Usar as condições de teste em Testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
   
 Em vez de usar as condições de teste, você também pode usar as asserções Transact\-SQL, que são instruções THROW ou RAISERROR em um script Transact\-SQL. Em determinadas circunstâncias, talvez você prefira usar uma asserção Transact\-SQL, em vez de uma condição de teste.  
   
-## <a name="using-transact-sql-assertions"></a>Usar asserções Transact-SQL  
+## <a name="using-transact-sql-assertions"></a>Usando asserções Transact-SQL  
 Considere os seguintes pontos antes de decidir validar dados usando asserções Transact\-SQL ou condições de teste.  
   
 -   **Desempenho**. É mais rápido executar uma asserção Transact\-SQL no servidor do que mover primeiro dados para um computador cliente e manipulá-los localmente.  
@@ -86,7 +86,7 @@ Para saber mais, confira [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/li
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Usando condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
+[Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Como abrir um teste de unidade do SQL Server para edição](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de9d91db8df1f55f59700d1a2a5cced94b560a49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c9d9d4e97c43c01ce71f9f30fdad93fd7e4a821
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045143"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982938"
 ---
 # <a name="view-information-about-an-alert"></a>Exibir informações sobre um alerta
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -100,5 +100,5 @@ Por padrão, os membros da função de servidor fixa **sysadmin** podem exibir a
     GO  
     ```  
   
-Para obter mais informações, veja [sp_help_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/850cef4e-6348-4439-8e79-fd1bca712091).  
+Para obter mais informações, veja [sp_help_alert (Transact-SQL)](http://msdn.microsoft.com/850cef4e-6348-4439-8e79-fd1bca712091).  
   

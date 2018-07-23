@@ -8,20 +8,20 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9def185eb7e584123b68913ce5be1c576807adf
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 9c0953156c0f3c002ea3f08ab7e18d6544eb667b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093603"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083208"
 ---
-# <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verificar o código do banco de dados usando os testes de unidade do SQL Server
+# <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verificando o código do banco de dados usando os testes de unidade do SQL Server
 Você pode usar os testes de unidade do SQL Server para estabelecer um estado de linha de base para o banco de dados e verificar todas as alterações subsequentes feitas nos objetos de banco de dados.  
   
 Para estabelecer um estado de linha de base para um banco de dados, você cria um projeto de teste e escreve conjuntos de Transact\-SQL que operam em seus objetos de banco de dados. Ao usar esses testes, você pode verificar em um ambiente de desenvolvimento isolado se esses objetos funcionam conforme o esperado. O teste de unidade do SQL Server funciona bem em combinação com o desenvolvimento do banco de dados offline usando projetos de banco de dados do SQL Server (confira [Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md) para obter mais informações). Assim que você tiver a linha de base definida dos testes de unidade do SQL Server, poderá usar esses testes para verificar se o banco de dados está funcionando corretamente antes de fazer check-in das alterações para o controle de versão.  

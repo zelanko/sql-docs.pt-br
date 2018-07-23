@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d59e3448b3e833adacab7b37708725e8ff36864
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045823"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984008"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ Detalhes do Pesquisador de Objetos dá suporte à seleção de vários objetos. 
 ## <a name="sql-server-object-search"></a>Pesquisa de objetos do SQL Server  
 Curingas  
   
--   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
   
 Escopo de pesquisa  
   

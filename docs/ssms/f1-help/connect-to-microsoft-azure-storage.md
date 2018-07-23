@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c43f3a3e6c717947859e9cbfc1b2de0197129c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97950c37c5cff52f049253bbd85a60d5373d724
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039953"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980048"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Especifique as informações a seguir sobre sua conta do Windows Azure e clique 
 1.  **Conta de Armazenamento** – Especifique o nome da conta de armazenamento.
 
    >[!NOTE]
-   > Você só pode se conectar a [Contas de Armazenamento de Uso Geral](https://docs.microsoft.com/en-us/azure/storage/storage-introduction#introducing-the-azure-storage-services). Conectar-se a outros tipos de contas de armazenamento pode gerar um erro similar ao seguinte:
+   > Você só pode se conectar a [Contas de Armazenamento de Uso Geral](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services). Conectar-se a outros tipos de contas de armazenamento pode gerar um erro similar ao seguinte:
    >
    >  O valor de um dos cabeçalhos HTTP não está no formato correto. (Microsoft.SqlServer.StorageClient).
    >

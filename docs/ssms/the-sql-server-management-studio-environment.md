@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046643"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981309"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>O ambiente do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ Resume os recursos gerais da interface do usuário, como o Gerenciador de Soluç
 [Gerenciador de Soluções](../ssms/solution/solution-explorer.md)  
 Introduz o Gerenciador de Soluções, que proporciona a você uma exibição organizada de seus projetos e arquivos, além de acesso imediato aos comandos para gerenciamento deles.  
   
-[Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/library/ms173879.aspx)  
 Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] se integra a produtos de controle do código-fonte.  
   

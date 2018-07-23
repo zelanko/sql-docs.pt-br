@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1476ab23a36faee220445218470c25713a47ebac
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093642"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088438"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Como criar um teste de unidade do SQL Server vazio
 Inclua os testes de unidade no projeto de banco de dados verificar se as alterações feitas nos objetos de banco de dados não prejudicam a funcionalidade existente. Os procedimentos a seguir explicam como criar testes de unidade SQL Server para qualquer objeto de banco de dados. O SQL Server Data Tools inclui suporte adicional para procedimentos armazenados, gatilhos e funções de banco de dados. Para saber mais, confira [Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
