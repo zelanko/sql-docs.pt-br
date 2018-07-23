@@ -1,7 +1,7 @@
 # [Microsoft JDBC Driver para SQL Server](microsoft-jdbc-driver-for-sql-server.md)
 
 # [Exemplos de código JDBC +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
-# [Referência do JDBC +](../../connect/jdbc/reference/datetimeoffset-class.md)
+# [Referência de API do JDBC +](reference/jdbc-driver-api-reference.md)
 
 # [Introdução ao driver JDBC](getting-started-with-the-jdbc-driver.md)
 ## [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java](step-1-configure-development-environment-for-java-development.md)
