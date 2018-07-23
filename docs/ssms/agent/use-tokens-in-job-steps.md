@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046033"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971358"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
   
 ### <a name="sql-server-agent-tokens"></a>Tokens do SQL Server Agent  
   
-|Token|Description|  
+|Token|Descrição|  
 |---------|---------------|  
 |**(A-DBN)**|Nome do banco de dados. Se o trabalho é executado por um alerta, o valor de nome de banco de dados substitui este token automaticamente na etapa de trabalho.|  
 |**(A-SVR)**|Nome de servidor. Se o trabalho é executado por um alerta, o valor de nome de servidor substitui este token automaticamente na etapa de trabalho.|  
@@ -97,7 +97,7 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de fuga do SQL Server Agent  
   
-|Macros de fuga|Description|  
+|Macros de fuga|Descrição|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|Ignora aspas simples (') na cadeia de caracteres de substituição do token. Substitui um aspa simples por duas aspas simples.|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|Ignora aspas duplas (") na cadeia de caracteres de substituição do token. Substitui um aspa dupla por duas aspas duplas.|  
