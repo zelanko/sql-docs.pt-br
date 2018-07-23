@@ -29,7 +29,7 @@
 ## SQL Server 2016
 ### [R Services (no Banco de Dados)](install/sql-r-services-windows-install.md)
 ### [R Server (Autônomo)](install/sql-r-standalone-windows-install.md)
-## [Modelos previamente treinados](r/install-pretrained-models-sql-server.md)
+## [Modelos previamente treinados](install/sql-pretrained-models-install.md)
 ## [Instalação de prompt de comando](install/sql-ml-component-commandline-install.md)
 ## [Instalação offline (sem Internet)](install/sql-ml-component-install-without-internet-access.md)
 ## [Atualizar R e Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
