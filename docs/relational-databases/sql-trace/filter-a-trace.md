@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974211"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046204"
 ---
 # <a name="filter-a-trace"></a>Filtrar um rastreamento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974211"
   
  A disponibilidade do filtro depende da coluna de dados. Algumas colunas de dados não podem ser filtradas. As colunas de dados que podem ser filtradas só o podem por certos operadores relacionais, como mostra a tabela a seguir.  
   
-|Operador relacional|Símbolo do operador|Description|  
+|Operador relacional|Símbolo do operador|Descrição|  
 |-------------------------|---------------------|-----------------|  
 |Como|Como|Especifica que os dados de evento de rastreamento devem ser semelhantes ao texto digitado. Permite vários valores.|  
 |Não semelhante a|Não semelhante a|Especifica que os dados de evento de rastreamento não devem ser semelhantes ao texto digitado. Permite vários valores.|  

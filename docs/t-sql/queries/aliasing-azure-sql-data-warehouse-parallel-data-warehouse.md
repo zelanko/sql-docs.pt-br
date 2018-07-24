@@ -14,11 +14,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4762900ff07c7849e7f058915573ca33bc4c1093
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045884"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

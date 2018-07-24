@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27a3a66a9fb4b31e96f7a09082ba6867b36be722
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046294"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>Relacionamento de Sincronização de Entidade (Master Data Services)
 

@@ -34,11 +34,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040034"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

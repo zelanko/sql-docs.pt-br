@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 7ede7699a0b15129cc4ffc23a8768beda28a7611
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030844"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
 

@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cfece11f3cec121dcdd56a3918f3bdafc7bbd05e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017203"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049254"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "33017203"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
 |[Componentes curinga e validação de conteúdo](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Descreve as limitações da utilização de caracteres curingas, a validação incerta e quaisquer Elementos anyType com coleções de esquema XML.|  

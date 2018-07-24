@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040044"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as informações do conjunto de resultados.
   
-|Estatística|Description|  
+|Estatística|Descrição|  
 |---|---|
 |**Páginas verificadas**|Número de páginas na tabela ou no índice.|  
 |**Extensões verificadas**|Número de extensões na tabela ou no índice.|  
@@ -114,7 +114,7 @@ Quando *table_id* e FAST forem especificados, DBCC SHOWCONTIG retornará um conj
   
 Quando TABLERESULTS é especificado, DBCC SHOWCONTIG retorna as seguintes colunas e também as nove colunas descritas na tabela anterior.
   
-|Estatística|Description|  
+|Estatística|Descrição|  
 |---|---|
 |**Object Name**|Nome da tabela ou exibição processada.|  
 |**ObjectId**|ID do nome do objeto.|  

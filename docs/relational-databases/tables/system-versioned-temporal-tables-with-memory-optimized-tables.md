@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028864"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033313"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047118"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solucionar problemas de renderização de relatório do Reporting Services
 Após a combinação dos dados do relatório e das informações de layout, o relatório compilado é enviado a um renderizador de relatório. Por exemplo, quando você visualiza um relatório localmente, está usando o renderizador HTML para exibir o relatório compilado. Use este tópico para ajudar a solucionar problemas específicos da renderização de relatório.   

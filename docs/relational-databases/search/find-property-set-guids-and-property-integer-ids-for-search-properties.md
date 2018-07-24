@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 974155cff19984223d015c5ef38165ece3517c97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038454"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33180532"
 ##  <a name="wellknown"></a> Localizando informações sobre propriedades da Microsoft amplamente usadas e conhecidas  
  A Microsoft define centenas de propriedades de documento para uso em vários contextos, mas somente um pequeno subconjunto das propriedades disponíveis é usado por cada formato de arquivo. Dentre as propriedades frequentemente usadas do Windows está um conjunto pequeno de propriedades genéricas. Alguns exemplos de propriedades genéricas conhecidas são mostrados na tabela seguinte. A tabela mostra o nome conhecido, o nome canônico (da descrição de propriedade publicada pela Microsoft) no Windows, a GUID do conjunto de propriedades, o identificador de inteiro de propriedade e uma descrição sucinta.  
   
-|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Description|  
+|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Descrição|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autores|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor ou autores de um determinado item.|  
 |Marcas|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  

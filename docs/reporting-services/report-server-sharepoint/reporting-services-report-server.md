@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053344"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de relatório do Reporting Services
 
@@ -103,7 +103,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
   
  ![Arquitetura funcional do SharePoint do SSRS](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Arquitetura funcional do SharePoint do SSRS")  
   
-||Description|  
+||Descrição|  
 |-|-----------------|  
 |**(1)**|Servidores Web ou WFE (front-ends da Web). O suplemento Reporting Services deve ser instalado em cada servidor Web do qual você deseja utilizar os recursos de aplicativo Web, como exibição de relatórios ou páginas de gerenciamento do Reporting Services para tarefas como gerenciar fontes de dados ou assinaturas.|  
 |**(2)**|O suplemento instala a URL e pontos de extremidade SOAP para clientes se comunicarem com os servidores de Aplicativos, pelo proxy de serviço do Reporting Services.|  

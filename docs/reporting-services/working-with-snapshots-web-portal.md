@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 33fb57b26b883d7515c6c0bfc8640ed67be3994d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032663"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38027300"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 

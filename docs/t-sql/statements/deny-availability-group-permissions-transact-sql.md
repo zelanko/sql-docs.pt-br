@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 85988f190920baf826e72bec91f37ea4c8ba3ca8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783197"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035851"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

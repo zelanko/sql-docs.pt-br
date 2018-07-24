@@ -15,11 +15,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: af3f407144dcaf8fae1929d34afd83a3b8b42442
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048624"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
