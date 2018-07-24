@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991718"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

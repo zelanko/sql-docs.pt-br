@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f19c24999fb1005a312af5eba61664faa2cc2aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006028"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "32936142"
   
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
-|Rótulo de ilustração|instrução DDL|Description|  
+|Rótulo de ilustração|instrução DDL|Descrição|  
 |------------------------|-------------------|-----------------|  
 |Criar|CREATE EVENT SESSION|O processo do host cria um objeto de sessão que contém os metadados fornecidos pela CREATE EVENT SESSION. O processo do host valida a definição de sessão, valida o nível de permissão do usuário, e armazena os metadados no banco de dados mestre. Neste momento a sessão não está ativa.|  
 |Alter|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  

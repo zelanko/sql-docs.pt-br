@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019684"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +46,10 @@ sqlsrv_free_stmt( resource $stmt)
 O valor booliano **true** , a menos que a função seja chamada com um parâmetro inválido. Se a função for chamada com um parâmetro inválido, **false** será retornado.  
   
 > [!NOTE]  
-> **Null** é um parâmetro válido para esta função. Isso permite que a função seja chamada várias vezes em um script. Por exemplo, se você liberar uma instrução em uma condição de erro e liberá-la novamente no final do script, a segunda chamada para **sqlsrv_free_stmt** retornará **true** porque a primeira chamada para **sqlsrv _ free_stmt** (na condição de erro) define o recurso de instrução como **nulo**.  
+> **Null** é um parâmetro válido para esta função. Isso permite que a função seja chamada várias vezes em um script. Por exemplo, se você liberar uma instrução em uma condição de erro e liberá-la novamente no final do script, a segunda chamada para sqlsrv_free_stmt **retornará true** porque a primeira chamada para sqlsrv_free_stmt **(na condição de erro) define o recurso de conexão como null**.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir cria um recurso de instrução, executa uma consulta simples e chama **sqlsrv_free_stmt** para liberar todos os recursos associados à instrução. O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir cria um recurso de instrução, executa uma consulta simples e chama **sqlsrv_free_stmt** para liberar todos os recursos associados à instrução. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -85,7 +85,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  

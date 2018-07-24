@@ -33,11 +33,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 001a830d517bc7472fe7d3eb761ecfb18b2b3063
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988501"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

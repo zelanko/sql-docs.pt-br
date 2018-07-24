@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c50821d85b649447097a5147543832495ff9c7ee
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36244508"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995148"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (índices XML seletivos)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

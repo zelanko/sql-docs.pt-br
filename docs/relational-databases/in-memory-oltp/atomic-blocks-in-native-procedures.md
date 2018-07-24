@@ -17,11 +17,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328147"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978600"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocos atômicos nos procedimentos nativos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4f2a62c4bf2eebe3a9cb9652a1c4bcc5d5a04bf9
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022741"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

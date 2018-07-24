@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988490"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ Por padrão, DBCC CHECKDB executa a verificação paralela de objetos. O grau de
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC    
 Depois que o comando DBCC CHECKDB é concluído, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará êxito e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação por causa de um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e o tempo de execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
     
-|Estado|Description|    
+|Estado|Descrição|    
 |-----------|-----------------|    
 |0|O número do erro 8930 foi gerado. Isso indica um dano nos metadados que finalizou o comando DBCC.|    
 |1|O erro número 8967 foi gerado. Ocorreu um erro interno de DBCC.|    

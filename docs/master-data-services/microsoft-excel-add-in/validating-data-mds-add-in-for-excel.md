@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985139"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validando dados (Suplemento do MDS para Excel)
 

@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000668"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  Na tabela a seguir, SysStartTime na coluna Qualifying Rows representa o valor na coluna **SysStartTime** da tabela que está sendo consultada e **SysEndTime** representa o valor da coluna **SysEndTime** da tabela que está sendo consultada. Para obter a sintaxe completa e exemplos, veja [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-|Expression|Linhas de qualificação|Description|  
+|Expression|Linhas de qualificação|Descrição|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>*. O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>*.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|  

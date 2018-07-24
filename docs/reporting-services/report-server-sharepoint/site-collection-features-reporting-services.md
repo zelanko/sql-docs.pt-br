@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982408"
 ---
 # <a name="reporting-services-site-collection-features"></a>Recursos do conjunto de sites do Reporting Services
 
@@ -35,7 +35,7 @@ O modo do SharePoint do Reporting Services fornece três recursos do conjunto de
 
  A tabela a seguir descreve os membros do conjunto de sites do Reporting Services.  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |-------------|-----------------|  
 |**Recurso Administração Central do Servidor de Relatório**|Habilita os Recursos para o gerenciamento da integração com um servidor de relatório do Reporting Services. Esse recurso somente é instalado e usado na coleção de sites da Administração Central do SharePoint.<br /><br /> O recurso de integração do Servidor de Relatório é ativado automaticamente na coleção de sites da Administração Central do SharePoint depois que você instala o Suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para produtos SharePoint. Em algumas situações, você precisa ativar o recurso manualmente. Para ativar o recurso de servidor do relatório, use as páginas do Reporting Services na página Configurações de Site da Administração Central do SharePoint.<br /><br /> A versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e posterior do Reporting Services do Suplemento para produtos do SharePoint ativa o recurso de integração do servidor de relatório em todos os conjuntos de sites existentes quando o Suplemento é instalado. Além disso, o recurso fica ativo automaticamente para novos conjuntos de sites.|  
 |**Recurso de Integração do Servidor de Relatório**|Permite relatórios avançados usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Esse recurso está Ativo por padrão.|  

@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a489b816081c8cec2cd70a132478481da162135
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997218"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: edd094a6c887c390f7a37dbd0ac3ca7950b49d02
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36253158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022716"
 ---
 # <a name="value-method-xml-data-type"></a>Método de valor() (Tipo de dados xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

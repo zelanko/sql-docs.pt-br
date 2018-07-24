@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f034cad035750603705d17e31becdc8496b99893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991658"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Alterações recentes do SQL Server Reporting Services no SQL Server 2016
 

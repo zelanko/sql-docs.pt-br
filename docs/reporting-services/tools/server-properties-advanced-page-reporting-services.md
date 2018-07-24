@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550397"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999448"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 

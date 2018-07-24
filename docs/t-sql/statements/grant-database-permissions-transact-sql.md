@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 81cf919bfe9f4e54afb0253d2b01bcddb9e69f5d
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984758"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>Permissões de banco de dados GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

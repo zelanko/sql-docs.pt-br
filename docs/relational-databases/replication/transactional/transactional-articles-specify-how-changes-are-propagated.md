@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005969"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artigos transacionais – Especificar como as alterações são propagadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

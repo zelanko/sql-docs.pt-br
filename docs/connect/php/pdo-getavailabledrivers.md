@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be61e256b025d9bcf290176dd322132c1c2d3918
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975190"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +51,7 @@ print_r(PDO::getAvailableDrivers());
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

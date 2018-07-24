@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 41ad9d69b045a149bf6adad58f16f881ccc5d98e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004759"
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

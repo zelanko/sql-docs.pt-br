@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8c2c74068c438cb5284cc8ae5bd92f91100662e4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015406"
 ---
 # <a name="create-clr-functions"></a>Criar funções CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

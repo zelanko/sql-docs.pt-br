@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a8bfa3073551c1a4881a5f3a13158a955b8fead8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322695"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993485"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gerenciador de Configurações do Reporting Services (Modo Nativo).
 

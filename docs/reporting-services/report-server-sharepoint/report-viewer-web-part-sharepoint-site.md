@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c29118ab8807d8bd0d51ee593488c66c89bf2942
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978898"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Web part do Visualizador de Relatórios em um site do SharePoint – Reporting Services
 

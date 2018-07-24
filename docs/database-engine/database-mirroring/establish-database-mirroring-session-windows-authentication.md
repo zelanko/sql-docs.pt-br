@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61fe97f28fc399ac261c06a962bd19bfe9efcd25
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988148"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

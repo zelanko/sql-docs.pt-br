@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181542"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001478"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
 A tabela a seguir lista as propriedades relacionadas a catálogos de texto completo. Talvez essas informações sejam úteis para administrar e solucionar problemas de pesquisa de texto completo. 
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Configuração da diferenciação de caracteres com/sem acento.|
 |**ImportStatus**|Se o catálogo de texto completo está sendo importado.|  

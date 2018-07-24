@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8ad0a956d1b23a61327159a0d103d8a5cbbec965
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36243068"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022757"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo de dados geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

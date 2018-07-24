@@ -17,11 +17,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 8282b2e24fbc3a0c1b69d2410e7df5484eb54d3f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926227"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023172"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

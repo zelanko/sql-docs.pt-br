@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991889"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

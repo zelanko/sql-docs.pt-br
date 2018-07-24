@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0f953ba7fa68efdb72bae5c5a48b0f21c6289f3f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980046"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d1db1758c979ae3582d562c47690e12af72171cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982428"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Serviço SharePoint do Reporting Services e aplicativos de serviço
 

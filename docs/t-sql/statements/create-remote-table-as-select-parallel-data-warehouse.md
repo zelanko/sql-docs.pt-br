@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b3a35be7145db9bb2ada6bd0af5805740568c216
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926577"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990234"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

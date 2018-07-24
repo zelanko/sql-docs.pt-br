@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 42a585c0446d823e778ba06c34924c4406fd119f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003749"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

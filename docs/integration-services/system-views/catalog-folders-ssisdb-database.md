@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f8f2456972b3be34cc6f50df55108f8f553d7f0a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020959"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
