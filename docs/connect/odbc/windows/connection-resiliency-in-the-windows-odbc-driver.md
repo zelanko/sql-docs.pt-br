@@ -1,5 +1,5 @@
 ---
-title: Resiliência de Conexão no Driver ODBC do Windows | Microsoft Docs
+title: Resiliência de conexão no driver ODBC do Windows
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060327"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resiliência de conexão no driver ODBC do Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "32852861"
 > [!IMPORTANT]  
 >  O recurso de resiliência de conexão tem suporte em versões de servidor do Banco de Dados SQL do Microsoft Azure e do SQL Server 2014 (e posteriores).  
   
- Para obter informações adicionais sobre a resiliência de conexão ociosa, consulte [artigo técnico – resiliência de Conexão ociosa](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Para obter informações adicionais sobre a resiliência de conexão ociosa, consulte [Artigo técnico – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Para controlar o comportamento de reconexão, o ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows tem duas opções:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32852861"
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryCount** .  
   
-     Para recuperar o número de tentativas de conexão, use o **SQL_COPT_SS_CONNECT_RETRY_COUNT** (somente leitura) atributo de conexão. Se um aplicativo se conecta a um servidor que não oferece suporte a resiliência de conexão, **SQL_COPT_SS_CONNECT_RETRY_COUNT** retorna 0.  
+     Para recuperar o número de tentativas de conexão, use o atributo de conexão SQL_COPT_SS_CONNECT_RETRY_COUNT** (somente leitura). Se um aplicativo se conectar a um servidor que não dê suporte para resiliência de conexão, SQL_COPT_SS_CONNECT_RETRY_COUNT** retornará 0.  
   
 -   Intervalo de repetição de conexão.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "32852861"
   
     -   Usar a palavra-chave de cadeia de conexão **ConnectRetryInterval** .  
   
-     Para recuperar o comprimento do intervalo de repetição de conexão, use o **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (somente leitura) atributo de conexão.  
+     Para recuperar a duração do intervalo de repetição de conexão, use o atributo de conexão SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (somente leitura).  
   
  Se um aplicativo estabelecer uma conexão com SQL_DRIVER_COMPLETE_REQUIRED e posteriormente tentar executar uma instrução em uma conexão interrompida, o driver ODBC não exibirá a caixa de diálogo novamente. Além disso, durante a recuperação em andamento:  
   
--   Durante a recuperação, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_FALSE**.  
+-   Durante a recuperação, qualquer chamada para SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) **deverá retornar SQL_CD_TRUE**.  
   
--   Se recuperação falhar, qualquer chamada para **sqlgetconnectattr (sql_copt_ss_connection_dead)**, deve retornar **SQL_CD_TRUE**.  
+-   Se a recuperação falhar, qualquer chamada para SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD) **deverá retornar SQL_CD_FALSE**.  
   
  Os seguintes códigos de estado são retornados por qualquer função que execute um comando no servidor:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "32852861"
 |IMC06|A conexão foi interrompida e a recuperação não é possível. A conexão foi marcada pelo driver do cliente como não recuperável. Não foi feita nenhuma tentativa de restaurar a conexão.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir contém duas funções. **Func1** mostra como você pode se conectar com um nome de fonte de dados (DSN) que usa o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e especifica a ID de usuário. **Func1** , em seguida, recupera o número de tentativas de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ O exemplo a seguir contém duas funções. **func1** mostra como você pode se conectar com um DNS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]nome de fonte de dados que usa o ODBC Driver for  no Windows. O DSN usa a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e especifica a ID de usuário. **Func1** , em seguida, recupera o número de novas tentativas de conexão com **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, a palavra-chave de cadeia de conexão **ConnectRetryCount** e atributos de conexão para recuperar a configuração de repetições de conexão e o intervalo de repetição.  
   
@@ -176,7 +176,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   
