@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923271"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982888"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para o SQL Server 2014, acesse [Criar um backup completo de banco de dados (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Para o SQL Server 2014, acesse [Criar um backup completo de banco de dados (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
 
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   
@@ -263,7 +263,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
      [ WITH *com_opções* [ **,**...*o* ] ] ;  
   
-    |Opção|Description|  
+    |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
     |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  

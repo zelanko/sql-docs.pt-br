@@ -15,12 +15,12 @@ caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: edbf80dce6c749551d8955e52aa1c09794dc0cd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de0e6f935de54430bebba64902da76721b9f4fa2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028493"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982198"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceitos do Reporting Services (SSRS)
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -127,11 +127,11 @@ Você pode criar relatórios móveis do Reporting Services (arquivos .rsmobile) 
   
  Use regiões de dados para habilitar visualizações de dados comuns: números e texto em uma tabela, matriz ou lista; exibições gráficas em um gráfico ou medidor; e exibições geográficas de um mapa. Tabelas, matrizes e listas se baseiam na região de dados tablix, que se expande conforme o necessário para exibir todos os dados do conjunto de dados. Uma região de dados tablix oferece suporte a vários grupos de linhas e colunas e a linhas, bem como colunas estáticas e dinâmicas. Um gráfico exibe vários grupos de categorias e séries em diversos formatos de gráfico. Um medidor exibe um único valor ou um valor agregado para um conjunto de dados. Um mapa exibe dados espaciais como elementos do mapa cuja aparência pode variar com base nos dados agregados de um conjunto de dados.  
   
--   **Tabela.** Uma tabela é uma região de dados que apresenta dados linha a linha. Colunas da tabela são estáticas: você determina o número de colunas quando você cria seu relatório. Linhas da tabela são dinâmicas: elas se expandem para baixo para acomodar os dados. Você pode adicionar grupos às tabelas, organizando os dados selecionados por campos ou expressões. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Tabela.** Uma tabela é uma região de dados que apresenta dados linha a linha. Colunas da tabela são estáticas: você determina o número de colunas quando você cria seu relatório. Linhas da tabela são dinâmicas: elas se expandem para baixo para acomodar os dados. Você pode adicionar grupos às tabelas, organizando os dados selecionados por campos ou expressões. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
   
--   **Matriz.** Uma matriz também é conhecida como uma tabela de referência cruzada. Uma região de dados de matriz contém as colunas e linhas dinâmicas: elas se expandem para acomodar os dados. As colunas e as linhas de uma matriz podem ser dinâmicas ou estáticas. As colunas ou as linhas podem conter outras colunas ou linhas e podem ser usadas para agrupar dados. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Matriz.** Uma matriz também é conhecida como uma tabela de referência cruzada. Uma região de dados de matriz contém as colunas e linhas dinâmicas: elas se expandem para acomodar os dados. As colunas e as linhas de uma matriz podem ser dinâmicas ou estáticas. As colunas ou as linhas podem conter outras colunas ou linhas e podem ser usadas para agrupar dados. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
   
--   **Lista.** Uma lista é uma região de dados que apresenta dados organizados de uma forma livre. Você pode organizar os itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados posicionadas em qualquer local dentro da lista. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Lista.** Uma lista é uma região de dados que apresenta dados organizados de uma forma livre. Você pode organizar os itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados posicionadas em qualquer local dentro da lista. Para obter mais informações, consulte [Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
   
 -   **Gráfico.** Um gráfico apresenta os dados de maneira gráfica. Os exemplos de gráficos incluem barra, pizza e gráficos de linhas, mas muitos outros estilos podem ser considerados. Para obter mais informações, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   

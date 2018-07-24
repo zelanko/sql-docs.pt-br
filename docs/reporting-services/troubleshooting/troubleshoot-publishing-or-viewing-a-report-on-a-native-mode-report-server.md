@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: de0d300991457ce6ba07a4f499f31224b6d38fbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058804"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solução de problemas ao publicar ou exibir um relatório em um Servidor de Relatório no modo nativo
   

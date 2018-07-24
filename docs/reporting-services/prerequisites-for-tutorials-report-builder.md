@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c720c71a703cd7c0fcd436923e7a820d35f4622
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd3566dce2e0b8b8c48396e5c268375f43252e45
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018893"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980738"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Pré-requisitos para tutoriais (Construtor de Relatórios)
 
@@ -44,7 +44,7 @@ Você deve ter os seguintes pré-requisitos para concluir os tutoriais do Constr
   
 -   O nome de uma instância do SQL Server e credenciais suficientes para acesso somente leitura a qualquer banco de dados. As consultas de conjunto de dados nos tutoriais usam dados literais, mas cada consulta deve ser processada por uma instância do SQL Server para retornar os metadados necessários para um conjunto de dados de relatório. Por exemplo, a seguinte cadeia de conexão especifica apenas um servidor: `data source=<servername>`. Você deve ter acesso de leitura ao banco de dados padrão atribuído a você pelo administrador do sistema que concede permissão para acessar o servidor. Também é possível especificar um banco de dados, conforme mostrado na seguinte cadeia de conexão: `data source=<servername>;initial catalog=<database>`.  
   
--   Para o [Tutorial: Relatório de mapa (Construtor de Relatórios)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), o servidor de relatório deve ser configurado para dar suporte ao Bing Mapas como tela de fundo. Para obter mais informações, consulte [Planejar suporte ao relatório de mapa](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Para o [Tutorial: Relatório de mapa (Construtor de Relatórios)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), o servidor de relatório deve ser configurado para dar suporte ao Bing Mapas como tela de fundo. Para obter mais informações, consulte [Planejar suporte ao relatório de mapa](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
 -   O [Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) exige o acesso ao cubo Vendas da Contoso. Consulte o tutorial para obter mais informações. 
   

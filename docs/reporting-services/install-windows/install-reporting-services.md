@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 868c812a854c39b1c75a3bc89d792eabe04483f8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989079"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalar o SQL Server Reporting Services (2017 e posterior)
 

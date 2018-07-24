@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4ad16ca27692fd165313b9adfe8f02cfe01254b6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333760"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059072"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Conexões (suplemento MDS para Excel)
 

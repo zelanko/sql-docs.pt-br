@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1e41f40025a7ccf883f2643baf538f4f045f5b65
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002921"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalar o servidor de relatório no modo nativo do Reporting Services 2016
 

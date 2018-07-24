@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989090"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984088"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "33989090"
 ###  <a name="intorkeyconcepts"></a> Introdução aos principais componentes e conceitos  
  As duas seções a seguir apresentam o serviço de Armazenamento de Blobs do Microsoft Azure e os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados durante o backup ou a restauração do serviço de Armazenamento de Blobs do Microsoft Azure. É importante entender os componentes e a interação entre eles para fazer um backup ou uma restauração no serviço de Armazenamento de Blobs do Microsoft Azure.  
   
- Criar uma conta de Armazenamento do Windows Azure dentro de sua assinatura do Azure é a primeira etapa nesse processo. Essa conta de armazenamento é uma conta administrativa que tem permissões administrativas completas em todos os contêineres e objetos criados com a conta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o nome da conta de armazenamento do Windows Azure e seu valor de chave de acesso para autenticar, gravar e ler blobs do serviço de Armazenamento de Blobs do Microsoft Azure, ou usar um token de Assinatura de Acesso Compartilhado gerado em contêineres específicos, concedendo direitos de leitura e gravação. Para saber mais sobre a Conta de Armazenamento do Azure, confira [Sobre as contas de armazenamento do Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) e para saber mais sobre as Assinaturas de Acesso Compartilhado, confira [Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração.  
+ Criar uma conta de Armazenamento do Windows Azure dentro de sua assinatura do Azure é a primeira etapa nesse processo. Essa conta de armazenamento é uma conta administrativa que tem permissões administrativas completas em todos os contêineres e objetos criados com a conta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o nome da conta de armazenamento do Windows Azure e seu valor de chave de acesso para autenticar, gravar e ler blobs do serviço de Armazenamento de Blobs do Microsoft Azure, ou usar um token de Assinatura de Acesso Compartilhado gerado em contêineres específicos, concedendo direitos de leitura e gravação. Para saber mais sobre a Conta de Armazenamento do Azure, confira [Sobre as contas de armazenamento do Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) e para saber mais sobre as Assinaturas de Acesso Compartilhado, confira [Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração.  
   
 ###  <a name="Blob"></a> Serviço de Armazenamento de Blobs do Microsoft Azure  
- **Conta de armazenamento:** a conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de Armazenamento de Blobs do Microsoft Azure, primeiro crie uma conta de armazenamento do Windows Azure. Para saber mais, confira [Criar uma conta de armazenamento](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).  
+ **Conta de armazenamento:** a conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de Armazenamento de Blobs do Microsoft Azure, primeiro crie uma conta de armazenamento do Windows Azure. Para saber mais, confira [Criar uma conta de armazenamento](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Contêiner:** um contêiner fornece o agrupamento de um conjunto de blobs e pode armazenar um número ilimitado de blobs. Para gravar um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no serviço de Armazenamento de Blobs do Microsoft Azure, pelo menos o contêiner raiz deve ter sido criado. Você pode gerar um token de Assinatura de Acesso Compartilhado em um contêiner e conceder acesso a objetos apenas em um contêiner específico.  
   
@@ -276,7 +276,7 @@ A tarefa Restaurar Banco de Dados inclui **URL** como um dispositivo do qual res
 >  Para obter um tutorial sobre como usar o SQL Server 2016 com o serviço de Armazenamento de Blobs do Microsoft Azure, confira [Tutorial: usando o serviço de Armazenamento de Blobs do Microsoft Azure com bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Criar uma Assinatura de Acesso Compartilhado  
- O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para saber mais, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). O script também grava o comando T-SQL necessário para criar a credencial no SQL Server. 
+ O exemplo a seguir cria Assinaturas de Acesso Compartilhado que podem ser usadas para criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credencial em um contêiner recém-criado. O script cria uma Assinatura de Acesso Compartilhado que está associada a uma Política de Acesso Armazenado. Para saber mais, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). O script também grava o comando T-SQL necessário para criar a credencial no SQL Server. 
 
 > [!NOTE] 
 > O exemplo exige o Microsoft Azure PowerShell. Para obter informações sobre como instalar e usar o Azure PowerShell, consulte [Como instalar e configurar o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

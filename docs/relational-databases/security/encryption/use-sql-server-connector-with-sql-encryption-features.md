@@ -18,11 +18,11 @@ ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 78fb6c3a345f92d51cec24954a21264847a96557
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695577"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038404"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]

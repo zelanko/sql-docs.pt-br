@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b6322c4aca621aa668286f82bf144ec579657cc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ab9f52631108c7761c94600d982ba6eefbcd329
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026473"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979108"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
   Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "33026473"
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Fornece etapas para a configuração de vários servidores de relatório para compartilhar um banco de dados do servidor de relatório.  
   
- [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurar um servidor de relatório para entrega de email (Configuration Manager do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  Fornece etapas para a configuração de um servidor de relatório para distribuição de email.  
   
  [Configurar um firewall para acesso ao servidor de relatório](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
