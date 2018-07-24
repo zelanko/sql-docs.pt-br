@@ -18,11 +18,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974599"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuração de conectividade do PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -95,7 +95,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> Result Sets  
  Quando é executado sem parâmetros, **sp_configure** retorna um conjunto de resultados com cinco colunas.  
   
-|Nome da coluna|Tipo de dados|Description|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**minimum**|**int**|Valor mínimo da opção de configuração.|  
