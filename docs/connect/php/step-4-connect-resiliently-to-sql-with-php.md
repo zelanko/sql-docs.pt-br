@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Conectar atenda com flexibilidade ao SQL com PHP | Microsoft Docs'
+title: 'Etapa 4: Conectar de forma resiliente ao SQL com PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -14,22 +14,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: da5c3b99eab34afded5fd92c19f53f3868517d43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309995"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983019"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Etapa 4: Conectar-se de forma resiliente ao SQL com PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-O programa de demonstração foi projetado para que um erro transitório (isto é qualquer código de erro com o prefixo '08' conforme listado neste [apêndice](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante a tentativa de conexão de clientes potenciais para uma nova tentativa. Mas um erro temporário durante o comando de consulta faz com que o programa descarte a conexão e crie uma nova conexão, antes de tentar novamente o comando de consulta. Não recomendamos ou Desaconselhamos essa opção de design. O programa de demonstração ilustra alguns da flexibilidade de design que está disponível para você.  
+O programa de demonstração é projetado para que um erro transitório (ou seja, qualquer código de erro com o prefixo '08', conforme listado neste [apêndice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante tentativa de conexão de clientes potenciais a uma nova tentativa. Mas um erro transitório durante o comando de consulta faz com que o programa descarte a conexão e criar uma nova conexão, antes de tentar novamente o comando de consulta. Não recomendamos nem Desaconselhamos essa opção de design. O programa de demonstração ilustra alguns da flexibilidade de design que está disponível para você.  
   
-O comprimento deste exemplo de código se deve principalmente à lógica de exceção de captura.   
+O comprimento deste exemplo de código se deve principalmente à lógica de exceção catch.   
   
-O [sqlsrv_query()](../../connect/php/sqlsrv-query.md) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer objeto de conexão e consulta e retorna um conjunto de resultados, que pode ser iterado com o uso de [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md). 
+O [sqlsrv_query ()](../../connect/php/sqlsrv-query.md) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer objeto de conexão e consulta e retorna um conjunto de resultados, que pode ser iterado com o uso de [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md). 
   
 ```php
 
