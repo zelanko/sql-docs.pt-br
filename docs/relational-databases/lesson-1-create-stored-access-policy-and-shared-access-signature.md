@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942001"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984678"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Nesta lição, você aprenderá a usar um script do [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) para criar uma assinatura de acesso compartilhado em um contêiner de blobs do Azure usando uma política de acesso armazenado.  
+Nesta lição, você aprenderá a usar um script do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para criar uma assinatura de acesso compartilhado em um contêiner de blobs do Azure usando uma política de acesso armazenado.  
   
 > [!NOTE]  
 > Esse script é escrito com o Azure PowerShell 5.0.10586.  
@@ -139,7 +139,7 @@ Para criar uma política no contêiner e gerar uma chave SAS (Assinatura de Aces
 [Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Criar contêiner](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

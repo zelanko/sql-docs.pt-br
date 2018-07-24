@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353958"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983088"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 A replicação de mesclagem é uma boa solução para o problema de movimentação de dados entre um servidor central e clientes móveis que são conectados apenas ocasionalmente. Usando os assistentes de replicação, é possível configurar e administrar uma topologia de replicação de mesclagem com facilidade. 
 
-Este tutorial mostra como você deve configurar uma topologia de replicação para clientes móveis. Para obter mais informações sobre a replicação de mesclagem, consulte a [visão geral da replicação de mesclagem](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+Este tutorial mostra como você deve configurar uma topologia de replicação para clientes móveis. Para obter mais informações sobre a replicação de mesclagem, consulte a [visão geral da replicação de mesclagem](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial ensina você a usar a replicação de mesclagem para publicar dados de um banco de dados central para um ou mais usuários móveis, de forma que cada usuário obtenha um subconjunto dos dados filtrado exclusivamente. 
@@ -54,14 +54,14 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
   
 - No servidor do assinante (destino), instale qualquer edição do SQL Server, exceto para [!INCLUDE[ssEW](../../includes/ssew-md.md)]. A publicação criada neste tutorial não é compatível com [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
 > - A replicação não é compatível em instâncias do SQL Server que tenham um intervalo de mais de duas versões. Para saber mais, veja [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versões do SQL Server compatíveis na topologia de replicação).
-> - No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário conectar-se ao editor e ao assinante usando um logon que seja membro da função de servidor fixa **sysadmin**. Para saber mais sobre essa função, veja [Funções de nível de servidor](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é necessário conectar-se ao editor e ao assinante usando um logon que seja membro da função de servidor fixa **sysadmin**. Para saber mais sobre essa função, veja [Funções de nível de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Tempo estimado para concluir este tutorial: 60 minutos**  
@@ -97,7 +97,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
    >
    > Se estiver usando um build anterior ao SQL Server 2017, será exibida uma mensagem na parte inferior da tela para notificá-lo de potencial perda de dados por usar essa coluna na replicação bidirecional. Para os fins deste tutorial, é possível ignorar essa mensagem. No entanto, esse tipo de dados não deve ser replicado em um ambiente de produção, a menos que você esteja usando um build compatível.
    > 
-   > Para obter mais informações sobre como replicar o tipo de dados **hierarchyid**, consulte [Using hierarchyid columns in replication](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables) (Usando colunas hierarchyid na replicação).
+   > Para obter mais informações sobre como replicar o tipo de dados **hierarchyid**, consulte [Using hierarchyid columns in replication](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables) (Usando colunas hierarchyid na replicação).
     
   
 7. Na página **Filtrar Linhas da Tabela**, selecione **Adicionar** e, em seguida, **Adicionar Filtro**.  

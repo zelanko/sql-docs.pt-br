@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a2099ad58020f03c3dc6deceea0fea9ba5230a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922521"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983378"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "32922521"
 ##  <a name="Prereqs"></a> Pré-requisitos  
  O Armazenamento do Microsoft Azure é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para armazenar os arquivos de backup. Os seguintes pré-requisitos são necessários:  
   
-|Pré-requisito|Description|  
+|Pré-requisito|Descrição|  
 |------------------|-----------------|  
 |**Conta do Microsoft Azure**|Você pode começar a usar o Azure com uma [avaliação gratuita](http://azure.microsoft.com/pricing/free-trial/) antes de explorar as [opções de compra](http://azure.microsoft.com/pricing/purchase-options/).|  
-|**Conta de Armazenamento do Azure**|Os backups são armazenados no Armazenamento de Blobs do Azure associado a uma conta de armazenamento do Azure. Para obter instruções passo a passo para criar uma conta de armazenamento, confira [Sobre as contas de armazenamento do Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
-|**Contêiner de Blob**|Os blobs são organizados em contêineres. Especifique o contêiner de destino para os arquivos de backup. Você pode criar um contêiner no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou usar o comando **New-AzureStorageContainer** do [Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).|  
-|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Conta de Armazenamento do Azure**|Os backups são armazenados no Armazenamento de Blobs do Azure associado a uma conta de armazenamento do Azure. Para obter instruções passo a passo para criar uma conta de armazenamento, confira [Sobre as contas de armazenamento do Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Contêiner de Blob**|Os blobs são organizados em contêineres. Especifique o contêiner de destino para os arquivos de backup. Você pode criar um contêiner no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou usar o comando **New-AzureStorageContainer** do [Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).|  
+|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|O SQL Server Agent deve estar em execução para que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere a configuração da opção de inicialização como automática.|  
   
 ## <a name="components"></a>Componentes  
@@ -56,7 +56,7 @@ ms.locfileid: "32922521"
   
 |||  
 |-|-|  
-|Objeto do Sistema|Description|  
+|Objeto do Sistema|Descrição|  
 |**MSDB**|Armazena os metadados, o histórico de backup de todos os backups criados pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Habilita o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Define as configurações avançadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], como a criptografia.|  

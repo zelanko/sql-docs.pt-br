@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012394"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981468"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Bem-vindo ao tutorial “Trabalhando com o SQL Server 2016 no serviço de Armaze
 O suporte da integração do SQL Server no serviço de armazenamento de Blobs do Microsoft Azure começou como uma melhoria do SQL Server 2012 Service Pack 1 CU2 e foi aprimorado ainda mais com o SQL Server 2014 e SQL Server 2016. Para obter uma visão geral da funcionalidade e dos benefícios do uso dessa funcionalidade, consulte [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Para uma demonstração ao vivo, confira [Demonstração da recuperação pontual](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
   
   
-**Download**<br /><br />**>>**  Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vá para o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
+**Download**<br /><br />**>>**  Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vá para o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial mostra como trabalhar com arquivos de dados do SQL Server no serviço de armazenamento de Blobs do Microsoft Azure em várias lições. Cada lição é centrada em uma tarefa específica e as lições devem ser concluídas na sequência. Primeiro, você aprenderá a criar um novo contêiner no armazenamento de Blobs com uma política de acesso armazenado e uma assinatura de acesso compartilhado. Em seguida, você aprenderá a criar uma credencial do SQL Server para integrar o SQL Server com o armazenamento de blobs do Azure. Em seguida, você vai fazer backup de um banco de dados no armazenamento de Blobs e restaurá-lo em uma máquina virtual do Azure. Depois, você vai usar o backup de log de transações de instantâneo de arquivo do SQL Server 2016 para restaurá-lo em um ponto específico e em um novo banco de dados. Por fim, o tutorial demonstrará o uso dos procedimentos armazenados e funções do sistema de metadados para ajudá-lo a entender e trabalhar com backups de instantâneo de arquivo.  
@@ -43,7 +43,7 @@ Este artigo pressupõe o seguinte:
   
 -   Você tem uma conta de armazenamento do Azure.  
   
--   Você tem, no mínimo, uma máquina virtual do Azure com o SQL Server 2016 instalado e provisionado, conforme explicado no artigo [Provisionando uma máquina virtual do SQL Server no Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/). Como opção, uma segunda máquina virtual pode ser usada para o cenário da [Lição 8: Restaurar como um novo banco de dados por meio do backup de log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md).  
+-   Você tem, no mínimo, uma máquina virtual do Azure com o SQL Server 2016 instalado e provisionado, conforme explicado no artigo [Provisionando uma máquina virtual do SQL Server no Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/). Como opção, uma segunda máquina virtual pode ser usada para o cenário da [Lição 8: Restaurar como um novo banco de dados por meio do backup de log](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md).  
   
 Este tutorial é dividido em nove lições, que devem ser concluídas na ordem:  
   

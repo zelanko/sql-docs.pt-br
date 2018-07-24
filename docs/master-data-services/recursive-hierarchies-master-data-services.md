@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8a6819d2bdb3d21315be536480bc3c96fa063914
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058897"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
 

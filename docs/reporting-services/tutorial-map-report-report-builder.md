@@ -17,12 +17,12 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036993"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985128"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -41,7 +41,7 @@ Neste tutorial, você cria um relatório de mapa que exibe a localização de lo
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
-Para este tutorial, o servidor de relatório deve ser configurado para dar suporte ao Bing Mapas como tela de fundo. Para obter mais informações, consulte [Planejar suporte ao relatório de mapa](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Para este tutorial, o servidor de relatório deve ser configurado para dar suporte ao Bing Mapas como tela de fundo. Para obter mais informações, consulte [Planejar suporte ao relatório de mapa](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Para obter informações sobre outros requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

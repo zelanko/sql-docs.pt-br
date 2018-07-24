@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3651eca0e06a0c0b91ba8f12ca0e66a49c906037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae4de7aad9a404b900c47c4067a8266410e44379
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278372"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981388"
 ---
 # <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar um procedimento armazenado](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar um procedimento armazenado](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx).
 
   Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a declaração [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   

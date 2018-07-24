@@ -21,12 +21,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce86448f4266da763c96c5b7f934aa8acaefd861
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a3c3eb131de8f0786bf72fc09da244b4bb542dd4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351428"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981728"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ Saiba como configurar a replicação de mesclagem para trocar dados entre um ser
 ## <a name="see-also"></a>Confira também  
 [Segurança e proteção da replicação](../../relational-databases/replication/security/security-and-protection-replication.md) 
 
-[Visão geral da replicação transacional](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+[Visão geral da replicação transacional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 
-[Visão geral da replicação de mesclagem](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
+[Visão geral da replicação de mesclagem](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
 
   

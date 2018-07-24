@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423176"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108358"
 ---
 # <a name="logon-triggers"></a>Gatilhos de logon
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Os gatilhos de logon acionam procedimentos armazenados em resposta a um evento LOGON. Esse evento ocorre quando é estabelecida uma sessão de usuário com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os gatilhos de logon são acionados após o término da fase de autenticação, mas antes da sessão de usuário ser realmente estabelecida. Logo, todas as mensagens originadas no gatilho que chegariam, normalmente, ao usuário, como mensagens de erro e mensagens da instrução PRINT, são desviadas para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os gatilhos de logon não são acionados quando a autenticação falha.  
   
  Você pode usar gatilhos de logon para auditar e controlar sessões do servidor, por exemplo, rastreando a atividade de logon, restringindo os logons ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou limitando o número de sessões para um logon específico. Por exemplo, no código abaixo, o gatilho de logon negará as tentativas de logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciadas por *login_test* se já houver três sessões de usuário criadas pelo logon em questão.  

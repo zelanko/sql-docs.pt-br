@@ -41,11 +41,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064382"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

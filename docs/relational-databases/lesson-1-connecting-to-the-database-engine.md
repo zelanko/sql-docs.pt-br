@@ -16,17 +16,17 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd86be05457d2596d1b17e29bd093c050bef8822
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947111"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979818"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: conectar-se ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: conectar-se ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/ms345332(SQL.120).aspx).
 
 Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
 

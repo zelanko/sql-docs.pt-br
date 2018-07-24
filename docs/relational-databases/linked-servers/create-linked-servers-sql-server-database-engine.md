@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947741"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984478"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx).
 
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
   

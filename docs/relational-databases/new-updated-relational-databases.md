@@ -4,7 +4,7 @@ description: Exibir trechos de conteúdo atualizado para documentação de Banco
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
@@ -12,12 +12,12 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: relational-databases
 ms.date: 04/28/2018
-ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 4f962279eb30e15b395f96417cc5e03aa1dbcfad
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32607507"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087768"
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Novos e recém-atualizados: documentos de Bancos de Dados Relacionais
 
@@ -79,7 +79,7 @@ Essa lista compacta fornece links para todos os artigos atualizados listados na 
 1. [Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)](#TitleNum_1)
 2. [Dados JSON no SQL Server](#TitleNum_2)
 3. [Guia de arquitetura de processamento de consultas](#TitleNum_3)
-4. [Tutorial: Preparar o SQL Server para replicação – Editor, Distribuidor, Assinante](#TitleNum_4)
+4. [Tutorial: Preparar o SQL Server para replicação – Publicador, Distribuidor, Assinante](#TitleNum_4)
 5. [Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional)](#TitleNum_5)
 6. [Tutorial: Configurar a replicação entre um servidor e clientes móveis (Mesclagem)](#TitleNum_6)
 7. [Consulta com pesquisa de texto completo](#TitleNum_7)
@@ -319,7 +319,7 @@ Nesta seção, você criará contas do Windows para executar os agentes de repli
 
 **Criar uma assinatura na publicação Transacional**
 
-Nesta seção, você adicionará um assinante à Publicação criada anteriormente. Este tutorial usa um assinante remoto (NODE2\SQL2016), mas uma assinatura também pode ser adicionada localmente ao editor.
+Nesta seção, você adicionará um assinante à Publicação criada anteriormente. Este tutorial usa um assinante remoto (NODE2\SQL2016), mas uma assinatura também pode ser adicionada localmente ao publicador.
 
 **Para criar a assinatura**
 
@@ -332,7 +332,7 @@ Nesta seção, você adicionará um assinante à Publicação criada anteriormen
 
 3.  Na página Publicação, selecione **AdvWorksProductTrans** e, em seguida, **Avançar**:
 
-    Selecionar o Publicador Tran
+    Selecionar o publicador Tran
 
 4.  Na página Local do Agente de Distribuição, selecione **Executar todos os agentes no Distribuidor** e, em seguida, selecione **Avançar**.  Para obter mais informações sobre assinaturas pull e push, consulte [Assinar publicações](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
 

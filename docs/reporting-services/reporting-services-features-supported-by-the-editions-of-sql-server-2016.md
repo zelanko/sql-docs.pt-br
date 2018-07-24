@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028943"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983118"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Reporting Services com suporte nas edições do SQL Server 2016
 
@@ -34,7 +34,7 @@ Esse tópico fornece detalhes dos recursos que têm suporte nas diferentes ediç
     
  > [![Baixar no Centro de Avaliação](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Baixar o SQL Server 2016 no Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![A máquina virtual pequena do Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma máquina virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![A máquina virtual pequena do Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Criar uma máquina virtual com o SQL Server 2016 já instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Para saber quais recursos têm suporte nas edições Evaluation e Developer, consulte SQL Server Enterprise Edition.
 

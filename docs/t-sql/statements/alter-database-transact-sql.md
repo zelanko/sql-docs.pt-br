@@ -3,7 +3,6 @@ title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bc109184f7678f48205c66b4c47684eecde9e4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c97a6b7e9735c7db5be82187767486bff93a6f92
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786537"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102544"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 

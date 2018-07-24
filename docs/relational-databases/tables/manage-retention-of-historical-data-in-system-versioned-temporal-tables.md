@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239095"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985608"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ A tarefa de limpeza para o columnstore clusterizado remove grupos de linha intei
 
 A excelente compactação de dados e eficiente limpeza da retenção torna o índice de columnstore clusterizado uma opção ideal para cenários em que sua carga de trabalho gera rapidamente uma grande quantidade de dados históricos. Esse padrão é comum para cargas de trabalho intensivas de processamento de transações que usam tabelas temporais para controle de alterações e auditoria, análise de tendências ou ingestão de dados IoT.
 
-Confira [Gerenciar dados históricos em tabelas temporais com a política de retenção](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) para obter mais detalhes.
+Confira [Gerenciar dados históricos em tabelas temporais com a política de retenção](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) para obter mais detalhes.
 
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas temporais](../../relational-databases/tables/temporal-tables.md)   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52ff1c2e1e994e103b216af60fe54c85ae033cb3
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 54df4f5e1e88c5a95ee1918003b482bd73f34680
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942632"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106292"
 ---
 # <a name="dynamic-data-masking"></a>Mascaramento de dados dinâmicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

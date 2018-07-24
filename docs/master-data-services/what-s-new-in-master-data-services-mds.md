@@ -15,12 +15,12 @@ caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f814950c08368a4045e151f4a6076f9be472e68
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 0f148c48f66aefacaa760938dddcbf77e43ada36
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328470"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984508"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novidades no MDS (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "35328470"
   
 -   Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.  
   
 ##  <a name="improved-performance"></a>Desempenho aprimorado  
   

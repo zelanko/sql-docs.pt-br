@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: cb93c59cec663a99ebc0460d948f4c2bd0a78f94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055854"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solucionar problemas de relatório do Reporting Services
 Este tópico ajuda você a solucionar problemas com design de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , visualização de um relatório, publicação de um relatório em um servidor de relatório em modo nativo ou em modo SharePoint, exibindo um relatório no servidor de relatório ou exportando um relatório para um formato de arquivo diferente.  

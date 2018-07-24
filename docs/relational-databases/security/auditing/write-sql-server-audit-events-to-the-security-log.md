@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9ded644d747a715e2d6c3bc5ebf03cb59dd23d6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: cc836986d8e3ab7604952409d6ca16962e520ec0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940852"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106262"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

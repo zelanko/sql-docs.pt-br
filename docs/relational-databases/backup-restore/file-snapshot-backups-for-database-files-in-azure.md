@@ -14,12 +14,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50d1845e0df6c508aaa6f4312403aa3d5231935e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 712e6a6b6f847bb781a121f8ab9944a3614828a3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923631"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979078"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backups de instantâneo de arquivo para arquivos de banco de dados no Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32923631"
   
 -   Para baixar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] já instalado.  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Como usar instantâneos do Azure para fazer backup de arquivos de banco de dados armazenados no Azure  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4c221d40c9f4a182f82ea241bf1acd7741286279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002628"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33075863"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|attribute|Description|  
+|attribute|Descrição|  
 |---------------|-----------------|  
 |**type**|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** reporta um problema de configuração encontrado durante a análise da configuração de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** reporta um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** reporta um evento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado quando você executa uma verificação de **-RUNTIME** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
 |**código**|Identifica o número de erro da mensagem.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33075863"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, tamanho é ilimitado.|  
 |**Value**|Retorna o texto da mensagem de erro.|  
@@ -68,7 +68,7 @@ ms.locfileid: "33075863"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elementos filho**|None|  
   
 ## <a name="example"></a>Exemplo  
  Este elemento reporta um erro 1102 para um banco de dados que não tenha uma chave mestra e o erro foi encontrado durante a análise de uma configuração do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  

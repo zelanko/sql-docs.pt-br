@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cb28981e42dd6bc12a4f9b47eb5378db6bacd88e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972217"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983058"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
+ > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . O Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] (**mmc.exe**) usa o arquivo **SQLServerManager\<versão>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Aqui estão os caminhos para as últimas quatro versões Windows instaladas na unidade C.  
   

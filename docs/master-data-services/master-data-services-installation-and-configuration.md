@@ -15,12 +15,12 @@ caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eeea06688707eb143254d62bbfaf59ef5d7d800
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f26803afed7f38e00c87db06e1c3c6398d346b5e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335500"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980478"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -40,7 +40,7 @@ Para obter links para vídeos e outros recursos de treinamento para ajudá-lo a 
   
 > **Download**  
 >-   Para baixar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], acesse o  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server já está instalado.  
+>-   Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server já está instalado.  
  
 > **Não está conseguindo criar um site do MDS?**
 >>Confira este artigo de suporte da Microsoft para obter instruções sobre como resolver esse problema.

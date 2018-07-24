@@ -4,19 +4,19 @@ description: Exiba trechos do conteúdo atualizado com alterações recentes na 
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.date: 04/28/2018
-ms.openlocfilehash: 865a5c79c3726b36faed32d24c07c37ea4837ba2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2a853be10aba997c4cb08f68951aa64233c8a578
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406178"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083498"
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Novo e atualizado recentemente: Integration Services para SQL Server
 

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974181"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062059"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32974181"
 ## <a name="use-data-columns-to-describe-returned-events"></a>Use colunas de dados para descrever eventos retornados  
  O Rastreamento do SQL usa colunas de dados na saída de rastreamento para descrever os eventos retornados por sua execução. A tabela a seguir descreve as colunas de dados do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , que são as mesmas usadas pelo Rastreamento do SQL, e indica as colunas selecionadas por padrão.  
   
-|Coluna de dados|Número da coluna|Description|  
+|Coluna de dados|Número da coluna|Descrição|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome do programa.|  
 |**BigintData1**|52|Valor (tipo de dados**bigint** ) que depende da classe de evento especificada no rastreamento.|  

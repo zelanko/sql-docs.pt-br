@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e602b89a44b5d26369973ef6f5ec8dc1f6d5c4eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405128"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130582"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gerenciar certificados do SQL Server Integration Services Scale Out
 
@@ -45,12 +45,12 @@ Talvez você deseje alterar o certificado do Mestre do Scale Out devido à expir
 Crie e instale um novo certificado SSL no nó Mestre com o seguinte comando:
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 Por exemplo:
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### <a name="2-bind-the-certificate-to-the-master-port"></a>2. Associar o certificado à porta do Mestre
@@ -92,7 +92,7 @@ A.  Instale o certificado SSL do cliente no repositório Raiz do computador loca
 
 B.  Atualize o arquivo de configuração de serviço do Trabalho do Scale Out.
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+Atualize o arquivo de configuração de serviço do Trabalho do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, no nó de Trabalho. Atualize **MasterHttpsCertThumbprint** para a impressão digital do novo certificado SSL.
 
 c.  Reinicie o serviço Trabalho do Scale Out.
 

@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce3d934327706eaf7733c5fec22b8e46311aed5a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 77fd3fcab52fef8b030846571fb5eb42429a0f37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400408"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983528"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Criar um atributo de data (Master Data Services)
 
@@ -92,7 +92,7 @@ ms.locfileid: "35400408"
   
  Depois de inserir uma linha com os valores acima na tabela mdm.tblList, a máscara “dd/MM/yyyy hh:mm:ss tt” estará disponível na caixa de listagem de máscaras de entrada. Você pode então selecionar essa máscara para exibir a data e a hora em uma coluna de atributo de datetime de uma entidade no MDS Explorer.  
   
- A máscara de entrada é uma cadeia de caracteres de formato DateTime .NET personalizada. Para obter mais informações, consulte [Cadeias de caracteres personalizadas de formato data e hora](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ A máscara de entrada é uma cadeia de caracteres de formato DateTime .NET personalizada. Para obter mais informações, consulte [Cadeias de caracteres personalizadas de formato data e hora](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

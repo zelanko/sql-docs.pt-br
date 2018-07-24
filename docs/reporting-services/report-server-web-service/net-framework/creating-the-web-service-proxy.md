@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 29c1cc08fa6e17eb59656cb658c6c1b78fe9c850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfc77e602a6d5082a9ffc44ed98b1710bcd19e9
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026834"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024172"
 ---
 # <a name="creating-the-web-service-proxy"></a>Criando o proxy de serviço Web
   Um cliente e um serviço Web podem se comunicar usando mensagens SOAP que encapsulam os parâmetros de entrada e de saída como XML. Uma classe de proxy mapeia parâmetros para elementos XML e então envia as mensagens SOAP pela rede. Dessa forma, a classe proxy libera você de ter de se comunicar com o serviço Web no nível de SOAP e permite que você invoque métodos do serviço Web em qualquer ambiente de desenvolvimento que dê suporte a SOAP e a proxies de serviço Web.  
@@ -120,8 +120,8 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
-rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
+rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  
   

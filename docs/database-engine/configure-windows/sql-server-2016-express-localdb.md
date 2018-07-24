@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870151"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984498"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 O **LocalDB** do Microsoft SQL Server 2016 Express é um recurso do [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) voltado para desenvolvedores. Ele está disponível no SQL Server 2016 Express with Advanced Services.  
 
@@ -40,7 +40,7 @@ O **LocalDB** do Microsoft SQL Server 2016 Express é um recurso do [SQL Server 
   
 -   Para baixar e instalar o SQL Server 2016 Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você baixar a mídia, escolha **Express Advanced** ou o pacote **LocalDB** . 
   
--   Tem uma conta do Azure?  Então, clique **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] já instalado.  
+-   Tem uma conta do Azure?  Então, clique **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] já instalado.  
   
 ## <a name="install-localdb"></a>Instalar o LocalDB  
  Instale o **LocalDB** por meio do assistente de instalação ou usando o programa SqlLocalDB.msi. O**LocalDB** é uma opção na instalação do [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -49,7 +49,7 @@ Selecione **LocalDB** na página **Seleção de Recursos/Recursos Compartilhados
 
  Uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** é gerenciada com o utilitário **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** deve ser usado no lugar do recurso de instância do usuário [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que foi preterido. 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O programa de instalação do **LocalDB** usa o programa SqlLocalDB.msi para instalar os arquivos necessários no computador. Uma vez instalado, o **LocalDB** torna-se uma instância do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que pode criar e abrir bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os arquivos de banco de dados do sistema para o banco de dados são armazenados no caminho de AppData local dos usuários, que normalmente é oculto. Por exemplo **C:\Usuários\\<usuário\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\\**. Os arquivos de banco de dados do usuário são armazenados onde o usuário determina, normalmente em algum lugar da pasta **C:\Usuários\\<usuário\>\Documents\\**.  
   
  Para obter mais informações sobre como incluir o **LocalDB** em um aplicativo, consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Visão geral da arquitetura lógica](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Passo a passo: criando um banco de dados LocalDB do SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) e [Passo a passo: conectando-se a dados no banco de dados LocalDB do SQL Server (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  

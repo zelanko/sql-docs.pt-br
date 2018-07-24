@@ -19,12 +19,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8d7a1aad6ccaa2b948799293d68137aac44a56b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ddbd649824694e4ef5be130b178014ea30f1b149
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934721"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980768"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Usar o XEvent Profiler do SSMS
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ O XEvent Profiler do SSMS é um recurso do SSMS (SQL Server Management Studio) q
 Ao contrário do SQL Profiler, o XEvent Profiler é integrado diretamente ao SSMS e criado com base na tecnologia de Eventos Estendidos escalonáveis no mecanismo do SQL. Esse recurso permite acesso rápido a uma exibição de transmissão ao vivo de eventos de diagnóstico no SQL Server. Essa exibição pode ser personalizada e as personalizações podem ser compartilhadas com outros usuários do SSMS como um arquivo .viewsettings. A sessão criada pelo XE Profiler é menos intrusiva para o SQL Server em execução do que ocorreria com um rastreamento SQL semelhante ao usar o SQL Profiler. Essa sessão também pode ser personalizada pelo usuário usando a interface do usuário existente das propriedades da sessão do XE ou pelo T-SQL.
 
 ## <a name="prerequisites"></a>Prerequisites
-Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
 ## <a id="getting-started"></a>Introdução
 Para acessar o XEvent Profiler, siga estas etapas:

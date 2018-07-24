@@ -17,16 +17,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00ff0d0eb75ea6ad78135ac85d93494d77b8c581
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e29db743d4b35cf5cf7a52a0eac2676fa32db37d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32937121"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981828"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-> Para obter conteúdo relacionado ao Assistente de Importação e de Exportação, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> Para obter conteúdo relacionado ao Assistente de Importação e de Exportação, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 O Assistente Importar Arquivo Simples fornece uma maneira simples de copiar dados de um arquivo simples (.csv, .txt) para um destino. Esta visão geral descreve os motivos para usar esse assistente, como encontrá-lo e um exemplo simples as ser seguido.
 
@@ -40,7 +40,7 @@ Para entender melhor a melhoria na experiência do usuário do Assistente Import
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>Prerequisites
-Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Introdução
 Para acessar o Assistente Importar Arquivo Simples, siga estas etapas:
@@ -98,7 +98,7 @@ Esta página indica se a importação foi bem-sucedida. Se uma marca de seleçã
 
 Saiba mais sobre o assistente.
  
-- **Saiba mais sobre como importar outras fontes.** Se desejar importar outros itens que não sejam arquivos simples, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **Saiba mais sobre como conectar-se a fontes de arquivos simples.** Se desejar obter mais informações sobre como conectar-se a fontes de arquivos simples, consulte [Conectar a uma fonte de dados de arquivo simples](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
+- **Saiba mais sobre como importar outras fontes.** Se desejar importar outros itens que não sejam arquivos simples, consulte [Assistente de Importação e Exportação do SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+- **Saiba mais sobre como conectar-se a fontes de arquivos simples.** Se desejar obter mais informações sobre como conectar-se a fontes de arquivos simples, consulte [Conectar a uma fonte de dados de arquivo simples](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Saiba mais sobre o PROSE.** Se desejar uma visão geral da estrutura inteligente usada por esse assistente, consulte [PROSE SDK](https://microsoft.github.io/prose/).
 

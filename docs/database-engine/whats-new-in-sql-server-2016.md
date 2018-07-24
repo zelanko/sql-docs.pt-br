@@ -19,12 +19,12 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc31efe5f3e78a80061d47149c56bf942cd7e8b7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989372"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980595"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Para examinar quais são as novidades em outros componentes do SQL Server, veja 
 
 - Para baixar o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], acesse  **[Centro de Avaliação](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![baixar](../analysis-services/media/download.png "download").
 
-- Tem uma conta do Azure?  Então, acesse **[aqui](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
+- Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para criar uma Máquina Virtual com o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] já instalado.
 
 > [!NOTE]
 > Para obter as notas de versão atuais, veja [Notas de versão do SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).

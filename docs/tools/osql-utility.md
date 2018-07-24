@@ -31,11 +31,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002598"
 ---
 # <a name="osql-utility"></a>Utilitário osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -214,7 +214,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Além das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] dentro do **osql**, os comandos a seguir também estão disponíveis.  
   
-|Comando|Description|  
+|Comando|Descrição|  
 |-------------|-----------------|  
 |GO|Executa todas as instruções inseridas depois do último GO.|  
 |RESET|Apaga as instruções inseridas.|  

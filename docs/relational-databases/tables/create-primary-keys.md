@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c25dc5d5d45b713f284cd6505db71320c0cf3234
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789287"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980199"
 ---
 # <a name="create-primary-keys"></a>Criar chaves primárias
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar chaves primárias](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Criar chaves primárias](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx).
 
   Você pode definir uma chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A criação de uma chave primária cria automaticamente um índice clusterizado correspondente exclusivo ou um índice não clusterizado, caso seja especificado dessa forma.  
   

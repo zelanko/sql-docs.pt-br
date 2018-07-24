@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 299f4837a54622370ff5c84e29e9a3db43db5510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b3c95ce2b9d937a464fcc2ec3528084503b5025
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218156"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983848"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Retornar dados de um procedimento armazenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Retornar dados de um procedimento armazenado](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx).
 
   Há três formas de retornar dados de um procedimento para um programa de chamada: conjuntos de resultados, parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as três abordagens.  
   

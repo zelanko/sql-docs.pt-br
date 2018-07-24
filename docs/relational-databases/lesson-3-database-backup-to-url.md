@@ -17,19 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942561"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978928"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lição 3: Backup de banco de dados em URL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Nesta lição, você aprenderá a fazer backup do banco de dados AdventureWorks2014 da instância local do SQL Server 2016 no contêiner do Azure criado na [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
-> Se quiser fazer backup de um banco de dados SQL Server 2012 SP1 CU2 ou posterior ou SQL Server 2014 nesse contêiner do Azure, você poderá usar a sintaxe preterida documentada [aqui](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) para fazer backup na URL usando a sintaxe WITH CREDENTIAL.  
+> Se quiser fazer backup de um banco de dados SQL Server 2012 SP1 CU2 ou posterior ou SQL Server 2014 nesse contêiner do Azure, você poderá usar a sintaxe preterida documentada [aqui](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) para fazer backup na URL usando a sintaxe WITH CREDENTIAL.  
   
 Para fazer backup de um banco de dados no armazenamento de Blobs, siga estas etapas:  
   

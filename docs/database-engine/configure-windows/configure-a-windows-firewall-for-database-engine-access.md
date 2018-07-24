@@ -18,16 +18,16 @@ caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aa4d659caca70d7ff01168d40148d35f23d25908
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa88b008e2c2115318c2c31c62b9fab94571273
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869521"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983838"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar um Firewall do Windows para o acesso ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar um Firewall do Windows para o acesso ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/ms175043(SQL.120).aspx).
 
 
   Este tópico descreve como configurar um firewall de Windows para acesso ao Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Para acessar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que estiver executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

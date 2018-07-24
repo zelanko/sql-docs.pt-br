@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97480ae8c4b390250ae2007b7d1d03d0efccf472
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a2be6888bcd358d5e8633801c79d4a994967d56f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332627"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979159"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 
-- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Monitorar o armazenamento no OLTP in-memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
