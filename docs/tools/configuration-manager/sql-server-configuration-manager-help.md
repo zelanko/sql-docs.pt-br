@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979972"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ajuda do SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para configurar os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurar a conectividade de rede. Para criar ou gerenciar objetos de banco de dados, configurar a segurança e escrever consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Se você precisa configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux, use o **mssql conf** ferramenta. Para obter mais informações, consulte [configurar o SQL Server no Linux com a ferramenta mssql conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Se você precisar configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux, use o **mssql-conf** ferramenta. Para obter mais informações, consulte [configurar o SQL Server no Linux com a ferramenta mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  Esta seção contém os tópicos da Ajuda F1 para as caixas de diálogo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

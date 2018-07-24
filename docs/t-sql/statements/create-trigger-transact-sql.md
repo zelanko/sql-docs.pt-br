@@ -32,12 +32,12 @@ caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 01e89f2c7bfb8cc814def96fcc8d51db0349b439
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ecf29c3e591bce67ef204ad8aabdb4eea84fa992
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785667"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038133"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "37785667"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql  
+``` 
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -78,7 +78,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```sql  
+``` 
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -97,7 +97,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```sql  
+``` 
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -113,7 +113,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```sql  
+```  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -130,8 +130,8 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql  
--- Windows Azure SQL Database Syntax   
+``` 
+-- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER [ schema_name . ]trigger_name   
@@ -146,8 +146,8 @@ ON { table | view }
   
 ```  
   
-```sql  
--- Windows Azure SQL Database Syntax  
+```  
+-- Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
   

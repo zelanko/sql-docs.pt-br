@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82235669c871943f1560224a4adf0c63e74bb66d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988388"
 ---
 # <a name="supportsouterjoins-method-sqlserverdatabasemetadata"></a>Método supportsOuterJoins (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32849411"
 public boolean supportsOuterJoins()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  **True** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -47,7 +47,7 @@ public boolean supportsOuterJoins()
 ## <a name="remarks"></a>Remarks  
  Esse método supportsOuterJoins é especificado pelo método supportsOuterJoins na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

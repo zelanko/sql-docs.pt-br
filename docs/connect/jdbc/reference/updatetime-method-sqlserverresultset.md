@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ae10ca220b6f0834f08599e1c1ce3e98cc53549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979198"
 ---
 # <a name="updatetime-method-sqlserverresultset"></a>Método updateTime (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "32847991"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|[updateTime (int, Java.SQL. time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Atualiza a coluna designada com um valor de hora, considerando o índice da coluna.|  
-|[updateTime (Java, Java.SQL. time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Atualiza a coluna designada com um valor de hora, considerando o nome da coluna.|  
+|[updateTime (int, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|Atualiza a coluna designada com um valor de hora, considerando o índice da coluna.|  
+|[updateTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|Atualiza a coluna designada com um valor de hora, considerando o nome da coluna.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -35,18 +35,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d23489e55a793e63b6b3bfcb8c2a71708a2bb567
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d50d18d7e2fbcf2012c9faf1bfbe46f515547
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154626"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981358"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> Para ver o conteúdo relacionado a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Reorganizar e recompilar índices](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+> Para ver o conteúdo relacionado a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Reorganizar e recompilar índices](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
 
 Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifica os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Os índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo, especialmente nas operações de exame.  
   

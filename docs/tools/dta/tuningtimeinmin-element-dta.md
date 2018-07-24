@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069143"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048644"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33069143"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**unsignedInt**, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
@@ -54,11 +54,11 @@ ms.locfileid: "33069143"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elementos filho**|None|  
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
  O exemplo de código a seguir mostra como definir 12 horas como tempo máximo de ajuste:  
   
 ## <a name="code"></a>Código  

@@ -1,5 +1,5 @@
 ---
-title: Configurar Distributed Replay | Microsoft Docs
+title: Configurar o Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038477"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33074183"
   
  O nível de log especificado pelo arquivo de configuração do controlador inclui o seguinte:  
   
-|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nível de log|`<LoggingLevel>`|Especifica o nível de log do serviço de controlador.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nenhum. Por padrão, o valor é `CRITICAL`.|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33074183"
   
  As configurações especificadas pelo arquivo de configuração de cliente incluem o seguinte:  
   
-|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controlador|`<Controller>`|Especifica o nome do computador do controlador. O cliente tentará se registrar com o ambiente de Distributed Replay entrando em contato o controlador.|Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.|Nenhum. Por padrão, o cliente tenta se registrar com a instância de controlador que está sendo executada localmente ("`.`"), se existir.|  
 |Diretório de trabalho do cliente|`<WorkingDirectory>`|É o caminho local no cliente onde os arquivos de expedição são salvos.<br /><br /> Os arquivos nesse diretório são substituídos na próxima reprodução.|Um nome de diretório completo, iniciando com a letra da unidade.|Nenhum. Se nenhum valor for especificado, os arquivos de expedição serão salvos no mesmo local que o arquivo de configuração de cliente padrão. Se for especificado um valor e essa pasta não existir no cliente, o serviço do cliente não será iniciado.|  
@@ -94,7 +94,7 @@ ms.locfileid: "33074183"
   
  As definições de configuração de pré-processamento são especificadas em elementos XML que são filhos do elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento. Essas configurações incluem:  
   
-|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Incluir atividades de sessão de sistema|`<IncSystemSession>`|Indica se as atividades de sessão de sistema durante a captura serão incluídas durante a reprodução.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  
 |Tempo ocioso máximo|`<MaxIdleTime>`|Arredonda o tempo ocioso para um número absoluto (em segundos).|Um inteiro que é >= -1.<br /><br /> `-1` indica que não houve alteração do valor original no arquivo de rastreamento original.<br /><br /> `0` indica que há alguma atividade ocorrendo em um determinado momento.|Nenhum. Por padrão, o valor é `-1`.|  
@@ -126,7 +126,7 @@ ms.locfileid: "33074183"
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<ReplayOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s***target server* com a opção **replay** da ferramenta de administração.|  
 |Modo de sequenciamento|`<SequencingMode>`|Especifica o modo usado para o agendamento de eventos.|`synchronization` &#124; `stress`|Nenhum. Por padrão, o valor é `stress`.|  
@@ -141,7 +141,7 @@ ms.locfileid: "33074183"
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<OutputOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|Description|Valores permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Gravar contagem de linhas|`<RecordRowCount>`|Indica se a contagem de linhas de cada conjunto de resultados deve ser gravada.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `Yes`.|  
 |Gravar conjunto de resultados|`<RecordResultSet>`|Indica se o conteúdo de todos os conjuntos de resultados deve ser gravado.|`Yes` &#124; `No`|Nenhum. Por padrão, o valor é `No`.|  

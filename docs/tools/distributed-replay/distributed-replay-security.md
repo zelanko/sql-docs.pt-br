@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay segurança | Microsoft Docs
+title: Distributed Replay Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d27f9cc7caa5ebeedf9052d5063ebec1e3851ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017302"
 ---
 # <a name="distributed-replay-security"></a>Segurança do Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

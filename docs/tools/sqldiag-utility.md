@@ -36,11 +36,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7f22e6ca9f21a4d40ec5b4a0839c3c308414f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004578"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ sqldiag
 > [!NOTE]  
 >  O**SQLdiag** não anexa a saída à pasta de saída atual quando é iniciado. Ele pode apenas substituir a pasta de saída padrão (opção 1) ou renomear a pasta (opção 2) e, em seguida, gravar a saída na nova pasta de saída padrão SQLDIAG.  
   
- **/M** *máquina1* [ *máquina2 * * machineN*] | *@machinelistfile*  
+ **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
  Substitui as máquinas especificadas no arquivo de configuração. Por padrão, o arquivo de configuração é SQLDiag.Xml ou é definido com o parâmetro **/I** . Ao especificar mais de uma máquina, separe cada nome de máquina com um espaço.  
   
  Usar o *@machinelistfile* especifica um nome de arquivo de lista de máquina a ser armazenado no arquivo de configuração.  

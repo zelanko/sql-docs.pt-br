@@ -1,5 +1,5 @@
 ---
-title: Exemplo de dados do conjunto de recuperar resultados | Microsoft Docs
+title: Exemplo de dados de recuperação resultado conjunto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039190"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Exemplo de recuperação de dados do conjunto de resultados
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ public class retrieveRS {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com conjuntos de resultados](../../connect/jdbc/working-with-result-sets.md)  
   
   

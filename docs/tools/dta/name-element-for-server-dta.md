@@ -1,5 +1,5 @@
 ---
-title: Nome de elemento do servidor (DTA) | Microsoft Docs
+title: Nomeie o elemento do servidor (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f147da482308ca216baf8b98ebab125fd3ff44d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041584"
 ---
 # <a name="name-element-for-server-dta"></a>Elemento Nome do servidor (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33069803"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Description|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  

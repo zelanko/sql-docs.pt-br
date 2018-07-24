@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066839"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33075363"
 ## <a name="showplan-events"></a>Eventos de Plano de Execução  
  Os eventos de rastreamento de Plano de Execução são listados e descritos na tabela a seguir.  
   
-|Nome do evento|Description|  
+|Nome do evento|Descrição|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica a primeira vez em que um Plano de Execução compilado é colocado em cache, quando é recompilado e quando é descartado do cache do plano. A coluna **TextData** contém o Plano de Execução em formato XML. Para obter mais informações, veja [Classe de evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Exibe o plano de consulta com detalhes completos da compilação da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] executada. Por exemplo, pode exibir estimativas de preço de custo e listas de colunas. Para obter mais informações, consulte [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  

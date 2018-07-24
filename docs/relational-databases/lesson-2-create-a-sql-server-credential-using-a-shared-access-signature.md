@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942421"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983159"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lição 2: Criar uma credencial do SQL Server usando uma assinatura de acesso compartilhado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Nesta lição, você aprenderá a criar uma credencial para armazenar as informa
 Uma credencial do SQL Server é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A credencial armazena o caminho de URI do contêiner de armazenamento e a assinatura de acesso compartilhado desse contêiner.  
   
 > [!NOTE]  
-> Se quiser fazer backup de um banco de dados SQL Server 2012 SP1 CU2 ou posterior ou SQL Server 2014 nesse contêiner do Azure, você poderá usar a [sintaxe preterida](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) documentada aqui para criar uma credencial do SQL Server baseada em sua chave de conta de armazenamento.  
+> Se quiser fazer backup de um banco de dados SQL Server 2012 SP1 CU2 ou posterior ou SQL Server 2014 nesse contêiner do Azure, você poderá usar a [sintaxe preterida](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) documentada aqui para criar uma credencial do SQL Server baseada em sua chave de conta de armazenamento.  
   
 ## <a name="create-sql-server-credential"></a>Criar uma credencial do SQL Server  
 Para criar uma credencial do SQL Server, siga estas etapas:  

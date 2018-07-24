@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 651f5b1650748fd4d6d6506ed5ac7ea8c75e17c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847471"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988368"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>Método supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32847471"
 public boolean supportsMinimumSQLGrammar()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  **True** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -47,7 +47,7 @@ public boolean supportsMinimumSQLGrammar()
 ## <a name="remarks"></a>Remarks  
  Esse método supportsMinimumSQLGrammer é especificado pelo método supportsMinimumSQLGrammer na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

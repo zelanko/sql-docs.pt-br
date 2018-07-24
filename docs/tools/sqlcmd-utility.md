@@ -34,25 +34,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990408"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para SQL Server 2014 e inferior, consulte [utilitário sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
- > Para usar o sqlcmd no Linux, consulte [instalar sqlcmd e bcp em Linux](../linux/sql-server-linux-setup-tools.md).
+ > Para usar o sqlcmd no Linux, confira [instalar o sqlcmd e bcp no Linux](../linux/sql-server-linux-setup-tools.md).
 
-  O utilitário **sqlcmd** permite inserir instruções Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando, no **Editor de Consultas** no modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do SQL Server Agent. Esse utilitário usa ODBC para executar lotes Transact-SQL. 
+  O utilitário **sqlcmd** permite inserir instruções Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando, no **Editor de Consultas** no modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do SQL Server Agent. Esse utilitário usa ODBC para executar lotes do Transact-SQL. 
   
 > [!NOTE]
-> As versões mais recentes do utilitário sqlcmd estão disponíveis como uma versão da Web no [Centro de Download](http://go.microsoft.com/fwlink/?LinkID=825643). Você precisa de versão 13,1 ou superior para dar suporte ao sempre criptografado (`-g`) e autenticação do Active Directory do Azure (`-G`). (Você poderá ter várias versões do sqlcmd.exe instaladas no computador. Verifique se você está usando a versão correta. Para determinar a versão, execute `sqlcmd -?`.)
+> As versões mais recentes do utilitário sqlcmd estão disponíveis como uma versão da Web no [Centro de Download](http://go.microsoft.com/fwlink/?LinkID=825643). Você precisa versão 13.1 ou superior para dar suporte a Always Encrypted (`-g`) e autenticação do Active Directory do Azure (`-G`). (Você poderá ter várias versões do sqlcmd.exe instaladas no computador. Verifique se você está usando a versão correta. Para determinar a versão, execute `sqlcmd -?`.)
 
-Você pode tentar o utilitário sqlcmd do Shell de nuvem do Azure, pois ele já está instalado por padrão: [ ![inicie o Shell de nuvem](https://shell.azure.com/images/launchcloudshell.png "inicie o Shell de nuvem")](https://shell.azure.com)
+Você pode tentar o utilitário sqlcmd do Azure Cloud Shell, pois ele já está instalado por padrão: [ ![iniciar Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "iniciar Cloud Shell")](https://shell.azure.com)
 
   Para executar instruções sqlcmd no SSMS, selecione o Modo SQLCMD na lista suspensa Menu de Consulta do painel de navegação superior.  
   
@@ -121,7 +121,7 @@ sqlcmd
 ## <a name="command-line-options"></a>Opções de linha de comando  
  **Opções relacionadas a logon**  
   **-A**  
- Faz logon no SQL Server com uma DAC (conexão de administrador dedicada). Esse tipo de conexão é usado para solucionar um problema no servidor. Isso funcionará apenas com computadores servidor que oferecem suporte para DAC. Se a DAC não estiver disponível, o **sqlcmd** vai gerar uma mensagem de erro e será encerrado. Para obter mais informações sobre a DAC, consulte [Conexão de diagnóstico para administradores de banco de dados](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Não há suporte para a opção - A com a opção -G. Ao se conectar ao banco de dados SQL usando - A, você deve ser um administrador do SQL server. A DAC não está disponível para um administrador do Active Directory do Azure.
+ Faz logon no SQL Server com uma DAC (conexão de administrador dedicada). Esse tipo de conexão é usado para solucionar um problema no servidor. Isso funcionará apenas com computadores servidor que oferecem suporte para DAC. Se a DAC não estiver disponível, o **sqlcmd** vai gerar uma mensagem de erro e será encerrado. Para obter mais informações sobre a DAC, consulte [Conexão de diagnóstico para administradores de banco de dados](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Não há suporte para a opção - A com a opção -G. Ao se conectar ao banco de dados SQL usando - A, você deve ser um administrador do SQL server. O DAC não está disponível para um administrador do Active Directory do Azure.
   
  **-C**  
  Essa opção é usada pelo cliente para configurá-lo para confiar implicitamente no certificado do servidor sem validação. Essa opção é equivalente à opção `TRUSTSERVERCERTIFICATE = true`do ADO.NET.  
@@ -186,7 +186,7 @@ Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mai
  Declara o tipo de carga de trabalho de aplicativo ao conectar-se a um servidor. O único valor com suporte no momento é **ReadOnly**. Se **-K** não for especificado, o utilitário sqlcmd não dará suporte à conectividade com uma réplica secundária em um grupo de disponibilidade AlwaysOn. Para obter mais informações, consulte [Secundárias ativas: Réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), e [secundárias ativas: réplicas secundárias legíveis (sempre em grupos de disponibilidade)](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Sempre especifique **-M** ao conectar-se ao ouvinte de um grupo de disponibilidade do SQL Server ou a uma instância de cluster de failover do SQL Server. **-M** proporciona maior rapidez na detecção do servidor (atualmente) ativo e na conexão a ele. Se **-M** não for especificado, **-M** estará desativado. Para obter mais informações sobre o [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [criação e configuração dos grupos de disponibilidade &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e grupos de disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), e [secundárias ativas: réplicas secundárias legíveis (grupos de disponibilidade) Always On](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  Essa opção é usada pelo cliente para solicitar uma conexão criptografada.  
