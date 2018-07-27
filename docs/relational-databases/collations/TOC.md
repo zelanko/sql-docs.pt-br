@@ -1,7 +1,0 @@
-# [Visão geral](collation-and-unicode-support.md)  
-# [Definir ou alterar o agrupamento do servidor](set-or-change-the-server-collation.md)  
-# [Definir ou alterar o agrupamento de banco de dados](set-or-change-the-database-collation.md)  
-# [Definir ou alterar o agrupamento de coluna](set-or-change-the-column-collation.md)  
-# [Exiba informações de agrupamento](view-collation-information.md)  
-# [Gravar instruções Transact-SQL internacionais](write-international-transact-sql-statements.md)  
-# [Definir um idioma de sessão](set-a-session-language.md)  

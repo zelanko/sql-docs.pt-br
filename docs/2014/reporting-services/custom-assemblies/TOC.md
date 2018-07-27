@@ -1,8 +1,0 @@
-# [Usar assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)
-## [Fazer referência a assemblies em um arquivo RDL](referencing-assemblies-in-an-rdl-file.md)
-## [Implantando um assembly personalizado](deploying-a-custom-assembly.md)
-## [Usar assemblies de nome forte personalizados](using-strong-named-custom-assemblies.md)
-## [Declarar permissões em assemblies personalizados](asserting-permissions-in-custom-assemblies.md)
-## [Acessar assemblies personalizados por meio de expressões](accessing-custom-assemblies-through-expressions.md)
-## [Inicializar objetos assembly personalizados](initializing-custom-assembly-objects.md)
-## [Como depurar assemblies personalizados](how-to-debug-custom-assemblies.md)

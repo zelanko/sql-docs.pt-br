@@ -1,6 +1,0 @@
-# [Visão geral](data-compression.md)  
-# [Implementação da compactação de linha](row-compression-implementation.md)  
-# [Implementação da compactação de página](page-compression-implementation.md)  
-# [Implementação da compactação Unicode](unicode-compression-implementation.md)  
-# [Habilitar a compactação em uma tabela ou um índice](enable-compression-on-a-table-or-index.md)  
-# [Desabilitar a compactação em uma tabela ou um índice](disable-compression-on-a-table-or-index.md)  

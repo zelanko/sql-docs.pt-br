@@ -1,5 +1,0 @@
-# [Guia do desenvolvedor (replicação)](replication-developer-documentation.md)
-# [Conceitos de programação da replicação](replication-programming-concepts.md)
-# [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)
-# [Conceitos de objetos de gerenciamento de replicação](replication-management-objects-concepts.md)
-# [Conceitos dos executáveis do Replication Agent](replication-agent-executables-concepts.md)

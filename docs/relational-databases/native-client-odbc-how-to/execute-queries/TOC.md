@@ -1,5 +1,0 @@
-# [Tópicos de instruções sobre a execução de consultas (ODBC)](executing-queries-how-to-topics-odbc.md)
-# [Executar diretamente uma instrução (ODBC)](execute-a-statement-directly-odbc.md)
-# [Preparar e executar uma instrução (ODBC)](prepare-and-execute-a-statement-odbc.md)
-# [Definir opções de cursor (ODBC)](set-cursor-options-odbc.md)
-# [Usar uma instrução (ODBC)](use-a-statement-odbc.md)

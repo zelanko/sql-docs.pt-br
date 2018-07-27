@@ -1,6 +1,0 @@
-# [Desenvolvendo um componente de destino personalizado](developing-a-custom-destination-component.md)
-# [Desenvolvendo um componente de origem personalizado](developing-a-custom-source-component.md)
-# [Desenvolvendo um componente de transformação personalizado com saídas assíncronas](developing-a-custom-transformation-component-with-asynchronous-outputs.md)
-# [Desenvolvendo um componente de transformação personalizado com saídas síncronas](developing-a-custom-transformation-component-with-synchronous-outputs.md)
-# [Desenvolvendo componentes de fluxo de dados com várias entradas](developing-data-flow-components-with-multiple-inputs.md)
-# [Desenvolvendo tipos específicos de componentes de fluxo de dados](developing-specific-types-of-data-flow-components.md)

@@ -1,6 +1,0 @@
-# [Executando operações de cópia em massa (ODBC)](performing-bulk-copy-operations-odbc.md)
-# [Cópia em massa de variáveis do programa](bulk-copying-from-program-variables.md)
-# [Copiando em massa dados de texto e imagem](bulk-copying-text-and-image-data.md)
-# [Convertendo de cópia em massa DB-Library em ODBC](converting-from-db-library-to-odbc-bulk-copy.md)
-# [Gerenciando tamanhos de lote para cópia em massa](managing-bulk-copy-batch-sizes.md)
-# [Usando arquivos de dados e de formato](using-data-files-and-format-files.md)

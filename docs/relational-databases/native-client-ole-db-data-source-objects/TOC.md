@@ -1,7 +1,0 @@
-# [Objetos de fonte de dados (OLE DB)](data-source-objects-ole-db.md)
-# [Propriedades de informações da fonte de dados](data-source-information-properties.md)
-# [Propriedades da fonte de dados (OLE DB)](data-source-properties-ole-db.md)
-# [Propriedades de inicialização e autorização](initialization-and-authorization-properties.md)
-# [Objetos persistidos da fonte de dados](persisted-data-source-objects.md)
-# [Propriedades da sessão – Provedor OLE DB do SQL Server Native Client](session-properties-sql-server-native-client-ole-db-provider.md)
-# [Sessões](sessions.md)

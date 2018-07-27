@@ -1,7 +1,0 @@
-# [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)
-# [Criar um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)
-# [Arquitetura de item de relatório personalizado](custom-report-item-architecture.md)
-# [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)
-# [Requisitos de implementação de item de relatório personalizado](custom-report-item-implementation-requirements.md)
-# [Itens de relatório personalizados](custom-report-items.md)
-# [Como implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)
