@@ -31,12 +31,12 @@ caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170307"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310293"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
   O **bcp** copia dados entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
@@ -105,7 +105,7 @@ ms.locfileid: "37170307"
   
 -   **formato** cria um arquivo de formato com base na opção especificada (**- n**, `-c`, `-w`, ou **-N**) e nos delimitadores da tabela ou exibição. Quando você copia dados em massa, o comando **bcp** pode recorrer a um arquivo de formato, o que libera você da necessidade de inserir novamente as informações de formato de forma interativa. A opção **format** exige a opção **-f**; a criação de um arquivo de formato XML também exige a opção **-x**. Para obter mais informações, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). É necessário especificar **nul** como o valor (**format nul**).  
   
- *proprietário*  
+ *Proprietário*  
  Corresponde ao nome do proprietário da tabela ou exibição. O*owner* será opcional se o usuário que estiver executando a operação for o proprietário da tabela ou exibição especificada. Se *owner* não estiver especificado e o usuário que está executando a operação não for proprietário da tabela ou exibição especificada, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retornará uma mensagem de erro e a operação será cancelada.  
   
  **"** *query* **"**  
@@ -147,7 +147,7 @@ ms.locfileid: "37170307"
 |RAW|Não ocorre nenhuma conversão de uma página de código para outra. Essa é a opção mais rápida porque não acontece nenhuma conversão.|  
 |*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> **\*\* Importante \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a página de código 65001 (codificação UTF-8).|  
   
- `-d` *Database_Name*  
+ `-d` *Database_name*  
  Especifica o banco de dados que deve ser conectado. Por padrão, bcp.exe se conecta ao banco de dados padrão do usuário. Se `-d` *database_name* e um nome de três partes (*database_name.schema.table*passado como o primeiro parâmetro para bcp.exe) for especificado, ocorrerá um erro porque você não pode especificar o nome do banco de dados duas vezes. Se *database_name* começa com um hífen (-) ou uma barra (/), não adicione um espaço entre `-d` e o nome do banco de dados.  
   
  **-e** *err_file*  

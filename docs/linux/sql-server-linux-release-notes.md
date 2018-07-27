@@ -4,20 +4,20 @@ description: Este artigo contém as notas de versão e recursos com suporte para
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/20/2018
-ms.topic: article
+ms.date: 07/18/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 85fb0060a7143aa77cd5495a6140a33d5ac881cc
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854358"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146756"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -47,6 +47,7 @@ A tabela a seguir lista o histórico de lançamento do SQL Server 2017.
 
 | Versão     | Versão       | Data de liberação |
 |-------------|---------------|--------------|
+| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
@@ -68,9 +69,23 @@ Se você estiver atualizando os pacotes existentes do SQL Server, execute o coma
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU9"></a> CU9 (julho de 2018)
+
+Esta é a versão de atualização cumulativa 9 (CU9) do SQL Server 2017. A versão do mecanismo do SQL Server para esta versão é 14.0.3030.27. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacote manual ou off-line, você pode baixar os pacotes Debian e RPM com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 14.0.3030.27-1 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[Pacote do SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacote RPM SLES | 14.0.3030.27-1 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
+| Pacote Debian do Ubuntu 16.04 | 14.0.3030.27-1 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[Pacote do SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU8"></a> CU8 (junho de 2018)
 
-Esta é a versão de atualização cumulativa 8 (CU8) do SQL Server 2017. A versão do mecanismo do SQL Server para esta versão é 14.0.3029.16. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+Esta é a versão de atualização cumulativa 8 (CU8) do SQL Server 2017. A versão do mecanismo do SQL Server para esta versão é 14.0.3029.16. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363).
 
 ### <a name="package-details"></a>Detalhes do pacote
 

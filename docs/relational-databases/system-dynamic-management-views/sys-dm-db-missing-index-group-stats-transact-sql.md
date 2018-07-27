@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b019f8e7b1f9e82e288c9c53732db4e2c7a253
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7b77b2a8df3d2f6f0afb47db519dae142baf2d13
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466422"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310213"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34466422"
     
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**Int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
+|**group_handle**|**int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
 |**unique_compiles**|**bigint**|Número de compilações e recompilações que se beneficiariam deste grupo de índice ausente. Compilações e recompilações de muitas consultas diferentes podem contribuir para esse valor de coluna.|  
 |**user_seeks**|**bigint**|Número de buscas geradas por consultas de usuário para as quais o índice recomendado no grupo poderia ter sido usado.|  
 |**user_scans**|**bigint**|Número de exames gerados por consultas de usuário para as quais o índice recomendado no grupo poderia ter sido usado.|  
@@ -57,7 +57,10 @@ ms.locfileid: "34466422"
 |**avg_system_impact**|**float**|Benefício de porcentagem média que as consultas de sistema poderiam experimentar se esse grupo de índices ausentes fosse implementado. O valor indica que o custo da consulta ficaria na média dessa porcentagem se esse grupo de índices ausentes fosse implementado.|  
   
 ## <a name="remarks"></a>Remarks  
- Informações retornadas por **db_missing_index_group_stats** são atualizadas por cada execução da consulta, não por todas as compilações de consulta ou recompilação. As estatísticas de uso não são persistentes e só serão mantidas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem manter as estatísticas de uso após o desligamento e a reinicialização do servidor.  
+ Informações retornadas por **db_missing_index_group_stats** é atualizado por cada execução da consulta, não por cada compilação de consulta ou a recompilação. As estatísticas de uso não são persistentes e só serão mantidas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem manter as estatísticas de uso após o desligamento e a reinicialização do servidor.  
+
+  >[!NOTE]
+  >Conjunto de resultados para essa DMV são limitado a 600 linhas. Cada linha contém um índice ausente. Se você tiver mais de 600 índices ausentes, você deve tratar os índices ausentes existentes para que você possa exibir, em seguida, as mais recentes.
   
 ## <a name="permissions"></a>Permissões  
  Para consultar essa exibição de gerenciamento dinâmico, os usuários devem receber a permissão VIEW SERVER STATE ou qualquer permissão que implique essa permissão.  
@@ -87,7 +90,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao escrever a instrução CREATE INDEX DDL para implementar índices ausentes, liste primeiro as colunas de igualdade e colunas de desigualdade em ON \< *table_name*> cláusula da instrução CREATE INDEX. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
+ Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao escrever a instrução CREATE INDEX DDL para implementar índices ausentes, liste primeiro as colunas de igualdade e, em seguida, as colunas de desigualdade em ON \< *table_name*> cláusula da instrução CREATE INDEX. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
   
 ## <a name="see-also"></a>Consulte também  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

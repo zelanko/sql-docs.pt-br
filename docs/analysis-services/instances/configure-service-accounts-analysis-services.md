@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019333"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130602"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
+  O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
   
  Este tópico fornece informações complementares para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo as permissões adicionais necessárias para instalações em tabela e em cluster. Abrange também as permissões necessárias para oferecer suporte às operações do servidor. Por exemplo, você pode configurar operações de processamento e de consulta para serem executadas na conta d serviço, caso no qual você terá de conceder permissões adicionais para funcionar.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34019333"
 ## <a name="logon-account-recommendations"></a>Recomendações de conta de logon  
  Em um cluster de failover, todas as instâncias do Analysis Services devem ser configuradas para usar uma conta de usuário de domínio do Windows. Atribua a mesma conta para todas as instâncias. Consulte [Como realizar cluster no Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) para obter detalhes.  
   
- Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
+ Instâncias autônomas devem usar a conta virtual padrão, **NT Service\MSSQLServerOLAPService** para a instância padrão, ou **NT Service\MSOLAP$ * * * nome de instância* para uma instância nomeada. Essa recomendação se aplica a instâncias do Analysis Services em todos os modos de servidor, considerando o Windows Server 2008 R2 e posterior para o sistema operacional e o SQL Server 2012 e posterior para o Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concedendo permissões ao Analysis Services  
  Esta seção explica as permissões exigidas para operações internas e locais do Analysis Services, tais como iniciar o executável, ler o arquivo de configuração e carregar os bancos de dados do diretório de dados. Se você estiver procurando orientação sobre definição de permissões para acesso a dados externos e interoperabilidade com outros serviços e aplicativos, consulte [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks) mais adiante neste tópico.  
@@ -44,7 +44,7 @@ ms.locfileid: "34019333"
   
  Você pode ver esse grupo de segurança nas configurações de segurança local:  
   
--   Execute compmgmt.msc | **Usuários e grupos locais** | **grupos** | **SQLServerMSASUser$**\<nome do servidor >**$MSSQLSERVER**  (para uma instância padrão).  
+-   Execute compmgmt. msc | **Usuários e grupos locais** | **grupos** | **SQLServerMSASUser$**\<nome do servidor >**$MSSQLSERVER**  (para uma instância padrão).  
   
 -   Clique duas vezes no grupo de segurança para exibir seus membros.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019333"
 |||  
 |-|-|  
 |**Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)|Este privilégio está disponível para todos os usuários por padrão por meio do grupo de segurança **Usuários** . Se você bloquear um servidor ao remover um privilégio desse grupo, o Analysis Services pode falhar ao iniciar o serviço, registrando o seguinte o log: "O cliente não possui o privilégio exigido." Quando esse erro ocorre, restaure o privilégio ao Analysis Services, concedendo-o ao grupo de segurança do Analysis Services apropriado.|  
-|**Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)|Este privilégio é usado para solicitar mais memória se um processo tiver recursos insuficientes para concluir a sua execução, sujeito aos limites estabelecidos de memória para a instância.|  
+|**Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|Este privilégio é usado para solicitar mais memória se um processo tiver recursos insuficientes para concluir a sua execução, sujeito aos limites estabelecidos de memória para a instância.|  
 |**Bloquear páginas na memória** (SeLockMemoryPrivilege)|Este privilégio somente é necessário quando a paginação está totalmente desativada. Por padrão, uma instância de servidor de tabela usa o arquivo de paginação do Windows, mas é possível configurá-lo para não usar a paginação do Windows ao definir **VertiPaqPagingPolicy** como 0.<br /><br /> **VertiPaqPagingPolicy** como 1 (padrão) instrui a instância do servidor de tabela a usar o arquivo de paginação do Windows. Alocações não são bloqueadas, permitindo que o Windows realize a paginação conforme necessário. Como a paginação está em uso, não é necessário bloquear páginas na memória. Assim, para a configuração padrão (em que **VertiPaqPagingPolicy** = 1), você não precisa conceder o privilégio **Bloquear páginas na memória** a uma instância de tabela.<br /><br /> **VertiPaqPagingPolicy** como 0. Se você desligar a paginação para o Analysis Services, as alocações são bloqueadas, assumindo que o privilégio **Bloquear páginas na memória** seja concedido à instância de tabela. Com essa configuração e o privilégio **Bloquear páginas na memória** , o Windows não pode realizar a paginação das alocações de memória feitas no Analysis Services quando o sistema está sob pressão de memória. O Analysis Services depende da permissão **Bloquear páginas na memória** como a imposição atrás de **VertiPaqPagingPolicy** = 0. Observe que não recomendamos desativar a paginação do Windows. Ela aumentará a taxa de erros de falta de memória para operações que poderiam ser bem-sucedidas se a paginação fosse permitida. Consulte [Memory Properties](../../analysis-services/server-properties/memory-properties.md) para obter mais informações sobre **VertiPaqPagingPolicy**.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Para exibir ou adicionar privilégios do Windows na conta de serviço  
@@ -99,7 +99,7 @@ ms.locfileid: "34019333"
   
  O detentor da permissão sobre arquivos de dados, executáveis de arquivo de programa, arquivos de configuração, arquivos de log e arquivos temporários é um grupo de segurança local criado pela Instalação do SQL Server.  
   
- Há um grupo de segurança criado para cada instância que você instalar. O grupo de segurança é chamado após a instância ─ ou **SQLServerMSASUser$ MSSQLSERVER** para a instância padrão, ou **SQLServerMSASUser$**\<servername >$\< InstanceName > para uma instância nomeada. A instalação provisiona esse grupo de segurança com as permissões de arquivo necessárias para executar operações de servidor. Se você verificar as permissões de segurança no diretório \MSAS13.MSSQLSERVER\OLAP\BIN, notará que o grupo de segurança (não a conta de serviço ou seu SID por serviço) é o detentor da permissão nesse diretório.  
+ Há um grupo de segurança criado para cada instância que você instalar. O grupo de segurança é chamado após a instância ─ tanto **SQLServerMSASUser$ MSSQLSERVER** para a instância padrão, ou **SQLServerMSASUser$**\<servername >$\< InstanceName > para uma instância nomeada. A instalação provisiona esse grupo de segurança com as permissões de arquivo necessárias para executar operações de servidor. Se você verificar as permissões de segurança no diretório \MSAS13.MSSQLSERVER\OLAP\BIN, notará que o grupo de segurança (não a conta de serviço ou seu SID por serviço) é o detentor da permissão nesse diretório.  
   
  O grupo de segurança contém apenas um membro: o SID (Identificador de Segurança) por serviço da conta de inicialização da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . A instalação adiciona o SID por serviço ao grupo de segurança local. O uso de um grupo de segurança local, com associação de SID, é uma diferença sutil, mas perceptível, de como a instalação do SQL Server provisiona o Analysis Services, em comparação com o Mecanismo de Banco de Dados.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34019333"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  Use **Computer Manager** | **usuários e grupos locais** | **grupos** para inspecionar a associação de SQLServerMSASUser$\<servername >$\<instancename > grupo de segurança.  
+2.  Use **Gerenciador de computador** | **usuários e grupos locais** | **grupos** para inspecionar a associação de SQLServerMSASUser$\<servername >$\<instancename > grupo de segurança.  
   
      O SID do membro deve corresponder ao SID por serviço a partir da etapa 1.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019333"
  Como o SID é imutável, as ACLs do sistema de arquivos criadas durante a instalação do serviço podem ser usadas por tempo indeterminado, independente de quantas vezes você alterar a conta de serviço. Como medida adicional de segurança, as ACLs que especificam permissões via um SID garantem que os executáveis do programa e as pastas de dados sejam acessados somente por uma única instância de um serviço, mesmo que outros serviços sejam executados na mesma conta.  
   
 ##  <a name="bkmk_tasks"></a> Concedendo permissões adicionais do Analysis Services para operações de servidor específicas  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]executa algumas tarefas no contexto de segurança da conta de serviço (ou conta de logon) que é usado para iniciar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e executa outras tarefas no contexto de segurança do usuário que está solicitando a tarefa.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa algumas tarefas no contexto de segurança da conta de serviço (ou conta de logon) que é usada para iniciar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e executa outras tarefas no contexto de segurança do usuário que está solicitando a tarefa.  
   
  A tabela a seguir descreve as permissões adicionais necessárias para oferecer suporte a tarefas executadas como a conta de serviço.  
   
@@ -144,12 +144,12 @@ ms.locfileid: "34019333"
 |Grave em uma tabela de log de consultas em um banco de dados relacional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Crie um logon de banco de dados para a conta de serviço e atribua permissões de gravação na tabela de log de consultas|Você pode habilitar o log de consultas para coletar dados de uso em uma tabela de banco de dados para a análise subsequente. A conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve ter permissões de gravação na tabela de log de consultas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se essa tabela ainda não existir e for necessário criá-la, a conta de logon do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também deve ter permissões de criação de tabelas no banco de dados designado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Melhorar o desempenho do SQL Server Analysis Services com o Assistente de Otimização Baseado no Uso (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) e [Log de consultas no Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Conta de Serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [O SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
- [Token de Acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificadores de Segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
- [Token de Acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [Listas de Controle de Acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Conta de serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
+ [Token de acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
+ [Identificadores de segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [Listas de controle de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

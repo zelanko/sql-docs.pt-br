@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7d3b07692b4e12ab4bdd0be15566cf115ad71b76
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 55d4e8b272b9ffaa120062ae6d870639bc3b6647
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465622"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310253"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,21 +42,24 @@ ms.locfileid: "34465622"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**index_handle**|**Int**|Identifica um determinado índice ausente. O identificador é exclusivo no servidor. **index_handle** é a chave dessa tabela.|  
+|**index_handle**|**int**|Identifica um determinado índice ausente. O identificador é exclusivo no servidor. **index_handle** é a chave dessa tabela.|  
 |**database_id**|**smallint**|Identifica o banco de dados onde reside a tabela com o índice ausente.|  
-|**object_id**|**Int**|Identifica a tabela onde o índice está ausente.|  
+|**object_id**|**int**|Identifica a tabela onde o índice está ausente.|  
 |**equality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para os predicados de igualdade do formulário:<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para predicados de desigualdade, por exemplo, predicados do formulário:<br /><br /> *table.column* > *constant_value*<br /><br /> Qualquer operador de comparação diferente de "=" expressa desigualdade.|  
-|**included_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas necessárias como colunas de cobertura para a consulta. Para obter mais informações sobre como cobrir ou colunas incluídas, consulte [criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Para índices com otimização de memória (hash e otimização de memória não clusterizado), ignorar **included_columns**. Todas as colunas da tabela são incluídas em cada índice com otimização de memória.|  
+|**included_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas necessárias como colunas de cobertura para a consulta. Para obter mais informações sobre como cobrir ou colunas incluídas, consulte [criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Para índices com otimização de memória (hash e otimização de memória não clusterizado), ignore **included_columns**. Todas as colunas da tabela são incluídas em cada índice com otimização de memória.|  
 |**instrução**|**nvarchar(4000)**|Nome da tabela onde o índice está ausente.|  
   
 ## <a name="remarks"></a>Remarks  
- Informações retornadas por **sys.DM db_missing_index_details** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  
+ Informações retornadas por **DM db_missing_index_details** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  
   
- Para determinar qual índice ausente um determinado índice ausente de grupos é parte do, você pode consultar o **db_missing_index_groups** exibição de gerenciamento dinâmico, unindo com **sys.DM db_missing_index_details**  com base no **index_handle** coluna.  
+ Para determinar qual índice ausente grupos a um determinado índice ausente é parte do, você pode consultar a **db_missing_index_groups** exibição de gerenciamento dinâmico por pertence com **DM db_missing_index_details**  com base em de **index_handle** coluna.  
+
+  >[!NOTE]
+  >Conjunto de resultados para essa DMV são limitado a 600 linhas. Cada linha contém um índice ausente. Se você tiver mais de 600 índices ausentes, você deve tratar os índices ausentes existentes para que você possa exibir, em seguida, as mais recentes. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Usando informações de índice ausente em instruções CREATE INDEX  
- Para converter as informações retornadas por **sys.DM db_missing_index_details** em uma instrução CREATE INDEX para índices com otimização de memória e baseadas em disco, as colunas iguais devem ser colocadas antes das colunas desiguais e juntos elas devem gerar a chave do índice. As colunas incluídas devem ser adicionadas à instrução CREATE INDEX com a cláusula INCLUDE. Para determinar uma ordem efetiva para as colunas desiguais, ordene-as com base em sua seletividade: liste as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
+ Para converter as informações retornadas por **DM db_missing_index_details** em uma instrução CREATE INDEX para índices com otimização de memória tanto baseadas em disco, as colunas iguais devem ser colocadas antes das colunas desiguais e juntos elas devem gerar a chave do índice. As colunas incluídas devem ser adicionadas à instrução CREATE INDEX com a cláusula INCLUDE. Para determinar uma ordem efetiva para as colunas desiguais, ordene-as com base em sua seletividade: liste as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
   
  Para obter mais informações sobre índices com otimização de memória, consulte [índices para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
@@ -65,8 +68,8 @@ ms.locfileid: "34465622"
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
 ## <a name="see-also"></a>Consulte também  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

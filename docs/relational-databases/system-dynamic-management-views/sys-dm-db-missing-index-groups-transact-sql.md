@@ -25,29 +25,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 32368c857dd44a19295e8169af0d1b51a8d23581
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 33909bd64f1ada7d096c97e11c82312c9e7a7bd3
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463572"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310273"
 ---
 # <a name="sysdmdbmissingindexgroups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna informações sobre quais índices ausentes estão contidos em um grupo de índice ausente específico, excluindo índices de espaço.  
+  Essa DMV retorna informações sobre índices que estão faltando em um grupo de índice específico, com exceção de índices espaciais. 
   
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**index_group_handle**|**Int**|Identifica um grupo de índice ausente.|  
-|**index_handle**|**Int**|Identifica um índice ausente que pertence ao grupo especificado por **index_group_handle**.<br /><br /> Um grupo de índice contém apenas um índice.|  
+|**index_group_handle**|**int**|Identifica um grupo de índice ausente.|  
+|**index_handle**|**int**|Identifica um índice ausente que pertence ao grupo especificado por **index_group_handle**.<br /><br /> Um grupo de índice contém apenas um índice.|  
   
 ## <a name="remarks"></a>Remarks  
  Informações retornadas por **db_missing_index_groups** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  
   
  Nenhuma coluna do conjunto de resultados de saída é uma chave, mas juntos eles formam uma chave de índice.  
+
+  >[!NOTE]
+  >Conjunto de resultados para essa DMV são limitado a 600 linhas. Cada linha contém um índice ausente. Se você tiver mais de 600 índices ausentes, você deve tratar os índices ausentes existentes para que você possa exibir, em seguida, as mais recentes.
   
 ## <a name="permissions"></a>Permissões  
  Para consultar essa exibição de gerenciamento dinâmico, os usuários devem receber a permissão VIEW SERVER STATE ou qualquer permissão que implique essa permissão.  
