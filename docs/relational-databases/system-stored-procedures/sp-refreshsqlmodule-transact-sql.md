@@ -1,7 +1,7 @@
 ---
 title: sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261002"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278727"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Atualiza os metadados do procedimento armazenado não associado a esquema, da função definida pelo usuário, da exibição, do gatilho DML, do gatilho DDL de nível de banco de dados ou do gatilho DDL de nível de servidor especificado no banco de dados atual. Metadados persistentes desses objetos, como tipos de dados de parâmetros, podem ficar desatualizados devido a atualizações em seus objetos subjacentes.  
+  Atualiza os metadados do procedimento armazenado não associado a esquema, da função definida pelo usuário, da exibição, do gatilho DML, do gatilho DDL de nível de banco de dados ou do gatilho DDL de nível de servidor especificado no banco de dados atual. Metadados persistentes desses objetos, como tipos de dados de parâmetros, podem ficar desatualizados devido a atualizações em seus objetos subjacentes.
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +61,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nome_de_módulo***'**  
- É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL de nível do banco de dados ou gatilho DDL do nível de servidor. *nome_de_módulo* não pode ser um tempo de execução de linguagem comum (CLR) procedimento armazenado ou uma função CLR. *nome_de_módulo* não pode ser associada a esquema. *nome_de_módulo* é **nvarchar**, sem padrão. *nome_de_módulo* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.  
+ [  **@name=** ] **'***module_name***'**  
+ É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL de nível do banco de dados ou gatilho DDL do nível de servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* está **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.  
   
  [ **,** @**namespace** =] **'** \<classe > **'**  
- É a classe do módulo especificado. Quando *nome_de_módulo* é um gatilho DDL, \<classe > é necessária. *\<classe >* é **nvarchar**(20). As entradas válidas são:  
+ É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, \<classe > é necessária. *\<classe >* está **nvarchar**(20). As entradas válidas são:  
   
 |||  
 |-|-|  
@@ -76,14 +76,14 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (êxito) ou um número diferente de zero (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_refreshsqlmodule** devem ser executados quando alterações são feitas nos objetos subjacentes ao módulo que afeta sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
+ **sp_refreshsqlmodule** deve ser executado quando forem feitas alterações aos objetos subjacentes ao módulo que afeta sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
   
- **sp_refreshsqlmodule** não afeta qualquer permissões, propriedades estendidas ou definir opções que estão associadas ao objeto.  
+ **sp_refreshsqlmodule** não afeta quaisquer permissões, propriedades estendidas ou definir opções que estão associadas com o objeto.  
   
  Para atualizar um gatilho DDL de nível de servidor, execute este procedimento armazenado a partir do contexto de qualquer banco de dados.  
   
 > [!NOTE]  
->  Assinaturas que estão associadas ao objeto são removidas quando você executar **sp_refreshsqlmodule**.  
+>  Todas as assinaturas que estão associadas com o objeto são descartadas quando você executa **sp_refreshsqlmodule**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão ALTER no módulo e permissão REFERENCES em qualquer tipo CLR definido pelo usuário e coleções de esquemas XML referidas pelo objeto. Requer permissão ALTER ANY DATABASE DDL TRIGGER no banco de dados atual se o módulo especificado for um gatilho DDL de nível de banco de dados. Requer permissão CONTROL SERVER se o módulo especificado for um gatilho DDL de nível de servidor.  

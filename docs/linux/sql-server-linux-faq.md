@@ -4,19 +4,19 @@ description: Este artigo fornece respostas para perguntas frequentes sobre o SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102224"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268804"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server no Linux perguntas frequentes (FAQ)
 
@@ -34,9 +34,13 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 
    SQL Server é testado e suportado no Linux para as distribuições listadas anteriormente. Outras distribuições do Linux estão intimamente relacionadas e pode ser capazes de executar o SQL Server (por exemplo, CentOS está intimamente relacionado a Red Hat Enterprise Server). Mas se você optar por instalar o SQL Server em um sistema operacional sem suporte, consulte o **política de suporte** seção o [política de suporte técnico para o Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) a entender o suporte implicações. Observe também que alguns mantidas pela comunidade – distribuições do Linux não tem uma maneira formal para receber suporte se o sistema operacional subjacente é o problema.
 
-1. **Quais recursos do SQL Server têm suporte no Linux?**
+1. **Como funciona o licenciamento no Linux?**
 
-   Para obter uma lista completa de recursos com suporte e problemas conhecidos, consulte o [notas de versão](sql-server-linux-release-notes.md).
+   SQL Server é licenciado da mesma forma para Windows e Linux. Na verdade, licenciar o SQL Server e, em seguida, você pode optar por usar essa licença na plataforma de sua escolha. Para obter mais informações, consulte [como licenciar o SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **SQL Server no Linux é o mesmo que no Windows?**
+
+   O núcleo do mecanismo de banco de dados para o SQL Server é o mesmo no Linux quanto no Windows. No entanto, alguns recursos não atualmente têm suporte no Linux. Para obter uma lista de recursos que não têm suporte no Linux, consulte o [sem suporte a recursos e serviços de](sql-server-linux-release-notes.md#Unsupported). Examine também os [problemas conhecidos](sql-server-linux-release-notes.md#known-issues). A menos que especificado nessas listas, outros serviços e recursos do SQL Server têm suporte no Linux.
 
 1. **O que é a política de suporte para o SQL Server?**
 

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061444"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278947"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -75,6 +75,9 @@ A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser
 |log_recovery_size_mb   |**float**  |   Tamanho do log em MB, desde a recuperação de log [(LSN) do número de sequência de log](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |recovery_vlf_count |**bigint** |   Número total de [arquivos de log virtuais (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) sejam recuperados, se houver failover ou reinicialização de servidor. |  
 
+
+## <a name="remarks"></a>Remarks
+Ao executar `sys.dm_db_log_stats` em relação a um banco de dados que está participando de um grupo de disponibilidade como uma réplica secundária, apenas um subconjunto dos campos descritos acima será retornado.  Atualmente, apenas `database_id`, `recovery_model`, e `log_backup_time` serão retornados quando executadas em um banco de dados secundário.   
 
 ## <a name="permissions"></a>Permissões  
 Requer a `VIEW DATABASE STATE` permissão no banco de dados.   

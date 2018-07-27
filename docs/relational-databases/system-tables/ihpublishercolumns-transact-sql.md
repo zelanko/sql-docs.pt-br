@@ -22,34 +22,34 @@ helpviewer_keywords:
 - IHpublishercolumns system table
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bd15161e658348ea68c2f87c1468ede00bac5e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1032578837699182d4c1ba73a118d03ece01b5f6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003753"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103864"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **IHpublishercolumns** tabela do sistema representa metadados armazenados no publicador. Esta tabela contém uma linha para cada coluna replicada de não - editores do SQL Server usando o distribuidor atual. Informações de tipo de dados **IHpublishercolumns** é específico para o sistema de gerenciamento de banco de dados do SQL Server (DBMS) do qual os dados são publicados. Esta tabela é armazenada no banco de dados de distribuição.  
+  O **IHpublishercolumns** tabela do sistema representa os metadados armazenados no publicador. Esta tabela contém uma linha para cada coluna replicada de não - editores do SQL Server usando o distribuidor atual. Informações de tipo de dados **IHpublishercolumns** é específico para o sistema de gerenciamento de banco de dados do SQL Server (DBMS) do qual os dados são publicados. Esta tabela é armazenada no banco de dados de distribuição.  
   
 ## <a name="definition"></a>Definição  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**Int**|Identifica uma coluna publicada.|  
-|**table_id**|**Int**|Identifica a tabela de origem [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) ao qual a coluna pertence.|  
+|**publishercolumn_id**|**int**|Identifica uma coluna publicada.|  
+|**table_id**|**int**|Identifica a tabela de origem [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) ao qual a coluna pertence.|  
 |**publisher_id**|**smallint**|Identifica o publicador não SQL Server do qual a coluna está sendo publicada.|  
 |**name**|**sysname**|O nome da coluna publicada.|  
-|**column_ordinal**|**Int**|Identifica a coluna por ordem.|  
+|**column_ordinal**|**int**|Identifica a coluna por ordem.|  
 |**type**|**varchar(255)**|O tipo de dados de coluna da coluna de origem no Publicador.|  
-|**comprimento**|**bigint**|O comprimento da coluna de origem no Publicador.|  
-|**prec**|**Int**|A precisão da coluna de origem no Publicador.|  
-|**scale**|**Int**|A escala da coluna de origem no Publicador.|  
+|**Comprimento**|**bigint**|O comprimento da coluna de origem no Publicador.|  
+|**prec**|**int**|A precisão da coluna de origem no Publicador.|  
+|**scale**|**int**|A escala da coluna de origem no Publicador.|  
 |**isnullable**|**bit**|Indica se a coluna aceita valores NULL, onde **1** significa que valores NULL são aceitos.|  
 |**iscaptured**|**bit**|Indica se um gatilho existe ou não na coluna, que pode existir mesmo se a coluna não for publicada em um artigo. Um valor de **1** significa que o gatilho existe na coluna.|  
   

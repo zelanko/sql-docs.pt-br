@@ -22,29 +22,29 @@ helpviewer_keywords:
 - MSpeer_originatorid_history
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145392c2ff7ebb3685a9ce710678ab88639d2842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54dfad713a9955791cc786bb89ef8d61cac2b3ca
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005093"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103824"
 ---
 # <a name="mspeeroriginatoridhistory-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada ID de originador que foi definida na topologia. Isso inclui ID para nós que são não estão mais ativos. A tabela é usada ao configurar um novo nó para a detecção de conflito, a fim de assegurar que a ID de originador especificada não esteja sendo usada. Essa tabela é armazenada no banco de dados de publicação. Para obter mais informações sobre a detecção de conflitos, consulte [detecção de conflito na replicação ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+  Contém uma linha para cada ID de originador que foi definida na topologia. Isso inclui ID para nós que são não estão mais ativos. A tabela é usada ao configurar um novo nó para a detecção de conflito, a fim de assegurar que a ID de originador especificada não esteja sendo usada. Essa tabela é armazenada no banco de dados de publicação. Para obter mais informações sobre a detecção de conflito, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |originator_publication|**sysname**|Publicação para a qual a ID de originador foi especificada.|  
-|originator_id|**Int**|Número que identifica cada nó na topologia com a finalidade de detecção de conflito.|  
+|originator_id|**int**|Número que identifica cada nó na topologia com a finalidade de detecção de conflito.|  
 |originator_node|**sysname**|Instância do servidor para a qual a ID de originador foi especificada.|  
 |originator_db|**sysname**|Banco de dados da publicação para o qual a ID de originador foi especificada.|  
-|originator_db_version|**Int**|Identifica o número da versão do banco de dados de origem.|  
-|originator_version|**Int**|Identifica o número da versão do Publicador.|  
+|originator_db_version|**int**|Identifica o número da versão do banco de dados de origem.|  
+|originator_version|**int**|Identifica o número da versão do Publicador.|  
 |inserted_date|**datetime**|Data e hora em que a linha para a ID do originador foi inserida nesta tabela.|  
   
 ## <a name="see-also"></a>Consulte também  

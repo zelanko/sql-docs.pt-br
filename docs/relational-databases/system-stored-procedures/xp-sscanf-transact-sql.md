@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257630"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103854"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  Quando especificado, põe o valor de *argumento* no parâmetro de saída.  
   
  *format*  
- É uma cadeia de caracteres formatada semelhante ao suporte da linguagem C **sscanf** função. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
+ É uma cadeia de caracteres formatada semelhante a que tem suporte pela linguagem C **sscanf** função. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
   
  *argument*  
- É um **varchar** variável definida para o valor do *formato* argumento.  
+ É um **varchar** variável é definido como o valor correspondente *formato* argumento.  
   
  *n*  
  É um espaço reservado que indica que no máximo 50 argumentos podem ser especificados.  
