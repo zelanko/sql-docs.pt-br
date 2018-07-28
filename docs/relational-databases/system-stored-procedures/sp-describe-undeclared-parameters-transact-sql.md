@@ -1,7 +1,7 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 07/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b819d5904cdcdc7339036a5ec5f5a9e6fde8477e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e4a4a97b4a69aaf68d196833ee56b089a3dadfcf
+ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086228"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331582"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retorna um conjunto de resultados que contém metadados sobre parâmetros não declarados em um [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Considera cada parâmetro é usado na  **\@tsql** do lote, mas não declarado em  **\@params**. Um conjunto de resultados que contém uma linha para cada um desses parâmetros é retornado com as informações de tipo deduzidas para esse parâmetro. O procedimento retornará um resultado vazio definido se o  **\@tsql** lote de entrada não tem parâmetros, exceto aqueles declarados em  **\@params**.  
   
