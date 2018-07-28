@@ -1,0 +1,33 @@
+- name: Visão geral
+  href: reporting-services-reports-ssrs.md
+- name: Publicando fontes de dados e relatórios
+  href: publishing-data-sources-and-reports.md
+  items:
+    - name: Visualizando relatórios
+      href: previewing-reports.md
+    - name: Publicando relatórios em um servidor de relatórios
+      href: publishing-reports-to-a-report-server.md
+    - name: Publicar um relatório em uma biblioteca do SharePoint
+      href: publish-a-report-to-a-sharepoint-library.md
+    - name: Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint
+      href: publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: Linguagem RDL
+  href: report-definition-language-ssrs.md
+- name: Localizar a versão do esquema de definição de relatório
+  href: find-the-report-definition-schema-version-ssrs.md
+- name: 'Localizar texto, números ou datas em um relatório'
+  href: find-text-numbers-or-dates-in-a-report.md
+- name: Configurar propriedades de execução de um relatório
+  href: configure-execution-properties-for-a-report-report-manager.md
+- name: Limitar o histórico de relatório
+  href: limit-report-history-report-manager.md
+- name: Abrir e fechar um relatório
+  href: open-and-close-a-report-report-manager.md
+- name: Carregar um arquivo ou relatório
+  href: upload-a-file-or-report-report-manager.md
+- name: Criar um relatório vinculado
+  href: create-a-linked-report.md
+- name: Relatórios de clickthrough (SSRS)
+  href: clickthrough-reports-ssrs.md
+- name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
+  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
