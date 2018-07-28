@@ -1,0 +1,31 @@
+- name: Rastreamento do SQL
+  href: sql-trace.md
+  items:
+    - name: Criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: Criar rastreamentos manuais usando procedimentos armazenados
+      href: create-manual-traces-using-stored-procedures.md
+    - name: Salvar resultados de rastreamento em um arquivo
+      href: save-trace-results-to-a-file.md
+    - name: Aprimorar o acesso aos dados de rastreamento
+      href: improve-access-to-trace-data.md
+    - name: Criar um rastreamento (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: Definir um filtro de rastreamento (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: Modificar um rastreamento existente (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: Exibir um rastreamento salvo (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: Exibir informações de filtro (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: Excluir um rastreamento (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: Otimizar o Rastreamento do SQL
+      href: optimize-sql-trace.md
+    - name: Filtrar um rastreamento
+      href: filter-a-trace.md
+    - name: Limitar o tamanho de arquivos e tabelas de rastreamento
+      href: limit-trace-file-and-table-sizes.md
+    - name: Agendar rastreamentos
+      href: schedule-traces.md

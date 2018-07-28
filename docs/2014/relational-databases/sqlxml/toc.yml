@@ -1,0 +1,259 @@
+- name: Conceitos de programação do SQLXML 4.0
+  href: sqlxml-4-0-programming-concepts.md
+- name: O SQLXML não é instalado no SQL Server
+  href: sqlxml-is-not-installed-in-sql-server.md
+- name: Novidades no SQLXML 4.0 SP1
+  href: what-s-new-in-sqlxml-4-0-sp1.md
+- name: Usando o ADO para executar consultas do SQLXML 4.0
+  href: using-ado-to-execute-sqlxml-4-0-queries.md
+- name: Suporte ao tipo de dados xml no SQLXML 4.0
+  href: xml-data-type-support-in-sqlxml-4-0.md
+- name: Requisitos para executar exemplos do SQLXML
+  href: requirements-for-running-sqlxml-examples.md
+- name: Formatação do lado do cliente e do lado do servidor (SQLXML 4.0)
+  href: formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
+  items:
+    - name: Arquitetura de formatação XML no lado do cliente e no lado do servidor (SQLXML 4.0)
+      href: formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
+    - name: Formatação XML do lado do servidor (SQLXML 4.0)
+      href: formatting/server-side-xml-formatting-sqlxml-4-0.md
+    - name: Formatação XML do lado do cliente (SQLXML 4.0)
+      href: formatting/client-side-xml-formatting-sqlxml-4-0.md
+    - name: XPath do lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
+      href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
+- name: Esquemas XSD anotados em SQLXML 4.0
+  href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
+  items:
+    - name: Introdução a esquemas XSD anotados (SQLXML 4.0)
+      href: annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md
+    - name: Usando anotações em esquemas XSD (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md
+    - name: Anotações XSD (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md
+    - name: Mapeamento padrão de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
+    - name: Mapeamento explícito de atributos e elementos XSD em tabelas e colunas (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
+    - name: 'Especificando relações usando sql:relationship (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md
+    - name: 'Especificando o atributo sql:inverse em sql:relationship (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md
+    - name: 'Criando elementos constantes usando sql:is-constant (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
+    - name: 'Excluindo elementos de esquema do documento XML resultante usando sql:mapped (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
+    - name: 'Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
+    - name: 'Identificando colunas de chave usando campos sql:key (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
+    - name: Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md
+    - name: 'Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
+    - name: 'Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
+    - name: Mapeando tipos de dados XSD para tipos de dados XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md
+    - name: 'Criando seções CDATA usando sql:use-cdata (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
+    - name: 'Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md
+    - name: 'Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md
+    - name: 'Ocultando elementos e atributos usando sql:hide'
+      href: ../sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md
+    - name: 'Usando as anotações sql:identity e sql:guid'
+      href: ../sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md
+    - name: 'Especificando a profundidade em relações recursivas usando sql:max-depth'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md
+    - name: Usando esquemas XSD anotados em consultas (SQLXML 4.0)
+      href: annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md
+- name: Convertendo esquemas XDR anotados a esquemas XSD equivalentes (SQLXML 4.0)
+  href: annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md
+- name: Esquemas XDR anotados (Substituídos no SQLXML 4.0)
+  href: annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md
+- name: Usando consultas XPath no SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
+  items:
+    - name: Introdução para usar consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md
+    - name: Especificando um caminho para o local (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md
+    - name: Especificando um eixo (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md
+    - name: Especificando um teste de nó no caminho do local (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
+    - name: Especificando predicados de seleção no caminho do local (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md
+- name: Consultas XPath de exemplo (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md
+  items:
+    - name: Esquema XSD anotado de exemplo para exemplos de XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md
+    - name: Especificando eixos em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando predicados com valor booliano em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando funções de conversão explícitas em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando funções boolianas em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md
+    - name: Especificando variáveis XPath em consultas XPath (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md
+- name: Tipos de dados XPath (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md
+- name: Usando diagramas de atualização para modificar dados no SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md
+  items:
+    - name: Introdução aos diagramas de atualização (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md
+    - name: Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md
+    - name: Manipulação de NULL (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md
+    - name: Inserindo dados usando diagramas de atualização XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: Transmitindo parâmetros a diagramas de atualização (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md
+    - name: Manipulando problemas de simultaneidade de banco de dados nos diagramas de atualização (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md
+    - name: Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md
+    - name: Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md
+    - name: Usando um diagrama de atualização em um aplicativo ASP de exemplo (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md
+    - name: Diretrizes e limitações dos diagramas de atualização XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md
+    - name: Aplicativos de exemplo de diagramas de atualização (SQLXML 4.0)
+      href: ../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md
+- name: Executando o carregamento em massa de dados XML (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
+  items:
+    - name: Introdução ao XML Bulk Load (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md
+    - name: Registrar processo de geração (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md
+    - name: Interpretação de anotação (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md
+    - name: 'sql:relationship e a Regra de Ordenação de Chaves (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md
+    - name: 'sql:mapped (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md
+    - name: 'sql:limit-field e sql:limit-value (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md
+    - name: 'sql:overflow-field (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md
+    - name: Outras anotações (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md
+    - name: Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md
+    - name: Exemplos do XML Bulk Load (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md
+    - name: Tipos de dados e o comportamento do Carregamento em Massa de XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md
+    - name: Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md
+- name: Data Access Components do SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+  items:
+    - name: Provedor SQLXMLOLEDB (SQLXML 4.0)
+      href: ../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md
+    - name: Introdução ao provedor SQLXMLOLEDB (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md
+    - name: Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md
+    - name: Executando consultas SQL (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md
+    - name: Executando modelos que contêm consultas SQL (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md
+    - name: Executando consultas XPath (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md
+    - name: Executando consultas XPath com namespaces (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md
+    - name: Executando modelos que contêm consultas XPath (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md
+    - name: Aplicando um XSL Transformation (provedor SQLXMLOLEDB)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md
+- name: Suporte ao .NET Framework do SQLXML 4.0
+  href: ../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md
+  items:
+    - name: Classes gerenciadas SQLXML
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
+    - name: Modelo do objeto de classes gerenciadas do SQLXML
+      href: ../../database-engine/dev-guide/sqlxml-managed-classes-object-model.md
+    - name: Objeto SqlXmlCommand (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md
+    - name: Objeto SqlXmlParameter (classes gerenciadas do SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md
+    - name: Objeto SqlXmlAdapter (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md
+    - name: 'Usando as classes gerenciadas do SQLXML '
+      href: ../../database-engine/dev-guide/using-the-sqlxml-managed-classes.md
+    - name: Executando consultas SQL (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md
+    - name: Executando consultas SQL usando o método ExecuteXMLReader
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md
+    - name: Processando XML no cliente (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md
+    - name: Executando consultas XPath (classes gerenciadas por SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md
+    - name: Executando consultas XPath com namespaces (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md
+    - name: Executando os arquivos de modelo usando a propriedade CommandText
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md
+    - name: Executando os arquivos de modelo usando a propriedade CommandStream
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md
+    - name: Aplicando uma transformação XSL (classes gerenciadas SQLXML)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md
+    - name: Acessando a funcionalidade SQLXML no ambiente .NET
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md
+- name: Usando DiffGrams para modificar dados no SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
+  items:
+    - name: Introdução a DiffGrams em SQLXML 4.0
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md
+    - name: Exemplos de DiffGram (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md
+    - name: Executando um DiffGram usando o ADO (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md
+    - name: Executando um DiffGram usando as classes gerenciadas SQLXML
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md
+    - name: Diretrizes e limitações de DiffGrams no SQLXML
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/guidelines-and-limitations-of-diffgrams-in-sqlxml.md
+- name: Usando o Carregamento em Massa de SQLXML no ambiente .NET
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md
+- name: 'Armazenando modelos, XSL e esquemas em cache (SQLXML 4.0)'
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
+  items:
+    - name: Cache de modelos (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md
+    - name: Cache de XSL (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md
+    - name: Cache de esquemas (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md
+- name: Considerações de segurança do SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
+  items:
+    - name: Principais considerações de segurança do SQLXML
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md
+    - name: Considerações sobre segurança para diagramas de atualização (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md
+    - name: Considerações sobre a segurança de esquemas anotados (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md
+    - name: Considerações de segurança de FOR XML (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md
+    - name: Considerações sobre segurança de carregamento em massa (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md
+- name: Diretrizes e limitações do SQLXML 4.0
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md

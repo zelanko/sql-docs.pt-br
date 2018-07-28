@@ -1,0 +1,29 @@
+- name: Aplicativos da camada de Dados
+  href: data-tier-applications.md
+  items:
+    - name: Suporte de DAC para objetos e versões do SQL Server
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: Excluir um Aplicativo da Camada de Dados
+      href: delete-a-data-tier-application.md
+    - name: Implantar um aplicativo da camada de dados
+      href: deploy-a-data-tier-application.md
+    - name: Exportar um aplicativo da camada de dados
+      href: export-a-data-tier-application.md
+    - name: Extrair um DAC de um banco de dados
+      href: extract-a-dac-from-a-database.md
+    - name: Importar um arquivo BACPAC para criar um novo banco de dados de usuário
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: Monitorar aplicativos da camada de dados
+      href: monitor-data-tier-applications.md
+    - name: Registrar um banco de dados como um DAC
+      href: register-a-database-as-a-dac.md
+    - name: Desempacotar um pacote de DAC
+      href: unpack-a-dac-package.md
+    - name: Atualizar um aplicativo da camada de dados
+      href: upgrade-a-data-tier-application.md
+    - name: Validar um pacote de DAC
+      href: validate-a-dac-package.md
+    - name: Regras de validação para Assistentes de Aplicativo da Camada de Dados
+      href: dbengine-validation-rules.md
+    - name: Implantar um banco de dados usando um DAC
+      href: deploy-a-database-by-using-a-dac.md

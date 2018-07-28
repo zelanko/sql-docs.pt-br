@@ -1,0 +1,46 @@
+- name: Visão geral
+  href: security-overview-replication.md
+- name: Segurança e proteção
+  href: security-and-protection-replication.md
+  items:
+    - name: Redução de ameaças e vulnerabilidades
+      href: threat-and-vulnerability-mitigation-replication.md
+    - name: Controle de identidade e acesso
+      href: identity-and-access-control-replication.md
+    - name: Gerenciar logons e senhas na replicação
+      href: manage-logins-and-passwords-in-replication.md
+    - name: Desenvolvimento seguro
+      href: secure-development-replication.md
+    - name: Replication Agent Security Model
+      href: replication-agent-security-model.md
+    - name: Security Role Requirements for Replication
+      href: security-role-requirements-for-replication.md
+    - name: Práticas recomendadas em relação à segurança de replicação
+      href: replication-security-best-practices.md
+- name: Implantação segura
+  href: secure-deployment-replication.md
+  items:
+    - name: Proteger o distribuidor
+      href: secure-the-distributor.md
+    - name: Proteger o Publicador
+      href: secure-the-publisher.md
+    - name: Proteger o Assinante
+      href: secure-the-subscriber.md
+    - name: Proteger uma pasta de instantâneo
+      href: secure-the-snapshot-folder.md
+    - name: Securing Replication Over the Internet
+      href: securing-replication-over-the-internet.md
+      items:
+        - name: Arquitetura de segurança para sincronização da Web
+          href: security-architecture-for-web-synchronization.md
+    - name: Considerações de segurança para SQL Server Compact Replication
+      href: security-considerations-for-sql-server-compact-replication.md
+- name: Proteger uma topologia de replicação
+  href: secure-a-replication-topology.md
+  items:
+    - name: Exibir e modificar configurações de segurança de replicação
+      href: view-and-modify-replication-security-settings.md
+    - name: Gerenciar logons na lista de acesso à publicação
+      href: manage-logins-in-the-publication-access-list.md
+    - name: Replicar dados em colunas criptografadas (SQL Server Management Studio)
+      href: replicate-data-in-encrypted-columns-sql-server-management-studio.md

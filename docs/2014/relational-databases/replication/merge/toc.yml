@@ -1,0 +1,39 @@
+- name: Replicação de mesclagem
+  href: merge-replication.md
+- name: Opções de artigo para replicação de mesclagem
+  href: article-options-for-merge-replication.md
+- name: Otimizar o desempenho de replicação de mesclagem com artigos de somente download
+  href: optimize-merge-replication-performance-with-download-only-articles.md
+- name: Otimizar o desempenho da replicação de mesclagem com o controle de exclusão condicional
+  href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+- name: Especificar a ordem de processamento dos artigos de mesclagem
+  href: specify-the-processing-order-of-merge-articles.md
+- name: Agrupar alterações a linhas relacionadas com registros lógicos
+  href: group-changes-to-related-rows-with-logical-records.md
+- name: Detectar e resolver conflitos de replicação de mesclagem
+  href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+- name: Advanced Merge Replication Conflict Detection and Resolution
+  href: advanced-merge-replication-conflict-detection-and-resolution.md
+  items:
+    - name: Escolher um resolvedor
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: COM-Based Custom Resolvers
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: Microsoft COM-Based Resolvers
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: Interactive Conflict Resolution
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: Detecting and Resolving Conflicts in Logical Records
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+- name: Executar lógica de negócios durante sincronizações de mesclagem
+  href: execute-business-logic-during-merge-synchronization.md
+- name: Filtrar dados publicados para replicação de mesclagem
+  href: filter-published-data-for-merge-replication.md
+- name: Parameterized Row Filters
+  href: parameterized-filters-parameterized-row-filters.md
+- name: Otimizar o desempenho de filtro parametrizado com partições pré-computadas
+  href: parameterized-filters-optimize-for-precomputed-partitions.md
+- name: filtros de junção
+  href: join-filters.md
+- name: Práticas recomendadas para filtros de linha baseados em tempo
+  href: best-practices-for-time-based-row-filters.md

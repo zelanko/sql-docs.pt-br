@@ -1,0 +1,68 @@
+- name: Implantação de projetos e pacotes
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Implantar projetos no servidor do Integration Services
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: Criar e mapear um ambiente de servidor
+      href: ../create-and-map-a-server-environment.md
+    - name: Assistente de Conversão de Projeto do Integration Services
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Assistente de Implantação do Integration Services
+      href: ../integration-services-deployment-wizard.md
+    - name: Caixa de diálogo Converter em Modelo de Implantação de Pacote
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: Implantação de pacotes (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: Configurações do Pacote
+          href: ../package-configurations.md
+        - name: Criar configurações de pacote
+          href: ../create-package-configurations.md
+    - name: Organizador de Configurações do Pacote
+      href: ../package-configurations-organizer.md
+    - name: Referência da interface do usuário do Assistente de Configuração de Pacotes
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Criar um utilitário de implantação
+          href: ../create-a-deployment-utility.md
+        - name: Implantar pacotes usando o utilitário de implantação
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: Reimplantação de pacotes
+          href: ../redeployment-of-packages.md
+        - name: Referência da interface do usuário do Assistente de Instalação de Pacotes
+          href: ../package-installation-wizard-ui-reference.md
+- name: Execução de projetos e pacotes
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: Executar um pacote no SQL Server Data Tools
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: Executar um pacote no servidor SSIS usando o SQL Server Management Studio
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: Implementação de pacotes filho
+          href: ../implementation-of-child-packages.md
+        - name: Implementação do pacote pai
+          href: ../implementation-of-the-parent-package.md
+        - name: Log para carga de pacotes balanceados em servidores remotos
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: Usar os valores de variáveis e parâmetros em um pacote filho
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: Solucionando problemas de ferramentas para execução de pacotes
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: Solucionando problemas de relatórios para execução de pacotes
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: Gerando arquivos de despejo para execução de pacote
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: Trabalhos do SQL Server Agent para pacotes
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: Agendar um pacote usando o SQL Server Agent
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: Tarefa Executar Trabalho do SQL Server Agent
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: Implantar e executar pacotes SSIS usando procedimentos armazenados
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

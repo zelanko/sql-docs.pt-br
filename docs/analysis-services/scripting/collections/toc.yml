@@ -1,0 +1,124 @@
+- name: Elemento Accounts (ASSL)
+  href: accounts-element-assl.md
+- name: Elemento Actions (ASSL)
+  href: actions-element-assl.md
+- name: Elemento AggregationDesigns (ASSL)
+  href: aggregationdesigns-element-assl.md
+- name: Elemento AggregationInstances (ASSL)
+  href: aggregationinstances-element-assl.md
+- name: Elemento Aggregations (ASSL)
+  href: aggregations-element-assl.md
+- name: Elemento AlgorithmParameters (ASSL)
+  href: algorithmparameters-element-assl.md
+- name: Elemento Aliases (ASSL)
+  href: aliases-element-assl.md
+- name: Elemento AllMemberTranslations (ASSL)
+  href: allmembertranslations-element-assl.md
+- name: Elemento Annotations (ASSL)
+  href: annotations-element-assl.md
+- name: Elemento Assemblies (ASSL)
+  href: assemblies-element-assl.md
+- name: Elemento AttributeAllMemberTranslations (ASSL)
+  href: attributeallmembertranslations-element-assl.md
+- name: Elemento AttributePermissions (ASSL)
+  href: attributepermissions-element-assl.md
+- name: Elemento AttributeRelationships (ASSL)
+  href: attributerelationships-element-assl.md
+- name: Elemento Attributes (ASSL)
+  href: attributes-element-assl.md
+- name: Elemento Blocks (ASSL)
+  href: blocks-element-assl.md
+- name: Elemento CalculationProperties (ASSL)
+  href: calculationproperties-element-assl.md
+- name: Elemento Calculations (ASSL)
+  href: calculations-element-assl.md
+- name: Elemento CellPermissions (ASSL)
+  href: cellpermissions-element-assl.md
+- name: Elemento ClassifiedColumns (ASSL)
+  href: classifiedcolumns-element-assl.md
+- name: Coleções (ASSL)
+  href: collections-assl.md
+- name: Elemento Columns (ASSL)
+  href: columns-element-assl.md
+- name: Elemento Commands (ASSL)
+  href: commands-element-assl.md
+- name: Elemento CubePermissions (ASSL)
+  href: cubepermissions-element-assl.md
+- name: Elemento Cubes (ASSL)
+  href: cubes-element-assl.md
+- name: Elemento DatabasePermissions (ASSL)
+  href: databasepermissions-element-assl.md
+- name: Elemento Databases (ASSL)
+  href: databases-element-assl.md
+- name: Elemento DataSourcePermissions (ASSL)
+  href: datasourcepermissions-element-assl.md
+- name: Elemento DataSources (ASSL)
+  href: datasources-element-assl.md
+- name: Elemento DataSourceViews (ASSL)
+  href: datasourceviews-element-assl.md
+- name: Elemento DimensionPermissions (ASSL)
+  href: dimensionpermissions-element-assl.md
+- name: Elemento Dimensions (ASSL)
+  href: dimensions-element-assl.md
+- name: Elemento Events (ASSL)
+  href: events-element-assl.md
+- name: Elemento Files (ASSL)
+  href: files-element-assl.md
+- name: Elemento ForeignKeyColumns (ASSL)
+  href: foreignkeycolumns-element-assl.md
+- name: Elemento Groups (ASSL)
+  href: groups-element-assl.md
+- name: Elemento Hierarchies (ASSL)
+  href: hierarchies-element-assl.md
+- name: Elemento IncrementalProcessingNotifications (ASSL)
+  href: incrementalprocessingnotifications-element-assl.md
+- name: Elemento KeyColumns (ASSL)
+  href: keycolumns-element-assl.md
+- name: Elemento Kpis (ASSL)
+  href: kpis-element-assl.md
+- name: Elemento Levels (ASSL)
+  href: levels-element-assl.md
+- name: Elemento MdxScripts (ASSL)
+  href: mdxscripts-element-assl.md
+- name: Elemento MeasureGroups (ASSL)
+  href: measuregroups-element-assl.md
+- name: Elemento Measures (ASSL)
+  href: measures-element-assl.md
+- name: Elemento Members (ASSL)
+  href: members-element-assl.md
+- name: Elemento MiningModelPermissions (ASSL)
+  href: miningmodelpermissions-element-assl.md
+- name: Elemento MiningModels (ASSL)
+  href: miningmodels-element-assl.md
+- name: Elemento MiningStructurePermissions (ASSL)
+  href: miningstructurepermissions-element-assl.md
+- name: Elemento MiningStructures (ASSL)
+  href: miningstructures-element-assl.md
+- name: Elemento ModelingFlags (ASSL)
+  href: modelingflags-element-assl.md
+- name: Elemento NamingTemplateTranslations (ASSL)
+  href: namingtemplatetranslations-element-assl.md
+- name: Elemento Partitions (ASSL)
+  href: partitions-element-assl.md
+- name: Elemento Perspectives (ASSL)
+  href: perspectives-element-assl.md
+- name: Elemento QueryNotifications (ASSL)
+  href: querynotifications-element-assl.md
+- name: Elemento Relationships (ASSL)
+  href: relationships-element-assl.md
+- name: Elemento ReportFormatParameters (ASSL)
+  href: reportformatparameters-element-assl.md
+- name: Elemento ReportParameters (ASSL)
+  href: reportparameters-element-assl.md
+- name: Elemento Roles (ASSL)
+  href: roles-element-assl.md
+- name: Elemento ServerProperties (ASSL)
+  href: serverproperties-element-assl.md
+- name: Elemento TableNotifications (ASSL)
+  href: tablenotifications-element-assl.md
+- name: Elemento Traces (ASSL)
+  href: traces-element-assl.md
+- name: Elemento Translations (ASSL)
+  href: translations-element-assl.md
+- name: Elemento UnknownMemberTranslations (ASSL)
+  href: unknownmembertranslations-element-assl.md

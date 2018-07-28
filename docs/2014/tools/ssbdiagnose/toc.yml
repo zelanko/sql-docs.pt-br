@@ -1,0 +1,11 @@
+- name: Utilitário ssbdiagnose (Service Broker)
+  href: ssbdiagnose-utility-service-broker.md
+- name: Formato de arquivo de saída XML (ssbdiagnose)
+  href: xml-output-file-format-ssbdiagnose.md
+  items:
+    - name: Elemento DiagnosticInformation (ssbdiagnose)
+      href: diagnosticinformation-element-ssbdiagnose.md
+    - name: Elemento Banner (ssbdiagnose)
+      href: banner-element-ssbdiagnose.md
+    - name: Elemento Issue (ssbdiagnose)
+      href: issue-element-ssbdiagnose.md

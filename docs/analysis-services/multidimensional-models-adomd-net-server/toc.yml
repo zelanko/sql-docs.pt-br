@@ -1,0 +1,8 @@
+- name: Funcionalidade de servidor do ADOMD.NET
+  href: adomd-net-server-functionality.md
+- name: Arquitetura de objeto de servidor do ADOMD.NET
+  href: adomd-net-server-object-architecture.md
+- name: Programando o servidor no ADOMD.NET
+  href: adomd-net-server-programming.md
+- name: Funções e procedimentos armazenados definidos pelo usuário
+  href: user-defined-functions-and-stored-procedures.md

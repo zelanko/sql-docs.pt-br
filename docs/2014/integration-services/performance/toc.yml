@@ -1,0 +1,32 @@
+- name: Monitorando execuções de pacotes e outras operações
+  href: monitor-running-packages-and-other-operations.md
+- name: Caixa de diálogo Operações Ativas
+  href: ../active-operations-dialog-box.md
+- name: Relatórios do servidor do Integration Services
+  href: ../reports-for-the-integration-services-server.md
+- name: Exibir relatórios do servidor do Integration Services
+  href: ../view-reports-for-the-integration-services-server.md
+- name: Exibindo e parando pacotes que são executados no servidor do Integration Services
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Log do SSIS (Integration Services)
+  href: integration-services-ssis-logging.md
+  items:
+    - name: Mensagens personalizadas para log
+      href: ../custom-messages-for-logging.md
+    - name: caixa de diálogo Configurar Logs do SSIS
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: Configurar o log por meio de um arquivo de configuração salvo
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: Habilitar o log de pacote no SQL Server Data Tools
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: Habilitar o log para a execução do pacote no servidor SSIS
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: Contadores de desempenho
+  href: performance-counters.md
+  items:
+    - name: Adicionar um log para contadores de desempenho de fluxo de dados
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: Análise do Fluxo de Dados
+  href: ../analysis-of-data-flow.md
+- name: Toques de Fluxo de Dados
+  href: ../data-flow-taps.md

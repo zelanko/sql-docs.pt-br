@@ -1,0 +1,21 @@
+- name: Controlar alterações de dados
+  href: track-data-changes-sql-server.md
+  items:
+    - name: Sobre o Change Data Capture
+      href: about-change-data-capture-sql-server.md
+    - name: Habilitar e desabilitar o Change Data Capture
+      href: enable-and-disable-change-data-capture-sql-server.md
+    - name: Administrar e monitorar a captura de dados de alteração
+      href: administer-and-monitor-change-data-capture-sql-server.md
+    - name: Trabalhar com dados de alterações
+      href: work-with-change-data-sql-server.md
+    - name: Sobre o controle de alterações
+      href: about-change-tracking-sql-server.md
+    - name: Habilitar e desabilitar o controle de alterações
+      href: enable-and-disable-change-tracking-sql-server.md
+    - name: Gerenciar o controle de alterações
+      href: manage-change-tracking-sql-server.md
+    - name: Trabalhar com o controle de alterações
+      href: work-with-change-tracking-sql-server.md
+    - name: Change Data Capture e outros recursos do SQL Server
+      href: change-data-capture-and-other-sql-server-features.md

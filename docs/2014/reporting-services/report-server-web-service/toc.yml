@@ -1,0 +1,92 @@
+- name: serviço Web Servidor de Relatórios
+  href: report-server-web-service.md
+  items:
+    - name: Acessando a API SOAP
+      href: accessing-the-soap-api.md
+    - name: The Role of SOAP in Reporting Services
+      href: the-role-of-soap-in-reporting-services.md
+    - name: Métodos de serviço Web Servidor de Relatórios
+      href: methods/report-server-web-service-methods.md
+    - name: Pontos de extremidade do serviço Web Servidor de Relatórios
+      href: methods/report-server-web-service-endpoints.md
+    - name: Métodos de gerenciamento de namespace do Servidor de Relatório
+      href: methods/report-server-namespace-management-methods.md
+    - name: Métodos de autorização
+      href: methods/authorization-methods.md
+    - name: Fontes de dados e métodos de conexão
+      href: methods/data-sources-and-connection-methods.md
+    - name: Métodos de parâmetros de relatório
+      href: methods/report-parameters-methods.md
+    - name: Métodos de modelagem
+      href: methods/model-methods-report-server-web-service.md
+    - name: Métodos de renderização e execução
+      href: methods/rendering-and-execution-methods.md
+    - name: Métodos de histórico de relatório
+      href: methods/report-history-methods.md
+    - name: Métodos de agendamento
+      href: methods/scheduling-methods.md
+    - name: Métodos de assinatura e de entrega
+      href: methods/subscription-and-delivery-methods.md
+    - name: Métodos de relatórios vinculados
+      href: methods/linked-reports-methods.md
+    - name: Building Applications Using the Web Service and the .NET Framework
+      href: net-framework/building-applications-using-the-web-service-and-the-net-framework.md
+    - name: Criando o proxy de serviço Web
+      href: net-framework/creating-the-web-service-proxy.md
+    - name: Autenticação de serviço Web
+      href: net-framework/web-service-authentication.md
+    - name: Chamando métodos do serviço Web
+      href: net-framework/calling-web-service-methods.md
+    - name: Definindo a propriedade Url do serviço Web
+      href: net-framework/setting-the-url-property-of-the-web-service.md
+    - name: Fornecendo argumentos de método de serviço Web
+      href: net-framework/supplying-web-service-method-arguments.md
+    - name: Omitindo valores para objetos de serviço Web opcionais
+      href: net-framework/omitting-values-for-optional-web-service-objects.md
+    - name: Usando métodos seguros do serviço Web
+      href: net-framework/using-secure-web-service-methods.md
+    - name: Usando o controle RSClientPrint em aplicativos personalizados
+      href: net-framework/using-the-rsclientprint-control-in-custom-applications.md
+    - name: Propriedades do Reporting Services
+      href: net-framework/reporting-services-properties.md
+      items:
+        - name: Propriedades do item do servidor de relatório
+          href: net-framework/reporting-services-properties-report-server-item-properties.md
+        - name: Propriedades do sistema do servidor de relatório
+          href: net-framework/reporting-services-properties-report-server-system-properties.md
+    - name: Passando configurações de informações de dispositivos para extensões de renderização
+      href: net-framework/passing-device-information-settings-to-rendering-extensions.md
+    - name: Configurações da extensão de entrega do Reporting Services
+      href: net-framework/reporting-services-delivery-extension-settings.md
+    - name: Usando cabeçalhos SOAP do Reporting Services
+      href: ../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md
+      items:
+        - name: Métodos de processamento em lote
+          href: ../report-server-web-service-net-framework-soap-headers/batching-methods.md
+        - name: Identificando o estado de execução
+          href: ../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md
+        - name: Definindo o namespace Item para o método GetProperties
+          href: ../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md
+    - name: Introduzindo a manipulação de exceção no Reporting Services
+      href: ../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md
+      items:
+        - name: Manipulando exceções no Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md
+        - name: Práticas recomendadas para a manipulação de exceção do Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md
+        - name: Impedindo solicitações inválidas
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md
+        - name: Usando blocos try/catch
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md
+        - name: Manipulando avisos e casos que não causam exceções
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md
+        - name: Usando a propriedade Detail para manipular erros específicos
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md
+        - name: Classe SoapException do Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md
+        - name: Propriedade Detail
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md
+        - name: Elemento HelpLink
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md
+        - name: Tabela de erros SoapException
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md

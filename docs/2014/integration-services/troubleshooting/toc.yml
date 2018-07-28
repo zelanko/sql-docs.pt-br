@@ -1,0 +1,15 @@
+- name: Solucionando problemas de ferramentas para desenvolvimento de pacotes
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: Depurando o fluxo de controle
+      href: debugging-control-flow.md
+    - name: Depurando script
+      href: debugging-script.md
+    - name: Depurando fluxo de dados
+      href: debugging-data-flow.md
+    - name: Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: Adicionar um visualizador de dados a um fluxo de dados
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: Configurar uma saída de erro em um componente de fluxo de dados
+      href: ../configure-an-error-output-in-a-data-flow-component.md

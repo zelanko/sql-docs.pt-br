@@ -1,0 +1,42 @@
+- name: Adicionar a Web Part do Visualizador de Relatórios a uma página da Web
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: Web Part do Visualizador de Relatórios em um site do SharePoint
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: Conectar Web Parte de filtro ou documentos
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: Personalizar a Web Part do Visualizador de Relatórios
+      href: ../customize-the-report-viewer-web-part.md
+- name: Servidor de relatório (modo do SharePoint)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: Serviço SharePoint e aplicativos de serviço
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Manage a Reporting Services SharePoint Service Application
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: Aplicativos de serviço Sharepoint de backup e restauração do Reporting Services
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: Cmdlets PowerShell para Modo do SharePoint do Reporting Services
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: Configuração e administração (modo do SharePoint)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Recursos da coleção de sites do Reporting Services
+      href: ../reporting-services-site-collection-features.md
+    - name: Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Configurações de Site do Reporting Services e Recursos de Site (Modo SharePoint)
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: Ativar o recurso de sincronização de arquivo do Servidor de Relatório.
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: Relatórios em Modo Local vs. Modo Conectado no Visualizador de Relatórios
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: Carregar documentos em uma biblioteca do SharePoint
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: Definir opções de processamento
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: Integração do SharePoint com o 2008 Report Server e o 2008 R2 Report Server
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

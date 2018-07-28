@@ -1,0 +1,25 @@
+- name: Sobre o envio de log
+  href: about-log-shipping-sql-server.md
+  items:
+    - name: Atualizar o envio de logs para o SQL Server 2014 (Transact-SQL)
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: Configurar o envio de logs
+      href: configure-log-shipping-sql-server.md
+    - name: Adicionar um banco de dados secundário a uma configuração de envio de logs
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: Remova um banco de dados secundário de uma configuração de envio de logs
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: Remover envio de log
+      href: remove-log-shipping-sql-server.md
+    - name: Exibir o relatório de envio de logs (SQL Server Management Studio)
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: Monitorar envio de logs (Transact-SQL)
+      href: monitor-log-shipping-transact-sql.md
+    - name: Failover para um envio de logs secundário
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: Alterar funções entre servidores de envio de log primários e secundários
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: Replicação e envio de logs
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

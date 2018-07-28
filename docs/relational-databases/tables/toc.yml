@@ -1,0 +1,151 @@
+- name: Visão geral
+  href: tables.md
+- name: Criar tabelas (Mecanismo de Banco de Dados)
+  href: create-tables-database-engine.md
+- name: Excluir tabelas (Mecanismo de Banco de Dados)
+  href: delete-tables-database-engine.md
+- name: Duplicar tabelas
+  href: duplicate-tables.md
+- name: Renomear tabelas (Mecanismo de Banco de Dados)
+  href: rename-tables-database-engine.md
+- name: Exibir a definição da tabela
+  href: view-the-table-definition.md
+  items:
+    - name: Table Properties - SSMS
+      href: table-properties-ssms.md
+    - name: Propriedades da coluna (página Geral)
+      href: column-properties-general-page.md
+- name: Exibir as dependências de uma tabela
+  href: view-the-dependencies-of-a-table.md
+- name: Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
+  href: add-columns-to-a-table-database-engine.md
+- name: Excluir colunas de uma tabela
+  href: delete-columns-from-a-table.md
+- name: Renomear colunas (Mecanismo de Banco de Dados)
+  href: rename-columns-database-engine.md
+- name: Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
+  href: copy-columns-from-one-table-to-another-database-engine.md
+- name: Modificar colunas (Mecanismo de Banco de Dados)
+  href: modify-columns-database-engine.md
+- name: Alterar ordem de colunas em uma tabela
+  href: change-column-order-in-a-table.md
+- name: Especificar colunas computadas em uma tabela
+  href: specify-computed-columns-in-a-table.md
+- name: Especificar valores padrão para colunas
+  href: specify-default-values-for-columns.md
+- name: Usar colunas esparsas
+  href: use-sparse-columns.md
+- name: Usar conjuntos de colunas
+  href: use-column-sets.md
+- name: Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
+  href: use-table-valued-parameters-database-engine.md
+- name: Restrições de chave primária e chave estrangeira
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Criar chaves primárias
+      href: create-primary-keys.md
+    - name: Modificar chaves primárias
+      href: modify-primary-keys.md
+    - name: Excluir chaves primárias
+      href: delete-primary-keys.md
+    - name: Criar relações de chaves estrangeiras
+      href: create-foreign-key-relationships.md
+    - name: Modificar relações de chave estrangeira
+      href: modify-foreign-key-relationships.md
+    - name: Excluir relações de chaves estrangeiras
+      href: delete-foreign-key-relationships.md
+    - name: Exibir propriedades de chave estrangeira
+      href: view-foreign-key-properties.md
+    - name: Desabilitar restrições FOREIGN KEY para replicação
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Restrições exclusivas e restrições de verificação
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Criar restrições exclusivas
+      href: create-unique-constraints.md
+    - name: Modificar restrições exclusivas
+      href: modify-unique-constraints.md
+    - name: Excluir restrições exclusivas
+      href: delete-unique-constraints.md
+    - name: Criar restrições de verificação
+      href: create-check-constraints.md
+    - name: Modificar restrições de verificação
+      href: modify-check-constraints.md
+    - name: Excluir restrições de verificação
+      href: delete-check-constraints.md
+    - name: Desabilitar verificação de restrições para replicação
+      href: disable-check-constraints-for-replication.md
+    - name: Desabilitar restrições de verificação com instruções INSERT e UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Propriedades da coluna de tabela (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md
+- name: Tabelas temporais
+  href: temporal-tables.md
+  items:
+    - name: Introdução a Tabelas Temporais com Controle da Versão do Sistema
+      href: getting-started-with-system-versioned-temporal-tables.md
+      items:
+        - name: Como criar uma tabela temporal com controle da versão do sistema
+          href: creating-a-system-versioned-temporal-table.md
+        - name: Modificando dados em uma tabela temporal com controle da versão do sistema
+          href: modifying-data-in-a-system-versioned-temporal-table.md
+        - name: Consultando dados em uma tabela temporal com controle da versão do sistema
+          href: querying-data-in-a-system-versioned-temporal-table.md
+        - name: Alterando o esquema de uma tabela temporal com versão do sistema
+          href: changing-the-schema-of-a-system-versioned-temporal-table.md
+        - name: Parando o controle de versão do sistema de uma tabela temporal com versão do sistema
+          href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
+    - name: Cenários de uso da tabela temporal
+      href: temporal-table-usage-scenarios.md
+    - name: Verificações de consistência do sistema de tabela temporal
+      href: temporal-table-system-consistency-checks.md
+    - name: Particionamento de Tabelas Temporais
+      href: partitioning-with-temporal-tables.md
+    - name: Considerações e limitações da tabela temporal
+      href: temporal-table-considerations-and-limitations.md
+    - name: Segurança da tabela temporal
+      href: temporal-table-security.md
+    - name: Gerenciar a Retenção de Dados Históricos em Tabelas Temporais com Versão do Sistema
+      href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+    - name: Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
+      href: system-versioned-temporal-tables-with-memory-optimized-tables.md
+      items:
+        - name: Criação de uma tabela temporal com controle da versão do sistema com otimização de memória
+          href: creating-a-memory-optimized-system-versioned-temporal-table.md
+        - name: Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória
+          href: working-with-memory-optimized-system-versioned-temporal-tables.md
+        - name: Monitorando tabelas temporais com controle da versão do sistema com otimização de memória
+          href: monitoring-memory-optimized-system-versioned-temporal-tables.md
+        - name: Considerações sobre desempenho com tabelas temporais com versão do sistema e otimização de memória
+          href: memory-optimized-system-versioned-temporal-tables-performance.md
+    - name: Funções e exibições de metadados de tabela temporal
+      href: temporal-table-metadata-views-and-functions.md
+- name: 'Tutorial: Usando o tipo de dados hierarchyid'
+  href: tutorial-using-the-hierarchyid-data-type.md
+  items:
+    - name: 'Lição 1: Convertendo uma tabela em uma estrutura hierárquica'
+      href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
+      items:
+        - name: Lição 1-1 – Examinando a estrutura atual da tabela Employee
+          href: lesson-1-1-examining-the-current-structure-of-the-employee-table.md
+        - name: Lição 1-2 – Populando uma tabela com os dados hierárquicos existentes
+          href: lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
+        - name: Lição 1-3 – Otimizando a tabela NewOrg
+          href: lesson-1-3-optimizing-the-neworg-table.md
+        - name: Lição 1-4 – Resumo – Convertendo uma tabela em uma estrutura hierárquica
+          href: lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
+    - name: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica'
+      href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+      items:
+        - name: Lição 2-1 – Criando uma tabela usando o tipo de dados hierarchyid
+          href: lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
+        - name: Lição 2-2 – Populando uma tabela hierárquica usando métodos hierárquicos
+          href: lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
+        - name: Lição 2-3 – Consultando uma tabela hierárquica usando métodos de hierarquia
+          href: lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
+        - name: Lição 2-4 – Reordenando dados em uma tabela hierárquica usando métodos hierárquicos
+          href: lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
+        - name: Lição 2-5 – Resumo – Gerenciando dados em uma tabela hierárquica
+          href: lesson-2-5-summary-managing-data-in-a-hierarchical-table.md

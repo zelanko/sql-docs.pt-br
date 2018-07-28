@@ -1,0 +1,8 @@
+- name: Desenvolvendo um gerenciador de conexões personalizado
+  href: developing-a-custom-connection-manager.md
+- name: Criando um gerenciador de conexões personalizado
+  href: creating-a-custom-connection-manager.md
+- name: Codificando um gerenciador de conexões personalizado
+  href: coding-a-custom-connection-manager.md
+- name: Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
+  href: developing-a-user-interface-for-a-custom-connection-manager.md

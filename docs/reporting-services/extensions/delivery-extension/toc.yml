@@ -1,0 +1,28 @@
+- name: Criando uma biblioteca de extensões de entrega
+  href: creating-a-delivery-extension-library.md
+- name: Depurando o código de extensão de entrega
+  href: debugging-delivery-extension-code.md
+- name: Visão geral de extensões de entrega
+  href: delivery-extensions-overview.md
+- name: Implantando uma extensão de entrega
+  href: deploying-a-delivery-extension.md
+- name: Implementando uma extensão de entrega
+  href: implementing-a-delivery-extension.md
+- name: Implementando a interface IDeliveryExtension para uma extensão de entrega
+  href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+- name: Implementando a interface ISubscriptionBaseUIUserControl
+  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
+- name: Preparando para implementar uma entrega de extensão
+  href: preparing-to-implement-a-delivery-extension.md
+- name: Removendo uma extensão de entrega
+  href: removing-a-delivery-extension.md
+- name: Usando uma classe de notificação classe para uma extensão de entrega
+  href: using-a-notification-class-for-a-delivery-extension.md
+- name: Usando a interface IDeliveryReportServerInformation para uma extensão de entrega
+  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+- name: Usando a classe RenderedOutputFile para uma extensão de entrega
+  href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
+- name: Usando a classe Report para uma extensão de entrega
+  href: using-the-report-class-for-a-delivery-extension.md
+- name: Usando a classe Setting para uma extensão de entrega
+  href: using-the-setting-class-for-a-delivery-extension.md

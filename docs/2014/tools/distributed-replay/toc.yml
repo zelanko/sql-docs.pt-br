@@ -1,0 +1,23 @@
+- name: SQL Server Distributed Replay
+  href: sql-server-distributed-replay.md
+- name: Configure Distributed Replay
+  href: configure-distributed-replay.md
+- name: Preparar os dados de rastreamento de entrada
+  href: prepare-the-input-trace-data.md
+- name: Reproduzir dados de rastreamento
+  href: replay-trace-data.md
+- name: Revisar os resultados da reprodução
+  href: review-the-replay-results.md
+- name: Segurança do Distributed Replay
+  href: distributed-replay-security.md
+- name: Opções de linha de comando da ferramenta de administração (Distributed Replay Utility)
+  href: administration-tool-command-line-options-distributed-replay-utility.md
+  items:
+    - name: Opção de pré-processamento (ferramenta de administração Distributed Replay)
+      href: preprocess-option-distributed-replay-administration-tool.md
+    - name: Opção Replay (ferramenta de administração do Distributed Replay)
+      href: replay-option-distributed-replay-administration-tool.md
+    - name: Opção de status (ferramenta de administração do Distributed Replay)
+      href: status-option-distributed-replay-administration-tool.md
+    - name: Opção de cancelamento (ferramenta de administração do Distributed Replay)
+      href: cancel-option-distributed-replay-administration-tool.md

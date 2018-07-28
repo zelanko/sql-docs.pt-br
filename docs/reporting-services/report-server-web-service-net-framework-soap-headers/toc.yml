@@ -1,0 +1,8 @@
+- name: Usando cabeçalhos SOAP do Reporting Services
+  href: using-reporting-services-soap-headers.md
+- name: Métodos de processamento em lote
+  href: batching-methods.md
+- name: Identificando o estado de execução
+  href: identifying-execution-state.md
+- name: Definindo o namespace Item para o método GetProperties
+  href: setting-the-item-namespace-for-the-getproperties-method.md

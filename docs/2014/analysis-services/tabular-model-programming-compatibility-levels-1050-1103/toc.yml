@@ -1,0 +1,75 @@
+- name: Programação de modelo tabular
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: CSDLBI (Anotações CSDL para Business Intelligence)
+  href: csdl-annotations-for-business-intelligence-csdlbi.md
+  items:
+    - name: Conceitos da CSDLBI
+      href: csdlbi-concepts.md
+    - name: Atributos CSDLBI para design de relatórios
+      href: csdlbi-attributes-for-report-design.md
+- name: Compreendendo o modelo de objeto de tabela
+  href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+  items:
+    - name: Representação de banco de dados
+      href: representation/database-representation-tabular.md
+    - name: Representação de conexão
+      href: representation/connection-representation-tabular.md
+    - name: Representação de tabelas
+      href: representation/tables-representation-tabular.md
+    - name: Representação de coluna calculada
+      href: representation/tables-calculated-column-representation.md
+    - name: Representação de medida calculada
+      href: representation/tables-calculated-measure-representation.md
+    - name: Representação de hierarquia
+      href: representation/tables-hierarchy-representation.md
+    - name: Representação de indicador chave de desempenho
+      href: representation/tables-key-performance-indicator-representation.md
+    - name: Representação de partição
+      href: representation/tables-partition-representation.md
+    - name: Representação de relação
+      href: representation/relationship-representation-tabular.md
+    - name: Representação de perspectiva
+      href: representation/perspective-representation-tabular.md
+    - name: Consultando um modelo de tabela
+      href: representation/querying-a-tabular-model.md
+- name: Referência técnica de CSDLBI
+  href: conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md
+  items:
+    - name: Elemento AssociationSet (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+    - name: Elemento BaseProperty (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md
+    - name: Elemento DefaultDetails (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md
+    - name: Elemento DisplayKey (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md
+    - name: Elemento EntityContainer (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/entitycontainer-element-csdlbi.md
+    - name: Elemento EntitySet (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md
+    - name: Elemento EntityType (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md
+    - name: Elemento Hierarchy (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md
+    - name: Elemento KPI (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md
+    - name: Elemento KpiGoal (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/kpigoal-element-csdlbi.md
+    - name: Elemento KpiStatus (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/kpistatus-element-csdlbi.md
+    - name: Elemento Level (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/level-element-csdlbi.md
+    - name: Elemento Measure (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/measure-element-csdlbi.md
+    - name: Elemento Member (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/member-element-csdlbi.md
+    - name: Elemento MemberRef (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md
+    - name: Elemento NavigationProperty (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/navigationproperty-element-csdlbi.md
+    - name: Elemento Property (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/property-element-csdlbi.md
+    - name: Elemento PropertyRef (CSDLBI)
+      href: conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md
+- name: Interface IMDEmbedded
+  href: imdembeddeddata-interface.md

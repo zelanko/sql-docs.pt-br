@@ -1,0 +1,12 @@
+- name: Commands
+  href: commands.md
+- name: Parâmetros de comando
+  href: command-parameters.md
+- name: Sintaxe de comando
+  href: command-syntax.md
+- name: Comandos que geram resultados de vários conjuntos de linhas
+  href: commands-generating-multiple-rowset-results.md
+- name: Preparando comandos
+  href: preparing-commands.md
+- name: Usando IMultipleResults para processar vários conjuntos de resultados
+  href: using-imultipleresults-to-process-multiple-result-sets.md

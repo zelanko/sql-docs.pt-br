@@ -1,0 +1,2 @@
+- name: Instalando o Master Data Services em um ambiente AlwaysOn
+  href: installing-mds-in-an-alwayson-group-environment.md

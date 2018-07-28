@@ -1,0 +1,18 @@
+- name: Parâmetros com valor de tabela (OLE DB)
+  href: table-valued-parameters-ole-db.md
+- name: Executando comandos que contêm parâmetros com valor de tabela
+  href: executing-commands-containing-table-valued-parameters.md
+- name: Inserindo dados em parâmetros com valor de tabela
+  href: inserting-data-into-table-valued-parameters.md
+- name: Suporte ao tipo de parâmetro com valor de tabela OLE DB(Métodos)
+  href: ole-db-table-valued-parameter-type-support-methods.md
+- name: Suporte ao tipo de parâmetro com valor de tabela de OLE DB (propriedades)
+  href: ole-db-table-valued-parameter-type-support-properties.md
+- name: Suporte ao tipo de parâmetro com valor de tabela OLE DB
+  href: ole-db-table-valued-parameter-type-support.md
+- name: Conjuntos de linhas de esquema alterados para parâmetros com valor de tabela de OLE DB
+  href: schema-rowsets-changed-for-ole-db-table-valued-parameters.md
+- name: Criação do conjunto de linhas do parâmetro com valor de tabela
+  href: table-valued-parameter-rowset-creation.md
+- name: Descoberta do tipo de parâmetro com valor de tabela
+  href: table-valued-parameter-type-discovery.md

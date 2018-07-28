@@ -1,0 +1,12 @@
+- name: Tópicos de instrução sobre cópia em massa com o driver ODBC do SQL Server (ODBC)
+  href: bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Copiar em massa um conjunto de resultados de SELECT (ODBC)
+  href: bulk-copy-a-select-result-set-odbc.md
+- name: Copiar em massa usando um arquivo de formato (ODBC)
+  href: bulk-copy-by-using-a-format-file-odbc.md
+- name: Copiar dados em massa de variáveis de programa (ODBC)
+  href: bulk-copy-data-from-program-variables-odbc.md
+- name: Copiar em massa sem um arquivo de formato (ODBC)
+  href: bulk-copy-without-a-format-file-odbc.md
+- name: Criar um arquivo de formato de cópia em massa (ODBC)
+  href: create-a-bulk-copy-format-file-odbc.md

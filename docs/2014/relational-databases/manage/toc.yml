@@ -1,0 +1,47 @@
+- name: Recursos e tarefas do Utilitário do SQL Server
+  href: sql-server-utility-features-and-tasks.md
+- name: Considerações sobre a execução de Conjuntos de Coleta do Utilitário e não Utilitário na mesma instância do SQL Server
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: Conectar a um Utilitário do SQL Server
+  href: connect-to-a-sql-server-utility.md
+- name: Inscrever uma instância do SQL Server (Utilitário do SQL Server)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: Monitorar instâncias do SQL Server no Utilitário do SQL Server
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: Exibir resultados da política de integridade de recursos (Utilitário do SQL Server)
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: Modificar uma definição de política de integridade de recursos (Utilitário do SQL Server)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: Configurar o data warehouse a partir do ponto de controle do utilitário (Utilitário do SQL Server)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: Configurar políticas de integridade (Utilitário do SQL Server)
+  href: configure-health-policies-sql-server-utility.md
+- name: Reduzir o ruído em políticas de utilização da CPU (Utilitário do SQL Server)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: Remover uma instância do SQL Server do Utilitário do SQL Server
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: Alterar a conta proxy para o conjunto de coleta do utilitário em uma instância gerenciada do SQL Server (Utilitário do SQL Server)
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: Mover um UCP de uma instância do SQL Server para outra (Utilitário do SQL Server)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: Remover um ponto de controle do utilitário (Utilitário do SQL Server)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: Solucionar problemas do Utilitário do SQL Server
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: Solucionar problemas de integridade de recursos do SQL Server (Utilitário do SQL Server)
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: Ajuda de F1 do Gerenciador do Utilitário
+  href: utility-explorer-f1-help.md
+  items:
+    - name: Painel do Utilitário (Utilitário do SQL Server)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: Administração do Utilitário (Utilitário do SQL Server)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

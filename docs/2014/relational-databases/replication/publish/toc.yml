@@ -1,0 +1,226 @@
+- name: Publicar dados e objetos de banco de dados
+  href: publish-data-and-database-objects.md
+  items:
+    - name: Visão geral do modelo de publicação de replicação
+      href: replication-publishing-model-overview.md
+    - name: Filtrar dados publicados
+      href: filter-published-data.md
+    - name: Replicar colunas de identidade
+      href: replicate-identity-columns.md
+    - name: Fazer alterações de esquema em bancos de dados de publicação
+      href: make-schema-changes-on-publication-databases.md
+    - name: Replicar tabelas e índices particionados
+      href: replicate-partitioned-tables-and-indexes.md
+      items:
+        - name: Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros
+          href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+    - name: 'Criar, modificar e excluir publicações e artigos'
+      href: create-modify-and-delete-publications-and-articles-replication.md
+      items:
+        - name: Create a Publication
+          href: create-a-publication.md
+        - name: Defina um Artigo
+          href: define-an-article.md
+    - name: Especificar tipos de artigo (Programação Transact-SQL de replicação)
+      href: specify-article-types-replication-transact-sql-programming.md
+      items:
+        - name: Visualizar e modificar as propriedades da publicação
+          href: view-and-modify-publication-properties.md
+        - name: Visualizar e modificar propriedades de artigos
+          href: view-and-modify-article-properties.md
+        - name: Excluir uma publicação
+          href: delete-a-publication.md
+        - name: Excluir um artigo
+          href: delete-an-article.md
+        - name: Criar uma publicação de um banco de dados Oracle
+          href: create-a-publication-from-an-oracle-database.md
+    - name: Especificar mapeamentos de tipo de dados para um Publicador Oracle
+      href: specify-data-type-mappings-for-an-oracle-publisher.md
+      items:
+        - name: Definir o período de validade da assinatura
+          href: set-the-expiration-period-for-subscriptions.md
+        - name: Especificar opções de esquema
+          href: specify-schema-options.md
+        - name: Replicar alterações de esquema
+          href: replicate-schema-changes.md
+        - name: Gerenciar colunas de identidade
+          href: manage-identity-columns.md
+        - name: Definir o nível de compatibilidade para publicações de mesclagem
+          href: set-the-compatibility-level-for-merge-publications.md
+        - name: Especificar o formato do instantâneo (SQL Server Management Studio)
+          href: specify-snapshot-format-sql-server-management-studio.md
+        - name: Especificar um local de pasta de instantâneo alternativa (SQL Server Management Studio)
+          href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+        - name: Compactar arquivos de instantâneo (SQL Server Management Studio)
+          href: compress-snapshot-files-sql-server-management-studio.md
+        - name: Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
+          href: configure-snapshot-properties-replication-transact-sql-programming.md
+        - name: Entregar um instantâneo pelo FTP
+          href: deliver-a-snapshot-through-ftp.md
+        - name: Definir e modificar um filtro de colunas
+          href: define-and-modify-a-column-filter.md
+        - name: Definir e modificar um filtro de linha estático
+          href: define-and-modify-a-static-row-filter.md
+        - name: Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem
+          href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+        - name: Otimizar filtros de linha com parâmetros
+          href: optimize-parameterized-row-filters.md
+        - name: Definir e modificar um filtro de junção entre artigos de mesclagem
+          href: define-and-modify-a-join-filter-between-merge-articles.md
+        - name: Gerar automaticamente um conjunto de filtros de junção entre artigos de mesclagem (SQL Server Management Studio)
+          href: automatically-generate-join-filters-between-merge-articles.md
+        - name: Definir o método de propagação de alterações de dados para artigos transacionais
+          href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: Habilitar atualização de assinaturas para publicações transacionais
+          href: enable-updating-subscriptions-for-transactional-publications.md
+        - name: Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)
+          href: create-an-updatable-subscription-to-a-transactional-publication.md
+        - name: 'Criar uma assinatura atualizável para uma publicação transacional, usando Transact-SQL'
+          href: ../create-updatable-subscription-transactional-publication-transact-sql.md
+        - name: Definir opções de resolução de conflito de atualização na fila (SQL Server Management Studio)
+          href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+        - name: Publicar a execução de um procedimento armazenado em uma publicação transacional (SQL Server Management Studio)
+          href: publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: Definir uma relação de registro lógico entre artigos da tabela de mesclagem
+          href: define-a-logical-record-relationship-between-merge-table-articles.md
+        - name: Especificar a ordem de processamento de artigos da tabela de mesclagem (Programação Transact-SQL de replicação)
+          href: specify-the-processing-order-of-merge-table-articles.md
+        - name: Especificar que um novo artigo de tabela de mesclagem é somente download
+          href: specify-that-a-merge-table-article-is-download-only.md
+        - name: Especificar que as exclusões não devem ser controladas para artigos de mesclagem (Programação Transact-SQL de replicação)
+          href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+        - name: Especificar o nível de rastreamento e resolução de conflitos para artigos de mesclagem
+          href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+        - name: Especificar um resolvedor de artigo de mesclagem
+          href: specify-a-merge-article-resolver.md
+        - name: Especificar a resolução interativa de conflitos para artigos de mesclagem
+          href: specify-interactive-conflict-resolution-for-merge-articles.md
+        - name: Adicionar e descartar artigos em uma publicação (SQL Server Management Studio)
+          href: add-articles-to-and-drop-articles-from-a-publication.md
+    - name: Manter publicações
+      href: maintain-publications.md
+      items:
+        - name: Adicionar e remover artigos de publicações existentes
+          href: add-articles-to-and-drop-articles-from-existing-publications.md
+        - name: Alterar propriedades da publicação e do artigo
+          href: change-publication-and-article-properties.md
+- name: Configurar a distribuição
+  href: ../configure-distribution.md
+  items:
+    - name: Configurar a publicação e a distribuição
+      href: ../configure-publishing-and-distribution.md
+    - name: Exibir e modificar propriedades de Publicador e Distribuidor
+      href: ../view-and-modify-distributor-and-publisher-properties.md
+    - name: Desabilitar publicação e distribuição
+      href: ../disable-publishing-and-distribution.md
+    - name: Habilitar um banco de dados para replicação (SQL Server Management Studio)
+      href: ../enable-a-database-for-replication-sql-server-management-studio.md
+    - name: Habilitar um Publicador remoto em um Distribuidor (SQL Server Management Studio)
+      href: ../enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+    - name: Especificar o local do instantâneo padrão (SQL Server Management Studio)
+      href: ../specify-the-default-snapshot-location-sql-server-management-studio.md
+    - name: Definir o período de retenção de distribuição para publicações transacionais (SQL Server Management Studio)
+      href: ../set-distribution-retention-period-for-transactional-publications.md
+    - name: Definir o período de retenção do histórico (SQL Server Management Studio)
+      href: ../set-the-history-retention-period-sql-server-management-studio.md
+- name: Assinar publicações
+  href: ../subscribe-to-publications.md
+  items:
+    - name: Create a Pull Subscription
+      href: ../create-a-pull-subscription.md
+    - name: Criar uma assinatura push
+      href: ../create-a-push-subscription.md
+    - name: Exibir e modificar propriedades de assinatura pull
+      href: ../view-and-modify-pull-subscription-properties.md
+    - name: Exibir e modificar propriedades de assinatura push
+      href: ../view-and-modify-push-subscription-properties.md
+    - name: Excluir uma assinatura pull
+      href: ../delete-a-pull-subscription.md
+    - name: Excluir uma assinatura push
+      href: ../delete-a-push-subscription.md
+    - name: Validade e desativação de assinatura
+      href: ../subscription-expiration-and-deactivation.md
+    - name: Criar uma assinatura para um Assinante não SQL Server
+      href: ../create-a-subscription-for-a-non-sql-server-subscriber.md
+    - name: Especificar um tipo de assinatura de mesclagem e prioridade de resolução de conflitos (SQL Server Management Studio)
+      href: ../specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+    - name: Especificar agendas de sincronização
+      href: ../specify-synchronization-schedules.md
+- name: Inicializar uma assinatura
+  href: ../initialize-a-subscription.md
+  items:
+    - name: Inicializar uma assinatura com um instantâneo
+      href: ../initialize-a-subscription-with-a-snapshot.md
+      items:
+        - name: Criar e aplicar o instantâneo
+          href: ../create-and-apply-the-snapshot.md
+        - name: Instantâneos para publicações de mesclagem com filtros com parâmetros
+          href: ../snapshots-for-merge-publications-with-parameterized-filters.md
+        - name: Opções de instantâneo
+          href: ../snapshot-options.md
+    - name: Locais da pasta de instantâneos alternativos
+      href: ../alternate-snapshot-folder-locations.md
+    - name: Instantâneos compactados
+      href: ../compressed-snapshots.md
+    - name: Executar scripts antes e depois da aplicação do instantâneo
+      href: ../execute-scripts-before-and-after-the-snapshot-is-applied.md
+    - name: Transferir instantâneos pelo FTP
+      href: ../transfer-snapshots-through-ftp.md
+    - name: Inicializar uma assinatura transacional sem um instantâneo
+      href: ../initialize-a-transactional-subscription-without-a-snapshot.md
+    - name: Reinicializar as assinaturas
+      href: ../reinitialize-subscriptions.md
+- name: Sincronizar assinaturas (Replicação)
+  href: ../synchronize-subscriptions-replication.md
+  items:
+    - name: Criar e aplicar o instantâneo inicial
+      href: ../create-and-apply-the-initial-snapshot.md
+      items:
+        - name: Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros
+          href: ../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+    - name: Habilitar a inicialização com um backup para publicações transacionais (SQL Server Management Studio)
+      href: ../enable-initialization-with-backup-for-transactional-publications.md
+    - name: Inicializar uma assinatura transacional de um backup (Programação Transact-SQL de replicação)
+      href: ../initialize-a-transactional-subscription-from-a-backup.md
+    - name: Inicializar uma assinatura manualmente
+      href: ../initialize-a-subscription-manually.md
+    - name: Sincronizar uma assinatura pull
+      href: ../synchronize-a-pull-subscription.md
+    - name: Sincronizar uma assinatura push
+      href: ../synchronize-a-push-subscription.md
+    - name: Reinicializar uma assinatura
+      href: ../reinitialize-a-subscription.md
+    - name: Executar scripts antes e depois de um instantâneo ser aplicado (SQL Server Management Studio)
+      href: ../execute-scripts-before-and-after-a-snapshot-is-applied.md
+    - name: Executar scripts durante a sincronização (Programação Transact-SQL de replicação)
+      href: ../execute-scripts-during-synchronization-replication-transact-sql-programming.md
+    - name: Exibir e resolver conflitos de dados para publicações de mesclagem (SQL Server Management Studio)
+      href: ../view-and-resolve-data-conflicts-for-merge-publications.md
+    - name: Exibir informações sobre conflitos para publicações de mesclagem (Programação Transact-SQL de replicação)
+      href: ../view-conflict-information-for-merge-publications.md
+    - name: Exibir conflitos de dados para publicações transacionais (SQL Server Management Studio)
+      href: ../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+    - name: Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows (Gerenciador de Sincronização do Windows)
+      href: ../synchronize-a-subscription-using-windows-synchronization-manager.md
+    - name: Controlar o comportamento de gatilhos e restrições durante sincronização (Programação Transact-SQL de replicação)
+      href: ../control-behavior-of-triggers-and-constraints-in-synchronization.md
+    - name: Implementar um manipulador de lógica de negócios para um artigo de mesclagem
+      href: ../implement-a-business-logic-handler-for-a-merge-article.md
+      items:
+        - name: Depurar um manipulador de lógica de negócios (Programação de replicação)
+          href: ../debug-a-business-logic-handler-replication-programming.md
+    - name: Implementar o resolvedor de conflitos personalizado para um artigo de mesclagem
+      href: ../implement-a-custom-conflict-resolver-for-a-merge-article.md
+    - name: Carregar dados em massa em tabelas em uma publicação de mesclagem (Programação Transact-SQL de replicação)
+      href: ../bulk-load-data-into-tables-in-a-merge-publication.md
+- name: Sincronizar dados
+  href: ../synchronize-data.md
+- name: Validar os dados replicados
+  href: ../validate-replicated-data.md
+  items:
+    - name: Validar informações de partição para um assinante de mesclagem
+      href: ../validate-partition-information-for-a-merge-subscriber.md
+    - name: Validar dados no assinante
+      href: ../validate-data-at-the-subscriber.md
+- name: Replicação de script
+  href: ../scripting-replication.md

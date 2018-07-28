@@ -1,0 +1,69 @@
+- name: Eventos estendidos
+  href: extended-events.md
+- name: Criar uma sessão de Eventos Estendidos
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: Criar uma sessão de Eventos Estendidos usando o Editor de Consultas
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: Criar uma sessão de Eventos Estendidos usando o assistente (Pesquisador de Objetos)
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: Criar uma sessão de Eventos Estendidos usando a caixa de diálogo Nova Sessão
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: Gerenciar sessões de evento no Pesquisador de Objetos
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Exibir dados de sessão de evento
+  href: ../../database-engine/view-event-session-data.md
+- name: Pacotes de Eventos Estendidos
+  href: sql-server-extended-events-packages.md
+- name: Destinos de eventos estendidos
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: Destino de contador de eventos
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: Destino de emparelhamento de evento
+      href: ../../database-engine/event-pairing-target.md
+    - name: Destino do histograma
+      href: ../../database-engine/histogram-target.md
+    - name: Destino de buffer de anel
+      href: ../../database-engine/ring-buffer-target.md
+    - name: destino do rastreamento de eventos do Windows
+      href: event-tracing-for-windows-target.md
+- name: Mecanismo de eventos estendidos
+  href: sql-server-extended-events-engine.md
+- name: Sessões de eventos estendidos
+  href: sql-server-extended-events-sessions.md
+- name: Ferramentas de eventos estendidos
+  href: extended-events-tools.md
+  items:
+    - name: Usar a sessão de system_health
+      href: use-the-ssms-xe-profiler.md
+    - name: Usar o Provedor do PowerShell para eventos estendidos
+      href: use-the-powershell-provider-for-extended-events.md
+- name: Criar script de uma sessão de evento estendido
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: Alterar uma sessão de Eventos Estendidos
+  href: alter-an-extended-events-session.md
+- name: Copiar ou exportar dados de destino
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: Modificar a exibição dos resultados de rastreamento
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: Obter os campos de todos os eventos
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: Exibir os eventos de pacotes registrados
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: Exibir os destinos dos Eventos Estendidos de pacotes registrados
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Obter os parâmetros configuráveis para o argumento ADD TARGET
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: Determinar quais consultas estão mantendo bloqueios
+  href: determine-which-queries-are-holding-locks.md
+- name: Localizar os objetos que detêm a maioria dos bloqueios
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: Monitorar a atividade do sistema usando Eventos Estendidos
+  href: monitor-system-activity-using-extended-events.md

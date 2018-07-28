@@ -1,0 +1,36 @@
+- name: Administrador de Recursos
+  href: resource-governor.md
+  items:
+    - name: Habilitar Administrador de Recursos
+      href: enable-resource-governor.md
+    - name: Desabilitar Administrador de Recursos
+      href: disable-resource-governor.md
+- name: Pool de recursos do Administrador de Recursos
+  href: resource-governor-resource-pool.md
+  items:
+    - name: Criar um pool de recursos
+      href: create-a-resource-pool.md
+    - name: Alterar configurações do pool de recursos
+      href: change-resource-pool-settings.md
+    - name: Excluir um pool de recursos
+      href: delete-a-resource-pool.md
+- name: Grupos de carga de trabalho do Administrador de Recursos
+  href: resource-governor-workload-group.md
+  items:
+    - name: Criar um grupo de carga de trabalho
+      href: create-a-workload-group.md
+    - name: Alterar as configurações de grupo de carga de trabalho
+      href: change-workload-group-settings.md
+    - name: Mover um Grupo de Cargas de Trabalho
+      href: move-a-workload-group.md
+    - name: Excluir um grupo de carga de trabalho
+      href: delete-a-workload-group.md
+- name: Função de classificação do Administrador de Recursos
+  href: resource-governor-classifier-function.md
+  items:
+    - name: Criar e testar uma função de classificação definida pelo usuário
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: Configurar o administrador de recursos usando um modelo
+  href: configure-resource-governor-using-a-template.md
+- name: View Resource Governor Properties
+  href: view-resource-governor-properties.md

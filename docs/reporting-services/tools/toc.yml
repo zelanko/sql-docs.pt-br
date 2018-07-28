@@ -1,0 +1,106 @@
+- name: Visão geral
+  href: reporting-services-tools.md
+- name: Reporting Services no SQL Server Data Tools
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: Criar relatórios com o Designer de Relatórios
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: Adicionar um relatório novo ou existente a um projeto de relatório
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+    - name: Deployment and Version Support in SQL Server Data Tools
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: Exemplos de URL para itens de relatório publicados em um servidor de relatório em modo de SharePoint (SSRS)
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: Definir propriedades de implantação
+      href: set-deployment-properties-reporting-services.md
+    - name: Encaixar o painel de dados do relatório no Designer de Relatórios
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: Ajuda F1 do Designer de Relatórios
+      href: report-designer-f1-help.md
+      items:
+        - name: Estrutura de Tópicos do Documento
+          href: document-outline.md
+        - name: Modo Design
+          href: design-view.md
+        - name: Modo Visualizar
+          href: preview-view.md
+        - name: Painel Agrupamento
+          href: grouping-pane.md
+        - name: caixa de diálogo Páginas de Propriedades do Projeto
+          href: project-property-pages-dialog-box.md
+        - name: Caixa de diálogo Logon do Reporting Services (SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+- name: Reporting Services no SQL Server Management Studio
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: Definir propriedades do servidor de relatório
+      href: set-report-server-properties-management-studio.md
+    - name: Conectar-se a um servidor de relatório no Management Studio
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: Excluir um item
+      href: delete-an-item-management-studio.md
+    - name: 'Servidor de Relatório na ajuda F1 do Management Studio '
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: Cancelar trabalhos do Servidor de Relatório
+          href: cancel-report-server-jobs-management-studio.md
+        - name: Excluir itens do catálogo
+          href: delete-catalog-items-management-studio.md
+        - name: Propriedades do Trabalho
+          href: job-properties-management-studio.md
+        - name: Nova Agenda Compartilhada
+          href: new-shared-schedule-management-studio.md
+        - name: Nova Função do Sistema
+          href: new-system-role-management-studio.md
+        - name: Nova função do usuário
+          href: new-user-role-management-studio.md
+        - name: Propriedades da Agenda (página Geral)
+          href: schedule-properties-general-page.md
+        - name: Propriedades da Agenda (página Relatórios)
+          href: schedule-properties-reports-page.md
+        - name: Propriedades do Servidor (página Geral)
+          href: report-server-properties-general-page.md
+        - name: Propriedades do Servidor (página Execução)
+          href: server-properties-execution-page.md
+        - name: Propriedades do Servidor (página Histórico)
+          href: server-properties-history-page.md
+        - name: Propriedades do Servidor (página Log)
+          href: server-properties-logging-page.md
+        - name: Propriedades do Servidor (página Segurança)
+          href: server-properties-security-page-reporting-services.md
+        - name: Propriedades do Servidor (página Avançado)
+          href: server-properties-advanced-page-reporting-services.md
+        - name: Propriedades de Função do Sistema
+          href: system-role-properties-management-studio.md
+        - name: Propriedades de Função do Usuário
+          href: user-role-properties-management-studio.md
+- name: Ambiente de criação do Construtor de Relatórios
+  href: report-builder-authoring-environment-ssrs.md
+- name: Script e PowerShell com o Reporting Services
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: Gerar scripts com o utilitário rs.exe e o serviço Web
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+      items:
+        - name: Formatar um arquivo de script do Reporting Services
+          href: format-a-reporting-services-script-file.md
+        - name: Executar um arquivo de script do Reporting Services
+          href: run-a-reporting-services-script-file.md
+    - name: Implantação de script e tarefas administrativas
+      href: script-deployment-and-administrative-tasks.md
+    - name: Script rs.exe do Reporting Services de exemplo para copiar conteúdo entre Servidores de Relatório
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: Acessar o provedor WMI do Reporting Services
+      href: access-the-reporting-services-wmi-provider.md
+- name: Utilitários de prompt de comando do servidor de relatório
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: Utilitário rskeymgmt
+      href: rskeymgmt-utility-ssrs.md
+    - name: Utilitário rsconfig
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe Utility (SSRS)
+      href: rs-exe-utility-ssrs.md
+- name: 'Tutorial: Como localizar e iniciar as ferramentas do Reporting Services'
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
